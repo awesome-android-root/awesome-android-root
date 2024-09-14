@@ -20,9 +20,11 @@ Pull requests are welcome ✨
     - [Backup and Restore](#backup-and-restore)
     - [Development and Debugging](#development-and-debugging)
     - [File Management](#file-management)
+    - [Kernel](#kernel)
     - [Modifications](#modifications)
     - [Network Tools](#network-tools)
     - [Privacy and Security](#privacy-and-security)
+    - [Root Specific](#root-specific)
 ## What is root?
 
 Android rooting is the process of gaining privileged control (known as root access) over various Android subsystems. Rooting allows overcoming limitations that carriers and hardware manufacturers put on some devices, resulting in the ability to alter or replace system applications and settings, run specialized apps that require administrator-level permissions, or perform other operations that are otherwise inaccessible to a normal Android user.
@@ -115,6 +117,9 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 - [Xplore File Manager](https://play.google.com/store/apps/details?id=com.lonelycatgames.Xplore) - A file manager with root support (Non-FOSS) 
 - [Solid Explorer](https://play.google.com/store/apps/details?id=pl.solidexplorer2) - Powerful file manager with root support (Non-FOSS)
 
+### Kernel
+- [Franco Kernel Manager](https://play.google.com/store/apps/details?id=com.franco.kernel&hl=en)
+
 ### Modifications
 
 - [Revanced Manager](https://github.com/ReVanced/revanced-manager) - YouTube with additional features (FOSS)
@@ -126,12 +131,17 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 - [NetGuard](https://github.com/M66B/NetGuard/) - No-root firewall (FOSS)
 
 ### Privacy and Security
-
+- [Amarok](https://github.com/deltazefiro/Amarok-Hider)
 - [AFWall+](https://github.com/ukanth/afwall) - Iptables-based firewall (FOSS)
 - [Shelter](https://gitea.angry.im/PeterCxy/Shelter) - Isolate and clone apps (FOSS)
 - [Island](https://play.google.com/store/apps/details?id=com.oasisfeng.island) - App isolation and cloning (Non-FOSS)
 
-
+### Root Specific 
+- [Hide-My-Applist](https://github.com/Dr-TSNG/Hide-My-Applist)
+- [Zygisk Detch](https://github.com/j-hc/zygisk-detach)
+- [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)
+- [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix)
+- [Trick Store](https://github.com/chiteroman/TrickyStore)
 
 
 ---
