@@ -6,6 +6,7 @@ Pull requests are welcome ✨
 
 ## Table of Contents
   - [What is root?](#what-is-root)
+  - [Should I root](#should-i-root)
   - [How to root](#how-to-root)
   - [Magisk](#magisk)
   - [KernelSU](#kernelsu)
@@ -27,9 +28,32 @@ Pull requests are welcome ✨
 
 Android rooting is the process of gaining privileged control (known as root access) over various Android subsystems. Rooting allows overcoming limitations that carriers and hardware manufacturers put on some devices, resulting in the ability to alter or replace system applications and settings, run specialized apps that require administrator-level permissions, or perform other operations that are otherwise inaccessible to a normal Android user.
 
-## How to root?
-It really depends upon your device, its recommended to check xda forum for your device that usually have a good guide for your devices.Another option is telegram groups for your devices as they have specific comunuty related to your device.
+## Should I root?
+Now to main question. Should i root?
+First lets view disadvantages than advantages.
+### Disadvantages
+- As root user, if you ever mess up, it's all your responsibility to fix it.
+- Personally i never faced it even tho i messed up device to the worst condition, People usually say your device may hard brick
+- Banking apps won't work, Recently some apps are detecting root even with Magisk (there are workaround for most of them).
+- Rooting process if messed, Although can be fixed, it can be tuff for begginer.
 
+### Advantages
+- You can grant apps Su and they'll do great job to you
+- You can tweak kernel= great performance for games
+- You can ban ads from device completely.
+- You can uninstall unnecessary apps, i mean system apps.
+- You can perform much more super enjoying tasks, they all can't be listed here.
+
+### Debate
+- Here is the [reddit thread](https://www.reddit.com/r/AndroidQuestions/comments/1c69h3q/is_rooting_still_something_you_would_do_in_2024/) debtaing if its worth it rooting in 2024 (but in my opinion its worth every penny).
+  
+## How to root?
+It really depends upon your device, its recommended to check XDA forum for your device that usually have a good guide for your devices.Another option is telegram groups for your devices as they have specific comunuty related to your device.
+Generally following steps are common:
+- Unlock the boot loader.
+- Get a custom recovery installed.
+- Flash your preferred method of rooting solutions from below.
+- Enjoy the ultimate power of rooted device.
 
 ## Magisk
 
