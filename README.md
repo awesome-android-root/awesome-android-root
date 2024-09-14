@@ -77,6 +77,9 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 ## LSPosed
 [LSPosed](https://github.com/LSPosed/LSPosed) is an open-source framework that allows users to install and use Xposed/LSPosed modules on their Android devices.
 
+## Glossary
+-  FOSS = Free and Open Source Software
+-  Non-FOSS = Closed Source Software
 ## Root Apps
 
 ### Ad Blocking
