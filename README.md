@@ -8,6 +8,7 @@ Pull requests are welcome ✨
   - [What is Android Root?](#what-is-android-root)
   - [Magisk](#magisk)
   - [KernelSU](#kernelsu)
+  - [APatch](#apatch)
   - [LSPosed](#lsposed)
   - [Root Apps](#root-apps)
     - [Ad Blocking](#ad-blocking)
@@ -36,8 +37,11 @@ Android rooting is the process of gaining privileged control (known as root acce
 
 [Download KernelSU](https://github.com/tiann/KernelSU/releases)
 
+## APatch
+[APatch](https://github.com/bmax121/APatch) uses patching of Android kernel and Android system to gain root access based on [Kernel Patch](https://github.com/bmax121/KernelPatch/).
+
 ## LSPosed
-[LSPosed](https://github.com/LSPosed/LSPosed) is an open-source framework designed to replace the traditional Xposed Framework, allowing users to install and use Xposed/LSPosed modules on their Android devices.
+[LSPosed](https://github.com/LSPosed/LSPosed) is an open-source framework that allows users to install and use Xposed/LSPosed modules on their Android devices.
 
 ## Root Apps
 
