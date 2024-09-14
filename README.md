@@ -5,10 +5,12 @@ A comprehensive, up-to-date list of Android apps that require or utilize root pr
 Pull requests are welcome ✨
 
 ## Table of Contents
-  - [What is Android Root?](#what-is-android-root)
+  - [What is root?](#what-is-root)
+  - [How to root](#how-to-root)
   - [Magisk](#magisk)
   - [KernelSU](#kernelsu)
   - [APatch](#apatch)
+  - [Which solution should I use?](#which-solution-should-i-use)
   - [LSPosed](#lsposed)
   - [Root Apps](#root-apps)
     - [Ad Blocking](#ad-blocking)
@@ -21,9 +23,13 @@ Pull requests are welcome ✨
     - [Network Tools](#network-tools)
     - [Privacy and Security](#privacy-and-security)
 
-## What is Android Root?
+## What is root?
 
 Android rooting is the process of gaining privileged control (known as root access) over various Android subsystems. Rooting allows overcoming limitations that carriers and hardware manufacturers put on some devices, resulting in the ability to alter or replace system applications and settings, run specialized apps that require administrator-level permissions, or perform other operations that are otherwise inaccessible to a normal Android user.
+
+## How to root?
+It really depends upon your device, its recommended to check xda forum for your device that usually have a good guide for your devices.Another option is telegram groups for your devices as they have specific comunuty related to your device.
+
 
 ## Magisk
 
@@ -39,6 +45,11 @@ Android rooting is the process of gaining privileged control (known as root acce
 
 ## APatch
 [APatch](https://github.com/bmax121/APatch) uses patching of Android kernel and Android system to gain root access based on [Kernel Patch](https://github.com/bmax121/KernelPatch/).
+
+[Download APatch](https://github.com/bmax121/APatch/releases)
+
+## Which solution should I use?
+If you are a newbiew or don't know much about rooting i'd  recommend going with Magisk as it has a vast community support.
 
 ## LSPosed
 [LSPosed](https://github.com/LSPosed/LSPosed) is an open-source framework that allows users to install and use Xposed/LSPosed modules on their Android devices.
