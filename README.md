@@ -23,41 +23,40 @@ Pull requests are welcome ✨
     - [Modifications](#modifications)
     - [Network Tools](#network-tools)
     - [Privacy and Security](#privacy-and-security)
-
 ## What is root?
 
 Android rooting is the process of gaining privileged control (known as root access) over various Android subsystems. Rooting allows overcoming limitations that carriers and hardware manufacturers put on some devices, resulting in the ability to alter or replace system applications and settings, run specialized apps that require administrator-level permissions, or perform other operations that are otherwise inaccessible to a normal Android user.
 
 ## Should I root?
-Now to main question. Should i root?
-First lets view disadvantages than advantages.
+Now to the main question. Should i root?
+First, let's view disadvantages then advantages.
 ### Disadvantages
-- As root user, if you ever mess up, it's all your responsibility to fix it.
-- Personally i never faced it even tho i messed up device to the worst condition, People usually say your device may hard brick
-- Banking apps won't work, Recently some apps are detecting root even with Magisk (there are workaround for most of them).
-- Rooting process if messed, Although can be fixed, it can be tuff for begginer.
+- As a root user, if you ever mess up, it's all your responsibility to fix it.
+- Personally i never faced it, even though i messed up the device to the worst condition. People usually say your device may hard brick.
+- Banking apps won't work. Recently, some apps are detecting root even with Magisk (there are workarounds for most of them).
+- Rooting process if messed, Although it can be fixed, it can be tough for beginners.
 
 ### Advantages
-- You can grant apps Su and they'll do great job to you
-- You can tweak kernel= great performance for games
-- You can ban ads from device completely.
-- You can uninstall unnecessary apps, i mean system apps.
+- You can grant apps, Su and they'll do a great job for you.
+- You can tweak kernel= great performance for games.
+- You can ban ads from your device completely.
+- You can uninstall unnecessary apps, i.e., system apps.
 - You can perform much more super enjoying tasks, they all can't be listed here.
 
 ### Debate
-- Here is the [reddit thread](https://www.reddit.com/r/AndroidQuestions/comments/1c69h3q/is_rooting_still_something_you_would_do_in_2024/) debtaing if its worth it rooting in 2024 (but in my opinion its worth every penny).
+- Here is the [reddit thread](https://www.reddit.com/r/AndroidQuestions/comments/1c69h3q/is_rooting_still_something_you_would_do_in_2024/) Debating if its worth it rooting in 2024 (but in my opinion its worth every penny).
   
 ## How to root?
-It really depends upon your device, its recommended to check XDA forum for your device that usually have a good guide for your devices.Another option is telegram groups for your devices as they have specific comunuty related to your device.
-Generally following steps are common:
+It really depends upon your device; it's recommended to check the XDA forum for your device, which usually has a good guide for your devices. Another option is telegram groups for your devices, as they have specific communities related to your device.
+Generally, the following steps are common:
 - Unlock the boot loader.
 - Get a custom recovery installed.
 - Flash your preferred method of rooting solutions from below.
-- Enjoy the ultimate power of rooted device.
+- Enjoy the ultimate power of a rooted device.
 
 ## Magisk
 
-[Magisk](https://github.com/topjohnwu/Magisk) is the most popular and powerful tool for Android power users, providing root access, boot scripts, and a module system for customizing Android devices systemless-ly. It's actively maintained and regularly updated.
+[Magisk](https://github.com/topjohnwu/Magisk) is the most popular and powerful tool for Android power users, providing root access, boot scripts, and a module system for customizing Android devices systemlessly. It's actively maintained and regularly updated.
 
 [Download Magisk](https://github.com/topjohnwu/Magisk/releases)
 
@@ -73,7 +72,7 @@ Generally following steps are common:
 [Download APatch](https://github.com/bmax121/APatch/releases)
 
 ## Which solution should I use?
-If you are a newbiew or don't know much about rooting i'd  recommend going with Magisk as it has a vast community support.
+If you are a newbie or don't know much about rooting, I'd  recommend going with Magisk, as it has a vast community support.
 
 ## LSPosed
 [LSPosed](https://github.com/LSPosed/LSPosed) is an open-source framework that allows users to install and use Xposed/LSPosed modules on their Android devices.
