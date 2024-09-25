@@ -137,11 +137,11 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 - [Island](https://play.google.com/store/apps/details?id=com.oasisfeng.island) - App isolation and cloning (Non-FOSS)
 
 ### Root Specific 
-- [Hide-My-Applist](https://github.com/Dr-TSNG/Hide-My-Applist)
+- [Hide My Applist](https://github.com/Dr-TSNG/Hide-My-Applist)
 - [Zygisk Detch](https://github.com/j-hc/zygisk-detach)
 - [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)
 - [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix)
-- [Trick Store](https://github.com/chiteroman/TrickyStore)
+- [Tricky Store](https://github.com/chiteroman/TrickyStore)
 
 
 ---
