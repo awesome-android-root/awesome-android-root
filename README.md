@@ -6,13 +6,17 @@ Pull requests are welcome ✨
 
 ## Table of Contents
   - [What is root?](#what-is-root)
-  - [Should I root](#should-i-root)
-  - [How to root](#how-to-root)
+  - [Should I root?](#should-i-root)
+    - [Disadvantages](#disadvantages)
+    - [Advantages](#advantages)
+    - [Debate](#debate)
+  - [How to root?](#how-to-root)
   - [Magisk](#magisk)
   - [KernelSU](#kernelsu)
   - [APatch](#apatch)
   - [Which solution should I use?](#which-solution-should-i-use)
   - [LSPosed](#lsposed)
+  - [Glossary](#glossary)
   - [Root Apps](#root-apps)
     - [Ad Blocking](#ad-blocking)
     - [App Management](#app-management)
@@ -25,13 +29,15 @@ Pull requests are welcome ✨
     - [Network Tools](#network-tools)
     - [Privacy and Security](#privacy-and-security)
     - [Root Specific](#root-specific)
-## What is root?
+    - [Termux](#termux)
 
+## What is root?
 Android rooting is the process of gaining privileged control (known as root access) over various Android subsystems. Rooting allows overcoming limitations that carriers and hardware manufacturers put on some devices, resulting in the ability to alter or replace system applications and settings, run specialized apps that require administrator-level permissions, or perform other operations that are otherwise inaccessible to a normal Android user.
 
 ## Should I root?
 Now to the main question. Should i root?
 First, let's view disadvantages then advantages.
+
 ### Disadvantages
 - As a root user, if you ever mess up, it's all your responsibility to fix it.
 - Personally i never faced it, even though i messed up the device to the worst condition. People usually say your device may hard brick.
@@ -57,20 +63,15 @@ Generally, the following steps are common:
 - Enjoy the ultimate power of a rooted device.
 
 ## Magisk
-
 [Magisk](https://github.com/topjohnwu/Magisk) is the most popular and powerful tool for Android power users, providing root access, boot scripts, and a module system for customizing Android devices systemlessly. It's actively maintained and regularly updated.
-
 [Download Magisk](https://github.com/topjohnwu/Magisk/releases)
 
 ## KernelSU
-
 [KernelSU](https://github.com/tiann/KernelSU) is a kernel-based root solution for Android devices. It provides a root method that works by modifying the kernel, offering an alternative to Magisk for some devices and use cases. KernelSU is gaining popularity, especially on newer devices.
-
 [Download KernelSU](https://github.com/tiann/KernelSU/releases)
 
 ## APatch
 [APatch](https://github.com/bmax121/APatch) uses patching of Android kernel and Android system to gain root access based on [Kernel Patch](https://github.com/bmax121/KernelPatch/).
-
 [Download APatch](https://github.com/bmax121/APatch/releases)
 
 ## Which solution should I use?
