@@ -132,11 +132,12 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 - [Island](https://play.google.com/store/apps/details?id=com.oasisfeng.island) - App isolation and cloning (Non-FOSS)
 
 ### Root Specific 
-- [Hide My Applist](https://github.com/Dr-TSNG/Hide-My-Applist)
-- [Zygisk Detch](https://github.com/j-hc/zygisk-detach)
-- [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)
-- [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix)
-- [Tricky Store](https://github.com/chiteroman/TrickyStore)
+- [Hide My Applist](https://github.com/Dr-TSNG/Hide-My-Applist) - An Xposed module to intercept applist detections. (FOSS)
+- [Zygisk Detch](https://github.com/j-hc/zygisk-detach) - Zygisk module to detach installed apps from Play Store, hooking binder. (FOSS)
+- [Flag Secure Patcher](https://github.com/j-hc/FlagSecurePatcher) - Magisk module to patch service.jar on device to disable secure lock and screenshot listeners. (FOSS)
+- [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases) - Hide Magisk. (FOSS)
+- [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix) - Fix Play Integrity (and SafetyNet) verdicts.  (FOSS)
+- [Tricky Store](https://github.com/chiteroman/TrickyStore)  (FOSS)
 
 ### Termux
 - [Termux](https://github.com/termux/termux-app) - A terminal emulator application for Android OS extendible by variety of packages. (FOSS)
