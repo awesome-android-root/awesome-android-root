@@ -96,22 +96,18 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 - [Hail](https://github.com/aistra0528/Hail) - Disable / Hide / Suspend / Uninstall Android apps (Foss)
 
 ### Automation
-
 - [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm) - Automation app (Non-FOSS)
 - [MacroDroid](https://play.google.com/store/search?q=macrodroid&c=apps) - Easy to use automation app (Non-Foss)
 
 ### Backup and Restore
-
 - [Neo Backup](https://github.com/NeoApplications/Neo-Backup) - Powerful open-source backup solution (FOSS)
 - [Swift Backup](https://play.google.com/store/apps/details?id=org.swiftapps.swiftbackup) - Modern backup solution with cloud support (Non-FOSS)
 
 ### Development and Debugging
-
 - [Termux](https://termux.com/) - Advanced terminal emulator and Linux environment (FOSS)
 - [LADB](https://github.com/tyronechen/LADB) - Local ADB shell (FOSS)
 
 ### File Management
-
 - [MiXplorer](https://mixplorer.com/) - Feature-rich file manager (FOSS)
 - [Root Explorer](https://play.google.com/store/apps/details?id=com.speedsoftware.rootexplorer) - File manager with root access (Non-FOSS)
 - [Xplore File Manager](https://play.google.com/store/apps/details?id=com.lonelycatgames.Xplore) - A file manager with root support (Non-FOSS) 
@@ -121,12 +117,11 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 - [Franco Kernel Manager](https://play.google.com/store/apps/details?id=com.franco.kernel&hl=en)
 
 ### Modifications
-
 - [Revanced Manager](https://github.com/ReVanced/revanced-manager) - YouTube with additional features (FOSS)
 - [Lucky Patcher](https://www.luckypatchers.com/) - App patcher and modifier (Use with caution, Non-FOSS)
+- [Live Boot](https://play.google.com/store/apps/details?id=eu.chainfire.liveboot) - Get a linux like live boot screen on adroid (Non-Foss)
 
 ### Network Tools
-
 - [Fing](https://play.google.com/store/apps/details?id=com.overlook.android.fing) - Network discovery and security (Non-FOSS)
 - [NetGuard](https://github.com/M66B/NetGuard/) - No-root firewall (FOSS)
 
@@ -142,6 +137,12 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 - [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)
 - [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix)
 - [Tricky Store](https://github.com/chiteroman/TrickyStore)
+
+### Termux
+- [Termux](https://github.com/termux/termux-app) - A terminal emulator application for Android OS extendible by variety of packages. (FOSS)
+- [Termux:API](https://github.com/termux/termux-api) - Termux add-on app which exposes device functionality as API to command line programs. (FOSS)
+- [Termux:Widget](https://github.com/termux/termux-widget) - Termux add-on app which adds shortcuts to commands on the home screen. (FOSS)
+- [Termux:Tasker](https://github.com/termux/termux-tasker) - Termux add-on app for integration with [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm). (FOSS)
 
 
 ---
