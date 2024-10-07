@@ -1,8 +1,7 @@
-# awesome-android-root
-
+# Awesome Android Root
 A comprehensive, up-to-date list of Android apps that require or utilize root privileges.
 
-Pull requests are welcome ✨
+> Pull requests are welcome ✨
 
 ## Table of Contents
   - [What is root?](#what-is-root)
