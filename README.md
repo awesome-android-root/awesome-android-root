@@ -10,9 +10,9 @@ A comprehensive, up-to-date list of Android apps that require or utilize root pr
     - [Advantages](#advantages)
     - [Debate](#debate)
   - [How to root?](#how-to-root)
-  - [Magisk](#magisk)
-  - [KernelSU](#kernelsu)
-  - [APatch](#apatch)
+    - [Magisk](#magisk)
+    - [KernelSU](#kernelsu)
+    - [APatch](#apatch)
   - [Which solution should I use?](#which-solution-should-i-use)
   - [LSPosed](#lsposed)
   - [Glossary](#glossary)
@@ -61,15 +61,15 @@ Generally, the following steps are common:
 - Flash your preferred method of rooting solutions from below.
 - Enjoy the ultimate power of a rooted device.
 
-## Magisk
+### Magisk
 [Magisk](https://github.com/topjohnwu/Magisk) is the most popular and powerful tool for Android power users, providing root access, boot scripts, and a module system for customizing Android devices systemlessly. It's actively maintained and regularly updated.
 [Download Magisk](https://github.com/topjohnwu/Magisk/releases)
 
-## KernelSU
+### KernelSU
 [KernelSU](https://github.com/tiann/KernelSU) is a kernel-based root solution for Android devices. It provides a root method that works by modifying the kernel, offering an alternative to Magisk for some devices and use cases. KernelSU is gaining popularity, especially on newer devices.
 [Download KernelSU](https://github.com/tiann/KernelSU/releases)
 
-## APatch
+### APatch
 [APatch](https://github.com/bmax121/APatch) uses patching of Android kernel and Android system to gain root access based on [Kernel Patch](https://github.com/bmax121/KernelPatch/).
 [Download APatch](https://github.com/bmax121/APatch/releases)
 
