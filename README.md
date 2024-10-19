@@ -126,7 +126,7 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 - [NetGuard](https://github.com/M66B/NetGuard/) - No-root firewall (FOSS)
 
 ### Privacy and Security
-- [Amarok](https://github.com/deltazefiro/Amarok-Hider)
+- [Amarok](https://github.com/deltazefiro/Amarok-Hider) - Android application which enables you to hide your private files & apps with a single click. (FOSS)
 - [Enable Screenshot ](https://github.com/LSPosed/DisableFlagSecure) - Enabling screenshots in apps that normally wouldn't allow it, and disabling screenshot(Android 14+) & screen record(Android 15+) detection. (FOSS)
 - [AFWall+](https://github.com/ukanth/afwall) - Iptables-based firewall (FOSS)
 - [Shelter](https://gitea.angry.im/PeterCxy/Shelter) - Isolate and clone apps (FOSS)
