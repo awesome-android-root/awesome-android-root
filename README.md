@@ -13,7 +13,7 @@ A comprehensive, up-to-date list of Android apps that require or utilize root pr
     - [Magisk](#magisk)
     - [KernelSU](#kernelsu)
     - [APatch](#apatch)
-  - [Which solution should I use?](#which-solution-should-i-use)
+    - [Which solution should I use?](#which-solution-should-i-use)
   - [LSPosed](#lsposed)
   - [Glossary](#glossary)
   - [Root Apps](#root-apps)
@@ -73,7 +73,7 @@ Generally, the following steps are common:
 [APatch](https://github.com/bmax121/APatch) uses patching of Android kernel and Android system to gain root access based on [Kernel Patch](https://github.com/bmax121/KernelPatch/).
 [Download APatch](https://github.com/bmax121/APatch/releases)
 
-## Which solution should I use?
+### Which solution should I use?
 If you are a newbie or don't know much about rooting, I'd  recommend going with Magisk, as it has a vast community support.
 
 ## LSPosed
