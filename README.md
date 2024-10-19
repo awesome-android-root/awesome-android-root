@@ -127,6 +127,7 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 
 ### Privacy and Security
 - [Amarok](https://github.com/deltazefiro/Amarok-Hider)
+- [Enable Screenshot ](https://github.com/LSPosed/DisableFlagSecure) - Enabling screenshots in apps that normally wouldn't allow it, and disabling screenshot(Android 14+) & screen record(Android 15+) detection. (FOSS)
 - [AFWall+](https://github.com/ukanth/afwall) - Iptables-based firewall (FOSS)
 - [Shelter](https://gitea.angry.im/PeterCxy/Shelter) - Isolate and clone apps (FOSS)
 - [Island](https://play.google.com/store/apps/details?id=com.oasisfeng.island) - App isolation and cloning (Non-FOSS)
