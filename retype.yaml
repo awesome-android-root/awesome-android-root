@@ -1,14 +1,12 @@
-input: ./docs/
+input: ./
 output: ./dist/
-url: https://fynks.netlify.app
+url: https://awesome-android-root.netlify.app
 branding:
   title: Awesome Android Root
 exclude:
 favicon: favicon.svg
 editor:
   enabled: false
-meta:
-  title: ' | Awesome Android Root'
 footer:
   links:
     - text: Repo

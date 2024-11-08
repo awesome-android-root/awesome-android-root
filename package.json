@@ -8,8 +8,7 @@
     "url": ""
   },
 "scripts": {
-  "build": "chmod +x generate.sh && npm run generate && npm run retype",
-  "generate": "./generate.sh",
+  "build": "npm run retype",
   "retype": "retype build"
 },
   "author": "Fynks",
