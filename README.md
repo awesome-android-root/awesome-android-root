@@ -13,9 +13,10 @@ A comprehensive, up-to-date list of Android apps that require or utilize root pr
     - [Magisk](#magisk)
     - [KernelSU](#kernelsu)
     - [APatch](#apatch)
-    - [Which solution should I use?](#which-solution-should-i-use)
-  - [LSPosed](#lsposed)
-  - [LSPosed Fork](#lsposed-fork)
+    - [Choosing a Solution](#which-solution-should-i-use)
+  - [Framework Solutions](#framework-solutions)
+    - [LSPosed](#lsposed)
+    - [LSPosed Fork](#lsposed-fork)
   - [Glossary](#glossary)
   - [Root Apps](#root-apps)
     - [Ad Blocking](#ad-blocking)
@@ -77,10 +78,11 @@ Generally, the following steps are common:
 ### Which solution should I use?
 If you are a newbie or don't know much about rooting, I'd  recommend going with Magisk, as it has a vast community support.
 
-## LSPosed
+## Framework Solutions
+### LSPosed
 [LSPosed](https://github.com/LSPosed/LSPosed) is an open-source framework that allows users to install and use Xposed/LSPosed modules on their Android devices.
 
-## LSPosed Fork
+### LSPosed Fork
 [LSPosed Fork by JingMatrix](https://github.com/JingMatrix/LSPosed) is a fork of LSPosed after LSPosed's development was halted for some reasons.It has support for Android 15 as well as some other improvements.
 
 ## Glossary
