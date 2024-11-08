@@ -81,7 +81,10 @@ extract_section() {
 }
 
 generate_docs() {
-    mkdir -p "$DOCS_DIR"
+    if ! mkdir -p "$DOCS_DIR"; then
+        log "ERROR" "Failed to create $DOCS_DIR directory"
+        exit 1
+    fi
     
     for section in "${!SECTIONS[@]}"; do
         local file="$DOCS_DIR/${section}.md"

@@ -7,12 +7,11 @@
     "type": "git",
     "url": ""
   },
-  "scripts": {
-    "build": "npm run generate && npm run retype",
-    "generate": "./generate.sh",
-    "retype": "retype build",
-    "publish": "npm publish"
-  },
+"scripts": {
+  "build": "chmod +x generate.sh && npm run generate && npm run retype",
+  "generate": "./generate.sh",
+  "retype": "retype build"
+},
   "author": "Fynks",
   "dependencies": {
     "retypeapp": "^3.6.0"
