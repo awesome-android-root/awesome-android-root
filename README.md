@@ -118,7 +118,8 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 - [Solid Explorer](https://play.google.com/store/apps/details?id=pl.solidexplorer2) - Powerful file manager with root support (Non-FOSS)
 
 ### Kernel
-- [Franco Kernel Manager](https://play.google.com/store/apps/details?id=com.franco.kernel&hl=en)
+- [Franco Kernel Manager](https://play.google.com/store/apps/details?id=com.franco.kernel) - A complete toolbox for all devices with a rich that combines everything you need to manage, tweak and empower your device (Non-FOSS)
+- [EX Kernel Manager](https://play.google.com/store/apps/details?id=flar2.exkernelmanager) - Root tool for backup and flashing kernels, tweaking color, sound, gestures and other kernel settings (Non-FOSS)
 
 ### Modifications
 - [Revanced Manager](https://github.com/ReVanced/revanced-manager) - YouTube with additional features (FOSS)
@@ -137,6 +138,8 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 - [Island](https://play.google.com/store/apps/details?id=com.oasisfeng.island) - App isolation and cloning (Non-FOSS)
 
 ### Root Specific 
+- [Rot Checker](https://play.google.com/store/apps/details?id=com.joeykrim.rootcheck) - Verify proper root (superuser or su) 
+- [Magisk Manager](https://github.com/topjohnwu/Magisk) - Manage Magisk modules and root permissions. (FOSS)
 - [Hide My Applist](https://github.com/Dr-TSNG/Hide-My-Applist) - An Xposed module to intercept applist detections. (FOSS)
 - [Zygisk Detch](https://github.com/j-hc/zygisk-detach) - Zygisk module to detach installed apps from Play Store, hooking binder. (FOSS)
 - [Flag Secure Patcher](https://github.com/j-hc/FlagSecurePatcher) - Magisk module to patch service.jar on device to disable secure lock and screenshot listeners. (FOSS)
@@ -148,6 +151,9 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 - [Termux](https://github.com/termux/termux-app) - A terminal emulator application for Android OS extendible by variety of packages. (FOSS)
 - [Termux:API](https://github.com/termux/termux-api) - Termux add-on app which exposes device functionality as API to command line programs. (FOSS)
 - [Termux:Widget](https://github.com/termux/termux-widget) - Termux add-on app which adds shortcuts to commands on the home screen. (FOSS)
+- [Termux:Styling](https://github.com/termux/termux-styling) - A Termux add-on app to customize the terminal font and color theme. (FOSS)
+- [Termux:Boot](https://github.com/termux/termux-boot) - Run scripts at device boot. (FOSS)
+- [Termux:Float](https://github.com/termux/termux-float) - Run Termux in a floating window. (FOSS)
 - [Termux:Tasker](https://github.com/termux/termux-tasker) - Termux add-on app for integration with [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm). (FOSS)
 
 
