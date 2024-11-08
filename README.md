@@ -6,8 +6,8 @@ A comprehensive, up-to-date list of Android apps that require or utilize root pr
 ## Table of Contents
   - [What is root?](#what-is-root)
   - [Should I root?](#should-i-root)
-    - [Disadvantages](#disadvantages)
     - [Advantages](#advantages)
+    - [Disadvantages](#disadvantages)
     - [Debate](#debate)
   - [How to root?](#how-to-root)
     - [Magisk](#magisk)
@@ -15,6 +15,7 @@ A comprehensive, up-to-date list of Android apps that require or utilize root pr
     - [APatch](#apatch)
     - [Which solution should I use?](#which-solution-should-i-use)
   - [LSPosed](#lsposed)
+  - [LSPosed Fork](#lsposed-fork)
   - [Glossary](#glossary)
   - [Root Apps](#root-apps)
     - [Ad Blocking](#ad-blocking)
@@ -37,18 +38,18 @@ Android rooting is the process of gaining privileged control (known as root acce
 Now to the main question. Should i root?
 First, let's view disadvantages then advantages.
 
-### Disadvantages
-- As a root user, if you ever mess up, it's all your responsibility to fix it.
-- Personally i never faced it, even though i messed up the device to the worst condition. People usually say your device may hard brick.
-- Banking apps won't work. Recently, some apps are detecting root even with Magisk (there are workarounds for most of them).
-- Rooting process if messed, Although it can be fixed, it can be tough for beginners.
-
 ### Advantages
 - You can grant apps, Su and they'll do a great job for you.
 - You can tweak kernel= great performance for games.
 - You can ban ads from your device completely.
 - You can uninstall unnecessary apps, i.e., system apps.
 - You can perform much more super enjoying tasks, they all can't be listed here.
+
+### Disadvantages
+- As a root user, if you ever mess up, it's all your responsibility to fix it.
+- Personally i never faced it, even though i messed up the device to the worst condition. People usually say your device may hard brick.
+- Banking apps won't work. Recently, some apps are detecting root even with Magisk (there are workarounds for most of them).
+- Rooting process if messed, Although it can be fixed, it can be tough for beginners.
 
 ### Debate
 - Here is the [reddit thread](https://www.reddit.com/r/AndroidQuestions/comments/1c69h3q/is_rooting_still_something_you_would_do_in_2024/) Debating if its worth it rooting in 2024 (but in my opinion its worth every penny).
@@ -79,11 +80,14 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 ## LSPosed
 [LSPosed](https://github.com/LSPosed/LSPosed) is an open-source framework that allows users to install and use Xposed/LSPosed modules on their Android devices.
 
+## LSPosed Fork
+[LSPosed Fork by JingMatrix](https://github.com/JingMatrix/LSPosed) is a fork of LSPosed after LSPosed's development was halted for some reasons.It has support for Android 15 as well as some other improvements.
+
 ## Glossary
 -  FOSS = Free and Open Source Software
 -  Non-FOSS = Closed Source Software
-## Root Apps
 
+## Root Apps
 ### Ad Blocking
 
 - [AdAway](https://adaway.org/) - Open-source ad blocker using hosts file (FOSS)
