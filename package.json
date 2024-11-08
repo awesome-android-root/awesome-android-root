@@ -8,7 +8,8 @@
     "url": ""
   },
   "scripts": {
-    "build": "python generate_docs.py && npm run retype",
+    "build": "npm run generate && npm run retype",
+    "generate": "./generate.sh",
     "retype": "retype build",
     "publish": "npm publish"
   },
