@@ -1,0 +1,19 @@
+input: ./docs/
+output: ./dist/
+url: https://fynks.netlify.app
+branding:
+  title: Awesome Android Root
+exclude:
+favicon: favicon.svg
+editor:
+  enabled: false
+meta:
+  title: ' | Awesome Android Root'
+footer:
+  links:
+    - text: Repo
+      link: https://github.com/fynks/awesome-android-root
+      icon: mark-github
+    - text: License
+      link: https://github.com/fynks/awesome-android-root/blob/main/LICENSE
+      icon: shield-check

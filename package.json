@@ -1,0 +1,19 @@
+{
+  "name": "@fynks/awesome-android-root",
+  "version": "0.1.0",
+  "main": "index.html",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "build": "python generate_docs.py && npm run retype",
+    "retype": "retype build",
+    "publish": "npm publish"
+  },
+  "author": "Fynks",
+  "dependencies": {
+    "retypeapp": "^3.6.0"
+  }
+}
