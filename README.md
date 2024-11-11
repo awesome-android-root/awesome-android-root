@@ -140,14 +140,14 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 - [Shelter](https://gitea.angry.im/PeterCxy/Shelter) - Isolate and clone apps (FOSS)
 - [Island](https://play.google.com/store/apps/details?id=com.oasisfeng.island) - App isolation and cloning (Non-FOSS)
 
-### Root Specific 
-- [Root Checker](https://play.google.com/store/apps/details?id=com.joeykrim.rootcheck) - Verify proper root (Non-FOSS)
-- [Magisk Manager](https://github.com/topjohnwu/Magisk) - Manage Magisk modules and root permissions. (FOSS)
+### Root Specific
 - [Hide My Applist](https://github.com/Dr-TSNG/Hide-My-Applist) - An Xposed module to intercept applist detections. (FOSS)
-- [Zygisk Detch](https://github.com/j-hc/zygisk-detach) - Zygisk module to detach installed apps from Play Store, hooking binder. (FOSS)
-- [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases) - Hide Magisk. (FOSS)
+- [Magisk Manager](https://github.com/topjohnwu/Magisk) - Manage Magisk modules and root permissions. (FOSS)
 - [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix) - Fix Play Integrity (and SafetyNet) verdicts.  (FOSS)
+- [Root Checker](https://play.google.com/store/apps/details?id=com.joeykrim.rootcheck) - Verify proper root (Non-FOSS)
+- [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases) - Hide Magisk. (FOSS)
 - [Tricky Store](https://github.com/chiteroman/TrickyStore)  (FOSS)
+- [Zygisk Detch](https://github.com/j-hc/zygisk-detach) - Zygisk module to detach installed apps from Play Store, hooking binder. (FOSS)
 
 ### Termux
 - [Termux](https://github.com/termux/termux-app) - A terminal emulator application for Android OS extendible by variety of packages. (FOSS)
