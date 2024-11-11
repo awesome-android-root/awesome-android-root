@@ -110,7 +110,7 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 - [Swift Backup](https://play.google.com/store/apps/details?id=org.swiftapps.swiftbackup) - Modern backup solution with cloud support (Non-FOSS)
 
 ### Development and Debugging
-- [Termux](https://termux.com/) - Advanced terminal emulator and Linux environment (FOSS)
+- [Termux](https://termux.com/) - Advanced terminal emulator and Linux environment (FOSS) - [More on Termux](#termux)
 - [LADB](https://github.com/tyronechen/LADB) - Local ADB shell (FOSS)
 
 ### File Management
@@ -135,6 +135,7 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 ### Privacy and Security
 - [Amarok](https://github.com/deltazefiro/Amarok-Hider) - Android application which enables you to hide your private files & apps with a single click. (FOSS)
 - [Enable Screenshot ](https://github.com/LSPosed/DisableFlagSecure) - Enabling screenshots in apps that normally wouldn't allow it, and disabling screenshot(Android 14+) & screen record(Android 15+) detection. (FOSS)
+- [Flag Secure Patcher](https://github.com/j-hc/FlagSecurePatcher) - Magisk module to patch service.jar on device to disable secure lock and screenshot listeners. (FOSS)
 - [AFWall+](https://github.com/ukanth/afwall) - Iptables-based firewall (FOSS)
 - [Shelter](https://gitea.angry.im/PeterCxy/Shelter) - Isolate and clone apps (FOSS)
 - [Island](https://play.google.com/store/apps/details?id=com.oasisfeng.island) - App isolation and cloning (Non-FOSS)
@@ -144,7 +145,6 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 - [Magisk Manager](https://github.com/topjohnwu/Magisk) - Manage Magisk modules and root permissions. (FOSS)
 - [Hide My Applist](https://github.com/Dr-TSNG/Hide-My-Applist) - An Xposed module to intercept applist detections. (FOSS)
 - [Zygisk Detch](https://github.com/j-hc/zygisk-detach) - Zygisk module to detach installed apps from Play Store, hooking binder. (FOSS)
-- [Flag Secure Patcher](https://github.com/j-hc/FlagSecurePatcher) - Magisk module to patch service.jar on device to disable secure lock and screenshot listeners. (FOSS)
 - [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases) - Hide Magisk. (FOSS)
 - [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix) - Fix Play Integrity (and SafetyNet) verdicts.  (FOSS)
 - [Tricky Store](https://github.com/chiteroman/TrickyStore)  (FOSS)
