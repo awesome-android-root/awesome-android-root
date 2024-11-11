@@ -162,3 +162,8 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 ---
 
 **Note**: Always be cautious when using root apps, as they have the potential to modify system files and settings.
+
+---
+You are visitor number:
+
+![Visitor Count](https://profile-counter.glitch.me/fynks/count.svg)
