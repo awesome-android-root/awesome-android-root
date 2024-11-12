@@ -114,6 +114,7 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 - **[Canta](https://github.com/samolego/Canta?tab=readme-ov-file)** -  Uninstall any app without root using Shizuku (Needs [Shizuku](https://shizuku.rikka.app/) to be installed and running) (F)SS
 
 ### Development and Debugging
+- **[Shizuku](https://github.com/RikkaApps/Shizuku)** - Use system APIs directly with ADB/root privileges (FOSS)
 - **[Termux](https://termux.com/)** - Advanced terminal emulator and Linux environment (FOSS) - **[More on Termux](#termux)**
 - **[LADB](https://github.com/tyronechen/LADB)** - Local ADB shell (FOSS)
 
@@ -170,3 +171,6 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 **Note**: Always be cautious when using root apps, as they have the potential to modify system files and settings.
 
 ---
+You are visitor number:
+
+![Visitor Count](https://profile-counter.glitch.me/fynks/count.svg)
