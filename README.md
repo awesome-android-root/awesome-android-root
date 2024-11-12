@@ -123,6 +123,8 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 ### Kernel
 - **[Franco Kernel Manager](https://play.google.com/store/apps/details?id=com.franco.kernel)** - A complete toolbox for all devices with a rich that combines everything you need to manage, tweak and empower your device (Non-FOSS)
 - **[EX Kernel Manager](https://play.google.com/store/apps/details?id=flar2.exkernelmanager)** - Root tool for backup and flashing kernels, tweaking color, sound, gestures and other kernel settings (Non-FOSS)
+- **[SmartPack-Kernel-Manager](https://github.com/SmartPack/SmartPack-Kernel-Manager)** - A Kernel Manager (FOSS)
+
 
 ### Modifications
 - **[Revanced Manager](https://github.com/ReVanced/revanced-manager)** - YouTube with additional features (FOSS)
@@ -165,6 +167,3 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 **Note**: Always be cautious when using root apps, as they have the potential to modify system files and settings.
 
 ---
-You are visitor number:
-
-![Visitor Count](https://profile-counter.glitch.me/fynks/count.svg)
