@@ -106,6 +106,9 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 - **[Neo Backup](https://github.com/NeoApplications/Neo-Backup)** - Powerful open-source backup solution (FOSS)
 - **[Swift Backup](https://play.google.com/store/apps/details?id=org.swiftapps.swiftbackup)** - Modern backup solution with cloud support (Non-FOSS)
 
+### Debloating
+- **[De-Bloater](https://github.com/sunilpaulmathew/De-Bloater)** - An application using the power of Magisk to debloat unwanted system apps! -  (FOSS)
+
 ### Development and Debugging
 - **[Termux](https://termux.com/)** - Advanced terminal emulator and Linux environment (FOSS) - **[More on Termux](#termux)**
 - **[LADB](https://github.com/tyronechen/LADB)** - Local ADB shell (FOSS)
