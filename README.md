@@ -123,7 +123,7 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 ### Modifications
 - **[Revanced Manager](https://github.com/ReVanced/revanced-manager)** - YouTube with additional features (FOSS)
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (Use with caution, Non-FOSS)
-- **[Live Boot](https://play.google.com/store/apps/details?id=eu.chainfire.liveboot)** - Get a linux like live boot screen on adroid (Non-Foss)
+- **[Live Boot](https://play.google.com/store/apps/details?id=eu.chainfire.liveboot)** - Get a linux like live boot screen on Android (Non-Foss)
 
 ### Network Tools
 - **[Fing](https://play.google.com/store/apps/details?id=com.overlook.android.fing)** - Network discovery and security (Non-FOSS)
@@ -144,7 +144,7 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 - **[Root Checker](https://play.google.com/store/apps/details?id=com.joeykrim.rootcheck)** - Verify proper root (Non-FOSS)
 - **[Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)** - Hide Magisk. (FOSS)
 - **[Tricky Store](https://github.com/chiteroman/TrickyStore)  (FOSS)
-- **[Zygisk Detch](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. (FOSS)
+- **[Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. (FOSS)
 
 ### Termux
 - **[Termux](https://github.com/termux/termux-app)** - A terminal emulator application for Android OS extendible by variety of packages. (FOSS)
