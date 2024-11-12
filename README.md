@@ -108,6 +108,7 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 
 ### Debloating
 - **[De-Bloater](https://github.com/sunilpaulmathew/De-Bloater)** - An application using the power of Magisk to debloat unwanted system apps! -  (FOSS)
+- **[Canta](https://github.com/samolego/Canta?tab=readme-ov-file)** -  Uninstall any app without root using Shizuku (Needs [Shizuku](https://shizuku.rikka.app/) to be installed and running) (F)SS
 
 ### Development and Debugging
 - **[Termux](https://termux.com/)** - Advanced terminal emulator and Linux environment (FOSS) - **[More on Termux](#termux)**
