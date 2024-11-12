@@ -107,7 +107,7 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 - **[Swift Backup](https://play.google.com/store/apps/details?id=org.swiftapps.swiftbackup)** - Modern backup solution with cloud support (Non-FOSS)
 
 ### Development and Debugging
-- **[Termux](https://termux.com/)** - Advanced terminal emulator and Linux environment (FOSS)** - **[More on Termux](#termux)
+- **[Termux](https://termux.com/)** - Advanced terminal emulator and Linux environment (FOSS) - **[More on Termux](#termux)**
 - **[LADB](https://github.com/tyronechen/LADB)** - Local ADB shell (FOSS)
 
 ### File Management
