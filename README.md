@@ -115,7 +115,7 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 - **[Root Explorer](https://play.google.com/store/apps/details?id=com.speedsoftware.rootexplorer)** - File manager with root access (Non-FOSS)
 - **[Xplore File Manager](https://play.google.com/store/apps/details?id=com.lonelycatgames.Xplore)** - A file manager with root support (Non-FOSS) 
 - **[Solid Explorer](https://play.google.com/store/apps/details?id=pl.solidexplorer2)** - Powerful file manager with root support (Non-FOSS)
-
+- **[Total Commander](https://play.google.com/store/apps/details?id=com.ghisler.android.TotalCommander)** (Non-FOSS)
 ### Kernel
 - **[Franco Kernel Manager](https://play.google.com/store/apps/details?id=com.franco.kernel)** - A complete toolbox for all devices with a rich that combines everything you need to manage, tweak and empower your device (Non-FOSS)
 - **[EX Kernel Manager](https://play.google.com/store/apps/details?id=flar2.exkernelmanager)** - Root tool for backup and flashing kernels, tweaking color, sound, gestures and other kernel settings (Non-FOSS)
