@@ -106,6 +106,9 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 - **[Neo Backup](https://github.com/NeoApplications/Neo-Backup)** - Powerful open-source backup solution (FOSS)
 - **[Swift Backup](https://play.google.com/store/apps/details?id=org.swiftapps.swiftbackup)** - Modern backup solution with cloud support (Non-FOSS)
 
+### Cleaning Apps
+- **[SD Maid 2/SE](https://github.com/d4rken-org/sdmaid-se)** - A file management tool for Android that specialises in maintenance. Its core purpose is freeing up space and removing unwanted data. (FOSS)
+
 ### Debloating
 - **[De-Bloater](https://github.com/sunilpaulmathew/De-Bloater)** - An application using the power of Magisk to debloat unwanted system apps! -  (FOSS)
 - **[Canta](https://github.com/samolego/Canta?tab=readme-ov-file)** -  Uninstall any app without root using Shizuku (Needs [Shizuku](https://shizuku.rikka.app/) to be installed and running) (F)SS
