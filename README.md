@@ -23,6 +23,7 @@ A comprehensive, up-to-date list of Android apps that require or utilize root pr
     - [App Management](#app-management)
     - [Automation](#automation)
     - [Backup and Restore](#backup-and-restore)
+    - [Battery Management](#battery-management)
     - [Cleaning Apps](#cleaning-apps)
     - [Debloating](#debloating)
     - [Development and Debugging](#development-and-debugging)
@@ -107,6 +108,10 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 ### Backup and Restore
 - **[Neo Backup](https://github.com/NeoApplications/Neo-Backup)** - Powerful open-source backup solution (FOSS)
 - **[Swift Backup](https://play.google.com/store/apps/details?id=org.swiftapps.swiftbackup)** - Modern backup solution with cloud support (Non-FOSS)
+
+### Battery Management
+- **[AccA](https://github.com/MatteCarra/AccA)** - Advanced Charging Controller app (FOSS)
+- **[Battery Guru](https://play.google.com/store/apps/details?id=com.paget96.batteryguru)** - Battery optimization and monitoring (Non-FOSS)
 
 ### Cleaning Apps
 - **[SD Maid 2/SE](https://github.com/d4rken-org/sdmaid-se)** - A file management tool for Android that specialises in maintenance. Its core purpose is freeing up space and removing unwanted data. (FOSS)
