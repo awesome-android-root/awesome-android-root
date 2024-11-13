@@ -67,23 +67,23 @@ Generally, the following steps are common:
 - Enjoy the ultimate power of a rooted device.
 
 ### Magisk
-**[Magisk](https://github.com/topjohnwu/Magisk)** is the most popular and powerful tool for Android power users, providing root access, boot scripts, and a module system for customizing Android devices systemlessly. It's actively maintained and regularly updated.
+**[Magisk](https://github.com/topjohnwu/Magisk)** is the most popular and powerful tool for Android power users, providing root access, boot scripts, and a module system for customizing Android devices systemlessly. It's actively maintained and regularly updated. - `FOSS`
 
 ### KernelSU
-**[KernelSU](https://github.com/tiann/KernelSU)** is a kernel-based root solution for Android devices. It provides a root method that works by modifying the kernel, offering an alternative to Magisk for some devices and use cases. KernelSU is gaining popularity, especially on newer devices.
+**[KernelSU](https://github.com/tiann/KernelSU)** is a kernel-based root solution for Android devices. It provides a root method that works by modifying the kernel, offering an alternative to Magisk for some devices and use cases. KernelSU is gaining popularity, especially on newer devices. - `FOSS`
 
 ### APatch
-**[APatch](https://github.com/bmax121/APatch)** uses patching of Android kernel and Android system to gain root access based on [Kernel Patch](https://github.com/bmax121/KernelPatch/).
+**[APatch](https://github.com/bmax121/APatch)** uses patching of Android kernel and Android system to gain root access based on [Kernel Patch](https://github.com/bmax121/KernelPatch/). - `FOSS`
 
 ### Which solution should I use?
 If you are a newbie or don't know much about rooting, I'd  recommend going with Magisk, as it has a vast community support.
 
 ## Framework Solutions
 ### LSPosed
-**[LSPosed](https://github.com/LSPosed/LSPosed)** is an open-source framework that allows users to install and use Xposed/LSPosed modules on their Android devices.
+**[LSPosed](https://github.com/LSPosed/LSPosed)** is an open-source framework that allows users to install and use Xposed/LSPosed modules on their Android devices. - `FOSS`
 
 ### LSPosed Fork
-**[LSPosed Fork by JingMatrix](https://github.com/JingMatrix/LSPosed)** is a fork of LSPosed after LSPosed's development was halted for some reasons.It has support for Android 15 as well as some other improvements.
+**[LSPosed Fork by JingMatrix](https://github.com/JingMatrix/LSPosed)** is a fork of LSPosed after LSPosed's development was halted for some reasons.It has support for Android 15 as well as some other improvements. - `FOSS`
 
 ## Glossary
 -  **`FOSS`** = Free and Open Source Software
