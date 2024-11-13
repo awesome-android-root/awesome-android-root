@@ -1,19 +1,22 @@
 # Awesome Android Root
+
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+
 A comprehensive, up-to-date list of Android apps that require or utilize root privileges.
 
 > Pull requests are welcome ✨
 
 ## Table of Contents
-  - [What is root?](#what-is-root)
-  - [Should I root?](#should-i-root)
+  - [What is root](#what-is-root)
+  - [Should I root](#should-i-root)
     - [Advantages](#advantages)
     - [Disadvantages](#disadvantages)
     - [Debate](#debate)
-  - [How to root?](#how-to-root)
+  - [How to root](#how-to-root)
     - [Magisk](#magisk)
     - [KernelSU](#kernelsu)
     - [APatch](#apatch)
-    - [Which solution should I use?](#which-solution-should-i-use)
+    - [Choosing a solution](#which-solution-should-i-use)
   - [Framework Solutions](#framework-solutions)
     - [LSPosed](#lsposed)
     - [LSPosed Fork](#lsposed-fork)
