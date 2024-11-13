@@ -16,7 +16,7 @@ A comprehensive, up-to-date list of Android apps that require or utilize root pr
     - [Magisk](#magisk)
     - [KernelSU](#kernelsu)
     - [APatch](#apatch)
-    - [Choosing a solution](#which-solution-should-i-use)
+    - [Which solution should I use](#which-solution-should-i-use)
   - [Framework Solutions](#framework-solutions)
     - [LSPosed](#lsposed)
     - [LSPosed Fork](#lsposed-fork)
@@ -38,10 +38,10 @@ A comprehensive, up-to-date list of Android apps that require or utilize root pr
     - [Root Specific](#root-specific)
     - [Termux](#termux)
 
-## What is root?
+## What is root
 Android rooting is the process of gaining privileged control (known as root access) over various Android subsystems. Rooting allows overcoming limitations that carriers and hardware manufacturers put on some devices, resulting in the ability to alter or replace system applications and settings, run specialized apps that require administrator-level permissions, or perform other operations that are otherwise inaccessible to a normal Android user.
 
-## Should I root?
+## Should I root
 Now to the main question. Should i root?
 First, let's view disadvantages then advantages.
 
@@ -61,7 +61,7 @@ First, let's view disadvantages then advantages.
 ### Debate
 - Here is the [reddit thread](https://www.reddit.com/r/AndroidQuestions/comments/1c69h3q/is_rooting_still_something_you_would_do_in_2024/) Debating if its worth it rooting in 2024 (but in my opinion its worth every penny).
   
-## How to root?
+## How to root
 It really depends upon your device; it's recommended to check the XDA forum for your device, which usually has a good guide for your devices. Another option is telegram groups for your devices, as they have specific communities related to your device.
 Generally, the following steps are common:
 - Unlock the boot loader.
@@ -78,7 +78,7 @@ Generally, the following steps are common:
 ### APatch
 **[APatch](https://github.com/bmax121/APatch)** uses patching of Android kernel and Android system to gain root access based on [Kernel Patch](https://github.com/bmax121/KernelPatch/). - `FOSS`
 
-### Which solution should I use?
+### Which solution should I use
 If you are a newbie or don't know much about rooting, I'd  recommend going with Magisk, as it has a vast community support.
 
 ## Framework Solutions
