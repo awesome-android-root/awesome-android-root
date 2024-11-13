@@ -123,7 +123,7 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 ### Development and Debugging
 - **[Shizuku](https://github.com/RikkaApps/Shizuku)** - Use system APIs directly with ADB/root privileges (FOSS)
 - **[Termux](https://termux.com/)** - Advanced terminal emulator and Linux environment (FOSS) - **[More on Termux](#termux)**
-- **[LADB](https://github.com/tyronechen/LADB)** - Local ADB shell (FOSS)
+- **[LADB](https://github.com/tytydraco/LADB)** - Local ADB shell - (FOSS) - [Free Build](https://github.com/hyperio546/ladb-builds?tab=readme-ov-file)
 
 ### File Management
 - **[MiXplorer](https://mixplorer.com/)** - Feature-rich file manager (FOSS)
@@ -161,6 +161,7 @@ If you are a newbie or don't know much about rooting, I'd  recommend going with 
 - **[Root Checker](https://play.google.com/store/apps/details?id=com.joeykrim.rootcheck)** - Verify proper root (Non-FOSS)
 - **[Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)** - Hide Magisk. (Non-FOSS)
 - **[Tricky Store](https://github.com/chiteroman/TrickyStore)**  (FOSS)
+- **[Zygisk-Assistant](https://github.com/snake-4/Zygisk-Assistant)** - A Zygisk module to hide root for KernelSU, Magisk and APatch. (FOSS)
 - **[Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. (FOSS)
 
 ### Termux
