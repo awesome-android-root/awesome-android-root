@@ -39,6 +39,7 @@ A comprehensive, up-to-date list of Android apps that require or utilize root pr
   - [Network Tools](#network-tools)
   - [Privacy and Security](#privacy-and-security)
   - [Root Specific](#root-specific)
+  - [System Tools](#system-tools)
   - [Termux](#termux)
 
 ## Understanding Root
