@@ -136,7 +136,7 @@ Frameworks provide a foundation for extending root functionality through modules
 - **[LADB](https://github.com/tytydraco/LADB)** - Local ADB shell. `FOSS` - [Free Build](https://github.com/hyperio546/ladb-builds?tab=readme-ov-file)
 
 ### File Management
-- **[MiXplorer](https://mixplorer.com/)** - Feature-rich file manager. `FOSS`
+- **[MiXplorer](https://mixplorer.com/)** - Feature-rich file manager. `Proprietary`
 - **[Root Explorer](https://play.google.com/store/apps/details?id=com.speedsoftware.rootexplorer)** - File manager with root access. `Proprietary`
 - **[Xplore File Manager](https://play.google.com/store/apps/details?id=com.lonelycatgames.Xplore)** - A file manager with root support. `Proprietary` 
 - **[Solid Explorer](https://play.google.com/store/apps/details?id=pl.solidexplorer2)** - Powerful file manager with root support. `Proprietary`
