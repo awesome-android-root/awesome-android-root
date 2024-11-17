@@ -134,7 +134,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 ## FAQs
 An index of various rooting related Frequently Asked Questions.
 
-[Read FAQs →](faq.md)
+[Read FAQs →](guide.md#frequently-asked-questions)
 
 ---
 
