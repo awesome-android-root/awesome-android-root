@@ -7,8 +7,10 @@ A comprehensive, up-to-date list of Android apps that require or utilize root pr
 > Pull requests are welcome ✨
 
 ## Table of Contents
+- [Awesome Android Root](#awesome-android-root)
+  - [Table of Contents](#table-of-contents)
   - [What is Root Access](#what-is-root-access)
-  - [Root Guides \& Solutions](#root-guides--solutions)
+  - [Root Guide \& Solutions](#root-guide--solutions)
   - [Glossary](#glossary)
   - [Root Apps](#root-apps)
     - [Ad Blocking](#ad-blocking)
