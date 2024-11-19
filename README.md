@@ -4,7 +4,7 @@
 
 A comprehensive, up-to-date list of Android apps that require or utilize root privileges.
 
-> Pull requests are welcome ✨
+> Pull requests are welcome ✨ Please consult [contributing.md](contributing.md)
 
 ## Table of Contents
 - [What is Root Access](#what-is-root-access)
