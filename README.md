@@ -73,12 +73,13 @@ A comprehensive guide covering different rooting methods, decision-making and di
 
 ### Debloating
 - **[De-Bloater](https://github.com/sunilpaulmathew/De-Bloater)** - An application using the power of Magisk to debloat unwanted system apps!. `FOSS`
-- **[Canta](https://github.com/samolego/Canta?tab=readme-ov-file)** -  Uninstall any app without root using Shizuku (Needs [Shizuku](https://shizuku.rikka.app/) to be installed and running). `FOSS`
+- **[Canta](https://github.com/samolego/Canta)** -  Uninstall any app without root using Shizuku (Needs [Shizuku](https://shizuku.rikka.app/) to be installed and running). `FOSS`
 
 ### Development and Debugging
 - **[Shizuku](https://github.com/RikkaApps/Shizuku)** - Use system APIs directly with ADB/root privileges. `FOSS`
 - **[Termux](https://termux.com/)** - Advanced terminal emulator and Linux environment. `FOSS` - **[More on Termux](#termux)**
-- **[LADB](https://github.com/tytydraco/LADB)** - Local ADB shell. `FOSS` - [Free Build](https://github.com/hyperio546/ladb-builds?tab=readme-ov-file)
+- **[LADB](https://github.com/tytydraco/LADB)** - Local ADB shell. `FOSS` - [Free Build](https://github.com/hyperio546/ladb-builds)
+- **[USB HID Client](https://github.com/Arian04/android-hid-client)** - Allows you to use your phone as a keyboard and mouse WITHOUT any software on the other end. `FOSS`
 
 ### File Management
 - **[MiXplorer](https://mixplorer.com/)** - Feature-rich file manager. `Proprietary`
