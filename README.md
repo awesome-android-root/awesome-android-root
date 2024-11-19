@@ -98,6 +98,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 - **[Live Boot](https://play.google.com/store/apps/details?id=eu.chainfire.liveboot)** - Get a linux like live boot screen on Android. `Proprietary`
 
 ### Network Tools
+- **[VPN Hotspot](https://github.com/Mygod/VPNHotspot)** -  Share your VPN connection over hotspot or repeater. `FOSS`
 - **[Fing](https://play.google.com/store/apps/details?id=com.overlook.android.fing)** - Network discovery and security. `Proprietary`
 - **[NetGuard](https://github.com/M66B/NetGuard/)** - No-root firewall. `FOSS`
 
