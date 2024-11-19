@@ -2,8 +2,6 @@
 
 A comprehensive, up-to-date list of Android apps that require or utilize root privileges.
 
-> Pull requests are welcome ✨ Please consult [contributing.md](contributing.md)
-
 ## Table of Contents
 - [What is Root Access](#what-is-root-access)
 - [Root Guide \& Solutions](#root-guide--solutions)
@@ -27,6 +25,7 @@ A comprehensive, up-to-date list of Android apps that require or utilize root pr
   - [Termux](#termux)
   - [Tools](#tools)
 - [FAQs](#faqs)
+- [Contributions](#contributions)
 
 ## What is Root Access
 Android rooting is the process of gaining privileged control (known as root access) over various Android subsystems. 
@@ -147,11 +146,15 @@ An index of various rooting related Frequently Asked Questions.
 
 [Read FAQs →](guide.md#frequently-asked-questions)
 
+## Contributions
+We welcome contributions from the community! Please read our [Contributing Guidelines](contributing.md) to get started.
+
 ---
 
 **Note**: Always be cautious when using root apps, as they have the potential to modify system files and settings.
 
----
+--- 
+
 You are visitor number:
 
 ![Visitor Count](https://profile-counter.glitch.me/fynks/count.svg)
