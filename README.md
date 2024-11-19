@@ -55,6 +55,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 - **[App Manager](https://github.com/MuntashirAkon/AppManager)** - A full-featured package manager and viewer for Android. `FOSS`
 - **[Inure](https://github.com/Hamza417/Inure)** - An elegant and beautiful premium Android app manager for rooted and non-rooted devices. `FOSS`
 - **[Hail](https://github.com/aistra0528/Hail)** - Disable / Hide / Suspend / Uninstall Android apps. `FOSS`
+- **[Package Manager](https://github.com/SmartPack/PackageManager)** - A highly powerful app to manage both system and user apps installed on an android device.  `FOSS`
 
 ### Automation
 - **[Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)** - Automation app. `Proprietary`
