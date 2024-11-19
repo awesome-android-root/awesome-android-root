@@ -7,27 +7,28 @@ A comprehensive, up-to-date list of Android apps that require or utilize root pr
 > Pull requests are welcome ✨
 
 ## Table of Contents
-  - [What is Root Access](#what-is-root-access)
-  - [Root Guide \& Solutions](#root-guide--solutions)
-  - [Glossary](#glossary)
-  - [Root Apps](#root-apps)
-    - [Ad Blocking](#ad-blocking)
-    - [App Management](#app-management)
-    - [Automation](#automation)
-    - [Backup and Restore](#backup-and-restore)
-    - [Battery Management](#battery-management)
-    - [Cleaning Apps](#cleaning-apps)
-    - [Debloating](#debloating)
-    - [Development and Debugging](#development-and-debugging)
-    - [File Management](#file-management)
-    - [Kernel](#kernel)
-    - [Modifications](#modifications)
-    - [Network Tools](#network-tools)
-    - [Privacy and Security](#privacy-and-security)
-    - [Root Specific](#root-specific)
-    - [System Tools](#system-tools)
-    - [Termux](#termux)
-  - [FAQs](#faqs)
+- [What is Root Access](#what-is-root-access)
+- [Root Guide \& Solutions](#root-guide--solutions)
+- [Glossary](#glossary)
+- [Root Apps](#root-apps)
+  - [Ad Blocking](#ad-blocking)
+  - [App Management](#app-management)
+  - [Automation](#automation)
+  - [Backup and Restore](#backup-and-restore)
+  - [Battery Management](#battery-management)
+  - [Cleaning Apps](#cleaning-apps)
+  - [Debloating](#debloating)
+  - [Development and Debugging](#development-and-debugging)
+  - [File Management](#file-management)
+  - [Kernel](#kernel)
+  - [Modifications](#modifications)
+  - [Network Tools](#network-tools)
+  - [Privacy and Security](#privacy-and-security)
+  - [Root Specific](#root-specific)
+  - [System Tools](#system-tools)
+  - [Termux](#termux)
+  - [Tools](#tools)
+- [FAQs](#faqs)
 
 ## What is Root Access
 Android rooting is the process of gaining privileged control (known as root access) over various Android subsystems. 
@@ -140,7 +141,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 - **[Termux:Tasker](https://github.com/termux/termux-tasker)** - Termux add-on app for integration with [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm). `FOSS`
 - **[Termux:Widget](https://github.com/termux/termux-widget)** - Termux add-on app which adds shortcuts to commands on the home screen. `FOSS`
 
-## Tools
+### Tools
 - **[NFC Card Emulator Pro (Root)](https://play.google.com/store/apps/details?id=com.yuanwofei.cardemulator.pro)** - An NFC Card Emulator that simulates various types of cards e.g. access cards, elevator cards, factory (meal) cards, school (meal) cards, some library cards, and other IC cards. `Proprietary`
 
 ## FAQs
