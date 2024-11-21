@@ -13,6 +13,7 @@ A comprehensive, up-to-date list of Android apps that require or utilize root pr
   - [Backup and Restore](#backup-and-restore)
   - [Battery Management](#battery-management)
   - [Cleaning Apps](#cleaning-apps)
+  - [Customizations](#customizations)
   - [Debloating](#debloating)
   - [Development and Debugging](#development-and-debugging)
   - [File Management](#file-management)
