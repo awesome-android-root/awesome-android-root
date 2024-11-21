@@ -45,7 +45,6 @@ A comprehensive guide covering different rooting methods, decision-making and di
 
 ## Root Apps
 ### Ad Blocking
-
 - **[AdAway](https://adaway.org/)** - Open-source ad blocker using hosts file. `FOSS`
 - **[AdGuard](https://adguard.com/en/adguard-android/overview.html)** - Comprehensive ad blocking solution. `Proprietary`
 - **[Blokada](https://blokada.org/)** - Advanced ad blocker with VPN functionality. `FOSS`
@@ -57,7 +56,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 - **[Package Manager](https://github.com/SmartPack/PackageManager)** - A highly powerful app to manage both system and user apps installed on an android device.  `FOSS`
 
 ### Automation
-- **[Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate)** - A powerful Android automation tool that lets you create custom workflows using flowcharts, enabling seamless management of tasks, files, and device settings. ``Proprietary`
+- **[Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate)** - A powerful Android automation tool that lets you create custom workflows using flowcharts, enabling seamless management of tasks, files, and device settings. `Proprietary`
 - **[MacroDroid](https://play.google.com/store/search?q=macrodroid&c=apps)** - Easy to use automation app. `Proprietary`
 - **[Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)** - An advanced and powerful automation app. `Proprietary`
 
@@ -98,7 +97,6 @@ A comprehensive guide covering different rooting methods, decision-making and di
 - **[EX Kernel Manager](https://play.google.com/store/apps/details?id=flar2.exkernelmanager)** - Root tool for backup and flashing kernels, tweaking color, sound, gestures and other kernel settings. `Proprietary`
 - **[Franco Kernel Manager](https://play.google.com/store/apps/details?id=com.franco.kernel)** - A complete toolbox for all devices with a rich that combines everything you need to manage, tweak and empower your device. `Proprietary`
 - **[SmartPack-Kernel-Manager](https://github.com/SmartPack/SmartPack-Kernel-Manager)** - A Kernel Manager. `FOSS`
-
 
 ### Modifications
 - **[Live Boot](https://play.google.com/store/apps/details?id=eu.chainfire.liveboot)** - Get a linux like live boot screen on Android. `Proprietary`
