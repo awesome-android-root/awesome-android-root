@@ -1,4 +1,6 @@
-# ![Awesome Android Logo](https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/favicon.svg) Awesome Android Root [![Awesome](https://awesome.re/badge.svg)](https://github.com/sindresorhus/awesome)
+# ![Awesome Android Logo](https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/favicon.svg) Awesome Android Root 
+
+[![Awesome](https://awesome.re/badge.svg)](https://github.com/sindresorhus/awesome)
 
 A comprehensive, up-to-date list of Android apps that require or utilize root privileges.
 
