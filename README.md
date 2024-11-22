@@ -44,6 +44,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 ## Glossary
 -  **`FOSS`** = Free and Open Source Software
 -  **`Proprietary`** = Missing license or closed-source software
+> Apps are organized in alphabetical order in each category.
 
 ## Root Apps
 ### Ad Blocking
