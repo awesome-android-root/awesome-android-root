@@ -144,6 +144,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 
 ### Tools
 - **[NFC Card Emulator Pro (Root)](https://play.google.com/store/apps/details?id=com.yuanwofei.cardemulator.pro)** - An NFC Card Emulator that simulates various types of cards e.g. access cards, elevator cards, factory (meal) cards, school (meal) cards, some library cards, and other IC cards. `Proprietary`
+- **[SecondScreen ](https://github.com/farmerbb/SecondScreen)** - Advanced solution to connect your Android device to external displays. `FOSS`
 
 ## FAQs
 An index of various rooting related Frequently Asked Questions.
