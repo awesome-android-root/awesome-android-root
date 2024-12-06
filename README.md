@@ -80,7 +80,11 @@ A comprehensive guide covering different rooting methods, decision-making and di
 ### Customizations
 - **[Bootanimation](https://github.com/Bitterneko/Bootanimation)** - A Custom Boot Animation for Android. `FOSS`
 -  **[ColorBlendr](https://github.com/Mahmud0808/ColorBlendr)** - Customize Material You colors of your device. `FOSS`
+- **[HyperCeiler](https://github.com/ReChronoRain/HyperCeiler/blob/main/README_en-US.md)** - Extensive Customizations for HyperOS. `FOSS` `[LP]`
+- **[Hyper Helper](https://github.com/HowieHChen/XiaomiHelper/blob/master/README_EN-US.md)** - Lightweight customization module for HyperOS only. `FOSS` `[LP]`
 - **[Live Boot](https://play.google.com/store/apps/details?id=eu.chainfire.liveboot)** - Get a linux like live boot screen on Android. `Proprietary`
+- **[Oxygen-Customizer](https://github.com/DHD2280/Oxygen-Customizer/)** - Free and Open-Source Oxygen OS Customizer Application. `FOSS` `[LP]`
+
 
 ### Debloating
 - **[Canta](https://github.com/samolego/Canta)** -  Uninstall any app without root using Shizuku (Needs [Shizuku](https://shizuku.rikka.app/) to be installed and running). `FOSS`
