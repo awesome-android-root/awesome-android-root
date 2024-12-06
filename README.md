@@ -99,6 +99,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 - **[USB HID Client](https://github.com/Arian04/android-hid-client)** - Allows you to use your phone as a keyboard and mouse WITHOUT any software on the other end. `FOSS`
 
 ### File Management
+- **[Material Files](https://github.com/zhanghai/MaterialFiles)** - Modern file manager with root capabilities. `FOSS`
 - **[MiXplorer](https://mixplorer.com/)** - Feature-rich file manager. `Proprietary`
 - **[Root Explorer](https://play.google.com/store/apps/details?id=com.speedsoftware.rootexplorer)** - File manager with root access. `Proprietary`
 - **[Solid Explorer](https://play.google.com/store/apps/details?id=pl.solidexplorer2)** - Powerful file manager with root support. `Proprietary`
