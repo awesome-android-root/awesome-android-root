@@ -102,6 +102,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 - **[SmartPack-Kernel-Manager](https://github.com/SmartPack/SmartPack-Kernel-Manager)** - A Kernel Manager. `FOSS`
 
 ### Modifications
+- **[Bootanimation](https://github.com/Bitterneko/Bootanimation)** - A Custom Boot Animation for Android. `FOSS`
 - **[Live Boot](https://play.google.com/store/apps/details?id=eu.chainfire.liveboot)** - Get a linux like live boot screen on Android. `Proprietary`
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (Use with caution) . `Proprietary`
 - **[Revanced Manager](https://github.com/ReVanced/revanced-manager)** - YouTube with additional features. `FOSS`
