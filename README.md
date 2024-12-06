@@ -76,7 +76,9 @@ A comprehensive guide covering different rooting methods, decision-making and di
 - **[SD Maid 2/SE](https://github.com/d4rken-org/sdmaid-se)** - A file management tool for Android that specialises in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS`
   
 ### Customizations
+- **[Bootanimation](https://github.com/Bitterneko/Bootanimation)** - A Custom Boot Animation for Android. `FOSS`
 -  **[ColorBlendr](https://github.com/Mahmud0808/ColorBlendr)** - Customize Material You colors of your device. `FOSS`
+- **[Live Boot](https://play.google.com/store/apps/details?id=eu.chainfire.liveboot)** - Get a linux like live boot screen on Android. `Proprietary`
 
 ### Debloating
 - **[Canta](https://github.com/samolego/Canta)** -  Uninstall any app without root using Shizuku (Needs [Shizuku](https://shizuku.rikka.app/) to be installed and running). `FOSS`
@@ -102,8 +104,6 @@ A comprehensive guide covering different rooting methods, decision-making and di
 - **[SmartPack-Kernel-Manager](https://github.com/SmartPack/SmartPack-Kernel-Manager)** - A Kernel Manager. `FOSS`
 
 ### Modifications
-- **[Bootanimation](https://github.com/Bitterneko/Bootanimation)** - A Custom Boot Animation for Android. `FOSS`
-- **[Live Boot](https://play.google.com/store/apps/details?id=eu.chainfire.liveboot)** - Get a linux like live boot screen on Android. `Proprietary`
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (Use with caution) . `Proprietary`
 - **[Revanced Manager](https://github.com/ReVanced/revanced-manager)** - YouTube with additional features. `FOSS`
 
