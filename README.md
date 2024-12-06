@@ -132,6 +132,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 - **[Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. `FOSS`
 
 ### System Tools
+- **[NovaInstaller](https://github.com/Minionguyjpro/NovaInstaller)** -  Installs the Nova Launcher to /system/app/ on Android. `FOSS`
 - **[Thanox](https://apt.izzysoft.de/fdroid/index/apk/github.tornaco.android.thanos)** - A system management tool that provide convenient functions like application startup management, background management, permission management etc. `FOSS`
 
 ### Termux
