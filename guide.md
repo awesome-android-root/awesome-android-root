@@ -1,5 +1,5 @@
 ---
-label: Guide
+label: Rooting Guide
 layout: default
 icon: log
 order: 90
