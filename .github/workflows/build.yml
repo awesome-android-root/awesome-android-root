@@ -1,17 +1,28 @@
 name: Build and Deploy
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: production
+    timeout-minutes: 5
+    
     steps:
       - uses: actions/checkout@v4
+      
+      - name: Cache apt packages
+        uses: actions/cache@v3
+        with:
+          path: /var/cache/apt
+          key: ${{ runner.os }}-apt-${{ hashFiles('**/convert.sh') }}
       
       - name: Install pandoc
         run: |
