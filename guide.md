@@ -1,10 +1,4 @@
----
-label: Rooting Guide
-layout: default
-icon: log
-order: 90
----
-
+# Rooting Guide
 - [What is Root Access](#what-is-root-access)
 - [Should I root](#should-i-root)
   - [Benefits of Rooting](#benefits-of-rooting)

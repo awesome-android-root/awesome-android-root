@@ -1,10 +1,3 @@
----
-label: Contributing Guidelines
-layout: default
-icon: code-review
-order: 80
----
-
 # Contributing Guidelines
 
 Thank you for your interest in contributing to the Awesome Android Root list! Following are some guidelines to help you contribute effectively.

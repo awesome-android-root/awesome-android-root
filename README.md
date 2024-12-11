@@ -38,7 +38,7 @@ Rooting allows overcoming limitations that carriers and hardware manufacturers p
 ## Root Guide & Solutions
 A comprehensive guide covering different rooting methods, decision-making and diiferent frameworks.
 
-[Read the complete rooting guide →](guide.md)
+[Read the complete rooting guide →](https://github.com/fynks/awesome-android-root/blob/main/guide.md)
 
 
 ## Glossary
@@ -167,7 +167,7 @@ An index of various rooting related Frequently Asked Questions.
 [Read FAQs →](guide.md#frequently-asked-questions)
 
 ## Contributions
-We welcome contributions from the community! Please read our [Contributing Guidelines](contributing.md) to get started.
+We welcome contributions from the community! Please read our [Contributing Guidelines](https://github.com/fynks/awesome-android-root/blob/main/contributing.md) to get started.
 
 ---
 
