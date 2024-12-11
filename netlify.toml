@@ -1,0 +1,8 @@
+[build]
+  publish = "docs"
+  command = "./convert.sh"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
