@@ -19,6 +19,14 @@ if ! command -v pandoc &> /dev/null; then
     handle_error "pandoc is not installed. Please install it first."
 fi
 
+# Check if styles.css exists
+if [[ ! -f ./docs/styles.css ]]; then
+    handle_error "styles.css not found in ./docs. Please ensure it exists."
+fi
+
+# Read styles.css content
+INLINE_CSS=$(<./docs/styles.css)
+
 # Create template
 cat > template.html << 'EOL'
 <!DOCTYPE html>
@@ -48,8 +56,8 @@ cat > template.html << 'EOL'
 </html>
 EOL
 
-# Create header with improved meta tags
-cat > header.html << 'EOL'
+# Create header with inline CSS and improved meta tags
+cat > header.html << EOL
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="A comprehensive, curated list of Android root apps, tools, and utilities. Includes ad blockers, system tools, customization apps, and root-specific utilities.">
@@ -59,8 +67,11 @@ cat > header.html << 'EOL'
 <link rel="preconnect" href="https://awesome.re" />
 <link rel="dns-prefetch" href="https://profile-counter.glitch.me/" />
 <link rel="preconnect" href="https://profile-counter.glitch.me/" />
-<link rel="stylesheet" href="styles.css">
 <meta name="theme-color" content="#0366d6">
+
+<style>
+${INLINE_CSS}
+</style>
 
 <!-- OpenGraph Meta Tags -->
 <meta property="og:title" content="Awesome Android Root - Ultimate List of Root Apps">
@@ -81,7 +92,6 @@ cat > header.html << 'EOL'
 <meta name="author" content="Android Root Community">
 <meta name="robots" content="index, follow">
 <meta name="language" content="English">
-
 EOL
 
 # Convert markdown with progress
