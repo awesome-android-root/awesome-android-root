@@ -33,7 +33,6 @@ cat > template.html << 'EOL'
 <html lang="en">
 <head>
     $header-includes$
-    <title>Awesome Android Root</title>
 </head>
 <body>
     
@@ -63,12 +62,14 @@ cat > header.html << EOL
 <meta name="description" content="A comprehensive, curated list of Android root apps, tools, and utilities. Includes ad blockers, system tools, customization apps, and root-specific utilities.">
 <link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<title>Awesome Android Root</title>
+<meta name="theme-color" content="#0366d6">
+<link canonical="https://awesome-android-root.netlify.app/">
+
 <link rel="dns-prefetch" href="https://awesome.re" />
 <link rel="preconnect" href="https://awesome.re" />
 <link rel="dns-prefetch" href="https://profile-counter.glitch.me/" />
 <link rel="preconnect" href="https://profile-counter.glitch.me/" />
-<meta name="theme-color" content="#0366d6">
-
 <style>
 ${INLINE_CSS}
 </style>
