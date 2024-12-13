@@ -53,9 +53,11 @@ cat > header.html << 'EOL'
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="A comprehensive, curated list of Android root apps, tools, and utilities. Includes ad blockers, system tools, customization apps, and root-specific utilities.">
-<link rel="stylesheet" href="styles.css">
 <link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="dns-prefetch" href="https://awesome.re" />
+<link rel="preconnect" href="https://awesome.re" />
+<link rel="stylesheet" href="styles.css">
 
 <!-- OpenGraph Meta Tags -->
 <meta property="og:title" content="Awesome Android Root - Ultimate List of Root Apps">
