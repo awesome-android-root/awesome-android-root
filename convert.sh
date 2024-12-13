@@ -57,7 +57,10 @@ cat > header.html << 'EOL'
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="dns-prefetch" href="https://awesome.re" />
 <link rel="preconnect" href="https://awesome.re" />
+<link rel="dns-prefetch" href="https://profile-counter.glitch.me/" />
+<link rel="preconnect" href="https://profile-counter.glitch.me/" />
 <link rel="stylesheet" href="styles.css">
+<meta name="theme-color" content="#0366d6">
 
 <!-- OpenGraph Meta Tags -->
 <meta property="og:title" content="Awesome Android Root - Ultimate List of Root Apps">
@@ -79,8 +82,6 @@ cat > header.html << 'EOL'
 <meta name="robots" content="index, follow">
 <meta name="language" content="English">
 
-<!-- Theme and PWA -->
-<meta name="theme-color" content="#0366d6">
 EOL
 
 # Convert markdown with progress
