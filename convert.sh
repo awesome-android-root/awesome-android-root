@@ -64,7 +64,7 @@ cat > header.html << EOL
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <title>Awesome Android Root</title>
 <meta name="theme-color" content="#0366d6">
-<link canonical="https://awesome-android-root.netlify.app/">
+<link rel="canonical" href="https://awesome-android-root.netlify.app/">
 
 <link rel="dns-prefetch" href="https://awesome.re" />
 <link rel="preconnect" href="https://awesome.re" />
