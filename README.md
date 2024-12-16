@@ -36,7 +36,7 @@ Android rooting is the process of gaining privileged control (known as root acce
 Rooting allows overcoming limitations that carriers and hardware manufacturers put on some devices, resulting in the ability to alter or replace system applications and settings, run specialized apps that require administrator-level permissions, or perform other operations that are otherwise inaccessible to a normal Android user.
 
 ## Root Guide & Solutions
-A comprehensive guide covering different rooting methods, decision-making and diiferent frameworks.
+A comprehensive guide covering different rooting methods, decision-making and different frameworks.
 
 [Read the complete rooting guide →](https://github.com/fynks/awesome-android-root/blob/main/guide.md)
 
