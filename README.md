@@ -77,7 +77,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 
 ### Cleaning Apps
 - **[SD Maid 2/SE](https://github.com/d4rken-org/sdmaid-se)** - A file management tool for Android that specialises in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS`
-- **[DirCleaner](https://www.dircleaner.com/)** - A simple and practical cleaning tool. 
+- **[DirCleaner](https://www.dircleaner.com/)** - A simple and practical cleaning tool. `Proprietary`
 
 ### Customizations
 - **[Bootanimation](https://github.com/Bitterneko/Bootanimation)** - A custom boot animation for Android. `FOSS`
