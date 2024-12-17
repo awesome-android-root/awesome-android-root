@@ -5,7 +5,7 @@ export default defineConfig({
   title: "Awesome Android Root - Ultimate List of Root Apps",
   titleTemplate: ':title | Awesome Android Root - Ultimate List of Root Apps',
   description: "A comprehensive, curated list of Android root apps, tools, and utilities. Includes ad blockers, system tools, customization apps, and root-specific utilities.",
-  ignoreDeadLinks: 'true',
+  ignoreDeadLinks: true,
   themeConfig: {
     logo: {
       light: '/images/logo.svg',
