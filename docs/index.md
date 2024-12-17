@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Home
+title: 
 
 hero:
   name: "Awesome Android Root"
@@ -11,7 +11,7 @@ hero:
       link: /apps
     - theme: brand
       text: Guides
-      link: /rooting_guides
+      link: /rooting-guides
     - theme: alt
       text: FAQs
       link: /faqs
