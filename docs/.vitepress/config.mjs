@@ -7,8 +7,8 @@ export default defineConfig({
   description: "A comprehensive, curated list of Android root apps, tools, and utilities. Includes ad blockers, system tools, customization apps, and root-specific utilities.",
   ignoreDeadLinks: true,
   head: [
-    ['link', { rel: 'icon', href: '../favicon.ico', sizes: 'any' }],
-    ['link', { rel: 'icon', href: '../favicon.svg', type: 'image/svg+xml' }],
+    ['link', { rel: 'icon', href: '/favicon.ico', sizes: 'any' }],
+    ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
 
     ['link', { rel: 'canonical', href: 'https://awesome-android-root.netlify.app/' }],
     ['link', { rel: 'dns-prefetch', href: 'https://awesome.re' }],
@@ -39,8 +39,8 @@ export default defineConfig({
     ],
   themeConfig: {
     logo: {
-      light: './images/logo.svg',
-      dark: './images/logo_dark.svg',
+      light: '/images/logo.svg',
+      dark: '/images/logo_dark.svg',
       alt: 'Site Logo'
     },
     lastUpdated: {
