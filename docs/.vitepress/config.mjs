@@ -7,13 +7,9 @@ export default defineConfig({
   description: "A comprehensive, curated list of Android root apps, tools, and utilities. Includes ad blockers, system tools, customization apps, and root-specific utilities.",
   ignoreDeadLinks: true,
   head: [
-    ['meta', { charset: 'UTF-8' }],
-    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
-    ['meta', { name: 'description', content: 'A comprehensive, curated list of Android root apps, tools, and utilities. Includes ad blockers, system tools, customization apps, and root-specific utilities.' }],
     ['link', { rel: 'icon', href: '../favicon.ico', sizes: 'any' }],
     ['link', { rel: 'icon', href: '../favicon.svg', type: 'image/svg+xml' }],
-    ['title', {}, 'Awesome Android Root'],
-    ['meta', { name: 'theme-color', content: '#0366d6' }],
+
     ['link', { rel: 'canonical', href: 'https://awesome-android-root.netlify.app/' }],
     ['link', { rel: 'dns-prefetch', href: 'https://awesome.re' }],
     ['link', { rel: 'preconnect', href: 'https://awesome.re' }],
@@ -24,7 +20,7 @@ export default defineConfig({
     ['meta', { property: 'og:title', content: 'Awesome Android Root - Ultimate List of Root Apps' }],
     ['meta', { property: 'og:description', content: 'Discover the best Android root apps, tools, and utilities. A curated collection of essential root applications for advanced Android users.' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:image', content: 'https://raw.githubusercontent.com/sindresorhus/awesome/main/media/logo.svg' }],
+    ['meta', { property: 'og:image', content: 'https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/docs/images/logo.png' }],
     ['meta', { property: 'og:url', content: 'https://awesome-android-root.netlify.app/' }],
     ['meta', { property: 'og:site_name', content: 'Awesome Android Root' }],
     
@@ -32,7 +28,7 @@ export default defineConfig({
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'Awesome Android Root - Ultimate List of Root Apps' }],
     ['meta', { name: 'twitter:description', content: 'Discover the best Android root apps, tools, and utilities. A curated collection of essential root applications.' }],
-    ['meta', { name: 'twitter:image', content: 'https://raw.githubusercontent.com/sindresorhus/awesome/main/media/logo.svg' }],
+    ['meta', { name: 'twitter:image', content: 'https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/docs/images/logo.png' }],
 
     // SEO Meta Tags
     ['meta', { name: 'keywords', content: 'android root, root apps, magisk modules, xposed modules, android customization, android tools, root utilities, android mods' }],
