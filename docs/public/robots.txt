@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Sitemap 
+Sitemap: https://awesome-android-root.netlify.app/sitemap.xml
+
