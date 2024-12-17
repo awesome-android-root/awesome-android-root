@@ -6,29 +6,19 @@ export default defineConfig({
   titleTemplate: ':title | Awesome Android Root - Ultimate List of Root Apps',
   description: "A comprehensive, curated list of Android root apps, tools, and utilities. Includes ad blockers, system tools, customization apps, and root-specific utilities.",
   ignoreDeadLinks: true,
-  themeConfig: {
-    logo: {
-      light: './images/logo.svg',
-      dark: './images/logo_dark.svg',
-      alt: 'Site Logo'
-    },
-    lastUpdated: {
-      text: 'Updated at',
-      formatOptions: {
-        dateStyle: 'full',
-        timeStyle: 'medium'
-      }
-    },
-    head: [
+  head: [
     ['meta', { charset: 'UTF-8' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
     ['meta', { name: 'description', content: 'A comprehensive, curated list of Android root apps, tools, and utilities. Includes ad blockers, system tools, customization apps, and root-specific utilities.' }],
-    ['link', {rel: 'icon', href: '../favicon.ico', sizes: 'any'}],
-    ['link', {rel: 'icon', href: '../favicon.svg', type: 'image/svg+xml'}],
-    ['link', {rel: 'dns-prefetch', href: 'https://awesome.re'}],
-    ['link', {rel: 'preconnect', href: 'https://awesome.re'}],
-    ['link', {rel: 'dns-prefetch', href: 'https://profile-counter.glitch.me/'}],
-    ['link', {rel: 'preconnect', href: 'https://profile-counter.glitch.me/'}],
+    ['link', { rel: 'icon', href: '../favicon.ico', sizes: 'any' }],
+    ['link', { rel: 'icon', href: '../favicon.svg', type: 'image/svg+xml' }],
+    ['title', {}, 'Awesome Android Root'],
+    ['meta', { name: 'theme-color', content: '#0366d6' }],
+    ['link', { rel: 'canonical', href: 'https://awesome-android-root.netlify.app/' }],
+    ['link', { rel: 'dns-prefetch', href: 'https://awesome.re' }],
+    ['link', { rel: 'preconnect', href: 'https://awesome.re' }],
+    ['link', { rel: 'dns-prefetch', href: 'https://profile-counter.glitch.me/' }],
+    ['link', { rel: 'preconnect', href: 'https://profile-counter.glitch.me/' }],
         
     // OpenGraph Meta Tags
     ['meta', { property: 'og:title', content: 'Awesome Android Root - Ultimate List of Root Apps' }],
@@ -51,6 +41,19 @@ export default defineConfig({
     ['meta', { name: 'language', content: 'English' }]
 
     ],
+  themeConfig: {
+    logo: {
+      light: './images/logo.svg',
+      dark: './images/logo_dark.svg',
+      alt: 'Site Logo'
+    },
+    lastUpdated: {
+      text: 'Updated at',
+      formatOptions: {
+        dateStyle: 'full',
+        timeStyle: 'medium'
+      }
+    },
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Apps', link: '/apps' },
