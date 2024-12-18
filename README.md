@@ -233,7 +233,8 @@ We welcome contributions from the community! Please read our [Contributing Guide
 **Note**: Always be cautious when using root apps, as they have the potential to modify system files and settings.
 
 --- 
-
-You are visitor number:
+## Stats
+#### Number of Apps: `96`
+#### You are visitor number:
 
 ![Visitor Count](https://profile-counter.glitch.me/fynks/count.svg)
