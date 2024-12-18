@@ -88,11 +88,12 @@ A comprehensive guide covering different rooting methods, decision-making and di
 
 ### App Mods
 #### Social Media Mods
-- **[Hachidori](https://github.com/Xposed-Modules-Repo/com.twifucker.hachidori/)** - Adds downloading media, hidding ads and other privacy features to X (formerly Twitter). `FOSS` `LP`
-- **[MBGA](https://github.com/cledwynl/mbga/)** - A Xposed module to Make Bilibili Great Again. `FOSS` `LP`
-- **[Re-Telegram ](https://github.com/Sakion-Team/Re-Telegram/)** - Adds features like AntiAntiForward, AntiRecall, NoSponsoredMessages, ProhibitChannelSwitching and many more to various Telegram clients. `FOSS` `LP`
+- **[Hachidori](https://github.com/Xposed-Modules-Repo/com.twifucker.hachidori/)** - Adds downloading media, hidding ads and other privacy features to X (formerly Twitter). `FOSS` `[LP]`
+- **[LineXtra](https://github.com/yagiyuu/LineXtra)** - Removes Ads and Tabs from the LINE. `FOSS` `[LP]`
+- **[MBGA](https://github.com/cledwynl/mbga/)** - A Xposed module to Make Bilibili Great Again. `FOSS` `[LP]`
+- **[Re-Telegram ](https://github.com/Sakion-Team/Re-Telegram/)** - Adds features like AntiAntiForward, AntiRecall, NoSponsoredMessages, ProhibitChannelSwitching and many more to various Telegram clients. `FOSS` `[LP]`
 - **[Wa Revamp](https://github.com/Xposed-Modules-Repo/its.madruga.warevamp)** - Add various functions like download staus and view once, hide read message, Statuses and
-Archived Chats to official WhatsApp. `FOSS` `LP`
+Archived Chats to official WhatsApp. `FOSS` `[LP]`
 
 #### Patching
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (Use with caution) . `Proprietary`
@@ -201,7 +202,7 @@ Archived Chats to official WhatsApp. `FOSS` `LP`
 
 ### System Modifications
 - **[Disable Rotation Button](https://github.com/JavaCakeGames/disable-rotation-button)** - Disable Android's floating rotation button. `FOSS`
-- **[KnoxPatch](https://github.com/salvogiangri/KnoxPatch)** - Restore Samsung apps/features on rooted Galaxy devices. `FOSS` `LP`
+- **[KnoxPatch](https://github.com/salvogiangri/KnoxPatch)** - Restore Samsung apps/features on rooted Galaxy devices. `FOSS` `[LP]`
 - **[NoStorageRestrict](https://github.com/Xposed-Modules-Repo/com.github.dan.nostoragerestrict)** - Manage storage restrictions on Android devices. `FOSS` `[M]` `[LP]`
 - **[Thanox](https://apt.izzysoft.de/fdroid/index/apk/github.tornaco.android.thanos)** - System management tool with various functions. `FOSS` `[LP]`
 - **[Unified Internet QS](https://f-droid.org/packages/com.looker.droidify/)** - Quick settings tile for managing internet connections. `FOSS`
