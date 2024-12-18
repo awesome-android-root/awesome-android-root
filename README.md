@@ -206,11 +206,11 @@ Archived Chats to official WhatsApp. `FOSS` `[LP]`
 - **[Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. `FOSS` `[M]`
 
 ### System Modifications
-- **[Disable Rotation Button](https://github.com/JavaCakeGames/disable-rotation-button)** - Disable Android's floating rotation button. `FOSS`
-- **[KnoxPatch](https://github.com/salvogiangri/KnoxPatch)** - Restore Samsung apps/features on rooted Galaxy devices. `FOSS` `[LP]`
-- **[NoStorageRestrict](https://github.com/Xposed-Modules-Repo/com.github.dan.nostoragerestrict)** - Manage storage restrictions on Android devices. `FOSS` `[M]` `[LP]`
-- **[Thanox](https://apt.izzysoft.de/fdroid/index/apk/github.tornaco.android.thanos)** - System management tool with various functions. `FOSS` `[LP]`
-- **[Unified Internet QS](https://f-droid.org/packages/com.looker.droidify/)** - Quick settings tile for managing internet connections. `FOSS`
+- **[AutoNight](https://github.com/Chilly-Blaze/autonight)** - Controlling Android's Dark Mode through environmental brightness. `FOSS`
+- **[Disable Rotation Button](https://github.com/JavaCakeGames/disable-rotation-button)** - App to disable Android's floating rotation button. `FOSS`
+- **[KnoxPatch](https://github.com/salvogiangri/KnoxPatch)** - Get Samsung apps/features working again in your rooted Galaxy device. For better experience, please also read [this](https://github.com/salvogiangri/KnoxPatch?tab=readme-ov-file#knoxpatch-enhancer) . `Foss` `LP`
+- **[NovaInstaller](https://github.com/Minionguyjpro/NovaInstaller)** -  Installs the Nova Launcher to /system/app/ on Android. `FOSS`
+- **[Thanox](https://apt.izzysoft.de/fdroid/index/apk/github.tornaco.android.thanos)** - A system management tool that provide convenient functions like application startup management, background management, permission management etc. `FOSS` `[LP]`
 
 
 ### Termux
