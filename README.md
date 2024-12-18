@@ -38,7 +38,7 @@ Rooting allows overcoming limitations that carriers and hardware manufacturers p
 ## Root Guide & Solutions
 A comprehensive guide covering different rooting methods, decision-making and different frameworks.
 
-[Read the complete rooting guide →](./docs/rooting_guides/index.md)
+[Read the complete rooting guide →](./docs/rooting-guides/index.md)
 
 
 ## Glossary
