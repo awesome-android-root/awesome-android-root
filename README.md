@@ -38,6 +38,7 @@ A comprehensive, up-to-date list of Android apps that require or utilize root pr
   - [Tools](#tools)
 - [FAQs](#faqs)
 - [Contributions](#contributions)
+- [Stats](#stats)
 
 ## What is Root Access
 Android rooting is the process of gaining privileged control (known as root access) over various Android subsystems. 
