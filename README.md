@@ -9,14 +9,23 @@ A comprehensive, up-to-date list of Android apps that require or utilize root pr
 - [Root Guide \& Solutions](#root-guide--solutions)
 - [Glossary](#glossary)
 - [Root Apps](#root-apps)
-  - [Ad Blocking](#ad-blocking)
   - [App Management](#app-management)
+    - [App Isolation and Cloning](#app-isolation-and-cloning)
+    - [App Managers](#app-managers)
+    - [App Markets](#app-markets)
+    - [App Permissions](#app-permissions)
   - [App Mods](#app-mods)
+    - [Social Media Mods](#social-media-mods)
+    - [Patching](#patching)
   - [Automation](#automation)
   - [Backup and Restore](#backup-and-restore)
   - [Battery Management](#battery-management)
   - [Cleaning Apps](#cleaning-apps)
   - [Customizations](#customizations)
+    - [Boot Animations](#boot-animations)
+    - [Launchers](#launchers)
+    - [OS Customization](#os-customization)
+    - [Theming](#theming)
   - [Debloating](#debloating)
   - [Development and Debugging](#development-and-debugging)
   - [File Management](#file-management)
@@ -24,7 +33,7 @@ A comprehensive, up-to-date list of Android apps that require or utilize root pr
   - [Network Tools](#network-tools)
   - [Privacy and Security](#privacy-and-security)
   - [Root Specific](#root-specific)
-  - [System Tools](#system-tools)
+  - [System Modifications](#system-modifications)
   - [Termux](#termux)
   - [Tools](#tools)
 - [FAQs](#faqs)
@@ -55,6 +64,10 @@ A comprehensive guide covering different rooting methods, decision-making and di
 - **[Blokada](https://blokada.org/)** - Advanced ad blocker with VPN functionality. `FOSS`
 
 ### App Management
+#### App Isolation and Cloning
+- **[Island](https://play.google.com/store/apps/details?id=com.oasisfeng.island)** - App isolation and cloning. `Proprietary`
+- **[Shelter](https://gitea.angry.im/PeterCxy/Shelter)** - Isolate and clone apps. `FOSS`
+
 #### App Managers
 - **[App Manager](https://github.com/MuntashirAkon/AppManager)** - A full-featured package manager and viewer for Android. `FOSS`
 - **[Inure](https://github.com/Hamza417/Inure)** - An elegant and beautiful premium Android app manager for rooted and non-rooted devices. `FOSS`
@@ -65,10 +78,6 @@ A comprehensive guide covering different rooting methods, decision-making and di
 #### App Markets
 - **[Aurora Store](https://github.com/whyorean/AuroraStore)** - A Google Play Store client to search, view app details, and download APKs directly to your device. `FOSS`
 - **[Droid-ify](https://github.com/Droid-ify/client)** - F-Droid client with Material UI and auto updating apps using root. `FOSS`
-
-#### App Isolation and Cloning
-- **[Island](https://play.google.com/store/apps/details?id=com.oasisfeng.island)** - App isolation and cloning. `Proprietary`
-- **[Shelter](https://gitea.angry.im/PeterCxy/Shelter)** - Isolate and clone apps. `FOSS`
 
 #### App Permissions
 - **[Permission Ruler](https://play.google.com/store/apps/details?id=com.stefanosiano.permissionruler&hl=en)** - Automatically manages app permissions when the screen is off for enhanced privacy. `Proprietary` `[M]`
