@@ -1,47 +1,42 @@
-# Contributing Guidelines
+# Contribution Guidelines
 
-Thank you for your interest in contributing to the Awesome Android Root list! Following are some guidelines to help you contribute effectively.
+Thank you for contributing to **Awesome Android Root**. Please follow these guidelines to make your additions consistent and helpful.
 
 ## How to Contribute
 
-1. Fork the repository
-2. Create a new branch for your additions
-3. Make your changes following the formatting guidelines below
-4. Submit a pull request
+1. **Fork** the repository.
+2. **Create a new branch** for your changes.
+3. **Add your contributions** following the guidelines below.
+4. **Submit a pull request**.
 
-## Formatting Guidelines
+## Adding New Apps
+- Use this format:
 
-### Adding New Apps
+  ```markdown
+  - **[App Name](link-to-app)** - Brief description. `FOSS/Proprietary` `[M]` `[LP]`
 
-When adding a new app, follow this format:
-- **[App Name](link-to-app)** - Brief description of the app. `FOSS/Proprietary`
+- `FOSS`: Open-source apps 
+- `Proprietary`: Closed-source.
+- `[M]`: Magisk Module
+- `[LP]`: Requires LSPosed Framework
 
-Example:
-```markdown
-- **[NewApp](https://github.com/user/newapp)** - A root app that does something cool. `FOSS`
-```
+- Place apps in the appropriate **existing category.**
+- Maintain **alphabetical order** within categories.
 
-## Categories
-- Place apps in appropriate existing categories.
-- If you need a new category, ensure it's relevant to root apps.
-- Maintain alphabetical order within categories.
 
 ## Requirements
-- Apps must be related to Android root functionality.
-- Include only apps that are actively maintained.
-- Provide accurate FOSS or Proprietary tags.
-- Ensure links are valid and point to official sources.
-- Write clear, concise descriptions.
+- Apps must be related to **Android root functionality.**
+- Include only apps that are **actively maintained.**
+- Ensure links are **valid** and point to **official sources.**
+- Write **clear and concise** descriptions.
+- Follow **Alphabetical order**.
 
 ## Quality Standards
-- Check for duplicate entries before submitting.
-- Verify that apps are actually root-related.
-- Test links before submitting.
-- Ensure proper markdown formatting.
-- Follow existing code style.
+- **Check for duplicates** before submitting.
+- **Verify** that apps are root-related.
+- **Test links** before submitting.
+- Follow existing **markdown formatting** and **style**.
+- **Do not remove** existing entries without valid reason.
+- **Update** outdated information when possible.
 
-## Additional Notes
-- Don't remove existing entries without good reason.
-- Update/fix outdated information when possible.
-
-Your contributions are greatly appreciated! 🚀
+> Your contributions are greatly appreciated! 🚀
