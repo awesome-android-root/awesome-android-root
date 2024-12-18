@@ -16,6 +16,7 @@ A comprehensive, up-to-date list of Android apps that require or utilize root pr
     - [App Permissions](#app-permissions)
   - [App Mods](#app-mods)
     - [Social Media Mods](#social-media-mods)
+    - [Other App Mods](#other-app-mods)
     - [Patching](#patching)
   - [Automation](#automation)
   - [Backup and Restore](#backup-and-restore)
@@ -89,11 +90,15 @@ A comprehensive guide covering different rooting methods, decision-making and di
 ### App Mods
 #### Social Media Mods
 - **[Hachidori](https://github.com/Xposed-Modules-Repo/com.twifucker.hachidori/)** - Adds downloading media, hidding ads and other privacy features to X (formerly Twitter). `FOSS` `[LP]`
+- **[IGExperiments](https://github.com/xHookman/IGexperiments)** - Unlocks Instagram's hidden developer options, giving you access to advanced features like White Hat settings (enables SSL unpinning), Test User mode, and much more. `FOSS` `[LP]`
 - **[LineXtra](https://github.com/yagiyuu/LineXtra)** - Removes Ads and Tabs from the LINE. `FOSS` `[LP]`
 - **[MBGA](https://github.com/cledwynl/mbga/)** - A Xposed module to Make Bilibili Great Again. `FOSS` `[LP]`
 - **[Re-Telegram ](https://github.com/Sakion-Team/Re-Telegram/)** - Adds features like AntiAntiForward, AntiRecall, NoSponsoredMessages, ProhibitChannelSwitching and many more to various Telegram clients. `FOSS` `[LP]`
 - **[Wa Revamp](https://github.com/Xposed-Modules-Repo/its.madruga.warevamp)** - Add various functions like download staus and view once, hide read message, Statuses and
 Archived Chats to official WhatsApp. `FOSS` `[LP]`
+
+#### Other App Mods
+- **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LP]`
 
 #### Patching
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (Use with caution) . `Proprietary`
