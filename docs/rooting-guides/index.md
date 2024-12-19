@@ -59,6 +59,7 @@ For vendor specific rooting guides, please visit respective vendor page:
 - [Xiaomi](./xiaomi.md)
 - [Samsung](./samsung.md)
 - [Pixel](./pixel.md)
+- [OnePlus](./oneplus.md)
 
 ### Common Methods
 #### Magisk
