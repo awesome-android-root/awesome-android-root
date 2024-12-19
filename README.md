@@ -247,7 +247,7 @@ We welcome contributions from the community! Please read our [Contributing Guide
 
 --- 
 ## Stats
-#### Number of Apps: `103`
+#### Number of Apps: `105`
 #### You are visitor number:
 
 ![Visitor Count](https://profile-counter.glitch.me/fynks/count.svg)
