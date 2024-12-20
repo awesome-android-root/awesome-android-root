@@ -4,8 +4,8 @@
   "description": "Ultimate list of best android root apps, rooting guides, tips, tricks and tools",
   "private": true,
   "scripts": {
-    "docs:dev": "cp README.md docs/apps.md && vitepress dev docs",
-    "docs:build": "cp README.md docs/apps.md && vitepress build docs",
+    "docs:dev": "./fix-links.sh && vitepress dev docs",
+    "docs:build": "chmod +x ./fix-links.sh && ./fix-links.sh && vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
