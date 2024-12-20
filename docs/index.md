@@ -1,7 +1,7 @@
 ---
 layout: home
 title: 
-description: "Discover 100+ curated root apps, step-by-step rooting guides for Xiaomi, Samsung & Pixel devices. Learn safe rooting methods, troubleshooting & advanced Android customization."
+description: "Ultimate list of best android root apps,rooting guides, tips, tricks and tools."
 
 hero:
   name: "Awesome Android Root"
