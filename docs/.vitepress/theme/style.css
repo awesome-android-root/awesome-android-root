@@ -129,11 +129,10 @@
   --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
 }
 
+
 /**
- * Component: Algolia
+ * Component: Custom Fonts
  * -------------------------------------------------------------------------- */
-
-.DocSearch {
-  --docsearch-primary-color: var(--vp-c-brand-1) !important;
+ .VPHero .name {
+  font-size: 50px;
 }
-
