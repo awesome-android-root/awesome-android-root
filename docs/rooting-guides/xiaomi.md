@@ -43,7 +43,7 @@ layout: doc
     - Mi account is associated with this device now.
 - Apply for Bootloader Unlock
   - MIUI
-    - Visit [MIUI Unlock](https://en.miui.com/unlock/) and apply for unlocking permissions
+    - You can proceed to straight to next step of unlocking with MIUI Unlock Tool.
   - HyperOS
     - Download [Xiaomi Community App](https://play.google.com/store/apps/details?id=com.mi.global.bbs&hl=en).
     - **Login** using your MI account.
@@ -65,6 +65,7 @@ layout: doc
   - **TWRP Recovery**: [Devices](https://twrp.me/Devices/)
   - **OrangeFox Recovery**: [Devices](https://orangefox.download/)
 - Download the `.img` file for your device
+- Rename the downloaded file to `recovery.img`.
 
 ### 3. Flash Custom Recovery
 
@@ -76,6 +77,9 @@ layout: doc
 3. Boot your device into Fastboot mode (Power + Volume Down)
 4. Connect your device to the PC
 5. Execute the following commands:
+   ```sh
+   fastboot flash recovery recovery.img
+   ```
    
 #### Using Linux:   
 1. Install Android Debug Bridge (adb):
