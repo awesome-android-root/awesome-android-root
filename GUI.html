@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Android Root Tool</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js" defer></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1d4ed8;
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+            --border-color: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: #fff;
+            border-radius: 1rem;
+            box-shadow: var(--shadow);
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.25rem;
+            border: none;
+            border-radius: 0.5rem;
+            background-color: var(--primary-color);
+            color: #fff;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+        }
+
+        select[multiple] {
+            height: 120px;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .table th,
+        .table td {
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .table th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+        }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .output {
+            margin-top: 2rem;
+        }
+
+        textarea {
+            width: 100%;
+            height: 300px;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            resize: vertical;
+            font-family: monospace;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 1rem;
+                padding: 1rem;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Awesome Android Root Tool</h1>
+        <div class="actions">
+            <button class="btn" id="loadReadmeBtn">Load README.md</button>
+            <button class="btn" id="generateReadmeBtn">Generate README.md</button>
+        </div>
+        <div>
+            <h2>Add New App</h2>
+            <form id="appForm" class="form">
+                <div class="form-group">
+                    <label class="form-label" for="category">Category:</label>
+                    <select class="form-control" id="category"></select>
+                </div>
+                <div class="form-group" id="subcategory-group" hidden>
+                    <label class="form-label" for="subcategory">Subcategory:</label>
+                    <select class="form-control" id="subcategory"></select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="appName">App Name:</label>
+                    <input type="text" class="form-control" id="appName" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="appLink">App Link:</label>
+                    <input type="url" class="form-control" id="appLink" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="license">License:</label>
+                    <select class="form-control" id="license" required>
+                        <option value="FOSS">FOSS</option>
+                        <option value="Proprietary">Proprietary</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="framework">Framework:</label>
+                    <select class="form-control" id="framework" multiple>
+                        <option value="`[M]`">Magisk</option>
+                        <option value="`[LP]`">LSPosed</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Add App</button>
+            </form>
+        </div>
+        <h2>App List</h2>
+        <div id="appList"></div>
+        <div class="output">
+            <h2>Generated README.md</h2>
+            <textarea id="readmeOutput" readonly></textarea>
+            <button class="btn" id="copyReadmeBtn">Copy to Clipboard</button>
+        </div>
+    </div>
+   <script>
+    const appData = {};
+
+document.addEventListener('DOMContentLoaded', () => {
+    setupEventListeners();
+});
+
+function setupEventListeners() {
+    document.getElementById('loadReadmeBtn').addEventListener('click', loadReadme);
+    document.getElementById('generateReadmeBtn').addEventListener('click', generateReadme);
+    document.getElementById('copyReadmeBtn').addEventListener('click', copyReadme);
+    document.getElementById('category').addEventListener('change', populateSubcategories);
+    document.getElementById('appForm').addEventListener('submit', handleFormSubmit);
+}
+
+async function loadReadme() {
+    try {
+        const response = await fetch('README.md');
+        const data = await response.text();
+        parseMarkdown(data);
+    } catch (error) {
+        console.error('Error loading README.md:', error);
+        showNotification('Error loading README.md', 'error');
+    }
+}
+
+function parseMarkdown(data) {
+    const lines = data.split('\n');
+    let currentCategory = '';
+    let currentSubcategory = null;
+    Object.keys(appData).forEach(key => delete appData[key]);
+
+    const startIndex = lines.findIndex(line => line.startsWith('## Root Apps'));
+    for (let i = startIndex + 1; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (line.startsWith('### ')) {
+            currentCategory = line.slice(4).trim();
+            currentSubcategory = null;
+            appData[currentCategory] = {};
+        } else if (line.startsWith('#### ')) {
+            currentSubcategory = line.slice(5).trim();
+            appData[currentCategory][currentSubcategory] = [];
+        } else if (line.startsWith('- **[')) {
+            const match = line.match(/\*\*\[(.*?)\]\((.*?)\)\*\* - (.*?)`(.*?)`/);
+            if (match) {
+                const app = {
+                    name: match[1],
+                    link: match[2],
+                    description: match[3],
+                    license: match[4],
+                    framework: line.includes('`[M]`') ? '`[M]`' : line.includes('`[LP]`') ? '`[LP]`' : ''
+                };
+                if (currentSubcategory) {
+                    appData[currentCategory][currentSubcategory].push(app);
+                } else {
+                    if (!appData[currentCategory].apps) appData[currentCategory].apps = [];
+                    appData[currentCategory].apps.push(app);
+                }
+            }
+        }
+    }
+
+    populateCategories();
+    displayApps();
+    showNotification('README.md loaded successfully');
+}
+
+function populateCategories() {
+    const categorySelect = document.getElementById('category');
+    categorySelect.innerHTML = '';
+    Object.keys(appData).forEach(category => {
+        const option = document.createElement('option');
+        option.value = category;
+        option.textContent = category;
+        categorySelect.appendChild(option);
+    });
+    populateSubcategories(); // Update subcategories for initial category
+}
+
+function populateSubcategories() {
+    const selectedCategory = document.getElementById('category').value;
+    const subcategoryGroup = document.getElementById('subcategory-group');
+    const subcategorySelect = document.getElementById('subcategory');
+    const subcategories = Object.keys(appData[selectedCategory] || {}).filter(key => key !== 'apps');
+
+    if (subcategories.length > 0) {
+        subcategoryGroup.hidden = false;
+        subcategorySelect.innerHTML = '';
+        subcategories.forEach(subcategory => {
+            const option = document.createElement('option');
+            option.value = subcategory;
+            option.textContent = subcategory;
+            subcategorySelect.appendChild(option);
+        });
+    } else {
+        subcategoryGroup.hidden = true;
+    }
+}
+
+function displayApps() {
+    const appList = document.getElementById('appList');
+    appList.innerHTML = '';
+
+    Object.entries(appData).forEach(([category, categoryData]) => {
+        const section = document.createElement('div');
+        section.className = 'category-section';
+        section.innerHTML = `<h3>${category}</h3>`;
+
+        Object.entries(categoryData).forEach(([subcategory, apps]) => {
+            if (subcategory === 'apps' || Array.isArray(apps)) {
+                const table = createAppTable(apps, category, subcategory);
+                if (subcategory !== 'apps') {
+                    section.innerHTML += `<h4>${subcategory}</h4>`;
+                }
+                section.appendChild(table);
+            }
+        });
+        appList.appendChild(section);
+    });
+}
+
+function createAppTable(apps, category, subcategory) {
+    const table = document.createElement('table');
+    table.className = 'table';
+    table.innerHTML = `
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Link</th>
+                <th>License</th>
+                <th>Framework</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            ${apps.map((app, index) => `
+                <tr>
+                    <td>${app.name}</td>
+                    <td><a href="${app.link}" target="_blank" rel="noopener noreferrer">${app.link}</a></td>
+                    <td>${app.license}</td>
+                    <td>${app.framework}</td>
+                    <td>
+                        <button class="btn btn-danger" onclick="removeApp('${category}', '${subcategory}', ${index})">
+                            Remove
+                        </button>
+                    </td>
+                </tr>
+            `).join('')}
+        </tbody>
+    `;
+    return table;
+}
+
+function handleFormSubmit(event) {
+    event.preventDefault();
+    
+    const formData = {
+        category: document.getElementById('category').value,
+        subcategory: document.getElementById('subcategory-group').hidden ? null : document.getElementById('subcategory').value,
+        name: document.getElementById('appName').value.trim(),
+        link: document.getElementById('appLink').value.trim(),
+        license: document.getElementById('license').value,
+        framework: Array.from(document.getElementById('framework').selectedOptions)
+            .map(opt => opt.value)
+            .join(' ')
+    };
+
+    if (validateFormData(formData)) {
+        addApp(formData);
+        event.target.reset();
+        showNotification('App added successfully');
+    }
+}
+
+function validateFormData(formData) {
+    if (!formData.category || !formData.name || !formData.link || !formData.license) {
+        showNotification('Please fill in all required fields', 'error');
+        return false;
+    }
+    return true;
+}
+
+function addApp(formData) {
+    const newApp = {
+        name: formData.name,
+        link: formData.link,
+        license: formData.license,
+        framework: formData.framework
+    };
+
+    if (formData.subcategory) {
+        if (!appData[formData.category][formData.subcategory]) {
+            appData[formData.category][formData.subcategory] = [];
+        }
+        appData[formData.category][formData.subcategory].push(newApp);
+    } else {
+        if (!appData[formData.category].apps) {
+            appData[formData.category].apps = [];
+        }
+        appData[formData.category].apps.push(newApp);
+    }
+    displayApps();
+}
+
+function removeApp(category, subcategory, index) {
+    if (confirm('Are you sure you want to remove this app?')) {
+        if (subcategory === 'apps') {
+            appData[category].apps.splice(index, 1);
+        } else {
+            appData[category][subcategory].splice(index, 1);
+        }
+        displayApps();
+        showNotification('App removed successfully');
+    }
+}
+
+function generateReadme() {
+    let readme = '# Awesome Android Root\n\n';
+    Object.entries(appData).forEach(([category, categoryData]) => {
+        readme += `## ${category}\n\n`;
+        
+        Object.entries(categoryData).forEach(([subcategory, apps]) => {
+            if (subcategory !== 'apps') {
+                readme += `### ${subcategory}\n`;
+            }
+            
+            apps.forEach(app => {
+                readme += `- **[${app.name}](${app.link})** - ${app.description || ''} \`${app.license}\`${app.framework ? ` ${app.framework}` : ''}\n`;
+            });
+            
+            readme += '\n';
+        });
+    });
+
+    const readmeOutput = document.getElementById('readmeOutput');
+    readmeOutput.value = readme;
+    showNotification('README.md content generated');
+}
+
+async function copyReadme() {
+    try {
+        const readmeOutput = document.getElementById('readmeOutput');
+        await navigator.clipboard.writeText(readmeOutput.value);
+        showNotification('README.md content copied to clipboard');
+    } catch (error) {
+        showNotification('Failed to copy to clipboard', 'error');
+    }
+}
+
+function showNotification(message, type = 'success') {
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 1rem 1.5rem;
+        border-radius: 0.5rem;
+        background-color: ${type === 'success' ? '#10b981' : '#ef4444'};
+        color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        animation: slideIn 0.3s ease-out;
+    `;
+    notification.textContent = message;
+    document.body.appendChild(notification);
+
+    setTimeout(() => {
+        notification.style.animation = 'slideOut 0.3s ease-out';
+        setTimeout(() => notification.remove(), 300);
+    }, 3000);
+}
+
+// Add CSS animations to head
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideIn {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slideOut {
+        from { transform: translateX(0); opacity: 1; }
+        to { transform: translateX(100%); opacity: 0; }
+    }
+`;
+document.head.appendChild(style);
+   </script>
+</body>
+</html>
