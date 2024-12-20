@@ -50,7 +50,65 @@ export default defineConfig({
       alt: 'Site Logo'
     },
     search: {
-      provider: 'local'
+      provider: 'local',
+      options: {
+        detailedView: true,
+        translations: {
+          button: {
+            buttonText: 'Search',
+            buttonAriaLabel: 'Search documentation'
+          }
+        }
+      }
+    },
+    nav: [
+      { text: 'Home', link: '/' },
+      { text: 'Apps', link: '/apps' },
+      { 
+        text: 'Guides',
+        items: [
+          { text: 'Rooting Guide', link: '/rooting-guides/' },
+          { text: 'Troubleshooting', link: '/troubleshooting/' }
+        ]
+      },
+      { text: 'FAQs', link: '/faqs' },
+      { text: 'Contribute', link: '/contributing' }
+    ],
+    sidebar: [
+      {
+        text: 'Rooting Guides',
+        collapsed: false,
+        items: [
+          { text: 'Basic Concepts', link: '/rooting-guides/' },
+          { text: 'Xiaomi Devices', link: '/rooting-guides/xiaomi' },
+          { text: 'Samsung Devices', link: '/rooting-guides/samsung' },
+          { text: 'Pixel Devices', link: '/rooting-guides/pixel' }
+        ]
+      },{
+        text: 'Troubleshooting',
+        collapsed: false,
+        items: [
+          { text: 'Common Issues', link: '/troubleshooting/' },
+          { text: 'WhatsApp Fix', link: '/troubleshooting/whatsapp' }
+        ]
+      },
+      {
+        text: 'Resources',
+        collapsed: true,
+        items: [
+          { text: 'Apps List', link: '/apps' },
+          { text: 'FAQs', link: '/faqs' },
+          { text: 'How to Contribute', link: '/contributing' }
+        ]
+      }
+    ],
+
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/fynks/awesome-android-root' }
+    ],
+    footer: {
+      message: "Released under the UnLicense.",
+      copyright: "Copyright © 2024-present"
     },
     lastUpdated: {
       text: 'Updated at',
@@ -58,43 +116,6 @@ export default defineConfig({
         dateStyle: 'full',
         timeStyle: 'medium'
       }
-    },
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Apps', link: '/apps' },
-      { text: 'Rooting Guides', link: '/rooting-guides/' },
-      { text: 'Troubleshooting', link: '/troubleshooting' },
-      { text: 'FAQs', link: '/faqs' }
-    ],
-    sidebar: [
-      {
-        text: 'Rooting Guides',
-          items: [
-            { text: 'Basics', link: '/rooting-guides/' },
-            { text: 'Xiaomi', link: '/rooting-guides/xiaomi' },
-            { text: 'Samsung', link: '/rooting-guides/samsung' },
-            { text: 'pixel', link: '/rooting-guides/pixel' }
-        ]
-      },
-      {
-        text: 'Troubleshooting',
-          items: [
-            { text: 'Basics', link: '/troubleshooting/' },
-            { text: 'Whatsapp Fix', link: '/troubleshooting/whatsapp' }
-        ]
-      },
-      {text: 'Navigation',
-        items: [
-          {text: 'Home', link: '/'},
-          {text: 'Apps', link: '/apps'},
-          {text: 'FAQs', link: '/faqs'},
-          {text: 'Contributions', link: '/contributing'},
-        ]
-
-      }
-    ],
-    footer: {
-      message: "Released under the UnLicense."
     }
   }
 })
