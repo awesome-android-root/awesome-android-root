@@ -2,7 +2,8 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://github.com/fynks/awesome-android-root)
 
-A comprehensive, up-to-date list of Android apps that require or utilize root privileges.
+A comprehensive and up-to-date list of latest Android root apps that require or utilize root privileges, rooting guides, tips, tricks and tools.
+
 
 ## Table of Contents
 - [What is Root Access](#what-is-root-access)
