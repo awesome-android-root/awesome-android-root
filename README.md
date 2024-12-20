@@ -37,6 +37,7 @@ A comprehensive, up-to-date list of Android apps that require or utilize root pr
   - [System Modifications](#system-modifications)
   - [Termux](#termux)
   - [Tools](#tools)
+- [Troubleshooting](#troubleshooting)
 - [FAQs](#faqs)
 - [Contributions](#contributions)
 - [Stats](#stats)
@@ -233,21 +234,36 @@ Archived Chats to official WhatsApp. `FOSS` `[LP]`
 - **[TTLChanger](https://github.com/aleksey-saenko/TTLChanger)** - Allows you to modify the default TTL (Time to Live) value. `FOSS`
 - **[Root Activity Launcher](https://play.google.com/store/apps/details?id=tk.zwander.rootactivitylauncher)** - Launch activities directly from your home screen with root access. `Proprietary` `[M]`
 
+## Troubleshooting
+
+A comprehensive guide on common issues and their solutions for Android rooting.
+
+[View Troubleshooting Guides →](./docs/troubleshooting/README.md)
+
 ## FAQs
-An index of various rooting related Frequently Asked Questions.
 
-[Read FAQs →](./docs/faqs.md)
+Detailed answers to frequently asked questions about Root basics and common errors.
 
-## Contributions
-We welcome contributions from the community! Please read our [Contributing Guidelines](./docs/contributing.md) to get started.
+[Browse FAQs →](./docs/faqs.md)
+
+## Contributing
+
+Help improve Awesome Android Root by adding new root apps, sharing device guides and Fixing documentation.
+
+[Contribution Guidelines →](./docs/contributing.md)
 
 ---
 
 **Note**: Always be cautious when using root apps, as they have the potential to modify system files and settings.
 
 --- 
+
 ## Stats
+[![GitHub stars](https://img.shields.io/github/stars/fynks/awesome-android-root?style=flat-square)](https://github.com/fynks/awesome-android-root/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/fynks/awesome-android-root?style=flat-square)](https://github.com/fynks/awesome-android-root/network)
+[![GitHub issues](https://img.shields.io/github/issues/fynks/awesome-android-root?style=flat-square)](https://github.com/fynks/awesome-android-root/issues)
 #### Number of Apps: `105`
 #### You are visitor number:
 
 ![Visitor Count](https://profile-counter.glitch.me/fynks/count.svg)
+
