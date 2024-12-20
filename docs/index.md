@@ -4,7 +4,7 @@ title:
 
 hero:
   name: "Awesome Android Root"
-  tagline: A comprehensive list of android root apps and guides.
+  tagline: Ultimate list of latest android root apps,rooting guides, tips, tricks and tools.
   actions:
     - theme: brand
       text: Apps
