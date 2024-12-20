@@ -239,7 +239,7 @@ Archived Chats to official WhatsApp. `FOSS` `[LP]`
 
 A comprehensive guide on common issues and their solutions for Android rooting.
 
-[View Troubleshooting Guides →](./docs/troubleshooting/README.md)
+[View Troubleshooting Guides →](./docs/troubleshooting/index.md)
 
 ## FAQs
 
