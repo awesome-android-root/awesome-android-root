@@ -6,10 +6,16 @@ export default defineConfig({
   description: "Ultimate list of best android root apps,rooting guides, tips, tricks and tools.",
   ignoreDeadLinks: true,
   head: [
+    // Favicons
     ['link', { rel: 'icon', href: '/favicon.ico', sizes: 'any' }],
     ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
-
+    ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png', sizes: '32x32' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/favicon-16x16', sizes: '16x16' }],
+    ['link', { rel: 'manifest', href: '/site.webmanifest' }],
     ['link', { rel: 'canonical', href: 'https://awesome-android-root.netlify.app/' }],
+
+    // Preconnects and Prefetches
     ['link', { rel: 'dns-prefetch', href: 'https://awesome.re' }],
     ['link', { rel: 'preconnect', href: 'https://awesome.re' }],
     ['link', { rel: 'dns-prefetch', href: 'https://profile-counter.glitch.me/' }],
