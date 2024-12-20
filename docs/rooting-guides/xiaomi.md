@@ -136,8 +136,77 @@ fastboot flash recovery recovery.img
 
 
 ## Tips and Trciks:
-[WIP]
-- Add HyperOS Unlock Bypass
-- Add hyper unlock
 
+### Alternative unlock bootloader
+> Unlocking the Bootloader on Redmi Note 13 4G NFC and Xiaomi 11 Lite 5G NE (HyperOS)
+
+After struggling with delays and account errors on the MI Community app, I found an effective method online to unlock the bootloader on HyperOS devices.
+
+Steps to Bypass MI Community Account Error and Unlock the Bootloader on HyperOS:
+
+#### Requirements:
+- **HyperOS-BootLoader-Bypass-V2**: 
+  - [Download here](https://github.com/mrzzoxo/HyperOS-BootLoader-Bypass/releases/tag/V2)
+- Download the **Settings.apk file**:
+  - [Download here](https://t.me/RedmiNote134G/72) - Telegram Link
+- **Download and install the MI Unlock Tool**:  
+  - [Download here](https://en.miui.com/unlock/download_en.html)
+
+#### Instructions:
+1. **Log in to your MI account.**
+2. Uninstall the MI Community app—you won't need it anymore.
+3. **Install the Settings.apk** from this message. Your device settings will now be in English, resembling MIUI 14.
+4. **Go to Developer Settings and toggle USB Debugging (turn it off, then on again).**
+5. **Enable OEM Unlock.**
+6. **Connect your phone** to your computer.
+7. **Open the HyperOS-BootLoader-Bypass-V2** folder and **run the bypass.cmd script.**
+(If everything is successful, you'll see a green "SUCCESS" message and a prompt to link your phone to your MI account in the phone settings.)
+8. **In Developer Settings, disable Wi-Fi and ensure Mobile Internet is enabled.**
+9. **Open "MI Unlock Status" and link your account to your phone.**
+(Make sure mobile data is on, and Wi-Fi is off. You’ll receive a notification confirming that your account is linked.)
+10.  **Open MI Unlock and log in to your account.**
+11.  Enter **FASTBOOT mode** on your phone by holding down the volume down and power buttons until FASTBOOT appears on the display.
+12.  Connect your phone to your computer.
+13.  In MI Unlock, **click UNLOCK and accept all the prompts.**
+14.  You should now see a **timer.** In my case, it was 72 hours, but it may vary depending on your situation.
+15.  Reboot your phone by long-pressing the power button and use it normally. After the timer expires, repeat steps 11 to 13 to complete the process.
+16.  Congratulations! Your bootloader is now unlocked.
+
+#### IMPORTANT NOTES:
+- Do not log out of your MI account on your phone.
+- Do not reset the settings.
+- Do not reinstall the Settings application (even though the language might be inconvenient for now).
+- Do not update your firmware until the process is fully complete.
+
+Thanks to @Kaktusbv for sharing this method.
+> Source : [Telegram](https://t.me/RedmiNote134GCommunity/105105)
+
+---
+### Hyper OS Feature Unlocker
+> FOR **Redmi Note 13 4G(Sapphire)** & **Redmi Note 13 4G NFC(Sapphiren)** ONLY
+
+#### Features:
+- Hyper Blur
+- New Hyper Boot Animation
+- Dynamic Refresh Rate
+- 90FPS Refresh Rate
+- And many more
+
+#### Requirements:
+
+- For **Sapphire**:
+  - **[Magisk](https://github.com/topjohnwu/Magisk)** 
+  - [Hyper OS Sapphire Unlocker](https://archive.org/download/hyper-os-sapphire-unlocker/Hyper%20OS%20Sapphire%20Unlocker.zip)
+
+- For **Sapphiren**: 
+   - **[Magisk](https://github.com/topjohnwu/Magisk)** 
+   - [Hyper OS Sapphiren Unlocker](https://archive.org/download/hyper-os-sapphire-unlocker/Hyper%20OS%20Sapphiren%20Unlocker.zip)
+
+#### Steps:
+- [Install Magisk](../rooting-guides/xiaomi.md#4-flash-magisk-using-custom-recovery)
+- Open Magisk and flash the module according to your device.
+- Reboot your device.
+
+
+---
 **Disclaimer:** Rooting voids your warranty and may brick your device if not done properly. Proceed at your own risk and ensure you have backups of important data.
