@@ -1,7 +1,7 @@
 ---
 layout: home
 title: 
-description: "Comprehensive collection of Android root apps, step-by-step rooting guides, troubleshooting tips, and essential tools."
+description: "Discover 100+ curated root apps, step-by-step rooting guides for Xiaomi, Samsung & Pixel devices. Learn safe rooting methods, troubleshooting & advanced Android customization."
 
 hero:
   name: "Awesome Android Root"
@@ -11,10 +11,10 @@ hero:
     alt: Awesome Android Root Logo
   actions:
     - theme: brand
-      text: Browse Root Apps
+      text: Explore Root Apps →
       link: /apps
     - theme: brand
-      text: Start Rooting
+      text: Start Rooting →
       link: /rooting-guides
     - theme: alt
       text: Read FAQs
