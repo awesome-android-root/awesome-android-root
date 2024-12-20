@@ -260,9 +260,6 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 --- 
 
 ## Stats
-[![GitHub stars](https://img.shields.io/github/stars/fynks/awesome-android-root?style=flat-square)](https://github.com/fynks/awesome-android-root/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/fynks/awesome-android-root?style=flat-square)](https://github.com/fynks/awesome-android-root/network)
-[![GitHub issues](https://img.shields.io/github/issues/fynks/awesome-android-root?style=flat-square)](https://github.com/fynks/awesome-android-root/issues)
 #### Number of Apps: `105`
 #### You are visitor number:
 
