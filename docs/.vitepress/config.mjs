@@ -42,6 +42,9 @@ export default defineConfig({
       dark: '/images/logo_dark.svg',
       alt: 'Site Logo'
     },
+    search: {
+      provider: 'local'
+    },
     lastUpdated: {
       text: 'Updated at',
       formatOptions: {
