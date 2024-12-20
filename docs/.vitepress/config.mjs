@@ -53,6 +53,7 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Apps', link: '/apps' },
       { text: 'Rooting Guides', link: '/rooting-guides/' },
+      { text: 'Troubleshooting', link: '/troubleshooting' },
       { text: 'FAQs', link: '/faqs' }
     ],
     sidebar: [
@@ -63,6 +64,13 @@ export default defineConfig({
             { text: 'Xiaomi', link: '/rooting-guides/xiaomi' },
             { text: 'Samsung', link: '/rooting-guides/samsung' },
             { text: 'pixel', link: '/rooting-guides/pixel' }
+        ]
+      },
+      {
+        text: 'Troubleshooting',
+          items: [
+            { text: 'Basics', link: '/troubleshooting/' },
+            { text: 'Whatsapp Fix', link: '/troubleshooting/whatsapp' }
         ]
       },
       {text: 'Navigation',
