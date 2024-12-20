@@ -65,6 +65,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 ### Ad Blocking
 - **[AdAway](https://adaway.org/)** - Open-source ad blocker using hosts file. `FOSS`
 - **[AdGuard](https://adguard.com/en/adguard-android/overview.html)** - Comprehensive ad blocking solution. `Proprietary`
+- **[bindhosts](https://github.com/backslashxx/bindhosts)** - Systemless hosts for Apatch, KernelSU and Magisk that is fully standalone & self-updating. - `FOSS` `[M]`
 - **[Blokada](https://blokada.org/)** - Advanced ad blocker with VPN functionality. `FOSS`
 
 ### App Management
