@@ -1,6 +1,7 @@
 ---
 layout: home
 title: 
+description: "Ultimate list of latest android root apps, rooting guides, tips, tricks, and tools."
 
 hero:
   name: "Awesome Android Root"
@@ -21,5 +22,5 @@ features:
   - title: Rooting Guides
     details: Guides for rooting various vendors and devices
   - title: FAQs
-    details: Frequenrly Asked Questions about various aspects and problems related to rooting
+    details: Frequently Asked Questions about various aspects and problems related to rooting
 ---
