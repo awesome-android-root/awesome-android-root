@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: "en-US",
   title: "Awesome Android Root",
-  description: "A comprehensive, curated list of Android root apps, tools, and utilities. Includes ad blockers, system tools, customization apps, and root-specific utilities.",
+  description: "A comprehensive and up-to-date list of Android root apps, guides and  tools.",
   ignoreDeadLinks: true,
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico', sizes: 'any' }],
@@ -17,7 +17,7 @@ export default defineConfig({
         
     // OpenGraph Meta Tags
     ['meta', { property: 'og:title', content: 'Awesome Android Root' }],
-    ['meta', { property: 'og:description', content: 'A comprehensive, curated list of Android root apps, tools, and utilities. Includes ad blockers, system tools, customization apps, and root-specific utilities.' }],
+    ['meta', { property: 'og:description', content: 'A comprehensive and up-to-date list of Android root apps, guides and  tools.' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:image', content: 'https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/docs/public/images/og.png' }],
     ['meta', { property: 'og:url', content: 'https://awesome-android-root.netlify.app/' }],
@@ -26,7 +26,7 @@ export default defineConfig({
     // Twitter Card Meta Tags
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'Awesome Android Root' }],
-    ['meta', { name: 'twitter:description', content: 'A comprehensive, curated list of Android root apps, tools, and utilities. Includes ad blockers, system tools, customization apps, and root-specific utilities.' }],
+    ['meta', { name: 'twitter:description', content: 'A comprehensive and up-to-date list of Android root apps, guides and  tools.' }],
     ['meta', { name: 'twitter:image', content: 'https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/docs/public/images/og.png' }],
 
     // SEO Meta Tags
