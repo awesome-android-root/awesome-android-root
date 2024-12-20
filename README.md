@@ -64,6 +64,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 ## Root Apps
 ### Ad Blocking
 - **[AdAway](https://adaway.org/)** - Open-source ad blocker using hosts file. `FOSS`
+- **[AdClose](https://github.com/Xposed-Modules-Repo/com.close.hook.ads/)** - Prevents the initial loading of the advertising SDK within the application and intercept application advertising requests to block ads. `FOSS` `[LP]`
 - **[AdGuard](https://adguard.com/en/adguard-android/overview.html)** - Comprehensive ad blocking solution. `Proprietary`
 - **[bindhosts](https://github.com/backslashxx/bindhosts)** - Systemless hosts for Apatch, KernelSU and Magisk that is fully standalone & self-updating. - `FOSS` `[M]`
 - **[Blokada](https://blokada.org/)** - Advanced ad blocker with VPN functionality. `FOSS`
@@ -101,7 +102,10 @@ A comprehensive guide covering different rooting methods, decision-making and di
 Archived Chats to official WhatsApp. `FOSS` `[LP]`
 
 #### Other App Mods
+- **[F*ck for VIP](https://github.com/Xposed-Modules-Repo/com.bug.hookvip)** - A module to unlock some software memberships and remove ads.Check releases section for list of supported apps. `FOSS` `[LP]`
 - **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LP]`
+- **[NewHookVip](https://github.com/Xposed-Modules-Repo/top.hookvip.pro)** - Xposed module for unlocking some App memberships and adding some extended functions. Check releases section for list of supported apps. `FOSS` `[LP]`
+
 
 #### Patching
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (Use with caution) . `Proprietary`
