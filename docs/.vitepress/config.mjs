@@ -43,12 +43,6 @@ export default defineConfig({
     ['meta', { name: 'language', content: 'English' }]
 
     ],
-    rewrites: {
-      'docs/rooting-guides/index.md': 'rooting-guides/index.md',
-      'docs/troubleshooting/index.md': 'troubleshooting/index.md',
-      'docs/faqs.md': 'faqs.md',
-      'docs/contributing.md': 'contributing.md'
-    },
   themeConfig: {
     logo: {
       light: '/images/logo.svg',
