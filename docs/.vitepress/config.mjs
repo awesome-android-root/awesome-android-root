@@ -7,7 +7,7 @@ export default defineConfig({
   ignoreDeadLinks: true,
   cleanUrls: true,
   sitemap: {
-    hostname: 'https://awesome-android-root.netlify.app'
+    hostname: 'https://awesome-android-root.pages.dev'
   },
   head: [
     // Favicons
@@ -17,7 +17,7 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png', sizes: '32x32' }],
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png', sizes: '16x16' }],
     ['link', { rel: 'manifest', href: '/site.webmanifest' }],
-    ['link', { rel: 'canonical', href: 'https://awesome-android-root.netlify.app/' }],
+    ['link', { rel: 'canonical', href: 'https://awesome-android-root.pages.dev/' }],
 
     // Preconnects and Prefetches
     ['link', { rel: 'dns-prefetch', href: 'https://awesome.re' }],
@@ -30,7 +30,7 @@ export default defineConfig({
     ['meta', { property: 'og:description', content: 'Ultimate list of best android root apps,rooting guides, tips, tricks and tools.' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:image', content: 'https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/docs/public/images/og.png' }],
-    ['meta', { property: 'og:url', content: 'https://awesome-android-root.netlify.app/' }],
+    ['meta', { property: 'og:url', content: 'https://awesome-android-root.pages.dev/' }],
     ['meta', { property: 'og:site_name', content: 'Awesome Android Root' }],
 
     // Twitter Card Meta Tags
