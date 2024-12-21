@@ -7,32 +7,32 @@ export default defineConfig({
   ignoreDeadLinks: true,
   cleanUrls: true,
   sitemap: {
-    hostname: 'https://awesome-android-root.pages.dev'
+    hostname: 'https://awesome-android-root.netlify.app'
   },
   head: [
     // Favicons
-    ['link', { rel: 'icon', type:'image/x-icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
     ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' }],
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png', sizes: '32x32' }],
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png', sizes: '16x16' }],
     ['link', { rel: 'manifest', href: '/site.webmanifest' }],
-    ['link', { rel: 'canonical', href: 'https://awesome-android-root.pages.dev' }],
+    ['link', { rel: 'canonical', href: 'https://awesome-android-root.netlify.app/' }],
 
     // Preconnects and Prefetches
     ['link', { rel: 'dns-prefetch', href: 'https://awesome.re' }],
     ['link', { rel: 'preconnect', href: 'https://awesome.re' }],
     ['link', { rel: 'dns-prefetch', href: 'https://profile-counter.glitch.me/' }],
     ['link', { rel: 'preconnect', href: 'https://profile-counter.glitch.me/' }],
-        
+
     // OpenGraph Meta Tags
     ['meta', { property: 'og:title', content: 'Awesome Android Root' }],
     ['meta', { property: 'og:description', content: 'Ultimate list of best android root apps,rooting guides, tips, tricks and tools.' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:image', content: 'https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/docs/public/images/og.png' }],
-    ['meta', { property: 'og:url', content: 'https://awesome-android-root.pages.dev' }],
+    ['meta', { property: 'og:url', content: 'https://awesome-android-root.netlify.app/' }],
     ['meta', { property: 'og:site_name', content: 'Awesome Android Root' }],
-    
+
     // Twitter Card Meta Tags
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'Awesome Android Root' }],
@@ -44,14 +44,14 @@ export default defineConfig({
     ['meta', { name: 'googlebot', content: 'index, follow' }],
     ['meta', { name: 'author', content: 'Fynks' }],
     ['meta', { name: 'robots', content: 'index, follow' }],
-    ['meta', { name: 'language', content: 'English' }]
+    ['meta', { name: 'language', content: 'English' }],
 
-    // Site Verification Meta Tags
+    // Search Console meta tags
     ['meta', { name: 'google-site-verification', content: 'cUtuaqjIZ-pGgkUGTHpQ9QV3Kek6Q3ZEYenZsStHZEE' }],
     ['meta', { name: 'yandex-verification', content: '21a617bcb994ee2f' }],
     ['meta', { name: 'msvalidate.01', content: '7EBF814961E199A15D10C1313CE49074' }]
 
-    ],
+  ],
   themeConfig: {
     logo: {
       light: '/images/logo.svg',
@@ -73,7 +73,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Apps', link: '/apps' },
-      { 
+      {
         text: 'Guides',
         items: [
           { text: 'Rooting Guide', link: '/rooting-guides/' },
@@ -93,7 +93,7 @@ export default defineConfig({
           { text: 'Samsung Devices', link: '/rooting-guides/samsung' },
           { text: 'Pixel Devices', link: '/rooting-guides/pixel' }
         ]
-      },{
+      }, {
         text: 'Troubleshooting',
         collapsed: false,
         items: [
@@ -119,7 +119,7 @@ export default defineConfig({
       message: "Released under the UnLicense.",
       copyright: "Copyright © 2024-present"
     },
-        outline: {
+    outline: {
       level: [2, 3],
       label: 'On this page'
     },
