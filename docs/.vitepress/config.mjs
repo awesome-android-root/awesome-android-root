@@ -5,6 +5,10 @@ export default defineConfig({
   title: "Awesome Android Root",
   description: "Ultimate list of best android root apps,rooting guides, tips, tricks and tools.",
   ignoreDeadLinks: true,
+  cleanUrls: true,
+  sitemap: {
+    hostname: 'https://awesome-android-root.netlify.app'
+  },
   head: [
     // Favicons
     ['link', { rel: 'icon', type:'image/x-icon', href: '/favicon.ico' }],
@@ -109,6 +113,10 @@ export default defineConfig({
     footer: {
       message: "Released under the UnLicense.",
       copyright: "Copyright © 2024-present"
+    },
+        outline: {
+      level: [2, 3],
+      label: 'On this page'
     },
     lastUpdated: {
       text: 'Updated at',
