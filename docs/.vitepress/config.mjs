@@ -46,6 +46,11 @@ export default defineConfig({
     ['meta', { name: 'robots', content: 'index, follow' }],
     ['meta', { name: 'language', content: 'English' }]
 
+    // Site Verification Meta Tags
+    ['meta', { name: 'google-site-verification', content: 'cUtuaqjIZ-pGgkUGTHpQ9QV3Kek6Q3ZEYenZsStHZEE' }],
+    ['meta', { name: 'yandex-verification', content: '21a617bcb994ee2f' }],
+    ['meta', { name: 'msvalidate.01', content: '7EBF814961E199A15D10C1313CE49074' }]
+
     ],
   themeConfig: {
     logo: {
