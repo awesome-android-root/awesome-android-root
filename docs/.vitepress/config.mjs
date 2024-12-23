@@ -9,20 +9,20 @@ export default defineConfig({
     hostname: 'https://awesome-android-root.link'
   },
   head: [
-// Favicons with improved metadata
-['link', { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: 'any' }],
-['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
-['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' }],
-['link', { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png', sizes: '32x32' }],
-['link', { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png', sizes: '16x16' }],
-['link', { rel: 'manifest', href: '/manifest.json', crossorigin: 'use-credentials' }],
+    // Favicons with improved metadata
+    ['link', { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: 'any' }],
+    ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png', sizes: '32x32' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png', sizes: '16x16' }],
+    ['link', { rel: 'manifest', href: '/manifest.json', crossorigin: 'use-credentials' }],
 
-// Additional browser compatibility meta tags
-['meta', { name: 'theme-color', content: '#ffffff' }],
-['meta', { name: 'apple-mobile-web-app-title', content: 'Awesome Android Root' }],
-['meta', { name: 'application-name', content: 'Awesome Android Root' }],
-['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    // Additional browser compatibility meta tags
+    ['meta', { name: 'theme-color', content: '#ffffff' }],
+    ['meta', { name: 'apple-mobile-web-app-title', content: 'Awesome Android Root' }],
+    ['meta', { name: 'application-name', content: 'Awesome Android Root' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
 
 
     // Preconnects and Prefetches
@@ -33,7 +33,7 @@ export default defineConfig({
 
     // OpenGraph Meta Tags
     ['meta', { property: 'og:title', content: 'Awesome Android Root' }],
-    ['meta', { property: 'og:description', content: 'Ultimate list of best android root apps,rooting guides, tips, tricks and tools.' }],
+    ['meta', { property: 'og:description', content: 'Complete guide to Android rooting with 100+ curated root apps, device-specific tutorials, troubleshooting tips, and Magisk/LSPosed frameworks.' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:image', content: 'https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/docs/public/images/og.png' }],
     ['meta', { property: 'og:url', content: 'https://awesome-android-root.link' }],
@@ -42,15 +42,29 @@ export default defineConfig({
     // Twitter Card Meta Tags
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'Awesome Android Root' }],
-    ['meta', { name: 'twitter:description', content: 'Ultimate list of best android root apps,rooting guides, tips, tricks and tools.' }],
+    ['meta', { name: 'twitter:description', content: 'Complete guide to Android rooting with 100+ curated root apps, device-specific tutorials, troubleshooting tips, and Magisk/LSPosed frameworks.' }],
     ['meta', { name: 'twitter:image', content: 'https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/docs/public/images/og.png' }],
 
     // SEO Meta Tags
-    ['meta', { name: 'keywords', content: 'android root, root apps, magisk modules, xposed modules, android customization, android tools, root utilities, android mods, cool rooted android apps, android root tool, root apk for android, adb debugging toolreddit, root apps for android, android tweaking toolbox without root, android os netlify, termux android root, how to root android in termux, android root app, how to get root access in termux without rooting your android root, awesome android root, android rooten, how to root magisk any samsung devices android 14 2024, app root for android, sdf tools android root, how to use terminal emulator in android device root, android jailbreak rooter, android root software, how to root android termux, lsposed zygisk, android root nobody, app root android, how to install parrot os on android without root youtube, debloating solution, awesome root android, android root jar, android run an app as root, awesome android kotlin apps, how to root andoid in temux, kernelsu, install parrot os on android termux non root youtube, android root file name, andid oot, android root tools, install kali linux on android without root andronix termux youtube, termux root android hilfe, adb macrodroid, android root modify app classification, toop 5 root application on android, root genes android, awesome android, aandroid root tool, best apps for rooted android reddit, root android app apk, youtube netlify lite app, git awesome android rot, start android app with root, andri root, apps to root android, root and other apps android, apps for rooting android from play store, rooted andoid 15, xposed installer 官网, apatch root, install hydra on termux in android without root youtube, qmqm.netlify.app, root, they like the applications to be integrated in the android root, android permissions list, tools to root android device, run termux command from kernel mamager, how to install termux on android no root, root package manager android, android hilfe rooten' }],
+     ['meta', { name: 'keywords', content: 'android root, magisk modules, lsposed framework, custom rom, root apps, android rooting guide, kernelsu, root access, android mods, xposed modules, root tools, bootloader unlock' }],
+    
     ['meta', { name: 'googlebot', content: 'index, follow' }],
     ['meta', { name: 'author', content: 'Fynks' }],
     ['meta', { name: 'robots', content: 'index, follow' }],
-    ['meta', { name: 'language', content: 'English' }]
+    ['meta', { name: 'language', content: 'English' }],
+
+    // Structured data
+    ['script', { type: 'application/ld+json' }, JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Awesome Android Root",
+      "url": "https://awesome-android-root.link",
+      "description": "Comprehensive Android root apps collection and Android rooting guides ",
+      "author": {
+        "@type": "Person",
+        "name": "Fynks"
+      }
+    })],
 
   ],
   themeConfig: {
