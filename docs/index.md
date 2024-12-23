@@ -2,6 +2,10 @@
 layout: home
 title: 
 description: "Ultimate list of best android root apps,rooting guides, tips, tricks and tools."
+head:
+  - - link
+    - rel: canonocal
+      href: https://awesome-android-root.link
 
 hero:
   name: "Awesome Android Root"
