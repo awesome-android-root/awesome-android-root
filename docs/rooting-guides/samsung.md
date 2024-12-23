@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Samsung Root Guide
-description: "Complete guide for rooting Samsung devices running One UI. Learn how to unlock bootloader, flash custom recovery, and root using Magisk. Covers Galaxy S series, A series, and Note devices."
+description: "Complete guide for rooting Samsung devices running One UI. Learn how to unlock bootloader, flash custom recovery, and root using Magisk. Covers Galaxy S series and Note devices."
 ---
 
 # Samsung Rooting Guide

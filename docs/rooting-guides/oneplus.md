@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: OnePlus Root Guide
-description: "Comprehensive guide to root OnePlus phones running OxygenOS. Includes bootloader unlocking instructions, MSM tool usage, and rooting methods for OnePlus 12, 11, Nord series and older devices."
+description: "Comprehensive guide to root OnePlus phones running OxygenOS. Includes bootloader unlocking instructions, MSM tool usage, and rooting methods for OnePlus 12, 11, Nord series."
 ---
 
 # OnePlus Rooting Guide
