@@ -3,7 +3,6 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: "en-US",
   title: "Awesome Android Root",
-  description: "Ultimate list of best android root apps,rooting guides, tips, tricks and tools.",
   ignoreDeadLinks: true,
   cleanUrls: true,
   sitemap: {

@@ -1,7 +1,7 @@
 ---
 layout: home
 title: 
-description: "Ultimate list of best android root apps,rooting guides, tips, tricks and tools."
+description: "A comprehensive collection of root apps, rooting guides, and tools for Android customization. Features curated lists of FOSS and proprietary apps for system modification, security, automation, and performance optimization. Includes device-specific rooting tutorials and troubleshooting."
 head:
   - - link
     - rel: canonocal

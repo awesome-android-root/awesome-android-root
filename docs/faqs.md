@@ -1,6 +1,7 @@
 ---
 title: FAQs
 layout: doc
+description: "Comprehensive guide answering common questions about Android rooting, covering safety, troubleshooting, custom ROMs, Magisk modules, and security concerns. Learn about root access, warranty implications, system modifications, and recommended tools for Android customization."
 ---
 # Frequently Asked Questions
 

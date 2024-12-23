@@ -1,5 +1,7 @@
 ---
 layout: doc
+title: Whatsapp Troubleshooting
+description: "Step-by-step guide to fix WhatsApp on rooted Android devices using Play Integrity Fix and LSPosed modules. Complete solution for bypassing root detection and maintaining WhatsApp functionality with Magisk and BootloaderSpoofer."
 ---
 # Bypassing Play Integrity for WhatsApp
 

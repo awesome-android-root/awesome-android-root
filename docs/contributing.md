@@ -1,3 +1,9 @@
+---
+title: Contribution Guidelines
+layout: doc
+description: "Detailed guidelines for contributing to the Awesome Android Root collection. Learn how to add root apps, Magisk modules, and LSPosed tweaks following our formatting standards. Includes step-by-step instructions for submissions, quality requirements, and markdown formatting rules."
+
+---
 # Contribution Guidelines
 
 Thank you for contributing to **Awesome Android Root**. Please follow these guidelines to make your additions consistent and helpful.
