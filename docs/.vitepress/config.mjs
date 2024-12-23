@@ -18,9 +18,6 @@ export default defineConfig({
 ['link', { rel: 'manifest', href: '/manifest.json', crossorigin: 'use-credentials' }],
 
 // Additional browser compatibility meta tags
-['meta', { name: 'msapplication-TileColor', content: '#ffffff' }],
-['meta', { name: 'msapplication-TileImage', content: '/mstile-144x144.png' }],
-['meta', { name: 'msapplication-config', content: '/browserconfig.xml' }],
 ['meta', { name: 'theme-color', content: '#ffffff' }],
 ['meta', { name: 'apple-mobile-web-app-title', content: 'Awesome Android Root' }],
 ['meta', { name: 'application-name', content: 'Awesome Android Root' }],
