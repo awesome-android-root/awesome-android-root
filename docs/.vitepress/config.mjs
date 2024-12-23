@@ -9,13 +9,24 @@ export default defineConfig({
     hostname: 'https://awesome-android-root.link'
   },
   head: [
-    // Favicons
-    ['link', { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
-    ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' }],
-    ['link', { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png', sizes: '32x32' }],
-    ['link', { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png', sizes: '16x16' }],
-    ['link', { rel: 'manifest', href: '/site.webmanifest' }],
+// Favicons with improved metadata
+['link', { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: 'any' }],
+['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
+['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' }],
+['link', { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png', sizes: '32x32' }],
+['link', { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png', sizes: '16x16' }],
+['link', { rel: 'manifest', href: '/manifest.json', crossorigin: 'use-credentials' }],
+
+// Additional browser compatibility meta tags
+['meta', { name: 'msapplication-TileColor', content: '#ffffff' }],
+['meta', { name: 'msapplication-TileImage', content: '/mstile-144x144.png' }],
+['meta', { name: 'msapplication-config', content: '/browserconfig.xml' }],
+['meta', { name: 'theme-color', content: '#ffffff' }],
+['meta', { name: 'apple-mobile-web-app-title', content: 'Awesome Android Root' }],
+['meta', { name: 'application-name', content: 'Awesome Android Root' }],
+['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+
 
     // Preconnects and Prefetches
     ['link', { rel: 'dns-prefetch', href: 'https://awesome.re' }],
