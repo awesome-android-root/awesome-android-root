@@ -179,6 +179,7 @@ Archived Chats to official WhatsApp. `FOSS` `[LP]`
 ### File Management
 - **[Material Files](https://github.com/zhanghai/MaterialFiles)** - Modern file manager with root capabilities. `FOSS`
 - **[MiXplorer](https://mixplorer.com/)** - Feature-rich file manager. `Proprietary`
+- **[MT Manager](https://mt2.cn/)** - File Management & Reverse Engineering Tool for Android. `Proprietary`
 - **[Root Explorer](https://play.google.com/store/apps/details?id=com.speedsoftware.rootexplorer)** - File manager with root access. `Proprietary`
 - **[Solid Explorer](https://play.google.com/store/apps/details?id=pl.solidexplorer2)** - Powerful file manager with root support. `Proprietary`
 - **[Total Commander](https://play.google.com/store/apps/details?id=com.ghisler.android.TotalCommander)** - A feature rich file maanger for Android supporting root and shizuku.For  a better experince, please read [this](https://www.ghisler.ch/board/viewforum.php?f=22). `Proprietary`
@@ -209,6 +210,7 @@ Archived Chats to official WhatsApp. `FOSS` `[LP]`
 - **[MMRL](https://github.com/DerGoogler/MMRL)** - An Android app that helps manage your own modules repository. `FOSS`
 - **[Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix)** - Fix Play Integrity (and SafetyNet) verdicts. `FOSS` `[M]`
 - **[Root Check](https://play.google.com/store/apps/details?id=com.jrummyapps.rootchecker)** - Verify proper root. `Proprietary`
+- **[TrickyStore](https://github.com/5ec1cff/TrickyStore)** - Modifying the certificate chain generated for android key attestation. `[M]`
 - **[Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)** - Hide Magisk. `Proprietary` `[M]`
 - **[Zygisk-Assistant](https://github.com/snake-4/Zygisk-Assistant)** - A Zygisk module to hide root for KernelSU, Magisk and APatch. `FOSS` `[M]`
 - **[Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. `FOSS` `[M]`
