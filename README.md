@@ -107,6 +107,8 @@ A comprehensive guide covering different rooting methods, decision-making and di
 - **[TeleVip](https://github.com/Xposed-Modules-Repo/com.my.televip/)** - A module for modifying Telegram with Hide seen status, unlocking channel restrictions etc. `Proprietary` `[LP]`
 - **[Wa Revamp](https://github.com/Xposed-Modules-Repo/its.madruga.warevamp)** - Add various functions like download staus and view once, hide read message, Statuses and
 Archived Chats to official WhatsApp. `FOSS` `[LP]`
+- **[X](https://github.com/Xposed-Modules-Repo/cn.android.x)** - Add extra features to Wechat. `FOSS` `[M]`
+
 
 #### Other App Mods
 - **[IceCore](https://github.com/Xposed-Modules-Repo/me.bingyue.IceCore/)** - Integrates various fun functions, supports obtaining VIP, removing ads, and other functions. `FOSS` `[LP]`
@@ -147,6 +149,7 @@ Archived Chats to official WhatsApp. `FOSS` `[LP]`
 #### Boot Animations
 - **[Bootanimation](https://github.com/Bitterneko/Bootanimation)** - A custom boot animation for Android. `FOSS`
 - **[Live Boot](https://play.google.com/store/apps/details?id=eu.chainfire.liveboot)** - Get a Linux-like live boot screen on Android. `Proprietary`
+- **[video-to-bootanimation](https://github.com/Magisk-Modules-Alt-Repo/video-to-bootanimation)** - A Magisk Module Which Can Set Videos as Android Device BootAnimation. `FOSS` `[M]`
 
 #### Launchers
 - **[Pixel Launcher Mods](https://github.com/KieronQuinn/PixelLauncherMods)** - Mods for enhancing the Pixel Launcher experience. `FOSS`
