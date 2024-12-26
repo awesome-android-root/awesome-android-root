@@ -12,8 +12,8 @@
     "url": "https://github.com/fynks/awesome-android-root/issues"
   },
   "scripts": {
-    "docs:dev": "chmod +x ./fix-links.sh && ./fix-links.sh && chmod +x ./update-meta.sh && ./update-meta.sh && vitepress dev docs",
-    "docs:build": "chmod +x ./fix-links.sh && ./fix-links.sh && chmod +x ./update-meta.sh && ./update-meta.sh && vitepress build docs",
+    "docs:dev": "chmod +x ./build-docs.sh && ./build-docs.sh && vitepress dev docs",
+    "docs:build": "chmod +x ./build-docs.sh && ./build-docs.sh && vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
