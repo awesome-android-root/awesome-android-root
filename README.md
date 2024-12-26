@@ -68,8 +68,11 @@ A comprehensive guide covering different rooting methods, decision-making and di
 - **[AdGuard](https://adguard.com/en/adguard-android/overview.html)** - Comprehensive ad blocking solution. `Proprietary`
 - **[bindhosts](https://github.com/backslashxx/bindhosts)** - Systemless hosts for Apatch, KernelSU and Magisk that is fully standalone & self-updating. - `FOSS` `[M]`
 - **[Blokada](https://blokada.org/)** - Advanced ad blocker with VPN functionality. `FOSS`
-- **[Systemless hosts KernelSU module](https://github.com/symbuzzer/systemless-hosts-KernelSU-module)** - Required module to use applications such as AdAway on KernelSU and APatch. `FOSS` 
+- **[ubic-AdBlock](https://github.com/Vaz15k/Cubic-AdBlock)** - A simple AdBlock module based on the hosts file. `FOSS` `[M]`
+- **[Re-Malwack](https://github.com/Magisk-Modules-Alt-Repo/Re-Malwack)** - Protect your device from ads, malware, p*rn, gambling sites, fake news sites etc. `FOSS` `[M]`
 - **[StevenBlock ](https://github.com/mikropsoft/StevenBlock)** - Ad Blocking Module for Android suporting Magisk, KernelSU & APatch. `FOSS` `[M]`
+- **[systemless-adblocker](https://github.com/Magisk-Modules-Alt-Repo/systemless-adblocker)** - Ultimate adblocker module derived from gloeyisk/systemless-hosts. `FOSS` `[M]`
+- **[Systemless hosts KernelSU module](https://github.com/symbuzzer/systemless-hosts-KernelSU-module)** - Required module to use applications such as AdAway on KernelSU and APatch. `FOSS` 
 
 ### App Management
 #### App Isolation and Cloning
@@ -252,7 +255,7 @@ Archived Chats to official WhatsApp. `FOSS` `[LP]`
 - **[UotanToolbox NT](https://github.com/Uotan-Dev/UotanToolboxNT)** - A modern toolbox for geeks. `FOSS`
 - **[TTLChanger](https://github.com/aleksey-saenko/TTLChanger)** - Allows you to modify the default TTL (Time to Live) value. `FOSS`
 - **[Root Activity Launcher](https://play.google.com/store/apps/details?id=tk.zwander.rootactivitylauncher)** - Launch activities directly from your home screen with root access. `Proprietary` `[M]`
-
+- **[WiFi Password Viewer for MMRL](https://github.com/Googlers-Repo/wpd)** - WiFi Password Viewer for MMRL. `FOSS`
 ## Troubleshooting
 
 A comprehensive guide on common issues and their solutions for Android rooting.
