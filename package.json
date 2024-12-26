@@ -1,8 +1,16 @@
 {
   "name": "awesome-android-root",
   "version": "1.1.0",
-  "description": "Ultimate list of best android root apps, rooting guides, tips, tricks and tools",
+  "description": "A curated list of best Android root applications and best magisk modules. Features over 120 apps across categories like system mods, privacy, customization, and development tools.",
   "private": true,
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fynks/awesome-android-root"
+  },
+  "bugs": {
+    "url": "https://github.com/fynks/awesome-android-root/issues"
+  },
   "scripts": {
     "docs:dev": "chmod +x ./fix-links.sh && ./fix-links.sh && chmod +x ./update-meta.sh && ./update-meta.sh && vitepress dev docs",
     "docs:build": "chmod +x ./fix-links.sh && ./fix-links.sh && chmod +x ./update-meta.sh && ./update-meta.sh && vitepress build docs",
@@ -11,20 +19,17 @@
   "devDependencies": {
     "vitepress": "^1.5.0"
   },
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fynks/awesome-android-root"
-  },
   "keywords": [
     "android",
     "root",
     "magisk",
     "rooting",
     "android-apps",
-    "awesome-list"
+    "awesome-list",
+    "lsposed",
+    "xposed",
+    "kernelsu",
+    "android-tools"
   ],
   "author": "Fynks",
   "license": "Unlicense"
