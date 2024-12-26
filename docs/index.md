@@ -4,7 +4,7 @@ title:
 description: "A comprehensive collection of root apps, rooting guides, and tools for Android customization. Features curated lists of FOSS and proprietary apps for system modification, security, and performance optimization."
 head:
   - - link
-    - rel: canonocal
+    - rel: canonical
       href: https://awesome-android-root.link
 
 hero:
