@@ -107,7 +107,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 - **[TeleVip](https://github.com/Xposed-Modules-Repo/com.my.televip/)** - A module for modifying Telegram with Hide seen status, unlocking channel restrictions etc. `Proprietary` `[LP]`
 - **[Wa Revamp](https://github.com/Xposed-Modules-Repo/its.madruga.warevamp)** - Add various functions like download staus and view once, hide read message, Statuses and
 Archived Chats to official WhatsApp. `FOSS` `[LP]`
-- **[X](https://github.com/Xposed-Modules-Repo/cn.android.x)** - Add extra features to Wechat. `FOSS` `[LM]`
+- **[X](https://github.com/Xposed-Modules-Repo/cn.android.x)** - Add extra features to Wechat. `FOSS` `[LP]`
 
 
 #### Other App Mods
