@@ -8,25 +8,6 @@ export default defineConfig({
   sitemap: {
     hostname: 'https://awesome-android-root.link'
   },
-   // Build optimization settings
-   vite: {
-    // Pre-bundle Vue for faster dev startup
-    optimizeDeps: {
-      include: ['vue']
-    },
-    build: {
-      // Use Terser for better minification
-      minify: 'terser',
-      rollupOptions: {
-        output: {
-          // Split Vue into separate vendor chunk
-          manualChunks: {
-            'vue-vendor': ['vue']
-          }
-        }
-      }
-    }
-  },
   head: [
     // Favicons with improved metadata
     ['link', { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: 'any' }],
