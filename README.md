@@ -6,10 +6,12 @@ A comprehensive and up-to-date list of latest Android root apps that require or 
 
 
 ## Table of Contents
+- [Table of Contents](#table-of-contents)
 - [What is Root Access](#what-is-root-access)
 - [Root Guide \& Solutions](#root-guide--solutions)
 - [Glossary](#glossary)
 - [Root Apps](#root-apps)
+  - [Ad Blocking](#ad-blocking)
   - [App Management](#app-management)
     - [App Isolation and Cloning](#app-isolation-and-cloning)
     - [App Managers](#app-managers)
@@ -26,6 +28,7 @@ A comprehensive and up-to-date list of latest Android root apps that require or 
   - [Customizations](#customizations)
     - [Boot Animations](#boot-animations)
     - [Launchers](#launchers)
+    - [Navigation](#navigation)
     - [OS Customization](#os-customization)
     - [Theming](#theming)
   - [Debloating](#debloating)
@@ -35,12 +38,14 @@ A comprehensive and up-to-date list of latest Android root apps that require or 
   - [Network Tools](#network-tools)
   - [Privacy and Security](#privacy-and-security)
   - [Root Specific](#root-specific)
+    - [Hide Root](#hide-root)
+    - [Managers](#managers)
   - [System Modifications](#system-modifications)
   - [Termux](#termux)
   - [Tools](#tools)
 - [Troubleshooting](#troubleshooting)
 - [FAQs](#faqs)
-- [Contributions](#contributions)
+- [Contributing](#contributing)
 - [Stats](#stats)
 
 ## What is Root Access
@@ -81,17 +86,18 @@ A comprehensive guide covering different rooting methods, decision-making and di
 
 #### App Managers
 - **[App Manager](https://github.com/MuntashirAkon/AppManager)** - A full-featured package manager and viewer for Android. `FOSS`
+- **[AppOps](https://appops.rikka.app/)** - Control the hidden appops conveniently. `Proprietary`
 - **[Inure](https://github.com/Hamza417/Inure)** - An elegant and beautiful premium Android app manager for rooted and non-rooted devices. `FOSS`
 - **[Package Manager](https://github.com/SmartPack/PackageManager)** - A highly powerful app to manage both system and user apps installed on an Android device. `FOSS`
 - **[Hail](https://github.com/aistra0528/Hail)** - Disable / Hide / Suspend / Uninstall Android apps. `FOSS`
 - **[LeanData](https://play.google.com/store/apps/details?id=com.teqtic.leandata&hl=en_IN&gl=US)** - Automatically manages the power-hungry radios on your device while the screen is off to significantly lengthen battery life. `Proprietary`
+- **[Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. `FOSS` `[M]`
 
 #### App Markets
 - **[Aurora Store](https://github.com/whyorean/AuroraStore)** - A Google Play Store client to search, view app details, and download APKs directly to your device. `FOSS`
 - **[Droid-ify](https://github.com/Droid-ify/client)** - F-Droid client with Material UI and auto updating apps using root. `FOSS`
 
 #### App Permissions
-- **[App Ops](https://appops.rikka.app/)** - Control the hidden appops conveniently. `Proprietary`
 - **[Permission Ruler](https://play.google.com/store/apps/details?id=com.stefanosiano.permissionruler&hl=en)** - Automatically manages app permissions when the screen is off for enhanced privacy. `Proprietary` `[M]`
 - **[PermissionManagerX](https://github.com/mirfatif/PermissionManagerX)** - eXtended Permission Manager for Android to view and set Manifest Permissions and AppOps. `FOSS` `[M]`
 
@@ -221,22 +227,21 @@ Archived Chats to official WhatsApp. `FOSS` `[LP]`
 
 
 ### Root Specific
+#### Hide Root
 - **[Hide My Applist](https://github.com/Dr-TSNG/Hide-My-Applist)** - An Xposed module to intercept applist detections. `FOSS` `[LP]`
-- **[Magisk Manager](https://github.com/topjohnwu/Magisk)** - Manage Magisk modules and root permissions. `FOSS`
-- **[MMRL](https://github.com/DerGoogler/MMRL)** - An Android app that helps manage your own modules repository. `FOSS`
 - **[Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix)** - Fix Play Integrity (and SafetyNet) verdicts. `FOSS` `[M]`
-- **[Root Check](https://play.google.com/store/apps/details?id=com.jrummyapps.rootchecker)** - Verify proper root. `Proprietary`
 - **[TrickyStore](https://github.com/5ec1cff/TrickyStore)** - Modifying the certificate chain generated for android key attestation. `Proprietary` `[M]`
 - **[Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)** - Hide Magisk. `Proprietary` `[M]`
 - **[Zygisk-Assistant](https://github.com/snake-4/Zygisk-Assistant)** - A Zygisk module to hide root for KernelSU, Magisk and APatch. `FOSS` `[M]`
-- **[Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. `FOSS` `[M]`
+
+#### Managers
+- **[Magisk Manager](https://github.com/topjohnwu/Magisk)** - Manage Magisk modules and root permissions. `FOSS`
+- **[MMRL](https://github.com/DerGoogler/MMRL)** - An Android app that helps manage your own modules repository. `FOSS`
 
 ### System Modifications
 - **[AutoNight](https://github.com/Chilly-Blaze/autonight)** - Controlling Android's Dark Mode through environmental brightness. `FOSS`
-- **[DarQ](https://github.com/KieronQuinn/DarQ)** - Provides a per-app selectable force dark option for Android 10 and above. `FOSS` `[LP]`
 - **[Disable Rotation Button](https://github.com/JavaCakeGames/disable-rotation-button)** - App to disable Android's floating rotation button. `FOSS`
-- **[Hydrostellaire](https://github.com/AestasBritannia/Hydro-Br-leur)** - A magisk module for devices running on Dimensity flagship platforms and OnePlus, Realme devices. `FOSS` `[M]`
-- **[KnoxPatch](https://github.com/salvogiangri/KnoxPatch)** - Get Samsung apps/features working again in your rooted Galaxy device. For better experience, please also read [this](https://github.com/salvogiangri/KnoxPatch?tab=readme-ov-file#knoxpatch-enhancer) . `FOSS` `[LP]`
+- **[KnoxPatch](https://github.com/salvogiangri/KnoxPatch)** - Get Samsung apps/features working again in your rooted Galaxy device. For better experience, please also read [this](https://github.com/salvogiangri/KnoxPatch?tab=readme-ov-file#knoxpatch-enhancer) . `Foss` `[LP]`
 - **[Open WebView](https://github.com/Magisk-Modules-Alt-Repo/open_webview)** - Helps you to replace your system webview though Magisk. `FOSS` `[M]`
 - **[Thanox](https://apt.izzysoft.de/fdroid/index/apk/github.tornaco.android.thanos)** - A system management tool that provide convenient functions like application startup management, background management, permission management etc. `FOSS` `[LP]`
 - **[Universal GMS Doze](https://github.com/gloeyisk/universal-gms-doze)** - Patches Google Play services app and certain processes/services to be able to use battery optimization. `FOSS` `[M]`
@@ -253,6 +258,7 @@ Archived Chats to official WhatsApp. `FOSS` `[LP]`
 - **[Termux:Widget](https://github.com/termux/termux-widget)** - Termux add-on app which adds shortcuts to commands on the home screen. `FOSS`
 
 ### Tools
+- **[Device Info HW](https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw)** - A hardware and software information app for Android devices.`Proprietary`
 - **[JoyCon Droid](https://joycondroid.gitbook.io/joycondroid)** - Allows you to turn your Android device into a controller for your Nintendo Switch. `FOSS`
 - **[NFC Card Emulator Pro (Root)](https://play.google.com/store/apps/details?id=com.yuanwofei.cardemulator.pro)** - An NFC Card Emulator that simulates various types of cards, e.g., access cards, elevator cards, factory (meal) cards, school (meal) cards, some library cards, and other IC cards. `Proprietary`
 - **[Pi-hole-for-Android](https://github.com/DesktopECHO/Pi-hole-for-Android)** - Pi-hole/Unbound Raspbian APK installer for Android 5.0+ devices. `FOSS`
@@ -286,7 +292,7 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 --- 
 
 ## Stats
-#### Number of Apps: `126`
+#### Number of Apps: `129`
 #### You are visitor number:
 
 ![Visitor Count](https://profile-counter.glitch.me/fynks/count.svg)
