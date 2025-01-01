@@ -81,7 +81,8 @@ A comprehensive guide covering different rooting methods, decision-making and di
 
 ### App Management
 #### App Isolation and Cloning
-- **[Island](https://play.google.com/store/apps/details?id=com.oasisfeng.island)** - App isolation and cloning. `Proprietary`
+- **[Insular](https://gitlab.com/secure-system/Insular)** -Isolate your big brother app.A fork based on the excellent Island. `FOSS`
+- **[Island](https://github.com/oasisfeng/island)** - App isolation and cloning. `FOSS`
 - **[Shelter](https://gitea.angry.im/PeterCxy/Shelter)** - Isolate and clone apps. `FOSS`
 
 #### App Managers
