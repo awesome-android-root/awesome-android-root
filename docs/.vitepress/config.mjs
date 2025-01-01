@@ -86,47 +86,69 @@ export default defineConfig({
         }
       }
     },
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Apps', link: '/apps' },
-      {
-        text: 'Guides',
-        items: [
-          { text: 'Rooting Guide', link: '/rooting-guides/' },
-          { text: 'Troubleshooting', link: '/troubleshooting/' }
-        ]
-      },
-      { text: 'FAQs', link: '/faqs' },
-      { text: 'Contribute', link: '/contributing' }
-    ],
-    sidebar: [
-      {
-        text: 'Rooting Guides',
-        collapsed: false,
-        items: [
-          { text: 'Basic Concepts', link: '/rooting-guides/' },
-          { text: 'Xiaomi Devices', link: '/rooting-guides/xiaomi' },
-          { text: 'Samsung Devices', link: '/rooting-guides/samsung' },
-          { text: 'Pixel Devices', link: '/rooting-guides/pixel' }
-        ]
-      }, {
-        text: 'Troubleshooting',
-        collapsed: false,
-        items: [
-          { text: 'Common Issues', link: '/troubleshooting/' },
-          { text: 'WhatsApp Fix', link: '/troubleshooting/whatsapp' }
-        ]
-      },
-      {
-        text: 'Resources',
-        collapsed: true,
-        items: [
-          { text: 'Apps List', link: '/apps' },
-          { text: 'FAQs', link: '/faqs' },
-          { text: 'How to Contribute', link: '/contributing' }
-        ]
-      }
-    ],
+        nav: [
+          { text: 'Home', link: '/' },
+          { text: 'Apps', link: '/apps' },
+          {
+            text: 'Root Guides',
+            items: [
+              { text: 'Overview', link: '/rooting-guides/' },
+              { text: 'Device Guides', items: [
+                { text: 'Xiaomi', link: '/rooting-guides/xiaomi' },
+                { text: 'Samsung', link: '/rooting-guides/samsung' },
+                { text: 'Pixel', link: '/rooting-guides/pixel' },
+                { text: 'OnePlus', link: '/rooting-guides/oneplus' }
+              ]},
+              { text: 'Troubleshooting', link: '/troubleshooting/' }
+            ]
+          },
+          { text: 'Resources', items: [
+            { text: 'FAQs', link: '/faqs' },
+            { text: 'Stats', link: '/stats' },
+            { text: 'Contribute', link: '/contributing' }
+          ]},
+          { text: 'GitHub', link: 'https://github.com/fynks/awesome-android-root' }
+        ],
+        sidebar: [
+          {
+            text: 'Getting Started',
+            collapsed: false,
+            items: [
+              { text: 'Introduction', link: '/rooting-guides/' },
+              { text: 'Root Solutions', link: '/rooting-guides/#root-solutions' },
+              { text: 'Framework Solutions', link: '/rooting-guides/#framework-solutions' }
+            ]
+          },
+          {
+            text: 'Device Guides',
+            collapsed: false,
+            items: [
+              { text: 'Xiaomi Devices', link: '/rooting-guides/xiaomi' },
+              { text: 'Samsung Devices', link: '/rooting-guides/samsung' },
+              { text: 'Pixel Devices', link: '/rooting-guides/pixel' },
+              { text: 'OnePlus Devices', link: '/rooting-guides/oneplus' }
+            ]
+          },
+          {
+            text: 'Troubleshooting',
+            collapsed: false,
+            items: [
+              { text: 'Common Issues', link: '/troubleshooting/' },
+              { text: 'WhatsApp Fix', link: '/troubleshooting/whatsapp' },
+              { text: 'Safety Net/Integrity', link: '/troubleshooting/#safetynet-play-integrity-issues' }
+            ]
+          },
+          {
+            text: 'Resources',
+            collapsed: false,
+            items: [
+              { text: 'Root Apps List', link: '/apps' },
+              { text: 'Statistics', link: '/stats' },
+              { text: 'FAQs', link: '/faqs' },
+              { text: 'Contributing', link: '/contributing' }
+            ]
+          }
+        ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/fynks/awesome-android-root' }
