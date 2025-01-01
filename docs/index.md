@@ -5,7 +5,7 @@ description: "A comprehensive collection of root apps, rooting guides, and tools
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.link
+      href: https://www.awesome-android-root.link
 
 hero:
   name: "Awesome Android Root"
