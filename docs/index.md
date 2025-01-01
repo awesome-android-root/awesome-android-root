@@ -36,12 +36,16 @@ features:
     title: Comprehensive Guides
     details: Step-by-step rooting tutorials for major Android devices. Clear instructions for Xiaomi, Samsung, Pixel, and more.
     link: /rooting-guides
-  - icon: ⚡
-    title: Expert Solutions
-    details: In-depth troubleshooting guides for common root issues. From SafetyNet fixes to app compatibility - we've got you covered.
-    link: /troubleshooting
   - icon: ⭐
     title: Open Source Project
     details: Help improve this resource by contributing guides, adding apps, or fixing issues. Join us in building the best Android rooting knowledge base.
     link: /contributing
+  - icon: 🔒
+    title: Safety & Security
+    details: Learn about rooting safety, security implications, and best practices to protect your device.
+    link: /faqs#safety-security
+  - icon: ❓
+    title: Common Issues
+    details: Find solutions to frequent rooting problems and compatibility issues.
+    link: /troubleshooting
 ---
