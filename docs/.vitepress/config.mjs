@@ -93,12 +93,7 @@ export default defineConfig({
             text: 'Root Guides',
             items: [
               { text: 'Overview', link: '/rooting-guides/' },
-              { text: 'Device Guides', items: [
-                { text: 'Xiaomi', link: '/rooting-guides/xiaomi' },
-                { text: 'Samsung', link: '/rooting-guides/samsung' },
-                { text: 'Pixel', link: '/rooting-guides/pixel' },
-                { text: 'OnePlus', link: '/rooting-guides/oneplus' }
-              ]},
+              { text: 'Device Guides', link: '/rooting-guides/#vendor-specific-rooting-guides'},
               { text: 'Troubleshooting', link: '/troubleshooting/' }
             ]
           },
@@ -114,7 +109,7 @@ export default defineConfig({
             text: 'Getting Started',
             collapsed: false,
             items: [
-              { text: 'Introduction', link: '/rooting-guides/' },
+              { text: 'Introduction', link: '/rooting-guides/#introduction' },
               { text: 'Root Solutions', link: '/rooting-guides/#root-solutions' },
               { text: 'Framework Solutions', link: '/rooting-guides/#framework-solutions' }
             ]
@@ -149,10 +144,6 @@ export default defineConfig({
             ]
           }
         ],
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/fynks/awesome-android-root' }
-    ],
     footer: {
       message: "Released under the UnLicense.",
       copyright: "Copyright © 2024-present"
