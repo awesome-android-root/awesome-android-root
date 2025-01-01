@@ -6,7 +6,7 @@ export default defineConfig({
   ignoreDeadLinks: true,
   cleanUrls: true,
   sitemap: {
-    hostname: 'https://awesome-android-root.link'
+    hostname: 'https://www.awesome-android-root.link'
   },
   head: [
     // Favicons with improved metadata
@@ -37,7 +37,7 @@ export default defineConfig({
     ['meta', { property: 'og:description', content: 'Complete guide to Android rooting with 100+ curated root apps, device-specific tutorials, troubleshooting tips, and Magisk/LSPosed frameworks.' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:image', content: 'https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/docs/public/images/og.png' }],
-    ['meta', { property: 'og:url', content: 'https://awesome-android-root.link' }],
+    ['meta', { property: 'og:url', content: 'https://www.awesome-android-root.link' }],
     ['meta', { property: 'og:site_name', content: 'Awesome Android Root' }],
 
     // Twitter Card Meta Tags
@@ -59,7 +59,7 @@ export default defineConfig({
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Awesome Android Root",
-      "url": "https://awesome-android-root.link",
+      "url": "https://www.awesome-android-root.link",
       "description": "Comprehensive Android root apps collection and Android rooting guides ",
       "author": {
         "@type": "Person",
