@@ -13,8 +13,8 @@
   },
   "scripts": {
     "docs:dev": "chmod +x ./build-docs.sh && ./build-docs.sh && vitepress dev docs",
-    "docs:build": "chmod +x ./build-docs.sh && ./build-docs.sh && vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+   "docs:build": "chmod +x $(pwd)/build-docs.sh && $(pwd)/build-docs.sh && vitepress build docs",
+  "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
     "vitepress": "^1.5.0"
