@@ -297,7 +297,7 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 --- 
 
 ## Stats
-#### Number of Apps: `129`
+#### Number of Apps: `111`
 #### You are visitor number:
 
 ![Visitor Count](https://profile-counter.glitch.me/fynks/count.svg)
