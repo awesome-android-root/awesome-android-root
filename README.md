@@ -5,7 +5,6 @@
 A curated collection of best Android root apps, Magisk modules, and LSPosed modules that includes comprehensive guides, troubleshooting, tips & trciks and best practices for rooted devices.
 
 ## Table of Contents
-- [Table of Contents](#table-of-contents)
 - [What is Root Access](#what-is-root-access)
 - [Root Guide \& Solutions](#root-guide--solutions)
 - [Glossary](#glossary)
@@ -29,6 +28,11 @@ A curated collection of best Android root apps, Magisk modules, and LSPosed modu
     - [Launchers](#launchers)
     - [Navigation](#navigation)
     - [OS Customization](#os-customization)
+      - [HyperOS/MIUI](#hyperosmiui)
+      - [ColorOS](#coloros)
+      - [Oxygen OS](#oxygen-os)
+      - [AOSP](#aosp)
+      - [Global](#global)
     - [Theming](#theming)
   - [Debloating](#debloating)
   - [Development and Debugging](#development-and-debugging)
@@ -45,6 +49,7 @@ A curated collection of best Android root apps, Magisk modules, and LSPosed modu
 - [Troubleshooting](#troubleshooting)
 - [FAQs](#faqs)
 - [Contributing](#contributing)
+- [Note](#note)
 - [Stats](#stats)
 
 ## What is Root Access
@@ -173,15 +178,24 @@ Archived Chats to official WhatsApp. `FOSS` `[LP]`
 - **[Volume Key Track Control Module](https://github.com/Hepolise/VolumeKeyTrackControlModule)** - An Xposed module that allows to skip and play/pause track with volume keys. `FOSS` `[LP]`
 
 #### OS Customization
+##### HyperOS/MIUI
 - **[ClipboardList](https://github.com/HChenX/ClipboardList)** - Remove the 20-item limit and time limit for the Clipboard and Phrases feature.Only for MIUI & HyperOS. `FOSS` `[LP]`
 - **[HyperCeiler](https://github.com/ReChronoRain/HyperCeiler/blob/main/README_en-US.md)** - Extensive customizations for HyperOS. `FOSS` `[LP]`
 - **[Hyper Helper](https://github.com/HowieHChen/XiaomiHelper/blob/master/README_EN-US.md)** - Lightweight customization module for HyperOS only. `FOSS` `[LP]`
-- **[HYperStar](https://github.com/YunZiA/HyperStar/blob/master/README_EN-US.md)** - An LSPosed module mainly designed to customize the Xiaomi HyperOS Control Center, along with some features. `FOSS` `[LP]` 
-- **[LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool/blob/main/README_EN.md)** - Extended and optimized Xposed module for ColorOS. `FOSS` `[LP]`
+- **[HyperStar](https://github.com/YunZiA/HyperStar/blob/master/README_EN-US.md)** - An LSPosed module mainly designed to customize the Xiaomi HyperOS Control Center, along with some features. `FOSS` `[LP]` 
 - **[MIUIqol](https://github.com/Xposed-Modules-Repo/io.github.chsbuffer.miuihelper/blob/main/README_EN.md)** - Improves my experience of MIUI 12 to 14 and HyperOS. `FOSS` `[LP]`
-- **[Oxygen-Customizer](https://github.com/DHD2280/Oxygen-Customizer/)** - Open-source Oxygen OS customizer application. `FOSS` `[LP]`
 - **[Pengeek](https://github.com/monwf/customiuizer)** - Customize your HyperOS to your liking. For HyperOS based on Android 14. `FOSS` `[LP]`
+  
+##### ColorOS
+- **[LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool/blob/main/README_EN.md)** - Extended and optimized Xposed module for ColorOS. `FOSS` `[LP]`
+
+##### Oxygen OS
+- **[Oxygen-Customizer](https://github.com/DHD2280/Oxygen-Customizer/)** - Open-source Oxygen OS customizer application. `FOSS` `[LP]`
+
+##### AOSP
 - **[PixelXpert](https://github.com/siavash79/PixelXpert)** - A mixed Xposed+Magisk module, which is made to allow customizations that are not originally designed in AOSP. `FOSS` `[M]` `[LP]`
+
+##### Global
 - **[SystemUI Tuner](https://github.com/zacharee/Tweaker?tab=readme-ov-file)** - View and modify hidden settings on Android devices. `FOSS` `[M]`
 
 #### Theming
@@ -295,15 +309,11 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 
 [Contribution Guidelines →](./docs/contributing.md)
 
----
-
-**Note**: 
+## Note
 - Always be cautious when using root apps, as they have the potential to modify system files and settings.
 - All apps and modules listed here are crowdsourced from the community.
 - The maintainers of this list are not responsible for any damage, security issues, or other problems that may occur on your device.
 - Use these tools at your own risk and always backup your data before making system modifications.
-
---- 
 
 ## Stats
 #### Number of Apps: `137`
