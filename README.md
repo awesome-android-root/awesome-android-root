@@ -122,9 +122,10 @@ Archived Chats to official WhatsApp. `FOSS` `[LP]`
 
 
 #### Other App Mods
-- **[IceCore](https://github.com/Xposed-Modules-Repo/me.bingyue.IceCore/)** - Integrates various fun functions, supports obtaining VIP, removing ads, and other functions. `FOSS` `[LP]`
 - **[F*ck for VIP](https://github.com/Xposed-Modules-Repo/com.bug.hookvip)** - A module to unlock some software memberships and remove ads.Check releases section for list of supported apps. `FOSS` `[LP]`
+- **[IceCore](https://github.com/Xposed-Modules-Repo/me.bingyue.IceCore/)** - Integrates various fun functions, supports obtaining VIP, removing ads, and other functions. `FOSS` `[LP]`
 - **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LP]`
+- **[Maps tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.mapstweaks)** - Collection of the maps UI tweaks for Google maps, Yandex maps and Yandex Navi. `Proprietary` `[LP]`
 - **[NewHookVip](https://github.com/Xposed-Modules-Repo/top.hookvip.pro)** - Xposed module for unlocking some App memberships and adding some extended functions. Check releases section for list of supported apps. `FOSS` `[LP]`
 
 
@@ -305,7 +306,7 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 --- 
 
 ## Stats
-#### Number of Apps: `136`
+#### Number of Apps: `137`
 #### You are visitor number:
 
 ![Visitor Count](https://profile-counter.glitch.me/fynks/count.svg)
