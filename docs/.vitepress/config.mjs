@@ -99,7 +99,6 @@ export default defineConfig({
           },
           { text: 'Resources', items: [
             { text: 'FAQs', link: '/faqs' },
-            { text: 'Stats', link: '/stats' },
             { text: 'Contribute', link: '/contributing' }
           ]},
           { text: 'GitHub', link: 'https://github.com/fynks/awesome-android-root' }
@@ -138,7 +137,6 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: 'Root Apps List', link: '/apps' },
-              { text: 'Statistics', link: '/stats' },
               { text: 'FAQs', link: '/faqs' },
               { text: 'Contributing', link: '/contributing' }
             ]
