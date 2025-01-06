@@ -34,7 +34,7 @@ export default defineConfig({
 
     // OpenGraph Meta Tags
     ['meta', { property: 'og:title', content: 'Awesome Android Root' }],
-    ['meta', { property: 'og:description', content: 'Complete guide to Android rooting with 100+ curated root apps, device-specific tutorials, troubleshooting tips, and Magisk/LSPosed frameworks.' }],
+    ['meta', { property: 'og:description', content: 'A curated collection of best Android root apps, Magisk modules, LSPosed modules and tools,tricks and guides.' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:image', content: 'https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/docs/public/images/og.png' }],
     ['meta', { property: 'og:url', content: 'https://awesome-android-root.link' }],
@@ -43,7 +43,7 @@ export default defineConfig({
     // Twitter Card Meta Tags
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'Awesome Android Root' }],
-    ['meta', { name: 'twitter:description', content: 'Complete guide to Android rooting with 100+ curated root apps, device-specific tutorials, troubleshooting tips, and Magisk/LSPosed frameworks.' }],
+    ['meta', { name: 'twitter:description', content: 'A curated collection of best Android root apps, Magisk modules, LSPosed modules and tools,tricks and guides.' }],
     ['meta', { name: 'twitter:image', content: 'https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/docs/public/images/og.png' }],
 
     // SEO Meta Tags
@@ -60,7 +60,7 @@ export default defineConfig({
       "@type": "WebSite",
       "name": "Awesome Android Root",
       "url": "https://awesome-android-root.link",
-      "description": "Comprehensive Android root apps collection and Android rooting guides ",
+      "description": "A curated collection of best Android root apps, Magisk modules, LSPosed modules and tools,tricks and guides.",
       "author": {
         "@type": "Person",
         "name": "Fynks"
