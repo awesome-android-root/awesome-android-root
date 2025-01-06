@@ -19,7 +19,7 @@ hero:
       link: /apps
     - theme: brand
       text: Rooting Guides →
-      link: /rooting-guides
+      link: /rooting-guides/
     - theme: alt
       text: FAQs
       link: /faqs
@@ -35,7 +35,7 @@ features:
   - icon: 📖
     title: Comprehensive Guides
     details: Step-by-step rooting tutorials for major Android devices. Clear instructions for Xiaomi, Samsung, Pixel, and more.
-    link: /rooting-guides
+    link: /rooting-guides/
   - icon: ⭐
     title: Open Source Project
     details: Help improve this resource by contributing guides, adding apps, or fixing issues. Join us in building the best Android rooting knowledge base.
@@ -47,5 +47,5 @@ features:
   - icon: ❓
     title: Common Issues
     details: Find solutions to frequent rooting problems and compatibility issues.
-    link: /troubleshooting
+    link: /troubleshooting/
 ---
