@@ -293,7 +293,11 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 
 ---
 
-**Note**: Always be cautious when using root apps, as they have the potential to modify system files and settings.
+**Note**: 
+- Always be cautious when using root apps, as they have the potential to modify system files and settings.
+- All apps and modules listed here are crowdsourced from the community.
+- The maintainers of this list are not responsible for any damage, security issues, or other problems that may occur on your device.
+- Use these tools at your own risk and always backup your data before making system modifications.
 
 --- 
 
