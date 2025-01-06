@@ -5,7 +5,7 @@ description: "Your comprehensive guide to Android rooting - featuring curated ro
 head:
   - - link
     - rel: canonical
-      href: https://www.awesome-android-root.link
+      href: https://awesome-android-root.link
 
 hero:
   name: "Awesome Android Root"
