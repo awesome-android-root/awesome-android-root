@@ -17,6 +17,15 @@ A curated collection of best Android root apps, Magisk modules, and LSPosed modu
     - [App Permissions](#app-permissions)
   - [App Mods](#app-mods)
     - [Social Media Mods](#social-media-mods)
+        - [Bilibili](#bilibili)
+        - [Discord](#discord)
+        - [Instagram](#instagram)
+        - [Line](#line)
+        - [QQ](#qq)
+        - [Telegram](#telegram)
+        - [Wechat](#wechat)
+        - [Whatsapp](#whatsapp)
+        - [X/Twitter](#xtwitter)
     - [Other App Mods](#other-app-mods)
     - [Patching](#patching)
   - [Automation](#automation)
@@ -109,21 +118,41 @@ A comprehensive guide covering different rooting methods, decision-making and di
 
 
 ### App Mods
+
 #### Social Media Mods
+##### Bilibili
+- **[MBGA](https://github.com/cledwynl/mbga/)** - A Xposed module to Make Bilibili Great Again. `FOSS` `[LP]`
+
+##### Discord
 - **[BunnyXposed](https://github.com/bunny-mod/BunnyXposed)** - An Xposed module to inject Bunny, a mod for Discord's mobile apps. `FOSS` `[M]`
-- **[Hachidori](https://github.com/Xposed-Modules-Repo/com.twifucker.hachidori/)** - Adds downloading media, hidding ads and other privacy features to X (formerly Twitter). `FOSS` `[LP]`
+  
+##### Instagram
 - **[IGExperiments](https://github.com/xHookman/IGexperiments)** - Unlocks Instagram's hidden developer options, giving you access to advanced features like White Hat settings (enables SSL unpinning), Test User mode, and much more. `FOSS` `[LP]`
 - **[InstaEclipse](https://github.com/ReSo7200/InstaEclipse/)** - Adds Features like Developer Options, Ghost Mode, Ad-Free browsing, and Distraction-Free Mode to Instagram. `FOSS` `[LP]`
+
+##### Line
 - **[LineXtra](https://github.com/yagiyuu/LineXtra)** - Removes Ads and Tabs from the LINE. `FOSS` `[LP]`
-- **[MBGA](https://github.com/cledwynl/mbga/)** - A Xposed module to Make Bilibili Great Again. `FOSS` `[LP]`
+
+
+
+##### QQ
 - **[NewQStory](https://github.com/Xposed-Modules-Repo/lin.xposed/)** - Xposed QQ module. `Proprietry` `[LP]`
+
+##### Telegram
 - **[Re-Telegram](https://github.com/Sakion-Team/Re-Telegram/)** - Adds features like AntiAntiForward, AntiRecall, NoSponsoredMessages, ProhibitChannelSwitching and many more to various Telegram clients. `FOSS` `[LP]`
 - **[TeleVip](https://github.com/Xposed-Modules-Repo/com.my.televip/)** - A module for modifying Telegram with Hide seen status, unlocking channel restrictions etc. `Proprietary` `[LP]`
+
+##### Wechat
+- **[X](https://github.com/Xposed-Modules-Repo/cn.android.x)** - Add extra features to Wechat. `FOSS` `[LP]`
+- **[XChat](https://github.com/Xposed-Modules-Repo/com.xchat)** - A customization mod for Wechat. `FOSS` `[LP]`
+
+##### Whatsapp
 - **[WA Enhancer](https://github.com/Dev4Mod/WaEnhancer)** - A Xposed module that enhances your WhatsApp experience.`FOSS` `[LP]`
 - **[Wa Revamp](https://github.com/Xposed-Modules-Repo/its.madruga.warevamp)** - Add various functions like download staus and view once, hide read message, Statuses and
 Archived Chats to official WhatsApp. `FOSS` `[LP]`
-- **[X](https://github.com/Xposed-Modules-Repo/cn.android.x)** - Add extra features to Wechat. `FOSS` `[LP]`
-- **[XChat](https://github.com/Xposed-Modules-Repo/com.xchat)** - A customization mod for Wechat. `FOSS` `[LP]`
+
+##### X/Twitter
+- **[Hachidori](https://github.com/Xposed-Modules-Repo/com.twifucker.hachidori/)** - Adds downloading media, hidding ads and other privacy features to X (formerly Twitter). `FOSS` `[LP]`
 
 
 #### Other App Mods
