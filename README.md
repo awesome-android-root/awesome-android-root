@@ -2,8 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://github.com/fynks/awesome-android-root)
 
-A comprehensive and up-to-date list of latest Android root apps that require or utilize root privileges, rooting guides, tips, tricks and tools.
-
+A curated collection of best Android root apps, Magisk modules, and LSPosed modules that includes comprehensive guides, troubleshooting, tips & trciks and best practices for rooted devices.
 
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
