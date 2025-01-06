@@ -1,7 +1,7 @@
 ---
 title: FAQs
 layout: doc
-description: "Comprehensive guide answering common questions about Android rooting, covering safety, troubleshooting, custom ROMs, and security concerns. Learn about root access implications."
+description: "Get answers to common Android rooting questions. Learn about safety, security, troubleshooting and security for rooted devices."
 ---
 # Frequently Asked Questions
 

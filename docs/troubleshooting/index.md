@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Troubleshooting
-description: "Essential troubleshooting guides for common Android root issues, including Play Integrity fixes and app compatibility solutions. Step-by-step instructions for root detection issues."
+description: "Find solutions for common Android root issues. Includes Play Integrity fixes and app compatibility guides with step-by-step instructions."
 ---
 # Troubleshooting Guides
 

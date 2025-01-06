@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Xiaomi Rooting Guide
-description: "Step-by-step guide to root Xiaomi devices with MIUI/HyperOS using Magisk, TWRP, and OrangeFox recovery. Includes bootloader unlocking instructions and device-specific tutorials."
+description: "Root Xiaomi devices running MIUI/HyperOS. Complete Step-by-step guide covering bootloader unlocking, custom recovery and Magisk installation."
 
 ---
 # Xiaomi Rooting Guide

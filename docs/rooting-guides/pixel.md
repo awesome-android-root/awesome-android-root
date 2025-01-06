@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Google Pixel Root Guide
-description: "Step-by-step tutorial for rooting Google Pixel phones. Learn bootloader unlocking, custom recovery installation, and rooting with Magisk. Includes guides for Pixel 8, 7, 6 series."
+description: "Root Google Pixel phones safely. Step-by-step guide for bootloader unlocking, recovery installation and Magisk rooting on Pixel devices."
 ---
 
 # Google Pixel Rooting Guide

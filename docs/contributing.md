@@ -1,7 +1,7 @@
 ---
 title: Contribution Guidelines
 layout: doc
-description: "Detailed guidelines for contributing to the Awesome Android Root collection. Learn how to add root apps, Magisk modules, and LSPosed tweaks following our formatting standards."
+description: "Learn how to contribute root apps, Magisk modules and guides to the Awesome Android Root collection. Includes formatting standards."
 
 ---
 # Contribution Guidelines

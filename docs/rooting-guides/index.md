@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Android Rooting Guides
-description: "Comprehensive guide to Android rooting, covering Magisk, KernelSU, and APatch solutions. Learn how to safely root Xiaomi, Samsung, Pixel and other devices with step-by-step tutorials."
+description: "Learn how to root Android devices safely. Compare root methods like Magisk and KernelSU with device-specific guides and best practices."
 
 ---
 
