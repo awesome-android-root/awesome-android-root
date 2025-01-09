@@ -28,6 +28,7 @@ A curated collection of best Android root apps, Magisk modules, and LSPosed modu
         - [X/Twitter](#xtwitter)
     - [Other App Mods](#other-app-mods)
     - [Patching](#patching)
+  - [Audio](#audio)
   - [Automation](#automation)
   - [Backup and Restore](#backup-and-restore)
   - [Battery Management](#battery-management)
@@ -167,6 +168,9 @@ Archived Chats to official WhatsApp. `FOSS` `[LP]`
 #### Patching
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (Use with caution) . `Proprietary`
 - **[Revanced Manager](https://github.com/ReVanced/revanced-manager)** - Modify YouTube, Youtube Music, spotify and many more with additional features. `FOSS`
+
+### Audio
+- **[NLSound](https://github.com/Briclyaz/NLSound_module_QCom)** - Magisk module for improving audio and microphone quality in your Snapdragon SoC device. `FOSS` `[M]`
 
 
 ### Automation
@@ -346,7 +350,7 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 - Use these tools at your own risk and always backup your data before making system modifications.
 
 ## Stats
-#### Number of Apps: `137`
+#### Number of Apps: `138`
 #### You are visitor number:
 
 ![Visitor Count](https://profile-counter.glitch.me/fynks/count.svg)
