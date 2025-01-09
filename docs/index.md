@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Awesome Android Root | Best Root Apps, Modules & Guides
+title: Awesome Android Root
 description: "A curated collection of best Android root apps, Magisk modules, LSPosed modules and tools,tricks and guides."
 head:
   - - link
