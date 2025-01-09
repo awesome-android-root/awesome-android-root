@@ -266,7 +266,6 @@ Archived Chats to official WhatsApp. `FOSS` `[LP]`
 
 
 ### Network Tools
-- **[Fing](https://play.google.com/store/apps/details?id=com.overlook.android.fing)** - Network discovery and security. `Proprietary`
 - **[NetGuard](https://github.com/M66B/NetGuard/)** - No-root firewall. `FOSS`
 - **[VPN Hotspot](https://github.com/Mygod/VPNHotspot)** -  Share your VPN connection over hotspot or repeater. `FOSS`
 - **[SimbaDroid](https://github.com/buttercookie42/SimbaDroid)** - A simple SMB file server for Android. `FOSS`
@@ -347,7 +346,7 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 - Use these tools at your own risk and always backup your data before making system modifications.
 
 ## Stats
-#### Number of Apps: `138`
+#### Number of Apps: `137`
 #### You are visitor number:
 
 ![Visitor Count](https://profile-counter.glitch.me/fynks/count.svg)
