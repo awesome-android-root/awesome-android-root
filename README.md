@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://github.com/fynks/awesome-android-root)
 
-A curated collection of best Android Root Apps (Apps that use root permission), Magisk modules, and LSPosed modules that includes comprehensive rooting guides, troubleshooting guides, tips and trciks for rooted devices.
+A curated collection of best Android Root Apps (Apps that use root permission), Magisk modules, LSPosed modules and comprehensive rooting & troubleshooting guides.
 
 ## Table of Contents
 - [What is Root Access](#what-is-root-access)
