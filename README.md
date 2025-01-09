@@ -270,7 +270,6 @@ Archived Chats to official WhatsApp. `FOSS` `[LP]`
 
 
 ### Network Tools
-- **[NetGuard](https://github.com/M66B/NetGuard/)** - No-root firewall. `FOSS`
 - **[VPN Hotspot](https://github.com/Mygod/VPNHotspot)** -  Share your VPN connection over hotspot or repeater. `FOSS`
 - **[SimbaDroid](https://github.com/buttercookie42/SimbaDroid)** - A simple SMB file server for Android. `FOSS`
 
@@ -297,7 +296,6 @@ Archived Chats to official WhatsApp. `FOSS` `[LP]`
 
 ### System Modifications
 - **[AutoNight](https://github.com/Chilly-Blaze/autonight)** - Controlling Android's Dark Mode through environmental brightness. `FOSS`
-- **[CorePatch](https://github.com/LSPosed/CorePatch)** - Disable signature verification For Android. `FOSS` `[LP]`
 - **[Disable Rotation Button](https://github.com/JavaCakeGames/disable-rotation-button)** - App to disable Android's floating rotation button. `FOSS`
 - **[KnoxPatch](https://github.com/salvogiangri/KnoxPatch)** - Get Samsung apps/features working again in your rooted Galaxy device. For better experience, please also read [this](https://github.com/salvogiangri/KnoxPatch?tab=readme-ov-file#knoxpatch-enhancer) . `Foss` `[LP]`
 - **[Open WebView](https://github.com/Magisk-Modules-Alt-Repo/open_webview)** - Helps you to replace your system webview though Magisk. `FOSS` `[M]`
@@ -351,7 +349,7 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 - Use these tools at your own risk and always backup your data before making system modifications.
 
 ## Stats
-#### Number of Apps: `139`
+#### Number of Apps: `138`
 #### You are visitor number:
 
 ![Visitor Count](https://profile-counter.glitch.me/fynks/count.svg)
