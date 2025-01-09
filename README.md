@@ -351,7 +351,7 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 - Use these tools at your own risk and always backup your data before making system modifications.
 
 ## Stats
-#### Number of Apps: `139`
+#### Number of Apps: `140`
 #### You are visitor number:
 
 ![Visitor Count](https://profile-counter.glitch.me/fynks/count.svg)
