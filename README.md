@@ -38,7 +38,7 @@ A curated collection of best Android Root Apps (Apps that use root permission), 
     - [Launchers](#launchers)
     - [Navigation](#navigation)
     - [OS Customization](#os-customization)
-      - [HyperOS/MIUI](#hyperosmiui)
+      - [HyperOS & MIUI](#hyperos--miui)
       - [ColorOS](#coloros)
       - [Oxygen OS](#oxygen-os)
       - [AOSP](#aosp)
@@ -222,7 +222,7 @@ Archived Chats to official WhatsApp. `FOSS` `[LP]`
 ##### Global
 - **[SystemUI Tuner](https://github.com/zacharee/Tweaker?tab=readme-ov-file)** - View and modify hidden settings on Android devices. `FOSS` `[M]`
 
-##### HyperOS/MIUI
+##### HyperOS & MIUI
 - **[ClipboardList](https://github.com/HChenX/ClipboardList)** - Remove the 20-item limit and time limit for the Clipboard and Phrases feature.Only for MIUI & HyperOS. `FOSS` `[LP]`
 - **[HyperCeiler](https://github.com/ReChronoRain/HyperCeiler/blob/main/README_en-US.md)** - Extensive customizations for HyperOS. `FOSS` `[LP]`
 - **[Hyper Helper](https://github.com/HowieHChen/XiaomiHelper/blob/master/README_EN-US.md)** - Lightweight customization module for HyperOS only. `FOSS` `[LP]`
