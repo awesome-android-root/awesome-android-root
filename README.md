@@ -130,7 +130,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 - **[BunnyXposed](https://github.com/bunny-mod/BunnyXposed)** - An Xposed module to inject Bunny, a mod for Discord's mobile apps. `FOSS` `[M]`
   
 ##### Instagram
-- **[IGExperiments](https://github.com/xHookman/IGexperiments)** - Unlocks Instagram's hidden developer options, giving you access to advanced features like White Hat settings (enables SSL unpinning), Test User mode, and much more. `FOSS` `[LP]`
+- **[IGExperiments](https://github.com/xHookman/IGexperiments)** - (Deprecated) Unlocks Instagram's hidden developer options, giving you access to advanced features like White Hat settings (enables SSL unpinning), Test User mode, and much more. `FOSS` `[LP]`
 - **[InstaEclipse](https://github.com/ReSo7200/InstaEclipse/)** - Adds Features like Developer Options, Ghost Mode, Ad-Free browsing, and Distraction-Free Mode to Instagram. `FOSS` `[LP]`
 
 ##### Line
@@ -155,7 +155,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 Archived Chats to official WhatsApp. `FOSS` `[LP]`
 
 ##### X/Twitter
-- **[Hachidori](https://github.com/Xposed-Modules-Repo/com.twifucker.hachidori/)** - Adds downloading media, hidding ads and other privacy features to X (formerly Twitter). `FOSS` `[LP]`
+- **[Hachidori](https://github.com/Xposed-Modules-Repo/com.twifucker.hachidori/)** - Adds downloading media, hidding ads and other privacy features to X (formerly Twitter). `Proprietary` `[LP]`
 
 
 #### Other App Mods
@@ -172,6 +172,7 @@ Archived Chats to official WhatsApp. `FOSS` `[LP]`
 
 ### Audio
 - **[NLSound](https://github.com/Briclyaz/NLSound_module_QCom)** - Magisk module for improving audio and microphone quality in your Snapdragon SoC device. `FOSS` `[M]`
+- **[ViPER4Android FX Redesign](https://github.com/WSTxda/ViperFX-RE-Releases)** - An audio enhancement software that provides users with a wide range of customizable sound options. It allows to improve the audio quality by offering features such as equalizer settings, surround sound effects, bass boost, and more. `Proprietary` `[M]`
 
 
 ### Automation
