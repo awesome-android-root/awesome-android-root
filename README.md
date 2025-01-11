@@ -130,7 +130,6 @@ A comprehensive guide covering different rooting methods, decision-making and di
 - **[BunnyXposed](https://github.com/bunny-mod/BunnyXposed)** - An Xposed module to inject Bunny, a mod for Discord's mobile apps. `FOSS` `[M]`
   
 ##### Instagram
-- **[IGExperiments](https://github.com/xHookman/IGexperiments)** - (Deprecated) Unlocks Instagram's hidden developer options, giving you access to advanced features like White Hat settings (enables SSL unpinning), Test User mode, and much more. `FOSS` `[LP]`
 - **[InstaEclipse](https://github.com/ReSo7200/InstaEclipse/)** - Adds Features like Developer Options, Ghost Mode, Ad-Free browsing, and Distraction-Free Mode to Instagram. `FOSS` `[LP]`
 
 ##### Line
