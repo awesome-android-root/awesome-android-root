@@ -17,18 +17,18 @@ A curated collection of best Android Root Apps (Apps that use root permission), 
     - [App Permissions](#app-permissions)
   - [App Mods](#app-mods)
     - [Social Media Mods](#social-media-mods)
-        - [Bilibili](#bilibili)
-        - [Discord](#discord)
-        - [Instagram](#instagram)
-        - [Line](#line)
-        - [QQ](#qq)
-        - [Telegram](#telegram)
-        - [Wechat](#wechat)
-        - [Whatsapp](#whatsapp)
-        - [X/Twitter](#xtwitter)
+      - [Bilibili](#bilibili)
+      - [Discord](#discord)
+      - [Instagram](#instagram)
+      - [Line](#line)
+      - [QQ](#qq)
+      - [Telegram](#telegram)
+      - [Wechat](#wechat)
+      - [Whatsapp](#whatsapp)
+      - [X/Twitter](#xtwitter)
     - [Other App Mods](#other-app-mods)
     - [Patching](#patching)
-  - [Audio](#audio)
+  - [Audio Enhancement](#audio-enhancement)
   - [Automation](#automation)
   - [Backup and Restore](#backup-and-restore)
   - [Battery Management](#battery-management)
@@ -38,16 +38,16 @@ A curated collection of best Android Root Apps (Apps that use root permission), 
     - [Launchers](#launchers)
     - [Navigation](#navigation)
     - [OS Customization](#os-customization)
-      - [HyperOS](#hyperos)
-      - [ColorOS](#coloros)
-      - [Oxygen OS](#oxygen-os)
       - [AOSP](#aosp)
+      - [ColorOS](#coloros)
       - [Global](#global)
+      - [HyperOS](#hyperos)
+      - [Oxygen OS](#oxygen-os)
     - [Theming](#theming)
   - [Debloating](#debloating)
   - [Development and Debugging](#development-and-debugging)
   - [File Management](#file-management)
-  - [Kernel](#kernel)
+  - [Kernel Management](#kernel-management)
   - [Network Tools](#network-tools)
   - [Privacy and Security](#privacy-and-security)
   - [Root Specific](#root-specific)
@@ -169,7 +169,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LP]`
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (Use with caution) . `Proprietary`
 - **[Revanced Manager](https://github.com/ReVanced/revanced-manager)** - Modify YouTube, Youtube Music, spotify and many more with additional features. `FOSS`
 
-### Audio
+### Audio Enhancement
 - **[NLSound](https://github.com/Briclyaz/NLSound_module_QCom)** - Magisk module for improving audio and microphone quality in your Snapdragon SoC device. `FOSS` `[M]`
 - **[ViPER4Android FX Redesign](https://github.com/WSTxda/ViperFX-RE-Releases)** - An audio enhancement software that provides users with a wide range of customizable sound options. It allows to improve the audio quality by offering features such as equalizer settings, surround sound effects, bass boost, and more. `Proprietary` `[M]`
 
@@ -264,7 +264,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LP]`
 - **[Total Commander](https://play.google.com/store/apps/details?id=com.ghisler.android.TotalCommander)** - A feature rich file maanger for Android supporting root and shizuku.For  a better experince, please read [this](https://www.ghisler.ch/board/viewforum.php?f=22). `Proprietary`
 - **[Xplore File Manager](https://play.google.com/store/apps/details?id=com.lonelycatgames.Xplore)** - A file manager with root support. `Proprietary` 
 
-### Kernel
+### Kernel Management
 - **[EX Kernel Manager](https://play.google.com/store/apps/details?id=flar2.exkernelmanager)** - Root tool for backup and flashing kernels, tweaking color, sound, gestures and other kernel settings. `Proprietary`
 - **[Franco Kernel Manager](https://play.google.com/store/apps/details?id=com.franco.kernel)** - A complete toolbox for all devices with a rich that combines everything you need to manage, tweak and empower your device. `Proprietary`
 - **[SmartPack-Kernel-Manager](https://github.com/SmartPack/SmartPack-Kernel-Manager)** - A Kernel Manager. `FOSS`
