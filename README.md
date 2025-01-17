@@ -360,17 +360,14 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 **Recommendation:**  Thoroughly research any root app before installation and understand its purpose and potential side effects.
 
 ## Stats
-[![Total Entries](https://img.shields.io/badge/Total%20Entries-140-blue?style=flat-square)](https://github.com/fynks/awesome-android-root)
-[![Root Apps](https://img.shields.io/badge/Root%20Apps-78-brightgreen?style=flat-square)](https://github.com/fynks/awesome-android-root)
-[![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-30-brightgreen?style=flat-square)](https://github.com/fynks/awesome-android-root)
-[![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-32-yellow?style=flat-square)](https://github.com/fynks/awesome-android-root)
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?style=flat-square&label=Github%20Stars)]((https://github.com/fynks/awesome-android-root))
-![GitHub contributors](https://img.shields.io/github/contributors/fynks/awesome-android-root?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/fynks/awesome-android-root?path=README.md&display_timestamp=committer&style=flat-square&label=Last%20Update)
+[![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?style=flat-square&label=Github%20Stars)](https://github.com/fynks/awesome-android-root)
 
+- ##### Total Entries: `140`
+- ##### Root Apps: `78`
+- ##### Magisk Modules: `30`
+- ##### LSPosed Modules: `32`
 
 #### You are visitor number:
 
 ![Visitor Count](https://profile-counter.glitch.me/fynks/count.svg)
-
