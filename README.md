@@ -364,10 +364,10 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?style=flat-square&label=Github%20Stars)](https://github.com/fynks/awesome-android-root)
 
-- ##### Total Entries: `140`
+- ##### Total Entries: `142`
 - ##### Root Apps: `78`
-- ##### Magisk Modules: `30`
-- ##### LSPosed Modules: `32`
+- ##### Magisk Modules: `31`
+- ##### LSPosed Modules: `33`
 
 #### You are visitor number:
 
