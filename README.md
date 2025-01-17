@@ -193,7 +193,6 @@ Archived Chats to official WhatsApp. `Proprietary` `[LP]`
 
 ### Cleaning Apps
 - **[DirCleaner](https://www.dircleaner.com/)** - A simple and practical cleaning tool. `Proprietary`
-- **[Cache Cleaner](https://github.com/takeru-kageyuki/cache_cleaner)** - A simple tool to clean cache files on your device. `FOSS` 
 - **[SD Maid 2/SE](https://github.com/d4rken-org/sdmaid-se)** - A file management tool for Android that specialises in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS`
 
 
