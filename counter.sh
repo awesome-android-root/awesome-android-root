@@ -15,7 +15,7 @@ lsposed_modules=$(grep -E '^- \*\*\[[^]]+\]\(.*\)\*\*.*\[LP\]' "$readme_file" | 
 root_apps=$((total_entries - magisk_modules - lsposed_modules))
 
 # Output in text
-echo "Total number of app entries: $total_entries"
-echo "Number of Magisk modules: $magisk_modules"
-echo "Number of LSPosed modules: $lsposed_modules"
-echo "Number of Root Apps: $root_apps"
+echo "- ##### Total Entries: \`$total_entries\`"
+echo "- ##### Root Apps: \`$root_apps\`"
+echo "- ##### Magisk Modules: \`$magisk_modules\`"
+echo "- ##### LSPosed Modules: \`$lsposed_modules\`"
