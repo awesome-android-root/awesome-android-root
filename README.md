@@ -59,7 +59,7 @@ A curated collection of best Android Root Apps (Apps that use root permission), 
 - [Troubleshooting](#troubleshooting)
 - [FAQs](#faqs)
 - [Contributing](#contributing)
-- [Note](#note)
+- [Important Notes](#important-notes)
 - [Stats](#stats)
 
 ## What is Root Access
@@ -345,14 +345,31 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 
 [Contribution Guidelines →](./docs/contributing.md)
 
-## Note
-- Always be cautious when using root apps, as they have the potential to modify system files and settings.
-- All apps and modules listed here are crowdsourced from the community.
-- The maintainers of this list are not responsible for any damage, security issues, or other problems that may occur on your device.
-- Use these tools at your own risk and always backup your data before making system modifications.
+## Important Notes
+
+**Warning: Proceed with Extreme Caution.** Root apps possess the power to fundamentally alter your Android system. Incorrect usage can lead to serious issues, including data loss, system instability, and rendering your device unusable (bricking).
+
+**Key Considerations:**
+
+* **System Modification Risks:** These apps can modify core system files, potentially causing boot loops, crashes, or other malfunctions.
+* **Data Loss Potential:** Mistakes or incompatible modifications can result in the loss of your personal data. *Always back up your device before using root apps.*
+* **Security Implications:** Granting root access can increase your device's vulnerability to malware and other security threats.
+* **Community-Sourced Information:** This list is a collection of community suggestions. We do not guarantee the safety, functionality, or suitability of every app.
+* **User Responsibility:** You are solely responsible for any consequences resulting from the use of these applications. Use them at your own risk.
+
+**Recommendation:**  Thoroughly research any root app before installation and understand its purpose and potential side effects.
 
 ## Stats
-#### Number of Apps: `140`
+[![Total Entries](https://img.shields.io/badge/Total%20Entries-140-blue?style=flat-square)](https://github.com/fynks/awesome-android-root)
+[![Root Apps](https://img.shields.io/badge/Root%20Apps-78-brightgreen?style=flat-square)](https://github.com/fynks/awesome-android-root)
+[![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-30-brightgreen?style=flat-square)](https://github.com/fynks/awesome-android-root)
+[![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-32-yellow?style=flat-square)](https://github.com/fynks/awesome-android-root)
+
+[![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?style=flat-square&label=Github%20Stars)]((https://github.com/fynks/awesome-android-root))
+![GitHub contributors](https://img.shields.io/github/contributors/fynks/awesome-android-root?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/fynks/awesome-android-root?path=README.md&display_timestamp=committer&style=flat-square&label=Last%20Update)
+
+
 #### You are visitor number:
 
 ![Visitor Count](https://profile-counter.glitch.me/fynks/count.svg)
