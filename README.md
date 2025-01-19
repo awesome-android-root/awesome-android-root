@@ -279,6 +279,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LP]`
 ### Network Tools
 - **[VPN Hotspot](https://github.com/Mygod/VPNHotspot)** -  Share your VPN connection over hotspot or repeater. `FOSS`
 - **[SimbaDroid](https://github.com/buttercookie42/SimbaDroid)** - A simple SMB file server for Android. `FOSS`
+- **[Unlimited Hotspot](https://github.com/felikcat/unlimited-hotspot)** - Remove speed restrictions on your hotspot internet and allows hotspots on any plan. `FOSS` `[M]`
 
 ### Privacy and Security
 - **[AFWall+](https://github.com/ukanth/afwall)** - Iptables-based firewall. `FOSS`
@@ -370,9 +371,9 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?style=flat-square&label=Github%20Stars)](https://github.com/fynks/awesome-android-root)
 
-- ##### Total Entries: `145`
+- ##### Total Entries: `146`
 - ##### Root Apps: `79`
-- ##### Magisk Modules: `33`
+- ##### Magisk Modules: `34`
 - ##### LSPosed Modules: `33`
 
 #### You are visitor number:
