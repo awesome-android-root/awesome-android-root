@@ -327,6 +327,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LP]`
 ### Tools
 - **[Device Info HW](https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw)** - A hardware and software information app for Android devices. `Proprietary`
 - **[Infamick Script](https://github.com/Infamousmick/Infamick-script/)** - A powerful system utility script that provides easy access to various system information and settings. `FOSS` `[M]`
+- **[Hide Mock Location](https://github.com/auag0/HideMockLocation)** - Xposed Module to Hide Mock Location Settings. `FOSS` `[LP]`
 - **[Hydrostellaire](https://github.com/AestasBritannia/Hydro-Br-leur)** - A magisk module for devices running on Dimensity flagship platforms and OnePlus, Realme devices. `FOSS` `[M]`
 - **[JoyCon Droid](https://joycondroid.gitbook.io/joycondroid)** - Allows you to turn your Android device into a controller for your Nintendo Switch. `FOSS`
 - **[NFC Card Emulator Pro (Root)](https://play.google.com/store/apps/details?id=com.yuanwofei.cardemulator.pro)** - An NFC Card Emulator that simulates various types of cards, e.g., access cards, elevator cards, factory (meal) cards, school (meal) cards, some library cards, and other IC cards. `Proprietary`
@@ -373,10 +374,10 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?style=flat-square&label=Github%20Stars)](https://github.com/fynks/awesome-android-root)
 
-- ##### Total Entries: `148`
+- ##### Total Entries: `149`
 - ##### Root Apps: `80`
 - ##### Magisk Modules: `35`
-- ##### LSPosed Modules: `33`
+- ##### LSPosed Modules: `34`
 
 #### You are visitor number:
 
