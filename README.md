@@ -32,9 +32,11 @@ A curated collection of best Android Root Apps (Apps that use root permission), 
   - [Automation](#automation)
   - [Backup and Restore](#backup-and-restore)
   - [Battery Management](#battery-management)
+  - [Call Recorders](#call-recorders)
   - [Cleaning Apps](#cleaning-apps)
   - [Customizations](#customizations)
     - [Boot Animations](#boot-animations)
+    - [Font Managers](#font-managers)
     - [Launchers](#launchers)
     - [Navigation](#navigation)
     - [OS Customization](#os-customization)
@@ -49,6 +51,8 @@ A curated collection of best Android Root Apps (Apps that use root permission), 
   - [File Management](#file-management)
   - [Kernel Management](#kernel-management)
   - [Network Tools](#network-tools)
+- [Troubleshooting](#troubleshooting)
+  - [NFC Tools](#nfc-tools)
   - [Privacy and Security](#privacy-and-security)
   - [Root Specific](#root-specific)
     - [Hide Root](#hide-root)
@@ -56,11 +60,11 @@ A curated collection of best Android Root Apps (Apps that use root permission), 
   - [System Modifications](#system-modifications)
   - [Termux](#termux)
   - [Tools](#tools)
-- [Troubleshooting](#troubleshooting)
 - [FAQs](#faqs)
 - [Contributing](#contributing)
 - [Important Notes](#important-notes)
 - [Stats](#stats)
+
 
 ## What is Root Access
 Android rooting is the process of gaining privileged control (known as root access) over various Android subsystems. 
@@ -281,6 +285,12 @@ Archived Chats to official WhatsApp. `Proprietary` `[LP]`
 - **[VPN Hotspot](https://github.com/Mygod/VPNHotspot)** -  Share your VPN connection over hotspot or repeater. `FOSS`
 - **[SimbaDroid](https://github.com/buttercookie42/SimbaDroid)** - A simple SMB file server for Android. `FOSS`
 - **[Unlimited Hotspot](https://github.com/felikcat/unlimited-hotspot)** - Remove speed restrictions on your hotspot internet and allows hotspots on any plan. `FOSS` `[M]`
+- **[WiFi Password Viewer for MMRL](https://github.com/Googlers-Repo/wpd)** - WiFi Password Viewer for MMRL. `FOSS`
+## Troubleshooting
+
+### NFC Tools
+- **[NFC Card Emulator Pro (Root)](https://play.google.com/store/apps/details?id=com.yuanwofei.cardemulator.pro)** - An NFC Card Emulator that simulates various types of cards, e.g., access cards, elevator cards, factory (meal) cards, school (meal) cards, some library cards, and other IC cards. `Proprietary`
+- **[NfcScreenOff](https://github.com/Jon8RFC/NfcScreenOff)** - Read NFC tags when screen is off & disable NFC tagging sound. `FOSS` `[M]`
 
 ### Privacy and Security
 - **[AFWall+](https://github.com/ukanth/afwall)** - Iptables-based firewall. `FOSS`
@@ -332,15 +342,12 @@ Archived Chats to official WhatsApp. `Proprietary` `[LP]`
 - **[Hide Mock Location](https://github.com/auag0/HideMockLocation)** - Xposed Module to Hide Mock Location Settings. `FOSS` `[LP]`
 - **[Hydrostellaire](https://github.com/AestasBritannia/Hydro-Br-leur)** - A magisk module for devices running on Dimensity flagship platforms and OnePlus, Realme devices. `FOSS` `[M]`
 - **[JoyCon Droid](https://joycondroid.gitbook.io/joycondroid)** - Allows you to turn your Android device into a controller for your Nintendo Switch. `FOSS`
-- **[NFC Card Emulator Pro (Root)](https://play.google.com/store/apps/details?id=com.yuanwofei.cardemulator.pro)** - An NFC Card Emulator that simulates various types of cards, e.g., access cards, elevator cards, factory (meal) cards, school (meal) cards, some library cards, and other IC cards. `Proprietary`
-- **[NfcScreenOff](https://github.com/Jon8RFC/NfcScreenOff)** - Read NFC tags when screen is off & disable NFC tagging sound. `FOSS` `[M]`
 - **[Pi-hole-for-Android](https://github.com/DesktopECHO/Pi-hole-for-Android)** - Pi-hole/Unbound Raspbian APK installer for Android 5.0+ devices. `FOSS`
 - **[SecondScreen](https://github.com/farmerbb/SecondScreen)** - Advanced solution to connect your Android device to external displays. `FOSS`
 - **[UotanToolbox NT](https://github.com/Uotan-Dev/UotanToolboxNT)** - A modern toolbox for geeks. `FOSS`
 - **[TTLChanger](https://github.com/aleksey-saenko/TTLChanger)** - Allows you to modify the default TTL (Time to Live) value. `FOSS`
 - **[Root Activity Launcher](https://play.google.com/store/apps/details?id=tk.zwander.rootactivitylauncher)** - Launch activities directly from your home screen with root access. `Proprietary` `[M]`
-- **[WiFi Password Viewer for MMRL](https://github.com/Googlers-Repo/wpd)** - WiFi Password Viewer for MMRL. `FOSS`
-## Troubleshooting
+
 
 A comprehensive guide on common issues and their solutions for Android rooting.
 
