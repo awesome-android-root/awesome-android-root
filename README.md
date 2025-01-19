@@ -322,6 +322,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LP]`
 - **[Hydrostellaire](https://github.com/AestasBritannia/Hydro-Br-leur)** - A magisk module for devices running on Dimensity flagship platforms and OnePlus, Realme devices. `FOSS` `[M]`
 - **[JoyCon Droid](https://joycondroid.gitbook.io/joycondroid)** - Allows you to turn your Android device into a controller for your Nintendo Switch. `FOSS`
 - **[NFC Card Emulator Pro (Root)](https://play.google.com/store/apps/details?id=com.yuanwofei.cardemulator.pro)** - An NFC Card Emulator that simulates various types of cards, e.g., access cards, elevator cards, factory (meal) cards, school (meal) cards, some library cards, and other IC cards. `Proprietary`
+- **[NfcScreenOff](https://github.com/Jon8RFC/NfcScreenOff)** - Read NFC tags when screen is off & disable NFC tagging sound. `FOSS` `[M]`
 - **[Pi-hole-for-Android](https://github.com/DesktopECHO/Pi-hole-for-Android)** - Pi-hole/Unbound Raspbian APK installer for Android 5.0+ devices. `FOSS`
 - **[SecondScreen](https://github.com/farmerbb/SecondScreen)** - Advanced solution to connect your Android device to external displays. `FOSS`
 - **[UotanToolbox NT](https://github.com/Uotan-Dev/UotanToolboxNT)** - A modern toolbox for geeks. `FOSS`
@@ -364,9 +365,9 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?style=flat-square&label=Github%20Stars)](https://github.com/fynks/awesome-android-root)
 
-- ##### Total Entries: `142`
+- ##### Total Entries: `143`
 - ##### Root Apps: `78`
-- ##### Magisk Modules: `31`
+- ##### Magisk Modules: `32`
 - ##### LSPosed Modules: `33`
 
 #### You are visitor number:
