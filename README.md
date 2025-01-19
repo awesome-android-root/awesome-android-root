@@ -227,7 +227,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LP]`
 - **[PixelXpert](https://github.com/siavash79/PixelXpert)** - A mixed Xposed+Magisk module, which is made to allow customizations that are not originally designed in AOSP. `FOSS` `[M]` `[LP]`
 
 ##### ColorOS
-- **[ColorOS Notify Icon](https://github.com/fankes/ColorOSNotifyIcon)** 
+- **[ColorOS Notify Icon](https://github.com/fankes/ColorOSNotifyIcon)** - Optimize notification icons for ColorOS and adapt to native notification icon specifications. `FOSS`
 - **[LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool/blob/main/README_EN.md)** - Extended and optimized Xposed module for ColorOS. `Proprietary` `[LP]`
 
 ##### Global
@@ -248,7 +248,6 @@ Archived Chats to official WhatsApp. `Proprietary` `[LP]`
 
 #### Theming
 - **[ColorBlendr](https://github.com/Mahmud0808/ColorBlendr)** - Customize Material You colors of your device. `FOSS`
-- Optimize notification icons for ColorOS and adapt to native notification icon specifications. `FOSS`
 - **[Iconify](https://github.com/Mahmud0808/Iconify)** - Customize your Android 12+ device easily. `FOSS` `[M]`
 - **[Project Themer](https://play.google.com/store/apps/details?id=com.drsants.eggproject)** - Provides tools and features for rooted devices. `Proprietary` `[M]`
 
