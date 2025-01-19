@@ -203,6 +203,8 @@ Archived Chats to official WhatsApp. `Proprietary` `[LP]`
 - **[Live Boot](https://play.google.com/store/apps/details?id=eu.chainfire.liveboot)** - Get a Linux-like live boot screen on Android. `Proprietary`
 - **[video-to-bootanimation](https://github.com/Magisk-Modules-Alt-Repo/video-to-bootanimation)** - A Magisk Module Which Can Set Videos as Android Device BootAnimation. `FOSS` `[M]`
 
+#### Font Managers
+- **[Font Manager](https://play.google.com/store/apps/details?id=com.androidacy.fontmanager)** - A great font and emoji changer by Androidacy. `Proprietary`
 #### Launchers
 - **[Pixel Launcher Mods](https://github.com/KieronQuinn/PixelLauncherMods)** - Mods for enhancing the Pixel Launcher experience. `FOSS`
 - **[Lawnchair](https://github.com/Goooler/LawnchairRelease)** - A customizable launcher offering a Pixel-like experience. `FOSS`
@@ -217,6 +219,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LP]`
 - **[PixelXpert](https://github.com/siavash79/PixelXpert)** - A mixed Xposed+Magisk module, which is made to allow customizations that are not originally designed in AOSP. `FOSS` `[M]` `[LP]`
 
 ##### ColorOS
+- **[ColorOS Notify Icon](https://github.com/fankes/ColorOSNotifyIcon)** 
 - **[LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool/blob/main/README_EN.md)** - Extended and optimized Xposed module for ColorOS. `Proprietary` `[LP]`
 
 ##### Global
@@ -237,7 +240,6 @@ Archived Chats to official WhatsApp. `Proprietary` `[LP]`
 
 #### Theming
 - **[ColorBlendr](https://github.com/Mahmud0808/ColorBlendr)** - Customize Material You colors of your device. `FOSS`
-- **[ColorOS Notify Icon](https://github.com/fankes/ColorOSNotifyIcon)** 
 - Optimize notification icons for ColorOS and adapt to native notification icon specifications. `FOSS`
 - **[Iconify](https://github.com/Mahmud0808/Iconify)** - Customize your Android 12+ device easily. `FOSS` `[M]`
 - **[Project Themer](https://play.google.com/store/apps/details?id=com.drsants.eggproject)** - Provides tools and features for rooted devices. `Proprietary` `[M]`
@@ -365,8 +367,8 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?style=flat-square&label=Github%20Stars)](https://github.com/fynks/awesome-android-root)
 
-- ##### Total Entries: `143`
-- ##### Root Apps: `78`
+- ##### Total Entries: `144`
+- ##### Root Apps: `79`
 - ##### Magisk Modules: `32`
 - ##### LSPosed Modules: `33`
 
