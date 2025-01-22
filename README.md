@@ -40,12 +40,12 @@ A curated collection of best Android Root Apps (Apps that use root permission), 
     - [Launchers](#launchers)
     - [Navigation](#navigation)
     - [OS Customizations](#os-customizations)
-      - [AOSP](#aosp)
-      - [ColorOS](#coloros)
+      - [AOSP (Android Open Source Project)](#aosp-android-open-source-project)
+      - [ColorOS (Oppo/Realme)](#coloros-opporealme)
       - [Global](#global)
-      - [HyperOS](#hyperos)
-      - [One UI](#one-ui)
-      - [Oxygen OS](#oxygen-os)
+      - [HyperOS (Xiaomi)](#hyperos-xiaomi)
+      - [One UI (Samsung)](#one-ui-samsung)
+      - [Oxygen OS (OnePlus)](#oxygen-os-oneplus)
     - [Theming](#theming)
   - [Debloating](#debloating)
   - [Development and Debugging](#development-and-debugging)
@@ -225,17 +225,17 @@ Archived Chats to official WhatsApp. `Proprietary` `[LP]`
 - **[Volume Key Track Control Module](https://github.com/Hepolise/VolumeKeyTrackControlModule)** - An Xposed module that allows to skip and play/pause track with volume keys. `FOSS` `[LP]`
 
 #### OS Customizations
-##### AOSP
+##### AOSP (Android Open Source Project)
 - **[PixelXpert](https://github.com/siavash79/PixelXpert)** - A mixed Xposed+Magisk module, which is made to allow customizations that are not originally designed in AOSP. `FOSS` `[M]` `[LP]`
 
-##### ColorOS
+##### ColorOS (Oppo/Realme)
 - **[ColorOS Notify Icon](https://github.com/fankes/ColorOSNotifyIcon)** - Optimize notification icons for ColorOS and adapt to native notification icon specifications. `FOSS`
 - **[LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool/blob/main/README_EN.md)** - Extended and optimized Xposed module for ColorOS. `Proprietary` `[LP]`
 
 ##### Global
 - **[SystemUI Tuner](https://github.com/zacharee/Tweaker?tab=readme-ov-file)** - View and modify hidden settings on Android devices. `FOSS` `[M]`
 
-##### HyperOS
+##### HyperOS (Xiaomi)
 - **[ClipboardList](https://github.com/HChenX/ClipboardList)** - Remove the 20-item limit and time limit for the Clipboard and Phrases feature.Only for MIUI & HyperOS. `FOSS` `[LP]`
 - **[HyperCeiler](https://github.com/ReChronoRain/HyperCeiler/blob/main/README_en-US.md)** - Extensive customizations for HyperOS. `FOSS` `[LP]`
 - **[Hyper Helper](https://github.com/HowieHChen/XiaomiHelper/blob/master/README_EN-US.md)** - Lightweight customization module for HyperOS only. `FOSS` `[LP]`
@@ -243,10 +243,10 @@ Archived Chats to official WhatsApp. `Proprietary` `[LP]`
 - **[MIUIqol](https://github.com/Xposed-Modules-Repo/io.github.chsbuffer.miuihelper/blob/main/README_EN.md)** - Improves my experience of MIUI 12 to 14 and HyperOS. `Proprietary` `[LP]`
 - **[Pengeek](https://github.com/monwf/customiuizer)** - Customize your HyperOS to your liking. For HyperOS based on Android 14. `FOSS` `[LP]`
   
-##### One UI
+##### One UI (Samsung)
 - **[KnoxPatch](https://github.com/salvogiangri/KnoxPatch)** - Get Samsung apps/features working again in your rooted Galaxy device. For better experience, please also read [this](https://github.com/salvogiangri/KnoxPatch?tab=readme-ov-file#knoxpatch-enhancer) . `Foss` `[LP]`
   
-##### Oxygen OS
+##### Oxygen OS (OnePlus)
 - **[OnePlus Flash Control](https://github.com/Bartixxx32/Opflashcontrol-app)** - Precise control over the brightness of the dual-tone and quad-tone LED flashes for OnePlus devices. `FOSS` 
 - **[Oxygen-Customizer](https://github.com/DHD2280/Oxygen-Customizer/)** - Open-source Oxygen OS customizer application. `FOSS` `[LP]`
 
