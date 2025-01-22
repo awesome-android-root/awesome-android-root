@@ -83,7 +83,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 -  **`Proprietary`** = Missing license or closed-source software
 -  **`[M]`** = Magisk Module
 -  **`[LP]`** = Requires LSPosed Framework
-> Apps are organized in alphabetical order in each category.
+> Apps are organized in alphabetical order within each category.
 
 ## Root Apps
 ### Ad Blocking
