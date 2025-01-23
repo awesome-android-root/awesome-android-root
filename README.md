@@ -215,6 +215,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LP]`
 
 #### Font Managers
 - **[Font Manager](https://play.google.com/store/apps/details?id=com.androidacy.fontmanager)** - A great font and emoji changer by Androidacy. `Proprietary`
+- **[Magisk-iOS-Emoji](https://github.com/Keinta15/Magisk-iOS-Emoji)** - Systemlessly replaces the emoji font with iOS Emoji. `FOSS` `[M]`
 #### Launchers
 - **[Pixel Launcher Mods](https://github.com/KieronQuinn/PixelLauncherMods)** - Mods for enhancing the Pixel Launcher experience. `FOSS`
 - **[Lawnchair](https://github.com/Goooler/LawnchairRelease)** - A customizable launcher offering a Pixel-like experience. `FOSS`
@@ -386,9 +387,9 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?style=flat-square&label=Github%20Stars)](https://github.com/fynks/awesome-android-root)
 
-- ##### Total Entries: `153`
+- ##### Total Entries: `154`
 - ##### Root Apps: `80`
-- ##### Magisk Modules: `37`
+- ##### Magisk Modules: `38`
 - ##### LSPosed Modules: `36`
 
 #### You are visitor number:
