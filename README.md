@@ -203,6 +203,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LP]`
 - **[Call Recorder - SKVALEX](https://github.com/Magisk-Modules-Repo/callrecorder-skvalex)** - Call recording app to record both sides from the line with a power of root and magisk. `FOSS` `[M]`
 
 ### Cleaning Apps
+- **[Cleaner Royall]()** - A Light weight but Ultra Fast & Powerful cleaner for Android. `FOSS` `[M]`
 - **[DirCleaner](https://www.dircleaner.com/)** - A simple and practical cleaning tool. `Proprietary`
 - **[SD Maid 2/SE](https://github.com/d4rken-org/sdmaid-se)** - A file management tool for Android that specialises in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS`
 
@@ -387,9 +388,9 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?style=flat-square&label=Github%20Stars)](https://github.com/fynks/awesome-android-root)
 
-- ##### Total Entries: `154`
+- ##### Total Entries: `155`
 - ##### Root Apps: `80`
-- ##### Magisk Modules: `38`
+- ##### Magisk Modules: `39`
 - ##### LSPosed Modules: `36`
 
 #### You are visitor number:
