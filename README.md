@@ -1,6 +1,6 @@
 # Awesome Android Root 
 
-[![Awesome](https://awesome.re/badge.svg)](https://github.com/fynks/awesome-android-root)
+[![Join our Telegram Group](https://img.shields.io/badge/Telegram-Join%20Group-blue?logo=telegram)](https://t.me/+pmxPqvXZZotlOGE0)
 
 A curated collection of best Android Root Apps (Apps that use root permission), Magisk modules, LSPosed modules and comprehensive rooting & troubleshooting guides.
 
