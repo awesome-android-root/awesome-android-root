@@ -32,8 +32,11 @@ A curated collection of best Android Root Apps (Apps that use root permission), 
   - [Automation](#automation)
   - [Backup and Restore](#backup-and-restore)
   - [Battery Management](#battery-management)
-  - [Call Recorders](#call-recorders)
   - [Cleaning Apps](#cleaning-apps)
+  - [Communication Tools](#communication-tools)
+    - [Call Recorders](#call-recorders)
+    - [Contacts](#contacts)
+    - [SMS](#sms)
   - [Customizations](#customizations)
     - [Boot Animations](#boot-animations)
     - [Font Managers](#font-managers)
@@ -41,7 +44,7 @@ A curated collection of best Android Root Apps (Apps that use root permission), 
     - [Navigation](#navigation)
     - [OS Customizations](#os-customizations)
       - [AOSP (Android Open Source Project)](#aosp-android-open-source-project)
-      - [ColorOS (Oppo/Realme)](#coloros-opporealme)
+      - [ColorOS (Oppo)](#coloros-oppo)
       - [Global](#global)
       - [HyperOS (Xiaomi)](#hyperos-xiaomi)
       - [One UI (Samsung)](#one-ui-samsung)
@@ -65,6 +68,7 @@ A curated collection of best Android Root Apps (Apps that use root permission), 
 - [Contributing](#contributing)
 - [Important Notes](#important-notes)
 - [Stats](#stats)
+
 
 
 ## What is Root Access
@@ -237,7 +241,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LP]`
 ##### AOSP (Android Open Source Project)
 - **[PixelXpert](https://github.com/siavash79/PixelXpert)** - A mixed Xposed+Magisk module, which is made to allow customizations that are not originally designed in AOSP. `FOSS` `[M]` `[LP]`
 
-##### ColorOS (Oppo/Realme)
+##### ColorOS (Oppo)
 - **[ColorOS Notify Icon](https://github.com/fankes/ColorOSNotifyIcon)** - Optimize notification icons for ColorOS and adapt to native notification icon specifications. `FOSS`
 - **[LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool/blob/main/README_EN.md)** - Extended and optimized Xposed module for ColorOS. `Proprietary` `[LP]`
 
