@@ -321,7 +321,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LP]`
 
 ### Root Specific
 #### Hide Root
-- **[Hide My Applist](https://github.com/Dr-TSNG/Hide-My-Applist)** - An Xposed module to intercept applist detections. `FOSS` `[LP]`
+- **[Hide My Applist](https://github.com/Dr-TSNG/Hide-My-Applist)** - An Xposed module to intercept applist detections.[Moded Fork](https://github.com/pumPCin/HMAL). `FOSS` `[LP]`
 - **[MagiskDetection](https://github.com/apkunpacker/MagiskDetection)** - Collection of Some Publically Available POC Apps to Detect Root/Magisk presence. `FOSS` `Proprietary`
 - **[playcurlNEXT](https://github.com/daboynb/playcurlNEXT)** - Fix Play Integrity (and SafetyNet) verdicts, allowing custom fields and props. `FOSS` `[M]`
 - **[Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix)** - Fix Play Integrity (and SafetyNet) verdicts. `FOSS` `[M]`
