@@ -212,7 +212,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LP]`
 - **[Contacts Sync](https://play.google.com/store/apps/details?id=com.lb.contacts_sync)** - Uses root to sync your address book with high-quality contacts photos from WhatsApp. `Proprietary`
 
 #### SMS
-
+- **[NekoSMS](https://github.com/apsun/NekoSMS)** - A pattern-based text message blocker for Android. ``Foss` `[LP]`
 
 
 ### Customizations
