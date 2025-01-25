@@ -18,7 +18,7 @@ count_entries() {
 # Patterns for entries
 total_pattern='^- \*\*\[[^]]+\]\(.*\)\*\*'
 magisk_pattern='^- \*\*\[[^]]+\]\(.*\)\*\*.*\[M\]'
-lsposed_pattern='^- \*\*\[[^]]+\]\(.*\)\*\*.*\[LP\]'
+lsposed_pattern='^- \*\*\[[^]]+\]\(.*\)\*\*.*\[LSP\]'
 
 # Count entries
 total_entries=$(count_entries "$total_pattern")
