@@ -34,9 +34,9 @@ Welcome to the Rooting Guides! This documentation will help you understand what 
 For detailed rooting instructions tailored to your specific device, please refer to the following guides:
 
 - [Xiaomi](./xiaomi.md)
-- [Samsung](./samsung.md)
-- [Pixel](./pixel.md)
-- [OnePlus](./oneplus.md)
+- [Samsung](./samsung.md) (WIP)
+- [Pixel](./pixel.md) (WIP)
+- [OnePlus](./oneplus.md) (WIP)
 
 ## What is Root Access
 
