@@ -10,13 +10,13 @@ export default defineConfig({
   },
   head: [
     // Favicons with improved metadata
-    ['link', { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: 'any' }],
-    ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
-    ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' }],
-    ['link', { rel: 'icon', type: 'image/png', href: '/favicon-192x192.png', sizes: '192x192' }],
-    ['link', { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png', sizes: '32x32' }],
-    ['link', { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png', sizes: '16x16' }],
-    ['link', { rel: 'manifest', href: '/manifest.json', crossorigin: 'use-credentials' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+    ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
+    ['meta', { name: 'apple-mobile-web-app-title', content: 'AAR' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['meta', { property: 'og:image', content: 'images/og.png' }],
 
     // Additional browser compatibility meta tags
     ['meta', { name: 'theme-color', content: '#ffffff' }],
@@ -24,13 +24,6 @@ export default defineConfig({
     ['meta', { name: 'application-name', content: 'Awesome Android Root' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-
-
-    // Preconnects and Prefetches
-    ['link', { rel: 'dns-prefetch', href: 'https://awesome.re' }],
-    ['link', { rel: 'preconnect', href: 'https://awesome.re' }],
-    ['link', { rel: 'dns-prefetch', href: 'https://profile-counter.glitch.me/' }],
-    ['link', { rel: 'preconnect', href: 'https://profile-counter.glitch.me/' }],
 
     // OpenGraph Meta Tags
     ['meta', { property: 'og:title', content: 'Awesome Android Root' }],
@@ -47,8 +40,8 @@ export default defineConfig({
     ['meta', { name: 'twitter:image', content: 'https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/docs/public/images/og.png' }],
 
     // SEO Meta Tags
-     ['meta', { name: 'keywords', content: 'android root, magisk modules, lsposed framework, custom rom, root apps, android rooting guide, kernelsu, root access, android mods, xposed modules, root tools, bootloader unlock' }],
-    
+    ['meta', { name: 'keywords', content: 'android root, magisk modules, lsposed framework, custom rom, root apps, android rooting guide, kernelsu, root access, android mods, xposed modules, root tools, bootloader unlock' }],
+
     ['meta', { name: 'googlebot', content: 'index, follow' }],
     ['meta', { name: 'author', content: 'Fynks' }],
     ['meta', { name: 'robots', content: 'index, follow' }],
@@ -86,52 +79,54 @@ export default defineConfig({
         }
       }
     },
-        nav: [
-          { text: 'Home', link: '/' },
-          { text: 'Apps', link: '/apps' },
-          {
-            text: 'Root Guides',
-            items: [
-              { text: 'Overview', link: '/rooting-guides/' },
-              { text: 'Device Guides', link: '/rooting-guides/#vendor-specific-rooting-guides'}
-            ]
-          },
-          { text: 'Resources', items: [
-            { text: 'FAQs', link: '/faqs' },
-            { text: 'Contribute', link: '/contributing' }
-          ]},
-          { text: 'GitHub', link: 'https://github.com/fynks/awesome-android-root' }
-        ],
-        sidebar: [
-          {
-            text: 'Getting Started',
-            collapsed: false,
-            items: [
-              { text: 'Introduction', link: '/rooting-guides/#introduction' },
-              { text: 'Root Solutions', link: '/rooting-guides/#root-solutions' },
-              { text: 'Framework Solutions', link: '/rooting-guides/#framework-solutions' }
-            ]
-          },
-          {
-            text: 'Device Guides',
-            collapsed: false,
-            items: [
-              { text: 'Xiaomi Devices', link: '/rooting-guides/xiaomi' },
-              { text: 'Samsung Devices', link: '/rooting-guides/samsung' },
-              { text: 'Pixel Devices', link: '/rooting-guides/pixel' },
-              { text: 'OnePlus Devices', link: '/rooting-guides/oneplus' }
-            ]
-          },
-          {
-            text: 'Resources',
-            collapsed: false,
-            items: [
-              { text: 'Root Apps List', link: '/apps' },
-              { text: 'FAQs', link: '/faqs' },
-              { text: 'Contributing', link: '/contributing' }
-            ]
-          }
-        ],
+    nav: [
+      { text: 'Home', link: '/' },
+      { text: 'Apps', link: '/apps' },
+      {
+        text: 'Root Guides',
+        items: [
+          { text: 'Overview', link: '/rooting-guides/' },
+          { text: 'Device Guides', link: '/rooting-guides/#vendor-specific-rooting-guides' }
+        ]
+      },
+      {
+        text: 'Resources', items: [
+          { text: 'FAQs', link: '/faqs' },
+          { text: 'Contribute', link: '/contributing' }
+        ]
+      },
+      { text: 'GitHub', link: 'https://github.com/fynks/awesome-android-root' }
+    ],
+    sidebar: [
+      {
+        text: 'Getting Started',
+        collapsed: false,
+        items: [
+          { text: 'Introduction', link: '/rooting-guides/#introduction' },
+          { text: 'Root Solutions', link: '/rooting-guides/#root-solutions' },
+          { text: 'Framework Solutions', link: '/rooting-guides/#framework-solutions' }
+        ]
+      },
+      {
+        text: 'Device Guides',
+        collapsed: false,
+        items: [
+          { text: 'Xiaomi Devices', link: '/rooting-guides/xiaomi' },
+          { text: 'Samsung Devices', link: '/rooting-guides/samsung' },
+          { text: 'Pixel Devices', link: '/rooting-guides/pixel' },
+          { text: 'OnePlus Devices', link: '/rooting-guides/oneplus' }
+        ]
+      },
+      {
+        text: 'Resources',
+        collapsed: false,
+        items: [
+          { text: 'Root Apps List', link: '/apps' },
+          { text: 'FAQs', link: '/faqs' },
+          { text: 'Contributing', link: '/contributing' }
+        ]
+      }
+    ],
     footer: {
       message: "Released under the UnLicense.",
       copyright: "Copyright © 2024-present"
