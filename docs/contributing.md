@@ -19,12 +19,12 @@ Thank you for contributing to **Awesome Android Root**. Please follow these guid
 - Use this format:
 
   ```markdown
-  - **[App Name](link-to-app)** - Brief description. `FOSS/Proprietary` `[M]` `[LP]`
+  - **[App Name](link-to-app)** - Brief description. `FOSS/Proprietary` `[M]` `[LSP]`
 
 - `FOSS`: Open-source apps 
 - `Proprietary`: Closed-source.
 - `[M]`: Magisk Module
-- `[LP]`: Requires LSPosed Framework
+- `[LSP]`: Requires LSPosed Framework
 
 - Place apps in the appropriate **existing category.**
 - Maintain **alphabetical order** within categories.
