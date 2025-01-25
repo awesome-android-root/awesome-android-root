@@ -10,6 +10,8 @@ description: "Get answers to common Android rooting questions. Learn about safet
 #### What is rooting?
 Rooting is the process of gaining privileged control (root access) over the Android operating system. This allows you to modify system files, install custom ROMs, and run apps that require administrative permissions.
 
+> You can find specific instrcutions for your device menufacturer at [Rooting Guides Section](./rooting-guides/index.md)
+
 #### Why would I want to root my device?
 Rooting allows you to:
 - Remove pre-installed bloatware
@@ -18,13 +20,20 @@ Rooting allows you to:
 - Access advanced features and settings
 - Use apps that require root permissions
 
+#### Can rooting improve my device's performance?
+Yes, rooting can potentially improve performance. By removing bloatware, installing custom kernels, and using performance-enhancing modules, you can optimize your device's resource usage. However, improper modifications can also lead to performance issues.
+
 #### Will rooting void my warranty?
 Generally yes, rooting voids your device warranty. However, it specifically depends upon your device manufacturer and region. Some manufacturers are more lenient and provide official methods to unlock the bootloader.
 
-#### Can I unroot my device?
-Yes. You can unroot by:
+#### Is rooting a reversible process?
+Yes, rooting is reversible. You can unroot by:
 - Using the "Uninstall" option in [Magisk Manager](https://github.com/topjohnwu/Magisk)
 - Flashing stock firmware via tools like [ODIN](https://www.samsungodin.com/) for Samsung devices or [Fastboot](https://developer.android.com/studio/releases/platform-tools) for others
+
+#### What is the "bootloader" and why is unlocking it necessary for rooting?
+The bootloader is a program that starts when your device powers on, loading the operating system. Unlocking it allows you to flash custom software, including custom recoveries and ROMs, which is essential for the rooting process.
+
 
 ### Safety & Security
 
@@ -45,14 +54,41 @@ Applying over-the-air (OTA) updates on a rooted device can cause issues. It's re
 - Use custom recovery to flash updates manually
 - Wait for community reviews about new update and its effects on root environment
 
+#### Can rooting expose my device to malware or security risks?
+Yes, a rooted device can be more vulnerable to malware if proper precautions are not taken. It's essential to only install apps from trusted sources and keep your Magisk modules and security patches updated.
+
+#### How can I ensure my rooted device remains secure?
+To maintain security on a rooted device:
+1. Keep your system and Magisk updated.
+2. Only install trusted modules and apps.
+3. Use a root-aware firewall.
+4. Avoid downloading questionable software.
+
+#### Does rooting increase the risk of data loss?
+Rooting itself doesn't cause data loss, but the process can involve wiping data during custom recovery installations. Always back up your device's data before rooting or making significant changes to avoid data loss.
+
 ### Troubleshooting
 
-#### What should I do if my device won't boot after rooting?
-1. Boot into recovery mode
-2. Wipe cache and Dalvik cache
-3. Restore from a backup if available
-4. Flash the stock firmware
-5. Seek assistance on forums like XDA Developers or your device's Telegram group
+#### My device is stuck in a boot loop after rooting. What can I do?
+A boot loop often indicates an issue with the software. Try:
+1.  Booting into recovery mode and wiping cache and Dalvik cache.
+2.  Restoring from a backup if available.
+3.  Flashing the stock firmware using your device's appropriate tools.
+4. Seeking help on XDA Developers forums or your device's online community.
+
+#### What does "bricking" a device mean and how can I avoid it?
+"Bricking" refers to rendering your device unusable, like a brick. This can be caused by improper flashing, corrupt files, or failed update attempts. To avoid it:
+1. Carefully follow rooting guides.
+2. Use trusted sources for files.
+3. Always back up your system before modifying it.
+4. Make sure files are compatible with your device model and firmware.
+
+What if my device's touchscreen stops working after rooting?
+If your touchscreen malfunctions, try:
+1. Rebooting the device.
+2. Booting into recovery mode to check if it works there.
+3. Re-flashing the ROM if its touchscreen drivers are corrupt.
+4. Searching for related issues on XDA forums.
 
 #### How do I fix SafetyNet/Play Integrity issues?
 Use a combination of:
@@ -86,7 +122,8 @@ A custom recovery like [TWRP](https://twrp.me/) or [OrangeFox Recovery](https://
 6. Flash GApps if required
 7. Reboot and configure your new system
 
-> You can find specific instrcutions for your device menufacturer at [Rooting Guides Section](./rooting-guides/index.md)
+#### What is a "kernel" and why would I want to flash a custom one?
+The kernel is the core of the operating system. A custom kernel can offer better performance, battery life, or additional features such as underclocking, overclocking or custom I/O scheduling.
 
 #### What are Magisk Modules?
 Magisk Modules are installable modifications that run at the system level, allowing you to customize your device without altering system partitions. They can add functionality, tweak performance, and more.
