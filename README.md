@@ -408,9 +408,9 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?style=flat-square&label=Github%20Stars)](https://github.com/fynks/awesome-android-root)
 
-- ##### Total Entries: `162`
+- ##### Total Entries: `164`
 - ##### Root Apps: `85`
-- ##### Magisk Modules: `39`
+- ##### Magisk Modules: `41`
 - ##### LSPosed Modules: `38`
 
 #### You are visitor number:
