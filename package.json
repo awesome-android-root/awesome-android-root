@@ -3,7 +3,6 @@
   "version": "1.1.0",
   "description": "A curated list of best Android root applications and best magisk modules. Features over 120 apps across categories like system mods, privacy, customization, and development tools.",
   "private": true,
-
   "repository": {
     "type": "git",
     "url": "https://github.com/fynks/awesome-android-root"
@@ -13,8 +12,8 @@
   },
   "scripts": {
     "docs:dev": "./build-docs.sh && vitepress dev docs",
-   "docs:build": "./build-docs.sh && vitepress build docs",
-  "docs:preview": "vitepress preview docs"
+    "docs:build": "./build-docs.sh && vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
     "vitepress": "^1.6.3"
