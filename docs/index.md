@@ -41,18 +41,18 @@ hero:
 features:
   - icon: 📱
     title: Essential Root Apps
-    details: Carefully curated collection of root applications organized by category. From system tools to customization - discover the best apps for your rooted device.
+    details: Carefully curated collection of root applications organized by category.
     link: /apps
-  - icon: 📖
+  - icon: 📚
     title: Comprehensive Guides
-    details: Step-by-step rooting tutorials for major Android devices. Clear instructions for Xiaomi, Samsung, Pixel, and more.
+    details: Step-by-step rooting tutorials for major Android devices. Clear instructions for Xiaomi.
     link: /rooting-guides/
+  - icon: 🔒
+    title: Frequently Asked Questions
+    details: Find answers to common questions about rooting, security, and device compatibility.
+    link: /faqs
   - icon: ⭐
     title: Open Source Project
-    details: Help improve this resource by contributing guides, adding apps, or fixing issues. Join us in building the best Android rooting knowledge base.
+    details: Help improve this resource by contributing guides, adding apps, or fixing issues.
     link: /contributing
-  - icon: 🔒
-    title: Safety & Security
-    details: Learn about rooting safety, security implications, and best practices to protect your device.
-    link: /faqs#safety-security
 ---
