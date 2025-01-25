@@ -58,6 +58,7 @@ A curated collection of best Android Root Apps (Apps that use root permission), 
   - [NFC Tools](#nfc-tools)
   - [Privacy and Security](#privacy-and-security)
   - [Root Specific](#root-specific)
+    - [Bootloop Protection](#bootloop-protection) 
     - [Hide Root](#hide-root)
     - [Managers](#managers)
   - [System Modifications](#system-modifications)
