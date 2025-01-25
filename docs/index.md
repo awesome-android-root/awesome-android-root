@@ -55,8 +55,4 @@ features:
     title: Safety & Security
     details: Learn about rooting safety, security implications, and best practices to protect your device.
     link: /faqs#safety-security
-  - icon: ❓
-    title: Common Issues
-    details: Find solutions to frequent rooting problems and compatibility issues.
-    link: /troubleshooting/
 ---

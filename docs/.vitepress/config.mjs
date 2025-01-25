@@ -93,8 +93,7 @@ export default defineConfig({
             text: 'Root Guides',
             items: [
               { text: 'Overview', link: '/rooting-guides/' },
-              { text: 'Device Guides', link: '/rooting-guides/#vendor-specific-rooting-guides'},
-              { text: 'Troubleshooting', link: '/troubleshooting/' }
+              { text: 'Device Guides', link: '/rooting-guides/#vendor-specific-rooting-guides'}
             ]
           },
           { text: 'Resources', items: [
@@ -121,15 +120,6 @@ export default defineConfig({
               { text: 'Samsung Devices', link: '/rooting-guides/samsung' },
               { text: 'Pixel Devices', link: '/rooting-guides/pixel' },
               { text: 'OnePlus Devices', link: '/rooting-guides/oneplus' }
-            ]
-          },
-          {
-            text: 'Troubleshooting',
-            collapsed: false,
-            items: [
-              { text: 'Common Issues', link: '/troubleshooting/' },
-              { text: 'WhatsApp Fix', link: '/troubleshooting/whatsapp' },
-              { text: 'Safety Net/Integrity', link: '/troubleshooting/#safetynet-play-integrity-issues' }
             ]
           },
           {

@@ -64,7 +64,6 @@ A curated collection of best Android Root Apps (Apps that use root permission), 
   - [System Modifications](#system-modifications)
   - [Termux](#termux)
   - [Tools](#tools)
-- [Troubleshooting](#troubleshooting)
 - [FAQs](#faqs)
 - [Contributing](#contributing)
 - [Important Notes](#important-notes)
