@@ -63,8 +63,8 @@ export default defineConfig({
   ],
   themeConfig: {
     logo: {
-      light: '/images/logo.svg',
-      dark: '/images/logo_dark.svg',
+      light: '/images/logo_dark.svg',
+      dark: '/images/logo_light.svg',
       alt: 'Site Logo'
     },
     search: {

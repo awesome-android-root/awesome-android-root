@@ -22,7 +22,7 @@ hero:
   name: "Awesome Android Root"
   tagline: "The ultimate resource for Android rooting enthusiasts"
   image:
-    src: /images/logo_dark.svg
+    src: /images/logo_light.svg
     alt: Awesome Android Root Logo
   actions:
     - theme: brand
