@@ -153,6 +153,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 
 ##### Telegram
 - **[Re-Telegram](https://github.com/Sakion-Team/Re-Telegram/)** - Adds features like AntiAntiForward, AntiRecall, NoSponsoredMessages, ProhibitChannelSwitching and many more to various Telegram clients. `FOSS` `[LSP]`
+- **[Telegram Speed Hook](https://github.com/araafroyall/Telegram-Speed-Hook)** - An Xposed Module to Increase Telegram Speed.`FOSS` `[LSP]`
 - **[TeleVip](https://github.com/Xposed-Modules-Repo/com.my.televip/)** - A module for modifying Telegram with Hide seen status, unlocking channel restrictions etc. `Proprietary` `[LSP]`
 
 ##### Wechat
@@ -416,10 +417,10 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?style=flat-square&label=Github%20Stars)](https://github.com/fynks/awesome-android-root)
 
-- ##### Total Entries: `170`
+- ##### Total Entries: `171`
 - ##### Root Apps: `85`
 - ##### Magisk Modules: `45`
-- ##### LSPosed Modules: `40`
+- ##### LSPosed Modules: `41`
 
 #### You are visitor number:
 
