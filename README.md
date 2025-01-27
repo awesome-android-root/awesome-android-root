@@ -303,6 +303,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 
 ### Network Tools
 - **[MACsposed](https://github.com/DavidBerdik/MACsposed)** - Adds support for MAC Address spoofing to Android 12 through 15. `FOSS` `[LSP]`
+- **[Magisk-WiFiADB](https://github.com/mrh929/magisk-wifiadb)** - A magisk module to enable WiFi ADB automatically. `FOSS` `[M]`
 - **[personalDNSfilter](https://github.com/IngoZenz/personaldnsfilter)** - A DNS filter proxy that provides local filtering of ads, malware, and tracking servers, supporting secure DNS protocols like DOH and DOT for enhanced privacy. `FOSS`
 - **[VPN Hotspot](https://github.com/Mygod/VPNHotspot)** -  Share your VPN connection over hotspot or repeater. `FOSS`
 - **[SimbaDroid](https://github.com/buttercookie42/SimbaDroid)** - A simple SMB file server for Android. `FOSS`
@@ -417,9 +418,9 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?style=flat-square&label=Github%20Stars)](https://github.com/fynks/awesome-android-root)
 
-- ##### Total Entries: `171`
+- ##### Total Entries: `172`
 - ##### Root Apps: `85`
-- ##### Magisk Modules: `45`
+- ##### Magisk Modules: `46`
 - ##### LSPosed Modules: `41`
 
 #### You are visitor number:
