@@ -1,6 +1,6 @@
 # Awesome Android Root 
 
-![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?style=flat-square&logo=github)
+[![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?style=flat-square&logo=github)](https://github.com/fynks/awesome-android-root?ref=awesome-android-root.link)
 
 Your comprehensive guide to Android root customization and enhancement. This curated collection features:
 
