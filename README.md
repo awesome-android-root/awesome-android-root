@@ -432,11 +432,6 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 [↑ Back to top](#table-of-contents)
 
 
-## Troubleshooting
-A comprehensive guide on common issues and their solutions for Android rooting.
-
-[View Troubleshooting Guides →](./docs/troubleshooting/index.md)
-
 ## FAQs
 
 Detailed answers to frequently asked questions about Root basics and common errors.
