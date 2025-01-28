@@ -434,15 +434,37 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 
 ## FAQs
 
-Detailed answers to frequently asked questions about Root basics and common errors.
+Common questions and solutions organized by category:
 
-[Browse FAQs →](./docs/faqs.md)
+### Root Basics
+- [What is Android root?](./docs/faqs.md#what-is-root)
+- [Is rooting safe?](./docs/faqs.md#is-rooting-safe) 
+- [Will I lose warranty?](./docs/faqs.md#will-rooting-void-my-warranty)
+
+### Common Issues
+- [SafetyNet/Play Integrity failures](./docs/faqs.md#how-do-i-fix-safetynet-play-integrity-issues)
+- [Bootloop recovery](./docs/faqs.md#my-device-is-stuck-in-a-boot-loop-after-rooting-what-can-i-do)
+
+[Browse all FAQs →](./docs/faqs.md)
 
 ## Contributing
 
-Help improve Awesome Android Root by adding new root apps, sharing device guides and Fixing documentation.
+Help improve this project by:
 
-[Contribution Guidelines →](./docs/contributing.md)
+### Content
+- Adding new root apps and modules
+- Sharing device-specific guides
+- Improving documentation
+- Fixing broken links
+
+### Standards
+- Follow [requirements](./docs/contributing.md#requirements)
+- Use provided [template](./docs/contributing.md#requirements)
+- Test links before submitting
+- Keep categories organized
+
+[Read Contribution Guidelines →](./docs/contributing.md)
+
 
 ## Important Notes
 
