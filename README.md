@@ -107,7 +107,9 @@ A comprehensive guide covering different rooting methods, decision-making and di
 - **[Re-Malwack](https://github.com/Magisk-Modules-Alt-Repo/Re-Malwack)** - Protect your device from ads, malware, p*rn, gambling sites, fake news sites etc. `FOSS` `[M]`
 - **[StevenBlock ](https://github.com/mikropsoft/StevenBlock)** - Ad Blocking Module for Android suporting Magisk, KernelSU & APatch. `FOSS` `[M]`
 - **[systemless-adblocker](https://github.com/Magisk-Modules-Alt-Repo/systemless-adblocker)** - Ultimate adblocker module derived from gloeyisk/systemless-hosts. `FOSS` `[M]`
-- **[Systemless hosts KernelSU module](https://github.com/symbuzzer/systemless-hosts-KernelSU-module)** - Required module to use applications such as AdAway on KernelSU and APatch. `FOSS` 
+- **[Systemless hosts KernelSU module](https://github.com/symbuzzer/systemless-hosts-KernelSU-module)** - Required module to use applications such as AdAway on KernelSU and APatch. `FOSS`
+
+[↑ Back to top](#table-of-contents)
 
 ### App Management
 #### App Isolation and Cloning
@@ -136,6 +138,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 - **[PermissionManagerX](https://github.com/mirfatif/PermissionManagerX)** - eXtended Permission Manager for Android to view and set Manifest Permissions and AppOps. `FOSS` `[M]`
 - **[Thanox](https://apt.izzysoft.de/fdroid/index/apk/github.tornaco.android.thanos)** - A system management tool that provide convenient functions like application startup management, background management, permission management etc. `FOSS` `[LSP]`
 
+[↑ Back to top](#table-of-contents)
 
 ### App Mods
 
@@ -174,6 +177,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 ##### X/Twitter
 - **[Hachidori](https://github.com/Xposed-Modules-Repo/com.twifucker.hachidori/)** - Adds downloading media, hidding ads and other privacy features to X (formerly Twitter). `Proprietary` `[LSP]`
 
+[↑ Back to top](#table-of-contents)
 
 #### Other App Mods
 - **[F*ck for VIP](https://github.com/Xposed-Modules-Repo/com.bug.hookvip)** - A module to unlock some software memberships and remove ads.Check releases section for list of supported apps. `Proprietary` `[LSP]`
@@ -188,6 +192,8 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (Use with caution) . `Proprietary`
 - **[Revanced Manager](https://github.com/ReVanced/revanced-manager)** - Modify YouTube, Youtube Music, spotify and many more with additional features. `FOSS`
 
+[↑ Back to top](#table-of-contents)
+
 ### Audio Enhancement
 - **[Hi-Res Audio Enabler](https://github.com/reiryuki/Hi-Res-Audio-Enabler-Magisk-Module)** - Enables high resolution 24 or 32 bit width audio output if device is supported. `FOSS` `[M]`
 - **[NLSound](https://github.com/Briclyaz/NLSound_module_QCom)** - Magisk module for improving audio and microphone quality in your Snapdragon SoC device. `FOSS` `[M]`
@@ -199,6 +205,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 - **[MacroDroid](https://play.google.com/store/search?q=macrodroid&c=apps)** - Easy to use automation app. `Proprietary`
 - **[Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)** - An advanced and powerful automation app. `Proprietary`
 
+[↑ Back to top](#table-of-contents)
 
 ### Backup and Restore
 - **[DataBackup](https://github.com/XayahSuSuSu/Android-DataBackup)** - DataBackup for Android 7.0+. `FOSS`
@@ -206,15 +213,21 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 - **[Neo Backup](https://github.com/NeoApplications/Neo-Backup)** - Powerful open-source backup solution. `FOSS`
 - **[Swift Backup](https://play.google.com/store/apps/details?id=org.swiftapps.swiftbackup)** - Modern backup solution with cloud support. `Proprietary`
 
+[↑ Back to top](#table-of-contents)
+
 ### Battery Management
 - **[AccA](https://github.com/MatteCarra/AccA)** - Advanced Charging Controller app. `FOSS`
 - **[Battery Guru](https://play.google.com/store/apps/details?id=com.paget96.batteryguru)** - Battery optimization and monitoring. `Proprietary`
 - **[Xtreme-Battery-Saver](https://github.com/Magisk-Modules-Alt-Repo/Xtreme-Battery-Saver)** - An extreme battery saver Magisk Module for users who want to really stretch their battery life. `FOSS` `[M]`
 
+[↑ Back to top](#table-of-contents)
+
 ### Cleaning Apps
 - **[Cleaner Royall]()** - A Light weight but Ultra Fast & Powerful cleaner for Android. `FOSS` `[M]`
 - **[DirCleaner](https://www.dircleaner.com/)** - A simple and practical cleaning tool. `Proprietary`
 - **[SD Maid 2/SE](https://github.com/d4rken-org/sdmaid-se)** - A file management tool for Android that specialises in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS`
+
+[↑ Back to top](#table-of-contents)
 
 ### Communication Tools
 #### Call Recorders
@@ -227,6 +240,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 #### SMS
 - **[NekoSMS](https://github.com/apsun/NekoSMS)** - A pattern-based text message blocker for Android. `FOSS` `[LSP]`
 
+[↑ Back to top](#table-of-contents)
 
 ### Customizations
 #### Boot Animations
@@ -278,11 +292,14 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 - **[Iconify](https://github.com/Mahmud0808/Iconify)** - Customize your Android 12+ device easily. `FOSS` `[M]`
 - **[Project Themer](https://play.google.com/store/apps/details?id=com.drsants.eggproject)** - Provides tools and features for rooted devices. `Proprietary` `[M]`
 
+[↑ Back to top](#table-of-contents)
 
 
 ### Debloating
 - **[Canta](https://github.com/samolego/Canta)** -  Uninstall any app without root using Shizuku (Needs [Shizuku](https://shizuku.rikka.app/) to be installed and running). `FOSS`
 - **[De-Bloater](https://github.com/sunilpaulmathew/De-Bloater)** - An application using the power of Magisk to debloat unwanted system apps!. `FOSS`
+
+[↑ Back to top](#table-of-contents)
 
 ### Development and Debugging
 - **[LADB](https://github.com/tytydraco/LADB)** - Local ADB shell. `FOSS` - [Free Build](https://github.com/hyperio546/ladb-builds)
@@ -291,6 +308,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 - **[Wireless ADB Switch](https://github.com/Smooth-E/wireless-adb-switch)** - Quickly enable or disable Android's Wireless Debugging feature. Includes widgets and a quick settings tile for convenience. `FOSS`
 - **[USB HID Client](https://github.com/Arian04/android-hid-client)** - Use your phone as a keyboard and mouse **without** any software on the other end. `FOSS`
 
+[↑ Back to top](#table-of-contents)
 
 ### File Management
 - **[Material Files](https://github.com/zhanghai/MaterialFiles)** - Modern file manager with root capabilities. `FOSS`
@@ -301,11 +319,15 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 - **[Total Commander](https://play.google.com/store/apps/details?id=com.ghisler.android.TotalCommander)** - A feature rich file maanger for Android supporting root and shizuku.For  a better experince, please read [this](https://www.ghisler.ch/board/viewforum.php?f=22). `Proprietary`
 - **[Xplore File Manager](https://play.google.com/store/apps/details?id=com.lonelycatgames.Xplore)** - A file manager with root support. `Proprietary` 
 
+[↑ Back to top](#table-of-contents)
+
+
 ### Kernel Management
 - **[EX Kernel Manager](https://play.google.com/store/apps/details?id=flar2.exkernelmanager)** - Root tool for backup and flashing kernels, tweaking color, sound, gestures and other kernel settings. `Proprietary`
 - **[Franco Kernel Manager](https://play.google.com/store/apps/details?id=com.franco.kernel)** - A complete toolbox for all devices with a rich that combines everything you need to manage, tweak and empower your device. `Proprietary`
 - **[SmartPack-Kernel-Manager](https://github.com/SmartPack/SmartPack-Kernel-Manager)** - A Kernel Manager. `FOSS`
 
+[↑ Back to top](#table-of-contents)
 
 ### Network Tools
 - **[MACsposed](https://github.com/DavidBerdik/MACsposed)** - Adds support for MAC Address spoofing to Android 12 through 15. `FOSS` `[LSP]`
@@ -316,9 +338,15 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 - **[Unlimited Hotspot](https://github.com/felikcat/unlimited-hotspot)** - Remove speed restrictions on your hotspot internet and allows hotspots on any plan. `FOSS` `[M]`
 - **[WiFi Password Viewer for MMRL](https://github.com/Googlers-Repo/wpd)** - WiFi Password Viewer for MMRL. `FOSS`
 
+[↑ Back to top](#table-of-contents)
+
+
 ### NFC Tools
 - **[NFC Card Emulator Pro (Root)](https://play.google.com/store/apps/details?id=com.yuanwofei.cardemulator.pro)** - An NFC Card Emulator that simulates various types of cards, e.g., access cards, elevator cards, factory (meal) cards, school (meal) cards, some library cards, and other IC cards. `Proprietary`
 - **[NfcScreenOff](https://github.com/Jon8RFC/NfcScreenOff)** - Read NFC tags when screen is off & disable NFC tagging sound. `FOSS` `[M]`
+
+[↑ Back to top](#table-of-contents)
+
 
 ### Performance Improvements
 - **[3C All-in-One Toolbox](https://play.google.com/store/apps/details?id=ccc71.at.free)** - A comprehensive utility that offers a wide range of tools for monitoring, controlling, and optimizing device performance in a user-friendly interface. `Proprietary`
@@ -326,6 +354,8 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 - **[Dynamic System Tweaks Magisk Module](https://github.com/PS2ClassicsVault/Dynamic-System-Tweaks-Magisk-Module)** - Improves overall System performance without overheating and losing battery power for armeabi-v7a devices. `FOSS` `[M]`
 - **[Encore Tweaks](https://github.com/Rem01Gaming/encore)** - Enhance device performance during gaming sessions, while keeping battery life optimized for normal use. `Proprietary` `[M]`
 - **[Uperf-Game-Turbo](https://github.com/yinwanxi/Uperf-Game-Turbo)** - Userspace performance controller for Android. `FOSS` `[M]`
+
+[↑ Back to top](#table-of-contents)
 
 
 ### Privacy and Security
@@ -335,6 +365,8 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 - **[Flag Secure Patcher](https://github.com/j-hc/FlagSecurePatcher)** - Magisk module to patch service.jar on device to disable secure lock and screenshot listeners. `FOSS` `[M]`
 - **[SensorsOff](https://github.com/theLlamaNet/SensorsOff)** - Simple app to enable or disable privacy sensors(camera and microphone) on Miui/HyperOS. `Proprietary`
 - **[XPL-EX](https://github.com/0bbedCode/XPL-EX)** - Really simple to use privacy manager for Android 6.0 Marshmallow and later. `FOSS` `[LSP]`
+
+[↑ Back to top](#table-of-contents)
 
 
 ### Root Specific
@@ -358,6 +390,9 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 - **[Magisk Manager](https://github.com/topjohnwu/Magisk)** - Manage Magisk modules and root permissions. `FOSS`
 - **[MMRL](https://github.com/DerGoogler/MMRL)** - An Android app that helps manage your own modules repository. `FOSS`
 
+[↑ Back to top](#table-of-contents)
+
+
 ### System Modifications
 - **[AnyWebView](https://github.com/neoblackxt/AnyWebView)** - Tries to detect all system webviews and add them to the developer options -> WebView implementation list. `FOSS` `[LSP]`
 - **[AutoNight](https://github.com/Chilly-Blaze/autonight)** - Controlling Android's Dark Mode through environmental brightness. `FOSS`
@@ -365,6 +400,8 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 - **[Disable Rotation Button](https://github.com/JavaCakeGames/disable-rotation-button)** - App to disable Android's floating rotation button. `FOSS`
 - **[Open WebView](https://github.com/Magisk-Modules-Alt-Repo/open_webview)** - Helps you to replace your system webview though Magisk. `FOSS` `[M]`
 - **[Universal GMS Doze](https://github.com/gloeyisk/universal-gms-doze)** - Patches Google Play services app and certain processes/services to be able to use battery optimization. `FOSS` `[M]`
+
+[↑ Back to top](#table-of-contents)
 
 
 ### Termux
@@ -375,6 +412,9 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 - **[Termux:Styling](https://github.com/termux/termux-styling)** - A Termux add-on app to customize the terminal font and color theme. `FOSS`
 - **[Termux:Tasker](https://github.com/termux/termux-tasker)** - Termux add-on app for integration with [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm). `FOSS`
 - **[Termux:Widget](https://github.com/termux/termux-widget)** - Termux add-on app which adds shortcuts to commands on the home screen. `FOSS`
+
+[↑ Back to top](#table-of-contents)
+
 
 ### Tools
 - **[Device Info HW](https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw)** - A hardware and software information app for Android devices. `Proprietary`
@@ -388,6 +428,9 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 - **[UotanToolbox NT](https://github.com/Uotan-Dev/UotanToolboxNT)** - A modern toolbox for geeks. `FOSS`
 - **[TTLChanger](https://github.com/aleksey-saenko/TTLChanger)** - Allows you to modify the default TTL (Time to Live) value. `FOSS`
 - **[Root Activity Launcher](https://play.google.com/store/apps/details?id=tk.zwander.rootactivitylauncher)** - Launch activities directly from your home screen with root access. `Proprietary` `[M]`
+
+[↑ Back to top](#table-of-contents)
+
 
 ## Troubleshooting
 A comprehensive guide on common issues and their solutions for Android rooting.
@@ -419,6 +462,8 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 * **User Responsibility:** You are solely responsible for any consequences resulting from the use of these applications. Use them at your own risk.
 
 **Recommendation:**  Thoroughly research any root app before installation and understand its purpose and potential side effects.
+
+[↑ Back to top](#table-of-contents)
 
 ## Stats
 
