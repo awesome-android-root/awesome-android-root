@@ -1,8 +1,14 @@
 # Awesome Android Root 
 
-[![Join our Telegram Group](https://img.shields.io/badge/Telegram-Join%20Group-blue?logo=telegram)](https://t.me/+pmxPqvXZZotlOGE0)
+![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?style=flat-square&logo=github)
 
-A curated collection of best Android Root Apps (Apps that use root permission), Magisk modules, LSPosed modules and comprehensive rooting & troubleshooting guides.
+Your comprehensive guide to Android root customization and enhancement. This curated collection features:
+
+- 🔧 Best root-enabled apps and utilities
+- 📦 Carefully selected Magisk modules
+- 🛠️ Popular LSPosed modules and tweaks
+- 📚 Detailed rooting guides and troubleshooting
+
 
 ## Table of Contents
 - [What is Root Access](#what-is-root-access)
@@ -415,8 +421,6 @@ Help improve Awesome Android Root by adding new root apps, sharing device guides
 **Recommendation:**  Thoroughly research any root app before installation and understand its purpose and potential side effects.
 
 ## Stats
-
-[![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?style=flat-square&label=Github%20Stars)](https://github.com/fynks/awesome-android-root)
 
 - ##### Total Entries: `172`
 - ##### Root Apps: `85`
