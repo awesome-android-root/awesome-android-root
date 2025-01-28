@@ -431,7 +431,6 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 
 [↑ Back to top](#table-of-contents)
 
-
 ## FAQs
 
 Common questions and solutions organized by category:
@@ -472,17 +471,28 @@ Help improve this project by:
 
 ## Important Notes
 
-**Warning: Proceed with Extreme Caution.** Root apps possess the power to fundamentally alter your Android system. Incorrect usage can lead to serious issues, including data loss, system instability, and rendering your device unusable (bricking).
+:warning: **Warning: Proceed with Extreme Caution**  
+Root apps possess the power to fundamentally alter your Android system. Incorrect usage can lead to serious issues, including data loss, system instability, and rendering your device unusable (bricking).
 
-**Key Considerations:**
 
-* **System Modification Risks:** These apps can modify core system files, potentially causing boot loops, crashes, or other malfunctions.
-* **Data Loss Potential:** Mistakes or incompatible modifications can result in the loss of your personal data. *Always back up your device before using root apps.*
-* **Security Implications:** Granting root access can increase your device's vulnerability to malware and other security threats.
-* **Community-Sourced Information:** This list is a collection of community suggestions. We do not guarantee the safety, functionality, or suitability of every app.
-* **User Responsibility:** You are solely responsible for any consequences resulting from the use of these applications. Use them at your own risk.
+### Key Considerations:
 
-**Recommendation:**  Thoroughly research any root app before installation and understand its purpose and potential side effects.
+:exclamation: **System Modification Risks**  
+These apps can modify core system files, potentially causing boot loops, crashes, or other malfunctions.
+
+:warning: **Data Loss Potential**  
+Mistakes or incompatible modifications can result in the loss of your personal data. *Always back up your device before using root apps.*
+
+:lock: **Security Implications**  
+Granting root access can increase your device's vulnerability to malware and other security threats.
+
+:information_source: **Community-Sourced Information**  
+This list is a collection of community suggestions. We do not guarantee the safety, functionality, or suitability of every app.
+
+:memo: **User Responsibility**  
+You are solely responsible for any consequences resulting from the use of these applications. Use them at your own risk.
+
+:bulb: **Recommendation:** Thoroughly research any root app before installation and understand its purpose and potential side effects.
 
 [↑ Back to top](#table-of-contents)
 
