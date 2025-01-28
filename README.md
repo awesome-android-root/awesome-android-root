@@ -447,6 +447,8 @@ Common questions and solutions organized by category:
 
 [Browse all FAQs →](./docs/faqs.md)
 
+[↑ Back to top](#table-of-contents)
+
 ## Contributing
 
 Help improve this project by:
@@ -464,6 +466,8 @@ Help improve this project by:
 - Keep categories organized
 
 [Read Contribution Guidelines →](./docs/contributing.md)
+
+[↑ Back to top](#table-of-contents)
 
 
 ## Important Notes
