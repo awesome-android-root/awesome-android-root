@@ -504,9 +504,9 @@ You are solely responsible for any consequences resulting from the use of these 
 
 ## Stats
 
-- ##### Total Entries: `174`
-- ##### Root Apps: `85`
-- ##### Magisk Modules: `46`
+- ##### Total Entries: `176`
+- ##### Root Apps: `87`
+- ##### Magisk Modules: `48`
 - ##### LSPosed Modules: `43`
 
 #### You are visitor number:
