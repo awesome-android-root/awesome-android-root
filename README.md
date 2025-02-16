@@ -502,10 +502,10 @@ You are solely responsible for any consequences resulting from the use of these 
 
 ## Stats
 
-- ##### Total Entries: `172`
+- ##### Total Entries: `174`
 - ##### Root Apps: `85`
 - ##### Magisk Modules: `46`
-- ##### LSPosed Modules: `41`
+- ##### LSPosed Modules: `43`
 
 #### You are visitor number:
 
