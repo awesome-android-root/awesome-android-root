@@ -265,6 +265,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 
 #### OS Customizations
 ##### AOSP (Android Open Source Project)
+- **[PixelUpdater](https://github.com/PixelUpdater/PixelUpdater)** - Pixel Updater is an app for installing Android A/B OTA updates from Google's OTA server. `FOSS` `[M]`
 - **[PixelXpert](https://github.com/siavash79/PixelXpert)** - A mixed Xposed+Magisk module, which is made to allow customizations that are not originally designed in AOSP. `FOSS` `[M]` `[LSP]`
 
 ##### ColorOS (Oppo)
@@ -328,6 +329,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 ### Kernel Management
 - **[EX Kernel Manager](https://play.google.com/store/apps/details?id=flar2.exkernelmanager)** - Root tool for backup and flashing kernels, tweaking color, sound, gestures and other kernel settings. `Proprietary`
 - **[Franco Kernel Manager](https://play.google.com/store/apps/details?id=com.franco.kernel)** - A complete toolbox for all devices with a rich that combines everything you need to manage, tweak and empower your device. `Proprietary`
+- **[Kernel Flasher](https://github.com/capntrips/KernelFlasher)** - An Android app to flash (AK3 files), backup, and restore kernels. `FOSS`
 - **[SmartPack-Kernel-Manager](https://github.com/SmartPack/SmartPack-Kernel-Manager)** - A Kernel Manager. `FOSS`
 
 [↑ Back to top](#table-of-contents)
@@ -502,9 +504,9 @@ You are solely responsible for any consequences resulting from the use of these 
 
 ## Stats
 
-- ##### Total Entries: `174`
-- ##### Root Apps: `85`
-- ##### Magisk Modules: `46`
+- ##### Total Entries: `176`
+- ##### Root Apps: `87`
+- ##### Magisk Modules: `48`
 - ##### LSPosed Modules: `43`
 
 #### You are visitor number:
