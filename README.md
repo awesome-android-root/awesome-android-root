@@ -26,6 +26,7 @@ Your comprehensive guide to Android root customization and enhancement. This cur
       - [Bilibili](#bilibili)
       - [Discord](#discord)
       - [Instagram](#instagram)
+      - [Youtube](#youtube)
       - [Line](#line)
       - [QQ](#qq)
       - [Telegram](#telegram)
@@ -154,6 +155,9 @@ A comprehensive guide covering different rooting methods, decision-making and di
   
 ##### Instagram
 - **[InstaEclipse](https://github.com/ReSo7200/InstaEclipse/)** - Adds Features like Developer Options, Ghost Mode, Ad-Free browsing, and Distraction-Free Mode to Instagram. `FOSS` `[LSP]`
+
+##### Youtube
+- **[RevancedXposed](https://github.com/chsbuffer/RevancedXposed)** - Youtube & YT Music block ads, background playback Xposed module `FOSS` `[LSP]`
 
 ##### Line
 - **[LineXtra](https://github.com/yagiyuu/LineXtra)** - Removes Ads and Tabs from the LINE. `FOSS` `[LSP]`
