@@ -26,6 +26,7 @@ Your comprehensive guide to Android root customization and enhancement. This cur
       - [Bilibili](#bilibili)
       - [Discord](#discord)
       - [Instagram](#instagram)
+      - [Youtube](#youtube)
       - [Line](#line)
       - [QQ](#qq)
       - [Telegram](#telegram)
@@ -104,7 +105,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 - **[bindhosts](https://github.com/bindhosts/bindhosts)** - Systemless hosts for Apatch, KernelSU and Magisk that is fully standalone & self-updating. - `FOSS` `[M]`
 - **[Blokada](https://blokada.org/)** - Advanced ad blocker with VPN functionality. `Proprietary`
 - **[Cubic-AdBlock](https://github.com/Vaz15k/Cubic-AdBlock)** - A simple AdBlock module based on the hosts file. `FOSS` `[M]`
-- **[Re-Malwack](https://github.com/Magisk-Modules-Alt-Repo/Re-Malwack)** - Protect your device from ads, malware, p*rn, gambling sites, fake news sites etc. `FOSS` `[M]`
+- **[Re-Malwack](https://github.com/Magisk-Modules-Alt-Repo/Re-Malwack)** - A fully-fledged ad-block module. Contains all your needs ✨ `FOSS` `[M]`
 - **[StevenBlock ](https://github.com/mikropsoft/StevenBlock)** - Ad Blocking Module for Android suporting Magisk, KernelSU & APatch. `FOSS` `[M]`
 - **[systemless-adblocker](https://github.com/Magisk-Modules-Alt-Repo/systemless-adblocker)** - Ultimate adblocker module derived from gloeyisk/systemless-hosts. `FOSS` `[M]`
 - **[Systemless hosts KernelSU module](https://github.com/symbuzzer/systemless-hosts-KernelSU-module)** - Required module to use applications such as AdAway on KernelSU and APatch. `FOSS`
@@ -154,6 +155,9 @@ A comprehensive guide covering different rooting methods, decision-making and di
   
 ##### Instagram
 - **[InstaEclipse](https://github.com/ReSo7200/InstaEclipse/)** - Adds Features like Developer Options, Ghost Mode, Ad-Free browsing, and Distraction-Free Mode to Instagram. `FOSS` `[LSP]`
+
+##### Youtube
+- **[RevancedXposed](https://github.com/chsbuffer/RevancedXposed)** - Youtube & YT Music block ads, background playback Xposed module `FOSS` `[LSP]`
 
 ##### Line
 - **[LineXtra](https://github.com/yagiyuu/LineXtra)** - Removes Ads and Tabs from the LINE. `FOSS` `[LSP]`
