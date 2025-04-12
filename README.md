@@ -95,6 +95,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 -  **`Proprietary`** = Missing license or closed-source software
 -  **`[M]`** = Magisk Module
 -  **`[LSP]`** = Requires LSPosed Framework
+
 > Apps are organized in alphabetical order within each category.
 
 ## Root Apps
@@ -164,7 +165,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 
 
 ##### QQ
-- **[NewQStory](https://github.com/Xposed-Modules-Repo/lin.xposed/)** - Xposed QQ module. `Proprietry` `[LSP]`
+- **[NewQStory](https://github.com/Xposed-Modules-Repo/lin.xposed/)** - Xposed QQ module. `Proprietary` `[LSP]`
 - **[QAuxiliary](https://github.com/cinit/QAuxiliary)** - Xposed module based on QNotified. `FOSS` `[LSP]`
 
 ##### Telegram
