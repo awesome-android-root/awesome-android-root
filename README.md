@@ -397,6 +397,8 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 - **[Zygisk-Assistant](https://github.com/snake-4/Zygisk-Assistant)** - A Zygisk module to hide root for KernelSU, Magisk and APatch. `FOSS` `[M]`
 - **[Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)**  - Standalone implementation of Zygisk, providing Zygisk API support for KernelSU and a replacement of Magisk's built-in Zygisk. `Proprietary` `[M]`
 
+:exclamation: Root hiding is a constant cat-and-mouse game. These methods might break with updates to Google Play Services or specific apps.
+
 After hiding root, you can check whether hiding works via root detection apps, see [rushiranpise/detection](https://github.com/rushiranpise/detection).
 
 #### Managers
