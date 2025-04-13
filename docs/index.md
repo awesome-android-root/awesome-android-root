@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Awesome Android Root
-description: "A curated collection of best Android root apps, Magisk modules, LSPosed modules and tools,tricks and guides."
+description: "A comprehensive collection of the best Android root apps, Magisk modules, LSPosed modules, tools, and detailed guides for Android enthusiasts."
 head:
   - - link
     - rel: dns-prefetch
@@ -17,16 +17,19 @@ head:
   - - link
     - rel: canonical
       href: https://awesome-android-root.pages.dev
+  - - meta
+    - name: keywords
+      content: awesome android root, android root, magisk modules, lsposed modules, root apps, kernelsu, apatch, android customization, root guides
 
 hero:
   name: "Awesome Android Root"
-  tagline: "The ultimate resource for Android rooting enthusiasts"
+  tagline: "Your complete resource for Android rooting and customization"
   image:
     src: /images/logo_dark.svg
     alt: Awesome Android Root Logo
   actions:
     - theme: brand
-      text: Browse Root Apps →
+      text: Explore Root Apps →
       link: /apps
     - theme: brand
       text: Rooting Guides →
@@ -40,8 +43,8 @@ hero:
 
 features:
   - icon: 📱
-    title: Essential Root Apps
-    details: Carefully curated collection of root applications organized by category.
+    title: 180+ Essential Root Apps & Modules
+    details: Carefully curated collection of root applications, Magisk modules, and LSPosed modules organized by category and use case.
     link: /apps
   - icon: 📚
     title: Comprehensive Guides
@@ -52,7 +55,20 @@ features:
     details: Find answers to common questions about rooting, security, and device compatibility.
     link: /faqs
   - icon: ⭐
-    title: Open Source Project
-    details: Help improve this resource by contributing guides, adding apps, or fixing issues.
+    title: Community-Driven Resource
+    details: Join our open-source project by contributing guides, adding new apps, or fixing issues to help the Android rooting community.
     link: /contributing
 ---
+
+## What is Awesome Android Root?
+
+Awesome Android Root is the most comprehensive resource for Android users looking to unlock the full potential of their devices through rooting. Our collection features:
+
+- **89 Root Apps**: Carefully tested and categorized applications for rooted devices
+- **46 Magisk Modules**: For systemless modifications and enhancements
+- **45 LSPosed Modules**: Framework-based modifications for advanced customization
+- **Multiple Rooting Methods**: Including Magisk, KernelSU, and APatch guides
+
+Whether you're new to rooting or an experienced power user, our resource has everything you need to customize, optimize, and enhance your Android experience.
+
+[Get Started with Root Apps →](/apps)
