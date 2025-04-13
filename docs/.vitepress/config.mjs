@@ -46,8 +46,11 @@ export default defineConfig({
     ['meta', { name: 'author', content: 'Fynks' }],
     ['meta', { name: 'robots', content: 'index, follow' }],
     ['meta', { name: 'language', content: 'English' }],
+
+    // Verification Meta Tags
     ['meta', { name: 'msvalidate.01', content: '7EBF814961E199A15D10C1313CE49074' }],
-    
+    ['meta', { name: 'google-site-verification', content: 'cUtuaqjIZ-pGgkUGTHpQ9QV3Kek6Q3ZEYenZsStHZEE' }],
+
     // Structured data
     ['script', { type: 'application/ld+json' }, JSON.stringify({
       "@context": "https://schema.org",
