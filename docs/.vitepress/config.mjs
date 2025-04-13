@@ -27,7 +27,7 @@ export default defineConfig({
 
     // OpenGraph Meta Tags
     ['meta', { property: 'og:title', content: 'Awesome Android Root' }],
-    ['meta', { property: 'og:description', content: 'A curated collection of best Android root apps, Magisk modules, LSPosed modules and tools,tricks and guides.' }],
+    ['meta', { property: 'og:description', content: 'The ultimate collection of Android root apps, Magisk modules, LSPosed modules, with detailed guides for rooting any Android device.' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:image', content: 'https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/docs/public/images/og.png' }],
     ['meta', { property: 'og:url', content: 'https://awesome-android-root.link' }],
@@ -128,8 +128,8 @@ export default defineConfig({
       }
     ],
     footer: {
-      message: "Released under MIT License.",
-      copyright: "Copyright © 2024-present"
+      message: "Released under the MIT License",
+      copyright: `Copyright © ${new Date().getFullYear()} Awesome Android Root Project`
     },
     outline: {
       level: [2, 3],
