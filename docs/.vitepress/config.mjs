@@ -46,7 +46,8 @@ export default defineConfig({
     ['meta', { name: 'author', content: 'Fynks' }],
     ['meta', { name: 'robots', content: 'index, follow' }],
     ['meta', { name: 'language', content: 'English' }],
-
+    ['meta', { name: 'msvalidate.01', content: '7EBF814961E199A15D10C1313CE49074' }],
+    
     // Structured data
     ['script', { type: 'application/ld+json' }, JSON.stringify({
       "@context": "https://schema.org",
