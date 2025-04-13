@@ -128,7 +128,7 @@ export default defineConfig({
       }
     ],
     footer: {
-      message: "Released under the UnLicense.",
+      message: "Released under MIT License.",
       copyright: "Copyright © 2024-present"
     },
     outline: {
