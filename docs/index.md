@@ -16,7 +16,7 @@ head:
       as: image
   - - link
     - rel: canonical
-      href: https://awesome-android-root.link
+      href: https://awesome-android-root.pages.dev
 
 hero:
   name: "Awesome Android Root"
