@@ -23,7 +23,7 @@ cp README.md docs/apps.md || handle_error "Failed copying README.md to docs/apps
 echo -e "${GREEN}Copied README.md to docs/apps.md${NC}"
 
 # 3. Add frontmatter
-META_DESC="Ultimate collection of best Android root apps, Magisk & LSPosed modules containing 130+ apps and modules arranged in various categories."
+META_DESC="Ultimate collection of best Android root apps, Magisk & LSPosed modules containing 180+ apps and modules arranged in various categories."
 tmp_file=$(mktemp)
 {
     echo "---"
