@@ -122,11 +122,10 @@ A comprehensive guide covering different rooting methods, decision-making and di
 #### App Managers
 - **[App Manager](https://github.com/MuntashirAkon/AppManager)** - A full-featured package manager and viewer for Android. `FOSS`
 - **[AppOps](https://appops.rikka.app/)** - Control the hidden appops conveniently. `Proprietary`
+- **[Hail](https://github.com/aistra0528/Hail)** - Disable / Hide / Suspend / Uninstall Android apps. `FOSS`
 - **[Inure](https://github.com/Hamza417/Inure)** - An elegant and beautiful premium Android app manager for rooted and non-rooted devices. `FOSS`
 - **[Let Me Downgrade](https://github.com/DavidBerdik/Let-Me-Downgrade)** - Add support for downgrading apps on Android 12 through 15 QPR1. `FOSS` `[LSP]`
 - **[Package Manager](https://github.com/SmartPack/PackageManager)** - A highly powerful app to manage both system and user apps installed on an Android device. `FOSS`
-- **[Hail](https://github.com/aistra0528/Hail)** - Disable / Hide / Suspend / Uninstall Android apps. `FOSS`
-- **[LeanData](https://play.google.com/store/apps/details?id=com.teqtic.leandata&hl=en_IN&gl=US)** - Automatically manages the power-hungry radios on your device while the screen is off to significantly lengthen battery life. `Proprietary`
 - **[Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. `FOSS` `[M]`
 
 #### App Markets
