@@ -278,6 +278,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 - **[LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool/blob/main/README_EN.md)** - Extended and optimized Xposed module for ColorOS. `Proprietary` `[LSP]`
 
 ##### Global
+- **[Disable Target API Block](https://github.com/buttercookie42/DisableTargetAPIBlock)** - An Xposed module for disabling Android 14's installation block for old apps. `FOSS` `[LSP]`
 - **[SystemUI Tuner](https://github.com/zacharee/Tweaker?tab=readme-ov-file)** - View and modify hidden settings on Android devices. `FOSS` `[M]`
 
 ##### HyperOS (Xiaomi)
@@ -518,10 +519,10 @@ You are solely responsible for any consequences resulting from the use of these 
 
 ## Stats
 
-- ##### Total Entries: `182`
+- ##### Total Entries: `183`
 - ##### Root Apps: `88`
 - ##### Magisk Modules: `46`
-- ##### LSPosed Modules: `48`
+- ##### LSPosed Modules: `49`
 
 #### You are visitor number:
 
