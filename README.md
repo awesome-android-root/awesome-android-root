@@ -521,10 +521,10 @@ You are solely responsible for any consequences resulting from the use of these 
 
 ## Stats
 
-- ##### Total Entries: `183`
+- ##### Total Entries: `185`
 - ##### Root Apps: `88`
 - ##### Magisk Modules: `46`
-- ##### LSPosed Modules: `49`
+- ##### LSPosed Modules: `51`
 
 #### You are visitor number:
 
