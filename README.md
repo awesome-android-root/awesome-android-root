@@ -205,6 +205,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 ### Audio Enhancement
 - **[Hi-Res Audio Enabler](https://github.com/reiryuki/Hi-Res-Audio-Enabler-Magisk-Module)** - Enables high resolution 24 or 32 bit width audio output if device is supported. `FOSS` `[M]`
 - **[NLSound](https://github.com/Briclyaz/NLSound_module_QCom)** - Magisk module for improving audio and microphone quality in your Snapdragon SoC device. `FOSS` `[M]`
+- **[XAudioCapture](https://github.com/Xposed-Modules-Repo/io.github.wzhy.xaudiocapture)** - Lets you to capture any audio stream you desire, bypassing these restrictions. `Proprietary` `[LSP]`
 - **[ViPER4Android FX Redesign](https://github.com/WSTxda/ViperFX-RE-Releases)** - An audio enhancement software that provides users with a wide range of customizable sound options. It allows to improve the audio quality by offering features such as equalizer settings, surround sound effects, bass boost, and more. `Proprietary` `[M]`
 
 
