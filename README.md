@@ -93,11 +93,15 @@ A comprehensive guide covering different rooting methods, decision-making and di
 
 ## Glossary
 -  **`FOSS`** = Free and Open Source Software
--  **`Proprietary`** = Missing license or closed-source software
+> Indicates software where the source code is openly available. This allows anyone to inspect, modify, and distribute the software, promoting transparency and community collaboration.
+-  **`Proprietary`** = Missing license or Closed-source software
+> Refers to software that is closed-source, meaning its underlying source code is not publicly available. This category may also include software with unclear or missing licensing terms.
 -  **`[M]`** = Magisk Module
+> Signifies an add-on specifically designed for the Magisk and require Magisk framework to be installed and active on the device to function. 
 -  **`[LSP]`** = Requires LSPosed Framework
+> Denotes that the app or modification needs the LSPosed Framework to be installed and active on the device to function. 
 
-> Apps are organized in alphabetical order within each category.
+- _**Apps are organized in alphabetical order within each category.**_
 
 ## Root Apps
 ### Ad Blocking
