@@ -14,9 +14,6 @@ head:
     - rel: preload
       href: https://img.shields.io
       as: image
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.pages.dev
   - - meta
     - name: keywords
       content: awesome android root, android root, magisk modules, lsposed modules, root apps, kernelsu, apatch, android customization, root guides
