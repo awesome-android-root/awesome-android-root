@@ -3,6 +3,9 @@ layout: home
 title: Awesome Android Root
 description: "A comprehensive collection of the best Android root apps, Magisk modules, LSPosed modules, tools, and detailed guides for Android enthusiasts."
 head:
+  - - meta
+    - name: title
+      content: Awesome Android Root
   - - link
     - rel: dns-prefetch
       href: https://img.shields.io
