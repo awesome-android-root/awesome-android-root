@@ -208,6 +208,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 [↑ Back to top](#table-of-contents)
 
 ### Audio Enhancement
+- **[DisableAudioFocus](https://github.com/auag0/DisableAudioFocus)** - Allows you to disable audio focus, enabling you to play multiple videos and audios simultaneously. `FOSS` `[LSP]`
 - **[Hi-Res Audio Enabler](https://github.com/reiryuki/Hi-Res-Audio-Enabler-Magisk-Module)** - Enables high resolution 24 or 32 bit width audio output if device is supported. `FOSS` `[M]`
 - **[NLSound](https://github.com/Briclyaz/NLSound_module_QCom)** - Magisk module for improving audio and microphone quality in your Snapdragon SoC device. `FOSS` `[M]`
 - **[XAudioCapture](https://github.com/Xposed-Modules-Repo/io.github.wzhy.xaudiocapture)** - Lets you to capture any audio stream you desire, bypassing these restrictions. `Proprietary` `[LSP]`
