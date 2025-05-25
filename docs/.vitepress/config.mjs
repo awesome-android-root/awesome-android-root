@@ -27,7 +27,7 @@ export default defineConfig({
 
     // OpenGraph Meta Tags
     ['meta', { property: 'og:title', content: 'Awesome Android Root' }],
-    ['meta', { property: 'og:description', content: 'The ultimate collection of Android root apps, Magisk modules, LSPosed modules, with detailed guides for rooting any Android device.' }],
+    ['meta', { property: 'og:description', content: 'Supercharge your Android! Your ultimate source for top root apps, Magisk & LSPosed modules and essential tools for ultimate device customization.' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:image', content: 'https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/docs/public/images/og.png' }],
     ['meta', { property: 'og:url', content: 'https://awesome-android-root.link' }],
@@ -36,7 +36,7 @@ export default defineConfig({
     // Twitter Card Meta Tags
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'Awesome Android Root' }],
-    ['meta', { name: 'twitter:description', content: 'A curated collection of best Android root apps, Magisk modules, LSPosed modules and tools,tricks and guides.' }],
+    ['meta', { name: 'twitter:description', content: 'Supercharge your Android! Your ultimate source for top root apps, Magisk & LSPosed modules and essential tools for ultimate device customization.' }],
     ['meta', { name: 'twitter:image', content: 'https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/docs/public/images/og.png' }],
 
     // SEO Meta Tags
@@ -57,7 +57,7 @@ export default defineConfig({
       "@type": "WebSite",
       "name": "Awesome Android Root",
       "url": "https://awesome-android-root.link",
-      "description": "A curated collection of best Android root apps, Magisk modules, LSPosed modules and tools,tricks and guides.",
+      "description": "Supercharge your Android! Your ultimate source for top root apps, Magisk & LSPosed modules and essential tools for ultimate device customization.",
       "author": {
         "@type": "Person",
         "name": "Fynks"

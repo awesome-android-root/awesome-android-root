@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Awesome Android Root
-description: "A comprehensive collection of the best Android root apps, Magisk modules, LSPosed modules, tools, and detailed guides for Android enthusiasts."
+description: "Supercharge your Android! Your ultimate source for top root apps, Magisk & LSPosed modules and essential tools for ultimate device customization."
 head:
   - - meta
     - name: title
