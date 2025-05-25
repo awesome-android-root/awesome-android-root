@@ -178,6 +178,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 
 ##### Telegram
 - **[Re-Telegram](https://github.com/Sakion-Team/Re-Telegram/)** - Adds features like AntiAntiForward, AntiRecall, NoSponsoredMessages, ProhibitChannelSwitching and many more to various Telegram clients. `FOSS` `[LSP]`
+- **[Telegram Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.sidestories)** - Remove action bar stories in the Telegram messenger (+block unmute button). `Proprietary` `[LSP]`
 - **[Telegram Speed Hook](https://github.com/araafroyall/Telegram-Speed-Hook)** - An Xposed Module to Increase Telegram Speed.`FOSS` `[LSP]`
 - **[TeleVip](https://github.com/Xposed-Modules-Repo/com.my.televip/)** - A module for modifying Telegram with Hide seen status, unlocking channel restrictions etc. `Proprietary` `[LSP]`
 - **[TMoe](https://github.com/cinit/TMoe)** - Adds various tweaks to various telegram clients. `FOSS` `[LSP]`
