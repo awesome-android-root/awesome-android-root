@@ -13,7 +13,7 @@
 
 ## Table of Contents
 - [What is Root Access](#what-is-root-access)
-- [Root Guide \& Solutions](#root-guide--solutions)
+- [Root Guide and Solutions](#root-guide-and-solutions)
 - [Glossary](#glossary)
 - [Root Apps](#root-apps)
   - [Ad Blocking](#ad-blocking)
@@ -61,9 +61,9 @@
     - [Theming](#theming)
   - [Debloating](#debloating)
   - [Development and Debugging](#development-and-debugging)
-  - [Device Control & Hardware](#device-control--hardware)
+  - [Device Control and Hardware](#device-control-and-hardware)
   - [File Management](#file-management)
-  - [Location & GPS](#location--gps)
+  - [Location and GPS](#location-and-gps)
   - [Kernel Management](#kernel-management)
   - [Network Tools](#network-tools)
   - [NFC Tools](#nfc-tools)
@@ -73,7 +73,7 @@
     - [Bootloop Protection](#bootloop-protection) 
     - [Hide Root](#hide-root)
     - [Managers](#managers)
-    - [Screen & Display](#screen--display)
+    - [Screen and Display](#screen-and-display)
   - [System Modifications](#system-modifications)
   - [Termux](#termux)
   - [Tools](#tools)
@@ -89,7 +89,7 @@ Android rooting is the process of gaining privileged control (known as root acce
 
 Rooting allows overcoming limitations that carriers and hardware manufacturers put on some devices, resulting in the ability to alter or replace system applications and settings, run specialized apps that require administrator-level permissions, or perform other operations that are otherwise inaccessible to a normal Android user.
 
-## Root Guide & Solutions
+## Root Guide and Solutions
 A comprehensive guide covering different rooting methods, decision-making and different frameworks.
 
 [Read the complete rooting guide →](./docs/rooting-guides/index.md)
@@ -337,7 +337,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 
 [↑ Back to top](#table-of-contents)
 
-### Device Control & Hardware
+### Device Control and Hardware
 - **[OnePlus Flash Control](https://github.com/Bartixxx32/Opflashcontrol-app)** - Precise control over the brightness of the dual-tone and quad-tone LED flashes for OnePlus devices. `FOSS`
 - **[Root Activity Launcher](https://play.google.com/store/apps/details?id=tk.zwander.rootactivitylauncher)** - Launch activities directly from your home screen with root access. `Proprietary`
 - **[SecondScreen](https://github.com/farmerbb/SecondScreen)** - Advanced solution to connect your Android device to external displays. `FOSS`
@@ -366,7 +366,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 
 [↑ Back to top](#table-of-contents)
 
-### Location & GPS
+### Location and GPS
 - **[Location Indicator Whitelist](https://github.com/gilbsgilbs/LocationIndicatorWhitelist)** - Prevents applications from spamming the annoying location notification dot on Android 12 +. `FOSS` `[LSP]`
 - **[Hide Mock Location](https://github.com/auag0/HideMockLocation)** - Xposed Module to Hide Mock Location Settings. `FOSS` `[LSP]`
 - **[XposedFakeLocation](https://github.com/noobexon1/XposedFakeLocation)** - Allows you to spoof your device's location globally or for specific apps without using "mock location" from the developer options. `FOSS` `[LSP]`
@@ -442,7 +442,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 [↑ Back to top](#table-of-contents)
 
-### Screen & Display
+### Screen and Display
 - **[AlwaysOn](https://github.com/Domi04151309/AlwaysOn)** - Adds an always-on display with various customization options regarding watch face, behavior, and background. `FOSS` `[LSP]`
 - **[CaptureSposed](https://github.com/99keshav99/CaptureSposed)** - Xposed module that effectively disables the newly introduced screenshot detection API in Android 14. `FOSS` `[LSP]`
 - **[Disable Rotation Button](https://github.com/JavaCakeGames/disable-rotation-button)** - App to disable Android's floating rotation button. `FOSS`
