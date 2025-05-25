@@ -28,7 +28,7 @@
   - [Hide Root](#hide-root)
   - [Managers](#managers)
 
-#### 🔧 **System Management**
+#### 🔧 **System & App Management**
 - [App Management](#app-management)
   - [App Isolation and Cloning](#app-isolation-and-cloning)
   - [App Managers](#app-managers)
@@ -39,7 +39,7 @@
 - [File Management](#file-management)
 - [System Modifications](#system-modifications)
 
-#### 🎨 **Customization & Theming**
+#### 🎨 **Customization & UI**
 - [Customizations](#customizations)
   - [Boot Animations](#boot-animations)
   - [Font Managers](#font-managers)
@@ -56,6 +56,7 @@
 - [Screen and Display](#screen-and-display)
 
 #### 🎮 **Media & Entertainment**
+- [Audio Enhancement](#audio-enhancement)
 - [App Mods](#app-mods)
   - [Other App Mods](#other-app-mods)
   - [Patching](#patching)
@@ -63,7 +64,7 @@
     - [Bilibili](#bilibili) • [Discord](#discord) • [Duolingo](#duolingo) • [Grindr](#grindr)
     - [Instagram](#instagram) • [Line](#line) • [QQ](#qq) • [Telegram](#telegram)
     - [Wechat](#wechat) • [Whatsapp](#whatsapp) • [X/Twitter](#xtwitter) • [Youtube](#youtube)
-- [Audio Enhancement](#audio-enhancement)
+
 
 #### ⚡ **Performance & Hardware**
 - [Battery Management](#battery-management)
