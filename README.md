@@ -438,6 +438,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[Disable Rotation Button](https://github.com/JavaCakeGames/disable-rotation-button)** - App to disable Android's floating rotation button. `FOSS`
 - **[Open WebView](https://github.com/Magisk-Modules-Alt-Repo/open_webview)** - Helps you to replace your system webview though Magisk. `FOSS` `[M]`
 - **[Universal GMS Doze](https://github.com/gloeyisk/universal-gms-doze)** - Patches Google Play services app and certain processes/services to be able to use battery optimization. `FOSS` `[M]`
+- **[XSpoofSignatures](https://github.com/rushiiMachine/XSpoofSignatures)** - Xposed module to spoof package signatures. `FOSS` `[LSP]`
 
 [↑ Back to top](#table-of-contents)
 
