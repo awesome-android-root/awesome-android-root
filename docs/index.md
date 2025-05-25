@@ -43,7 +43,7 @@ hero:
 
 features:
   - icon: 📱
-    title: 180+ Essential Root Apps & Modules
+    title: 190+ Essential Root Apps & Modules
     details: Carefully curated collection of root applications, Magisk modules, and LSPosed modules organized by category and use case.
     link: /apps
   - icon: 📚
