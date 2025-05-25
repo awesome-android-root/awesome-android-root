@@ -136,3 +136,15 @@
  .VPHero .name {
   font-size: 50px;
 }
+
+.aar-intro p{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.aar-intro img {
+margin: 0.5rem 0.25rem;
+}

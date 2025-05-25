@@ -1,5 +1,12 @@
+<div align="center" class="aar-intro">
+
 # Awesome Android Root 
-[![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?style=flat-square&logo=github)](https://github.com/fynks/awesome-android-root?ref=awesome-android-root.link)
+
+[![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?logo=github&style=for-the-badge)](https://github.com/fynks/awesome-android-root?ref=awesome-android-root.link)
+![GitHub contributors](https://img.shields.io/github/contributors/fynks/awesome-android-root?style=for-the-badge&color=blue)
+[![Apps](https://img.shields.io/badge/Total%20Apps-190+-blue?style=for-the-badge)](#root-apps)
+
+</div>
 
 **Unlock the full potential of your Android device!** This is your ultimate, community-curated guide to gain root access, customize your system, enhance performance and everything related to android rooting.
 
@@ -18,9 +25,11 @@
 - [Root Guide and Solutions](#root-guide-and-solutions)
 - [Glossary](#glossary)
 
-### 📱 Root Apps
+### 📱 **Root Apps**
+<details>
 
-#### 🛡️ **Security & Privacy**
+<summary><strong>🛡️ Security & Privacy</strong></summary>
+
 - [Ad Blocking](#ad-blocking)
 - [Privacy and Security](#privacy-and-security)
 - [Root Specific](#root-specific)
@@ -28,7 +37,10 @@
   - [Hide Root](#hide-root)
   - [Managers](#managers)
 
-#### 🔧 **System & App Management**
+</details>
+<details>
+<summary><strong> 🔧 System & App Management </strong></summary>
+
 - [App Management](#app-management)
   - [App Isolation and Cloning](#app-isolation-and-cloning)
   - [App Managers](#app-managers)
@@ -39,7 +51,11 @@
 - [File Management](#file-management)
 - [System Modifications](#system-modifications)
 
-#### 🎨 **Customization & UI**
+</details>
+
+<details>
+<summary><strong> 🎨 Customization & UI </strong></summary>
+
 - [Customizations](#customizations)
   - [Boot Animations](#boot-animations)
   - [Font Managers](#font-managers)
@@ -55,7 +71,10 @@
   - [Theming](#theming)
 - [Screen and Display](#screen-and-display)
 
-#### 🎮 **Media & Entertainment**
+</details>
+<details>
+<summary><strong> Media & Entertainment</strong></summary>
+
 - [Audio Enhancement](#audio-enhancement)
 - [App Mods](#app-mods)
   - [Other App Mods](#other-app-mods)
@@ -65,14 +84,19 @@
     - [Instagram](#instagram) • [Line](#line) • [QQ](#qq) • [Telegram](#telegram)
     - [Wechat](#wechat) • [Whatsapp](#whatsapp) • [X/Twitter](#xtwitter) • [Youtube](#youtube)
 
+</details>
+<details>
+<summary><strong> Performance & Hardware </strong></summary>
 
-#### ⚡ **Performance & Hardware**
 - [Battery Management](#battery-management)
 - [Device Control and Hardware](#device-control-and-hardware)
 - [Kernel Management](#kernel-management)
 - [Performance Improvements](#performance-improvements)
 
-#### 🌐 **Network & Communication**
+</details>
+<details>
+<summary><strong> 🌐 Network & Communication </strong></summary>
+
 - [Communication Tools](#communication-tools)
   - [Call Recorders](#call-recorders)
   - [Contacts](#contacts)
@@ -81,19 +105,24 @@
 - [Network Tools](#network-tools)
 - [NFC Tools](#nfc-tools)
 
-#### 🛠️ **Development & Tools**
+</details>
+<details>
+<summary><strong> Development & Tools </strong></summary>
+
 - [Automation](#automation)
 - [Cleaning Apps](#cleaning-apps)
 - [Development and Debugging](#development-and-debugging)
 - [Termux](#termux)
 - [Tools](#tools)
 
+</details>
+
 ### ❓ **Help & Resources**
+
 - [Contributing](#contributing)
 - [FAQs](#faqs)
 - [Important Notes](#important-notes)
 - [Stats](#stats)
-
 
 
 ## What is Root Access
@@ -516,19 +545,11 @@ Common questions and solutions organized by category:
 
 ## Contributing
 
-Help improve this project by:
-
-### Content
-- Adding new root apps and modules
-- Sharing device-specific guides
-- Improving documentation
-- Fixing broken links
-
-### Standards
-- Follow [requirements](./docs/contributing.md#requirements)
-- Use provided [template](./docs/contributing.md#requirements)
-- Test links before submitting
-- Keep categories organized
+### 🎯 Help Us Grow
+- ⭐ **Star this repo** if it helped you
+- 🔗 **Share** with fellow Android enthusiasts  
+- 🐛 **Report** broken links or outdated apps
+- ➕ **Suggest** new apps via [issues](https://github.com/fynks/awesome-android-root/issues)
 
 [Read Contribution Guidelines →](./docs/contributing.md)
 
