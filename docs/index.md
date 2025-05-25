@@ -64,9 +64,9 @@ features:
 
 Awesome Android Root is the most comprehensive resource for Android users looking to unlock the full potential of their devices through rooting. Our collection features:
 
-- **89 Root Apps**: Carefully tested and categorized applications for rooted devices
+- **88 Root Apps**: Carefully tested and categorized applications for rooted devices
 - **46 Magisk Modules**: For systemless modifications and enhancements
-- **45 LSPosed Modules**: Framework-based modifications for advanced customization
+- **61 LSPosed Modules**: Framework-based modifications for advanced customization
 - **Multiple Rooting Methods**: Including Magisk, KernelSU, and APatch guides
 
 Whether you're new to rooting or an experienced power user, our resource has everything you need to customize, optimize, and enhance your Android experience.
