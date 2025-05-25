@@ -26,6 +26,7 @@
     - [Social Media Mods](#social-media-mods)
       - [Bilibili](#bilibili)
       - [Discord](#discord)
+      - [Grindr](#grindr)
       - [Instagram](#instagram)
       - [Youtube](#youtube)
       - [Line](#line)
@@ -157,6 +158,9 @@ A comprehensive guide covering different rooting methods, decision-making and di
 
 ##### Duolingo
 - **[Duolingo Regret](https://github.com/TigerBeanst/Duolingo-Regret)** - Change Duolingo's time zone to any arbitrary time zone, makes it easier to go back and finish forgotten streaks. `FOSS` `[LSP]`
+
+##### Grindr
+- **[Grindr Plus](https://github.com/R0rt1z2/GrindrPlus)** - Unlocks and adds unique features to the Grindr app, enhancing user experience. `FOSS` `[LSP]` 
   
 ##### Instagram
 - **[InstaEclipse](https://github.com/ReSo7200/InstaEclipse/)** - Adds Features like Developer Options, Ghost Mode, Ad-Free browsing, and Distraction-Free Mode to Instagram. `FOSS` `[LSP]`
