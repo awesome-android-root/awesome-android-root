@@ -2,12 +2,14 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   lang: "en-US",
-  title: "Awesome Android Root",
+  title: "Awesome Android Root - Best root apps & modules 2025",
+  description: "Explore the ultimate curated list of 2025 for 195+ best root apps, powerful Magisk & LSPosed modules, must-have tools for ultimate customization.",
   ignoreDeadLinks: true,
   cleanUrls: true,
   sitemap: {
     hostname: 'https://awesome-android-root.link'
   },
+
   head: [
     // Favicons with improved metadata
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' }],
@@ -17,6 +19,7 @@ export default defineConfig({
     ['meta', { name: 'apple-mobile-web-app-title', content: 'AAR' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { property: 'og:image', content: 'images/og.png' }],
+    ['link', {rel: 'canonical', href: 'https://awesome-android-root.link'}],
 
     // Additional browser compatibility meta tags
     ['meta', { name: 'theme-color', content: '#ffffff' }],
