@@ -176,8 +176,7 @@ export default defineConfig({
           { text: 'FAQs', link: '/faqs' },
           { text: 'Contribute', link: '/contributing' }
         ]
-      },
-      { text: 'GitHub', link: 'https://github.com/fynks/awesome-android-root' }
+      }
     ],
     sidebar: [
       {
@@ -209,7 +208,7 @@ export default defineConfig({
       }
     ],
     footer: {
-      message: "Released under the MIT License",
+      message: "Released under the MIT License | Made with ❤️ for the Android community",
       copyright: `Copyright © ${new Date().getFullYear()} Awesome Android Root Project`
     },
     outline: {
@@ -220,8 +219,11 @@ export default defineConfig({
       text: 'Updated at',
       formatOptions: {
         dateStyle: 'full',
-        timeStyle: 'medium'
+        timeStyle: 'short'
       }
-    }
+    },
+        socialLinks: [
+      { icon: 'github', link: 'https://github.com/fynks/awesome-android-root' }
+    ],
   }
 })
