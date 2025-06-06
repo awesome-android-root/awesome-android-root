@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   lang: "en-US",
-  title: "Awesome Android Root - Best root apps & modules 2025",
+  title: "Awesome Android Root",
   description: "Explore the ultimate curated list of 2025 for 195+ best root apps, powerful Magisk & LSPosed modules, must-have tools for ultimate customization.",
   ignoreDeadLinks: true,
   cleanUrls: true,
