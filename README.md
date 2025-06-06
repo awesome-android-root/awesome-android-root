@@ -2,9 +2,12 @@
 
 # Awesome Android Root 
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?logo=github&style=for-the-badge)](https://github.com/fynks/awesome-android-root?ref=awesome-android-root.link)
-![GitHub contributors](https://img.shields.io/github/contributors/fynks/awesome-android-root?style=for-the-badge&color=blue)
-[![Apps](https://img.shields.io/badge/Total%20Apps-190+-blue?style=for-the-badge)](#root-apps)
+[![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?logo=github&style=for-the-badge&color=green)](https://github.com/fynks/awesome-android-root?ref=awesome-android-root.link)
+[![GitHub forks](https://img.shields.io/github/forks/fynks/awesome-android-root?style=for-the-badge&logo=github&label=Forks&color=blue)](https://github.com/fynks/awesome-android-root/network/members)
+[![GitHub contributors](https://img.shields.io/github/contributors/fynks/awesome-android-root?style=for-the-badge&logo=github&color=blue)](https://github.com/fynks/awesome-android-root/graphs/contributors)
+
+[![Total Apps](https://img.shields.io/badge/Total%20Apps-195+-brightgreen?style=for-the-badge&logo=android)](#root-apps)
+[![Awesome](https://img.shields.io/badge/Awesome-Android%20Root-blue?style=for-the-badge&logo=awesome-lists)](https://github.com/sindresorhus/awesome)
 
 </div>
 
@@ -18,112 +21,83 @@
 *   📖 **In-Depth Rooting Guides & Troubleshooting:** Navigate the rooting process with clear guides, understand key concepts and find solutions to common issues.
 *   🛡️ **Safety & Security:** Learn about best practices for rooting safely and tools to manage root access responsibly.
 
-## Table of Contents
 
-### 📚 Getting Started
+## Table of Contents
+<details>
+<summary>👉 Tap  to expand</summary>
+
 - [What is Root Access](#what-is-root-access)
 - [Root Guide and Solutions](#root-guide-and-solutions)
 - [Glossary](#glossary)
-
-### 📱 **Root Apps**
-<details>
-
-<summary><strong>🛡️ Security & Privacy</strong></summary>
-
-- [Ad Blocking](#ad-blocking)
-- [Privacy and Security](#privacy-and-security)
-- [Root Specific](#root-specific)
-  - [Bootloop Protection](#bootloop-protection)
-  - [Hide Root](#hide-root)
-  - [Managers](#managers)
-
-</details>
-<details>
-<summary><strong> 🔧 System & App Management </strong></summary>
-
-- [App Management](#app-management)
-  - [App Isolation and Cloning](#app-isolation-and-cloning)
-  - [App Managers](#app-managers)
-  - [App Markets](#app-markets)
-  - [App Permissions](#app-permissions)
-- [Backup and Restore](#backup-and-restore)
-- [Debloating](#debloating)
-- [File Management](#file-management)
-- [System Modifications](#system-modifications)
-
-</details>
-
-<details>
-<summary><strong> 🎨 Customization & UI </strong></summary>
-
-- [Customizations](#customizations)
-  - [Boot Animations](#boot-animations)
-  - [Font Managers](#font-managers)
-  - [Launchers](#launchers)
-  - [Navigation](#navigation)
-  - [OS Customizations](#os-customizations)
-    - [AOSP (Android Open Source Project)](#aosp-android-open-source-project)
-    - [ColorOS (Oppo)](#coloros-oppo)
-    - [Global](#global)
-    - [HyperOS (Xiaomi)](#hyperos-xiaomi)
-    - [One UI (Samsung)](#one-ui-samsung)
-    - [Oxygen OS (OnePlus)](#oxygen-os-oneplus)
-  - [Theming](#theming)
-- [Screen and Display](#screen-and-display)
-
-</details>
-<details>
-<summary><strong> Media & Entertainment</strong></summary>
-
-- [Audio Enhancement](#audio-enhancement)
-- [App Mods](#app-mods)
-  - [Other App Mods](#other-app-mods)
-  - [Patching](#patching)
-  - [Social Media Mods](#social-media-mods)
-    - [Bilibili](#bilibili) • [Discord](#discord) • [Duolingo](#duolingo) • [Grindr](#grindr)
-    - [Instagram](#instagram) • [Line](#line) • [QQ](#qq) • [Telegram](#telegram)
-    - [Wechat](#wechat) • [Whatsapp](#whatsapp) • [X/Twitter](#xtwitter) • [Youtube](#youtube)
-
-</details>
-<details>
-<summary><strong> Performance & Hardware </strong></summary>
-
-- [Battery Management](#battery-management)
-- [Device Control and Hardware](#device-control-and-hardware)
-- [Kernel Management](#kernel-management)
-- [Performance Improvements](#performance-improvements)
-
-</details>
-<details>
-<summary><strong> 🌐 Network & Communication </strong></summary>
-
-- [Communication Tools](#communication-tools)
-  - [Call Recorders](#call-recorders)
-  - [Contacts](#contacts)
-  - [SMS](#sms)
-- [Location and GPS](#location-and-gps)
-- [Network Tools](#network-tools)
-- [NFC Tools](#nfc-tools)
-
-</details>
-<details>
-<summary><strong> Development & Tools </strong></summary>
-
-- [Automation](#automation)
-- [Cleaning Apps](#cleaning-apps)
-- [Development and Debugging](#development-and-debugging)
-- [Termux](#termux)
-- [Tools](#tools)
-
-</details>
-
-### ❓ **Help & Resources**
-
-- [Contributing](#contributing)
+- [Root Apps](#root-apps)
+  - [Ad Blocking](#ad-blocking)
+  - [App Management](#app-management)
+    - [App Isolation and Cloning](#app-isolation-and-cloning)
+    - [App Managers](#app-managers)
+    - [App Markets](#app-markets)
+    - [App Permissions](#app-permissions)
+  - [App Mods](#app-mods)
+    - [Social Media Mods](#social-media-mods)
+      - [Bilibili](#bilibili)
+      - [Discord](#discord)
+      - [Duolingo](#duolingo)
+      - [Grindr](#grindr)
+      - [Instagram](#instagram)
+      - [Youtube](#youtube)
+      - [Line](#line)
+      - [QQ](#qq)
+      - [Telegram](#telegram)
+      - [Wechat](#wechat)
+      - [Whatsapp](#whatsapp)
+      - [X/Twitter](#xtwitter)
+    - [Other App Mods](#other-app-mods)
+    - [Patching](#patching)
+  - [Audio Enhancement](#audio-enhancement)
+  - [Automation](#automation)
+  - [Backup and Restore](#backup-and-restore)
+  - [Battery Management](#battery-management)
+  - [Cleaning Apps](#cleaning-apps)
+  - [Communication Tools](#communication-tools)
+    - [Call Recorders](#call-recorders)
+    - [Contacts](#contacts)
+    - [SMS](#sms)
+  - [Customizations](#customizations)
+    - [Boot Animations](#boot-animations)
+    - [Font Managers](#font-managers)
+    - [Launchers](#launchers)
+    - [Navigation](#navigation)
+    - [OS Customizations](#os-customizations)
+      - [AOSP (Android Open Source Project)](#aosp-android-open-source-project)
+      - [ColorOS (Oppo)](#coloros-oppo)
+      - [Global](#global)
+      - [HyperOS (Xiaomi)](#hyperos-xiaomi)
+      - [One UI (Samsung)](#one-ui-samsung)
+      - [Oxygen OS (OnePlus)](#oxygen-os-oneplus)
+    - [Theming](#theming)
+  - [Debloating](#debloating)
+  - [Development and Debugging](#development-and-debugging)
+  - [Device Control and Hardware](#device-control-and-hardware)
+  - [File Management](#file-management)
+  - [Kernel Management](#kernel-management)
+  - [Location and GPS](#location-and-gps)
+  - [Network Tools](#network-tools)
+  - [NFC Tools](#nfc-tools)
+  - [Performance Improvements](#performance-improvements)
+  - [Privacy and Security](#privacy-and-security)
+  - [Root Specific](#root-specific)
+    - [Bootloop Protection](#bootloop-protection)
+    - [Hide Root](#hide-root)
+    - [Managers](#managers)
+  - [Screen and Display](#screen-and-display)
+  - [System Modifications](#system-modifications)
+  - [Termux](#termux)
+  - [Tools](#tools)
 - [FAQs](#faqs)
+- [Contributing](#contributing)
 - [Important Notes](#important-notes)
 - [Stats](#stats)
 
+</details>
 
 ## What is Root Access
 Android rooting is the process of gaining privileged control (known as root access) over various Android subsystems. 
@@ -583,13 +557,40 @@ You are solely responsible for any consequences resulting from the use of these 
 
 [↑ Back to top](#table-of-contents)
 
+
 ## Stats
 
-- ##### Total Entries: `195`
-- ##### Root Apps: `88`
-- ##### Magisk Modules: `46`
-- ##### LSPosed Modules: `61`
+<div align="center">
 
-#### You are visitor number:
+### 📊 Repository Statistics
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://img.shields.io/badge/Total%20Entries-195-brightgreen?style=for-the-badge&logo=android" alt="Total Entries"/>
+      <br><strong>Total Entries</strong>
+    </td>
+    <td align="center">
+      <img src="https://img.shields.io/badge/Root%20Apps-88-blue?style=for-the-badge&logo=android" alt="Root Apps"/>
+      <br><strong>Root Apps</strong>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://img.shields.io/badge/Magisk%20Modules-46-orange?style=for-the-badge&logo=magisk" alt="Magisk Modules"/>
+      <br><strong>Magisk Modules</strong>
+    </td>
+    <td align="center">
+      <img src="https://img.shields.io/badge/LSPosed%20Modules-61-purple?style=for-the-badge&logo=xposed" alt="LSPosed Modules"/>
+      <br><strong>LSPosed Modules</strong>
+    </td>
+  </tr>
+</table>
+
+### 👥 Visitor Counter
 
 ![Visitor Count](https://profile-counter.glitch.me/fynks/count.svg)
+
+<p><em>Thank you for being part of our growing community! 🚀</em></p>
+
+</div>
