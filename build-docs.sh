@@ -22,6 +22,23 @@ echo -e "${GREEN}Starting build-docs process...${NC}"
 cp README.md docs/index.md || handle_error "Failed copying README.md to docs/index.md"
 echo -e "${GREEN}Copied README.md to docs/index.md${NC}"
 
+# 3. Add frontmatter
+META_DESC="Ultimate collection of best Android root apps, Magisk & LSPosed modules containing 180+ apps and modules arranged in various categories."
+tmp_file=$(mktemp)
+{
+    echo "---"
+    echo "title: Awesome Android Root"
+    echo "titleTemplate: Best Root Apps & Modules 2025"
+    echo "head:"
+    echo "  - - link"
+    echo "    - rel: canonical"
+    echo "      href: https://awesome-android-root.link/"
+    echo "---"
+    cat docs/index.md
+} > "$tmp_file" && mv "$tmp_file" docs/index.md || handle_error "Failed adding meta description"
+echo -e "${GREEN}Added meta description to docs/index.md${NC}"
+
+
 # 4. Adjust links
 sed -i '/http[s]*:\/\/\//! s|./docs/|./|g' docs/index.md && \
 sed -i 's|\([^:]\)//|\1/|g' docs/index.md || handle_error "Failed adjusting links"

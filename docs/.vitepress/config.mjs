@@ -19,7 +19,6 @@ export default defineConfig({
     ['meta', { name: 'apple-mobile-web-app-title', content: 'AAR' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { property: 'og:image', content: 'images/og.png' }],
-    ['link', {rel: 'canonical', href: 'https://awesome-android-root.link'}],
 
     // Additional browser compatibility meta tags
     ['meta', { name: 'theme-color', content: '#ffffff' }],
