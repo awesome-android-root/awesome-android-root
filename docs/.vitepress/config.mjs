@@ -20,48 +20,123 @@ export default defineConfig({
 
     // Additional browser compatibility meta tags
     ['meta', { name: 'theme-color', content: '#ffffff' }],
-    ['meta', { name: 'apple-mobile-web-app-title', content: 'Awesome Android Root' }],
+    ['meta', { name: 'color-scheme', content: 'light dark' }],
+    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, viewport-fit=cover' }],
+    ['meta', { name: 'apple-mobile-web-app-title', content: 'AAR' }],
     ['meta', { name: 'application-name', content: 'Awesome Android Root' }],
     ['meta', { name: 'mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }],
 
     // OpenGraph Meta Tags
-    ['meta', { property: 'og:title', content: 'Awesome Android Root' }],
-    ['meta', { property: 'og:description', content: 'Explore the ultimate curated list of 2025 for 195+ best root apps,powerful Magisk & LSPosed modules, must-have tools for ultimate customization.' }],
-    ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:image', content: 'https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/docs/public/images/og.png' }],
-    ['meta', { property: 'og:url', content: 'https://awesome-android-root.link' }],
-    ['meta', { property: 'og:site_name', content: 'Awesome Android Root' }],
 
-    // Twitter Card Meta Tags
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:site_name', content: 'Awesome Android Root' }],
+    ['meta', { property: 'og:title', content: 'Awesome Android Root - Ultimate Collection of Root Apps & Modules 2025' }],
+    ['meta', { property: 'og:description', content: 'Discover 195+ curated root apps, powerful Magisk & LSPosed modules, comprehensive rooting guides, and essential tools for ultimate Android customization.' }],
+    ['meta', { property: 'og:url', content: 'https://awesome-android-root.link' }],
+    ['meta', { property: 'og:image', content: 'https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/docs/public/images/og.png' }],
+    ['meta', { property: 'og:image:alt', content: 'Awesome Android Root - Collection of root apps and modules' }],
+    ['meta', { property: 'og:image:width', content: '1200' }],
+    ['meta', { property: 'og:image:height', content: '630' }],
+    ['meta', { property: 'og:locale', content: 'en_US' }],
+
+    // Twitter Card
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:title', content: 'Awesome Android Root' }],
-    ['meta', { name: 'twitter:description', content: 'Explore the ultimate curated list of 2025 for 195+ best root apps,powerful Magisk & LSPosed modules, must-have tools for ultimate customization.' }],
+    ['meta', { name: 'twitter:title', content: 'Awesome Android Root - Ultimate Root Apps Collection 2025' }],
+    ['meta', { name: 'twitter:description', content: 'Discover 195+ curated root apps, Magisk & LSPosed modules, and comprehensive Android rooting guides.' }],
     ['meta', { name: 'twitter:image', content: 'https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/docs/public/images/og.png' }],
+    ['meta', { name: 'twitter:image:alt', content: 'Awesome Android Root collection preview' }],
+
+    // Additional social media tags
+    ['meta', { property: 'article:author', content: 'https://github.com/fynks' }],
+    ['meta', { property: 'article:publisher', content: 'https://awesome-android-root.link' }],
+
 
     // SEO Meta Tags
-    ['meta', { name: 'keywords', content: 'android root, magisk modules, lsposed framework, custom rom, root apps, android rooting guide, kernelsu, root access, android mods, xposed modules, root tools, bootloader unlock' }],
+    ['meta', { name: 'keywords', content: 'android root 2025, best magisk modules, lsposed framework, android rooting guide, kernelsu modules, root apps collection, android customization, xposed modules, bootloader unlock, android mods, root tools, custom rom, android tweaks, system modifications' }],
 
-    ['meta', { name: 'googlebot', content: 'index, follow' }],
     ['meta', { name: 'author', content: 'Fynks' }],
-    ['meta', { name: 'robots', content: 'index, follow' }],
-    ['meta', { name: 'language', content: 'English' }],
+    ['meta', { name: 'publisher', content: 'Awesome Android Root Project' }],
+    ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1' }],
+    ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large' }],
+    ['meta', { name: 'language', content: 'en-US' }],
 
+  
     // Verification Meta Tags
     ['meta', { name: 'msvalidate.01', content: '7EBF814961E199A15D10C1313CE49074' }],
     ['meta', { name: 'google-site-verification', content: 'cUtuaqjIZ-pGgkUGTHpQ9QV3Kek6Q3ZEYenZsStHZEE' }],
 
+    // Preconnect to external domains for performance
+    ['link', { rel: 'dns-prefetch', href: 'https://github.com' }],
+
     // Structured data
     ['script', { type: 'application/ld+json' }, JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "WebSite",
+      "@type": ["WebSite", "SoftwareApplication"],
       "name": "Awesome Android Root",
+      "alternateName": "AAR",
       "url": "https://awesome-android-root.link",
       "description": "Explore the ultimate curated list of 2025 for 195+ best root apps,powerful Magisk & LSPosed modules, must-have tools for ultimate customization.",
+      "keywords": "android root, magisk modules, lsposed framework, custom rom, root apps, android rooting guide, kernelsu, root access, android mods, xposed modules, root tools, bootloader unlock",
+      "inLanguage": "en-US",
+      "datePublished": "2025-06-06",
+      "image": "https://awesome-android-root.link/images/og.png",
       "author": {
         "@type": "Person",
-        "name": "Fynks"
-      }
+        "name": "Fynks",
+        "url": "https://github.com/fynks"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Awesome Android Root Project",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://awesome-android-root.link/images/logo.svg"
+        }
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Android Root Resources",
+        "description": "Curated collection of Android rooting tools and guides",
+        "numberOfItems": 190,
+        "itemListElement": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "Magisk Modules",
+            "applicationCategory": "SystemUtility",
+            "operatingSystem": "Android"
+          },
+          {
+            "@type": "SoftwareApplication", 
+            "name": "LSPosed Modules",
+            "applicationCategory": "SystemUtility",
+            "operatingSystem": "Android"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Android Rooting Guides",
+            "description": "Step-by-step rooting guides for various Android devices"
+          }
+        ]
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Android developers, power users, modding enthusiasts"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Android Rooting"
+        },
+        {
+          "@type": "Thing", 
+          "name": "Magisk"
+        },
+        {
+          "@type": "Thing",
+          "name": "LSPosed Framework"
+        }
+      ]
     })],
 
   ],
@@ -77,14 +152,18 @@ export default defineConfig({
         detailedView: true,
         translations: {
           button: {
-            buttonText: 'Search',
+            buttonText: 'Search root apps and guides',
             buttonAriaLabel: 'Search documentation'
           }
         }
       }
     },
     nav: [
-      { text: 'Home', link: '/' },
+      { 
+        text: 'Home', 
+        link: '/',
+        ariaLabel: 'Go to homepage'
+      },
       {
         text: 'Root Guides',
         items: [
