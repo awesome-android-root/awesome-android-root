@@ -200,7 +200,6 @@ A comprehensive guide covering different rooting methods, decision-making and di
 
 ##### Wechat
 - **[X](https://github.com/Xposed-Modules-Repo/cn.android.x)** - Add extra features to Wechat. `Proprietary` `[LSP]`
-- **[XChat](https://github.com/Xposed-Modules-Repo/com.xchat)** - A customization mod for Wechat. `Proprietary` `[LSP]`
 
 ##### Whatsapp
 - **[WA Enhancer](https://github.com/Dev4Mod/WaEnhancer)** - A Xposed module that enhances your WhatsApp experience. `FOSS` `[LSP]`
