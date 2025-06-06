@@ -85,7 +85,6 @@ export default defineConfig({
     },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Apps', link: '/apps' },
       {
         text: 'Root Guides',
         items: [
@@ -125,7 +124,6 @@ export default defineConfig({
         text: 'Resources',
         collapsed: false,
         items: [
-          { text: 'Root Apps List', link: '/apps' },
           { text: 'FAQs', link: '/faqs' },
           { text: 'Contributing', link: '/contributing' }
         ]

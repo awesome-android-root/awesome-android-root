@@ -4,14 +4,11 @@
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?logo=github&style=for-the-badge&color=green)](https://github.com/fynks/awesome-android-root?ref=awesome-android-root.link)
 [![GitHub forks](https://img.shields.io/github/forks/fynks/awesome-android-root?style=for-the-badge&logo=github&label=Forks&color=blue)](https://github.com/fynks/awesome-android-root/network/members)
-[![GitHub contributors](https://img.shields.io/github/contributors/fynks/awesome-android-root?style=for-the-badge&logo=github&color=blue)](https://github.com/fynks/awesome-android-root/graphs/contributors)
-
-[![Total Apps](https://img.shields.io/badge/Total%20Apps-195+-brightgreen?style=for-the-badge&logo=android)](#root-apps)
-[![Awesome](https://img.shields.io/badge/Awesome-Android%20Root-blue?style=for-the-badge&logo=awesome-lists)](https://github.com/sindresorhus/awesome)
+[![Total Apps](https://img.shields.io/badge/Total%20Apps-195+-blue?style=for-the-badge&logo=android)](#root-apps)
 
 </div>
 
-**Unlock the full potential of your Android device!** This is your ultimate, community-curated guide to gain root access, customize your system, enhance performance and everything related to android rooting.
+**🚀 Unlock the full potential of your Android device!** This is your ultimate, community-curated guide to gain root access, customize your system, enhance performance and everything related to android rooting.
 
 **What you'll find inside:**
 
@@ -564,6 +561,7 @@ You are solely responsible for any consequences resulting from the use of these 
 ### 📊 Repository Statistics
 
 <table>
+  <tbody>
   <tr>
     <td align="center">
       <img src="https://img.shields.io/badge/Total%20Entries-195-brightgreen?style=for-the-badge&logo=android" alt="Total Entries"/>
@@ -584,6 +582,7 @@ You are solely responsible for any consequences resulting from the use of these 
       <br><strong>LSPosed Modules</strong>
     </td>
   </tr>
+</tbody>
 </table>
 
 ### 👥 Visitor Counter
