@@ -579,7 +579,7 @@ You are solely responsible for any consequences resulting from the use of these 
       <br><strong>LSPosed Modules</strong>
     </td>
   </tr>
-  <tbody>
+  </tbody>
 </table>
 
 ### 👥 Visitor Counter

@@ -56,7 +56,7 @@ cat << EOF
       <br><strong>LSPosed Modules</strong>
     </td>
   </tr>
-  <tbody>
+  </tbody>
 </table>
 
 ### 👥 Visitor Counter
