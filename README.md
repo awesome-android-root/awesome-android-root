@@ -1,4 +1,4 @@
-q<div align="center" class="aar-intro">
+<div align="center" class="aar-intro">
 
 # Awesome Android Root 
 
