@@ -213,7 +213,6 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 
 #### Other App Mods
 - **[F*ck for VIP](https://github.com/Xposed-Modules-Repo/com.bug.hookvip)** - A module to unlock some software memberships and remove ads.Check releases section for list of supported apps. `Proprietary` `[LSP]`
-- **[IceCore](https://github.com/Xposed-Modules-Repo/me.bingyue.IceCore/)** - Integrates various fun functions, supports obtaining VIP, removing ads, and other functions. `Proprietary` `[LSP]`
 - **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
 - **[Maps tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.mapstweaks)** - Collection of the maps UI tweaks for Google maps, Yandex maps and Yandex Navi. `Proprietary` `[LSP]`
 - **[NewHookVip](https://github.com/Xposed-Modules-Repo/top.hookvip.pro)** - Xposed module for unlocking some App memberships and adding some extended functions. Check releases section for list of supported apps. `Proprietary` `[LSP]`
