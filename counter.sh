@@ -35,6 +35,7 @@ cat << EOF
 ### 📊 Repository Statistics
 
 <table>
+<tbody>
   <tr>
     <td align="center">
       <img src="https://img.shields.io/badge/Total%20Entries-${total_entries}-brightgreen?style=for-the-badge&logo=android" alt="Total Entries"/>
@@ -55,6 +56,7 @@ cat << EOF
       <br><strong>LSPosed Modules</strong>
     </td>
   </tr>
+  <tbody>
 </table>
 
 ### 👥 Visitor Counter
