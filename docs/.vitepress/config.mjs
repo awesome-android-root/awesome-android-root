@@ -67,6 +67,7 @@ export default defineConfig({
     // Verification Meta Tags
     ['meta', { name: 'msvalidate.01', content: '7EBF814961E199A15D10C1313CE49074' }],
     ['meta', { name: 'google-site-verification', content: 'cUtuaqjIZ-pGgkUGTHpQ9QV3Kek6Q3ZEYenZsStHZEE' }],
+    ['meta', { name: 'sitecheckerpro-site-verification', content: '0d5b9f5c721e50a14deed210e31cda75' }],
 
     // Preconnect to external domains for performance
     ['link', { rel: 'dns-prefetch', href: 'https://github.com' }],
