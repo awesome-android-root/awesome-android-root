@@ -167,45 +167,69 @@ export default defineConfig({
         ariaLabel: 'Go to homepage'
       },
       {
-        text: 'Root Guides',
+        text: 'Guides',
         items: [
-          { text: 'Overview', link: '/rooting-guides/' },
-          { text: 'Device Guides', link: '/rooting-guides/#vendor-specific-rooting-guides' }
+          { text: 'Rooting Guides', link: '/rooting-guides/' },
+          { text: 'Device-Specific Guides', link: '/rooting-guides/#vendor-specific-rooting-guides' },
         ]
       },
       {
-        text: 'Resources', items: [
+        text: 'Resources', 
+        items: [
           { text: 'FAQs', link: '/faqs' },
-          { text: 'Contribute', link: '/contributing' }
+          { text: 'Contributing Guide', link: '/contributing' },
+          { text: 'Glossary', link: '../#glossary' }
+        ]
+      },
+      {
+        text: 'More',
+        items: [
+          { 
+            text: 'Alternative Sites',
+            items: [
+              { text: 'Cloudflare Pages', link: 'https://awesome-android-root.pages.dev/' },
+              { text: 'Netlify Mirror', link: 'https://awesome-android-root.netlify.app/' },
+              { text: 'Main Site', link: 'https://awesome-android-root.link/' }
+            ]
+          },
+          { text: 'GitHub Repository', link: 'https://github.com/fynks/awesome-android-root' },
+          { text: 'Report Issue', link: 'https://github.com/fynks/awesome-android-root/issues' }
         ]
       }
     ],
     sidebar: [
       {
-        text: 'Getting Started',
+        text: '🚀 Quick Start',
         collapsed: false,
         items: [
-          { text: 'Introduction', link: '/rooting-guides/#introduction' },
-          { text: 'Root Solutions', link: '/rooting-guides/#root-solutions' },
-          { text: 'Framework Solutions', link: '/rooting-guides/#framework-solutions' }
+          { text: 'What is Root?', link: '/rooting-guides/#what-is-root-access' },
+          { text: 'Pros and Cons', link: '/rooting-guides/#should-i-root' }
         ]
       },
       {
-        text: 'Device Guides',
+        text: '🔧 Rooting Guides',
         collapsed: false,
         items: [
-          { text: 'Xiaomi Devices', link: '/rooting-guides/xiaomi' },
-          { text: 'Samsung Devices', link: '/rooting-guides/samsung' },
-          { text: 'Pixel Devices', link: '/rooting-guides/pixel' },
-          { text: 'OnePlus Devices', link: '/rooting-guides/oneplus' }
+          { text: 'General Rooting Guide', link: '/rooting-guides/#how-to-root' },
+          { text: 'Framework Solutions', link: '/rooting-guides/#framework-solutions' },
+          { text: 'Device-Specific Guides', link: '/rooting-guides/#vendor-specific-rooting-guides' }
         ]
       },
       {
-        text: 'Resources',
-        collapsed: false,
+        text: '💡 Help & Resources',
+        collapsed: true,
         items: [
-          { text: 'FAQs', link: '/faqs' },
-          { text: 'Contributing', link: '/contributing' }
+          { text: 'Frequently Asked Questions', link: '/faqs' },
+          { text: 'Troubleshooting', link: '/faqs#troubleshooting' },
+          { text: 'Glossary of Terms', link: '../#glossary' }
+        ]
+      },
+      {
+        text: '🤝 Contributing',
+        collapsed: true,
+        items: [
+          { text: 'How to Contribute', link: '/contributing' },
+          { text: 'Report an Issue', link: 'https://github.com/fynks/awesome-android-root/issues' }
         ]
       }
     ],
