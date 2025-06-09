@@ -177,9 +177,9 @@ export default defineConfig({
       {
         text: 'Resources', 
         items: [
+          { text: 'Glossary', link: '../#glossary' },
           { text: 'FAQs', link: '/faqs' },
-          { text: 'Contributing Guide', link: '/contributing' },
-          { text: 'Glossary', link: '../#glossary' }
+          { text: 'Contributing Guide', link: '/contributing' }
         ]
       },
       {
