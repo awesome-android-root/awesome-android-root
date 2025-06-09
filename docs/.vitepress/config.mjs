@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: "en-US",
   title: "Awesome Android Root",
-  description: "Explore the ultimate curated list of 2025 for 195+ best root apps, powerful Magisk & LSPosed modules, must-have tools for ultimate customization.",
+  description: "Explore the ultimate curated list of 2025 for 200+ best root apps, powerful Magisk & LSPosed modules, must-have tools for ultimate customization.",
   ignoreDeadLinks: true,
   cleanUrls: true,
   sitemap: {
@@ -34,7 +34,7 @@ export default defineConfig({
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Awesome Android Root' }],
     ['meta', { property: 'og:title', content: 'Awesome Android Root - Ultimate Collection of Root Apps & Modules 2025' }],
-    ['meta', { property: 'og:description', content: 'Discover 195+ curated root apps, powerful Magisk & LSPosed modules, comprehensive rooting guides, and essential tools for ultimate Android customization.' }],
+    ['meta', { property: 'og:description', content: 'Discover 200+ curated root apps, powerful Magisk & LSPosed modules, comprehensive rooting guides, and essential tools for ultimate Android customization.' }],
     ['meta', { property: 'og:url', content: 'https://awesome-android-root.link' }],
     ['meta', { property: 'og:image', content: 'https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/docs/public/images/og.png' }],
     ['meta', { property: 'og:image:alt', content: 'Awesome Android Root - Collection of root apps and modules' }],
@@ -45,7 +45,7 @@ export default defineConfig({
     // Twitter Card
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'Awesome Android Root - Ultimate Root Apps Collection 2025' }],
-    ['meta', { name: 'twitter:description', content: 'Discover 195+ curated root apps, Magisk & LSPosed modules, and comprehensive Android rooting guides.' }],
+    ['meta', { name: 'twitter:description', content: 'Discover 200+ curated root apps, Magisk & LSPosed modules, and comprehensive Android rooting guides.' }],
     ['meta', { name: 'twitter:image', content: 'https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/docs/public/images/og.png' }],
     ['meta', { name: 'twitter:image:alt', content: 'Awesome Android Root collection preview' }],
 
@@ -63,7 +63,7 @@ export default defineConfig({
     ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large' }],
     ['meta', { name: 'language', content: 'en-US' }],
 
-  
+
     // Verification Meta Tags
     ['meta', { name: 'msvalidate.01', content: '7EBF814961E199A15D10C1313CE49074' }],
     ['meta', { name: 'google-site-verification', content: 'cUtuaqjIZ-pGgkUGTHpQ9QV3Kek6Q3ZEYenZsStHZEE' }],
@@ -71,19 +71,25 @@ export default defineConfig({
 
     // Preconnect to external domains for performance
     ['link', { rel: 'dns-prefetch', href: 'https://github.com' }],
+    ['link', { rel: 'dns-prefetch', href: 'https://img.shields.io' }],
+
 
     // Structured data
     ['script', { type: 'application/ld+json' }, JSON.stringify({
       "@context": "https://schema.org",
-      "@type": ["WebSite", "SoftwareApplication"],
+      "@type": "WebSite",
       "name": "Awesome Android Root",
       "alternateName": "AAR",
       "url": "https://awesome-android-root.link",
-      "description": "Explore the ultimate curated list of 2025 for 195+ best root apps,powerful Magisk & LSPosed modules, must-have tools for ultimate customization.",
-      "keywords": "android root, magisk modules, lsposed framework, custom rom, root apps, android rooting guide, kernelsu, root access, android mods, xposed modules, root tools, bootloader unlock",
+      "description": "Explore the ultimate curated list of 2025 for 200+ best root apps, powerful Magisk & LSPosed modules, must-have tools for ultimate customization.",
       "inLanguage": "en-US",
       "datePublished": "2025-06-06",
-      "image": "https://awesome-android-root.link/images/og.png",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://awesome-android-root.link/images/og.png",
+        "width": 1200,
+        "height": 630
+      },
       "author": {
         "@type": "Person",
         "name": "Fynks",
@@ -101,7 +107,7 @@ export default defineConfig({
         "@type": "ItemList",
         "name": "Android Root Resources",
         "description": "Curated collection of Android rooting tools and guides",
-        "numberOfItems": 190,
+        "numberOfItems": 200,
         "itemListElement": [
           {
             "@type": "SoftwareApplication",
@@ -110,7 +116,7 @@ export default defineConfig({
             "operatingSystem": "Android"
           },
           {
-            "@type": "SoftwareApplication", 
+            "@type": "SoftwareApplication",
             "name": "LSPosed Modules",
             "applicationCategory": "SystemUtility",
             "operatingSystem": "Android"
@@ -132,14 +138,15 @@ export default defineConfig({
           "name": "Android Rooting"
         },
         {
-          "@type": "Thing", 
+          "@type": "Thing",
           "name": "Magisk"
         },
         {
           "@type": "Thing",
           "name": "LSPosed Framework"
         }
-      ]
+      ],
+      "keywords": "android root, magisk modules, lsposed framework, custom rom, root apps, android rooting guide, kernelsu, root access, android mods, xposed modules, root tools, bootloader unlock"
     })],
 
   ],
@@ -153,17 +160,35 @@ export default defineConfig({
       provider: 'local',
       options: {
         detailedView: true,
+        miniSearch: {
+          searchOptions: {
+            fuzzy: 0.2,
+            prefix: true,
+            boost: { title: 4, text: 2, titles: 1 }
+          }
+        },
         translations: {
           button: {
-            buttonText: 'Search root apps and guides',
-            buttonAriaLabel: 'Search documentation'
+            buttonText: 'Search apps, modules & guides',
+            buttonAriaLabel: 'Search root resources'
+          },
+          modal: {
+            displayDetails: 'Display detailed list',
+            resetButtonTitle: 'Reset search',
+            backButtonTitle: 'Close search',
+            noResultsText: 'No results for',
+            footer: {
+              selectText: 'to select',
+              navigateText: 'to navigate',
+              closeText: 'to close'
+            }
           }
         }
       }
     },
     nav: [
-      { 
-        text: 'Home', 
+      {
+        text: 'Home',
         link: '/',
         ariaLabel: 'Go to homepage'
       },
@@ -175,7 +200,7 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Resources', 
+        text: 'Resources',
         items: [
           { text: 'Glossary', link: '../#glossary' },
           { text: 'FAQs', link: '/faqs' },
@@ -185,7 +210,7 @@ export default defineConfig({
       {
         text: 'More',
         items: [
-          { 
+          {
             text: 'Alternative Sites',
             items: [
               { text: 'Cloudflare Pages', link: 'https://awesome-android-root.pages.dev/' },
@@ -250,7 +275,7 @@ export default defineConfig({
         timeStyle: 'short'
       }
     },
-        socialLinks: [
+    socialLinks: [
       { icon: 'github', link: 'https://github.com/fynks/awesome-android-root' }
     ],
   }
