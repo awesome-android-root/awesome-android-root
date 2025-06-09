@@ -179,6 +179,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
   
 ##### Instagram
 - **[InstaEclipse](https://github.com/ReSo7200/InstaEclipse/)** - Adds Features like Developer Options, Ghost Mode, Ad-Free browsing, and Distraction-Free Mode to Instagram. `FOSS` `[LSP]`
+- **[InstaGhost](https://github.com/ricalnet/InstaGhost)** - Enhance your Instagram experience with advanced features such as developer options, ghost mode, distraction-free mode, and more. `FOSS` `[LSP]`
 
 ##### Line
 - **[LineXtra](https://github.com/yagiyuu/LineXtra)** - Removes Ads and Tabs from the LINE. `FOSS` `[LSP]`
