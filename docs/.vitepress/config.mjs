@@ -204,7 +204,8 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'What is Root?', link: '/rooting-guides/#what-is-root-access' },
-          { text: 'Pros and Cons', link: '/rooting-guides/#should-i-root' }
+          { text: 'Benefits & Risks', link: '/rooting-guides/#should-i-root' },
+          { text: 'Prerequisites', link: '/rooting-guides/#prerequisites' }
         ]
       },
       {
