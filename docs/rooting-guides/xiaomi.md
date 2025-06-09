@@ -1,7 +1,6 @@
 ---
 layout: doc
-title: Xiaomi Rooting Guide - MIUI & HyperOS 2025
-titleTemplate: Complete Xiaomi Root Guide
+title: Xiaomi Rooting Guide
 description: "Complete step-by-step guide to root Xiaomi devices running MIUI/HyperOS. Learn bootloader unlocking, custom recovery installation, and Magisk setup with device-specific tips."
 head:
   - - link
