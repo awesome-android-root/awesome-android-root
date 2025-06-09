@@ -40,7 +40,7 @@
       - [Duolingo](#duolingo)
       - [Grindr](#grindr)
       - [Instagram](#instagram)
-      - [Youtube](#youtube)
+      - [Youtube, Spotify, GPhotos](#youtube)
       - [Line](#line)
       - [QQ](#qq)
       - [Telegram](#telegram)
@@ -180,8 +180,9 @@ A comprehensive guide covering different rooting methods, decision-making and di
 ##### Instagram
 - **[InstaEclipse](https://github.com/ReSo7200/InstaEclipse/)** - Adds Features like Developer Options, Ghost Mode, Ad-Free browsing, and Distraction-Free Mode to Instagram. `FOSS` `[LSP]`
 
-##### Youtube
-- **[RevancedXposed](https://github.com/chsbuffer/RevancedXposed)** - Youtube & YT Music block ads, background playback Xposed module `FOSS` `[LSP]`
+##### Youtube, Spotify, Google Photos
+- **[RevancedXposed](https://github.com/chsbuffer/RevancedXposed)** - Youtube, Spotify & YT Music block ads and background playback, Google Photos Unlimited backup Xposed module. `FOSS` `[LSP]`
+- **[XposedPhotosFix](https://github.com/RevealedSoulEven/XposedPhotosFIX)** - Prevents Google Photos app to merge all folders in Camera folder and create separate albums for each folders, useful for backup. `[LSP]`
 
 ##### Line
 - **[LineXtra](https://github.com/yagiyuu/LineXtra)** - Removes Ads and Tabs from the LINE. `FOSS` `[LSP]`
@@ -267,6 +268,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 #### Call Recorders
 - **[Basic Call Recorder](https://github.com/chenxiaolong/BCR)** - A Basic Call Recorder for rooted Android devices. `FOSS`
 - **[Call Recorder - SKVALEX](https://github.com/Magisk-Modules-Repo/callrecorder-skvalex)** - Call recording app to record both sides from the line with a power of root and magisk. `FOSS` `[M]`
+- **[Call Recording Google Dialer](https://modules.lsposed.org/module/io.github.vvb2060.callrecording)** - Allows call recorder for google dialer for all regions and without notifying sound. `[LSP]`
 
 #### Contacts
 - **[Contacts Sync](https://play.google.com/store/apps/details?id=com.lb.contacts_sync)** - Uses root to sync your address book with high-quality contacts photos from WhatsApp. `Proprietary`
@@ -377,6 +379,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 [↑ Back to top](#table-of-contents)
 
 ### Location and GPS
+- **[GPS Setter](https://github.com/Xposed-Modules-Repo/com.android1500.gpssetter)** - Allows to mock locations for any specific app or entire system. `[LSP]`
 - **[Location Indicator Whitelist](https://github.com/gilbsgilbs/LocationIndicatorWhitelist)** - Prevents applications from spamming the annoying location notification dot on Android 12 +. `FOSS` `[LSP]`
 - **[Hide Mock Location](https://github.com/auag0/HideMockLocation)** - Xposed Module to Hide Mock Location Settings. `FOSS` `[LSP]`
 - **[XposedFakeLocation](https://github.com/noobexon1/XposedFakeLocation)** - Allows you to spoof your device's location globally or for specific apps without using "mock location" from the developer options. `FOSS` `[LSP]`
@@ -439,6 +442,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 - **[Sensitive_Props Mod](https://github.com/Pixel-Props/sensitive-props)** - Helps you bypass SafetyNet and Play Integrity on rooted Android devices by modifying system properties and applying device-specific fixes. `FOSS` `[M]`
 - **[Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)** - Hide Magisk. `Proprietary` `[M]`
 - **[TrickyStore](https://github.com/5ec1cff/TrickyStore)** - Modifying the certificate chain generated for android key attestation. `Proprietary` `[M]`
+- **[Tricky Addon](https://github.com/KOWX712/Tricky-Addon-Update-Target-List)** - Addon for tricky store with webUI, allows to set keyboxes for speific apps. `Proprietary` `[M]`
 - **[Zygisk-Assistant](https://github.com/snake-4/Zygisk-Assistant)** - A Zygisk module to hide root for KernelSU, Magisk and APatch. `FOSS` `[M]`
 - **[Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)**  - Standalone implementation of Zygisk, providing Zygisk API support for KernelSU and a replacement of Magisk's built-in Zygisk. `Proprietary` `[M]`
 
