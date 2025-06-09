@@ -253,7 +253,6 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 ### Battery Management
 - **[AccA](https://github.com/MatteCarra/AccA)** - Advanced Charging Controller app. `FOSS`
 - **[Battery Guru](https://play.google.com/store/apps/details?id=com.paget96.batteryguru)** - Battery optimization and monitoring. `Proprietary`
-- **[Greenify](https://play.google.com/store/apps/details?id=com.oasisfeng.greenify)** - Helps you to identify misbehaviour of apps and put them into hybernation, and prevent apps from self starting and many more. `FOSS`
 - **[Xtreme-Battery-Saver](https://github.com/Magisk-Modules-Alt-Repo/Xtreme-Battery-Saver)** - An extreme battery saver Magisk Module for users who want to really stretch their battery life. `FOSS` `[M]`
 
 [↑ Back to top](#table-of-contents)
