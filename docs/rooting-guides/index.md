@@ -6,24 +6,26 @@ description: "Learn how to root Android devices safely. Compare root methods lik
 ---
 
 # Android Rooting Guide
-
-- [Introduction](#introduction)
-- [Vendor-Specific Rooting Guides](#vendor-specific-rooting-guides)
-- [What is Root Access](#what-is-root-access)
-- [Should I Root](#should-i-root)
-  - [Benefits of Rooting](#benefits-of-rooting)
-  - [Risks and Limitations](#risks-and-limitations)
-  - [Community Perspectives](#community-perspectives)
-- [Root Solutions](#root-solutions)
-  - [How to Root](#how-to-root)
-  - [Common Methods](#common-methods)
-    - [Magisk](#magisk)
-    - [KernelSU](#kernelsu)
-    - [APatch](#apatch)
-  - [Which Solution Should I Use](#which-solution-should-i-use)
-- [Framework Solutions](#framework-solutions)
-  - [LSPosed](#lsposed)
-  - [LSPosed Fork](#lsposed-fork)
+  - [Introduction](#introduction)
+  - [What is Root Access](#what-is-root-access)
+  - [Should I Root](#should-i-root)
+    - [Benefits of Rooting](#benefits-of-rooting)
+    - [Risks and Limitations](#risks-and-limitations)
+    - [Community Perspectives](#community-perspectives)
+  - [Prerequisites](#prerequisites)
+      - [Essential Requirements](#essential-requirements)
+      - [Important Preparations](#important-preparations)
+      - [Manufacturer-Specific Requirements](#manufacturer-specific-requirements)
+  - [Root Solutions](#root-solutions)
+    - [How to Root](#how-to-root)
+    - [Common Methods](#common-methods)
+      - [Magisk](#magisk)
+      - [KernelSU](#kernelsu)
+      - [APatch](#apatch)
+    - [Which Solution Should I Use](#which-solution-should-i-use)
+  - [Framework Solutions](#framework-solutions)
+    - [LSPosed](#lsposed)
+    - [LSPosed Fork](#lsposed-fork)
 
 ## Introduction
 
@@ -64,6 +66,59 @@ Now to the main question: Should you root your device? Let's explore the disadva
 ### Community Perspectives
 
 - Here is the [Reddit thread](https://www.reddit.com/r/AndroidQuestions/comments/1c69h3q/is_rooting_still_something_you_would_do_in_2024/) debating if it's worth rooting in 2024 (but in my opinion, it's worth every penny).
+
+## Prerequisites
+
+Before attempting to root your Android device, ensure you meet the following requirements:
+
+#### Essential Requirements
+
+1. **Unlocked Bootloader**
+   - Most devices require an unlocked bootloader to install custom recovery and root solutions
+   - Check your device manufacturer's official unlock process
+   - **Warning:** Unlocking bootloader will erase all data on your device
+
+2. **Developer Options & USB Debugging**
+   - Enable Developer Options by tapping Build Number 7 times in About Phone
+   - Enable USB Debugging and OEM Unlocking in Developer Options
+
+3. **Computer Setup**
+   - Windows, macOS, or Linux computer
+   - USB cable for device connection
+   - Latest ADB and Fastboot tools installed
+   - Device-specific drivers (especially for Windows)
+
+4. **Device-Specific Files**
+   - Custom Recovery (TWRP, OrangeFox, etc.) for your exact device model
+   - Stock firmware/ROM for your device (for recovery purposes)
+   - Root solution package (Magisk, KernelSU, or APatch)
+
+#### Important Preparations
+
+5. **Backup Everything**
+   - Complete device backup including personal data, photos, and documents
+   - Create a NANDroid backup if possible
+   - Note down your device's current firmware version
+
+6. **Battery & Time**
+   - Ensure device battery is at least 50% charged
+   - Set aside 1-2 hours for the complete process
+   - Stable internet connection for downloading files
+
+7. **Knowledge Requirements**
+   - Basic understanding of Android system structure
+   - Familiarity with command line operations
+   - Ability to troubleshoot if something goes wrong
+
+#### Manufacturer-Specific Requirements
+
+- **Xiaomi:** Active Mi Account (30+ days old), MIUI Unlock Tool
+- **Samsung:** Odin flashing tool, compatible firmware
+- **OnePlus:** MSM Download Tool (for recovery)
+- **Pixel:** Unlocked bootloader, latest platform tools
+
+> ⚠️ **Important:** Always research your specific device model and current firmware version before proceeding. Some devices have additional requirements or restrictions.
+
 
 ## Root Solutions
 
