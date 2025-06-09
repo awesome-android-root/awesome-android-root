@@ -171,7 +171,7 @@ export default defineConfig({
         text: 'Guides',
         items: [
           { text: 'Rooting Guides', link: '/rooting-guides/' },
-          { text: 'Device-Specific Guides', link: '/rooting-guides/#vendor-specific-rooting-guides' },
+          { text: 'Device-Specific Guides', link: '/rooting-guides/#device-specific-guides' },
         ]
       },
       {
@@ -203,9 +203,9 @@ export default defineConfig({
         text: '🚀 Quick Start',
         collapsed: false,
         items: [
-          { text: 'What is Root?', link: '/rooting-guides/#what-is-root-access' },
-          { text: 'Benefits & Risks', link: '/rooting-guides/#should-i-root' },
-          { text: 'Prerequisites', link: '/rooting-guides/#prerequisites' }
+          { text: 'What is Root?', link: '/rooting-guides/#understanding-root-access' },
+          { text: 'Benefits & Risks', link: '/rooting-guides/#should-you-root-your-device' },
+          { text: 'Prerequisites', link: '/rooting-guides/#prerequisites-and-preparations' }
         ]
       },
       {
@@ -213,8 +213,8 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'General Rooting Guide', link: '/rooting-guides/#how-to-root' },
-          { text: 'Framework Solutions', link: '/rooting-guides/#framework-solutions' },
-          { text: 'Device-Specific Guides', link: '/rooting-guides/#vendor-specific-rooting-guides' }
+          { text: 'Framework Solutions', link: '/rooting-guides/#advanced-framework-solutions' },
+          { text: 'Device-Specific Guides', link: '/rooting-guides/#device-specific-guides' }
         ]
       },
       {
