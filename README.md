@@ -180,10 +180,6 @@ A comprehensive guide covering different rooting methods, decision-making and di
 ##### Instagram
 - **[InstaEclipse](https://github.com/ReSo7200/InstaEclipse/)** - Adds Features like Developer Options, Ghost Mode, Ad-Free browsing, and Distraction-Free Mode to Instagram. `FOSS` `[LSP]`
 
-##### Youtube, Spotify, Google Photos
-- **[RevancedXposed](https://github.com/chsbuffer/RevancedXposed)** - Youtube, Spotify & YT Music block ads and background playback, Google Photos Unlimited backup Xposed module. `FOSS` `[LSP]`
-- **[XposedPhotosFix](https://github.com/RevealedSoulEven/XposedPhotosFIX)** - Prevents Google Photos app to merge all folders in Camera folder and create separate albums for each folders, useful for backup. `[LSP]`
-
 ##### Line
 - **[LineXtra](https://github.com/yagiyuu/LineXtra)** - Removes Ads and Tabs from the LINE. `FOSS` `[LSP]`
 
@@ -209,6 +205,10 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 
 ##### X/Twitter
 - **[Hachidori](https://github.com/Xposed-Modules-Repo/com.twifucker.hachidori/)** - Adds downloading media, hiding ads and other privacy features to X (formerly Twitter). `Proprietary` `[LSP]`
+
+##### Youtube, Spotify, Google Photos
+- **[RevancedXposed](https://github.com/chsbuffer/RevancedXposed)** - Youtube, Spotify & YT Music block ads and background playback, Google Photos Unlimited backup Xposed module. `FOSS` `[LSP]`
+- **[XposedPhotosFix](https://github.com/RevealedSoulEven/XposedPhotosFIX)** - Prevents Google Photos app to merge all folders in Camera folder and create separate albums for each folders, useful for backup. `[LSP]`
 
 [↑ Back to top](#table-of-contents)
 
