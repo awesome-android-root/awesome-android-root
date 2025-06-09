@@ -58,8 +58,6 @@ head:
   - - meta
     - property: article:tag
       content: Bootloader Unlock
-lastUpdated: true
-editLink: true
 ---
 # Xiaomi Rooting Guide
 

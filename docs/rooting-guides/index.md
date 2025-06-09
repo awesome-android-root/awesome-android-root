@@ -1,7 +1,74 @@
 ---
 layout: doc
-title: Android Rooting Guides
+title: Android Rooting Guides 2025
 description: "Complete Android rooting guide for 2025. Learn and compare root methods like Magisk, KernelSU, and APatch with device-specific step-by-step rooting guides."
+head:
+  - - link
+    - rel: canonical
+      href: https://awesome-android-root.link/rooting-guides/
+  - - meta
+    - property: og:type
+      content: website
+  - - meta
+    - property: og:title
+      content: Android Rooting Guides 2025 - Complete Root Guide
+  - - meta
+    - property: og:description
+      content: Master Android rooting with our comprehensive 2025 guide covering Magisk, KernelSU, APatch, and device-specific instructions for Xiaomi, Samsung, Pixel, and OnePlus.
+  - - meta
+    - property: og:url
+      content: https://awesome-android-root.link/rooting-guides/
+  - - meta
+    - property: og:image
+      content: https://awesome-android-root.link/images/og.png
+  - - meta
+    - name: twitter:card
+      content: summary_large_image
+  - - meta
+    - name: twitter:title
+      content: Android Rooting Guides 2025 - Complete Root Guide
+  - - meta
+    - name: twitter:description
+      content: Master Android rooting with comprehensive guides for Magisk, KernelSU, APatch and device-specific instructions.
+  - - meta
+    - name: keywords
+      content: android root guide 2025, magisk guide, kernelsu guide, apatch guide, android rooting tutorial, systemless root, bootloader unlock, custom recovery, twrp guide, xda developers, android root methods, rooting safety, lsposed framework
+  - - meta
+    - name: author
+      content: Awesome Android Root Project
+  - - meta
+    - property: article:author
+      content: https://github.com/fynks/awesome-android-root
+  - - meta
+    - property: article:section
+      content: Rooting Guides
+  - - meta
+    - property: article:tag
+      content: Android Root
+  - - meta
+    - property: article:tag
+      content: Magisk
+  - - meta
+    - property: article:tag
+      content: KernelSU
+  - - meta
+    - property: article:tag
+      content: APatch
+  - - meta
+    - property: article:tag
+      content: Bootloader Unlock
+  - - meta
+    - property: article:tag
+      content: Custom Recovery
+  - - meta
+    - property: article:tag
+      content: TWRP
+  - - meta
+    - property: article:tag
+      content: LSPosed
+  - - meta
+    - name: robots
+      content: index, follow
 ---
 
 # Android Rooting Guide
