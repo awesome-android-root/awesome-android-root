@@ -69,6 +69,7 @@
       - [Global](#global)
       - [HyperOS (Xiaomi)](#hyperos-xiaomi)
       - [One UI (Samsung)](#one-ui-samsung)
+      - [Onyx](#onyx)
       - [Oxygen OS (OnePlus)](#oxygen-os-oneplus)
     - [Theming](#theming)
   - [Debloating](#debloating)
