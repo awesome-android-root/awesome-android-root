@@ -4,7 +4,7 @@
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?logo=github&style=for-the-badge&color=green)](https://github.com/fynks/awesome-android-root?ref=awesome-android-root.link)
 [![GitHub forks](https://img.shields.io/github/forks/fynks/awesome-android-root?style=for-the-badge&logo=github&label=Forks&color=blue)](https://github.com/fynks/awesome-android-root/network/members)
-[![Total Apps](https://img.shields.io/badge/Total%20Apps-190+-blue?style=for-the-badge&logo=android)](#root-apps)
+[![Total Apps](https://img.shields.io/badge/Total%20Apps-200+-blue?style=for-the-badge&logo=android)](#root-apps)
 
 </div>
 
@@ -569,6 +569,7 @@ You are solely responsible for any consequences resulting from the use of these 
 :bulb: **Recommendation:** Thoroughly research any root app before installation and understand its purpose and potential side effects.
 
 [↑ Back to top](#table-of-contents)
+
 ## Stats
 
 <div align="center">
@@ -579,7 +580,7 @@ You are solely responsible for any consequences resulting from the use of these 
 <tbody>
   <tr>
     <td align="center">
-      <img src="https://img.shields.io/badge/Total%20Entries-193-brightgreen?style=for-the-badge&logo=android" alt="Total Entries"/>
+      <img src="https://img.shields.io/badge/Total%20Entries-206-brightgreen?style=for-the-badge&logo=android" alt="Total Entries"/>
       <br><strong>Total Entries</strong>
     </td>
     <td align="center">
@@ -589,11 +590,11 @@ You are solely responsible for any consequences resulting from the use of these 
   </tr>
   <tr>
     <td align="center">
-      <img src="https://img.shields.io/badge/Magisk%20Modules-45-orange?style=for-the-badge&logo=magisk" alt="Magisk Modules"/>
+      <img src="https://img.shields.io/badge/Magisk%20Modules-48-orange?style=for-the-badge&logo=magisk" alt="Magisk Modules"/>
       <br><strong>Magisk Modules</strong>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/LSPosed%20Modules-59-purple?style=for-the-badge&logo=xposed" alt="LSPosed Modules"/>
+      <img src="https://img.shields.io/badge/LSPosed%20Modules-69-purple?style=for-the-badge&logo=xposed" alt="LSPosed Modules"/>
       <br><strong>LSPosed Modules</strong>
     </td>
   </tr>
