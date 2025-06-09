@@ -1,8 +1,65 @@
 ---
 layout: doc
-title: Xiaomi Rooting Guide
-description: "Root Xiaomi devices running MIUI/HyperOS. Complete Step-by-step guide covering bootloader unlocking, custom recovery and Magisk installation."
-
+title: Xiaomi Rooting Guide - MIUI & HyperOS 2025
+titleTemplate: Complete Xiaomi Root Guide
+description: "Complete step-by-step guide to root Xiaomi devices running MIUI/HyperOS. Learn bootloader unlocking, custom recovery installation, and Magisk setup with device-specific tips."
+head:
+  - - link
+    - rel: canonical
+      href: https://awesome-android-root.link/rooting-guides/xiaomi
+  - - meta
+    - property: og:type
+      content: article
+  - - meta
+    - property: og:title
+      content: Complete Xiaomi Rooting Guide - MIUI & HyperOS 2025
+  - - meta
+    - property: og:description
+      content: Root your Xiaomi device with this comprehensive guide covering bootloader unlock, TWRP/OrangeFox recovery, and Magisk installation for MIUI and HyperOS.
+  - - meta
+    - property: og:url
+      content: https://awesome-android-root.link/rooting-guides/xiaomi
+  - - meta
+    - property: og:image
+      content: https://awesome-android-root.link/images/og.png
+  - - meta
+    - name: twitter:card
+      content: summary_large_image
+  - - meta
+    - name: twitter:title
+      content: Xiaomi Rooting Guide - MIUI & HyperOS 2025
+  - - meta
+    - name: twitter:description
+      content: Complete step-by-step guide to root Xiaomi devices. Covers bootloader unlock, custom recovery, and Magisk installation.
+  - - meta
+    - name: keywords
+      content: xiaomi root guide, miui root, hyperos root, xiaomi bootloader unlock, xiaomi magisk, twrp xiaomi, orangefox xiaomi, redmi root guide, mi unlock tool, xiaomi rooting 2025
+  - - meta
+    - name: author
+      content: Awesome Android Root Project
+  - - meta
+    - property: article:author
+      content: https://github.com/fynks/awesome-android-root
+  - - meta
+    - property: article:section
+      content: Rooting Guides
+  - - meta
+    - property: article:tag
+      content: Xiaomi
+  - - meta
+    - property: article:tag
+      content: MIUI
+  - - meta
+    - property: article:tag
+      content: HyperOS
+  - - meta
+    - property: article:tag
+      content: Magisk
+  - - meta
+    - property: article:tag
+      content: Bootloader Unlock
+lastUpdated: true
+editLink: true
 ---
 # Xiaomi Rooting Guide
 
