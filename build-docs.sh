@@ -22,21 +22,15 @@ echo -e "${GREEN}Starting build-docs process...${NC}"
 cp README.md docs/index.md || handle_error "Failed copying README.md to docs/index.md"
 echo -e "${GREEN}Copied README.md to docs/index.md${NC}"
 
+
 # 3. Add frontmatter
-META_DESC="Ultimate collection of best Android root apps, Magisk & LSPosed modules containing 180+ apps and modules arranged in various categories."
+[ ! -f "docs/index-frontmatter.txt" ] && handle_error "'frontmatter.txt' not found."
 tmp_file=$(mktemp)
 {
-    echo "---"
-    echo "title: Awesome Android Root"
-    echo "titleTemplate: Best Root Apps & Modules 2025"
-    echo "head:"
-    echo "  - - link"
-    echo "    - rel: canonical"
-    echo "      href: https://awesome-android-root.link/"
-    echo "---"
+    cat docs/index-frontmatter.txt
     cat docs/index.md
-} > "$tmp_file" && mv "$tmp_file" docs/index.md || handle_error "Failed adding meta description"
-echo -e "${GREEN}Added meta description to docs/index.md${NC}"
+} > "$tmp_file" && mv "$tmp_file" docs/index.md || handle_error "Failed adding frontmatter"
+echo -e "${GREEN}Added frontmatter to docs/index.md${NC}"
 
 
 # 4. Adjust links
