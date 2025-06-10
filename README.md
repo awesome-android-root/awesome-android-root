@@ -450,6 +450,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 
 #### Hide Root
 - **[Hide My Applist](https://github.com/Dr-TSNG/Hide-My-Applist)** - An Xposed module to intercept applist detections.[Moded Fork](https://github.com/pumPCin/HMAL). `FOSS` `[LSP]`
+- **[Integrity-Box](https://github.com/MeowDump/Integrity-Box)** - Open source Keybox Updater with several useful features. `FOSS` `[M]`
 - **[MagiskDetection](https://github.com/apkunpacker/MagiskDetection)** - Collection of Some Publically Available POC Apps to Detect Root/Magisk presence. `FOSS` `Proprietary`
 - **[NoHello](https://github.com/MhmRdd/NoHello)** -  A Zygisk module to hide root. `FOSS` `[M]`
 - **[PlaycurlNEXT](https://github.com/daboynb/playcurlNEXT)** - Fix Play Integrity (and SafetyNet) verdicts, allowing custom fields and props. `FOSS` `[M]`
