@@ -594,21 +594,21 @@ You are solely responsible for any consequences resulting from the use of these 
 <tbody>
   <tr>
     <td align="center">
-      <img src="https://img.shields.io/badge/Total%20Entries-206-brightgreen?style=for-the-badge&logo=android" alt="Total Entries"/>
+      <img src="https://img.shields.io/badge/Total%20Entries-215-brightgreen?style=for-the-badge&logo=android" alt="Total Entries"/>
       <br><strong>Total Entries</strong>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/Root%20Apps-89-blue?style=for-the-badge&logo=android" alt="Root Apps"/>
+      <img src="https://img.shields.io/badge/Root%20Apps-92-blue?style=for-the-badge&logo=android" alt="Root Apps"/>
       <br><strong>Root Apps</strong>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="https://img.shields.io/badge/Magisk%20Modules-48-orange?style=for-the-badge&logo=magisk" alt="Magisk Modules"/>
+      <img src="https://img.shields.io/badge/Magisk%20Modules-53-orange?style=for-the-badge&logo=magisk" alt="Magisk Modules"/>
       <br><strong>Magisk Modules</strong>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/LSPosed%20Modules-69-purple?style=for-the-badge&logo=xposed" alt="LSPosed Modules"/>
+      <img src="https://img.shields.io/badge/LSPosed%20Modules-70-purple?style=for-the-badge&logo=xposed" alt="LSPosed Modules"/>
       <br><strong>LSPosed Modules</strong>
     </td>
   </tr>
