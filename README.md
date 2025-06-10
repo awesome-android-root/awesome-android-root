@@ -82,6 +82,7 @@
   - [NFC Tools](#nfc-tools)
   - [Performance Improvements](#performance-improvements)
   - [Privacy and Security](#privacy-and-security)
+  - [Revanced](#revanced)
   - [Root Specific](#root-specific)
     - [Bootloop Protection](#bootloop-protection)
     - [Hide Root](#hide-root)
@@ -226,7 +227,6 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 
 #### Patching
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (Use with caution) . `Proprietary`
-- **[Revanced Manager](https://github.com/ReVanced/revanced-manager)** - Modify YouTube, Youtube Music, spotify and many more with additional features. `FOSS`
 
 [↑ Back to top](#table-of-contents)
 
@@ -432,11 +432,16 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 - **[AlternativeUnlockXposed](https://github.com/leohearts/AlternativeUnlockXposed)** - Unlock your Android phone with an alternative PIN. `FOSS` `[LSP]`
 - **[Amarok](https://github.com/deltazefiro/Amarok-Hider)** - Android application which enables you to hide your private files & apps with a single click -  `FOSS`
 - **[Fyrypt](https://github.com/mirfatif/Fyrypt)** - Android firewall with UID + PID rules, dnscrypt-proxy management, and per-app live network monitoring. `Proprietary`
-- **[Privacy ReVanced Patches](https://github.com/jkennethcarino/privacy-revanced-patches)** - Privacy Patches for ReVanced to disable ads, trackers and analytics, always open Gboard in incognito mode, and much more. `FOSS`
 - **[XPL-EX](https://github.com/0bbedCode/XPL-EX)** - Really simple to use privacy manager for Android 6.0 Marshmallow and later. `FOSS` `[LSP]`
 
 [↑ Back to top](#table-of-contents)
 
+### Revanced
+- **[Awesome ReVanced](https://github.com/Jman-Github/Awesome-ReVanced)** - A curated list of awesome ReVanced patches, resources and projects. `FOSS`
+- **[Privacy ReVanced Patches](https://github.com/jkennethcarino/privacy-revanced-patches)** - Privacy Patches for ReVanced to disable ads, trackers and analytics, always open Gboard in incognito mode, and much more. `FOSS`
+- **[Revanced Manager](https://github.com/ReVanced/revanced-manager)** - Modify YouTube, Youtube Music, spotify and many more with additional features. `FOSS`
+
+[↑ Back to top](#table-of-contents)
 
 ### Root Specific
 #### Bootloop Protection
