@@ -34,30 +34,10 @@ cat << EOF
 
 ### 📊 Repository Statistics
 
-<table>
-<tbody>
-  <tr>
-    <td align="center">
-      <img src="https://img.shields.io/badge/Total%20Entries-${total_entries}-brightgreen?style=for-the-badge&logo=android" alt="Total Entries"/>
-      <br><strong>Total Entries</strong>
-    </td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/Root%20Apps-${root_apps}-blue?style=for-the-badge&logo=android" alt="Root Apps"/>
-      <br><strong>Root Apps</strong>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="https://img.shields.io/badge/Magisk%20Modules-${magisk_modules}-orange?style=for-the-badge&logo=magisk" alt="Magisk Modules"/>
-      <br><strong>Magisk Modules</strong>
-    </td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/LSPosed%20Modules-${lsposed_modules}-purple?style=for-the-badge&logo=xposed" alt="LSPosed Modules"/>
-      <br><strong>LSPosed Modules</strong>
-    </td>
-  </tr>
-  </tbody>
-</table>
+
+| ![Total Entries](https://img.shields.io/badge/Total%20Entries-${total_entries}-brightgreen?style=for-the-badge&logo=android)<br>**Total Entries** | ![Root Apps](https://img.shields.io/badge/Root%20Apps-${root_apps}-blue?style=for-the-badge&logo=android)<br>**Root Apps** |
+|:---:|:---:|
+| ![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-${root_apps}-orange?style=for-the-badge&logo=magisk)<br>**Magisk Modules** | ![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-${lsposed_modules}-purple?style=for-the-badge&logo=xposed)<br>**LSPosed Modules** |
 
 ### 👥 Visitor Counter
 

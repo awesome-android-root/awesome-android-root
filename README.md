@@ -590,30 +590,9 @@ You are solely responsible for any consequences resulting from the use of these 
 
 ### 📊 Repository Statistics
 
-<table>
-<tbody>
-  <tr>
-    <td align="center">
-      <img src="https://img.shields.io/badge/Total%20Entries-215-brightgreen?style=for-the-badge&logo=android" alt="Total Entries"/>
-      <br><strong>Total Entries</strong>
-    </td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/Root%20Apps-92-blue?style=for-the-badge&logo=android" alt="Root Apps"/>
-      <br><strong>Root Apps</strong>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="https://img.shields.io/badge/Magisk%20Modules-53-orange?style=for-the-badge&logo=magisk" alt="Magisk Modules"/>
-      <br><strong>Magisk Modules</strong>
-    </td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/LSPosed%20Modules-70-purple?style=for-the-badge&logo=xposed" alt="LSPosed Modules"/>
-      <br><strong>LSPosed Modules</strong>
-    </td>
-  </tr>
-  </tbody>
-</table>
+| ![Total Entries](https://img.shields.io/badge/Total%20Entries-215-brightgreen?style=for-the-badge&logo=android)<br>**Total Entries** | ![Root Apps](https://img.shields.io/badge/Root%20Apps-92-blue?style=for-the-badge&logo=android)<br>**Root Apps** |
+|:---:|:---:|
+| ![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-53-orange?style=for-the-badge&logo=magisk)<br>**Magisk Modules** | ![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-70-purple?style=for-the-badge&logo=xposed)<br>**LSPosed Modules** |
 
 ### 👥 Visitor Counter
 
