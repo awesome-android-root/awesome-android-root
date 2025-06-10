@@ -449,6 +449,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 - **[YetAnotherBootloopProtector](https://github.com/Magisk-Modules-Alt-Repo/YetAnotherBootloopProtector)** - A Magisk Module to monitor and fix potential Bootloops and SystemUI failures. `FOSS` `[M]`
 
 #### Hide Root
+> [TheUnrealZaka's Guide for Hiding Root](https://gist.github.com/TheUnrealZaka/042040a1700ad869d54e781507a9ba4f)
 - **[Hide My Applist](https://github.com/Dr-TSNG/Hide-My-Applist)** - An Xposed module to intercept applist detections.[Moded Fork](https://github.com/pumPCin/HMAL). `FOSS` `[LSP]`
 - **[Integrity-Box](https://github.com/MeowDump/Integrity-Box)** - Open source Keybox Updater with several useful features. `FOSS` `[M]`
 - **[MagiskDetection](https://github.com/apkunpacker/MagiskDetection)** - Collection of Some Publically Available POC Apps to Detect Root/Magisk presence. `FOSS` `Proprietary`
