@@ -143,7 +143,7 @@ head:
             "https://github.com/awesome-android-root/awesome-android-root"
           ]
         },
- "mainEntity": {
+        "mainEntity": {
           "@type": "ItemList",
           "name": "Android Root Resources Collection",
           "description": "Comprehensive curated collection of Android rooting tools, apps, and guides",
