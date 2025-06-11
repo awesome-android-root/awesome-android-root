@@ -1,11 +1,12 @@
 {
   "name": "awesome-android-root",
   "version": "1.1.0",
-  "description": "A curated list of best Android root applications and best magisk modules. Features over 120 apps across categories like system mods, privacy, customization, and development tools.",
+  "description": "A curated list of best Android root applications and best magisk modules. Features over 200+ apps across categories like system mods, privacy, customization, and development tools.",
   "private": true,
+"homepage": "https://awesome-root.org",
   "repository": {
     "type": "git",
-    "url": "https://github.com/awesome-android-root/awesome-android-root"
+    "url": "https://github.com/awesome-android-root/awesome-android-root.git"
   },
   "bugs": {
     "url": "https://github.com/awesome-android-root/awesome-android-root/issues"
@@ -30,6 +31,9 @@
     "kernelsu",
     "android-tools"
   ],
-  "author": "awesome-android-root",
-  "license": "Unlicense"
+   "author": {
+    "name": "awesome-android-root",
+    "url": "https://github.com/awesome-android-root"
+  },
+  "license": "MIT"
 }
