@@ -1,4 +1,68 @@
-﻿# How to root Motorola phones.
+﻿---
+layout: doc
+title: Motorola Rooting Guide
+description: "Complete step-by-step guide to root Motorola phones in 2025. Learn how to unlock bootloader and install Magisk on Motorola devices."
+head:
+  - - link
+    - rel: canonical
+      href: https://awesome-root.org/rooting-guides/motorola
+  - - meta
+    - property: og:type
+      content: article
+  - - meta
+    - property: og:title
+      content: Complete Motorola Rooting Guide - Bootloader Unlock & Magisk 2025
+  - - meta
+    - property: og:description
+      content: Root your Motorola device with this comprehensive guide covering bootloader unlock, Magisk installation, and step-by-step instructions for Motorola Edge 30 Neo.
+  - - meta
+    - property: og:url
+      content: https://awesome-root.org/rooting-guides/motorola
+  - - meta
+    - property: og:image
+      content: https://awesome-root.org/images/og.png
+  - - meta
+    - name: twitter:card
+      content: summary_large_image
+  - - meta
+    - name: twitter:title
+      content: Motorola Rooting Guide - Edge 30 Neo & More 2025
+  - - meta
+    - name: twitter:description
+      content: Complete step-by-step guide to root Motorola phones. Covers bootloader unlock, Magisk installation, and troubleshooting.
+  - - meta
+    - name: keywords
+      content: motorola root guide, motorola edge 30 neo root, motorola bootloader unlock, motorola magisk, motorola rooting 2025, motorola adb drivers, motorola software fix, fastboot motorola, motorola unlock token, motorola rooting tutorial
+  - - meta
+    - name: author
+      content: Awesome Android Root Project
+  - - meta
+    - property: article:author
+      content: https://github.com/fynks/awesome-android-root
+  - - meta
+    - property: article:section
+      content: Rooting Guides
+  - - meta
+    - property: article:tag
+      content: Motorola
+  - - meta
+    - property: article:tag
+      content: Bootloader Unlock
+  - - meta
+    - property: article:tag
+      content: Magisk
+  - - meta
+    - property: article:published_time
+      content: 2025-06-11
+  - - meta
+    - property: article:modified_time
+      content: 2025-06-11
+  - - meta
+    - name: robots
+      content: index, follow, max-image-preview:large
+---
+
+# How to root Motorola phones.
 
 Hi, 
 Welcome to my first tutorial I will show you how to root any Motorola phone.
@@ -15,29 +79,30 @@ Then extract platform tools and open terminal inside platform tools folder.
 # Chapter 2: Unlocking bootloader
 **THIS PROCESS WILL WIPE ALL YOUR DATA!**
 
-Go to your terminal and type:
-
-    adb reboot bootloader
-    
-  Phone should restart to bootloader
-  Next you will need a Device unlock token.
-  Type to terminal:
-
-
+1. Go to your terminal and type:
+ ```
+  adb reboot bootloader
+ ```
+2. Phone should restart to bootloader
+3. Next you will need a Device unlock token.
+Type to terminal:
+  ```
     fastboot oem get_unlock_data
-
-You will get a token copy only the token.
+  ```
+5. You will get a token copy only the token.
 Make sure there is no space between lines.
 Go to this [Motorola page](https://en-us.support.motorola.com/app/standalone/bootloader/unlock-your-device-a) and login (or sign in) and enter  your token.
-In a minute you will get an email with your bootloader unlock key.
+6. In a minute you will get an email with your bootloader unlock key.
 Go back to your terminal and copy this:
-
+  ```
     fastboot oem unlock [your unlock key]
-  Now you have bootloader unlocked.
-  Next you have to reboot your device with this command
+  ```
+7. Now you have bootloader unlocked.
+8. Next you have to reboot your device with this command
   
-
+  ```
     fastboot reboot
+  ```
 
 # Chapter 3: Flashing Magisk
 Next you will need rooting manager in this tutorial we will be using: [Magisk (source code link)](https://github.com/topjohnwu/Magisk) 
@@ -52,18 +117,20 @@ Go to magisk app and click Install then click [select and then patch the file]
 Select your boot.img file.
 Transfer new magisk patched boot.img to your pc.
 Open your terminal.
-
+  ```
     adb reboot bootloader
+  ```
 Your phone will restart to botloader.
 Now rename your new magisk batched boot img to -> **magisk_patched.img**
 And transfer it to your platform tools folder.
 Now type to your terminal:
-
+  ```
     fastboot flash boot magisk_patched.img
+  ```
   When is booting done go to 
-  
-
+  ```
     fastboot reboot
+  ```
   And that's all your phone should be rooted. 
 
 
