@@ -22,7 +22,7 @@ head:
       content: Awesome Android Root
   - - meta
     - property: og:title
-      content: Awesome Android Root - Ultimate Collection of Root Apps & Modules 2025
+      content: Awesome Android Root - Best Root Apps & Modules 2025
   - - meta
     - property: og:description
       content: Discover 200+ curated root apps, powerful Magisk & LSPosed modules, comprehensive rooting guides, and essential tools for ultimate Android customization.
@@ -31,10 +31,10 @@ head:
       content: https://awesome-root.org
   - - meta
     - property: og:image
-      content: https://raw.githubusercontent.com/awesome-android-root/awesome-android-root/refs/heads/main/docs/public/images/og.png
+      content: https://awesome-root.org/images/og.png
   - - meta
     - property: og:image:alt
-      content: Awesome Android Root - Collection of root apps and modules
+      content: Awesome Android Root - Best Root Apps & Modules 2025
   - - meta
     - property: og:image:width
       content: '1200'
@@ -51,13 +51,13 @@ head:
       content: summary_large_image
   - - meta
     - name: twitter:title
-      content: Awesome Android Root - Ultimate Root Apps Collection 2025
+      content: Awesome Android Root - Best Root Apps & Modules 2025
   - - meta
     - name: twitter:description
       content: Discover 200+ curated root apps, Magisk & LSPosed modules, and comprehensive Android rooting guides.
   - - meta
     - name: twitter:image
-      content: https://raw.githubusercontent.com/awesome-android-root/awesome-android-root/refs/heads/main/docs/public/images/og.png
+      content: https://awesome-root.org/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Awesome Android Root collection preview
