@@ -41,7 +41,7 @@ cat << EOF
 
 ### 👥 Visitor Counter
 
-![Visitor Count](https://profile-counter.glitch.me/fynks/count.svg)
+![Visitor Count](https://profile-counter.glitch.me/awesome-android-root/count.svg)
 
 <p><em>Thank you for being part of our growing community! 🚀</em></p>
 

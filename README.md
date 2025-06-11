@@ -2,8 +2,8 @@
 
 # Awesome Android Root 
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/fynks/awesome-android-root?logo=github&style=for-the-badge&color=green)](https://github.com/fynks/awesome-android-root?ref=awesome-android-root.link)
-[![GitHub forks](https://img.shields.io/github/forks/fynks/awesome-android-root?style=for-the-badge&logo=github&label=Forks&color=blue)](https://github.com/fynks/awesome-android-root/network/members)
+[![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=green)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-android-root.link)
+[![GitHub forks](https://img.shields.io/github/forks/awesome-android-root/awesome-android-root?style=for-the-badge&logo=github&label=Forks&color=blue)](https://github.com/awesome-android-root/awesome-android-root/network/members)
 [![Total Apps](https://img.shields.io/badge/Total%20Apps-200+-blue?style=for-the-badge&logo=android)](#root-apps)
 
 </div>
@@ -550,7 +550,7 @@ Common questions and solutions organized by category:
 - ⭐ **Star this repo** if it helped you
 - 🔗 **Share** with fellow Android enthusiasts  
 - 🐛 **Report** broken links or outdated apps
-- ➕ **Suggest** new apps via [issues](https://github.com/fynks/awesome-android-root/issues)
+- ➕ **Suggest** new apps via [issues](https://github.com/awesome-android-root/awesome-android-root/issues)
 
 [Read Contribution Guidelines →](./docs/contributing.md)
 
@@ -596,7 +596,7 @@ You are solely responsible for any consequences resulting from the use of these 
 
 ### 👥 Visitor Counter
 
-![Visitor Count](https://profile-counter.glitch.me/fynks/count.svg)
+![Visitor Count](https://profile-counter.glitch.me/awesome-android-root/count.svg)
 
 <p><em>Thank you for being part of our growing community! 🚀</em></p>
 
