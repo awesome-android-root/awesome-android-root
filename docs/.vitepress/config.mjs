@@ -6,7 +6,7 @@ export default defineConfig({
   ignoreDeadLinks: true,
   cleanUrls: true,
   sitemap: {
-    hostname: 'https://awesome-android-root.link'
+    hostname: 'https://awesome-root.org'
   },
 
   head: [
@@ -112,7 +112,7 @@ export default defineConfig({
             items: [
               { text: 'Cloudflare Pages', link: 'https://awesome-android-root.pages.dev/' },
               { text: 'Netlify Mirror', link: 'https://awesome-android-root.netlify.app/' },
-              { text: 'Main Site', link: 'https://awesome-android-root.link/' }
+              { text: 'Main Site', link: 'https://awesome-root.org/' }
             ]
           },
           { text: 'GitHub Repository', link: 'https://github.com/fynks/awesome-android-root' },
