@@ -307,6 +307,7 @@ The standard rooting procedure typically follows these sequential steps:
 Detailed rooting instructions tailored to specific device families:
 
 - [Xiaomi](./xiaomi.md)
+- [Motorola](./motorola.md)
 - [Samsung](./samsung.md) (WIP)
 - [Pixel](./pixel.md) (WIP)
 - [OnePlus](./oneplus.md) (WIP)
