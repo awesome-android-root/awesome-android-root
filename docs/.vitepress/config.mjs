@@ -26,7 +26,6 @@ export default defineConfig({
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }],
 
 
-
     // SEO Meta Tags
     ['meta', { name: 'keywords', content: 'android root 2025, best magisk modules, lsposed framework, android rooting guide, kernelsu modules, root apps collection, android customization, xposed modules, bootloader unlock, android mods, root tools, custom rom, android tweaks, system modifications' }],
 
@@ -108,8 +107,8 @@ export default defineConfig({
               { text: 'Main Site', link: 'https://awesome-root.org/' }
             ]
           },
-          { text: 'GitHub Repository', link: 'https://github.com/fynks/awesome-android-root' },
-          { text: 'Report Issue', link: 'https://github.com/fynks/awesome-android-root/issues' }
+          { text: 'GitHub Repository', link: 'https://github.com/awesome-android-root/awesome-android-root' },
+          { text: 'Report Issue', link: 'https://github.com/awesome-android-root/awesome-android-root/issues' }
         ]
       }
     ],
@@ -146,7 +145,7 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'How to Contribute', link: '/contributing' },
-          { text: 'Report an Issue', link: 'https://github.com/fynks/awesome-android-root/issues' }
+          { text: 'Report an Issue', link: 'https://github.com/awesome-android-root/awesome-android-root/issues' }
         ]
       }
     ],
@@ -166,7 +165,7 @@ export default defineConfig({
       }
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/fynks/awesome-android-root' }
+      { icon: 'github', link: 'https://github.com/awesome-android-root/awesome-android-root' }
     ],
   }
 })
