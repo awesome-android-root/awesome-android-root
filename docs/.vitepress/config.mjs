@@ -5,9 +5,6 @@ export default defineConfig({
   title: "Awesome Android Root",
   ignoreDeadLinks: true,
   cleanUrls: true,
-  sitemap: {
-    hostname: 'https://awesome-root.org'
-  },
 
   head: [
     // Favicons with improved metadata

@@ -2,5 +2,5 @@ User-agent: *
 Allow: /
 
 # Sitemap 
-Sitemap: https://awesome-android-root.link/sitemap.xml
+Sitemap: https://awesome-root.org/sitemap.xml
 
