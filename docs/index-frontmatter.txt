@@ -87,7 +87,7 @@ head:
         "url": "https://awesome-root.org",
         "description": "Explore the ultimate curated list of 2025 for 200+ best root apps, powerful Magisk & LSPosed modules, must-have tools for ultimate customization.",
         "inLanguage": "en-US",
-        "datePublished": "2025-06-06",
+        "datePublished": "2025-06-11",
         "image": {
           "@type": "ImageObject",
           "url": "https://awesome-root.org/images/og.png",
