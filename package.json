@@ -5,10 +5,10 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/fynks/awesome-android-root"
+    "url": "https://github.com/awesome-android-root/awesome-android-root"
   },
   "bugs": {
-    "url": "https://github.com/fynks/awesome-android-root/issues"
+    "url": "https://github.com/awesome-android-root/awesome-android-root/issues"
   },
   "scripts": {
     "docs:dev": "./build-docs.sh && vitepress dev docs",
@@ -30,6 +30,6 @@
     "kernelsu",
     "android-tools"
   ],
-  "author": "Fynks",
+  "author": "awesome-android-root",
   "license": "Unlicense"
 }

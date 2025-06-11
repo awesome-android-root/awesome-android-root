@@ -5,7 +5,7 @@ description: Explore the ultimate curated list of 2025 for 200+ best root apps, 
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.link/
+      href: https://awesome-root.org/
   - - link
     - rel: dns-prefetch
       href: https://github.com
@@ -28,7 +28,7 @@ head:
       content: Discover 200+ curated root apps, powerful Magisk & LSPosed modules, comprehensive rooting guides, and essential tools for ultimate Android customization.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.link
+      content: https://awesome-root.org
   - - meta
     - property: og:image
       content: https://raw.githubusercontent.com/fynks/awesome-android-root/refs/heads/main/docs/public/images/og.png
@@ -68,7 +68,7 @@ head:
       content: https://github.com/fynks
   - - meta
     - property: article:publisher
-      content: https://awesome-android-root.link
+      content: https://awesome-root.org
 
   # Homepage-specific keywords
   - - meta
@@ -84,13 +84,13 @@ head:
         "@type": "WebSite",
         "name": "Awesome Android Root",
         "alternateName": "AAR",
-        "url": "https://awesome-android-root.link",
+        "url": "https://awesome-root.org",
         "description": "Explore the ultimate curated list of 2025 for 200+ best root apps, powerful Magisk & LSPosed modules, must-have tools for ultimate customization.",
         "inLanguage": "en-US",
         "datePublished": "2025-06-06",
         "image": {
           "@type": "ImageObject",
-          "url": "https://awesome-android-root.link/images/og.png",
+          "url": "https://awesome-root.org/images/og.png",
           "width": 1200,
           "height": 630
         },
@@ -104,7 +104,7 @@ head:
           "name": "Awesome Android Root Project",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://awesome-android-root.link/images/logo.svg"
+            "url": "https://awesome-root.org/images/logo.svg"
           }
         },
         "mainEntity": {

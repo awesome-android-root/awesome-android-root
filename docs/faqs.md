@@ -5,7 +5,7 @@ description: "Get answers to common Android rooting questions about safety, secu
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.link/faqs
+      href: https://awesome-root.org/faqs
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: Comprehensive FAQ covering Android rooting safety, security, troubleshooting, and best practices. Get expert answers to common root questions and solutions.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.link/faqs
+      content: https://awesome-root.org/faqs
   - - meta
     - property: og:image
-      content: https://awesome-android-root.link/images/og.png
+      content: https://awesome-root.org/images/og.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -38,7 +38,7 @@ head:
       content: Awesome Android Root Project
   - - meta
     - property: article:author
-      content: https://github.com/fynks/awesome-android-root
+      content: https://github.com/awesome-android-root/awesome-android-root
   - - meta
     - property: article:section
       content: Support
