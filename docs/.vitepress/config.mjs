@@ -82,16 +82,11 @@ export default defineConfig({
         ariaLabel: 'Go to homepage'
       },
       {
-        text: 'Guides',
-        items: [
-          { text: 'Rooting Guides', link: '/rooting-guides/' },
-          { text: 'Device-Specific Guides', link: '/rooting-guides/#device-specific-guides' },
-        ]
-      },
-      {
         text: 'Resources',
         items: [
-          { text: 'Glossary', link: '../#glossary' },
+          { text: 'Apps & Modules', link: '/#root-apps' },
+          { text: 'Rooting Guides', link: '/rooting-guides/' },
+          { text: 'Glossary', link: '/#glossary' },
           { text: 'FAQs', link: '/faqs' },
           { text: 'Contributing Guide', link: '/contributing' }
         ]
@@ -123,12 +118,30 @@ export default defineConfig({
         ]
       },
       {
-        text: '🔧 Rooting Guides',
+        text: '🔧 Rooting Methods',
         collapsed: false,
         items: [
           { text: 'General Rooting Guide', link: '/rooting-guides/#how-to-root' },
-          { text: 'Framework Solutions', link: '/rooting-guides/#advanced-framework-solutions' },
-          { text: 'Device-Specific Guides', link: '/rooting-guides/#device-specific-guides' }
+          { text: 'Root Solutions', link: '/rooting-guides/#root-solutions-comparison' },
+          { text: 'Framework Solutions', link: '/rooting-guides/#advanced-framework-solutions' }
+        ]
+      },
+      {
+        text: '📱 Device-Specific Guides',
+        collapsed: true,
+        items: [
+          { text: 'All Device Guides', link: '/rooting-guides/#device-specific-guides' },
+          { text: 'Motorola', link: '/rooting-guides/motorola' },
+          { text: 'Xiaomi', link: '/rooting-guides/xiaomi' }
+        ]
+      },
+      {
+        text: '🔐 Root Management',
+        collapsed: true,
+        items: [
+          { text: 'Hide Root', link: '/#hide-root' },
+          { text: 'Root Managers', link: '/#managers' },
+          { text: 'Bootloop Protection', link: '/#bootloop-protection' }
         ]
       },
       {
@@ -137,7 +150,7 @@ export default defineConfig({
         items: [
           { text: 'Frequently Asked Questions', link: '/faqs' },
           { text: 'Troubleshooting', link: '/faqs#troubleshooting' },
-          { text: 'Glossary of Terms', link: '../#glossary' }
+          { text: 'Glossary of Terms', link: '/#glossary' }
         ]
       },
       {
