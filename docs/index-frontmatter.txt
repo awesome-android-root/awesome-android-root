@@ -1,4 +1,5 @@
 ---
+layout: docs
 title: Awesome Android Root
 titleTemplate: Best Root Apps, Module & Guides 2025
 description: Explore the ultimate curated list of 2025 for 200+ best root apps, powerful Magisk & LSPosed modules, must-have tools for ultimate customization.
