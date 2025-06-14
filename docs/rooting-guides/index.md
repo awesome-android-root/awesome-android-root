@@ -106,9 +106,9 @@ Welcome to the Ultimate Android Rooting Guide - Master Android rooting with our 
 **New to rooting?** Start here for a quick overview:
 
 - 1️⃣ [Check device compatibility](#device-specific-guides)
-- 2️⃣ [Understand risks and benefits](#should-i-root)
-- 3️⃣ [Prepare prerequisites](#prerequisites)
-- 4️⃣ [Choose root method](#common-methods) 
+- 2️⃣ [Understand risks and benefits](#should-you-root-your-device)
+- 3️⃣ [Prepare prerequisites](#prerequisites-and-preparations)
+- 4️⃣ [Choose root method](#root-solutions-comparison) 
 - 5️⃣ [Follow rooting steps](#general-rooting-process)
 
 ## Understanding Root Access
