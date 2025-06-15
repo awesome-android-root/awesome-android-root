@@ -132,7 +132,7 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'All Device Guides', link: '/rooting-guides/#device-specific-guides' },
-                  { text: 'Xiaomi', link: '/rooting-guides/xiaomi' },
+          { text: 'Xiaomi', link: '/rooting-guides/xiaomi' },
           { text: 'Motorola', link: '/rooting-guides/motorola' }
         ]
       },
@@ -167,7 +167,17 @@ export default defineConfig({
     ],
     footer: {
       message: "Released under the MIT License | Made with ❤️ for the Android community",
-      copyright: `Copyright © ${new Date().getFullYear()} Awesome Android Root Project`
+      copyright: `Copyright © ${new Date().getFullYear()} Awesome Android Root Project`,
+      links: [
+        {
+          text: 'Support',
+          link: 'https://opencollective.com/awesome-android-root-official'
+        },
+        {
+          text: 'GitHub',
+          link: 'https://github.com/awesome-android-root/awesome-android-root'
+        }
+      ]
     },
     outline: {
       level: [2, 3],

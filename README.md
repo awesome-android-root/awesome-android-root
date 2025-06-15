@@ -30,8 +30,6 @@
 
 > **Your support enables us to:** Keep this list updated with the latest apps & modules • Maintain comprehensive documentation • Improve project infrastructure & tools • Grow the open-source Android rooting community.
 
-[↑ Back to top](#table-of-contents)
-
 ## Table of Contents
 <details>
 <summary>👉 Tap to expand</summary>
@@ -633,5 +631,3 @@ Quick answers to common rooting questions:
 [⭐ Star this repo](https://github.com/awesome-android-root/awesome-android-root) • [🐛 Report Issue](https://github.com/awesome-android-root/awesome-android-root/issues)  • [💖 Sponsor](https://opencollective.com/awesome-android-root-official)
 
 </div>
-
-[↑ Back to top](#table-of-contents)
