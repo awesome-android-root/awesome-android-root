@@ -109,7 +109,7 @@ export default defineConfig({
     ],
     sidebar: [
       {
-        text: '🚀 Quick Start',
+        text: 'Quick Start',
         collapsed: false,
         items: [
           { text: 'What is Root?', link: '/rooting-guides/#understanding-root-access' },
@@ -118,7 +118,7 @@ export default defineConfig({
         ]
       },
       {
-        text: '🔧 Rooting Methods',
+        text: 'Rooting Methods',
         collapsed: false,
         items: [
           { text: 'General Rooting Guide', link: '/rooting-guides/#how-to-root' },
@@ -127,7 +127,7 @@ export default defineConfig({
         ]
       },
       {
-        text: '📱 Device-Specific Guides',
+        text: 'Device-Specific Guides',
         collapsed: true,
         items: [
           { text: 'All Device Guides', link: '/rooting-guides/#device-specific-guides' },
@@ -136,7 +136,7 @@ export default defineConfig({
         ]
       },
       {
-        text: '🔐 Root Management',
+        text: 'Root Management',
         collapsed: true,
         items: [
           { text: 'Hide Root', link: '/#hide-root' },
@@ -145,7 +145,7 @@ export default defineConfig({
         ]
       },
       {
-        text: '💡 Help & Resources',
+        text: 'Help & Resources',
         collapsed: true,
         items: [
           { text: 'Frequently Asked Questions', link: '/faqs' },
@@ -154,7 +154,7 @@ export default defineConfig({
         ]
       },
       {
-        text: '🤝 Contributing',
+        text: 'Contributing',
         collapsed: true,
         items: [
           { text: 'How to Contribute', link: '/contributing' },
