@@ -92,7 +92,7 @@ export default defineConfig({
         ]
       },
       {
-        text: 'More',
+        text: 'Links',
         items: [
           {
             text: 'Alternative Sites',

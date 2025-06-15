@@ -616,7 +616,6 @@ Quick answers to common rooting questions:
 
 ## Acknowledgments
 
-### 🙏 Special Thanks
 - **Contributors** - Everyone who has submitted apps, corrections, and improvements.
 - **Community** - XDA Developers, Reddit communities, and GitHub users.
 - **Developers** - All the talented developers creating these amazing root tools.
