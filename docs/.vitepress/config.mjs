@@ -109,12 +109,13 @@ export default defineConfig({
     ],
     sidebar: [
       {
-        text: 'Quick Start',
+        text: 'Getting Started',
         collapsed: false,
         items: [
-          { text: 'What is Root?', link: '/rooting-guides/#understanding-root-access' },
-          { text: 'Benefits & Risks', link: '/rooting-guides/#should-you-root-your-device' },
-          { text: 'Prerequisites', link: '/rooting-guides/#prerequisites-and-preparations' }
+          { text: 'What is Root Access?', link: '/rooting-guides/#understanding-root-access' },
+          { text: 'Benefits and Risks', link: '/rooting-guides/#should-you-root-your-device' },
+          { text: 'Prerequisites', link: '/rooting-guides/#prerequisites-and-preparations' },
+          { text: 'Safety Guidelines', link: '/rooting-guides/#safety-guidelines' }
         ]
       },
       {
@@ -127,38 +128,40 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Device-Specific Guides',
+        text: 'Device Guides',
         collapsed: true,
         items: [
           { text: 'All Device Guides', link: '/rooting-guides/#device-specific-guides' },
-          { text: 'Motorola', link: '/rooting-guides/motorola' },
-          { text: 'Xiaomi', link: '/rooting-guides/xiaomi' }
+                  { text: 'Xiaomi', link: '/rooting-guides/xiaomi' },
+          { text: 'Motorola', link: '/rooting-guides/motorola' }
         ]
       },
       {
         text: 'Root Management',
         collapsed: true,
         items: [
-          { text: 'Hide Root', link: '/#hide-root' },
           { text: 'Root Managers', link: '/#managers' },
+          { text: 'Hide Root Detection', link: '/#hide-root' },
           { text: 'Bootloop Protection', link: '/#bootloop-protection' }
         ]
       },
       {
-        text: 'Help & Resources',
+        text: 'Help & Support',
         collapsed: true,
         items: [
           { text: 'Frequently Asked Questions', link: '/faqs' },
-          { text: 'Troubleshooting', link: '/faqs#troubleshooting' },
+          { text: 'Troubleshooting Guide', link: '/faqs#troubleshooting' },
           { text: 'Glossary of Terms', link: '/#glossary' }
         ]
       },
       {
-        text: 'Contributing',
+        text: 'Community',
         collapsed: true,
         items: [
+          { text: 'Support the Project', link: '/#support-this-project' },
           { text: 'How to Contribute', link: '/contributing' },
-          { text: 'Report an Issue', link: 'https://github.com/awesome-android-root/awesome-android-root/issues' }
+          { text: 'Report an Issue', link: 'https://github.com/awesome-android-root/awesome-android-root/issues' },
+          { text: 'Feature Requests', link: 'https://github.com/awesome-android-root/awesome-android-root/discussions' }
         ]
       }
     ],
