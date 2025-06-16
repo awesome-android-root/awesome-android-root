@@ -1,19 +1,28 @@
 ---
 layout: doc
 title: Awesome Android Root
-titleTemplate: Best Root Apps, Module & Guides 2025
-description: Explore the ultimate curated list of 2025 for 200+ best root apps, powerful Magisk & LSPosed modules, must-have tools for ultimate customization.
+titleTemplate: Best Root Apps, Modules & Guides 2025
+description: Discover the ultimate curated collection of 215+ best Android root apps, powerful Magisk & LSPosed modules, comprehensive rooting guides, and essential tools for ultimate Android customization in 2025.
 head:
+  # Canonical and preconnect links
   - - link
     - rel: canonical
       href: https://awesome-root.org/
   - - link
-    - rel: dns-prefetch
+    - rel: preconnect
       href: https://github.com
+      crossorigin: ''
+  - - link
+    - rel: preconnect
+      href: https://img.shields.io
+      crossorigin: ''
   - - link
     - rel: dns-prefetch
-      href: https://img.shields.io
-  
+      href: https://api.github.com
+  - - link
+    - rel: dns-prefetch
+      href: https://raw.githubusercontent.com
+
   # Homepage-specific OpenGraph
   - - meta
     - property: og:type
@@ -26,12 +35,15 @@ head:
       content: Awesome Android Root - Best Root Apps, Modules & Guides 2025
   - - meta
     - property: og:description
-      content: Discover 200+ curated root apps, powerful Magisk & LSPosed modules, comprehensive rooting guides, and essential tools for ultimate Android customization.
+      content: Discover 215+ curated Android root apps, powerful Magisk & LSPosed modules, comprehensive rooting guides, and essential tools for ultimate Android customization in 2025.
   - - meta
     - property: og:url
-      content: https://awesome-root.org
+      content: https://awesome-root.org/
   - - meta
     - property: og:image
+      content: https://awesome-root.org/images/og.png
+  - - meta
+    - property: og:image:secure_url
       content: https://awesome-root.org/images/og.png
   - - meta
     - property: og:image:alt
@@ -50,24 +62,59 @@ head:
       content: en_US
   - - meta
     - property: og:updated_time
-      content: '2025-06-11T00:00:00Z'
+      content: '2025-06-16T00:00:00Z'
 
   # Homepage-specific Twitter Card
   - - meta
     - name: twitter:card
       content: summary_large_image
   - - meta
+    - name: twitter:site
+      content: "@awsmroot"
+  - - meta
+    - name: twitter:creator
+      content: "@awsmroot"
+  - - meta
     - name: twitter:title
-      content: Awesome Android Root - Best Root Apps, Modules & Guides 2025
+      content: Best Root Apps & Modules 2025 | Awesome Android Root
   - - meta
     - name: twitter:description
-      content: Ultimate collection of 200+ Android root apps, Magisk modules, LSPosed frameworks & rooting guides.
+      content: Ultimate collection of 215+ Android root apps, Magisk modules, LSPosed frameworks & comprehensive rooting guides for 2025.
   - - meta
     - name: twitter:image
       content: https://awesome-root.org/images/og.png
   - - meta
     - name: twitter:image:alt
-      content: Awesome Android Root collection preview
+      content: Awesome Android Root collection preview - 215+ curated apps and modules
+
+
+  # Pinterest optimization
+  - - meta
+    - name: pinterest-rich-pin
+      content: true
+  - - meta
+    - property: pinterest:url
+      content: https://awesome-root.org/
+  - - meta
+    - property: pinterest:title
+      content: Best Android Root Apps & Magisk Modules 2025
+  - - meta
+    - property: pinterest:description
+      content: Ultimate curated collection of Android root apps, Magisk modules, LSPosed frameworks, KernelSU & rooting guides for Android customization enthusiasts.
+  - - meta
+    - property: pinterest:image
+      content: https://awesome-root.org/images/og.png
+  - - meta
+    - property: pinterest:media
+      content: https://awesome-root.org/images/og.png
+  - - meta
+    - name: p:domain_verify
+      content: awesome-root.org
+
+  # Performance and security headers
+  - - meta
+    - httpEquiv: Content-Security-Policy
+      content: upgrade-insecure-requests
 
   # Homepage-specific social tags
   - - meta
@@ -81,7 +128,7 @@ head:
       content: '2025-06-11T00:00:00Z'
   - - meta
     - property: article:modified_time
-      content: '2025-06-11T00:00:00Z'
+      content: '2025-06-16T00:00:00Z'
   - - meta
     - property: article:section
       content: Technology
@@ -95,13 +142,39 @@ head:
     - property: article:tag
       content: LSPosed Framework
   - - meta
+    - property: article:tag
+      content: KernelSU
+  - - meta
+    - property: article:tag
+      content: APatch
+  - - meta
+    - property: article:tag
+      content: Xposed Framework
+
+  # SEO optimization meta tags
+  - - meta
     - name: robots
       content: index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1
+  - - meta
+    - name: googlebot
+      content: index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1
+  - - meta
+    - name: bingbot
+      content: index, follow
+  - - meta
+    - name: rating
+      content: safe for kids
+  - - meta
+    - name: distribution
+      content: global
+  - - meta
+    - name: revisit-after
+      content: 7 days
 
   # Homepage-specific keywords
   - - meta
     - name: keywords
-      content: android root 2025, best magisk modules, lsposed framework, android rooting guide, kernelsu modules, root apps collection, android customization, xposed modules, bootloader unlock, android mods, root tools, custom rom, android tweaks, system modifications, android power users, magisk manager, xposed framework, apatch, android security, root permissions, systemless root, android development, mobile hacking, android hacks, root access, android superuser, android root apps, best root apps 2025
+      content: awesome android root,android root 2025, best magisk modules, lsposed framework, android rooting guide, kernelsu modules, apatch modules, root apps collection, android customization, xposed modules, bootloader unlock, android mods, root tools, custom rom, android tweaks, system modifications, android power users, magisk manager, xposed framework, android security, root permissions, systemless root, android development, mobile customization, android hacks, root access, android superuser, android root apps, best root apps 2025, magisk hide, zygisk modules, riru modules, android modding, phone rooting, tablet rooting, android firmware modification
 
   # Homepage-specific structured data
   - - script
@@ -109,75 +182,147 @@ head:
     - |
       {
         "@context": "https://schema.org",
-        "@type": "WebSite",
+        "@type": ["WebSite", "CollectionPage"],
         "name": "Awesome Android Root",
         "alternateName": "AAR",
         "url": "https://awesome-root.org",
-        "description": "Explore the ultimate curated list of 2025 for 200+ best root apps, powerful Magisk & LSPosed modules, must-have tools for ultimate customization.",
+        "description": "Discover the ultimate curated collection of 215+ best Android root apps, powerful Magisk & LSPosed modules, comprehensive rooting guides, and essential tools for ultimate Android customization in 2025.",
         "inLanguage": "en-US",
-        "datePublished": "2025-06-11",
+        "datePublished": "2025-06-11T00:00:00Z",
+        "dateModified": "2025-06-16T00:00:00Z",
         "image": {
           "@type": "ImageObject",
           "url": "https://awesome-root.org/images/og.png",
           "width": 1200,
-          "height": 630
+          "height": 630,
+          "caption": "Awesome Android Root - Best Root Apps & Modules 2025"
         },
         "author": {
           "@type": "Person",
           "name": "Fynks",
-          "url": "https://github.com/fynks"
+          "url": "https://github.com/fynks",
+          "sameAs": [
+            "https://github.com/fynks"
+          ]
         },
         "publisher": {
           "@type": "Organization",
           "name": "Awesome Android Root Project",
+          "url": "https://awesome-root.org",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://awesome-root.org/images/logo.svg"
-          }
+            "url": "https://awesome-root.org/images/logo.svg",
+            "caption": "Awesome Android Root Logo"
+          },
+          "sameAs": [
+            "https://github.com/awesome-android-root/awesome-android-root"
+          ]
         },
         "mainEntity": {
           "@type": "ItemList",
-          "name": "Android Root Resources",
-          "description": "Curated collection of Android rooting tools and guides",
-          "numberOfItems": 200,
+          "name": "Android Root Resources Collection",
+          "description": "Curated collection of Android rooting tools, apps, modules and comprehensive guides",
+          "numberOfItems": 215,
           "itemListElement": [
             {
               "@type": "SoftwareApplication",
               "name": "Magisk Modules",
               "applicationCategory": "SystemUtility",
-              "operatingSystem": "Android"
+              "operatingSystem": "Android",
+              "description": "Systemless modification modules for Android devices"
+            },
+            {
+              "@type": "SoftwareApplication", 
+              "name": "LSPosed Modules",
+              "applicationCategory": "SystemUtility",
+              "operatingSystem": "Android",
+              "description": "Framework modules for advanced Android customization"
             },
             {
               "@type": "SoftwareApplication",
-              "name": "LSPosed Modules",
+              "name": "KernelSU Modules", 
               "applicationCategory": "SystemUtility",
-              "operatingSystem": "Android"
+              "operatingSystem": "Android",
+              "description": "Kernel-based root solution modules"
+            },
+            {
+              "@type": "SoftwareApplication",
+              "name": "APatch Modules",
+              "applicationCategory": "SystemUtility", 
+              "operatingSystem": "Android",
+              "description": "Alternative patching framework modules"
             },
             {
               "@type": "HowTo",
               "name": "Android Rooting Guides",
-              "description": "Step-by-step rooting guides for various Android devices"
+              "description": "Step-by-step rooting guides for various Android devices and brands",
+              "totalTime": "PT30M",
+              "supply": [
+                {
+                  "@type": "HowToSupply",
+                  "name": "Android Device"
+                },
+                {
+                  "@type": "HowToSupply", 
+                  "name": "Computer"
+                },
+                {
+                  "@type": "HowToSupply",
+                  "name": "USB Cable"
+                }
+              ]
             }
           ]
         },
         "audience": {
           "@type": "Audience",
-          "audienceType": "Android developers, power users, modding enthusiasts"
+          "audienceType": "Android developers, power users, modding enthusiasts, system administrators"
         },
         "about": [
           {
             "@type": "Thing",
-            "name": "Android Rooting"
+            "name": "Android Rooting",
+            "description": "Process of gaining privileged control over Android devices"
+          },
+          {
+            "@type": "Thing", 
+            "name": "Magisk",
+            "description": "Systemless interface for Android customization"
           },
           {
             "@type": "Thing",
-            "name": "Magisk"
+            "name": "LSPosed Framework", 
+            "description": "Xposed framework implementation for modern Android"
           },
           {
             "@type": "Thing",
-            "name": "LSPosed Framework"
+            "name": "KernelSU",
+            "description": "Kernel-based root solution for Android devices"
+          },
+          {
+            "@type": "Thing",
+            "name": "APatch", 
+            "description": "Alternative patching framework for Android"
           }
         ],
-        "keywords": "android root, magisk modules, lsposed framework, custom rom, root apps, android rooting guide, kernelsu, root access, android mods, xposed modules, root tools, bootloader unlock"
+        "keywords": "awesome android root, android root, magisk modules, lsposed framework, kernelsu, apatch, custom rom, root apps, android rooting guide, root access, android mods, xposed modules, root tools, bootloader unlock, android customization, systemless root",
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://awesome-root.org/"
+            },
+            "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Root Guides",
+              "item": "https://awesome-root.org/rooting-guides/"
+            }
+          ]
+        }
       }
 ---
