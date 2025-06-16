@@ -87,11 +87,10 @@ head:
     - name: twitter:image:alt
       content: Awesome Android Root collection preview - 215+ curated apps and modules
 
-
-  # Pinterest optimization
+ # Pinterest optimization
   - - meta
     - name: pinterest-rich-pin
-      content: true
+      content: "true"
   - - meta
     - property: pinterest:url
       content: https://awesome-root.org/
@@ -103,9 +102,6 @@ head:
       content: Ultimate curated collection of Android root apps, Magisk modules, LSPosed frameworks, KernelSU & rooting guides for Android customization enthusiasts.
   - - meta
     - property: pinterest:image
-      content: https://awesome-root.org/images/og.png
-  - - meta
-    - property: pinterest:media
       content: https://awesome-root.org/images/og.png
   - - meta
     - name: p:domain_verify
