@@ -315,10 +315,9 @@ head:
               "name": "Home",
               "item": "https://awesome-root.org/"
             },
-            "itemListElement": [
             {
               "@type": "ListItem",
-              "position": 1,
+              "position": 2,
               "name": "Root Guides",
               "item": "https://awesome-root.org/rooting-guides/"
             }
