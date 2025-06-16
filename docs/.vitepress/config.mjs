@@ -166,18 +166,8 @@ export default defineConfig({
       }
     ],
     footer: {
-      message: "Released under the MIT License | Made with ❤️ for the Android community",
-      copyright: `Copyright © ${new Date().getFullYear()} Awesome Android Root Project`,
-      links: [
-        {
-          text: 'Support',
-          link: 'https://opencollective.com/awesome-android-root-official'
-        },
-        {
-          text: 'GitHub',
-          link: 'https://github.com/awesome-android-root/awesome-android-root'
-        }
-      ]
+      message: "Made with ❤️ for the Android Root community",
+      copyright: `Copyright © ${new Date().getFullYear()} Awesome Android Root Project`
     },
     outline: {
       level: [2, 3],
@@ -191,8 +181,9 @@ export default defineConfig({
       }
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/awesome-android-root/awesome-android-root' },
-      { icon: 'reddit', link: 'https://www.reddit.com/r/awesomeandroidroot' }
+      { icon: 'x', link: 'https://x.com/awsmroot' },
+      { icon: 'reddit', link: 'https://www.reddit.com/r/awesomeandroidroot' },
+      { icon: 'github', link: 'https://github.com/awesome-android-root/awesome-android-root' }
     ],
   }
 })
