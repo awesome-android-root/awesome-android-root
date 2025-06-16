@@ -470,7 +470,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 > [TheUnrealZaka's Guide for Hiding Root](https://gist.github.com/TheUnrealZaka/042040a1700ad869d54e781507a9ba4f)
 - **[Hide My Applist](https://github.com/Dr-TSNG/Hide-My-Applist)** - An Xposed module to intercept applist detections.[Moded Fork](https://github.com/pumPCin/HMAL). `FOSS` `[LSP]`
 - **[Integrity-Box](https://github.com/MeowDump/Integrity-Box)** - Open source Keybox Updater with several useful features. `FOSS` `[M]`
-- **[MagiskDetection](https://github.com/apkunpacker/MagiskDetection)** - Collection of Some Publicaly Available POC Apps to Detect Root/Magisk presence. `FOSS` `Proprietary`
+- **[MagiskDetection](https://github.com/apkunpacker/MagiskDetection)** - Collection of Some publicaly Available POC Apps to Detect Root/Magisk presence. `FOSS` `Proprietary`
 - **[NoHello](https://github.com/MhmRdd/NoHello)** -  A Zygisk module to hide root. `FOSS` `[M]`
 - **[PlaycurlNEXT](https://github.com/daboynb/playcurlNEXT)** - Fix Play Integrity (and SafetyNet) verdicts, allowing custom fields and props. `FOSS` `[M]`
 - **[Play Integrity Fork](https://github.com/osm0sis/PlayIntegrityFork)** - A fork of PIF that fixes "MEETS_DEVICE_INTEGRITY" for Android <13 "deviceRecognitionVerdict" with the Play Integrity API. `FOSS` `[M]`
