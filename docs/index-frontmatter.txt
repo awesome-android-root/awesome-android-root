@@ -89,23 +89,14 @@ head:
 
  # Pinterest optimization
   - - meta
-    - name: pinterest-rich-pin
-      content: "true"
+    - property: og:title
+      content: Awesome Android Root - Best Root Apps, Modules & Guides 2025
   - - meta
-    - property: pinterest:url
-      content: https://awesome-root.org/
+    - property: og:description
+      content: Discover 215+ curated Android root apps, powerful Magisk & LSPosed modules, comprehensive rooting guides, and essential tools for ultimate Android customization in 2025.
   - - meta
-    - property: pinterest:title
-      content: Best Android Root Apps & Magisk Modules 2025
-  - - meta
-    - property: pinterest:description
-      content: Ultimate curated collection of Android root apps, Magisk modules, LSPosed frameworks, KernelSU & rooting guides for Android customization enthusiasts.
-  - - meta
-    - property: pinterest:image
-      content: https://awesome-root.org/images/og.png
-  - - meta
-    - name: p:domain_verify
-      content: awesome-root.org
+    - property: og:type
+      content: article
 
   # Performance and security headers
   - - meta
