@@ -155,11 +155,11 @@ If your touchscreen malfunctions, try:
 4. Searching for related issues on XDA forums.
 
 #### How do I fix SafetyNet/Play Integrity issues?
-Use a combination of:
-- [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix)
-- [Magisk](https://github.com/topjohnwu/Magisk)'s DenyList
-- [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases) module
-- Keep Magisk and modules up to date
+Use this guide:
+[TheUnrealZaka's Guide for Hiding Root Detections](https://gist.github.com/TheUnrealZaka/042040a1700ad869d54e781507a9ba4f)
+
+Or visit: [Hide Root Section](https://awesome-root.org/#hide-root) of Awesome Root Project.
+
 
 #### Why aren't root apps detecting root access?
 Check if:
