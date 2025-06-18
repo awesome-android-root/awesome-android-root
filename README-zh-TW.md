@@ -570,7 +570,7 @@ Root 應用程式擁有從根本上改變您的 Android 系統的能力。不正
 - [SafetyNet/Play Integrity issues](./docs/faqs.md#how-do-i-fix-safetynet-play-integrity-issues)
 - [Bootloop recovery](./docs/faqs.md#my-device-is-stuck-in-a-boot-loop-after-rooting-what-can-i-do)
 
-[View all FAQs →](./docs/faqs.md)
+[查看所有常見問題 →](./docs/faqs.md)
 
 [↑ 返回頂部](#目錄)
 
