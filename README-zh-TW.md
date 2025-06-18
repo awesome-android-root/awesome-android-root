@@ -23,9 +23,9 @@
 ## 支持此專案
 <div align="center" class="aar-intro">
 
-[![Become a Sponsor](https://img.shields.io/badge/💖-Become%20a%20Sponsor-ff69b4?style=for-the-badge)](https://opencollective.com/awesome-android-root-official)
-[![GitHub Stars](https://img.shields.io/badge/⭐-Star%20this%20Repo-yellow?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
-[![Share Project](https://img.shields.io/badge/📢-Share%20Project-green?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root)
+[![成爲贊助者](https://img.shields.io/badge/💖-Become%20a%20Sponsor-ff69b4?style=for-the-badge)](https://opencollective.com/awesome-android-root-official)
+[![GitHub 星標](https://img.shields.io/badge/⭐-Star%20this%20Repo-yellow?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
+[![分享項目](https://img.shields.io/badge/📢-Share%20Project-green?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root)
 
 </div>
 
@@ -34,21 +34,21 @@
 <details>
 <summary>👉 點擊展開</summary>
 
-- [什麼是 Root 權限](#what-is-root-access)
-- [Root 指南與解决方案](#root-guide-and-solutions)
-- [詞彙表](#glossary)
-- [Root 應用程式](#root-apps)
-  - [廣告攔截](#ad-blocking)
-  - [應用程式管理](#app-management)
-    - [應用程式隔離與克隆](#app-isolation-and-cloning)
-    - [應用程式管理器](#app-managers)
-    - [應用程式商店](#app-markets)
-    - [應用程式權限管理](#app-permissions)
-  - [應用程式修改](#app-mods)
-    - [社交媒體類](#social-media-mods)
-      - [嗶哩嗶哩](#bilibili)
+- [什麼是 Root 權限](#什麼是-Root-權限)
+- [Root 指南與解决方案](#Root-指南與解决方案)
+- [詞彙表](#詞彙表)
+- [Root 應用程式](#root-應用程式)
+  - [廣告攔截](#廣告攔截)
+  - [應用程式管理](#廣告攔截)
+    - [應用程式隔離與克隆](#應用程式隔離與克隆)
+    - [應用程式管理器](#應用程式管理器)
+    - [應用程式商店](#應用程式商店)
+    - [應用程式權限管理](#應用程式權限管理)
+  - [應用程式修改](#應用程式修改)
+    - [社交媒體類](#社交媒體類)
+      - [嗶哩嗶哩](#嗶哩嗶哩)
       - [Discord](#discord)
-      - [Duolingo 多鄰國](#duolingo)
+      - [Duolingo 多鄰國](#Duolingo-多鄰國)
       - [Grindr](#grindr)
       - [Instagram](#instagram)
       - [Line](#line)
@@ -57,58 +57,58 @@
       - [WeChat](#wechat)
       - [WhatsApp](#whatsapp)
       - [X/Twitter](#xtwitter)
-      - [Youtube, Spotify, Google 相冊](#youtube-spotify-google-photos)
-    - [其他](#other-app-mods)
-    - [修補](#patching)
-  - [音訊增強](#audio-enhancement)
-  - [自動化](#automation)
-  - [備份與還原](#backup-and-restore)
-  - [電池管理](#battery-management)
-  - [清理類應用程式](#cleaning-apps)
-  - [通訊工具](#communication-tools)
-    - [通話錄音](#call-recorders)
-    - [通訊錄](#contacts)
-    - [訊息](#sms)
-  - [定製](#customizations)
-    - [啓動動畫](#boot-animations)
-    - [字體管理器](#font-managers)
-    - [啓動器](#launchers)
-    - [導航](#navigation)
-    - [系统客製化](#os-customizations)
+      - [Youtube, Spotify, Google 相冊](#youtube-spotify-google-相冊)
+    - [其他](#其他)
+    - [修補](#修補)
+  - [音訊增強](#音訊增強)
+  - [自動化](#自動化)
+  - [備份與還原](#備份與還原)
+  - [電池管理](#電池管理)
+  - [清理類應用程式](#清理類應用程式)
+  - [通訊工具](#通訊工具)
+    - [通話錄音](#通話錄音)
+    - [通訊錄](#通訊錄)
+    - [訊息](#訊息)
+  - [定製](#定製)
+    - [啓動動畫](#啓動動畫)
+    - [字體管理器](#字體管理器)
+    - [啓動器](#啓動器)
+    - [導航](#導航)
+    - [系统客製化](#系统客製化)
       - [AOSP (Android
-開放原始碼專案)](#aosp-android-open-source-project)
-      - [ColorOS (OPPO 歐珀)](#coloros-oppo)
-      - [通用](#global)
-      - [HyperOS (小米、紅米、POCO)](#hyperos-xiaomi)
-      - [One UI (三星)](#one-ui-samsung)
-      - [Onyx （文石）](#onyx)
-      - [Oxygen OS (一加)](#oxygen-os-oneplus)
-    - [主體化](#theming)
-  - [精簡](#debloating)
-  - [開發與除錯](#development-and-debugging)
-  - [設備控制與硬體](#device-control-and-hardware)
-  - [檔案管理](#file-management)
-  - [內核管理](#kernel-management)
-  - [位置與 GPS](#location-and-gps)
-  - [網絡工具](#network-tools)
-  - [NFC 工具](#nfc-tools)
-  - [效能改進](#performance-improvements)
-  - [隱私與安全](#privacy-and-security)
+開放原始碼專案)](#aosp-android-開放原始碼專案)
+      - [ColorOS (OPPO) 和 realme UI （真我）](#coloros-oppo-和-realme-ui-真我)
+      - [通用](#通用)
+      - [HyperOS (小米)](#hyperos-小米)
+      - [One UI (三星)](#one-ui-三星)
+      - [Onyx （文石）](#onyx-文石)
+      - [Oxygen OS (一加)](#oxygen-os-一加)
+    - [主體化](#主體化)
+  - [精簡](#精簡)
+  - [開發與除錯](#開發與除錯)
+  - [設備控制與硬體](#設備控制與除錯)
+  - [檔案管理](#檔案管理)
+  - [內核管理](#內核管理)
+  - [位置與 GPS](#位置和-gps)
+  - [網絡工具](#網絡工具)
+  - [NFC 工具](#nfc-工具)
+  - [效能改進](#效能改進)
+  - [隱私與安全](#隱私與安全)
   - [Revanced](#revanced)
-  - [Root 專用](#root-specific)
-    - [救磚保護](#bootloop-protection)
-    - [隱藏 Root](#hide-root)
-    - [管理器](#managers)
-  - [螢幕與顯示](#screen-and-display)
-  - [系統修改](#system-modifications)
+  - [Root 專用](#root-專用)
+    - [救磚保護](#救磚保護)
+    - [隱藏 Root](#隱藏-root)
+    - [管理器](#管理器)
+  - [螢幕與顯示](#螢幕與顯示)
+  - [系統修改](#系統修改)
   - [Termux](#termux)
-  - [工具](#tools)
-- [重要提示](#important-notes)
-- [常見問題](#faqs)
-- [社群與提示](#community--resources)
-- [貢獻](#contributing)
-- [統計](#stats)
-- [鳴謝](#acknowledgments)
+  - [工具](#工具)
+- [重要提示](#重要提示)
+- [常見問題](#常見問題)
+- [社群與資源](#社群與資源)
+- [貢獻](#貢獻)
+- [統計](#統計)
+- [鳴謝](#鳴謝)
 
 </details>
 
@@ -176,7 +176,7 @@ Root 允許克服營運商和硬體製造商對某些設備施加的限制，從
 - **[PermissionManagerX](https://github.com/mirfatif/PermissionManagerX)** - 適用於 Android 的擴充權限管理器，用於檢視和設定清單權限和 AppOps。 `FOSS` `[M]`
 - **[Thanox](https://apt.izzysoft.de/fdroid/index/apk/github.tornaco.android.thanos)** - 一個提供應用程式啟動管理、背景管理、權限管理等功能的系統管理工具 `FOSS` `[LSP]`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 ### 應用程式修改
 
@@ -228,7 +228,7 @@ Root 允許克服營運商和硬體製造商對某些設備施加的限制，從
 - **[RevancedXposed](https://github.com/chsbuffer/RevancedXposed)** - YouTube、Spotify 及 YouTube Music 阻擋廣告和背景播放，谷歌相冊無限備份 Xposed 模組。 `FOSS` `[LSP]`
 - **[XposedPhotosFix](https://github.com/RevealedSoulEven/XposedPhotosFIX)** - 防止 Google 相冊應用程式將相機資料夾中的所有資料夾合併，並為每個資料夾建立獨立的相簿，適用於備份。 `[LSP]`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 #### 其他
 - **[F*ck for VIP](https://github.com/Xposed-Modules-Repo/com.bug.hookvip)** - 一個用於解鎖某些軟體會員資格和刪除廣告的模組。查看 releases 以獲取支援的應用程式清單。 `Proprietary` `[LSP]`
@@ -243,7 +243,7 @@ Root 允許克服營運商和硬體製造商對某些設備施加的限制，從
 #### 修補
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - 應用程式修補程式及修改器（請小心使用）。 `Proprietary`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 ### 音訊增強
 - **[Audio Misc Settings](https://github.com/Magisk-Modules-Alt-Repo/audio-misc-settings)** - 為設定雜項音頻配置值（媒體音量步長（100 步）、提高重採樣品質、停用效果框架等） `FOSS` `[M]`
@@ -261,7 +261,7 @@ Root 允許克服營運商和硬體製造商對某些設備施加的限制，從
 - **[MacroDroid](https://play.google.com/store/search?q=macrodroid&c=apps)** - 易用的自動化應用程式。 `Proprietary`
 - **[Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)** - 一個進階且強大的自動化應用程式。 `Proprietary`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 ### 備份與還原
 - **[數據備份](https://github.com/XayahSuSuSu/Android-DataBackup)** - 適用於 Android 7.0+ 的資料備份。 `FOSS`
@@ -269,21 +269,21 @@ Root 允許克服營運商和硬體製造商對某些設備施加的限制，從
 - **[Neo Backup](https://github.com/NeoApplications/Neo-Backup)** - 強大的開源備份解決方案。 `FOSS`
 - **[Swift Backup](https://play.google.com/store/apps/details?id=org.swiftapps.swiftbackup)** - 現代化的備份解決方案，支援雲端儲存。 `Proprietary`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 ### 電池管理
 - **[AccA](https://github.com/MatteCarra/AccA)** - 進階充電控制器應用程式 `FOSS`
 - **[Battery Guru](https://play.google.com/store/apps/details?id=com.paget96.batteryguru)** - 電池優化與監控。 `Proprietary`
 - **[Xtreme-Battery-Saver](https://github.com/Magisk-Modules-Alt-Repo/Xtreme-Battery-Saver)** - 一個極致省電的 Magisk 模組，為希望大幅延長電池壽命的使用者設計。 `FOSS` `[M]`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 ### 清理類應用程式
 - **[Cleaner Royall](https://github.com/araafroyall/Cleaner-Royall)** - 一款輕量級但超快速且強大的 Android 清理工具。 `FOSS` `[LSP]`
 - **[清濁](https://www.dircleaner.com/)** - 一個簡單實用的清潔工具。 `Proprietary`
 - **[SD 女僕 2/SE](https://github.com/d4rken-org/sdmaid-se)** - 一個專門用於維護的 Android 文件管理工具。其核心目的是釋放空間並刪除不需要的數據。 `FOSS`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 ### 通訊工具
 #### 通話錄音
@@ -297,7 +297,7 @@ Root 允許克服營運商和硬體製造商對某些設備施加的限制，從
 #### 訊息
 - **[NekoSMS](https://github.com/apsun/NekoSMS)** - 基於模式的 Android 簡訊攔截器。 `FOSS` `[LSP]`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 ### 定製
 #### 啓動動畫
@@ -324,7 +324,7 @@ Root 允許克服營運商和硬體製造商對某些設備施加的限制，從
 - **[PixelUpdater](https://github.com/PixelUpdater/PixelUpdater)** - Pixel Updater 是一款用於從 Google 的 OTA 伺服器安裝 Android A/B OTA 更新的應用程式。 `FOSS` `[M]`
 - **[PixelXpert](https://github.com/siavash79/PixelXpert)** - 一個混合的 Xposed+Magisk 模組，用於允許進行 AOSP 原設計中未提供的客製化。 `FOSS` `[M]` `[LSP]`
 
-##### ColorOS (OPPO) + realme UI （真我）
+##### ColorOS (OPPO) 和 realme UI （真我）
 - **[ColorOS 通知圖標增強](https://github.com/fankes/ColorOSNotifyIcon)** - 針對 ColorOS 優化通知圖標，適配原生通知圖標規範。 `FOSS` `[LSP]`
 - **[LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool/blob/main/README_EN.md)** - 為 ColorOS 擴展和優化的 Xposed 模組。 `Proprietary` `[LSP]`
 
@@ -332,7 +332,7 @@ Root 允許克服營運商和硬體製造商對某些設備施加的限制，從
 - **[Disable Target API Block](https://github.com/buttercookie42/DisableTargetAPIBlock)** - 用於停用 Android 14 對舊應用程式安裝阻止的 Xposed 模組。 `FOSS` `[LSP]`
 - **[SystemUI Tuner](https://github.com/zacharee/Tweaker)** - 檢視並修改 Android 設備的隱藏設定。 `FOSS` `[M]`
 
-##### HyperOS (小米、紅米、POCO)
+##### HyperOS (小米)
 - **[ClipboardList](https://github.com/HChenX/ClipboardList)** - 取消剪貼簿和短語功能的 20 項限制和時間限制。僅適用於 MIUI 和 HyperOS。 `FOSS` `[LSP]`
 - **[GreenDotHide](https://github.com/Dorian399/GreenDotHide)** - 隱藏表示敏感權限使用的綠點。僅在 MIUI/HyperOS 上有效。 `FOSS` `[LSP]`
 - **[HyperCeiler](https://github.com/ReChronoRain/HyperCeiler/blob/main/README_en-US.md)** - 針對 HyperOS 的廣泛定製。 `FOSS` `[LSP]`
@@ -359,14 +359,14 @@ Root 允許克服營運商和硬體製造商對某些設備施加的限制，從
 - **[Iconify](https://github.com/Mahmud0808/Iconify)** - 輕鬆自訂您的 Android 12+ 裝置。 `FOSS` `[M]` `[LSP]`
 - **[Project Themer](https://play.google.com/store/apps/details?id=com.drsants.eggproject)** - 提供針對已 root 設備的工具和功能。 `Proprietary` `[M]`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 
 ### 精簡
 - **[Canta](https://github.com/samolego/Canta)** -  在沒有 root 權限的情況下使用 Shizuku 卸載任何應用程式。 (需要安裝並運行 [Shizuku](https://shizuku.rikka.app/) ). `FOSS`
 - **[De-Bloater](https://github.com/sunilpaulmathew/De-Bloater)** - 使用 Magisk 之力來清空不想要的系統應用程式之應用程式。 `FOSS`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 ### 開發與除錯
 - **[IAmNotADeveloper](https://github.com/xfqwdsj/IAmNotADeveloper)** - 一個隱藏 Android 開發者相關開關狀態的 Xposed 模組。 `FOSS` `[LSP]`
@@ -375,7 +375,7 @@ Root 允許克服營運商和硬體製造商對某些設備施加的限制，從
 - **[Termux](https://termux.com/)** - 進階終端仿真器和 Linux 環境。 `FOSS` - **[更多關於 Termux](#termux)**
 - **[Wireless ADB Switch](https://github.com/Smooth-E/wireless-adb-switch)** - 快速啟用或停用 Android 的無線調試功能。包含小工具和快速設定圖塊，方便使用。 `FOSS`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 ### 設備控制與硬體
 - **[OnePlus Flash Control](https://github.com/Bartixxx32/Opflashcontrol-app)** - 精確控制一加設備的雙色調和四色調 LED 閃光燈的亮度。 `FOSS`
@@ -395,7 +395,7 @@ Root 允許克服營運商和硬體製造商對某些設備施加的限制，從
 - **[Total Commander](https://play.google.com/store/apps/details?id=com.ghisler.android.TotalCommander)** - 功能豐富的 Android 文件管理器，支持 root 和 shizuku。要獲得更好的體驗，請閱讀 [這裡](https://www.ghisler.ch/board/viewforum.php?f=22). `Proprietary`
 - **[Xplore File Manager](https://play.google.com/store/apps/details?id=com.lonelycatgames.Xplore)** - 具有 root 支持的檔案管理器 `Proprietary` 
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 
 ### 內核管理
@@ -404,7 +404,7 @@ Root 允許克服營運商和硬體製造商對某些設備施加的限制，從
 - **[Kernel Flasher](https://github.com/capntrips/KernelFlasher)** - 一個可用来刷写（AK3 檔案）、備份和恢復內核的 Android 應用程式。 `FOSS`
 - **[SmartPack-Kernel-Manager](https://github.com/SmartPack/SmartPack-Kernel-Manager)** - 一個內核管理器 `FOSS`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 ### 位置和 GPS
 - **[GPS Setter](https://github.com/Xposed-Modules-Repo/com.android1500.gpssetter)** - 允許為任何特定應用程式或整個系統模擬位置。 `[LSP]`
@@ -412,7 +412,7 @@ Root 允許克服營運商和硬體製造商對某些設備施加的限制，從
 - **[Hide Mock Location](https://github.com/auag0/HideMockLocation)** - 用於隱藏模擬位置設定的 Xposed 模組。 `FOSS` `[LSP]`
 - **[XposedFakeLocation](https://github.com/noobexon1/XposedFakeLocation)** - 讓您可以在全域範圍或特定應用程式中偽造裝置的位置，而不必使用開發者選項中的「模擬位置」。 `FOSS` `[LSP]`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 ### 網絡工具
 - **[MACsposed](https://github.com/DavidBerdik/MACsposed)** - 為 Android 12 到 15 添加了對 MAC 位址欺騙的支援。 `FOSS` `[LSP]`
@@ -424,14 +424,14 @@ Root 允許克服營運商和硬體製造商對某些設備施加的限制，從
 - **[Unlimited Hotspot](https://github.com/felikcat/unlimited-hotspot)** - 取消對熱點網際網路的速度限制，並允許任何方案的熱點。 `FOSS` `[M]`
 - **[WiFi Password Viewer for MMRL](https://github.com/Googlers-Repo/wpd)** - 用於 MMRL 的 WiFi 密碼檢視器。 `FOSS`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 
 ### NFC 工具
 - **[NFC Card Emulator Pro (Root)](https://play.google.com/store/apps/details?id=com.yuanwofei.cardemulator.pro)** - 一張可模擬各種類型卡片的 NFC 卡片模擬器，例如：門禁卡、電梯卡、工廠（餐卡）、學校（餐卡）、某些圖書館卡片以及其他 IC 卡片。 `Proprietary`
 - **[NfcScreenOff](https://github.com/Jon8RFC/NfcScreenOff)** - 螢幕關閉時讀取 NFC 標籤，並禁用 NFC 標籤音效。 `FOSS` `[M]`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 
 ### 效能改進
@@ -443,7 +443,7 @@ Root 允許克服營運商和硬體製造商對某些設備施加的限制，從
 - **[Hydrostellaire](https://github.com/AestasBritannia/Hydro-Br-leur)** - 適用於天璣旗艦平台及一加、真我裝置的 Magisk 模組。 `FOSS` `[M]`
 - **[Uperf-Game-Turbo](https://github.com/yinwanxi/Uperf-Game-Turbo)** -  Android 用的用戶空間效能控制器 `FOSS` `[M]`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 
 ### 隱私與安全
@@ -453,17 +453,17 @@ Root 允許克服營運商和硬體製造商對某些設備施加的限制，從
 - **[Fyrypt](https://github.com/mirfatif/Fyrypt)** - 一個具有 UID + PID 規則的 Android 防火牆，dnscrypt-proxy 管理，以及單獨應用程序的實時網絡監控。 `Proprietary`
 - **[XPL-EX](https://github.com/0bbedCode/XPL-EX)** - 適用於 Android 6.0 Marshmallow 及更高版本的非常簡單易用的隱私管理器。 `FOSS` `[LSP]`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 ### Revanced
 - **[Awesome ReVanced](https://github.com/Jman-Github/Awesome-ReVanced)** - 一個精選的 ReVanced 补丁、資源和專案清單。 `FOSS`
 - **[Privacy ReVanced Patches](https://github.com/jkennethcarino/privacy-revanced-patches)** - ReVanced 的隱私補丁，用以關閉廣告、追蹤器和分析資料，並始終在隱私模式下開啟 Gboard，以及其他更多功能。 `FOSS`
 - **[Revanced Manager](https://github.com/ReVanced/revanced-manager)** - 修改 YouTube、YouTube Music、Spotify 等多個應用程式，並加入更多功能。 `FOSS`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 ### Root 專用
-#### 啓動迴圈保護
+#### 救磚保護
 - **[Anti bootloop](https://github.com/Magisk-Modules-Alt-Repo/abootloop)** - 一個防止啟動迴圈的 Magisk 模組。 `FOSS` `[M]`
 - **[YetAnotherBootloopProtector](https://github.com/Magisk-Modules-Alt-Repo/YetAnotherBootloopProtector)** - 一個用於監控和修復潛在的啓動迴圈和系統 UI 故障的 Magisk 模組。 `FOSS` `[M]`
 
@@ -494,9 +494,9 @@ Root 允許克服營運商和硬體製造商對某些設備施加的限制，從
 - **[MMRL](https://github.com/DerGoogler/MMRL)** - 一個幫助管理你自己的模組庫的 Android 應用程式。 `FOSS`
 - **[KernelSU](https://github.com/tiann/KernelSU)** - 一個基於內核的 Android root 解決方案。 `FOSS`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
-### 螢幕顯示
+### 螢幕與顯示
 - **[AlwaysOn](https://github.com/Domi04151309/AlwaysOn)** - 新增持續顯示功能，並提供多種自定義選項，包括錶面、行為和背景設定。 `FOSS` `[LSP]`
 - **[CaptureSposed](https://github.com/99keshav99/CaptureSposed)** - 一個可有效禁用 Android 14 中新引入的屏幕截圖檢測 API 的 Xposed 模組。 `FOSS` `[LSP]`
 - **[Disable Rotation Button](https://github.com/JavaCakeGames/disable-rotation-button)** - 一個可以關閉 Android 浮動旋轉按鈕的應用程式。 `FOSS`
@@ -504,7 +504,7 @@ Root 允許克服營運商和硬體製造商對某些設備施加的限制，從
 - **[Flag Secure Patcher](https://github.com/j-hc/FlagSecurePatcher)** - 一個用於在設備上修補 service.jar 以禁用安全鎖和屏幕截圖監聽器的 Magisk 模組。 `FOSS` `[M]`
 - **[Pointer Replacer](https://github.com/thesandipv/pointer_replacer)** - 替換用戶觸控螢幕時出現的點[要求在開發人員選項中啟用『顯示觸控回應』]。 `FOSS` `[LSP]`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 ### 系统修改
 - **[AnyWebView](https://github.com/neoblackxt/AnyWebView)** - 嘗試檢測所有系統 WebView 並將其添加到開發人員選項 -> WebView 實作列表中。 `FOSS` `[LSP]`
@@ -518,7 +518,7 @@ Root 允許克服營運商和硬體製造商對某些設備施加的限制，從
 - **[Universal GMS Doze](https://github.com/gloeyisk/universal-gms-doze)** - 修補 Google Play 服務應用程式和某些進程/服務，以便能夠使用電池優化。 `FOSS` `[M]`
 - **[XSpoofSignatures](https://github.com/rushiiMachine/XSpoofSignatures)** - 一個用來欺騙軟體包簽名的 Xposed 模塊。 `FOSS` `[LSP]`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 
 ### Termux
@@ -530,7 +530,7 @@ Root 允許克服營運商和硬體製造商對某些設備施加的限制，從
 - **[Termux:Tasker](https://github.com/termux/termux-tasker)** - 用於與 [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm) 集成的 Termux 附加應用程式. `FOSS`
 - **[Termux:Widget](https://github.com/termux/termux-widget)** - Termux 附加應用程式，可在主屏幕上添加命令的快捷方式。 `FOSS`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 
 ### 工具
@@ -538,7 +538,7 @@ Root 允許克服營運商和硬體製造商對某些設備施加的限制，從
 - **[UotanToolbox NT](https://github.com/Uotan-Dev/UotanToolboxNT)** - 極客的現代工具箱 `FOSS`
 - **[XposedModulets](https://github.com/binarynoise/XposedModulets)** - 許多小而有用的 Xposed 模塊的集合。 `FOSS` `[LSP]`
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 ## 重要提示
 
@@ -555,7 +555,7 @@ Root 應用程式擁有從根本上改變您的 Android 系統的能力。不正
 *   :備忘: **用戶責任：** 您對使用這些應用程式所產生的任何後果承擔全部責任。使用它們需自行承擔風險。
 *   :注意: **推薦：** 在安裝之前徹底研究任何 root 應用程式，並了解其目的和潛在的副作用。
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 ## 常見問題
 
@@ -572,7 +572,7 @@ Root 應用程式擁有從根本上改變您的 Android 系統的能力。不正
 
 [View all FAQs →](./docs/faqs.md)
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 ## 社群與資源
 
@@ -588,7 +588,7 @@ Root 應用程式擁有從根本上改變您的 Android 系統的能力。不正
 - 對於常見問題查看 [FAQ 小節](./docs/faqs.md) 
 - 訪問 XDA 論壇或俄文論壇 [4PDA](https://4pda.to/devdb) 以獲取特定設備的幫助。
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 ## 貢獻
 
@@ -600,7 +600,7 @@ Root 應用程式擁有從根本上改變您的 Android 系統的能力。不正
 
 [閱讀貢獻指南 →](./docs/contributing.md)
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 ## 統計
 
@@ -614,7 +614,7 @@ Root 應用程式擁有從根本上改變您的 Android 系統的能力。不正
 
 ![Visitor Count](https://profile-counter.glitch.me/awesome-android-root/count.svg)
 
-[↑ 返回頂部](#table-of-contents)
+[↑ 返回頂部](#目錄)
 
 ## 鳴謝
 
