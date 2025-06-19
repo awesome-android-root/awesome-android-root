@@ -115,7 +115,7 @@ export default defineConfig({
           { text: 'What is Root Access?', link: '/rooting-guides/#understanding-root-access' },
           { text: 'Benefits and Risks', link: '/rooting-guides/#should-you-root-your-device' },
           { text: 'Prerequisites', link: '/rooting-guides/#prerequisites-and-preparations' },
-          { text: 'Safety Guidelines', link: '/rooting-guides/#safety-guidelines' }
+          { text: 'Safety Guidelines', link: '/rooting-guides/#safety-and-troubleshooting' }
         ]
       },
       {
