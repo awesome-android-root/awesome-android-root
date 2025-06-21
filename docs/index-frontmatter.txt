@@ -2,7 +2,7 @@
 layout: doc
 title: Awesome Android Root
 titleTemplate: Best Root Apps, Modules & Guides 2025
-description: Discover the ultimate curated collection of 215+ best Android root apps, powerful Magisk & LSPosed modules, comprehensive rooting guides, and essential tools for ultimate Android customization in 2025.
+description: Discover the ultimate curated collection of 215+ best Android root apps, Magisk & LSPosed modules, step-by-step rooting guides for ultimate Android customization in 2025.
 head:
   # Canonical and preconnect links
   - - link
