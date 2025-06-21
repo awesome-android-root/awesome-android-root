@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Google Pixel Root Guide 2025
-description: "Complete Google Pixel rooting guide for 2025. Step-by-step instructions for bootloader unlocking, custom recovery installation, and Magisk rooting on all Pixel devices."
+description: "Complete Step-by-step Google Pixel rooting guide for 2025 Inluding bootloader unlocking, custom recovery & Magisk rooting on all Pixel devices."
 head:
   - - link
     - rel: canonical
@@ -14,7 +14,7 @@ head:
       content: Google Pixel Root Guide 2025 - Complete Rooting Instructions
   - - meta
     - property: og:description
-      content: Master Google Pixel rooting with our comprehensive 2025 guide. Safe bootloader unlocking, custom recovery, and Magisk installation for all Pixel models.
+      content: Complete Step-by-step Google Pixel rooting guide for 2025 Inluding bootloader unlocking, custom recovery & Magisk rooting on all Pixel devices.
   - - meta
     - property: og:url
       content: https://awesome-root.org/rooting-guides/pixel

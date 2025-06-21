@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Samsung Galaxy Root Guide 2025
-description: "Complete Samsung Galaxy rooting guide for 2025. Step-by-step instructions for bootloader unlocking, custom recovery installation, and Magisk rooting on Galaxy devices with One UI."
+description: "Complete Step-by-step Samsung Galaxy rooting guide for 2025 including bootloader unlocking, custom recovery & Magisk rooting on Galaxy devices."
 head:
   - - link
     - rel: canonical
@@ -14,7 +14,7 @@ head:
       content: Samsung Galaxy Root Guide 2025 - Complete One UI Rooting Instructions
   - - meta
     - property: og:description
-      content: Master Samsung Galaxy rooting with our comprehensive 2025 guide. Safe bootloader unlocking, custom recovery, and Magisk installation for all Galaxy models running One UI.
+      content: Complete Step-by-step Samsung Galaxy rooting guide for 2025 including bootloader unlocking, custom recovery & Magisk rooting on Galaxy devices.
   - - meta
     - property: og:url
       content: https://awesome-root.org/rooting-guides/samsung
@@ -29,7 +29,7 @@ head:
       content: Samsung Galaxy Root Guide 2025 - Complete One UI Rooting Tutorial
   - - meta
     - name: twitter:description
-      content: Step-by-step Samsung Galaxy rooting guide covering bootloader unlock, custom recovery, and Magisk installation for One UI devices.
+      content: Complete Step-by-step Samsung Galaxy rooting guide for 2025 including bootloader unlocking, custom recovery & Magisk rooting on Galaxy devices.
   - - meta
     - name: twitter:image
       content: https://awesome-root.org/images/og.png
