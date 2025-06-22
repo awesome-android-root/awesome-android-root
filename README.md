@@ -419,6 +419,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 ### Network Tools
 - **[MACsposed](https://github.com/DavidBerdik/MACsposed)** - Adds support for MAC Address spoofing to Android 12 through 15. `FOSS` `[LSP]`
 - **[Magisk-WiFiADB](https://github.com/mrh929/magisk-wifiadb)** - A magisk module to enable WiFi ADB automatically. `FOSS` `[M]`
+- **[NetGuard]** - Block access to the internet.Apps and addresses can individually be allowed or denied access to your Wi-Fi and/or mobile connection. `FOSS`
 - **[personalDNSfilter](https://github.com/IngoZenz/personaldnsfilter)** - A DNS filter proxy that provides local filtering of ads, malware, and tracking servers, supporting secure DNS protocols like DOH and DOT for enhanced privacy. `FOSS`
 - **[TTLChanger](https://github.com/aleksey-saenko/TTLChanger)** - Allows you to modify the default TTL (Time to Live) value. `FOSS`
 - **[VPN Hotspot](https://github.com/Mygod/VPNHotspot)** -  Share your VPN connection over hotspot or repeater. `FOSS`
