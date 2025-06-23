@@ -626,9 +626,9 @@ Quick answers to common rooting questions:
 
 ### Repository Statistics
 
-| ![Total Entries](https://img.shields.io/badge/Total%20Entries-223-brightgreen?style=for-the-badge&logo=android)<br>**Total Entries** | ![Root Apps](https://img.shields.io/badge/Root%20Apps-100-blue?style=for-the-badge&logo=android)<br>**Root Apps** |
+| ![Total Entries](https://img.shields.io/badge/Total%20Entries-227-brightgreen?style=for-the-badge&logo=android)<br>**Total Entries** | ![Root Apps](https://img.shields.io/badge/Root%20Apps-101-blue?style=for-the-badge&logo=android)<br>**Root Apps** |
 |:---:|:---:|
-| ![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-52-orange?style=for-the-badge&logo=magisk)<br>**Magisk Modules** | ![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-71-purple?style=for-the-badge&logo=xposed)<br>**LSPosed Modules** |
+| ![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-51-orange?style=for-the-badge&logo=magisk)<br>**Magisk Modules** | ![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-75-purple?style=for-the-badge&logo=xposed)<br>**LSPosed Modules** |
 
 ### Visitor Counter
 
