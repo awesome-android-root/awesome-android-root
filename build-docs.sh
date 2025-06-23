@@ -18,12 +18,16 @@ echo -e "${GREEN}Starting build-docs process...${NC}"
 [ ! -d "docs" ] && handle_error "'docs' directory not found."
 [ ! -f "README.md" ] && handle_error "'README.md' not found."
 
-# 2. Copy README.md to docs/index.md
+# 2. Copy README-zh-TW.md to docs/README-zh-TW.md
+cp README-zh-TW.md docs/README-zh-TW.md || handle_error "Failed copying README-zh-TW.md to docs/README-zh-TW.md"
+echo -e "${GREEN}Copied README-zh-TW.md to docs/README-zh-TW.md${NC}"
+
+# 3. Copy README.md to docs/index.md
 cp README.md docs/index.md || handle_error "Failed copying README.md to docs/index.md"
 echo -e "${GREEN}Copied README.md to docs/index.md${NC}"
 
 
-# 3. Add frontmatter
+# 4. Add frontmatter
 [ ! -f "docs/index-frontmatter.txt" ] && handle_error "'frontmatter.txt' not found."
 tmp_file=$(mktemp)
 {
@@ -33,7 +37,7 @@ tmp_file=$(mktemp)
 echo -e "${GREEN}Added frontmatter to docs/index.md${NC}"
 
 
-# 4. Adjust links
+# 5. Adjust links
 sed -i '/http[s]*:\/\/\//! s|./docs/|./|g' docs/index.md && \
 sed -i 's|\([^:]\)//|\1/|g' docs/index.md || handle_error "Failed adjusting links"
 echo -e "${GREEN}Links adjusted in docs/index.md${NC}"
