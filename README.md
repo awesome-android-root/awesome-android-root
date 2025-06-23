@@ -1,6 +1,7 @@
 <div align="center" class="aar-intro">
 
 # Awesome Android Root
+[Traditional Chinese Version](README-zh-TW.md)
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=green)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
 [![Total Entries](https://img.shields.io/badge/Total%20Entries-220+-blue?style=for-the-badge&logo=android)](#root-apps)
