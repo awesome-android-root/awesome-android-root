@@ -7,6 +7,9 @@ export default defineConfig({
   cleanUrls: true,
 
   head: [
+    // Font preloading to prevent layout shifts
+    ['link', { rel: 'preload', href: '/assets/inter-roman-latin.Di8DUHzh.woff2', as: 'font', type: 'font/woff2', crossorigin: '' }],
+    
     // Favicons with improved metadata
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
@@ -14,6 +17,12 @@ export default defineConfig({
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
     ['meta', { name: 'apple-mobile-web-app-title', content: 'AAR' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
+
+    // Performance and CLS optimization headers
+    ['link', { rel: 'preconnect', href: 'https://img.shields.io', crossorigin: '' }],
+    ['link', { rel: 'dns-prefetch', href: 'https://img.shields.io' }],
+    ['link', { rel: 'preconnect', href: 'https://github.com', crossorigin: '' }],
+    ['link', { rel: 'dns-prefetch', href: 'https://github.com' }],
 
     // Additional browser compatibility meta tags
     ['meta', { name: 'theme-color', content: '#ffffff' }],
@@ -32,6 +41,21 @@ export default defineConfig({
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1' }],
     ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large' }],
     ['meta', { name: 'language', content: 'en-US' }],
+
+    // Critical performance optimization
+    ['style', {}, `
+      /* Critical CSS to prevent layout shifts */
+      .aar-intro img[src*="img.shields.io"] { 
+        height: 20px; 
+        width: auto; 
+        display: inline-block; 
+        vertical-align: middle;
+        background-color: rgba(0,0,0,0.05);
+        border-radius: 4px;
+      }
+      .aar-intro { min-height: 60px; }
+      .VPLocalNavOutlineDropdown { min-height: 40px; }
+    `]
   ],
   themeConfig: {
     logo: {

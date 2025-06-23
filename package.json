@@ -14,7 +14,10 @@
   "scripts": {
     "docs:dev": "./build-docs.sh && vitepress dev docs",
     "docs:build": "./build-docs.sh && vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "perf:lighthouse": "lighthouse https://awesome-android-root.org --chrome-flags='--headless' --output=html --output-path=./lighthouse-report.html",
+    "perf:cls": "echo 'CLS Performance Test - Check lighthouse-report.html for detailed results'",
+    "optimize:cls": "./optimize-cls.sh"
   },
   "devDependencies": {
     "vitepress": "^1.6.3"
