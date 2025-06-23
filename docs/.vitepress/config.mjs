@@ -14,7 +14,6 @@ export default defineConfig({
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
     ['meta', { name: 'apple-mobile-web-app-title', content: 'AAR' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
-    ['meta', { property: 'og:image', content: 'images/og.png' }],
 
     // Additional browser compatibility meta tags
     ['meta', { name: 'theme-color', content: '#ffffff' }],
