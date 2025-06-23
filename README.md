@@ -584,7 +584,7 @@ Quick answers to common rooting questions:
 - **[XDA Developers](https://forum.xda-developers.com/)** - The largest Android development community.
 - **[Reddit - r/Android](https://www.reddit.com/r/Android/)** - General Android discussions.
 - **[Reddit - r/Magisk](https://www.reddit.com/r/Magisk/)** - Magisk-specific community.
--  **[Reddit - r/AwesomeAndroidRoot](https://www.reddit.com/r/awesomeandroidroot)** - Awesome Android Root community.
+-  **[Reddit - r/AwesomeAndroidRoot](https://www.reddit.com/r/Awesome_Android_Root/))** - Awesome Android Root community.
 
 ### Getting Help
 - Search existing [GitHub Issues](https://github.com/awesome-android-root/awesome-android-root/issues) first.
