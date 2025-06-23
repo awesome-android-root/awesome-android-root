@@ -217,6 +217,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 - **[TMoe](https://github.com/cinit/TMoe)** - Adds various tweaks to various telegram clients. `FOSS` `[LSP]`
 
 ##### Wechat
+- **[MaskWechat](https://github.com/Mingyueyixi/MaskWechat)** - A WeChat Xposed module, that can hide the chat records of specific users to prevent private chats from being peeked by third parties. `FOSS` `[LSP]`
 - **[WeChat Auxiliary](https://github.com/HdShare/WAuxiliary_Public)** - Various tweaks for Wechat. `Proprietary` `[LSP]`
 - **[X](https://github.com/Xposed-Modules-Repo/cn.android.x)** - Add extra features to Wechat. `Proprietary` `[LSP]`
 
