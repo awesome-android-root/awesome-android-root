@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Xiaomi Rooting Guide
-description: "Best complete step-by-step guide to root Xiaomi devices running MIUI/HyperOS in 2025."
+description: "Best complete step-by-step complete guide to root Xiaomi and redmi devices running MIUI/HyperOS in 2025."
 head:
   - - link
     - rel: canonical
