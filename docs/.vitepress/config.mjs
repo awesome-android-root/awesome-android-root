@@ -4,7 +4,6 @@ export default defineConfig({
   lang: "en-US",
   title: "Awesome Android Root",
   ignoreDeadLinks: true,
-  cleanUrls: true,
 
   head: [
     // Favicons with improved metadata
