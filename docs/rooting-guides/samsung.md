@@ -5,7 +5,7 @@ description: "Complete Step-by-step Samsung Galaxy rooting guide for 2025 includ
 head:
   - - link
     - rel: canonical
-      href: https://awesome-root.org/rooting-guides/samsung
+      href: https://awesome-android-root.org/rooting-guides/samsung
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: Complete Step-by-step Samsung Galaxy rooting guide for 2025 including bootloader unlocking, custom recovery & Magisk rooting on Galaxy devices.
   - - meta
     - property: og:url
-      content: https://awesome-root.org/rooting-guides/samsung
+      content: https://awesome-android-root.org/rooting-guides/samsung
   - - meta
     - property: og:image
-      content: https://awesome-root.org/images/og.png
+      content: https://awesome-android-root.org/images/og.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -32,7 +32,7 @@ head:
       content: Complete Step-by-step Samsung Galaxy rooting guide for 2025 including bootloader unlocking, custom recovery & Magisk rooting on Galaxy devices.
   - - meta
     - name: twitter:image
-      content: https://awesome-root.org/images/og.png
+      content: https://awesome-android-root.org/images/og.png
   - - meta
     - name: keywords
       content: samsung galaxy root guide, samsung rooting 2025, samsung bootloader unlock, samsung magisk guide, samsung custom recovery, galaxy s24 root, galaxy s23 root, galaxy a series root, one ui root, samsung odin, heimdall samsung, twrp samsung, lineageos samsung, samsung knox bypass, samsung root safety

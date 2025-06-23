@@ -7,7 +7,7 @@ head:
   # Canonical and preconnect links
   - - link
     - rel: canonical
-      href: https://awesome-root.org/
+      href: https://awesome-android-root.org/
   - - link
     - rel: preconnect
       href: https://github.com
@@ -38,13 +38,13 @@ head:
       content: Discover 215+ curated Android root apps, powerful Magisk & LSPosed modules, comprehensive rooting guides, and essential tools for ultimate Android customization in 2025.
   - - meta
     - property: og:url
-      content: https://awesome-root.org/
+      content: https://awesome-android-root.org/
   - - meta
     - property: og:image
-      content: https://awesome-root.org/images/og.png
+      content: https://awesome-android-root.org/images/og.png
   - - meta
     - property: og:image:secure_url
-      content: https://awesome-root.org/images/og.png
+      content: https://awesome-android-root.org/images/og.png
   - - meta
     - property: og:image:alt
       content: Awesome Android Root - Best Root Apps & Modules 2025
@@ -82,7 +82,7 @@ head:
       content: Ultimate collection of 215+ Android root apps, Magisk modules, LSPosed frameworks & comprehensive rooting guides for 2025.
   - - meta
     - name: twitter:image
-      content: https://awesome-root.org/images/og.png
+      content: https://awesome-android-root.org/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Awesome Android Root collection preview - 215+ curated apps and modules
@@ -179,7 +179,7 @@ head:
         "dateModified": "2025-06-16T00:00:00Z",
         "image": {
           "@type": "ImageObject",
-          "url": "https://awesome-root.org/images/og.png",
+          "url": "https://awesome-android-root.org/images/og.png",
           "width": 1200,
           "height": 630,
           "caption": "Awesome Android Root - Best Root Apps & Modules 2025"
@@ -198,7 +198,7 @@ head:
           "url": "https://awesome-root.org",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://awesome-root.org/images/logo.svg",
+            "url": "https://awesome-android-root.org/images/logo.svg",
             "caption": "Awesome Android Root Logo"
           },
           "sameAs": [
@@ -300,13 +300,13 @@ head:
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://awesome-root.org/"
+              "item": "https://awesome-android-root.org/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Root Guides",
-              "item": "https://awesome-root.org/rooting-guides/"
+              "item": "https://awesome-android-root.org/rooting-guides/"
             }
           ]
         }

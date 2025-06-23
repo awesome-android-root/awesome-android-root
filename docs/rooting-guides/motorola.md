@@ -5,7 +5,7 @@ description: "Complete step-by-step guide to root Motorola phones in 2025. Learn
 head:
   - - link
     - rel: canonical
-      href: https://awesome-root.org/rooting-guides/motorola
+      href: https://awesome-android-root.org/rooting-guides/motorola
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: Root your Motorola device with this comprehensive guide covering bootloader unlock, Magisk installation, and step-by-step instructions for Motorola Edge 30 Neo.
   - - meta
     - property: og:url
-      content: https://awesome-root.org/rooting-guides/motorola
+      content: https://awesome-android-root.org/rooting-guides/motorola
   - - meta
     - property: og:image
-      content: https://awesome-root.org/images/og.png
+      content: https://awesome-android-root.org/images/og.png
   - - meta
     - name: twitter:card
       content: summary_large_image

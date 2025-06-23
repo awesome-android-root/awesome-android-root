@@ -5,7 +5,7 @@ description: "Learn how to contribute root apps, Magisk modules and guides to th
 head:
   - - link
     - rel: canonical
-      href: https://awesome-root.org/contributing
+      href: https://awesome-android-root.org/contributing
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: Help grow the ultimate Android root resource collection. Learn how to contribute apps, Magisk modules, rooting guides, and more with our comprehensive guidelines.
   - - meta
     - property: og:url
-      content: https://awesome-root.org/contributing
+      content: https://awesome-android-root.org/contributing
   - - meta
     - property: og:image
-      content: https://awesome-root.org/images/og.png
+      content: https://awesome-android-root.org/images/og.png
   - - meta
     - name: twitter:card
       content: summary_large_image

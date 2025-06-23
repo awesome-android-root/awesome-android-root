@@ -5,7 +5,7 @@ description: "Get answers to common Android rooting questions about safety, secu
 head:
   - - link
     - rel: canonical
-      href: https://awesome-root.org/faqs
+      href: https://awesome-android-root.org/faqs
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: Comprehensive FAQ covering Android rooting safety, security, troubleshooting, and best practices. Get expert answers to common root questions and solutions.
   - - meta
     - property: og:url
-      content: https://awesome-root.org/faqs
+      content: https://awesome-android-root.org/faqs
   - - meta
     - property: og:image
-      content: https://awesome-root.org/images/og.png
+      content: https://awesome-android-root.org/images/og.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -173,7 +173,7 @@ If your touchscreen malfunctions, try:
 Use this guide:
 [TheUnrealZaka's Guide for Hiding Root Detections](https://gist.github.com/TheUnrealZaka/042040a1700ad869d54e781507a9ba4f)
 
-Or visit: [Hide Root Section](https://awesome-root.org/#hide-root) of Awesome Root Project.
+Or visit: [Hide Root Section](https://awesome-android-root.org/#hide-root) of Awesome Root Project.
 
 
 #### Why aren't root apps detecting root access?

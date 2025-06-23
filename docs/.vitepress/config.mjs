@@ -155,7 +155,7 @@ export default defineConfig({
           {
             text: 'Project Links',
             items: [
-              { text: '🏠 Main Website', link: 'https://awesome-root.org/' },
+              { text: '🏠 Main Website', link: 'https://awesome-android-root.org' },
               { text: '📱 GitHub Repository', link: 'https://github.com/awesome-android-root/awesome-android-root' },
               { text: '💖 Support Project', link: 'https://opencollective.com/awesome-android-root-official' }
             ]
