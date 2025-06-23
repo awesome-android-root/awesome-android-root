@@ -239,6 +239,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 [↑ Back to top](#table-of-contents)
 
 #### Other App Mods
+- **[ChromeXt](https://github.com/JingMatrix/ChromeXt)** - UserScript and DevTools supports for Chromium based and WebView based browsers. `FOSS` `[LSP]`
 - **[F*ck for VIP](https://github.com/Xposed-Modules-Repo/com.bug.hookvip)** - A module to unlock some software memberships and remove ads.Check releases section for list of supported apps. `Proprietary` `[LSP]`
 - **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
 - **[Maps tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.mapstweaks)** - Collection of the maps UI tweaks for Google maps, Yandex maps and Yandex Navi. `Proprietary` `[LSP]`
