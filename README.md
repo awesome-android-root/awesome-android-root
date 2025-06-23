@@ -219,6 +219,9 @@ A comprehensive guide covering different rooting methods, decision-making and di
 - **[WeChat Auxiliary](https://github.com/HdShare/WAuxiliary_Public)** - Various tweaks for Wechat. `Proprietary` `[LSP]`
 - **[X](https://github.com/Xposed-Modules-Repo/cn.android.x)** - Add extra features to Wechat. `Proprietary` `[LSP]`
 
+##### Weibo
+- **[WeiboHelper](https://github.com/Xposed-Modules-Repo/com.skyhand.sinahelper)** - `Proprietary` `[LSP]`
+
 ##### Whatsapp
 - **[WA Enhancer](https://github.com/Dev4Mod/WaEnhancer)** - A Xposed module that enhances your WhatsApp experience. `FOSS` `[LSP]`
 - **[Wa Revamp](https://github.com/Xposed-Modules-Repo/its.madruga.warevamp)** - Add various functions like download staus and view once, hide read message, Statuses and
