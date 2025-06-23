@@ -7,7 +7,7 @@
 
 <!-- Homepage -->
 <url>
-  <loc>https://awesome-root.org</loc>
+  <loc>https://awesome-android-root.org</loc>
   <lastmod>2025-06-11T07:09:19+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
@@ -15,13 +15,13 @@
 
 <!-- Main sections -->
 <url>
-  <loc>https://awesome-root.org/rooting-guides</loc>
+  <loc>https://awesome-android-root.org/rooting-guides</loc>
   <lastmod>2025-06-11T07:09:19+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://awesome-root.org/faqs</loc>
+  <loc>https://awesome-android-root.org/faqs</loc>
   <lastmod>2025-06-11T07:09:19+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
@@ -29,31 +29,31 @@
 
 <!-- Device-specific guides (popular brands) -->
 <url>
-  <loc>https://awesome-root.org/rooting-guides/xiaomi</loc>
+  <loc>https://awesome-android-root.org/rooting-guides/xiaomi</loc>
   <lastmod>2025-06-11T07:09:19+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-root.org/rooting-guides/motorola</loc>
+  <loc>https://awesome-android-root.org/rooting-guides/motorola</loc>
   <lastmod>2025-06-11T07:09:19+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-root.org/rooting-guides/samsung</loc>
+  <loc>https://awesome-android-root.org/rooting-guides/samsung</loc>
   <lastmod>2025-06-11T07:09:19+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.75</priority>
 </url>
 <url>
-  <loc>https://awesome-root.org/rooting-guides/pixel</loc>
+  <loc>https://awesome-android-root.org/rooting-guides/pixel</loc>
   <lastmod>2025-06-11T07:09:19+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.75</priority>
 </url>
 <url>
-  <loc>https://awesome-root.org/rooting-guides/oneplus</loc>
+  <loc>https://awesome-android-root.org/rooting-guides/oneplus</loc>
   <lastmod>2025-06-11T07:09:19+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.75</priority>
@@ -61,7 +61,7 @@
 
 <!-- Additional pages -->
 <url>
-  <loc>https://awesome-root.org/contributing</loc>
+  <loc>https://awesome-android-root.org/contributing</loc>
   <lastmod>2025-06-11T07:09:19+00:00</lastmod>
   <changefreq>yearly</changefreq>
   <priority>0.70</priority>
