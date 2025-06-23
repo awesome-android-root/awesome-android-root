@@ -2,4 +2,3 @@ docs/.vitepress/dist
 docs/.vitepress/cache
 node_modules
 docs/index.md
-docs/stats.md
