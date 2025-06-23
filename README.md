@@ -55,6 +55,7 @@
       - [QQ](#qq)
       - [Telegram](#telegram)
       - [WeChat](#wechat)
+      - [Weibo](#weibo)
       - [WhatsApp](#whatsapp)
       - [X/Twitter](#xtwitter)
       - [YouTube, Spotify, Google Photos](#youtube-spotify-google-photos)
