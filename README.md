@@ -21,7 +21,7 @@
 
 ---
 
-### 🚀 Quick Navigation
+## 🚀 Quick Navigation
 > **New to rooting?** Start with [What is Root Access?](#what-is-root-access) and [Root Guide](#root-guide-and-solutions)  
 > **Looking for apps?** Jump to [Root Apps](#root-apps) or use the [Table of Contents](#table-of-contents)  
 > **Need help?** Check our [FAQs](#faqs) or join the [Community](#community--resources)
