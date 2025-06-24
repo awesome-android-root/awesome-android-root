@@ -21,10 +21,10 @@
 
 
 ## 🚀 Quick Navigation
-> **New to rooting?** Start with [What is Root Access?](#what-is-root-access) and [Root Guide](#root-guide-and-solutions)  
-> **Looking for apps?** Jump to [Root Apps](#root-apps) or use the [Table of Contents](#table-of-contents)  
-> **Need help?** Check our [FAQs](#faqs) or join the [Community](#community--resources)
-  
+
+- **New to rooting?** → [What is Root Access?](#what-is-root-access) • [Root Guide](#root-guide-and-solutions)  
+- **Looking for apps?** → [Root Apps](#root-apps) • [Table of Contents](#table-of-contents)  
+- **Need help?** → [FAQs](#faqs) • [Community](#community--resources)
 
 ### Support This Project
 <div align="center" class="aar-intro">
