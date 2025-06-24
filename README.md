@@ -5,11 +5,11 @@
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=green)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
 [![Total Entries](https://img.shields.io/badge/Total%20Entries-220+-blue?style=for-the-badge&logo=android)](#root-apps)
-[![Support via Open Collective](https://img.shields.io/badge/Support%20via-Open%20Collective-blue?style=for-the-badge&logo=opencollective)](https://opencollective.com/awesome-android-root-official)
+[![Support via Open Collective](https://img.shields.io/badge/Support%20via-Open%20Collective-blue?style=for-the-badge&logo=opencollective)](https://opencollective.com/awesome-android-root-officia)
 
 </div>
 
-**🚀 Unlock the full potential of your Android device!** This is your ultimate, community-curated guide to gain root access, customize your system, enhance performance, and everything related to Android rooting.
+**🚀 Unlock the full potential of your Android device!** This is your ultimate, community-curated guide to gaining root access, customizing your system, enhancing performance, and everything related to Android rooting.
 
 **What you'll find inside:**
 
@@ -18,6 +18,13 @@
 *   🔧 **Popular LSPosed Modules:** Dive into modules that allow control and modification of app and system behavior.
 *   📖 **In-Depth Rooting Guides:** Follow the rooting process with step-by-step guides and troubleshooting solutions.
 *   🛡️ **Safety & Security:** Learn best practices for rooting safely and managing root access.
+
+---
+
+### 🚀 Quick Navigation
+> **New to rooting?** Start with [What is Root Access?](#what-is-root-access) and [Root Guide](#root-guide-and-solutions)  
+> **Looking for apps?** Jump to [Root Apps](#root-apps) or use the [Table of Contents](#table-of-contents)  
+> **Need help?** Check our [FAQs](#faqs) or join the [Community](#community--resources)
   
 
 ## Support This Project
@@ -33,78 +40,96 @@
 
 ## Table of Contents
 <details>
-<summary>👉 Tap to expand</summary>
+<summary>👉 Tap to expand navigation</summary>
 
+### 📚 Getting Started
 - [What is Root Access?](#what-is-root-access)
 - [Root Guide and Solutions](#root-guide-and-solutions)
 - [Glossary](#glossary)
-- [Root Apps](#root-apps)
-  - [Ad Blocking](#ad-blocking)
-  - [App Management](#app-management)
-    - [App Isolation and Cloning](#app-isolation-and-cloning)
-    - [App Managers](#app-managers)
-    - [App Markets](#app-markets)
-    - [App Permissions](#app-permissions)
-  - [App Mods](#app-mods)
-    - [Social Media Mods](#social-media-mods)
-      - [Bilibili](#bilibili)
-      - [Discord](#discord)
-      - [Duolingo](#duolingo)
-      - [Grindr](#grindr)
-      - [Instagram](#instagram)
-      - [Line](#line)
-      - [QQ](#qq)
-      - [Telegram](#telegram)
-      - [WeChat](#wechat)
-      - [Weibo](#weibo)
-      - [WhatsApp](#whatsapp)
-      - [X/Twitter](#xtwitter)
-      - [YouTube, Spotify, Google Photos](#youtube-spotify-google-photos)
-    - [Other App Mods](#other-app-mods)
-    - [Patching](#patching)
-  - [Audio Enhancement](#audio-enhancement)
-  - [Automation](#automation)
-  - [Backup and Restore](#backup-and-restore)
-  - [Battery Management](#battery-management)
-  - [Cleaning Apps](#cleaning-apps)
-  - [Communication Tools](#communication-tools)
-    - [Call Recorders](#call-recorders)
-    - [Contacts](#contacts)
-    - [SMS](#sms)
-  - [Customizations](#customizations)
-    - [Boot Animations](#boot-animations)
-    - [Font Managers](#font-managers)
-    - [Launchers](#launchers)
-    - [Navigation](#navigation)
-    - [OS Customizations](#os-customizations)
-      - [AOSP (Android Open Source Project)](#aosp-android-open-source-project)
-      - [ColorOS (Oppo)](#coloros-oppo)
-      - [Global](#global)
-      - [HyperOS (Xiaomi)](#hyperos-xiaomi)
-      - [One UI (Samsung)](#one-ui-samsung)
-      - [Onyx](#onyx)
-      - [Oxygen OS (OnePlus)](#oxygen-os-oneplus)
-    - [Theming](#theming)
-  - [Debloating](#debloating)
-  - [Development and Debugging](#development-and-debugging)
-  - [Device Control and Hardware](#device-control-and-hardware)
-  - [File Management](#file-management)
-  - [Kernel Management](#kernel-management)
-  - [Location and GPS](#location-and-gps)
-  - [Network Tools](#network-tools)
-  - [NFC Tools](#nfc-tools)
-  - [Performance Improvements](#performance-improvements)
-  - [Privacy and Security](#privacy-and-security)
-  - [Revanced](#revanced)
-  - [Root Specific](#root-specific)
-    - [Bootloop Protection](#bootloop-protection)
-    - [Root Detection](#root-detection)
-    - [Root Hiding](#root-hiding)
-    - [Managers](#managers)
-  - [Screen and Display](#screen-and-display)
-  - [System Modifications](#system-modifications)
-  - [Termux](#termux)
-  - [Tools](#tools)
+
+### 📱 Root Apps
+#### 🚫 Ad & Content Blocking
+- [Ad Blocking](#ad-blocking)
+
+#### 📦 App Management & Control
+- [App Management](#app-management)
+  - [App Isolation and Cloning](#app-isolation-and-cloning)
+  - [App Managers](#app-managers)
+  - [App Markets](#app-markets)
+  - [App Permissions](#app-permissions)
+
+#### 🔧 App Modifications
+- [App Mods](#app-mods)
+  - [Social Media Mods](#social-media-mods)
+    - [Bilibili](#bilibili) • [Discord](#discord) • [Duolingo](#duolingo) • [Grindr](#grindr)
+    - [Instagram](#instagram) • [Line](#line) • [QQ](#qq) • [Telegram](#telegram)
+    - [WeChat](#wechat) • [Weibo](#weibo) • [WhatsApp](#whatsapp) • [X/Twitter](#xtwitter)
+    - [YouTube, Spotify, Google Photos](#youtube-spotify-google-photos)
+  - [Other App Mods](#other-app-mods)
+  - [Patching](#patching)
+
+#### 🎵 Audio & Media
+- [Audio Enhancement](#audio-enhancement)
+
+#### ⚡ System & Performance
+- [Automation](#automation)
+- [Battery Management](#battery-management)
+- [Performance Improvements](#performance-improvements)
+
+#### 🗂️ Data & Storage
+- [Backup and Restore](#backup-and-restore)
+- [Cleaning Apps](#cleaning-apps)
+- [File Management](#file-management)
+
+#### 📞 Communication
+- [Communication Tools](#communication-tools)
+  - [Call Recorders](#call-recorders)
+  - [Contacts](#contacts)
+  - [SMS](#sms)
+
+#### 🎨 Customization & Theming
+- [Customizations](#customizations)
+  - [Boot Animations](#boot-animations)
+  - [Font Managers](#font-managers)
+  - [Launchers](#launchers)
+  - [Navigation](#navigation)
+  - [OS Customizations](#os-customizations)
+    - [AOSP](#aosp-android-open-source-project) • [ColorOS](#coloros-oppo) • [Global](#global)
+    - [HyperOS](#hyperos-xiaomi) • [One UI](#one-ui-samsung) • [Onyx](#onyx)
+    - [Oxygen OS](#oxygen-os-oneplus)
+  - [Theming](#theming)
+
+#### 🧹 System Optimization
+- [Debloating](#debloating)
+- [Kernel Management](#kernel-management)
+- [System Modifications](#system-modifications)
+
+#### 🛠️ Development & Tools
+- [Development and Debugging](#development-and-debugging)
+- [Device Control and Hardware](#device-control-and-hardware)
+- [Termux](#termux)
+- [Tools](#tools)
+
+#### 🌐 Network & Connectivity
+- [Location and GPS](#location-and-gps)
+- [Network Tools](#network-tools)
+- [NFC Tools](#nfc-tools)
+
+#### 🛡️ Security & Privacy
+- [Privacy and Security](#privacy-and-security)
+- [ReVanced](#revanced)
+
+#### 🔓 Root Management
+- [Root Specific](#root-specific)
+  - [Bootloop Protection](#bootloop-protection)
+  - [Root Detection](#root-detection)
+  - [Root Hiding](#root-hiding)
+  - [Managers](#managers)
+
+#### 📺 Display & Interface
+- [Screen and Display](#screen-and-display)
+
+### 📖 Resources & Help
 - [Important Notes](#important-notes)
 - [FAQs](#faqs)
 - [Community & Resources](#community--resources)
@@ -114,7 +139,7 @@
 
 </details>
 
-## What is Root Access
+## What is Root Access?
 Android rooting is the process of gaining privileged control (known as root access) over various Android subsystems. 
 
 Rooting allows overcoming limitations that carriers and hardware manufacturers put on some devices, resulting in the ability to alter or replace system applications and settings, run specialized apps that require administrator-level permissions, or perform other operations that are otherwise inaccessible to a normal Android user.
@@ -122,31 +147,31 @@ Rooting allows overcoming limitations that carriers and hardware manufacturers p
 ## Root Guide and Solutions
 A comprehensive guide covering different rooting methods, decision-making and different frameworks.
 
-[Read the complete rooting guide →](./docs/rooting-guides/index.md)
+[📖 Read the complete rooting guide →](./docs/rooting-guides/index.md)
 
 
 ## Glossary
 -  **`FOSS`** = Free and Open Source Software
-> Indicates software where the source code is openly available. This allows anyone to inspect, modify, and distribute the software, promoting transparency and community collaboration.
+> Software where the source code is openly available. This allows anyone to inspect, modify, and distribute the software, promoting transparency and community collaboration.
 -  **`Proprietary`** = Missing license or Closed-source software
-> Refers to software that is closed-source, meaning its underlying source code is not publicly available. This category may also include software with unclear or missing licensing terms.
+> Software that is closed-source, meaning its underlying source code is not publicly available. This category may also include software with unclear or missing licensing terms.
 -  **`[M]`** = Magisk Module
-> Signifies an add-on specifically designed for the Magisk and require Magisk framework to be installed and active on the device to function. 
+> An add-on specifically designed for Magisk that requires the Magisk framework to be installed and active on the device to function. 
 -  **`[LSP]`** = Requires LSPosed Framework
-> Denotes that the app or modification needs the LSPosed Framework to be installed and active on the device to function. 
+> The app or modification needs the LSPosed Framework to be installed and active on the device to function. 
 
 - _**Apps are organized in alphabetical order within each category.**_
 
 ## Root Apps
 ### Ad Blocking
 - **[AdAway](https://adaway.org/)** - Open-source ad blocker using hosts file. `FOSS`
-- **[AdClose](https://github.com/Xposed-Modules-Repo/com.close.hook.ads/)** - Prevents the initial loading of the advertising SDK within the application and intercept application advertising requests to block ads. `Proprietary` `[LSP]`
+- **[AdClose](https://github.com/Xposed-Modules-Repo/com.close.hook.ads/)** - Prevents the initial loading of the advertising SDK within the application and intercepts application advertising requests to block ads. `Proprietary` `[LSP]`
 - **[AdGuard](https://adguard.com/en/adguard-android/overview.html)** - Comprehensive ad blocking solution. `Proprietary`
-- **[bindhosts](https://github.com/bindhosts/bindhosts)** - Systemless hosts for Apatch, KernelSU and Magisk that is fully standalone & self-updating. - `FOSS` `[M]`
+- **[bindhosts](https://github.com/bindhosts/bindhosts)** - Systemless hosts for APatch, KernelSU and Magisk that is fully standalone & self-updating. `FOSS` `[M]`
 - **[Blokada](https://blokada.org/)** - Advanced ad blocker with VPN functionality. `Proprietary`
 - **[Cubic-AdBlock](https://github.com/Vaz15k/Cubic-AdBlock)** - A simple AdBlock module based on the hosts file. `FOSS` `[M]`
 - **[Re-Malwack](https://github.com/Magisk-Modules-Alt-Repo/Re-Malwack)** - A fully-fledged ad-block module. Contains all your needs ✨ `FOSS` `[M]`
-- **[StevenBlock ](https://github.com/mikropsoft/StevenBlock)** - Ad Blocking Module for Android supporting Magisk, KernelSU & APatch. `FOSS` `[M]`
+- **[StevenBlock](https://github.com/mikropsoft/StevenBlock)** - Ad Blocking Module for Android supporting Magisk, KernelSU & APatch. `FOSS` `[M]`
 - **[systemless-adblocker](https://github.com/Magisk-Modules-Alt-Repo/systemless-adblocker)** - Ultimate adblocker module derived from gloeyisk/systemless-hosts. `FOSS` `[M]`
 - **[Systemless hosts KernelSU module](https://github.com/symbuzzer/systemless-hosts-KernelSU-module)** - Required module to use applications such as AdAway on KernelSU and APatch. `FOSS`
 
@@ -154,7 +179,7 @@ A comprehensive guide covering different rooting methods, decision-making and di
 
 ### App Management
 #### App Isolation and Cloning
-- **[Insular](https://gitlab.com/secure-system/Insular)** -Isolate your big brother app.A fork based on the excellent Island. `FOSS`
+- **[Insular](https://gitlab.com/secure-system/Insular)** - Isolate your big brother app. A fork based on the excellent Island. `FOSS`
 - **[Island](https://github.com/oasisfeng/island)** - App isolation and cloning. `FOSS`
 - **[Shelter](https://gitea.angry.im/PeterCxy/Shelter)** - Isolate and clone apps. `FOSS`
 
@@ -212,58 +237,57 @@ A comprehensive guide covering different rooting methods, decision-making and di
 
 ##### Telegram
 - **[Re-Telegram](https://github.com/Sakion-Team/Re-Telegram/)** - Adds features like AntiAntiForward, AntiRecall, NoSponsoredMessages, ProhibitChannelSwitching and many more to various Telegram clients. `FOSS` `[LSP]`
+- **[Telegram Speed Hook](https://github.com/araafroyall/Telegram-Speed-Hook)** - An Xposed Module to increase Telegram speed. `FOSS` `[LSP]`
 - **[Telegram Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.sidestories)** - Remove action bar stories in the Telegram messenger (+block unmute button). `Proprietary` `[LSP]`
-- **[Telegram Speed Hook](https://github.com/araafroyall/Telegram-Speed-Hook)** - An Xposed Module to Increase Telegram Speed.`FOSS` `[LSP]`
-- **[TeleVip](https://github.com/Xposed-Modules-Repo/com.my.televip/)** - A module for modifying Telegram with Hide seen status, unlocking channel restrictions etc. `Proprietary` `[LSP]`
-- **[TMoe](https://github.com/cinit/TMoe)** - Adds various tweaks to various telegram clients. `FOSS` `[LSP]`
+- **[TeleVip](https://github.com/Xposed-Modules-Repo/com.my.televip/)** - A module for modifying Telegram with hide seen status, unlocking channel restrictions etc. `Proprietary` `[LSP]`
+- **[TMoe](https://github.com/cinit/TMoe)** - Adds various tweaks to various Telegram clients. `FOSS` `[LSP]`
 
-##### Wechat
-- **[MaskWechat](https://github.com/Mingyueyixi/MaskWechat)** - A WeChat Xposed module, that can hide the chat records of specific users to prevent private chats from being peeked by third parties. `FOSS` `[LSP]`
-- **[WeChat Auxiliary](https://github.com/HdShare/WAuxiliary_Public)** - Various tweaks for Wechat. `Proprietary` `[LSP]`
-- **[X](https://github.com/Xposed-Modules-Repo/cn.android.x)** - Add extra features to Wechat. `Proprietary` `[LSP]`
+##### WeChat
+- **[MaskWechat](https://github.com/Mingyueyixi/MaskWechat)** - A WeChat Xposed module that can hide the chat records of specific users to prevent private chats from being peeked by third parties. `FOSS` `[LSP]`
+- **[WeChat Auxiliary](https://github.com/HdShare/WAuxiliary_Public)** - Various tweaks for WeChat. `Proprietary` `[LSP]`
+- **[X](https://github.com/Xposed-Modules-Repo/cn.android.x)** - Add extra features to WeChat. `Proprietary` `[LSP]`
 
 ##### Weibo
 - **[WeiboHelper](https://github.com/Xposed-Modules-Repo/com.skyhand.sinahelper)** - Remove all available advertisements and recommendations from Weibo. `Proprietary` `[LSP]`
 
-##### Whatsapp
+##### WhatsApp
 - **[WA Enhancer](https://github.com/Dev4Mod/WaEnhancer)** - A Xposed module that enhances your WhatsApp experience. `FOSS` `[LSP]`
-- **[Wa Revamp](https://github.com/Xposed-Modules-Repo/its.madruga.warevamp)** - Add various functions like download staus and view once, hide read message, Statuses and
-Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
+- **[WA Revamp](https://github.com/Xposed-Modules-Repo/its.madruga.warevamp)** - Add various functions like download status and view once, hide read messages, statuses and archived chats to official WhatsApp. `Proprietary` `[LSP]`
 
 ##### X/Twitter
 - **[Hachidori](https://github.com/Xposed-Modules-Repo/com.twifucker.hachidori/)** - Adds downloading media, hiding ads and other privacy features to X (formerly Twitter). `Proprietary` `[LSP]`
 
-##### Youtube, Spotify, Google Photos
-- **[RevancedXposed](https://github.com/chsbuffer/RevancedXposed)** - Youtube, Spotify & YT Music block ads and background playback, Google Photos Unlimited backup Xposed module. `FOSS` `[LSP]`
-- **[XposedPhotosFix](https://github.com/RevealedSoulEven/XposedPhotosFIX)** - Prevents Google Photos app to merge all folders in Camera folder and create separate albums for each folders, useful for backup. `[LSP]`
+##### YouTube, Spotify, Google Photos
+- **[RevancedXposed](https://github.com/chsbuffer/RevancedXposed)** - YouTube, Spotify & YT Music block ads and background playback, Google Photos unlimited backup Xposed module. `FOSS` `[LSP]`
+- **[XposedPhotosFix](https://github.com/RevealedSoulEven/XposedPhotosFIX)** - Prevents Google Photos app from merging all folders in Camera folder and creates separate albums for each folder, useful for backup. `FOSS` `[LSP]`
 
 [↑ Back to top](#table-of-contents)
 
 #### Other App Mods
-- **[ChromeXt](https://github.com/JingMatrix/ChromeXt)** - UserScript and DevTools supports for Chromium based and WebView based browsers. `FOSS` `[LSP]`
-- **[F*ck for VIP](https://github.com/Xposed-Modules-Repo/com.bug.hookvip)** - A module to unlock some software memberships and remove ads.Check releases section for list of supported apps. `Proprietary` `[LSP]`
+- **[ChromeXt](https://github.com/JingMatrix/ChromeXt)** - UserScript and DevTools support for Chromium-based and WebView-based browsers. `FOSS` `[LSP]`
+- **[F*ck for VIP](https://github.com/Xposed-Modules-Repo/com.bug.hookvip)** - A module to unlock some software memberships and remove ads. Check releases section for list of supported apps. `Proprietary` `[LSP]`
 - **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
-- **[Maps tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.mapstweaks)** - Collection of the maps UI tweaks for Google maps, Yandex maps and Yandex Navi. `Proprietary` `[LSP]`
-- **[NewHookVip](https://github.com/Xposed-Modules-Repo/top.hookvip.pro)** - Xposed module for unlocking some App memberships and adding some extended functions. Check releases section for list of supported apps. `Proprietary` `[LSP]`
+- **[Maps Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.mapstweaks)** - Collection of maps UI tweaks for Google Maps, Yandex Maps and Yandex Navi. `Proprietary` `[LSP]`
+- **[NewHookVip](https://github.com/Xposed-Modules-Repo/top.hookvip.pro)** - Xposed module for unlocking some app memberships and adding some extended functions. Check releases section for list of supported apps. `Proprietary` `[LSP]`
 - **[Rboard Theme Manager](https://github.com/DerTyp7214/RboardThemeManagerV3)** - A customizable manager app for Google Gboard that allows users to download, apply, and manage various themes and sound settings. `FOSS` `[LSP]`
 - **[Smule Mod](https://github.com/michei69/SmuleXposed)** - A Smule Xposed module which enables free VIP and many other features. `FOSS` `[LSP]`
 - **[Wallet Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.wallettweaks/releases)** - UI tweaks for Google Wallet. `Proprietary` `[LSP]`
 - **[Yandex Maps Patcher](https://github.com/Xposed-Modules-Repo/ru.bluecat.yandexmapspatcher)** - Hides ads and intrusive services in the Yandex Maps app. `Proprietary` `[LSP]`
 
 #### Patching
-- **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (Use with caution) . `Proprietary`
+- **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (use with caution). `Proprietary`
 
 [↑ Back to top](#table-of-contents)
 
 ### Audio Enhancement
-- **[Audio Misc Settings](https://github.com/Magisk-Modules-Alt-Repo/audio-misc-settings)** - For setting miscellaneous audio configuration values (media audio volume steps (100 steps), raising the resampling quality, disabling the effects framework, etc.) `FOSS` `[M]`
 - **[Audio jitter silencer](https://github.com/Magisk-Modules-Alt-Repo/audio-jitter-silencer)** - For avoiding distortion on all digital audio outputs, it disables audio jitter generators (w.r.t. battery draining & optimizations, and wireless connectivity). `FOSS` `[M]`
-- **[Audio SampleRate Changer](https://github.com/Magisk-Modules-Alt-Repo/audio-samplerate-changer)** - A Magisk module changing audio samplerates at the system-wide mixer for the best Hi-Fi experience. `FOSS` `[M]`
+- **[Audio Misc Settings](https://github.com/Magisk-Modules-Alt-Repo/audio-misc-settings)** - For setting miscellaneous audio configuration values (media audio volume steps (100 steps), raising the resampling quality, disabling the effects framework, etc.) `FOSS` `[M]`
+- **[Audio SampleRate Changer](https://github.com/Magisk-Modules-Alt-Repo/audio-samplerate-changer)** - A Magisk module changing audio sample rates at the system-wide mixer for the best Hi-Fi experience. `FOSS` `[M]`
 - **[DisableAudioFocus](https://github.com/auag0/DisableAudioFocus)** - Allows you to disable audio focus, enabling you to play multiple videos and audios simultaneously. `FOSS` `[LSP]`
-- **[Hi-Res Audio Enabler](https://github.com/reiryuki/Hi-Res-Audio-Enabler-Magisk-Module)** - Enables high resolution 24 or 32 bit width audio output if device is supported. `FOSS` `[M]`
+- **[Hi-Res Audio Enabler](https://github.com/reiryuki/Hi-Res-Audio-Enabler-Magisk-Module)** - Enables high resolution 24 or 32-bit width audio output if device is supported. `FOSS` `[M]`
 - **[NLSound](https://github.com/Briclyaz/NLSound_module_QCom)** - Magisk module for improving audio and microphone quality in your Snapdragon SoC device. `FOSS` `[M]`
-- **[XAudioCapture](https://github.com/Xposed-Modules-Repo/io.github.wzhy.xaudiocapture)** - Lets you to capture any audio stream you desire, bypassing these restrictions. `Proprietary` `[LSP]`
-- **[ViPER4Android FX Redesign](https://github.com/WSTxda/ViperFX-RE-Releases)** - An audio enhancement software that provides users with a wide range of customizable sound options. It allows to improve the audio quality by offering features such as equalizer settings, surround sound effects, bass boost, and more. `Proprietary` `[M]`
+- **[ViPER4Android FX Redesign](https://github.com/WSTxda/ViperFX-RE-Releases)** - An audio enhancement software that provides users with a wide range of customizable sound options. It allows improving the audio quality by offering features such as equalizer settings, surround sound effects, bass boost, and more. `Proprietary` `[M]`
+- **[XAudioCapture](https://github.com/Xposed-Modules-Repo/io.github.wzhy.xaudiocapture)** - Lets you capture any audio stream you desire, bypassing these restrictions. `Proprietary` `[LSP]`
 
 
 ### Automation
@@ -431,13 +455,13 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 
 ### Network Tools
 - **[MACsposed](https://github.com/DavidBerdik/MACsposed)** - Adds support for MAC Address spoofing to Android 12 through 15. `FOSS` `[LSP]`
-- **[Magisk-WiFiADB](https://github.com/mrh929/magisk-wifiadb)** - A magisk module to enable WiFi ADB automatically. `FOSS` `[M]`
-- **[NetGuard]** - Block access to the internet.Apps and addresses can individually be allowed or denied access to your Wi-Fi and/or mobile connection. `FOSS`
+- **[Magisk-WiFiADB](https://github.com/mrh929/magisk-wifiadb)** - A Magisk module to enable WiFi ADB automatically. `FOSS` `[M]`
+- **[NetGuard](https://github.com/M66B/NetGuard)** - Block access to the internet. Apps and addresses can individually be allowed or denied access to your Wi-Fi and/or mobile connection. `FOSS`
 - **[personalDNSfilter](https://github.com/IngoZenz/personaldnsfilter)** - A DNS filter proxy that provides local filtering of ads, malware, and tracking servers, supporting secure DNS protocols like DOH and DOT for enhanced privacy. `FOSS`
-- **[TTLChanger](https://github.com/aleksey-saenko/TTLChanger)** - Allows you to modify the default TTL (Time to Live) value. `FOSS`
-- **[VPN Hotspot](https://github.com/Mygod/VPNHotspot)** -  Share your VPN connection over hotspot or repeater. `FOSS`
 - **[SimbaDroid](https://github.com/buttercookie42/SimbaDroid)** - A simple SMB file server for Android. `FOSS`
+- **[TTLChanger](https://github.com/aleksey-saenko/TTLChanger)** - Allows you to modify the default TTL (Time to Live) value. `FOSS`
 - **[Unlimited Hotspot](https://github.com/felikcat/unlimited-hotspot)** - Remove speed restrictions on your hotspot internet and allows hotspots on any plan. `FOSS` `[M]`
+- **[VPN Hotspot](https://github.com/Mygod/VPNHotspot)** - Share your VPN connection over hotspot or repeater. `FOSS`
 - **[WiFi Password Viewer for MMRL](https://github.com/Googlers-Repo/wpd)** - WiFi Password Viewer for MMRL. `FOSS`
 
 [↑ Back to top](#table-of-contents)
@@ -465,18 +489,18 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 
 
 ### Privacy and Security
-- **[AFWall+](https://github.com/ukanth/afwall)** - Iptables-based firewall. `FOSS`
+- **[AFWall+](https://github.com/ukanth/afwall)** - iptables-based firewall. `FOSS`
 - **[AlternativeUnlockXposed](https://github.com/leohearts/AlternativeUnlockXposed)** - Unlock your Android phone with an alternative PIN. `FOSS` `[LSP]`
-- **[Amarok](https://github.com/deltazefiro/Amarok-Hider)** - Android application which enables you to hide your private files & apps with a single click -  `FOSS`
+- **[Amarok](https://github.com/deltazefiro/Amarok-Hider)** - Android application which enables you to hide your private files & apps with a single click. `FOSS`
 - **[Fyrypt](https://github.com/mirfatif/Fyrypt)** - Android firewall with UID + PID rules, dnscrypt-proxy management, and per-app live network monitoring. `Proprietary`
 - **[XPL-EX](https://github.com/0bbedCode/XPL-EX)** - Really simple to use privacy manager for Android 6.0 Marshmallow and later. `FOSS` `[LSP]`
 
 [↑ Back to top](#table-of-contents)
 
-### Revanced
+### ReVanced
 - **[Awesome ReVanced](https://github.com/Jman-Github/Awesome-ReVanced)** - A curated list of awesome ReVanced patches, resources and projects. `FOSS`
 - **[Privacy ReVanced Patches](https://github.com/jkennethcarino/privacy-revanced-patches)** - Privacy Patches for ReVanced to disable ads, trackers and analytics, always open Gboard in incognito mode, and much more. `FOSS`
-- **[Revanced Manager](https://github.com/ReVanced/revanced-manager)** - Modify YouTube, Youtube Music, spotify and many more with additional features. `FOSS`
+- **[ReVanced Manager](https://github.com/ReVanced/revanced-manager)** - Modify YouTube, YouTube Music, Spotify and many more with additional features. `FOSS`
 
 [↑ Back to top](#table-of-contents)
 
@@ -506,7 +530,7 @@ Archived Chats to official WhatsApp. `Proprietary` `[LSP]`
 - **[TrickyStore](https://github.com/5ec1cff/TrickyStore)** - Modifying the certificate chain generated for android key attestation. `Proprietary` `[M]`
 - **[Tricky Addon - Update Target List](https://github.com/KOWX712/Tricky-Addon-Update-Target-List)** - A KSU WebUI to configure Tricky Store target.txt. `FOSS` `[M]`
 - **[Zygisk-Assistant](https://github.com/snake-4/Zygisk-Assistant)** - A Zygisk module to hide root for KernelSU, Magisk and APatch. `FOSS` `[M]`
-- **[Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)**  - Standalone implementation of Zygisk, providing Zygisk API support for KernelSU and a replacement of Magisk's built-in Zygisk. `Proprietary` `[M]`
+- **[Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)** - Standalone implementation of Zygisk, providing Zygisk API support for KernelSU and a replacement of Magisk's built-in Zygisk. `Proprietary` `[M]`
 
 :exclamation: Root hiding is a constant cat-and-mouse game. These methods might break with updates to Google Play Services or specific apps.
 
@@ -570,17 +594,17 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 ## Important Notes
 
-:warning: **Warning: Proceed with Extreme Caution**
-Root apps possess the power to fundamentally alter your Android system. Incorrect usage can lead to serious issues, including data loss, system instability, and rendering your device unusable (bricking).
+> ⚠️ **Warning: Proceed with Extreme Caution**  
+> Root apps possess the power to fundamentally alter your Android system. Incorrect usage can lead to serious issues, including data loss, system instability, and rendering your device unusable (bricking).
 
 ### Key Considerations:
 
-*   :exclamation: **System Modification Risks:** These apps can modify core system files, potentially causing boot loops, crashes, or other malfunctions.
-*   :warning: **Data Loss Potential:** Mistakes or incompatible modifications can result in the loss of your personal data. *Always back up your device before using root apps.*
-*   :lock: **Security Implications:** Granting root access can increase your device's vulnerability to malware and other security threats.
-*   :information_source: **Community-Sourced Information:** This list is a collection of community suggestions. We do not guarantee the safety, functionality, or suitability of every app.
-*   :memo: **User Responsibility:** You are solely responsible for any consequences resulting from the use of these applications. Use them at your own risk.
-*   :bulb: **Recommendation:** Thoroughly research any root app before installation and understand its purpose and potential side effects.
+*   🚨 **System Modification Risks:** These apps can modify core system files, potentially causing boot loops, crashes, or other malfunctions.
+*   💾 **Data Loss Potential:** Mistakes or incompatible modifications can result in the loss of your personal data. *Always back up your device before using root apps.*
+*   🔒 **Security Implications:** Granting root access can increase your device's vulnerability to malware and other security threats.
+*   ℹ️ **Community-Sourced Information:** This list is a collection of community suggestions. We do not guarantee the safety, functionality, or suitability of every app.
+*   👤 **User Responsibility:** You are solely responsible for any consequences resulting from the use of these applications. Use them at your own risk.
+*   💡 **Recommendation:** Thoroughly research any root app before installation and understand its purpose and potential side effects.
 
 [↑ Back to top](#table-of-contents)
 
@@ -588,19 +612,18 @@ Root apps possess the power to fundamentally alter your Android system. Incorrec
 
 Quick answers to common rooting questions:
 
-### Root Basics
+### 📚 Root Basics
 - [What is Android root?](./docs/faqs.md#what-is-root)
 - [Is rooting safe?](./docs/faqs.md#is-rooting-safe)
 - [Will I lose my warranty?](./docs/faqs.md#will-rooting-void-my-warranty)
 
-### Troubleshooting
+### 🔧 Troubleshooting
 - [SafetyNet/Play Integrity issues](./docs/faqs.md#how-do-i-fix-safetynet-play-integrity-issues)
 - [Bootloop recovery](./docs/faqs.md#my-device-is-stuck-in-a-boot-loop-after-rooting-what-can-i-do)
 
-[View all FAQs →](./docs/faqs.md)
+[📖 View all FAQs →](./docs/faqs.md)
 
 [↑ Back to top](#table-of-contents)
-
 ## Community & Resources
 
 ### Useful Links
@@ -620,12 +643,12 @@ Quick answers to common rooting questions:
 ## Contributing
 
 ### Help Us Grow
--  **Star this repo** if it helped you.
--  **Share** with fellow Android enthusiasts.
--  **Report** broken links or outdated apps.
--  **Suggest** new apps via [issues](https://github.com/awesome-android-root/awesome-android-root/issues).
+- ⭐ **Star this repo** if it helped you.
+- 📢 **Share** with fellow Android enthusiasts.
+- 🐛 **Report** broken links or outdated apps.
+- 💡 **Suggest** new apps via [issues](https://github.com/awesome-android-root/awesome-android-root/issues).
 
-[Read Contribution Guidelines →](./docs/contributing.md)
+[📖 Read Contribution Guidelines →](./docs/contributing.md)
 
 [↑ Back to top](#table-of-contents)
 
