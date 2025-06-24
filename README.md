@@ -600,6 +600,7 @@ Quick answers to common rooting questions:
 [📖 View all FAQs →](./docs/faqs.md)
 
 [↑ Back to top](#table-of-contents)
+
 ## Community & Resources
 
 ### Useful Links
