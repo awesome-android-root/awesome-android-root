@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "A curated list of best Android root applications and best magisk modules. Features over 200+ apps across categories like system mods, privacy, customization, and development tools.",
   "private": true,
-"homepage": "https://awesome-root.org",
+"homepage": "https://awesome-android-root.org",
   "repository": {
     "type": "git",
     "url": "https://github.com/awesome-android-root/awesome-android-root.git"
