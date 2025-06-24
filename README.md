@@ -647,7 +647,7 @@ Quick answers to common rooting questions:
 
 [![Become a Sponsor](https://img.shields.io/badge/💖-Become%20a%20Sponsor-ff69b4?style=for-the-badge)](https://opencollective.com/awesome-android-root-official)
 [![GitHub Stars](https://img.shields.io/badge/⭐-Star%20this%20Repo-yellow?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
-[![Report Issue](https://img.shields.io/badge/🐛-Report%Issue-green?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root)
+[![Report Issue](https://img.shields.io/badge/🐛-Report%20Issue-green?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root)
 
 > **Your support enables us to:** Keep this list updated with the latest apps & modules • Maintain comprehensive documentation • Improve project infrastructure & tools • Grow the open-source Android rooting community.
 
