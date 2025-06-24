@@ -1,41 +1,18 @@
 <div align="center" class="aar-intro">
 
 # Awesome Android Root
-[Traditional Chinese Version](README-zh-TW.md)
+#### 🛡️ **The ultimate hub for Android Rooting**
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=green)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
 [![Total Entries](https://img.shields.io/badge/Total%20Entries-220+-blue?style=for-the-badge&logo=android)](#root-apps)
-[![Support via Open Collective](https://img.shields.io/badge/Support%20via-Open%20Collective-blue?style=for-the-badge&logo=opencollective)](https://opencollective.com/awesome-android-root-officia)
+[![Support via Open Collective](https://img.shields.io/badge/Support%20via-Open%20Collective-blue?style=for-the-badge&logo=opencollective)](https://opencollective.com/awesome-android-root-official)
+
+[🌐 **What is Root?**](#what-is-root-access) | [📱 **Root Apps**](#root-apps) | [📋 **Table of Contents**](#table-of-contents) | [💬 **Resources**](#community--resources)
 
 </div>
 
-**🚀 Unlock the full potential of your Android device!** This is your ultimate, community-curated guide to gaining root access, customizing your system, enhancing performance, and everything related to Android rooting.
+**🚀 Unlock your Android device's full potential!** Ultimate Community-curated collection of best root apps, Magisk & LSPosed modules and how to rooting guides for Android customization, performance enhancement, debloating and system optimization.
 
-**What you'll find inside:**
-
-*   🌟 **Top-Tier Root Apps:** The best applications that leverage root permissions for ad-blocking, debloating, system tweaks, and much more.
-*   🧩 **Essential Magisk Modules:** Explore an excellent selection of Magisk modules for system modifications.
-*   🔧 **Popular LSPosed Modules:** Dive into modules that allow control and modification of app and system behavior.
-*   📖 **In-Depth Rooting Guides:** Follow the rooting process with step-by-step guides and troubleshooting solutions.
-*   🛡️ **Safety & Security:** Learn best practices for rooting safely and managing root access.
-
-
-## 🚀 Quick Navigation
-
-- **New to rooting?** → [What is Root Access?](#what-is-root-access) • [Root Guide](#root-guide-and-solutions)  
-- **Looking for apps?** → [Root Apps](#root-apps) • [Table of Contents](#table-of-contents)  
-- **Need help?** → [FAQs](#faqs) • [Community](#community--resources)
-
-### Support This Project
-<div align="center" class="aar-intro">
-
-[![Become a Sponsor](https://img.shields.io/badge/💖-Become%20a%20Sponsor-ff69b4?style=for-the-badge)](https://opencollective.com/awesome-android-root-official)
-[![GitHub Stars](https://img.shields.io/badge/⭐-Star%20this%20Repo-yellow?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
-[![Share Project](https://img.shields.io/badge/📢-Share%20Project-green?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root)
-
-</div>
-
-> **Your support enables us to:** Keep this list updated with the latest apps & modules • Maintain comprehensive documentation • Improve project infrastructure & tools • Grow the open-source Android rooting community.
 
 ## Table of Contents
 <details>
@@ -134,7 +111,7 @@
 - [Community & Resources](#community--resources)
 - [Contributing](#contributing)
 - [Stats](#stats)
-- [Acknowledgments](#acknowledgments)
+- [Support](#support-this-project)
 
 </details>
 
@@ -665,19 +642,21 @@ Quick answers to common rooting questions:
 
 [↑ Back to top](#table-of-contents)
 
-## Acknowledgments
+## Support This Project
+<div align="center" class="aar-intro">
 
-- **Contributors** - Everyone who has submitted apps, corrections, and improvements.
-- **Community** - XDA Developers, Reddit communities, and GitHub users.
-- **Developers** - All the talented developers creating these amazing root tools.
-- **Sponsors** - Our Open Collective supporters keeping this project alive.
+[![Become a Sponsor](https://img.shields.io/badge/💖-Become%20a%20Sponsor-ff69b4?style=for-the-badge)](https://opencollective.com/awesome-android-root-official)
+[![GitHub Stars](https://img.shields.io/badge/⭐-Star%20this%20Repo-yellow?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
+[![Report Issue](https://img.shields.io/badge/🐛-Report%Issue-green?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root)
+
+> **Your support enables us to:** Keep this list updated with the latest apps & modules • Maintain comprehensive documentation • Improve project infrastructure & tools • Grow the open-source Android rooting community.
+
+</div>
 
 ---
 
 <div align="center">
 
-**Made with ❤️ by the Android rooting community**
-
-[⭐ Star this repo](https://github.com/awesome-android-root/awesome-android-root) • [🐛 Report Issue](https://github.com/awesome-android-root/awesome-android-root/issues)  • [💖 Sponsor](https://opencollective.com/awesome-android-root-official)
+**Made with ❤️ by Awesome Android Root**
 
 </div>
