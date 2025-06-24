@@ -9,14 +9,6 @@ head:
     - rel: canonical
       href: https://awesome-android-root.org/
   - - link
-    - rel: preconnect
-      href: https://github.com
-      crossorigin: ''
-  - - link
-    - rel: preconnect
-      href: https://img.shields.io
-      crossorigin: ''
-  - - link
     - rel: dns-prefetch
       href: https://api.github.com
   - - link
@@ -27,8 +19,8 @@ head:
       href: https://profile-counter.glitch.me
   - - link
     - rel: preconnect
-      href: https://img.shields.io
-      crossorigin: 'https://profile-counter.glitch.me'
+      href: https://profile-counter.glitch.me
+      crossorigin: ''
 
   # Homepage-specific OpenGraph
   - - meta
