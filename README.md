@@ -20,14 +20,13 @@
 *   🛡️ **Safety & Security:** Learn best practices for rooting safely and managing root access.
 
 
-
 ## 🚀 Quick Navigation
 > **New to rooting?** Start with [What is Root Access?](#what-is-root-access) and [Root Guide](#root-guide-and-solutions)  
 > **Looking for apps?** Jump to [Root Apps](#root-apps) or use the [Table of Contents](#table-of-contents)  
 > **Need help?** Check our [FAQs](#faqs) or join the [Community](#community--resources)
   
 
-## Support This Project
+### Support This Project
 <div align="center" class="aar-intro">
 
 [![Become a Sponsor](https://img.shields.io/badge/💖-Become%20a%20Sponsor-ff69b4?style=for-the-badge)](https://opencollective.com/awesome-android-root-official)
