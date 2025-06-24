@@ -6,7 +6,68 @@ export default defineConfig({
   ignoreDeadLinks: true,
   cleanUrls: true,
 
+  // VitePress build optimizations
+  vite: {
+    build: {
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          drop_console: true,
+          drop_debugger: true,
+          pure_funcs: ['console.log'],
+          dead_code: true
+        }
+      },
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'vue-vendor': ['vue'],
+            'vitepress-vendor': ['vitepress']
+          }
+        }
+      },
+      cssCodeSplit: true,
+      sourcemap: false
+    },
+    ssr: {
+      noExternal: ['vue']
+    },
+    optimizeDeps: {
+      include: ['vue'],
+      force: true
+    },
+    esbuild: {
+      drop: ['console', 'debugger']
+    }
+  },
+
+  // Enhanced performance settings
+  appearance: 'auto',
+  lastUpdated: true,
+  
+  // Reduce markdown processing overhead
+  markdown: {
+    lineNumbers: false,
+    config: (md) => {
+      // Optimize markdown processing
+      md.set({
+        html: true,
+        xhtmlOut: true,
+        breaks: false,
+        langPrefix: 'language-',
+        linkify: true,
+        typographer: false
+      });
+    }
+  },
+
   head: [
+    // Critical resource hints - prioritize most important resources
+    ['link', { rel: 'preconnect', href: 'https://img.shields.io', crossorigin: '' }],
+    ['link', { rel: 'dns-prefetch', href: 'https://img.shields.io' }],
+    ['link', { rel: 'preconnect', href: 'https://profile-counter.glitch.me', crossorigin: '' }],
+    ['link', { rel: 'dns-prefetch', href: 'https://profile-counter.glitch.me' }],
+    
     // Font preloading to prevent layout shifts
     ['link', { rel: 'preload', href: '/assets/inter-roman-latin.Di8DUHzh.woff2', as: 'font', type: 'font/woff2', crossorigin: '' }],
     
