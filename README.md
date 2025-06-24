@@ -19,7 +19,7 @@
 *   📖 **In-Depth Rooting Guides:** Follow the rooting process with step-by-step guides and troubleshooting solutions.
 *   🛡️ **Safety & Security:** Learn best practices for rooting safely and managing root access.
 
----
+
 
 ## 🚀 Quick Navigation
 > **New to rooting?** Start with [What is Root Access?](#what-is-root-access) and [Root Guide](#root-guide-and-solutions)  
