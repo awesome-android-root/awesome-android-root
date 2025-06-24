@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "A curated list of best Android root applications and best magisk modules. Features over 200+ apps across categories like system mods, privacy, customization, and development tools.",
   "private": true,
-"homepage": "https://awesome-android-root.org",
+  "homepage": "https://awesome-android-root.org",
   "repository": {
     "type": "git",
     "url": "https://github.com/awesome-android-root/awesome-android-root.git"
@@ -14,9 +14,11 @@
   "scripts": {
     "docs:dev": "./build-docs.sh && vitepress dev docs",
     "docs:build": "./build-docs.sh && vitepress build docs",
+    "postdocs:build": "find docs/.vitepress/dist/assets -name '*.js' -exec terser {} -c -m -o {} \\;",
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
+    "terser": "^5.43.1",
     "vitepress": "^1.6.3"
   },
   "keywords": [
@@ -31,7 +33,7 @@
     "kernelsu",
     "android-tools"
   ],
-   "author": {
+  "author": {
     "name": "awesome-android-root",
     "url": "https://github.com/awesome-android-root"
   },
