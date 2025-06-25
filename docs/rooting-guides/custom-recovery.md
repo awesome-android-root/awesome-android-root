@@ -523,14 +523,6 @@ Some devices automatically restore stock recovery on first normal boot. Booting 
 
 ## Advanced Topics
 
-### Custom Recovery Development
-
-**Building Recovery for Unsupported Devices:**
-- Requires device tree knowledge
-- Android source code compilation
-- Testing on actual hardware
-- Community contribution process
-
 ### Recovery Modifications
 
 **Themes and Customization:**
@@ -551,71 +543,19 @@ Some devices automatically restore stock recovery on first normal boot. Booting 
 
 ---
 
-## 🗺️ Next Steps
+##  What's Next?
 
-**Successfully installed custom recovery?** Here's what you can do next:
+**Excellent work!** You now have custom recovery installed. Here's your roadmap:
 
-### Immediate Actions
-1. **[📋 Create System Backup](#step-2-create-system-backup)** - Essential safety measure
-2. **[🔧 Root Your Device](./index.md#root-solutions-comparison)** - Install Magisk, KernelSU, or APatch
-3. **[📱 Test Recovery Functions](#using-your-custom-recovery)** - Familiarize yourself with interface
-
-### Advanced Modifications
-1. **[🎨 Install Custom ROMs](./custom-rom-installation.md)** - Complete guide to LineageOS, GrapheneOS, Pixel Experience, and more
-2. **[🔧 Flash Custom Kernels](./index.md#advanced-framework-solutions)** - Performance and feature enhancements
-3. **[📦 Install Recovery Modules](./index.md#advanced-framework-solutions)** - Add-ons and utilities
-
-::: tip 🚀 What's Next After Custom Recovery?
-With custom recovery installed, you're ready for advanced Android modifications:
-
-- **[📱 Root Your Device](./index.md#root-solutions-comparison)** - Install Magisk, KernelSU, or APatch for system-level access
-- **[🌟 Install Custom ROMs](./custom-rom-installation.md)** - Transform your Android experience with privacy-focused, feature-rich operating systems
-- **[🔧 Advanced Customization](./index.md#advanced-framework-solutions)** - LSPosed modules, custom kernels, and system tweaks
-:::
-
-### Community Resources
-- **💬 XDA Developers** - Device-specific forums and development
-- **📱 Telegram Groups** - Real-time help and updates
-- **📚 Recovery Documentation** - Official guides and tutorials
-
-::: tip 🎯 Success Tips
-- Always backup before major changes
-- Use recovery from official sources only
-- Join your device's community for support
-- Keep stock recovery/firmware as safety net
-:::
-
-**Need Help?** Check our [troubleshooting section](#troubleshooting) or join the community discussions for device-specific support!
-
----
-
-## 🚀 **What's Next After Custom Recovery?**
-
-**Excellent work!** You now have custom recovery installed. You've unlocked powerful Android modification capabilities:
-
-### **Essential Next Steps:**
-1. **[💾 Create NANDroid Backup](./custom-recovery.md#step-2-create-system-backup)** - Protect your current system
+### Essential Steps
+1. **[💾 Create NANDroid Backup](#step-2-create-system-backup)** - Protect your current system
 2. **[⚡ Root Your Device](./index.md#root-solutions-comparison)** - Install Magisk, KernelSU, or APatch
 3. **[🧪 Test Recovery Features](#using-your-custom-recovery)** - Familiarize yourself with the interface
 
-### **Advanced Modifications Now Available:**
+### Advanced Modifications
 4. **[🌟 Install Custom ROM](./custom-rom-installation.md)** - Complete Android transformation
-   - **GrapheneOS** - Maximum security and privacy (Pixel only)
-   - **LineageOS** - Most popular, wide device support
-   - **CalyxOS** - Privacy-focused with better app compatibility
-   - **Pixel Experience** - Google Pixel features on non-Pixel devices
+5. **[📦 Install LSPosed Modules](./index.md#advanced-framework-solutions)** - System customization
 
-5. **[🔧 Flash Custom Kernels](./index.md#advanced-framework-solutions)** - Performance and battery optimization
-6. **[📦 Install LSPosed Modules](./index.md#lsposed-framework)** - Deep system customization
-
-### **Power User Resources:**
-- **[CustomROMBay.org](https://customrombay.org/)** - Find ROMs for 811 devices
-- **[Android OS Comparison](https://eylenburg.github.io/android_comparison.htm)** - Privacy & security analysis
-- **[XDA Developers](https://forum.xda-developers.com/)** - Community forums and development
-
-### **Get Support & Learn More:**
+### Need Help?
 - **[❓ FAQ & Troubleshooting](../faqs.md)** - Solutions to common issues
-- **[📖 About Awesome Android Root](../about.md)** - Learn about our project and community
-- **[💬 Join Community](../about.md#community--resources)** - Connect with fellow Android enthusiasts
-
-**You're now equipped with one of the most powerful Android modification tools. The Android customization world is at your fingertips!**
+- **[💬 Join Community](../about.md#community--resources)** - Connect with fellow enthusiasts
