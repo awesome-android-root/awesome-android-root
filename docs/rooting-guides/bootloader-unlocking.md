@@ -133,7 +133,12 @@ Complete guide to understanding and unlocking Android bootloaders - the essentia
 7. 🔧 **[Install Custom Recovery](./custom-recovery.md)** - Next step for advanced modifications
 
 ::: tip 🚀 What's After Bootloader Unlocking?
-Bootloader unlocking is just the first step! Next, you'll typically want to [install custom recovery](./custom-recovery.md) to enable advanced modifications like rooting and custom ROM installation.
+Bootloader unlocking is just the first step! Here's your complete Android customization roadmap:
+
+1. **[Install Custom Recovery](./custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK for advanced operations
+2. **[Root Your Device](./index.md#root-solutions-comparison)** - Magisk, KernelSU, or APatch for system access
+3. **[Install Custom ROMs](./custom-rom-installation.md)** - Transform your Android experience with LineageOS, GrapheneOS, and more
+4. **[Advanced Customization](./index.md#advanced-framework-solutions)** - LSPosed modules and system tweaks
 :::
 
 ## What is a Bootloader?

@@ -93,6 +93,7 @@ Welcome to the Ultimate Android Rooting Guide - Master Android rooting with our 
 - [How to Root](#how-to-root)
     - [General Rooting Process](#general-rooting-process)
   - [Device-Specific Guides](#device-specific-guides)
+- [Beyond Rooting: Custom ROMs](#beyond-rooting-custom-roms)
 - [Advanced Framework Solutions](#advanced-framework-solutions)
     - [LSPosed Framework](#lsposed-framework)
     - [LSPosed Fork by JingMatrix](#lsposed-fork-by-jingmatrix)
@@ -108,10 +109,12 @@ Welcome to the Ultimate Android Rooting Guide - Master Android rooting with our 
 - 1️⃣ **[Understand the basics](#understanding-root-access)** - Learn what root access means
 - 2️⃣ **[Assess risks vs benefits](#should-you-root-your-device)** - Make an informed decision  
 - 3️⃣ **[Check device compatibility](#device-specific-guides)** - Verify your device is supported
-- 4️⃣ **[Unlock bootloader](./Bootloader-unlocking.md)** - Essential first step for most devices
-- 5️⃣ **[Prepare prerequisites](#prerequisites-and-preparations)** - Get tools and backups ready
-- 6️⃣ **[Choose root method](#root-solutions-comparison)** - Select the best solution for you
-- 7️⃣ **[Follow rooting steps](#general-rooting-process)** - Complete the rooting process
+- 4️⃣ **[Unlock bootloader](./bootloader-unlocking.md)** - Essential first step for most devices
+- 5️⃣ **[Install custom recovery](./custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK for advanced operations
+- 6️⃣ **[Prepare prerequisites](#prerequisites-and-preparations)** - Get tools and backups ready
+- 7️⃣ **[Choose root method](#root-solutions-comparison)** - Select the best solution for you
+- 8️⃣ **[Follow rooting steps](#general-rooting-process)** - Complete the rooting process
+- 9️⃣ **[Install custom ROM](./custom-rom-installation.md)** - Optional: Transform your Android experience
 
 ::: tip 🚀 Fast Track for Experienced Users
 Already familiar with rooting? Jump to [Root Solutions Comparison](#root-solutions-comparison) or your specific [Device Guide](#device-specific-guides).
@@ -370,6 +373,55 @@ Don't see your device listed? Here's what to do:
 
 ::: warning ⚠️ Device Compatibility
 Always verify your exact device model and firmware version before following any rooting guide. Even minor model variations can have different procedures.
+:::
+
+## Beyond Rooting: Custom ROMs
+
+**Custom ROMs** represent the ultimate Android customization - complete operating system replacements that can transform your device experience with enhanced privacy, security, and features.
+
+### Why Consider Custom ROMs After Rooting?
+
+Once you've successfully rooted your device, custom ROMs become the next frontier:
+
+#### 🛡️ **Privacy & Security Benefits**
+- **Degoogled Experience** - Remove Google tracking and services entirely
+- **Enhanced Security** - Advanced security features like GrapheneOS hardening
+- **Open Source Transparency** - Full visibility into operating system code
+- **Extended Security Updates** - Continue receiving updates after manufacturer EOL
+
+#### ⚡ **Performance & Features**
+- **Optimized Performance** - Better battery life and system responsiveness  
+- **Latest Android Versions** - Run newest Android on older devices
+- **Advanced Customization** - Deep system theming and modification options
+- **Bloatware Elimination** - Clean system without manufacturer additions
+
+#### 🔧 **Popular Custom ROM Options**
+- **[GrapheneOS](https://grapheneos.org/)** - Maximum security and privacy (Pixel devices only)
+- **[LineageOS](https://lineageos.org/)** - Most popular, wide device support
+- **[CalyxOS](https://calyxos.org/)** - Privacy-focused with better app compatibility
+- **[Pixel Experience](https://download.pixelexperience.org/)** - Google Pixel UI on non-Pixel devices
+
+### Complete Custom ROM Installation Guide
+
+Ready to transform your Android experience? Our comprehensive Custom ROM guide covers everything you need:
+
+🔗 **[📱 Complete Custom ROM Installation Guide](./custom-rom-installation.md)**
+
+**What You'll Learn:**
+- **ROM Comparison** - Detailed analysis of 20+ Android-based operating systems
+- **Installation Process** - Step-by-step instructions for all major ROMs
+- **Device Compatibility** - Find ROMs for 800+ supported devices via [CustomROMBay.org](https://customrombay.org/)
+- **Security Considerations** - Privacy and security implications of different ROM choices
+- **Troubleshooting** - Common issues and solutions for ROM installation
+
+**Prerequisites for Custom ROMs:**
+1. ✅ **[Unlocked Bootloader](./bootloader-unlocking.md)** - Essential first step
+2. ✅ **[Custom Recovery](./custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK installed  
+3. ✅ **Complete Backups** - NANDroid backup and important data saved
+4. ✅ **Root Knowledge** - Understanding gained from rooting experience
+
+::: tip 🚀 Rooting + Custom ROM = Ultimate Android Control
+The combination of rooting knowledge and custom ROM installation gives you complete control over your Android device. Start with rooting to understand the fundamentals, then explore custom ROMs for the ultimate Android experience.
 :::
 
 ## Advanced Framework Solutions

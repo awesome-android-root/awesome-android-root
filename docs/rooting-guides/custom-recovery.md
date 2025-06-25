@@ -554,9 +554,17 @@ Some devices automatically restore stock recovery on first normal boot. Booting 
 3. **[📱 Test Recovery Functions](#using-your-custom-recovery)** - Familiarize yourself with interface
 
 ### Advanced Modifications
-1. **[🎨 Install Custom ROMs](./index.md#advanced-framework-solutions)** - LineageOS, Pixel Experience, etc.
+1. **[🎨 Install Custom ROMs](./custom-rom-installation.md)** - Complete guide to LineageOS, GrapheneOS, Pixel Experience, and more
 2. **[🔧 Flash Custom Kernels](./index.md#advanced-framework-solutions)** - Performance and feature enhancements
 3. **[📦 Install Recovery Modules](./index.md#advanced-framework-solutions)** - Add-ons and utilities
+
+::: tip 🚀 What's Next After Custom Recovery?
+With custom recovery installed, you're ready for advanced Android modifications:
+
+- **[📱 Root Your Device](./index.md#root-solutions-comparison)** - Install Magisk, KernelSU, or APatch for system-level access
+- **[🌟 Install Custom ROMs](./custom-rom-installation.md)** - Transform your Android experience with privacy-focused, feature-rich operating systems
+- **[🔧 Advanced Customization](./index.md#advanced-framework-solutions)** - LSPosed modules, custom kernels, and system tweaks
+:::
 
 ### Community Resources
 - **💬 XDA Developers** - Device-specific forums and development

@@ -110,6 +110,18 @@ Zygisk is Magisk's implementation that hooks into the Zygote process (Android's 
 #### Is it possible to root newer Android versions (like Android 14/15)?
 Yes, rooting is still possible on the latest Android versions. However, methods have evolved. For many modern devices, rooting involves patching the `init_boot` or `boot` image directly. Always refer to the latest Magisk installation guides and device-specific instructions on forums like XDA.
 
+#### What are Custom ROMs and should I install one?
+Custom ROMs are modified Android operating systems that replace your device's stock firmware. They offer benefits like enhanced privacy (GrapheneOS), extended device support (LineageOS), and removal of bloatware. However, they require an unlocked bootloader and custom recovery. Consider custom ROMs if you want:
+- Better privacy & security
+- Longer device update support
+- Clean Android experience without bloatware
+- Advanced customization options
+
+> Check our [Complete Custom ROM Installation Guide](./rooting-guides/custom-rom-installation.md) for detailed information.
+
+#### Can I install custom ROMs without rooting?
+While custom ROMs don't require root access to install, they do require an unlocked bootloader and custom recovery. You can use custom ROMs without rooting them afterward, but many advanced features and modifications require root access.
+
 ### Safety & Security
 
 #### Is rooting safe?
