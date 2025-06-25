@@ -135,7 +135,7 @@ Complete guide to understanding and unlocking Android bootloaders - the essentia
 - **[📖 Complete Rooting Guide](./index.md)** - Master guide covering all aspects of rooting
 - **[🛠️ Custom Recovery Installation](./custom-recovery.md)** - Next step after bootloader unlock
 - **[🌟 Custom ROM Installation](./custom-rom-installation.md)** - Transform your Android experience
-- **[❓ FAQ & Troubleshooting](../faqs.md)** - Common questions and solutions
+- **[❓ FAQ & Troubleshooting](../faqs.md)** - Complete support guide with troubleshooting solutions
 5. 📱 **[Use manufacturer-specific guide](#manufacturer-specific-instructions)** - Unlock your specific device
 6. ✅ **[Complete post-unlock steps](#post-unlock-steps)** - Verify and secure your device
 7. 🔧 **[Install Custom Recovery](./custom-recovery.md)** - Next step for advanced modifications

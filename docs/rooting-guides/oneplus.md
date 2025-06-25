@@ -76,3 +76,25 @@ head:
 > 🚧 **Guide Under Construction**
 >
 > The OnePlus rooting guide is being created to provide detailed instructions for all OnePlus devices. Please check back soon for the complete tutorial.
+
+## 🔗 **Quick Help Resources**
+While we prepare the complete guide, here are essential resources:
+
+### **Immediate Help:**
+- **[❓ FAQ & Troubleshooting](../faqs.md)** - Complete support guide with troubleshooting solutions
+- **[🔓 Bootloader Unlocking](./bootloader-unlocking.md)** - Universal bootloader guide (works for OnePlus)
+- **[🛠️ Custom Recovery](./custom-recovery.md)** - Install TWRP for OnePlus devices
+- **[📖 Complete Rooting Guide](./index.md)** - Master guide covering all rooting aspects
+
+### **OnePlus-Specific Resources:**
+- **[OnePlus Community Forums](https://forums.oneplus.com/)** - Official OnePlus support and community
+- **[OnePlus XDA Forums](https://forum.xda-developers.com/c/oneplus.12004/)** - Device-specific development forums
+- **[OnePlus MSM Tool](https://onepluscommunityserver.com/list/Unbrick_Tools/)** - Unbrick tools for OnePlus devices
+- **[OxygenOS Updates](https://www.oneplus.com/support/software-upgrade)** - Official firmware downloads
+
+### **Emergency Help:**
+- **[OnePlus Unbrick Guide](../faqs.md#bricked-device-recovery)** - Recovery from soft/hard brick
+- **[MSM Download Tool Usage](../faqs.md#bricked-device-recovery)** - OnePlus-specific recovery method
+- **[Fastboot Commands](../faqs.md#custom-recovery-issues)** - Essential OnePlus fastboot commands
+
+**💡 Pro Tip:** OnePlus devices generally have excellent custom ROM support. Check XDA forums for your specific model once you've unlocked the bootloader!

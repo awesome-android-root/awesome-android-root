@@ -551,7 +551,7 @@ Always research thoroughly, maintain current backups, and seek assistance from e
 - **[OnePlus Devices](./oneplus.md)** - OxygenOS rooting procedures *(Coming Soon)*
 
 ### 🆘 **Get Support:**
-- **[❓ FAQ & Troubleshooting](../faqs.md)** - Solutions to common issues and questions
+- **[❓ FAQ & Troubleshooting](../faqs.md)** - Complete support guide with troubleshooting solutions
 - **[📖 About Awesome Android Root](../about.md)** - Learn about our project and community
 - **[💬 Join Our Community](../about.md#community--resources)** - Connect with fellow Android enthusiasts
 - **[🐛 Report Issues](https://github.com/awesome-android-root/awesome-android-root/issues)** - Help improve our guides

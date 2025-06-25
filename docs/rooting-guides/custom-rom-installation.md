@@ -106,7 +106,7 @@ Complete guide to installing custom Android ROMs - Unlock the full potential of 
 - **[🔓 Bootloader Unlocking](./bootloader-unlocking.md)** - Required prerequisite step
 - **[🛠️ Custom Recovery Installation](./custom-recovery.md)** - Required prerequisite step
 - **[⚡ Root Installation](./index.md#root-solutions-comparison)** - Optional: Add root access to custom ROM
-- **[❓ FAQ & Troubleshooting](../faqs.md)** - Common questions and solutions
+- **[❓ FAQ & Troubleshooting](../faqs.md)** - Complete support guide with troubleshooting solutions
 - **[📖 About Project](../about.md)** - Learn about Awesome Android Root
 
 ::: tip 🚀 Prerequisites Check

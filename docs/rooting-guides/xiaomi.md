@@ -68,6 +68,7 @@ Before starting, ensure you understand the basics:
 - **[🔓 Bootloader Unlocking](./bootloader-unlocking.md)** - Universal bootloader guide with Xiaomi specifics
 - **[🛠️ Custom Recovery](./custom-recovery.md)** - Install TWRP, OrangeFox, or SKYHAWK
 - **[🌟 Custom ROM Installation](./custom-rom-installation.md)** - Install LineageOS, crDroid, and other ROMs
+- **[❓ FAQ & Troubleshooting](../faqs.md)** - Complete support guide with troubleshooting solutions
 
 ## Requirements:
 1. **[Get your device `code name`](https://xiaomiui.net/all-xiaomi-codenames-5137/)**

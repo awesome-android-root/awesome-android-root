@@ -119,7 +119,7 @@ Complete guide to installing custom recovery on Android devices - your gateway t
 - **[🔓 Bootloader Unlocking](./bootloader-unlocking.md)** - Required prerequisite step
 - **[⚡ Root Installation](./index.md#root-solutions-comparison)** - Next step: Install Magisk, KernelSU, or APatch
 - **[🌟 Custom ROM Installation](./custom-rom-installation.md)** - Advanced: Install custom Android ROMs
-- **[❓ FAQ & Troubleshooting](../faqs.md)** - Common questions and solutions
+- **[❓ FAQ & Troubleshooting](../faqs.md)** - Complete support guide with troubleshooting solutions
 
 ::: tip 🚀 Prerequisites Check
 Before starting, ensure you have completed [bootloader unlocking](./bootloader-unlocking.md) and have ADB/Fastboot tools ready. Custom recovery installation requires an unlocked bootloader.
