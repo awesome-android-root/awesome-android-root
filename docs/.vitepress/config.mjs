@@ -157,66 +157,34 @@ export default defineConfig({
     nav: [
       {
         text: 'Home',
-        link: '/',
-        ariaLabel: 'Go to homepage'
+        link: '/'
       },
       {
-        text: 'Apps & Modules',
+        text: 'Root Apps & Modules',
         items: [
+          {
+            items: [
+              { text: '📋 All Categories', link: '/#root-apps' }
+            ]
+          },
           {
             text: 'Popular Categories',
             items: [
               { text: '🛡️ Ad Blocking', link: '/#ad-blocking' },
-              { text: '📱 App Management', link: '/#app-management' },
-              { text: '🎯 App Modifications', link: '/#app-mods' },
-              { text: '🎨 Customization', link: '/#customization' }
-            ]
-          },
-          {
-            text: 'System & Performance',
-            items: [
+              { text: '🎨 Customization', link: '/#customization' },
               { text: '⚡ Performance', link: '/#performance-improvements' },
-              { text: '🔧 System Tools', link: '/#system-tools' },
-              { text: '🎵 Audio Enhancement', link: '/#audio-enhancement' },
               { text: '🔋 Battery Management', link: '/#battery-management' }
-            ]
-          },
-          {
-            text: 'Browse All',
-            items: [
-              { text: '📋 All Categories', link: '/#root-apps' }
             ]
           }
         ]
       },
       {
-        text: 'Guides',
+        text: 'Rooting Guides',
         items: [
-          {
-            text: '🚀 Getting Started',
-            items: [
-              { text: '📖 Complete Rooting Guide', link: '/rooting-guides/' },
-              { text: '❓ Should I Root My Device?', link: '/rooting-guides/#should-you-root-your-device' },
-
-            ]
-          },
-          {
-            text: '📱 Essential Steps',
-            items: [
-              { text: '🔓 Bootloader Unlocking', link: '/rooting-guides/bootloader-unlocking' },
-              { text: '🛠️ Custom Recovery Installation', link: '/rooting-guides/custom-recovery' },
-              { text: '🔧 Root Installation Process', link: '/rooting-guides/#how-to-root' },
-              { text: '🌟 Custom ROM Installation', link: '/rooting-guides/custom-rom-installation' }
-            ]
-          },
-          {
-            text: '🔧 Advanced Topics',
-            items: [
-              { text: '🧩 LSPosed Framework', link: '/rooting-guides/#lsposed-framework' },
-              { text: '�️ Safety & Troubleshooting', link: '/rooting-guides/#safety-and-troubleshooting' },
-              { text: '🆘 Emergency Recovery', link: '/rooting-guides/bootloader-unlocking#troubleshooting' }
-            ]
-          }
+          { text: '🚀 Start Here', link: '/rooting-guides/' },
+          { text: '🔓 Unlock Bootloader', link: '/rooting-guides/bootloader-unlocking' },
+          { text: '🛠️ Install Recovery', link: '/rooting-guides/custom-recovery' },
+          { text: '🌟 Install Custom ROM', link: '/rooting-guides/custom-rom-installation' }
         ]
       },
       {
@@ -227,41 +195,16 @@ export default defineConfig({
             items: [
               { text: '❓ FAQ & Troubleshooting', link: '/faqs' },
               { text: '� Glossary & Terms', link: '/#glossary' },
-              { text: '🆘 Emergency Recovery', link: '/rooting-guides/bootloader-unlocking#troubleshooting' },
-              { text: '�️ Safety Guidelines', link: '/rooting-guides/#safety-and-troubleshooting' }
+              { text: '📖 Contributing Guide', link: '/contributing' },
+              { text: '📜 About This Project', link: '/about' }
             ]
           },
           {
             text: 'Community Resources',
             items: [
               { text: '💬 Community Forums', link: '/#community-resources' },
-              { text: '📖 Contributing Guide', link: '/contributing' },
               { text: '🐛 Report Issues', link: 'https://github.com/awesome-android-root/awesome-android-root/issues' },
               { text: '💡 Feature Requests', link: 'https://github.com/awesome-android-root/awesome-android-root/discussions' }
-            ]
-          }
-        ]
-      },
-      {
-        text: 'Community & Links',
-        items: [
-          {
-            text: 'Official Project',
-            items: [
-              { text: '🔍  About',  link: '/about' },
-              { text: '🏠 Main Website', link: 'https://awesome-android-root.org' },
-              { text: '📱 GitHub Repository', link: 'https://github.com/awesome-android-root/awesome-android-root' },
-              { text: '💖 Support Project', link: 'https://opencollective.com/awesome-android-root-official' },
-              { text: '📋 Project Stats', link: '/#stats' }
-            ]
-          },
-          {
-            text: 'Community & Social',
-            items: [
-              { text: '💬 Reddit Community', link: 'https://www.reddit.com/r/Awesome_Android_Root/' },
-              { text: '𝕏 Twitter/X', link: 'https://x.com/awsm_and_root' },
-              { text: '💡 Discussions', link: 'https://github.com/awesome-android-root/awesome-android-root/discussions' },
-              { text: '🐛 Report Issues', link: 'https://github.com/awesome-android-root/awesome-android-root/issues' }
             ]
           },
           {
@@ -280,119 +223,51 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'What is Root Access?', link: '/#what-is-root-access' },
-          { text: 'Root Guide & Solutions', link: '/rooting-guides/' },
-          { text: 'Glossary', link: '/#glossary' }
+          { text: 'Should You Root?', link: '/rooting-guides/#should-you-root-your-device' },
+          { text: 'Safety & Prerequisites', link: '/rooting-guides/#prerequisites-and-preparations' }
         ]
       },
       {
-        text: '📖 Complete Rooting Guides',
+        text: '📖 Step-by-Step Guides',
+        collapsed: false,
+        items: [
+          { text: '📋 Complete Rooting Guide', link: '/rooting-guides/#android-rooting-guide' },
+          { text: '🔓 Unlock Bootloader', link: '/rooting-guides/bootloader-unlocking' },
+          { text: '🛠️  Install Recovery', link: '/rooting-guides/custom-recovery' },
+          ,{
+        text: '📱 Device Guides',
         collapsed: true,
         items: [
-          {
-            text: '📋 Master Rooting Guide',
-            link: '/rooting-guides/',
-            items: [
-              { text: '❓ Should You Root?', link: '/rooting-guides/#should-you-root-your-device' },
-              { text: '📋 Prerequisites', link: '/rooting-guides/#prerequisites-and-preparations' },
-              { text: '🔍 Root Solutions Comparison', link: '/rooting-guides/#root-solutions-comparison' }
-            ]
-          },
-          {
-            text: '🔓 Bootloader Unlocking',
-            link: '/rooting-guides/bootloader-unlocking',
-          },
-          {
-            text: '🛠️ Custom Recovery',
-            link: '/rooting-guides/custom-recovery',
-          }
+          { text: 'Xiaomi Devices', link: '/rooting-guides/xiaomi' },
+          { text: 'Motorola Devices', link: '/rooting-guides/motorola' },
+          { text: 'Samsung (Coming Soon)', link: '/rooting-guides/samsung' },
+          { text: 'Google Pixel (Coming Soon)', link: '/rooting-guides/pixel' },
+          { text: 'OnePlus (Coming Soon)', link: '/rooting-guides/oneplus' }
+        ]},
+          { text: '🌟 Install Custom ROM', link: '/rooting-guides/custom-rom-installation' }
         ]
       },
       {
-        text: '📱 Device-Specific Guides',
+        text: '📱 Root Apps by Category',
         collapsed: true,
         items: [
-          { text: '📱 Xiaomi Devices', link: '/rooting-guides/xiaomi' },
-          { text: '📱 Motorola Devices', link: '/rooting-guides/motorola' },
-          { text: '📱 Samsung (Coming Soon)', link: '/rooting-guides/samsung' },
-          { text: '📱 Google Pixel (Coming Soon)', link: '/rooting-guides/pixel' },
-          { text: '📱 OnePlus (Coming Soon)', link: '/rooting-guides/oneplus' }
-        ]
-      },
-      { text: '📋 Browse all Root Apps', link: '/#root-apps' },
-      {
-        text: '🎨 Customization',
-        collapsed: true,
-        items: [
-          { text: 'OS Customizations', link: '/#os-customizations' },
-          { text: 'Theming', link: '/#theming' },
-          { text: 'Launchers', link: '/#launchers' },
-          { text: 'Boot Animations', link: '/#boot-animations' },
-          { text: 'Font Managers', link: '/#font-managers' },
-          { text: 'Navigation', link: '/#navigation' }
+          { text: '📋 Browse All Apps', link: '/#root-apps' },
+          { text: '🔧 System & Performance', link: '/#performance-improvements' },
+          { text: '🎨 Customization & Themes', link: '/#os-customizations' },
+          { text: '🛡️ Privacy & Security', link: '/#privacy-and-security' },
+          { text: '🎯 App Management', link: '/#app-managers' },
+          { text: '⚡ Performance & System', link: '/#performance-improvements' }
         ]
       },
       {
-        text: '🎯 App Modifications',
-        collapsed: true,
-        items: [
-          { text: 'Social Media Mods', link: '/#social-media-mods' },
-          { text: 'Other App Mods', link: '/#other-app-mods' },
-          { text: 'Patching', link: '/#patching' },
-          { text: 'ReVanced', link: '/#revanced' }
-        ]
-      }, {
-        text: '🔧 System Tools',
-        collapsed: true,
-        items: [
-          { text: 'File Management', link: '/#file-management' },
-          { text: 'Backup & Restore', link: '/#backup-and-restore' },
-          { text: 'Cleaning Apps', link: '/#cleaning-apps' },
-          { text: 'Development & Debugging', link: '/#development-and-debugging' },
-          { text: 'Termux', link: '/#termux' },
-          { text: 'Tools', link: '/#tools' }
-        ]
-      },
-      {
-        text: '🛡️ Security & Blocking',
-        collapsed: true,
-        items: [
-          { text: 'Ad Blocking', link: '/#ad-blocking' },
-          { text: 'Privacy & Security', link: '/#privacy-and-security' },
-          { text: 'Hide Root', link: '/#hide-root' }
-        ]
-      },
-      {
-        text: '📱 App Management',
-        collapsed: true,
-        items: [
-          { text: 'App Managers', link: '/#app-managers' },
-          { text: 'App Markets', link: '/#app-markets' },
-          { text: 'App Permissions', link: '/#app-permissions' },
-          { text: 'App Isolation & Cloning', link: '/#app-isolation-and-cloning' }
-        ]
-      },
-      {
-        text: '⚡ Performance & System',
-        collapsed: true,
-        items: [
-          { text: 'Performance Improvements', link: '/#performance-improvements' },
-          { text: 'Battery Management', link: '/#battery-management' },
-          { text: 'System Modifications', link: '/#system-modifications' },
-          { text: 'Kernel Management', link: '/#kernel-management' },
-          { text: 'Debloating', link: '/#debloating' }
-        ]
-      },
-      {
-        text: '📚 Help & Community',
+        text: '❓ Help & Support',
         collapsed: true,
         items: [
           { text: 'FAQ & Troubleshooting', link: '/faqs' },
-          { text: '🆘 Emergency Recovery', link: '/rooting-guides/bootloader-unlocking#troubleshooting' },
-          { text: '🛡️ Safety Guidelines', link: '/rooting-guides/#safety-and-troubleshooting' },
-          { text: 'Important Notes', link: '/#important-notes' },
-          { text: 'Community & Resources', link: '/#community--resources' },
-          { text: 'Contributing', link: '/contributing' },
-          { text: 'Stats', link: '/#stats' }
+          { text: 'Emergency Recovery', link: '/rooting-guides/bootloader-unlocking#troubleshooting' },
+          { text: 'Contributing Guide', link: '/contributing' },
+          { text: 'About This Project', link: '/about' },
+          { text: 'Community Links', link: '/#community-resources' }
         ]
       }
     ],
@@ -410,6 +285,11 @@ export default defineConfig({
         dateStyle: 'full',
         timeStyle: 'short'
       }
-    }
+    },
+    socialLinks:[
+      { icon: 'x', link: 'https://x.com/awsm_and_root' },
+      { icon: 'reddit', link: 'https://x.com/awsm_and_root' },
+
+    ]
   }
 })
