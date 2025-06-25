@@ -7,7 +7,7 @@
 [![Total Entries](https://img.shields.io/badge/Total%20Entries-220+-blue?style=for-the-badge&logo=android)](#root-apps)
 [![Support via Open Collective](https://img.shields.io/badge/Support%20via-Open%20Collective-blue?style=for-the-badge&logo=opencollective)](https://opencollective.com/awesome-android-root-official)
 
-[🌐 **What is Root?**](#what-is-root-access) | [📱 **Root Apps**](#root-apps) | [📋 **Table of Contents**](#table-of-contents) | [💬 **Community**](#community-resources) | [❓ **FAQ & Help**](./docs/faqs.md) | [**繁體中文**](README-zh-TW.md)
+[🌐 **What is Root?**](#what-is-root-access) | [📱 **Root Apps**](#root-apps) | [📋 **Table of Contents**](#table-of-contents) | [💬 **Community**](#community-resources) | [**繁體中文**](README-zh-TW.md)
 
 </div>
 
@@ -129,18 +129,7 @@ Rooting allows overcoming limitations that carriers and hardware manufacturers p
 3. **[⚡ Root Your Device](./docs/rooting-guides/index.md#root-solutions-comparison)** - Magisk, KernelSU, or APatch comparison
 4. **[🌟 Install Custom ROM](./docs/rooting-guides/custom-rom-installation.md)** - Optional: Transform your Android experience
 
-### 📱 **Device-Specific Guides:**
-- **[Google Pixel](./docs/rooting-guides/pixel.md)** - Easiest bootloader unlock process
-- **[Samsung Galaxy](./docs/rooting-guides/samsung.md)** - Knox considerations and ODIN usage
-- **[Xiaomi/Redmi](./docs/rooting-guides/xiaomi.md)** - MIUI unlock tool and HyperOS
-- **[OnePlus](./docs/rooting-guides/oneplus.md)** - MSM tool and OxygenOS tweaks  
-- **[Motorola](./docs/rooting-guides/motorola.md)** - Complete step-by-step guide
-
-### 🆘 **Need Help?**
-- **[📖 Complete FAQ & Troubleshooting](./docs/faqs.md)** - Emergency fixes and expert solutions
-- **[🏆 XDA Forums](https://forum.xda-developers.com/)** - Device-specific community support
-
-[📖 **Read the Complete Rooting Master Guide** →](./docs/rooting-guides/index.md)
+[**Read the Complete Rooting Master Guide** →](./docs/rooting-guides/index.md)
 
 ## Glossary
 -  **`FOSS`** = Free and Open Source Software
@@ -606,67 +595,26 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 Complete support resource with expert troubleshooting solutions:
 
-### 🆘 **Emergency Help**
-- [Device won't boot / Bootloop recovery](./docs/faqs.md#device-wont-boot--bootloop)
-- [Bricked device recovery methods](./docs/faqs.md#bricked-device-recovery)
-- [Root access problems](./docs/faqs.md#root-access-problems)
-- [Custom recovery issues](./docs/faqs.md#custom-recovery-issues)
-
-### ❓ **Common Questions**
-- [What is Android rooting?](./docs/faqs.md#what-is-rooting)
-- [Is rooting safe?](./docs/faqs.md#what-are-the-risks-of-rootings)
-- [Will I lose my warranty?](./docs/faqs.md#will-rooting-void-my-device-warranty)
-- [Root method comparison (Magisk vs KernelSU vs APatch)](./docs/faqs.md#root-methods-comparison)
-
-### 🔧 **Technical Support**
-- [Play Integrity/Banking app fixes](./docs/faqs.md#how-do-i-fix-play-integrity-and-banking-app-issues)
-- [Magisk modules troubleshooting](./docs/faqs.md#magisk-modules)
-- [Custom kernel installation](./docs/faqs.md#custom-kernels)
-- [Performance optimization](./docs/faqs.md#performance-optimization)
-
-[📖 **View Complete FAQ & Troubleshooting Guide** →](./docs/faqs.md)
+[**View Complete FAQ & Troubleshooting Guide** →](./docs/faqs.md)
 
 [↑ Back to top](#table-of-contents)
 
 ## Community & Resources
 
-### 🏆 **Premier Android Communities**
+### **Premier Android Communities**
 - **[XDA Developers](https://forum.xda-developers.com/)** - The ultimate Android development and modding community
-- **[4PDA Forums](https://4pda.to/)** - Largest Russian-language Android community
-- **[Android Police](https://www.androidpolice.com/)** - Android news, apps, and in-depth reviews
 
-### 💬 **Reddit Communities**
+### **Reddit Communities**
 - **[r/AndroidRoot](https://reddit.com/r/AndroidRoot)** - General rooting discussions and troubleshooting
 - **[r/Magisk](https://reddit.com/r/Magisk)** - Magisk modules, updates, and support
-- **[r/LineageOS](https://reddit.com/r/LineageOS)** - Official LineageOS community support
-- **[r/AwesomeAndroidRoot](https://reddit.com/r/AwesomeAndroidRoot)** - Our official community
 - **[r/Android](https://reddit.com/r/Android)** - Main Android community (1M+ members)
 
-### 📱 **Official Project Resources**
+### **Official Project Resources**
 - **[GitHub Repository](https://github.com/awesome-android-root/awesome-android-root)** - Source code, issues, and contributions
 - **[𝕏 / Twitter @awsm_and_root](https://x.com/awsm_and_root)** - Updates, tips, and community highlights
+- **[r/AwesomeAndroidRoot](https://reddit.com/r/AwesomeAndroidRoot)** - Our official community
 - **[GitHub Discussions](https://github.com/awesome-android-root/awesome-android-root/discussions)** - Feature requests and feedback
-- **[Telegram Channel](https://t.me/awesome_android_root)** - Real-time updates and quick help
 
-### 🛠️ **Developer Resources**
-- **[Magisk GitHub](https://github.com/topjohnwu/Magisk)** - Official Magisk development and support
-- **[LineageOS Community](https://www.lineageos.org/community/)** - Official LineageOS support channels
-- **[Android Open Source Project](https://source.android.com/)** - Complete AOSP documentation
-- **[KernelSU Documentation](https://kernelsu.org/)** - Kernel-level root management
-
-### 🆘 **Getting Expert Help**
-1. **Search First**: Use "[Device Name] + [Problem]" format on XDA Forums
-2. **Check Our FAQ**: Visit our **[Complete FAQ & Troubleshooting Guide](./docs/faqs.md)**
-3. **Device Forums**: Find your device's specific XDA forum section
-4. **Community Support**: Post detailed questions with device info on Reddit
-5. **Official Channels**: Contact project maintainers directly
-
-### 📚 **Learning Resources**
-- **[Complete Rooting Guide](./docs/rooting-guides/index.md)** - Master guide for all rooting aspects
-- **[Bootloader Unlocking](./docs/rooting-guides/bootloader-unlocking.md)** - Essential first step
-- **[Custom Recovery Guide](./docs/rooting-guides/custom-recovery.md)** - TWRP, OrangeFox, SKYHAWK
-- **[Custom ROM Installation](./docs/rooting-guides/custom-rom-installation.md)** - LineageOS, GrapheneOS, and more
-- **[About Project](./docs/about.md)** - Learn about Awesome Android Root
 
 [↑ Back to top](#table-of-contents)
 
@@ -678,7 +626,7 @@ Complete support resource with expert troubleshooting solutions:
 - 🐛 **Report** broken links or outdated apps.
 - 💡 **Suggest** new apps via [issues](https://github.com/awesome-android-root/awesome-android-root/issues).
 
-[📖 Read Contribution Guidelines →](./docs/contributing.md)
+[Read Contribution Guidelines →](./docs/contributing.md)
 
 [↑ Back to top](#table-of-contents)
 
