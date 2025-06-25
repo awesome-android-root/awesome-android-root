@@ -64,6 +64,15 @@ head:
 
 # How to root Motorola phones.
 
+Complete step-by-step guide to root Motorola phones in 2025, including bootloader unlock and Magisk installation.
+
+## 🔗 Related Guides
+Master the complete rooting process with our comprehensive guides:
+- **[📖 Complete Rooting Guide](./index.md)** - Master guide covering all rooting aspects
+- **[🔓 Bootloader Unlocking](./bootloader-unlocking.md)** - Universal bootloader guide with Motorola specifics
+- **[🛠️ Custom Recovery](./custom-recovery.md)** - Install TWRP, OrangeFox, or SKYHAWK
+- **[🌟 Custom ROM Installation](./custom-rom-installation.md)** - Install LineageOS and other custom ROMs
+
 Hi, 
 Welcome to my first tutorial I will show you how to root any Motorola phone.
 For this guide ill be using Motorola Edge 30 Neo.

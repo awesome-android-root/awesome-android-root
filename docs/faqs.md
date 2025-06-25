@@ -69,6 +69,15 @@ head:
 ---
 # Frequently Asked Questions
 
+Get expert answers to common Android rooting questions. For specific procedures, see our comprehensive rooting guides.
+
+## 🔗 **Quick Navigation**
+- **[📖 Complete Rooting Guide](./rooting-guides/index.md)** - Master guide for all rooting aspects
+- **[🔓 Bootloader Unlocking](./rooting-guides/bootloader-unlocking.md)** - Essential first step
+- **[🛠️ Custom Recovery](./rooting-guides/custom-recovery.md)** - TWRP, OrangeFox, SKYHAWK
+- **[🌟 Custom ROM Installation](./rooting-guides/custom-rom-installation.md)** - LineageOS, GrapheneOS, and more
+- **[📖 About Project](./about.md)** - Learn about Awesome Android Root
+
 ### General Questions
 
 #### What is rooting?

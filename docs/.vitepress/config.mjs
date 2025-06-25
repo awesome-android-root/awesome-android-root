@@ -204,8 +204,9 @@ export default defineConfig({
             text: '📱 Essential Steps',
             items: [
               { text: '🔓 Bootloader Unlocking', link: '/rooting-guides/bootloader-unlocking' },
-              { text: '�️ Custom Recovery Installation', link: '/rooting-guides/custom-recovery' },
-              { text: '🔧 Root Installation Process', link: '/rooting-guides/#how-to-root' }
+              { text: '🛠️ Custom Recovery Installation', link: '/rooting-guides/custom-recovery' },
+              { text: '🔧 Root Installation Process', link: '/rooting-guides/#how-to-root' },
+              { text: '🌟 Custom ROM Installation', link: '/rooting-guides/custom-rom-installation' }
             ]
           },
           {
@@ -247,6 +248,7 @@ export default defineConfig({
           {
             text: 'Official Project',
             items: [
+              { text: '🔍  About',  link: '/about' },
               { text: '🏠 Main Website', link: 'https://awesome-android-root.org' },
               { text: '📱 GitHub Repository', link: 'https://github.com/awesome-android-root/awesome-android-root' },
               { text: '💖 Support Project', link: 'https://opencollective.com/awesome-android-root-official' },

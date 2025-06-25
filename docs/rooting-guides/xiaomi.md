@@ -60,6 +60,15 @@ head:
 ---
 # Xiaomi Rooting Guide
 
+Complete step-by-step guide to root Xiaomi and Redmi devices running MIUI/HyperOS in 2025.
+
+## 🔗 Related Guides
+Before starting, ensure you understand the basics:
+- **[📖 Complete Rooting Guide](./index.md)** - Master guide covering all rooting aspects
+- **[🔓 Bootloader Unlocking](./bootloader-unlocking.md)** - Universal bootloader guide with Xiaomi specifics
+- **[🛠️ Custom Recovery](./custom-recovery.md)** - Install TWRP, OrangeFox, or SKYHAWK
+- **[🌟 Custom ROM Installation](./custom-rom-installation.md)** - Install LineageOS, crDroid, and other ROMs
+
 ## Requirements:
 1. **[Get your device `code name`](https://xiaomiui.net/all-xiaomi-codenames-5137/)**
 

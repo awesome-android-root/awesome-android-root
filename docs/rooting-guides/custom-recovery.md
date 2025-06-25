@@ -114,6 +114,13 @@ Complete guide to installing custom recovery on Android devices - your gateway t
 5. 🛠️ **[Install recovery](#universal-installation-steps)** - Flash using fastboot
 6. ✅ **[Verify installation](#post-installation-setup)** - Test recovery functionality
 
+### 🔗 **Related Guides in This Series:**
+- **[📖 Complete Rooting Guide](./index.md)** - Master guide covering all aspects of rooting
+- **[🔓 Bootloader Unlocking](./bootloader-unlocking.md)** - Required prerequisite step
+- **[⚡ Root Installation](./index.md#root-solutions-comparison)** - Next step: Install Magisk, KernelSU, or APatch
+- **[🌟 Custom ROM Installation](./custom-rom-installation.md)** - Advanced: Install custom Android ROMs
+- **[❓ FAQ & Troubleshooting](../faqs.md)** - Common questions and solutions
+
 ::: tip 🚀 Prerequisites Check
 Before starting, ensure you have completed [bootloader unlocking](./bootloader-unlocking.md) and have ADB/Fastboot tools ready. Custom recovery installation requires an unlocked bootloader.
 :::
@@ -579,3 +586,36 @@ With custom recovery installed, you're ready for advanced Android modifications:
 :::
 
 **Need Help?** Check our [troubleshooting section](#troubleshooting) or join the community discussions for device-specific support!
+
+---
+
+## 🚀 **What's Next After Custom Recovery?**
+
+**Excellent work!** You now have custom recovery installed. You've unlocked powerful Android modification capabilities:
+
+### **Essential Next Steps:**
+1. **[💾 Create NANDroid Backup](./custom-recovery.md#step-2-create-system-backup)** - Protect your current system
+2. **[⚡ Root Your Device](./index.md#root-solutions-comparison)** - Install Magisk, KernelSU, or APatch
+3. **[🧪 Test Recovery Features](#using-your-custom-recovery)** - Familiarize yourself with the interface
+
+### **Advanced Modifications Now Available:**
+4. **[🌟 Install Custom ROM](./custom-rom-installation.md)** - Complete Android transformation
+   - **GrapheneOS** - Maximum security and privacy (Pixel only)
+   - **LineageOS** - Most popular, wide device support
+   - **CalyxOS** - Privacy-focused with better app compatibility
+   - **Pixel Experience** - Google Pixel features on non-Pixel devices
+
+5. **[🔧 Flash Custom Kernels](./index.md#advanced-framework-solutions)** - Performance and battery optimization
+6. **[📦 Install LSPosed Modules](./index.md#lsposed-framework)** - Deep system customization
+
+### **Power User Resources:**
+- **[CustomROMBay.org](https://customrombay.org/)** - Find ROMs for 811 devices
+- **[Android OS Comparison](https://eylenburg.github.io/android_comparison.htm)** - Privacy & security analysis
+- **[XDA Developers](https://forum.xda-developers.com/)** - Community forums and development
+
+### **Get Support & Learn More:**
+- **[❓ FAQ & Troubleshooting](../faqs.md)** - Solutions to common issues
+- **[📖 About Awesome Android Root](../about.md)** - Learn about our project and community
+- **[💬 Join Community](../about.md#community--resources)** - Connect with fellow Android enthusiasts
+
+**You're now equipped with one of the most powerful Android modification tools. The Android customization world is at your fingertips!**
