@@ -193,6 +193,7 @@ export default defineConfig({
           {
             text: 'Help & Support',
             items: [
+              { text: 'Support this Project', link: 'https://opencollective.com/awesome-android-root-official' },
               { text: '❓ FAQ & Troubleshooting', link: '/faqs' },
               { text: '� Glossary & Terms', link: '/#glossary' },
               { text: '📖 Contributing Guide', link: '/contributing' },
