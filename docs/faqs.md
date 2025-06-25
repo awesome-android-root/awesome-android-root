@@ -100,7 +100,7 @@ head:
 - [Root Methods Comparison](#root-methods-comparison)
 - [Bootloader and Recovery](#bootloader-and-recovery)
 - [Safety and Security](#safety-and-security)
-- [App Compatibility](#app-compatibility)
+
 
 ### 🏆 **Advanced Topics**
 - [Magisk Modules](#magisk-modules)
@@ -517,39 +517,6 @@ Magisk → Configure DenyList → Add problematic apps
 
 > **For latest methods, visit our [Hide Root Section](/#hide-root)**
 
-### App Compatibility
-
-#### Which apps work well with root access?
-
-**Essential Root Apps by Category:**
-
-**🚫 Ad Blocking:**
-- **[AdAway](https://adaway.org/)**: System-wide ad blocking via hosts file
-- **[AdGuard](https://adguard.com/en/android/overview.html)**: Advanced filtering with root integration
-- **[Blokada](https://blokada.org/)**: DNS-based blocking with root features
-
-**🔧 System Management:**
-- **[Titanium Backup](https://www.titaniumtrack.com/titanium-backup.html)**: Complete app and data backup
-- **[Greenify](https://dontkillmyapp.com/greenify/)**: Advanced app hibernation
-- **[SD Maid](https://github.com/d4rken-org/sdmaid)**: Deep system cleaning
-- **[Franco Kernel Manager](https://play.google.com/store/apps/details?id=com.franco.kernel)**: Kernel tweaking
-
-**⚡ Performance:**
-- **[Kernel Adiutor](https://github.com/Grarak/KernelAdiutor)**: CPU/GPU tweaking
-- **[L Speed](https://github.com/Paget96/LSpeed)**: Performance optimization
-- **[Amplify](https://play.google.com/store/apps/details?id=com.ryansteckler.nlpunbounce)**: Battery optimization
-
-**🎨 Customization:**
-- **[Substratum](https://substratumtheme.com/)**: System theming (Android 8+)
-- **[Tasker](https://tasker.joaoapps.com/)**: Automation with root actions
-- **[GMD GestureControl](https://play.google.com/store/apps/details?id=com.goodmooddroid.gesturecontrol)**: Advanced gestures
-
-**🛡️ Security & Privacy:**
-- **[AFWall+](https://github.com/ukanth/afwall)**: Advanced firewall
-- **[XPrivacyLua](https://github.com/M66B/XPrivacyLua)**: Privacy management (requires Xposed)
-- **[App Ops](https://play.google.com/store/apps/details?id=rikka.appops)**: Permission management
-
----
 
 ## 🏆 Advanced Topics
 
@@ -563,23 +530,6 @@ Magisk Modules are modifications that run systemlessly, meaning they don't actua
 - Multiple modules can coexist
 - System integrity maintained for OTA updates
 - Boot-time loading for maximum compatibility
-
-**Popular Module Categories:**
-
-**Audio Enhancement:**
-- **[ViPER4Android FX](https://github.com/AndroidAudioMods/ViPER4Android)**: Advanced audio processing
-- **[JamesDSPManager](https://github.com/james34602/JamesDSPManager)**: Professional audio effects
-- **[Dolby Atmos](https://github.com/reiryuki/Dolby-Atmos-Magic-Revision-Magisk-Module)**: Spatial audio enhancement
-
-**Performance:**
-- **[Thermal Throttling Controller](https://github.com/Magisk-Modules-Repo/thermal_throttle)**: CPU thermal management
-- **[GPU Adreno Turbo](https://github.com/Magisk-Modules-Repo/adreno-gpu-boost)**: GPU performance boost
-- **[Swap Torpedo](https://github.com/Magisk-Modules-Repo/swap-torpedo)**: Memory management
-
-**Privacy & Security:**
-- **[Universal SafetyNet Fix](https://github.com/kdrag0n/safetynet-fix)**: Play Integrity bypass
-- **[iOS Emoji](https://github.com/Magisk-Modules-Repo/iOS-Emoji)**: Replace Android emoji
-- **[Systemless Hosts](https://github.com/Magisk-Modules-Repo/systemless-hosts-KSU-lite)**: Ad blocking hosts
 
 **Safe Installation Practices:**
 1. **Research First**: Read module description and user reviews
@@ -626,12 +576,6 @@ The kernel is the core component that manages:
 - **USB OTG**: Enhanced peripheral support
 - **WiFi/Bluetooth**: Updated drivers and features
 
-**Popular Custom Kernels:**
-- **[ElementalX](https://elementalx.org/)**: Balanced performance/battery
-- **[Franco Kernel](https://www.francokernel.com/)**: Performance-focused
-- **[Arter97](https://arter97.com/)**: Samsung-specific optimizations
-- **[Sultan](https://github.com/sultan)**: OnePlus optimizations
-
 **Installation Process:**
 1. **Unlock Bootloader**: Required for custom kernel
 2. **Custom Recovery**: TWRP or similar for flashing
@@ -666,13 +610,10 @@ GSI are pure Android implementations that can run on any Treble-compatible devic
 **Popular GSI Options:**
 
 **Stock-like Experience:**
-- **[AOSP GSI](https://github.com/phhusson/treble_experimentations)**: Pure Android
-- **[Pixel Experience GSI](https://github.com/phhussong/treble_pe)**: Pixel features
-- **[LineageOS GSI](https://github.com/AndyYan/lineage_generic)**: LineageOS features
+- **[AOSP GSI](https://github.com/TrebleDroid/treble_experimentations)**: Pure Android
 
 **Enhanced Versions:**
 - **[Evolution X GSI](https://sourceforge.net/projects/evolution-x/files/GSI/)**: Feature-rich customization
-- **[Havoc OS GSI](https://sourceforge.net/projects/havoc-os/files/GSI/)**: Gaming optimizations
 - **[crDroid GSI](https://sourceforge.net/projects/crdroid/files/GSI/)**: Stability-focused
 
 **Device Compatibility Check:**
@@ -766,18 +707,6 @@ echo 1804800 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
 - **TCP Congestion Control**: BBR for better network performance
 - **Virtual Memory**: Swappiness, dirty ratios optimization
 - **Process Scheduling**: CFS tweaks for responsiveness
-
-**Recommended Apps:**
-- **[Kernel Adiutor](https://github.com/Grarak/KernelAdiutor)**: Comprehensive kernel tweaking
-- **[EX Kernel Manager](https://play.google.com/store/apps/details?id=flar2.exkernelmanager)**: Advanced kernel control
-- **[Franco Kernel Manager](https://play.google.com/store/apps/details?id=com.franco.kernel)**: Device-specific optimization
-- **[L Speed](https://github.com/Paget96/LSpeed)**: All-in-one optimization
-
-**Performance Testing:**
-- **[AnTuTu Benchmark](https://play.google.com/store/apps/details?id=com.antutu.ABenchMark)**: Overall system performance
-- **[Geekbench](https://play.google.com/store/apps/details?id=com.primatelabs.geekbench5)**: CPU performance testing
-- **[3DMark](https://play.google.com/store/apps/details?id=com.futuremark.dmandroid.application)**: GPU performance testing
-- **[A1 SD Bench](https://play.google.com/store/apps/details?id=com.a1dev.sdbench)**: Storage performance testing
 
 ---
 

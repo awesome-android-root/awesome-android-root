@@ -289,7 +289,7 @@ export default defineConfig({
     },
     socialLinks:[
       { icon: 'github', link: 'https://github.com/awesome-android-root/awesome-android-root' },
-      { icon: 'reddit', link: 'https://x.com/awsm_and_root' },
+      { icon: 'reddit', link: 'https://www.reddit.com/r/Awesome_Android_Root/' },
 
     ]
   }
