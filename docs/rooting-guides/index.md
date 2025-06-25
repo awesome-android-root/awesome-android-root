@@ -162,23 +162,23 @@ Before attempting to root your Android device, ensure you meet all requirements 
 
 #### Essential Requirements
 
-1. **[Unlocked Bootloader](./Bootloader-unlocking.md)** ⭐ **Most Critical Step**
+1. **[Unlocked Bootloader](./bootloader-unlocking.md)** ⭐ **Most Critical Step**
    - Required for installing custom recovery and root solutions
-   - **Comprehensive guide available**: [Complete Bootloader Unlocking Guide](./Bootloader-unlocking.md)
+   - **Comprehensive guide available**: [Complete Bootloader Unlocking Guide](./bootloader-unlocking.md)
    - Covers all major manufacturers with step-by-step instructions
    - **Warning:** Unlocking bootloader will erase all data on your device
 
 2. **Developer Options & USB Debugging**
    - Enable Developer Options by tapping Build Number 7 times in About Phone
    - Enable USB Debugging and OEM Unlocking in Developer Options
-   - **Detailed steps**: See [Universal Preparation Steps](./Bootloader-unlocking.md#universal-preparation-steps)
+   - **Detailed steps**: See [Universal Preparation Steps](./bootloader-unlocking.md#universal-preparation-steps)
 
 3. **Computer Setup**
    - Windows, macOS, or Linux computer
    - USB cable for device connection
    - Latest ADB and Fastboot tools installed
    - Device-specific drivers (especially for Windows)
-   - **Setup guide**: [What You'll Need](./Bootloader-unlocking.md#what-youll-need)
+   - **Setup guide**: [What You'll Need](./bootloader-unlocking.md#what-youll-need)
 
 4. **Device-Specific Files**
    - Custom Recovery (TWRP, OrangeFox, etc.) for your exact device model
@@ -203,7 +203,7 @@ Before attempting to root your Android device, ensure you meet all requirements 
 
 ### Manufacturer-Specific Considerations
 
-Different manufacturers implement varying security measures requiring specific approaches. For detailed bootloader unlocking instructions, see our [**Complete Bootloader Unlocking Guide**](./Bootloader-unlocking.md).
+Different manufacturers implement varying security measures requiring specific approaches. For detailed bootloader unlocking instructions, see our [**Complete Bootloader Unlocking Guide**](./bootloader-unlocking.md).
 
 **Quick Overview:**
 
@@ -217,7 +217,7 @@ Different manufacturers implement varying security measures requiring specific a
 | **Sony** | ⚠️ Medium | Developer portal registration |
 
 ::: tip 💡 Detailed Instructions Available
-Each manufacturer has specific requirements and procedures. Our [Bootloader Unlocking Guide](./Bootloader-unlocking.md) provides comprehensive instructions for all major brands.
+Each manufacturer has specific requirements and procedures. Our [Bootloader Unlocking Guide](./bootloader-unlocking.md) provides comprehensive instructions for all major brands.
 :::
 
 ## Root Solutions Comparison
@@ -241,7 +241,7 @@ Each manufacturer has specific requirements and procedures. Our [Bootloader Unlo
 **Best for:** First-time rooters, users wanting extensive module support, general usage
 
 **Installation Requirements:**
-- Unlocked bootloader ([guide here](./Bootloader-unlocking.md))
+- Unlocked bootloader ([guide here](./bootloader-unlocking.md))
 - Custom recovery or patched boot image
 - Compatible with most Android versions
 
@@ -264,7 +264,7 @@ Each manufacturer has specific requirements and procedures. Our [Bootloader Unlo
 **Best for:** Advanced users, newer devices with KernelSU support, security-conscious users
 
 **Installation Requirements:**
-- Unlocked bootloader ([guide here](./Bootloader-unlocking.md))
+- Unlocked bootloader ([guide here](./bootloader-unlocking.md))
 - Custom kernel with KernelSU support
 - Android 12+ recommended for best compatibility
 
@@ -287,7 +287,7 @@ Each manufacturer has specific requirements and procedures. Our [Bootloader Unlo
 **Best for:** Experimental users, developers, specific use cases where other methods fail
 
 **Installation Requirements:**
-- Unlocked bootloader ([guide here](./Bootloader-unlocking.md))
+- Unlocked bootloader ([guide here](./bootloader-unlocking.md))
 - Compatible kernel
 - Advanced technical knowledge recommended
 
@@ -350,7 +350,7 @@ Steps 3-4 (Bootloader Unlocking and Custom Recovery Installation) are the most c
 Detailed rooting instructions tailored to specific device families. Each guide includes manufacturer-specific considerations, required tools, and step-by-step procedures:
 
 ::: tip 📋 All Guides Include Bootloader Unlocking
-Each device-specific guide references our [Complete Bootloader Unlocking Guide](./Bootloader-unlocking.md) for the essential first step.
+Each device-specific guide references our [Complete Bootloader Unlocking Guide](./bootloader-unlocking.md) for the essential first step.
 :::
 
 ### Available Guides
