@@ -121,34 +121,12 @@ Android rooting is the process of gaining privileged control (known as root acce
 Rooting allows overcoming limitations that carriers and hardware manufacturers put on some devices, resulting in the ability to alter or replace system applications and settings, run specialized apps that require administrator-level permissions, or perform other operations that are otherwise inaccessible to a normal Android user.
 
 ## Root Guide and Solutions
-A comprehensive guide covering different rooting methods, decision-making and different frameworks.
+1. **[Unlock Bootloader](./docs/rooting-guides/bootloader-unlocking.md)** - Essential first step for all modifications
+2. **[Install Custom Recovery](./docs/rooting-guides/custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK
+3. **[Root Your Device](./docs/rooting-guides/index.md#root-solutions-comparison)** - Magisk, KernelSU, or APatch
+4. **[Install Custom ROM](./docs/rooting-guides/custom-rom-installation.md)** - Optional: Transform your Android experience
 
 [📖 Read the complete rooting guide →](./docs/rooting-guides/index.md)
-
-### 🚀 **Essential Rooting Steps**
-Follow this proven roadmap to successfully root your Android device:
-
-1. **[🔓 Unlock Bootloader](./docs/rooting-guides/bootloader-unlocking.md)** - Essential first step for all modifications
-2. **[🛠️ Install Custom Recovery](./docs/rooting-guides/custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK
-3. **[⚡ Root Your Device](./docs/rooting-guides/index.md#root-solutions-comparison)** - Magisk, KernelSU, or APatch
-4. **[🌟 Install Custom ROM](./docs/rooting-guides/custom-rom-installation.md)** - Optional: Transform your Android experience
-
-### 🔧 **Popular Root Solutions**
-- **[Magisk](./docs/rooting-guides/index.md#1-magisk-recommended-for-beginners)** - Most popular systemless root solution
-- **[KernelSU](./docs/rooting-guides/index.md#2-kernelsu)** - Kernel-level root management
-- **[APatch](./docs/rooting-guides/index.md#3-apatch)** - Advanced kernel patching solution
-
-### 📱 **Device-Specific Guides**
-- **[Xiaomi Devices](./docs/rooting-guides/xiaomi.md)** - MIUI/HyperOS rooting guide
-- **[Motorola Devices](./docs/rooting-guides/motorola.md)** - Complete Moto rooting tutorial
-- **[Samsung Devices](./docs/rooting-guides/samsung.md)** - Exynos models with Knox considerations
-- **[Google Pixel](./docs/rooting-guides/pixel.md)** - Simple unlocking for Google devices
-- **[OnePlus Devices](./docs/rooting-guides/oneplus.md)** - OxygenOS rooting procedures
-
-### 🆘 **Need Help?**
-- **[❓ FAQ & Troubleshooting](./docs/faqs.md)** - Common questions and solutions
-- **[📖 About Project](./docs/about.md)** - Learn about Awesome Android Root
-
 
 ## Glossary
 -  **`FOSS`** = Free and Open Source Software
