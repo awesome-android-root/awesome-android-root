@@ -122,14 +122,19 @@ Complete guide to understanding and unlocking Android bootloaders - the essentia
 
 ## Quick Start
 
-**New to bootloader unlocking?** Here's your roadmap:
+**New to bootloader unlocking?** Here's your complete roadmap:
 
-1. 🔍 [Understand what bootloaders are](#what-is-a-bootloader)
-2. ⚠️ [Read important warnings](#important-warnings)
-3. 📋 [Complete prerequisites](#prerequisites)
-4. 🛠️ [Follow universal preparation](#universal-preparation-steps)
-5. 📱 [Use manufacturer-specific guide](#manufacturer-specific-instructions)
-6. ✅ [Complete post-unlock steps](#post-unlock-steps)
+1. 🔍 **[Understand what bootloaders are](#what-is-a-bootloader)** - Learn the basics
+2. ⚠️ **[Read important warnings](#important-warnings)** - Know the risks and requirements
+3. 📋 **[Complete prerequisites](#prerequisites)** - Prepare your device and tools
+4. 🛠️ **[Follow universal preparation](#universal-preparation-steps)** - Enable developer options and ADB
+5. 📱 **[Use manufacturer-specific guide](#manufacturer-specific-instructions)** - Unlock your specific device
+6. ✅ **[Complete post-unlock steps](#post-unlock-steps)** - Verify and secure your device
+7. 🔧 **[Install Custom Recovery](./custom-recovery.md)** - Next step for advanced modifications
+
+::: tip 🚀 What's After Bootloader Unlocking?
+Bootloader unlocking is just the first step! Next, you'll typically want to [install custom recovery](./custom-recovery.md) to enable advanced modifications like rooting and custom ROM installation.
+:::
 
 ## What is a Bootloader?
 
@@ -158,9 +163,16 @@ Unlocking your bootloader is the **essential first step** for advanced Android c
 ### Primary Benefits
 - 🔓 **Enable Root Access** - Required for Magisk, KernelSU, and APatch installation
 - 🎨 **Custom ROMs** - Install LineageOS, Pixel Experience, and other custom Android versions
-- 🛠️ **Custom Recovery** - Access TWRP, OrangeFox for advanced system management
+- 🛠️ **Custom Recovery** - Install TWRP, OrangeFox, or SKYHAWK for advanced system management
 - 🔧 **Kernel Modifications** - Install custom kernels for better performance
 - 📱 **Complete Device Control** - Full access to system files and configurations
+
+### The Complete Modification Chain
+**Bootloader unlocking enables this progression:**
+1. **Unlocked Bootloader** ✅ (This guide)
+2. **[Custom Recovery](./custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK
+3. **[Root Access](./index.md#root-solutions-comparison)** - Magisk, KernelSU, or APatch  
+4. **Advanced Modifications** - Custom ROMs, kernels, and system tweaks
 
 ### Advanced Use Cases
 - **Development and Testing** - Essential for Android developers and power users
@@ -287,7 +299,24 @@ Or use hardware keys (varies by device):
 - **Most devices**: Power + Volume Down
 - **Samsung**: Power + Volume Down + Home (older models)
 
+::: tip 💡 Fastboot Mode Ready
+Once in fastboot mode, you're ready to proceed with manufacturer-specific unlocking. The next step varies significantly by brand - choose your manufacturer below!
+:::
+
 ## Manufacturer-Specific Instructions
+
+::: warning ⚠️ Device-Specific Process
+**Each manufacturer has different requirements and procedures.** Find your device manufacturer below and follow the specific instructions. Using the wrong method can brick your device.
+:::
+
+**Quick Manufacturer Navigation:**
+- 🔹 **[Google Pixel](#google-pixel)** - Easiest process, official support
+- 🔹 **[Xiaomi](#xiaomi)** - Requires Mi Account and waiting period  
+- 🔹 **[OnePlus](#oneplus)** - Generally straightforward process
+- 🔹 **[Samsung](#samsung)** - Most restrictive, Exynos models only
+- 🔹 **[Motorola](#motorola)** - Official unlock codes required
+- 🔹 **[Sony](#sony)** - Developer portal registration needed
+- 🔹 **[Other Manufacturers](#other-manufacturers)** - Various methods
 
 ### Google Pixel
 
@@ -316,6 +345,10 @@ fastboot flashing unlock
 fastboot getvar unlocked
 # Should return: unlocked: yes
 ```
+
+::: tip ✅ Success! What's Next?
+**Congratulations!** Your Pixel bootloader is now unlocked. The next step is typically to [install custom recovery](./custom-recovery.md) to enable advanced modifications like rooting.
+:::
 
 ### Xiaomi
 
@@ -349,6 +382,10 @@ Xiaomi requires official approval through their Mi Unlock Tool:
 - **Region Restrictions**: Some regions have longer waiting periods
 - **Account Binding**: Mi Account must be added to device before applying
 
+::: tip ✅ Xiaomi Unlocked Successfully?
+**Great job!** Xiaomi devices with unlocked bootloaders work excellently with custom recoveries. Next step: [Install Custom Recovery](./custom-recovery.md) - TWRP and OrangeFox have excellent Xiaomi support.
+:::
+
 ### OnePlus
 
 OnePlus devices generally allow easy bootloader unlocking:
@@ -376,6 +413,10 @@ fastboot oem unlock
 fastboot flashing unlock
 ```
 
+::: tip ✅ OnePlus Unlocked Successfully?
+**Excellent!** OnePlus devices have great custom development support. Ready for the next step? [Install Custom Recovery](./custom-recovery.md) to unlock advanced modifications.
+:::
+
 ### Samsung
 
 Samsung has the most restrictive bootloader policy:
@@ -398,6 +439,10 @@ Samsung has the most restrictive bootloader policy:
 4. Long press **Volume Up** to unlock bootloader
 5. Follow on-screen warnings and confirmations
 6. Device will factory reset and show **"Custom"** on boot
+
+::: warning ⚠️ Samsung Knox Triggered
+**Knox has been permanently triggered.** Your device will show "Custom" on boot screen and some Samsung Pay/Knox features may not work. However, you can now proceed with [custom recovery installation](./custom-recovery.md).
+:::
 
 ### Motorola
 
@@ -426,6 +471,10 @@ fastboot oem get_unlock_data
 fastboot oem unlock [UNIQUE_KEY]
 ```
 
+::: tip ✅ Motorola Unlocked Successfully?
+**Perfect!** Motorola devices have solid custom development support. Time for the next step: [Install Custom Recovery](./custom-recovery.md) to enable advanced system modifications.
+:::
+
 ### Sony
 
 Sony supports bootloader unlocking for most devices:
@@ -446,6 +495,10 @@ Sony supports bootloader unlocking for most devices:
 ```bash
 fastboot oem unlock 0x[UNLOCK_CODE]
 ```
+
+::: tip ✅ Sony Unlocked Successfully?
+**Fantastic!** Sony devices are developer-friendly with good custom ROM support. Ready to continue? [Install Custom Recovery](./custom-recovery.md) for advanced system management.
+:::
 
 ### Other Manufacturers
 
@@ -486,9 +539,17 @@ fastboot getvar unlocked
 
 ### Next Steps
 With unlocked bootloader, you can now:
-- [Install Custom Recovery](./index.md#install-custom-recovery)
-- [Root Your Device](./index.md#root-solutions-comparison)
-- [Install Custom ROMs](./index.md#advanced-framework-solutions)
+- **[🛠️ Install Custom Recovery](./custom-recovery.md)** - Essential next step for rooting
+- **[🔧 Root Your Device](./index.md#root-solutions-comparison)** - Magisk, KernelSU, or APatch
+- **[🎨 Install Custom ROMs](./index.md#advanced-framework-solutions)** - LineageOS, Pixel Experience, etc.
+
+::: tip 📋 Recommended Next Step
+**[Install Custom Recovery](./custom-recovery.md)** is typically the next step after bootloader unlocking. Our comprehensive guide covers TWRP, OrangeFox, and SKYHAWK Recovery installation.
+:::
+
+::: warning ⚠️ Important: Boot to Recovery First
+After installing custom recovery, **boot directly to recovery mode** before the first normal boot to prevent the stock recovery from being restored automatically.
+:::
 
 ## Troubleshooting
 
@@ -576,9 +637,34 @@ Check the Wall of Shame repository before purchasing a device if bootloader unlo
 
 ---
 
+## 🗺️ What's Next?
+
+**Successfully unlocked your bootloader?** Here's your next steps:
+
+### Immediate Next Steps
+1. **[🛠️ Install Custom Recovery](./custom-recovery.md)** - Essential for advanced modifications
+   - **TWRP** - Most compatible and widely supported
+   - **OrangeFox** - Modern interface with enhanced features  
+   - **SKYHAWK** - Feature-rich with dashboard interface
+
+2. **[🔧 Choose Root Method](./index.md#root-solutions-comparison)** - After custom recovery
+   - **Magisk** - Recommended for beginners
+   - **KernelSU** - Advanced kernel-based solution
+   - **APatch** - Newest kernel patching approach
+
+### Advanced Modifications (Later)
+3. **[🎨 Custom ROMs](./index.md#advanced-framework-solutions)** - LineageOS, Pixel Experience
+4. **[🔧 Custom Kernels](./index.md#advanced-framework-solutions)** - Performance optimization
+5. **[📦 LSPosed Framework](./index.md#lsposed-framework)** - System-level modifications
+
+### Essential Resources
+- **[📋 Complete Rooting Guide](./index.md)** - Full process overview
+- **[🛠️ Custom Recovery Guide](./custom-recovery.md)** - Detailed recovery installation
+- **[📱 Device-Specific Guides](./index.md#device-specific-guides)** - Manufacturer-specific instructions
+
 ::: warning ⚠️ Final Reminder
 Bootloader unlocking is a powerful but irreversible step that voids warranties and can cause security implications. Only proceed if you understand the risks and have legitimate need for the advanced capabilities it enables.
 :::
 
-**Need Help?** Join our [community discussions](../index.md#community--resources) for device-specific support and troubleshooting assistance.
+**Need Help?** Join our [community discussions](./index.md#community--resources) for device-specific support and troubleshooting assistance.
 

@@ -311,14 +311,16 @@ The standard rooting procedure typically follows these sequential steps:
    - Ensure stable power supply and uninterrupted time
    - Set up ADB/Fastboot environment on computer
 
-3. **[📖 Unlock Bootloader](./Bootloader-unlocking.md)** ⭐ **Essential Step**
+3. **[📖 Unlock Bootloader](./bootloader-unlocking.md)** ⭐ **Essential Step**
    - **Follow our comprehensive guide** for your specific manufacturer
    - Enable Developer Options and USB Debugging
    - Request unlock code from manufacturer (if required)
    - Execute bootloader unlock command via fastboot
    - Accept data wipe and security warnings
 
-4. **Install Custom Recovery**
+4. **[🛠️ Install Custom Recovery](./custom-recovery.md)** ⭐ **Critical for Root Installation**
+   - **Complete guide available**: [Custom Recovery Installation Guide](./custom-recovery.md)
+   - Choose between TWRP, OrangeFox, or SKYHAWK Recovery
    - Download recovery image compatible with your device
    - Flash recovery using fastboot commands
    - Verify recovery installation and functionality
@@ -336,7 +338,9 @@ The standard rooting procedure typically follows these sequential steps:
    - Install essential root applications
 
 ::: warning ⚠️ Critical Note
-Step 3 (Bootloader Unlocking) is the most complex and manufacturer-specific step. Our [dedicated guide](./Bootloader-unlocking.md) covers all the details, prerequisites, and troubleshooting for this crucial step.
+Steps 3-4 (Bootloader Unlocking and Custom Recovery Installation) are the most complex and manufacturer-specific steps. Our dedicated guides provide comprehensive coverage:
+- **[Bootloader Unlocking Guide](./bootloader-unlocking.md)** - Complete manufacturer-specific instructions
+- **[Custom Recovery Guide](./custom-recovery.md)** - TWRP, OrangeFox, and SKYHAWK installation
 :::
 
 ## Device-Specific Guides
@@ -439,6 +443,41 @@ Rooting involves inherent risks that users must understand and accept:
 - **Application Restrictions:** Some applications detect and block functionality on rooted devices
 
 Always research thoroughly, maintain current backups, and seek assistance from experienced community members when uncertain about procedures. The rooting process requires patience, preparation, and willingness to troubleshoot potential issues.
+
+---
+
+## 🗺️ Next Steps
+
+**Ready to start rooting?** Here's your action plan:
+
+### For Beginners
+1. **[📖 Read Bootloader Unlocking Guide](./bootloader-unlocking.md)** - Essential first step
+2. **[🛠️ Install Custom Recovery](./custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK
+3. **[🔍 Check Device Compatibility](#device-specific-guides)** - Find your device guide
+4. **[⚖️ Choose Root Method](#root-solutions-comparison)** - Magisk recommended for first-timers
+
+### For Experienced Users
+1. **[📱 Jump to Device Guide](#device-specific-guides)** - Skip to your specific device
+2. **[🛠️ Custom Recovery Guide](./custom-recovery.md)** - Advanced recovery options
+3. **[🔧 Advanced Frameworks](#advanced-framework-solutions)** - LSPosed and modules
+4. **[🛠️ Troubleshooting](#safety-and-troubleshooting)** - Solutions for common issues
+
+### Essential Resources
+- **[🔓 Bootloader Unlocking](./bootloader-unlocking.md)** - Complete manufacturer guide
+- **[🛠️ Custom Recovery Installation](./custom-recovery.md)** - TWRP, OrangeFox, SKYHAWK
+- **[📱 Device Guides](#device-specific-guides)** - Manufacturer-specific instructions
+
+### Need Help?
+- **💬 Community Support** - Join XDA Forums and Telegram groups
+- **📚 Documentation** - Check our [main project](../../README.md) for more resources
+- **🆘 Emergency** - Use troubleshooting guides for recovery
+
+::: tip 🎯 Success Tips
+- Always backup before making changes
+- Read device-specific guides completely before starting  
+- Join community groups for your device model
+- Start with Magisk if you're new to rooting
+:::
 
 ---
 
