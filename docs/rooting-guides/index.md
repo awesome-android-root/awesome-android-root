@@ -103,13 +103,19 @@ Welcome to the Ultimate Android Rooting Guide - Master Android rooting with our 
 
 ## Quick Start
 
-**New to rooting?** Start here for a quick overview:
+**New to rooting?** Follow this step-by-step roadmap:
 
-- 1️⃣ [Check device compatibility](#device-specific-guides)
-- 2️⃣ [Understand risks and benefits](#should-you-root-your-device)
-- 3️⃣ [Prepare prerequisites](#prerequisites-and-preparations)
-- 4️⃣ [Choose root method](#root-solutions-comparison) 
-- 5️⃣ [Follow rooting steps](#general-rooting-process)
+- 1️⃣ **[Understand the basics](#understanding-root-access)** - Learn what root access means
+- 2️⃣ **[Assess risks vs benefits](#should-you-root-your-device)** - Make an informed decision  
+- 3️⃣ **[Check device compatibility](#device-specific-guides)** - Verify your device is supported
+- 4️⃣ **[Unlock bootloader](./Bootloader-unlocking.md)** - Essential first step for most devices
+- 5️⃣ **[Prepare prerequisites](#prerequisites-and-preparations)** - Get tools and backups ready
+- 6️⃣ **[Choose root method](#root-solutions-comparison)** - Select the best solution for you
+- 7️⃣ **[Follow rooting steps](#general-rooting-process)** - Complete the rooting process
+
+::: tip 🚀 Fast Track for Experienced Users
+Already familiar with rooting? Jump to [Root Solutions Comparison](#root-solutions-comparison) or your specific [Device Guide](#device-specific-guides).
+:::
 
 ## Understanding Root Access
 
@@ -154,20 +160,23 @@ Before attempting to root your Android device, ensure you meet all requirements 
 
 #### Essential Requirements
 
-1. **Unlocked Bootloader**
-   - Most devices require an unlocked bootloader to install custom recovery and root solutions
-   - Check your device manufacturer's official unlock process
+1. **[Unlocked Bootloader](./Bootloader-unlocking.md)** ⭐ **Most Critical Step**
+   - Required for installing custom recovery and root solutions
+   - **Comprehensive guide available**: [Complete Bootloader Unlocking Guide](./Bootloader-unlocking.md)
+   - Covers all major manufacturers with step-by-step instructions
    - **Warning:** Unlocking bootloader will erase all data on your device
 
 2. **Developer Options & USB Debugging**
    - Enable Developer Options by tapping Build Number 7 times in About Phone
    - Enable USB Debugging and OEM Unlocking in Developer Options
+   - **Detailed steps**: See [Universal Preparation Steps](./Bootloader-unlocking.md#universal-preparation-steps)
 
 3. **Computer Setup**
    - Windows, macOS, or Linux computer
    - USB cable for device connection
    - Latest ADB and Fastboot tools installed
    - Device-specific drivers (especially for Windows)
+   - **Setup guide**: [What You'll Need](./Bootloader-unlocking.md#what-youll-need)
 
 4. **Device-Specific Files**
    - Custom Recovery (TWRP, OrangeFox, etc.) for your exact device model
@@ -192,27 +201,22 @@ Before attempting to root your Android device, ensure you meet all requirements 
 
 ### Manufacturer-Specific Considerations
 
-Different manufacturers implement varying security measures requiring specific approaches:
+Different manufacturers implement varying security measures requiring specific approaches. For detailed bootloader unlocking instructions, see our [**Complete Bootloader Unlocking Guide**](./Bootloader-unlocking.md).
 
-**Xiaomi Requirements**
-- Mi Unlock Tool with active Mi Account
-- Mandatory waiting period (7-30 days) for bootloader unlock approval
-- MIUI-specific root persistence considerations
+**Quick Overview:**
 
-**Samsung Considerations**
-- Knox security system complications and warranty implications
-- Odin flashing tool requirements for firmware manipulation
-- Potential KNOX warranty bit activation
+| Manufacturer | Difficulty | Special Requirements |
+|--------------|------------|---------------------|
+| **Google Pixel** | ✅ Easy | Official fastboot unlock |
+| **Xiaomi** | ⚠️ Medium | Mi Unlock Tool + 7-30 day wait |
+| **OnePlus** | ✅ Easy | Simple fastboot commands |
+| **Samsung** | 🚫 Hard | Exynos only (US models locked) |
+| **Motorola** | ⚠️ Medium | Official unlock code required |
+| **Sony** | ⚠️ Medium | Developer portal registration |
 
-**Google Pixel Advantages**
-- Official bootloader unlock support through fastboot
-- Simplified unlocking procedures
-- Regular security update compatibility
-
-**OnePlus Specifics**
-- MSM Download Tool availability for recovery scenarios
-- OxygenOS-specific root implementation requirements
-- Strong community development support
+::: tip 💡 Detailed Instructions Available
+Each manufacturer has specific requirements and procedures. Our [Bootloader Unlocking Guide](./Bootloader-unlocking.md) provides comprehensive instructions for all major brands.
+:::
 
 ## Root Solutions Comparison
 
@@ -222,40 +226,68 @@ Different manufacturers implement varying security measures requiring specific a
 
 **Pros:**
 - ✅ Huge community and module ecosystem
-- ✅ Excellent SafetyNet/Play Integrity bypass
-- ✅ Easy to install and manage
-- ✅ Regular updates and support
+- ✅ Excellent SafetyNet/Play Integrity bypass capabilities
+- ✅ Easy to install and manage through intuitive interface
+- ✅ Regular updates and strong community support
+- ✅ Systemless approach (doesn't modify system partition)
+- ✅ MagiskHide for hiding root from apps
 
-**Best for:** First-time rooters, users wanting extensive module support
+**Cons:**
+- ❌ Main development has slowed down
+- ❌ Play Integrity bypassing becoming more challenging
+
+**Best for:** First-time rooters, users wanting extensive module support, general usage
+
+**Installation Requirements:**
+- Unlocked bootloader ([guide here](./Bootloader-unlocking.md))
+- Custom recovery or patched boot image
+- Compatible with most Android versions
 
 ### 2. **KernelSU**
 
-**[KernelSU](https://github.com/tiann/KernelSU)** - Kernel-based root solution
+**[KernelSU](https://github.com/tiann/KernelSU)** - Modern kernel-based root solution
 
 **Pros:**
-- ✅ Kernel-level integration
-- ✅ Better security model
-- ✅ Growing module support
+- ✅ Kernel-level integration for better security
+- ✅ More efficient resource usage
+- ✅ Growing module ecosystem
+- ✅ Better isolation between root and user space
+- ✅ Active development and improvements
 
 **Cons:**
-- ❌ Requires custom kernel
-- ❌ Limited device support
+- ❌ Requires custom kernel (not available for all devices)
+- ❌ Limited device support compared to Magisk
+- ❌ Newer solution with smaller community
 
-**Best for:** Advanced users, newer devices with KernelSU support
+**Best for:** Advanced users, newer devices with KernelSU support, security-conscious users
+
+**Installation Requirements:**
+- Unlocked bootloader ([guide here](./Bootloader-unlocking.md))
+- Custom kernel with KernelSU support
+- Android 12+ recommended for best compatibility
 
 ### 3. **APatch**
 
-**[APatch](https://github.com/bmax121/APatch)** - Kernel patching solution
+**[APatch](https://github.com/bmax121/APatch)** - Innovative kernel patching solution
 
 **Pros:**
-- ✅ Innovative approach
-- ✅ Active development
+- ✅ Innovative kernel patching approach
+- ✅ Active development with regular updates
+- ✅ Potentially better compatibility with some devices
+- ✅ Modern architecture and design
 
 **Cons:**
-- ❌ Newer, less tested
-- ❌ Limited documentation
+- ❌ Newest solution with limited testing
+- ❌ Smaller community and module ecosystem
+- ❌ Limited documentation and guides
+- ❌ May have stability issues on some devices
 
-**Best for:** Experimental users, specific use cases
+**Best for:** Experimental users, developers, specific use cases where other methods fail
+
+**Installation Requirements:**
+- Unlocked bootloader ([guide here](./Bootloader-unlocking.md))
+- Compatible kernel
+- Advanced technical knowledge recommended
 
 ## How to Root
 The rooting process varies significantly between different device manufacturers, models, and Android versions. While general principles remain consistent, specific implementation details require device-specific research and preparation.
@@ -279,7 +311,8 @@ The standard rooting procedure typically follows these sequential steps:
    - Ensure stable power supply and uninterrupted time
    - Set up ADB/Fastboot environment on computer
 
-3. **Unlock Bootloader**
+3. **[📖 Unlock Bootloader](./Bootloader-unlocking.md)** ⭐ **Essential Step**
+   - **Follow our comprehensive guide** for your specific manufacturer
    - Enable Developer Options and USB Debugging
    - Request unlock code from manufacturer (if required)
    - Execute bootloader unlock command via fastboot
@@ -302,15 +335,38 @@ The standard rooting procedure typically follows these sequential steps:
    - Configure root management settings
    - Install essential root applications
 
+::: warning ⚠️ Critical Note
+Step 3 (Bootloader Unlocking) is the most complex and manufacturer-specific step. Our [dedicated guide](./Bootloader-unlocking.md) covers all the details, prerequisites, and troubleshooting for this crucial step.
+:::
+
 ## Device-Specific Guides
 
-Detailed rooting instructions tailored to specific device families:
+Detailed rooting instructions tailored to specific device families. Each guide includes manufacturer-specific considerations, required tools, and step-by-step procedures:
 
-- [Xiaomi](./xiaomi.md)
-- [Motorola](./motorola.md)
-- [Samsung](./samsung.md) (WIP)
-- [Pixel](./pixel.md) (WIP)
-- [OnePlus](./oneplus.md) (WIP)
+::: tip 📋 All Guides Include Bootloader Unlocking
+Each device-specific guide references our [Complete Bootloader Unlocking Guide](./Bootloader-unlocking.md) for the essential first step.
+:::
+
+### Available Guides
+- **[📱 Xiaomi Devices](./xiaomi.md)** - Complete guide for MIUI devices including Mi Unlock Tool usage
+- **[📱 Motorola Devices](./motorola.md)** - Step-by-step for Moto devices with official unlock codes
+
+### Coming Soon
+- **[📱 Samsung Devices](./samsung.md)** - Exynos models, Knox considerations *(Work in Progress)*
+- **[📱 Google Pixel](./pixel.md)** - Simple unlocking for Google devices *(Work in Progress)*
+- **[📱 OnePlus Devices](./oneplus.md)** - OxygenOS rooting procedures *(Work in Progress)*
+
+### Need Help with Your Device?
+Don't see your device listed? Here's what to do:
+
+1. **Check XDA Developers** - Visit [XDA Forums](https://forum.xda-developers.com/) for device-specific communities
+2. **Telegram Groups** - Search for your device model + "root" or "development"
+3. **Reddit Communities** - r/AndroidRoot, r/LineageOS, device-specific subreddits
+4. **Follow General Process** - Use our [General Rooting Process](#general-rooting-process) as a starting point
+
+::: warning ⚠️ Device Compatibility
+Always verify your exact device model and firmware version before following any rooting guide. Even minor model variations can have different procedures.
+:::
 
 ## Advanced Framework Solutions
 
@@ -351,13 +407,26 @@ Implement changes gradually, testing stability after each modification. Avoid ma
 ### Common Issues and Solutions
 
 **Boot Loops**
-Usually resolved by wiping cache partitions or flashing stock recovery. Ensure compatibility between root solution and firmware version.
+- Usually resolved by wiping cache partitions or flashing stock recovery
+- Ensure compatibility between root solution and firmware version
+- Boot to recovery mode and perform factory reset if necessary
+- **Emergency recovery**: See [Bootloader Unlocking Troubleshooting](./Bootloader-unlocking.md#troubleshooting)
 
 **SafetyNet/Play Integrity Failures**
-Configure Magisk Hide or similar features to conceal root status from detection systems. Update root solution and modules regularly.
+- Configure Magisk Hide or similar features to conceal root status
+- Update root solution and modules regularly
+- Use Universal SafetyNet Fix module for Magisk
+- Consider switching to KernelSU for better detection avoidance
 
 **Application Compatibility**
-Use root hiding modules or alternative applications when banking or security apps detect root access. Consider creating separate user profiles for sensitive applications.
+- Use root hiding modules (Magisk Hide, Shamiko)
+- Try alternative applications when banking apps detect root
+- Consider using separate user profiles for sensitive applications
+- Some apps require complete unroot to function
+
+**Bootloader Unlock Issues**
+- **Most common problems** are covered in our [Bootloader Unlocking Troubleshooting](./Bootloader-unlocking.md#troubleshooting) section
+- Includes solutions for missing OEM unlock, fastboot recognition, and recovery procedures
 
 ### Important Disclaimers
 
@@ -370,3 +439,17 @@ Rooting involves inherent risks that users must understand and accept:
 - **Application Restrictions:** Some applications detect and block functionality on rooted devices
 
 Always research thoroughly, maintain current backups, and seek assistance from experienced community members when uncertain about procedures. The rooting process requires patience, preparation, and willingness to troubleshoot potential issues.
+
+---
+
+### Need Help?
+- **💬 Community Support** - Join XDA Forums and Telegram groups
+- **📚 Documentation** - Check our [main project](../../README.md) for more resources
+- **🆘 Emergency** - Use [troubleshooting guides](./Bootloader-unlocking.md#troubleshooting) for recovery
+
+::: tip 🎯 Success Tips
+- Always backup before making changes
+- Read device-specific guides completely before starting  
+- Join community groups for your device model
+- Start with Magisk if you're new to rooting
+:::
