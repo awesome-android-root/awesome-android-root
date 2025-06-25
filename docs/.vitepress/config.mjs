@@ -193,20 +193,16 @@ export default defineConfig({
           {
             text: 'Help & Support',
             items: [
-              { text: 'Support this Project', link: 'https://opencollective.com/awesome-android-root-official' },
               { text: '❓ FAQ & Troubleshooting', link: '/faqs' },
-              { text: '� Glossary & Terms', link: '/#glossary' },
-              { text: '📖 Contributing Guide', link: '/contributing' },
-              { text: '📜 About This Project', link: '/about' }
+              { text: '💖 Support', link: 'https://opencollective.com/awesome-android-root-official' },
+              { text: '📜 About', link: '/about' }
             ]
           },
           {
             text: 'Community Resources',
             items: [
               { text: '𝕏 / Twitter', link: 'https://x.com/awsm_and_root' },
-              { text: '💬 Community Forums', link: '/#community-resources' },
-              { text: '🐛 Report Issues', link: 'https://github.com/awesome-android-root/awesome-android-root/issues' },
-              { text: '💡 Feature Requests', link: 'https://github.com/awesome-android-root/awesome-android-root/discussions' }
+              { text: '💬 Community Forums', link: '/#community-resources' }
             ]
           },
           {
