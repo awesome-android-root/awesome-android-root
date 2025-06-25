@@ -69,10 +69,10 @@ head:
       content: summary_large_image
   - - meta
     - name: twitter:site
-      content: "@awsmroot"
+      content: "@awsm_and_root"
   - - meta
     - name: twitter:creator
-      content: "@awsmroot"
+      content: "@awsm_and_root"
   - - meta
     - name: twitter:title
       content: Best Root Apps & Modules 2025 | Awesome Android Root
