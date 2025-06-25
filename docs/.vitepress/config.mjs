@@ -202,6 +202,7 @@ export default defineConfig({
           {
             text: 'Community Resources',
             items: [
+              { text: '𝕏 / Twitter', link: 'https://x.com/awsm_and_root' },
               { text: '💬 Community Forums', link: '/#community-resources' },
               { text: '🐛 Report Issues', link: 'https://github.com/awesome-android-root/awesome-android-root/issues' },
               { text: '💡 Feature Requests', link: 'https://github.com/awesome-android-root/awesome-android-root/discussions' }
@@ -287,7 +288,7 @@ export default defineConfig({
       }
     },
     socialLinks:[
-      { icon: 'x', link: 'https://x.com/awsm_and_root' },
+      { icon: 'github', link: 'https://github.com/awesome-android-root/awesome-android-root' },
       { icon: 'reddit', link: 'https://x.com/awsm_and_root' },
 
     ]
