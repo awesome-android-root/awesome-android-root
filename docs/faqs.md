@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Android Rooting FAQ & Troubleshooting Guide 2025
+title: Root FAQ & Troubleshooting
 description: "Complete Android rooting FAQ with troubleshooting solutions. Expert answers to safety, security, bootloader unlock, Magisk issues, Play Integrity fixes, and community resources."
 head:
   - - link

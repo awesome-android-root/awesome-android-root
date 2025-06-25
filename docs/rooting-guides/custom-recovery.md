@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Custom Recovery Installation Guide 2025 | Awesome Android Root
+title: Custom Recovery Installation Guide 2025
 description: "Complete custom recovery installation guide for 2025. Learn to install TWRP, OrangeFox, and SKYHAWK Recovery with step-by-step instructions for all Android devices. Essential for rooting and ROM flashing."
 head:
   - - link

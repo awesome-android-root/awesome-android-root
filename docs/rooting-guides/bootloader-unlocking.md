@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Bootloader Unlocking Guide 2025 | Awesome Android Root
+title: Bootloader Unlocking Guide 2025 
 description: "Complete bootloader unlocking guide for 2025. Learn what bootloaders are & step-by-step guide for Google Pixel, Xiaomi, Samsung, OnePlus, and Motorola."
 head:
   - - link
