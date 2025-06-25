@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: About Awesome Android Root
-description: "Learn about the Awesome Android Root project - the most comprehensive collection of Android root apps, guides, and resources. Discover our mission, community, and commitment to Android freedom."
+description: "Learn about the Awesome Android Root project - the most comprehensive collection of Android root apps, guides, and resources. 
 head:
   - - link
     - rel: canonical

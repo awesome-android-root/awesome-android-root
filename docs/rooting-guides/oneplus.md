@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: OnePlus Root Guide 2025
-description: "Complete Step-by-step OnePlus rooting guide for 2025. including bootloader unlocking, MSM tool, custom recovery and Magisk rooting on all devices running OxygenOS."
+description: "Complete Step-by-step OnePlus rooting guide for 2025. including bootloader unlocking, custom recovery and Magisk rooting on all OxygenOS devices."
 head:
   - - link
     - rel: canonical

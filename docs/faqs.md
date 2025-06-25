@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Root FAQ & Troubleshooting
-description: "Complete Android rooting FAQ with troubleshooting solutions. Expert answers to safety, security, bootloader unlock, Magisk issues, Play Integrity fixes, and community resources."
+description: "Complete Android rooting FAQ with troubleshooting solutions about safety, security, bootloader unlock, Magisk issues, Play Integrity fixes etc."
 head:
   - - link
     - rel: canonical

@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Custom ROM Installation Guide 2025
-description: "Complete custom ROM installation guide for 2025. Learn to install LineageOS, GrapheneOS, Pixel Experience & more with step-by-step instructions. Compare 20+ Android-based operating systems."
+description: "Complete step-by-step custom ROM installation guide for 2025 for installing LineageOS,CalyxOS GrapheneOS, Pixel Experience & more. "
 head:
   - - link
     - rel: canonical
