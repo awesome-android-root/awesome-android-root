@@ -93,7 +93,6 @@ Welcome to the Ultimate Android Rooting Guide - Master Android rooting with our 
 - [How to Root](#how-to-root)
     - [General Rooting Process](#general-rooting-process)
   - [Device-Specific Guides](#device-specific-guides)
-- [Beyond Rooting: Custom ROMs](#beyond-rooting-custom-roms)
 - [Advanced Framework Solutions](#advanced-framework-solutions)
     - [LSPosed Framework](#lsposed-framework)
     - [LSPosed Fork by JingMatrix](#lsposed-fork-by-jingmatrix)
@@ -377,207 +376,91 @@ Always verify your exact device model and firmware version before following any 
 
 ## Beyond Rooting: Custom ROMs
 
-**Custom ROMs** represent the ultimate Android customization - complete operating system replacements that can transform your device experience with enhanced privacy, security, and features.
+**Custom ROMs** replace your device's operating system with privacy-focused, bloatware-free alternatives.
 
-### Why Consider Custom ROMs After Rooting?
+### Key Benefits
+- **🛡️ Privacy** - Remove Google tracking, get security updates longer
+- **⚡ Performance** - Better battery life, latest Android versions on older devices  
+- **🎨 Customization** - Complete UI control, remove manufacturer bloatware
 
-Once you've successfully rooted your device, custom ROMs become the next frontier:
-
-#### 🛡️ **Privacy & Security Benefits**
-- **Degoogled Experience** - Remove Google tracking and services entirely
-- **Enhanced Security** - Advanced security features like GrapheneOS hardening
-- **Open Source Transparency** - Full visibility into operating system code
-- **Extended Security Updates** - Continue receiving updates after manufacturer EOL
-
-#### ⚡ **Performance & Features**
-- **Optimized Performance** - Better battery life and system responsiveness  
-- **Latest Android Versions** - Run newest Android on older devices
-- **Advanced Customization** - Deep system theming and modification options
-- **Bloatware Elimination** - Clean system without manufacturer additions
-
-#### 🔧 **Popular Custom ROM Options**
-- **[GrapheneOS](https://grapheneos.org/)** - Maximum security and privacy (Pixel devices only)
+### Popular Options
+- **[GrapheneOS](https://grapheneos.org/)** - Maximum security (Pixel only)
 - **[LineageOS](https://lineageos.org/)** - Most popular, wide device support
-- **[CalyxOS](https://calyxos.org/)** - Privacy-focused with better app compatibility
-- **[Pixel Experience](https://download.pixelexperience.org/)** - Google Pixel UI on non-Pixel devices
+- **[CalyxOS](https://calyxos.org/)** - Privacy-focused with app compatibility
 
-### Complete Custom ROM Installation Guide
-
-Ready to transform your Android experience? Our comprehensive Custom ROM guide covers everything you need:
-
+### Ready to Install?
 🔗 **[📱 Complete Custom ROM Installation Guide](./custom-rom-installation.md)**
 
-**What You'll Learn:**
-- **ROM Comparison** - Detailed analysis of 20+ Android-based operating systems
-- **Installation Process** - Step-by-step instructions for all major ROMs
-- **Device Compatibility** - Find ROMs for 800+ supported devices via [CustomROMBay.org](https://customrombay.org/)
-- **Security Considerations** - Privacy and security implications of different ROM choices
-- **Troubleshooting** - Common issues and solutions for ROM installation
-
-**Prerequisites for Custom ROMs:**
-1. ✅ **[Unlocked Bootloader](./bootloader-unlocking.md)** - Essential first step
-2. ✅ **[Custom Recovery](./custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK installed  
-3. ✅ **Complete Backups** - NANDroid backup and important data saved
-4. ✅ **Root Knowledge** - Understanding gained from rooting experience
-
-::: tip 🚀 Rooting + Custom ROM = Ultimate Android Control
-The combination of rooting knowledge and custom ROM installation gives you complete control over your Android device. Start with rooting to understand the fundamentals, then explore custom ROMs for the ultimate Android experience.
-:::
+**Prerequisites:** Unlocked bootloader + Custom recovery + Complete backups + Root experience
 
 ## Advanced Framework Solutions
 
-Frameworks extend root functionality through modular systems allowing deep system modifications:
+**LSPosed Framework** extends root with powerful system modifications through modules.
 
-### LSPosed Framework
-
-**[LSPosed](https://github.com/LSPosed/LSPosed)** provides Xposed framework functionality on modern Android versions, enabling system-level modifications through modules.
-
-**Key Features:**
+### [LSPosed](https://github.com/LSPosed/LSPosed)
 - Extensive module ecosystem for system customization
-- Granular permission control and module management
-- Support for modern Android versions with regular updates
-- Advanced logging and debugging capabilities
+- Granular permission control and module management  
+- Support for modern Android versions
 
-### LSPosed Fork by JingMatrix
-
-**[LSPosed Fork](https://github.com/JingMatrix/LSPosed)** continues development after the original project's pause, offering enhanced compatibility and features.
-
-**Improvements:**
-- Android 15 compatibility and support
-- Additional security enhancements and bug fixes
-- Continued development and community support
+### [LSPosed Fork by JingMatrix](https://github.com/JingMatrix/LSPosed)
+- Continued development with Android 15 support
+- Enhanced compatibility and additional features
 
 ## Safety and Troubleshooting
 
-### Risk Mitigation Strategies
+### Risk Mitigation
+- **Backup Everything** - NANDroid backups, personal data, stock firmware
+- **Research First** - Check XDA forums and device compatibility
+- **Stage Changes** - Make one modification at a time
 
-**Backup Protocols**
-Maintain multiple backup types including NANDroid backups, personal data backups, and stock firmware downloads. Test backup restoration procedures before making significant changes.
+### Common Issues & Quick Fixes
+**Bootloop** → Wipe cache, factory reset, or flash stock firmware  
+**Play Integrity/Banking Apps** → Use Magisk Hide, Universal SafetyNet Fix, or switch to KernelSU  
+**Root Not Detected** → Check Magisk installation, grant permissions, reboot device
 
-**Recovery Planning**
-Identify and download appropriate unbrick tools for your device. Understand recovery procedures including fastboot commands and emergency download modes.
+### Emergency Recovery
+For complete troubleshooting and emergency recovery procedures:  
+🔗 **[📖 Complete FAQ & Troubleshooting Guide](../faqs.md)**
 
-**Staged Implementation**
-Implement changes gradually, testing stability after each modification. Avoid making multiple simultaneous changes that could complicate troubleshooting.
+### Important Warnings
+- **Warranty void** upon bootloader unlock
+- **Security risks** from root access  
+- **OTA updates** may fail on rooted devices
+- **Bricking possible** with incorrect procedures
 
-### Common Issues and Solutions
-
-**Boot Loops**
-- Usually resolved by wiping cache partitions or flashing stock recovery
-- Ensure compatibility between root solution and firmware version
-- Boot to recovery mode and perform factory reset if necessary
-- **Emergency recovery**: See [Bootloader Unlocking Troubleshooting](./Bootloader-unlocking.md#troubleshooting)
-
-**SafetyNet/Play Integrity Failures**
-- Configure Magisk Hide or similar features to conceal root status
-- Update root solution and modules regularly
-- Use Universal SafetyNet Fix module for Magisk
-- Consider switching to KernelSU for better detection avoidance
-
-**Application Compatibility**
-- Use root hiding modules (Magisk Hide, Shamiko)
-- Try alternative applications when banking apps detect root
-- Consider using separate user profiles for sensitive applications
-- Some apps require complete unroot to function
-
-**Bootloader Unlock Issues**
-- **Most common problems** are covered in our [Bootloader Unlocking Troubleshooting](./Bootloader-unlocking.md#troubleshooting) section
-- Includes solutions for missing OEM unlock, fastboot recognition, and recovery procedures
-
-### Important Disclaimers
-
-Rooting involves inherent risks that users must understand and accept:
-
-- **Warranty Implications:** Most manufacturers void warranties upon bootloader unlock
-- **Security Considerations:** Root access potentially reduces device security posture
-- **Update Complications:** Official OTA updates may fail or cause system instability
-- **Bricking Potential:** Incorrect procedures can render devices temporarily or permanently unusable
-- **Application Restrictions:** Some applications detect and block functionality on rooted devices
-
-Always research thoroughly, maintain current backups, and seek assistance from experienced community members when uncertain about procedures. The rooting process requires patience, preparation, and willingness to troubleshoot potential issues.
+*Always research thoroughly and maintain backups before proceeding.*
 
 ---
 
-## 🗺️ Next Steps
+## Ready to Start Rooting?
 
-**Ready to start rooting?** Here's your action plan:
+### Quick Action Plan
 
-### For Beginners
-1. **[📖 Read Bootloader Unlocking Guide](./bootloader-unlocking.md)** - Essential first step
-2. **[🛠️ Install Custom Recovery](./custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK
-3. **[🔍 Check Device Compatibility](#device-specific-guides)** - Find your device guide
-4. **[⚖️ Choose Root Method](#root-solutions-comparison)** - Magisk recommended for first-timers
+**Beginners:** [Bootloader Unlocking](./bootloader-unlocking.md) → [Custom Recovery](./custom-recovery.md) → [Choose Root Method](#root-solutions-comparison)
 
-### For Experienced Users
-1. **[📱 Jump to Device Guide](#device-specific-guides)** - Skip to your specific device
-2. **[🛠️ Custom Recovery Guide](./custom-recovery.md)** - Advanced recovery options
-3. **[🔧 Advanced Frameworks](#advanced-framework-solutions)** - LSPosed and modules
-4. **[🛠️ Troubleshooting](#safety-and-troubleshooting)** - Solutions for common issues
+**Experienced:** Jump to [Device Guides](#device-specific-guides) or [Root Solutions](#root-solutions-comparison)
 
 ### Essential Resources
 - **[🔓 Bootloader Unlocking](./bootloader-unlocking.md)** - Complete manufacturer guide
-- **[🛠️ Custom Recovery Installation](./custom-recovery.md)** - TWRP, OrangeFox, SKYHAWK
-- **[📱 Device Guides](#device-specific-guides)** - Manufacturer-specific instructions
+- **[🛠️ Custom Recovery](./custom-recovery.md)** - TWRP, OrangeFox, SKYHAWK  
+- **[🌟 Custom ROMs](./custom-rom-installation.md)** - Transform your Android experience
+- **[❓ FAQ & Troubleshooting](../faqs.md)** - Complete support guide
 
 ### Need Help?
-- **💬 Community Support** - Join XDA Forums and Telegram groups
-- **📚 Documentation** - Check our [main project](../../README.md) for more resources
-- **🆘 Emergency** - Use troubleshooting guides for recovery
+- **[XDA Forums](https://forum.xda-developers.com/)** - Device-specific communities
+- **[Our FAQ](../faqs.md)** - Emergency fixes and troubleshooting
+- **[GitHub Issues](https://github.com/awesome-android-root/awesome-android-root/issues)** - Report problems
 
-::: tip 🎯 Success Tips
-- Always backup before making changes
-- Read device-specific guides completely before starting  
-- Join community groups for your device model
-- Start with Magisk if you're new to rooting
-:::
+### Success Tips
+✅ Always backup before changes  
+✅ Read device guides completely  
+✅ Join your device's community  
+✅ Start with Magisk if new to rooting
 
 ---
 
-## 🎉 **You're Ready to Root Your Android Device!**
+## 🎉 Welcome to Android Freedom!
 
-**Congratulations on completing our comprehensive rooting education!** You now have the knowledge to safely and successfully root your Android device and unlock its full potential.
+**You now have the knowledge to safely root your Android device.** Join millions of users worldwide who believe in digital freedom and true device ownership.
 
-### 🚀 **Your Rooting Roadmap:**
-1. **[🔓 Start with Bootloader Unlocking](./bootloader-unlocking.md)** - The essential first step
-2. **[🛠️ Install Custom Recovery](./custom-recovery.md)** - Your gateway to advanced modifications
-3. **[⚡ Choose Your Root Method](#root-solutions-comparison)** - Magisk, KernelSU, or APatch
-4. **[🌟 Consider Custom ROMs](./custom-rom-installation.md)** - Transform your entire Android experience
-
-### 📱 **Device-Specific Support:**
-- **[Xiaomi/Redmi Devices](./xiaomi.md)** - MIUI/HyperOS specific instructions
-- **[Motorola Devices](./motorola.md)** - Complete Moto rooting guide
-- **[Samsung Devices](./samsung.md)** - Exynos models and Knox considerations *(Coming Soon)*
-- **[Google Pixel](./pixel.md)** - Simple process for Google devices *(Coming Soon)*
-- **[OnePlus Devices](./oneplus.md)** - OxygenOS rooting procedures *(Coming Soon)*
-
-### 🆘 **Get Support:**
-- **[❓ FAQ & Troubleshooting](../faqs.md)** - Complete support guide with troubleshooting solutions
-- **[📖 About Awesome Android Root](../about.md)** - Learn about our project and community
-- **[💬 Join Our Community](../about.md#community--resources)** - Connect with fellow Android enthusiasts
-- **[🐛 Report Issues](https://github.com/awesome-android-root/awesome-android-root/issues)** - Help improve our guides
-
-### 🔗 **Essential Resources:**
-- **[📱 220+ Root Apps Collection](/)** - Discover the best root applications
-- **[CustomROMBay.org](https://customrombay.org/)** - Find ROMs for 811 devices
-- **[Android OS Comparison](https://eylenburg.github.io/android_comparison.htm)** - Privacy & security analysis
-- **[XDA Developers](https://forum.xda-developers.com/)** - Premier Android development community
-
-### 💪 **Join the Android Freedom Movement**
-
-Rooting isn't just about technical modification - it's about digital freedom, privacy control, and true device ownership. By choosing to root, you're joining millions of users worldwide who believe technology should serve people, not corporations.
-
-**Welcome to the world of unlimited Android possibilities. Your journey to Android freedom starts now!**
-
----
-
-### Need Help?
-- **💬 Community Support** - Join XDA Forums and Telegram groups
-- **📚 Documentation** - Check our [main project](../../README.md) for more resources
-- **🆘 Emergency** - Use [troubleshooting guides](./bootloader-unlocking.md#troubleshooting) for recovery
-
-::: tip 🎯 Success Tips
-- Always backup before making changes
-- Read device-specific guides completely before starting  
-- Join community groups for your device model
-- Start with Magisk if you're new to rooting
-:::
+**Your journey to unlimited Android possibilities starts now!**
