@@ -171,8 +171,7 @@ Rooting allows overcoming limitations that carriers and hardware manufacturers p
 - **[Inure](https://github.com/Hamza417/Inure)** - An elegant and beautiful premium Android app manager for rooted and non-rooted devices. `FOSS`
 - **[Let Me Downgrade](https://github.com/DavidBerdik/Let-Me-Downgrade)** - Add support for downgrading apps on Android 12 through 15 QPR1. `FOSS` `[LSP]`
 - **[Package Manager](https://github.com/SmartPack/PackageManager)** - A highly powerful app to manage both system and user apps installed on an Android device. `FOSS`
-- **[System App Nuker](https://github.com/ChiseWaguri/systemapp_nuker)** - A module to debloat system apps with WebUI Interface. `FOSS` `[M]`
-- **[System app remover](https://play.google.com/store/apps/details?id=com.jumobile.manager.systemapp)** - A system app remover and user app uninstaller, move app to sdcard, move app to phone, apk on sdcard scan/install/delete. `Proprietary`
+- **[Update Locker](https://github.com/Xposed-Modules-Repo/ru.mike.updatelocker/)** - Block updates (and auto-updates) selected apps via popular markets including Google Play Market, Huawei AppGallery & Samsung Galaxy Store.
 - **[Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. `FOSS` `[M]`
 
 #### App Markets
@@ -385,6 +384,8 @@ Rooting allows overcoming limitations that carriers and hardware manufacturers p
 - **[Canta](https://github.com/samolego/Canta)** -  Uninstall any app without root using Shizuku (Needs [Shizuku](https://shizuku.rikka.app/) to be installed and running). `FOSS`
 - **[De-Bloater](https://github.com/sunilpaulmathew/De-Bloater)** - An application using the power of Magisk to debloat unwanted system apps!. `FOSS`
 - **[EXA System App Remover](https://play.google.com/store/apps/details?id=exa.free.saux)** - Remove Bloatware, clear memory and speed up your phone now by uninstalling unused system apps. `Proprietary`
+- **[System App Nuker](https://github.com/ChiseWaguri/systemapp_nuker)** - A module to debloat system apps with WebUI Interface. `FOSS` `[M]`
+- **[System app remover](https://play.google.com/store/apps/details?id=com.jumobile.manager.systemapp)** - A system app remover and user app uninstaller, move app to sdcard, move app to phone, apk on sdcard scan/install/delete. `Proprietary`
 
 [↑ Back to top](#table-of-contents)
 
