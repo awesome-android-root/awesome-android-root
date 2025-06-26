@@ -9,6 +9,7 @@ export default defineConfig({
   // VitePress build optimizations
   vite: {
     build: {
+        target: 'esnext',
       minify: 'terser',
       terserOptions: {
         compress: {
