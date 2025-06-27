@@ -14,7 +14,7 @@ head:
       content: About Awesome Android Root - Ultimate Android Rooting Resource 2025
   - - meta
     - property: og:description
-      content: Discover the story behind Awesome Android Root - the most comprehensive collection of 220+ Android root apps, Magisk modules, and expert rooting guides for 2025.
+      content: Discover the story behind Awesome Android Root - the most comprehensive collection of 250+ Android root apps, Magisk modules, and expert rooting guides for 2025.
   - - meta
     - property: og:url
       content: https://awesome-android-root.org/about
@@ -29,7 +29,7 @@ head:
       content: About Awesome Android Root - Ultimate Resource 2025
   - - meta
     - name: twitter:description
-      content: The story behind the most comprehensive Android rooting resource. 220+ apps, expert guides, and community-driven excellence.
+      content: The story behind the most comprehensive Android rooting resource. 250+ apps, expert guides, and community-driven excellence.
   - - meta
     - name: keywords
       content: about awesome android root, android rooting project, android root community, magisk modules collection, android customization resource, open source android, android freedom project, rooting guides 2025
@@ -64,7 +64,7 @@ head:
 
 # About Awesome Android Root
 
-**The ultimate Android rooting resource** - A comprehensive collection of 220+ root apps, expert guides, and community-driven resources for Android customization and freedom.
+**The ultimate Android rooting resource** - A comprehensive collection of 250+ root apps, expert guides, and community-driven resources for Android customization and freedom.
 
 ## Our Mission
 
@@ -72,7 +72,7 @@ head:
 
 ## What We Offer
 
-### 📱 **220+ Curated Root Apps**
+### 📱 **250+ Curated Root Apps**
 Hand-selected Android root applications across 15 categories:
 - Ad Blocking, App Management, System Modifications
 - Audio Enhancement, Performance Optimization, Privacy Tools
@@ -95,7 +95,7 @@ Professional guides covering the complete rooting process:
 4. **[🌟 Custom ROM Installation](./android-root-guides/custom-rom-installation.md)** - Transform your experience
 
 ### **📱 Explore Resources:**
-- **[🏠 Browse Root Apps](/)** - Discover 220+ curated applications
+- **[🏠 Browse Root Apps](/)** - Discover 250+ curated applications
 - **[❓ FAQ & Help](./faqs.md)** - Common questions and solutions
 - **[📋 Contributing Guide](https://github.com/awesome-android-root/awesome-android-root/blob/main/CONTRIBUTING.md)** - Help improve the project
 

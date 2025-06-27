@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Best Android Root Apps and Modules 2025
-description: Download & explore ultimate collection of 230+ best Android root apps, Magisk modules, LSPosed frameworks and rooting guides.
+description: Download & explore ultimate collection of 250+ best Android root apps, Magisk modules, LSPosed frameworks and rooting guides.
 head:
   # Canonical and preconnect links
   - - link
@@ -30,10 +30,10 @@ head:
       content: Awesome Android Root
   - - meta
     - property: og:title
-      content: Best Android Root Apps 2025 - Ultimate Collection of 230+ Apps & Modules
+      content: Best Android Root Apps 2025 - Ultimate Collection of 250+ Apps & Modules
   - - meta
     - property: og:description
-      content: Download the best Android root apps, Magisk modules, and LSPosed frameworks. Ultimate collection of 230+ curated root applications for Android customization, system optimization, and power user features.
+      content: Download the best Android root apps, Magisk modules, and LSPosed frameworks. Ultimate collection of 250+ curated root applications for Android customization, system optimization, and power user features.
   - - meta
     - property: og:url
       content: https://awesome-android-root.org/android-root-apps/
@@ -45,7 +45,7 @@ head:
       content: https://awesome-android-root.org/images/og.png
   - - meta
     - property: og:image:alt
-      content: Best Android Root Apps 2025 - 230+ Apps & Modules Collection
+      content: Best Android Root Apps 2025 - 250+ Apps & Modules Collection
   - - meta
     - property: og:image:width
       content: '1200'
@@ -74,24 +74,24 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:title
-      content: Best Android Root Apps 2025 | 230+ Apps & Modules Collection
+      content: Best Android Root Apps 2025 | 250+ Apps & Modules Collection
   - - meta
     - name: twitter:description
-      content: Download top Android root apps, Magisk modules & LSPosed frameworks. Ultimate collection of 230+ curated root applications for system optimization & customization.
+      content: Download top Android root apps, Magisk modules & LSPosed frameworks. Ultimate collection of 250+ curated root applications for system optimization & customization.
   - - meta
     - name: twitter:image
       content: https://awesome-android-root.org/images/og.png
   - - meta
     - name: twitter:image:alt
-      content: Android Root Apps Collection - 230+ curated applications and modules
+      content: Android Root Apps Collection - 250+ curated applications and modules
 
  # Android Root Apps Pinterest optimization
   - - meta
     - property: og:title
-      content: Best Android Root Apps 2025 - Ultimate Collection of 230+ Apps & Modules
+      content: Best Android Root Apps 2025 - Ultimate Collection of 250+ Apps & Modules
   - - meta
     - property: og:description
-      content: Download the best Android root apps, Magisk modules, and LSPosed frameworks. Ultimate collection of 230+ curated root applications for Android customization, system optimization, and power user features.
+      content: Download the best Android root apps, Magisk modules, and LSPosed frameworks. Ultimate collection of 250+ curated root applications for Android customization, system optimization, and power user features.
   - - meta
     - property: og:type
       content: article
@@ -180,7 +180,7 @@ head:
         "name": "Best Android Root Apps 2025 - Ultimate Collection",
         "alternateName": ["Android Root Apps", "Root Apps Collection", "Magisk Modules Collection"],
         "url": "https://awesome-android-root.org/android-root-apps/",
-        "description": "Ultimate collection of 230+ best Android root apps, Magisk modules, and LSPosed frameworks. Download top-rated root applications for Android customization, system optimization, and power user features.",
+        "description": "Ultimate collection of 250+ best Android root apps, Magisk modules, and LSPosed frameworks. Download top-rated root applications for Android customization, system optimization, and power user features.",
         "inLanguage": "en-US",
         "datePublished": "2025-06-11T00:00:00Z",
         "dateModified": "2025-06-16T00:00:00Z",
@@ -189,7 +189,7 @@ head:
           "url": "https://awesome-android-root.org/images/og.png",
           "width": 1200,
           "height": 630,
-          "caption": "Best Android Root Apps 2025 - 230+ Apps & Modules Collection"
+          "caption": "Best Android Root Apps 2025 - 250+ Apps & Modules Collection"
         },
         "author": {
           "@type": "Person",
