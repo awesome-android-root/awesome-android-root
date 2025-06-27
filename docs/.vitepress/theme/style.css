@@ -137,6 +137,14 @@
   font-size: 50px;
 }
 
+ .VPHero .text {
+  font-size: 25px;
+}
+
+ .VPHero .tagline {
+  font-size: 18px;
+}
+
 .aar-intro p{
   display: flex;
   flex-wrap: wrap;

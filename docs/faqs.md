@@ -73,10 +73,10 @@ head:
 **The ultimate Android rooting support resource** - Get expert answers to common questions and comprehensive troubleshooting solutions for all your rooting challenges.
 
 ## 🔗 **Quick Navigation to Guides**
-- **[📖 Complete Rooting Guide](./rooting-guides/index.md)** - Master guide covering all rooting aspects
-- **[🔓 Bootloader Unlocking](./rooting-guides/bootloader-unlocking.md)** - Essential first step with troubleshooting
-- **[🛠️ Custom Recovery](./rooting-guides/custom-recovery.md)** - TWRP, OrangeFox, SKYHAWK installation
-- **[🌟 Custom ROM Installation](./rooting-guides/custom-rom-installation.md)** - LineageOS, GrapheneOS, and more
+- **[📖 Complete Rooting Guide](./android-root-guides/index.md)** - Master guide covering all rooting aspects
+- **[🔓 Bootloader Unlocking](./android-root-guides/bootloader-unlocking.md)** - Essential first step with troubleshooting
+- **[🛠️ Custom Recovery](./android-root-guides/custom-recovery.md)** - TWRP, OrangeFox, SKYHAWK installation
+- **[🌟 Custom ROM Installation](./android-root-guides/custom-rom-installation.md)** - LineageOS, GrapheneOS, and more
 - **[📖 About Project](./about.md)** - Learn about Awesome Android Root
 
 ## 📋 **Table of Contents**
@@ -261,7 +261,7 @@ Rooting is the process of gaining privileged administrative access (superuser ac
 - **Custom Software**: Install custom ROMs, kernels, and mods
 - **Advanced Debugging**: Deep system analysis and troubleshooting
 
-> **Find device-specific rooting instructions at [Rooting Guides Section](./rooting-guides/index.md)**
+> **Find device-specific rooting instructions at [Rooting Guides Section](./android-root-guides/index.md)**
 
 ### Benefits and Risks
 
@@ -430,7 +430,7 @@ The bootloader is firmware that runs when you power on your device. It's respons
 3. Use manufacturer tool or fastboot commands
 4. Accept warnings (usually voids warranty)
 
-> **Detailed instructions in our [Bootloader Unlocking Guide](./rooting-guides/bootloader-unlocking.md)**
+> **Detailed instructions in our [Bootloader Unlocking Guide](./android-root-guides/bootloader-unlocking.md)**
 
 #### What is custom recovery and do I need it?
 
@@ -856,4 +856,4 @@ Any suggestions for getting modules working again?
 - **Banking Apps**: [Play Integrity Fix](#how-do-i-fix-play-integrity-and-banking-app-issues)
 - **Community**: [Getting Help](#where-can-i-get-help-with-rooting-problems) | [XDA Forums](https://forum.xda-developers.com/)
 
-> **📖 For step-by-step rooting procedures, visit our [Complete Rooting Guide](./rooting-guides/index.md)**
+> **📖 For step-by-step rooting procedures, visit our [Complete Rooting Guide](./android-root-guides/index.md)**

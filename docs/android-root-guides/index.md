@@ -5,7 +5,7 @@ description: "Complete Android rooting guide for 2025. Learn and compare root me
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/rooting-guides/
+      href: https://awesome-android-root.org/android-root-guides/
   - - meta
     - property: og:type
       content: website
@@ -17,7 +17,7 @@ head:
       content: Master Android rooting with our comprehensive 2025 guide covering Magisk, KernelSU, APatch, and device-specific instructions for Xiaomi, Samsung, Pixel, and OnePlus.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/rooting-guides/
+      content: https://awesome-android-root.org/android-root-guides/
   - - meta
     - property: og:image
       content: https://awesome-android-root.org/images/og.png

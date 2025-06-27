@@ -5,7 +5,7 @@ description: "Complete step-by-step custom ROM installation guide for 2025 for i
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/rooting-guides/custom-rom-installation
+      href: https://awesome-android-root.org/android-root-guides/custom-rom-installation
   - - meta
     - property: og:type
       content: article
@@ -17,7 +17,7 @@ head:
       content: Master custom ROM installation with our comprehensive 2025 guide. Compare Android-based OS options, install LineageOS, GrapheneOS, Pixel Experience with step-by-step instructions.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/rooting-guides/custom-rom-installation
+      content: https://awesome-android-root.org/android-root-guides/custom-rom-installation
   - - meta
     - property: og:image
       content: https://awesome-android-root.org/images/og.png

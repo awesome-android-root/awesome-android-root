@@ -138,8 +138,8 @@ export default defineConfig({
         },
         translations: {
           button: {
-            buttonText: 'Search apps, guides & resources',
-            buttonAriaLabel: 'Search root apps, rooting guides and resources'
+            buttonText: 'Search apps, modules & guides',
+            buttonAriaLabel: 'Search root apps, modules & root guides'
           },
           modal: {
             displayDetails: 'Display detailed list',
@@ -165,16 +165,16 @@ export default defineConfig({
         items: [
           {
             items: [
-              { text: '📋 All Categories', link: '/#root-apps' }
+              { text: '📋 All Categories', link: '/android-root-apps/#root-apps' }
             ]
           },
           {
             text: 'Popular Categories',
             items: [
-              { text: '🛡️ Ad Blocking', link: '/#ad-blocking' },
-              { text: '🎨 Customization', link: '/#customization' },
-              { text: '⚡ Performance', link: '/#performance-improvements' },
-              { text: '🔋 Battery Management', link: '/#battery-management' }
+              { text: '🛡️ Ad Blocking', link: '/android-root-apps/#ad-blocking' },
+              { text: '🎨 Customization', link: '/android-root-apps/#customization' },
+              { text: '⚡ Performance', link: '/android-root-apps/#performance-improvements' },
+              { text: '🔋 Battery Management', link: '/android-root-apps/#battery-management' }
             ]
           }
         ]
@@ -182,10 +182,10 @@ export default defineConfig({
       {
         text: 'Rooting Guides',
         items: [
-          { text: '🚀 Start Here', link: '/rooting-guides/' },
-          { text: '🔓 Unlock Bootloader', link: '/rooting-guides/bootloader-unlocking' },
-          { text: '🛠️ Install Recovery', link: '/rooting-guides/custom-recovery' },
-          { text: '🌟 Install Custom ROM', link: '/rooting-guides/custom-rom-installation' }
+          { text: '🚀 Start Here', link: '/android-root-guides/' },
+          { text: '🔓 Unlock Bootloader', link: '/android-root-guides/bootloader-unlocking' },
+          { text: '🛠️ Install Recovery', link: '/android-root-guides/custom-recovery' },
+          { text: '🌟 Install Custom ROM', link: '/android-root-guides/custom-rom-installation' }
         ]
       },
       {
@@ -203,7 +203,7 @@ export default defineConfig({
             text: 'Community Resources',
             items: [
               { text: '𝕏 / Twitter', link: 'https://x.com/awsm_and_root' },
-              { text: '💬 Community Forums', link: '/#community-resources' }
+              { text: '💬 Community Forums', link: '/android-root-apps/#community-resources' }
             ]
           },
           {
@@ -221,41 +221,41 @@ export default defineConfig({
         text: '🚀 Getting Started',
         collapsed: false,
         items: [
-          { text: 'What is Root Access?', link: '/#what-is-root-access' },
-          { text: 'Should You Root?', link: '/rooting-guides/#should-you-root-your-device' },
-          { text: 'Safety & Prerequisites', link: '/rooting-guides/#prerequisites-and-preparations' }
+          { text: 'What is Root Access?', link: '/android-root-apps/#what-is-root-access' },
+          { text: 'Should You Root?', link: '/android-root-guides/#should-you-root-your-device' },
+          { text: 'Safety & Prerequisites', link: '/android-root-guides/#prerequisites-and-preparations' }
         ]
       },
       {
         text: '📖 Step-by-Step Guides',
         collapsed: false,
         items: [
-          { text: '📋 Complete Rooting Guide', link: '/rooting-guides/#android-rooting-guide' },
-          { text: '🔓 Unlock Bootloader', link: '/rooting-guides/bootloader-unlocking' },
-          { text: '🛠️  Install Recovery', link: '/rooting-guides/custom-recovery' },
+          { text: '📋 Complete Rooting Guide', link: '/android-root-guides/#android-rooting-guide' },
+          { text: '🔓 Unlock Bootloader', link: '/android-root-guides/bootloader-unlocking' },
+          { text: '🛠️  Install Recovery', link: '/android-root-guides/custom-recovery' },
           ,{
         text: '📱 Device Guides',
         collapsed: true,
         items: [
-          { text: 'Xiaomi Devices', link: '/rooting-guides/xiaomi' },
-          { text: 'Motorola Devices', link: '/rooting-guides/motorola' },
-          { text: 'Samsung (Coming Soon)', link: '/rooting-guides/samsung' },
-          { text: 'Google Pixel (Coming Soon)', link: '/rooting-guides/pixel' },
-          { text: 'OnePlus (Coming Soon)', link: '/rooting-guides/oneplus' }
+          { text: 'Xiaomi Devices', link: '/android-root-guides/xiaomi' },
+          { text: 'Motorola Devices', link: '/android-root-guides/motorola' },
+          { text: 'Samsung (Coming Soon)', link: '/android-root-guides/samsung' },
+          { text: 'Google Pixel (Coming Soon)', link: '/android-root-guides/pixel' },
+          { text: 'OnePlus (Coming Soon)', link: '/android-root-guides/oneplus' }
         ]},
-          { text: '🌟 Install Custom ROM', link: '/rooting-guides/custom-rom-installation' }
+          { text: '🌟 Install Custom ROM', link: '/android-root-guides/custom-rom-installation' }
         ]
       },
       {
         text: '📱 Root Apps by Category',
         collapsed: true,
         items: [
-          { text: '📋 Browse All Apps', link: '/#root-apps' },
-          { text: '🔧 System & Performance', link: '/#performance-improvements' },
-          { text: '🎨 Customization & Themes', link: '/#os-customizations' },
-          { text: '🛡️ Privacy & Security', link: '/#privacy-and-security' },
-          { text: '🎯 App Management', link: '/#app-managers' },
-          { text: '⚡ Performance & System', link: '/#performance-improvements' }
+          { text: '📋 Browse All Apps', link: '/android-root-apps/#root-apps' },
+          { text: '🔧 System & Performance', link: '/android-root-apps/#performance-improvements' },
+          { text: '🎨 Customization & Themes', link: '/android-root-apps/#os-customizations' },
+          { text: '🛡️ Privacy & Security', link: '/android-root-apps/#privacy-and-security' },
+          { text: '🎯 App Management', link: '/android-root-apps/#app-managers' },
+          { text: '⚡ Performance & System', link: '/android-root-apps/#performance-improvements' }
         ]
       },
       {
@@ -263,10 +263,10 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'FAQ & Troubleshooting', link: '/faqs' },
-          { text: 'Emergency Recovery', link: '/rooting-guides/bootloader-unlocking#troubleshooting' },
+          { text: 'Emergency Recovery', link: '/android-root-guides/bootloader-unlocking#troubleshooting' },
           { text: 'Contributing Guide', link: '/contributing' },
           { text: 'About This Project', link: '/about' },
-          { text: 'Community Links', link: '/#community-resources' }
+          { text: 'Community Links', link: '/android-root-apps/#community-resources' }
         ]
       }
     ],

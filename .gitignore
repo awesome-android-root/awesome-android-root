@@ -1,6 +1,5 @@
 docs/.vitepress/dist
 docs/.vitepress/cache
 node_modules
-docs/index.md
 docs/README-zh-TW.md
 tbd.txt

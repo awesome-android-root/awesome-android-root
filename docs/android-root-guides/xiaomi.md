@@ -5,7 +5,7 @@ description: "Best complete step-by-step complete guide to root Xiaomi and redmi
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/rooting-guides/xiaomi
+      href: https://awesome-android-root.org/android-root-guides/xiaomi
   - - meta
     - property: og:type
       content: article
@@ -17,7 +17,7 @@ head:
       content: Root your Xiaomi device with this comprehensive guide covering bootloader unlock, TWRP/OrangeFox recovery, and Magisk installation for MIUI and HyperOS.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/rooting-guides/xiaomi
+      content: https://awesome-android-root.org/android-root-guides/xiaomi
   - - meta
     - property: og:image
       content: https://awesome-android-root.org/images/og.png
@@ -270,7 +270,7 @@ Thanks to @Kaktusbv for sharing this method.
    - [Hyper OS Sapphiren Unlocker](https://archive.org/download/hyper-os-sapphire-unlocker/Hyper%20OS%20Sapphiren%20Unlocker.zip)
 
 #### Steps:
-- [Install Magisk](../rooting-guides/xiaomi.md#4-flash-magisk-using-custom-recovery)
+- [Install Magisk](../android-root-guides/xiaomi.md#4-flash-magisk-using-custom-recovery)
 - Open Magisk and flash the module according to your device.
 - Reboot your device.
 

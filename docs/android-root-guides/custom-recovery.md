@@ -5,7 +5,7 @@ description: "Complete custom recovery installation guide for 2025. Learn to ins
 head:
   - - link
     - rel: canonical
-      href: https://awesome-root.org/rooting-guides/custom-recovery
+      href: https://awesome-root.org/android-root-guides/custom-recovery
   - - meta
     - property: og:type
       content: article
@@ -17,7 +17,7 @@ head:
       content: Master custom recovery installation with our comprehensive 2025 guide covering TWRP, OrangeFox, and SKYHAWK Recovery. Step-by-step instructions with troubleshooting for all Android devices.
   - - meta
     - property: og:url
-      content: https://awesome-root.org/rooting-guides/custom-recovery
+      content: https://awesome-root.org/android-root-guides/custom-recovery
   - - meta
     - property: og:image
       content: https://awesome-root.org/images/og.png
