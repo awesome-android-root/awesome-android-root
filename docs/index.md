@@ -205,7 +205,7 @@ hero:
     alt: Awesome Android Root - Ultimate Android Rooting Resource
   actions:
     - theme: brand
-      text: 🚀 Explore 250+ Root Apps
+      text: 🚀 Explore Root Apps
       link: /android-root-apps/#root-apps
     - theme: alt
       text: 📚 Complete Rooting Guides
