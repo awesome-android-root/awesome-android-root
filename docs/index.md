@@ -68,6 +68,9 @@ head:
     - rel: alternate
       hreflang: "en"
       href: "https://awesome-android-root.org"
+  - - link
+    - rel: prefetch
+      href: "/android-root-apps/"
   - - script
     - type: application/ld+json
     - |
