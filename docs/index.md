@@ -48,7 +48,7 @@ head:
       content: "2025-06-27T00:00:00Z"
   - - meta
     - property: article:published_time
-      content: "2024-01-01T00:00:00Z"
+      content: "2025-05-25T00:00:00Z"
   - - meta
     - property: article:modified_time
       content: "2025-06-27T00:00:00Z"
@@ -100,33 +100,8 @@ head:
             "@type": "Organization",
             "name": "Awesome Android Root Community"
           },
-          "datePublished": "2024-01-01",
+          "datePublished": "2025-05-25",
           "dateModified": "2025-06-27"
-        },
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://awesome-android-root.org"
-            },
-            "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Root Apps",
-              "item": "https://awesome-android-root.org/android-root-apps/"
-            },
-            "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Root Apps",
-              "item": "https://awesome-android-root.org/android-root-guides/"
-            }
-          ]
         },
         "sameAs": [
           "https://github.com/awesome-android-root",
@@ -150,6 +125,33 @@ head:
           "apatch",
           "lineageos",
           "grapheneos"
+        ]
+      }
+  - - script
+    - type: application/ld+json
+    - |
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://awesome-android-root.org"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Root Apps",
+            "item": "https://awesome-android-root.org/android-root-apps/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Root Guides",
+            "item": "https://awesome-android-root.org/android-root-guides/"
+          }
         ]
       }
   - - script
