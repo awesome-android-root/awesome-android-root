@@ -206,8 +206,8 @@ hero:
       text: 📚 Complete Rooting Guides
       link: /android-root-guides/
     - theme: alt
-      text: 🎯 Get Started Today
-      link: /android-root-guides/index
+      text: 🌟 Star on Github
+      link: https://github.com/awesome-android-root/awesome-android-root
 
 features:
   - icon: 🛡️
