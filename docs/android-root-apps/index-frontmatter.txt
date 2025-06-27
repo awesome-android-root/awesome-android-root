@@ -1,8 +1,7 @@
 ---
 layout: doc
-title: Best Android Root Apps 2025 - Ultimate Collection
-titleTemplate: 230+ Root Apps, Magisk & LSPosed Modules
-description: Ultimate collection of 230+ best Android root apps, Magisk modules, LSPosed frameworks and rooting guides. Download top-rated root applications for Android customization, system optimization, and power user features in 2025.
+title: Best Android Root Apps and Modules 2025
+description: Download & explore ultimate collection of 230+ best Android root apps, Magisk modules, LSPosed frameworks and rooting guides.
 head:
   # Canonical and preconnect links
   - - link
