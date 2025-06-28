@@ -174,8 +174,8 @@ export default defineConfig({
         text: 'Getting Started',
         collapsed: false,
         items: [
-          { text: 'What is Root?', link: '/android-root-apps/#what-is-root-access' },
-          { text: 'Complete Guide', link: '/android-root-guides/' },
+          { text: 'What is Root', link: '/android-root-apps/#what-is-root-access' },
+          { text: 'Should I Root?', link: '/android-root-apps/#should-you-root-your-device' },
           { text: 'Prerequisites', link: '/android-root-guides/#prerequisites-and-preparations' }
         ]
       },
@@ -183,9 +183,11 @@ export default defineConfig({
         text: 'Guides',
         collapsed: true,
         items: [
+          { text: 'Complete Guide', link: '/android-root-guides/' },
           { text: 'Unlock Bootloader', link: '/android-root-guides/bootloader-unlocking' },
           { text: 'Install Recovery', link: '/android-root-guides/custom-recovery' },
-          { text: 'Install Custom ROM', link: '/android-root-guides/custom-rom-installation' }
+          { text: 'Install Custom ROM', link: '/android-root-guides/custom-rom-installation' },
+          { text: 'Device-Specific Guides', link: '/android-root-guides/#device-specific-guides' }
         ]
       }
       ,
