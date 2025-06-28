@@ -107,7 +107,7 @@ Complete guide to installing custom recovery on Android devices - your gateway t
 
 **Ready to install custom recovery?** Follow this roadmap:
 
-1. 🔓 **[Unlock bootloader](./bootloader-unlocking.md)** - Essential prerequisite
+1. 🔓 **[Unlock bootloader](./how-to-unlock-bootloader.md)** - Essential prerequisite
 2. 🔍 **[Choose recovery](#recovery-options-comparison)** - TWRP, OrangeFox, or SKYHAWK
 3. 📋 **[Check prerequisites](#prerequisites)** - Ensure you have everything ready
 4. 📱 **[Find your device](#finding-recovery-for-your-device)** - Download correct recovery image
@@ -116,13 +116,13 @@ Complete guide to installing custom recovery on Android devices - your gateway t
 
 ### 🔗 **Related Guides in This Series:**
 - **[📖 Complete Rooting Guide](./index.md)** - Master guide covering all aspects of rooting
-- **[🔓 Bootloader Unlocking](./bootloader-unlocking.md)** - Required prerequisite step
+- **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - Required prerequisite step
 - **[⚡ Root Installation](./index.md#root-solutions-comparison)** - Next step: Install Magisk, KernelSU, or APatch
 - **[🌟 Custom ROM Installation](./custom-rom-installation.md)** - Advanced: Install custom Android ROMs
 - **[❓ FAQ & Troubleshooting](../faqs.md)** - Complete support guide with troubleshooting solutions
 
 ::: tip 🚀 Prerequisites Check
-Before starting, ensure you have completed [bootloader unlocking](./bootloader-unlocking.md) and have ADB/Fastboot tools ready. Custom recovery installation requires an unlocked bootloader.
+Before starting, ensure you have completed [bootloader unlocking](./how-to-unlock-bootloader.md) and have ADB/Fastboot tools ready. Custom recovery installation requires an unlocked bootloader.
 :::
 
 ## What is Custom Recovery?
@@ -230,9 +230,9 @@ Before starting, ensure you have completed [bootloader unlocking](./bootloader-u
 ::: danger ⚠️ ESSENTIAL REQUIREMENTS
 **You MUST have these completed before proceeding:**
 
-1. **[🔓 Unlocked Bootloader](./bootloader-unlocking.md)** - Custom recovery requires unlocked bootloader
-2. **📱 ADB/Fastboot Tools** - [Setup guide here](./bootloader-unlocking.md#step-3-set-up-adb-and-fastboot)
-3. **💻 USB Debugging Enabled** - [Enable in Developer Options](./bootloader-unlocking.md#step-2-enable-critical-developer-settings)
+1. **[🔓 Unlocked Bootloader](./how-to-unlock-bootloader.md)** - Custom recovery requires unlocked bootloader
+2. **📱 ADB/Fastboot Tools** - [Setup guide here](./how-to-unlock-bootloader.md#step-3-set-up-adb-and-fastboot)
+3. **💻 USB Debugging Enabled** - [Enable in Developer Options](./how-to-unlock-bootloader.md#step-2-enable-critical-developer-settings)
 :::
 
 #### Additional Requirements

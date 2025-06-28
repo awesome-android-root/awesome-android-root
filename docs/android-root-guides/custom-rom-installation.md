@@ -93,7 +93,7 @@ Complete guide to installing custom Android ROMs - Unlock the full potential of 
 
 **Ready to transform your Android experience?** Follow this complete roadmap:
 
-1. 🔓 **[Unlock bootloader](./bootloader-unlocking.md)** - Essential prerequisite for all custom ROMs
+1. 🔓 **[Unlock bootloader](./how-to-unlock-bootloader.md)** - Essential prerequisite for all custom ROMs
 2. 🛠️ **[Install custom recovery](./custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK for ROM flashing
 3. 🔍 **[Choose your ROM](#popular-custom-rom-comparison)** - Compare privacy, features, and compatibility
 4. 📱 **[Find device support](#finding-roms-for-your-device)** - Verify ROM availability for your specific device
@@ -103,14 +103,14 @@ Complete guide to installing custom Android ROMs - Unlock the full potential of 
 
 ### 🔗 **Related Guides in This Series:**
 - **[📖 Complete Rooting Guide](./index.md)** - Master guide covering all aspects of rooting
-- **[🔓 Bootloader Unlocking](./bootloader-unlocking.md)** - Required prerequisite step
+- **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - Required prerequisite step
 - **[🛠️ Custom Recovery Installation](./custom-recovery.md)** - Required prerequisite step
 - **[⚡ Root Installation](./index.md#root-solutions-comparison)** - Optional: Add root access to custom ROM
 - **[❓ FAQ & Troubleshooting](../faqs.md)** - Complete support guide with troubleshooting solutions
 - **[📖 About Project](../about.md)** - Learn about Awesome Android Root
 
 ::: tip 🚀 Prerequisites Check
-Before starting, ensure you have completed [bootloader unlocking](./bootloader-unlocking.md) and [custom recovery installation](./custom-recovery.md). These are mandatory steps for custom ROM installation.
+Before starting, ensure you have completed [bootloader unlocking](./how-to-unlock-bootloader.md) and [custom recovery installation](./custom-recovery.md). These are mandatory steps for custom ROM installation.
 :::
 
 ## What are Custom ROMs?
@@ -279,7 +279,7 @@ This resource provides in-depth analysis of:
 ### Essential Requirements
 
 #### ✅ Completed Prerequisite Steps
-1. **[Unlocked Bootloader](./bootloader-unlocking.md)** - Mandatory for all custom ROMs
+1. **[Unlocked Bootloader](./how-to-unlock-bootloader.md)** - Mandatory for all custom ROMs
 2. **[Custom Recovery](./custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK installed
 3. **ADB/Fastboot Tools** - Platform tools for device communication
 

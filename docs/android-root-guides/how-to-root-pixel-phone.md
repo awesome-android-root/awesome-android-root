@@ -76,7 +76,7 @@ While we prepare the complete guide, here are essential resources:
 
 ### **Immediate Help:**
 - **[❓ FAQ & Troubleshooting](../faqs.md)** - Complete support guide with troubleshooting solutions
-- **[🔓 Bootloader Unlocking](./bootloader-unlocking.md#google-pixel)** - Pixel-specific bootloader unlocking
+- **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md#google-pixel)** - Pixel-specific bootloader unlocking
 - **[🛠️ Custom Recovery](./custom-recovery.md)** - Install TWRP for Pixel devices
 - **[📖 Complete Rooting Guide](./index.md)** - Master guide covering all rooting aspects
 

@@ -124,7 +124,7 @@ Rooting allows overcoming limitations that carriers and hardware manufacturers p
 
 **Complete roadmap to unlock your Android device's potential:**
 
-1. **[🔓 Unlock Bootloader](./docs/android-root-guides/bootloader-unlocking.md)** - Essential first step for all modifications
+1. **[🔓 Unlock Bootloader](./docs/android-root-guides/how-to-unlock-bootloader.md)** - Essential first step for all modifications
 2. **[🛠️ Install Custom Recovery](./docs/android-root-guides/custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK
 3. **[⚡ Root Your Device](./docs/android-root-guides/index.md#root-solutions-comparison)** - Magisk, KernelSU, or APatch comparison
 4. **[🌟 Install Custom ROM](./docs/android-root-guides/custom-rom-installation.md)** - Optional: Transform your Android experience

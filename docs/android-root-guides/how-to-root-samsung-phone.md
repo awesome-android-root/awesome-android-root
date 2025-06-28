@@ -82,7 +82,7 @@ While we prepare the complete guide, here are essential resources:
 
 ### **Immediate Help:**
 - **[❓ FAQ & Troubleshooting](../faqs.md)** - Complete support guide with troubleshooting solutions
-- **[🔓 Bootloader Unlocking](./bootloader-unlocking.md)** - Universal bootloader guide with Samsung considerations
+- **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - Universal bootloader guide with Samsung considerations
 - **[🛠️ Custom Recovery](./custom-recovery.md)** - Install TWRP for Samsung devices
 - **[📖 Complete Rooting Guide](./index.md)** - Master guide covering all rooting aspects
 

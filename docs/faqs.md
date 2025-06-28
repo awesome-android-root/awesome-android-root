@@ -74,7 +74,7 @@ head:
 
 ## 🔗 **Quick Navigation to Guides**
 - **[📖 Complete Rooting Guide](./android-root-guides/index.md)** - Master guide covering all rooting aspects
-- **[🔓 Bootloader Unlocking](./android-root-guides/bootloader-unlocking.md)** - Essential first step with troubleshooting
+- **[🔓 Bootloader Unlocking](./android-root-guides/how-to-unlock-bootloader.md)** - Essential first step with troubleshooting
 - **[🛠️ Custom Recovery](./android-root-guides/custom-recovery.md)** - TWRP, OrangeFox, SKYHAWK installation
 - **[🌟 Custom ROM Installation](./android-root-guides/custom-rom-installation.md)** - LineageOS, GrapheneOS, and more
 - **[📖 About Project](./about.md)** - Learn about Awesome Android Root
@@ -430,7 +430,7 @@ The bootloader is firmware that runs when you power on your device. It's respons
 3. Use manufacturer tool or fastboot commands
 4. Accept warnings (usually voids warranty)
 
-> **Detailed instructions in our [Bootloader Unlocking Guide](./android-root-guides/bootloader-unlocking.md)**
+> **Detailed instructions in our [Bootloader Unlocking Guide](./android-root-guides/how-to-unlock-bootloader.md)**
 
 #### What is custom recovery and do I need it?
 

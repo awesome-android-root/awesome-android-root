@@ -69,7 +69,7 @@ Complete step-by-step guide to root Motorola phones in 2025, including bootloade
 ## 🔗 Related Guides
 Master the complete rooting process with our comprehensive guides:
 - **[📖 Complete Rooting Guide](./index.md)** - Master guide covering all rooting aspects
-- **[🔓 Bootloader Unlocking](./bootloader-unlocking.md)** - Universal bootloader guide with Motorola specifics
+- **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - Universal bootloader guide with Motorola specifics
 - **[🛠️ Custom Recovery](./custom-recovery.md)** - Install TWRP, OrangeFox, or SKYHAWK
 - **[🌟 Custom ROM Installation](./custom-rom-installation.md)** - Install LineageOS and other custom ROMs
 - **[❓ FAQ & Troubleshooting](../faqs.md)** - Complete support guide with troubleshooting solutions
