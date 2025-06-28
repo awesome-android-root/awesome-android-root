@@ -175,7 +175,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'What is Root', link: '/android-root-guides/#what-is-rooting' },
-          { text: 'Should I Root?', link: '/android-root-apps//#should-you-root' },
+          { text: 'Should I Root?', link: '/android-root-guides/#should-you-root' },
           { text: 'Requirements', link: '/android-root-guides/#requirements-preparation' }
         ]
       },
