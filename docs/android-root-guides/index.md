@@ -91,7 +91,7 @@ head:
 **Simple explanation:** Your phone has built-in restrictions. Rooting removes these restrictions, giving you complete control.
 
 ::: tip � Quick Start Path
-**New to rooting?** Follow: [Check Requirements](#requirements--preparation) → [Choose Root Method](#root-methods-comparison) → [Unlock Bootloader](./how-to-unlock-bootloader.md) → [Install Recovery](./how-to-install-custom-recovery.md) → [Root Device](#step-by-step-rooting)
+**New to rooting?** Follow: [Check Requirements](#requirements-preparation) → [Choose Root Method](#root-methods-comparison) → [Unlock Bootloader](./how-to-unlock-bootloader.md) → [Install Recovery](./how-to-install-custom-recovery.md) → [Root Device](#step-by-step-rooting)
 :::
 
 ## Should You Root?
