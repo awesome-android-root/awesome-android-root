@@ -156,117 +156,57 @@ export default defineConfig({
       }
     },
     nav: [
+      { text: 'Root Apps', link: '/android-root-apps/#root-apps' },
+      { text: 'Guides', link: '/android-root-guides/' },
+      { text: 'FAQ', link: '/faqs' },
       {
-        text: 'Home',
-        link: '/'
-      },
-      {
-        text: 'Root Apps & Modules',
+        text: 'More',
         items: [
-          {
-            items: [
-              { text: '📋 All Categories', link: '/android-root-apps/#root-apps' }
-            ]
-          },
-          {
-            text: 'Popular Categories',
-            items: [
-              { text: '🛡️ Ad Blocking', link: '/android-root-apps/#ad-blocking' },
-              { text: '🎨 Customization', link: '/android-root-apps/#customization' },
-              { text: '⚡ Performance', link: '/android-root-apps/#performance-improvements' },
-              { text: '🔋 Battery Management', link: '/android-root-apps/#battery-management' }
-            ]
-          }
-        ]
-      },
-      {
-        text: 'Rooting Guides',
-        items: [
-          { text: '🚀 Start Here', link: '/android-root-guides/' },
-          { text: '🔓 Unlock Bootloader', link: '/android-root-guides/bootloader-unlocking' },
-          { text: '🛠️ Install Recovery', link: '/android-root-guides/custom-recovery' },
-          { text: '🌟 Install Custom ROM', link: '/android-root-guides/custom-rom-installation' }
-        ]
-      },
-      {
-        text: 'Resources',
-        items: [
-          {
-            text: 'Help & Support',
-            items: [
-              { text: '❓ FAQ & Troubleshooting', link: '/faqs' },
-              { text: '💖 Support', link: 'https://opencollective.com/awesome-android-root-official' },
-              { text: '📜 About', link: '/about' }
-            ]
-          },
-          {
-            text: 'Community Resources',
-            items: [
-              { text: '𝕏 / Twitter', link: 'https://x.com/awsm_and_root' },
-              { text: '💬 Community Forums', link: '/android-root-apps/#community-resources' }
-            ]
-          },
-          {
-            text: 'Mirror Sites',
-            items: [
-              { text: '☁️ Cloudflare Pages', link: 'https://awesome-android-root.pages.dev/' },
-              { text: '🌐 Netlify Mirror', link: 'https://awesome-android-root.netlify.app/' }
-            ]
-          }
+          { text: 'About Project', link: '/about' },
+          { text: 'Support Us', link: 'https://opencollective.com/awesome-android-root-official' },
+          { text: 'Star on GitHub', link: 'https://github.com/awesome-android-root/awesome-android-root' },
+          { text: 'Follow on X/Twitter', link: 'https://x.com/awsm_and_root' }
         ]
       }
     ],
     sidebar: [
       {
-        text: '🚀 Getting Started',
+        text: 'Getting Started',
         collapsed: false,
         items: [
-          { text: 'What is Root Access?', link: '/android-root-apps/#what-is-root-access' },
-          { text: 'Should You Root?', link: '/android-root-guides/#should-you-root-your-device' },
-          { text: 'Safety & Prerequisites', link: '/android-root-guides/#prerequisites-and-preparations' }
+          { text: 'What is Root?', link: '/android-root-apps/#what-is-root-access' },
+          { text: 'Complete Guide', link: '/android-root-guides/' },
+          { text: 'Prerequisites', link: '/android-root-guides/#prerequisites-and-preparations' }
         ]
       },
       {
-        text: '📖 Step-by-Step Guides',
+        text: 'Guides',
+        collapsed: true,
+        items: [
+          { text: 'Unlock Bootloader', link: '/android-root-guides/bootloader-unlocking' },
+          { text: 'Install Recovery', link: '/android-root-guides/custom-recovery' },
+          { text: 'Install Custom ROM', link: '/android-root-guides/custom-rom-installation' }
+        ]
+      }
+      ,
+      {
+        text: 'Root Apps',
         collapsed: false,
         items: [
-          { text: '📋 Complete Rooting Guide', link: '/android-root-guides/#android-rooting-guide' },
-          { text: '🔓 Unlock Bootloader', link: '/android-root-guides/bootloader-unlocking' },
-          { text: '🛠️  Install Recovery', link: '/android-root-guides/custom-recovery' },
-          ,{
-        text: '📱 Device Guides',
-        collapsed: true,
-        items: [
-          { text: 'Xiaomi Devices', link: '/android-root-guides/xiaomi' },
-          { text: 'Motorola Devices', link: '/android-root-guides/motorola' },
-          { text: 'Samsung (Coming Soon)', link: '/android-root-guides/samsung' },
-          { text: 'Google Pixel (Coming Soon)', link: '/android-root-guides/pixel' },
-          { text: 'OnePlus (Coming Soon)', link: '/android-root-guides/oneplus' }
-        ]},
-          { text: '🌟 Install Custom ROM', link: '/android-root-guides/custom-rom-installation' }
+          { text: 'Browse All Apps', link: '/android-root-apps/#root-apps' },
+          { text: 'Ad Blocking', link: '/android-root-apps/#ad-blocking' },
+          { text: 'Customization', link: '/android-root-apps/#customization' },
+          { text: 'Performance', link: '/android-root-apps/#performance-improvements' }
         ]
       },
       {
-        text: '📱 Root Apps by Category',
+        text: 'Help',
         collapsed: true,
         items: [
-          { text: '📋 Browse All Apps', link: '/android-root-apps/#root-apps' },
-          { text: '🔧 System & Performance', link: '/android-root-apps/#performance-improvements' },
-          { text: '🎨 Customization & Themes', link: '/android-root-apps/#os-customizations' },
-          { text: '🛡️ Privacy & Security', link: '/android-root-apps/#privacy-and-security' },
-          { text: '🎯 App Management', link: '/android-root-apps/#app-managers' },
-          { text: '⚡ Performance & System', link: '/android-root-apps/#performance-improvements' }
-        ]
-      },
-      {
-        text: '❓ Help & Support',
-        collapsed: true,
-        items: [
-          { text: 'FAQ & Troubleshooting', link: '/faqs' },
-          { text: 'Emergency Recovery', link: '/android-root-guides/bootloader-unlocking#troubleshooting' },
-          { text: 'Contributing Guide', link: '/contributing' },
-          { text: 'About This Project', link: '/about' },
-          { text: 'Community Links', link: '/android-root-apps/#community-resources' }
+          { text: 'FAQ', link: '/faqs' },
+          { text: 'About', link: '/about' },
+          { text: 'Support Project', link: 'https://opencollective.com/awesome-android-root-official' },
+          { text: 'Contributing', link: '/contributing' }
         ]
       }
     ],
