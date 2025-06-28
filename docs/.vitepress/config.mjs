@@ -184,8 +184,8 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'Complete Guide', link: '/android-root-guides/' },
-          { text: 'Unlock Bootloader', link: '/android-root-guides/bootloader-unlocking' },
-          { text: 'Install Recovery', link: '/android-root-guides/custom-recovery' },
+          { text: 'Unlock Bootloader', link: '/android-root-guides/how-to-unlock-bootloader' },
+          { text: 'Install Recovery', link: '/android-root-guides/how-to-install-custom-recovery' },
           { text: 'Install Custom ROM', link: '/android-root-guides/custom-rom-installation' },
           { text: 'Device-Specific Guides', link: '/android-root-guides/#device-specific-guides' }
         ]
@@ -197,7 +197,7 @@ export default defineConfig({
         items: [
           { text: 'Browse All Apps', link: '/android-root-apps/#root-apps' },
           { text: 'Ad Blocking', link: '/android-root-apps/#ad-blocking' },
-          { text: 'Customization', link: '/android-root-apps/#customization' },
+          { text: 'Customization', link: '/android-root-apps/#customizations' },
           { text: 'Performance', link: '/android-root-apps/#performance-improvements' }
         ]
       },
