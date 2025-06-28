@@ -354,13 +354,14 @@ Each device-specific guide references our [Complete Bootloader Unlocking Guide](
 :::
 
 ### Available Guides
-- **[📱 Xiaomi Devices](./xiaomi.md)** - Complete guide for MIUI devices including Mi Unlock Tool usage
-- **[📱 Motorola Devices](./motorola.md)** - Step-by-step for Moto devices with official unlock codes
+- **[📱 Xiaomi Devices](./how-to-root-xiaomi-phone.md)** - Complete guide for MIUI devices including Mi Unlock Tool usage
+- **[📱 Xiaomi Devices](./how-to-root-nothing-phone.md)** - Complete guide for Nothing devices
+- **[📱 Motorola Devices](./how-to-root-motorola-phone.md)** - Step-by-step for Motorola devices
 
 ### Coming Soon
-- **[📱 Samsung Devices](./samsung.md)** - Exynos models, Knox considerations *(Work in Progress)*
-- **[📱 Google Pixel](./pixel.md)** - Simple unlocking for Google devices *(Work in Progress)*
-- **[📱 OnePlus Devices](./oneplus.md)** - OxygenOS rooting procedures *(Work in Progress)*
+- **[📱 Samsung Devices](./how-to-root-samsung-phone.md)** - Exynos models, Knox considerations *(Work in Progress)*
+- **[📱 Google Pixel](./how-to-root-pixel-phone.md)** - Simple unlocking for Google devices *(Work in Progress)*
+- **[📱 OnePlus Devices](./how-to-root-oneplus-phone.md)** - OxygenOS rooting procedures *(Work in Progress)*
 
 ### Need Help with Your Device?
 Don't see your device listed? Here's what to do:
