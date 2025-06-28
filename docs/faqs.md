@@ -75,7 +75,7 @@ head:
 ## 🔗 **Quick Navigation to Guides**
 - **[📖 Complete Rooting Guide](./android-root-guides/index.md)** - Master guide covering all rooting aspects
 - **[🔓 Bootloader Unlocking](./android-root-guides/how-to-unlock-bootloader.md)** - Essential first step with troubleshooting
-- **[🛠️ Custom Recovery](./android-root-guides/custom-recovery.md)** - TWRP, OrangeFox, SKYHAWK installation
+- **[🛠️ Custom Recovery](./android-root-guides/how-to-install-custom-recovery.md)** - TWRP, OrangeFox, SKYHAWK installation
 - **[🌟 Custom ROM Installation](./android-root-guides/custom-rom-installation.md)** - LineageOS, GrapheneOS, and more
 - **[📖 About Project](./about.md)** - Learn about Awesome Android Root
 

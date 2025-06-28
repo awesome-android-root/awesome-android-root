@@ -4,7 +4,7 @@
 #### 🛡️ **The ultimate hub for Android Rooting**
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=green)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
-[![Total Entries](https://img.shields.io/badge/Total%20Entries-230+-blue?style=for-the-badge&logo=android)](#root-apps)
+[![Total Entries](https://img.shields.io/badge/Total%20Entries-250+-blue?style=for-the-badge&logo=android)](#root-apps)
 [![Support via Open Collective](https://img.shields.io/badge/Support%20via-Open%20Collective-blue?style=for-the-badge&logo=opencollective)](https://opencollective.com/awesome-android-root-official)
 
 [🌐 **What is Root?**](#what-is-root-access) | [📱 **Root Apps**](#root-apps) | [📋 **Table of Contents**](#table-of-contents) | [💬 **Community**](#community-resources) | [**繁體中文**](README-zh-TW.md)
@@ -125,7 +125,7 @@ Rooting allows overcoming limitations that carriers and hardware manufacturers p
 **Complete roadmap to unlock your Android device's potential:**
 
 1. **[🔓 Unlock Bootloader](./docs/android-root-guides/how-to-unlock-bootloader.md)** - Essential first step for all modifications
-2. **[🛠️ Install Custom Recovery](./docs/android-root-guides/custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK
+2. **[🛠️ Install Custom Recovery](./docs/android-root-guides/how-to-install-custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK
 3. **[⚡ Root Your Device](./docs/android-root-guides/index.md#root-solutions-comparison)** - Magisk, KernelSU, or APatch comparison
 4. **[🌟 Install Custom ROM](./docs/android-root-guides/custom-rom-installation.md)** - Optional: Transform your Android experience
 

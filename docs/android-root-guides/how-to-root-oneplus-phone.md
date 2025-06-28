@@ -83,7 +83,7 @@ While we prepare the complete guide, here are essential resources:
 ### **Immediate Help:**
 - **[❓ FAQ & Troubleshooting](../faqs.md)** - Complete support guide with troubleshooting solutions
 - **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - Universal bootloader guide (works for OnePlus)
-- **[🛠️ Custom Recovery](./custom-recovery.md)** - Install TWRP for OnePlus devices
+- **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - Install TWRP for OnePlus devices
 - **[📖 Complete Rooting Guide](./index.md)** - Master guide covering all rooting aspects
 
 ### **OnePlus-Specific Resources:**

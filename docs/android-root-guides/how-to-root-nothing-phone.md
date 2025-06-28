@@ -63,7 +63,7 @@ Complete step-by-step guide to root Nothing Phone 1, 2, 2a, and 3 series devices
 Before starting, ensure you understand the basics:
 - **[📖 Complete Rooting Guide](./index.md)** - Master guide covering all rooting aspects
 - **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - Universal bootloader guide with Nothing Phone specifics
-- **[🛠️ Custom Recovery](./custom-recovery.md)** - Install TWRP, OrangeFox, or SKYHAWK
+- **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - Install TWRP, OrangeFox, or SKYHAWK
 - **[🌟 Custom ROM Installation](./custom-rom-installation.md)** - Install LineageOS, crDroid, and other ROMs
 - **[❓ FAQ & Troubleshooting](../faqs.md)** - Complete support guide with troubleshooting solutions
 

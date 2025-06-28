@@ -66,7 +66,7 @@ Complete step-by-step guide to root Xiaomi and Redmi devices running MIUI/HyperO
 Before starting, ensure you understand the basics:
 - **[📖 Complete Rooting Guide](./index.md)** - Master guide covering all rooting aspects
 - **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - Universal bootloader guide with Xiaomi specifics
-- **[🛠️ Custom Recovery](./custom-recovery.md)** - Install TWRP, OrangeFox, or SKYHAWK
+- **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - Install TWRP, OrangeFox, or SKYHAWK
 - **[🌟 Custom ROM Installation](./custom-rom-installation.md)** - Install LineageOS, crDroid, and other ROMs
 - **[❓ FAQ & Troubleshooting](../faqs.md)** - Complete support guide with troubleshooting solutions
 

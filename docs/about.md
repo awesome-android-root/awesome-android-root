@@ -81,7 +81,7 @@ Hand-selected Android root applications across 15 categories:
 ### 📚 **Expert Rooting Guides**
 Professional guides covering the complete rooting process:
 - **[🔓 Bootloader Unlocking](./android-root-guides/how-to-unlock-bootloader.md)** - Essential first step
-- **[🛠️ Custom Recovery](./android-root-guides/custom-recovery.md)** - TWRP, OrangeFox, SKYHAWK
+- **[🛠️ Custom Recovery](./android-root-guides/how-to-install-custom-recovery.md)** - TWRP, OrangeFox, SKYHAWK
 - **[⚡ Root Installation](./android-root-guides/index.md)** - Magisk, KernelSU, APatch
 - **[🌟 Custom ROM Installation](./android-root-guides/custom-rom-installation.md)** - LineageOS, GrapheneOS, and more
 - **[📱 Device-Specific Guides](./android-root-guides/)** - Xiaomi, Samsung, Pixel, OnePlus, Motorola
@@ -91,7 +91,7 @@ Professional guides covering the complete rooting process:
 ### **🚀 Quick Start:**
 1. **[📖 Complete Rooting Guide](./android-root-guides/index.md)** - Master guide for all rooting aspects
 2. **[🔓 Bootloader Unlocking](./android-root-guides/how-to-unlock-bootloader.md)** - Essential first step
-3. **[🛠️ Custom Recovery](./android-root-guides/custom-recovery.md)** - Install recovery tools
+3. **[🛠️ Custom Recovery](./android-root-guides/how-to-install-custom-recovery.md)** - Install recovery tools
 4. **[🌟 Custom ROM Installation](./android-root-guides/custom-rom-installation.md)** - Transform your experience
 
 ### **📱 Explore Resources:**

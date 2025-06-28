@@ -109,7 +109,7 @@ Welcome to the Ultimate Android Rooting Guide - Master Android rooting with our 
 - 2️⃣ **[Assess risks vs benefits](#should-you-root-your-device)** - Make an informed decision  
 - 3️⃣ **[Check device compatibility](#device-specific-guides)** - Verify your device is supported
 - 4️⃣ **[Unlock bootloader](./how-to-unlock-bootloader.md)** - Essential first step for most devices
-- 5️⃣ **[Install custom recovery](./custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK for advanced operations
+- 5️⃣ **[Install custom recovery](./how-to-install-custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK for advanced operations
 - 6️⃣ **[Prepare prerequisites](#prerequisites-and-preparations)** - Get tools and backups ready
 - 7️⃣ **[Choose root method](#root-solutions-comparison)** - Select the best solution for you
 - 8️⃣ **[Follow rooting steps](#general-rooting-process)** - Complete the rooting process
@@ -320,8 +320,8 @@ The standard rooting procedure typically follows these sequential steps:
    - Execute bootloader unlock command via fastboot
    - Accept data wipe and security warnings
 
-4. **[🛠️ Install Custom Recovery](./custom-recovery.md)** ⭐ **Critical for Root Installation**
-   - **Complete guide available**: [Custom Recovery Installation Guide](./custom-recovery.md)
+4. **[🛠️ Install Custom Recovery](./how-to-install-custom-recovery.md)** ⭐ **Critical for Root Installation**
+   - **Complete guide available**: [Custom Recovery Installation Guide](./how-to-install-custom-recovery.md)
    - Choose between TWRP, OrangeFox, or SKYHAWK Recovery
    - Download recovery image compatible with your device
    - Flash recovery using fastboot commands
@@ -342,7 +342,7 @@ The standard rooting procedure typically follows these sequential steps:
 ::: warning ⚠️ Critical Note
 Steps 3-4 (Bootloader Unlocking and Custom Recovery Installation) are the most complex and manufacturer-specific steps. Our dedicated guides provide comprehensive coverage:
 - **[Bootloader Unlocking Guide](./how-to-unlock-bootloader.md)** - Complete manufacturer-specific instructions
-- **[Custom Recovery Guide](./custom-recovery.md)** - TWRP, OrangeFox, and SKYHAWK installation
+- **[Custom Recovery Guide](./how-to-install-custom-recovery.md)** - TWRP, OrangeFox, and SKYHAWK installation
 :::
 
 ## Device-Specific Guides
@@ -437,13 +437,13 @@ For complete troubleshooting and emergency recovery procedures:
 
 ### Quick Action Plan
 
-**Beginners:** [Bootloader Unlocking](./how-to-unlock-bootloader.md) → [Custom Recovery](./custom-recovery.md) → [Choose Root Method](#root-solutions-comparison)
+**Beginners:** [Bootloader Unlocking](./how-to-unlock-bootloader.md) → [Custom Recovery](./how-to-install-custom-recovery.md) → [Choose Root Method](#root-solutions-comparison)
 
 **Experienced:** Jump to [Device Guides](#device-specific-guides) or [Root Solutions](#root-solutions-comparison)
 
 ### Essential Resources
 - **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - Complete manufacturer guide
-- **[🛠️ Custom Recovery](./custom-recovery.md)** - TWRP, OrangeFox, SKYHAWK  
+- **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - TWRP, OrangeFox, SKYHAWK  
 - **[🌟 Custom ROMs](./custom-rom-installation.md)** - Transform your Android experience
 - **[❓ FAQ & Troubleshooting](../faqs.md)** - Complete support guide
 

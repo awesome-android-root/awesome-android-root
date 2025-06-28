@@ -133,7 +133,7 @@ Complete guide to understanding and unlocking Android bootloaders - the essentia
 
 ### Related Guides
 - **[📖 Complete Rooting Guide](./index.md)** - Master guide for all rooting aspects
-- **[🛠️ Custom Recovery Installation](./custom-recovery.md)** - Next step after unlock
+- **[🛠️ Custom Recovery Installation](./how-to-install-custom-recovery.md)** - Next step after unlock
 - **[🌟 Custom ROM Installation](./custom-rom-installation.md)** - Transform your Android experience
 - **[❓ FAQ & Troubleshooting](../faqs.md)** - Support and solutions
 
@@ -171,7 +171,7 @@ Unlocking your bootloader is the **essential first step** for advanced Android c
 ### The Complete Modification Chain
 **Bootloader unlocking enables this progression:**
 1. **Unlocked Bootloader** ✅ (This guide)
-2. **[Custom Recovery](./custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK
+2. **[Custom Recovery](./how-to-install-custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK
 3. **[Root Access](./index.md#root-solutions-comparison)** - Magisk, KernelSU, or APatch  
 4. **Advanced Modifications** - Custom ROMs, kernels, and system tweaks
 
@@ -348,7 +348,7 @@ fastboot getvar unlocked
 ```
 
 ::: tip ✅ Success! What's Next?
-**Congratulations!** Your Pixel bootloader is now unlocked. The next step is typically to [install custom recovery](./custom-recovery.md) to enable advanced modifications like rooting.
+**Congratulations!** Your Pixel bootloader is now unlocked. The next step is typically to [install custom recovery](./how-to-install-custom-recovery.md) to enable advanced modifications like rooting.
 :::
 
 ### Xiaomi
@@ -384,7 +384,7 @@ Xiaomi requires official approval through their Mi Unlock Tool:
 - **Account Binding**: Mi Account must be added to device before applying
 
 ::: tip ✅ Xiaomi Unlocked Successfully?
-**Great job!** Xiaomi devices with unlocked bootloaders work excellently with custom recoveries. Next step: [Install Custom Recovery](./custom-recovery.md) - TWRP and OrangeFox have excellent Xiaomi support.
+**Great job!** Xiaomi devices with unlocked bootloaders work excellently with custom recoveries. Next step: [Install Custom Recovery](./how-to-install-custom-recovery.md) - TWRP and OrangeFox have excellent Xiaomi support.
 :::
 
 ### OnePlus
@@ -415,7 +415,7 @@ fastboot flashing unlock
 ```
 
 ::: tip ✅ OnePlus Unlocked Successfully?
-**Excellent!** OnePlus devices have great custom development support. Ready for the next step? [Install Custom Recovery](./custom-recovery.md) to unlock advanced modifications.
+**Excellent!** OnePlus devices have great custom development support. Ready for the next step? [Install Custom Recovery](./how-to-install-custom-recovery.md) to unlock advanced modifications.
 :::
 
 ### Samsung
@@ -442,7 +442,7 @@ Samsung has the most restrictive bootloader policy:
 6. Device will factory reset and show **"Custom"** on boot
 
 ::: warning ⚠️ Samsung Knox Triggered
-**Knox has been permanently triggered.** Your device will show "Custom" on boot screen and some Samsung Pay/Knox features may not work. However, you can now proceed with [custom recovery installation](./custom-recovery.md).
+**Knox has been permanently triggered.** Your device will show "Custom" on boot screen and some Samsung Pay/Knox features may not work. However, you can now proceed with [custom recovery installation](./how-to-install-custom-recovery.md).
 :::
 
 ### Motorola
@@ -473,7 +473,7 @@ fastboot oem unlock [UNIQUE_KEY]
 ```
 
 ::: tip ✅ Motorola Unlocked Successfully?
-**Perfect!** Motorola devices have solid custom development support. Time for the next step: [Install Custom Recovery](./custom-recovery.md) to enable advanced system modifications.
+**Perfect!** Motorola devices have solid custom development support. Time for the next step: [Install Custom Recovery](./how-to-install-custom-recovery.md) to enable advanced system modifications.
 :::
 
 ### Sony
@@ -498,7 +498,7 @@ fastboot oem unlock 0x[UNLOCK_CODE]
 ```
 
 ::: tip ✅ Sony Unlocked Successfully?
-**Fantastic!** Sony devices are developer-friendly with good custom ROM support. Ready to continue? [Install Custom Recovery](./custom-recovery.md) for advanced system management.
+**Fantastic!** Sony devices are developer-friendly with good custom ROM support. Ready to continue? [Install Custom Recovery](./how-to-install-custom-recovery.md) for advanced system management.
 :::
 
 ### Other Manufacturers
@@ -540,12 +540,12 @@ fastboot getvar unlocked
 
 ### Next Steps
 With unlocked bootloader, you can now:
-- **[🛠️ Install Custom Recovery](./custom-recovery.md)** - Essential next step for rooting
+- **[🛠️ Install Custom Recovery](./how-to-install-custom-recovery.md)** - Essential next step for rooting
 - **[🔧 Root Your Device](./index.md#root-solutions-comparison)** - Magisk, KernelSU, or APatch
 - **[🎨 Install Custom ROMs](./index.md#advanced-framework-solutions)** - LineageOS, Pixel Experience, etc.
 
 ::: tip 📋 Recommended Next Step
-**[Install Custom Recovery](./custom-recovery.md)** is typically the next step after bootloader unlocking. Our comprehensive guide covers TWRP, OrangeFox, and SKYHAWK Recovery installation.
+**[Install Custom Recovery](./how-to-install-custom-recovery.md)** is typically the next step after bootloader unlocking. Our comprehensive guide covers TWRP, OrangeFox, and SKYHAWK Recovery installation.
 :::
 
 ::: warning ⚠️ Important: Boot to Recovery First
@@ -638,7 +638,7 @@ Check the Wall of Shame repository before purchasing a device if bootloader unlo
 
 ---
 ::: tip 🚀 What's After Bootloader Unlocking?
-1. **[Install Custom Recovery](./custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK
+1. **[Install Custom Recovery](./how-to-install-custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK
 2. **[Root Your Device](./index.md#root-solutions-comparison)** - Magisk, KernelSU, or APatch
 3. **[Install Custom ROMs](./custom-rom-installation.md)** - LineageOS, GrapheneOS, and more
 4. **[Advanced Customization](./index.md#advanced-framework-solutions)** - LSPosed modules and tweaks
