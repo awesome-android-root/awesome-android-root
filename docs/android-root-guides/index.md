@@ -90,8 +90,8 @@ head:
 
 **Simple explanation:** Your phone has built-in restrictions. Rooting removes these restrictions, giving you complete control.
 
-::: tip � Quick Start Path
-**New to rooting?** Follow: [Check Requirements](#requirements-preparation) → [Choose Root Method](#root-methods-comparison) → [Unlock Bootloader](./how-to-unlock-bootloader.md) → [Install Recovery](./how-to-install-custom-recovery.md) → [Root Device](#step-by-step-rooting)
+::: tip ⚡ Quick Start Path
+**New to rooting?** Follow: [Check Requirements](#requirements-preparation) → [Choose Root Method](#root-methods-comparison) → [Unlock Bootloader](#phase-1-unlock-bootloader) → [Install Recovery](#phase-1-unlock-bootloader) → [Root Device](#phase-3-install-rootg)
 :::
 
 ## Should You Root?
@@ -202,7 +202,7 @@ Choose the right root method for your needs and experience level:
 4. Unlock: `fastboot oem unlock` (varies by device)
 5. Accept data wipe warning
 
-### **Phase 2: Install Custom Recovery** 🛠️
+### **Phase 2: Install Custom Recovery**
 **Required for flashing root packages**
 
 **[Custom Recovery Installation Guide](./how-to-install-custom-recovery.md)** - TWRP, OrangeFox, SKYHAWK
@@ -288,7 +288,7 @@ Always verify your **exact model number** (Settings → About Phone). Even simil
 
 ## Troubleshooting
 
-### 🚨 **Emergency Fixes**
+### **Emergency Fixes**
 
 #### **Phone Won't Boot (Bootloop)**
 1. **Recovery mode:** Power + Volume Down → Boot to TWRP
@@ -315,7 +315,7 @@ Always verify your **exact model number** (Settings → About Phone). Even simil
 3. **Check device forums:** Look for unbrick guides on XDA
 4. **Professional help:** Service center as last resort
 
-### 🆘 **Getting Help**
+### **Getting Help**
 - **[Complete FAQ Guide](../faqs.md)** - Detailed troubleshooting solutions
 - **[XDA Forums](https://forum.xda-developers.com/)** - Device-specific communities
 - **Telegram Groups** - Real-time support from community
@@ -330,7 +330,7 @@ Always verify your **exact model number** (Settings → About Phone). Even simil
 
 ---
 
-## 🚀 **Ready to Root?**
+## **Ready to Root?**
 
 ### **Final Checklist**
 - [ ] Device data backed up completely
@@ -341,10 +341,10 @@ Always verify your **exact model number** (Settings → About Phone). Even simil
 - [ ] Battery 50%+ charged
 
 ### **Your Journey**
-1. **[🔓 Unlock Bootloader](./how-to-unlock-bootloader.md)** - Essential first step
-2. **[🛠️ Install Recovery](./how-to-install-custom-recovery.md)** - TWRP recommended
+1. **[Unlock Bootloader](./how-to-unlock-bootloader.md)** - Essential first step
+2. **[Install Recovery](./how-to-install-custom-recovery.md)** - TWRP recommended
 3. **[📱 Check Device Guide](#device-specific-guides)** - Brand-specific instructions
-4. **[⚡ Root Your Device](#step-by-step-rooting)** - Follow the steps above
+4. **[Root Your Device](#step-by-step-rooting)** - Follow the steps above
 
 ### **Remember**
 ✅ Take your time and read everything  
