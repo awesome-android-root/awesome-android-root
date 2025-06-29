@@ -7,17 +7,86 @@ head:
     - rel: canonical
       href: https://awesome-android-root/android-root-guides/bootloader-unlocking
   - - meta
+    - property: og:type
+      content: article
+  - - meta
     - property: og:title
       content: Complete Bootloader Unlocking Guide 2025 - All Android Manufacturers
   - - meta
     - property: og:description
       content: Complete bootloader unlocking guide for 2025. Learn what bootloaders are & step-by-step guide for Google Pixel, Xiaomi, Samsung, OnePlus, and Motorola.
   - - meta
+    - property: og:url
+      content: https://awesome-android-root/android-root-guides/bootloader-unlocking
+  - - meta
+    - property: og:image
+      content: https://awesome-android-root/images/og.png
+  - - meta
+    - name: twitter:card
+      content: summary_large_image
+  - - meta
+    - name: twitter:title
+      content: Complete Bootloader Unlocking Guide 2025 - All Android Manufacturers
+  - - meta
+    - name: twitter:description
+      content: Complete bootloader unlocking guide for 2025. Learn what bootloaders are & step-by-step guide for Google Pixel, Xiaomi, Samsung, OnePlus, and Motorola.
+  - - meta
     - name: keywords
-      content: bootloader unlock, android bootloader, fastboot unlock, xiaomi mi unlock, samsung knox, pixel unlock, oneplus unlock, motorola unlock, oem unlocking, custom recovery, android rooting
+      content: how to root, android rooting, bootloader unlock guide 2025, android bootloader unlock, fastboot unlock bootloader, xiaomi mi unlock tool, samsung bootloader unlock, google pixel unlock, oneplus bootloader unlock, motorola unlock code, sony bootloader unlock, oem unlocking, fastboot commands, adb fastboot guide, bootloader unlock tutorial, android development, custom recovery, twrp install, magisk install preparation
   - - meta
     - name: author
       content: Awesome Android Root Project
+  - - meta
+    - property: article:author
+      content: https://github.com/awesome-android-root/awesome-android-root
+  - - meta
+    - property: article:section
+      content: Bootloader Unlocking
+  - - meta
+    - property: article:tag
+      content: Bootloader Unlock
+  - - meta
+    - property: article:tag
+      content: Android Bootloader
+  - - meta
+    - property: article:tag
+      content: Fastboot
+  - - meta
+    - property: article:tag
+      content: OEM Unlocking
+  - - meta
+    - property: article:tag
+      content: Google Pixel
+  - - meta
+    - property: article:tag
+      content: Xiaomi Mi Unlock
+  - - meta
+    - property: article:tag
+      content: Samsung Knox
+  - - meta
+    - property: article:tag
+      content: OnePlus Unlock
+  - - meta
+    - property: article:tag
+      content: Motorola Unlock
+  - - meta
+    - property: article:tag
+      content: Sony Bootloader
+  - - meta
+    - property: article:tag
+      content: ADB Fastboot
+  - - meta
+    - property: article:tag
+      content: Custom Recovery
+  - - meta
+    - property: article:tag
+      content: Android Development
+  - - meta
+    - name: robots
+      content: index, follow
+  - - meta
+    - name: viewport
+      content: width=device-width, initial-scale=1.0
   - - meta
     - property: article:published_time
       content: 2025-01-01T00:00:00Z
