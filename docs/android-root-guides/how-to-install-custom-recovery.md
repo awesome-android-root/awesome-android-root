@@ -5,7 +5,7 @@ description: "Complete custom recovery installation guide for 2025. Learn to ins
 head:
   - - link
     - rel: canonical
-      href: https://awesome-root.org/android-root-guides/custom-recovery
+      href: https://awesome-android-root.org/android-root-guides/how-to-install-custom-recovery
   - - meta
     - property: og:type
       content: article
@@ -17,7 +17,7 @@ head:
       content: Master custom recovery installation with our comprehensive 2025 guide covering TWRP, OrangeFox, and SKYHAWK Recovery. Step-by-step instructions with troubleshooting for all Android devices.
   - - meta
     - property: og:url
-      content: https://awesome-root.org/android-root-guides/custom-recovery
+      content: https://awesome-android-root.org/android-root-guides/how-to-install-custom-recovery
   - - meta
     - property: og:image
       content: https://awesome-root.org/images/og.png
@@ -85,57 +85,26 @@ head:
 
 # Custom Recovery Installation Guide
 
-Complete guide to installing custom recovery on Android devices - your gateway to advanced modifications, custom ROMs, and powerful system management tools.
+Complete guide for beginners and advanced users to install custom recovery - your gateway to root access, custom ROMs, and advanced Android modifications.
 
 ## Table of Contents
-- [Quick Start](#quick-start)
-- [What is Custom Recovery?](#what-is-custom-recovery)
-- [Recovery Options Comparison](#recovery-options-comparison)
-  - [TWRP - Team Win Recovery Project](#twrp---team-win-recovery-project)
-  - [OrangeFox Recovery](#orangefox-recovery)
-  - [SKYHAWK Recovery Project (SHRP)](#skyhawk-recovery-project-shrp)
-- [Before You Begin](#before-you-begin)
-  - [Prerequisites](#prerequisites)
-  - [Important Warnings](#important-warnings)
-- [Universal Installation Steps](#universal-installation-steps)
-- [Post-Installation Setup](#post-installation-setup)
-- [Using Your Custom Recovery](#using-your-custom-recovery)
+- [Overview](#what-is-custom-recovery)
+- [Recovery Options](#recovery-options)
+- [Prerequisites](#prerequisites)
+- [Installation Process](#installation-process)
+- [Post-Installation](#post-installation)
+- [Essential Operations](#essential-operations)
 - [Troubleshooting](#troubleshooting)
-- [Advanced Topics](#advanced-topics)
 
-## Quick Start
+# What is Custom Recovery?
+Custom recovery is a specialized environment that replaces your device's stock recovery mode, providing advanced system management capabilities.
 
-**Ready to install custom recovery?** Follow this roadmap:
-
-1. 🔓 **[Unlock bootloader](./how-to-unlock-bootloader.md)** - Essential prerequisite
-2. 🔍 **[Choose recovery](#recovery-options-comparison)** - TWRP, OrangeFox, or SKYHAWK
-3. 📋 **[Check prerequisites](#prerequisites)** - Ensure you have everything ready
-4. 📱 **[Find your device](#finding-recovery-for-your-device)** - Download correct recovery image
-5. 🛠️ **[Install recovery](#universal-installation-steps)** - Flash using fastboot
-6. ✅ **[Verify installation](#post-installation-setup)** - Test recovery functionality
-
-### 🔗 **Related Guides in This Series:**
-- **[📖 Complete Rooting Guide](./index.md)** - Master guide covering all aspects of rooting
-- **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - Required prerequisite step
-- **[⚡ Root Installation](./index.md#root-solutions-comparison)** - Next step: Install Magisk, KernelSU, or APatch
-- **[🌟 Custom ROM Installation](./custom-rom-installation.md)** - Advanced: Install custom Android ROMs
-- **[❓ FAQ & Troubleshooting](../faqs.md)** - Complete support guide with troubleshooting solutions
-
-::: tip 🚀 Prerequisites Check
-Before starting, ensure you have completed [bootloader unlocking](./how-to-unlock-bootloader.md) and have ADB/Fastboot tools ready. Custom recovery installation requires an unlocked bootloader.
-:::
-
-## What is Custom Recovery?
-
-**Custom recovery** is a specialized environment that replaces your device's stock recovery mode, providing advanced system management capabilities:
-
-### Key Functions
-- 📦 **Flash Custom ROMs** - Install LineageOS, Pixel Experience, and other custom Android versions  
-- 🔧 **Install Root Solutions** - Flash Magisk, KernelSU, and APatch packages
-- 💾 **Complete System Backups** - Create and restore NANDroid backups of entire system
-- 🗂️ **Advanced File Management** - Mount partitions and manage system files
-- 🧹 **System Maintenance** - Wipe cache, dalvik, and perform factory resets
-- 🔄 **Update Management** - Install OTA updates and custom firmware
+### What You Can Do
+- **Flash custom ROMs** (LineageOS, Pixel Experience, etc.)
+- **Install root solutions** (Magisk, KernelSU, APatch)
+- **Create complete system backups** (NANDroid)
+- **Manage system files** with root access
+- **Install mods and frameworks** (LSPosed, Xposed)
 
 ### Stock vs Custom Recovery
 
@@ -148,141 +117,83 @@ Before starting, ensure you have completed [bootloader unlocking](./how-to-unloc
 | ❌ No root package installation | ✅ Flash Magisk, KernelSU, and custom packages |
 | ❌ Basic interface | ✅ Touch-friendly modern interface |
 
-## Recovery Options Comparison
+### Requirements Path
+1. 🔓 **[Unlock bootloader](./how-to-unlock-bootloader.md)** ← Start here
+2. 🛠️ **Install custom recovery** (this guide)
+3. ⚡ **[Install root solution](./index.md)** ← Next step
 
-### TWRP - Team Win Recovery Project
-
-**[TWRP](https://twrp.me/)** - The most popular and widely supported custom recovery
-
-#### Latest Version: 3.7.1 (February 2024)
-
-**Pros:**
-- ✅ **Widest Device Support** - Largest compatibility across Android devices
-- ✅ **Mature and Stable** - Years of development and testing
-- ✅ **Extensive Documentation** - Comprehensive guides and community support
-- ✅ **Touch Interface** - Full touchscreen navigation
-- ✅ **Active Community** - Large user base and developer community
-
-**Cons:**
-- ❌ **Basic Interface** - Older, less modern design
-- ❌ **Limited Theming** - Minimal customization options
-- ❌ **Development Slowing** - Updates less frequent recently
-
-**Best For:** 
-- First-time users seeking maximum compatibility
-- Devices with official TWRP support
-- Users wanting proven stability
-
-**Device Support:** [Check TWRP Device Database](https://twrp.me/Devices/)
-
-### OrangeFox Recovery
-
-**[OrangeFox Recovery](https://orangefox.download/)** - Modern TWRP-based recovery with enhanced features
-
-**Pros:**
-- ✅ **Modern Interface** - Beautiful, intuitive design with Material Design elements
-- ✅ **Enhanced Features** - Additional tools and utilities beyond standard TWRP
-- ✅ **Regular Updates** - Active development with frequent improvements
-- ✅ **TWRP Compatibility** - Full compatibility with TWRP scripts and functions
-- ✅ **Advanced File Manager** - Improved file management capabilities
-
-**Cons:**
-- ❌ **Limited Device Support** - Fewer officially supported devices than TWRP
-- ❌ **Newer Project** - Less long-term stability testing
-- ❌ **Larger Size** - More storage space required
-
-**Best For:**
-- Users wanting modern interface and enhanced features  
-- Devices with official OrangeFox support
-- Advanced users appreciating extra utilities
-
-**Device Support:** [Check OrangeFox Downloads](https://orangefox.download/)
-
-### SKYHAWK Recovery Project (SHRP)
-
-**[SKYHAWK Recovery](https://skyhawkrecovery.github.io/)** - Feature-rich recovery with dashboard interface
-
-#### Latest Version: 3.1
-
-**Pros:**
-- ✅ **Dashboard Interface** - Unique dashboard design for easy navigation
-- ✅ **Built-in Tools** - Integrated Magisk installer, Camera2API enabler
-- ✅ **Security Features** - Password lock protection for recovery access
-- ✅ **Theming Support** - Multiple theme options (Dark, Black, White)
-- ✅ **Modern Design** - Clean, contemporary interface
-
-**Cons:**
-- ❌ **Newest Project** - Least mature of the three options
-- ❌ **Limited Device Support** - Smallest device compatibility list
-- ❌ **Less Documentation** - Fewer guides and community resources
-
-**Best For:**
-- Users wanting cutting-edge features and modern design
-- Devices with official SHRP support  
-- Power users who appreciate integrated tools
-
-**Device Support:** [Check SHRP Devices](https://skyhawkrecovery.github.io/Devices.html)
-
-## Before You Begin
-
-### Prerequisites
-
-::: danger ⚠️ ESSENTIAL REQUIREMENTS
-**You MUST have these completed before proceeding:**
-
-1. **[🔓 Unlocked Bootloader](./how-to-unlock-bootloader.md)** - Custom recovery requires unlocked bootloader
-2. **📱 ADB/Fastboot Tools** - [Setup guide here](./how-to-unlock-bootloader.md#step-3-set-up-adb-and-fastboot)
-3. **💻 USB Debugging Enabled** - [Enable in Developer Options](./how-to-unlock-bootloader.md#step-2-enable-critical-developer-settings)
+::: danger ⚠️ ESSENTIAL PREREQUISITE
+**Unlocked bootloader required!** Complete [bootloader unlocking](./how-to-unlock-bootloader.md) first.
 :::
 
-#### Additional Requirements
-- ✅ **Device Drivers** - Proper USB drivers installed (Windows)
-- ✅ **Recovery Image** - Correct recovery file for your exact device model
-- ✅ **Backup** - Complete device backup before proceeding
-- ✅ **Battery** - At least 50% charge on device
-- ✅ **Stable Connection** - Quality USB cable and reliable computer
+## Recovery Options
+
+Choose the best recovery for your needs:
+
+### TWRP (Recommended for Beginners)
+**[Team Win Recovery Project](https://twrp.me/)** - Most popular and stable
+
+- ✅ **Widest device support** and extensive documentation
+- ✅ **Proven stability** with large community
+- ✅ **Touch interface** with easy navigation
+- ❌ Basic interface design
+- **Best for:** First-time users, maximum compatibility
+
+### OrangeFox (Best Interface)
+**[OrangeFox Recovery](https://orangefox.download/)** - Modern TWRP-based recovery
+
+- ✅ **Beautiful modern interface** with Material Design
+- ✅ **Enhanced features** and improved file manager
+- ✅ **TWRP compatible** with regular updates
+- ❌ Limited device support vs TWRP
+- **Best for:** Users wanting modern UI and extra features
+
+### SKYHAWK/SHRP (Advanced Features)
+**[SKYHAWK Recovery](https://skyhawkrecovery.github.io/)** - Feature-rich with dashboard
+
+- ✅ **Unique dashboard interface** with built-in tools
+- ✅ **Security features** (password protection)
+- ✅ **Integrated Magisk installer** and theming
+- ❌ Newest project with smallest device support
+- **Best for:** Power users wanting cutting-edge features
+
+::: tip 💡 Quick Decision Guide
+- **New to custom recovery?** → Choose TWRP
+- **Want modern interface?** → Choose OrangeFox  
+- **Need advanced features?** → Choose SKYHAWK
+- **Device not supported?** → Check XDA Forums for unofficial builds
+:::
+
+## Prerequisites
+
+### Required (Must Complete First)
+::: danger ⚠️ ESSENTIAL REQUIREMENTS
+1. **[Unlocked bootloader](./how-to-unlock-bootloader.md)** - Absolutely required
+2. **ADB/Fastboot tools** - [Setup guide](./how-to-unlock-bootloader.md#step-3-set-up-adb-and-fastboot)
+3. **USB debugging enabled** - In Developer Options
+4. **Correct recovery image** - For your exact device model
+5. **50%+ battery charge** - Prevent interruption during flashing
+:::
 
 ### Important Warnings
+- **Wrong recovery = brick risk** - Double-check device compatibility
+- **Warranty voided** - Beyond bootloader unlocking
+- **Backup recommended** - Create full backup before proceeding
+- **Power interruption** - Can cause serious device issues
 
-::: warning ⚠️ CRITICAL WARNINGS
-**Read these warnings carefully:**
-
-- **📱 DEVICE-SPECIFIC**: Using wrong recovery image can brick your device
-- **🔄 IRREVERSIBLE**: Some devices cannot return to stock recovery easily  
-- **⚡ POWER LOSS**: Interruption during flashing can cause serious issues
-- **🔒 WARRANTY**: Further voids warranty beyond bootloader unlocking
-- **🛡️ SECURITY**: Custom recovery provides root-level system access
-:::
-
-## Universal Installation Steps
-
-These steps apply to all custom recovery installations:
+## Installation Process
 
 ### Step 1: Download Recovery Image
 
-#### Finding Recovery for Your Device
+1. **Find your device specs:**
+   - Settings → About Phone → Model Number
+   - Note Android version and device codename
 
-1. **Identify Your Device:**
-   - Find exact model number: Settings → About Phone → Model Number
-   - Note Android version and build number
-   - Identify device codename (important for downloads)
+2. **Download from official sources:**
+   - **TWRP:** [twrp.me/Devices](https://twrp.me/Devices/)
+   - **OrangeFox:** [orangefox.download](https://orangefox.download/)
+   - **SKYHAWK:** [skyhawkrecovery.github.io](https://skyhawkrecovery.github.io/Devices.html)
 
-2. **Download from Official Sources:**
-   
-   **For TWRP:**
-   - Visit [TWRP.me](https://twrp.me/Devices/)
-   - Search for your device model
-   - Download latest stable version
-
-   **For OrangeFox:**
-   - Visit [OrangeFox Downloads](https://orangefox.download/)
-   - Use search to find your device
-   - Download latest stable build
-
-   **For SKYHAWK (SHRP):**
-   - Visit [SHRP Devices](https://skyhawkrecovery.github.io/Devices.html)
-   - Find your device in supported list
-   - Download from official channels
 
 ::: tip 💡 Device Not Listed?
 If your device isn't officially supported:
@@ -365,197 +276,146 @@ fastboot boot recovery.img
 Some devices automatically restore stock recovery on first normal boot. Booting to custom recovery first prevents this restoration.
 :::
 
-## Post-Installation Setup
+## Post-Installation
 
-### Step 1: Verify Installation
+### 1. Verify Installation
+- Boot to recovery using hardware keys (Volume Up + Power)
+- Navigate through menus to test touch/button response
+- Check if all features load properly
 
-1. **Boot to Recovery:**
-   - Power off device
-   - Use hardware key combination to enter recovery
-   - Should boot to custom recovery interface
-
-2. **Test Basic Functions:**
-   - Navigate through menus
-   - Test backup function (create test backup)
-   - Verify file manager works
-
-### Step 2: Create System Backup
-
-::: tip 💾 CRITICAL: Create Backup Immediately
-**Create a NANDroid backup before making any modifications!**
+### 2. Create NANDroid Backup (Critical!)
+::: tip 💾 CREATE BACKUP FIRST
+**Always create a complete backup before making any system changes!**
 :::
 
-**In Custom Recovery:**
-1. Navigate to **Backup** section
-2. Select partitions to backup:
-   - ✅ **Boot** (essential)
-   - ✅ **System** (essential)  
-   - ✅ **Data** (user data - optional but recommended)
-   - ✅ **Recovery** (to restore current recovery if needed)
-3. Start backup process
-4. Wait for completion (may take 10-30 minutes)
-
-### Step 3: Configure Recovery Settings
-
-**Recommended Settings:**
-- **Enable** screen timeout extension
-- **Set** default backup location
-- **Configure** advanced features as needed
-- **Test** restore functionality with small backup
-
-## Using Your Custom Recovery
-
-### Essential Operations
-
-#### Installing Packages (.zip files)
-1. Download files to internal storage or SD card
-2. Boot to recovery
-3. Select **Install** (or **Flash** in some recoveries)
-4. Navigate to file location
-5. Select package and swipe to confirm
-6. Reboot when complete
-
-#### Creating Backups
+**In recovery interface:**
 1. Go to **Backup** section
-2. Select partitions to backup
-3. Choose backup location
-4. Start backup process
-5. Store backup safely
+2. Select partitions:
+   - ✅ **Boot** (essential)
+   - ✅ **System** (essential)
+   - ✅ **Data** (recommended)
+   - ✅ **Recovery** (for safety)
+3. Start backup (takes 10-30 minutes)
+4. Store backup files safely
 
-#### Restoring Backups
-1. Go to **Restore** section  
-2. Select backup location
-3. Choose backup to restore
-4. Select partitions to restore
-5. Confirm and wait for completion
+### 3. Test Basic Functions
+- **File manager** - Browse system folders
+- **Flash test** - Try flashing a simple zip
+- **Wipe functions** - Test cache wipe (safe)
 
-#### Wiping Partitions
-1. Go to **Wipe** section
-2. Select wipe type:
-   - **Factory Reset** - Data and cache
-   - **Advanced Wipe** - Choose specific partitions
-   - **Format Data** - Complete data partition format
+## Essential Operations
+
+### Installing ZIP Files
+1. Download `.zip` file to device storage
+2. Boot to recovery
+3. **Install** → Navigate to file → **Swipe to confirm**
+4. **Reboot System** when complete
+
+### Managing Backups
+- **Create:** Backup → Select partitions → Start
+- **Restore:** Restore → Select backup → Choose partitions → Confirm
+- **Store safely:** Copy backups to computer/cloud storage
+
+### Wiping System
+- **Factory Reset:** Wipe → Factory Reset (keeps internal storage) 
+- **Advanced Wipe:** Choose specific partitions (System, Data, Cache, etc.)
+- **Format Data:** Complete data partition wipe (loses encryption)
+
+::: warning ⚠️ Wipe Warnings
+- **System wipe** removes Android OS - have ROM ready to flash
+- **Data wipe** removes all user data and apps
+- **Format Data** removes encryption - requires password/PIN reset
+:::
 
 ## Troubleshooting
 
-### Common Issues and Solutions
+### Common Issues
 
-#### Recovery Won't Boot / Bootloop
-**Symptoms:** Device stuck on boot screen or boot loops
-
+#### Recovery Won't Boot
+**Problem:** Device stuck on boot screen or bootloop
 **Solutions:**
-1. **Boot to Fastboot:**
-   - Use hardware keys to enter fastboot mode
-   - Reflash recovery image
+1. **Re-flash recovery:**
    ```bash
    fastboot flash recovery recovery.img
    ```
+2. **Try different recovery version** or different recovery project
+3. **Emergency: Flash stock recovery** if available
 
-2. **Flash Stock Recovery (Emergency):**
-   - Download stock recovery for your device
-   - Flash using fastboot
+#### "No OS Installed" Warning
+**Problem:** Recovery shows system not detected
+**Solutions:**
+1. **Ignore and reboot** - often boots normally anyway
+2. **Flash custom ROM** if this was your intention
+3. **Restore system backup** if available
+
+#### Touch Not Working
+**Problem:** Cannot navigate recovery with touch
+**Solutions:**
+1. **Use hardware keys** - Volume keys navigate, Power selects
+2. **Try different recovery** - Some have better touch support
+3. **Check device compatibility** - May need specific build
+
+#### Recovery Disappears
+**Problem:** Custom recovery replaced by stock after reboot
+**Solutions:**
+1. **Install root solution** (Magisk) to prevent replacement
+2. **Boot to recovery immediately** after flashing
+3. **Avoid normal boot** until root is installed
+
+### Emergency Recovery
+
+If recovery is completely broken:
+
+1. **Boot to fastboot:**
+   ```bash
+   fastboot devices
+   ```
+
+2. **Flash stock recovery:**
    ```bash
    fastboot flash recovery stock_recovery.img
    ```
 
-#### "No OS Installed" Message
-**Meaning:** Recovery doesn't detect bootable system
+3. **Flash stock ROM if needed:**
+   - Samsung: Use Odin + stock firmware
+   - Xiaomi: Mi Flash Tool + fastboot ROM  
+   - OnePlus: MSM Download Tool
+   - Google: Factory images
 
-**Solutions:**
-1. **Install ROM:**
-   - Flash custom ROM if intended
-   - Or restore system backup if available
+### Advanced Troubleshooting
 
-2. **Boot to System:**
-   - Try rebooting to system anyway
-   - May boot normally despite message
+**Fastboot not working:**
+- Check USB drivers (Windows)
+- Try different USB port/cable
+- Enable OEM unlocking again
+- Use different computer
 
-#### Touch Not Working in Recovery
-**Causes:** Incompatible recovery image or driver issues
-
-**Solutions:**
-1. **Try Different Recovery:**
-   - Download different recovery version
-   - Try different recovery project (TWRP vs OrangeFox)
-
-2. **Use Hardware Keys:**
-   - Volume keys for navigation
-   - Power key for selection
-   - Check if hardware navigation works
-
-#### Recovery Gets Replaced by Stock
-**Symptoms:** Custom recovery disappears after reboot
-
-**Solutions:**
-1. **Disable Recovery Replacement:**
-   - Root device first
-   - Install Magisk to prevent stock recovery restoration
-
-2. **Flash Recovery Again:**
-   - Reflash custom recovery
-   - Boot directly to recovery after flashing
-
-### Emergency Recovery Procedures
-
-#### Soft Brick Recovery
-1. **Boot to Fastboot Mode:**
-   ```bash
-   fastboot devices  # Verify device detected
-   ```
-
-2. **Flash Stock Recovery:**
-   ```bash
-   fastboot flash recovery stock_recovery.img
-   ```
-
-3. **Flash Stock ROM:**
-   ```bash
-   fastboot flashall  # If fastboot ROM available
-   ```
-
-#### Complete Recovery Process
-1. **Download stock firmware** for your exact device
-2. **Use manufacturer tools:**
-   - **Samsung:** Odin + stock firmware
-   - **Xiaomi:** Mi Flash Tool + fastboot ROM
-   - **OnePlus:** MSM Download Tool
-   - **Google Pixel:** Flash factory images
-
-## Advanced Topics
-
-### Recovery Modifications
-
-**Themes and Customization:**
-- Custom themes for supported recoveries
-- Icon packs and layout modifications
-- Language translations
-
-### Integration with Root Solutions
-
-**Magisk Integration:**
-- Automatic Magisk installation from recovery
-- Magisk module flashing
-- SafetyNet considerations
-
-**KernelSU/APatch Integration:**
-- Recovery compatibility with kernel-based solutions
-- Module management from recovery
+**Recovery crashes:**
+- Wrong recovery for device variant
+- Corrupted download - re-download
+- Hardware incompatibility
 
 ---
 
-##  What's Next?
+## Next Steps
 
-**Excellent work!** You now have custom recovery installed. Here's your roadmap:
+**Recovery installed successfully!** Choose your path:
 
-### Essential Steps
-1. **[💾 Create NANDroid Backup](#step-2-create-system-backup)** - Protect your current system
-2. **[⚡ Root Your Device](./index.md#root-solutions-comparison)** - Install Magisk, KernelSU, or APatch
-3. **[🧪 Test Recovery Features](#using-your-custom-recovery)** - Familiarize yourself with the interface
+### For Beginners
+1. **[Install Magisk](./index.md)** - Most popular root solution
+2. **Practice with recovery** - Create backups, flash simple mods
+3. **Read FAQ** - Common questions answered
 
-### Advanced Modifications
-4. **[🌟 Install Custom ROM](./custom-rom-installation.md)** - Complete Android transformation
-5. **[📦 Install LSPosed Modules](./index.md#advanced-framework-solutions)** - System customization
+### For Advanced Users  
+1. **[Try KernelSU/APatch](./index.md)** - Kernel-based root alternatives
+2. **[Install custom ROM](./custom-rom-installation.md)** - Complete Android replacement
+3. **[Set up development environment](./index.md)** - For ROM building
 
 ### Need Help?
-- **[❓ FAQ & Troubleshooting](../faqs.md)** - Solutions to common issues
-- **[💬 Join Community](../about.md#community--resources)** - Connect with fellow enthusiasts
+- **[Complete FAQ](../faqs.md)** - Troubleshooting guide
+- **[Join community](../about.md)** - Get support from other users
+- **XDA Forums** - Device-specific help
+
+::: tip 🎉 Congratulations!
+You've successfully installed custom recovery! This unlocks the full potential of Android modification. Take time to explore the interface and always backup before making changes.
+:::
