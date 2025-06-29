@@ -238,7 +238,7 @@ features:
   - icon: 🎨
     title: UI Customization
     details: "Transform your Android UI with SystemUI Tuner, Substratum themes & icon packs."
-    link: /android-root-apps/#customization
+    link: /android-root-apps//#customizations
     
   - icon: 🔋
     title: Battery Management
@@ -253,7 +253,7 @@ features:
   - icon: 💻
     title: Debloating
     details: "Remove unwanted apps from your device for best performance and battery life"
-    link: /android-root-apps/#development-tools
+    link: /android-root-apps/#debloating
     
   - icon: 🔐
     title: Privacy & Security
@@ -263,15 +263,15 @@ features:
   - icon:  ⚙️
     title: Kernel Management
     details: "Overclock and underclock your phone to have maximum performance or battery"
-    link: /android-root-apps/#network-and-internet
+    link: /android-root-apps/#kernel-management
     
   - icon: 🧪
     title: Device Control and Hardware
     details: "Change how your device hardware should be as your like to customize"
-    link: /android-root-apps/#lsposed-modules
+    link: /android-root-apps/#device-control-and-hardware
     
   - icon: 📍
     title: Location and GPS
     details: "Fake your location to be somewhere else while being at your home"
-    link: /android-root-apps/#magisk-modules
+    link: /android-root-apps/#location-and-gps
 ---
