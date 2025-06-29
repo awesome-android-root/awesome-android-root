@@ -64,105 +64,55 @@ head:
 
 # About Awesome Android Root
 
-**The ultimate Android rooting resource** - A comprehensive collection of 250+ root apps, expert guides, and community-driven resources for Android customization and freedom.
+The ultimate Android rooting resource with 250+ curated apps, expert guides, and community-driven resources for Android customization and freedom.
 
 ## Our Mission
 
-🚀 **Democratize Android customization** by providing free, comprehensive resources for rooting, custom ROMs, and advanced Android modifications.
+Democratize Android customization by providing free, comprehensive resources for rooting, custom ROMs, and advanced Android modifications.
 
 ## What We Offer
 
-### 📱 **250+ Curated Root Apps**
-Hand-selected Android root applications across 15 categories:
-- Ad Blocking, App Management, System Modifications
-- Audio Enhancement, Performance Optimization, Privacy Tools
-- Customization, Development Tools, and more
+**🔧 Complete Rooting Solutions**
+- **[📖 Expert Guides](./android-root-guides/index.md)** - Step-by-step rooting tutorials
+- **[📱 250+ Root Apps](/)** - Hand-selected applications across 15 categories
+- **[🛠️ Device Support](./android-root-guides/)** - Guides for Xiaomi, Samsung, Pixel, OnePlus, Motorola
+- **[❓ FAQ & Support](./faqs.md)** - Common questions and troubleshooting
 
-### 📚 **Expert Rooting Guides**
-Professional guides covering the complete rooting process:
-- **[🔓 Bootloader Unlocking](./android-root-guides/how-to-unlock-bootloader.md)** - Essential first step
-- **[🛠️ Custom Recovery](./android-root-guides/how-to-install-custom-recovery.md)** - TWRP, OrangeFox, SKYHAWK
-- **[⚡ Root Installation](./android-root-guides/index.md)** - Magisk, KernelSU, APatch
-- **[🌟 Custom ROM Installation](./android-root-guides/custom-rom-installation.md)** - LineageOS, GrapheneOS, and more
-- **[📱 Device-Specific Guides](./android-root-guides/)** - Xiaomi, Samsung, Pixel, OnePlus, Motorola
+## Getting Started
 
-## Get Started
+**Essential Steps:**
+1. [🔓 Unlock Bootloader](./android-root-guides/how-to-unlock-bootloader.md)
+2. [🛠️ Install Custom Recovery](./android-root-guides/how-to-install-custom-recovery.md)
+3. [⚡ Root Your Device](./android-root-guides/index.md)
+4. [🌟 Install Custom ROM](./android-root-guides/custom-rom-installation.md) (optional)
 
-### **🚀 Quick Start:**
-1. **[📖 Complete Rooting Guide](./android-root-guides/index.md)** - Master guide for all rooting aspects
-2. **[🔓 Bootloader Unlocking](./android-root-guides/how-to-unlock-bootloader.md)** - Essential first step
-3. **[🛠️ Custom Recovery](./android-root-guides/how-to-install-custom-recovery.md)** - Install recovery tools
-4. **[🌟 Custom ROM Installation](./android-root-guides/custom-rom-installation.md)** - Transform your experience
+## Community
 
-### **📱 Explore Resources:**
-- **[🏠 Browse Root Apps](/)** - Discover 250+ curated applications
-- **[❓ FAQ & Help](./faqs.md)** - Common questions and solutions
-- **[📋 Contributing Guide](https://github.com/awesome-android-root/awesome-android-root/blob/main/CONTRIBUTING.md)** - Help improve the project
+**Official Channels:**
+- [📱 GitHub](https://github.com/awesome-android-root/awesome-android-root) - Source code and contributions
+- [𝕏 Twitter](https://x.com/awsm_and_root) - Updates and community highlights
+- [💬 Reddit](https://reddit.com/r/AwesomeAndroidRoot) - Discussions and questions
+- [📱 Telegram](https://t.me/awesome_android_root) - Real-time support
 
-## Community & Resources
+**Need Help?**
+- Check our [FAQ](./faqs.md) for common questions
+- Search [XDA Forums](https://forum.xda-developers.com/) for device-specific help
+- Include device model, Android version, and error messages when asking for help
 
-### **🏆 Official Project Links:**
-- **[📱 GitHub Repository](https://github.com/awesome-android-root/awesome-android-root)** - Source code, issues, and contributions
-- **[🌐 Official Website](https://awesome-android-root.org)** - Browse apps and guides  
-- **[📊 Project Statistics](/#stats)** - Usage stats and growth metrics
-- **[💝 Support via Open Collective](https://opencollective.com/awesome-android-root-official)** - Financial contributions
-
-### **💬 Join Our Community:**
-- **[𝕏 / Twitter @awsm_and_root](https://x.com/awsm_and_root)** - Updates, tips, and community highlights
-- **[💬 Reddit r/AwesomeAndroidRoot](https://reddit.com/r/AwesomeAndroidRoot)** - Discussions, questions, and sharing
-- **[💡 GitHub Discussions](https://github.com/awesome-android-root/awesome-android-root/discussions)** - Feature requests and feedback
-- **[🐛 Issue Tracker](https://github.com/awesome-android-root/awesome-android-root/issues)** - Bug reports and technical issues
-- **[📱 Telegram Channel](https://t.me/awesome_android_root)** - Real-time updates and quick help
-
-### **🌍 Community & Support:**
-
-**🏅 Main Communities:**
-- **[XDA Developers](https://forum.xda-developers.com/)** - Premier Android development community
-- **[r/AndroidRoot](https://reddit.com/r/AndroidRoot)** - General rooting discussions
-- **[r/LineageOS](https://reddit.com/r/LineageOS)** - LineageOS support
-- **[r/Magisk](https://reddit.com/r/Magisk)** - Magisk modules and support
-
-**🔧 Project Resources:**
-- **[Magisk GitHub](https://github.com/topjohnwu/Magisk)** - Official Magisk development
-- **[LineageOS Community](https://www.lineageos.org/community/)** - LineageOS support
-- **[GrapheneOS](https://grapheneos.org/)** - Privacy-focused Android
-
-**� Device-Specific Help:**
-- **Xiaomi**: [MIUI Forums](https://en.miui.com/forum/) • [r/Xiaomi](https://reddit.com/r/Xiaomi)
-- **Samsung**: [SamMobile](https://www.sammobile.com/)   
-- **Google Pixel**: [r/GooglePixel](https://reddit.com/r/GooglePixel) • [GrapheneOS](https://grapheneos.org/)
-- **OnePlus**: [OnePlus Forums](https://forums.oneplus.com/) • [r/OnePlus](https://reddit.com/r/OnePlus)
-
-### **🔍 Getting Help:**
-
-**When asking for help, include:**
-- Device model and Android version
-- What you tried and what happened
-- Exact error messages or screenshots
-
-**Help Resources:**
-- **[Our FAQ](./faqs.md)** - Common questions and solutions
-- **[XDA Device Forums](https://forum.xda-developers.com/all-devices)** - Device-specific support
-- Search format: "[Device Name] + [Problem]"
-
----
-
-**🚀 Ready to dive deeper?** Join our vibrant community and unlock the full potential of your Android device with expert guidance and support!
-
-## Values
+## Core Values
 
 - **🔒 Security First** - Verified sources and safe practices
-- **🌍 Community-Driven** - Open source with global contributions
-- **📚 Educational** - Empowering users through comprehensive guides
-- **🔄 Up-to-Date** - Regular updates with latest Android developments
+- **🌍 Open Source** - Community-driven development
+- **📚 Educational** - Comprehensive learning resources
+- **🔄 Always Current** - Regular updates with latest developments
 
 ## Support the Project
 
-- **⭐ [Star on GitHub](https://github.com/awesome-android-root/awesome-android-root)** - Show your support
-- **📝 [Contribute](https://github.com/awesome-android-root/awesome-android-root/blob/main/CONTRIBUTING.md)** - Submit apps or guides
-- **💬 [Join Discussions](https://github.com/awesome-android-root/awesome-android-root/discussions)** - Share knowledge
-- **🔄 Share** - Help others discover Android freedom
+- ⭐ [Star on GitHub](https://github.com/awesome-android-root/awesome-android-root)
+- 📝 [Contribute](https://github.com/awesome-android-root/awesome-android-root/blob/main/CONTRIBUTING.md)
+- 💝 [Donate](https://opencollective.com/awesome-android-root-official)
+- 🔄 Share with others
 
 ---
 
-**Ready to unlock your Android's potential?** Start with our **[Complete Rooting Guide](./android-root-guides/index.md)** and join the Android freedom movement.
+Ready to unlock your Android's potential? Start with our [Complete Rooting Guide](./android-root-guides/index.md).
