@@ -207,7 +207,7 @@ export default defineConfig({
         items: [
           { text: 'FAQ', link: '/faqs' },
           { text: 'About', link: '/about' },
-          { text: 'Support Project', link: 'https://opencollective.com/awesome-android-root-official' },
+          { text: 'Support Project', link: '/about#support-the-project' },
           { text: 'Contributing', link: '/contributing' }
         ]
       }
