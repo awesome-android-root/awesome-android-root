@@ -5,7 +5,7 @@ description: "Complete bootloader unlocking guide for 2025. Learn what bootloade
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root/android-root-guides/bootloader-unlocking
+      href: https://awesome-android-root.org/android-root-guides/how-to-unlock-bootloader
   - - meta
     - property: og:type
       content: article
@@ -17,7 +17,7 @@ head:
       content: Complete bootloader unlocking guide for 2025. Learn what bootloaders are & step-by-step guide for Google Pixel, Xiaomi, Samsung, OnePlus, and Motorola.
   - - meta
     - property: og:url
-      content: https://awesome-android-root/android-root-guides/bootloader-unlocking
+      content: https://awesome-android-root.org/android-root-guides/how-to-unlock-bootloader
   - - meta
     - property: og:image
       content: https://awesome-android-root/images/og.png
