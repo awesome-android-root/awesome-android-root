@@ -20,7 +20,7 @@ head:
       content: https://awesome-android-root.org/android-root-guides/how-to-install-custom-recovery
   - - meta
     - property: og:image
-      content: https://awesome-root.org/images/og.png
+      content: https://awesome-androidroot.org/images/og/custom-recovery.png
   - - meta
     - name: twitter:card
       content: summary_large_image

@@ -20,7 +20,7 @@ head:
       content: https://awesome-android-root.org/android-root-guides/nothing-phone
   - - meta
     - property: og:image
-      content: https://awesome-android-root.org/images/og.png
+      content: https://awesome-android-root.org/images/og/nothing.png
   - - meta
     - name: twitter:card
       content: summary_large_image

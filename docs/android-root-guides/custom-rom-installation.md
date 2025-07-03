@@ -20,7 +20,7 @@ head:
       content: https://awesome-android-root.org/android-root-guides/custom-rom-installation
   - - meta
     - property: og:image
-      content: https://awesome-android-root.org/images/og.png
+      content: https://awesome-android-root.org/images/og/custom-rom.png
   - - meta
     - name: twitter:card
       content: summary_large_image

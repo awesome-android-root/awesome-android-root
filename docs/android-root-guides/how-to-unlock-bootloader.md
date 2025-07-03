@@ -20,7 +20,7 @@ head:
       content: https://awesome-android-root.org/android-root-guides/how-to-unlock-bootloader
   - - meta
     - property: og:image
-      content: https://awesome-android-root/images/og.png
+      content: https://awesome-android-root/images/og/bootloader.png
   - - meta
     - name: twitter:card
       content: summary_large_image
