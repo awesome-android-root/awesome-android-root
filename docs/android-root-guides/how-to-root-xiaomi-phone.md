@@ -270,7 +270,7 @@ Thanks to @Kaktusbv for sharing this method.
    - [Hyper OS Sapphiren Unlocker](https://archive.org/download/hyper-os-sapphire-unlocker/Hyper%20OS%20Sapphiren%20Unlocker.zip)
 
 #### Steps:
-- [Install Magisk](../android-root-guides/xiaomi.md#4-flash-magisk-using-custom-recovery)
+- [Install Magisk](../android-root-guides/how-to-root-xiaomi-phone.md#4-flash-magisk-using-custom-recovery)
 - Open Magisk and flash the module according to your device.
 - Reboot your device.
 
