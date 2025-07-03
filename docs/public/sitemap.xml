@@ -99,6 +99,13 @@
   <priority>0.75</priority>
 </url>
 
+<!-- Guides -->
+<url>
+  <loc>https://awesome-android-root.org/guides/stop-android-app-auto-updates-play-store</loc>
+  <lastmod>2025-07-03T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
 
 <!-- Additional pages -->
 <url>
