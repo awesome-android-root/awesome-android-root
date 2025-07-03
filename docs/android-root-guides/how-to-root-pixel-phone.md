@@ -17,7 +17,7 @@ head:
       content: Complete Step-by-step Google Pixel rooting guide for 2025 Inluding bootloader unlocking, custom recovery & Magisk rooting on all Pixel devices.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/android-root-guides/pixel
+      content: https://awesome-android-root.org/android-root-guides/how-to-root-pixel-phone
   - - meta
     - property: og:image
       content: https://awesome-android-root.org/images/og/google-pixel.png
@@ -32,7 +32,7 @@ head:
       content: Step-by-step Google Pixel rooting guide covering bootloader unlock, custom recovery, and Magisk installation.
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.org/images/og.png
+      content: https://awesome-android-root.org/images/og/google-pixel.png
   - - meta
     - name: keywords
       content: google pixel root guide, pixel rooting 2025, pixel bootloader unlock, pixel magisk guide, pixel custom recovery, pixel 8 root, pixel 7 root, pixel 6 root, fastboot commands pixel, adb pixel, twrp pixel, lineageos pixel, grapheneos pixel, pixel root safety

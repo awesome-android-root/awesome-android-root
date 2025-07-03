@@ -5,7 +5,7 @@ description: "Complete Step-by-step Samsung Galaxy rooting guide for 2025 includ
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/android-root-guides/samsung
+      href: https://awesome-android-root.org/android-root-guides/how-to-root-samsung-phone
   - - meta
     - property: og:type
       content: article
@@ -17,7 +17,7 @@ head:
       content: Complete Step-by-step Samsung Galaxy rooting guide for 2025 including bootloader unlocking, custom recovery & Magisk rooting on Galaxy devices.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/android-root-guides/samsung
+      content: https://awesome-android-root.org/android-root-guides/how-to-root-samsung-phone
   - - meta
     - property: og:image
       content: https://awesome-android-root.org/images/og/samsung.png

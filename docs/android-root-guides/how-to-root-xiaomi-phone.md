@@ -5,7 +5,7 @@ description: "Best complete step-by-step complete guide to root Xiaomi and redmi
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/android-root-guides/xiaomi
+      href: https://awesome-android-root.org/android-root-guides/how-to-root-xiaomi-phone
   - - meta
     - property: og:type
       content: article
@@ -17,7 +17,7 @@ head:
       content: Root your Xiaomi device with this comprehensive guide covering bootloader unlock, TWRP/OrangeFox recovery, and Magisk installation for MIUI and HyperOS.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/android-root-guides/xiaomi
+      content: https://awesome-android-root.org/android-root-guides/how-to-root-xiaomi-phone
   - - meta
     - property: og:image
       content: https://awesome-android-root.org/images/og/xiaomi.png

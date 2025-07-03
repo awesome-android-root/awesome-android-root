@@ -5,7 +5,7 @@ description: "Complete step-by-step guide to root Nothing Phone 1, 2, 2a, and 3 
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/android-root-guides/nothing-phone
+      href: https://awesome-android-root.org/android-root-guides/how-to-root-nothing-phone
   - - meta
     - property: og:type
       content: article
@@ -17,7 +17,7 @@ head:
       content: Root your Nothing Phone with this comprehensive guide covering bootloader unlock, custom recovery, and Magisk installation for Nothing OS.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/android-root-guides/nothing-phone
+      content: https://awesome-android-root.org/android-root-guides/how-to-root-nothing-phone
   - - meta
     - property: og:image
       content: https://awesome-android-root.org/images/og/nothing.png

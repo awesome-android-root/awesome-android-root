@@ -5,7 +5,7 @@ description: "Complete Step-by-step OnePlus rooting guide for 2025. including bo
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/android-root-guides/oneplus
+      href: https://awesome-android-root.org/android-root-guides/how-to-root-oneplus-phone
   - - meta
     - property: og:type
       content: article
@@ -17,7 +17,7 @@ head:
       content: Complete Step-by-step OnePlus rooting guide for 2025. including bootloader unlocking, MSM tool, custom recovery and Magisk rooting on all devices running OxygenOS.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/android-root-guides/oneplus
+      content: https://awesome-android-root.org/android-root-guides/how-to-root-oneplus-phone
   - - meta
     - property: og:image
       content: https://awesome-android-root.org/images/og/oneplus.png
