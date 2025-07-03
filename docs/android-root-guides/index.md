@@ -265,7 +265,8 @@ Always verify your **exact model number** (Settings → About Phone). Even simil
 
 ### **Success! Now What?**
 
-- **[Browser our collection of 250+ Root apps and modules](../android-root-apps/#root-apps)**
+- **[Browse our collection of 250+ Root apps and modules](../android-root-apps/#root-apps)**
+- **[Stop App Auto-Updates from Play Store](../guides/stop-android-app-auto-updates-play-store.md)** - Take control of app updates
 
 
 ### Advanced Framework Solutions
