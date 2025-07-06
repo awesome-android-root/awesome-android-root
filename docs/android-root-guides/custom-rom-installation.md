@@ -110,7 +110,7 @@ Complete guide to installing custom Android ROMs - Unlock the full potential of 
 - **[📖 About Project](../about.md)** - Learn about Awesome Android Root
 
 ::: tip 🚀 Prerequisites Check
-Before starting, ensure you have completed [bootloader unlocking](./how-to-unlock-bootloader.md) and [custom recovery installation](./custom-recovery.md). These are mandatory steps for custom ROM installation.
+Before starting, ensure you have completed [bootloader unlocking](./how-to-unlock-bootloader.md) and [custom recovery installation](./how-to-install-custom-recovery.md). These are mandatory steps for custom ROM installation.
 :::
 
 ## What are Custom ROMs?
@@ -280,7 +280,7 @@ This resource provides in-depth analysis of:
 
 #### ✅ Completed Prerequisite Steps
 1. **[Unlocked Bootloader](./how-to-unlock-bootloader.md)** - Mandatory for all custom ROMs
-2. **[Custom Recovery](./custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK installed
+2. **[Custom Recovery](./how-to-install-custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK installed
 3. **ADB/Fastboot Tools** - Platform tools for device communication
 
 #### 📱 Device Requirements
