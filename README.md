@@ -4,7 +4,7 @@
 #### 🛡️ **The ultimate hub for Android Rooting**
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=green)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
-[![Total Entries](https://img.shields.io/badge/Total%20Entries-250+-blue?style=for-the-badge&logo=android)](#root-apps)
+[![Total Entries](https://img.shields.io/badge/Total%20Entries-280+-blue?style=for-the-badge&logo=android)](#root-apps)
 [![Support via Open Collective](https://img.shields.io/badge/Support%20via-Open%20Collective-blue?style=for-the-badge&logo=opencollective)](https://opencollective.com/awesome-android-root-official)
 
 [🌐 **What is Root?**](#what-is-root-access) | [📱 **Root Apps**](#root-apps) | [📋 **Table of Contents**](#table-of-contents) | [💬 **Community**](#community-resources) | [**繁體中文**](README-zh-TW.md)
@@ -686,9 +686,9 @@ Complete support resource with expert troubleshooting solutions:
 
 ### Repository Statistics
 
-| ![Total Entries](https://img.shields.io/badge/Total%20Entries-287-brightgreen?style=for-the-badge&logo=android)<br>**Total Entries** | ![Root Apps](https://img.shields.io/badge/Root%20Apps-113-blue?style=for-the-badge&logo=android)<br>**Root Apps** |
+| ![Total Entries](https://img.shields.io/badge/Total%20Entries-288-brightgreen?style=for-the-badge&logo=android)<br>**Total Entries** | ![Root Apps](https://img.shields.io/badge/Root%20Apps-113-blue?style=for-the-badge&logo=android)<br>**Root Apps** |
 |:---:|:---:|
-| ![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-96-orange?style=for-the-badge&logo=magisk)<br>**Magisk Modules** | ![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-78-purple?style=for-the-badge&logo=xposed)<br>**LSPosed Modules** |
+| ![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-97-orange?style=for-the-badge&logo=magisk)<br>**Magisk Modules** | ![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-78-purple?style=for-the-badge&logo=xposed)<br>**LSPosed Modules** |
 
 ### Visitor Counter
 
