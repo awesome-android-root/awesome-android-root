@@ -540,6 +540,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 #### Managers
 - **[APatch](https://github.com/bmax121/APatch)** - The patching of Android kernel and Android system. `FOSS`
 - **[Magisk Manager](https://github.com/topjohnwu/Magisk)** - Manage Magisk modules and root permissions. `FOSS`
+- **[Magisk Manager for Recovery Mode](https://github.com/Rikj000/Magisk-Manager-for-Recovery-Mode)** - Easily manage your Magisk Modules from a terminal session in your custom recovery. `FOSS` `[M]`
 - **[MMRL](https://github.com/DerGoogler/MMRL)** - An Android app that helps manage your own modules repository. `FOSS`
 - **[KernelSU](https://github.com/tiann/KernelSU)** - A Kernel based root solution for Android. `FOSS`
 
