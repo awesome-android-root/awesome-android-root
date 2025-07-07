@@ -501,6 +501,7 @@ Rooting allows overcoming limitations that carriers and hardware manufacturers p
 - **[PerfMTK](https://github.com/JUANIMAN/PerfMTK)** - Designed to optimize performance and power efficiency on MediaTek devices with Mali GPUs. `FOSS` `[M]`
 - **[SpeedCool](https://github.com/Llucs/SpeedCool-Magisk-Module)** - Boost, cool down, and optimize your Android with SpeedCool: less lag, more performance, and a cooler system. `FOSS` `[M]`
 - **[SuperMario Tweaker](https://github.com/mrx7014/SuperMario-Tweaker)** - A tweaker module that can improve any device performance and stability (Gaming, Daily Useage, etc). `FOSS` `[M]`
+- **[SwapBoost Pro](https://github.com/yadavnikhil03/SwapBoost-Pro)** - Optimizes your device's memory performance through persistent zRAM + Swapfile optimization with VM tweaks. `FOSS` `[M]`
 - **[Swap Disabler](https://github.com/rompelhd/Swap-Disabler)** - Disable swap at system startup. `FOSS` `[M]`
 - **[Uperf-Game-Turbo](https://github.com/yinwanxi/Uperf-Game-Turbo)** - Userspace performance controller for Android. `FOSS` `[M]`
 
