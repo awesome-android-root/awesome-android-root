@@ -130,7 +130,7 @@ Rooting allows overcoming limitations that carriers and hardware manufacturers p
 3. **[⚡ Root Your Device](./docs/android-root-guides/index.md#root-solutions-comparison)** - Magisk, KernelSU, or APatch comparison
 4. **[🌟 Install Custom ROM](./docs/android-root-guides/custom-rom-installation.md)** - Optional: Transform your Android experience
 
-[**Read the Complete Rooting Master Guide** →](./docs/android-root-guides/index.md)
+**[Read the Complete Rooting Master Guide→](./docs/android-root-guides/index.md)** 
 
 ## Glossary
 -  **`FOSS`** = Free and Open Source Software
