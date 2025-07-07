@@ -30,7 +30,7 @@ head:
       content: Awesome Android Root
   - - meta
     - property: og:title
-      content: Best Android Root Apps 2025 - Ultimate Collection of 280+ Apps & Modules
+      content: Best Android Root Apps and Modules 2025 | Awesome Android Root
   - - meta
     - property: og:description
       content: Download the best Android root apps, Magisk modules, and LSPosed frameworks. Ultimate collection of 280+ curated root applications for Android customization, system optimization, and power user features.
@@ -74,7 +74,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:title
-      content: Best Android Root Apps 2025 | 280+ Apps & Modules Collection
+      content: Best Android Root Apps and Modules 2025 | Awesome Android Root
   - - meta
     - name: twitter:description
       content: Download top Android root apps, Magisk modules & LSPosed frameworks. Ultimate collection of 280+ curated root applications for system optimization & customization.
@@ -88,7 +88,7 @@ head:
  # Android Root Apps Pinterest optimization
   - - meta
     - property: og:title
-      content: Best Android Root Apps 2025 - Ultimate Collection of 280+ Apps & Modules
+      content: Best Android Root Apps and Modules 2025 | Awesome Android Root
   - - meta
     - property: og:description
       content: Download the best Android root apps, Magisk modules, and LSPosed frameworks. Ultimate collection of 280+ curated root applications for Android customization, system optimization, and power user features.
@@ -177,7 +177,7 @@ head:
       {
         "@context": "https://schema.org",
         "@type": ["WebPage", "CollectionPage", "SoftwareSourceCode"],
-        "name": "Best Android Root Apps 2025 - Ultimate Collection",
+        "name": "Best Android Root Apps and Modules 2025 | Awesome Android Root",
         "alternateName": ["Android Root Apps", "Root Apps Collection", "Magisk Modules Collection"],
         "url": "https://awesome-android-root.org/android-root-apps/",
         "description": "Ultimate collection of 280+ best Android root apps, Magisk modules, and LSPosed frameworks. Download top-rated root applications for Android customization, system optimization, and power user features.",
