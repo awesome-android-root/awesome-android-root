@@ -650,9 +650,9 @@ Complete support resource with expert troubleshooting solutions:
 
 ### Repository Statistics
 
-| ![Total Entries](https://img.shields.io/badge/Total%20Entries-248-brightgreen?style=for-the-badge&logo=android)<br>**Total Entries** | ![Root Apps](https://img.shields.io/badge/Root%20Apps-113-blue?style=for-the-badge&logo=android)<br>**Root Apps** |
+| ![Total Entries](https://img.shields.io/badge/Total%20Entries-253-brightgreen?style=for-the-badge&logo=android)<br>**Total Entries** | ![Root Apps](https://img.shields.io/badge/Root%20Apps-113-blue?style=for-the-badge&logo=android)<br>**Root Apps** |
 |:---:|:---:|
-| ![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-58-orange?style=for-the-badge&logo=magisk)<br>**Magisk Modules** | ![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-77-purple?style=for-the-badge&logo=xposed)<br>**LSPosed Modules** |
+| ![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-62-orange?style=for-the-badge&logo=magisk)<br>**Magisk Modules** | ![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-78-purple?style=for-the-badge&logo=xposed)<br>**LSPosed Modules** |
 
 ### Visitor Counter
 
@@ -661,6 +661,7 @@ Complete support resource with expert troubleshooting solutions:
 [↑ Back to top](#table-of-contents)
 
 ## Support This Project
+
 <div align="center" class="aar-intro">
 
 [![Become a Sponsor](https://img.shields.io/badge/💖-Become%20a%20Sponsor-ff69b4?style=for-the-badge)](https://opencollective.com/awesome-android-root-official)
