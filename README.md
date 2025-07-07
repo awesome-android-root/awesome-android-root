@@ -685,9 +685,9 @@ Complete support resource with expert troubleshooting solutions:
 
 ### Repository Statistics
 
-| ![Total Entries](https://img.shields.io/badge/Total%20Entries-278-brightgreen?style=for-the-badge&logo=android)<br>**Total Entries** | ![Root Apps](https://img.shields.io/badge/Root%20Apps-113-blue?style=for-the-badge&logo=android)<br>**Root Apps** |
+| ![Total Entries](https://img.shields.io/badge/Total%20Entries-287-brightgreen?style=for-the-badge&logo=android)<br>**Total Entries** | ![Root Apps](https://img.shields.io/badge/Root%20Apps-113-blue?style=for-the-badge&logo=android)<br>**Root Apps** |
 |:---:|:---:|
-| ![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-87-orange?style=for-the-badge&logo=magisk)<br>**Magisk Modules** | ![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-78-purple?style=for-the-badge&logo=xposed)<br>**LSPosed Modules** |
+| ![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-96-orange?style=for-the-badge&logo=magisk)<br>**Magisk Modules** | ![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-78-purple?style=for-the-badge&logo=xposed)<br>**LSPosed Modules** |
 
 ### Visitor Counter
 
