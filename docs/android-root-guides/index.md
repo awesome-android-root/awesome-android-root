@@ -242,12 +242,12 @@ Choose the right root method for your needs and experience level:
 **Brand-specific rooting instructions with detailed procedures:**
 
 ### **Available Now**
-- **[Xiaomi Devices](./how-to-root-xiaomi-phone.md)** - MIUI, Mi Unlock Tool, 7-30 day wait period
-- **[Nothing Phones](./how-to-root-nothing-phone.md)** - Nothing Phone (1) and (2) complete guide
-- **[Motorola Devices](./how-to-root-motorola-phone.md)** - Moto G, Edge series with unlock codes
+- **[Xiaomi Devices](./how-to-root-xiaomi-phone.md)** 
+- **[Samsung Devices](./how-to-root-samsung-phone.md)**
+- **[Nothing Phones](./how-to-root-nothing-phone.md)** 
+- **[Motorola Devices](./how-to-root-motorola-phone.md)** 
 
 ### **Coming Soon**
-- Samsung Devices (Exynos models, Knox considerations)
 - Google Pixel (Simple unlocking procedures)
 - OnePlus Devices (OxygenOS rooting)
 
