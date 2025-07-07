@@ -39,7 +39,8 @@
   - [Social Media Mods](#social-media-mods)
     - [Bilibili](#bilibili) • [Discord](#discord) • [Duolingo](#duolingo) • [Grindr](#grindr)
     - [Instagram](#instagram) • [Line](#line) • [QQ](#qq) • [Telegram](#telegram)
-    - [WeChat](#wechat) • [Weibo](#weibo) • [WhatsApp](#whatsapp) • [X/Twitter](#xtwitter)
+    - [WeChat](#wechat) • [Weibo](#weibo) • [WhatsApp](#whatsapp) 
+    - [X/Twitter](#xtwitter) • [TikTok](#tiktok)
     - [YouTube, Spotify, Google Photos](#youtube-spotify-google-photos)
   - [Other App Mods](#other-app-mods)
   - [Patching](#patching)
@@ -218,6 +219,9 @@ Rooting allows overcoming limitations that carriers and hardware manufacturers p
 ##### QQ
 - **[NewQStory](https://github.com/Xposed-Modules-Repo/lin.xposed/)** - Xposed QQ module. `Proprietary` `[LSP]`
 - **[QAuxiliary](https://github.com/cinit/QAuxiliary)** - Xposed module based on QNotified. `FOSS` `[LSP]`
+
+##### TikTok
+- **[TikTok Tracker Blocks Magisk Module](https://github.com/Scott-Nx/TikTok-Tracker-Blocks_Magisk)** - A simple Magisk module to block TikTok tracking domains on Android devices. `FOSS` `[M]`
 
 ##### Telegram
 - **[Re-Telegram](https://github.com/Sakion-Team/Re-Telegram/)** - Adds features like AntiAntiForward, AntiRecall, NoSponsoredMessages, ProhibitChannelSwitching and many more to various Telegram clients. `FOSS` `[LSP]`
