@@ -414,6 +414,7 @@ Rooting allows overcoming limitations that carriers and hardware manufacturers p
 
 
 ### File Management
+- **[AnExplorer]** - A is Simple, Small, Fast and Efficient File Explorer. `FOSS`
 - **[Fossify File Manager](https://github.com/FossifyOrg/File-Manager)** - Easy app for managing your files without ads, respecting your privacy & security. `FOSS`
 - **[Material Files](https://github.com/zhanghai/MaterialFiles)** - Modern file manager with root capabilities. `FOSS`
 - **[MiXplorer](https://mixplorer.com/)** - Feature-rich file manager. `Proprietary`
