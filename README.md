@@ -308,6 +308,7 @@ Rooting allows overcoming limitations that carriers and hardware manufacturers p
 ### Cleaning Apps
 - **[Cleaner Royall](https://github.com/araafroyall/Cleaner-Royall)** - A Light weight but Ultra Fast & Powerful cleaner for Android. `FOSS` `[LSP]`
 - **[DirCleaner](https://www.dircleaner.com/)** - A simple and practical cleaning tool. `Proprietary`
+- **[Risk](https://github.com/rakarmp/Risk)** - Clean RAM Cache And Stop Background Apps, Google Apps, Third Party Apps. `FOSS` `[M]`
 - **[SD Maid 2/SE](https://github.com/d4rken-org/sdmaid-se)** - A file management tool for Android that specialises in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS`
 
 [↑ Back to top](#table-of-contents)
