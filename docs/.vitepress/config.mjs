@@ -165,7 +165,8 @@ export default defineConfig({
           { text: 'About Project', link: '/about' },
           { text: 'Support Us', link: 'https://opencollective.com/awesome-android-root-official' },
           { text: 'Star on GitHub', link: 'https://github.com/awesome-android-root/awesome-android-root' },
-          { text: 'Follow on X/Twitter', link: 'https://x.com/awsm_and_root' }
+          { text: 'Follow on X/Twitter', link: 'https://x.com/awsm_and_root' },
+          { text: 'Reddit', link: 'https://www.reddit.com/r/Awesome_Android_Root/' }
         ]
       }
     ],
@@ -229,7 +230,7 @@ export default defineConfig({
     },
     socialLinks:[
       { icon: 'github', link: 'https://github.com/awesome-android-root/awesome-android-root' },
-      { icon: 'reddit', link: 'https://www.reddit.com/r/Awesome_Android_Root/' },
+      {icon: 'telegram', link: 'https://t.me/+WrdT8QhS5bg5ZDY0' },
 
     ]
   }
