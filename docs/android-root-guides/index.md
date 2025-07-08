@@ -157,25 +157,68 @@ head:
 
 Choose the right root method for your needs and experience level:
 
-### **Magisk** (Recommended)
+### **🥇 Magisk** (Recommended)
+**[📖 Complete Magisk Guide](./magisk-guide.md)** - Installation, modules, troubleshooting
+
 **Best for:** Beginners, most users, extensive module support
 
-**Pros:** Largest community, easy app interface, excellent banking app bypass, systemless approach, regular updates
+**Pros:** 
+- Largest community and support
+- Easy-to-use app interface
+- Excellent banking app bypass (with proper setup)
+- Systemless approach preserves system integrity
+- Massive module ecosystem
+- Works with most Android versions (6.0-15)
 
-**Cons:** Development has slowed, Play Integrity becoming harder to bypass
+**Cons:** 
+- Play Integrity getting harder to bypass
+- Zygisk dependency for some features
+- Requires more setup for advanced hiding
 
-**Requirements:** Unlocked bootloader, custom recovery or patched boot image
+**Requirements:** Unlocked bootloader, custom recovery or boot image patching
 
-### **KernelSU** (Advanced)
-**Best for:** Advanced users, security-conscious users, newer devices
+### **🚀 KernelSU** (Advanced)
+**[📖 Complete KernelSU Guide](./kernelsu-guide.md)** - Installation, app profiles, modules
 
-**Pros:** Better security, efficient performance, kernel-level integration, active development
+**Best for:** Advanced users, security-conscious users, GKI 2.0 devices
 
-**Cons:** Requires custom kernel, limited device support, smaller community
+**Pros:** 
+- Superior security with kernel-level root
+- Better root hiding capabilities
+- Advanced App Profile system for granular control
+- Lower performance overhead
+- Modern architecture for new devices
+- Active development with frequent updates
 
-**Requirements:** Unlocked bootloader, custom kernel with KernelSU support, Android 12+
+**Cons:** 
+- Limited to GKI 2.0 devices (Android 12+)
+- Smaller module ecosystem
+- Requires more technical knowledge
+- Fewer device-specific builds available
 
-### **APatch** (Experimental)
+**Requirements:** Unlocked bootloader, GKI 2.0 compatible device, Android 12+
+
+### **🔧 LSPosed** (Framework Enhancement)
+**[📖 Complete LSPosed Guide](./lsposed-guide.md)** - Advanced app modifications
+
+**Best for:** Users wanting Xposed framework functionality (requires Magisk)
+
+**Pros:**
+- Access to thousands of Xposed modules
+- Deep app modification capabilities
+- Modern implementation of classic Xposed
+- Works with Android 8.1-14
+- Systemless design
+
+**Cons:**
+- Requires Magisk + Zygisk as base
+- Some modules may cause instability
+- Learning curve for configuration
+- Module compatibility varies
+
+**Requirements:** Magisk with Zygisk enabled, compatible Android version
+
+### **⚗️ APatch** (Experimental)
 **Best for:** Developers, experimental users, specific edge cases
 
 **Pros:** Innovative approach, modern architecture, active development
@@ -184,9 +227,27 @@ Choose the right root method for your needs and experience level:
 
 **Requirements:** Unlocked bootloader, compatible kernel, advanced knowledge
 
-::: tip 💡 Recommendation
-**Start with Magisk** - it's the most user-friendly with the largest community for support. Advanced users can explore KernelSU for enhanced security.
+::: tip 💡 2025 Recommendations
+
+**🎯 For Beginners:** Start with **[Magisk](./magisk-guide.md)** - it's the most user-friendly with extensive community support, great documentation, and works on most devices.
+
+**🔒 For Security-focused Users:** Consider **[KernelSU](./kernelsu-guide.md)** if you have a GKI 2.0 device - better root hiding and App Profile system provide superior security.
+
+**🛠️ For Advanced Customization:** Add **[LSPosed](./lsposed-guide.md)** after setting up Magisk to access powerful Xposed modules for deep app modifications.
+
+**📱 Check Compatibility:** Always verify your device supports your chosen method before starting. GKI 2.0 support is required for KernelSU.
 :::
+
+### **🎯 Quick Decision Guide**
+
+| Your Situation | Recommended Method | Why? |
+|----------------|-------------------|------|
+| **First time rooting** | [Magisk](./magisk-guide.md) | Easiest, best support |
+| **Banking apps user** | [KernelSU](./kernelsu-guide.md) | Better hiding |
+| **Custom ROM user** | [Magisk](./magisk-guide.md) + [LSPosed](./lsposed-guide.md) | Maximum compatibility |
+| **Privacy focused** | [KernelSU](./kernelsu-guide.md) | App Profiles |
+| **Older device** | [Magisk](./magisk-guide.md) | Broader compatibility |
+| **GKI 2.0 device** | [KernelSU](./kernelsu-guide.md) | Modern architecture |
 
 ## Step-by-Step Rooting
 
