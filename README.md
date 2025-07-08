@@ -9,10 +9,10 @@
 
 [🌐 **What is Root?**](#what-is-root-access) | [📱 **Root Apps**](#root-apps) | [📋 **Table of Contents**](#table-of-contents) | [💬 **Community**](#community-resources) | [**繁體中文**](README-zh-TW.md)
 
+
+Ultimate Community-curated collection of best root apps, Magisk & LSPosed modules and how to rooting guides for Android customization, performance enhancement, debloating and system optimization.
+
 </div>
-
-**🚀 Unlock your Android device's full potential!** Ultimate Community-curated collection of best root apps, Magisk & LSPosed modules and how to rooting guides for Android customization, performance enhancement, debloating and system optimization.
-
 
 ## Table of Contents
 <details>
