@@ -138,6 +138,8 @@ Rooting allows overcoming limitations that carriers and hardware manufacturers p
 > Software where the source code is openly available. This allows anyone to inspect, modify, and distribute the software, promoting transparency and community collaboration.
 -  **`Proprietary`** = Missing license or Closed-source software
 > Software that is closed-source, meaning its underlying source code is not publicly available. This category may also include software with unclear or missing licensing terms.
+- **`[K]`** = KernelSU Module
+> A module that requires the KernelSU to be installed and active on the device to function. 
 -  **`[M]`** = Magisk Module
 > A module that requires the Magisk framework to be installed and active on the device to function. 
 -  **`[LSP]`** = Requires LSPosed Framework
