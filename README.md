@@ -564,7 +564,7 @@ Rooting allows overcoming limitations that carriers and hardware manufacturers p
 
 [↑ Back to top](#table-of-contents)
 
-#### Root Hiding
+#### Root Hiding & Integrity
 > [TheUnrealZaka's Guide for Hiding Root](https://gist.github.com/TheUnrealZaka/042040a1700ad869d54e781507a9ba4f)
 
 - **[Android VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer)** - A Magisk/KernelSU/Apatch module to fix VBMeta detections on Android. `FOSS` `[M]`
@@ -721,11 +721,6 @@ Complete support resource with expert troubleshooting solutions:
 | ![Total Entries](https://img.shields.io/badge/Total%20Entries-311-brightgreen?style=for-the-badge&logo=android)<br>**Total Entries** | ![Root Apps](https://img.shields.io/badge/Root%20Apps-115-blue?style=for-the-badge&logo=android)<br>**Root Apps** |
 |:---:|:---:|
 | ![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-113-orange?style=for-the-badge&logo=magisk)<br>**Magisk Modules** | ![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-83-purple?style=for-the-badge&logo=xposed)<br>**LSPosed Modules** |
-
-### Visitor Counter
-
-![Visitor Count](https://profile-counter.glitch.me/awesome-android-root/count.svg)
-[↑ Back to top](#table-of-contents)
 
 ## Support This Project
 
