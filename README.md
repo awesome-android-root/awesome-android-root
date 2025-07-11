@@ -133,6 +133,7 @@ Rooting allows overcoming limitations that carriers and hardware manufacturers p
 **[Read the Complete Rooting Master Guide→](./docs/android-root-guides/index.md)** 
 
 ## Glossary
+- **⭐** = Recommended app/module from a specific category
 -  **`FOSS`** = Free and Open Source Software
 > Software where the source code is openly available. This allows anyone to inspect, modify, and distribute the software, promoting transparency and community collaboration.
 -  **`Proprietary`** = Missing license or Closed-source software
@@ -141,7 +142,6 @@ Rooting allows overcoming limitations that carriers and hardware manufacturers p
 > A module that requires the Magisk framework to be installed and active on the device to function. 
 -  **`[LSP]`** = Requires LSPosed Framework
 > The app or modification needs the LSPosed Framework to be installed and active on the device to function. 
-- **⭐** = Recommended app/module from a specific category
 - _**Apps are organized in alphabetical order within each category.**_
 
 ## Root Apps
