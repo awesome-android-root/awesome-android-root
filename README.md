@@ -565,6 +565,7 @@ Rooting allows overcoming limitations that carriers and hardware manufacturers p
 
 - **[Android VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer)** - A Magisk/KernelSU/Apatch module to fix VBMeta detections on Android. `FOSS` `[M]`
 - **[Hide My Applist](https://github.com/Dr-TSNG/Hide-My-Applist)** - An Xposed module to intercept applist detections.[Moded Fork](https://github.com/pumPCin/HMAL). `FOSS` `[LSP]`
+- **[Komodo Build Props](https://github.com/Elcapitanoe/Komodo-Build-Prop#komodo-build-props)** - Spoof your Android device as the Pixel 9 Pro XL (komodo/komodo_beta). `FOSS` `[M]`
 - **[Mountify](https://github.com/backslashxx/mountify)** - Globally mounted modules via OverlayFS. `FOSS` `[M]`
 - **[NoHello](https://github.com/MhmRdd/NoHello)** -  A Zygisk module to hide root. `FOSS` `[M]`
 - **[NeoZygisk](https://github.com/JingMatrix/NeoZygisk)** - Zygote injection module implemented using ptrace, which provides Zygisk API support for APatch/KernelSU and serves as a replacement of Magisk's built-in Zygisk. `FOSS` `[M]`
@@ -650,6 +651,9 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[XposedModulets](https://github.com/binarynoise/XposedModulets)** - A collection of many small useful Xposed Modules. `FOSS` `[LSP]`
 
 [↑ Back to top](#table-of-contents)
+
+## Utilities
+- **[crond4Android](https://github.com/powerAn2020/crond4android)** - he Crond program that supports running on KernelSU, APatch and Magisk. `FOSS` `[M]`
 
 ## Important Notes
 
