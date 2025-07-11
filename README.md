@@ -790,7 +790,7 @@ Complete support resource with expert troubleshooting solutions:
 [![GitHub Stars](https://img.shields.io/badge/⭐-Star%20this%20Repo-yellow?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
 [![Report Issue](https://img.shields.io/badge/🐛-Report%20Issue-green?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root)
 
-> **Your support enables us to:** Keep this list updated with the latest apps & modules • Maintain comprehensive documentation • Improve project infrastructure & tools • Grow the open-source Android rooting community.
+> **Your support enables us to:** Keep this list updated with the latest apps & modules - Maintain comprehensive documentation - Improve project infrastructure & tools - Grow the open-source Android rooting community.
 
 </div>
 
@@ -798,6 +798,6 @@ Complete support resource with expert troubleshooting solutions:
 
 <div align="center">
 
-**Made with ❤️ by Awesome Android Root**
+**Made with ❤️ by [Awesome Android Root](https://github.com/awesome-android-root/awesome-android-root)**
 
 </div>
