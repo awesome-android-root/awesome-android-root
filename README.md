@@ -418,6 +418,7 @@ Rooting allows overcoming limitations that carriers and hardware manufacturers p
 - **[⭐ Shizuku](https://github.com/RikkaApps/Shizuku)** - Use system APIs directly with ADB/root privileges. `FOSS`
 - **[Termux](https://termux.com/)** - Advanced terminal emulator and Linux environment. `FOSS` - **[More on Termux](#termux)**
 - **[Wireless ADB Switch](https://github.com/Smooth-E/wireless-adb-switch)** - Quickly enable or disable Android's Wireless Debugging feature. Includes widgets and a quick settings tile for convenience. `FOSS`
+- **[ZRAM Module](https://github.com/FurLC/ZRAM-Module)** -  A Magisk/KernelSU module that provides ZRAM compression algorithm support for Android devices. `FOSS` `[M]`
 
 [↑ Back to top](#table-of-contents)
 
