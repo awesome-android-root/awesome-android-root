@@ -84,7 +84,7 @@ Ultimate Community-curated collection of best root apps, Magisk & LSPosed module
 #### 🛠️ Development & Tools
 - [Development and Debugging](#development-and-debugging)
 - [Device Control and Hardware](#device-control-and-hardware)
-- [Termux](#termux)
+- [Terminal & Shell Environments](#terminal--shell-environments)
 - [Tools](#tools)
 
 #### 🌐 Network & Connectivity
@@ -100,7 +100,7 @@ Ultimate Community-curated collection of best root apps, Magisk & LSPosed module
 - [Root Specific](#root-specific)
   - [Bootloop Protection](#bootloop-protection)
   - [Root Detection](#root-detection)
-  - [Root Hiding](#root-hiding)
+  - [Root Hiding & Integrity](#root-hiding--integrity)
   - [Managers](#managers)
 
 #### 📺 Display & Interface
