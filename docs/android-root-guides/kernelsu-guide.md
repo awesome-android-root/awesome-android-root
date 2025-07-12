@@ -1,62 +1,198 @@
 ---
 layout: doc
-title: KernelSU Guide 2025 - Complete Installation & Management
-description: "Complete KernelSU guide for 2025. Learn how to install KernelSU, manage kernel-based root, modules, and app profiles with step-by-step instructions."
+title: "KernelSU Guide 2025"
+description: "Ultimate KernelSU guide for 2025! Learn to install KernelSU & KernelSU Next, manage kernel-based root, modules, app profiles. Step-by-step tutorial for Android 4.4+ devices."
 head:
   - - link
     - rel: canonical
       href: https://awesome-android-root.org/android-root-guides/kernelsu-guide/
   - - meta
+    - name: googlebot
+      content: index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1
+  - - meta
+    - name: keywords
+      content: kernelsu guide 2025, kernelsu installation, kernelsu next, kernel root android, kernelsu modules, app profiles, gki kernel, kernel based root, android root solution, kernelsu vs magisk, kernelsu tutorial, android rooting guide, kernelsu manager, lkm mode, gki mode, kernelsu next installation
+  - - meta
+    - name: author
+      content: Awesome Android Root Project
+  - - meta
+    - name: publisher
+      content: Awesome Android Root
+  - - meta
+    - name: revisit-after
+      content: 7 days
+  - - meta
     - property: og:type
-      content: website
+      content: article
+  - - meta
+    - property: og:site_name
+      content: Awesome Android Root
   - - meta
     - property: og:title
-      content: KernelSU Guide 2025 - Complete Installation & Management
+      content: "KernelSU Guide 2025  | Awesome Android Root"
   - - meta
     - property: og:description
-      content: Master KernelSU with our comprehensive 2025 guide covering installation, kernel-based root management, modules, and app profiles.
+      content: "Ultimate KernelSU guide for 2025! Learn to install KernelSU & KernelSU Next, manage kernel-based root, modules, app profiles. Step-by-step tutorial for Android 4.4+ devices."
   - - meta
     - property: og:url
       content: https://awesome-android-root.org/android-root-guides/kernelsu-guide/
   - - meta
     - property: og:image
-      content: https://awesome-android-root.org/images/og.png
+      content: https://awesome-android-root.org/images/og/kernelsu-guide-2025.png
   - - meta
-    - name: twitter:card
-      content: summary_large_image
+    - property: og:image:alt
+      content: KernelSU Guide 2025 - Complete Installation Tutorial
   - - meta
-    - name: twitter:title
-      content: KernelSU Guide 2025 - Complete Installation & Management
+    - property: og:image:width
+      content: 1200
   - - meta
-    - name: twitter:description
-      content: Complete guide to KernelSU installation, kernel-based root management, and advanced Android customization.
+    - property: og:image:height
+      content: 630
   - - meta
-    - name: keywords
-      content: kernelsu guide 2025, kernelsu installation, kernel root, kernelsu modules, app profiles, gki kernel, kernel based root, android root solution
-  - - meta
-    - name: author
-      content: Awesome Android Root Project
+    - property: og:locale
+      content: en_US
   - - meta
     - property: article:author
       content: https://github.com/fynks/awesome-android-root
   - - meta
+    - property: article:publisher
+      content: https://awesome-android-root.org
+  - - meta
     - property: article:section
-      content: Rooting Guides
+      content: Android Rooting Guides
+  - - meta
+    - property: article:published_time
+      content: 2025-01-12T00:00:00Z
+  - - meta
+    - property: article:modified_time
+      content: 2025-01-12T00:00:00Z
   - - meta
     - property: article:tag
       content: KernelSU
   - - meta
     - property: article:tag
-      content: Kernel Root
+      content: KernelSU Next
   - - meta
     - property: article:tag
       content: Android Root
   - - meta
     - property: article:tag
+      content: Kernel Root
+  - - meta
+    - property: article:tag
       content: GKI Kernel
   - - meta
-    - name: robots
-      content: index, follow
+    - property: article:tag
+      content: Android Rooting
+  - - meta
+    - property: article:tag
+      content: Root Management
+  - - meta
+    - property: article:tag
+      content: Android Customization
+  - - meta
+    - name: twitter:card
+      content: summary_large_image
+  - - meta
+    - name: twitter:site
+      content: "@awesomeandroot"
+  - - meta
+    - name: twitter:creator
+      content: "@awesomeandroot"
+  - - meta
+    - name: twitter:title
+      content: "KernelSU Guide 2025  | Awesome Android Root"
+  - - meta
+    - name: twitter:description
+      content: "Ultimate KernelSU guide for 2025! Learn to install KernelSU & KernelSU Next, manage kernel-based root, modules, app profiles. Step-by-step tutorial for Android 4.4+ devices."
+  - - meta
+    - name: twitter:image
+      content: https://awesome-android-root.org/images/og/kernelsu-guide-2025.png
+  - - meta
+    - name: twitter:image:alt
+      content: KernelSU Guide 2025 - Complete Installation Tutorial
+  - - link
+    - rel: preconnect
+      href: https://fonts.googleapis.com
+  - - link
+    - rel: preconnect
+      href: https://fonts.gstatic.com
+      crossorigin: true
+  - - link
+    - rel: dns-prefetch
+      href: https://github.com
+  - - link
+    - rel: dns-prefetch
+      href: https://kernelsu.org
+  - - link
+    - rel: dns-prefetch
+      href: https://kernelsu-next.github.io
+  - - script
+    - type: application/ld+json
+      content: |
+        {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "headline": "KernelSU Guide 2025  | Awesome Android Root",
+          "description": "Ultimate KernelSU guide for 2025! Learn to install KernelSU & KernelSU Next, manage kernel-based root, modules, app profiles. Step-by-step tutorial for Android 4.4+ devices.",
+          "image": "https://awesome-android-root.org/images/og/kernelsu-guide-2025.png",
+          "author": {
+            "@type": "Organization",
+            "name": "Awesome Android Root Project",
+            "url": "https://awesome-android-root.org"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Awesome Android Root",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://awesome-android-root.org/images/logo.png"
+            }
+          },
+          "datePublished": "2025-01-12",
+          "dateModified": "2025-01-12",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://awesome-android-root.org/android-root-guides/kernelsu-guide/"
+          },
+          "about": [
+            {
+              "@type": "Thing",
+              "name": "KernelSU",
+              "description": "Kernel-based root solution for Android devices"
+            },
+            {
+              "@type": "Thing",
+              "name": "KernelSU Next",
+              "description": "Community fork of KernelSU with enhanced features"
+            },
+            {
+              "@type": "Thing",
+              "name": "Android Rooting",
+              "description": "Process of gaining root access on Android devices"
+            }
+          ],
+          "keywords": [
+            "kernelsu guide 2025",
+            "kernelsu installation",
+            "kernelsu next",
+            "kernel root android",
+            "kernelsu modules",
+            "app profiles",
+            "gki kernel",
+            "android root solution",
+            "kernelsu vs magisk",
+            "kernelsu tutorial"
+          ],
+          "articleSection": "Android Rooting Guides",
+          "inLanguage": "en-US",
+          "isAccessibleForFree": true,
+          "copyrightYear": 2025,
+          "copyrightHolder": {
+            "@type": "Organization",
+            "name": "Awesome Android Root Project"
+          }
+        }
 ---
 
 # KernelSU Guide 2025
@@ -65,14 +201,14 @@ head:
 
 ## Table of Contents
 - [What is KernelSU?](#what-is-kernelsu)
-- [KernelSU vs Magisk](#kernelsu-vs-magisk)
+- [KernelSU Installation Modes](#kernelsu-installation-modes)
+- [KernelSU vs Magisk](#kernelsu-vs-kernelsu-next-vs-magisk)
 - [Requirements](#requirements)
 - [Installation Methods](#installation-methods)
 - [First Time Setup](#first-time-setup)
 - [KernelSU Manager](#kernelsu-manager)
 - [App Profiles](#app-profiles)
 - [Module System](#module-system)
-- [Advanced Features](#advanced-features)
 - [Troubleshooting](#troubleshooting)
 - [Uninstallation](#uninstallation)
 
@@ -98,22 +234,60 @@ head:
 - **Performance** - Lower overhead than userspace solutions
 - **Modern design** - Built for Android 12+ and GKI kernels
 
-## KernelSU vs Magisk
+## KernelSU Installation Modes
+
+Since version 0.9.0, KernelSU supports two installation modes on GKI devices:
+
+### 🔧 **GKI Mode**
+**How it works:** Replaces device's original kernel with KernelSU's Generic Kernel Image
+
+**Advantages:**
+- **Universal compatibility** - Works on most GKI devices
+- **Samsung Knox support** - Works on Knox-enabled devices
+- **Independent of firmware** - No need to wait for OTA updates
+- **Better compatibility** - Ideal for modified devices
+
+**Disadvantages:**
+- **Kernel replacement** - Loses original kernel optimizations
+- **Manual flashing** - Requires fastboot for upgrades
+
+### 🔧 **LKM Mode (Loadable Kernel Module)**
+**How it works:** Loads KernelSU as a kernel module without replacing the original kernel
+
+**Advantages:**
+- **Preserves original kernel** - Keeps device-specific optimizations
+- **Easy upgrades** - Update directly through manager
+- **OTA friendly** - Install to inactive slot after OTA
+- **No AVB issues** - Doesn't trigger Android Verified Boot
+- **Temporary disable** - Can unload module without reboot
+
+**Disadvantages:**
+- **Firmware dependent** - Requires official firmware
+- **Limited compatibility** - May not work on all devices
+
+### 🤔 **Which Mode to Choose?**
+- **Mobile phones** - LKM mode recommended
+- **Emulators/WSA** - GKI mode recommended
+- **Samsung Knox devices** - GKI mode only
+- **Custom ROMs** - Either mode works
+
+## KernelSU vs KernelSU Next vs Magisk
 
 ### 📊 **Detailed Comparison**
 
-| Feature | KernelSU | Magisk |
-|---------|----------|---------|
-| **Root Method** | Kernel-based | Userspace |
-| **Android Support** | 12+ (GKI 5.10+) | 6.0+ |
-| **Architecture** | arm64-v8a, x86_64 | arm64-v8a, x86_64, arm32 |
-| **Installation** | Boot image or kernel | Boot image |
-| **Module System** | OverlayFS | Mount namespace |
-| **Root Hiding** | Kernel-level | Userspace DenyList |
-| **App Control** | App Profiles | Basic permissions |
-| **SafetyNet** | Better passing rate | Good with modules |
-| **Performance** | Lower overhead | Standard |
-| **Learning Curve** | Moderate | Easy |
+| Feature | KernelSU | KernelSU Next | Magisk |
+|---------|----------|---------------|---------|
+| **Root Method** | Kernel-based | Kernel-based | Userspace |
+| **Android Support** | 12+ (GKI 5.10+) | 4.4+ (Kernel 4.4-6.6) | 6.0+ |
+| **Architecture** | arm64-v8a, x86_64 | arm64-v8a, armeabi-v7a, x86_64 | arm64-v8a, x86_64, arm32 |
+| **Installation** | Boot image/LKM | Boot image/LKM | Boot image |
+| **Module System** | OverlayFS | Magic Mount + OverlayFS | Magic Mount |
+| **Root Hiding** | Kernel-level | Kernel-level | Userspace DenyList |
+| **App Control** | App Profiles | App Profiles | Basic permissions |
+| **SafetyNet** | Better passing rate | Better passing rate | Good with modules |
+| **Performance** | Lower overhead | Lower overhead | Standard |
+| **Learning Curve** | Moderate | Moderate | Easy |
+| **Development** | Official | Community | Official |
 
 ### 🎯 **Choose KernelSU If:**
 - You have a GKI 2.0 compatible device (Android 12+)
@@ -122,17 +296,34 @@ head:
 - You prefer kernel-level security
 - You use banking/finance apps frequently
 
+### 🎯 **Choose KernelSU Next If:**
+- You have an older device (Android 4.4+)
+- You want Magic Mount compatibility with Magisk modules
+- You need broader architecture support
+- You want cutting-edge features
+- You're comfortable with community support
+
 ### 🎯 **Choose Magisk If:**
 - You have an older Android device (< Android 12)
-- You want a larger module ecosystem
+- You want the largest module ecosystem
 - You prefer simpler setup and management
 - You need broader device compatibility
+- You want official support
 
 ## Requirements
 
 ### 📋 **Essential Prerequisites**
+
+#### **For KernelSU (Original)**
 - ✅ **Android 12+ with GKI 2.0** - Kernel 5.10 or newer
 - ✅ **Compatible architecture** - arm64-v8a or x86_64 only
+- ✅ **Unlocked bootloader** - [Bootloader unlock guide](./how-to-unlock-bootloader.md)
+- ✅ **ADB/Fastboot tools** - [Platform Tools](https://developer.android.com/studio/releases/platform-tools)
+- ✅ **Stock boot image** - Original boot.img for your firmware
+
+#### **For KernelSU Next (Community Fork)**
+- ✅ **Android 4.4+ with Kernel 4.4-6.6** - Much broader compatibility
+- ✅ **Compatible architecture** - arm64-v8a, armeabi-v7a, or x86_64
 - ✅ **Unlocked bootloader** - [Bootloader unlock guide](./how-to-unlock-bootloader.md)
 - ✅ **ADB/Fastboot tools** - [Platform Tools](https://developer.android.com/studio/releases/platform-tools)
 - ✅ **Stock boot image** - Original boot.img for your firmware
@@ -143,7 +334,7 @@ head:
 ```bash
 # Check kernel version
 adb shell uname -r
-# Should show 5.10+ for GKI 2.0
+# Should show 5.10+ for GKI 2.0, 4.4+ for KernelSU Next
 
 # Check GKI version
 adb shell cat /proc/version
@@ -153,19 +344,38 @@ adb shell cat /proc/version
 adb shell getprop ro.kernel.version
 ```
 
+#### **KernelSU Next Compatibility Table**
+| Kernel Version | Support Level | Notes |
+|----------------|---------------|-------|
+| 5.10+ (GKI 2.0) | Full support | Pre-built images and LKM/KMI |
+| 4.19 – 5.4 (GKI 1.0) | Build required | Requires KernelSU driver built-in |
+| < 4.14 (EOL) | Experimental | Requires driver (3.18+ may need backports) |
+
 #### **Supported Devices**
-- Download KernelSU manager from [GitHub Releases](https://github.com/tiann/KernelSU/releases) and install it on your device:
-    - If the app shows `Unsupported`, it means that **you should compile the kernel yourself**, KernelSU won't and never provide a boot.img file for you to flash.
-    - If the app shows `Not installed`, then your device is **officially supported** by KernelSU.
+- Download KernelSU/KernelSU Next manager from respective GitHub releases:
+  - **KernelSU**: [GitHub Releases](https://github.com/tiann/KernelSU/releases)
+  - **KernelSU Next**: [GitHub Releases](https://github.com/KernelSU-Next/KernelSU-Next/releases)
+- Install and check compatibility:
+  - If the app shows `Unsupported`, you need to compile the kernel yourself
+  - If the app shows `Not installed`, your device is officially supported
 
 ::: tip Check Official documentation
-https://kernelsu.org/guide/installation.html#check-if-your-device-is-supported
+- **KernelSU**: https://kernelsu.org/guide/installation.html
+- **KernelSU Next**: https://kernelsu-next.github.io/webpage/pages/installation.html
 :::
 
 ### 💾 **Required Downloads**
+
+#### **KernelSU (Original)**
 - **[KernelSU Manager APK](https://github.com/tiann/KernelSU/releases/latest)** (Latest: v1.0.5)
 - **Stock firmware** with matching boot.img
 - **Custom kernel** with KernelSU support (if available)
+
+#### **KernelSU Next (Community Fork)**
+- **[KernelSU Next Manager APK](https://github.com/KernelSU-Next/KernelSU-Next/releases/latest)** (Latest: v1.0.8)
+- **[Nightly Build](https://nightly.link/KernelSU-Next/KernelSU-Next/workflows/build-manager-ci/next/Manager)** (Development version)
+- **Stock firmware** with matching boot.img
+- **Custom kernel** with KernelSU Next support (if available)
 
 ## Installation Methods
 
@@ -173,12 +383,12 @@ https://kernelsu.org/guide/installation.html#check-if-your-device-is-supported
 
 **Best for:** Users with officially supported devices
 
-#### **Check Official Support**
+#### **KernelSU (Original)**
 1. **Visit [KernelSU Device List](https://kernelsu.org/guide/installation.html)**
 2. **Find your device** in supported list
 3. **Download pre-built kernel** for your device model
 
-#### **Installation Steps**
+**Installation Steps:**
 ```bash
 # Download device-specific kernel with KernelSU
 # Example for Pixel 7:
@@ -197,6 +407,30 @@ fastboot reboot
 adb install KernelSU_v1.0.5.apk
 ```
 
+#### **KernelSU Next (Community Fork)**
+1. **Visit [KernelSU Next Device List](https://kernelsu-next.github.io/webpage/pages/devices.html)**
+2. **Download pre-built kernel** for your device (if available)
+3. **Or use community builds** from XDA/Telegram
+
+**Installation Steps:**
+```bash
+# Download KernelSU Next kernel
+# Example for supported device:
+wget https://github.com/KernelSU-Next/KernelSU-Next/releases/download/v1.0.8/kernel-device-v1.0.8.img
+
+# Boot to fastboot mode
+adb reboot bootloader
+
+# Flash KernelSU Next kernel
+fastboot flash boot kernel-device-v1.0.8.img
+
+# Reboot device
+fastboot reboot
+
+# Install KernelSU Next Manager APK
+adb install KernelSU-Next_v1.0.8.apk
+```
+
 ### Method 2: Boot Image Patching
 
 **Best for:** Devices without pre-built kernels
@@ -211,16 +445,21 @@ adb shell su -c "dd if=/dev/block/bootdevice/by-name/boot of=/sdcard/boot.img"
 adb pull /sdcard/boot.img
 ```
 
-#### **Step 2: Install KernelSU Manager**
-1. **Download KernelSU Manager APK**
-2. **Install on device** - `adb install KernelSU_v1.0.5.apk`
-3. **Open app** - May show "Not Installed" status
+#### **Step 2: Install Manager**
+1. **Download and install** KernelSU/KernelSU Next Manager APK
+2. **Open app** - May show "Not Installed" status
 
 #### **Step 3: Patch Boot Image**
+**For KernelSU:**
 1. **KernelSU Manager** → **Install**
 2. **Select boot.img** you extracted
 3. **Patch image** - Creates kernelsu_patched_[random].img
-4. **Download patched image** to computer
+
+**For KernelSU Next:**
+1. **KernelSU Next Manager** → **Install**
+2. **Select boot.img** you extracted
+3. **Choose patching method** (LKM or GKI)
+4. **Patch image** - Creates kernelsu_next_patched_[random].img
 
 #### **Step 4: Flash Patched Boot**
 ```bash
@@ -229,6 +468,8 @@ adb reboot bootloader
 
 # Flash patched boot image
 fastboot flash boot kernelsu_patched_[random].img
+# or
+fastboot flash boot kernelsu_next_patched_[random].img
 
 # Reboot device
 fastboot reboot
@@ -238,29 +479,38 @@ fastboot reboot
 
 **Best for:** Advanced users, custom ROM users
 
-#### **Kernel Sources with KernelSU**
+#### **KernelSU-Compatible Kernels**
 - **[Proton Kernel](https://github.com/ProtonAOSP/android_kernel_google_gs101)** - Pixel devices
 - **[Sultan Kernel](https://github.com/kerneltoast/android_kernel_oneplus_sm8350)** - OnePlus devices
 - **[ArrowOS Kernel](https://github.com/ArrowOS-Devices)** - Various devices
 
-#### **Installation Process**
-1. **Download custom kernel** with KernelSU support
-2. **Flash via recovery** or fastboot
-3. **Install KernelSU Manager**
-4. **Verify installation**
+#### **KernelSU Next-Compatible Kernels**
+- **Custom kernels** with KernelSU Next integration
+- **Community builds** from XDA forums
+- **Telegram groups** for device-specific builds
 
 ### Method 4: Building Custom Kernel
 
 **For developers and unsupported devices**
 
-#### **Build Environment Setup**
+#### **KernelSU Integration**
 ```bash
 # Clone KernelSU source
 git clone https://github.com/tiann/KernelSU.git
 
 # Integrate with kernel source
 cd your_kernel_source
-git subtree add --prefix=kernelsu https://github.com/tiann/KernelSU.git main
+curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -
+```
+
+#### **KernelSU Next Integration**
+```bash
+# Clone KernelSU Next source
+git clone https://github.com/KernelSU-Next/KernelSU-Next.git
+
+# Integrate with kernel source
+cd your_kernel_source
+curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -
 ```
 
 #### **Kernel Configuration**
@@ -269,9 +519,23 @@ git subtree add --prefix=kernelsu https://github.com/tiann/KernelSU.git main
 CONFIG_KSU=y
 CONFIG_KSU_DEBUG=y
 
-# Build kernel with KernelSU
+# Build kernel
 make -j$(nproc)
 ```
+
+### Method 5: LKM Installation (KernelSU Next)
+
+**Best for:** Devices that support LKM mode
+
+#### **Direct Install (if already rooted)**
+1. **KernelSU Next Manager** → **Install**
+2. **Choose "Direct Install"**
+3. **Manager automatically patches** and installs
+
+#### **Install to Inactive Slot (A/B devices)**
+1. **After OTA update**
+2. **KernelSU Next Manager** → **Install to inactive slot**
+3. **Reboot to new slot**
 
 ## First Time Setup
 
@@ -467,11 +731,22 @@ ksud profile import com.target.app < my_template.json
 
 ## Module System
 
-### 📦 **KernelSU Modules**
+### 📦 **Module Architecture Comparison**
 
-KernelSU uses **OverlayFS** for modules, providing a more efficient and stable modification system compared to traditional mount-based approaches.
+#### **KernelSU (Original)**
+- **Primary:** OverlayFS-based system
+- **Advantage:** More efficient, kernel-level integration
+- **Disadvantage:** Limited compatibility with some Magisk modules
 
-#### **Module Architecture**
+#### **KernelSU Next (Community Fork)**
+- **Dual System:** Magic Mount + OverlayFS
+- **Magic Mount:** Full compatibility with Magisk modules
+- **OverlayFS:** Efficient kernel-level modifications
+- **Advantage:** Best of both worlds - compatibility and performance
+
+### 🔧 **Module Structure**
+
+#### **Standard KernelSU Module**
 ```
 module_structure/
 ├── META-INF/               # Installation metadata
@@ -483,29 +758,50 @@ module_structure/
 └── webroot/               # Web UI files (optional)
 ```
 
+#### **KernelSU Next Enhanced Module**
+```
+module_structure/
+├── META-INF/               # Installation metadata
+├── module.prop            # Module properties
+├── post-fs-data.sh        # Early boot script
+├── service.sh             # Late boot script
+├── boot-completed.sh      # Post-boot script (KSU Next)
+├── post-mount.sh          # Post-mount script (KSU Next)
+├── system/                # System overlay files
+├── vendor/                # Vendor overlay files
+└── webroot/               # Web UI files (optional)
+```
+
 ### 🔥 **Compatible Modules**
 
-#### **KernelSU-Specific Modules**
-- **[KSU WebUI](https://github.com/tiann/KernelSU-WebUI)** - Web-based management interface
-- **[KSU Hide](https://github.com/JingMatrix/KSU-Hide)** - Advanced root hiding
-- **[KSU Profiles](https://github.com/symbuzzer/KSU-Profiles)** - Extended profile management
+#### **KernelSU Next Enhanced Modules**
+- **All KernelSU modules** - Full backward compatibility
+- **Most Magisk modules** - Magic Mount support
+- **Zygisk modules** - Through [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext)
+- **Custom KSU Next modules** - Enhanced features
 
 #### **Magisk Module Compatibility**
-Many Magisk modules work with KernelSU:
-- **✅ System overlay modules** - Font changes, audio mods
-- **✅ Simple modification modules** - Build.prop tweaks
-- **❌ Zygisk-dependent modules** - Require Magisk's Zygisk
-- **❌ Complex injection modules** - May need adaptation
+
+| Module Type | KernelSU | KernelSU Next |
+|-------------|----------|---------------|
+| **System overlay modules** | ✅ Compatible | ✅ Compatible |
+| **Simple modification modules** | ✅ Compatible | ✅ Compatible |
+| **Magic Mount modules** | ❌ Not compatible | ✅ Compatible |
+| **Zygisk-dependent modules** | ❌ Need ZygiskNext | ✅ Better support |
+| **Complex injection modules** | ❌ May need adaptation | ✅ Better compatibility |
 
 ### 📥 **Module Installation**
 
-#### **Method 1: KernelSU Manager**
-1. **Download module ZIP** from trusted source
-2. **KernelSU Manager** → **Modules**
-3. **Install from storage** → Select ZIP
-4. **Reboot device** to activate
+#### **Method 1: Manager Installation**
+```bash
+# For both KernelSU and KernelSU Next
+1. Download module ZIP from trusted source
+2. Open KernelSU/KernelSU Next Manager → Modules
+3. Install from storage → Select ZIP
+4. Reboot device to activate
+```
 
-#### **Method 2: Command Line**
+#### **Method 2: Command Line (KernelSU)**
 ```bash
 # Install module via command line
 ksud module install /path/to/module.zip
@@ -521,106 +817,20 @@ ksud module disable module_id
 ksud module remove module_id
 ```
 
-#### **Method 3: Web Interface**
-If KSU WebUI is installed:
-1. **Open browser** → `http://localhost:12346`
-2. **Navigate to Modules** section
-3. **Upload and install** module files
-4. **Manage** modules through web interface
-
-### 🛠️ **Module Development**
-
-#### **Basic Module Template**
+#### **Method 3: Command Line (KernelSU Next)**
 ```bash
-# module.prop
-id=my_kernelsu_module
-name=My KernelSU Module
-version=v1.0
-versionCode=1
-author=MyName
-description=Module description
-updateJson=https://example.com/update.json
-```
+# Install module via command line
+ksud_next module install /path/to/module.zip
 
-#### **Installation Script**
-```bash
-#!/system/bin/sh
-# post-fs-data.sh
+# List installed modules with more details
+ksud_next module list --verbose
 
-# Module initialization code
-MODDIR=${0%/*}
+# Enable/disable module
+ksud_next module enable module_id
+ksud_next module disable module_id
 
-# Copy files to system overlay
-cp -rf $MODDIR/system/* /
-
-# Set permissions
-chmod 644 /system/lib/libnative.so
-```
-
-#### **Advanced Features**
-```bash
-# service.sh - Late boot service
-#!/system/bin/sh
-
-# Wait for system fully loaded
-while [ "$(getprop sys.boot_completed)" != "1" ]; do
-    sleep 1
-done
-
-# Start module services
-start my_module_service
-```
-
-## Advanced Features
-
-### 🌐 **Web Interface**
-
-#### **KSU WebUI Setup**
-1. **Install KSU WebUI module**
-2. **Enable web server** in KernelSU settings
-3. **Access interface** at `http://localhost:12346`
-
-#### **Web Interface Features**
-- **Dashboard** - System status and statistics
-- **Module management** - Install, configure, remove modules
-- **App profile editor** - Visual profile creation
-- **Log viewer** - Real-time system logs
-- **File manager** - System file browsing
-
-### 📊 **Monitoring & Logging**
-
-#### **System Monitoring**
-```bash
-# Monitor KernelSU activity
-ksud log --tail
-
-# Check module status
-ksud module status
-
-# View app profile activity
-ksud profile log
-```
-
-#### **Performance Metrics**
-- **Resource usage** - CPU, memory, I/O monitoring
-- **Boot time analysis** - Module impact on boot speed
-- **Security events** - Root access attempts and blocks
-
-### 🔧 **Advanced Configuration**
-
-#### **Kernel Parameters**
-```bash
-# Customize KernelSU behavior
-echo "ksu.strict_mode=1" > /sys/kernel/ksu/config
-echo "ksu.log_level=2" > /sys/kernel/ksu/log_level
-```
-
-#### **Security Hardening**
-```bash
-# Enable enhanced security features
-ksud security --enable-strict-mode
-ksud security --require-signature
-ksud security --audit-all-access
+# Remove module
+ksud_next module remove module_id
 ```
 
 ## Troubleshooting
@@ -666,61 +876,6 @@ ksud security --audit-all-access
 3. Flash stock firmware if necessary
 4. Check kernel compatibility before reinstalling
 ```
-
-### 🔧 **Advanced Debugging**
-
-#### **Kernel Log Analysis**
-```bash
-# View kernel messages
-dmesg | grep ksu
-
-# Check kernel module status
-cat /proc/modules | grep kernelsu
-
-# Monitor kernel events
-cat /proc/kmsg | grep ksu
-```
-
-#### **App Profile Debugging**
-```bash
-# Debug app profile issues
-ksud profile debug com.example.app
-
-# Test profile permissions
-ksud profile test com.example.app
-
-# Export profile for analysis
-ksud profile export com.example.app
-```
-
-#### **Module Debugging**
-```bash
-# Enable module debug mode
-ksud module debug enable
-
-# Check module dependencies
-ksud module deps module_id
-
-# Verify module integrity
-ksud module verify module_id
-```
-
-### 📱 **Device-Specific Issues**
-
-#### **Samsung Devices**
-- **Knox triggered** - Some Samsung devices detect KernelSU
-- **Solutions:** Use specific Samsung-compatible kernels
-- **Alternative:** Flash custom ROM first
-
-#### **Xiaomi Devices**
-- **Anti-rollback protection** - May prevent kernel flashing
-- **Solutions:** Ensure kernel version matches or is newer
-- **Alternative:** Use MIUI-compatible builds
-
-#### **OnePlus Devices**
-- **OxygenOS detection** - Some versions detect root
-- **Solutions:** Use OxygenOS-specific kernels
-- **Alternative:** Flash custom ROM
 
 ## Uninstallation
 
@@ -768,18 +923,20 @@ After uninstallation:
 - ✅ SafetyNet passes (if was issue)
 
 ::: tip 💡 Pro Tips
+- **Choose the right version** - KernelSU for stability, KernelSU Next for compatibility
 - **Start conservative** - Begin with minimal app profiles
 - **Test thoroughly** - Verify each profile before deployment
 - **Keep backups** - Always backup working boot images
-- **Stay updated** - Follow KernelSU development for updates
-- **Join community** - KernelSU Telegram for support and tips
+- **Stay updated** - Follow both projects for updates
+- **Join communities** - Get support from both official and community channels
 - **Document changes** - Keep track of profiles and modules
-- **Monitor performance** - Watch for resource usage impacts
 :::
 
 ## Next Steps
 
 🎯 **Optimize Your Setup:**
+- **[KernelSU Official Guide](https://kernelsu.org/)** - Official documentation
+- **[KernelSU Next Guide](https://kernelsu-next.github.io/webpage/)** - Community fork documentation
 - **[App Profile Templates](https://kernelsu.org/guide/app-profile.html)** - Pre-configured security profiles
 - **[Compatible Modules](../android-root-apps/)** - KernelSU-compatible modifications
 - **[Security Hardening](./index.md)** - Advanced security configurations
@@ -787,4 +944,7 @@ After uninstallation:
 
 ---
 
-**Need help?** Join the [KernelSU Telegram community](https://t.me/KernelSU) or check our [FAQ section](../faqs.md) for common questions and solutions.
+**Need help?** 
+- **KernelSU Official**: Join the [KernelSU Telegram community](https://t.me/KernelSU)
+- **KernelSU Next**: Visit the [GitHub repository](https://github.com/KernelSU-Next/KernelSU-Next)
+- **General Support**: Check our [FAQ section](../faqs.md) for common questions and solutions
