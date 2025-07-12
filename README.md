@@ -172,7 +172,7 @@ Android rooting is the process of gaining **privileged administrative control** 
    - Enables flashing custom ROMs and root solutions
    - Required for advanced modifications
 
-3. **[⚡ Root Your Device](./docs/android-root-guides/index.md#root-solutions-comparison)** 
+3. **[⚡ Root Your Device](./docs/android-root-guides/index.md#root-methods-comparison)** 
    - **Magisk** - Most popular, systemless root with modules
    - **KernelSU** - Kernel-level root solution
    - **APatch** - Alternative root method
