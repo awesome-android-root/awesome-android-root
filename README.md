@@ -148,7 +148,7 @@ Android rooting is the process of gaining **privileged administrative control** 
 
 ### ⚠️ Important Considerations
 
-> **Warning**: Rooting voids your warranty and carries risks including potential bootloops, security vulnerabilities, and inability to receive OTA updates. Always research your specific device and backup your data before proceeding.
+> **Warning**: Rooting **voids your warranty** and carries risks including potential bootloops, security vulnerabilities, and inability to receive OTA updates. Always research your specific device and backup your data before proceeding.
 
 **Before You Begin:**
 - ✅ Backup all important data
