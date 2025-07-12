@@ -42,26 +42,6 @@ export default defineConfig({
     }
   },
 
-  // Enhanced performance settings
-  appearance: 'auto',
-  lastUpdated: true,
-
-  // Reduce markdown processing overhead
-  markdown: {
-    lineNumbers: false,
-    config: (md) => {
-      // Optimize markdown processing
-      md.set({
-        html: true,
-        xhtmlOut: true,
-        breaks: false,
-        langPrefix: 'language-',
-        linkify: true,
-        typographer: false
-      });
-    }
-  },
-
   head: [
     // Critical resource hints - prioritize most important resources
     ['link', { rel: 'preconnect', href: 'https://img.shields.io', crossorigin: '' }],
@@ -227,6 +207,7 @@ export default defineConfig({
         timeStyle: 'short'
       }
     },
+    appearance: 'auto',
     socialLinks:[
       { icon: 'github', link: 'https://github.com/awesome-android-root/awesome-android-root' },
       { icon: 'x', link: 'https://x.com/awsm_and_root' }
