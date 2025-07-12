@@ -103,10 +103,10 @@ head:
 ## Requirements
 
 ### 📋 **Essential Prerequisites**
-- ✅ **Rooted Android device** - [Magisk Guide](./magisk-guide.md)
+- ✅ **Rooted Android device** - [Magisk Guide](./magisk-guide.md) or [KernelSU Guide](./kernelsu-guide.md)
 - ✅ **Magisk v24.0+** - Latest version recommended
 - ✅ **Zygisk enabled** - Required for LSPosed functionality
-- ✅ **Android 8.1 - 14** - Supported Android versions
+- ✅ **Android 8.1 - 15** - Supported Android versions
 - ✅ **Compatible architecture** - arm64-v8a or x86_64
 
 ### 🔧 **Magisk Configuration**
@@ -306,11 +306,6 @@ Many modules have their own settings accessible through:
 
 ### 🔥 **Essential Modules**
 
-#### **System Enhancement**
-- **[⭐ GravityBox](https://repo.xposed.info/module/com.ceco.q.gravitybox)** - Comprehensive system customization
-- **[⭐ XPrivacyLua](https://github.com/M66B/XPrivacyLua)** - Advanced privacy manager
-- **[Screenshot Timestamp](https://github.com/Magisk-Modules-Repo/screenshot-timestamp)** - Add timestamps to screenshots
-
 #### **App Modifications**
 - **[⭐ ChromeXt](https://github.com/JingMatrix/ChromeXt)** - Chrome browser enhancement
 - **[⭐ WA Enhancer](https://github.com/Dev4Mod/WaEnhancer)** - WhatsApp feature additions
@@ -321,18 +316,8 @@ Many modules have their own settings accessible through:
 - **[Re-Telegram](https://github.com/Sakion-Team/Re-Telegram/)** - Telegram enhancements
 - **[QAuxiliary](https://github.com/cinit/QAuxiliary)** - QQ messenger modifications
 
-#### **Privacy & Security**
-- **[⭐ XPrivacyLua](https://github.com/M66B/XPrivacyLua)** - Comprehensive privacy control
-- **[NekoSMS](https://github.com/apsun/NekoSMS)** - SMS spam blocking
-- **[DisableAudioFocus](https://github.com/auag0/DisableAudioFocus)** - Multiple audio sources
-
-#### **Gaming & Entertainment**
-- **[Duolingo Regret](https://github.com/TigerBeanst/Duolingo-Regret)** - Timezone management for streaks
-- **[Grindr Plus](https://github.com/R0rt1z2/GrindrPlus)** - Dating app enhancements
-- **[XAudioCapture](https://modules.lsposed.org/module/io.github.wzhy.xaudiocapture)** - Audio recording bypass
-
 ::: tip 
-Visit our [Root Apps and Modules Section](../android-root-apps/index.md) for more than 290+ apps and modules
+Visit our [Root Apps and Modules Section](../android-root-apps/index.md) for more than 300+ apps and modules
 :::
 
 ## Troubleshooting
@@ -380,28 +365,6 @@ Visit our [Root Apps and Modules Section](../android-root-apps/index.md) for mor
 ```
 
 ### 🔧 **Advanced Debugging**
-
-#### **Log Analysis**
-```bash
-# View detailed LSPosed logs
-adb shell su -c "cat /data/adb/lspd/log.txt"
-
-# Monitor real-time logs
-adb shell su -c "tail -f /data/adb/lspd/log.txt"
-
-# Check module-specific logs
-# LSPosed Manager → Modules → [Module] → Logs
-```
-
-#### **Module Conflicts**
-```yaml
-# Identify conflicting modules:
-1. Disable all modules
-2. Enable one by one
-3. Test functionality after each
-4. Note when issues appear
-5. Report conflicts to developers
-```
 
 #### **Safe Mode Boot**
 ```bash
