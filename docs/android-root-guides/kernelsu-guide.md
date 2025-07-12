@@ -29,7 +29,7 @@ head:
       content: Awesome Android Root
   - - meta
     - property: og:title
-      content: "KernelSU Guide 2025  | Awesome Android Root"
+      content: "KernelSU Guide 2025 | Awesome Android Root"
   - - meta
     - property: og:description
       content: "Ultimate KernelSU guide for 2025! Learn to install KernelSU & KernelSU Next, manage kernel-based root, modules, app profiles. Step-by-step tutorial for Android 4.4+ devices."
@@ -40,20 +40,8 @@ head:
     - property: og:image
       content: https://awesome-android-root.org/images/og/kernelsu-guide-2025.png
   - - meta
-    - property: og:image:alt
-      content: KernelSU Guide 2025 - Complete Installation Tutorial
-  - - meta
-    - property: og:image:width
-      content: 1200
-  - - meta
-    - property: og:image:height
-      content: 630
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
     - property: article:author
-      content: https://github.com/fynks/awesome-android-root
+      content: https://github.com/awesome-android-root/awesome-android-root
   - - meta
     - property: article:publisher
       content: https://awesome-android-root.org
@@ -65,7 +53,7 @@ head:
       content: 2025-01-12T00:00:00Z
   - - meta
     - property: article:modified_time
-      content: 2025-01-12T00:00:00Z
+      content: 2025-07-12T00:00:00Z
   - - meta
     - property: article:tag
       content: KernelSU
@@ -95,13 +83,13 @@ head:
       content: summary_large_image
   - - meta
     - name: twitter:site
-      content: "@awesomeandroot"
+      content: "@awsm_and_root"
   - - meta
     - name: twitter:creator
-      content: "@awesomeandroot"
+      content: "@awsm_and_root"
   - - meta
     - name: twitter:title
-      content: "KernelSU Guide 2025  | Awesome Android Root"
+      content: "KernelSU Guide 2025 | Awesome Android Root"
   - - meta
     - name: twitter:description
       content: "Ultimate KernelSU guide for 2025! Learn to install KernelSU & KernelSU Next, manage kernel-based root, modules, app profiles. Step-by-step tutorial for Android 4.4+ devices."
@@ -111,13 +99,6 @@ head:
   - - meta
     - name: twitter:image:alt
       content: KernelSU Guide 2025 - Complete Installation Tutorial
-  - - link
-    - rel: preconnect
-      href: https://fonts.googleapis.com
-  - - link
-    - rel: preconnect
-      href: https://fonts.gstatic.com
-      crossorigin: true
   - - link
     - rel: dns-prefetch
       href: https://github.com
@@ -129,11 +110,11 @@ head:
       href: https://kernelsu-next.github.io
   - - script
     - type: application/ld+json
-      content: |
+    - innerHTML: |
         {
           "@context": "https://schema.org",
           "@type": "TechArticle",
-          "headline": "KernelSU Guide 2025  | Awesome Android Root",
+          "headline": "KernelSU Guide 2025 | Awesome Android Root",
           "description": "Ultimate KernelSU guide for 2025! Learn to install KernelSU & KernelSU Next, manage kernel-based root, modules, app profiles. Step-by-step tutorial for Android 4.4+ devices.",
           "image": "https://awesome-android-root.org/images/og/kernelsu-guide-2025.png",
           "author": {
@@ -150,7 +131,7 @@ head:
             }
           },
           "datePublished": "2025-01-12",
-          "dateModified": "2025-01-12",
+          "dateModified": "2025-07-12",
           "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://awesome-android-root.org/android-root-guides/kernelsu-guide/"
@@ -275,19 +256,19 @@ Since version 0.9.0, KernelSU supports two installation modes on GKI devices:
 
 ### 📊 **Detailed Comparison**
 
-| Feature | KernelSU | KernelSU Next | Magisk |
-|---------|----------|---------------|---------|
-| **Root Method** | Kernel-based | Kernel-based | Userspace |
-| **Android Support** | 12+ (GKI 5.10+) | 4.4+ (Kernel 4.4-6.6) | 6.0+ |
-| **Architecture** | arm64-v8a, x86_64 | arm64-v8a, armeabi-v7a, x86_64 | arm64-v8a, x86_64, arm32 |
-| **Installation** | Boot image/LKM | Boot image/LKM | Boot image |
-| **Module System** | OverlayFS | Magic Mount + OverlayFS | Magic Mount |
-| **Root Hiding** | Kernel-level | Kernel-level | Userspace DenyList |
-| **App Control** | App Profiles | App Profiles | Basic permissions |
-| **SafetyNet** | Better passing rate | Better passing rate | Good with modules |
-| **Performance** | Lower overhead | Lower overhead | Standard |
-| **Learning Curve** | Moderate | Moderate | Easy |
-| **Development** | Official | Community | Official |
+| Feature             | KernelSU            | KernelSU Next                  | Magisk                   |
+| ------------------- | ------------------- | ------------------------------ | ------------------------ |
+| **Root Method**     | Kernel-based        | Kernel-based                   | Userspace                |
+| **Android Support** | 12+ (GKI 5.10+)     | 4.4+ (Kernel 4.4-6.6)          | 6.0+                     |
+| **Architecture**    | arm64-v8a, x86_64   | arm64-v8a, armeabi-v7a, x86_64 | arm64-v8a, x86_64, arm32 |
+| **Installation**    | Boot image/LKM      | Boot image/LKM                 | Boot image               |
+| **Module System**   | OverlayFS           | Magic Mount + OverlayFS        | Magic Mount              |
+| **Root Hiding**     | Kernel-level        | Kernel-level                   | Userspace DenyList       |
+| **App Control**     | App Profiles        | App Profiles                   | Basic permissions        |
+| **SafetyNet**       | Better passing rate | Better passing rate            | Good with modules        |
+| **Performance**     | Lower overhead      | Lower overhead                 | Standard                 |
+| **Learning Curve**  | Moderate            | Moderate                       | Easy                     |
+| **Development**     | Official            | Community                      | Official                 |
 
 ### 🎯 **Choose KernelSU If:**
 - You have a GKI 2.0 compatible device (Android 12+)
@@ -345,11 +326,11 @@ adb shell getprop ro.kernel.version
 ```
 
 #### **KernelSU Next Compatibility Table**
-| Kernel Version | Support Level | Notes |
-|----------------|---------------|-------|
-| 5.10+ (GKI 2.0) | Full support | Pre-built images and LKM/KMI |
-| 4.19 – 5.4 (GKI 1.0) | Build required | Requires KernelSU driver built-in |
-| < 4.14 (EOL) | Experimental | Requires driver (3.18+ may need backports) |
+| Kernel Version       | Support Level  | Notes                                      |
+| -------------------- | -------------- | ------------------------------------------ |
+| 5.10+ (GKI 2.0)      | Full support   | Pre-built images and LKM/KMI               |
+| 4.19 – 5.4 (GKI 1.0) | Build required | Requires KernelSU driver built-in          |
+| < 4.14 (EOL)         | Experimental   | Requires driver (3.18+ may need backports) |
 
 #### **Supported Devices**
 - Download KernelSU/KernelSU Next manager from respective GitHub releases:
@@ -782,13 +763,13 @@ module_structure/
 
 #### **Magisk Module Compatibility**
 
-| Module Type | KernelSU | KernelSU Next |
-|-------------|----------|---------------|
-| **System overlay modules** | ✅ Compatible | ✅ Compatible |
-| **Simple modification modules** | ✅ Compatible | ✅ Compatible |
-| **Magic Mount modules** | ❌ Not compatible | ✅ Compatible |
-| **Zygisk-dependent modules** | ❌ Need ZygiskNext | ✅ Better support |
-| **Complex injection modules** | ❌ May need adaptation | ✅ Better compatibility |
+| Module Type                     | KernelSU              | KernelSU Next          |
+| ------------------------------- | --------------------- | ---------------------- |
+| **System overlay modules**      | ✅ Compatible          | ✅ Compatible           |
+| **Simple modification modules** | ✅ Compatible          | ✅ Compatible           |
+| **Magic Mount modules**         | ❌ Not compatible      | ✅ Compatible           |
+| **Zygisk-dependent modules**    | ❌ Need ZygiskNext     | ✅ Better support       |
+| **Complex injection modules**   | ❌ May need adaptation | ✅ Better compatibility |
 
 ### 📥 **Module Installation**
 
