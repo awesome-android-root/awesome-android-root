@@ -92,7 +92,6 @@ Democratize Android customization by providing free, comprehensive resources for
 - [📱 GitHub](https://github.com/awesome-android-root/awesome-android-root) - Source code and contributions
 - [𝕏 Twitter](https://x.com/awsm_and_root) - Updates and community highlights
 - [💬 Reddit](https://reddit.com/r/AwesomeAndroidRoot) - Discussions and questions
-- [📱 Telegram](https://t.me/awesome_android_root) - Real-time support
 
 **Need Help?**
 - Check our [FAQ](./faqs.md) for common questions
