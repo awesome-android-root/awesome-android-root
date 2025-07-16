@@ -14,7 +14,7 @@ head:
       content: About Awesome Android Root - Ultimate Android Rooting Resource 2025
   - - meta
     - property: og:description
-      content: Discover the story behind Awesome Android Root - the most comprehensive collection of 300+ Android root apps, Magisk modules, and expert rooting guides for 2025.
+      content: Discover the story behind Awesome Android Root - the most comprehensive collection of 300+ Android root apps, Magisk, KernelSU & LSPosed (Xposed) modules & rooting guides.
   - - meta
     - property: og:url
       content: https://awesome-android-root.org/about
