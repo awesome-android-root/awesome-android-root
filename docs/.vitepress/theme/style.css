@@ -256,3 +256,7 @@ img {
 .aar-intro p:nth-child(2) {
   min-height: 38px; /* Height for second badge row */
 }
+
+.web{
+  display: none;
+}

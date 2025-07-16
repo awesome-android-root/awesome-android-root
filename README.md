@@ -12,6 +12,12 @@
 
 Ultimate Community-curated collection of best root apps, Magisk & LSPosed modules and how to rooting guides for Android customization, performance enhancement, debloating and system optimization.
 
+<div class="web">
+
+> ✨ For a better experience use [Web Version](https://awesome-android-root.org) ✨
+
+</div>
+
 </div>
 
 ## Table of Contents
