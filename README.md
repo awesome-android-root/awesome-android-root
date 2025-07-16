@@ -179,7 +179,6 @@ Android rooting gives you **privileged administrative control** over your device
 
 
 ### **Root Management**
-First things first, [choose your rooting solution](docs/android-root-guides/index.md#root-methods-comparison) and [start exploring](#managers) the necessary tools and tricks required for managing and hidding root. 
 
 ### Managers
 - **[APatch](https://github.com/bmax121/APatch)** - The patching of Android kernel and Android system. `FOSS`
