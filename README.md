@@ -742,33 +742,48 @@ Complete support resource with expert troubleshooting solutions:
 
 ## Contributing
 
-- **Star this repo** if it helped you.
-- **Report** broken links or outdated apps.
-- **Suggest** new apps via [issues](https://github.com/awesome-android-root/awesome-android-root/issues).
+We welcome contributions from the community! Here's how you can help:
 
-[Read Contribution Guidelines →](./docs/contributing.md)
+### Quick Actions
+- **⭐ Star this repository** if it helped you
+- **🐛 Report issues** for broken links or outdated apps
+- **💡 Suggest new apps** via [GitHub issues](https://github.com/awesome-android-root/awesome-android-root/issues)
+
+### Detailed Guidelines
+For comprehensive contribution instructions, including formatting standards and submission requirements:
+
+**[📖 Read Full Contribution Guidelines →](./docs/contributing.md)**
 
 [↑ Back to top](#table-of-contents)
 
 ## Stats
 
-### Repository Statistics
+![Total Entries](https://img.shields.io/badge/Total%20Entries-311-blue?style=for-the-badge&logo=android)
+![Root Apps](https://img.shields.io/badge/Root%20Apps-115-blue?style=for-the-badge&logo=googleplay)
+![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-113-orange?style=for-the-badge&logo=magisk&logoColor=white)
+![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-83-purple?style=for-the-badge&logo=local&logoColor=white)
 
-| ![Total Entries](https://img.shields.io/badge/Total%20Entries-311-brightgreen?style=for-the-badge&logo=android)<br>**Total Entries** | ![Root Apps](https://img.shields.io/badge/Root%20Apps-115-blue?style=for-the-badge&logo=android)<br>**Root Apps** |
-|:---:|:---:|
-| ![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-113-orange?style=for-the-badge&logo=magisk)<br>**Magisk Modules** | ![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-83-purple?style=for-the-badge&logo=xposed)<br>**LSPosed Modules** |
 
 ## Support This Project
 
-<div align="center" class="aar-intro">
+<div align="center">
+
+### 💖 Help Us Grow
 
 [![Become a Sponsor](https://img.shields.io/badge/💖-Become%20a%20Sponsor-ff69b4?style=for-the-badge)](https://opencollective.com/awesome-android-root-official)
 [![GitHub Stars](https://img.shields.io/badge/⭐-Star%20this%20Repo-yellow?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
-[![Report Issue](https://img.shields.io/badge/🐛-Report%20Issue-green?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root)
+[![Report Issue](https://img.shields.io/badge/🐛-Report%20Issue-green?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root/issues)
 
 </div>
 
-> **Your support enables us to:** Keep this list updated with the latest apps & modules - Maintain comprehensive documentation - Improve project infrastructure & tools - Grow the open-source Android rooting community.
+### 🚀 Your Support Enables Us To:
+- ✅ Keep this list updated with the latest apps & modules
+- ✅ Maintain comprehensive documentation & guides
+- ✅ Improve project infrastructure & development tools
+- ✅ Grow the open-source Android rooting community
+
+### 🙏 Thank You!
+Every star, contribution, and piece of feedback helps make this project better for the entire Android rooting community.
 
 ---
 
