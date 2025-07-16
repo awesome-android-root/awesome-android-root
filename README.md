@@ -758,11 +758,14 @@ For comprehensive contribution instructions, including formatting standards and 
 
 ## Stats
 
-![Total Entries](https://img.shields.io/badge/Total%20Entries-311-blue?style=for-the-badge&logo=android)
-![Root Apps](https://img.shields.io/badge/Root%20Apps-115-blue?style=for-the-badge&logo=googleplay)
-![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-113-orange?style=for-the-badge&logo=magisk&logoColor=white)
-![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-83-purple?style=for-the-badge&logo=local&logoColor=white)
+<div class="img-cnt">
 
+[![Total Entries](https://img.shields.io/badge/Total%20Entries-311-blue?style=for-the-badge&logo=android)]
+[![Root Apps](https://img.shields.io/badge/Root%20Apps-115-blue?style=for-the-badge&logo=googleplay)]
+[![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-113-orange?style=for-the-badge&logo=magisk&logoColor=white)]
+[![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-83-purple?style=for-the-badge&logo=local&logoColor=white)]
+
+</div>
 
 ## Support This Project
 
@@ -770,10 +773,13 @@ For comprehensive contribution instructions, including formatting standards and 
 
 ### 💖 Help Us Grow
 
+<div class="img-cnt">
+
 [![Become a Sponsor](https://img.shields.io/badge/💖-Become%20a%20Sponsor-ff69b4?style=for-the-badge)](https://opencollective.com/awesome-android-root-official)
 [![GitHub Stars](https://img.shields.io/badge/⭐-Star%20this%20Repo-yellow?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
 [![Report Issue](https://img.shields.io/badge/🐛-Report%20Issue-green?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root/issues)
 
+</div>
 </div>
 
 ### 🚀 Your Support Enables Us To:

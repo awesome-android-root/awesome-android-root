@@ -145,16 +145,18 @@
   font-size: 18px;
 }
 
-.aar-intro p{
+ .aar-intro p{
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   
 }
 
-.aar-intro img {
+.img-cnt img, .aar-intro img {
 margin: 0.5rem 0.25rem;
+  display: inline-block;
 }
 
 /**
@@ -168,7 +170,6 @@ margin: 0.5rem 0.25rem;
   min-height: 30px;
   max-height: 30px;
   margin: 0.5rem 0.25rem;
-  display: inline-block;
   vertical-align: middle;
 }
 
