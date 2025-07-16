@@ -122,29 +122,10 @@ Android rooting is the process of gaining **privileged administrative control** 
 
 ### Why Root Your Android Device?
 
-**🔓 Freedom & Control**
-- Remove pre-installed bloatware and carrier restrictions
-- Install system-level apps and modifications
-- Customize your device beyond manufacturer limitations
-- Access and modify system files and settings
-
-**⚡ Enhanced Performance**
-- Optimize CPU and GPU performance
-- Improve battery life through advanced power management
-- Speed up device with custom kernels and tweaks
-- Remove unnecessary background processes
-
-**🛡️ Advanced Security & Privacy**
-- Install powerful ad blockers and privacy tools
-- Control app permissions at a granular level
-- Block tracking and telemetry at system level
-- Use advanced backup and encryption solutions
-
-**🎨 Complete Customization**
-- Install custom ROMs with unique features
-- Modify system UI, fonts, and animations
-- Change boot animations and system sounds
-- Access exclusive root-only apps and modules
+- 🔓 Freedom & Control
+- ⚡ Enhanced Performance
+- 🛡️ Advanced Security & Privacy
+- 🎨 Complete Customization
 
 ### ⚠️ Important Considerations
 
@@ -165,29 +146,20 @@ Android rooting is the process of gaining **privileged administrative control** 
 1. **[🔓 Unlock Bootloader](./docs/android-root-guides/how-to-unlock-bootloader.md)** 
    - Essential first step for all modifications
    - Required for custom recovery and root access
-   - ⚠️ **Warning**: This will wipe your device
 
 2. **[🛠️ Install Custom Recovery](./docs/android-root-guides/how-to-install-custom-recovery.md)** 
    - TWRP, OrangeFox, or SKYHAWK recovery
    - Enables flashing custom ROMs and root solutions
-   - Required for advanced modifications
-
+  
 3. **[⚡ Root Your Device](./docs/android-root-guides/index.md#root-methods-comparison)** 
-   - **Magisk** - Most popular, systemless root with modules
-   - **KernelSU** - Kernel-level root solution
+   - **[Magisk](./docs/android-root-guides/magisk-guide.md)** - Most popular, systemless root with modules
+   - **[KernelSU](docs/android-root-guides/magisk-guide.md** - Kernel-level root solution
    - **APatch** - Alternative root method
    - Compare features and choose what's best for you
 
 4. **[🌟 Install Custom ROM](./docs/android-root-guides/custom-rom-installation.md)** _(Optional)_
    - Transform your Android experience completely
    - Get latest Android features on older devices
-   - Choose from LineageOS, Pixel Experience, and more
-
-### Quick Start Options
-
-**New to Rooting?** → Start with **[Magisk](./docs/android-root-guides/magisk-guide.md)** - Most beginner-friendly
-**Want Maximum Control?** → Try **[KernelSU](./docs/android-root-guides/kernelsu-guide.md)** - Advanced users
-**LSPosed User?** → Check out **[LSPosed Guide](./docs/android-root-guides/lsposed-guide.md)** - Module framework
 
 **[📖 Read the Complete Rooting Master Guide →](./docs/android-root-guides/index.md)** 
 
