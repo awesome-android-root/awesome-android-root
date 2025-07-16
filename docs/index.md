@@ -6,7 +6,7 @@ description: "Discover 300+ hand-curated best root apps, Magisk & LSPosed (Xpose
 head:
   - - meta
     - name: keywords
-      content: "awesome android root, android root, magisk, lsposed, custom rom, bootloader unlock, twrp, root apps, android customization, xposed modules, android privacy, system modification, android development, kernelsu, apatch, lineageos, grapheneos, android rooting guide 2025, best root apps, magisk modules, android root tutorial, root android phone, android root methods, custom recovery, android root benefits"
+      content: "awesome android root, android root, magisk, lsposed, custom rom, bootloader unlock, twrp, root apps, android customization, xposed modules, android privacy, system modification, android development, kernelsu,kernelsu-next, apatch, lineageos, grapheneos, android rooting guide 2025, best root apps, magisk modules,kernelsu module, android root tutorial, root android phone, android root methods, custom recovery, android root benefits"
   - - meta
     - name: robots
       content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
@@ -33,7 +33,7 @@ head:
       content: "Awesome Android Root - Ultimate Android Rooting Hub 2025"
   - - meta
     - name: twitter:description
-      content: "The ultimate Android rooting resource! 300+ curated root apps, complete rooting guides, Magisk modules, and expert tutorials."
+      content: "The ultimate Android rooting resource! 300+ best root apps, Magisk,KernelSu & LSPosed Modules & rooting guides."
   - - meta
     - name: twitter:image
       content: "https://awesome-android-root.org/images/og.png"
@@ -79,7 +79,7 @@ head:
         "@type": "WebSite",
         "name": "Awesome Android Root",
         "alternateName": "Ultimate Android Rooting Hub",
-        "description": "The ultimate Android rooting resource with 300+ curated root apps, complete rooting guides, and expert tutorials",
+        "description": "The ultimate Android rooting resource! 300+ best root apps, Magisk,KernelSu & LSPosed Modules & rooting guides.",
         "url": "https://awesome-android-root.org",
         "inLanguage": "en-US",
         "publisher": {
@@ -122,6 +122,8 @@ head:
           "system modification",
           "android development",
           "kernelsu",
+          "kernelsu next",
+          kernelsu module",
           "apatch",
           "lineageos",
           "grapheneos"
@@ -199,7 +201,7 @@ head:
 hero:
   name: "Awesome Android Root"
   text: "Ultimate Android Rooting Hub"
-  tagline: "Explore 300+ best root apps, Magisk & LSPosed (Xposed) Modules, step-by-step rooting & custom rom guides."
+  tagline: "Explore 300+ best root apps, Magisk, Kernel SU & LSPosed (Xposed) Modules & step-by-step rooting."
   image:
     src: /images/logo_dark.svg
     alt: Awesome Android Root - Ultimate Android Rooting Resource
