@@ -10,7 +10,7 @@
 [🌐 **What is Root?**](#what-is-root-access) | [📱 **Root Apps**](#root-apps) | [📋 **Table of Contents**](#table-of-contents) | [💬 **Community**](#community-resources)
 
 
-Ultimate Community-curated collection of best root apps, Magisk & LSPosed modules and how to rooting guides for Android customization, performance enhancement, debloating and system optimization.
+Community-curated Ultimate collection of best root apps, Magisk, KernelSU & LSPosed(Xposed) modules and how to rooting guides for Android customization, performance enhancement, debloating and system optimization.
 
 <div class="web">
 
