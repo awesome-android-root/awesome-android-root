@@ -760,10 +760,10 @@ For comprehensive contribution instructions, including formatting standards and 
 
 <div class="img-cnt">
 
-[![Total Entries](https://img.shields.io/badge/Total%20Entries-311-blue?style=for-the-badge&logo=android)]
-[![Root Apps](https://img.shields.io/badge/Root%20Apps-115-blue?style=for-the-badge&logo=googleplay)]
-[![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-113-orange?style=for-the-badge&logo=magisk&logoColor=white)]
-[![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-83-purple?style=for-the-badge&logo=local&logoColor=white)]
+![Total Entries](https://img.shields.io/badge/Total%20Entries-311-blue?style=for-the-badge&logo=android)
+![Root Apps](https://img.shields.io/badge/Root%20Apps-115-blue?style=for-the-badge&logo=googleplay)
+![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-113-orange?style=for-the-badge&logo=magisk&logoColor=white)
+![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-83-purple?style=for-the-badge&logo=local&logoColor=white)
 
 </div>
 
