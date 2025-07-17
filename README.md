@@ -224,6 +224,8 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 [↑ Back to top](#table-of-contents)
 
+---
+
 ### Ad Blocking
 - **[⭐ AdAway](https://adaway.org/)** - Open-source ad blocker using hosts file. `FOSS`
 - **[AdClose](https://github.com/Xposed-Modules-Repo/com.close.hook.ads/)** - Prevents the initial loading of the advertising SDK within the application and intercepts application advertising requests to block ads. `Proprietary` `[LSP]`
