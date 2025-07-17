@@ -243,6 +243,8 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 [↑ Back to top](#table-of-contents)
 
+---
+
 ### App Management
 #### App Isolation and Cloning
 - **[Insular](https://gitlab.com/secure-system/Insular)** - Isolate your big brother app. A fork based on the excellent Island. `FOSS`
@@ -275,6 +277,8 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[Thanox](https://apt.izzysoft.de/fdroid/index/apk/github.tornaco.android.thanos)** - A system management tool that provide convenient functions like application startup management, background management, permission management etc. `FOSS` `[LSP]`
 
 [↑ Back to top](#table-of-contents)
+
+---
 
 ### App Mods
 
@@ -350,6 +354,8 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 [↑ Back to top](#table-of-contents)
 
+---
+
 ### Audio Enhancement
 - **[Audio Modification Library Ryuki Mod](https://github.com/reiryuki/Audio-Modification-Library-Ryuki-Mod-Magisk-Module)** - Enables supported audio mods to share the same needed files sudo as audio_effects. `FOSS` `[M]`
 - **[Audio jitter silencer](https://github.com/Magisk-Modules-Alt-Repo/audio-jitter-silencer)** - For avoiding distortion on all digital audio outputs, it disables audio jitter generators (w.r.t. battery draining & optimizations, and wireless connectivity). `FOSS` `[M]`
@@ -363,6 +369,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[ViPER4AndroidRepackaged](https://github.com/programminghoch10/ViPER4AndroidRepackaged)** - Contains many useability enhancements and all the major fixes needed to run ViPER4Android on modern ROMs effortlessly. `FOSS` `[M]`
 - **[XAudioCapture](https://github.com/Xposed-Modules-Repo/io.github.wzhy.xaudiocapture)** - Lets you capture any audio stream you desire, bypassing these restrictions. `Proprietary` `[LSP]`
 
+---
 
 ### Automation
 - **[Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate)** - Lets you create custom automation workflows using flowcharts, enabling seamless management of tasks, files, and device settings. `Proprietary`
@@ -370,6 +377,8 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)** - An advanced and powerful automation app. `Proprietary`
 
 [↑ Back to top](#table-of-contents)
+
+---
 
 ### Backup and Restore
 - **[DataBackup](https://github.com/XayahSuSuSu/Android-DataBackup)** - DataBackup for Android 7.0+. `FOSS`
@@ -379,6 +388,8 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[Swift Backup](https://play.google.com/store/apps/details?id=org.swiftapps.swiftbackup)** - Modern backup solution with cloud support. `Proprietary`
 
 [↑ Back to top](#table-of-contents)
+
+---
 
 ### Battery Management
 - **[AccA](https://github.com/MatteCarra/AccA)** - Advanced Charging Controller app. `FOSS`
@@ -392,6 +403,8 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 [↑ Back to top](#table-of-contents)
 
+---
+
 ### Cleaning Apps
 - **[Cleaner Royall](https://github.com/araafroyall/Cleaner-Royall)** - A Light weight but Ultra Fast & Powerful cleaner for Android. `FOSS` `[LSP]`
 - **[DirCleaner](https://www.dircleaner.com/)** - A simple and practical cleaning tool. `Proprietary`
@@ -399,6 +412,8 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[⭐ SD Maid 2/SE](https://github.com/d4rken-org/sdmaid-se)** - A file management tool for Android that specialises in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS`
 
 [↑ Back to top](#table-of-contents)
+
+---
 
 ### Communication Tools
 #### Call Recorders
@@ -413,6 +428,8 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[NekoSMS](https://github.com/apsun/NekoSMS)** - A pattern-based text message blocker for Android. `FOSS` `[LSP]`
 
 [↑ Back to top](#table-of-contents)
+
+---
 
 ### Customizations
 #### Boot Animations
@@ -486,6 +503,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 [↑ Back to top](#table-of-contents)
 
+---
 
 ### Debloating
 - **[⭐ Canta](https://github.com/samolego/Canta)** -  Uninstall any app without root using Shizuku (Needs [Shizuku](https://shizuku.rikka.app/) to be installed and running). `FOSS`
@@ -495,6 +513,8 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[System app remover](https://play.google.com/store/apps/details?id=com.jumobile.manager.systemapp)** - A system app remover and user app uninstaller, move app to sdcard, move app to phone, apk on sdcard scan/install/delete. `Proprietary`
 
 [↑ Back to top](#table-of-contents)
+
+---
 
 ### Development and Debugging
 - **[IAmNotADeveloper](https://github.com/xfqwdsj/IAmNotADeveloper)** - A Xposed module for hiding Android developer-related switches status. `FOSS` `[LSP]`
@@ -509,6 +529,8 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 [↑ Back to top](#table-of-contents)
 
+---
+
 ### Device Control and Hardware
 - **[Classic Power Menu](https://github.com/KieronQuinn/ClassicPowerMenu)** - Power Menu Replacement for Android 11+, with the main aim being restoring power menu options (Device Controls & Quick Access Wallet) on Android 12. `FOSS`
 - **[OnePlus Flash Control](https://github.com/Bartixxx32/Opflashcontrol-app)** - Precise control over the brightness of the dual-tone and quad-tone LED flashes for OnePlus devices. `FOSS`
@@ -518,6 +540,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[USB HID Client](https://github.com/Arian04/android-hid-client)** - Use your phone as a keyboard and mouse **without** any software on the other end. `FOSS`
 - **[JoyCon Droid](https://joycondroid.gitbook.io/joycondroid)** - Allows you to turn your Android device into a controller for your Nintendo Switch. `FOSS`
 
+---
 
 ### File Management
 - **[AnExplorer]** - A is Simple, Small, Fast and Efficient File Explorer. `FOSS`
@@ -533,6 +556,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 [↑ Back to top](#table-of-contents)
 
+---
 
 ### Kernel Management
 - **[EX Kernel Manager](https://play.google.com/store/apps/details?id=flar2.exkernelmanager)** - Root tool for backup and flashing kernels, tweaking color, sound, gestures and other kernel settings. `Proprietary`
@@ -542,6 +566,8 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 [↑ Back to top](#table-of-contents)
 
+---
+
 ### Location and GPS
 - **[GPS Optimization](https://github.com/DEMONICCA/GPS-Optimization)** - Module designed to improve GPS performance and stability on Android devices. `FOSS` `[M]`
 - **[GPS Setter](https://github.com/Xposed-Modules-Repo/com.android1500.gpssetter)** - Allows to mock locations for any specific app or entire system. `[LSP]`
@@ -550,6 +576,8 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[XposedFakeLocation](https://github.com/noobexon1/XposedFakeLocation)** - Allows you to spoof your device's location globally or for specific apps without using "mock location" from the developer options. `FOSS` `[LSP]`
 
 [↑ Back to top](#table-of-contents)
+
+---
 
 ### Network Tools
 - **[Box for Root](https://github.com/taamarin/box_for_magisk)** - Box for Root (BFR) is a Magisk, KernelSU, APatch, module that provides a suite of proxy tools, including clash, sing-box, v2ray, hysteria and xray. It allows you to configure a transparent proxy on Android devices with root access. `FOSS` `[M]` `[K]`
@@ -567,6 +595,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 [↑ Back to top](#table-of-contents)
 
+---
 
 ### NFC Tools
 - **[NFC Card Emulator Pro (Root)](https://play.google.com/store/apps/details?id=com.yuanwofei.cardemulator.pro)** - An NFC Card Emulator that simulates various types of cards, e.g., access cards, elevator cards, factory (meal) cards, school (meal) cards, some library cards, and other IC cards. `Proprietary`
@@ -574,6 +603,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 [↑ Back to top](#table-of-contents)
 
+---
 
 ### Performance Improvements
 
@@ -611,6 +641,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 [↑ Back to top](#table-of-contents)
 
+---
 
 ### Privacy and Security
 - **[AFWall+](https://github.com/ukanth/afwall)** - iptables-based firewall. `FOSS`
@@ -624,6 +655,8 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 [↑ Back to top](#table-of-contents)
 
+---
+
 ### ReVanced
 - **[Awesome ReVanced](https://github.com/Jman-Github/Awesome-ReVanced)** - A curated list of awesome ReVanced patches, resources and projects. `FOSS`
 - **[Privacy ReVanced Patches](https://github.com/jkennethcarino/privacy-revanced-patches)** - Privacy Patches for ReVanced to disable ads, trackers and analytics, always open Gboard in incognito mode, and much more. `FOSS`
@@ -631,6 +664,8 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[ReVancedRepackaged](https://github.com/programminghoch10/ReVancedRepackaged)** - This magisk module contains only the ReVanced Patcher.It will patch any installed ReVanced compatible app right on your device during installation. `FOSS` `[M]`
 
 [↑ Back to top](#table-of-contents)
+
+---
 
 ### Screen and Display
 - **[AlwaysOn](https://github.com/Domi04151309/AlwaysOn)** - Adds an always-on display with various customization options regarding watch face, behavior, and background. `FOSS` `[LSP]`
@@ -641,6 +676,8 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[Pointer Replacer](https://github.com/thesandipv/pointer_replacer)** - Replaces a dot appears when user touch the screen [Require Show Touches to be enabled in Developer Options]. `FOSS` `[LSP]`
 
 [↑ Back to top](#table-of-contents)
+
+---
 
 ### System Modifications
 - **[AnyWebView](https://github.com/neoblackxt/AnyWebView)** - Tries to detect all system webviews and add them to the developer options -> WebView implementation list. `FOSS` `[LSP]`
@@ -663,6 +700,8 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 [↑ Back to top](#table-of-contents)
 
+---
+
 ### Terminal & Shell Environments
 - **[LADB](https://github.com/tytydraco/LADB)** - Local ADB shell. `FOSS` - [Free Build](https://github.com/hyperio546/ladb-builds)
 - **[Termux](https://github.com/termux/termux-app)** - A terminal emulator application for Android OS extendible by variety of packages. `FOSS`
@@ -676,6 +715,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 [↑ Back to top](#table-of-contents)
 
+---
 
 ### Tools
 - **[AdGuardHome for Root](https://github.com/twoone-3/AdGuardHomeForRoot/blob/main/README_en.md#adguardhome-for-root)** - A module to easily execute AdGuardHome on Android. `FOSS` `[M]`
@@ -689,9 +729,12 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 [↑ Back to top](#table-of-contents)
 
-## Utilities
+---
+
+### Utilities
 - **[crond4Android](https://github.com/powerAn2020/crond4android)** - he Crond program that supports running on KernelSU, APatch and Magisk. `FOSS` `[M]` `[K]`
 - **[Hosts Manager Lite](play.google.com/store/apps/details?id=awais.hostsmanager.lite)** - Advanced /etc/hosts editor. `Proprietary`
+
 
 ## Important Notes
 
