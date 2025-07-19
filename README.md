@@ -14,7 +14,7 @@ Community-curated Ultimate collection of best root apps, Magisk, KernelSU & LSPo
 
 <div class="web">
 
-> ✨ For a better experience use [Web Version](https://awesome-android-root.org) ✨
+> For a better experience use ✨ [Web Version](https://awesome-android-root.org) ✨
 
 </div>
 
