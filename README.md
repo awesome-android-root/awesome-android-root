@@ -162,17 +162,12 @@ Android rooting gives you **privileged administrative control** over your device
 **[📖 Read the Complete Rooting Master Guide →](./docs/android-root-guides/index.md)**
 
 ## Glossary
-- **⭐** = Recommended app/module from a specific category
--  **`FOSS`** = Free and Open Source Software
-> Software where the source code is openly available. This allows anyone to inspect, modify, and distribute the software, promoting transparency and community collaboration.
--  **`Proprietary`** = Missing license or Closed-source software
-> Software that is closed-source, meaning its underlying source code is not publicly available. This category may also include software with unclear or missing licensing terms.
-- **`[K]`** = KernelSU Module
-> A module that requires the KernelSU to be installed and active on the device to function. 
--  **`[M]`** = Magisk Module
-> A module that requires the Magisk framework to be installed and active on the device to function. 
--  **`[LSP]`** = Requires LSPosed Framework
-> The app or modification needs the LSPosed Framework to be installed and active on the device to function. 
+- **⭐** = Community recommended (most popular/trusted in category)
+- **`FOSS`** = Free and Open Source Software (source code available)
+- **`Proprietary`** = Closed-source software or unclear licensing
+- **`[M]`** = Magisk Module (requires [_Magisk framework_](docs/android-root-guides/magisk-guide.md))
+- **`[K]`** = KernelSU Module (requires [_KernelSU framework_](docs/android-root-guides/kernelsu-guide.md)) 
+- **`[LSP]`** = LSPosed Module (requires [_LSPosed framework_](docs/android-root-guides/lsposed-guide.md))
 - _**Apps are organized in alphabetical order within each category.**_
 
 ## Root Apps
