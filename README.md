@@ -170,7 +170,7 @@ Android rooting gives you **privileged administrative control** over your device
 - **`[M]`** = Magisk Module (requires [_Magisk framework_](./docs/android-root-guides/magisk-guide.md))
 - **`[K]`** = KernelSU Module (requires [_KernelSU framework_](./docs/android-root-guides/kernelsu-guide.md)) 
 - **`[LSP]`** = LSPosed Module (requires [_LSPosed framework_](./docs/android-root-guides/lsposed-guide.md))
-- _**Apps are organized in alphabetical order within each category.**_
+> _Apps are organized in alphabetical order within each category._
 
 ## Root Apps
 
