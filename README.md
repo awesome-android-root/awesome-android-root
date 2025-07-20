@@ -7,7 +7,9 @@
 [![Total Entries](https://img.shields.io/badge/Total%20Entries-300+-blue?style=for-the-badge&logo=android)](#root-apps)
 [![Support via Open Collective](https://img.shields.io/badge/Support%20via-Open%20Collective-blue?style=for-the-badge&logo=opencollective)](https://opencollective.com/awesome-android-root-official)
 
-[🌐 **What is Root?**](#what-is-root-access) | [📱 **Root Apps**](#root-apps) | [📋 **Table of Contents**](#table-of-contents) | [💬 **Community**](#community-resources)
+
+[🔰 **New to Root?**](#what-is-root-access) | [📱 **Root Apps**](#root-apps) | [📋 **Full Index**](#table-of-contents) | [💬 **Community**](#community--resources) | [⚡ **Quick Start Guide**](#root-guide-and-solutions)
+
 
 
 Community-curated Ultimate collection of best root apps, Magisk, KernelSU & LSPosed(Xposed) modules and how to rooting guides for Android customization, performance enhancement, debloating and system optimization.
