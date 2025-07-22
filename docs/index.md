@@ -123,7 +123,7 @@ head:
           "android development",
           "kernelsu",
           "kernelsu next",
-          kernelsu module",
+          "kernelsu module",
           "apatch",
           "lineageos",
           "grapheneos"

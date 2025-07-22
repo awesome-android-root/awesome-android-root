@@ -110,7 +110,7 @@ head:
       href: https://kernelsu-next.github.io
   - - script
     - type: application/ld+json
-    - innerHTML: |
+    - |
         {
           "@context": "https://schema.org",
           "@type": "TechArticle",
