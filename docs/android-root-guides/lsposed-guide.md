@@ -5,7 +5,7 @@ description: "Complete LSPosed guide for 2025. Learn how to install LSPosed fram
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/android-root-guides/lsposed-guide/
+      href: https://awesome-android-root.org/android-root-guides/lsposed-guide
   - - meta
     - property: og:type
       content: website

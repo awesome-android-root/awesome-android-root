@@ -5,7 +5,7 @@ description: "Ultimate KernelSU guide for 2025! Learn to install KernelSU & Kern
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/android-root-guides/kernelsu-guide/
+      href: https://awesome-android-root.org/android-root-guides/kernelsu-guide
   - - meta
     - name: googlebot
       content: index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1

@@ -5,7 +5,7 @@ description: "Complete Magisk guide for 2025. Learn how to install Magisk, use m
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/android-root-guides/magisk-guide/
+      href: https://awesome-android-root.org/android-root-guides/magisk-guide
   - - meta
     - property: og:type
       content: website

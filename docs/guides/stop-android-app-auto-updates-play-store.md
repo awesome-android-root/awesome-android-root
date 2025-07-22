@@ -6,7 +6,7 @@ head:
   # Canonical and preconnect links
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/guides/stop-android-app-auto-updates-play-store/
+      href: https://awesome-android-root.org/guides/stop-android-app-auto-updates-play-store
 
   # Stop App Updates specific OpenGraph
   - - meta

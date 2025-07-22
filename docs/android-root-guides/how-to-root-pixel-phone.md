@@ -5,7 +5,7 @@ description: "Complete Step-by-step Google Pixel rooting guide for 2025 Inluding
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/android-root-guides/pixel
+      href: https://awesome-android-root.org/android-root-guides/how-to-root-pixel-phone
   - - meta
     - property: og:type
       content: article
