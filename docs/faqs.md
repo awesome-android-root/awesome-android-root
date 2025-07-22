@@ -55,7 +55,7 @@ head:
 - **New to rooting?** → [What is Rooting?](#what-is-rooting)
 - **Ready to start?** → [Complete Rooting Guide](./android-root-guides/index.md)
 - **Having problems?** → [Emergency Help](#emergency-help)
-- **Need root apps?** → [Root Apps Collection](../README.md#root-apps)
+
 
 ## Table of Contents
 
