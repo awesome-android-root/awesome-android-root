@@ -17,7 +17,7 @@ head:
       content: Master Magisk with our comprehensive 2025 guide covering installation, modules, root management, and troubleshooting for Android devices.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/android-root-guides/magisk-guide/
+      content: https://awesome-android-root.org/android-root-guides/magisk-guide
   - - meta
     - property: og:image
       content: https://awesome-android-root.org/images/og.png

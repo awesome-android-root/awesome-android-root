@@ -17,7 +17,7 @@ head:
       content: Master LSPosed framework with our comprehensive 2025 guide covering installation, Xposed modules, and advanced Android customization.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/android-root-guides/lsposed-guide/
+      content: https://awesome-android-root.org/android-root-guides/lsposed-guide
   - - meta
     - property: og:image
       content: https://awesome-android-root.org/images/og.png

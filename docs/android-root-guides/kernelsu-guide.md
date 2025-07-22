@@ -35,7 +35,7 @@ head:
       content: "Ultimate KernelSU guide for 2025! Learn to install KernelSU & KernelSU Next, manage kernel-based root, modules, app profiles. Step-by-step tutorial for Android 4.4+ devices."
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/android-root-guides/kernelsu-guide/
+      content: https://awesome-android-root.org/android-root-guides/kernelsu-guide
   - - meta
     - property: og:image
       content: https://awesome-android-root.org/images/og/kernelsu-guide-2025.png
@@ -134,7 +134,7 @@ head:
           "dateModified": "2025-07-12",
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://awesome-android-root.org/android-root-guides/kernelsu-guide/"
+            "@id": "https://awesome-android-root.org/android-root-guides/kernelsu-guide"
           },
           "about": [
             {
