@@ -76,6 +76,9 @@ export default defineConfig({
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1' }],
     ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large' }],
     ['meta', { name: 'language', content: 'en-US' }],
+
+    // Ahref Verification for Search Console
+    ['meta', { name: 'ahrefs-site-verification', content: '5fd5ad82113006dedaabbb7cc47ee96924361ceedafe09795ce9abbb7d32d6ff' }],
   ],
   themeConfig: {
     logo: {
