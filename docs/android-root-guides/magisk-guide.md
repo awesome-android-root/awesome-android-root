@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Magisk Guide 2025 - Complete Installation & Setup
+title: Magisk Guide 2025
 description: "Complete step-by-step Magisk guide for 2025. Install Magisk, use modules, manage root permissions, and troubleshoot common issues."
 head:
   - - link
@@ -11,7 +11,7 @@ head:
       content: website
   - - meta
     - property: og:title
-      content: Magisk Guide 2025 - Complete Installation & Setup
+      content: Magisk Guide 2025 | Awesome Android Root
   - - meta
     - property: og:description
       content: Master Magisk with our comprehensive 2025 guide covering installation, modules, root management, and troubleshooting for Android devices.
@@ -26,7 +26,7 @@ head:
       content: summary_large_image
   - - meta
     - name: twitter:title
-      content: Magisk Guide 2025 - Complete Installation & Setup
+      content: Magisk Guide 2025 | Awesome Android Root
   - - meta
     - name: twitter:description
       content: Complete guide to Magisk installation, modules, and root management for Android devices.

@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: LSPosed Guide 2025 - Complete Installation & Module Management
+title: LSPosed Guide 2025
 description: "Complete LSPosed step-by-step guide for 2025. Install LSPosed framework, manage Xposed modules, and enhance your rooted Android."
 head:
   - - link
