@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "KernelSU Guide 2025"
-description: "Ultimate KernelSU guide for 2025! Learn to install KernelSU & KernelSU Next, manage kernel-based root, modules, app profiles. Step-by-step tutorial for Android 4.4+ devices."
+description: "Ultimate Step-by-step KernelSU guide for 2025! Install KernelSU & KernelSU Next, manage kernel-based root, modules, app profiles."
 head:
   - - link
     - rel: canonical

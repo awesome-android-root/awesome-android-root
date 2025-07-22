@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Magisk Guide 2025 - Complete Installation & Setup
-description: "Complete Magisk guide for 2025. Learn how to install Magisk, use modules, manage root permissions, and troubleshoot common issues with step-by-step instructions."
+description: "Complete step-by-step Magisk guide for 2025. Install Magisk, use modules, manage root permissions, and troubleshoot common issues."
 head:
   - - link
     - rel: canonical
