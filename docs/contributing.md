@@ -79,11 +79,12 @@ Thank you for contributing to **Awesome Android Root**. Please follow these guid
 - Use this format:
 
   ```markdown
-  - **[App Name](link-to-app)** - Brief description. `FOSS/Proprietary` `[M]` `[LSP]`
+  - **[App Name](link-to-app)** - Brief description. `FOSS/Proprietary` `[M]` `[LSP]` `[K]`
 
 - `FOSS`: Open-source apps 
 - `Proprietary`: Closed-source.
 - `[M]`: Magisk Module
+- `[K]`: KernelSU Module
 - `[LSP]`: Requires LSPosed Framework
 
 - Place apps in the appropriate **existing category.**
