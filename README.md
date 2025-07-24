@@ -10,15 +10,7 @@
 
 [🔰 **New to Root?**](#what-is-root-access) | [📱 **Root Apps**](#root-apps) | [📋 **Full Index**](#table-of-contents) | [💬 **Community**](#community--resources) | [⚡ **Quick Start Guide**](#root-guide-and-solutions)
 
-
-
 Community-curated Ultimate collection of best root apps, Magisk, KernelSU & LSPosed(Xposed) modules and how to rooting guides for Android customization, performance enhancement, debloating and system optimization.
-
-<div class="web">
-
-> For a better experience use ✨ [Web Version](https://awesome-android-root.org) ✨
-
-</div>
 
 </div>
 
@@ -126,7 +118,7 @@ Community-curated Ultimate collection of best root apps, Magisk, KernelSU & LSPo
 
 ## What is Root Access?
 
-Android rooting gives you **privileged administrative control** over your device's subsystems - essentially becoming the "administrator" of your own device.
+Android rooting gives you **privileged administrative control** over your device's subsystems - essentially becoming the "superuser" of your own device, similar to having administrator rights on a computer.
 
 ### Why Root Your Android Device?
 - 🔓 **Freedom & Control** - Remove restrictions and customize everything
@@ -136,17 +128,23 @@ Android rooting gives you **privileged administrative control** over your device
 
 ### ⚠️ Important Considerations
 
-> **Warning**: Rooting **voids your warranty** and carries risks including potential bootloops, security vulnerabilities, and inability to receive OTA updates. Always research your specific device and backup your data before proceeding.
+> **🚨 Warning**: Rooting **voids your warranty** and carries risks including potential bootloops, security vulnerabilities, and inability to receive OTA updates. Always research your specific device and backup your data before proceeding.
 
-**Essential Prerequisites:**
-- ✅ Backup all important data
-- ✅ Ensure your device is supported
-- ✅ Research device-specific instructions
-- ✅ Have necessary tools and drivers ready
+<details>
+<summary><strong>📝 Essential Prerequisites Checklist</strong></summary>
+
+- ✅ **Backup all important data** (photos, contacts, apps)
+- ✅ **Verify device compatibility** with rooting methods
+- ✅ **Research device-specific instructions** thoroughly
+- ✅ **Download necessary tools and drivers** beforehand
+- ✅ **Ensure sufficient battery charge** (70%+)
+- ✅ **Enable Developer Options** and USB Debugging
+- ✅ **Have recovery plan ready** in case something goes wrong
+
+</details>
 
 ## Root Guide and Solutions
 
-**🗺️ Complete roadmap to unlock your Android device's potential:**
 
 ### Step-by-Step Process
 
