@@ -845,6 +845,6 @@ Every star, contribution, and piece of feedback helps make this project better f
 
 <div align="center">
 
-**Made with ❤️ by [Awesome Android Root](https://github.com/awesome-android-root/awesome-android-root)**
+**⚡ Made with ❤️ by [Awesome Android Root](https://github.com/awesome-android-root/awesome-android-root)**
 
 </div>
