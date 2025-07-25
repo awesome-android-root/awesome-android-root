@@ -649,6 +649,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[Magisk Swapspace](https://github.com/chickendrop89/magisk-swapspace)** - This module allows for creating a persistent swap space on android. `FOSS` `[M]`
 - **[SwapBoost Pro](https://github.com/yadavnikhil03/SwapBoost-Pro)** - Optimizes your device's memory performance through persistent zRAM + Swapfile optimization with VM tweaks. `FOSS` `[M]`
 - **[Swap Disabler](https://github.com/rompelhd/Swap-Disabler)** - Disable swap at system startup. `FOSS` `[M]`
+- **[SkyScene Add-on](https://github.com/WeirdMidas/SkySceneAddon)** - Memory management optimization of current Android platforms. Now as a personal project. Containing optimizations for most memory management subsystems, as well as integrated intelligent memory expansion, a way to expand memory that mimics OEMs like Ram Plus. `FOSS` `[M]` `[K]`
 
 [↑ Back to top](#table-of-contents)
 
