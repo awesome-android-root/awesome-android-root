@@ -1,16 +1,18 @@
 <div align="center" class="aar-intro">
 
 # Awesome Android Root
-#### 🛡️ **The ultimate hub for Android Rooting**
+🛡️ ***The ultimate hub for Android Rooting***
+
+Community-curated Ultimate collection of best root apps, Magisk, KernelSU & LSPosed(Xposed) modules and how to rooting guides for Android customization, performance enhancement, debloating and system optimization.
+
+---
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=green)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
 [![Total Entries](https://img.shields.io/badge/Total%20Entries-300+-blue?style=for-the-badge&logo=android)](#root-apps)
 [![Support via Open Collective](https://img.shields.io/badge/Support%20via-Open%20Collective-blue?style=for-the-badge&logo=opencollective)](https://opencollective.com/awesome-android-root-official)
 
+🚀 Quick Links: [**New to Root?**](#what-is-root-access) | [**Root Apps**](#root-apps) | [**Full Index**](#table-of-contents) | [**Community**](#community--resources) | [**Quick Start Guide**](#root-guide-and-solutions)
 
-Community-curated Ultimate collection of best root apps, Magisk, KernelSU & LSPosed(Xposed) modules and how to rooting guides for Android customization, performance enhancement, debloating and system optimization.
-
-[🔰 **New to Root?**](#what-is-root-access) | [📱 **Root Apps**](#root-apps) | [📋 **Full Index**](#table-of-contents) | [💬 **Community**](#community--resources) | [⚡ **Quick Start Guide**](#root-guide-and-solutions)
 
 </div>
 
