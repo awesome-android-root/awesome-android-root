@@ -3,7 +3,7 @@
 # Awesome Android Root
 🛡️ ***The ultimate hub for Android Rooting***
 
-Community-curated Ultimate collection of best root apps, Magisk, KernelSU & LSPosed(Xposed) modules and how to rooting guides for Android customization, performance enhancement, debloating and system optimization.
+Community-curated Ultimate collection of best root apps, **Magisk**, **KernelSU** & **LSPosed(Xposed)** modules and how to **rooting guides** for Android customization, performance enhancement, debloating and system optimization.
 
 ---
 
