@@ -840,8 +840,15 @@ For comprehensive contribution instructions, including formatting standards and 
 - ✅ Improve project infrastructure & development tools
 - ✅ Grow the open-source Android rooting community
 
-### 🙏 Thank You!
-Every star, contribution, and piece of feedback helps make this project better for the entire Android rooting community.
+## 🏆 Hall of Fame
+
+Special thanks to our top contributors and supporters:
+
+<div align="center">
+
+[![Contributors](https://contrib.rocks/image?repo=awesome-android-root/awesome-android-root)](https://github.com/awesome-android-root/awesome-android-root/graphs/contributors)
+
+</div>
 
 ---
 
