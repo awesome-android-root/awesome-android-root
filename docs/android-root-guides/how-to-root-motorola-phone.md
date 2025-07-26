@@ -115,33 +115,33 @@ Go back to your terminal and copy this:
   ```
 
 # Chapter 3: Flashing Magisk
-Next you will need rooting manager in this tutorial we will be using: [Magisk (source code link)](https://github.com/topjohnwu/Magisk) 
-Install apk from here: [Magisk download](https://github.com/topjohnwu/Magisk/releases/tag/v29.0)
-Now we will install [Motorola Software fix](https://en-us.support.motorola.com/app/softwarefix). on your pc.
-Connect your phone and go to the Backup & Restore tab.
-It should start downloading firmware for your phone.
-After it is downloaded navigate to download folder with your file explorer   
-For me its: C:\ProgramData\RSA\RomFiles\[Your extracted rom fie] 
-Get your boot.img file and transfer it to your mobile phone.
-Go to magisk app and click Install then click [select and then patch the file]
-Select your boot.img file.
-Transfer new magisk patched boot.img to your pc.
-Open your terminal.
+1. Next you will need rooting manager in this tutorial we will be using: [Magisk (source code link)](https://github.com/topjohnwu/Magisk) 
+2. Install apk from here: [Magisk download](https://github.com/topjohnwu/Magisk/releases/tag/v29.0)
+3. Now we will install [Motorola Software fix](https://en-us.support.motorola.com/app/softwarefix). on your pc.
+4. Connect your phone and go to the Backup & Restore tab.
+5. It should start downloading firmware for your phone.
+6. After it is downloaded navigate to download folder with your file explorer   
+7. For me its: C:\ProgramData\RSA\RomFiles\[Your extracted rom fie] 
+8. Get your boot.img file and transfer it to your mobile phone.
+9. Go to magisk app and click Install then click [select and then patch the file]
+10. Select your boot.img file.
+11. Transfer new magisk patched boot.img to your pc.
+12. Open your terminal.
   ```
     adb reboot bootloader
   ```
-Your phone will restart to botloader.
-Now rename your new magisk batched boot img to -> **magisk_patched.img**
-And transfer it to your platform tools folder.
-Now type to your terminal:
+13. Your phone will restart to botloader.
+14. Now rename your new magisk batched boot img to -> **magisk_patched.img**
+15. And transfer it to your platform tools folder.
+16. Now type to your terminal:
   ```
     fastboot flash boot magisk_patched.img
   ```
-  When is booting done go to 
+17. When is booting done go to 
   ```
     fastboot reboot
   ```
-  And that's all your phone should be rooted. 
+18. And that's all your phone should be rooted. 
 
 
 
