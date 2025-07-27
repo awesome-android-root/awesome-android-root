@@ -361,7 +361,7 @@ Some users prefer installing recovery before rooting:
 4. **Consider custom ROMs** for faster Android updates
 
 ### Community Resources
-- **[OnePlus XDA](https://forum.xda-developers.com/c/oneplus.12004/)** - Development community
+- **[OnePlus XDA](https://xdaforums.com/c/oneplus.11993/)** - Development community
 - **[OnePlus Community](https://forums.oneplus.com/)** - Official support
 - **[r/OnePlus](https://reddit.com/r/oneplus)** - User discussions
 - **[OnePlus Telegram Groups](https://t.me/OnePlusUpdates)** - Update notifications
