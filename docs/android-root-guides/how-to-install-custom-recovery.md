@@ -65,50 +65,6 @@ head:
 - **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - Required prerequisite
 - **[📱 Custom ROM Installation](./custom-rom-installation.md)** - Next step after recovery
 - **[❓ FAQ & Troubleshooting](../faqs.md)** - Solutions for common issues
-  - - meta
-    - property: article:tag
-      content: OrangeFox
-  - - meta
-    - property: article:tag
-      content: SKYHAWK Recovery
-  - - meta
-    - property: article:tag
-      content: Recovery Installation
-  - - meta
-    - property: article:tag
-      content: Fastboot Flash
-  - - meta
-    - property: article:tag
-      content: Android Recovery
-  - - meta
-    - property: article:tag
-      content: ROM Flashing
-  - - meta
-    - property: article:tag
-      content: Android Modification
-  - - meta
-    - name: robots
-      content: index, follow
-  - - meta
-    - name: viewport
-      content: width=device-width, initial-scale=1.0
-  - - meta
-    - property: article:published_time
-      content: 2025-01-01T00:00:00Z
-  - - meta
-    - property: article:modified_time
-      content: 2025-06-25T00:00:00Z
----
-
-# Complete Custom Recovery Installation Guide
-
-**Your gateway to Android customization** - Install custom recovery to unlock rooting, custom ROMs, and advanced system management.
-
-## 🔗 Essential Resources
-- **[📖 Main Rooting Guide](./index.md)** - Universal rooting principles and safety
-- **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - Required prerequisite
-- **[📱 Custom ROM Installation](./custom-rom-installation.md)** - Next step after recovery
-- **[❓ FAQ & Troubleshooting](../faqs.md)** - Solutions for common issues
 
 ## ⚡ What is Custom Recovery?
 
@@ -120,19 +76,6 @@ Custom recovery replaces Android's stock recovery with an enhanced system that u
 - **Root Solution Management** - Install Magisk, KernelSU, APatch efficiently
 - **Advanced File Operations** - Partition management and system repair tools
 - **Enhanced ADB Access** - Powerful debugging and troubleshooting capabilities
-
-### Recovery Comparison Matrix
-
-| Recovery | Primary Strength | Interface Style | Update Frequency | Device Coverage |
-|----------|------------------|-----------------|------------------|------------------|
-| **TWRP** | Universal compatibility | Touch-based, mature | Stable releases | 95% of devices |
-| **OrangeFox** | Modern experience | Material Design | Monthly updates | Newer devices |
-| **SKYHAWK** | Performance focus | Minimal, fast | Device-specific | Select models |
-| ✅ Official OTA updates | ✅ Custom ROM and kernel installation |
-| ❌ No custom ROM support | ✅ Complete system backups (NANDroid) |
-| ❌ Limited file management | ✅ Advanced file manager with root access |
-| ❌ No root package installation | ✅ Flash Magisk, KernelSU, and custom packages |
-| ❌ Basic interface | ✅ Touch-friendly modern interface |
 
 ### Requirements Path
 1. 🔓 **[Unlock bootloader](./how-to-unlock-bootloader.md)** ← Start here
