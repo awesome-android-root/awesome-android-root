@@ -1,38 +1,20 @@
 ---
 layout: doc
-title: "KernelSU Guide 2025"
-description: "Ultimate Step-by-step KernelSU guide for 2025! Install KernelSU & KernelSU Next, manage kernel-based root, modules, app profiles."
+title: Complete KernelSU Root Guide
+description: "Master KernelSU rooting - the kernel-based root solution. Comprehensive guide covering installation, modules, and advanced kernel management."
 head:
   - - link
     - rel: canonical
       href: https://awesome-android-root.org/android-root-guides/kernelsu-guide
   - - meta
-    - name: googlebot
-      content: index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1
-  - - meta
-    - name: keywords
-      content: kernelsu guide 2025, kernelsu installation, kernelsu next, kernel root android, kernelsu modules, app profiles, gki kernel, kernel based root, android root solution, kernelsu vs magisk, kernelsu tutorial, android rooting guide, kernelsu manager, lkm mode, gki mode, kernelsu next installation
-  - - meta
-    - name: author
-      content: Awesome Android Root Project
-  - - meta
-    - name: publisher
-      content: Awesome Android Root
-  - - meta
-    - name: revisit-after
-      content: 7 days
-  - - meta
     - property: og:type
       content: article
   - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
     - property: og:title
-      content: "KernelSU Guide 2025 | Awesome Android Root"
+      content: Complete KernelSU Root Guide - Kernel-Based Android Rooting
   - - meta
     - property: og:description
-      content: "Ultimate KernelSU guide for 2025! Learn to install KernelSU & KernelSU Next, manage kernel-based root, modules, app profiles. Step-by-step tutorial for Android 4.4+ devices."
+      content: Install KernelSU root with our comprehensive guide. Kernel-based rooting solution with advanced module system and app profiles.
   - - meta
     - property: og:url
       content: https://awesome-android-root.org/android-root-guides/kernelsu-guide
@@ -40,14 +22,38 @@ head:
     - property: og:image
       content: https://awesome-android-root.org/images/og/kernelsu-guide-2025.png
   - - meta
+    - name: twitter:card
+      content: summary_large_image
+  - - meta
+    - name: twitter:title
+      content: Complete KernelSU Root Guide
+  - - meta
+    - name: twitter:description
+      content: Kernel-based Android rooting with KernelSU. Advanced module support and app profile management.
+  - - meta
+    - name: keywords
+      content: kernelsu root guide, kernel-based root, kernelsu installation, gki kernel, lkm mode, android rooting, app profiles
+  - - meta
+    - name: author
+      content: Awesome Android Root Project
+  - - meta
     - property: article:author
       content: https://github.com/awesome-android-root/awesome-android-root
   - - meta
-    - property: article:publisher
-      content: https://awesome-android-root.org
-  - - meta
     - property: article:section
-      content: Android Rooting Guides
+      content: Android Rooting
+  - - meta
+    - property: article:tag
+      content: KernelSU
+  - - meta
+    - property: article:tag
+      content: Kernel Root
+  - - meta
+    - property: article:tag
+      content: Android Rooting
+  - - meta
+    - name: robots
+      content: index, follow
   - - meta
     - property: article:published_time
       content: 2025-01-12T00:00:00Z
@@ -176,22 +182,55 @@ head:
         }
 ---
 
-# KernelSU Guide 2025
+# Complete KernelSU Root Guide
 
-**Complete KernelSU installation and management guide** - The modern kernel-based root solution offering enhanced security, better hiding capabilities, and advanced app profile management.
+**The kernel-based root solution** - Master KernelSU installation and management for enhanced security and advanced app control.
 
-## Table of Contents
-- [What is KernelSU?](#what-is-kernelsu)
-- [KernelSU Installation Modes](#kernelsu-installation-modes)
-- [KernelSU vs Magisk](#kernelsu-vs-kernelsu-next-vs-magisk)
-- [Requirements](#requirements)
-- [Installation Methods](#installation-methods)
-- [First Time Setup](#first-time-setup)
-- [KernelSU Manager](#kernelsu-manager)
-- [App Profiles](#app-profiles)
-- [Module System](#module-system)
-- [Troubleshooting](#troubleshooting)
-- [Uninstallation](#uninstallation)
+## 🔗 Essential Resources
+- **[📖 Main Rooting Guide](./index.md)** - Universal rooting principles and device preparation
+- **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - Required prerequisite
+- **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - Installation method option
+- **[❓ FAQ & Troubleshooting](../faqs.md)** - Solutions for common issues
+
+## ⚡ What is KernelSU?
+
+KernelSU represents the evolution of Android rooting, operating at the kernel level for enhanced security and sophisticated app management:
+
+### Core Innovation
+- **Kernel-Level Integration** - Direct kernel modification for enhanced security
+- **Advanced App Profiles** - Granular root permission control per application
+- **Superior Hiding** - Better detection evasion than traditional methods
+- **GKI Compatibility** - Optimized for Generic Kernel Image devices
+- **LKM Support** - Loadable Kernel Module architecture
+
+### KernelSU vs Other Root Solutions
+
+| Feature | KernelSU | KernelSU Next | Magisk |
+|---------|----------|---------------|--------|
+| **Operation Level** | Kernel-based | Kernel-based | System overlay |
+| **Security Model** | Enhanced | Community fork | Standard |
+| **App Profiles** | Advanced | Enhanced | Basic |
+| **Detection Evasion** | Superior | Superior | Good |
+| **Module System** | Growing | Enhanced | Mature |
+| **Setup Complexity** | Advanced | Advanced | Moderate |
+
+## ✅ Prerequisites & Compatibility
+
+### Essential Requirements
+- **[🔓 Unlocked Bootloader](./how-to-unlock-bootloader.md)** - Mandatory prerequisite
+- **Android 11+** - Minimum supported version (GKI 2.0+)
+- **Compatible Kernel** - GKI-based or custom kernel with KernelSU support
+- **Platform Tools** - [Download ADB/Fastboot](https://developer.android.com/studio/releases/platform-tools)
+- **Custom Recovery** - TWRP, OrangeFox, or SKYHAWK
+
+### Installation Mode Options
+1. **GKI Mode** (Recommended for newer devices)
+   - Direct GKI kernel patching
+   - Best compatibility with Android 12+
+   
+2. **LKM Mode** (Advanced users)
+   - Loadable Kernel Module approach
+   - Requires custom kernel compilation
 
 ## What is KernelSU?
 

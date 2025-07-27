@@ -1,53 +1,59 @@
 ---
 layout: doc
-title: Magisk Guide 2025
-description: "Complete step-by-step Magisk guide for 2025. Install Magisk, use modules, manage root permissions, and troubleshoot common issues."
+title: Complete Magisk Root Guide
+description: "Master Magisk rooting - the universal systemless root solution. Comprehensive installation guide with modules, management, and troubleshooting."
 head:
   - - link
     - rel: canonical
       href: https://awesome-android-root.org/android-root-guides/magisk-guide
   - - meta
     - property: og:type
-      content: website
+      content: article
   - - meta
     - property: og:title
-      content: Magisk Guide 2025 | Awesome Android Root
+      content: Complete Magisk Root Guide - Universal Android Rooting
   - - meta
     - property: og:description
-      content: Master Magisk with our comprehensive 2025 guide covering installation, modules, root management, and troubleshooting for Android devices.
+      content: Install Magisk root with our comprehensive guide. Systemless rooting solution with advanced module system and root management.
   - - meta
     - property: og:url
       content: https://awesome-android-root.org/android-root-guides/magisk-guide
   - - meta
     - property: og:image
-      content: https://awesome-android-root.org/images/og.png
+      content: https://awesome-android-root.org/images/og/magisk-guide.png
   - - meta
     - name: twitter:card
       content: summary_large_image
   - - meta
     - name: twitter:title
-      content: Magisk Guide 2025 | Awesome Android Root
+      content: Complete Magisk Root Guide
   - - meta
     - name: twitter:description
-      content: Complete guide to Magisk installation, modules, and root management for Android devices.
+      content: Universal systemless Android rooting with Magisk. Advanced module support and root management.
   - - meta
     - name: keywords
-      content: magisk guide 2025, magisk installation, magisk modules, magisk manager, systemless root, magisk zygisk, magisk hide, magisk troubleshooting, android root
+      content: magisk root guide, systemless root, magisk installation, magisk modules, android rooting, zygisk, magisk manager
   - - meta
     - name: author
       content: Awesome Android Root Project
   - - meta
     - property: article:author
-      content: https://github.com/fynks/awesome-android-root
+      content: https://github.com/awesome-android-root/awesome-android-root
   - - meta
     - property: article:section
-      content: Rooting Guides
+      content: Android Rooting
   - - meta
     - property: article:tag
       content: Magisk
   - - meta
     - property: article:tag
-      content: Android Root
+      content: Systemless Root
+  - - meta
+    - property: article:tag
+      content: Android Rooting
+  - - meta
+    - name: robots
+      content: index, follow
   - - meta
     - property: article:tag
       content: Systemless Root
@@ -59,38 +65,54 @@ head:
       content: index, follow
 ---
 
-# Magisk Guide 2025
+# Complete Magisk Root Guide
 
-**Complete Magisk installation, configuration, and usage guide** - Everything you need to know about the most popular systemless root solution for Android.
+**The universal systemless root solution** - Master Magisk installation, modules, and management for comprehensive Android customization.
 
-## Table of Contents
-- [What is Magisk?](#what-is-magisk)
-- [Features & Benefits](#features--benefits)
-- [Requirements](#requirements)
-- [Installation Methods](#installation-methods)
-- [First Time Setup](#first-time-setup)
-- [Magisk Manager](#magisk-manager)
-- [Magisk Modules](#magisk-modules)
-- [Zygisk & DenyList](#zygisk--denylist)
-- [Troubleshooting](#troubleshooting)
-- [Uninstallation](#uninstallation)
+## 🔗 Essential Resources
+- **[📖 Main Rooting Guide](./index.md)** - Universal rooting principles and device preparation
+- **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - Required prerequisite
+- **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - Installation method option
+- **[❓ FAQ & Troubleshooting](../faqs.md)** - Solutions for common issues
 
-## What is Magisk?
+## ⚡ What is Magisk?
 
-**Magisk** is a systemless root solution for Android that provides root access without modifying the system partition. Created by topjohnwu, it's the most popular and advanced rooting solution available.
+Magisk revolutionizes Android rooting with its systemless approach, providing comprehensive root access while maintaining system integrity:
 
-**Key Concept:** Instead of modifying `/system`, Magisk creates a "magic mount" that overlays changes, keeping your system partition untouched.
+### Core Innovation
+- **Systemless Architecture** - Root without modifying system partition
+- **Magic Mount Technology** - Dynamic file system overlays
+- **Universal Compatibility** - Works across Android versions and devices
+- **Reversible Changes** - Complete uninstallation capability
+- **Advanced Module System** - Extensible plugin architecture
 
-::: tip 🎯 Quick Start
-**Already have unlocked bootloader and custom recovery?** Jump to [Installation Methods](#installation-methods) to get started immediately.
-:::
+### Magisk vs Traditional Root Methods
 
-### **Why Magisk?**
-- **Systemless design** - Doesn't modify system partition
-- **Passes SafetyNet** - Works with banking apps (when properly configured)
-- **Module system** - Easy modification installation/removal
-- **OTA friendly** - Can survive system updates
-- **Active development** - Regular updates and improvements
+| Feature | Magisk | Traditional Root | KernelSU |
+|---------|--------|------------------|----------|
+| **System Modification** | None (systemless) | Direct system changes | Kernel-level |
+| **SafetyNet** | Can pass with setup | Usually fails | Variable |
+| **OTA Updates** | Survives with steps | Breaks updates | Complex |
+| **Module System** | Advanced ecosystem | Limited | Growing |
+| **Reversibility** | Complete removal | Requires reflash | Partial |
+
+## ✅ Prerequisites & Compatibility
+
+### Essential Requirements
+- **[🔓 Unlocked Bootloader](./how-to-unlock-bootloader.md)** - Mandatory prerequisite
+- **Android 5.0+** - Minimum supported version
+- **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK
+- **Platform Tools** - [Download ADB/Fastboot](https://developer.android.com/studio/releases/platform-tools)
+- **Stock Boot Image** - For direct patching method
+
+### Installation Method Options
+1. **Custom Recovery Method** (Recommended for beginners)
+   - Flash Magisk ZIP through TWRP/OrangeFox
+   - Safest and most universal approach
+   
+2. **Boot Patching Method** (Advanced users)
+   - Patch boot.img directly with Magisk app
+   - Requires stock firmware extraction
 
 ## Features & Benefits
 

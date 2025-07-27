@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: Custom ROM Installation Guide 2025
-description: "Complete step-by-step custom ROM installation guide for 2025 for installing LineageOS,CalyxOS GrapheneOS, Pixel Experience & more. "
+title: Complete Custom ROM Installation Guide
+description: "Master guide to install custom Android ROMs - LineageOS, GrapheneOS, Pixel Experience, CalyxOS. Transform your device with privacy-focused alternatives."
 head:
   - - link
     - rel: canonical
@@ -11,10 +11,10 @@ head:
       content: article
   - - meta
     - property: og:title
-      content: Complete Custom ROM Installation Guide 2025 - LineageOS, GrapheneOS & More
+      content: Complete Custom ROM Installation Guide - All Android Alternatives
   - - meta
     - property: og:description
-      content: Master custom ROM installation with our comprehensive 2025 guide. Compare Android-based OS options, install LineageOS, GrapheneOS, Pixel Experience with step-by-step instructions.
+      content: Install custom Android ROMs with our comprehensive guide covering LineageOS, GrapheneOS, Pixel Experience and privacy-focused alternatives.
   - - meta
     - property: og:url
       content: https://awesome-android-root.org/android-root-guides/custom-rom-installation
@@ -26,22 +26,22 @@ head:
       content: summary_large_image
   - - meta
     - name: twitter:title
-      content: Custom ROM Installation Guide 2025 - Android-based OS
+      content: Complete Custom ROM Installation Guide - Android Alternatives
   - - meta
     - name: twitter:description
-      content: Complete guide to install custom ROMs like LineageOS, GrapheneOS, Pixel Experience. Compare privacy & security features across Android distributions.
+      content: Install custom Android ROMs like LineageOS, GrapheneOS, Pixel Experience with step-by-step guide.
   - - meta
     - name: keywords
-      content: custom rom installation guide 2025, lineageos installation, grapheneos guide, pixel experience rom, android based operating systems, custom rom comparison, aosp distribution, android privacy roms, security focused android, degoogled android, custom android firmware
+      content: custom rom installation, lineageos installation, grapheneos guide, pixel experience rom, android alternatives, aosp distribution, degoogled android, custom android firmware
   - - meta
     - name: author
       content: Awesome Android Root Project
   - - meta
     - property: article:author
-      content: https://github.com/fynks/awesome-android-root
+      content: https://github.com/awesome-android-root/awesome-android-root
   - - meta
     - property: article:section
-      content: Rooting Guides
+      content: Android Modification
   - - meta
     - property: article:tag
       content: Custom ROM
@@ -55,135 +55,310 @@ head:
     - property: article:tag
       content: Android Privacy
   - - meta
-    - property: article:published_time
-      content: 2025-06-25
-  - - meta
-    - property: article:modified_time
-      content: 2025-06-25
-  - - meta
     - name: robots
-      content: index, follow, max-image-preview:large
+      content: index, follow
 ---
 
-# Custom ROM Installation Guide
+# Complete Custom ROM Installation Guide
 
-Complete guide to installing custom Android ROMs - Transform your device with privacy-focused, security-enhanced Android distributions.
+**Transform your Android experience** - Install privacy-focused, security-enhanced custom ROMs to revive and enhance your device.
 
-## Table of Contents
-- [Quick Start](#quick-start)
-- [What are Custom ROMs?](#what-are-custom-roms)
-- [Popular ROM Comparison](#popular-rom-comparison)
-- [Installation Steps](#installation-steps)
-- [ROM-Specific Guides](#rom-specific-guides)
-- [Finding ROMs](#finding-roms)
-- [Setup & Troubleshooting](#setup--troubleshooting)
+## 🔗 Essential Resources
+- **[📖 Main Rooting Guide](./index.md)** - Universal rooting principles and safety
+- **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - Required first step
+- **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - Installation prerequisite
+- **[❓ FAQ & Troubleshooting](../faqs.md)** - Solutions for common issues
 
-## Quick Start
+## Understanding Custom ROMs
 
-**Ready to transform your Android?** Here's your complete roadmap:
-
-1. **Unlock bootloader** → [Guide](./how-to-unlock-bootloader.md)
-2. **Install custom recovery** → [Guide](./how-to-install-custom-recovery.md)
-3. **Choose your ROM** → [Comparison](#popular-rom-comparison)
-4. **Find device support** → [ROM Database](#finding-roms)
-5. **Backup everything** → Recovery backup
-6. **Flash ROM** → [Steps](#installation-steps)
-7. **Setup & optimize** → [Post-install](#setup--troubleshooting)
-
-**Prerequisites Check:**
-✅ Bootloader unlocked  
-✅ Custom recovery installed (TWRP/OrangeFox)  
-✅ ADB/Fastboot tools ready  
-✅ Device charged 70%+  
-
-**Related Guides:**
-- [Complete Rooting Guide](./index.md) - Master rooting guide
-- [Bootloader Unlocking](./how-to-unlock-bootloader.md) - Required step
-- [Custom Recovery](./how-to-install-custom-recovery.md) - Required step
-- [FAQ & Troubleshooting](../faqs.md) - Support guide
-
-## What are Custom ROMs?
-
-**Custom ROMs** are modified versions of Android that replace your device's stock firmware. Think of them as alternative Android distributions, similar to different Linux distributions.
+**Custom ROMs** are alternative Android distributions that replace your device's stock firmware, offering enhanced privacy, performance, and customization.
 
 ### Why Choose Custom ROMs?
 
-**✅ Benefits:**
-- Extended device lifespan with continued updates
-- Enhanced privacy and security controls
-- Minimal or no bloatware
-- Deep customization options
-- Better performance and battery life
-- Optional Google services integration
+**Key Benefits:**
+- **Extended device lifespan** - Continue receiving updates after manufacturer stops
+- **Enhanced privacy controls** - Remove Google tracking and telemetry
+- **Bloatware elimination** - Clean Android experience without vendor apps
+- **Performance optimization** - Better battery life and system responsiveness
+- **Customization freedom** - Deep system modifications and theming
+- **Security improvements** - Faster security patches and hardened features
 
-**❌ Trade-offs:**
-- Warranty void (usually reversible)
-- Banking apps may require extra setup
-- Potential stability issues on newer ROMs
-- Learning curve for setup and maintenance
+### ROM Categories
 
-### Stock vs Custom ROM Comparison
+**Privacy & Security Focused:**
+- **GrapheneOS** - Maximum security for Pixel devices
+- **CalyxOS** - Privacy with app compatibility balance
+- **DivestOS** - Hardened Android with broad device support
 
-| **Stock Android** | **Custom ROMs** |
-|-------------------|-----------------|
-| Official support, guaranteed updates | Community-driven, extended support |
-| Limited customization | Extensive customization freedom |
-| Bloatware included | Clean, minimal experience |
-| Forced Google integration | Optional Google services |
-| Banking apps work seamlessly | May require root hiding |
+**General Use & Features:**
+- **LineageOS** - Most popular, widest device support
+- **Pixel Experience** - Stock Google experience on non-Pixel devices
+- **crDroid** - Feature-rich customization options
 
-**Best for:** Privacy-conscious users, developers, those wanting to revive older devices, or users seeking maximum customization control.
+**Gaming & Performance:**
+- **Project Sakura** - Gaming optimizations
+- **ArrowOS** - Performance-focused experience
+- **EvolutionX** - Balanced features and performance
 
-## Popular ROM Comparison
+## Critical Warnings
 
-### Privacy & Security Focused
+::: danger ⚠️ Custom ROM Risks
+- **Warranty void** - Installing custom ROM voids manufacturer warranty
+- **Bricking potential** - Wrong ROM can permanently damage device
+- **Banking app issues** - May require root hiding or SafetyNet bypass
+- **Learning curve** - Requires technical knowledge and troubleshooting skills
+- **Update responsibility** - Manual updates and security patch management
+:::
 
-#### GrapheneOS - Maximum Security
-- **Focus:** Hardened security for Google Pixel devices only
-- **Key Features:** Hardware-verified boot, sandboxed Google Play, enhanced permissions
-- **Best For:** Security professionals, privacy advocates
-- **Device Support:** Google Pixel devices only
+## Prerequisites & Requirements
 
-#### CalyxOS - Privacy with Usability  
-- **Focus:** Privacy-focused with better app compatibility
-- **Key Features:** microG integration, built-in firewall, F-Droid integration
-- **Best For:** Privacy users needing app compatibility
-- **Device Support:** Primarily Google Pixel devices
+### Essential Prerequisites
+1. **[Unlocked bootloader](./how-to-unlock-bootloader.md)** - Absolutely required
+2. **[Custom recovery](./how-to-install-custom-recovery.md)** - TWRP/OrangeFox installed  
+3. **Compatible ROM** - Verified support for your exact device model
+4. **Backup everything** - Complete NANDroid backup via recovery
+5. **Stock firmware** - Original ROM for emergency recovery
 
-### General Use ROMs
+### Required Tools
+- **ADB/Fastboot** - Platform tools for device communication
+- **Custom recovery** - TWRP, OrangeFox, or device-specific recovery
+- **ROM files** - Custom ROM ZIP and optional GApps package
+- **Computer** - Windows, macOS, or Linux with USB drivers
 
-#### LineageOS - Most Popular
-- **Focus:** Clean Android experience with essential features
-- **Key Features:** Widest device support (300+ devices), Privacy Guard, regular updates
-- **Best For:** General users wanting stock Android with enhancements
-- **Device Support:** Check [CustomROMBay.org](https://customrombay.org/)
+### Device Preparation
+1. **Charge to 70%+** - Prevent interruption during installation
+2. **Stable USB connection** - Quality cable and reliable computer
+3. **Backup critical data** - Photos, contacts, apps, documents
+4. **Note device info** - Model number, current firmware version
 
-#### Pixel Experience - Stock Google Feel
-- **Focus:** Authentic Google Pixel UI on non-Pixel devices
-- **Key Features:** Pixel UI, Google features, monthly updates
-- **Best For:** Users wanting genuine Pixel experience
-- **Device Support:** Popular devices with official builds
+## ROM Selection Guide
 
-### Customization-Focused
+### Decision Matrix
 
-#### crDroid - Feature-Rich
-- **Focus:** Extensive customization based on LineageOS
-- **Key Features:** Advanced customization, performance optimizations
-- **Best For:** Power users wanting maximum control
-- **Device Support:** Growing LineageOS-based support
+| **Need** | **Recommended ROM** | **Why** |
+|----------|-------------------|---------|
+| **Maximum Privacy** | GrapheneOS | Hardware security, no Google |
+| **Privacy + Apps** | CalyxOS | microG integration, app compatibility |
+| **Most Devices** | LineageOS | 300+ supported devices |
+| **Pixel Experience** | Pixel Experience | Google features on non-Pixel |
+| **Gaming** | Project Sakura | Performance optimizations |
+| **Customization** | crDroid | Extensive modification options |
 
-#### EvolutionX - Pixel + Customization
-- **Focus:** Pixel UI with additional customization options
-- **Key Features:** Pixel base with theming, performance focus
-- **Best For:** Users wanting Pixel experience with customization
-- **Device Support:** Growing list of supported devices
+### Device Compatibility Check
 
-**📊 Complete Comparison:** [Android OS Comparison Chart](https://eylenburg.github.io/android_comparison.htm) - Detailed privacy, security, and feature analysis.
+**Find Your Device:**
+1. **[CustomROMBay.org](https://customrombay.org/)** - Comprehensive ROM database
+2. **[XDA Forums](https://forum.xda-developers.com/)** - Device-specific development
+3. **ROM official websites** - Check supported device lists
 
-## Prerequisites
+**Verify Model:**
+- Settings → About Phone → Model Number
+- Must match exactly (SM-G991B ≠ SM-G991U)
+- Check regional variants and carrier differences
 
-### Essential Requirements
-✅ **[Unlocked Bootloader](./how-to-unlock-bootloader.md)** - Required for all custom ROMs  
+## Installation Process
+
+### Step 1: Create Complete Backup
+
+**Critical Safety Step:**
+1. **Boot to custom recovery** - Power + Volume combinations vary
+2. **Create NANDroid backup:**
+   - Recovery → Backup → Select all partitions
+   - Wait 10-30 minutes for completion
+   - Store backup files safely
+
+### Step 2: Download ROM Files
+
+**Essential Downloads:**
+1. **Custom ROM ZIP** - From official source for your device
+2. **GApps package** (optional) - Google services integration
+3. **Additional mods** - Kernels, themes, or specific modifications
+
+**File Verification:**
+- Check MD5/SHA checksums if provided
+- Verify file integrity before flashing
+- Ensure files match your device exactly
+
+### Step 3: Prepare Device
+
+**Pre-installation Steps:**
+1. **Transfer files** to device storage or SD card
+2. **Boot to recovery** mode
+3. **Verify recovery functionality** - Test touch/navigation
+
+### Step 4: Wipe System
+
+::: warning ⚠️ Data Loss Warning
+This process erases all user data. Ensure backup is complete!
+:::
+
+**Wipe Procedure:**
+1. **Factory Reset** - Wipe → Factory Reset (standard wipe)
+2. **Advanced Wipe** (clean install):
+   - Select: System, Data, Dalvik/ART Cache
+   - Optional: Internal Storage (complete fresh start)
+
+### Step 5: Flash Custom ROM
+
+**Installation Sequence:**
+1. **Flash ROM ZIP:**
+   - Install → Select ROM file → Swipe to confirm
+   - Wait 5-15 minutes for completion
+
+2. **Flash GApps** (immediately after ROM):
+   - Install → Select GApps package → Swipe to confirm
+   - Must flash before first boot
+
+3. **Flash additional mods** (if needed):
+   - Custom kernels, root solutions, or modifications
+
+### Step 6: First Boot & Setup
+
+**Initial Boot:**
+1. **Reboot system** - First boot takes 10-20 minutes
+2. **Don't interrupt** - Allow complete initialization
+3. **Setup wizard** - Configure accounts and preferences
+
+## ROM-Specific Installation
+
+### GrapheneOS (Pixel Only)
+
+**Web Installer Method:**
+1. **Visit [GrapheneOS Install](https://grapheneos.org/install/web)**
+2. **Use Chrome/Chromium** with WebUSB support
+3. **Follow web installer** - Automated process
+4. **No recovery needed** - Direct fastboot flashing
+
+**Benefits:** Maximum security, regular updates, sandboxed Google Play
+
+### LineageOS (Most Devices)
+
+**Standard Recovery Method:**
+1. **Download from [LineageOS](https://download.lineageos.org/)**
+2. **Flash via TWRP/OrangeFox**
+3. **Add GApps** if Google services desired
+4. **Configure Privacy Guard** during setup
+
+**Benefits:** Widest device support, stable releases, Privacy Guard
+
+### Pixel Experience (Popular Devices)
+
+**Installation Options:**
+- **Pixel Experience Plus** - Includes Google apps
+- **Pixel Experience** - Clean AOSP base
+- **Flash via recovery** - Standard installation process
+
+**Benefits:** Authentic Pixel UI, monthly updates, Google integration
+
+## Post-Installation Setup
+
+### Essential Configuration
+
+**First Boot Setup:**
+1. **Complete Android setup** - Skip Google account initially
+2. **Check all functions** - WiFi, cellular, sensors, cameras
+3. **Install essential apps** - F-Droid, Aurora Store, browsers
+
+**Privacy Optimization:**
+1. **Disable telemetry** - Turn off analytics and data sharing
+2. **Configure DNS** - Use privacy-focused DNS providers
+3. **Install privacy apps** - VPN, ad blockers, secure messaging
+
+### App Installation
+
+**App Store Alternatives:**
+- **F-Droid** - Open-source apps repository
+- **Aurora Store** - Google Play without account
+- **APKMirror** - Trusted APK downloads
+- **Direct APKs** - From developer websites
+
+**Banking App Compatibility:**
+1. **Install Magisk** - For root hiding if needed
+2. **Configure SafetyNet** - Use Universal SafetyNet Fix
+3. **Test banking apps** - Some may work without modification
+
+## Troubleshooting Guide
+
+### Common Installation Issues
+
+#### ROM Won't Boot (Bootloop)
+**Symptoms:** Stuck on boot animation or bootloop
+**Solutions:**
+1. **Flash stock recovery** and factory reset
+2. **Wipe Dalvik/ART cache** in recovery
+3. **Flash different GApps** package
+4. **Restore from backup** if all else fails
+
+#### Missing Features
+**Symptoms:** Camera, sensors, or hardware not working
+**Solutions:**
+1. **Flash vendor/firmware** package if available
+2. **Use ROM-specific fixes** from developer
+3. **Check XDA forums** for device-specific solutions
+
+#### Performance Issues
+**Symptoms:** Lag, crashes, or poor battery life
+**Solutions:**
+1. **Clean flash** - Complete wipe and reinstall
+2. **Different kernel** - Flash performance-optimized kernel
+3. **Reduce animations** - Developer options tweaks
+
+### Recovery Solutions
+
+#### Emergency Recovery
+**If device won't boot:**
+1. **Boot to fastboot** - Hardware key combination
+2. **Flash stock boot.img** via fastboot
+3. **Use manufacturer tools** - Odin (Samsung), Mi Flash (Xiaomi)
+4. **Complete stock restore** if necessary
+
+#### Backup Restoration
+**Restore previous state:**
+1. **Boot to custom recovery**
+2. **Restore NANDroid backup**
+3. **Select appropriate partitions**
+4. **Wait for restoration completion**
+
+## Staying Updated
+
+### Update Strategies
+
+**Manual Updates:**
+1. **Monitor ROM releases** - Check official sources regularly
+2. **Download new builds** - Usually monthly or weekly
+3. **Dirty flash** - Flash new ROM over existing (keeps data)
+4. **Clean flash** - Complete wipe for major updates
+
+**OTA Updates:**
+- **LineageOS** - Built-in updater for official builds
+- **Pixel Experience** - OTA support for supported devices
+- **Custom builds** - Usually require manual flashing
+
+### Community Resources
+
+**Development Communities:**
+- **[XDA Developers](https://forum.xda-developers.com/)** - Device-specific forums
+- **[Reddit ROM Communities](https://reddit.com/r/LineageOS)** - User discussions
+- **[Telegram Groups](https://t.me/s/pixelexperience)** - Real-time support
+- **[GitHub Issues](https://github.com/LineageOS)** - Bug reports and development
+
+**Official Resources:**
+- **ROM websites** - Official downloads and documentation
+- **Device trees** - Source code for device support
+- **Changelogs** - Track new features and fixes
+
+---
+
+::: tip 💡 Custom ROM Success Tips
+**Best Practices:**
+- Always backup before making changes
+- Use official ROM builds when possible
+- Join device-specific communities for support
+- Keep stock firmware handy for recovery
+- Start with stable releases before trying experimental builds
+:::
+
+**Need more help?** Visit our **[FAQ section](../faqs.md)** or check the **[main rooting guide](./index.md)** for additional troubleshooting and techniques.  
 ✅ **[Custom Recovery](./how-to-install-custom-recovery.md)** - TWRP or similar installed  
 ✅ **ADB/Fastboot Tools** - Platform tools for device communication  
 ✅ **70%+ Battery** - Prevent interruptions during installation  

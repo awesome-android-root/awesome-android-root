@@ -1,53 +1,59 @@
 ---
 layout: doc
-title: LSPosed Guide 2025
-description: "Complete LSPosed step-by-step guide for 2025. Install LSPosed framework, manage Xposed modules, and enhance your rooted Android."
+title: Complete LSPosed Framework Guide
+description: "Master LSPosed framework - the modern Xposed implementation. Comprehensive installation guide with module management and customization."
 head:
   - - link
     - rel: canonical
       href: https://awesome-android-root.org/android-root-guides/lsposed-guide
   - - meta
     - property: og:type
-      content: website
+      content: article
   - - meta
     - property: og:title
-      content: LSPosed Guide 2025 - Complete Installation & Module Management
+      content: Complete LSPosed Framework Guide - Modern Xposed Implementation
   - - meta
     - property: og:description
-      content: Master LSPosed framework with our comprehensive 2025 guide covering installation, Xposed modules, and advanced Android customization.
+      content: Install LSPosed framework with our comprehensive guide. Modern Xposed implementation with Zygisk integration and advanced module management.
   - - meta
     - property: og:url
       content: https://awesome-android-root.org/android-root-guides/lsposed-guide
   - - meta
     - property: og:image
-      content: https://awesome-android-root.org/images/og.png
+      content: https://awesome-android-root.org/images/og/lsposed-guide.png
   - - meta
     - name: twitter:card
       content: summary_large_image
   - - meta
     - name: twitter:title
-      content: LSPosed Guide 2025 - Complete Installation & Module Management
+      content: Complete LSPosed Framework Guide
   - - meta
     - name: twitter:description
-      content: Complete guide to LSPosed framework installation, Xposed modules, and advanced Android customization.
+      content: Modern Xposed framework implementation with LSPosed. Advanced Android customization and module management.
   - - meta
     - name: keywords
-      content: lsposed guide 2025, lsposed installation, xposed modules, lsposed framework, android customization, zygisk modules, xposed framework, lsposed manager
+      content: lsposed guide, xposed framework, zygisk modules, lsposed installation, android customization, xposed modules
   - - meta
     - name: author
       content: Awesome Android Root Project
   - - meta
     - property: article:author
-      content: https://github.com/fynks/awesome-android-root
+      content: https://github.com/awesome-android-root/awesome-android-root
   - - meta
     - property: article:section
-      content: Rooting Guides
+      content: Android Customization
   - - meta
     - property: article:tag
       content: LSPosed
   - - meta
     - property: article:tag
       content: Xposed Framework
+  - - meta
+    - property: article:tag
+      content: Android Customization
+  - - meta
+    - name: robots
+      content: index, follow
   - - meta
     - property: article:tag
       content: Android Customization
@@ -59,38 +65,62 @@ head:
       content: index, follow
 ---
 
-# LSPosed Guide 2025
+# Complete LSPosed Framework Guide
 
-**Complete LSPosed framework installation and management guide** - The modern successor to the original Xposed framework for advanced Android customization and app modifications.
+**The modern Xposed implementation** - Master LSPosed framework for advanced Android customization and app modifications.
 
-## Table of Contents
-- [What is LSPosed?](#what-is-lsposed)
-- [LSPosed vs Original Xposed](#lsposed-vs-original-xposed)
-- [Requirements](#requirements)
-- [Installation Guide](#installation-guide)
-- [First Time Setup](#first-time-setup)
-- [LSPosed Manager](#lsposed-manager)
-- [Installing Modules](#installing-modules)
-- [Popular Modules](#popular-modules)
-- [Module Development](#module-development)
-- [Troubleshooting](#troubleshooting)
-- [Uninstallation](#uninstallation)
+## 🔗 Essential Resources
+- **[📖 Main Rooting Guide](./index.md)** - Universal rooting principles and device preparation
+- **[⚡ Magisk Guide](./magisk-guide.md)** - Required root solution with Zygisk
+- **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - Installation method option
+- **[❓ FAQ & Troubleshooting](../faqs.md)** - Solutions for common issues
 
-## What is LSPosed?
+## ⚡ What is LSPosed?
 
-**LSPosed** is a modern implementation of the Xposed framework that provides ART hooking capabilities for Android devices. It allows developers to create modules that can modify app behavior and system functionality without modifying APK files.
+LSPosed revolutionizes Android customization as the modern successor to the original Xposed framework, providing powerful app modification capabilities:
 
-**Key Innovation:** LSPosed leverages Zygisk (Zygote + Magisk) to provide consistent APIs with the original Xposed while being more stable and compatible with modern Android versions.
+### Core Innovation
+- **ART Hooking Technology** - Direct Android Runtime method interception
+- **Zygisk Integration** - Seamless operation within Magisk ecosystem
+- **Modern Architecture** - Optimized for Android 8.0+ with enhanced stability
+- **Scope Management** - Granular control over module application per app
+- **Active Development** - Continuously updated with latest Android support
 
-::: tip 🚀 Quick Start
-**Already have Magisk with Zygisk?** Jump to [Installation Guide](#installation-guide) to get LSPosed running in minutes.
+### LSPosed vs Traditional Xposed
+
+| Feature | LSPosed | Original Xposed | EdXposed |
+|---------|---------|-----------------|----------|
+| **Android Support** | 8.0+ (active) | 5.0-10 (discontinued) | 8.0-11 (deprecated) |
+| **Installation Method** | Zygisk module | System integration | Magisk module |
+| **Stability** | High | Variable | Moderate |
+| **Module Compatibility** | Modern APIs | Legacy support | Mixed |
+| **Performance Impact** | Minimal | Moderate | Variable |
+
+## ✅ Prerequisites & Requirements
+
+### Essential Requirements
+- **[⚡ Magisk Root](./magisk-guide.md)** - Latest version with Zygisk enabled
+- **Android 8.0+** - Minimum supported version
+- **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - For installation (optional)
+- **Developer Knowledge** - Understanding of app modification concepts
+
+### Critical Configuration
+::: warning ⚠️ MAGISK ZYGISK REQUIRED
+**LSPosed requires Zygisk enabled in Magisk settings!**
+- Open Magisk Manager
+- Settings → Enable Zygisk
+- Reboot device before installing LSPosed
 :::
 
-### **Core Concepts**
-- **ART Hooking** - Intercept and modify method calls in Android Runtime
-- **Zygisk Integration** - Works seamlessly with Magisk's Zygisk feature
-- **Module System** - Install modifications as separate modules
-- **Scope Management** - Control which apps each module affects
+### Compatibility Check
+1. **Verify Magisk Version**
+   - Magisk 24.0+ recommended
+   - Zygisk functionality confirmed
+   
+2. **System Requirements**
+   - ARM64 or ARM32 architecture
+   - Android 8.0+ (API level 26+)
+   - Root access via Magisk
 
 
 ### 🎯 **Why Choose LSPosed?**
