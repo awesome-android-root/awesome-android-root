@@ -364,6 +364,53 @@ Choose your starting point and begin your Android freedom journey today!
 </div>
 
 <style>
+/* Enhanced VitePress styling for better visual consistency */
+
+.root-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.device-support-grid {
+  margin: 24px 0;
+}
+
+.device-support-grid table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.device-support-grid th,
+.device-support-grid td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--vp-c-divider-light);
+}
+
+.device-support-grid th {
+  background: var(--vp-c-bg-soft);
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  margin: 32px 0;
+}
+
+.resources-grid h3 {
+  color: var(--vp-c-brand-1);
+  margin-bottom: 16px;
+  border-bottom: 2px solid var(--vp-c-brand-soft);
+  padding-bottom: 8px;
+}
 
 .impact-stats {
   background: linear-gradient(135deg, var(--vp-c-brand-softer) 0%, var(--vp-c-bg-soft) 100%);
@@ -505,6 +552,15 @@ h3 + p + ul li:hover {
 
 /* Responsive improvements */
 @media (max-width: 768px) {
+  .root-methods-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .resources-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
   
   .mission-actions {
     grid-template-columns: 1fr;
