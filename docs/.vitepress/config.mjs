@@ -123,15 +123,12 @@ export default defineConfig({
         link: '/android-root-apps/',
         activeMatch: '^/android-root-apps/'
       },
-      { 
-        text: 'Rooting Guides', 
-        link: '/android-root-guides/',
-        activeMatch: '^/android-root-guides/'
-      },
-      { 
-        text: 'General Guides', 
-        link: '/guides/',
-        activeMatch: '^/guides/'
+      {
+        text: 'Guides',
+        items: [
+          { text: 'Rooting Guides', link: '/android-root-guides/', activeMatch: '^/android-root-guides/' },
+          { text: 'General Guides', link: '/guides/', activeMatch: '^/guides/' }
+        ]
       },
       { 
         text: 'FAQ', 
