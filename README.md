@@ -174,7 +174,7 @@ Android rooting gives you **privileged administrative control** over your device
 
 ## Root Apps
 
-### ✨ Featured Apps: The Essentials
+### Featured Apps: The Essentials
 
 If you've just rooted your device, start with these must-have applications. They form the foundation of a great root experience.
 
