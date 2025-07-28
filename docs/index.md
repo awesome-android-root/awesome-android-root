@@ -340,9 +340,3 @@ Choose your path based on your experience level:
 - **Keep security updated** when possible with latest patches
 - **Understand the risks** before proceeding with any modifications
 :::
-
-
-
-::: tip 🚀 Ready to Unlock Your Android's Full Potential?
-Choose your starting point and begin your Android freedom journey today!
-:::
