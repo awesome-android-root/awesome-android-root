@@ -273,10 +273,47 @@ export default defineConfig({
       // General Guides Sidebar
       '/guides/': [
         {
-          text: '📖 General Guides',
+          text: '📖 General Android Guides',
           collapsed: false,
           items: [
-            { text: '🛑 Stop Auto Updates', link: '/guides/stop-android-app-auto-updates-play-store' }
+            { text: '🏠 Guides Overview', link: '/guides/' },
+            { text: '🛑 Stop App Auto Updates', link: '/guides/stop-android-app-auto-updates-play-store' }
+          ]
+        },
+        {
+          text: '📱 App Management',
+          collapsed: true,
+          items: [
+            { text: '🛑 Stop Auto Updates', link: '/guides/stop-android-app-auto-updates-play-store' },
+            { text: '📦 Batch App Management', link: '/guides/#app-management-guides' },
+            { text: '🔄 App Backup Guide', link: '/guides/#app-management-guides' }
+          ]
+        },
+        {
+          text: '🔒 Privacy & Security',
+          collapsed: true,
+          items: [
+            { text: '🛡️ Privacy Setup', link: '/guides/#privacy--security-guides' },
+            { text: '📍 Location Privacy', link: '/guides/#privacy--security-guides' },
+            { text: '🔐 Permission Audit', link: '/guides/#privacy--security-guides' }
+          ]
+        },
+        {
+          text: '⚡ Performance & Optimization',
+          collapsed: true,
+          items: [
+            { text: '🔋 Battery Optimization', link: '/guides/#performance--optimization' },
+            { text: '🚀 Speed Up Android', link: '/guides/#performance--optimization' },
+            { text: '🗂️ Storage Management', link: '/guides/#performance--optimization' }
+          ]
+        },
+        {
+          text: '🛠️ Troubleshooting',
+          collapsed: true,
+          items: [
+            { text: '🔧 Common Issues', link: '/guides/#troubleshooting--maintenance' },
+            { text: '📱 Boot Problems', link: '/guides/#troubleshooting--maintenance' },
+            { text: '🌐 Network Issues', link: '/guides/#troubleshooting--maintenance' }
           ]
         }
       ],
@@ -333,7 +370,8 @@ export default defineConfig({
             { text: '❓ FAQ & Troubleshooting', link: '/faqs' },
             { text: '📋 About Project', link: '/about' },
             { text: '🤝 Contributing', link: '/contributing' },
-            { text: '💝 Support Project', link: '#support-this-project' }
+            { text: '💝 Support Project', link: '#support-this-project' },
+            { text: '💡 General Android Tips', link: '/guides/' }
           ]
         }
       ]
