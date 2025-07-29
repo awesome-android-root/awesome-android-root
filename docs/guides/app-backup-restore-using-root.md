@@ -20,7 +20,7 @@ head:
       content: https://awesome-android-root.org/guides/app-backup-restore-using-root
   - - meta
     - property: og:image
-      content: https://awesome-android-root.org/images/og.png
+      content: https://awesome-android-root.org/images/og/app-backup.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -32,7 +32,7 @@ head:
       content: Complete step-by-step tutorial for rooted devices for app backup & restore using App Manager with app data, settings, permissions, and configurations.
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.org/images/og.png
+      content: https://awesome-android-root.org/images/og/app-backup.png
   - - meta
     - property: article:author
       content: https://github.com/awesome-android-root

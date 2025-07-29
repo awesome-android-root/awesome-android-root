@@ -26,10 +26,10 @@ head:
       content: https://awesome-android-root.org/guides/stop-android-app-auto-updates-play-store
   - - meta
     - property: og:image
-      content: https://awesome-android-root.org/images/og/szygisk-detach.png
+      content: https://awesome-android-root.org/images/og/zygisk-detach.png
   - - meta
     - property: og:image:secure_url
-      content: https://awesome-android-root.org/images/og/szygisk-detach.png
+      content: https://awesome-android-root.org/images/og/zygisk-detach.png
   - - meta
     - property: og:image:alt
       content: How to Stop Android App Auto Updates from Play Store - Zygisk Detach Guide 2025
