@@ -310,7 +310,10 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 ##### Grindr
 - **[Grindr Plus](https://github.com/R0rt1z2/GrindrPlus)** - Unlocks and adds unique features to the Grindr app, enhancing user experience. `FOSS` `[LSP]` 
-  
+
+##### Reddit
+- **[Reddidn’t](https://modules.lsposed.org/module/com.wizpizz.reddidnt/)** - Dynamically finds methods within the Reddit app responsible for displaying ads and blocks them. `Proprietary` `[LSP]`
+
 ##### Instagram
 - **[⭐ InstaEclipse](https://github.com/ReSo7200/InstaEclipse/)** - Adds Features like Developer Options, Ghost Mode, Ad-Free browsing, and Distraction-Free Mode to Instagram. `FOSS` `[LSP]`
 
