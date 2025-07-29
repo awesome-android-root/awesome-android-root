@@ -320,7 +320,6 @@ After hiding root, you can check whether hiding works via root detection apps, s
 ##### Line
 - **[LineXtra](https://github.com/yagiyuu/LineXtra)** - Removes Ads and Tabs from the LINE. `FOSS` `[LSP]`
 
-
 ##### QQ
 - **[NewQStory](https://github.com/Xposed-Modules-Repo/lin.xposed/)** - Xposed QQ module. `Proprietary` `[LSP]`
 - **[QAuxiliary](https://github.com/cinit/QAuxiliary)** - Xposed module based on QNotified. `FOSS` `[LSP]`
@@ -337,6 +336,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 ##### WeChat
 - **[MaskWechat](https://github.com/Mingyueyixi/MaskWechat)** - A WeChat Xposed module that can hide the chat records of specific users to prevent private chats from being peeked by third parties. `FOSS` `[LSP]`
+- **[NewMiko](https://modules.lsposed.org/module/im.mingxi.miko/)** - Various tweaks related to  WeChat app.
 - **[WeChat Auxiliary](https://github.com/HdShare/WAuxiliary_Public)** - Various tweaks for WeChat. `Proprietary` `[LSP]`
 - **[X](https://github.com/Xposed-Modules-Repo/cn.android.x)** - Add extra features to WeChat. `Proprietary` `[LSP]`
 
