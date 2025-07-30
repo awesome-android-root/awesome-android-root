@@ -726,6 +726,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 ---
 
 ### Terminal & Shell Environments
+- **[aShell You](https://github.com/DP-Hridayan/aShellYou)** - Android shell utility app with Material Design 3 UI, letting you run ADB, root and shell commands. `FOSS`
 - **[LADB](https://github.com/tytydraco/LADB)** - Local ADB shell. `FOSS` - [Free Build](https://github.com/hyperio546/ladb-builds)
 - **[Termux](https://github.com/termux/termux-app)** - A terminal emulator application for Android OS extendible by variety of packages. `FOSS`
 - **[TermuxRootMods](https://github.com/rompelhd/TermuxRootMods)** - A Magisk module that enhances the Termux experience for rooted devices. `FOSS` `[M]`
