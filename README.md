@@ -11,7 +11,7 @@ Community-curated Ultimate collection of best root apps, **Magisk**, **KernelSU*
 [![Total Entries](https://img.shields.io/badge/Total%20Entries-330+-blue?style=for-the-badge&logo=android)](#root-apps)
 [![Support via Open Collective](https://img.shields.io/badge/Support%20via-Open%20Collective-blue?style=for-the-badge&logo=opencollective)](https://opencollective.com/awesome-android-root-official)
 
-🚀 Quick Links: [**New to Root?**](#what-is-root-access) | [**Root Apps**](#root-apps) | [**Full Index**](#table-of-contents) | [**Community**](#community--resources) | [**Quick Start Guide**](#root-guide-and-solutions)
+🚀 Quick Links: [**New to Root?**](#what-is-root-access) | [**Root Apps**](#root-apps) | [**Android Guides**](#essential-android-guides) | [**Full Index**](#table-of-contents) | [**Community**](#community--resources) | 
 
 
 </div>
@@ -23,6 +23,8 @@ Community-curated Ultimate collection of best root apps, **Magisk**, **KernelSU*
 ### 📚 Getting Started
 - [What is Root Access?](#what-is-root-access)
 - [Root Guide and Solutions](#root-guide-and-solutions)
+  - [Device-Specific Root Guides](#device-specific-root-guides)
+- [Essential Android Guides](#essential-android-guides)
 - [Glossary](#glossary)
 
 ### 📱 Root Apps
@@ -109,8 +111,10 @@ Community-curated Ultimate collection of best root apps, **Magisk**, **KernelSU*
 - [Screen and Display](#screen-and-display)
 
 ### 📖 Resources & Help
+- [Essential Android Guides](#essential-android-guides)
 - [Important Notes](#important-notes)
 - [FAQ & Troubleshooting](#faqs)
+- [About This Project](./docs/about.md)
 - [Community & Resources](#community--resources)
 - [Contributing](#contributing)
 - [Stats](#stats)
@@ -157,9 +161,18 @@ Android rooting gives you **privileged administrative control** over your device
 3. **[⚡ Root Your Device](./docs/android-root-guides/index.md#root-methods-comparison)** - Choose your method:
    - **[Magisk](./docs/android-root-guides/magisk-guide.md)** - Most popular, systemless root with modules
    - **[KernelSU](./docs/android-root-guides/kernelsu-guide.md)** - Kernel-level root solution
-   - **APatch** - Alternative root method
+   - **[APatch](./docs/android-root-guides/apatch-guide.md)** - Alternative root method
 
 4. **[🌟 Install Custom ROM](./docs/android-root-guides/custom-rom-installation.md)** _(Optional)_ - Transform your Android experience
+
+### Device-Specific Root Guides
+Choose your device for tailored rooting instructions:
+- **[📱 Google Pixel](./docs/android-root-guides/how-to-root-pixel-phone.md)** - Comprehensive Pixel rooting guide
+- **[📱 Samsung Galaxy](./docs/android-root-guides/how-to-root-samsung-phone.md)** - Navigate Samsung's Knox security
+- **[📱 Xiaomi/MIUI](./docs/android-root-guides/how-to-root-xiaomi-phone.md)** - Handle MIUI-specific challenges
+- **[📱 OnePlus](./docs/android-root-guides/how-to-root-oneplus-phone.md)** - OxygenOS rooting walkthrough
+- **[📱 Nothing Phone](./docs/android-root-guides/how-to-root-nothing-phone.md)** - Root the transparent revolution
+- **[📱 Motorola](./docs/android-root-guides/how-to-root-motorola-phone.md)** - Motorola-specific root methods
 
 **[📖 Read the Complete Rooting Master Guide →](./docs/android-root-guides/index.md)**
 
@@ -189,9 +202,29 @@ If you've just rooted your device, start with these must-have applications. They
 
 [↑ Back to top](#table-of-contents)
 
+---
+
+## Essential Android Guides
+
+Beyond rooting, master these essential Android techniques for better device management and optimization:
+
+### 🚫 Privacy & Security Guides
+- **[Android Ad Blocking Guide](./docs/guides/android-adblocking.md)** - Complete guide to blocking ads across your Android device
+- **[Android App Debloating](./docs/guides/android-apps-debloating.md)** - Remove bloatware and optimize your device performance
+- **[Stop Auto-Updates in Play Store](./docs/guides/stop-android-app-auto-updates-play-store.md)** - Take control of app updates
+
+### 💾 Data Management Guides  
+- **[App Backup & Restore Using Root](./docs/guides/app-backup-restore-using-root.md)** - Comprehensive backup solutions for rooted devices
+
+**[📖 View All General Android Guides →](./docs/guides/index.md)**
+
+> 💡 **New to Android Rooting?** Start with our [complete rooting guide](./docs/android-root-guides/index.md) before exploring the apps below.
+
 -----
 
 ### Ad Blocking
+> 📚 **Related Guide**: [Complete Android Ad Blocking Tutorial](./docs/guides/android-adblocking.md)
+
 - **[⭐ AdAway](https://adaway.org/)** - Open-source ad blocker using hosts file. `FOSS`
 - **[AdClose](https://github.com/Xposed-Modules-Repo/com.close.hook.ads/)** - Prevents the initial loading of the advertising SDK within the application and intercepts application advertising requests to block ads. `Proprietary` `[LSP]`
 - **[AdGuard](https://adguard.com/en/adguard-android/overview.html)** - Comprehensive ad blocking solution. `Proprietary`
@@ -354,6 +387,8 @@ If you've just rooted your device, start with these must-have applications. They
 ---
 
 ### Backup and Restore
+> 📚 **Related Guide**: [App Backup & Restore Using Root](./docs/guides/app-backup-restore-using-root.md)
+
 - **[DataBackup](https://github.com/XayahSuSuSu/Android-DataBackup)** - DataBackup for Android 7.0+. `FOSS`
 - **[DiskDigger](https://play.google.com/store/apps/details?id=com.defianttech.diskdigger)** - A powerful data recovery tool for Android devices. `Proprietary`
 - **[Dumpster: Photo/Video Recovery](https://play.google.com/store/apps/details?id=com.baloota.dumpster)** - You can recover deleted videos, restore photos, undelete recently deleted apps, and other files. `Proprietary`
@@ -483,6 +518,8 @@ If you've just rooted your device, start with these must-have applications. They
 ---
 
 ### Debloating
+> 📚 **Related Guide**: [Android Apps Debloating Guide](./docs/guides/android-apps-debloating.md)
+
 - **[⭐ Canta](https://github.com/samolego/Canta)** -  Uninstall any app without root using Shizuku (Needs [Shizuku](https://shizuku.rikka.app/) to be installed and running). `FOSS`
 - **[De-Bloater](https://github.com/sunilpaulmathew/De-Bloater)** - An application using the power of Magisk to debloat unwanted system apps!. `FOSS`
 - **[EXA System App Remover](https://play.google.com/store/apps/details?id=exa.free.saux)** - Remove Bloatware, clear memory and speed up your phone now by uninstalling unused system apps. `Proprietary`
@@ -771,11 +808,16 @@ After hiding root, you can check whether hiding works via root detection apps, s
 ### Key Considerations:
 
 *   🚨 **System Modification Risks:** These apps can modify core system files, potentially causing boot loops, crashes, or other malfunctions.
-*   💾 **Data Loss Potential:** Mistakes or incompatible modifications can result in the loss of your personal data. *Always back up your device before using root apps.*
+*   💾 **Data Loss Potential:** Mistakes or incompatible modifications can result in the loss of your personal data. *Always back up your device before using root apps.* → [📖 Backup Guide](./docs/guides/app-backup-restore-using-root.md)
 *   🔒 **Security Implications:** Granting root access can increase your device's vulnerability to malware and other security threats.
 *   ℹ️ **Community-Sourced Information:** This list is a collection of community suggestions. We do not guarantee the safety, functionality, or suitability of every app.
 *   👤 **User Responsibility:** You are solely responsible for any consequences resulting from the use of these applications. Use them at your own risk.
 *   💡 **Recommendation:** Thoroughly research any root app before installation and understand its purpose and potential side effects.
+
+**Essential Reading Before You Start:**
+- 📚 [Complete Android Rooting Guide](./docs/android-root-guides/index.md) - Master the fundamentals
+- ❓ [FAQ & Troubleshooting](./docs/faqs.md) - Common issues and solutions
+- 🤝 [Contributing Guidelines](./docs/contributing.md) - Help improve this resource
 
 [↑ Back to top](#table-of-contents)
 
