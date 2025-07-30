@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: Complete Magisk Root Guide
-description: "Master Magisk rooting - the universal systemless root solution. Comprehensive installation guide with modules, management, and troubleshooting."
+title: Complete Magisk Root Guide 2025 - Universal Android Rooting
+description: "Master Magisk rooting with our comprehensive guide. Install systemless root, modules, and advanced root management for all Android devices safely."
 head:
   - - link
     - rel: canonical
@@ -11,10 +11,10 @@ head:
       content: article
   - - meta
     - property: og:title
-      content: Complete Magisk Root Guide - Universal Android Rooting
+      content: Complete Magisk Root Guide 2025 - Universal Android Rooting Solution
   - - meta
     - property: og:description
-      content: Install Magisk root with our comprehensive guide. Systemless rooting solution with advanced module system and root management.
+      content: Install Magisk root with our comprehensive guide. Master systemless rooting with advanced module system, root hiding, and complete device management.
   - - meta
     - property: og:url
       content: https://awesome-android-root.org/android-root-guides/magisk-guide
@@ -26,13 +26,13 @@ head:
       content: summary_large_image
   - - meta
     - name: twitter:title
-      content: Complete Magisk Root Guide
+      content: Complete Magisk Root Guide 2025 - Universal Systemless Root
   - - meta
     - name: twitter:description
-      content: Universal systemless Android rooting with Magisk. Advanced module support and root management.
+      content: Master Magisk installation with systemless rooting, module support, and advanced root management for all Android devices.
   - - meta
     - name: keywords
-      content: magisk root guide, systemless root, magisk installation, magisk modules, android rooting, zygisk, magisk manager
+      content: magisk root guide 2025, systemless root installation, magisk modules, android rooting, zygisk magisk, magisk manager, root hiding, play integrity fix, magisk delta, magisk boot image patching, magisk installation tutorial, android root 2025, magisk denylist, magisk shamiko
   - - meta
     - name: author
       content: Awesome Android Root Project
@@ -41,503 +41,589 @@ head:
       content: https://github.com/awesome-android-root/awesome-android-root
   - - meta
     - property: article:section
-      content: Android Rooting
+      content: Android Rooting Solutions
   - - meta
     - property: article:tag
-      content: Magisk
-  - - meta
-    - property: article:tag
-      content: Systemless Root
-  - - meta
-    - property: article:tag
-      content: Android Rooting
-  - - meta
-    - name: robots
-      content: index, follow
+      content: Magisk Root 2025
   - - meta
     - property: article:tag
       content: Systemless Root
+  - - meta
+    - property: article:tag
+      content: Android Rooting
   - - meta
     - property: article:tag
       content: Magisk Modules
   - - meta
+    - property: article:tag
+      content: Root Management
+  - - meta
+    - property: article:tag
+      content: Play Integrity Fix
+  - - meta
+    - property: article:published_time
+      content: 2024-01-20T09:00:00Z
+  - - meta
+    - property: article:modified_time
+      content: 2025-01-30T14:00:00Z
+  - - meta
     - name: robots
-      content: index, follow
+      content: index, follow, max-image-preview:large
+  - - script
+    - type: application/ld+json
+    - |
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Complete Magisk Root Installation Guide",
+        "description": "Step-by-step guide to install Magisk systemless root on Android devices",
+        "totalTime": "PT45M",
+        "estimatedCost": {
+          "@type": "MonetaryAmount",
+          "currency": "USD", 
+          "value": "0"
+        },
+        "tool": [
+          {"@type": "HowToTool", "name": "Android Device with Unlocked Bootloader"},
+          {"@type": "HowToTool", "name": "Computer with ADB/Fastboot"},
+          {"@type": "HowToTool", "name": "Magisk APK"},
+          {"@type": "HowToTool", "name": "Stock Boot Image"}
+        ],
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Download Required Files",
+            "text": "Download latest Magisk APK and extract boot.img from device firmware"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Patch Boot Image",
+            "text": "Use Magisk app to patch the stock boot image creating magisk_patched.img"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Flash Patched Boot",
+            "text": "Use fastboot to flash the patched boot image to device"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Install Magisk Manager",
+            "text": "Install Magisk app for root management and module installation"
+          }
+        ]
+      }
 ---
 
-# Complete Magisk Root Guide
+# Complete Magisk Root Guide 2025
 
-**The universal systemless root solution** - Master Magisk installation, modules, and management for comprehensive Android customization.
+**The universal systemless root solution** - Master Magisk installation, modules, and management for comprehensive Android customization without system modifications.
 
-## 🔗 Essential Resources
-- **[📖 Main Rooting Guide](./index.md)** - Universal rooting principles and device preparation
-- **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - Required prerequisite
-- **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - Installation method option
-- **[❓ FAQ & Troubleshooting](../faqs.md)** - Solutions for common issues
+::: tip 🔗 Essential Navigation
+**Prerequisites:** [Bootloader Unlocked](./how-to-unlock-bootloader.md) | **Main Guide:** [Android Rooting Master Guide](./index.md) | **Alternatives:** [KernelSU Guide](./kernelsu-guide.md) | **Support:** [FAQ & Troubleshooting](../faqs.md)
+:::
 
-## ⚡ What is Magisk?
+## Table of Contents
 
-Magisk revolutionizes Android rooting with its systemless approach, providing comprehensive root access while maintaining system integrity:
+### 🚀 Getting Started
+- [What is Magisk?](#what-is-magisk)
+- [Why Choose Magisk?](#why-choose-magisk)
+- [Prerequisites & Compatibility](#prerequisites--compatibility)
 
-### Core Innovation
-- **Systemless Architecture** - Root without modifying system partition
-- **Magic Mount Technology** - Dynamic file system overlays
-- **Universal Compatibility** - Works across Android versions and devices
-- **Reversible Changes** - Complete uninstallation capability
-- **Advanced Module System** - Extensible plugin architecture
+### ⚙️ Installation Process
+- [Method 1: Boot Image Patching](#method-1-boot-image-patching-recommended)
+- [Method 2: Custom Recovery Installation](#method-2-custom-recovery-installation)
+- [Method 3: Direct Installation](#method-3-direct-installation-advanced)
+
+### 🔧 Configuration & Management
+- [Post-Installation Setup](#post-installation-setup)
+- [Root Hiding & Banking Apps](#root-hiding--banking-apps)
+- [Module Management](#magisk-modules-ecosystem)
+
+### 🛠️ Advanced Topics
+- [Updates & Maintenance](#updates--maintenance)
+- [Troubleshooting Guide](#troubleshooting-guide)
+
+---
+
+## What is Magisk?
+
+Magisk revolutionizes Android rooting with its groundbreaking systemless approach, providing comprehensive root access while maintaining system integrity and compatibility.
+
+### Core Innovation: Systemless Architecture
+
+Unlike traditional root methods that modify system files directly, Magisk uses innovative techniques:
+
+- **Magic Mount Technology** - Creates virtual file system overlays
+- **Boot Image Patching** - Modifies only the boot partition, leaving system untouched
+- **Dynamic Loading** - Loads modifications at runtime without permanent changes
+- **Complete Reversibility** - Can be completely uninstalled with no traces
 
 ### Magisk vs Traditional Root Methods
 
-| Feature | Magisk | Traditional Root | KernelSU |
-|---------|--------|------------------|----------|
-| **System Modification** | None (systemless) | Direct system changes | Kernel-level |
-| **SafetyNet** | Can pass with setup | Usually fails | Variable |
-| **OTA Updates** | Survives with steps | Breaks updates | Complex |
-| **Module System** | Advanced ecosystem | Limited | Growing |
-| **Reversibility** | Complete removal | Requires reflash | Partial |
-
-## ✅ Prerequisites & Compatibility
-
-### Essential Requirements
-- **[🔓 Unlocked Bootloader](./how-to-unlock-bootloader.md)** - Mandatory prerequisite
-- **Android 5.0+** - Minimum supported version
-- **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK
-- **Platform Tools** - [Download ADB/Fastboot](https://developer.android.com/studio/releases/platform-tools)
-- **Stock Boot Image** - For direct patching method
-
-### Installation Method Options
-1. **Custom Recovery Method** (Recommended for beginners)
-   - Flash Magisk ZIP through TWRP/OrangeFox
-   - Safest and most universal approach
-   
-2. **Boot Patching Method** (Advanced users)
-   - Patch boot.img directly with Magisk app
-   - Requires stock firmware extraction
-
-## Features & Benefits
-
-### 🔥 **Core Features**
-- **MagiskSU** - Full root access for applications
-- **Magisk Modules** - Systemless modifications via OverlayFS
-- **MagiskBoot** - Complete tool for boot image manipulation
-- **Zygisk** - Run code in every Android app's process
-- **DenyList** - Hide root from specific apps
-
-## Requirements
-
-### 📋 **Essential Prerequisites**
-- ✅ **Unlocked bootloader** - [Bootloader unlock guide](./how-to-unlock-bootloader.md)
-- ✅ **Custom recovery** (TWRP recommended) - [Recovery installation guide](./how-to-install-custom-recovery.md)
-- ✅ **Stock boot.img** - Original boot image for your firmware
-- ✅ **Computer with ADB/Fastboot** - [Platform Tools](https://developer.android.com/studio/releases/platform-tools)
-- ✅ **40%+ battery** - Sufficient power for installation
-
-### 💾 **Required Downloads**
-- **[Magisk APK](https://github.com/topjohnwu/Magisk/releases/latest)** (Latest: v29.0)
-- **Stock firmware** for your device (for boot.img extraction)
-- **Custom recovery** compatible with your device
-
-::: warning ⚠️ Important
-Always download Magisk from the **official GitHub repository only**. Fake versions may contain malware or cause bootloops.
-:::
-
-## Installation Methods
-
-### Method 1: Custom Recovery Installation (Recommended)
-
-**Best for:** First-time users, most reliable method
-
-#### **Step 1: Prepare Files**
-```bash
-# Download latest Magisk APK
-# Rename .apk to .zip (e.g., Magisk-v29.0.apk → Magisk-v29.0.zip)
-```
-
-#### **Step 2: Flash via Recovery**
-1. **Boot to recovery** - Power + Volume Down/Up (device dependent)
-2. **Backup current ROM** - Always create nandroid backup first
-3. **Flash Magisk**:
-   - Select "Install" or "Install ZIP"
-   - Navigate to renamed Magisk ZIP file
-   - Swipe to confirm flash
-4. **Reboot system** - Do not install TWRP app if prompted
-
-#### **Step 3: Install Magisk Manager**
-1. **Install APK** - Install the original Magisk APK file
-2. **Grant permissions** - Allow all requested permissions
-3. **Verify installation** - Check if root access is working
-
-### Method 2: Boot Image Patching (Advanced)
-
-**Best for:** Devices without custom recovery, A/B partition devices
-
-#### **Step 1: Extract Boot Image**
-```bash
-# From stock firmware ZIP
-unzip firmware.zip boot.img
-
-# Or from device (requires root)
-adb shell
-su
-dd if=/dev/block/bootdevice/by-name/boot of=/sdcard/boot.img
-```
-
-#### **Step 2: Patch Boot Image**
-1. **Install Magisk APK** on your device
-2. **Open Magisk Manager** 
-3. **Tap "Install"** → "Select and Patch a File"
-4. **Select boot.img** you extracted
-5. **Wait for patching** - Creates magisk_patched_[random].img
-6. **Copy patched image** to computer
-
-#### **Step 3: Flash Patched Boot**
-```bash
-# Boot to fastboot mode
-adb reboot bootloader
-
-# Flash patched boot image
-fastboot flash boot magisk_patched_[random].img
-
-# Reboot device
-fastboot reboot
-```
-
-### Method 3: Direct Installation (Magisk Already Installed)
-
-**For updating Magisk or switching installation methods**
-
-1. **Open Magisk Manager**
-2. **Tap "Install"** next to Magisk
-3. **Choose method:**
-   - "Direct Install" - Updates existing installation
-   - "Install to Inactive Slot" - For A/B devices
-4. **Reboot when prompted**
-
-## First Time Setup
-
-### 🎯 **Initial Configuration**
-
-#### **1. Verify Installation**
-```bash
-# Check via ADB
-adb shell
-su
-# Should show root shell (#)
-```
-
-#### **2. Configure Magisk Manager**
-- **Update channel:** Stable (recommended) or Beta
-- **Auto-update:** Enable for security updates
-- **Restart system:** After major updates
-
-#### **3. Basic Settings**
-- **Multiuser mode:** Disable (unless needed)
-- **Mount namespace mode:** Global (default)
-- **Automatic response:** Grant (for trusted apps)
-
-### 🔐 **Root Permission Management**
-
-#### **Grant Root Access**
-1. **App requests root** - Popup appears
-2. **Review request** - Check app legitimacy
-3. **Choose duration:**
-   - Forever (trusted apps)
-   - Session only (testing)
-   - Deny (suspicious apps)
-
-#### **Root Access Logs**
-- **Access history** - See which apps used root
-- **Detailed logs** - Commands executed by root apps
-- **Security monitoring** - Detect unauthorized access
-
-## Magisk Manager
-
-### 🏠 **Main Interface**
-
-#### **Status Section**
-- **Magisk version** - Currently installed version
-- **SafetyNet status** - Pass/Fail for banking apps
-- **Device info** - Android version, security patch
-
-#### **Quick Actions**
-- **Install** - Update or install Magisk
-- **Modules** - Manage installed modules
-- **Superuser** - Root permission management
-- **Logs** - Debug and error information
-
-### ⚙️ **Settings Configuration**
-
-#### **Update Settings**
-- **Update channel:** Stable vs Beta releases
-- **Auto-update:** Automatic security updates
-- **Download via:** WiFi only vs Mobile data
-
-#### **Magisk Core Settings**
-- **Zygisk:** Enable for advanced module features
-- **Enforce DenyList:** Hide root from specified apps
-- **Systemless hosts:** Enable system-wide ad blocking
-
-#### **App Settings**
-- **Hide Magisk app:** Rename to avoid detection
-- **Biometric authentication:** Secure manager access
-- **Language:** Interface localization
-
-## Magisk Modules
-
-### 📦 **What are Modules?**
-
-Magisk modules are systemless modifications that add features or modify system behavior without touching the actual system partition.
-
-#### **Module Structure**
-```
-module_root/
-├── META-INF/
-│   └── com/google/android/
-│       ├── update-binary
-│       └── updater-script
-├── module.prop          # Module metadata
-├── service.sh          # Boot service script
-├── post-fs-data.sh     # Early boot script
-└── system/             # System modifications
-```
-
-### 🔥 **Popular Modules**
-
-#### **Performance & Battery**
-- **[Universal GMS Doze](https://github.com/gloeyisk/universal-gms-doze)** - Optimize Google Play Services
-- **[Extreme Battery Saver](https://github.com/Magisk-Modules-Alt-Repo/Xtreme-Battery-Saver)** - Aggressive power saving
-
-#### **Privacy & Security**
-- **[Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Detach apps from Play Store
-- **[Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)** - Advanced root hiding
-
-::: tip 
-Visit our [Root Apps and Modules Section](../android-root-apps/index.md) for more than 290+ apps and modules
-:::
-
-### 📥 **Installing Modules**
-
-#### **Method 1: Magisk Manager Repository**
-1. **Open Magisk Manager**
-2. **Tap "Modules"** tab
-3. **Browse available modules**
-4. **Tap module** → "Install"
-5. **Reboot** when installation completes
-
-#### **Method 2: Manual ZIP Installation**
-1. **Download module ZIP** from trusted source
-2. **Open Magisk Manager** → "Modules"
-3. **Tap "Install from storage"**
-4. **Select ZIP file**
-5. **Reboot** to activate
-
-#### **Method 3: Recovery Installation**
-1. **Boot to custom recovery**
-2. **Flash module ZIP** like any other ZIP
-3. **Reboot system**
-
-### 🛠️ **Module Management**
-
-#### **Enable/Disable Modules**
-- **Toggle switch** - Enable/disable without removing
-- **Remove button** - Completely uninstall module
-- **Update check** - Keep modules current
-
-#### **Module Troubleshooting**
-```bash
-# Disable all modules (emergency)
-adb shell touch /data/adb/modules/.disable_all
-
-# Remove specific module
-adb shell rm -rf /data/adb/modules/module_name
-
-# Safe mode boot
-# Boot without any modules loaded
-```
-
-## Zygisk & DenyList
-
-### 🔍 **Zygisk Explained**
-
-**Zygisk** (Zygote + Magisk) allows Magisk to run code in every Android application's process, enabling advanced features like root hiding and app hooking.
-
-#### **Key Features**
-- **Process injection** - Run code in app contexts
-- **Root hiding** - Make root invisible to specific apps
-- **Module enhancement** - Advanced module capabilities
-- **Improved compatibility** - Better app support
-
-### 🛡️ **DenyList Configuration**
-
-DenyList hides root access from apps that shouldn't detect it (banking apps, games, streaming services).
-
-#### **Enable DenyList**
-1. **Open Magisk Manager**
-2. **Settings** → "Zygisk" → **Enable**
-3. **Settings** → "Enforce DenyList" → **Enable**
-4. **Reboot device**
-
-#### **Configure DenyList**
-1. **Magisk Manager** → "DenyList"
-2. **Find target app** (e.g., banking app)
-3. **Enable checkbox** for the app
-4. **Select processes** to hide root from
-5. **Test app** - Should no longer detect root
-
-#### **Advanced DenyList**
-```bash
-# Command line DenyList management
-magisk --denylist add com.app.package
-magisk --denylist rm com.app.package
-magisk --denylist ls
-```
-
-### 📱 **Common Apps for DenyList**
-- **Banking:** Chase, Bank of America, Wells Fargo
-- **Payment:** Google Pay, Samsung Pay, PayPal
-- **Streaming:** Netflix, Disney+, Hulu
-- **Games:** Pokémon GO, Call of Duty Mobile
-- **Work:** Microsoft Intune, enterprise apps
-
-## Troubleshooting
-
-### 🚨 **Common Issues**
-
-#### **Installation Failed**
-**Symptoms:** Magisk won't install or bootloop after installation
-```bash
-# Solutions:
-1. Verify bootloader is unlocked
-2. Use correct boot.img for your firmware
-3. Try different installation method
-4. Check recovery compatibility
-```
-
-#### **Root Not Working**
-**Symptoms:** Apps can't get root access
-```bash
-# Fixes:
-1. Reinstall Magisk Manager APK
-2. Check Superuser settings
-3. Clear Magisk Manager data
-4. Reflash Magisk ZIP
-```
-
-#### **SafetyNet Failing**
-**Symptoms:** Banking apps detect root
-```bash
-# Solutions:
-1. Enable Zygisk + DenyList
-2. Install Universal SafetyNet Fix module
-3. Hide Magisk Manager (rename app)
-4. Add banking apps to DenyList
-```
-
-#### **Modules Not Working**
-**Symptoms:** Installed modules have no effect
-```bash
-# Troubleshooting:
-1. Ensure Zygisk is enabled (if module requires it)
-2. Check module compatibility with Android version
-3. Verify module installation in /data/adb/modules/
-4. Reboot after module installation
-```
-
-### 🔧 **Emergency Recovery**
-
-#### **Boot Loop Fix**
-```bash
-# Method 1: Disable modules
-adb shell touch /data/adb/modules/.disable_all
-adb reboot
-
-# Method 2: Remove problematic module
-adb shell rm -rf /data/adb/modules/problem_module
-
-# Method 3: Magisk Safe Mode
-# Hold Volume Up during boot (device dependent)
-```
-
-#### **Complete Magisk Removal**
-```bash
-# Via recovery (if accessible)
-1. Flash Magisk uninstaller ZIP
-2. Or restore clean boot.img backup
-
-# Via fastboot (last resort)
-fastboot flash boot stock_boot.img
-fastboot reboot
-```
-
-### 📊 **Debug Information**
-
-#### **Collect Logs**
-1. **Magisk Manager** → "Logs"
-2. **Save logs** before reporting issues
-3. **Include device info** and steps to reproduce
-
-#### **Useful Commands**
-```bash
-# Check Magisk status
-magisk --version
-
-# List modules
-ls /data/adb/modules/
-
-# Check SELinux status
-getenforce
-
-# Verify mount points
-mount | grep magisk
-```
-
-## Uninstallation
-
-### 🗑️ **Complete Removal**
-
-#### **Method 1: Magisk Manager**
-1. **Open Magisk Manager**
-2. **Tap "Uninstall"** → "Complete Uninstall"
-3. **Confirm removal**
-4. **Reboot device**
-
-#### **Method 2: Recovery Method**
-1. **Download Magisk uninstaller** from GitHub releases
-2. **Boot to recovery**
-3. **Flash uninstaller ZIP**
-4. **Reboot system**
-
-#### **Method 3: Fastboot Method**
-```bash
-# Flash original boot image
-fastboot flash boot stock_boot.img
-fastboot reboot
-```
-
-### 🧹 **Clean Removal**
-```bash
-# Remove all traces
-adb shell rm -rf /data/adb/magisk*
-adb shell rm -rf /data/adb/modules
-adb shell rm -rf /data/magisk*
-```
-
-::: tip 💡 Pro Tips
-- Always backup your working setup before making changes
-- Test modules one at a time to identify problems
-- Keep stock firmware files for emergency recovery
-- Join Magisk community forums for help and updates
-- Regularly update Magisk for security and compatibility
-:::
-
-## Next Steps
-
-🎯 **Continue Your Android Journey:**
-- **[LSPosed Guide](./lsposed-guide.md)** - Advanced Xposed framework
-- **[KernelSU Guide](./kernelsu-guide.md)** - Alternative kernel-based root
-- **[Custom ROM Installation](./custom-rom-installation.md)** - Transform your Android experience
-- **[Root Apps Collection](../android-root-apps/)** - Best apps for rooted devices
+| Feature | **Magisk** | **Traditional Root** | **KernelSU** |
+|---------|------------|---------------------|--------------|
+| **System Modification** | ❌ None (systemless) | ✅ Direct system changes | ⚠️ Kernel-level only |
+| **OTA Compatibility** | ✅ Survives with steps | ❌ Breaks updates | ⚠️ Complex restoration |
+| **Banking App Support** | ✅ Excellent with setup | ❌ Usually detected | ✅ Good hiding |
+| **Module Ecosystem** | ✅ 1000+ modules | ❌ Limited | ⚠️ Growing ecosystem |
+| **Reversibility** | ✅ Complete removal | ❌ Requires reflashing | ⚠️ Partial uninstall |
+| **Difficulty** | 🟢 Beginner-friendly | 🔴 Advanced | 🟡 Intermediate |
+| **Community Support** | ✅ Massive community | ⚠️ Fragmented | ⚠️ Smaller community |
 
 ---
 
-**Need help?** Join our community discussions or check the [FAQ section](../faqs.md) for common questions and solutions.
+## Why Choose Magisk?
+
+### Perfect for Beginners & Experts
+- **Straightforward installation** - Clear step-by-step process
+- **Comprehensive documentation** - Extensive community guides
+- **Active development** - Regular updates and improvements
+- **Universal compatibility** - Works across Android 6.0-15
+
+### Massive Module Ecosystem
+- **1000+ available modules** - From performance to privacy enhancements
+- **Easy installation** - One-click module installation
+- **Automatic updates** - Modules update independently
+- **Community-driven** - Constant innovation and new features
+
+### Maintenance-Friendly
+- **Easy uninstallation** - Complete removal possible
+
+---
+
+## Prerequisites & Compatibility
+
+### Essential Requirements
+
+**Device Prerequisites:**
+- ✅ **Unlocked bootloader** - [Complete unlock guide](./how-to-unlock-bootloader.md)
+- ✅ **Android 6.0+** (API level 23+) - Magisk supports wide version range
+- ✅ **50%+ battery** - Prevents interruption during installation
+- ✅ **Custom recovery** (recommended) - TWRP, OrangeFox, or equivalent
+
+**Computer Requirements:**
+- ✅ **ADB/Fastboot tools** - [Download Platform Tools](https://developer.android.com/studio/releases/platform-tools)
+- ✅ **USB drivers** - Device-specific drivers installed
+- ✅ **Stock firmware** - For boot image extraction
+- ✅ **Backup solution** - Complete device backup created
+
+### 📱 Device Compatibility Matrix
+
+| Android Version | Magisk Support | Notes |
+|-----------------|----------------|-------|
+| **Android 15** | ✅ Full support | Latest Magisk v3o+ |
+| **Android 14** | ✅ Full support | Stable with all features |
+| **Android 13** | ✅ Full support | Excellent compatibility |
+| **Android 12** | ✅ Full support | May need specific setup |
+| **Android 11** | ✅ Full support | Widely tested |
+| **Android 10** | ✅ Full support | Mature support |
+| **Android 9** | ✅ Full support | Legacy but functional |
+| **Android 8.x** | ✅ Limited support | Basic functionality |
+| **Android 7.x** | ⚠️ Legacy support | Use older Magisk versions |
+| **Android 6.x** | ⚠️ Minimal support | Limited features |
+
+---
+
+## Method 1: Boot Image Patching (Recommended)
+
+**Recommended for:** Most users, first-time rooters, devices without custom recovery
+
+This is the safest and most compatible method for Magisk installation.
+
+### Phase 1: Preparation & Downloads
+
+**Step 1: Download Required Files**
+1. **Latest Magisk APK:**
+   - Visit [Magisk GitHub Releases](https://github.com/topjohnwu/Magisk/releases)
+   - Download `Magisk-v30.x.apk` (latest version)
+   - Rename to `Magisk.apk` for easier handling
+
+2. **Stock Boot Image:**
+   - Download firmware for your exact device model
+   - Extract `boot.img` from firmware package
+   - Ensure it matches your current Android version
+
+3. **Platform Tools:**
+   - Download [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools)
+   - Extract to easily accessible folder
+   - Add to system PATH (optional but helpful)
+
+**Step 2: Verify Prerequisites**
+```bash
+# Test ADB connection
+adb devices
+
+# Test Fastboot connection (in bootloader mode)
+fastboot devices
+
+# Check current slot (A/B devices)
+fastboot getvar current-slot
+```
+
+### Phase 2: Boot Image Patching
+
+**Step 3: Install Magisk App**
+1. **Enable Unknown Sources** - Settings → Security → Unknown Sources
+2. **Install Magisk APK** - Navigate to downloaded file and install
+3. **Open Magisk App** - Should show "N/A" for Magisk and app versions
+4. **Grant permissions** - Allow file access when prompted
+
+**Step 4: Patch Boot Image**
+1. **Transfer boot.img** to device internal storage
+2. **Open Magisk app** → **Install** button
+3. **Select "Select and Patch a File"**
+4. **Navigate and select** your `boot.img` file
+5. **Wait for patching** - Process takes 1-2 minutes
+6. **Note output location** - Usually `/storage/emulated/0/Download/magisk_patched_[random].img`
+
+**Step 5: Transfer Patched Image**
+1. **Connect device to computer**
+2. **Copy patched image** from Downloads folder to computer
+3. **Rename for clarity** - `magisk_patched_boot.img`
+
+### Phase 3: Installation via Fastboot
+
+**Step 6: Flash Patched Boot Image**
+1. **Boot to bootloader:**
+   - Power off device completely
+   - Hold **Power + Volume Down** (varies by device)
+   - Connect USB cable to computer
+
+2. **Verify fastboot connection:**
+   ```bash
+   fastboot devices
+   ```
+
+3. **Flash patched boot image:**
+   ```bash
+   # For A-only devices
+   fastboot flash boot magisk_patched_boot.img
+   
+   # For A/B devices (check current slot first)
+   fastboot flash boot_a magisk_patched_boot.img
+   fastboot flash boot_b magisk_patched_boot.img
+   ```
+
+4. **Reboot device:**
+   ```bash
+   fastboot reboot
+   ```
+
+**Step 7: Verification**
+1. **Device boots normally** - May take longer on first boot
+2. **Open Magisk app** - Should show installed version
+3. **Check root status** - Both app and Magisk versions should be displayed
+4. **Test root access** - Install [Root Checker](https://play.google.com/store/apps/details?id=com.joeykrim.rootcheck) app
+
+---
+
+## Method 2: Custom Recovery Installation
+
+**Recommended for:** Users with TWRP/custom recovery, multiple device modifications
+
+### Phase 1: Recovery Preparation
+
+**Step 1: Install Custom Recovery**
+- Follow our [Custom Recovery Guide](./how-to-install-custom-recovery.md)
+- Ensure recovery is working properly
+- Create NANDroid backup before proceeding
+
+**Step 2: Download Magisk**
+1. **Download Magisk ZIP:**
+   - Visit [Magisk GitHub](https://github.com/topjohnwu/Magisk/releases)
+   - Download `Magisk-v27.x.zip` file
+   - Transfer to device storage or SD card
+
+### Phase 2: Recovery Installation
+
+**Step 3: Flash via Recovery**
+1. **Boot to recovery mode:**
+   - Power off device
+   - Hold **Power + Volume Up** (varies by device)
+
+2. **In TWRP/Recovery:**
+   - **Wipe** → **Advanced Wipe** → **Dalvik/ART Cache**
+   - **Install** → Navigate to Magisk ZIP
+   - **Swipe to confirm flash**
+   - **Reboot System** when prompted
+
+**Step 4: Post-Installation**
+1. **Install Magisk APK** on first boot
+2. **Verify installation** - Check app for version info
+3. **Grant superuser requests** as needed
+
+---
+
+## Method 3: Direct Installation (Advanced)
+
+**Recommended for:** Experienced users, already rooted devices, special circumstances
+
+### Scenario A: Already Rooted Device
+If you have existing root (different method):
+
+```bash
+# Download Magisk APK and install
+# Open Magisk app
+# Choose "Direct Install" → "Install"
+# Follow app prompts
+```
+
+### Scenario B: Temporary Boot Method
+For devices supporting temporary boot:
+
+```bash
+# Extract boot.img from device
+adb shell su -c "dd if=/dev/block/bootdevice/by-name/boot of=/sdcard/boot.img"
+
+# Patch with Magisk app (as in Method 1)
+# Boot temporarily with patched image
+fastboot boot magisk_patched_boot.img
+
+# Install directly from running system
+# Open Magisk app → Install → Direct Install
+```
+
+---
+
+## Post-Installation Setup
+
+### Essential First Steps
+
+**1. Verify Root Access**
+- **Open Magisk app** - Check for version numbers
+- **Test with root app** - Install Root Checker or similar
+- **Grant superuser** - Allow root requests from trusted apps
+
+**2. Configure Basic Settings**
+- **Magisk Settings:**
+  - Enable **Zygisk** (recommended)
+
+**3. Create System Backup**
+- **NANDroid backup** via custom recovery
+
+### Security Hardening
+
+**Superuser Access Control:**
+- **Review granted apps regularly**
+- **Deny unnecessary requests**
+- **Use fingerprint/PIN protection**
+- **Enable logging** for audit trail
+
+**Module Safety:**
+- **Only install trusted modules**
+- **Read module descriptions thoroughly**
+- **Test one module at a time**
+- **Keep modules updated**
+
+---
+
+## Root Hiding & Banking Apps
+
+### Banking App Compatibility Strategy
+
+**Phase 1: Enable Root Hiding**
+1. **Enable Zygisk** - Magisk Settings → Zygisk (toggle on)
+2. **Configure DenyList:**
+   - Magisk → Settings → Configure DenyList
+   - Enable DenyList feature
+   - Add problematic apps to list
+
+**Phase 2: Advanced Hiding Modules**
+Essential modules for maximum compatibility:
+
+**Shamiko (Root Hiding Enhancement)**
+```
+Download: GitHub - LSPosed/LSPosed
+Installation: Flash via Magisk Modules
+Purpose: Advanced root detection bypass
+```
+
+### Testing Your Setup
+
+**Recommended Test Apps:**
+- **YASNAC** - SafetyNet status checker
+- **Play Integrity API Checker** - Modern integrity testing
+- **Root Checker** - Verify root status
+- **Device Info HW** - System information
+
+---
+
+## Magisk Modules Ecosystem
+
+### Essential Modules for New Users
+> Check out our [300+ Root Apps and magisk module collection](../android-root-apps/#root-apps)
+
+### Module Installation Process
+1. **Open Magisk** → **Modules** tab
+2. **Install from storage** - Select module ZIP file
+3. **Reboot device** - Most modules require restart
+4. **Verify functionality** - Test module features
+
+
+### Module Safety Guidelines
+
+**Before Installing:**
+- **Research module thoroughly** - Read descriptions and reviews
+- **Check compatibility** - Verify Android version support
+- **Create backup** - Full system backup before major changes
+- **Test environment preparation** - Ensure recovery access
+
+**After Installing:**
+- **Monitor system stability** - Watch for crashes or issues
+- **Test affected functionality** - Verify features work properly
+- **Document changes** - Note what was installed and when
+- **Be prepared to remove** - Know how to disable problematic modules
+
+---
+
+## Updates & Maintenance
+
+### Magisk Updates
+
+**Automatic Updates:**
+- **Enable in settings** - Magisk → Settings → Update Channel
+- **Choose update channel:**
+  - **Stable** - Recommended for daily drivers
+  - **Beta** - Latest features with potential issues
+  - **Custom** - Specify custom update URL
+
+**Manual Update Process:**
+1. **Download latest APK** from GitHub releases
+2. **Install over existing** app (don't uninstall first)
+3. **Open updated app** → **Install** → **Direct Install**
+4. **Reboot device** when prompted
+5. **Verify update** - Check version numbers
+
+### Maintenance Best Practices
+
+**Regular Tasks:**
+- **Review granted root access** - Monthly security audit
+- **Update modules** - Keep modules current
+- **Clean module residues** - Remove unused module files
+- **Monitor system logs** - Check for root-related errors
+
+**Troubleshooting Preparation:**
+- **Maintain current backups** - Weekly full system backup
+- **Document module installations** - Keep installation log
+- **Test restore procedures** - Practice recovery scenarios
+- **Keep stock firmware** - Always have restore option available
+
+---
+
+## Troubleshooting Guide
+
+### Installation Issues
+
+**Magisk App Shows "N/A"**
+- **Boot image not patched** - Repeat patching process
+- **Wrong boot image** - Verify firmware version match
+- **Fastboot flash failed** - Check command syntax and file paths
+- **A/B slot confusion** - Flash to correct slot
+
+**Device Bootloop After Install**
+1. **Boot to recovery** - Access custom recovery
+2. **Remove Magisk** - Flash original boot.img
+3. **Alternative method** - Try different installation method
+4. **Seek help** - Post on forums with device details
+
+**Root Access Denied**
+- **Check Superuser settings** - Ensure app is granted access
+- **Zygisk conflicts** - Disable if causing issues
+- **Module interference** - Disable modules temporarily
+- **Reinstall Magisk** - Complete fresh installation
+
+### Banking App Issues
+
+**Apps Detect Root Despite Hiding**
+1. **Clear app data** - Remove cached detection flags
+2. **Update modules** - Install latest hiding modules
+3. **Check DenyList** - Ensure app is properly added
+4. **Module conflicts** - Disable unnecessary modules
+
+**Play Integrity Fails**
+1. **Install Play Integrity Fix** - Latest version
+2. **Obtain valid keybox** - Required for some devices
+3. **Clear Google Play data** - Reset Play services
+4. **Test different modules** - Try alternative solutions
+
+### Module Problems
+
+**Module Causes Bootloop**
+1. **Boot to recovery** - Access TWRP/custom recovery
+2. **Remove module** - Delete from `/data/adb/modules/`
+3. **Safe mode boot** - Volume up during boot (some devices)
+4. **Reflash Magisk** - Complete reinstallation
+
+**Modules Not Working**
+- **Check compatibility** - Verify Android version support
+- **Review dependencies** - Install required components
+- **Module conflicts** - Disable conflicting modules
+- **Check logs** - Review Magisk logs for errors
+
+### Advanced Recovery
+
+**Complete Magisk Removal**
+1. **Magisk app method:**
+   - Open Magisk → **Uninstall** → **Restore Images**
+   - Reboot device
+
+2. **Manual removal:**
+   ```bash
+   # Flash original boot image
+   fastboot flash boot original_boot.img
+   
+   # Remove Magisk files
+   adb shell rm -rf /data/adb/magisk*
+   ```
+
+**Emergency Restore**
+1. **Boot recovery** - Custom recovery access
+2. **Flash stock firmware** - Complete system restoration
+3. **Factory reset** - Clean slate approach
+4. **Restore from backup** - If available
+
+---
+
+## Community & Resources
+
+### Official Channels
+- **[Magisk GitHub](https://github.com/topjohnwu/Magisk)** - Official source code and releases
+- **[XDA Magisk Forum](https://forum.xda-developers.com/t/magisk-the-magic-mask-for-android.3473445/)** - Community discussions
+- **[Magisk Documentation](https://topjohnwu.github.io/Magisk/)** - Official documentation
+
+### Learning Resources
+- **[Magisk Module Template](https://github.com/topjohnwu/magisk-module-template)** - Create custom modules
+- **[Module Repository](https://github.com/Magisk-Modules-Repo)** - Community modules
+- **[Advanced Guides](https://www.xda-developers.com/)** - In-depth tutorials
+
+### Getting Help
+**When seeking help, provide:**
+- Device model and Android version
+- Magisk version installed
+- Installation method used
+- Exact error messages
+- Logs from Magisk app
+
+**Best places for support:**
+1. **XDA Forums** - Device-specific help
+2. **Reddit r/Magisk** - General discussions
+3. **Telegram groups** - Real-time assistance
+4. **GitHub Issues** - Bug reports and features
+
+---
+
+::: tip 🎉 Congratulations on Your Successful Root!
+**You now have complete control over your Android device!** 
+
+**Next recommended steps:**
+- 📱 **[Explore Root Apps](../android-root-apps/)** - Discover 300+ curated applications
+- 🔬 **[Try LSPosed Framework](./lsposed-guide.md)** - Advanced app modifications
+- 🌟 **[Install Custom ROM](./custom-rom-installation.md)** - Transform your Android experience
+- 🛡️ **[Read Security Guide](../guides/)** - Maintain device security
+:::
+
+**Continue Your Journey:**
+- 🧩 **[Essential Magisk Modules →](../android-root-apps/#featured-apps-the-essentials)**
+- 🏦 **[Banking App Solutions →](../faqs.md#play-integrity-and-banking-apps)**
+- 🔧 **[Advanced Root Management →](../android-root-apps/#root-management)**
+- ❓ **[Need Help? →](../faqs.md)**
