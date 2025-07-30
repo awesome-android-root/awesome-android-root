@@ -2,7 +2,7 @@
 layout: home
 title: Awesome Android Root
 titleTemplate: Ultimate Android Rooting Hub 2025
-description: "Discover 300+ hand-curated best root apps, Magisk & LSPosed (Xposed) modules of 2025 and step-by-step rooting guides"
+description: "Discover 330+ hand-curated best root apps, Magisk & LSPosed (Xposed) modules of 2025 and step-by-step rooting guides"
 head:
   - - meta
     - name: keywords
@@ -33,7 +33,7 @@ head:
       content: "Awesome Android Root - Ultimate Android Rooting Hub 2025"
   - - meta
     - name: twitter:description
-      content: "The ultimate Android rooting resource! 300+ best root apps, Magisk,KernelSu & LSPosed Modules & rooting guides."
+      content: "The ultimate Android rooting resource! 330+ best root apps, Magisk,KernelSu & LSPosed Modules & rooting guides."
   - - meta
     - name: twitter:image
       content: "https://awesome-android-root.org/images/og.png"
@@ -79,7 +79,7 @@ head:
         "@type": "WebSite",
         "name": "Awesome Android Root",
         "alternateName": "Ultimate Android Rooting Hub",
-        "description": "The ultimate Android rooting resource! 300+ best root apps, Magisk,KernelSu & LSPosed Modules & rooting guides.",
+        "description": "The ultimate Android rooting resource! 330+ best root apps, Magisk,KernelSu & LSPosed Modules & rooting guides.",
         "url": "https://awesome-android-root.org",
         "inLanguage": "en-US",
         "publisher": {
@@ -88,14 +88,14 @@ head:
           "logo": {
             "@type": "ImageObject",
             "url": "https://awesome-android-root.org/images/logo.png",
-            "width": 300,
-            "height": 300
+            "width": 330,
+            "height": 330
           }
         },
         "mainEntity": {
           "@type": "Article",
           "headline": "Ultimate Android Rooting Guide 2025",
-          "description": "Comprehensive collection of 300+ root apps, rooting guides, and expert tutorials",
+          "description": "Comprehensive collection of 330+ root apps, rooting guides, and expert tutorials",
           "author": {
             "@type": "Organization",
             "name": "Awesome Android Root Community"
@@ -201,13 +201,13 @@ head:
 hero:
   name: "Awesome Android Root"
   text: "Ultimate Android Freedom Hub"
-  tagline: "Unlock your Android's full potential with 300+ curated root apps, expert rooting guides, and comprehensive tutorials for complete device control."
+  tagline: "Unlock your Android's full potential with 330+ curated root apps, expert rooting guides, and comprehensive tutorials for complete device control."
   image:
     src: /images/logo_dark.svg
     alt: Awesome Android Root - Ultimate Android Rooting Resource
   actions:
     - theme: brand
-      text: 🚀 Explore 300+ Root Apps
+      text: 🚀 Explore 330+ Root Apps
       link: /android-root-apps/#root-apps
     - theme: alt
       text: 📚 Master Rooting Guides
@@ -297,7 +297,7 @@ features:
 ---
 
 ::: info 🚀 Why Choose Awesome Android Root?
-**The most trusted Android rooting resource since 2024** with 300+ curated apps, expert guides, and a thriving community of **50,000+ members** worldwide. Zero ads, zero tracking, pure community dedication.
+**The most trusted Android rooting resource since 2024** with 330+ curated apps, expert guides, and a thriving community of **50,000+ members** worldwide. Zero ads, zero tracking, pure community dedication.
 :::
 
 ## 🎯 Quick Start Guide

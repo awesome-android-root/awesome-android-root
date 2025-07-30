@@ -8,7 +8,7 @@ Community-curated Ultimate collection of best root apps, **Magisk**, **KernelSU*
 ---
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=green)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
-[![Total Entries](https://img.shields.io/badge/Total%20Entries-300+-blue?style=for-the-badge&logo=android)](#root-apps)
+[![Total Entries](https://img.shields.io/badge/Total%20Entries-330+-blue?style=for-the-badge&logo=android)](#root-apps)
 [![Support via Open Collective](https://img.shields.io/badge/Support%20via-Open%20Collective-blue?style=for-the-badge&logo=opencollective)](https://opencollective.com/awesome-android-root-official)
 
 🚀 Quick Links: [**New to Root?**](#what-is-root-access) | [**Root Apps**](#root-apps) | [**Full Index**](#table-of-contents) | [**Community**](#community--resources) | [**Quick Start Guide**](#root-guide-and-solutions)
@@ -826,8 +826,8 @@ For comprehensive contribution instructions, including formatting standards and 
 
 <div class="img-cnt">
 
-![Total Entries](https://img.shields.io/badge/Total%20Entries-324-blue?style=for-the-badge&logo=android)
-![Root Apps](https://img.shields.io/badge/Root%20Apps-120-blue?style=for-the-badge&logo=android)
+![Total Entries](https://img.shields.io/badge/Total%20Entries-328-blue?style=for-the-badge&logo=android)
+![Root Apps](https://img.shields.io/badge/Root%20Apps-124-blue?style=for-the-badge&logo=android)
 ![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-113-orange?style=for-the-badge&logo=magisk&logoColor=white)
 ![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-91-purple?style=for-the-badge&logo=local&logoColor=white)
 
