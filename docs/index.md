@@ -208,7 +208,7 @@ hero:
   actions:
     - theme: brand
       text: 🚀 Explore 300+ Root Apps
-      link: /android-root-apps/
+      link: /android-root-apps/#root-apps
     - theme: alt
       text: 📚 Master Rooting Guides
       link: /android-root-guides/
