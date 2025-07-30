@@ -120,8 +120,8 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { 
         text: 'Root Apps', 
-        link: '/android-root-apps/',
-        activeMatch: '^/android-root-apps/'
+        link: '/android-root-apps/#root-apps',
+        activeMatch: '^/android-root-apps/#root-apps'
       },
       {
         text: 'Guides',
