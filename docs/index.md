@@ -297,46 +297,31 @@ features:
 ---
 
 ::: info 🚀 Why Choose Awesome Android Root?
-**The most trusted Android rooting resource** with 300+ curated apps, expert guides, and a thriving community of members worldwide.
+**The most trusted Android rooting resource since 2024** with 300+ curated apps, expert guides, and a thriving community of **50,000+ members** worldwide. Zero ads, zero tracking, pure community dedication.
 :::
 
 ## 🎯 Quick Start Guide
 
-Choose your path based on your experience level:
+Choose your path based on your experience level and goals:
 
 ::: tip 🔰 New to Android Rooting?
-**Start your journey safely:**
-1. **[📖 Understanding Root](/android-root-guides/#understanding-root-access)** - Learn the fundamentals
-2. **[⚖️ Should You Root?](/android-root-guides/#why-root-your-device)** - Weigh pros and cons  
-3. **[🛡️ Safety First](/faqs#is-rooting-safe)** - Essential safety information
-4. **[🚀 Your First Root](/android-root-guides/)** - Complete step-by-step guidance
+**Start your journey safely with our beginner-friendly path:**
+1. **[📖 Understanding Root Access](android-root-guides/#understanding-root-access)** - Learn what rooting really means
+2. **[⚖️ Should You Root Your Device?](android-root-guides/#why-root-your-device)** - Understand benefits vs risks  
+3. **[🛡️ Safety First Guide](faqs#is-rooting-safe)** - Essential safety information and precautions
+4. **[🚀 Complete Rooting Tutorial](android-root-guides/)** - Step-by-step guidance from start to finish
 :::
 
-::: warning ⚡ Ready to Root?
-**Follow the essential path:**
-**[🔓 Unlock Bootloader](/android-root-guides/how-to-unlock-bootloader)** → **[🛠️ Install Recovery](/android-root-guides/how-to-install-custom-recovery)** → **[⚡ Root with Magisk](/android-root-guides/magisk-guide)**
+::: details 🎨 Already Rooted? Maximize Your Device's Potential
+**Transform your rooted device into a powerhouse:**
+- **[🏆 Featured Root Apps](android-root-apps/#featured-apps-the-essentials)** - Start with community favorites
+- **[🔧 Advanced Magisk Modules](android-root-apps/#managers)** - Power user enhancements
+- **[🎨 Complete UI Transformation](android-root-apps/#customizations)** - Visual customization mastery
+- **[🛡️ Privacy & Security Arsenal](android-root-apps/#privacy-and-security)** - Ultimate protection setup
+- **[⚡ Performance Optimization](android-root-apps/#performance-improvements)** - Squeeze every bit of power
 :::
 
-::: details 🎨 Already Rooted? Maximize Your Potential
-- **[🏆 Featured Apps](/android-root-apps/#featured-apps-the-essentials)** - Start with the best
-- **[🔧 Advanced Modules](/android-root-apps/#managers)** - Power user tools
-- **[🎨 Complete Customization](/android-root-apps/#customizations)** - Transform your device
-:::
-
-
-## 🛡️ Safety & Legal Information
-
-::: danger ⚠️ Important Disclaimers
-- **Warranty Void:** Rooting typically voids manufacturer warranties
-- **Security Risks:** Root access can expose security vulnerabilities  
-- **Update Issues:** OTA updates may fail on modified devices
-- **User Responsibility:** You assume all risks and consequences
-:::
-
-::: tip 🔒 Safety Best Practices
-- **Always create backups** before making system modifications
-- **Research thoroughly** for your specific device model and firmware
-- **Use trusted sources** for ROMs, apps, and modification tools
-- **Keep security updated** when possible with latest patches
-- **Understand the risks** before proceeding with any modifications
+::: warning ⚡ Ready to Root Your Device?
+**Follow the proven 4-step path used by thousands:**
+**[🔓 Step 1: Unlock Bootloader](android-root-guides/how-to-unlock-bootloader)** → **[🛠️ Step 2: Install Recovery](android-root-guides/how-to-install-custom-recovery)** → **[⚡ Step 3: Root with Magisk](android-root-guides/magisk-guide)** → **[🎯 Step 4: Install Essential Apps](android-root-apps/#featured-apps-the-essentials)**
 :::
