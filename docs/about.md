@@ -74,17 +74,22 @@ Democratize Android customization by providing free, comprehensive resources for
 
 **🔧 Complete Rooting Solutions**
 - **[📖 Expert Guides](./android-root-guides/index.md)** - Step-by-step rooting tutorials
-- **[📱 300+ Root Apps](/)** - Hand-selected applications across 15 categories
-- **[🛠️ Device Support](./android-root-guides/)** - Guides for Xiaomi, Samsung, Pixel, OnePlus, Motorola
+- **[📱 300+ Root Apps](/android/root-apps/#root-apps)** - Hand-selected applications across 15 categories
+- **[🛠️ Device Support](./android-root-guides/#device-specific-guides)** - Guides for Xiaomi, Samsung, Pixel, OnePlus, Motorola
 - **[❓ FAQ & Support](./faqs.md)** - Common questions and troubleshooting
 
 ## Getting Started
 
-**Essential Steps:**
-1. [🔓 Unlock Bootloader](./android-root-guides/how-to-unlock-bootloader.md)
-2. [🛠️ Install Custom Recovery](./android-root-guides/how-to-install-custom-recovery.md)
-3. [⚡ Root Your Device](./android-root-guides/index.md)
-4. [🌟 Install Custom ROM](./android-root-guides/custom-rom-installation.md) (optional)
+**Essential Steps for New Users:**
+1. [🔓 Unlock Bootloader](./android-root-guides/how-to-unlock-bootloader.md) - Essential first step
+2. [🛠️ Install Custom Recovery](./android-root-guides/how-to-install-custom-recovery.md) - Gateway to modifications
+3. [⚡ Choose Root Method](./android-root-guides/index.md#root-solutions-comparison) - Magisk, KernelSU, or APatch
+4. [🌟 Install Custom ROM](./android-root-guides/custom-rom-installation.md) - Transform your Android (optional)
+
+**Quick Navigation by Experience:**
+- **Beginners:** [Complete Rooting Guide](./android-root-guides/) → [Essential Apps](./android-root-apps/#featured-apps-the-essentials)
+- **Intermediate:** [Device-Specific Guides](./android-root-guides/#device-specific-guides) → [Advanced Modules](./android-root-apps/#managers)
+- **Experts:** [Troubleshooting](./faqs.md) → [Community Contributions](./contributing.md)
 
 ## Community
 
