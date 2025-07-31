@@ -11,7 +11,7 @@ Community-curated Ultimate collection of best root apps, **Magisk**, **KernelSU*
 [![Total Entries](https://img.shields.io/badge/Total%20Entries-330+-blue?style=for-the-badge&logo=android)](#root-apps)
 [![Support via Open Collective](https://img.shields.io/badge/Support%20via-Open%20Collective-blue?style=for-the-badge&logo=opencollective)](https://opencollective.com/awesome-android-root-official)
 
-🚀 Quick Links: [**New to Root?**](#what-is-root-access) | [**Root Apps**](#root-apps) | [**Android Guides**](#essential-android-guides) | [**Full Index**](#table-of-contents) | [**Community**](#community--resources)
+🚀 Quick Links: [**New to Root?**](#what-is-root-access) | [**Android Guides**](#root-guide-and-solutions) | [**Root Apps**](#root-apps)| [**Community**](#community-and-resources)
 
 
 </div>
