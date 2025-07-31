@@ -36,7 +36,7 @@ Community-curated Ultimate collection of best root apps, **Magisk**, **KernelSU*
 - [App Management](#app-management)
   - [App Isolation and Cloning](#app-isolation-and-cloning)
   - [App Managers](#app-managers)
-  - [App Markets and Stores](#app-markets)
+  - [App Markets and Stores](#app-markets-and-stores)
   - [App Permissions](#app-permissions)
 
 #### 🔧 App Modifications
@@ -47,39 +47,39 @@ Community-curated Ultimate collection of best root apps, **Magisk**, **KernelSU*
     - [WeChat](#wechat) • [Weibo](#weibo) • [WhatsApp](#whatsapp) 
     - [X/Twitter](#xtwitter) • [TikTok](#tiktok) • [Telegram](#telegram)
     - [YouTube, Spotify, Google Photos](#youtube-spotify-google-photos)
-  - [General App Mods](#other-app-mods)
-  - [Patching Tools](#patching)
+  - [General App Mods](#general-app-mods)
+  - [Patching Tools](#patching-tools)
 
 #### 🎵 Audio and Media
 - [Audio Enhancement](#audio-enhancement)
 
 #### ⚡ Performance and Battery
 - [Automation](#automation)
-- [Battery Optimization](#battery-management)
-- [Performance Tweaks](#performance-improvements)
+- [Battery Optimization](#battery-optimization)
+- [Performance Tweaks](#performance-tweaks))
 
 #### 🗂️ Storage and Data
 - [Backup and Restore](#backup-and-restore)
-- [System Cleaning](#cleaning-apps)
+- [Cleaning Apps](#cleaning-apps)
 - [File Management](#file-management)
 
 #### 📞 Communication
 - [Communication Tools](#communication-tools)
-  - [Call Recording](#call-recorders)
-  - [Contact Management](#contacts)
-  - [SMS Management](#sms)
+  - [Call Recording](#call-recording)
+  - [Contact Management](#contact-management)
+  - [SMS Management](#sms-management)
 
 #### 🎨 Customization
-- [System Customization](#customizations)
+- [Customizations](#customization)
   - [Boot Animations](#boot-animations)
-  - [Fonts and Typography](#fonts)
+  - [Fonts and Typography](#fonts-and-typography)
   - [Launchers](#launchers)
   - [Navigation](#navigation)
-  - [ROM-Specific Mods](#os-customizations)
+  - [OS Specific Mods](#os-specific-mods)
     - [AOSP](#aosp-android-open-source-project) • [ColorOS](#coloros-oppo) • [Global](#global)
     - [HyperOS](#hyperos-xiaomi) • [One UI](#one-ui-samsung) • [Onyx](#onyx)
     - [Oxygen OS](#oxygen-os-oneplus)
-  - [Themes and UI](#theming)
+  - [Themes and UI](#themes-and-ui)
 
 #### 🧹 System Optimization
 - [System Debloating](#debloating)
@@ -89,7 +89,7 @@ Community-curated Ultimate collection of best root apps, **Magisk**, **KernelSU*
 #### 🛠️ Developer Tools
 - [Development and Debugging](#development-and-debugging)
 - [Device Control and Hardware](#device-control-and-hardware)
-- [Terminal and Shell](#terminal--shell-environments)
+- [Terminal and Shell](#terminal-and-shell-environments)
 - [Utilities](#tools)
 
 #### 🌐 Network and Connectivity
@@ -103,9 +103,9 @@ Community-curated Ultimate collection of best root apps, **Magisk**, **KernelSU*
 
 #### 🔓 Root Management
 - [Root Management](#root-management)
-  - [Root Managers](#managers)
-  - [Root Hiding and Integrity](#root-hiding--integrity)
-  - [Root Detection Tools](#root-detection)
+  - [Root Managers](#root-managers)
+  - [Root Hiding and Integrity](#root-hiding-and-integrity)
+  - [Root Detection Tools](#root-detection-tools)
   - [Bootloop Protection](#bootloop-protection)
 
 #### 📺 Display and Interface
@@ -116,7 +116,7 @@ Community-curated Ultimate collection of best root apps, **Magisk**, **KernelSU*
 - [Important Notes](#important-notes)
 - [FAQ and Troubleshooting](#faqs)
 - [About This Project](./docs/about.md)
-- [Community and Resources](#community--resources)
+- [Community and Resources](#community-and-resources)
 - [Contributing](#contributing)
 - [Stats](#stats)
 - [Support](#support-this-project)
@@ -424,7 +424,7 @@ If you've just rooted your device, start with these must-have applications. They
 
 ---
 
-### System Cleaning
+### Cleaning Apps
 - **[Cleaner Royall](https://github.com/araafroyall/Cleaner-Royall)** - A Light weight but Ultra Fast and Powerful cleaner for Android. `Proprietary` `[LSP]`
 - **[DirCleaner](https://www.dircleaner.com/)** - A simple and practical cleaning tool. `Proprietary`
 - **[Risk](https://github.com/rakarmp/Risk)** - Clean RAM Cache And Stop Background Apps, Google Apps, Third Party Apps. `FOSS` `[M]`
@@ -450,7 +450,7 @@ If you've just rooted your device, start with these must-have applications. They
 
 ---
 
-### System Customization
+### Customization
 #### Boot Animations
 - **[Bootanimation](https://github.com/Bitterneko/Bootanimation)** - A custom boot animation for Android. `Proprietary` `[M]`
 - **[Live Boot](https://play.google.com/store/apps/details?id=eu.chainfire.liveboot)** - Get a Linux-like live boot screen on Android. `Proprietary`
@@ -476,7 +476,7 @@ If you've just rooted your device, start with these must-have applications. They
 - **[NavTweaks](https://github.com/Magisk-Modules-Alt-Repo/HideNavBar)** - Fullscreen/Immersive Gesture Tweaks for Android 10-14. `FOSS` `[M]`
 - **[Volume Key Track Control Module](https://github.com/Hepolise/VolumeKeyTrackControlModule)** - An Xposed module that allows to skip and play/pause track with volume keys. `FOSS` `[LSP]`
 
-#### ROM-Specific Mods
+#### OS Specific Mods
 ##### AOSP (Android Open Source Project)
 - **[PixelUpdater](https://github.com/PixelUpdater/PixelUpdater)** - Pixel Updater is an app for installing Android A/B OTA updates from Google's OTA server. `FOSS` `[M]`
 - **[PixelXpert](https://github.com/siavash79/PixelXpert)** - A mixed Xposed+Magisk module, which is made to allow customizations that are not originally designed in AOSP. `FOSS` `[M]` `[LSP]`
