@@ -183,9 +183,16 @@ Choose your device for tailored rooting instructions:
 - **`[M]`** = Magisk Module (requires [_Magisk framework_](./docs/android-root-guides/magisk-guide.md))
 - **`[K]`** = KernelSU Module (requires [_KernelSU framework_](./docs/android-root-guides/kernelsu-guide.md)) 
 - **`[LSP]`** = LSPosed Module (requires [_LSPosed framework_](./docs/android-root-guides/lsposed-guide.md))
+
 > _Apps are organized in alphabetical order within each category._
 
 ## Root Apps
+
+> - **We Strongly recommend to install *[Droid-ify](https://github.com/Droid-ify/client/releases)* for private and easier app install from this list.**
+
+> - Clicking on the app name directs to F-Droid(FOSS) or Google Play Store(Proprietary) app page.
+> - If an app is available both on F-Droid & Google Play Store, **F-Droid link will be prefered**.
+
 
 ### Featured Apps: The Essentials
 
