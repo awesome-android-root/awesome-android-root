@@ -568,9 +568,9 @@ Beyond rooting, master these essential Android techniques for better device mana
 ---
 
 ### File Management
-- **[AnExplorer]** - A is Simple, Small, Fast and Efficient File Explorer. `FOSS`
-- **[Fossify File Manager](https://github.com/FossifyOrg/File-Manager)** - Easy app for managing your files without ads, respecting your privacy & security. `FOSS`
-- **[Material Files](https://github.com/zhanghai/MaterialFiles)** - Modern file manager with root capabilities. `FOSS`
+- **[AnExplorer](https://play.google.com/store/apps/details?id=dev.dworks.apps.anexplorer)** - A is Simple, Small, Fast and Efficient File Explorer. `FOSS` | [📦 Source](https://github.com/1hakr/AnExplorer)
+- **[Fossify File Manager](https://f-droid.org/packages/org.fossify.filemanager/)** - Easy app for managing your files without ads, respecting your privacy & security. `FOSS` | [📦 Source](https://github.com/FossifyOrg/File-Manager)
+- **[Material Files](https://f-droid.org/packages/me.zhanghai.android.files)** - Modern file manager with root capabilities. `FOSS` | [📦 Source](https://github.com/zhanghai/MaterialFiles)
 - **[⭐ MiXplorer](https://mixplorer.com/)** - Feature-rich file manager. `Proprietary`
 - **[MT Manager](https://mt2.cn/)** - File Management & Reverse Engineering Tool for Android. `Proprietary`
 - **[Root Explorer](https://play.google.com/store/apps/details?id=com.speedsoftware.rootexplorer)** - File manager with root access. `Proprietary`
