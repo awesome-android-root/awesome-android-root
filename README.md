@@ -140,13 +140,18 @@ Android rooting gives you **privileged administrative control** over your device
 <details>
 <summary><strong>📝 Essential Prerequisites Checklist</strong></summary>
 
-- ✅ **Backup all important data** (photos, contacts, apps)
-- ✅ **Verify device compatibility** with rooting methods
-- ✅ **Research device-specific instructions** thoroughly
-- ✅ **Download necessary tools and drivers** beforehand
-- ✅ **Ensure sufficient battery charge** (70%+)
-- ✅ **Enable Developer Options** and USB Debugging
-- ✅ **Have recovery plan ready** in case something goes wrong
+Before You Start - Complete This Checklist:
+
+- ✅ **Create Complete Backup** - Photos, contacts, apps, and system partition
+- ✅ **Verify Device Compatibility** - Confirm your exact model supports rooting
+- ✅ **Research Thoroughly** - Read device-specific guides and known issues
+- ✅ **Download Required Tools** - ADB, fastboot, drivers, and device-specific files
+- ✅ **Ensure Adequate Battery** - Minimum 70% charge to prevent interruption
+- ✅ **Enable Developer Options** - Turn on USB Debugging and OEM Unlocking
+- ✅ **Prepare Recovery Plan** - Know how to restore from bootloop/brick scenarios
+- ✅ **Understand the Risks** - Accept responsibility for potential device damage
+
+**💡 Pro Tip**: Join device-specific communities on XDA Developers for real-world experiences and troubleshooting support.
 
 </details>
 
@@ -166,31 +171,26 @@ Android rooting gives you **privileged administrative control** over your device
 4. **[🌟 Install Custom ROM](./docs/android-root-guides/custom-rom-installation.md)** _(Optional)_ - Transform your Android experience
 
 ### Device-Specific Root Guides
-Choose your device for tailored rooting instructions:
-- **[📱 Google Pixel](./docs/android-root-guides/how-to-root-pixel-phone.md)** - Comprehensive Pixel rooting guide
-- **[📱 Samsung Galaxy](./docs/android-root-guides/how-to-root-samsung-phone.md)** - Navigate Samsung's Knox security
-- **[📱 Xiaomi/MIUI](./docs/android-root-guides/how-to-root-xiaomi-phone.md)** - Handle MIUI-specific challenges
-- **[📱 OnePlus](./docs/android-root-guides/how-to-root-oneplus-phone.md)** - OxygenOS rooting walkthrough
-- **[📱 Nothing Phone](./docs/android-root-guides/how-to-root-nothing-phone.md)** - Root the transparent revolution
-- **[📱 Motorola](./docs/android-root-guides/how-to-root-motorola-phone.md)** - Motorola-specific root methods
+- [Google Pixel](./docs/android-root-guides/how-to-root-pixel-phone.md) 
+- [Samsung Galaxy](./docs/android-root-guides/how-to-root-samsung-phone.md)
+- [Xiaomi/MIUI](./docs/android-root-guides/how-to-root-xiaomi-phone.md)
+- [OnePlus](./docs/android-root-guides/how-to-root-oneplus-phone.md)
+- [Nothing Phone](./docs/android-root-guides/how-to-root-nothing-phone.md)
+- [Motorola](./docs/android-root-guides/how-to-root-motorola-phone.md)
 
 **[📖 Read the Complete Rooting Master Guide →](./docs/android-root-guides/index.md)**
 
 ### Essential Android Guides
 
-Beyond rooting, master these essential Android techniques for better device management and optimization:
-
-### 🚫 Privacy and Security Guides
+#### Privacy and Security Guides
 - **[Android Ad Blocking Guide](./docs/guides/android-adblocking.md)** - Complete guide to blocking ads across your Android device
 - **[Android App Debloating](./docs/guides/android-apps-debloating.md)** - Remove bloatware and optimize your device performance
 - **[Stop Auto-Updates in Play Store](./docs/guides/stop-android-app-auto-updates-play-store.md)** - Take control of app updates
 
-### 💾 Data Management Guides  
+#### Data Management Guides  
 - **[App Backup and Restore Using Root](./docs/guides/app-backup-restore-using-root.md)** - Comprehensive backup solutions for rooted devices
 
 **[📖 View All General Android Guides →](./docs/guides/index.md)**
-
-> 💡 **New to Android Rooting?** Start with our [complete rooting guide](./docs/android-root-guides/index.md) before exploring the apps below.
 
 ## Glossary
 - **⭐** = Community recommended (most popular/trusted in category)
@@ -203,6 +203,7 @@ Beyond rooting, master these essential Android techniques for better device mana
 > _Apps are organized in alphabetical order within each category._
 
 ## Root Apps
+> 💡 **New to Android Rooting?** Start with our [complete rooting guide](./docs/android-root-guides/index.md) before exploring the apps below.
 
 > - **We Strongly recommend to install *[Droid-ify](https://github.com/Droid-ify/client/releases)* and [enable _IzzyOnDroid_ Repo](https://apt.izzysoft.de/fdroid/) for private and easier app install from this list.**
 
