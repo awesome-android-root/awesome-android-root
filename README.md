@@ -611,9 +611,9 @@ Beyond rooting, master these essential Android techniques for better device mana
 - **[MACsposed](https://github.com/DavidBerdik/MACsposed)** - Adds support for MAC Address spoofing to Android 12 through 15. `FOSS` `[LSP]`
 - **[Magisk-WiFiADB](https://github.com/mrh929/magisk-wifiadb)** - A Magisk module to enable WiFi ADB automatically. `FOSS` `[M]`
 - **[NetGuard](https://github.com/M66B/NetGuard)** - Block access to the internet. Apps and addresses can individually be allowed or denied access to your Wi-Fi and/or mobile connection. `FOSS`
-- **[personalDNSfilter](https://github.com/IngoZenz/personaldnsfilter)** - A DNS filter proxy that provides local filtering of ads, malware, and tracking servers, supporting secure DNS protocols like DOH and DOT for enhanced privacy. `FOSS`
-- **[SimbaDroid](https://github.com/buttercookie42/SimbaDroid)** - A simple SMB file server for Android. `FOSS`
-- **[TTLChanger](https://github.com/aleksey-saenko/TTLChanger)** - Allows you to modify the default TTL (Time to Live) value. `FOSS`
+- **[personalDNSfilter](https://f-droid.org/packages/dnsfilter.android/)** - A DNS filter proxy that provides local filtering of ads, malware, and tracking servers, supporting secure DNS protocols like DOH and DOT for enhanced privacy. `FOSS` | [📦 Source](https://github.com/IngoZenz/personaldnsfilter)
+- **[SimbaDroid](https://f-droid.org/packages/de.buttercookie.simbadroid)** - A simple SMB file server for Android. `FOSS` | [📦 Source](https://github.com/buttercookie42/SimbaDroid)
+- **[TTLChanger](https://f-droid.org/en/packages/com.mrsep.ttlchanger/)** - Allows you to modify the default TTL (Time to Live) value. `FOSS` | [📦 Source](https://github.com/aleksey-saenko/TTLChanger)
 - **[Unlimited Hotspot](https://github.com/felikcat/unlimited-hotspot)** - Remove speed restrictions on your hotspot internet and allows hotspots on any plan. `FOSS` `[M]`
 - **[VPN Hotspot](https://github.com/Mygod/VPNHotspot)** - Share your VPN connection over hotspot or repeater. `FOSS`
 - **[WiFi Password Viewer for MMRL](https://github.com/Googlers-Repo/wpd)** - WiFi Password Viewer for MMRL. `FOSS`
