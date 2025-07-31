@@ -470,9 +470,9 @@ Beyond rooting, master these essential Android techniques for better device mana
 
 #### Launchers
 - **[Pixel Launcher Enhanced](https://github.com/Mahmud0808/PixelLauncherEnhanced)** - Xposed module designed to unlock a variety of exciting features inluding customizing the look to adding more functionality and many more. `FOSS` `[LSP]`
-- **[Pixel Launcher Mods](https://github.com/KieronQuinn/PixelLauncherMods)** - Mods for enhancing the Pixel Launcher experience. `FOSS`
-- **[Lawnchair](https://github.com/Goooler/LawnchairRelease)** - A customizable launcher offering a Pixel-like experience. `FOSS`
-- **[NovaInstaller](https://github.com/Minionguyjpro/NovaInstaller)** - Installs Nova Launcher to /system/app/ on Android. `FOSS`
+- **[Pixel Launcher Mods](https://github.com/KieronQuinn/PixelLauncherMods/releases)** - Mods for enhancing the Pixel Launcher experience. `FOSS` | [📦 Source](https://github.com/KieronQuinn/PixelLauncherMods)
+- **[Lawnchair](https://github.com/Goooler/LawnchairRelease/releases/latest)** - A customizable launcher offering a Pixel-like experience. `FOSS` | [📦 Source](https://github.com/Goooler/LawnchairRelease)
+- **[NovaInstaller](https://github.com/Minionguyjpro/NovaInstaller/releases)** - Installs Nova Launcher to /system/app/ on Android. `FOSS` | [📦 Source](https://github.com/Minionguyjpro/NovaInstaller/)
   
 #### Navigation
 - **[NavTweaks](https://github.com/Magisk-Modules-Alt-Repo/HideNavBar)** - Fullscreen/Immersive Gesture Tweaks for Android 10-14. `FOSS` `[M]`
@@ -486,7 +486,7 @@ Beyond rooting, master these essential Android techniques for better device mana
 ##### ColorOS (Oppo)
 - **[Breeno Source Changer](https://github.com/Xposed-Modules-Repo/com.niki.breeno.openai/tree/main)** - Allows ColorOS's Breeno Assistant to change its AI model source and customize large language model (LLM) APIs. `FOSS` `[LSP]`
 - **[OPCameraPro](https://github.com/Xposed-Modules-Repo/com.tlsu.opluscamerapro)** - Xposed module for ColorOS and realmeUI providing various AI functions, enhancing cameras and other photo related tweaks. `Proprietary` `[LSP]`
-- **[ColorOS Notify Icon](https://github.com/fankes/ColorOSNotifyIcon)** - Optimize notification icons for ColorOS and adapt to native notification icon specifications. `FOSS`
+- **[ColorOS Notify Icon](https://github.com/fankes/ColorOSNotifyIcon)** - Optimize notification icons for ColorOS and adapt to native notification icon specifications. `FOSS` `[LSP]`
 - **[LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool/blob/main/README_EN.md)** - Extended and optimized Xposed module for ColorOS. `Proprietary` `[LSP]`
 
 ##### Global
