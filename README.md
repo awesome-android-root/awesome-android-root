@@ -225,7 +225,7 @@ Beyond rooting, master these essential Android techniques for better device mana
 ### Ad Blocking
 > 📚 **Related Guide**: [Complete Android Ad Blocking Tutorial](./docs/guides/android-adblocking.md)
 
-- **[⭐ AdAway](https://adaway.org/)** - Open-source ad blocker using hosts file. `FOSS`
+- **[⭐ AdAway](https://f-droid.org/packages/org.adaway/)** - Open-source ad blocker using hosts file. `FOSS` | [📦 Source](https://github.com/AdAway/AdAway)
 - **[AdClose](https://github.com/Xposed-Modules-Repo/com.close.hook.ads/)** - Prevents the initial loading of the advertising SDK within the application and intercepts application advertising requests to block ads. `Proprietary` `[LSP]`
 - **[AdGuard](https://adguard.com/en/adguard-android/overview.html)** - Comprehensive ad blocking solution. `Proprietary`
 - **[bindhosts](https://github.com/bindhosts/bindhosts)** - Systemless hosts for APatch, KernelSU and Magisk that is fully standalone & self-updating. `FOSS` `[M]` `[K]`
@@ -246,34 +246,34 @@ Beyond rooting, master these essential Android techniques for better device mana
 
 ### App Management
 #### App Isolation and Cloning
-- **[Insular](https://gitlab.com/secure-system/Insular)** - Isolate your big brother app. A fork based on the excellent Island. `FOSS`
-- **[Island](https://github.com/oasisfeng/island)** - App isolation and cloning. `FOSS`
-- **[Shelter](https://gitea.angry.im/PeterCxy/Shelter)** - Isolate and clone apps. `FOSS`
+- **[Insular](https://f-droid.org/packages/com.oasisfeng.island.fdroid)** - Isolate your big brother app. A fork based on the excellent Island. `FOSS` | [📦 Source](https://gitlab.com/secure-system/Insular)
+- **[Island](https://play.google.com/store/apps/details?id=com.oasisfeng.island)** - App isolation and cloning. `FOSS` | [📦 Source](https://github.com/oasisfeng/island/tree/dev)
+- **[Shelter](https://f-droid.org/app/net.typeblog.shelter)** - Isolate and clone apps. `FOSS` | [📦 Source](https://gitea.angry.im/PeterCxy/Shelter)
 
 #### App Managers
-- **[⭐ App Manager](https://github.com/MuntashirAkon/AppManager)** - A full-featured package manager and viewer for Android. `FOSS`
+- **[⭐ App Manager](https://github.com/MuntashirAkon/AppManager)** - A full-featured package manager and viewer for Android. `FOSS` | [📦 Source](https://github.com/MuntashirAkon/AppManager)
 - **[App Manager](https://play.google.com/store/apps/details?id=com.lb.app_manager)** - A feature rich app manager with batch operation support. `Proprietary`
-- **[AppOps](https://appops.rikka.app/)** - Control the hidden appops conveniently. `Proprietary`
+- **[AppOps](https://play.google.com/store/apps/details?id=rikka.appops)** - Control the hidden appops conveniently. `Proprietary`
 - **[BanUninstall](https://github.com/TinyHai/BanUninstall/)** - A Xposed Module that prevents apps be uninstalled or apps' data be cleared. `FOSS` `[LSP]`
-- **[⭐ Hail](https://github.com/aistra0528/Hail)** - Disable / Hide / Suspend / Uninstall Android apps. `FOSS`
+- **[⭐ Hail](https://f-droid.org/packages/com.aistra.hail/)** - Disable / Hide / Suspend / Uninstall Android apps. `FOSS` | [📦 Source](https://github.com/aistra0528/Hail)
 - **[Ice Box](https://play.google.com/store/apps/details?id=com.catchingnow.icebox)** - Freeze and hide apps rarely used. `Proprietary`
-- **[Inure](https://github.com/Hamza417/Inure)** - An elegant and beautiful premium Android app manager for rooted and non-rooted devices. `FOSS`
+- **[Inure](https://play.google.com/store/apps/details?id=app.simple.inure.play)** - An elegant and beautiful premium Android app manager for rooted and non-rooted devices. `FOSS` | [📦 Source](https://github.com/Hamza417/Inure)
 - **[Let Me Downgrade](https://github.com/DavidBerdik/Let-Me-Downgrade)** - Add support for downgrading apps on Android 12 through 15 QPR1. `FOSS` `[LSP]`
-- **[Package Manager](https://github.com/SmartPack/PackageManager)** - A highly powerful app to manage both system and user apps installed on an Android device. `FOSS`
-- **[Thor](https://github.com/trinadhthatakula/Thor)** - Android App Manager and App Installer utility. `FOSS`
+- **[Package Manager](https://f-droid.org/packages/com.smartpack.packagemanager)** - A highly powerful app to manage both system and user apps installed on an Android device. `FOSS` | [📦 Source](https://github.com/SmartPack/PackageManager)
+- **[Thor](https://play.google.com/store/apps/details?id=com.valhalla.thor)** - Android App Manager and App Installer utility. `FOSS` | [📦 Source](https://github.com/SmartPack/PackageManager)
 - **[Update Locker](https://github.com/Xposed-Modules-Repo/ru.mike.updatelocker/)** - Block updates (and auto-updates) selected apps via popular markets including Google Play Market, Huawei AppGallery & Samsung Galaxy Store.
 - **[⭐ Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. `FOSS` `[M]` → [📖 Setup Guide](./docs/guides/stop-android-app-auto-updates-play-store.md)
 
 
 #### App Markets
-- **[Aurora Store](https://github.com/whyorean/AuroraStore)** - A Google Play Store client to search, view app details, and download APKs directly to your device. `FOSS`
-- **[⭐ Droid-ify](https://github.com/Droid-ify/client)** - F-Droid client with Material UI and auto updating apps using root. `FOSS`
-- **[Neo Store](https://github.com/NeoApplications/Neo-Store)** - An F-Droid client with modern UI and an arsenal of extra features. `FOSS`
+- **[Aurora Store](https://f-droid.org/packages/com.aurora.store/)** - A Google Play Store client to search, view app details, and download APKs directly to your device. `FOSS` | [📦 Source](https://github.com/whyorean/AuroraStore)
+- **[⭐ Droid-ify](https://f-droid.org/packages/com.looker.droidify)** - F-Droid client with Material UI and auto updating apps using root. `FOSS` | [📦 Source](https://github.com/Droid-ify/client)
+- **[Neo Store](https://github.com/NeoApplications/Neo-Store)** - An F-Droid client with modern UI and an arsenal of extra features. `FOSS` | [📦 Source](https://github.com/NeoApplications/Neo-Store)
 
 #### App Permissions
 - **[Net Switch](https://github.com/Rem01Gaming/net-switch)** - Magisk Module to isolate any app from Internet access. `FOSS` `[M]`
-- **[Permission Ruler](https://play.google.com/store/apps/details?id=com.stefanosiano.permissionruler&hl=en)** - Automatically manages app permissions when the screen is off for enhanced privacy. `Proprietary` `[M]`
-- **[PermissionManagerX](https://github.com/mirfatif/PermissionManagerX)** - eXtended Permission Manager for Android to view and set Manifest Permissions and AppOps. `FOSS` `[M]`
+- **[Permission Ruler](https://play.google.com/store/apps/details?id=com.stefanosiano.permissionruler&hl=en)** - Automatically manages app permissions when the screen is off for enhanced privacy. `Proprietary`
+- **[PermissionManagerX](https://f-droid.org/packages/com.mirfatif.permissionmanagerx)** - eXtended Permission Manager for Android to view and set Manifest Permissions and AppOps. `FOSS` | [📦 Source](https://github.com/mirfatif/PermissionManagerX)
 - **[Thanox](https://apt.izzysoft.de/fdroid/index/apk/github.tornaco.android.thanos)** - A system management tool that provide convenient functions like application startup management, background management, permission management etc. `FOSS` `[LSP]`
 
 [↑ Back to top](#table-of-contents)
@@ -304,6 +304,11 @@ Beyond rooting, master these essential Android techniques for better device mana
 
 ##### Line
 - **[LineXtra](https://github.com/yagiyuu/LineXtra)** - Removes Ads and Tabs from the LINE. `FOSS` `[LSP]`
+
+##### Maps
+- **[Maps Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.mapstweaks)** - Collection of maps UI tweaks for Google Maps, Yandex Maps and Yandex Navi. `Proprietary` `[LSP]`
+- **[Yandex Maps Patcher](https://github.com/Xposed-Modules-Repo/ru.bluecat.yandexmapspatcher)** - Hides ads and intrusive services in the Yandex Maps app. `Proprietary` `[LSP]`
+
 
 ##### QQ
 - **[NewQStory](https://github.com/Xposed-Modules-Repo/lin.xposed/)** - Xposed QQ module. `Proprietary` `[LSP]`
@@ -348,12 +353,11 @@ Beyond rooting, master these essential Android techniques for better device mana
 - **[Freely module](https://modules.lsposed.org/module/me.build/)** - Compatible with mainstream social and short video applications (such as WeChat, Tik Tok, Soul, etc.), and is designed to improve the user experience and functional freedom. `Proprietary` `[LSP]`
 - **[F*ck for VIP](https://github.com/bug-bit/fckvip)** - A module to unlock some software memberships and remove ads. Check releases section for list of supported apps. `Proprietary` `[LSP]`
 - **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
-- **[Maps Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.mapstweaks)** - Collection of maps UI tweaks for Google Maps, Yandex Maps and Yandex Navi. `Proprietary` `[LSP]`
 - **[NewHookVip](https://github.com/Xposed-Modules-Repo/top.hookvip.pro)** - Xposed module for unlocking some app memberships and adding some extended functions. Check releases section for list of supported apps. `Proprietary` `[LSP]`
 - **[Rboard Theme Manager](https://github.com/DerTyp7214/RboardThemeManagerV3)** - A customizable manager app for Google Gboard that allows users to download, apply, and manage various themes and sound settings. `FOSS` `[LSP]`
 - **[Smule Mod](https://github.com/michei69/SmuleXposed)** - A Smule Xposed module which enables free VIP and many other features. `FOSS` `[LSP]`
 - **[Wallet Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.wallettweaks/releases)** - UI tweaks for Google Wallet. `Proprietary` `[LSP]`
-- **[Yandex Maps Patcher](https://github.com/Xposed-Modules-Repo/ru.bluecat.yandexmapspatcher)** - Hides ads and intrusive services in the Yandex Maps app. `Proprietary` `[LSP]`
+
 
 #### Patching
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (use with caution). `Proprietary`
@@ -389,10 +393,10 @@ Beyond rooting, master these essential Android techniques for better device mana
 ### Backup and Restore
 > 📚 **Related Guide**: [App Backup & Restore Using Root](./docs/guides/app-backup-restore-using-root.md)
 
-- **[DataBackup](https://github.com/XayahSuSuSu/Android-DataBackup)** - DataBackup for Android 7.0+. `FOSS`
+- **[DataBackup](https://f-droid.org/zh_Hans/packages/com.xayah.databackup.foss/)** - DataBackup for Android 7.0+. `FOSS` | [📦 Source](https://github.com/XayahSuSuSu/Android-DataBackup)
 - **[DiskDigger](https://play.google.com/store/apps/details?id=com.defianttech.diskdigger)** - A powerful data recovery tool for Android devices. `Proprietary`
 - **[Dumpster: Photo/Video Recovery](https://play.google.com/store/apps/details?id=com.baloota.dumpster)** - You can recover deleted videos, restore photos, undelete recently deleted apps, and other files. `Proprietary`
-- **[Neo Backup](https://github.com/NeoApplications/Neo-Backup)** - Powerful open-source backup solution. `FOSS`
+- **[Neo Backup](https://f-droid.org/packages/com.machiav3lli.backup/)** - Powerful open-source backup solution. `FOSS` | [📦 Source](https://github.com/NeoApplications/Neo-Backup)
 - **[Swift Backup](https://play.google.com/store/apps/details?id=org.swiftapps.swiftbackup)** - Modern backup solution with cloud support. `Proprietary`
 
 [↑ Back to top](#table-of-contents)
@@ -400,14 +404,14 @@ Beyond rooting, master these essential Android techniques for better device mana
 ---
 
 ### Battery Management
-- **[AccA](https://github.com/MatteCarra/AccA)** - Advanced Charging Controller app. `FOSS`
+- **[AccA](https://github.com/VR-25/acc)** - Advanced Charging Controller app. `FOSS`
 - **[Background App Slayer (BAS)](https://github.com/UNKNUW/Background-App-Slayer)** - Automatic Killing Background apps. `FOSS` `[M]`
 - **[Battery Guru](https://play.google.com/store/apps/details?id=com.paget96.batteryguru)** - Battery optimization and monitoring. `Proprietary`
-- **[Drowser](https://gitlab.com/juanitobananas/drowser)** - Drowser is a simple app that kills the apps you select when the screen turns off. `FOSS`
-- **[EnforceDoze](https://github.com/farfromrefug/EnforceDoze)** - Enable Doze mode immediately after screen off and turn off motion sensing to get best battery life. `FOSS` 
+- **[Drowser](https://gitlab.com/juanitobananas/drowser)** - Drowser is a simple app that kills the apps you select when the screen turns off. `FOSS` | [📦 Source](https://gitlab.com/juanitobananas/drowser)
+- **[EnforceDoze](https://f-droid.org/packages/com.akylas.enforcedoze/)** - Enable Doze mode immediately after screen off and turn off motion sensing to get best battery life. `FOSS`  | [📦 Source](https://github.com/farfromrefug/EnforceDoze)
 - **[Extreme GMS Doze](https://github.com/Skyghost090/Extreme-Gms-Doze)** - Intelligently kills Google Play Services when your screen is turned off, dramatically boosting battery life. `FOSS` `[M]`
 - **[NoWakeLock](https://github.com/NoWakeLock/NoWakeLock)** - An application that controls Android wakelocks can run on Android N and later. `FOSS` `[LSP]`
-- **[SaverTuner](https://codeberg.org/s1m/savertuner)** - Allows you to take advantage of this built-in battery saver. You can now set different profiles that save the battery more or less aggressively. `FOSS`
+- **[SaverTuner](https://f-droid.org/packages/s1m.savertuner/)** - Allows you to take advantage of this built-in battery saver. You can now set different profiles that save the battery more or less aggressively. `FOSS` | [📦 Source](https://codeberg.org/s1m/savertuner)
 - **[Universal GMS Doze](https://github.com/gloeyisk/universal-gms-doze)** - Patches Google Play services app and certain processes/services to be able to use battery optimization. `FOSS` `[M]`
 - **[Xtreme-Battery-Saver](https://github.com/Magisk-Modules-Alt-Repo/Xtreme-Battery-Saver)** - An extreme battery saver Magisk Module for users who want to really stretch their battery life. `FOSS` `[M]`
 
@@ -416,10 +420,10 @@ Beyond rooting, master these essential Android techniques for better device mana
 ---
 
 ### Cleaning Apps
-- **[Cleaner Royall](https://github.com/araafroyall/Cleaner-Royall)** - A Light weight but Ultra Fast & Powerful cleaner for Android. `FOSS` `[LSP]`
+- **[Cleaner Royall](https://github.com/araafroyall/Cleaner-Royall)** - A Light weight but Ultra Fast & Powerful cleaner for Android. `Proprietary` `[LSP]`
 - **[DirCleaner](https://www.dircleaner.com/)** - A simple and practical cleaning tool. `Proprietary`
 - **[Risk](https://github.com/rakarmp/Risk)** - Clean RAM Cache And Stop Background Apps, Google Apps, Third Party Apps. `FOSS` `[M]`
-- **[⭐ SD Maid 2/SE](https://github.com/d4rken-org/sdmaid-se)** - A file management tool for Android that specialises in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS`
+- **[⭐ SD Maid 2/SE](https://f-droid.org/en/packages/eu.darken.sdmse/)** - A file management tool for Android that specialises in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS` | [📦 Source](https://github.com/d4rken-org/sdmaid-se)
 
 [↑ Back to top](#table-of-contents)
 
