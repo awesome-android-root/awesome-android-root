@@ -205,7 +205,7 @@ Beyond rooting, master these essential Android techniques for better device mana
 
 > - **We Strongly recommend to install *[Droid-ify](https://github.com/Droid-ify/client/releases)* and [enable _IzzyOnDroid_ Repo](https://apt.izzysoft.de/fdroid/) for private and easier app install from this list.**
 
-> - Clicking on the app name directs to F-Droid(FOSS) or Google Play Store(Proprietary) app page.
+> - Clicking on the app name directs to **F-Droid** (FOSS) or **Google Play Store** (Proprietary) app page.
 > - If an app is available both on F-Droid & Google Play Store, **F-Droid link will be prefered**.
 
 
