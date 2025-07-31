@@ -151,7 +151,6 @@ Android rooting gives you **privileged administrative control** over your device
 
 ## Root Guide and Solutions
 
-
 ### Step-by-Step Process
 
 1. **[🔓 Unlock Bootloader](./docs/android-root-guides/how-to-unlock-bootloader.md)** - Essential first step for all modifications
@@ -175,6 +174,22 @@ Choose your device for tailored rooting instructions:
 - **[📱 Motorola](./docs/android-root-guides/how-to-root-motorola-phone.md)** - Motorola-specific root methods
 
 **[📖 Read the Complete Rooting Master Guide →](./docs/android-root-guides/index.md)**
+
+### Essential Android Guides
+
+Beyond rooting, master these essential Android techniques for better device management and optimization:
+
+### 🚫 Privacy & Security Guides
+- **[Android Ad Blocking Guide](./docs/guides/android-adblocking.md)** - Complete guide to blocking ads across your Android device
+- **[Android App Debloating](./docs/guides/android-apps-debloating.md)** - Remove bloatware and optimize your device performance
+- **[Stop Auto-Updates in Play Store](./docs/guides/stop-android-app-auto-updates-play-store.md)** - Take control of app updates
+
+### 💾 Data Management Guides  
+- **[App Backup & Restore Using Root](./docs/guides/app-backup-restore-using-root.md)** - Comprehensive backup solutions for rooted devices
+
+**[📖 View All General Android Guides →](./docs/guides/index.md)**
+
+> 💡 **New to Android Rooting?** Start with our [complete rooting guide](./docs/android-root-guides/index.md) before exploring the apps below.
 
 ## Glossary
 - **⭐** = Community recommended (most popular/trusted in category)
@@ -210,24 +225,6 @@ If you've just rooted your device, start with these must-have applications. They
 [↑ Back to top](#table-of-contents)
 
 ---
-
-## Essential Android Guides
-
-Beyond rooting, master these essential Android techniques for better device management and optimization:
-
-### 🚫 Privacy & Security Guides
-- **[Android Ad Blocking Guide](./docs/guides/android-adblocking.md)** - Complete guide to blocking ads across your Android device
-- **[Android App Debloating](./docs/guides/android-apps-debloating.md)** - Remove bloatware and optimize your device performance
-- **[Stop Auto-Updates in Play Store](./docs/guides/stop-android-app-auto-updates-play-store.md)** - Take control of app updates
-
-### 💾 Data Management Guides  
-- **[App Backup & Restore Using Root](./docs/guides/app-backup-restore-using-root.md)** - Comprehensive backup solutions for rooted devices
-
-**[📖 View All General Android Guides →](./docs/guides/index.md)**
-
-> 💡 **New to Android Rooting?** Start with our [complete rooting guide](./docs/android-root-guides/index.md) before exploring the apps below.
-
------
 
 ### Ad Blocking
 > 📚 **Related Guide**: [Complete Android Ad Blocking Tutorial](./docs/guides/android-adblocking.md)
