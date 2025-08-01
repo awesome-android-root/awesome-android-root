@@ -92,8 +92,9 @@ head:
 **All OnePlus devices with unlockable bootloaders:**
 
 ### Flagship Series
-- **OnePlus 12** - Latest flagship with advanced features
-- **OnePlus 11** - Snapdragon 8 Gen 2 powerhouse
+- **OnePlus 13** - Latest flagship with advanced features
+- **OnePlus 12** - Snapdragon 8 Gen 3
+- **OnePlus 11** - Snapdragon 8 Gen 2 
 - **OnePlus 10 Pro** - Previous generation flagship
 - **OnePlus 9/9 Pro** - Hasselblad camera collaboration
 - **OnePlus 8/8 Pro/8T** - 5G capable devices
