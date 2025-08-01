@@ -162,12 +162,7 @@ img[src*="img.shields.io"]{
   vertical-align: middle;
   margin: 0.5rem 0.25rem;
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-/* Dark mode adjustment */
-img {
-  background-color: rgba(255, 255, 255, 0.05);
+    background-color: inherit; /* Ensure background is transparent */
 }
 
 /* Container layout stability */
