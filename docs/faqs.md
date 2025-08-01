@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Android Rooting FAQ & Troubleshooting Guide 2025
+title: Android Rooting FAQ & Troubleshooting
 description: "Complete Android rooting FAQ with step-by-step solutions with emergency fixes for beginners and experts."
 head:
   - - link

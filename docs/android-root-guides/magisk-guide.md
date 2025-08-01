@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Complete Magisk Root Guide 2025 - Universal Android Rooting
+title: Complete Magisk Root Guide 2025
 description: "Master Magisk rooting with our comprehensive guide. Install systemless root, modules, and advanced root management for all Android devices safely."
 head:
   - - link
