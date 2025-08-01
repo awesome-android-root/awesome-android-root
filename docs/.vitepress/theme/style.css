@@ -154,69 +154,25 @@
   
 }
 
-.img-cnt img, .aar-intro img {
-margin: 0.5rem 0.25rem;
-  display: inline-block;
-}
-
-/**
- * CLS (Cumulative Layout Shift) Performance Optimizations
- * -------------------------------------------------------------------------- */
-
-/* Fix GitHub badge layout shifts by setting explicit dimensions */
-.aar-intro img[src*="img.shields.io"] {
+img[src*="img.shields.io"]{
   width: auto;
   height: 30px; /* Standard shields.io badge height */
   min-height: 30px;
   max-height: 30px;
-  margin: 0.5rem 0.25rem;
   vertical-align: middle;
-}
-
-/* Specific sizing for known badge types */
-.aar-intro img[src*="github/stars"] {
-  min-width: 120px;
-}
-
-.aar-intro img[src*="Total%20Entries"] {
-  min-width: 110px;
-}
-
-.aar-intro img[src*="Support%20via"] {
-  min-width: 150px;
-}
-
-.aar-intro img[src*="Become%20a%20Sponsor"] {
-  min-width: 140px;
-}
-
-.aar-intro img[src*="Star%20this%20Repo"] {
-  min-width: 120px;
-}
-
-.aar-intro img[src*="Share%20Project"] {
-  min-width: 110px;
-}
-
-/* Prevent layout shift during image loading */
-.aar-intro img {
-  background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 4px;
+  margin: 0.5rem 0.25rem;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 /* Dark mode adjustment */
-html.dark .aar-intro img {
+img {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
 /* Container layout stability */
-.aar-intro {
+div :has(img[src*="img.shields.io"]) {
   min-height: 60px; /* Reserve space for badges */
-}
-
-/* Navigation and content layout stability */
-.VPLocalNavOutlineDropdown {
-  min-height: 40px;
 }
 
 /* Font loading optimization - prevent FOIT/FOUT layout shifts */
@@ -226,38 +182,8 @@ html.dark .aar-intro img {
   src: url('/assets/inter-roman-latin.Di8DUHzh.woff2') format('woff2');
 }
 
-/* Ensure text has consistent height during font loading */
-body {
-  font-feature-settings: normal;
-  text-rendering: optimizeLegibility;
-}
-
-/* Prevent layout shift from dynamic content loading */
-.content[data-v-aaeb7c83] {
-  min-height: 200px;
-}
-
-/* Outline dropdown stability */
-.VPLocalNavOutlineDropdown[data-v-eea61c59][data-v-02cb4a4e] {
-  min-height: 40px;
-  transition: none; /* Remove transitions that could cause CLS */
-}
-
 /* Image loading states */
 img {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
-}
-
-/* Badge container stability */
-.aar-intro p:first-child {
-  min-height: 38px; /* Height for badge row */
-}
-
-.aar-intro p:nth-child(2) {
-  min-height: 38px; /* Height for second badge row */
-}
-
-.web{
-  display: none;
 }
