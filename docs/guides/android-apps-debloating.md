@@ -1,5 +1,5 @@
 ---
-title: "Remove Android Bloatware with App Manager & Canta"
+title: "Android Debloating"
 description: "Safely remove Android bloatware using App Manager and Canta. Step-by-step tutorial with safety tips."
 head:
   - - meta
