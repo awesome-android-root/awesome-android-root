@@ -13,13 +13,6 @@ head:
   - - link
     - rel: dns-prefetch
       href: https://raw.githubusercontent.com
-  - - link
-    - rel: dns-prefetch
-      href: https://profile-counter.glitch.me
-  - - link
-    - rel: preconnect
-      href: https://profile-counter.glitch.me
-      crossorigin: ''
 
   # Android Root Apps specific OpenGraph
   - - meta
