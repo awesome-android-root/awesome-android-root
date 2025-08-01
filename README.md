@@ -892,7 +892,7 @@ For comprehensive contribution instructions, including formatting standards and 
 
 ### 💖 Help Us Grow
 
-<div class="img-cnt">
+<div class="img-support">
 
 [![Become a Sponsor](https://img.shields.io/badge/💖-Become%20a%20Sponsor-ff69b4?style=for-the-badge)](https://opencollective.com/awesome-android-root-official)
 [![GitHub Stars](https://img.shields.io/badge/⭐-Star%20this%20Repo-yellow?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
