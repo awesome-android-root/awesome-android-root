@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "Ultimate Android Ad Blocking Guide for Rooted Devices (2025)"
-description: "Complete guide to system-wide ad blocking on rooted Android using AdAway and Bindhosts. Block ads in all apps, improve performance, and enhance privacy with root access."
+description: "Complete guide to system-wide ad blocking on rooted Android using AdAway and Bindhosts. Block ads in all apps."
 head:
   - - link
     - rel: canonical

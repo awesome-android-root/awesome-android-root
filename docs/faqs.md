@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Android Rooting FAQ & Troubleshooting Guide 2025
-description: "Complete Android rooting FAQ with step-by-step solutions for beginners and experts. Updated troubleshooting guide with emergency fixes and banking app solutions."
+description: "Complete Android rooting FAQ with step-by-step solutions with emergency fixes for beginners and experts."
 head:
   - - link
     - rel: canonical

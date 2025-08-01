@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Android Rooting Guide 2025
-description: "The ultimate Android rooting guide for 2025. Master Magisk, KernelSU & APatch with step-by-step instructions, safety practices, and device-specific tutorials for all major brands."
+description: "The ultimate Android rooting guide for 2025. Learn Magisk, KernelSU & APatch with step-by-step instructions with device-specific guides."
 head:
   - - link
     - rel: canonical
