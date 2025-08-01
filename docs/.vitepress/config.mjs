@@ -120,18 +120,15 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { 
         text: 'Root Apps', 
-        link: '/android-root-apps/',
-        activeMatch: '^/android-root-apps/'
+        link: '/android-root-apps/#root-apps',
+        activeMatch: '^/android-root-apps/#root-apps'
       },
       {
-        text: 'Rooting Guides',
-        link: '/android-root-guides/',
-        activeMatch: '^/android-root-guides/'
-      },
-      {
-        text: 'Android Tips',
-        link: '/guides/',
-        activeMatch: '^/guides/'
+        text: 'Guides',
+        items: [
+          { text: 'Rooting Guides', link: '/android-root-guides/', activeMatch: '^/android-root-guides/' },
+          { text: 'General Guides', link: '/guides/', activeMatch: '^/guides/' }
+        ]
       },
       { 
         text: 'FAQ', 
@@ -139,12 +136,11 @@ export default defineConfig({
         activeMatch: '^/faqs'
       },
       {
-        text: 'Community',
+        text: 'More',
         items: [
           { text: 'About Project', link: '/about' },
-          { text: 'Contributing', link: '/contributing' },
           { text: 'Support Us', link: 'https://opencollective.com/awesome-android-root-official' },
-          { text: 'GitHub Repository', link: 'https://github.com/awesome-android-root/awesome-android-root' },
+          { text: 'Star on GitHub', link: 'https://github.com/awesome-android-root/awesome-android-root' },
           { text: 'Reddit Community', link: 'https://www.reddit.com/r/Awesome_Android_Root/' }
         ]
       }
