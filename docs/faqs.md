@@ -413,7 +413,7 @@ Rooting gives you administrator access to your Android device, like having admin
 - About 1-2 hours of time
 - Basic comfort with following instructions
 
-**Detailed Explanation:** [What is Root Access?](../README.md#what-is-root-access)
+**Detailed Explanation:** [What is Root Access?](./android-root-guides/index.md#understanding-root-access)
 
 ### Is Rooting Safe?
 
