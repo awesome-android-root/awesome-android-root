@@ -74,7 +74,7 @@ Democratize Android customization by providing free, comprehensive resources for
 
 **🔧 Complete Rooting Solutions**
 - **[📖 Expert Guides](./android-root-guides/index.md)** - Step-by-step rooting tutorials
-- **[📱 300+ Root Apps](/android/root-apps/#root-apps)** - Hand-selected applications across 15 categories
+- **[📱 300+ Root Apps](/android-root-apps/#root-apps)** - Hand-selected applications across 15 categories
 - **[🛠️ Device Support](./android-root-guides/#device-specific-guides)** - Guides for Xiaomi, Samsung, Pixel, OnePlus, Motorola
 - **[❓ FAQ & Support](./faqs.md)** - Common questions and troubleshooting
 
