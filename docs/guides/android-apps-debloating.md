@@ -1,6 +1,6 @@
 ---
 title: "Remove Android Bloatware with App Manager & Canta"
-description: "Learn how to safely remove Android bloatware using App Manager and Canta. Step-by-step tutorial with screenshots, safety tips, and app alternatives. No bootloop risk!"
+description: "Safely remove Android bloatware using App Manager and Canta. Step-by-step tutorial with safety tips."
 head:
   - - meta
     - name: author
@@ -16,7 +16,7 @@ head:
       content: "Complete Guide: Remove Android Bloatware Safely with App Manager & Canta"
   - - meta
     - property: og:description
-      content: "Learn how to safely remove Android bloatware using App Manager and Canta. Step-by-step tutorial with screenshots, safety tips, and app alternatives. No bootloop risk!"
+      content: "Safely remove Android bloatware using App Manager and Canta. Step-by-step tutorial with safety tips."
   - - meta
     - property: og:image
       content: https://awesome-android-root.com/images/og/android-debloating.png
