@@ -241,6 +241,7 @@ If you've just rooted your device, start with these must-have applications. They
 - **[F*ck AD](https://github.com/hujiayucc/Fuck-AD)** - As the name implies, this is an ad-blocking Xposed module. `FOSS` `[LSP]`
 - **[Magical Protection](https://github.com/programminghoch10/MagicalProtection)** - Magisk-only completely systemless adblocking. `FOSS` `[M]`
 - **[Magisk Ad Blocking Module](https://github.com/pantsufan/Magisk-Ad-Blocking-Module)** - Magisk module to block ads on android. `FOSS` `[M]`
+- **[Reddidn't](https://github.com/Xposed-Modules-Repo/com.wizpizz.reddidnt)** - LSPosed module to block ads in the Reddit app `Proprietary` `[LSP]`
 - **[Re-Malwack](https://github.com/Magisk-Modules-Alt-Repo/Re-Malwack)** - A fully-fledged ad-block module. Contains all your needs ✨ `FOSS` `[M]`
 - **[StevenBlock](https://github.com/mikropsoft/StevenBlock)** - Ad Blocking Module for Android supporting Magisk, KernelSU and APatch. `FOSS` `[M]`
 - **[systemless-adblocker](https://github.com/Magisk-Modules-Alt-Repo/systemless-adblocker)** - Ultimate adblocker module derived from gloeyisk/systemless-hosts. `FOSS` `[M]`
