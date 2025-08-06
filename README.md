@@ -94,7 +94,7 @@ Community-curated Ultimate collection of best root apps, **Magisk**, **KernelSU*
 
 #### 🌐 Network and Connectivity
 - [Location and GPS](#location-and-gps)
-- [Network Tools](#network-tools)
+- [Firewall and Network Tools](#firewall-and-network-tools)
 - [NFC Tools](#nfc-tools)
 
 #### 🛡️ Security and Privacy
@@ -582,6 +582,25 @@ If you've just rooted your device, start with these must-have applications. They
 
 ---
 
+### Firewall and Network Tools
+- **[Athena](https://play.google.com/store/apps/details?id=com.kin.athena)** - Material You (Material 3) firewall and ad blocker that works seamlessly on both rooted and non-rooted devices. `FOSS` | [📦 Source](https://github.com/Kin69/Athena)
+- **[Box for Root](https://github.com/taamarin/box_for_magisk)** - Box for Root (BFR) is a Magisk, KernelSU, APatch, module that provides a suite of proxy tools, including clash, sing-box, v2ray, hysteria and xray. It allows you to configure a transparent proxy on Android devices with root access. `FOSS` `[M]` `[K]`
+- **[DNS Accelerator](https://github.com/DEMONICCA/DNS-Accelerator)** - Module designed to improve system performance and network connectivity on Android devices. `FOSS` `[M]`
+- **[DriFiCrack](https://github.com/ZeltNamizake/DriFiCrack)** - Brute Force Tool to Crack Wi-Fi Passwords. `FOSS` `[M]`
+- **[MACsposed](https://github.com/DavidBerdik/MACsposed)** - Adds support for MAC Address spoofing to Android 12 through 15. `FOSS` `[LSP]`
+- **[Magisk-WiFiADB](https://github.com/mrh929/magisk-wifiadb)** - A Magisk module to enable WiFi ADB automatically. `FOSS` `[M]`
+- **[NetGuard](https://github.com/M66B/NetGuard)** - Block access to the internet. Apps and addresses can individually be allowed or denied access to your Wi-Fi and/or mobile connection. `FOSS`
+- **[personalDNSfilter](https://f-droid.org/packages/dnsfilter.android/)** - A DNS filter proxy that provides local filtering of ads, malware, and tracking servers, supporting secure DNS protocols like DOH and DOT for enhanced privacy. `FOSS` | [📦 Source](https://github.com/IngoZenz/personaldnsfilter)
+- **[SimbaDroid](https://f-droid.org/packages/de.buttercookie.simbadroid)** - A simple SMB file server for Android. `FOSS` | [📦 Source](https://github.com/buttercookie42/SimbaDroid)
+- **[TTLChanger](https://f-droid.org/en/packages/com.mrsep.ttlchanger/)** - Allows you to modify the default TTL (Time to Live) value. `FOSS` | [📦 Source](https://github.com/aleksey-saenko/TTLChanger)
+- **[Unlimited Hotspot](https://github.com/felikcat/unlimited-hotspot)** - Remove speed restrictions on your hotspot internet and allows hotspots on any plan. `FOSS` `[M]`
+- **[VPN Hotspot](https://github.com/Mygod/VPNHotspot)** - Share your VPN connection over hotspot or repeater. `FOSS`
+- **[WiFi Password Viewer for MMRL](https://github.com/Googlers-Repo/wpd)** - WiFi Password Viewer for MMRL. `FOSS`
+
+[↑ Back to top](#table-of-contents)
+
+---
+
 ### Kernel Management
 - **[EX Kernel Manager](https://play.google.com/store/apps/details?id=flar2.exkernelmanager)** - Root tool for backup and flashing kernels, tweaking color, sound, gestures and other kernel settings. `Proprietary`
 - **[Franco Kernel Manager](https://play.google.com/store/apps/details?id=com.franco.kernel)** - A complete toolbox for all devices with a rich interface that combines everything you need to manage, tweak and empower your device. `Proprietary`
@@ -598,24 +617,6 @@ If you've just rooted your device, start with these must-have applications. They
 - **[Location Indicator Whitelist](https://github.com/gilbsgilbs/LocationIndicatorWhitelist)** - Prevents applications from spamming the annoying location notification dot on Android 12 +. `FOSS` `[LSP]`
 - **[Hide Mock Location](https://github.com/auag0/HideMockLocation)** - Xposed Module to Hide Mock Location Settings. `FOSS` `[LSP]`
 - **[XposedFakeLocation](https://github.com/noobexon1/XposedFakeLocation)** - Allows you to spoof your device's location globally or for specific apps without using "mock location" from the developer options. `FOSS` `[LSP]`
-
-[↑ Back to top](#table-of-contents)
-
----
-
-### Network Tools
-- **[Box for Root](https://github.com/taamarin/box_for_magisk)** - Box for Root (BFR) is a Magisk, KernelSU, APatch, module that provides a suite of proxy tools, including clash, sing-box, v2ray, hysteria and xray. It allows you to configure a transparent proxy on Android devices with root access. `FOSS` `[M]` `[K]`
-- **[DNS Accelerator](https://github.com/DEMONICCA/DNS-Accelerator)** - Module designed to improve system performance and network connectivity on Android devices. `FOSS` `[M]`
-- **[DriFiCrack](https://github.com/ZeltNamizake/DriFiCrack)** - Brute Force Tool to Crack Wi-Fi Passwords. `FOSS` `[M]`
-- **[MACsposed](https://github.com/DavidBerdik/MACsposed)** - Adds support for MAC Address spoofing to Android 12 through 15. `FOSS` `[LSP]`
-- **[Magisk-WiFiADB](https://github.com/mrh929/magisk-wifiadb)** - A Magisk module to enable WiFi ADB automatically. `FOSS` `[M]`
-- **[NetGuard](https://github.com/M66B/NetGuard)** - Block access to the internet. Apps and addresses can individually be allowed or denied access to your Wi-Fi and/or mobile connection. `FOSS`
-- **[personalDNSfilter](https://f-droid.org/packages/dnsfilter.android/)** - A DNS filter proxy that provides local filtering of ads, malware, and tracking servers, supporting secure DNS protocols like DOH and DOT for enhanced privacy. `FOSS` | [📦 Source](https://github.com/IngoZenz/personaldnsfilter)
-- **[SimbaDroid](https://f-droid.org/packages/de.buttercookie.simbadroid)** - A simple SMB file server for Android. `FOSS` | [📦 Source](https://github.com/buttercookie42/SimbaDroid)
-- **[TTLChanger](https://f-droid.org/en/packages/com.mrsep.ttlchanger/)** - Allows you to modify the default TTL (Time to Live) value. `FOSS` | [📦 Source](https://github.com/aleksey-saenko/TTLChanger)
-- **[Unlimited Hotspot](https://github.com/felikcat/unlimited-hotspot)** - Remove speed restrictions on your hotspot internet and allows hotspots on any plan. `FOSS` `[M]`
-- **[VPN Hotspot](https://github.com/Mygod/VPNHotspot)** - Share your VPN connection over hotspot or repeater. `FOSS`
-- **[WiFi Password Viewer for MMRL](https://github.com/Googlers-Repo/wpd)** - WiFi Password Viewer for MMRL. `FOSS`
 
 [↑ Back to top](#table-of-contents)
 
