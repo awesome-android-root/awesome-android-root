@@ -254,38 +254,38 @@ Before proceeding, understand the serious implications:
 
 ### Essential Requirements Checklist
 
-**Hardware Requirements:**
-- ✅ **Unlockable bootloader** - Verify compatibility before starting
-- ✅ **50%+ battery charge** - Prevents shutdown during critical operations
-- ✅ **Quality USB cable** - Data transfer capable (not charge-only)
-- ✅ **Computer access** - Windows, macOS, or Linux for ADB/Fastboot
+**Hardware:**
+- ✅ **Unlockable bootloader** - Verify compatibility first
+- ✅ **50%+ battery** - Prevents shutdown during operations
+- ✅ **Quality USB cable** - Data transfer capable
+- ✅ **Computer** - Windows/macOS/Linux with ADB/Fastboot
 
-**Software Requirements:**
-- ✅ **[Platform Tools](https://developer.android.com/studio/releases/platform-tools)** - ADB and Fastboot installed
-- ✅ **Device drivers** - Manufacturer-specific USB drivers
-- ✅ **Stock firmware** - Original firmware file for emergency recovery
-- ✅ **Backup solution** - External storage for complete data backup
+**Software:**
+- ✅ **[Platform Tools](https://developer.android.com/studio/releases/platform-tools)** - ADB and Fastboot
+- ✅ **Device drivers** - Manufacturer USB drivers
+- ✅ **Stock firmware** - For emergency recovery
+- ✅ **Backup solution** - External storage ready
 
-**Knowledge Requirements:**
-- ✅ **Basic command line familiarity** - Comfortable with terminal/command prompt
-- ✅ **Device-specific research** - Read XDA forums for your exact model
-- ✅ **Emergency recovery plan** - Know how to restore if things go wrong
+**Knowledge:**
+- ✅ **Command line basics** - Terminal/command prompt familiarity
+- ✅ **Device research** - XDA forums for your model
+- ✅ **Recovery plan** - Know restoration procedures
 
 ### Safety Best Practices
 
-**Pre-Rooting Safety:**
-1. **Complete backup** - Photos, contacts, apps, and system data
-2. **Research thoroughly** - Read multiple guides specific to your device
-3. **Check compatibility** - Verify your exact model and firmware version
-4. **Prepare recovery files** - Download stock firmware and recovery tools
-5. **Stable internet** - Ensure reliable connection for downloads
+**Before Rooting:**
+1. **Complete backup** - All data, photos, contacts
+2. **Research thoroughly** - Multiple device-specific guides
+3. **Verify compatibility** - Exact model and firmware
+4. **Download recovery files** - Stock firmware and tools
+5. **Stable connection** - Reliable internet access
 
-**During Rooting:**
-1. **Follow instructions exactly** - Don't improvise or skip steps
-2. **One step at a time** - Wait for each command to complete
-3. **Don't disconnect device** - Keep USB connection stable throughout
-4. **Monitor process** - Watch for error messages and respond appropriately
-5. **Take notes** - Document what you've done for troubleshooting
+**During Process:**
+1. **Follow exactly** - No improvisation or skipping steps
+2. **Complete each step** - Wait for commands to finish
+3. **Maintain connection** - Keep USB stable
+4. **Monitor closely** - Watch for errors
+5. **Document progress** - Notes for troubleshooting
 
 ### Manufacturer Compatibility Matrix
 
@@ -307,79 +307,39 @@ Before proceeding, understand the serious implications:
 
 Choose the optimal root method based on your device compatibility, experience level, and specific needs:
 
-### Magisk - Universal Excellence
-**[📖 Complete Magisk Guide](./magisk-guide.md)**
+## Root Solutions Comparison
 
-**Perfect for:** Beginners, banking app users, maximum ecosystem support
+| Feature | Magisk | KernelSU | APatch |
+|---------|---------|----------|---------|
+| **Guide Link** | [Complete Magisk Guide](./magisk-guide.md) | [Complete KernelSU Guide](./kernelsu-guide.md) | [Complete APatch Guide](./apatch-guide.md) |
+| **Target Users** | Beginners, banking app users | GKI 2.0 devices, security-focused users | Kernel developers, experimental users |
+| **Architecture** | Systemless | Kernel-level root | Kernel patching |
+| **Community Size** | Largest | Growing | Small |
+| **Module Ecosystem** | 1000+ modules | Modified Magisk modules | Limited |
+| **Android Support** | 6.0 through 15 | Modern versions (GKI 2.0+) | Latest versions |
+| **Banking Compatibility** | Weak hiding capabilities  | Advanced hiding capabilities | Sophisticated evasion |
+| **Installation Complexity** | Easy | Complex | Very complex |
+| **Device Support** | Universal | Limited to compatible kernels | Very limited |
+| **Detection Bypassing** | Easily detectable | Kernel-level concealment | Advanced hiding |
+| **Performance Impact** | Standard overhead | Lower overhead | Variable |
+| **Stability** | Stable | Stable | Experimental |
+| **Update Mechanism** | In-app updates | Manual | Manual |
 
-**✅ Advantages:**
-- **Systemless architecture** - No direct system modifications
-- **Largest community** - Extensive support and documentation  
-- **Massive module ecosystem** - 1000+ available modifications
-- **Banking compatibility** - Best solutions for bypassing detection
-- **Universal support** - Works on Android 6.0 through 15
-- **MagiskHide successor** - Advanced root detection bypassing
-- **Easy updates** - Simple in-app update mechanism
+### Best Use Cases
 
-**❌ Limitations:**
-- **Play Integrity challenges** - Requires additional setup for some apps
-- **Module dependency** - Some features require specific modules
-- **Detection evolution** - Banking apps continuously improve detection
+| Root Method | Ideal For |
+|-------------|-----------|
+| **Magisk** | Daily driver devices, beginners, maximum compatibility |
+| **KernelSU** | Advanced users, privacy-focused users, banking app users |
+| **APatch** | Developers, experimental setups, cutting-edge features, secondary devices |
 
-**Best Use Cases:**
-- Daily driver devices requiring banking app functionality
-- Users wanting extensive customization options
-- Beginners learning about root management
-- Devices requiring SafetyNet/Play Integrity bypass
+### Limitations Summary
 
-### KernelSU - Next-Generation Security  
-**[📖 Complete KernelSU Guide](./kernelsu-guide.md)**
-
-**Perfect for:** GKI 2.0 devices, security-focused users, advanced customization
-
-**✅ Advantages:**
-- **Kernel-level root** - Superior security and hiding capabilities
-- **Advanced App Profiles** - Granular per-app permission control
-- **Better hiding** - Kernel-level concealment from detection
-- **Modern architecture** - Built for newer Android versions
-- **Performance benefits** - Lower overhead than traditional methods
-- **Module compatibility** - Supports modified Magisk modules
-
-**❌ Limitations:**
-- **Limited device support** - Requires compatible kernel or custom ROM
-- **Complex installation** - More technical expertise required
-- **Smaller ecosystem** - Fewer modules compared to Magisk
-- **Kernel dependency** - Tied to specific kernel versions
-
-**Best Use Cases:**
-- Pixel devices with compatible kernels
-- Custom ROM users seeking enhanced security
-- Advanced users comfortable with kernel modifications
-- Privacy-focused users requiring strong root hiding
-
-### APatch - Cutting-Edge Innovation
-**[📖 Complete APatch Guide](./apatch-guide.md)**
-
-**Perfect for:** Kernel developers, experimental users, latest Android versions
-
-**✅ Advantages:**
-- **Kernel patching** - Direct kernel modification approach
-- **Modern codebase** - Built with latest security practices
-- **Advanced hiding** - Sophisticated detection evasion
-- **Experimental features** - Access to bleeding-edge capabilities
-- **Developer focus** - Built by and for advanced users
-
-**❌ Limitations:**
-- **Very limited support** - Few compatible devices
-- **Experimental status** - Potential stability issues
-- **Complex setup** - Requires advanced technical knowledge
-- **Small community** - Limited support and documentation
-
-**Best Use Cases:**
-- Developers testing new root technologies
-- Experimental setups on secondary devices
-- Users wanting cutting-edge root features
-- Advanced developers contributing to development
+| Root Method | Key Limitations |
+|-------------|-----------------|
+| **Magisk** | Play Integrity challenges, module dependency, evolving detection |
+| **KernelSU** | Limited device support, kernel dependency, smaller ecosystem |
+| **APatch** | Experimental status, complex setup, very limited support |
 
 ### LSPosed Framework - App Modification Master
 **[📖 Complete LSPosed Guide](./lsposed-guide.md)**
