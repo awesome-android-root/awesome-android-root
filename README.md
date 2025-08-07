@@ -205,7 +205,7 @@ Before You Start - Complete This Checklist:
 ## Root Apps
 > 💡 **New to Android Rooting?** Start with our [complete rooting guide](./docs/android-root-guides/index.md) before exploring the apps below.
 
-> - **We Strongly recommend to install *[Droid-ify](https://github.com/Droid-ify/client/releases)* and [enable _IzzyOnDroid_ Repo](https://apt.izzysoft.de/fdroid/) for private and easier app install from this list.**
+> ⚠️ **We Strongly recommend to install *[Droid-ify](https://github.com/Droid-ify/client/releases)* and [enable _IzzyOnDroid_ Repo](https://apt.izzysoft.de/fdroid/) for private and easier app install from this list.**
 
 > - Clicking on the app name directs to **F-Droid** (FOSS) or **Google Play Store** (Proprietary) app page.
 > - If an app is available both on F-Droid and Google Play Store, **F-Droid link will be prefered**.
