@@ -218,11 +218,9 @@ If you've just rooted your device, start with these must-have applications. They
 | App | Category | Why it's essential |
 | :--- | :--- | :--- |
 | **[Magisk](https://github.com/topjohnwu/Magisk)** | Root Management | The standard for systemless rooting, managing permissions, and installing modules. |
-| **[MiXplorer](https://mixplorer.com/)** | File Management | The most powerful file manager for Android, with full root access capabilities. |
-| **[Neo Backup](https://github.com/NeoApplications/Neo-Backup)** | Backup and Restore | An open-source powerhouse for backing up your apps, data, and settings. |
-| **[AdAway](https://adaway.org/)** | Ad Blocking | The classic, open-source ad blocker that uses the hosts file for system-wide blocking. |
 | **[App Manager](https://github.com/MuntashirAkon/AppManager)** | App Control | A feature-packed tool to inspect, manage, and control every app on your device. |
-| **[SD Maid SE](https://github.com/d4rken-org/sdmaid-se)** | System Cleaning | The best tool for cleaning up leftover files and keeping your system tidy. |
+| **[MiXplorer](https://mixplorer.com/)** | File Management | The most powerful file manager for Android, with full root access capabilities. |
+| **[AdAway](https://adaway.org/)** | Ad Blocking | The classic, open-source ad blocker that uses the hosts file for system-wide blocking. |
 
 [↑ Back to top](#table-of-contents)
 
