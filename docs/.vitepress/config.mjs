@@ -153,7 +153,7 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'Understanding Root Access', link: '/android-root-guides/#understanding-root-access' },
-            { text: 'Should I Root My Device?', link: '/android-root-guides/#why-root-your-device' },
+            { text: 'Should I Root My Device?', link: '/android-root-guides/#should-you-root-decision-matrix' },
             { text: 'Prerequisites & Safety', link: '/android-root-guides/#prerequisites-safety' }
           ]
         },
