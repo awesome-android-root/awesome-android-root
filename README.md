@@ -601,6 +601,7 @@ If you've just rooted your device, start with these must-have applications. They
 - **[MaskWechat](https://github.com/Mingyueyixi/MaskWechat)** - A WeChat Xposed module that can hide the chat records of specific users to prevent private chats from being peeked by third parties. `FOSS` `[LSP]`
 - **[NewMiko](https://modules.lsposed.org/module/im.mingxi.miko/)** - Various tweaks related to  WeChat app. `Proprietary` `[LSP]`
 - **[WeChat Auxiliary](https://github.com/HdShare/WAuxiliary_Public)** - Various tweaks for WeChat. `Proprietary` `[LSP]`
+- **[WePadBridge](https://github.com/libingtong/WePadBridge)** - An Xposed module that enables tablet interface and features in WeChat Work mobile app. `FOSS` `[LSP]`
 - **[X](https://github.com/Xposed-Modules-Repo/cn.android.x)** - Add extra features to WeChat. `Proprietary` `[LSP]`
 
 ##### Weibo
