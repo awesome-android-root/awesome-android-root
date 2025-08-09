@@ -182,3 +182,6 @@ img {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
+.quick-nav a{
+  margin: auto 0.3rem ;
+}
