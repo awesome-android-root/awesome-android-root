@@ -63,7 +63,7 @@ Community‑curated collection of the best root apps, **Magisk/KernelSU/LSPosed 
 - [System Optimization](#system-optimization)
 - [Memory & Storage Management](#memory-and-storage-management)
 
-#### �️ **Storage & Data**
+#### 🗃️ **Storage & Data**
 - [Backup & Restore](#backup-and-restore)
 - [Cleaning & Maintenance](#cleaning-and-maintenance)
 - [File Managers](#file-management)
@@ -114,7 +114,8 @@ Community‑curated collection of the best root apps, **Magisk/KernelSU/LSPosed 
 - [Root Detection Tools](#root-detection-tools)
 - [Bootloop Protection](#bootloop-protection)
 
-#### 📺 **Display
+#### 📺 **Display and Screen**
+- [Screen and Display](#screen-and-display)
 
 ### 📖 **Resources & Support**
 - [Important Notes](#important-notes)
