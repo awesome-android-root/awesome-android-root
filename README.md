@@ -736,6 +736,7 @@ If you've just rooted your device, start with these must-have applications. They
 - **[SUSFS Module](https://github.com/sidex15/susfs4ksu-module)** - An addon root hiding service for KernelSU. `FOSS` `[M]`
 - **[TrickyStore](https://github.com/5ec1cff/TrickyStore)** - Modifying the certificate chain generated for android key attestation. `Proprietary` `[M]` `[K]`
 - **[Tricky Addon - Update Target List](https://github.com/KOWX712/Tricky-Addon-Update-Target-List)** - A KSU WebUI to configure Tricky Store target.txt. `FOSS` `[K]`
+- **[Tricky Store OSS](https://github.com/beakthoven/TrickyStoreOSS)** - Open source alternative to proprietary Tricky Store module. `[M]` [K]`
 - **[YuriKey](https://github.com/dpejoh/yurikey)** - A systemless module to get strong integrity easily. `FOSS` `[M]` `[K]`
 - **[Zygisk-Assistant](https://github.com/snake-4/Zygisk-Assistant)** - A Zygisk module to hide root for KernelSU, Magisk and APatch. `FOSS` `[M]`
 - **[Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)** - Standalone implementation of Zygisk, providing Zygisk API support for KernelSU and a replacement of Magisk's built-in Zygisk. `Proprietary` `[M]` `[K]`
