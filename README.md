@@ -898,11 +898,11 @@ For comprehensive contribution instructions, including formatting standards and 
 
 <div class="img-cnt">
 
-![Total Entries](https://img.shields.io/badge/Total%20Entries-330-blue?style=for-the-badge&logo=android)
+![Total Entries](https://img.shields.io/badge/Total%20Entries-333-blue?style=for-the-badge&logo=android)
 ![Root Apps](https://img.shields.io/badge/Root%20Apps-123-blue?style=for-the-badge&logo=android)
-![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-112-orange?style=for-the-badge&logo=magisk&logoColor=white)
-![KernelSU Modules](https://img.shields.io/badge/KernelSU%20Modules-18-green?style=for-the-badge&logo=keenetic&logoColor=white)
-![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-93-purple?style=for-the-badge&logo=local&logoColor=white)
+![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-114-orange?style=for-the-badge&logo=magisk&logoColor=white)
+![KernelSU Modules](https://img.shields.io/badge/KernelSU%20Modules-20-green?style=for-the-badge&logo=keenetic&logoColor=white)
+![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-94-purple?style=for-the-badge&logo=local&logoColor=white)
 
 </div>
 
