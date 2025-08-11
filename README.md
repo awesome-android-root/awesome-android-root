@@ -153,64 +153,36 @@ Android rooting gives you **privileged administrative control** over your device
 - 🛡️ **Advanced Security and Privacy** - Control app permissions and data access
 - 🎨 **Complete Customization** - Themes, system modifications, and UI changes
 
-### ⚠️ Important Considerations
+> 🚨 **Please read our [Important Notes Section](#important-notes) before continuing!**
 
-> **🚨 Warning**: Rooting may **void your warranty** and carries risks including potential bootloops, security vulnerabilities, and inability to receive OTA updates. Always research your specific device and back up your data before proceeding.
+## Rooting Guides & Resources
 
-<details>
-<summary><strong>📝 Essential Prerequisites Checklist</strong></summary>
+This collection of guides will walk you through the entire rooting process, from unlocking your bootloader to advanced system modifications.
 
-Before You Start - Complete This Checklist:
+### Core Rooting Process
+1.  **[🔓 Unlock Bootloader](./docs/android-root-guides/how-to-unlock-bootloader.md)** - The essential first step for all modifications.
+2.  **[🛠️ Install Custom Recovery](./docs/android-root-guides/how-to-install-custom-recovery.md)** - Flash TWRP, OrangeFox, or another custom recovery.
+3.  **[⚡ Root Your Device](./docs/android-root-guides/index.md#root-methods-comparison)** - Choose your preferred rooting method:
+    *   **[Magisk](./docs/android-root-guides/magisk-guide.md)** - The most popular systemless root solution.
+    *   **[KernelSU](./docs/android-root-guides/kernelsu-guide.md)** - A kernel-based root method.
+    *   **[APatch](./docs/android-root-guides/apatch-guide.md)** - An alternative kernel-patching solution.
+4.  **[🌟 Install Custom ROM](./docs/android-root-guides/custom-rom-installation.md)** _(Optional)_ - Completely transform your Android experience.
 
-- ✅ **Create Complete Backup** - Photos, contacts, apps, and system partition
-- ✅ **Verify Device Compatibility** - Confirm your exact model supports rooting
-- ✅ **Research Thoroughly** - Read device-specific guides and known issues
-- ✅ **Download Required Tools** - ADB, fastboot, drivers, and device-specific files
-- ✅ **Ensure Adequate Battery** - Minimum 70% charge to prevent interruption
-- ✅ **Enable Developer Options** - Turn on USB Debugging and OEM Unlocking
-- ✅ **Prepare Recovery Plan** - Know how to restore from bootloop/brick scenarios
-- ✅ **Understand the Risks** - Accept responsibility for potential device damage
+### Device-Specific & How-To Guides
+-   **Device-Specific Instructions:**
+    -   [Google Pixel](./docs/android-root-guides/how-to-root-pixel-phone.md)
+    -   [Samsung Galaxy](./docs/android-root-guides/how-to-root-samsung-phone.md)
+    -   [Xiaomi/MIUI](./docs/android-root-guides/how-to-root-xiaomi-phone.md)
+    -   [OnePlus](./docs/android-root-guides/how-to-root-oneplus-phone.md)
+    -   [Nothing Phone](./docs/android-root-guides/how-to-root-nothing-phone.md)
+    -   [Motorola](./docs/android-root-guides/how-to-root-motorola-phone.md)
+-   **Essential How-To's:**
+    -   [Android Ad Blocking Guide](./docs/guides/android-adblocking.md)
+    -   [Android App Debloating](./docs/guides/android-apps-debloating.md)
+    -   [Stop Auto-Updates in Play Store](./docs/guides/stop-android-app-auto-updates-play-store.md)
+    -   [App Backup and Restore Using Root](./docs/guides/app-backup-restore-using-root.md)
 
-**💡 Pro Tip**: Join device-specific communities on XDA Developers for real-world experiences and troubleshooting support.
-
-</details>
-
-## Root Guide and Solutions
-
-### Step-by-Step Process
-
-1. **[🔓 Unlock Bootloader](./docs/android-root-guides/how-to-unlock-bootloader.md)** - Essential first step for all modifications
-
-2. **[🛠️ Install Custom Recovery](./docs/android-root-guides/how-to-install-custom-recovery.md)** - TWRP, OrangeFox, or SKYHAWK recovery
-
-3. **[⚡ Root Your Device](./docs/android-root-guides/index.md#root-methods-comparison)** - Choose your method:
-   - **[Magisk](./docs/android-root-guides/magisk-guide.md)** - Most popular, systemless root with modules
-   - **[KernelSU](./docs/android-root-guides/kernelsu-guide.md)** - Kernel-level root solution
-   - **[APatch](./docs/android-root-guides/apatch-guide.md)** - Alternative root method
-
-4. **[🌟 Install Custom ROM](./docs/android-root-guides/custom-rom-installation.md)** _(Optional)_ - Transform your Android experience
-
-### Device-Specific Root Guides
-- [Google Pixel](./docs/android-root-guides/how-to-root-pixel-phone.md) 
-- [Samsung Galaxy](./docs/android-root-guides/how-to-root-samsung-phone.md)
-- [Xiaomi/MIUI](./docs/android-root-guides/how-to-root-xiaomi-phone.md)
-- [OnePlus](./docs/android-root-guides/how-to-root-oneplus-phone.md)
-- [Nothing Phone](./docs/android-root-guides/how-to-root-nothing-phone.md)
-- [Motorola](./docs/android-root-guides/how-to-root-motorola-phone.md)
-
-**[📖 Read the Complete Rooting Master Guide →](./docs/android-root-guides/index.md)**
-
-### Essential Android Guides
-
-#### Privacy and Security Guides
-- **[Android Ad Blocking Guide](./docs/guides/android-adblocking.md)** - Complete guide to blocking ads across your Android device
-- **[Android App Debloating](./docs/guides/android-apps-debloating.md)** - Remove bloatware and optimize your device performance
-- **[Stop Auto-Updates in Play Store](./docs/guides/stop-android-app-auto-updates-play-store.md)** - Take control of app updates
-
-#### Data Management Guides  
-- **[App Backup and Restore Using Root](./docs/guides/app-backup-restore-using-root.md)** - Comprehensive backup solutions for rooted devices
-
-**[📖 View All General Android Guides →](./docs/guides/index.md)**
+**[📖 View the Complete Rooting Master Guide →](./docs/android-root-guides/index.md)**
 
 ## Glossary
 - **⭐** = Community‑recommended (most popular/trusted in category)
@@ -221,6 +193,7 @@ Before You Start - Complete This Checklist:
 - **`[LSP]`** = LSPosed Module (requires [_LSPosed framework_](./docs/android-root-guides/lsposed-guide.md))
 
 > _Apps are organized in alphabetical order within each category._
+
 
 ## Root Apps
 > 💡 **New to Android Rooting?** Start with our [complete rooting guide](./docs/android-root-guides/index.md) before exploring the apps below.
@@ -826,7 +799,9 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 ### Tools
 - **[AdGuardHome for Root](https://github.com/twoone-3/AdGuardHomeForRoot/blob/main/README_en.md#adguardhome-for-root)** - A module to easily execute AdGuardHome on Android. `FOSS` `[M]`
+- **[crond4Android](https://github.com/powerAn2020/crond4android)** - he Crond program that supports running on KernelSU, APatch and Magisk. `FOSS` `[M]` `[K]`
 - **[⭐ GreaseMilkyway](https://play.google.com/store/apps/details?id=net.kollnig.greasemilkyway)** - Android accessibility service designed to help people with attention-related conditions (such as ADHD) manage their digital environment and focus on what matters. `FOSS` `[LSP]`
+- **[Hosts Manager Lite](https://play.google.com/store/apps/details?id=awais.hostsmanager.lite)** - Advanced /etc/hosts editor. `Proprietary`
 - **[MagiskGapps](https://github.com/wacko1805/MagiskGapps)** - Convert a regular GApps package into a Magisk flashable package using a simple website. `FOSS` `[M]`
 - **[Magisk Tailscaled](https://github.com/mgksu/tailscaled)** - Module for running Tailscale on rooted Android devices. `FOSS` `[M]`
 - **[Pi-hole-for-Android](https://github.com/DesktopECHO/Pi-hole-for-Android)** - Pi-hole/Unbound Raspbian APK installer for Android 5.0+ devices. `FOSS`
@@ -837,11 +812,6 @@ After hiding root, you can check whether hiding works via root detection apps, s
 [↑ Back to top](#table-of-contents)
 
 ---
-
-### Utilities
-- **[crond4Android](https://github.com/powerAn2020/crond4android)** - he Crond program that supports running on KernelSU, APatch and Magisk. `FOSS` `[M]` `[K]`
-- **[Hosts Manager Lite](https://play.google.com/store/apps/details?id=awais.hostsmanager.lite)** - Advanced /etc/hosts editor. `Proprietary`
-
 
 ## Important Notes
 
