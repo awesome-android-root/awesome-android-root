@@ -8,7 +8,7 @@ Community‑curated collection of the best root apps, **Magisk/KernelSU/LSPosed 
 ---
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=green)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
-[![Total Entries](https://img.shields.io/badge/Total%20Entries-330+-blue?style=for-the-badge&logo=android)](#root-apps)
+[![Total Entries](https://img.shields.io/badge/Total%20Entries-280+-blue?style=for-the-badge&logo=android)](#root-apps)
 [![Support via Open Collective](https://img.shields.io/badge/Support%20via-Open%20Collective-blue?style=for-the-badge&logo=opencollective)](https://opencollective.com/awesome-android-root-official)
 
 <div class="quick-nav">
