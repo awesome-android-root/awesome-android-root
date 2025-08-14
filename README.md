@@ -44,7 +44,6 @@ Community‑curated collection of the best root apps, **Magisk/KernelSU/LSPosed 
 - [App Stores](#app-stores)
 - [App Permissions](#app-permissions)
 
-
 #### 🔧 **App Modifications**
 - [Bilibili Mods](#bilibili-mods)
 - [Discord Mods](#discord-mods)
@@ -64,7 +63,6 @@ Community‑curated collection of the best root apps, **Magisk/KernelSU/LSPosed 
 - [YouTube, Spotify, & Google Photos Mods](#youtube-spotify--google-photos-mods)
 - [General App Mods](#general-app-mods)
 - [Patching Tools](#patching-tools)
-
 
 #### 🎵 **Audio & Media**
 - [Audio & Media](#audio-and-media)
@@ -125,6 +123,7 @@ Community‑curated collection of the best root apps, **Magisk/KernelSU/LSPosed 
 
 #### 🔓 **Root Management**
 - [Root Managers](#root-managers)
+- [Zygisk Implementations](#zygisk-implementations)
 - [Root Hiding & Integrity](#root-hiding--integrity)
 - [Root Detection Tools](#root-detection-tools)
 - [Bootloop Protection](#bootloop-protection)
