@@ -98,7 +98,7 @@ Community‑curated collection of the best root apps, **Magisk/KernelSU/LSPosed 
 - [Themes & UI](#themes-and-ui)
 
 #### 🧹 **System Management**
-- [Debloating & System App Removal](#debloating--system-app-removal)
+- [Debloating & System App Removal](#debloating-and-system-app-removal)
 - [Kernel Management](#kernel-management)
 - [System Modifications](#system-modifications)
 
@@ -107,7 +107,9 @@ Community‑curated collection of the best root apps, **Magisk/KernelSU/LSPosed 
 - [Device Controls & Hardware](#device-controls--hardware)
 - [Terminal & Shell Environments](#terminal-and-shell-environments)
 - [Tools](#tools)
-- [Utilities](#utilities)
+
+#### ♿ **Accessibility & Utilities**
+- [Accessibility & Utilities](#accessibility--utilities)
 
 #### 🌐 **Network & Connectivity**
 - [Firewall Tools](#firewall-tools)
@@ -219,12 +221,19 @@ If you've just rooted your device, start with these must-have applications. They
 
 ---
 
+### Accessibility & Utilities
+
+- **[GreaseMilkyway](https://play.google.com/store/apps/details?id=net.kollnig.greasemilkyway)** - Android accessibility service designed to help people with attention-related conditions (such as ADHD) manage their digital environment and focus on what matters. `FOSS` `[LSP]`
+- **[JoyCon Droid](https://joycondroid.gitbook.io/joycondroid)** - Allows you to turn your Android device into a controller for your Nintendo Switch. `FOSS`
+
+
 ### Ads and Tracking Blockers
 > 📚 **Related Guide**: [Complete Android Ad Blocking Tutorial](./docs/guides/android-adblocking.md)
 
 - **⭐ [AdAway](https://f-droid.org/packages/org.adaway/)** - Open-source ad blocker using hosts file. `FOSS` | [📦 Source](https://github.com/AdAway/AdAway)
 - **[AdClose](https://github.com/Xposed-Modules-Repo/com.close.hook.ads/)** - Prevents the initial loading of the advertising SDK within the application and intercepts application advertising requests to block ads. `Proprietary` `[LSP]`
 - **[AdGuard](https://adguard.com/en/adguard-android/overview.html)** - Comprehensive ad blocking solution. `Proprietary`
+- **[AdGuardHome for Root](https://github.com/twoone-3/AdGuardHomeForRoot/blob/main/README_en.md#adguardhome-for-root)** - A module to easily execute AdGuardHome on Android. `FOSS` `[M]`
 - **⭐ [bindhosts](https://github.com/bindhosts/bindhosts)** - Systemless hosts for APatch, KernelSU and Magisk that is fully standalone and self-updating. `FOSS` `[M]` `[K]`
 - **[BlockAds](https://github.com/pantsufan/BlockAds)** - BlockAds is an advertisement blocking Magisk module. `FOSS` `[M]`
 - **[Blokada](https://blokada.org/)** - Advanced ad blocker with VPN functionality. `Proprietary`
@@ -232,6 +241,7 @@ If you've just rooted your device, start with these must-have applications. They
 - **[F*ck AD](https://github.com/hujiayucc/Fuck-AD)** - As the name implies, this is an ad-blocking Xposed module. `FOSS` `[LSP]`
 - **[Magical Protection](https://github.com/programminghoch10/MagicalProtection)** - Magisk-only completely systemless adblocking. `FOSS` `[M]`
 - **[Magisk Ad Blocking Module](https://github.com/pantsufan/Magisk-Ad-Blocking-Module)** - Magisk module to block ads on android. `FOSS` `[M]`
+- **[Pi-hole-for-Android](https://github.com/DesktopECHO/Pi-hole-for-Android)** - Pi-hole/Unbound Raspbian APK installer for Android 5.0+ devices. `FOSS`
 - **[Re-Malwack](https://github.com/Magisk-Modules-Alt-Repo/Re-Malwack)** - A fully-fledged ad-block module. Contains all your needs. `FOSS` `[M]`
 - **[StevenBlock](https://github.com/mikropsoft/StevenBlock)** - Ad Blocking Module for Android supporting Magisk, KernelSU and APatch. `FOSS` `[M]`
 - **[systemless-adblocker](https://github.com/Magisk-Modules-Alt-Repo/systemless-adblocker)** - Ultimate adblocker module derived from gloeyisk/systemless-hosts. `FOSS` `[M]`
@@ -432,7 +442,7 @@ If you've just rooted your device, start with these must-have applications. They
 
 ---
 
-### Debloating & System App Removal
+### Debloating and System App Removal
 > 📚 **Related Guide**: [Android Apps Debloating Guide](./docs/guides/android-apps-debloating.md)
 
 - **⭐ [Canta](https://f-droid.org/en/packages/io.github.samolego.canta/)** -  Uninstall any app without root using Shizuku (Needs [Shizuku](https://shizuku.rikka.app/) to be installed and running). `FOSS`  | [📦 Source](https://github.com/samolego/Canta)
@@ -461,13 +471,11 @@ If you've just rooted your device, start with these must-have applications. They
 ---
 
 ### Device Control and Hardware
-- **[Classic Power Menu](https://github.com/KieronQuinn/ClassicPowerMenu)** - Power Menu Replacement for Android 11+, with the main aim being restoring power menu options (Device Controls and Quick Access Wallet) on Android 12. `FOSS`
 - **[OnePlus Flash Control](https://github.com/Bartixxx32/Opflashcontrol-app)** - Precise control over the brightness of the dual-tone and quad-tone LED flashes for OnePlus devices. `FOSS`
 - **[Root Activity Launcher](https://play.google.com/store/apps/details?id=tk.zwander.rootactivitylauncher)** - Launch activities directly from your home screen with root access. `Proprietary`
 - **[SecondScreen](https://github.com/farmerbb/SecondScreen)** - Advanced solution to connect your Android device to external displays. `FOSS` | [📦 Source](https://github.com/farmerbb/SecondScreen)
 - **[SensorsOff](https://github.com/theLlamaNet/SensorsOff)** - Simple app to enable or disable privacy sensors(camera and microphone) on Miui/HyperOS. `Proprietary`
 - **[USB HID Client](https://apt.izzysoft.de/packages/me.arianb.usb_hid_client)** - Use your phone as a keyboard and mouse **without** any software on the other end. `FOSS` | [📦 Source](https://github.com/Arian04/android-hid-client)
-- **[JoyCon Droid](https://joycondroid.gitbook.io/joycondroid)** - Allows you to turn your Android device into a controller for your Nintendo Switch. `FOSS`
 
 ---
 
@@ -492,6 +500,7 @@ If you've just rooted your device, start with these must-have applications. They
 #### Firewall Tools
 - **[AFWall+](https://f-droid.org/packages/dev.ukanth.ufirewall/)** - iptables-based firewall. `FOSS` | [📦 Source](https://github.com/ukanth/afwall)
 - **[Athena](https://play.google.com/store/apps/details?id=com.kin.athena)** - Material You (Material 3) firewall and ad blocker that works seamlessly on both rooted and non-rooted devices. `FOSS` | [📦 Source](https://github.com/Kin69/Athena)
+- **[Fyrypt](https://github.com/mirfatif/Fyrypt)** - Android firewall with UID + PID rules, dnscrypt-proxy management, and per-app live network monitoring. `Proprietary`
 - **⭐ [NetGuard](https://github.com/M66B/NetGuard)** - Block access to the internet. Apps and addresses can individually be allowed or denied access to your Wi-Fi and/or mobile connection. `FOSS`
 
 #### DNS Tools
@@ -646,6 +655,7 @@ If you've just rooted your device, start with these must-have applications. They
 #### System Optimization
 - **⭐ [3C All-in-One Toolbox](https://play.google.com/store/apps/details?id=ccc71.at.free)** - A comprehensive utility that offers a wide range of tools for monitoring, controlling, and optimizing device performance in a user-friendly interface. `Proprietary`
 - **[Bye Blur](https://github.com/Magisk-Modules-Alt-Repo/Bye-Blur)** - Disable the blur effect, this improves performance by discarding this complex visual effect. `FOSS` `[M]`
+- **[Classic Power Menu](https://github.com/KieronQuinn/ClassicPowerMenu)** - Power Menu Replacement for Android 11+, with the main aim being restoring power menu options (Device Controls and Quick Access Wallet) on Android 12. `FOSS`
 - **[COPG](https://github.com/AlirezaParsi/COPG)** - Spoof your device to enjoy premium features, max performance, and exclusive benefits. `FOSS` `[M]`
 - **[Dex2OAT Optimizer](https://github.com/DEMONICCA/Dex2OAT-Optimizer)** - Optimizes Android system performance by recompiling Dalvik/ART files (dex2oat), clearing caches, and applying customized Dalvik properties for speed and efficiency. `FOSS` `[M]`
 - **[Dynamic System Tweaks Magisk Module](https://github.com/PS2ClassicsVault/Dynamic-System-Tweaks-Magisk-Module)** - Improves overall System performance without overheating and losing battery power for armeabi-v7a devices. `FOSS` `[M]`
@@ -675,7 +685,6 @@ If you've just rooted your device, start with these must-have applications. They
 - **[AlternativeUnlockXposed](https://github.com/leohearts/AlternativeUnlockXposed)** - Unlock your Android phone with an alternative PIN. `FOSS` `[LSP]`
 - **[Always Trust User Certs](https://github.com/NVISOsecurity/AlwaysTrustUserCerts)** - A Magisk/KernelSU module that automatically adds user certificates to the system root CA store. `FOSS` `[M]` `[K]`
 - **⭐ [Amarok](https://f-droid.org/zh_Hans/packages/deltazero.amarok.foss/)** - Android application which enables you to hide your private files and apps with a single click. `FOSS` | [📦 Source](https://github.com/deltazefiro/Amarok-Hider)
-- **[Fyrypt](https://github.com/mirfatif/Fyrypt)** - Android firewall with UID + PID rules, dnscrypt-proxy management, and per-app live network monitoring. `Proprietary`
 - **[Geergit](https://github.com/pyshivam/geergit-discussion)** - Xposed Module For Changing (MASKING) the various IDs in the Phone. `Proprietary` `[LSP]`
 - **[Tarnhelm](https://github.com/lz233/Tarnhelm)** - The magic to clean sharing links up. `FOSS` `[LSP]`
 - **[XPL-EX](https://github.com/0bbedCode/XPL-EX)** - Really simple to use privacy manager for Android 6.0 Marshmallow and later. `FOSS` `[LSP]`
@@ -798,13 +807,10 @@ After hiding root, you can check whether hiding works via root detection apps, s
 ---
 
 ### Tools
-- **[AdGuardHome for Root](https://github.com/twoone-3/AdGuardHomeForRoot/blob/main/README_en.md#adguardhome-for-root)** - A module to easily execute AdGuardHome on Android. `FOSS` `[M]`
 - **[crond4Android](https://github.com/powerAn2020/crond4android)** - he Crond program that supports running on KernelSU, APatch and Magisk. `FOSS` `[M]` `[K]`
-- **⭐ [GreaseMilkyway](https://play.google.com/store/apps/details?id=net.kollnig.greasemilkyway)** - Android accessibility service designed to help people with attention-related conditions (such as ADHD) manage their digital environment and focus on what matters. `FOSS` `[LSP]`
 - **[Hosts Manager Lite](https://play.google.com/store/apps/details?id=awais.hostsmanager.lite)** - Advanced /etc/hosts editor. `Proprietary`
 - **[MagiskGapps](https://github.com/wacko1805/MagiskGapps)** - Convert a regular GApps package into a Magisk flashable package using a simple website. `FOSS` `[M]`
 - **[Magisk Tailscaled](https://github.com/mgksu/tailscaled)** - Module for running Tailscale on rooted Android devices. `FOSS` `[M]`
-- **[Pi-hole-for-Android](https://github.com/DesktopECHO/Pi-hole-for-Android)** - Pi-hole/Unbound Raspbian APK installer for Android 5.0+ devices. `FOSS`
 - **[ROM Toolbox Lite](https://play.google.com/store/apps/details?id=com.jrummy.liberty.toolbox)** - Combines several powerful apps to customize and enhance the performance of your device into one app. `Proprietary`
 - **[UotanToolbox NT](https://github.com/Uotan-Dev/UotanToolboxNT)** - A modern toolbox for geeks. `FOSS`
 - **[XposedModulets](https://github.com/binarynoise/XposedModulets)** - A collection of many small useful Xposed Modules. `FOSS` `[LSP]`
