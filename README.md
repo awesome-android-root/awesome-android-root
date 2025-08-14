@@ -834,6 +834,13 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 ---
 
+## Disclaimer
+
+> **Disclaimer:**  
+> This repository is provided for informational and educational purposes only. Rooting, modifying, or altering your Android device can void warranties, cause data loss, or render your device unusable. The maintainers and contributors of this project are **not responsible** for any damage, loss, or legal issues resulting from the use of any apps, modules, or guides listed here.  
+>  
+> **Proceed at your own risk. Always back up your data and thoroughly research any modifications before applying them to your device.**
+
 ## Important Notes
 
 > ⚠️ **Warning: Proceed with Extreme Caution**  
@@ -850,8 +857,6 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 **Essential Reading Before You Start:**
 - 📚 [Complete Android Rooting Guide](./docs/android-root-guides/index.md) - Master the fundamentals
-- ❓ [FAQ and Troubleshooting](./docs/faqs.md) - Common issues and solutions
-- 🤝 [Contributing Guidelines](./docs/contributing.md) - Help improve this resource
 
 [↑ Back to top](#table-of-contents)
 
