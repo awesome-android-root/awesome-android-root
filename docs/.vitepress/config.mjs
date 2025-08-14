@@ -120,8 +120,8 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { 
         text: 'Root Apps', 
-        link: '/android-root-apps/#root-apps',
-        activeMatch: '^/android-root-apps/#root-apps'
+        link: '/android-root-apps/',  // Updated - remove hash anchor
+        activeMatch: '^/android-root-apps/'
       },
       {
         text: 'Guides',
@@ -152,9 +152,9 @@ export default defineConfig({
           text: 'Getting Started',
           collapsed: false,
           items: [
-            { text: 'Understanding Root Access', link: '/android-root-guides/#understanding-root-access' },
-            { text: 'Should I Root My Device?', link: '/android-root-guides/#should-you-root-decision-matrix' },
-            { text: 'Prerequisites & Safety', link: '/android-root-guides/#prerequisites-safety' }
+            { text: 'Understanding Root Access', link: '/android-root-guides/' }, // Updated - remove hash anchor
+            { text: 'Should I Root My Device?', link: '/android-root-guides/' }, // Updated - remove hash anchor  
+            { text: 'Prerequisites & Safety', link: '/android-root-guides/' } // Updated - remove hash anchor
           ]
         },
         {
@@ -190,82 +190,83 @@ export default defineConfig({
         }
       ],
 
-      // Root Apps Sidebar
+      // Root Apps Sidebar - Update to use the actual index file
       '/android-root-apps/': [
         {
           text: 'Essential Apps',
           collapsed: false,
           items: [
-            { text: 'Featured Must-Have Apps', link: '/android-root-apps/#featured-apps-the-essentials' },
-            { text: 'Root Management Tools', link: '/android-root-apps/#root-management' },
-            { text: 'Ad Blocking Solutions', link: '/android-root-apps/#ad-blocking' }
+            { text: 'Browse All Root Apps', link: '/android-root-apps/' }, // Updated - main index page
+            { text: 'Featured Must-Have Apps', link: '/android-root-apps/' }, // Updated
+            { text: 'Root Management Tools', link: '/android-root-apps/' }, // Updated
+            { text: 'Ad Blocking Solutions', link: '/android-root-apps/' } // Updated
           ]
         },
         {
           text: 'App Management',
           collapsed: true,
           items: [
-            { text: 'App Managers & Control', link: '/android-root-apps/#app-managers' },
-            { text: 'App Isolation & Cloning', link: '/android-root-apps/#app-isolation-and-cloning' },
-            { text: 'Alternative App Stores', link: '/android-root-apps/#app-markets' },
-            { text: 'Permission Control', link: '/android-root-apps/#app-permissions' }
+            { text: 'App Managers & Control', link: '/android-root-apps/' },
+            { text: 'App Isolation & Cloning', link: '/android-root-apps/' },
+            { text: 'Alternative App Stores', link: '/android-root-apps/' },
+            { text: 'Permission Control', link: '/android-root-apps/' }
           ]
         },
         {
           text: 'App Modifications',
           collapsed: true,
           items: [
-            { text: 'Social Media Mods', link: '/android-root-apps/#social-media-mods' },
-            { text: 'YouTube & Media Mods', link: '/android-root-apps/#revanced' },
-            { text: 'Other App Modifications', link: '/android-root-apps/#other-app-mods' },
-            { text: 'App Patching Tools', link: '/android-root-apps/#patching' }
+            { text: 'Social Media Mods', link: '/android-root-apps/' },
+            { text: 'YouTube & Media Mods', link: '/android-root-apps/' },
+            { text: 'Other App Modifications', link: '/android-root-apps/' },
+            { text: 'App Patching Tools', link: '/android-root-apps/' }
           ]
         },
         {
           text: 'System & Performance',
           collapsed: true,
           items: [
-            { text: 'Battery Optimization', link: '/android-root-apps/#battery-management' },
-            { text: 'Performance Tuning', link: '/android-root-apps/#performance-improvements' },
-            { text: 'Kernel Management', link: '/android-root-apps/#kernel-management' },
-            { text: 'System Modifications', link: '/android-root-apps/#system-modifications' },
-            { text: 'Audio Enhancement', link: '/android-root-apps/#audio-enhancement' }
+            { text: 'Battery Optimization', link: '/android-root-apps/' },
+            { text: 'Performance Tuning', link: '/android-root-apps/' },
+            { text: 'Kernel Management', link: '/android-root-apps/' },
+            { text: 'System Modifications', link: '/android-root-apps/' },
+            { text: 'Audio Enhancement', link: '/android-root-apps/' }
           ]
         },
         {
           text: 'Storage & Data',
           collapsed: true,
           items: [
-            { text: 'File Management', link: '/android-root-apps/#file-management' },
-            { text: 'Backup & Restore', link: '/android-root-apps/#backup-and-restore' },
-            { text: 'System Cleaning', link: '/android-root-apps/#cleaning-apps' }
+            { text: 'File Management', link: '/android-root-apps/' },
+            { text: 'Backup & Restore', link: '/android-root-apps/' },
+            { text: 'System Cleaning', link: '/android-root-apps/' }
           ]
         },
         {
           text: 'Privacy & Security',
           collapsed: true,
           items: [
-            { text: 'Privacy Protection', link: '/android-root-apps/#privacy-and-security' },
-            { text: 'Network Security', link: '/android-root-apps/#network-tools' },
-            { text: 'Location & GPS Control', link: '/android-root-apps/#location-and-gps' }
+            { text: 'Privacy Protection', link: '/android-root-apps/' },
+            { text: 'Network Security', link: '/android-root-apps/' },
+            { text: 'Location & GPS Control', link: '/android-root-apps/' }
           ]
         },
         {
           text: 'Customization',
           collapsed: true,
           items: [
-            { text: 'UI Customization', link: '/android-root-apps/#customizations' },
-            { text: 'System Debloating', link: '/android-root-apps/#debloating' },
-            { text: 'Display & Screen', link: '/android-root-apps/#screen-and-display' }
+            { text: 'UI Customization', link: '/android-root-apps/' },
+            { text: 'System Debloating', link: '/android-root-apps/' },
+            { text: 'Display & Screen', link: '/android-root-apps/' }
           ]
         },
         {
           text: 'Developer Tools',
           collapsed: true,
           items: [
-            { text: 'Development & Debugging', link: '/android-root-apps/#development-and-debugging' },
-            { text: 'Terminal & Shell', link: '/android-root-apps/#terminal--shell-environments' },
-            { text: 'System Tools & Utilities', link: '/android-root-apps/#tools' }
+            { text: 'Development & Debugging', link: '/android-root-apps/' },
+            { text: 'Terminal & Shell', link: '/android-root-apps/' },
+            { text: 'System Tools & Utilities', link: '/android-root-apps/' }
           ]
         }
       ],
@@ -285,15 +286,15 @@ export default defineConfig({
         }
       ],
 
-      // Homepage Sidebar
+      // Homepage Sidebar - Update to reflect actual content structure
       '/': [
         {
           text: 'Quick Start',
           collapsed: false,
           items: [
-            { text: 'What is Root Access?', link: '/#what-is-root-access' },
+            { text: 'What is Root Access?', link: '/' }, // Updated - remove hash anchor
             { text: 'Rooting Tutorials', link: '/android-root-guides/' },
-            { text: 'Root Apps Collection', link: '/android-root-apps/' },
+            { text: 'Root Apps Collection', link: '/android-root-apps/' }, // Updated
             { text: 'Android Tips', link: '/guides/' },
             { text: 'FAQ & Help', link: '/faqs' }
           ]
@@ -302,22 +303,22 @@ export default defineConfig({
           text: 'Popular Categories',
           collapsed: false,
           items: [
-            { text: 'Essential Root Apps', link: '/android-root-apps/#featured-apps-the-essentials' },
-            { text: 'Root Management', link: '/android-root-apps/#root-management' },
-            { text: 'Ad Blocking', link: '/android-root-apps/#ad-blocking' },
-            { text: 'App Management', link: '/android-root-apps/#app-managers' },
-            { text: 'System Performance', link: '/android-root-apps/#performance-improvements' },
-            { text: 'Privacy & Security', link: '/android-root-apps/#privacy-and-security' }
+            { text: 'Essential Root Apps', link: '/android-root-apps/' }, // Updated
+            { text: 'Root Management', link: '/android-root-apps/' }, // Updated
+            { text: 'Ad Blocking', link: '/android-root-apps/' }, // Updated
+            { text: 'App Management', link: '/android-root-apps/' }, // Updated
+            { text: 'System Performance', link: '/android-root-apps/' }, // Updated
+            { text: 'Privacy & Security', link: '/android-root-apps/' } // Updated
           ]
         },
         {
           text: 'Advanced Features',
           collapsed: true,
           items: [
-            { text: 'App Modifications', link: '/android-root-apps/#social-media-mods' },
-            { text: 'System Customization', link: '/android-root-apps/#customizations' },
-            { text: 'Developer Tools', link: '/android-root-apps/#development-and-debugging' },
-            { text: 'Backup Solutions', link: '/android-root-apps/#backup-and-restore' }
+            { text: 'App Modifications', link: '/android-root-apps/' }, // Updated
+            { text: 'System Customization', link: '/android-root-apps/' }, // Updated
+            { text: 'Developer Tools', link: '/android-root-apps/' }, // Updated
+            { text: 'Backup Solutions', link: '/android-root-apps/' } // Updated
           ]
         },
         {
