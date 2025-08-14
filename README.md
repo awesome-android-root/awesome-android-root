@@ -267,7 +267,7 @@ If you've just rooted your device, start with these must-have applications. They
 - **[Let Me Downgrade](https://github.com/DavidBerdik/Let-Me-Downgrade)** - Add support for downgrading apps on Android 12 through 15 QPR1. `FOSS` `[LSP]`
 - **[Package Manager](https://f-droid.org/packages/com.smartpack.packagemanager)** - A highly powerful app to manage both system and user apps installed on an Android device. `FOSS` | [📦 Source](https://github.com/SmartPack/PackageManager)
 - **[Thor](https://play.google.com/store/apps/details?id=com.valhalla.thor)** - Android App Manager and App Installer utility. `FOSS` | [📦 Source](https://github.com/SmartPack/PackageManager)
-- **[Update Locker](https://github.com/Xposed-Modules-Repo/ru.mike.updatelocker/)** - Block updates (and auto-updates) selected apps via popular markets including Google Play Market, Huawei AppGallery and Samsung Galaxy Store.
+- **[Update Locker](https://github.com/Xposed-Modules-Repo/ru.mike.updatelocker/)** - Block updates (and auto-updates) selected apps via popular markets including Google Play Market, Huawei AppGallery and Samsung Galaxy Store. `Proprietary`
 - **⭐ [Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. Also checkout → [📖 Zygisk Detach Guide](./docs/guides/stop-android-app-auto-updates-play-store.md). `FOSS` `[M]`
 
 
@@ -340,7 +340,7 @@ If you've just rooted your device, start with these must-have applications. They
 ---
 
 ### Cleaning and Maintenance
-- **[Cleaner Royall](https://github.com/araafroyall/Cleaner-Royall)** - A Light weight but Ultra Fast and Powerful cleaner for Android. `Proprietary` `[LSP]`
+- **[Cleaner Royall](https://github.com/araafroyall/Cleaner-Royall)** - A light weight but ultra-fast and powerful cleaner for Android. `Proprietary` `[LSP]`
 - **[DirCleaner](https://www.dircleaner.com/)** - A simple and practical cleaning tool. `Proprietary`
 - **[Risk](https://github.com/rakarmp/Risk)** - Clean RAM Cache And Stop Background Apps, Google Apps, Third Party Apps. `FOSS` `[M]`
 - **⭐ [SD Maid 2/SE](https://f-droid.org/en/packages/eu.darken.sdmse/)** - A file management tool for Android that specialises in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS` | [📦 Source](https://github.com/d4rken-org/sdmaid-se)
@@ -351,7 +351,7 @@ If you've just rooted your device, start with these must-have applications. They
 
 ### Communication
 #### Call Recording
-- **[Basic Call Recorder](https://github.com/chenxiaolong/BCR)** - A Basic Call Recorder for rooted Android devices.Also checkout [GUI for BCR ↗](https://github.com/nicorac/bcr-gui) `FOSS` `[M]` `[K]`
+- **[Basic Call Recorder](https://github.com/chenxiaolong/BCR)** - A Basic Call Recorder for rooted Android devices. Also checkout [GUI for BCR ↗](https://github.com/nicorac/bcr-gui) `FOSS` `[M]` `[K]`
 - **[Call Recorder - SKVALEX](https://github.com/Magisk-Modules-Repo/callrecorder-skvalex)** - Call recording app to record both sides from the line with a power of root and magisk. `FOSS` `[M]`
 - **[Call Recording Google Dialer](https://modules.lsposed.org/module/io.github.vvb2060.callrecording)** - Allows call recorder for google dialer for all regions and without notifying sound. `FOSS` `[LSP]`
 
@@ -479,7 +479,7 @@ If you've just rooted your device, start with these must-have applications. They
 ---
 
 ### File Management
-- **[AnExplorer](https://play.google.com/store/apps/details?id=dev.dworks.apps.anexplorer)** - A is Simple, Small, Fast and Efficient File Explorer. `FOSS` | [📦 Source](https://github.com/1hakr/AnExplorer)
+- **[AnExplorer](https://play.google.com/store/apps/details?id=dev.dworks.apps.anexplorer)** - A simple, Small, Fast and Efficient File Explorer. `FOSS` | [📦 Source](https://github.com/1hakr/AnExplorer)
 - **[Fossify File Manager](https://f-droid.org/packages/org.fossify.filemanager/)** - Easy app for managing your files without ads, respecting your privacy and security. `FOSS` | [📦 Source](https://github.com/FossifyOrg/File-Manager)
 - **[Material Files](https://f-droid.org/packages/me.zhanghai.android.files)** - Modern file manager with root capabilities. `FOSS` | [📦 Source](https://github.com/zhanghai/MaterialFiles)
 - **⭐ [MiXplorer](https://mixplorer.com/)** - Feature-rich file manager. `Proprietary`
@@ -748,7 +748,7 @@ Use these modules if you need Zygisk features on alternative root frameworks (Ke
 - **⭐ [SUSFS Module](https://github.com/sidex15/susfs4ksu-module)** - An addon root hiding service for KernelSU. `FOSS` `[M]`
 - **⭐ [TrickyStore](https://github.com/5ec1cff/TrickyStore)** - Modifying the certificate chain generated for android key attestation. `Proprietary` `[M]` `[K]`
 - **[Tricky Addon - Update Target List](https://github.com/KOWX712/Tricky-Addon-Update-Target-List)** - A KSU WebUI to configure Tricky Store target.txt. `FOSS` `[K]`
-- **[Tricky Store OSS](https://github.com/beakthoven/TrickyStoreOSS)** - Open source alternative to proprietary Tricky Store module. `[M]` [K]`
+- **[Tricky Store OSS](https://github.com/beakthoven/TrickyStoreOSS)** - Open source alternative to proprietary Tricky Store module. `[M]` `[K]`
 - **⭐ [YuriKey](https://github.com/dpejoh/yurikey)** - A systemless module to get strong integrity easily. `FOSS` `[M]` `[K]`
 - **[Zygisk-Assistant](https://github.com/snake-4/Zygisk-Assistant)** - A Zygisk module to hide root for KernelSU, Magisk and APatch. `FOSS` `[M]`
 
