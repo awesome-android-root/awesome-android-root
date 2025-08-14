@@ -717,13 +717,22 @@ If you've just rooted your device, start with these must-have applications. They
 
 ### Zygisk Implementations
 
-<details><summary>What is Zygisk?</summary>
-Zygisk is a feature within the Magisk framework that allows modules to run code directly within the Zygote process of the Android operating system
+<details>
+<summary><strong><bold>What is Zygisk?</bold></strong></summary>
+
+Zygisk is a feature that allows modules to inject code directly into the Zygote process in Android. This enables **powerful system-level modifications**, such as **hiding root**, patching app behavior, and more, with minimal impact on device stability and performance.
 </details>
 
-- **[NeoZygisk](https://github.com/JingMatrix/NeoZygisk)** - Zygote injection module implemented using ptrace, which provides Zygisk API support for APatch/KernelSU and serves as a replacement of Magisk's built-in Zygisk. `FOSS` `[M]`
-- **[ReZygisk](https://github.com/PerformanC/ReZygisk)** - A standalone and open-source Zygisk implementation, providing Zygisk API support for KernelSU and a replacement for Magisk's built-in Zygisk. `FOSS` `[M]` `[K]`
-- **⭐ [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)** - Standalone implementation of Zygisk, providing Zygisk API support for KernelSU and a replacement of Magisk's built-in Zygisk. `Proprietary` `[M]` `[K]`
+- **[NeoZygisk](https://github.com/JingMatrix/NeoZygisk)**  
+  Zygote injection module implemented using ptrace, providing Zygisk API support for APatch and KernelSU. Serves as a replacement for Magisk's built-in Zygisk. `FOSS` `[M]`
+- **[ReZygisk](https://github.com/PerformanC/ReZygisk)**  
+  Standalone and open-source Zygisk implementation, offering Zygisk API support for KernelSU and as a drop-in replacement for Magisk's Zygisk. `FOSS` `[M]` `[K]`
+- **⭐ [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)**  
+  Advanced standalone Zygisk implementation, supporting KernelSU and replacing Magisk's built-in Zygisk. `Proprietary` `[M]` `[K]`
+
+::: tip **💡 Tip:**  
+Use these modules if you need Zygisk features on alternative root frameworks (KernelSU, APatch), or want more control over Zygisk behavior than Magisk's
+:::
 
 ### Root Hiding and Integrity
 > [TheUnrealZaka's Guide for Hiding Root](https://gist.github.com/TheUnrealZaka/042040a1700ad869d54e781507a9ba4f)
