@@ -154,7 +154,7 @@ export default defineConfig({
           items: [
             { text: 'Understanding Root Access', link: '/android-root-guides/#understanding-root-access' },
             { text: 'Why Root Your Device?', link: '/android-root-guides/#why-root-your-device' },
-            { text: 'Prerequisites & Safety', link: '/android-root-guides/#prerequisites--safety' }
+            { text: 'Prerequisites & Safety', link: '/android-root-guides/#prerequisites-and-safety' }
           ]
         },
         {
@@ -216,8 +216,8 @@ export default defineConfig({
           text: 'App Modifications',
           collapsed: true,
           items: [
-            { text: 'Social Media Mods', link: '/android-root-apps/#modded-apps--tweaks' },
-            { text: 'YouTube & Media Mods', link: '/android-root-apps/#youtube-spotify--google-photos-mods' },
+            { text: 'Social Media Mods', link: '/android-root-apps/#modded-apps-and-tweaks' },
+            { text: 'YouTube & Media Mods', link: '/android-root-apps/#youtube-spotify-and-google-photos-mods' },
             { text: 'Other App Modifications', link: '/android-root-apps/#general-app-mods' },
             { text: 'App Patching Tools', link: '/android-root-apps/#patching-tools' }
           ]
@@ -315,7 +315,7 @@ export default defineConfig({
           text: 'Advanced Features',
           collapsed: true,
           items: [
-            { text: 'App Modifications', link: '/android-root-apps/#modded-apps--tweaks' },
+            { text: 'App Modifications', link: '/android-root-apps/#modded-apps-and-tweaks' },
             { text: 'System Customization', link: '/android-root-apps/#customization' },
             { text: 'Developer Tools', link: '/android-root-apps/#development-and-debugging' },
             { text: 'Backup Solutions', link: '/android-root-apps/#backup-and-restore' }
