@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "terser": "^5.43.1",
-    "vitepress": "^1.6.3"
+    "vitepress": "^1.6.4"
   },
   "keywords": [
     "android",
