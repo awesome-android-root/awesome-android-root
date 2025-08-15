@@ -13,7 +13,7 @@ Community‑curated collection of the best root apps, **Magisk/KernelSU/LSPosed 
 
 <div class="quick-nav">
 
-**🚀 Quick Links:** [What is Root?](#what-is-root-access) • [Root Guides](#root-guide-and-solutions) • [Browse Apps/Modules](#root-apps) • [Community](#community-and-resources)
+**🚀 Quick Links:** [What is Root?](#what-is-root-access) • [Root Guides](#rooting-guides-and-resources) • [Browse Apps/Modules](#root-apps) • [Community](#community-and-resources)
 
 </div>
 </div>
@@ -156,7 +156,7 @@ Android rooting gives you **privileged administrative control** over your device
 
 > 🚨 **Please read our [Important Notes Section](#important-notes) before continuing!**
 
-## Rooting Guides & Resources
+## Rooting Guides and Resources
 
 This collection of guides will walk you through the entire rooting process, from unlocking your bootloader to advanced system modifications.
 
