@@ -149,10 +149,10 @@ Community‑curated collection of the best root apps, **Magisk/KernelSU/LSPosed 
 Android rooting gives you **privileged administrative control** over your device's subsystems—essentially becoming the "superuser" of your device, like administrator rights on a computer.
 
 ### Why Root Your Android Device?
-- 🔓 **Freedom and Control** - Remove restrictions and customize everything
-- ⚡ **Enhanced Performance** - Optimize system performance and battery life
-- 🛡️ **Advanced Security and Privacy** - Control app permissions and data access
-- 🎨 **Complete Customization** - Themes, system modifications, and UI changes
+- **Freedom and Control** - Remove restrictions and customize everything
+- **Enhanced Performance** - Optimize system performance and battery life
+- **Advanced Security and Privacy** - Control app permissions and data access
+- **Complete Customization** - Themes, system modifications, and UI changes
 
 > 🚨 **Please read our [Important Notes Section](#important-notes) before continuing!**
 
@@ -161,29 +161,43 @@ Android rooting gives you **privileged administrative control** over your device
 This collection of guides will walk you through the entire rooting process, from unlocking your bootloader to advanced system modifications.
 
 ### Core Rooting Process
-1.  **[🔓 Unlock Bootloader](./docs/android-root-guides/how-to-unlock-bootloader.md)** - The essential first step for all modifications.
-2.  **[🛠️ Install Custom Recovery](./docs/android-root-guides/how-to-install-custom-recovery.md)** - Flash TWRP, OrangeFox, or another custom recovery.
-3.  **[⚡ Root Your Device](./docs/android-root-guides/index.md#root-methods-comparison)** - Choose your preferred rooting method:
+
+<details><summary>👉 tap to expand contents</summary>
+
+1.  **[Unlock Bootloader](./docs/android-root-guides/how-to-unlock-bootloader.md)** - The essential first step for all modifications.
+2.  **[Install Custom Recovery](./docs/android-root-guides/how-to-install-custom-recovery.md)** - Flash TWRP, OrangeFox, or another custom recovery.
+3.  **[Root Your Device](./docs/android-root-guides/index.md#root-methods-comparison)** - Choose your preferred rooting method:
     *   **[Magisk](./docs/android-root-guides/magisk-guide.md)** - The most popular systemless root solution.
     *   **[KernelSU](./docs/android-root-guides/kernelsu-guide.md)** - A kernel-based root method.
     *   **[APatch](./docs/android-root-guides/apatch-guide.md)** - An alternative kernel-patching solution.
-4.  **[🌟 Install Custom ROM](./docs/android-root-guides/custom-rom-installation.md)** _(Optional)_ - Completely transform your Android experience.
+4.  **[Install Custom ROM](./docs/android-root-guides/custom-rom-installation.md)** _(Optional)_ - Completely transform your Android experience.
+
+</details>
 
 ### Device-Specific & How-To Guides
--   **Device-Specific Instructions:**
-    -   [Google Pixel](./docs/android-root-guides/how-to-root-pixel-phone.md)
-    -   [Samsung Galaxy](./docs/android-root-guides/how-to-root-samsung-phone.md)
-    -   [Xiaomi/MIUI](./docs/android-root-guides/how-to-root-xiaomi-phone.md)
-    -   [OnePlus](./docs/android-root-guides/how-to-root-oneplus-phone.md)
-    -   [Nothing Phone](./docs/android-root-guides/how-to-root-nothing-phone.md)
-    -   [Motorola](./docs/android-root-guides/how-to-root-motorola-phone.md)
--   **Essential How-To's:**
-    -   [Android Ad Blocking Guide](./docs/guides/android-adblocking.md)
-    -   [Android App Debloating](./docs/guides/android-apps-debloating.md)
-    -   [Stop Auto-Updates in Play Store](./docs/guides/stop-android-app-auto-updates-play-store.md)
-    -   [App Backup and Restore Using Root](./docs/guides/app-backup-restore-using-root.md)
+#### Device-Specific Instructions:
+<details><summary>👉 tap to expand contents</summary>
 
-**[📖 View the Complete Rooting Master Guide →](./docs/android-root-guides/index.md)**
+-   [Google Pixel](./docs/android-root-guides/how-to-root-pixel-phone.md)
+-   [Samsung Galaxy](./docs/android-root-guides/how-to-root-samsung-phone.md)
+-   [Xiaomi/MIUI](./docs/android-root-guides/how-to-root-xiaomi-phone.md)
+-   [OnePlus](./docs/android-root-guides/how-to-root-oneplus-phone.md)
+-   [Nothing Phone](./docs/android-root-guides/how-to-root-nothing-phone.md)
+-   [Motorola](./docs/android-root-guides/how-to-root-motorola-phone.md)
+
+</details>
+
+#### Essential How-To's:
+<details><summary>👉 tap to expand contents</summary>
+
+-   [Android Ad Blocking Guide](./docs/guides/android-adblocking.md)
+-   [Android App Debloating](./docs/guides/android-apps-debloating.md)
+-   [Stop Auto-Updates in Play Store](./docs/guides/stop-android-app-auto-updates-play-store.md)
+-   [App Backup and Restore Using Root](./docs/guides/app-backup-restore-using-root.md)
+
+</details>
+
+#### [📖 View the Complete Rooting Master Guide →](./docs/android-root-guides/index.md)
 
 ## Glossary
 - **⭐** = Community‑recommended (most popular/trusted in category)
