@@ -40,7 +40,7 @@ head:
 **The ultimate collection of 280+ curated apps, modules, and tools** for rooted Android devices, organized by category for effortless discovery and exploration.
 
 ::: tip 🚀 New to Root Apps?
-**Start with our [Featured Apps](./featured-apps.md)** - community-recommended essentials that every rooted device should have, or follow our [Quick Start Guide](../quick-start.md) to safely root your device first.
+**Start with our [Featured Apps](../featured)** - community-recommended essentials that every rooted device should have, or follow our [Quick Start Guide](../quick-start) to safely root your device first.
 :::
 
 ## Collection Overview
@@ -67,7 +67,7 @@ All apps are carefully vetted for **safety**, **functionality**, and **active de
 
 | Category | Description |
 | :--- | :--- |
-| [**Featured Apps**](./featured) | Community-recommended essentials for every rooted device |
+| [**Featured Apps**](../featured) | Community-recommended essentials for every rooted device |
 | [**Root Management**](./root-management) | Core tools for managing root access and modules |
 | [**Ad &amp; Tracker Blocking**](./ads-and-tracker-blocking) | System-wide ad blocking and privacy protection |
 | [**App Management**](./apps-management) | Advanced app control, isolation, and management |

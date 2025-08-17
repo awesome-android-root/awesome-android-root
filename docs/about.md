@@ -87,9 +87,9 @@ Democratize Android customization by providing free, comprehensive resources for
 4. [🌟 Install Custom ROM](./android-root-guides/custom-rom-installation.md) - Transform your Android (optional)
 
 **Quick Navigation by Experience:**
-- **Beginners:** [Complete Rooting Guide](./android-root-guides/) → [Essential Apps](./android-root-apps/#featured-apps-the-essentials)
+- **Beginners:** [Complete Rooting Guide](./android-root-guides/) → [Featured Apps](./featured)
 - **Intermediate:** [Device-Specific Guides](./android-root-guides/#device-specific-guides) → [Advanced Modules](./android-root-apps/#managers)
-- **Experts:** [Troubleshooting](./faqs.md) → [Community Contributions](./contributing.md)
+- **Experts:** [Troubleshooting](./faqs) → [Community Contributions](./contributing)
 
 ## Community
 
