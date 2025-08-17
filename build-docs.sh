@@ -70,8 +70,9 @@ update_stats() {
     
     # Function to count entries matching a pattern
     count_entries() {
-        local pattern=$1
-        grep -E "$pattern" "$readme_file" | wc -l
+        local pattern="$1"
+        local file="${2:-$readme_file}"
+        grep -E "$pattern" "$file" 2>/dev/null | wc -l
     }
 
     # Patterns for entries (same as counter.sh)
@@ -87,24 +88,29 @@ update_stats() {
 
     # Calculate actual app entries (excluding guides)
     local total_entries=$((all_entries - guide_entries))
-
+    
     # Count modules by type (total counts including overlaps)
     local magisk_modules=$(count_entries "$magisk_pattern")
     local kernelsu_modules=$(count_entries "$kernelsu_pattern")
     local lsposed_modules=$(count_entries "$lsposed_pattern")
 
     # Calculate root apps (entries without any module tags)
-    local all_module_entries=$(grep -E "$total_pattern" "$readme_file" | grep -v "$guides_pattern" | grep -E '\[(M|K|LSP)\]' | wc -l)
+    # First get all app entries, then subtract those with any module tags
+    local all_module_entries=$(grep -E "$total_pattern" "$readme_file" 2>/dev/null | grep -v "$guides_pattern" | grep -E '\[(M|K|LSP)\]' | wc -l)
     local root_apps=$((total_entries - all_module_entries))
 
-    # Create new stats section
+    # Debug logging
+    log_info "Stats calculated: Total=${total_entries}, Root Apps=${root_apps}, Magisk=${magisk_modules}, KernelSU=${kernelsu_modules}, LSPosed=${lsposed_modules}"
+
+    # Generate stats section with current date
+    local current_date=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
     local new_stats="<div class=\"img-cnt\">
 
-![Total Entries](https://img.shields.io/badge/Total%20Entries-${total_entries}-blue?style=for-the-badge&logo=android)
-![Root Apps](https://img.shields.io/badge/Root%20Apps-${root_apps}-blue?style=for-the-badge&logo=android)
-![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-${magisk_modules}-orange?style=for-the-badge&logo=magisk&logoColor=white)
-![KernelSU Modules](https://img.shields.io/badge/KernelSU%20Modules-${kernelsu_modules}-green?style=for-the-badge&logo=keenetic&logoColor=white)
-![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-${lsposed_modules}-purple?style=for-the-badge&logo=local&logoColor=white)
+![Total Entries](https://img.shields.io/badge/Total%20Entries-${total_entries}-blue?style=for-the-badge&logo=android&cacheSeconds=3600)
+![Root Apps](https://img.shields.io/badge/Root%20Apps-${root_apps}-blue?style=for-the-badge&logo=android&cacheSeconds=3600)
+![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-${magisk_modules}-orange?style=for-the-badge&logo=magisk&logoColor=white&cacheSeconds=3600)
+![KernelSU Modules](https://img.shields.io/badge/KernelSU%20Modules-${kernelsu_modules}-green?style=for-the-badge&logo=keenetic&logoColor=white&cacheSeconds=3600)
+![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-${lsposed_modules}-purple?style=for-the-badge&logo=local&logoColor=white&cacheSeconds=3600)
 
 </div>"
 
@@ -119,6 +125,34 @@ update_stats() {
     mv "$temp_file" "$readme_file" || handle_error "Failed updating stats in $readme_file"
     
     log_info "Stats updated: Total=${total_entries}, Root Apps=${root_apps}, Magisk=${magisk_modules}, KernelSU=${kernelsu_modules}, LSPosed=${lsposed_modules}"
+    
+    # Also update frontmatter if it's the android-root-apps index file
+    if [[ "$readme_file" == *"android-root-apps/index.md" ]] && [[ -f "docs/android-root-apps/index-frontmatter.txt" ]]; then
+        update_frontmatter_stats "$total_entries" "$root_apps" "$magisk_modules" "$kernelsu_modules" "$lsposed_modules" "$current_date"
+    fi
+}
+
+# Function to update frontmatter stats and metadata
+update_frontmatter_stats() {
+    local total_entries="$1"
+    local root_apps="$2" 
+    local magisk_modules="$3"
+    local kernelsu_modules="$4"
+    local lsposed_modules="$5"
+    local current_date="$6"
+    local frontmatter_file="docs/android-root-apps/index-frontmatter.txt"
+    
+    log_info "Updating frontmatter stats in $frontmatter_file"
+    
+    # Update description with current stats (replace any number+)
+    sed -i "s/[0-9]\++/${total_entries}+/g" "$frontmatter_file" || log_warn "Could not update total entries in frontmatter"
+    
+    # Update dateModified in JSON-LD (if present)
+    if grep -q "dateModified" "$frontmatter_file" 2>/dev/null; then
+        sed -i "s/\"dateModified\": \"[^\"]*\"/\"dateModified\": \"$current_date\"/g" "$frontmatter_file"
+    fi
+    
+    log_info "Frontmatter updated with current stats and date"
 }
 
 # Update stats in original README.md

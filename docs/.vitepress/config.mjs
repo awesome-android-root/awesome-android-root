@@ -3,9 +3,10 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: "en-US",
   title: "Awesome Android Root",
+  description: "Ultimate Android rooting hub with 280+ curated root apps, Magisk modules, and step-by-step guides for Android customization and freedom.",
   ignoreDeadLinks: true,
   cleanUrls: true,
-
+  
   // VitePress build optimizations
   vite: {
     build: {
@@ -44,6 +45,11 @@ export default defineConfig({
 
   head: [
 
+    // Content Security Policy for enhanced security
+    // This CSP allows images from our site, shields.io, and GitHub
+    // while blocking inline scripts and styles for better security.
+    ['meta', { 'http-equiv': 'Content-Security-Policy', content: "default-src 'self'; img-src 'self' https://img.shields.io https://github.com data:; script-src 'self' 'unsafe-inline';" }],
+
     // Favicons with improved metadata
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
@@ -70,12 +76,47 @@ export default defineConfig({
     // SEO Meta Tags - Enhanced for Android Root niche
     ['meta', { name: 'keywords', content: 'android root 2025, magisk modules, kernelsu guide, lsposed framework, custom recovery, twrp guide, bootloader unlock, android customization, root apps, system modifications, android freedom, xposed modules, android debloating, performance optimization, privacy tools, android security, custom rom installation, android development, rooting tutorial, android hacking, mobile security' }],
 
-    // Additional SEO and performance meta tags
-    ['meta', { name: 'author', content: 'Fynks' }],
+    // Enhanced SEO and performance meta tags
+    ['meta', { name: 'author', content: 'Awesome Android Root Project' }],
     ['meta', { name: 'publisher', content: 'Awesome Android Root Project' }],
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1' }],
     ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large' }],
     ['meta', { name: 'language', content: 'en-US' }],
+    ['meta', { name: 'distribution', content: 'global' }],
+    ['meta', { name: 'rating', content: 'general' }],
+    ['meta', { name: 'referrer', content: 'no-referrer-when-downgrade' }],
+    
+    // Open Graph structured data
+    ['meta', { property: 'og:site_name', content: 'Awesome Android Root' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:locale', content: 'en_US' }],
+    
+    // Twitter Card data
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:site', content: '@awsm_and_root' }],
+    ['meta', { name: 'twitter:creator', content: '@awsm_and_root' }],
+    
+    // JSON-LD structured data for better SEO
+    ['script', { type: 'application/ld+json' }, JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Awesome Android Root",
+      "description": "Ultimate Android rooting hub with 280+ curated root apps, Magisk modules, and step-by-step guides",
+      "url": "https://awesome-android-root.org",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://awesome-android-root.org/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Awesome Android Root Project",
+        "url": "https://github.com/awesome-android-root"
+      }
+    })],
 
     // Ahref Verification for Search Console
     ['meta', { name: 'ahrefs-site-verification', content: '5fd5ad82113006dedaabbb7cc47ee96924361ceedafe09795ce9abbb7d32d6ff' }],
