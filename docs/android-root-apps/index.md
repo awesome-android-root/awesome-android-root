@@ -1,4 +1,4 @@
----
+--- 
 layout: doc
 title: Android Root Apps Collection - 280+ Apps by Category
 description: "Browse 280+ curated Android root apps, Magisk modules, and LSPosed (Xposed) frameworks organized by category. Essential tools for rooted Android devices."
@@ -37,13 +37,13 @@ head:
 
 # Android Root Apps Collection
 
-**280+ curated apps, modules, and tools** for rooted Android devices, organized by category for easy discovery.
+**The ultimate collection of 280+ curated apps, modules, and tools** for rooted Android devices, organized by category for effortless discovery and exploration.
 
 ::: tip 🚀 New to Root Apps?
-**Start with our [Featured Apps](../featured.md)** - community-recommended essentials, or follow our [Quick Start Guide](../quick-start.md) to safely root your device first.
+**Start with our [Featured Apps](./featured-apps.md)** - community-recommended essentials that every rooted device should have, or follow our [Quick Start Guide](../quick-start.md) to safely root your device first.
 :::
 
-## 📊 Collection Stats
+## Collection Overview
 
 <div class="stats-grid">
 
@@ -55,245 +55,118 @@ head:
 
 </div>
 
+::: info 📋 About Our Collection
+All apps are carefully vetted for **safety**, **functionality**, and **active development**. We focus on open-source solutions where possible and clearly mark proprietary alternatives. Each category includes compatibility information for different root methods.
+:::
+
+---
+
 ## 🎯 Browse by Category
 
-### 🏆 Essential Categories
+### 🌟 Essential Categories
 
-<div class="category-grid">
+| Category | Description |
+| :--- | :--- |
+| [**Featured Apps**](./featured) | Community-recommended essentials for every rooted device |
+| [**Root Management**](./root-management) | Core tools for managing root access and modules |
+| [**Ad &amp; Tracker Blocking**](./ads-and-tracker-blocking) | System-wide ad blocking and privacy protection |
+| [**App Management**](./apps-management) | Advanced app control, isolation, and management |
 
-**[🌟 Featured Apps](../featured.md)**  
-*Community-recommended essentials for every rooted device*
+### 📱 App Enhancement & Control
 
-**[🛡️ Root Management](#root-managers)**  
-*Core tools for managing root access and modules*
+| Category | Description |
+| :--- | :--- |
+| [**App Automation**](./automation) | Tasker, Automate, and workflow automation tools |
+| [**Communication**](./communication) | Enhanced messaging, calling, and communication apps |
+| [**Media Modifications**](./reVanced) | YouTube, Spotify, and enhanced media applications |
+| [**Social Media Mods**](./modded-apps-and-tweaks) | Modified Instagram, Twitter, TikTok, and social apps |
 
-**[🚫 Ad & Tracking Blockers](#ads-and-tracking-blockers)**  
-*System-wide ad blocking and privacy protection*
+### ⚡ System Performance & Control
 
-**[📱 App Management](#app-managers-and-control)**  
-*Advanced app control, isolation, and management*
-
-</div>
-
-### 📦 App Management & Control
-
-<div class="category-grid">
-
-**[🔒 App Isolation & Cloning](#app-isolation-and-cloning)**  
-*Run multiple app instances and isolate apps*
-
-**[🏪 Alternative App Stores](#app-stores)**  
-*F-Droid, Aurora Store, and other app sources*
-
-**[🔐 App Permissions](#app-permissions)**  
-*Granular permission control and management*
-
-</div>
-
-### 🔧 App Modifications & Tweaks
-
-<div class="category-grid">
-
-**[📺 YouTube & Media Mods](#youtube-spotify--google-photos-mods)**  
-*Enhanced YouTube, Spotify, and media apps*
-
-**[💬 Social Media Mods](#modded-apps-and-tweaks)**  
-*Modified Instagram, Twitter, TikTok, and more*
-
-**[🛠️ Patching Tools](#patching-tools)**  
-*Tools for modifying and patching applications*
-
-</div>
-
-### ⚡ Performance & System
-
-<div class="category-grid">
-
-**[🔋 Battery & Power Management](#battery-and-power-management)**  
-*Optimize battery life and power consumption*
-
-**[🎮 Performance & Gaming](#performance-and-gaming)**  
-*CPU/GPU optimization and gaming enhancements*
-
-**[🧠 Kernel Management](#kernel-management)**  
-*Kernel tuning and custom kernel management*
-
-**[⚙️ System Modifications](#system-modifications)**  
-*Deep system tweaks and modifications*
-
-</div>
+| Category | Description |
+| :--- | :--- |
+| [**Battery &amp; Power Management**](./battery-and-power-management) | Optimize battery life and power consumption |
+| [**Performance &amp; Gaming**](./performance-tweaks) | CPU/GPU optimization and gaming enhancements |
+| [**Kernel Management**](./kernel-management) | Kernel tuning and custom kernel management |
+| [**System Modifications**](./system-modifications) | Deep system tweaks and core modifications |
+| [**Audio Management**](./audio-management) | Advanced audio control and enhancement tools |
 
 ### 🗂️ Storage & Data Management
 
-<div class="category-grid">
-
-**[💾 Backup & Restore](#backup-and-restore)**  
-*Complete backup solutions for apps and data*
-
-**[📁 File Management](#file-management)**  
-*Advanced file managers with root access*
-
-**[🧹 Cleaning & Maintenance](#cleaning-and-maintenance)**  
-*System cleaning and maintenance tools*
-
-</div>
+| Category | Description |
+| :--- | :--- |
+| [**Backup &amp; Restore**](./backup-and-estore) | Complete backup solutions for apps and system data |
+| [**File Management**](./file-management) | Advanced file managers with full root access |
+| [**Cleaning &amp; Maintenance**](./cleaning-and-maintenance) | System cleaning and maintenance utilities |
+| [**Device Control &amp; Hardware**](./device-control-and-hardware) | Hardware control and device management tools |
 
 ### 🛡️ Privacy & Security
 
-<div class="category-grid">
+| Category | Description |
+| :--- | :--- |
+| [**Privacy &amp; Security**](./privacy-and-security) | Ultimate privacy protection and security tools |
+| [**Networking &amp; Connectivity**](./networking-and-connectivity) | Network control, firewall, and connectivity tools |
+| [**Location &amp; GPS**](./location-and-gps) | GPS spoofing and location control applications |
+| [**NFC Tools**](./nfc-tools) | Near Field Communication utilities and tools |
 
-**[🔒 Privacy & Security](#privacy-and-security)**  
-*Ultimate privacy protection and security tools*
+### 🎨 Customization & Interface
 
-**[🔥 Firewall Tools](#firewall-tools)**  
-*Network control and firewall applications*
-
-**[📍 Location & GPS](#location-and-gps)**  
-*GPS spoofing and location control*
-
-</div>
-
-### 🎨 Customization & Theming
-
-<div class="category-grid">
-
-**[🎭 Themes & UI](#themes-and-ui)**  
-*System-wide themes and UI customization*
-
-**[🗑️ System Debloating](#debloating-and-system-app-removal)**  
-*Remove bloatware and unnecessary system apps*
-
-**[📺 Screen & Display](#screen-and-display)**  
-*Display settings, DPI, and screen management*
-
-</div>
+| Category | Description |
+| :--- | :--- |
+| [**Customization &amp; Theming**](./customization) | System-wide themes and UI customization |
+| [**System Debloating**](./system-debloating) | Remove bloatware and unnecessary system apps |
+| [**Screen &amp; Display**](./screen-and-display) | Display settings, DPI, and screen management |
+| [**Accessibility**](./accessibility) | Accessibility enhancements and assistive tools |
 
 ### 🔧 Developer & Advanced Tools
 
-<div class="category-grid">
-
-**[💻 Development & Debugging](#development-and-debugging)**  
-*Tools for app development and system debugging*
-
-**[💻 Terminal & Shell](#terminal-and-shell-environments)**  
-*Command line tools and terminal emulators*
-
-**[🛠️ System Tools](#tools)**  
-*Advanced utilities and system tools*
-
-</div>
-
----
-
-## 🔍 Quick Category Reference
-
-### Most Popular Categories
-
-::: details 📱 **Essential Apps** (Start Here)
-- [Featured Apps](../featured.md) - Community favorites
-- [Root Managers](#root-managers) - Core root management
-- [Ad Blockers](#ads-and-tracking-blockers) - Block ads system-wide
-- [App Managers](#app-managers-and-control) - Control your apps
-:::
-
-::: details 🎨 **Customization**
-- [Themes & UI](#themes-and-ui) - Visual customization
-- [System Debloating](#debloating-and-system-app-removal) - Remove bloatware
-- [Screen & Display](#screen-and-display) - Display tweaks
-:::
-
-::: details ⚡ **Performance**
-- [Battery Management](#battery-and-power-management) - Improve battery life
-- [Performance Tuning](#performance-and-gaming) - Speed optimization
-- [Kernel Management](#kernel-management) - Low-level tuning
-:::
-
-::: details 🛡️ **Privacy & Security**
-- [Privacy Tools](#privacy-and-security) - Ultimate protection
-- [Firewall Apps](#firewall-tools) - Network control
-- [Location Control](#location-and-gps) - GPS management
-:::
-
----
-
-## 📖 Full App Listings
-
-The complete categorized app listings are maintained in the main collection. Each category contains detailed app descriptions, download links, and compatibility information.
-
-### 🏆 Featured Apps: The Essentials
-
-Community-recommended must-have apps for rooted devices:
-
-#### 🛡️ Root Management (Essential for all rooted devices)
-- **[Magisk](https://github.com/topjohnwu/Magisk)** - The gold standard for systemless root and module management. `FOSS`
-- **[LSPosed](https://github.com/LSPosed/LSPosed)** - Modern Xposed Framework implementation with improved compatibility. `FOSS` `[M]` `[LSP]`
-
-#### 🚫 Ad & Tracking Blocking
-- **[AdAway](https://github.com/AdAway/AdAway)** - System-wide ad blocker using host files, blocks ads in apps and browsers. `FOSS`
-- **[Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Detaches installed apps from Play Store to prevent forced updates. `FOSS` `[M]`
-
-#### 📱 App Management
-- **[App Manager](https://github.com/MuntashirAkon/AppManager)** - Complete app management solution with advanced features. `FOSS`
-- **[Island](https://github.com/oasisfeng/island)** - App isolation using Android work profile, no root required for basic features. `FOSS`
-
-#### 💾 Backup Solutions
-- **[Swift Backup](https://swiftapps.org/)** - Professional-grade backup solution for apps and data. `Proprietary`
-- **[Titanium Backup](https://play.google.com/store/apps/details?id=com.keramidas.TitaniumBackup)** - Classic backup app with extensive restore options. `Proprietary`
-
-> **💡 See All Featured Apps:** Visit our [complete featured apps page](../featured.md) for detailed descriptions and more recommendations.
-
----
-
-## Root Apps
-
-*For the complete app listings with descriptions, download links, and compatibility information, please refer to the main repository file.*
-
-### Ads and Tracking Blockers
-
-- **[AdAway](https://adaway.org/)** - Open-source hosts file-based ad blocker. `FOSS`
-- **[Blokada](https://blokada.org/)** - Free, open source, compact, fast ad blocker. `FOSS`
-- **[DNS66](https://github.com/julian-klode/dns66)** - DNS-based hosts file ad blocker. `FOSS`
-
-### Root Managers
-
-- **[Magisk](https://github.com/topjohnwu/Magisk)** - Systemless interface to alter the Android system. `FOSS`
-- **[LSPosed](https://github.com/LSPosed/LSPosed)** - Xposed framework implemented through Zygisk. `FOSS` `[M]` `[LSP]`
-- **[KernelSU](https://github.com/tiann/KernelSU)** - Kernel-based root solution for Android devices. `FOSS` `[K]`
-
-### App Managers and Control
-
-- **[App Manager](https://github.com/MuntashirAkon/AppManager)** - Advanced package manager and viewer for Android. `FOSS`
-- **[Island](https://github.com/oasisfeng/island)** - Android app isolation using work profile. `FOSS`
-- **[Shelter](https://gitea.angry.im/PeterCxy/Shelter)** - Isolate your Big Brother apps. `FOSS`
-
-### Backup and Restore
-
-- **[Swift Backup](https://swiftapps.org/)** - Modern backup solution with cloud integration. `Proprietary`
-- **[Titanium Backup](https://play.google.com/store/apps/details?id=com.keramidas.TitaniumBackup)** - The most trusted backup app for rooted devices. `Proprietary`
-- **[Migrate](https://play.google.com/store/apps/details?id=balti.migrate)** - Custom ROM migration tool. `FOSS`
-
-*[Additional categories and apps continue...]*
+| Category | Description |
+| :--- | :--- |
+| [**Development &amp; Debugging**](./development-and-debugging) | Tools for app development and system debugging |
+| [**Terminal &amp; Shell**](./terminals) | Command line tools and terminal emulators |
+| [**System Tools**](./tools) | Advanced utilities and system administration tools |
 
 ---
 
 ## 🔗 Related Resources
 
-### Getting Started
-- **[Quick Start Guide](../quick-start.md)** - New to rooting? Start here
-- **[Featured Apps](../featured.md)** - Community-recommended essentials
-- **[Rooting Guides](../android-root-guides/)** - Step-by-step rooting tutorials
+### 🚀 Getting Started
+- **[Quick Start Guide](../quick-start)** - Complete rooting walkthrough for beginners
+- **[Featured Apps](./featured)** - Essential apps every rooted device needs
+- **[Rooting Guides](../android-root-guides/)** - Step-by-step tutorials by device brand
 
-### Community & Support
-- **[FAQ & Troubleshooting](../faqs.md)** - Common questions and solutions  
-- **[Contributing Guidelines](../contributing.md)** - Help improve this collection
-- **[About This Project](../about.md)** - Learn more about our mission
+### 📚 Learn More
+- **[FAQ & Troubleshooting](../faqs)** - Common questions and solutions
+- **[Safety Guidelines](../android-root-guides/#safety-and-prerequisites)** - Important safety information
+- **[Root Methods Comparison](../android-root-guides/#root-methods-overview)** - Magisk vs KernelSU vs APatch
+
+### 🤝 Community & Support
+- **[Contributing Guidelines](../contributing)** - Help improve this collection
+- **[About This Project](../about)** - Learn about our mission and team
+- **[Community Discussion](https://reddit.com/r/AwesomeAndroidRoot)** - Join our Reddit community
 
 ---
 
-::: tip 💡 Full Collection Available
-**This page shows category overviews and featured apps.** The complete collection with detailed descriptions, download links, and all 280+ apps is maintained in our main repository. [View the full collection →](https://github.com/awesome-android-root/awesome-android-root)
+## 🌟 Contributing to the Collection
+
+::: warning Help Us Grow
+**Found an amazing root app we're missing?** We welcome contributions from the community! Here's how you can help:
+
+- **[Submit New Apps](../contributing.md)** - Recommend apps for inclusion
+- **[Report Issues](https://github.com/awesome-android-root/awesome-android-root/issues)**
+- **[Share Feedback](https://github.com/awesome-android-root/awesome-android-root/discussions)** - Tell us what you think
+
 :::
 
-::: warning 📝 Contributing
-**Found a great root app?** Help us expand this collection! Check our [Contributing Guidelines](../contributing.md) to submit new apps, improvements, or corrections.
+### Quality Standards
+All submissions are reviewed for:
+- ✅ **Active development** (updated within 12 months)
+- ✅ **Safety verification** (no malware or suspicious behavior)
+- ✅ **Functionality testing** (works as described)
+- ✅ **Documentation quality** (clear instructions available)
+
+---
+
+::: info 📄 Repository Information
+**Complete Source Available:** This collection is maintained as an open-source project. View the complete repository with all app listings, detailed information, and contribution history on [GitHub](https://github.com/awesome-android-root/awesome-android-root).
 :::
