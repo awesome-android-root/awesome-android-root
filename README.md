@@ -18,13 +18,7 @@ This documentation site is built with VitePress and includes:
 - **[Rooting Guides](docs/android-root-guides/)** - Step-by-step tutorials
 - **[FAQ & Troubleshooting](docs/faqs.md)** - Common questions and solutions
 
-## 🚀 Quick Links
-
-- **New to rooting?** → [Start here](docs/quick-start.md)
-- **Need root apps?** → [Browse collection](docs/android-root-apps/)
-- **Device-specific help?** → [Rooting guides](docs/android-root-guides/)
-- **Have questions?** → [Check FAQ](docs/faqs.md)
-
+> Old wiki can be accessed here [Old-README.md](./old-README.md)
 
 ## 🤝 Contributing
 
