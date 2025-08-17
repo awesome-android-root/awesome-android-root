@@ -155,6 +155,13 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       {
+        text: 'Get Started',
+        items: [
+          { text: 'Quick Start Guide', link: '/quick-start', activeMatch: '^/quick-start' },
+          { text: 'Featured Apps', link: '/featured', activeMatch: '^/featured' }
+        ]
+      },
+      {
         text: 'Root Apps',
         link: '/android-root-apps/',
         activeMatch: '^/android-root-apps/'
@@ -325,14 +332,22 @@ export default defineConfig({
       // Homepage Sidebar - Updated with proper hash anchors
       '/': [
         {
-          text: 'Quick Start',
+          text: 'Getting Started',
           collapsed: false,
           items: [
+            { text: 'Quick Start Guide', link: '/quick-start' },
+            { text: 'Featured Apps', link: '/featured' },
             { text: 'What is Root Access?', link: '/#what-is-root-access' },
-            { text: 'Rooting Tutorials', link: '/android-root-guides/' },
-            { text: 'Root Apps Collection', link: '/android-root-apps/' },
-            { text: 'Android Tips', link: '/guides/' },
             { text: 'FAQ & Help', link: '/faqs' }
+          ]
+        },
+        {
+          text: 'Main Collections',
+          collapsed: false,
+          items: [
+            { text: 'Root Apps Collection', link: '/android-root-apps/' },
+            { text: 'Rooting Tutorials', link: '/android-root-guides/' },
+            { text: 'General Guides', link: '/guides/' }
           ]
         },
         {
