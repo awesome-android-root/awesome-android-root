@@ -61,7 +61,7 @@ All apps are carefully vetted for **safety**, **functionality**, and **active de
 
 ---
 
-## 🎯 Browse by Category
+<h2><u>Browse by Category</u></h2>
 
 ### 🌟 Essential Categories
 
