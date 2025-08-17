@@ -14,8 +14,8 @@ This documentation site is built with VitePress and includes:
 
 - **[Quick Start Guide](docs/quick-start.md)** - Essential steps for new users
 - **[Featured Apps](docs/featured.md)** - Community-recommended essentials  
-- **[Root Apps Collection](docs/android-root-apps/)** - 280+ apps across 15+ categories
-- **[Rooting Guides](docs/android-root-guides/)** - Step-by-step tutorials
+- **[Root Apps Collection](docs/android-root-apps/index.md)** - 280+ apps across 15+ categories
+- **[Rooting Guides](docs/android-root-guides/index.md)** - Step-by-step tutorials
 - **[FAQ & Troubleshooting](docs/faqs.md)** - Common questions and solutions
 
 > Old wiki can be accessed here [Old-README.md](./old-README.md)
