@@ -45,11 +45,6 @@ export default defineConfig({
 
   head: [
 
-    // Content Security Policy for enhanced security
-    // This CSP allows images from our site, shields.io, and GitHub
-    // while blocking inline scripts and styles for better security.
-    ['meta', { 'http-equiv': 'Content-Security-Policy', content: "default-src 'self'; img-src 'self' https://img.shields.io https://github.com data:; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; connect-src 'self' https://static.cloudflareinsights.com https://cloudflareinsights.com https://img.shields.io https://github.com; object-src 'none'; frame-ancestors 'none';" }],
-
     // Favicons with improved metadata
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
