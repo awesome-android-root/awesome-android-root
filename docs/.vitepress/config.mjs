@@ -6,11 +6,11 @@ export default defineConfig({
   description: "Ultimate Android rooting hub with 280+ curated root apps, Magisk modules, and step-by-step guides for Android customization and freedom.",
   ignoreDeadLinks: true,
   cleanUrls: true,
-  
+
   // VitePress build optimizations
   vite: {
     build: {
-        target: 'esnext',
+      target: 'esnext',
       minify: 'terser',
       terserOptions: {
         compress: {
@@ -48,7 +48,7 @@ export default defineConfig({
     // Content Security Policy for enhanced security
     // This CSP allows images from our site, shields.io, and GitHub
     // while blocking inline scripts and styles for better security.
-    ['meta', { 'http-equiv': 'Content-Security-Policy', content: "default-src 'self'; img-src 'self' https://img.shields.io https://github.com data:; script-src 'self' 'unsafe-inline';" }],
+    ['meta', { 'http-equiv': 'Content-Security-Policy', content: "default-src 'self'; img-src 'self' https://img.shields.io https://github.com data:; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; connect-src 'self' https://static.cloudflareinsights.com https://img.shields.io https://github.com; object-src 'none'; frame-ancestors 'none';" }],
 
     // Favicons with improved metadata
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' }],
@@ -85,17 +85,17 @@ export default defineConfig({
     ['meta', { name: 'distribution', content: 'global' }],
     ['meta', { name: 'rating', content: 'general' }],
     ['meta', { name: 'referrer', content: 'no-referrer-when-downgrade' }],
-    
+
     // Open Graph structured data
     ['meta', { property: 'og:site_name', content: 'Awesome Android Root' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:locale', content: 'en_US' }],
-    
+
     // Twitter Card data
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:site', content: '@awsm_and_root' }],
     ['meta', { name: 'twitter:creator', content: '@awsm_and_root' }],
-    
+
     // JSON-LD structured data for better SEO
     ['script', { type: 'application/ld+json' }, JSON.stringify({
       "@context": "https://schema.org",
@@ -159,8 +159,8 @@ export default defineConfig({
     },
     nav: [
       { text: 'Home', link: '/' },
-      { 
-        text: 'Root Apps', 
+      {
+        text: 'Root Apps',
         link: '/android-root-apps/',
         activeMatch: '^/android-root-apps/'
       },
@@ -171,8 +171,8 @@ export default defineConfig({
           { text: 'General Guides', link: '/guides/', activeMatch: '^/guides/' }
         ]
       },
-      { 
-        text: 'FAQ', 
+      {
+        text: 'FAQ',
         link: '/faqs',
         activeMatch: '^/faqs'
       },
@@ -394,7 +394,7 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/awesome-android-root/awesome-android-root' },
       { icon: 'x', link: 'https://x.com/awsm_and_root' },
     ],
-    
+
   },
-  
+
 })
