@@ -1,3 +1,33 @@
+---
+title: "Android Root Apps - Cleaning and Maintenance"
+description: "Keep rooted Android devices healthy with cleaning, cache management, and maintenance tools to free space, remove cruft, and ensure smooth performance."
+head:
+  - - meta
+    - name: og:title
+      content: "Android Root Apps - Cleaning and Maintenance"
+  - - meta
+    - name: og:description
+      content: "Keep rooted Android devices healthy with cleaning, cache management, and maintenance tools to free space, remove cruft, and ensure smooth performance."
+  - - meta
+    - name: og:type
+      content: "article"
+  - - meta
+    - name: twitter:card
+      content: "summary"
+  - - meta
+    - name: twitter:title
+      content: "Android Root Apps - Cleaning and Maintenance"
+  - - meta
+    - name: twitter:description
+      content: "Keep rooted Android devices healthy with cleaning, cache management, and maintenance tools to free space, remove cruft, and ensure smooth performance."
+  - - meta
+    - name: keywords
+      content: "android root, cleaning, maintenance, cache cleaner, storage, rooted tools, device maintenance"
+sidebar: true
+outline: deep
+lastUpdated: true
+---
+
 # Cleaning and Maintenance
 - **[Cleaner Royall](https://github.com/araafroyall/Cleaner-Royall)** - A light weight but ultra-fast and powerful cleaner for Android. `Proprietary` `[LSP]`
 - **[DirCleaner](https://www.dircleaner.com/)** - A simple and practical cleaning tool. `Proprietary`

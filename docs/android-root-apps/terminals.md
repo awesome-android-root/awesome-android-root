@@ -1,3 +1,33 @@
+---
+title: "Android Root Apps - Terminals"
+description: "Powerful terminal and shell tools for rooted Android: full shell access, busybox, scripting, and command-line utilities for advanced workflows."
+head:
+  - - meta
+    - name: og:title
+      content: "Android Root Apps - Terminals"
+  - - meta
+    - name: og:description
+      content: "Powerful terminal and shell tools for rooted Android: full shell access, busybox, scripting, and command-line utilities for advanced workflows."
+  - - meta
+    - name: og:type
+      content: "article"
+  - - meta
+    - name: twitter:card
+      content: "summary"
+  - - meta
+    - name: twitter:title
+      content: "Android Root Apps - Terminals"
+  - - meta
+    - name: twitter:description
+      content: "Powerful terminal and shell tools for rooted Android: full shell access, busybox, scripting, and command-line utilities for advanced workflows."
+  - - meta
+    - name: keywords
+      content: "android root, terminal, shell, busybox, adb shell, command line, rooted tools"
+sidebar: true
+outline: deep
+lastUpdated: true
+---
+
 # Terminal and Shell Environments
 - **[aShell You](https://apt.izzysoft.de/fdroid/index/apk/in.hridayan.ashell)** - Android shell utility app with Material Design 3 UI, letting you run ADB, root and shell commands. `FOSS` | [📦 Source](https://github.com/DP-Hridayan/aShellYou)
 - **[LADB](https://play.google.com/store/apps/details?id=com.draco.ladb)** - Local ADB shell. `FOSS` | [📦 Source](https://github.com/tytydraco/LADB) - [LADB Free Build](https://github.com/hyperio546/ladb-builds)

@@ -1,3 +1,33 @@
+---
+title: "Android Root Apps - Networking and Connectivity"
+description: "Advanced networking tools for rooted Android: VPNs, tethering, packet capture, routing, and network debugging for power users and testers."
+head:
+  - - meta
+    - name: og:title
+      content: "Android Root Apps - Networking and Connectivity"
+  - - meta
+    - name: og:description
+      content: "Advanced networking tools for rooted Android: VPNs, tethering, packet capture, routing, and network debugging for power users and testers."
+  - - meta
+    - name: og:type
+      content: "article"
+  - - meta
+    - name: twitter:card
+      content: "summary"
+  - - meta
+    - name: twitter:title
+      content: "Android Root Apps - Networking and Connectivity"
+  - - meta
+    - name: twitter:description
+      content: "Advanced networking tools for rooted Android: VPNs, tethering, packet capture, routing, and network debugging for power users and testers."
+  - - meta
+    - name: keywords
+      content: "android root, networking, VPN, tethering, packet capture, network tools, rooted apps"
+sidebar: true
+outline: deep
+lastUpdated: true
+---
+
 # Networking & Connectivity
 
 ## Firewall Tools

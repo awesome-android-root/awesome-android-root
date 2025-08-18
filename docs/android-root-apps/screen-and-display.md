@@ -1,3 +1,32 @@
+---
+title: "Android Root Apps - Screen and Display"
+description: "Control display settings on rooted Android: overlays, scaling, color calibration, refresh rate control, and screenshot tools for power users."
+head:
+  - - meta
+    - name: og:title
+      content: "Android Root Apps - Screen and Display"
+  - - meta
+    - name: og:description
+      content: "Control display settings on rooted Android: overlays, scaling, color calibration, refresh rate control, and screenshot tools for power users."
+  - - meta
+    - name: og:type
+      content: "article"
+  - - meta
+    - name: twitter:card
+      content: "summary"
+  - - meta
+    - name: twitter:title
+      content: "Android Root Apps - Screen and Display"
+  - - meta
+    - name: twitter:description
+      content: "Control display settings on rooted Android: overlays, scaling, color calibration, refresh rate control, and screenshot tools for power users."
+  - - meta
+    - name: keywords
+      content: "android root, screen, display, resolution, scaling, color calibration, refresh rate, rooted apps"
+sidebar: true
+outline: deep
+lastUpdated: true
+---
 
 # Screen and Display
 - **[AlwaysOn](https://github.com/Domi04151309/AlwaysOn)** - Adds an always-on display with various customization options regarding watch face, behavior, and background. `FOSS` `[LSP]`

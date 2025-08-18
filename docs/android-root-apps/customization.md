@@ -1,3 +1,33 @@
+---
+title: "Android Root Apps - Customization"
+description: "Customize every aspect of rooted Android: themes, UI tweaks, launchers, fonts, and system mods to tailor the device experience precisely."
+head:
+  - - meta
+    - name: og:title
+      content: "Android Root Apps - Customization"
+  - - meta
+    - name: og:description
+      content: "Customize every aspect of rooted Android: themes, UI tweaks, launchers, fonts, and system mods to tailor the device experience precisely."
+  - - meta
+    - name: og:type
+      content: "article"
+  - - meta
+    - name: twitter:card
+      content: "summary"
+  - - meta
+    - name: twitter:title
+      content: "Android Root Apps - Customization"
+  - - meta
+    - name: twitter:description
+      content: "Customize every aspect of rooted Android: themes, UI tweaks, launchers, fonts, and system mods to tailor the device experience precisely."
+  - - meta
+    - name: keywords
+      content: "android root, customization, themes, UI tweaks, launchers, rooted mods, Xposed"
+sidebar: true
+outline: deep
+lastUpdated: true
+---
+
 # Customization
 ## Boot Animations
 - **[Bootanimation](https://github.com/Bitterneko/Bootanimation)** - A custom boot animation for Android. `Proprietary` `[M]`

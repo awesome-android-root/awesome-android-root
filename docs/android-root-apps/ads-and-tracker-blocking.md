@@ -1,3 +1,32 @@
+---
+title: "Android Root Apps - Ads and Tracker Blocking"
+description: "Block ads and trackers system-wide on rooted Android. Use hosts, firewall, and DNS-based blockers to improve privacy and reduce ads across apps and browsers."
+head:
+  - - meta
+    - name: og:title
+      content: "Android Root Apps - Ads and Tracker Blocking"
+  - - meta
+    - name: og:description
+      content: "Block ads and trackers system-wide on rooted Android. Use hosts, firewall, and DNS-based blockers to improve privacy and reduce ads across apps and browsers."
+  - - meta
+    - name: og:type
+      content: "article"
+  - - meta
+    - name: twitter:card
+      content: "summary"
+  - - meta
+    - name: twitter:title
+      content: "Android Root Apps - Ads and Tracker Blocking"
+  - - meta
+    - name: twitter:description
+      content: "Block ads and trackers system-wide on rooted Android. Use hosts, firewall, and DNS-based blockers to improve privacy and reduce ads across apps and browsers."
+  - - meta
+    - name: keywords
+      content: "android root, ad blocking, tracker blocking, hosts file, firewall, privacy, rooted apps"
+sidebar: true
+outline: deep
+lastUpdated: true
+---
 
 # Ads and Tracking Blocking
 > 📚 **Related Guide**: [Complete Android Ad Blocking Tutorial](./docs/guides/android-adblocking.md)

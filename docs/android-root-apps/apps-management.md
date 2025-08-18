@@ -1,3 +1,33 @@
+---
+title: "Android Root Apps - Apps Management"
+description: "Manage apps on rooted Android: backup, uninstall, freeze, migrate, and control packages with advanced tools for safer, cleaner app management."
+head:
+  - - meta
+    - name: og:title
+      content: "Android Root Apps - Apps Management"
+  - - meta
+    - name: og:description
+      content: "Manage apps on rooted Android: backup, uninstall, freeze, migrate, and control packages with advanced tools for safer, cleaner app management."
+  - - meta
+    - name: og:type
+      content: "article"
+  - - meta
+    - name: twitter:card
+      content: "summary"
+  - - meta
+    - name: twitter:title
+      content: "Android Root Apps - Apps Management"
+  - - meta
+    - name: twitter:description
+      content: "Manage apps on rooted Android: backup, uninstall, freeze, migrate, and control packages with advanced tools for safer, cleaner app management."
+  - - meta
+    - name: keywords
+      content: "android root, app management, uninstall, backup, package manager, freeze apps, rooted apps"
+sidebar: true
+outline: deep
+lastUpdated: true
+---
+
 # App Management
 ## App Isolation and Cloning
 - **[Insular](https://f-droid.org/packages/com.oasisfeng.island.fdroid)** - Isolate your big brother app. A fork based on the excellent Island. `FOSS` | [📦 Source](https://gitlab.com/secure-system/Insular)

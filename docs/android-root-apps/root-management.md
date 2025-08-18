@@ -1,3 +1,33 @@
+---
+title: "Android Root Apps - Root Management"
+description: "Manage root access on Android: su binaries, permission control, root switchers, and safety tools for granting and auditing root privileges."
+head:
+  - - meta
+    - name: og:title
+      content: "Android Root Apps - Root Management"
+  - - meta
+    - name: og:description
+      content: "Manage root access on Android: su binaries, permission control, root switchers, and safety tools for granting and auditing root privileges."
+  - - meta
+    - name: og:type
+      content: "article"
+  - - meta
+    - name: twitter:card
+      content: "summary"
+  - - meta
+    - name: twitter:title
+      content: "Android Root Apps - Root Management"
+  - - meta
+    - name: twitter:description
+      content: "Manage root access on Android: su binaries, permission control, root switchers, and safety tools for granting and auditing root privileges."
+  - - meta
+    - name: keywords
+      content: "android root, root management, su, superuser, magisk, root permission, rooted apps"
+sidebar: true
+outline: deep
+lastUpdated: true
+---
+
 # Root Management
 
 ## Root Managers

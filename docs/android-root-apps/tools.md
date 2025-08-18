@@ -1,3 +1,33 @@
+---
+title: "Android Root Apps - Tools"
+description: "Essential tools for rooted Android: utilities for flashing, partitioning, backups, logs, and system inspection to manage your rooted device effectively."
+head:
+  - - meta
+    - name: og:title
+      content: "Android Root Apps - Tools"
+  - - meta
+    - name: og:description
+      content: "Essential tools for rooted Android: utilities for flashing, partitioning, backups, logs, and system inspection to manage your rooted device effectively."
+  - - meta
+    - name: og:type
+      content: "article"
+  - - meta
+    - name: twitter:card
+      content: "summary"
+  - - meta
+    - name: twitter:title
+      content: "Android Root Apps - Tools"
+  - - meta
+    - name: twitter:description
+      content: "Essential tools for rooted Android: utilities for flashing, partitioning, backups, logs, and system inspection to manage your rooted device effectively."
+  - - meta
+    - name: keywords
+      content: "android root, tools, flashing, partitioning, backup, system utilities, rooted tools"
+sidebar: true
+outline: deep
+lastUpdated: true
+---
+
 # Tools
 - **[crond4Android](https://github.com/powerAn2020/crond4android)** - The Crond program that supports running on KernelSU, APatch and Magisk. `FOSS` `[M]` `[K]`
 - **[Hosts Manager Lite](https://play.google.com/store/apps/details?id=awais.hostsmanager.lite)** - Advanced /etc/hosts editor. `Proprietary`

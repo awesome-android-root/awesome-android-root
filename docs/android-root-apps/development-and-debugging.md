@@ -1,3 +1,33 @@
+---
+title: "Android Root Apps - Development and Debugging"
+description: "Tools for development and debugging on rooted Android: advanced logging, debugging bridges, kernel tools, and runtime inspection for developers."
+head:
+  - - meta
+    - name: og:title
+      content: "Android Root Apps - Development and Debugging"
+  - - meta
+    - name: og:description
+      content: "Tools for development and debugging on rooted Android: advanced logging, debugging bridges, kernel tools, and runtime inspection for developers."
+  - - meta
+    - name: og:type
+      content: "article"
+  - - meta
+    - name: twitter:card
+      content: "summary"
+  - - meta
+    - name: twitter:title
+      content: "Android Root Apps - Development and Debugging"
+  - - meta
+    - name: twitter:description
+      content: "Tools for development and debugging on rooted Android: advanced logging, debugging bridges, kernel tools, and runtime inspection for developers."
+  - - meta
+    - name: keywords
+      content: "android root, development, debugging, adb, logcat, kernel tools, rooted development"
+sidebar: true
+outline: deep
+lastUpdated: true
+---
+
 # Development and Debugging
 - **[IAmNotADeveloper](https://github.com/xfqwdsj/IAmNotADeveloper)** - A Xposed module for hiding Android developer-related switches status. `FOSS` `[LSP]`
 - **[Chroot Distro](https://github.com/Magisk-Modules-Alt-Repo/chroot-distro)** - Install Gnu/Linux distributions on Android. `FOSS` `[M]`

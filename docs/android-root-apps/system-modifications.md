@@ -1,3 +1,33 @@
+---
+title: "Android Root Apps - System Modifications"
+description: "Make system-level modifications on rooted Android: framework edits, overlays, services tweaks, and system mods for deep customization and features."
+head:
+  - - meta
+    - name: og:title
+      content: "Android Root Apps - System Modifications"
+  - - meta
+    - name: og:description
+      content: "Make system-level modifications on rooted Android: framework edits, overlays, services tweaks, and system mods for deep customization and features."
+  - - meta
+    - name: og:type
+      content: "article"
+  - - meta
+    - name: twitter:card
+      content: "summary"
+  - - meta
+    - name: twitter:title
+      content: "Android Root Apps - System Modifications"
+  - - meta
+    - name: twitter:description
+      content: "Make system-level modifications on rooted Android: framework edits, overlays, services tweaks, and system mods for deep customization and features."
+  - - meta
+    - name: keywords
+      content: "android root, system modifications, framework, overlays, Xposed, system mods, rooted"
+sidebar: true
+outline: deep
+lastUpdated: true
+---
+
 ### System Modifications
 - **[AnyWebView](https://github.com/neoblackxt/AnyWebView)** - Tries to detect all system webviews and add them to the developer options -> WebView implementation list. `FOSS` `[LSP]`
 - **[AutoNight](https://github.com/Chilly-Blaze/autonight)** - Controlling Android's Dark Mode through environmental brightness. `FOSS`

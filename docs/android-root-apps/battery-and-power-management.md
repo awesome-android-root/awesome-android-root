@@ -1,3 +1,33 @@
+---
+title: "Android Root Apps - Battery and Power Management"
+description: "Optimize battery life and control power on rooted Android with kernels, wakelock managers, and tools to monitor and reduce power drain effectively."
+head:
+  - - meta
+    - name: og:title
+      content: "Android Root Apps - Battery and Power Management"
+  - - meta
+    - name: og:description
+      content: "Optimize battery life and control power on rooted Android with kernels, wakelock managers, and tools to monitor and reduce power drain effectively."
+  - - meta
+    - name: og:type
+      content: "article"
+  - - meta
+    - name: twitter:card
+      content: "summary"
+  - - meta
+    - name: twitter:title
+      content: "Android Root Apps - Battery and Power Management"
+  - - meta
+    - name: twitter:description
+      content: "Optimize battery life and control power on rooted Android with kernels, wakelock managers, and tools to monitor and reduce power drain effectively."
+  - - meta
+    - name: keywords
+      content: "android root, battery, power management, wakelock, kernel, battery saver, rooted apps"
+sidebar: true
+outline: deep
+lastUpdated: true
+---
+
 # Battery and Power Management
 - **[AccA](https://github.com/VR-25/acc)** - Advanced Charging Controller app. `FOSS`
 - **[Background App Slayer (BAS)](https://github.com/UNKNUW/Background-App-Slayer)** - Automatic Killing Background apps. `FOSS` `[M]`

@@ -1,3 +1,33 @@
+---
+title: "Android Root Apps - System Debloating"
+description: "Debloat Android system on rooted devices: remove bloatware, disable system apps, and slim ROMs to reclaim storage and improve performance."
+head:
+  - - meta
+    - name: og:title
+      content: "Android Root Apps - System Debloating"
+  - - meta
+    - name: og:description
+      content: "Debloat Android system on rooted devices: remove bloatware, disable system apps, and slim ROMs to reclaim storage and improve performance."
+  - - meta
+    - name: og:type
+      content: "article"
+  - - meta
+    - name: twitter:card
+      content: "summary"
+  - - meta
+    - name: twitter:title
+      content: "Android Root Apps - System Debloating"
+  - - meta
+    - name: twitter:description
+      content: "Debloat Android system on rooted devices: remove bloatware, disable system apps, and slim ROMs to reclaim storage and improve performance."
+  - - meta
+    - name: keywords
+      content: "android root, debloat, bloatware removal, system apps, slim ROM, rooted debloating"
+sidebar: true
+outline: deep
+lastUpdated: true
+---
+
 # Debloating and System App Removal
 > 📚 **Related Guide**: [Android Apps Debloating Guide](./docs/guides/android-apps-debloating.md)
 

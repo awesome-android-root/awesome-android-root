@@ -1,3 +1,33 @@
+---
+title: "Android Root Apps - Modded Apps and Tweaks"
+description: "Explore modded apps, tweaks, and patches for rooted Android to enable premium features, remove restrictions, and customize app behavior responsibly."
+head:
+  - - meta
+    - name: og:title
+      content: "Android Root Apps - Modded Apps and Tweaks"
+  - - meta
+    - name: og:description
+      content: "Explore modded apps, tweaks, and patches for rooted Android to enable premium features, remove restrictions, and customize app behavior responsibly."
+  - - meta
+    - name: og:type
+      content: "article"
+  - - meta
+    - name: twitter:card
+      content: "summary"
+  - - meta
+    - name: twitter:title
+      content: "Android Root Apps - Modded Apps and Tweaks"
+  - - meta
+    - name: twitter:description
+      content: "Explore modded apps, tweaks, and patches for rooted Android to enable premium features, remove restrictions, and customize app behavior responsibly."
+  - - meta
+    - name: keywords
+      content: "android root, modded apps, tweaks, patched apps, rooted mods, premium features"
+sidebar: true
+outline: deep
+lastUpdated: true
+---
+
 # Modded Apps & Tweaks
 
 ## Bilibili Mods

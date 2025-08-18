@@ -1,3 +1,33 @@
+---
+title: "Android Root Apps - Performance Tweaks"
+description: "Boost performance on rooted Android with CPU/GPU tuning, kernel profiles, caching strategies, and tools for smoother, faster device operation."
+head:
+  - - meta
+    - name: og:title
+      content: "Android Root Apps - Performance Tweaks"
+  - - meta
+    - name: og:description
+      content: "Boost performance on rooted Android with CPU/GPU tuning, kernel profiles, caching strategies, and tools for smoother, faster device operation."
+  - - meta
+    - name: og:type
+      content: "article"
+  - - meta
+    - name: twitter:card
+      content: "summary"
+  - - meta
+    - name: twitter:title
+      content: "Android Root Apps - Performance Tweaks"
+  - - meta
+    - name: twitter:description
+      content: "Boost performance on rooted Android with CPU/GPU tuning, kernel profiles, caching strategies, and tools for smoother, faster device operation."
+  - - meta
+    - name: keywords
+      content: "android root, performance, tweaks, kernel tuning, CPU, GPU, rooted performance apps"
+sidebar: true
+outline: deep
+lastUpdated: true
+---
+
 # Performance Tweaks
 
 ## Performance and Gaming

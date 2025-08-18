@@ -1,3 +1,33 @@
+---
+title: "Android Root Apps - Communication"
+description: "Enhance communication on rooted Android with messaging mods, VoIP tools, and privacy-focused clients that require deeper system access for features."
+head:
+  - - meta
+    - name: og:title
+      content: "Android Root Apps - Communication"
+  - - meta
+    - name: og:description
+      content: "Enhance communication on rooted Android with messaging mods, VoIP tools, and privacy-focused clients that require deeper system access for features."
+  - - meta
+    - name: og:type
+      content: "article"
+  - - meta
+    - name: twitter:card
+      content: "summary"
+  - - meta
+    - name: twitter:title
+      content: "Android Root Apps - Communication"
+  - - meta
+    - name: twitter:description
+      content: "Enhance communication on rooted Android with messaging mods, VoIP tools, and privacy-focused clients that require deeper system access for features."
+  - - meta
+    - name: keywords
+      content: "android root, communication, messaging, VoIP, privacy, rooted mods, communication apps"
+sidebar: true
+outline: deep
+lastUpdated: true
+---
+
 # Communication
 ## Call Recording
 - **[Basic Call Recorder](https://github.com/chenxiaolong/BCR)** - A Basic Call Recorder for rooted Android devices. Also checkout [GUI for BCR ↗](https://github.com/nicorac/bcr-gui). `FOSS` `[M]` `[K]`

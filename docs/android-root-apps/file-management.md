@@ -1,3 +1,33 @@
+---
+title: "Android Root Apps - File Management"
+description: "Advanced file management on rooted Android: full system access, file explorers, batch operations, permission editing, and safe file recovery tools."
+head:
+  - - meta
+    - name: og:title
+      content: "Android Root Apps - File Management"
+  - - meta
+    - name: og:description
+      content: "Advanced file management on rooted Android: full system access, file explorers, batch operations, permission editing, and safe file recovery tools."
+  - - meta
+    - name: og:type
+      content: "article"
+  - - meta
+    - name: twitter:card
+      content: "summary"
+  - - meta
+    - name: twitter:title
+      content: "Android Root Apps - File Management"
+  - - meta
+    - name: twitter:description
+      content: "Advanced file management on rooted Android: full system access, file explorers, batch operations, permission editing, and safe file recovery tools."
+  - - meta
+    - name: keywords
+      content: "android root, file manager, explorer, permission editor, file recovery, rooted file tools"
+sidebar: true
+outline: deep
+lastUpdated: true
+---
+
 # File Management
 - **[AnExplorer](https://play.google.com/store/apps/details?id=dev.dworks.apps.anexplorer)** - A simple, Small, Fast and Efficient File Explorer. `FOSS` | [📦 Source](https://github.com/1hakr/AnExplorer)
 - **[Fossify File Manager](https://f-droid.org/packages/org.fossify.filemanager/)** - Easy app for managing your files without ads, respecting your privacy and security. `FOSS` | [📦 Source](https://github.com/FossifyOrg/File-Manager)

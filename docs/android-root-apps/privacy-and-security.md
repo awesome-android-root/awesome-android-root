@@ -1,3 +1,33 @@
+---
+title: "Android Root Apps - Privacy and Security"
+description: "Protect privacy on rooted Android: firewall, permission managers, encryption tools, and privacy-focused mods to limit tracking and data leakage."
+head:
+  - - meta
+    - name: og:title
+      content: "Android Root Apps - Privacy and Security"
+  - - meta
+    - name: og:description
+      content: "Protect privacy on rooted Android: firewall, permission managers, encryption tools, and privacy-focused mods to limit tracking and data leakage."
+  - - meta
+    - name: og:type
+      content: "article"
+  - - meta
+    - name: twitter:card
+      content: "summary"
+  - - meta
+    - name: twitter:title
+      content: "Android Root Apps - Privacy and Security"
+  - - meta
+    - name: twitter:description
+      content: "Protect privacy on rooted Android: firewall, permission managers, encryption tools, and privacy-focused mods to limit tracking and data leakage."
+  - - meta
+    - name: keywords
+      content: "android root, privacy, security, firewall, permission manager, encryption, rooted privacy apps"
+sidebar: true
+outline: deep
+lastUpdated: true
+---
+
 ### Privacy and Security
 - **[AlternativeUnlockXposed](https://github.com/leohearts/AlternativeUnlockXposed)** - Unlock your Android phone with an alternative PIN. `FOSS` `[LSP]`
 - **[Always Trust User Certs](https://github.com/NVISOsecurity/AlwaysTrustUserCerts)** - A Magisk/KernelSU module that automatically adds user certificates to the system root CA store. `FOSS` `[M]` `[K]`
