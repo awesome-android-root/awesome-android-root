@@ -124,24 +124,25 @@ export default defineConfig({
     },
     nav: [
       { text: 'Home', link: '/' },
-      {
-        text: 'Apps',
-        items: [
-          { text: 'Overview', link: '/android-root-apps/' },
-          { text: 'Essential Apps', link: '/android-root-apps/#essential-apps---start-here' },
-          { text: 'Categories', link: '/android-root-apps/' }
-        ]
-      },
+      { text: 'Apps', link: '/android-root-apps/' },
+
       {
         text: 'Guides',
         items: [
+          { text: '🚀 Quick Start', link: '/quick-start' },
           { text: 'Rooting Guides', link: '/android-root-guides/' },
           { text: 'General Guides', link: '/guides/' }
         ]
       },
-      { text: 'Quick Start', link: '/quick-start' },
-      { text: 'Contribute', link: '/contributing' },
-      { text: 'About', link: '/about' }
+      {
+        text: 'Community',
+         items: [
+          { text: 'Contributing', link: '/contributing' },
+          { text: 'About Project', link: '/about' },
+          { text: 'Support Us', link: 'https://opencollective.com/awesome-android-root-official' },
+          { text: 'Star on GitHub', link: 'https://github.com/awesome-android-root/awesome-android-root' }
+        ]
+      }
     ],
     sidebar: {
       '/quick-start': [
@@ -154,7 +155,9 @@ export default defineConfig({
             { text: 'Step 2: Install Recovery', link: '/quick-start#step-2-install-custom-recovery' },
             { text: 'Step 3: Choose Root Method', link: '/quick-start#step-3-choose-and-install-root-method' },
             { text: 'Step 4: Hide Root', link: '/quick-start#step-4-hide-root-from-detection' },
-            { text: 'Step 5: Create Backup', link: '/quick-start#step-5-create-complete-system-backup' }
+            { text: 'Step 5: Create Backup', link: '/quick-start#step-5-create-complete-system-backup' },
+            { text: 'Post-Root Essentials', link: '/quick-start#post-rooting-essentials' },
+            { text: 'Emergency Recovery', link: '/quick-start#emergency-recovery-guide' }
           ]
         }
       ],
@@ -210,9 +213,10 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'Overview', link: '/guides/' },
-            { text: 'Ad Blocking', link: '/guides/android-adblocking' },
+            { text: 'Android Ad Blocking', link: '/guides/android-adblocking' },
             { text: 'App Debloating', link: '/guides/android-apps-debloating' },
-            { text: 'Backup & Restore', link: '/guides/app-backup-restore-using-root' }
+            { text: 'App Backup & Restore (using root)', link: '/guides/app-backup-restore-using-root' },
+            { text: 'Stop Play Store Auto-Updates', link: '/guides/stop-android-app-auto-updates-play-store' }
           ]
         }
       ],
@@ -229,19 +233,20 @@ export default defineConfig({
         },
         {
           text: 'Collections',
-          collapsed: true,
+          collapsed: false,
           items: [
-            { text: 'Root Apps', link: '/android-root-apps/' },
+            { text: 'Root Apps (all categories)', link: '/android-root-apps/' },
             { text: 'Rooting Guides', link: '/android-root-guides/' },
             { text: 'General Guides', link: '/guides/' }
           ]
         },
         {
           text: 'Community',
-          collapsed: true,
+          collapsed: false,
           items: [
             { text: 'Contributing', link: '/contributing' },
-            { text: 'About', link: '/about' }
+            { text: 'About', link: '/about' },
+            { text: 'Support Us', link: 'https://opencollective.com/awesome-android-root-official' }
           ]
         }
       ]
