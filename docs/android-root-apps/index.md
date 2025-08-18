@@ -69,7 +69,22 @@ Core apps that form the foundation of every great root setup:
 **Getting Started:** [Root Device](../android-root-guides/) → Install Essential Apps → Browse Categories → [Join Community](../about#community-resources)
 :::
 
+## Glossary
+- **⭐** = Community‑recommended (most popular/trusted in category)
+- **`FOSS`** = Free and Open Source Software (source code available)
+- **`Proprietary`** = Closed-source software or unclear licensing
+- **`[M]`** = Magisk Module (requires [_Magisk framework_](./docs/android-root-guides/magisk-guide.md))
+- **`[K]`** = KernelSU Module (requires [_KernelSU framework_](./docs/android-root-guides/kernelsu-guide.md)) 
+- **`[LSP]`** = LSPosed Module (requires [_LSPosed framework_](./docs/android-root-guides/lsposed-guide.md))
+
+> _Apps are organized in alphabetical order within each category._
+
 ## 📱 Browse by Category
+
+> ⚠️ **We strongly recommend installing *[Droid‑ify](https://github.com/Droid-ify/client/releases)* and [enabling the _IzzyOnDroid_ repo](https://apt.izzysoft.de/fdroid/) for private and easier app installs from this list.**
+
+> - Clicking on the app name directs to the **F‑Droid** (FOSS) or **Google Play Store** (proprietary) page.
+> - If an app is available both on F‑Droid and Google Play, the **F‑Droid link is preferred**.
 
 ### 🌟 Essential Categories
 
@@ -132,18 +147,6 @@ Core apps that form the foundation of every great root setup:
 | [**Development & Debugging**](./development-and-debugging) | Tools for app development and system debugging |
 | [**Terminal & Shell**](./terminals) | Command line tools and terminal emulators |
 | [**System Tools**](./tools) | Advanced utilities and system administration tools |
-
----
-
-## Glossary
-- **⭐** = Community‑recommended (most popular/trusted in category)
-- **`FOSS`** = Free and Open Source Software (source code available)
-- **`Proprietary`** = Closed-source software or unclear licensing
-- **`[M]`** = Magisk Module (requires [_Magisk framework_](./docs/android-root-guides/magisk-guide.md))
-- **`[K]`** = KernelSU Module (requires [_KernelSU framework_](./docs/android-root-guides/kernelsu-guide.md)) 
-- **`[LSP]`** = LSPosed Module (requires [_LSPosed framework_](./docs/android-root-guides/lsposed-guide.md))
-
-> _Apps are organized in alphabetical order within each category._
 
 ---
 
