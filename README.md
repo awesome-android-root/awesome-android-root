@@ -1,10 +1,15 @@
+<div align="center" class="aar-intro">
+
 # Awesome Android Root
+🛡️ The ultimate hub for Android rooting
 
 > Ultimate collection of 280+ curated Android root apps, Magisk/KernelSU/LSPosed modules, and step-by-step rooting guides.
 
 [![GitHub stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?style=flat-square)](https://github.com/awesome-android-root/awesome-android-root)
 [![Total Entries](https://img.shields.io/badge/Total%20Entries-280+-blue?style=flat-square&logo=android)](https://awesome-android-root.org/android-root-apps/)
 [![Website](https://img.shields.io/badge/Website-awesome--android--root.org-blue?style=flat-square)](https://awesome-android-root.org)
+
+</div>
 
 Discover Android root apps, Magisk modules, KernelSU, LSPosed (Xposed), custom ROM and device-specific rooting guides with practical how-tos for 2025.
 
