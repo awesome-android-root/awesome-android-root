@@ -41,3 +41,4 @@ lastUpdated: true
 [↑ Back to top](#table-of-contents)
 
 ---
+[← Terminal & Shell](./terminals.md) | [All Categories](./index.md)

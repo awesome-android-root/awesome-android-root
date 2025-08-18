@@ -40,3 +40,6 @@ lastUpdated: true
 - **⭐ [Universal GMS Doze](https://github.com/gloeyisk/universal-gms-doze)** - Patches Google Play services app and certain processes/services to be able to use battery optimization. `FOSS` `[M]`
 - **⭐ [Xtreme-Battery-Saver](https://github.com/Magisk-Modules-Alt-Repo/Xtreme-Battery-Saver)** - An extreme battery saver Magisk Module for users who want to really stretch their battery life. `FOSS` `[M]`
 
+---
+[← Modded Apps & Tweaks](./modded-apps-and-tweaks.md) | [All Categories](./index.md) | [Performance & Gaming →](./performance-tweaks.md)
+

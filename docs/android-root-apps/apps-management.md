@@ -63,3 +63,5 @@ lastUpdated: true
 [↑ Back to top](#table-of-contents)
 
 ---
+
+[← Ads & Tracker Blocking](./ads-and-tracker-blocking.md) | [All Categories](./index.md) | [Backup & Restore →](./backup-and-restore.md)

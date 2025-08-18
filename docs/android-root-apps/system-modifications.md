@@ -51,4 +51,5 @@ lastUpdated: true
 [↑ Back to top](#table-of-contents)
 
 ---
+[← Kernel Management](./kernel-management.md) | [All Categories](./index.md) | [Audio Management →](./audio-management.md)
 

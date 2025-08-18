@@ -93,3 +93,5 @@ After hiding root, you can check whether hiding works via root detection apps, s
 [↑ Back to top](#table-of-contents)
 
 ---
+
+[← All Categories](./index.md) | [Ads & Tracker Blocking →](./ads-and-tracker-blocking.md)

@@ -66,4 +66,5 @@ lastUpdated: true
 [↑ Back to top](#table-of-contents)
 
 ---
+[← Battery & Power Management](./battery-and-power-management.md) | [All Categories](./index.md) | [Kernel Management →](./kernel-management.md)
 

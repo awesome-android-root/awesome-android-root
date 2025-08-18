@@ -33,3 +33,6 @@ lastUpdated: true
 - **[DirCleaner](https://www.dircleaner.com/)** - A simple and practical cleaning tool. `Proprietary`
 - **[Risk](https://github.com/rakarmp/Risk)** - Clean RAM Cache And Stop Background Apps, Google Apps, Third Party Apps. `FOSS` `[M]`
 - **⭐ [SD Maid 2/SE](https://f-droid.org/en/packages/eu.darken.sdmse/)** - A file management tool for Android that specialises in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS` | [📦 Source](https://github.com/d4rken-org/sdmaid-se)
+
+---
+[← File Management](./file-management.md) | [All Categories](./index.md) | [Device Control & Hardware →](./device-control-and-hardware.md)

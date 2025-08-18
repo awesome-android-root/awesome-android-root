@@ -33,3 +33,6 @@ lastUpdated: true
 - **[NfcScreenOff](https://github.com/Jon8RFC/NfcScreenOff)** - Read NFC tags when screen is off and disable NFC tagging sound. `FOSS` `[M]`
 
 [↑ Back to top](#table-of-contents)
+
+---
+[← Location & GPS](./location-and-gps.md) | [All Categories](./index.md) | [Customization & Theming →](./customization.md)

@@ -103,3 +103,4 @@ lastUpdated: true
 [↑ Back to top](#table-of-contents)
 
 ---
+[← NFC Tools](./nfc-tools.md) | [All Categories](./index.md) | [System Debloating →](./system-debloating.md)

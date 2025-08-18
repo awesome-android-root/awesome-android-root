@@ -111,3 +111,5 @@ lastUpdated: true
 [↑ Back to top](#table-of-contents)
 
 ---
+
+[← ReVanced](./reVanced.md.md) | [All Categories](./index) | [Battery & Power Management →](./battery-and-power-management.md)

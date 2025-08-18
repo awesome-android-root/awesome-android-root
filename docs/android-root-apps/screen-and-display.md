@@ -39,4 +39,5 @@ lastUpdated: true
 [↑ Back to top](#table-of-contents)
 
 ---
+[← System Debloating](./system-debloating.md) | [All Categories](./index.md) | [Accessibility →](./accessibility.md)
 

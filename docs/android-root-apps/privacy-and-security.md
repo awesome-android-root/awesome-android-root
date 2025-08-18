@@ -39,4 +39,5 @@ lastUpdated: true
 [↑ Back to top](#table-of-contents)
 
 ---
+[← Device Control & Hardware](./device-control-and-hardware.md) | [All Categories](./index.md) | [Networking & Connectivity →](./networking-and-connectivity.md)
 

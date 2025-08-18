@@ -59,3 +59,4 @@ lastUpdated: true
 [↑ Back to top](#table-of-contents)
 
 ---
+[← Privacy & Security](./privacy-and-security.md) | [All Categories](./index.md) | [Location & GPS →](./location-and-gps.md)

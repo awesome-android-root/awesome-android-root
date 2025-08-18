@@ -36,3 +36,4 @@ lastUpdated: true
 - **[USB HID Client](https://apt.izzysoft.de/packages/me.arianb.usb_hid_client)** - Use your phone as a keyboard and mouse **without** any software on the other end. `FOSS` | [📦 Source](https://github.com/Arian04/android-hid-client)
 
 ---
+[← Cleaning & Maintenance](./cleaning-and-maintenance.md) | [All Categories](./index.md) | [Privacy & Security →](./privacy-and-security.md)

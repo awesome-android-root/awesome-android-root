@@ -40,3 +40,6 @@ lastUpdated: true
 ## SMS Management
 - **[NekoSMS](https://github.com/apsun/NekoSMS)** - A pattern-based text message blocker for Android. `FOSS` `[LSP]`
 
+---
+[← App Automation](./automation.md) | [All Categories](./index.md) | [ReVanced →](./reVanced.md)
+

@@ -34,4 +34,6 @@ lastUpdated: true
 - **[Kernel Flasher](https://github.com/fatalcoder524/KernelFlasher)** - An Android app to flash (AK3 files), backup, and restore kernels. `FOSS`
 - **[SmartPack-Kernel-Manager](https://f-droid.org/packages/com.smartpack.kernelmanager)** - A Kernel Manager. `FOSS` | [📦 Source](https://github.com/SmartPack/SmartPack-Kernel-Manager)
 
+[← Performance & Gaming](./performance-tweaks.md) | [All Categories](./index.md) | [System Modifications →](./system-modifications.md)
+
 [↑ Back to top](#table-of-contents)

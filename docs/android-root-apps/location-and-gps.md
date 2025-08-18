@@ -39,3 +39,4 @@ lastUpdated: true
 [↑ Back to top](#table-of-contents)
 
 ---
+[← Networking & Connectivity](./networking-and-connectivity.md) | [All Categories](./index.md) | [NFC Tools →](./nfc-tools.md)

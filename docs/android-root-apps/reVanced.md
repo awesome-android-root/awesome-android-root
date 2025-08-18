@@ -34,6 +34,8 @@ lastUpdated: true
 - **[ReVanced Manager](https://github.com/ReVanced/revanced-manager)** - Modify YouTube, YouTube Music, Spotify and many more with additional features. `FOSS`
 - **[ReVancedRepackaged](https://github.com/programminghoch10/ReVancedRepackaged)** - This magisk module contains only the ReVanced Patcher.It will patch any installed ReVanced compatible app right on your device during installation. `FOSS` `[M]`
 
+[← Communication](./communication.md) | [All Categories](./index.md) | [Modded Apps & Tweaks →](./modded-apps-and-tweaks.md)
+
 [↑ Back to top](#table-of-contents)
 
 ---

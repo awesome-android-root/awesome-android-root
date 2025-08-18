@@ -36,3 +36,6 @@ lastUpdated: true
 - **[Dumpster: Photo/Video Recovery](https://play.google.com/store/apps/details?id=com.baloota.dumpster)** - You can recover deleted videos, restore photos, undelete recently deleted apps, and other files. `Proprietary`
 - **[Neo Backup](https://f-droid.org/packages/com.machiav3lli.backup/)** - Powerful open-source backup solution. `FOSS` | [📦 Source](https://github.com/NeoApplications/Neo-Backup)
 - **[Swift Backup](https://play.google.com/store/apps/details?id=org.swiftapps.swiftbackup)** - Modern backup solution with cloud support. `Proprietary`
+
+---
+[← App Management](./apps-management.md) | [All Categories](./index.md) | [App Automation →](./automation.md)

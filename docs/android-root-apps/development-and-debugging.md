@@ -42,3 +42,4 @@ lastUpdated: true
 [↑ Back to top](#table-of-contents)
 
 ---
+[← Accessibility](./accessibility.md) | [All Categories](./index.md) | [Terminal & Shell →](./terminals.md)
