@@ -135,6 +135,18 @@ Core apps that form the foundation of every great root setup:
 
 ---
 
+## Glossary
+- **⭐** = Community‑recommended (most popular/trusted in category)
+- **`FOSS`** = Free and Open Source Software (source code available)
+- **`Proprietary`** = Closed-source software or unclear licensing
+- **`[M]`** = Magisk Module (requires [_Magisk framework_](./docs/android-root-guides/magisk-guide.md))
+- **`[K]`** = KernelSU Module (requires [_KernelSU framework_](./docs/android-root-guides/kernelsu-guide.md)) 
+- **`[LSP]`** = LSPosed Module (requires [_LSPosed framework_](./docs/android-root-guides/lsposed-guide.md))
+
+> _Apps are organized in alphabetical order within each category._
+
+---
+
 ## Getting Started Paths
 
 ::: tip New to Root Apps
