@@ -18,7 +18,7 @@ Discover Android root apps, Magisk modules, KernelSU, LSPosed (Xposed), custom R
 Full docs: https://awesome-android-root.org
 
 - [Quick Start](docs/quick-start.md)
-- [Featured Apps](docs/featured.md)
+- [Essential Apps](docs/android-root-apps/index.md#essential-apps---start-here)
 - [All Root Apps Index](docs/android-root-apps/index.md)
 - [All Rooting Guides](docs/android-root-guides/index.md)
 - [FAQ & Troubleshooting](docs/faqs.md)
@@ -31,7 +31,7 @@ Full docs: https://awesome-android-root.org
 ## 🧭 Quick Navigation
 
 - Getting Started → [Quick Start Guide](docs/quick-start.md)
-- Already Rooted? → [Featured Apps](docs/featured.md) · [All Categories](docs/android-root-apps/index.md)
+- Already Rooted? → [Essential Apps](docs/android-root-apps/index.md#essential-apps---start-here) · [All Categories](docs/android-root-apps/index.md)
 - Need Help? → [FAQ & Troubleshooting](docs/faqs.md)
 
 ---

@@ -128,7 +128,7 @@ export default defineConfig({
         text: 'Get Started',
         items: [
           { text: '🚀 Quick Start Guide', link: '/quick-start' },
-          { text: '🌟 Featured Apps', link: '/featured' },
+          { text: '🌟 Essential Apps', link: '/android-root-apps/#essential-apps---start-here' },
           { text: '❓ FAQ & Help', link: '/faqs' }
         ]
       },
@@ -177,41 +177,9 @@ export default defineConfig({
           text: '🔗 Related Resources',
           collapsed: true,
           items: [
-            { text: 'Featured Apps', link: '/featured' },
+            { text: 'Essential Apps', link: '/android-root-apps/#essential-apps---start-here' },
             { text: 'Device-Specific Guides', link: '/android-root-guides/' },
             { text: 'FAQ & Troubleshooting', link: '/faqs' }
-          ]
-        }
-      ],
-
-      // Featured Apps Sidebar
-      '/featured': [
-        {
-          text: '🏆 Essential Categories',
-          collapsed: false,
-          items: [
-            { text: 'Root Management', link: '/featured#root-management-essentials' },
-            { text: 'Ad Blocking', link: '/featured#ad-blocking-champions' },
-            { text: 'App Management', link: '/featured#app-management-powerhouses' },
-            { text: 'Backup Solutions', link: '/featured#backup-solutions' }
-          ]
-        },
-        {
-          text: '⚡ Performance & Customization',
-          collapsed: false,
-          items: [
-            { text: 'Performance Boosters', link: '/featured#performance-boosters' },
-            { text: 'Customization Masters', link: '/featured#customization-masters' },
-            { text: 'Privacy & Security', link: '/featured#privacy-security-guardians' }
-          ]
-        },
-        {
-          text: '🔗 Explore More',
-          collapsed: true,
-          items: [
-            { text: 'Complete App Collection', link: '/android-root-apps/' },
-            { text: 'Quick Start Guide', link: '/quick-start' },
-            { text: 'Community Choice Awards', link: '/featured#community-choice-awards' }
           ]
         }
       ],
@@ -268,7 +236,7 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'Browse All Categories', link: '/android-root-apps/' },
-            { text: 'Featured Must-Have Apps', link: '/featured' },
+            { text: 'Essential Must-Have Apps', link: '/android-root-apps/#essential-apps---start-here' },
             { text: 'Quick Start Guide', link: '/quick-start' }
           ]
         },
@@ -373,7 +341,7 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'Quick Start Guide', link: '/quick-start' },
-            { text: 'Featured Apps', link: '/featured' },
+            { text: 'Essential Apps', link: '/android-root-apps/#essential-apps---start-here' },
             { text: 'FAQ & Troubleshooting', link: '/faqs' }
           ]
         },
@@ -390,11 +358,11 @@ export default defineConfig({
           text: '🏆 Popular Categories',
           collapsed: false,
           items: [
-            { text: 'Essential Root Apps', link: '/featured#root-management-essentials' },
-            { text: 'Ad Blocking Solutions', link: '/featured#ad-blocking-champions' },
-            { text: 'App Management Tools', link: '/featured#app-management-powerhouses' },
-            { text: 'Performance Boosters', link: '/featured#performance-boosters' },
-            { text: 'Privacy & Security', link: '/featured#privacy-security-guardians' }
+            { text: 'Essential Root Apps', link: '/android-root-apps/root-management' },
+            { text: 'Ad Blocking Solutions', link: '/android-root-apps/ads-and-tracker-blocking' },
+            { text: 'App Management Tools', link: '/android-root-apps/apps-management' },
+            { text: 'Performance Boosters', link: '/android-root-apps/performance-tweaks' },
+            { text: 'Privacy & Security', link: '/android-root-apps/privacy-and-security' }
           ]
         },
         {
