@@ -62,4 +62,4 @@ head:
 - **⭐ [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)** - An advanced and powerful automation app. `Proprietary`
 
 ---
-[← Backup & Restore](./backup-and-estore.md) | [All Categories](./index.md) | [Communication →](./communication.md)
+[← Backup & Restore](./backup-and-restore.md) | [All Categories](./index.md) | [Communication →](./communication.md)

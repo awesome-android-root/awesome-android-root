@@ -183,7 +183,7 @@ export default defineConfig({
             { text: '📦 Apps Management', link: '/android-root-apps/apps-management' },
             { text: '🔊 Audio Management', link: '/android-root-apps/audio-management' },
             { text: '🤖 Automation', link: '/android-root-apps/automation' },
-            { text: '💾 Backup & E-Store', link: '/android-root-apps/backup-and-estore' },
+            { text: '💾 Backup & ReStore', link: '/android-root-apps/backup-and-restore' },
             { text: '🔋 Battery & Power', link: '/android-root-apps/battery-and-power-management' },
             { text: '🧹 Cleaning & Maintenance', link: '/android-root-apps/cleaning-and-maintenance' },
             { text: '💬 Communication', link: '/android-root-apps/communication' },

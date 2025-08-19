@@ -120,7 +120,7 @@ We focus on open-source solutions where possible and clearly mark proprietary al
 | [Root Management](./root-management) | Core tools for managing root access and modules |
 | [Ad & Tracker Blocking](./ads-and-tracker-blocking) | System-wide ad blocking and privacy protection |
 | [App Management](./apps-management) | Advanced app control, isolation, and management |
-| [Backup & Restore](./backup-and-estore) | Complete backup solutions for apps and system data |
+| [Backup & Restore](./backup-and-restore) | Complete backup solutions for apps and system data |
 
 ---
 

@@ -265,7 +265,7 @@ features:
   - icon: 💾
     title: Professional Backup Solutions
     details: "Never lose data with comprehensive backup systems, TWRP integration, and advanced file management capabilities."
-    link: /android-root-apps/backup-and-estore
+    link: /android-root-apps/backup-and-restore
     
   - icon: 🧹
     title: System Debloating & Cleaning
