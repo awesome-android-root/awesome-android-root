@@ -1,4 +1,5 @@
 docs/.vitepress/dist
 docs/.vitepress/cache
+docs/android-root-apps/index.html
 node_modules
 tbd.txt
