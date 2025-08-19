@@ -35,12 +35,9 @@ head:
       content: android root apps, magisk modules, lsposed framework, kernelsu modules, root app collection, android customization apps, rooted android tools
 ---
 
-
-# Android Root Apps Collection
-
 <div align="center" style="margin-bottom: 1.5em;">
-  <img src="../public/images/logo_dark.svg" alt="Awesome Android Root Logo" width="80" height="80" />
-  <br>
+  <img src="../public/images/logo_dark.svg" alt="Awesome Android Root Logo" width="120" height="120" />
+  <h2>Android Root Apps & Modules</h2>
   <b>The ultimate collection of 280+ curated apps, modules, and tools for rooted Android devices</b>
   <br>
   <span style="color: #888;">Organized by category for effortless discovery and exploration</span>
@@ -126,9 +123,9 @@ We focus on open-source solutions where possible and clearly mark proprietary al
 <li><b>⭐</b> = Community‑recommended (most popular/trusted in category)</li>
 <li><b><code>FOSS</code></b> = Free and Open Source Software</li>
 <li><b><code>Proprietary</code></b> = Closed-source or unclear licensing</li>
-<li><b>[M]</b> = Magisk Module (needs <a href="./docs/android-root-guides/magisk-guide.md">Magisk</a>)</li>
-<li><b>[K]</b> = KernelSU Module (needs <a href="./docs/android-root-guides/kernelsu-guide.md">KernelSU</a>)</li>
-<li><b>[LSP]</b> = LSPosed Module (needs <a href="./docs/android-root-guides/lsposed-guide.md">LSPosed</a>)</li>
+<li><b><code>[M]</code></b> = Magisk Module (needs <a href="./docs/android-root-guides/magisk-guide.md">Magisk</a>)</li>
+<li><b><code>[K]</code></b> = KernelSU Module (needs <a href="./docs/android-root-guides/kernelsu-guide.md">KernelSU</a>)</li>
+<li><b><code>[LSP]</code></b> = LSPosed Module (needs <a href="./docs/android-root-guides/lsposed-guide.md">LSPosed</a>)</li>
 </ul>
 </div>
 
