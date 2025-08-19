@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: Complete Nothing Phone Rooting Guide
-description: "Master guide to root all Nothing Phone models - Phone 1, 2, 2a, 3 series with bootloader unlock and Magisk installation for Nothing OS."
+title: Complete Nothing & CMF by Nothing Phone Rooting Guide
+description: "Master guide to root all Nothing & CMF by Nothing Phone models with bootloader unlock and Magisk installation for Nothing OS."
 head:
   - - link
     - rel: canonical
@@ -11,7 +11,7 @@ head:
       content: article
   - - meta
     - property: og:title
-      content: Complete Nothing Phone Rooting Guide - All Models
+      content: Complete Nothing & CMF by Nothing Phone Rooting Guide - All Models
   - - meta
     - property: og:description
       content: Root any Nothing Phone with our comprehensive guide covering bootloader unlock, custom recovery, and Magisk installation for Nothing OS.
@@ -26,10 +26,10 @@ head:
       content: summary_large_image
   - - meta
     - name: twitter:title
-      content: Complete Nothing Phone Rooting Guide - All Models
+      content: Complete Nothing & CMF by Nothing Phone Rooting Guide - All Models
   - - meta
     - name: twitter:description
-      content: Root any Nothing Phone with bootloader unlock and Magisk installation guide.
+      content: Root any Nothing & CMF by Nothing Phone with bootloader unlock and Magisk installation guide.
   - - meta
     - name: keywords
       content: nothing phone root, nothing os root, nothing phone bootloader unlock, nothing phone magisk, twrp nothing phone, nothing phone 1 root, nothing phone 2 root, nothing phone 2a root, nothing phone 3 root
@@ -59,9 +59,9 @@ head:
       content: index, follow
 ---
 
-# Complete Nothing Phone Rooting Guide
+# Complete Nothing & CMF by Nothing Phone Rooting Guide
 
-**Root any Nothing Phone model** - Phone 1, 2, 2a, 3 series with bootloader unlock and Magisk installation.
+**Root any Nothing or CMF by Nothing Phone model** with bootloader unlock and Magisk installation.
 
 ## 🔗 Essential Resources
 - **[📖 Main Rooting Guide](./index.md)** - Universal rooting principles and safety
@@ -84,16 +84,20 @@ head:
 - **Nothing Phone (1)** - Codename: `Spacewar`
 - **Nothing Phone (2)** - Codename: `Pong`
 - **Nothing Phone (2a)** - Codename: `Pacman`
-- **Nothing Phone (2a) Plus** - Codename: `PacmanPlus`
-- **Nothing Phone (3)** - Codename: `Asteroids`
-- **Nothing Phone (3a)** - Codename: `AsteroidsPlus`
+- **Nothing Phone (2a) Plus** - Codename: `PacmanPro`
+- **Nothing Phone (3a) Series** - Codename: `Asteroids`
+- **Nothing Phone (3)** - Codename: `Metroid`
+
+**All CMF by Nothing Phone models supported:**
+- **CMF Phone (1)** - Codename: `Tetris`
+- **CMF Phone (2) Pro** - Codename: `Galaga`
 
 ## Prerequisites & Setup
 
 ### Required Tools
 1. **[Platform Tools](https://developer.android.com/studio/releases/platform-tools)** - ADB/Fastboot
 2. **[Magisk APK](https://github.com/topjohnwu/Magisk/releases)** - Latest release
-3. **Stock firmware** for your device model (for boot.img extraction)
+3. **[Nothing Archive](https://github.com/spike0en/nothing_archive)** by spike0en - Stock boot/init_boot image
 4. **Custom recovery** (optional) - TWRP or OrangeFox
 
 ### Device Preparation
@@ -155,15 +159,17 @@ After automatic factory reset:
 ### Method A: Boot Image Patching (Recommended)
 
 #### Step 1: Extract Boot Image
-1. **Download stock firmware** for your exact device model and version
-2. **Extract firmware package** using 7-Zip or similar tool
-3. **Locate boot.img** file within extracted files
-4. **Copy boot.img** to easily accessible location
+1. **Download stock boot/init_boot image** from the Nothing Archive for your respective model.
+2. **Refer to the [downloads index](https://github.com/spike0en/nothing_archive#downloads-)**, click on OTA Images for your corresponding build version and model. Go to release assets. Download the `-image-boot.img.7z` file.
+3. **Locate the boot.img/init_boot.img** file within the archive. Note: if init_boot.img exists, that should be used for rooting instead of boot.img.
+4. **Copy boot.img/init_boot.img** to an easily accessible location.
 
 #### Step 2: Patch Boot Image
-1. **Transfer boot.img to device:**
+1. **Transfer boot.img/init_boot.img to device:**
    ```bash
    adb push boot.img /sdcard/Download/
+   # or
+   adb push init_boot.img /sdcard/Download/
    ```
 
 2. **Install Magisk APK** on device:
@@ -174,7 +180,7 @@ After automatic factory reset:
 3. **Patch boot image:**
    - Open Magisk app on device
    - Tap **Install** → **Select and patch a file**
-   - Navigate to Downloads and select boot.img
+   - Navigate to Downloads and select boot.img or init_boot.img, as applicable.
    - Wait for patching to complete
 
 4. **Retrieve patched image:**
@@ -191,6 +197,8 @@ After automatic factory reset:
 2. **Flash patched boot:**
    ```bash
    fastboot flash boot magisk_patched_[hash].img
+   # or
+   fastboot flash init_boot magisk_patched_[hash].img
    ```
 
 3. **Reboot system:**
@@ -295,15 +303,16 @@ fastboot flash recovery recovery.img
 
 ### Unroot Process
 1. **Uninstall Magisk** - Magisk → Settings → Complete Uninstall
-2. **Flash stock firmware** - Use official Nothing firmware
-3. **Factory reset** - Ensure clean restoration
+2. **Restore OTA Functionality** - Refer to [this guide](https://github.com/spike0en/nothing_archive#i-ota-sideloading-)
+2. **Flash stock firmware** - Refer to [this guide](https://github.com/spike0en/nothing_archive#iv-flashing-the-stock-rom-using-fastboot-)
+3. **Fastboot Flashing Script** - [Nothing Flasher](https://github.com/spike0en/nothing_flasher)
 
 ### Lock Bootloader (Optional)
 ```bash
 fastboot flashing lock
 ```
 ::: danger ⚠️ Critical Warning
-Only lock bootloader with completely stock firmware. Locking with custom firmware can permanently brick your device.
+Only lock bootloader with completely stock firmware and android verified boot (AVB) enabled. Locking with custom firmware or modified partitions can permanently brick your device.
 :::
 
 ## Banking App Compatibility
@@ -320,12 +329,13 @@ Only lock bootloader with completely stock firmware. Locking with custom firmwar
 3. Add problematic apps to DenyList
 4. Clear app data for banking/payment apps
 5. Re-login and test functionality
+6. Alternatively refer to [this guide](https://github.com/yashaswee-exe/AndroidGuides/wiki/Fix-integrity-and-root-detection) for fixing integrity & root detection
 
 ---
 
 ## Success! Your Nothing Phone is Rooted
 
-**Congratulations!** Your Nothing Phone now has root access. Here's what to do next:
+**Congratulations!** Your Nothing / CMF by Nothing Phone now has root access. Here's what to do next:
 
 ### Immediate Next Steps
 1. **[Browse Root Apps](../android-root-apps/#root-apps)** - Discover 300+ curated applications
