@@ -1,4 +1,5 @@
 ---
+layout: doc
 title: "Android Root Apps - Location and GPS"
 description: "Enhance location services on rooted Android: mock locations, GPS tuning, and privacy controls for accurate location testing and spoofing where permitted."
 head:

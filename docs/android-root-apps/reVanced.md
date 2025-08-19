@@ -1,4 +1,5 @@
 ---
+layout: doc
 title: "Android Root Apps - reVanced"
 description: "Guide to reVanced on rooted Android: patched clients and modules that restore features, block ads, and customize app behavior responsibly."
 head:

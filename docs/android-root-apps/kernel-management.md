@@ -1,4 +1,5 @@
 ---
+layout: doc
 title: "Android Root Apps - Kernel Management"
 description: "Manage and customize kernels on rooted Android: flashing, configuration, governors, and low-level tuning for performance and battery improvements."
 head:
