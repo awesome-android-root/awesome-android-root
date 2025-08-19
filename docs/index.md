@@ -287,7 +287,7 @@ features:
     details: "Master network management with firewall tools, DNS control, Wi-Fi optimization, and advanced connectivity features."
     link: /android-root-apps/#network-and-connectivity
     
-  - icon: �
+  - icon: 🛠️
     title: Root Management & Hiding
     details: "Manage root access, hide root from banking apps, ensure integrity checks pass, and maintain system security."
     link: /android-root-apps/#root-management
