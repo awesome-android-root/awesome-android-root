@@ -164,6 +164,10 @@ sed -i '/http[s]*:\/\/\//! s|./docs/|../|g' docs/android-root-apps/index.md && \
 sed -i 's|\([^:]\)//|\1/|g' docs/android-root-apps/index.md || handle_error "Failed adjusting links in docs/android-root-apps/index.md"
 log_info "Links adjusted in docs/android-root-apps/index.md"
 
+# Add this after line 161 in build-docs.sh
+sed -i 's|docs/public/images/|../public/images/|g' docs/android-root-apps/index.md || handle_error "Failed adjusting image paths in docs/android-root-apps/index.md"
+log_info "Image paths adjusted in docs/android-root-apps/index.md"
+
 # 7. Update stats in docs/android-root-apps/index.md as well
 update_stats "docs/android-root-apps/index.md"
 
