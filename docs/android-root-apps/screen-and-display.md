@@ -1,31 +1,59 @@
 ---
+layout: doc
 title: "Android Root Apps - Screen and Display"
 description: "Control display settings on rooted Android: overlays, scaling, color calibration, refresh rate control, and screenshot tools for power users."
 head:
+  - - link
+    - rel: canonical
+      href: https://awesome-android-root.org/android-root-apps/screen-and-display
   - - meta
-    - name: og:title
-      content: "Android Root Apps - Screen and Display"
+    - property: og:type
+      content: article
   - - meta
-    - name: og:description
-      content: "Control display settings on rooted Android: overlays, scaling, color calibration, refresh rate control, and screenshot tools for power users."
+    - property: og:title
+      content: Android Root Apps - Screen and Display
   - - meta
-    - name: og:type
-      content: "article"
+    - property: og:description
+      content: Control display settings on rooted Android: overlays, scaling, color calibration, refresh rate control, and screenshot tools for power users.
+  - - meta
+    - property: og:url
+      content: https://awesome-android-root.org/android-root-apps/screen-and-display
+  - - meta
+    - property: og:image
+      content: https://awesome-android-root.org/images/og.png
   - - meta
     - name: twitter:card
-      content: "summary"
+      content: summary_large_image
   - - meta
     - name: twitter:title
-      content: "Android Root Apps - Screen and Display"
+      content: Android Root Apps - Screen and Display
   - - meta
     - name: twitter:description
-      content: "Control display settings on rooted Android: overlays, scaling, color calibration, refresh rate control, and screenshot tools for power users."
+      content: Control display settings on rooted Android: overlays, scaling, color calibration, refresh rate control, and screenshot tools for power users.
   - - meta
     - name: keywords
-      content: "android root, screen, display, resolution, scaling, color calibration, refresh rate, rooted apps"
-sidebar: true
-outline: deep
-lastUpdated: true
+      content: android root apps, root tools, magisk modules, lsposed, kernelsu, screen, display, resolution, scaling, color calibration, refresh rate
+  - - meta
+    - name: robots
+      content: index, follow, max-image-preview:large
+  - - meta
+    - name: author
+      content: Awesome Android Root Project
+  - - meta
+    - property: article:author
+      content: https://github.com/awesome-android-root/awesome-android-root
+  - - meta
+    - property: article:section
+      content: Android Root Apps
+  - - meta
+    - property: article:tag
+      content: Android Root, Root Apps, Magisk, LSPosed, KernelSU, screen, display
+  - - meta
+    - property: article:published_time
+      content: 2025-08-19
+  - - meta
+    - property: article:modified_time
+      content: 2025-08-19
 ---
 
 # Screen and Display

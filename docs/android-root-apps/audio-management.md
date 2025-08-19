@@ -1,31 +1,59 @@
 ---
+layout: doc
 title: "Android Root Apps - Audio Management"
 description: "Control audio on rooted Android: advanced routing, equalizers, gain, and per-app volume control to improve sound and recording workflows."
 head:
+  - - link
+    - rel: canonical
+      href: https://awesome-android-root.org/android-root-apps/audio-management
   - - meta
-    - name: og:title
-      content: "Android Root Apps - Audio Management"
+    - property: og:type
+      content: article
   - - meta
-    - name: og:description
-      content: "Control audio on rooted Android: advanced routing, equalizers, gain, and per-app volume control to improve sound and recording workflows."
+    - property: og:title
+      content: Android Root Apps - Audio Management
   - - meta
-    - name: og:type
-      content: "article"
+    - property: og:description
+      content: Control audio on rooted Android: advanced routing, equalizers, gain, and per-app volume control to improve sound and recording workflows.
+  - - meta
+    - property: og:url
+      content: https://awesome-android-root.org/android-root-apps/audio-management
+  - - meta
+    - property: og:image
+      content: https://awesome-android-root.org/images/og.png
   - - meta
     - name: twitter:card
-      content: "summary"
+      content: summary_large_image
   - - meta
     - name: twitter:title
-      content: "Android Root Apps - Audio Management"
+      content: Android Root Apps - Audio Management
   - - meta
     - name: twitter:description
-      content: "Control audio on rooted Android: advanced routing, equalizers, gain, and per-app volume control to improve sound and recording workflows."
+      content: Control audio on rooted Android: advanced routing, equalizers, gain, and per-app volume control to improve sound and recording workflows.
   - - meta
     - name: keywords
-      content: "android root, audio, equalizer, audio routing, per-app volume, rooted audio apps"
-sidebar: true
-outline: deep
-lastUpdated: true
+      content: android root apps, root tools, magisk modules, lsposed, kernelsu, audio, equalizer, audio routing, per-app volume
+  - - meta
+    - name: robots
+      content: index, follow, max-image-preview:large
+  - - meta
+    - name: author
+      content: Awesome Android Root Project
+  - - meta
+    - property: article:author
+      content: https://github.com/awesome-android-root/awesome-android-root
+  - - meta
+    - property: article:section
+      content: Android Root Apps
+  - - meta
+    - property: article:tag
+      content: Android Root, Root Apps, Magisk, LSPosed, KernelSU, audio, equalizer
+  - - meta
+    - property: article:published_time
+      content: 2025-08-19
+  - - meta
+    - property: article:modified_time
+      content: 2025-08-19
 ---
 
 # Audio Management

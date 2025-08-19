@@ -1,31 +1,59 @@
 ---
+layout: doc
 title: "Android Root Apps - Automation"
 description: "Automate tasks on rooted Android using scripts, Tasker plugins, and root-only tools to streamline workflows and enable powerful device automation."
 head:
+  - - link
+    - rel: canonical
+      href: https://awesome-android-root.org/android-root-apps/automation
   - - meta
-    - name: og:title
-      content: "Android Root Apps - Automation"
+    - property: og:type
+      content: article
   - - meta
-    - name: og:description
-      content: "Automate tasks on rooted Android using scripts, Tasker plugins, and root-only tools to streamline workflows and enable powerful device automation."
+    - property: og:title
+      content: Android Root Apps - Automation
   - - meta
-    - name: og:type
-      content: "article"
+    - property: og:description
+      content: Automate tasks on rooted Android using scripts, Tasker plugins, and root-only tools to streamline workflows and enable powerful device automation.
+  - - meta
+    - property: og:url
+      content: https://awesome-android-root.org/android-root-apps/automation
+  - - meta
+    - property: og:image
+      content: https://awesome-android-root.org/images/og.png
   - - meta
     - name: twitter:card
-      content: "summary"
+      content: summary_large_image
   - - meta
     - name: twitter:title
-      content: "Android Root Apps - Automation"
+      content: Android Root Apps - Automation
   - - meta
     - name: twitter:description
-      content: "Automate tasks on rooted Android using scripts, Tasker plugins, and root-only tools to streamline workflows and enable powerful device automation."
+      content: Automate tasks on rooted Android using scripts, Tasker plugins, and root-only tools to streamline workflows and enable powerful device automation.
   - - meta
     - name: keywords
-      content: "android root, automation, Tasker, scripts, root automation, rooted tools"
-sidebar: true
-outline: deep
-lastUpdated: true
+      content: android root apps, root tools, magisk modules, lsposed, kernelsu, automation, Tasker, scripts, root automation
+  - - meta
+    - name: robots
+      content: index, follow, max-image-preview:large
+  - - meta
+    - name: author
+      content: Awesome Android Root Project
+  - - meta
+    - property: article:author
+      content: https://github.com/awesome-android-root/awesome-android-root
+  - - meta
+    - property: article:section
+      content: Android Root Apps
+  - - meta
+    - property: article:tag
+      content: Android Root, Root Apps, Magisk, LSPosed, KernelSU, automation, Tasker
+  - - meta
+    - property: article:published_time
+      content: 2025-08-19
+  - - meta
+    - property: article:modified_time
+      content: 2025-08-19
 ---
 
 # Automation

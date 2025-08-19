@@ -1,31 +1,59 @@
 ---
+layout: doc
 title: "Android Root Apps - Apps Management"
 description: "Manage apps on rooted Android: backup, uninstall, freeze, migrate, and control packages with advanced tools for safer, cleaner app management."
 head:
+  - - link
+    - rel: canonical
+      href: https://awesome-android-root.org/android-root-apps/apps-management
   - - meta
-    - name: og:title
-      content: "Android Root Apps - Apps Management"
+    - property: og:type
+      content: article
   - - meta
-    - name: og:description
-      content: "Manage apps on rooted Android: backup, uninstall, freeze, migrate, and control packages with advanced tools for safer, cleaner app management."
+    - property: og:title
+      content: Android Root Apps - Apps Management
   - - meta
-    - name: og:type
-      content: "article"
+    - property: og:description
+      content: Manage apps on rooted Android: backup, uninstall, freeze, migrate, and control packages with advanced tools for safer, cleaner app management.
+  - - meta
+    - property: og:url
+      content: https://awesome-android-root.org/android-root-apps/apps-management
+  - - meta
+    - property: og:image
+      content: https://awesome-android-root.org/images/og.png
   - - meta
     - name: twitter:card
-      content: "summary"
+      content: summary_large_image
   - - meta
     - name: twitter:title
-      content: "Android Root Apps - Apps Management"
+      content: Android Root Apps - Apps Management
   - - meta
     - name: twitter:description
-      content: "Manage apps on rooted Android: backup, uninstall, freeze, migrate, and control packages with advanced tools for safer, cleaner app management."
+      content: Manage apps on rooted Android: backup, uninstall, freeze, migrate, and control packages with advanced tools for safer, cleaner app management.
   - - meta
     - name: keywords
-      content: "android root, app management, uninstall, backup, package manager, freeze apps, rooted apps"
-sidebar: true
-outline: deep
-lastUpdated: true
+      content: android root apps, root tools, magisk modules, lsposed, kernelsu, app management, uninstall, backup, package manager, freeze apps
+  - - meta
+    - name: robots
+      content: index, follow, max-image-preview:large
+  - - meta
+    - name: author
+      content: Awesome Android Root Project
+  - - meta
+    - property: article:author
+      content: https://github.com/awesome-android-root/awesome-android-root
+  - - meta
+    - property: article:section
+      content: Android Root Apps
+  - - meta
+    - property: article:tag
+      content: Android Root, Root Apps, Magisk, LSPosed, KernelSU, app management, backup, uninstall
+  - - meta
+    - property: article:published_time
+      content: 2025-08-19
+  - - meta
+    - property: article:modified_time
+      content: 2025-08-19
 ---
 
 # App Management

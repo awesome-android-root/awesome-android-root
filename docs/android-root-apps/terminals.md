@@ -1,31 +1,59 @@
 ---
+layout: doc
 title: "Android Root Apps - Terminals"
 description: "Powerful terminal and shell tools for rooted Android: full shell access, busybox, scripting, and command-line utilities for advanced workflows."
 head:
+  - - link
+    - rel: canonical
+      href: https://awesome-android-root.org/android-root-apps/terminals
   - - meta
-    - name: og:title
-      content: "Android Root Apps - Terminals"
+    - property: og:type
+      content: article
   - - meta
-    - name: og:description
-      content: "Powerful terminal and shell tools for rooted Android: full shell access, busybox, scripting, and command-line utilities for advanced workflows."
+    - property: og:title
+      content: Android Root Apps - Terminals
   - - meta
-    - name: og:type
-      content: "article"
+    - property: og:description
+      content: Powerful terminal and shell tools for rooted Android: full shell access, busybox, scripting, and command-line utilities for advanced workflows.
+  - - meta
+    - property: og:url
+      content: https://awesome-android-root.org/android-root-apps/terminals
+  - - meta
+    - property: og:image
+      content: https://awesome-android-root.org/images/og.png
   - - meta
     - name: twitter:card
-      content: "summary"
+      content: summary_large_image
   - - meta
     - name: twitter:title
-      content: "Android Root Apps - Terminals"
+      content: Android Root Apps - Terminals
   - - meta
     - name: twitter:description
-      content: "Powerful terminal and shell tools for rooted Android: full shell access, busybox, scripting, and command-line utilities for advanced workflows."
+      content: Powerful terminal and shell tools for rooted Android: full shell access, busybox, scripting, and command-line utilities for advanced workflows.
   - - meta
     - name: keywords
-      content: "android root, terminal, shell, busybox, adb shell, command line, rooted tools"
-sidebar: true
-outline: deep
-lastUpdated: true
+      content: android root apps, root tools, magisk modules, lsposed, kernelsu, terminal, shell, busybox, adb shell, command line
+  - - meta
+    - name: robots
+      content: index, follow, max-image-preview:large
+  - - meta
+    - name: author
+      content: Awesome Android Root Project
+  - - meta
+    - property: article:author
+      content: https://github.com/awesome-android-root/awesome-android-root
+  - - meta
+    - property: article:section
+      content: Android Root Apps
+  - - meta
+    - property: article:tag
+      content: Android Root, Root Apps, Magisk, LSPosed, KernelSU, terminal, shell
+  - - meta
+    - property: article:published_time
+      content: 2025-08-19
+  - - meta
+    - property: article:modified_time
+      content: 2025-08-19
 ---
 
 # Terminal and Shell Environments

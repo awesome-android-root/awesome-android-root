@@ -1,31 +1,59 @@
 ---
+layout: doc
 title: "Android Root Apps - Communication"
 description: "Enhance communication on rooted Android with messaging mods, VoIP tools, and privacy-focused clients that require deeper system access for features."
 head:
+  - - link
+    - rel: canonical
+      href: https://awesome-android-root.org/android-root-apps/communication
   - - meta
-    - name: og:title
-      content: "Android Root Apps - Communication"
+    - property: og:type
+      content: article
   - - meta
-    - name: og:description
-      content: "Enhance communication on rooted Android with messaging mods, VoIP tools, and privacy-focused clients that require deeper system access for features."
+    - property: og:title
+      content: Android Root Apps - Communication
   - - meta
-    - name: og:type
-      content: "article"
+    - property: og:description
+      content: Enhance communication on rooted Android with messaging mods, VoIP tools, and privacy-focused clients that require deeper system access for features.
+  - - meta
+    - property: og:url
+      content: https://awesome-android-root.org/android-root-apps/communication
+  - - meta
+    - property: og:image
+      content: https://awesome-android-root.org/images/og.png
   - - meta
     - name: twitter:card
-      content: "summary"
+      content: summary_large_image
   - - meta
     - name: twitter:title
-      content: "Android Root Apps - Communication"
+      content: Android Root Apps - Communication
   - - meta
     - name: twitter:description
-      content: "Enhance communication on rooted Android with messaging mods, VoIP tools, and privacy-focused clients that require deeper system access for features."
+      content: Enhance communication on rooted Android with messaging mods, VoIP tools, and privacy-focused clients that require deeper system access for features.
   - - meta
     - name: keywords
-      content: "android root, communication, messaging, VoIP, privacy, rooted mods, communication apps"
-sidebar: true
-outline: deep
-lastUpdated: true
+      content: android root apps, root tools, magisk modules, lsposed, kernelsu, communication, messaging, VoIP, privacy
+  - - meta
+    - name: robots
+      content: index, follow, max-image-preview:large
+  - - meta
+    - name: author
+      content: Awesome Android Root Project
+  - - meta
+    - property: article:author
+      content: https://github.com/awesome-android-root/awesome-android-root
+  - - meta
+    - property: article:section
+      content: Android Root Apps
+  - - meta
+    - property: article:tag
+      content: Android Root, Root Apps, Magisk, LSPosed, KernelSU, communication, messaging
+  - - meta
+    - property: article:published_time
+      content: 2025-08-19
+  - - meta
+    - property: article:modified_time
+      content: 2025-08-19
 ---
 
 # Communication

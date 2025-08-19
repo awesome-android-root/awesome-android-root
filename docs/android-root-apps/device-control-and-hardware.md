@@ -1,31 +1,59 @@
 ---
+layout: doc
 title: "Android Root Apps - Device Control and Hardware"
 description: "Access low-level device controls on rooted Android: CPU/GPU settings, kernel tweaks, sensors, and hardware interfaces for advanced customization and tools."
 head:
+  - - link
+    - rel: canonical
+      href: https://awesome-android-root.org/android-root-apps/device-control-and-hardware
   - - meta
-    - name: og:title
-      content: "Android Root Apps - Device Control and Hardware"
+    - property: og:type
+      content: article
   - - meta
-    - name: og:description
-      content: "Access low-level device controls on rooted Android: CPU/GPU settings, kernel tweaks, sensors, and hardware interfaces for advanced customization and tools."
+    - property: og:title
+      content: Android Root Apps - Device Control and Hardware
   - - meta
-    - name: og:type
-      content: "article"
+    - property: og:description
+      content: Access low-level device controls on rooted Android: CPU/GPU settings, kernel tweaks, sensors, and hardware interfaces for advanced customization and tools.
+  - - meta
+    - property: og:url
+      content: https://awesome-android-root.org/android-root-apps/device-control-and-hardware
+  - - meta
+    - property: og:image
+      content: https://awesome-android-root.org/images/og.png
   - - meta
     - name: twitter:card
-      content: "summary"
+      content: summary_large_image
   - - meta
     - name: twitter:title
-      content: "Android Root Apps - Device Control and Hardware"
+      content: Android Root Apps - Device Control and Hardware
   - - meta
     - name: twitter:description
-      content: "Access low-level device controls on rooted Android: CPU/GPU settings, kernel tweaks, sensors, and hardware interfaces for advanced customization and tools."
+      content: Access low-level device controls on rooted Android: CPU/GPU settings, kernel tweaks, sensors, and hardware interfaces for advanced customization and tools.
   - - meta
     - name: keywords
-      content: "android root, device control, hardware, kernel, CPU, GPU, sensors, rooted tools"
-sidebar: true
-outline: deep
-lastUpdated: true
+      content: android root apps, root tools, magisk modules, lsposed, kernelsu, device control, hardware, kernel, CPU, GPU, sensors
+  - - meta
+    - name: robots
+      content: index, follow, max-image-preview:large
+  - - meta
+    - name: author
+      content: Awesome Android Root Project
+  - - meta
+    - property: article:author
+      content: https://github.com/awesome-android-root/awesome-android-root
+  - - meta
+    - property: article:section
+      content: Android Root Apps
+  - - meta
+    - property: article:tag
+      content: Android Root, Root Apps, Magisk, LSPosed, KernelSU, device control, hardware
+  - - meta
+    - property: article:published_time
+      content: 2025-08-19
+  - - meta
+    - property: article:modified_time
+      content: 2025-08-19
 ---
 
 # Device Control and Hardware

@@ -1,31 +1,59 @@
 ---
+layout: doc
 title: "Android Root Apps - Root Management"
 description: "Manage root access on Android: su binaries, permission control, root switchers, and safety tools for granting and auditing root privileges."
 head:
+  - - link
+    - rel: canonical
+      href: https://awesome-android-root.org/android-root-apps/root-management
   - - meta
-    - name: og:title
-      content: "Android Root Apps - Root Management"
+    - property: og:type
+      content: article
   - - meta
-    - name: og:description
-      content: "Manage root access on Android: su binaries, permission control, root switchers, and safety tools for granting and auditing root privileges."
+    - property: og:title
+      content: Android Root Apps - Root Management
   - - meta
-    - name: og:type
-      content: "article"
+    - property: og:description
+      content: Manage root access on Android: su binaries, permission control, root switchers, and safety tools for granting and auditing root privileges.
+  - - meta
+    - property: og:url
+      content: https://awesome-android-root.org/android-root-apps/root-management
+  - - meta
+    - property: og:image
+      content: https://awesome-android-root.org/images/og.png
   - - meta
     - name: twitter:card
-      content: "summary"
+      content: summary_large_image
   - - meta
     - name: twitter:title
-      content: "Android Root Apps - Root Management"
+      content: Android Root Apps - Root Management
   - - meta
     - name: twitter:description
-      content: "Manage root access on Android: su binaries, permission control, root switchers, and safety tools for granting and auditing root privileges."
+      content: Manage root access on Android: su binaries, permission control, root switchers, and safety tools for granting and auditing root privileges.
   - - meta
     - name: keywords
-      content: "android root, root management, su, superuser, magisk, root permission, rooted apps"
-sidebar: true
-outline: deep
-lastUpdated: true
+      content: android root apps, root tools, magisk modules, lsposed, kernelsu, root management, su, superuser, magisk, root permission
+  - - meta
+    - name: robots
+      content: index, follow, max-image-preview:large
+  - - meta
+    - name: author
+      content: Awesome Android Root Project
+  - - meta
+    - property: article:author
+      content: https://github.com/awesome-android-root/awesome-android-root
+  - - meta
+    - property: article:section
+      content: Android Root Apps
+  - - meta
+    - property: article:tag
+      content: Android Root, Root Apps, Magisk, LSPosed, KernelSU, root management, su
+  - - meta
+    - property: article:published_time
+      content: 2025-08-19
+  - - meta
+    - property: article:modified_time
+      content: 2025-08-19
 ---
 
 # Root Management
