@@ -1,5 +1,4 @@
 ---
-layout: doc
 title: "Android Root Apps - Development and Debugging"
 description: "Tools for development and debugging on rooted Android: advanced logging, debugging bridges, kernel tools, and runtime inspection for developers."
 head:

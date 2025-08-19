@@ -1,59 +1,31 @@
 ---
-layout: doc
 title: "Android Root Apps - Modded Apps and Tweaks"
 description: "Explore modded apps, tweaks, and patches for rooted Android to enable premium features, remove restrictions, and customize app behavior responsibly."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.org/android-root-apps/modded-apps-and-tweaks
   - - meta
-    - property: og:type
-      content: article
+    - name: og:title
+      content: "Android Root Apps - Modded Apps and Tweaks"
   - - meta
-    - property: og:title
-      content: Android Root Apps - Modded Apps and Tweaks
+    - name: og:description
+      content: "Explore modded apps, tweaks, and patches for rooted Android to enable premium features, remove restrictions, and customize app behavior responsibly."
   - - meta
-    - property: og:description
-      content: Explore modded apps, tweaks, and patches for rooted Android to enable premium features, remove restrictions, and customize app behavior responsibly.
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.org/android-root-apps/modded-apps-and-tweaks
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.org/images/og.png
+    - name: og:type
+      content: "article"
   - - meta
     - name: twitter:card
-      content: summary_large_image
+      content: "summary"
   - - meta
     - name: twitter:title
-      content: Android Root Apps - Modded Apps and Tweaks
+      content: "Android Root Apps - Modded Apps and Tweaks"
   - - meta
     - name: twitter:description
-      content: Explore modded apps, tweaks, and patches for rooted Android to enable premium features, remove restrictions, and customize app behavior responsibly.
+      content: "Explore modded apps, tweaks, and patches for rooted Android to enable premium features, remove restrictions, and customize app behavior responsibly."
   - - meta
     - name: keywords
-      content: android root apps, root tools, magisk modules, lsposed, kernelsu, modded apps, tweaks, patched apps, premium features
-  - - meta
-    - name: robots
-      content: index, follow, max-image-preview:large
-  - - meta
-    - name: author
-      content: Awesome Android Root Project
-  - - meta
-    - property: article:author
-      content: https://github.com/awesome-android-root/awesome-android-root
-  - - meta
-    - property: article:section
-      content: Android Root Apps
-  - - meta
-    - property: article:tag
-      content: Android Root, Root Apps, Magisk, LSPosed, KernelSU, modded apps, tweaks
-  - - meta
-    - property: article:published_time
-      content: 2025-08-19
-  - - meta
-    - property: article:modified_time
-      content: 2025-08-19
+      content: "android root, modded apps, tweaks, patched apps, rooted mods, premium features"
+sidebar: true
+outline: deep
+lastUpdated: true
 ---
 
 # Modded Apps & Tweaks

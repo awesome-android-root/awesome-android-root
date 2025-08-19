@@ -1,5 +1,4 @@
 ---
-layout: doc
 title: "Android Root Apps - Networking and Connectivity"
 description: "Advanced networking tools for rooted Android: VPNs, tethering, packet capture, routing, and network debugging for power users and testers."
 head:

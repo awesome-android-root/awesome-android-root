@@ -1,5 +1,4 @@
 ---
-layout: doc
 title: "Android Root Apps - Privacy and Security"
 description: "Protect privacy on rooted Android: firewall, permission managers, encryption tools, and privacy-focused mods to limit tracking and data leakage."
 head:

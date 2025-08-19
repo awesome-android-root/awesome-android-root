@@ -1,59 +1,31 @@
 ---
-layout: doc
 title: "Android Root Apps - System Debloating"
 description: "Debloat Android system on rooted devices: remove bloatware, disable system apps, and slim ROMs to reclaim storage and improve performance."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.org/android-root-apps/system-debloating
   - - meta
-    - property: og:type
-      content: article
+    - name: og:title
+      content: "Android Root Apps - System Debloating"
   - - meta
-    - property: og:title
-      content: Android Root Apps - System Debloating
+    - name: og:description
+      content: "Debloat Android system on rooted devices: remove bloatware, disable system apps, and slim ROMs to reclaim storage and improve performance."
   - - meta
-    - property: og:description
-      content: Debloat Android system on rooted devices: remove bloatware, disable system apps, and slim ROMs to reclaim storage and improve performance.
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.org/android-root-apps/system-debloating
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.org/images/og.png
+    - name: og:type
+      content: "article"
   - - meta
     - name: twitter:card
-      content: summary_large_image
+      content: "summary"
   - - meta
     - name: twitter:title
-      content: Android Root Apps - System Debloating
+      content: "Android Root Apps - System Debloating"
   - - meta
     - name: twitter:description
-      content: Debloat Android system on rooted devices: remove bloatware, disable system apps, and slim ROMs to reclaim storage and improve performance.
+      content: "Debloat Android system on rooted devices: remove bloatware, disable system apps, and slim ROMs to reclaim storage and improve performance."
   - - meta
     - name: keywords
-      content: android root apps, root tools, magisk modules, lsposed, kernelsu, debloat, bloatware removal, system apps, slim ROM
-  - - meta
-    - name: robots
-      content: index, follow, max-image-preview:large
-  - - meta
-    - name: author
-      content: Awesome Android Root Project
-  - - meta
-    - property: article:author
-      content: https://github.com/awesome-android-root/awesome-android-root
-  - - meta
-    - property: article:section
-      content: Android Root Apps
-  - - meta
-    - property: article:tag
-      content: Android Root, Root Apps, Magisk, LSPosed, KernelSU, debloat, bloatware removal
-  - - meta
-    - property: article:published_time
-      content: 2025-08-19
-  - - meta
-    - property: article:modified_time
-      content: 2025-08-19
+      content: "android root, debloat, bloatware removal, system apps, slim ROM, rooted debloating"
+sidebar: true
+outline: deep
+lastUpdated: true
 ---
 
 # Debloating and System App Removal
