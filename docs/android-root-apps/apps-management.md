@@ -14,7 +14,7 @@ head:
       content: Android Root Apps - Apps Management
   - - meta
     - property: og:description
-      content: Manage apps on rooted Android: backup, uninstall, freeze, migrate, and control packages with advanced tools for safer, cleaner app management.
+      content: "Manage apps on rooted Android: backup, uninstall, freeze, migrate, and control packages with advanced tools for safer, cleaner app management."
   - - meta
     - property: og:url
       content: https://awesome-android-root.org/android-root-apps/apps-management
