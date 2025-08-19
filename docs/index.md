@@ -213,7 +213,7 @@ head:
 hero:
   name: "Awesome Android Root"
   text: "The Ultimate Hub for Android Rooting"
-  tagline: "Community‑curated collection of 280+ best root apps, Magisk/KernelSU/LSPosed modules, and comprehensive step‑by‑step rooting guides for Android customization, privacy, performance optimization, and complete system control."
+  tagline: "280+ top root apps, Magisk/KernelSU/LSPosed modules, and step-by-step rooting guides."
   image:
     src: /images/logo_dark.svg
     alt: Awesome Android Root - Ultimate Android Rooting Resource
