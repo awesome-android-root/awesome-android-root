@@ -35,22 +35,26 @@ head:
       content: android root apps, magisk modules, lsposed framework, kernelsu modules, root app collection, android customization apps, rooted android tools
 ---
 
-<div align="center" style="margin-bottom: 1.5em;">
+<div align="center">
+
+<p>
   <img src="../public/images/logo_dark.svg" alt="Awesome Android Root Logo" width="120" height="120" />
+</p>
+
   <h2>Android Root Apps & Modules</h2>
   <b>The ultimate collection of 280+ curated apps, modules, and tools for rooted Android devices</b>
   <br>
   <span style="color: #888;">Organized by category for effortless discovery and exploration</span>
-</div>
+
 
 ---
 
-<div class="stats-grid" style="display: flex; flex-wrap: wrap; gap: 0.5em; justify-content: center; margin-bottom: 1.5em;">
-  <img src="https://img.shields.io/badge/Total%20Apps-284-blue?style=for-the-badge&logo=android" alt="Total Apps" />
-  <img src="https://img.shields.io/badge/Root%20Apps-104-blue?style=for-the-badge&logo=android" alt="Root Apps" />
-  <img src="https://img.shields.io/badge/Magisk%20Modules-98-orange?style=for-the-badge&logo=magisk&logoColor=white" alt="Magisk Modules" />
-  <img src="https://img.shields.io/badge/KernelSU%20Modules-14-green?style=for-the-badge&logo=keenetic&logoColor=white" alt="KernelSU Modules" />
-  <img src="https://img.shields.io/badge/LSPosed%20Modules-80-purple?style=for-the-badge&logo=local&logoColor=white" alt="LSPosed Modules" />
+![Total Apps](https://img.shields.io/badge/Total%20Apps-284-blue?style=for-the-badge&logo=android)
+![Root Apps](https://img.shields.io/badge/Root%20Apps-104-blue?style=for-the-badge&logo=android)
+![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-98-orange?style=for-the-badge&logo=magisk&logoColor=white)
+![KernelSU Modules](https://img.shields.io/badge/KernelSU%20Modules-14-green?style=for-the-badge&logo=keenetic&logoColor=white)
+![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-80-purple?style=for-the-badge&logo=local&logoColor=white)
+
 </div>
 
 ::: info
@@ -62,34 +66,12 @@ We focus on open-source solutions where possible and clearly mark proprietary al
 
 ## 🌟 Essential Apps
 
-<div style="margin-bottom: 1em;">
-<table>
-  <thead>
-    <tr>
-      <th>App</th>
-      <th>Purpose</th>
-      <th>Why Essential</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="../android-root-guides/magisk-guide"><b>Magisk</b></a></td>
-      <td>Root Management</td>
-      <td>Systemless root with module support and SafetyNet bypass</td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/AdAway/AdAway"><b>AdAway</b></a></td>
-      <td>Ad Blocking</td>
-      <td>System-wide ad blocking across all apps and browsers</td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/MuntashirAkon/AppManager"><b>App Manager</b></a></td>
-      <td>App Control</td>
-      <td>Complete app analysis, permission control, and management</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+
+| App | Purpose | Why Essential |
+|---|---|---|
+| [**Magisk**](../android-root-guides/magisk-guide) | Root Management | Systemless root with module support and SafetyNet bypass |
+| [**AdAway**](https://github.com/AdAway/AdAway) | Ad Blocking | System-wide ad blocking across all apps and browsers |
+| [**App Manager**](https://github.com/MuntashirAkon/AppManager) | App Control | Complete app analysis, permission control, and management |
 
 ::: tip New to Root Apps?
 <b>Getting Started:</b> <br>
@@ -103,130 +85,113 @@ We focus on open-source solutions where possible and clearly mark proprietary al
 <details>
 <summary><b>Jump to a Category</b> ⬇️</summary>
 
-<ul>
-  <li><a href="#essential-categories">Essential Categories</a></li>
-  <li><a href="#app-enhancement--control">App Enhancement & Control</a></li>
-  <li><a href="#system-performance--control">System Performance & Control</a></li>
-  <li><a href="#storage--data-management">Storage & Data Management</a></li>
-  <li><a href="#privacy--security">Privacy & Security</a></li>
-  <li><a href="#customization--interface">Customization & Interface</a></li>
-  <li><a href="#developer--advanced-tools">Developer & Advanced Tools</a></li>
-</ul>
+
+- [Essential Categories](#-essential-categories)
+- [App Enhancement & Control](#-app-enhancement--control)
+- [System Performance & Control](#-system-performance--control)
+- [Storage & Data Management](#-storage--data-management)
+- [Privacy & Security](#-privacy--security)
+- [Customization & Interface](#-customization--interface)
+- [Developer & Advanced Tools](#-developer--advanced-tools)
+
 </details>
 
 ---
 
 ## 🏷️ Glossary
 
-<div style="columns: 2; max-width: 600px;">
-<ul>
-<li><b>⭐</b> = Community‑recommended (most popular/trusted in category)</li>
-<li><b><code>FOSS</code></b> = Free and Open Source Software</li>
-<li><b><code>Proprietary</code></b> = Closed-source or unclear licensing</li>
-<li><b><code>[M]</code></b> = Magisk Module (needs <a href="./docs/android-root-guides/magisk-guide.md">Magisk</a>)</li>
-<li><b><code>[K]</code></b> = KernelSU Module (needs <a href="./docs/android-root-guides/kernelsu-guide.md">KernelSU</a>)</li>
-<li><b><code>[LSP]</code></b> = LSPosed Module (needs <a href="./docs/android-root-guides/lsposed-guide.md">LSPosed</a>)</li>
-</ul>
-</div>
 
-<blockquote style="font-size: 1em; color: #888;">Apps are organized in alphabetical order within each category.</blockquote>
+**⭐** = Community‑recommended (most popular/trusted in category)  
+**`FOSS`** = Free and Open Source Software  
+**`Proprietary`** = Closed-source or unclear licensing  
+**`[M]`** = Magisk Module ([needs Magisk](./docs/android-root-guides/magisk-guide.md))  
+**`[K]`** = KernelSU Module ([needs KernelSU](./docs/android-root-guides/kernelsu-guide.md))  
+**`[LSP]`** = LSPosed Module ([needs LSPosed](./docs/android-root-guides/lsposed-guide.md))
+
+> Apps are organized in alphabetical order within each category.
 
 ---
 
 ## 🌟 Essential Categories
 
-<table>
-  <thead><tr><th>Category</th><th>Description</th></tr></thead>
-  <tbody>
-    <tr><td><a href="./root-management">Root Management</a></td><td>Core tools for managing root access and modules</td></tr>
-    <tr><td><a href="./ads-and-tracker-blocking">Ad & Tracker Blocking</a></td><td>System-wide ad blocking and privacy protection</td></tr>
-    <tr><td><a href="./apps-management">App Management</a></td><td>Advanced app control, isolation, and management</td></tr>
-    <tr><td><a href="./backup-and-estore">Backup & Restore</a></td><td>Complete backup solutions for apps and system data</td></tr>
-  </tbody>
-</table>
+
+| Category | Description |
+|---|---|
+| [Root Management](./root-management) | Core tools for managing root access and modules |
+| [Ad & Tracker Blocking](./ads-and-tracker-blocking) | System-wide ad blocking and privacy protection |
+| [App Management](./apps-management) | Advanced app control, isolation, and management |
+| [Backup & Restore](./backup-and-estore) | Complete backup solutions for apps and system data |
 
 ---
 
 ## 📱 App Enhancement & Control
 
-<table>
-  <thead><tr><th>Category</th><th>Description</th></tr></thead>
-  <tbody>
-    <tr><td><a href="./automation">App Automation</a></td><td>Tasker, Automate, and workflow automation tools</td></tr>
-    <tr><td><a href="./communication">Communication</a></td><td>Enhanced messaging, calling, and communication apps</td></tr>
-    <tr><td><a href="./reVanced">Media Modifications</a></td><td>YouTube, Spotify, and enhanced media applications</td></tr>
-    <tr><td><a href="./modded-apps-and-tweaks">Social Media Mods</a></td><td>Modified Instagram, Twitter, TikTok, and social apps</td></tr>
-  </tbody>
-</table>
+
+| Category | Description |
+|---|---|
+| [App Automation](./automation) | Tasker, Automate, and workflow automation tools |
+| [Communication](./communication) | Enhanced messaging, calling, and communication apps |
+| [Media Modifications](./reVanced) | YouTube, Spotify, and enhanced media applications |
+| [Social Media Mods](./modded-apps-and-tweaks) | Modified Instagram, Twitter, TikTok, and social apps |
 
 ---
 
 ## ⚡ System Performance & Control
 
-<table>
-  <thead><tr><th>Category</th><th>Description</th></tr></thead>
-  <tbody>
-    <tr><td><a href="./battery-and-power-management">Battery & Power Management</a></td><td>Optimize battery life and power consumption</td></tr>
-    <tr><td><a href="./performance-tweaks">Performance & Gaming</a></td><td>CPU/GPU optimization and gaming enhancements</td></tr>
-    <tr><td><a href="./kernel-management">Kernel Management</a></td><td>Kernel tuning and custom kernel management</td></tr>
-    <tr><td><a href="./system-modifications">System Modifications</a></td><td>Deep system tweaks and core modifications</td></tr>
-    <tr><td><a href="./audio-management">Audio Management</a></td><td>Advanced audio control and enhancement tools</td></tr>
-  </tbody>
-</table>
+
+| Category | Description |
+|---|---|
+| [Battery & Power Management](./battery-and-power-management) | Optimize battery life and power consumption |
+| [Performance & Gaming](./performance-tweaks) | CPU/GPU optimization and gaming enhancements |
+| [Kernel Management](./kernel-management) | Kernel tuning and custom kernel management |
+| [System Modifications](./system-modifications) | Deep system tweaks and core modifications |
+| [Audio Management](./audio-management) | Advanced audio control and enhancement tools |
 
 ---
 
 ## 🗂️ Storage & Data Management
 
-<table>
-  <thead><tr><th>Category</th><th>Description</th></tr></thead>
-  <tbody>
-    <tr><td><a href="./file-management">File Management</a></td><td>Advanced file managers with full root access</td></tr>
-    <tr><td><a href="./cleaning-and-maintenance">Cleaning & Maintenance</a></td><td>System cleaning and maintenance utilities</td></tr>
-    <tr><td><a href="./device-control-and-hardware">Device Control & Hardware</a></td><td>Hardware control and device management tools</td></tr>
-  </tbody>
-</table>
+
+| Category | Description |
+|---|---|
+| [File Management](./file-management) | Advanced file managers with full root access |
+| [Cleaning & Maintenance](./cleaning-and-maintenance) | System cleaning and maintenance utilities |
+| [Device Control & Hardware](./device-control-and-hardware) | Hardware control and device management tools |
 
 ---
 
 ## 🛡️ Privacy & Security
 
-<table>
-  <thead><tr><th>Category</th><th>Description</th></tr></thead>
-  <tbody>
-    <tr><td><a href="./privacy-and-security">Privacy & Security</a></td><td>Ultimate privacy protection and security tools</td></tr>
-    <tr><td><a href="./networking-and-connectivity">Networking & Connectivity</a></td><td>Network control, firewall, and connectivity tools</td></tr>
-    <tr><td><a href="./location-and-gps">Location & GPS</a></td><td>GPS spoofing and location control applications</td></tr>
-    <tr><td><a href="./nfc-tools">NFC Tools</a></td><td>Near Field Communication utilities and tools</td></tr>
-  </tbody>
-</table>
+
+| Category | Description |
+|---|---|
+| [Privacy & Security](./privacy-and-security) | Ultimate privacy protection and security tools |
+| [Networking & Connectivity](./networking-and-connectivity) | Network control, firewall, and connectivity tools |
+| [Location & GPS](./location-and-gps) | GPS spoofing and location control applications |
+| [NFC Tools](./nfc-tools) | Near Field Communication utilities and tools |
 
 ---
 
 ## 🎨 Customization & Interface
 
-<table>
-  <thead><tr><th>Category</th><th>Description</th></tr></thead>
-  <tbody>
-    <tr><td><a href="./customization">Customization & Theming</a></td><td>System-wide themes and UI customization</td></tr>
-    <tr><td><a href="./system-debloating">System Debloating</a></td><td>Remove bloatware and unnecessary system apps</td></tr>
-    <tr><td><a href="./screen-and-display">Screen & Display</a></td><td>Display settings, DPI, and screen management</td></tr>
-    <tr><td><a href="./accessibility">Accessibility</a></td><td>Accessibility enhancements and assistive tools</td></tr>
-  </tbody>
-</table>
+
+| Category | Description |
+|---|---|
+| [Customization & Theming](./customization) | System-wide themes and UI customization |
+| [System Debloating](./system-debloating) | Remove bloatware and unnecessary system apps |
+| [Screen & Display](./screen-and-display) | Display settings, DPI, and screen management |
+| [Accessibility](./accessibility) | Accessibility enhancements and assistive tools |
 
 ---
 
 ## 🔧 Developer & Advanced Tools
 
-<table>
-  <thead><tr><th>Category</th><th>Description</th></tr></thead>
-  <tbody>
-    <tr><td><a href="./development-and-debugging">Development & Debugging</a></td><td>Tools for app development and system debugging</td></tr>
-    <tr><td><a href="./terminals">Terminal & Shell</a></td><td>Command line tools and terminal emulators</td></tr>
-    <tr><td><a href="./tools">System Tools</a></td><td>Advanced utilities and system administration tools</td></tr>
-  </tbody>
-</table>
+
+| Category | Description |
+|---|---|
+| [Development & Debugging](./development-and-debugging) | Tools for app development and system debugging |
+| [Terminal & Shell](./terminals) | Command line tools and terminal emulators |
+| [System Tools](./tools) | Advanced utilities and system administration tools |
 
 ---
 
@@ -250,21 +215,19 @@ We focus on open-source solutions where possible and clearly mark proprietary al
 
 ## 📚 Resources
 
-<ul>
-  <li><a href="../android-root-guides/">Rooting Guides</a> - Device-specific rooting instructions</li>
-  <li><a href="../quick-start">Quick Start Guide</a> - Complete rooting walkthrough</li>
-  <li><a href="../faqs">FAQ & Troubleshooting</a> - Common questions and solutions</li>
-</ul>
+
+- [Rooting Guides](../android-root-guides/) - Device-specific rooting instructions
+- [Quick Start Guide](../quick-start) - Complete rooting walkthrough
+- [FAQ & Troubleshooting](../faqs) - Common questions and solutions
 
 ---
 
 ## 🤝 Community & Support
 
-<ul>
-  <li><a href="https://reddit.com/r/AwesomeAndroidRoot">Reddit Community</a> - Discussions, help, sharing</li>
-  <li><a href="https://github.com/awesome-android-root/awesome-android-root">GitHub Repository</a> - Source code, issues, contributions</li>
-  <li><a href="https://t.me/awesomeandroidroot">Telegram Channel</a> - Real-time chat and quick help</li>
-</ul>
+
+- [Reddit Community](https://reddit.com/r/AwesomeAndroidRoot) - Discussions, help, sharing
+- [GitHub Repository](https://github.com/awesome-android-root/awesome-android-root) - Source code, issues, contributions
+- [Telegram Channel](https://t.me/awesomeandroidroot) - Real-time chat and quick help
 
 ---
 
@@ -272,11 +235,10 @@ We focus on open-source solutions where possible and clearly mark proprietary al
 
 Help us grow this collection by contributing new apps or improvements:
 
-<ul>
-  <li><a href="../contributing.md">Submit New Apps</a> - Recommend missing apps</li>
-  <li><a href="https://github.com/awesome-android-root/awesome-android-root/issues">Report Issues</a> - Help us fix problems</li>
-  <li><a href="https://github.com/awesome-android-root/awesome-android-root/discussions">Share Feedback</a> - Tell us what you think</li>
-</ul>
+
+- [Submit New Apps](../contributing.md) - Recommend missing apps
+- [Report Issues](https://github.com/awesome-android-root/awesome-android-root/issues) - Help us fix problems
+- [Share Feedback](https://github.com/awesome-android-root/awesome-android-root/discussions) - Tell us what you think
 
 <details>
 <summary><b>Quality Standards</b> (click to expand)</summary>
@@ -287,10 +249,3 @@ Help us grow this collection by contributing new apps or improvements:
   <li>Documentation quality (clear instructions available)</li>
 </ul>
 </details>
-
----
-
-<div align="center" style="color: #888; font-size: 1em; margin-top: 2em;">
-  This collection is maintained as an open-source project.<br>
-  View the complete repository and app listings on <a href="https://github.com/awesome-android-root/awesome-android-root">GitHub</a>.
-</div>
