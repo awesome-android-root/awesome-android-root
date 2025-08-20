@@ -337,6 +337,15 @@ Only lock bootloader with completely stock firmware and android verified boot (A
 
 **Congratulations!** Your Nothing / CMF by Nothing Phone now has root access. Here's what to do next:
 
+### Explore Community Platforms & Resources
+- **[Nothing Resource Index](https://linkfly.to/Nothing_Archive)** – Updates, community projects, and resources related to the Nothing ecosystem
+- **[Nothing Telegram](https://t.me/Nothing_Archive)** – Channel indexing the Unofficial Telegram community for updates, ROMs, development and photography
+- **[Nothing Telegram Community Chat](https://t.me/NothingTelegramCommunity)** – General discussion and onboarding chat linked to the above channel
+- **[Nothing XDA](https://xdaforums.com/c/nothing.12583/)** – Developer community
+- **[Nothing Discord](https://discord.com/invite/nothingtech)** – Official Discord server
+- **[Community Website](https://nothing.community/)** – Official Nothing community website
+- **[r/NothingTech](https://www.reddit.com/r/NothingTech/)** – Unofficial Reddit community
+
 ### Immediate Next Steps
 1. **[Browse Root Apps](../android-root-apps/#root-apps)** - Discover 300+ curated applications
 2. **[Setup Banking App Bypass](../faqs.md#play-integrity-and-banking-apps)** - Configure root hiding
