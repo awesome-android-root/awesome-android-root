@@ -18,26 +18,39 @@
 [![Support via Open Collective](https://img.shields.io/badge/Support%20via-Open%20Collective-blue?style=for-the-badge&logo=opencollective&cacheSeconds=3600)](https://opencollective.com/awesome-android-root-official)<br>
 [![Website](https://img.shields.io/badge/Website-awesome--android--root.org-green?style=for-the-badge&logo=googlechrome)](https://awesome-android-root.org)
 
-<div class="quick-nav">
-
-**🚀 Quick Links:** [What is Root?](#what-is-root-access) • [Root Guides](#rooting-guides-and-resources) • [Browse Apps/Modules](#root-apps) • [Community](#community-and-resources)
-
 </div>
-</div>
+
+## 🚀 Quick Start Guide
+
+**New to Android rooting?** Follow this streamlined path:
+
+1. **Learn the Basics** → [What is Root Access?](#what-is-root-access)
+2. **Check Compatibility** → [Device-Specific Guides](#device-specific-root-guides)
+3. **Get Essential Apps** → [Featured Apps: The Essentials](#featured-apps-the-essentials)
+4. **Stay Safe** → [Important Notes](#important-notes)
+
+
+> **Already rooted?** Jump to ✨[Root Apps by Category](#root-apps)✨
+
+---
 
 ## Table of Contents
 <details>
 <summary>👉 <strong>Tap to expand complete navigation</strong></summary>
 
-### 📚 Getting Started
-- [What is Root Access?](#what-is-root-access)
-- [Root Guide and Solutions](#root-guide-and-solutions)
-  - [Step-by-Step Process](#step-by-step-process)
-  - [Device-Specific Root Guides](#device-specific-root-guides)
-- [Essential Android Guides](#essential-android-guides)
-- [Glossary](#glossary)
+### 🚀 **Quick Start**
+- [Quick Start Guide](#-quick-start-guide)
 
-### ⭐ Featured Essentials
+### 📚 **Getting Started**
+- [What is Root Access?](#what-is-root-access)
+- [Security & Safety First](#-security--safety-first)
+- [Rooting Guides and Resources](#rooting-guides-and-resources)
+  - [Complete Process Overview](#complete-process-overview)
+  - [Device-Specific Root Guides](#-device-specific-root-guides)
+  - [Essential How-To's](#essential-how-tos)
+- [Glossary & Legend](#glossary--legend)
+
+### ⭐ **Featured Essentials**
 - [Featured Apps: The Essentials](#featured-apps-the-essentials)
 
 ### 📱 Root Apps by Category
@@ -139,15 +152,20 @@
 - [Screen and Display](#screen-and-display)
 
 ### 📖 **Resources & Support**
-- [Important Notes](#important-notes)
-- [FAQs](#faqs)
-- [Community and Resources](#community-and-resources)
-  - [Premier Android Communities](#premier-android-communities)
-  - [Reddit Communities](#reddit-communities)
-  - [Official Project Resources](#official-project-resources)
-- [Contributing](#contributing)
-- [Stats](#stats)
-- [Support This Project](#support-this-project)
+- [Resources & Support](#resources--support)
+  - [FAQs & Troubleshooting](#faqs-and-troubleshooting)
+  - [Important Safety Guidelines](#important-safety-guidelines)
+  - [Legal Disclaimer](#legal-disclaimer)
+- [Community & Connect](#community-and-connect)
+  - [Premier Communities](#premier-communities)
+  - [Official Project Channels](#-official-project-channels)
+  - [Get Help](#-get-help)
+- [Contributing & Support](#contributing-and-support)
+  - [Quick Ways to Help](#-quick-ways-to-help)
+  - [Contribution Guidelines](#contribution-guidelines)
+  - [Support This Project](#support-this-project)
+- [Project Statistics](#stats)
+- [Hall of Fame](#hall-of-fame)
 
 </details>
 
@@ -161,33 +179,61 @@ Android rooting gives you **privileged administrative control** over your device
 - **Advanced Security and Privacy** - Control app permissions and data access
 - **Complete Customization** - Themes, system modifications, and UI changes
 
-> 🚨 **Please read our [Important Notes Section](#important-notes) before continuing!**
+---
+
+## Security & Safety First
+
+> **🚨 CRITICAL:** Rooting fundamentally changes your device's security model. Please understand the risks:
+<details><summary>👉 Tap to expand contents</summary>
+
+### Before You Start:
+- **Backup Everything** - Full device backup before any modifications
+- **Research Your Device** - Ensure compatibility and available recovery methods  
+- **Understand the Risks** - Warranty void, potential bootloops, security implications
+- **Have Recovery Plan** - Know how to restore your device if something goes wrong
+
+### Security Considerations:
+- Root access can be exploited by malicious apps
+- Banking and payment apps may stop working  
+- OTA updates will likely fail and require manual intervention
+- Some streaming services block rooted devices
+
+### Safety Checklist:
+- [ ] Device bootloader is unlockable
+- [ ] Recovery images and tools are available for your device
+- [ ] You understand how to use fastboot/ADB
+- [ ] You have a complete backup strategy
+
+</details>
+
+---
 
 ## Rooting Guides and Resources
 Step-by-step instructions for every stage of rooting:
 
-| Topic | Guide |
-|------|-------|
-| Complete Rooting Overview | [Rooting Guides Index](docs/android-root-guides/index.md) |
-| Unlock Bootloader | [How to Unlock Bootloader](docs/android-root-guides/how-to-unlock-bootloader.md) |
-| Install Custom Recovery | [How to Install Custom Recovery](docs/android-root-guides/how-to-install-custom-recovery.md) |
-| Magisk (systemless root) | [Magisk Guide](docs/android-root-guides/magisk-guide.md) |
-| KernelSU (kernel-based root) | [KernelSU Guide](docs/android-root-guides/kernelsu-guide.md) |
-| APatch (alternative root) | [APatch Guide](docs/android-root-guides/apatch-guide.md) |
-| LSPosed / Xposed | [LSPosed Guide](docs/android-root-guides/lsposed-guide.md) |
-| Custom ROM Installation | [Custom ROM Guide](docs/android-root-guides/custom-rom-installation.md) |
+### Complete Process Overview
 
+| Step | Topic | Guide |
+|------|-------|-------|
+| **1** | Complete Rooting Overview | [Rooting Guides Index](docs/android-root-guides/index.md) |
+| **2** | Unlock Bootloader | [How to Unlock Bootloader](docs/android-root-guides/how-to-unlock-bootloader.md) |
+| **3** | Install Custom Recovery | [How to Install Custom Recovery](docs/android-root-guides/how-to-install-custom-recovery.md) |
+| **4** | Choose Root Method | [Magisk](docs/android-root-guides/magisk-guide.md) • [KernelSU](docs/android-root-guides/kernelsu-guide.md) • [APatch](docs/android-root-guides/apatch-guide.md) |
+| **5** | Advanced Modules | [LSPosed Guide](docs/android-root-guides/lsposed-guide.md) |
+| **6** | Custom ROMs (Optional) | [Custom ROM Guide](docs/android-root-guides/custom-rom-installation.md) |
 
-### 📱 Device-Specific Guides
+### 📱 Device-Specific Root Guides
 
-| Device         | Guide                                                                 |
-|---------------|-----------------------------------------------------------------------|
-| Google Pixel  | [How to Root Pixel Phones](docs/android-root-guides/how-to-root-pixel-phone.md) |
-| Samsung Galaxy| [How to Root Samsung Phones](docs/android-root-guides/how-to-root-samsung-phone.md) |
-| Xiaomi / MIUI | [How to Root Xiaomi Phones](docs/android-root-guides/how-to-root-xiaomi-phone.md) |
-| OnePlus       | [How to Root OnePlus Phones](docs/android-root-guides/how-to-root-oneplus-phone.md) |
-| Nothing Phone | [How to Root Nothing Phone](docs/android-root-guides/how-to-root-nothing-phone.md) |
-| Motorola      | [How to Root Motorola Phones](docs/android-root-guides/how-to-root-motorola-phone.md) |
+| Device Brand | Guide |
+| :--- | :--- |
+| **Google Pixel** | [Root Pixel Guide](docs/android-root-guides/how-to-root-pixel-phone.md) |
+| **Samsung Galaxy** | [Root Samsung Guide](docs/android-root-guides/how-to-root-samsung-phone.md) |
+| **Xiaomi / MIUI** | [Root Xiaomi Guide](docs/android-root-guides/how-to-root-xiaomi-phone.md) |
+| **OnePlus** | [Root OnePlus Guide](docs/android-root-guides/how-to-root-oneplus-phone.md) |
+| **Nothing Phone** | [Root Nothing Guide](docs/android-root-guides/how-to-root-nothing-phone.md) |
+| **Motorola** | [Root Motorola Guide](docs/android-root-guides/how-to-root-motorola-phone.md) |
+
+> **💡 Don't see your device?** Check our [complete device database](docs/android-root-guides/index.md).
 
 ### Essential How-To's:
 <details><summary>👉 tap to expand contents</summary>
@@ -199,15 +245,26 @@ Step-by-step instructions for every stage of rooting:
 
 </details>
 
-#### [📖 View the Complete Rooting Master Guide →](./docs/android-root-guides/index.md)
+---
 
 ## Glossary
 - **⭐** = Community‑recommended (most popular/trusted in category)
 - **`FOSS`** = Free and Open Source Software (source code available)
 - **`Proprietary`** = Closed-source software or unclear licensing
+
+### **Root Framework Badges**
 - **`[M]`** = Magisk Module (requires [_Magisk framework_](./docs/android-root-guides/magisk-guide.md))
 - **`[K]`** = KernelSU Module (requires [_KernelSU framework_](./docs/android-root-guides/kernelsu-guide.md)) 
 - **`[LSP]`** = LSPosed Module (requires [_LSPosed framework_](./docs/android-root-guides/lsposed-guide.md))
+
+### **Common Rooting Terms**
+- **Bootloader** - Low-level software that starts your OS (must be unlocked for root)
+- **Recovery** - Special mode for system modifications (TWRP, CWM)
+- **Systemless Root** - Root method that doesn't modify system partition
+- **Zygisk** - Magisk feature for advanced app hooking and hiding
+- **DenyList** - Magisk feature to hide root from specific apps
+- **Play Integrity** - Google's security check (replacing SafetyNet)
+- **Knox** - Samsung's security platform (trips when bootloader unlocked)
 
 > _Apps are organized in alphabetical order within each category._
 
@@ -223,7 +280,7 @@ Step-by-step instructions for every stage of rooting:
 
 ### Featured Apps: The Essentials
 
-If you've just rooted your device, start with these must-have applications. They form the foundation of a great root experience.
+**Just rooted your device?** Start with these must-have applications that form the foundation of a great root experience.
 
 | App | Category | Why it's essential |
 | :--- | :--- | :--- |
@@ -849,72 +906,122 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 ---
 
-## Disclaimer
+## Resources & Support
 
-> **Disclaimer:**  
-> This repository is provided for informational and educational purposes only. Rooting, modifying, or altering your Android device can void warranties, cause data loss, or render your device unusable. The maintainers and contributors of this project are **not responsible** for any damage, loss, or legal issues resulting from the use of any apps, modules, or guides listed here.  
->  
-> **Proceed at your own risk. Always back up your data and thoroughly research any modifications before applying them to your device.**
+### FAQs and Troubleshooting
 
-## Important Notes
+Having issues? Get expert solutions for the most common rooting problems:
 
-> ⚠️ **Warning: Proceed with Extreme Caution**  
-> Root apps possess the power to fundamentally alter your Android system. Incorrect usage can lead to serious issues, including data loss, system instability, and rendering your device unusable (bricking).
+**[📖 Complete FAQ & Troubleshooting Guide →](./docs/faqs.md)**
 
-### Key Considerations:
+Quick answers to:
+- 🔴 Bootloop recovery and prevention
+- 🛡️ Root detection bypass methods  
+- 📱 Banking apps not working after root
+- 🔄 OTA update failures and solutions
+- ⚠️ SafetyNet/Play Integrity issues
 
-*   🚨 **System Modification Risks:** These apps can modify core system files, potentially causing boot loops, crashes, or other malfunctions.
-*   💾 **Data Loss Potential:** Mistakes or incompatible modifications can result in the loss of your personal data. *Always back up your device before using root apps.* → [📖 Backup Guide](./docs/guides/app-backup-restore-using-root.md)
-*   🔒 **Security implications:** Granting root access can increase your device's vulnerability to malware and other security threats.
-*   ℹ️ **Community‑sourced information:** This list is a collection of community suggestions. We do not guarantee the safety, functionality, or suitability of every app.
-*   👤 **User responsibility:** You are solely responsible for any consequences resulting from the use of these applications. Use them at your own risk.
-*   💡 **Recommendation:** Thoroughly research any root app before installation and understand its purpose and potential side effects.
+### Important Safety Guidelines
 
-**Essential Reading Before You Start:**
-- 📚 [Complete Android Rooting Guide](./docs/android-root-guides/index.md) - Master the fundamentals
+> **🚨 CRITICAL WARNING:** Rooting fundamentally alters your device's security model and can cause permanent damage.
 
-[↑ Back to top](#table-of-contents)
+<details>
+<summary><strong>🛡️ Essential Safety Information (Click to Expand)</strong></summary>
 
-## FAQs
+#### **Before You Begin:**
+- 💾 **Complete Device Backup** - Full system backup before ANY modifications
+- 🔍 **Research Your Device** - Verify compatibility and recovery methods
+- 📖 **Understand the Risks** - Warranty void, potential bootloops, security implications  
+- 🛠️ **Prepare Recovery Plan** - Know how to restore if something goes wrong
 
-Complete support resource with expert troubleshooting solutions:
+#### **Key Risk Factors:**
+- 🚨 **System Modification Risks** - Core file changes can cause boot failures
+- � **Data Loss Potential** - Incorrect modifications can destroy personal data
+- � **Security Vulnerabilities** - Root access increases malware susceptibility
+- 🏦 **App Compatibility** - Banking/payment apps may stop working
+- 📺 **Streaming Services** - Many services block rooted devices
 
-[**View Complete FAQ and Troubleshooting Guide** →](./docs/faqs.md)
+#### **Your Responsibilities:**
+- ✅ You assume **full responsibility** for any consequences
+- ✅ This list is **community-sourced** - we don't guarantee safety
+- ✅ **Research thoroughly** before installing any root app
+- ✅ **Test in safe environment** when possible
 
-[↑ Back to top](#table-of-contents)
+</details>
 
-## Community and Resources
+**📚 Essential Reading:** [Complete Android Rooting Guide](./docs/android-root-guides/index.md)
 
-### **Premier Android Communities**
-- **[XDA Developers](https://forum.xda-developers.com/)** - The ultimate Android development and modding community
+### Legal Disclaimer
 
-### **Reddit Communities**
-- **[r/AndroidRoot](https://reddit.com/r/AndroidRoot)** - General rooting discussions and troubleshooting
-- **[r/Magisk](https://reddit.com/r/Magisk)** - Magisk modules, updates, and support
-- **[r/Android](https://reddit.com/r/Android)** - Main Android community (1M+ members)
-
-### **Official Project Resources**
-- **[GitHub Repository](https://github.com/awesome-android-root/awesome-android-root)** - Source code, issues, and contributions
-- **[𝕏 / Twitter @awsm_and_root](https://x.com/awsm_and_root)** - Updates, tips, and community highlights
-- **[r/AwesomeAndroidRoot](https://reddit.com/r/AwesomeAndroidRoot)** - Our official community
-- **[GitHub Discussions](https://github.com/awesome-android-root/awesome-android-root/discussions)** - Feature requests and feedback
-
+> **DISCLAIMER:** This repository is for **educational purposes only**. Rooting may void warranties, cause data loss, or render devices unusable. The maintainers are **not responsible** for any damage, loss, or legal issues from using listed apps, modules, or guides. **Proceed at your own risk.**
 
 [↑ Back to top](#table-of-contents)
 
-## Contributing
+---
 
-We welcome contributions from the community! Here's how you can help:
+## Community and Connect
 
-### Quick Actions
-- **⭐ Star this repository** if it helped you
-- **🐛 Report issues** for broken links or outdated apps
-- **💡 Suggest new apps** via [GitHub issues](https://github.com/awesome-android-root/awesome-android-root/issues)
+### **Premier Communities**
+- **[XDA Developers](https://forum.xda-developers.com/)** - The ultimate Android development and modding hub (2M+ experts)
+- **[r/AndroidRoot](https://reddit.com/r/AndroidRoot)** - General rooting discussions and live troubleshooting  
+- **[r/Magisk](https://reddit.com/r/Magisk)** - Magisk modules, updates, and community support
 
-### Detailed Guidelines
-For comprehensive contribution instructions, including formatting standards and submission requirements:
+### 🔗 **Official Project Channels**
+- **[📱Our Website](https://awesome-android-root.org)** - Browse apps with advanced filtering
+- **[💬 GitHub Discussions](https://github.com/awesome-android-root/awesome-android-root/discussions)** - Feature requests and Q&A
+- **[🐛 Issues & Suggestions](https://github.com/awesome-android-root/awesome-android-root/issues)** - Report problems or suggest apps
+- **[🐦 Twitter @awsm_and_root](https://x.com/awsm_and_root)** - Latest updates and community highlights
+- **[📺 r/AwesomeAndroidRoot](https://reddit.com/r/AwesomeAndroidRoot)** - Our official Reddit community
 
-**[📖 Read Full Contribution Guidelines →](./docs/contributing.md)**
+### 💡 **Get Help**
+- **Quick Questions** → [GitHub Discussions](https://github.com/awesome-android-root/awesome-android-root/discussions)
+- **Device-Specific Help** → [XDA Device Forums](https://forum.xda-developers.com/)
+- **Emergency Recovery** → [r/AndroidRoot](https://reddit.com/r/AndroidRoot) (fast community response)
+
+[↑ Back to top](#table-of-contents)
+
+---
+
+## Contributing and Support
+
+### 🚀 **Quick Ways to Help**
+
+| Action | How to Help | Impact |
+|--------|-------------|---------|
+| ⭐ **Star** | [Star this repository](https://github.com/awesome-android-root/awesome-android-root) | Increases visibility |
+| 🐛 **Report** | [Report broken links](https://github.com/awesome-android-root/awesome-android-root/issues) | Keeps list accurate |
+| 💡 **Suggest** | [Suggest new apps](https://github.com/awesome-android-root/awesome-android-root/issues) | Grows the collection |
+| 📝 **Contribute** | [Add apps/guides](./docs/contributing.md) | Direct community impact |
+| 💖 **Sponsor** | [Support financially](https://opencollective.com/awesome-android-root-official) | Sustains the project |
+
+---
+
+### **Contribution Guidelines**
+
+**Ready to contribute?** Read our comprehensive guide:
+
+**[📖 Complete Contribution Guidelines →](./docs/contributing.md)**
+
+Includes:
+- ✅ App submission standards
+- ✅ Formatting requirements  
+- ✅ Quality guidelines
+- ✅ Review process
+
+---
+
+### **Support This Project**
+
+[![Become a Sponsor](https://img.shields.io/badge/💖-Become%20a%20Sponsor-ff69b4?style=for-the-badge)](https://opencollective.com/awesome-android-root-official)
+[![GitHub Stars](https://img.shields.io/badge/⭐-Star%20this%20Repo-yellow?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
+[![Share Project](https://img.shields.io/badge/📢-Share%20Project-blue?style=for-the-badge)](https://twitter.com/intent/tweet?text=Check%20out%20this%20amazing%20Android%20rooting%20resource!&url=https://awesome-android-root.org)
+
+#### **Your Support Enables:**
+- ✅ **Regular Updates** - Keep 280+ apps/modules current
+- ✅ **Comprehensive Guides** - Maintain detailed documentation  
+- ✅ **Community Growth** - Expand the rooting ecosystem
+- ✅ **Infrastructure** - Improve tools and automation
+- ✅ **Security Research** - Test and verify app safety
 
 [↑ Back to top](#table-of-contents)
 
@@ -930,41 +1037,24 @@ For comprehensive contribution instructions, including formatting standards and 
 
 </div>
 
-## Support This Project
+---
 
-<div align="center">
+## Hall of Fame
 
-### 💖 Help Us Grow
-
-<div class="img-support">
-
-[![Become a Sponsor](https://img.shields.io/badge/💖-Become%20a%20Sponsor-ff69b4?style=for-the-badge)](https://opencollective.com/awesome-android-root-official)
-[![GitHub Stars](https://img.shields.io/badge/⭐-Star%20this%20Repo-yellow?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
-[![Report Issue](https://img.shields.io/badge/🐛-Report%20Issue-green?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root/issues)
-
-</div>
-</div>
-
-### 🚀 Your Support Enables Us To:
-- ✅ Keep this list updated with the latest apps and modules
-- ✅ Maintain comprehensive documentation and guides
-- ✅ Improve project infrastructure and development tools
-- ✅ Grow the open-source Android rooting community
-
-## 🏆 Hall of Fame
-
-Special thanks to our top contributors and supporters:
-
-<div align="center">
+**Top Contributors & Supporters who make this project possible:**
 
 [![Contributors](https://contrib.rocks/image?repo=awesome-android-root/awesome-android-root)](https://github.com/awesome-android-root/awesome-android-root/graphs/contributors)
-
-</div>
 
 ---
 
 <div align="center">
 
-**⚡ Made with ❤️ by [Awesome Android Root](https://github.com/awesome-android-root/awesome-android-root)**
+#### ⚡ **Built with ❤️ for the Android Community**
+
+[Awesome Android Root](https://awesome-android-root.org) • **Licensed under [MIT](LICENSE)** • **Est. 2024**
+
+---
+
+*"Empowering Android users with the tools and knowledge to unlock their device's full potential"*
 
 </div>

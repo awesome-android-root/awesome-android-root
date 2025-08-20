@@ -150,7 +150,7 @@ head:
         "description": "Ultimate collection of 284+ best Android root apps, Magisk modules, and LSPosed frameworks. Download top-rated root applications for Android customization, system optimization, and power user features.",
         "inLanguage": "en-US",
         "datePublished": "2025-08-11T00:00:00Z",
-        "dateModified": "2025-08-19T13:25:27Z",
+        "dateModified": "2025-08-20T04:54:25Z",
         "image": {
           "@type": "ImageObject",
           "url": "https://awesome-android-root.org/images/og.png",
