@@ -153,6 +153,8 @@
 
 </details>
 
+---
+
 ## What is Root Access?
 
 Android rooting gives you **privileged administrative control** over your device's subsystems—essentially becoming the "superuser" of your device, like administrator rights on a computer.
