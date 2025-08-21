@@ -27,7 +27,7 @@
 1. **Learn the Basics** → [What is Root Access?](#what-is-root-access)
 2. **Check Compatibility** → [Device-Specific Guides](#device-specific-root-guides)
 3. **Get Essential Apps** → [Featured Apps: The Essentials](#featured-apps-the-essentials)
-4. **Stay Safe** → [Important Notes](#important-notes)
+4. **Stay Safe** → [Important Notes](#important-safety-guidelines)
 
 
 > **Already rooted?** Jump to ✨[Root Apps by Category](#root-apps)✨
@@ -222,7 +222,7 @@ Step-by-step instructions for every stage of rooting:
 | **5** | Advanced Modules | [LSPosed Guide](docs/android-root-guides/lsposed-guide.md) |
 | **6** | Custom ROMs (Optional) | [Custom ROM Guide](docs/android-root-guides/custom-rom-installation.md) |
 
-### 📱 Device-Specific Root Guides
+### Device-Specific Root Guides
 
 | Device Brand | Guide |
 | :--- | :--- |
