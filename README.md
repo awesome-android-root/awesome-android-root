@@ -20,9 +20,9 @@
 
 </div>
 
-### 🚀 Quick Start Guide
+### 🚀 Getting Started
 
-**New to Android rooting?** Follow this streamlined path:
+New to Android rooting? Follow this streamlined path:
 
 1. **Learn the Basics** → [What is Root Access?](#what-is-root-access)
 2. **Check Compatibility** → [Device-Specific Guides](#device-specific-root-guides)
