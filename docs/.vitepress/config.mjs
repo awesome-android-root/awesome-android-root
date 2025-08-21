@@ -122,138 +122,257 @@ export default defineConfig({
       dark: '/images/logo_dark.svg',
       alt: 'Site Logo'
     },
+    search: {
+      provider: 'local',
+      options: {
+        detailedView: true,
+        miniSearch: {
+          searchOptions: {
+            fuzzy: 0.2,
+            prefix: true,
+            boost: { 
+              title: 4, 
+              text: 2, 
+              titles: 3,
+              'quick-start': 4,
+              'troubleshooting': 4,
+              'safety': 4,
+              'featured': 3
+            }
+          }
+        },
+        translations: {
+          button: {
+            buttonText: 'Search apps, modules & guides',
+            buttonAriaLabel: 'Search apps, modules & guides'
+          },
+          modal: {
+            displayDetails: 'Display detailed list',
+            resetButtonTitle: 'Reset search',
+            backButtonTitle: 'Close search',
+            noResultsText: 'No results for',
+            footer: {
+              selectText: 'to select',
+              navigateText: 'to navigate',
+              closeText: 'to close'
+            }
+          }
+        }
+      }
+    },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Apps', link: '/android-root-apps/' },
-
+      {
+        text: 'Root Apps',
+        link: '/android-root-apps/',
+        activeMatch: '^/android-root-apps/'
+      },
       {
         text: 'Guides',
         items: [
-          { text: '🚀 Quick Start', link: '/quick-start' },
-          { text: 'Rooting Guides', link: '/android-root-guides/' },
-          { text: 'General Guides', link: '/guides/' }
+          { text: 'Rooting Guides', link: '/android-root-guides/', activeMatch: '^/android-root-guides/' },
+          { text: 'General Guides', link: '/guides/', activeMatch: '^/guides/' }
         ]
       },
       {
-        text: 'Community',
-         items: [
-          { text: 'Contributing', link: '/contributing' },
+        text: 'Resources',
+        items: [
+          { text: 'FAQ & Support', link: '/faqs', activeMatch: '^/faqs' },
+          { text: 'Glossary & Terms', link: '/android-root-apps/#glossary' },
+          { text: 'Community', link: '/android-root-apps/#community-and-connect' },
+          { text: 'Project Stats', link: '/android-root-apps/#stats' }
+        ]
+      },
+      {
+        text: 'More',
+        items: [
           { text: 'About Project', link: '/about' },
+          { text: 'How to Contribute', link: '/contributing' },
           { text: 'Support Us', link: 'https://opencollective.com/awesome-android-root-official' },
-          { text: 'Star on GitHub', link: 'https://github.com/awesome-android-root/awesome-android-root' }
+          { text: 'Star on GitHub', link: 'https://github.com/awesome-android-root/awesome-android-root' },
+          { text: 'Reddit Community', link: 'https://www.reddit.com/r/Awesome_Android_Root/' }
         ]
       }
     ],
     sidebar: {
-      '/quick-start': [
+      // Android Root Guides Sidebar
+      '/android-root-guides/': [
+        {
+          text: 'Getting Started',
+          collapsed: false,
+          items: [
+            { text: 'Understanding Root Access', link: '/android-root-guides/#understanding-root-access' },
+            { text: 'Why Root Your Device?', link: '/android-root-guides/#why-root-your-device' },
+            { text: 'Security & Safety First', link: '/#-security--safety-first' },
+            { text: 'Prerequisites & Safety', link: '/android-root-guides/#prerequisites-and-safety' }
+          ]
+        },
+        {
+          text: 'Choose Your Root Method',
+          collapsed: false,
+          items: [
+            { text: 'Root Methods Comparison', link: '/#choose-your-root-method' },
+            { text: 'Magisk (Recommended)', link: '/android-root-guides/magisk-guide' },
+            { text: 'KernelSU (Advanced)', link: '/android-root-guides/kernelsu-guide' },
+            { text: 'APatch (Alternative)', link: '/android-root-guides/apatch-guide' }
+          ]
+        },
+        {
+          text: 'Essential Steps',
+          collapsed: false,
+          items: [
+            { text: 'Step-by-Step Overview', link: '/#complete-process-overview' },
+            { text: 'Unlock Bootloader', link: '/android-root-guides/how-to-unlock-bootloader' },
+            { text: 'Install Custom Recovery', link: '/android-root-guides/how-to-install-custom-recovery' },
+            { text: 'Install Custom ROM', link: '/android-root-guides/custom-rom-installation' }
+          ]
+        },
+        {
+          text: 'Advanced Frameworks',
+          collapsed: false,
+          items: [
+            { text: 'LSPosed Framework', link: '/android-root-guides/lsposed-guide' },
+            { text: 'Zygisk Implementation', link: '/#zygisk-implementations' },
+            { text: 'Root Hiding Setup', link: '/#root-hiding--integrity' }
+          ]
+        },
+        {
+          text: 'Device-Specific Guides',
+          collapsed: true,
+          items: [
+            { text: 'Device Compatibility', link: '/#-device-specific-root-guides' },
+            { text: 'Google Pixel', link: '/android-root-guides/how-to-root-pixel-phone' },
+            { text: 'Samsung Galaxy', link: '/android-root-guides/how-to-root-samsung-phone' },
+            { text: 'Xiaomi/Redmi/POCO', link: '/android-root-guides/how-to-root-xiaomi-phone' },
+            { text: 'OnePlus', link: '/android-root-guides/how-to-root-oneplus-phone' },
+            { text: 'Motorola', link: '/android-root-guides/how-to-root-motorola-phone' },
+            { text: 'Nothing Phone', link: '/android-root-guides/how-to-root-nothing-phone' }
+          ]
+        },
+        {
+          text: 'Support & Troubleshooting',
+          collapsed: true,
+          items: [
+            { text: 'Quick Troubleshooting', link: '/#-quick-troubleshooting' },
+            { text: 'Complete FAQ', link: '/faqs' },
+            { text: 'Emergency Recovery', link: '/#bootloop-protection' },
+            { text: 'Community Support', link: '/#community-and-connect' }
+          ]
+        }
+      ],
+
+      // Root Apps Sidebar - Updated with proper hash anchors
+      '/android-root-apps/': [
+        { text: '⭐ Featured Essentials', link: '/android-root-apps/#featured-apps-the-essentials' },
+        { text: '📋 Browse All Categories', link: '/android-root-apps/' },
+        { text: '---' },
+        { text: '🔓 Root Management', link: '/android-root-apps/#root-management' },
+        { text: '🛡️ Root Hiding & Integrity', link: '/android-root-apps/#root-hiding--integrity' },
+        { text: '🚫 Ad & Tracker Blocking', link: '/android-root-apps/#ads-and-tracking-blockers' },
+        { text: '📦 App Management', link: '/android-root-apps/#app-management' },
+        { text: '🛡  Privacy & Security', link: '/android-root-apps/#privacy-and-security' },
+        { text: '---' },
+        { text: '⚡ Performance Tweaks', link: '/android-root-apps/#performance-tweaks' },
+        { text: '🎨 Customization', link: '/android-root-apps/#customization' },
+        { text: '🪄 Modded Apps & Tweaks', link: '/android-root-apps/#modded-apps--tweaks' },
+        { text: '🌐 Networking & Connectivity', link: '/android-root-apps/#networking--connectivity' },
+        { text: '---' },
+        { text: '🛠️ Development & Debugging', link: '/android-root-apps/#development-and-debugging' },
+        { text: '🔧 Device Control & Hardware', link: '/android-root-apps/#device-control-and-hardware' },
+        { text: '🗂️ File Management', link: '/android-root-apps/#file-management' },
+        { text: '💻 Terminal & Shell', link: '/android-root-apps/#terminal-and-shell-environments' },
+        { text: '---' },
+        { text: '� Audio Management', link: '/android-root-apps/#audio-and-media' },
+        { text: '💾 Backup & Restore', link: '/android-root-apps/#backup-and-restore' },
+        { text: '🧹 System Debloating', link: '/android-root-apps/#debloating-and-system-app-removal' },
+        { text: '🔩 System Modifications', link: '/android-root-apps/#system-modifications' },
+        { text: '---' },
+        { text: '💬 Communication', link: '/android-root-apps/#communication' },
+        { text: '📍 Location & GPS', link: '/android-root-apps/#location-and-gps' },
+        { text: '📡 NFC Tools', link: '/android-root-apps/#nfc-tools' },
+        { text: '🖼️ Screen & Display', link: '/android-root-apps/#screen-and-display' },
+        { text: '♿ Accessibility & Utilities', link: '/android-root-apps/#accessibility--utilities' },
+        { text: '🧰 General Tools', link: '/android-root-apps/#tools' },
+        { text: '▶️ ReVanced', link: '/android-root-apps/#revanced' },
+        { text: '🧩 Kernel Management', link: '/android-root-apps/#kernel-management' }
+      ],
+
+      // General Android Guides Sidebar
+      '/guides/': [
+        {
+          text: 'Android Tips & Guides',
+          collapsed: false,
+          items: [
+            { text: 'Overview', link: '/guides/' },
+            { text: 'Ad Blocking Methods', link: '/guides/android-adblocking' },
+            { text: 'App Debloating Guide', link: '/guides/android-apps-debloating' },
+            { text: 'Stop App Auto Updates', link: '/guides/stop-android-app-auto-updates-play-store' },
+            { text: 'App Backup & Restore', link: '/guides/app-backup-restore-using-root' }
+          ]
+        }
+      ],
+
+      // Homepage Sidebar - Updated with proper hash anchors
+      '/': [
         {
           text: 'Quick Start',
           collapsed: false,
           items: [
-            { text: 'Overview', link: '/quick-start' },
-            { text: 'Step 1: Unlock Bootloader', link: '/quick-start#step-1-unlock-bootloader' },
-            { text: 'Step 2: Install Recovery', link: '/quick-start#step-2-install-custom-recovery' },
-            { text: 'Step 3: Choose Root Method', link: '/quick-start#step-3-choose-and-install-root-method' },
-            { text: 'Step 4: Hide Root', link: '/quick-start#step-4-hide-root-from-detection' },
-            { text: 'Step 5: Create Backup', link: '/quick-start#step-5-create-complete-system-backup' },
-            { text: 'Post-Root Essentials', link: '/quick-start#post-rooting-essentials' },
-            { text: 'Emergency Recovery', link: '/quick-start#emergency-recovery-guide' }
-          ]
-        }
-      ],
-
-      '/android-root-guides/': [
-        {
-          text: 'Rooting Guides',
-          collapsed: false,
-          items: [
-            { text: 'Overview', link: '/android-root-guides/' },
-            { text: 'Magisk Guide', link: '/android-root-guides/magisk-guide' },
-            { text: 'KernelSU Guide', link: '/android-root-guides/kernelsu-guide' },
-            { text: 'APatch Guide', link: '/android-root-guides/apatch-guide' },
-            { text: 'Device Guides', link: '/android-root-guides/' }
-          ]
-        }
-      ],
-
-      '/android-root-apps/': [
-            { text: '📋 Browse All Categories', link: '/android-root-apps/' },
-            { text: '♿ Accessibility', link: '/android-root-apps/accessibility' },
-            { text: '🚫 Ads & Tracker Blocking', link: '/android-root-apps/ads-and-tracker-blocking' },
-            { text: '📦 Apps Management', link: '/android-root-apps/apps-management' },
-            { text: '🔊 Audio Management', link: '/android-root-apps/audio-management' },
-            { text: '🤖 Automation', link: '/android-root-apps/automation' },
-            { text: '💾 Backup & ReStore', link: '/android-root-apps/backup-and-restore' },
-            { text: '🔋 Battery & Power', link: '/android-root-apps/battery-and-power-management' },
-            { text: '🧹 Cleaning & Maintenance', link: '/android-root-apps/cleaning-and-maintenance' },
-            { text: '💬 Communication', link: '/android-root-apps/communication' },
-            { text: '🎨 Customization', link: '/android-root-apps/customization' },
-            { text: '🛠 Development & Debugging', link: '/android-root-apps/development-and-debugging' },
-            { text: '🔧 Device Control & Hardware', link: '/android-root-apps/device-control-and-hardware' },
-            { text: '🗂 File Management', link: '/android-root-apps/file-management' },
-            { text: '🧩 Kernel Management', link: '/android-root-apps/kernel-management' },
-            { text: '📍 Location & GPS', link: '/android-root-apps/location-and-gps' },
-            { text: '🪄 Modded Apps & Tweaks', link: '/android-root-apps/modded-apps-and-tweaks' },
-            { text: '🌐 Networking & Connectivity', link: '/android-root-apps/networking-and-connectivity' },
-            { text: '📡 NFC Tools', link: '/android-root-apps/nfc-tools' },
-            { text: '⚡ Performance Tweaks', link: '/android-root-apps/performance-tweaks' },
-            { text: '🔒 Privacy & Security', link: '/android-root-apps/privacy-and-security' },
-            { text: '▶️ reVanced', link: '/android-root-apps/reVanced' },
-            { text: '🛡 Root Management', link: '/android-root-apps/root-management' },
-            { text: '🖼 Screen & Display', link: '/android-root-apps/screen-and-display' },
-            { text: '🗑 System Debloating', link: '/android-root-apps/system-debloating' },
-            { text: '🔩 System Modifications', link: '/android-root-apps/system-modifications' },
-            { text: '💻 Terminals & Shells', link: '/android-root-apps/terminals' },
-            { text: '🧰 Tools (Utilities)', link: '/android-root-apps/tools' }
-      ],
-
-      '/guides/': [
-        {
-          text: 'General Guides',
-          collapsed: false,
-          items: [
-            { text: 'Overview', link: '/guides/' },
-            { text: 'Android Ad Blocking', link: '/guides/android-adblocking' },
-            { text: 'App Debloating', link: '/guides/android-apps-debloating' },
-            { text: 'App Backup & Restore (using root)', link: '/guides/app-backup-restore-using-root' },
-            { text: 'Stop Play Store Auto-Updates', link: '/guides/stop-android-app-auto-updates-play-store' }
-          ]
-        }
-      ],
-
-      '/': [
-        {
-          text: 'Get Started',
-          collapsed: false,
-          items: [
-            { text: 'Quick Start', link: '/quick-start' },
-            { text: 'FAQ', link: '/faqs' },
-            { text: 'Essential Apps', link: '/android-root-apps/#essential-apps---start-here' }
+            { text: 'Quick Start Guide', link: '/#-quick-start-guide' },
+            { text: 'What is Root Access?', link: '/#what-is-root-access' },
+            { text: 'Security & Safety First', link: '/#-security--safety-first' },
+            { text: 'Root Methods Comparison', link: '/#choose-your-root-method' },
+            { text: 'Device Compatibility', link: '/#-device-specific-root-guides' }
           ]
         },
         {
-          text: 'Collections',
+          text: 'Essential Resources',
           collapsed: false,
           items: [
-            { text: 'Root Apps (all categories)', link: '/android-root-apps/' },
-            { text: 'Rooting Guides', link: '/android-root-guides/' },
-            { text: 'General Guides', link: '/guides/' }
+            { text: 'Complete Rooting Guides', link: '/android-root-guides/' },
+            { text: 'Featured Root Apps', link: '/#featured-apps-the-essentials' },
+            { text: 'Troubleshooting Guide', link: '/#-quick-troubleshooting' },
+            { text: 'Glossary & Terms', link: '/#glossary--legend' }
           ]
         },
         {
-          text: 'Community',
+          text: 'Popular Categories',
           collapsed: false,
           items: [
-            { text: 'Contributing', link: '/contributing' },
-            { text: 'About', link: '/about' },
-            { text: 'Support Us', link: 'https://opencollective.com/awesome-android-root-official' }
+            { text: 'Root Management', link: '/#root-managers' },
+            { text: 'Ad Blocking', link: '/#ads-and-tracking-blockers' },
+            { text: 'App Management', link: '/#app-managers-and-control' },
+            { text: 'System Performance', link: '/#performance-and-gaming' },
+            { text: 'Privacy & Security', link: '/#privacy-and-security' },
+            { text: 'System Customization', link: '/#customization' }
+          ]
+        },
+        {
+          text: 'Advanced Features',
+          collapsed: true,
+          items: [
+            { text: 'App Modifications', link: '/#modded-apps--tweaks' },
+            { text: 'Root Hiding & Integrity', link: '/#root-hiding--integrity' },
+            { text: 'Developer Tools', link: '/#development-and-debugging' },
+            { text: 'System Modifications', link: '/#system-modifications' },
+            { text: 'Network & Connectivity', link: '/#networking--connectivity' }
+          ]
+        },
+        {
+          text: 'Support & Community',
+          collapsed: true,
+          items: [
+            { text: 'FAQ & Troubleshooting', link: '/faqs' },
+            { text: 'Community & Connect', link: '/#community-and-connect' },
+            { text: 'How to Contribute', link: '/contributing' },
+            { text: 'About This Project', link: '/about' }
           ]
         }
       ]
     },
     footer: {
       message: "Made with ❤️ for the Android Root community",
-      copyright: `Copyright © ${new Date().getFullYear()} Awesome Android Root Project. Licensed under MIT.`
+      copyright: `Copyright © ${new Date().getFullYear()} Awesome Android Root Project. All rights reserved.`
     },
     outline: {
       level: [2, 3],
@@ -270,51 +389,7 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/awesome-android-root/awesome-android-root' },
       { icon: 'x', link: 'https://x.com/awsm_and_root' },
-      { 
-        icon: {
-          svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>'
-        },
-        link: 'https://reddit.com/r/AwesomeAndroidRoot'
-      }
     ],
-
-    // Add editLink for community contributions
-    editLink: {
-      pattern: 'https://github.com/awesome-android-root/awesome-android-root/edit/main/docs/:path',
-      text: 'Edit this page on GitHub'
-    },
-
-    // Improve search functionality
-    search: {
-      provider: 'local',
-      options: {
-        detailedView: true,
-        miniSearch: {
-          searchOptions: {
-            fuzzy: 0.2,
-            prefix: true,
-            boost: { title: 4, text: 2, titles: 1 }
-          }
-        },
-        translations: {
-          button: {
-            buttonText: 'Search apps, guides & tutorials',
-            buttonAriaLabel: 'Search documentation'
-          },
-          modal: {
-            displayDetails: 'Display detailed results',
-            resetButtonTitle: 'Reset search',
-            backButtonTitle: 'Close search',
-            noResultsText: 'No results found for',
-            footer: {
-              selectText: 'to select',
-              navigateText: 'to navigate',
-              closeText: 'to close'
-            }
-          }
-        }
-      }
-    }
 
   },
 
