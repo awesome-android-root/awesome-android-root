@@ -35,136 +35,120 @@
 ---
 
 ## Table of Contents
+
 <details>
-<summary>👉 <strong>Tap to expand complete navigation</strong></summary>
+<summary>📚 <strong>Getting Started</strong></summary>
 
-### 🚀 **Quick Start**
-- [Quick Start Guide](#-quick-start-guide)
+- [What is Root Access?](#what-is-root-access)  
+- [Security & Safety First](#security--safety-first)  
+- [Rooting Guides and Resources](#rooting-guides-and-resources)  
+  - [Complete Rooting Process Overview](#complete-process-overview)  
+  - [Device-Specific Root Guides](#device-specific-root-guides)  
+  - [Essential How-To Guides](#essential-how-tos)  
+- [Glossary & Legend](#glossary--legend)  
 
-### 📚 **Getting Started**
-- [What is Root Access?](#what-is-root-access)
-- [Security & Safety First](#-security--safety-first)
-- [Rooting Guides and Resources](#rooting-guides-and-resources)
-  - [Complete Process Overview](#complete-process-overview)
-  - [Device-Specific Root Guides](#-device-specific-root-guides)
-  - [Essential How-To's](#essential-how-tos)
-- [Glossary & Legend](#glossary--legend)
+</details>
 
-### ⭐ **Featured Essentials**
-- [Featured Apps: The Essentials](#featured-apps-the-essentials)
+---
 
-### 📱 Root Apps by Category
+<details open>
+<summary>⭐ <strong>Must-Have Essentials</strong></summary>
 
-#### 🚫 **Ad & Content Blocking**
+- [Featured Apps: The Essentials](#featured-apps-the-essentials)  
+  *(Perfect for first-time root users)*
+
+</details>
+
+---
+
+<details>
+<summary>📱 <strong>Root Apps by Category</strong></summary>
+
+#### 🚫 Ad & Tracking Blocking
 - [Ad & Tracking Blockers](#ads-and-tracking-blockers)
 
-#### 📦 **App Management**
-- [App Isolation & Cloning](#app-isolation-and-cloning)
-- [App Managers & Control](#app-managers-and-control)
-- [App Stores](#app-stores)
+#### 📦 App Management
+- [App Isolation & Cloning](#app-isolation-and-cloning)  
+- [App Managers & Control](#app-managers-and-control)  
+- [App Stores](#app-stores)  
 - [App Permissions](#app-permissions)
 
-#### 🔧 **App Modifications**
-- [Bilibili Mods](#bilibili-mods)
-- [Discord Mods](#discord-mods)
-- [Duolingo Mods](#duolingo-mods)
-- [Grindr Mods](#grindr-mods)
-- [Instagram Mods](#instagram-mods)
-- [Line Mods](#line-mods)
-- [Maps Mods](#maps-mods)
-- [QQ Mods](#qq-mods)
-- [Reddit Mods](#reddit-mods)
-- [Telegram Mods](#telegram-mods)
-- [TikTok Mods](#tiktok-mods)
-- [WeChat Mods](#wechat-mods)
-- [Weibo Mods](#weibo-mods)
-- [WhatsApp Mods](#whatsapp-mods)
-- [X/Twitter Mods](#xtwitter-mods)
-- [YouTube, Spotify, & Google Photos Mods](#youtube-spotify--google-photos-mods)
-- [General App Mods](#general-app-mods)
-- [Patching Tools](#patching-tools)
+#### 🛠️ App Modifications
+- [WhatsApp Mods](#whatsapp-mods)  
+- [YouTube, Spotify & Google Photos Mods](#youtube-spotify--google-photos-mods)  
+- [Telegram Mods](#telegram-mods)  
+- [Instagram Mods](#instagram-mods)  
+- [TikTok Mods](#tiktok-mods)  
+- [X/Twitter Mods](#xtwitter-mods)  
+- [Reddit Mods](#reddit-mods)  
+- [Duolingo, Bilibili, Grindr & More](#modded-apps--tweaks)
 
-#### 🎵 **Audio & Media**
+#### 🔊 Audio & Media
 - [Audio & Media](#audio-and-media)
 
-#### ⚡ **Performance & System**
-- [Automation](#automation)
-- [Battery & Power Management](#battery-and-power-management)
-- [Performance & Gaming](#performance-and-gaming)
-- [System Optimization](#system-optimization)
-- [Memory & Storage Management](#memory-and-storage-management)
+#### ⚡ Performance & System
+- [Automation](#automation)  
+- [Battery & Power Management](#battery-and-power-management)  
+- [Performance & Gaming](#performance-and-gaming)  
+- [System Optimization](#system-optimization)  
+- [Memory & Storage](#memory-and-storage-management)
 
-#### 🗃️ **Storage & Data**
-- [Backup & Restore](#backup-and-restore)
-- [Cleaning & Maintenance](#cleaning-and-maintenance)
-- [File Managers](#file-management)
+#### 💾 Backup & Maintenance
+- [Backup & Restore](#backup-and-restore)  
+- [Cleaning & Maintenance](#cleaning-and-maintenance)  
+- [File Management](#file-management)
 
-#### 📞 **Communication**
-- [Call Recording](#call-recording)
-- [Contact Management](#contact-management)
-- [SMS Management](#sms-management)
+#### 📞 Communication
+- [Call Recording](#call-recording)  
+- [Contact & SMS Management](#contact-management) • [SMS Management](#sms-management)
 
-#### 🎨 **Customization**
-- [Boot Animations](#boot-animations)
-- [Fonts & Typography](#fonts-and-typography)
-- [Launchers](#launchers)
-- [Navigation](#navigation)
-- [OS Specific Mods](#os-specific-mods)
-  - [AOSP](#aosp-android-open-source-project) • [ColorOS](#coloros-oppo) • [Global](#global)
-  - [HyperOS](#hyperos-xiaomi) • [One UI](#one-ui-samsung) • [Onyx](#onyx)
-  - [Oxygen OS](#oxygen-os-oneplus)
-- [Themes & UI](#themes-and-ui)
+#### 🎨 Customization
+- [Boot Animations](#boot-animations)  
+- [Fonts & Emoji](#fonts-and-typography)  
+- [Launchers](#launchers)  
+- [Navigation & Gestures](#navigation)  
+- [OS-Specific Mods](#os-specific-mods)  
+  *(One UI, HyperOS, ColorOS, AOSP, etc.)*  
+- [Themes & UI Tweaks](#themes-and-ui)
 
-#### 🧹 **System Management**
-- [Debloating & System App Removal](#debloating-and-system-app-removal)
-- [Kernel Management](#kernel-management)
-- [System Modifications](#system-modifications)
+#### 🔐 Security & Privacy
+- [Privacy & Security](#privacy-and-security)  
+- [ReVanced & Patching Tools](#revanced)  
+- [Root Hiding & Integrity](#root-hiding--integrity)  
+- [Firewall & DNS Tools](#firewall-tools) • [Network Tools](#network--connectivity)
 
-#### 🛠️ **Developer & Technical**
-- [Development & Debugging](#development-and-debugging)
+#### 🔧 System & Developer Tools
+- [Root Management](#root-managers)  
+- [Zygisk Implementations](#zygisk-implementations)  
+- [Kernel Management](#kernel-management)  
+- [Debloating & System Removal](#debloating-and-system-app-removal)  
+- [Terminal & Shell](#terminal-and-shell-environments)  
+- [Development & Debugging](#development-and-debugging)  
 - [Device Controls & Hardware](#device-controls--hardware)
-- [Terminal & Shell Environments](#terminal-and-shell-environments)
-- [Tools](#tools)
 
-#### ♿ **Accessibility & Utilities**
+#### 🖥️ Display & Input
+- [Screen & Display](#screen-and-display)  
+- [Location & GPS](#location--gps)  
+- [NFC & Cards](#nfc--cards)  
 - [Accessibility & Utilities](#accessibility--utilities)
 
-#### 🌐 **Network & Connectivity**
-- [Firewall Tools](#firewall-tools)
-- [DNS Tools](#dns-tools)
-- [Hotspot/Tether](#hotspot-tools)
-- [Wi‑Fi Tools](#wi‑fi-tools)
-- [Location & GPS](#location--gps)
-- [NFC & Cards](#nfc--cards)
+</details>
 
-#### 🛡️ **Security & Privacy**
-- [Privacy & Security](#privacy-and-security)
-- [ReVanced](#revanced)
+---
 
-#### 🔓 **Root Management**
-- [Root Managers](#root-managers)
-- [Zygisk Implementations](#zygisk-implementations)
-- [Root Hiding & Integrity](#root-hiding--integrity)
-- [Root Detection Tools](#root-detection-tools)
-- [Bootloop Protection](#bootloop-protection)
+<details>
+<summary>📘 <strong>Resources & Support</strong></summary>
 
-#### 📺 **Display and Screen**
-- [Screen and Display](#screen-and-display)
-
-### 📖 **Resources & Support**
-- [Resources & Support](#resources--support)
-  - [FAQs & Troubleshooting](#faqs-and-troubleshooting)
-  - [Important Safety Guidelines](#important-safety-guidelines)
-  - [Legal Disclaimer](#legal-disclaimer)
-- [Community & Connect](#community-and-connect)
-  - [Premier Communities](#premier-communities)
-  - [Official Project Channels](#-official-project-channels)
-  - [Get Help](#-get-help)
-- [Contributing & Support](#contributing-and-support)
-  - [Quick Ways to Help](#-quick-ways-to-help)
-  - [Contribution Guidelines](#contribution-guidelines)
-  - [Support This Project](#support-this-project)
-- [Project Statistics](#stats)
+- [FAQs & Troubleshooting](#faqs-and-troubleshooting)  
+- [Important Safety Guidelines](#important-safety-guidelines)  
+- [Legal Disclaimer](#legal-disclaimer)  
+- [Community & Connect](#community-and-connect)  
+  - [XDA, Reddit & Official Channels](#premier-communities)  
+- [Contributing & Support](#contributing-and-support)  
+  - [How to Suggest Apps or Report Issues](#quick-ways-to-help)  
+  - [Contribution Guidelines](#contribution-guidelines)  
+  - [Sponsor the Project](#support-this-project)  
+- [Project Statistics](#stats)  
 - [Hall of Fame](#hall-of-fame)
 
 </details>
