@@ -20,7 +20,7 @@
 
 </div>
 
-## 🚀 Quick Start Guide
+### 🚀 Quick Start Guide
 
 **New to Android rooting?** Follow this streamlined path:
 
