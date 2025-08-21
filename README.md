@@ -254,6 +254,7 @@ Step-by-step instructions for every stage of rooting:
 
 > _Apps are organized in alphabetical order within each category._
 
+---
 
 ## Root Apps
 > 💡 **New to Android Rooting?** Start with our [complete rooting guide](./docs/android-root-guides/index.md) before exploring the apps below.
