@@ -122,7 +122,7 @@
 - [Zygisk Implementations](#zygisk-implementations)  
 - [Kernel Management](#kernel-management)  
 - [Debloating & System Removal](#debloating-and-system-app-removal)  
-- [Terminal & Shell](#terminal-and-shell-environments)  
+- [Terminal & Shell Tools](#terminal-and-shell-tools)  
 - [Development & Debugging](#development-and-debugging)  
 - [Device Controls & Hardware](#device-controls--hardware)
 
@@ -520,7 +520,7 @@ Step-by-step instructions for every stage of rooting:
 - **[Magisk Docker](https://github.com/mgksu/dockerd)** - Magisk and KernelSU module for running Docker on rooted Android devices. `FOSS` `[M]` `[K]`
 - **[Magisk Tailscaled](https://github.com/mgksu/tailscaled)** - Magisk and KernelSU module for running Tailscale on rooted Android devices. `FOSS` `[M]` `[K]`
 - **[Py2Droid](https://github.com/Mrakorez/py2droid)** - A Magisk module to install Python 3 on Android, including the standard library (STDLIB). `FOSS` `[M]`
-- **⭐ [Termux](https://termux.com/)** - Advanced terminal emulator and Linux environment. `FOSS` - **[More on Termux](#terminal--shell-environments)**
+- **⭐ [Termux](https://termux.com/)** - Advanced terminal emulator and Linux environment. `FOSS` - **[More on Termux](#terminal-and-shell-tools)**
 - **[Wireless ADB Switch](https://f-droid.org/ru/packages/com.smoothie.wirelessDebuggingSwitch)** - Quickly enable or disable Android's Wireless Debugging feature. Includes widgets and a quick settings tile for convenience. `FOSS` | [📦 Source](https://github.com/Smooth-E/wireless-adb-switch)
 - **[ZRAM Module](https://github.com/FurLC/ZRAM-Module)** -  A Magisk/KernelSU module that provides ZRAM compression algorithm support for Android devices. `FOSS` `[M]` `[K]`
 
@@ -863,7 +863,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 ---
 
-### Terminal and Shell Environments
+### Terminal and Shell Tools
 - **[aShell You](https://apt.izzysoft.de/fdroid/index/apk/in.hridayan.ashell)** - Android shell utility app with Material Design 3 UI, letting you run ADB, root and shell commands. `FOSS` | [📦 Source](https://github.com/DP-Hridayan/aShellYou)
 - **[LADB](https://play.google.com/store/apps/details?id=com.draco.ladb)** - Local ADB shell. `FOSS` | [📦 Source](https://github.com/tytydraco/LADB) - [LADB Free Build](https://github.com/hyperio546/ladb-builds)
 - **⭐ [Termux](https://f-droid.org/en/packages/com.termux)** - A terminal emulator application for Android OS extendible by variety of packages. `FOSS` | [📦 Source](https://github.com/termux/termux-app)
