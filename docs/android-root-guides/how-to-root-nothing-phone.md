@@ -338,7 +338,7 @@ Only lock bootloader with completely stock firmware and android verified boot (A
 **Congratulations!** Your Nothing / CMF by Nothing Phone now has root access. Here's what to do next:
 
 ### Explore Community Platforms & Resources
-- **[Nothing Resource Index](https://linkfly.to/Nothing_Archive)** – Updates, community projects, and resources related to the Nothing ecosystem
+- **[Nothing Resource Index](https://linkfly.to/NothingArchive)** – Updates, community projects, and resources related to the Nothing ecosystem
 - **[Nothing Telegram](https://t.me/Nothing_Archive)** – Channel indexing the Unofficial Telegram community for updates, ROMs, development and photography
 - **[Nothing Telegram Community Chat](https://t.me/NothingTelegramCommunity)** – General discussion and onboarding chat linked to the above channel
 - **[Nothing XDA](https://xdaforums.com/c/nothing.12583/)** – Developer community
