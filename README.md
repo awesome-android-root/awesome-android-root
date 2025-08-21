@@ -89,7 +89,7 @@
 #### ⚡ Performance & System
 - [Automation](#automation)  
 - [Battery & Power Management](#battery-and-power-management)  
-- [Performance & Gaming](#performance-and-gaming)  
+- [Gaming & Performance Tweak](#gaming-and-performance-tweak)  
 - [System Optimization](#system-optimization)  
 - [Memory & Storage](#memory-and-storage-management)
 
@@ -701,7 +701,7 @@ Step-by-step instructions for every stage of rooting:
 
 ### Performance Tweaks
 
-#### Performance and Gaming
+#### Gaming and Performance Tweak
 - **[AsoulOpt](https://github.com/nakixii/Magisk_AsoulOpt)** - Game threads tweaker for Android, suitable for mainstream games and some niche games. `FOSS` `[M]`
 - **[FPS Unlocker](https://github.com/yadavnikhil03/GameUnlocker#fps-unlocker)** - Enables 90 FPS options in BGMI and PUBG and other Games as well for smoother gameplay on low-end devices. `FOSS` `[M]`
 - **[GameResChange](https://github.com/Xposed-Modules-Repo/com.game.reschange)** - Change the resolution of any app/game on Android 13+. `Proprietary` `[LSP]`
