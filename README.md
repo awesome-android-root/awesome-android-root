@@ -11,10 +11,10 @@
 
 <b>🛡️ The Ultimate Android Rooting Hub</b>
 
-<sub>Discover 280+ top root apps, Magisk/KernelSU/LSPosed modules, and step-by-step guides for every device.</sub>
+<sub>Discover 290+ top root apps, Magisk/KernelSU/LSPosed modules, and step-by-step guides for every device.</sub>
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=blue&cacheSeconds=3600)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
-[![Total Entries](https://img.shields.io/badge/Total%20Entries-280+-blue?style=for-the-badge&logo=android&cacheSeconds=3600)](#root-apps)
+[![Total Entries](https://img.shields.io/badge/Total%20Entries-290+-blue?style=for-the-badge&logo=android&cacheSeconds=3600)](#root-apps)
 [![Support via Open Collective](https://img.shields.io/badge/Support%20via-Open%20Collective-blue?style=for-the-badge&logo=opencollective&cacheSeconds=3600)](https://opencollective.com/awesome-android-root-official)<br>
 [![Website](https://img.shields.io/badge/Website-awesome--android--root.org-green?style=for-the-badge&logo=googlechrome)](https://awesome-android-root.org)
 
@@ -997,7 +997,7 @@ Includes:
 [![Share Project](https://img.shields.io/badge/📢-Share%20Project-blue?style=for-the-badge)](https://twitter.com/intent/tweet?text=Check%20out%20this%20amazing%20Android%20rooting%20resource!&url=https://awesome-android-root.org)
 
 #### **Your Support Enables:**
-- ✅ **Regular Updates** - Keep 280+ apps/modules current
+- ✅ **Regular Updates** - Keep 290+ apps/modules current
 - ✅ **Comprehensive Guides** - Maintain detailed documentation  
 - ✅ **Community Growth** - Expand the rooting ecosystem
 - ✅ **Infrastructure** - Improve tools and automation
@@ -1009,11 +1009,11 @@ Includes:
 
 <div class="img-cnt">
 
-![Total Entries](https://img.shields.io/badge/Total%20Entries-284-blue?style=for-the-badge&logo=android&cacheSeconds=3600)
-![Root Apps](https://img.shields.io/badge/Root%20Apps-104-blue?style=for-the-badge&logo=android&cacheSeconds=3600)
-![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-98-orange?style=for-the-badge&logo=magisk&logoColor=white&cacheSeconds=3600)
-![KernelSU Modules](https://img.shields.io/badge/KernelSU%20Modules-14-green?style=for-the-badge&logo=keenetic&logoColor=white&cacheSeconds=3600)
-![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-80-purple?style=for-the-badge&logo=local&logoColor=white&cacheSeconds=3600)
+![Total Entries](https://img.shields.io/badge/Total%20Entries-292-blue?style=for-the-badge&logo=android)
+![Root Apps](https://img.shields.io/badge/Root%20Apps-110-blue?style=for-the-badge&logo=android)
+![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-99-orange?style=for-the-badge&logo=magisk&logoColor=white)
+![KernelSU Modules](https://img.shields.io/badge/KernelSU%20Modules-14-green?style=for-the-badge&logo=keenetic&logoColor=white)
+![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-81-purple?style=for-the-badge&logo=local&logoColor=white)
 
 </div>
 
