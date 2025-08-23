@@ -36,10 +36,9 @@
 ### 📚 Getting Started
 - [What is Root Access?](#what-is-root-access)  
 - [Security & Safety First](#security--safety-first)  
-- [Rooting Guides and Resources](#rooting-guides-and-resources)  
-  - [Complete Rooting Process Overview](#complete-process-overview)  
-  - [Device-Specific Root Guides](#device-specific-root-guides)  
-  - [Essential How-To Guides](#essential-how-tos)  
+- [Complete Rooting Process Overview](#complete-process-overview)  
+- [Device-Specific Root Guides](#device-specific-root-guides)  
+- [Essential How-To Guides](#essential-how-tos)  
 - [Glossary & Legend](#glossary--legend)  
 
 ### ⭐ Must-Have Essentials
@@ -121,14 +120,10 @@
 - [FAQs & Troubleshooting](#faqs-and-troubleshooting)  
 - [Important Safety Guidelines](#important-safety-guidelines)  
 - [Legal Disclaimer](#legal-disclaimer)  
-- [Community & Connect](#community-and-connect)  
-  - [XDA, Reddit & Official Channels](#premier-communities)  
+- [Community & Connect](#community-and-connect)
 - [Contributing & Support](#contributing-and-support)  
-  - [How to Suggest Apps or Report Issues](#quick-ways-to-help)  
-  - [Contribution Guidelines](#contribution-guidelines)  
-  - [Sponsor the Project](#support-this-project)  
-- [Project Statistics](#stats)  
-- [Hall of Fame](#hall-of-fame)
+- [Sponsor the Project](#support-this-project)  
+- [Project Statistics](#stats) 
 
 </details>
 
