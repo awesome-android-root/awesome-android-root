@@ -154,22 +154,26 @@ Android rooting gives you **privileged administrative control** over your device
 
 ## Security & Safety First
 
-> **🚨 CRITICAL:** Rooting fundamentally changes your device's security model. Please understand the risks:
+> **🚨 CRITICAL:** Use this checklist and follow all steps: ✨[Check list](https://fynks.github.io/check-list/)✨
+
+> **⚠️ Important:** Rooting fundamentally changes your device's security model. Please understand the risks:
 <details><summary>👉 Tap to expand contents</summary>
 
-### Before You Start:
+### Use this checklist
+
+#### Before You Start:
 - **Backup Everything** - Full device backup before any modifications
 - **Research Your Device** - Ensure compatibility and available recovery methods  
 - **Understand the Risks** - Warranty void, potential bootloops, security implications
 - **Have Recovery Plan** - Know how to restore your device if something goes wrong
 
-### Security Considerations:
+#### Security Considerations:
 - Root access can be exploited by malicious apps
 - Banking and payment apps may stop working  
 - OTA updates will likely fail and require manual intervention
 - Some streaming services block rooted devices
 
-### Safety Checklist:
+#### Safety Checklist:
 - [ ] Device bootloader is unlockable
 - [ ] Recovery images and tools are available for your device
 - [ ] You understand how to use fastboot/ADB
