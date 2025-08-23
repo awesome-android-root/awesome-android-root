@@ -20,7 +20,7 @@
 
 </div>
 
-### 🚀 Getting Started
+### 🚀 Quick Start
 
 New to Android rooting? Follow this streamlined path:
 
@@ -37,8 +37,9 @@ New to Android rooting? Follow this streamlined path:
 ## Table of Contents
 
 <details>
-<summary>📚 <strong>Getting Started</strong></summary>
+<summary>👉 Click to expand contents</summary>
 
+### 📚 Getting Started
 - [What is Root Access?](#what-is-root-access)  
 - [Security & Safety First](#security--safety-first)  
 - [Rooting Guides and Resources](#rooting-guides-and-resources)  
@@ -47,22 +48,11 @@ New to Android rooting? Follow this streamlined path:
   - [Essential How-To Guides](#essential-how-tos)  
 - [Glossary & Legend](#glossary--legend)  
 
-</details>
-
----
-
-<details open>
-<summary>⭐ <strong>Must-Have Essentials</strong></summary>
-
+### ⭐ Must-Have Essentials
 - [Featured Apps: The Essentials](#featured-apps-the-essentials)  
   *(Perfect for first-time root users)*
 
-</details>
-
----
-
-<details>
-<summary>📱 <strong>Root Apps by Category</strong></summary>
+### 📱 Root Apps by Category
 
 #### 🚫 Ad & Tracking Blocking
 - [Ad & Tracking Blockers](#ads-and-tracking-blockers)
@@ -132,12 +122,7 @@ New to Android rooting? Follow this streamlined path:
 - [NFC & Cards](#nfc--cards)  
 - [Accessibility & Utilities](#accessibility--utilities)
 
-</details>
-
----
-
-<details>
-<summary>📘 <strong>Resources & Support</strong></summary>
+### 📘Resources & Support
 
 - [FAQs & Troubleshooting](#faqs-and-troubleshooting)  
 - [Important Safety Guidelines](#important-safety-guidelines)  
