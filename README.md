@@ -20,7 +20,7 @@
 
 </div>
 
-<div align="center" class="quick-nav>
+<div align="center" class="quick-nav">
 
 🚀 Quick Links: [Introduction](#what-is-root-access) | [Guides](#rooting-guides-and-resources) | [Apps & Modules](#root-apps) | [Resources](#resources--support)
 
