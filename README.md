@@ -258,6 +258,7 @@ Step-by-step instructions for every stage of rooting:
 | **⭐ [App Manager](https://github.com/MuntashirAkon/AppManager)** | App Control | A feature-packed tool to inspect, manage, and control every app on your device. |
 | **⭐ [MiXplorer](https://mixplorer.com/)** | File Management | The most powerful file manager for Android, with full root access capabilities. |
 | **⭐ [AdAway](https://adaway.org/)** | Ad Blocking | The classic, open-source ad blocker that uses the hosts file for system-wide blocking. |
+| **⭐ [Droid-ify](https://f-droid.org/packages/com.looker.droidify)** | F-Droid client | Material UI and auto updating apps using root. |
 
 [↑ Back to top](#table-of-contents)
 
