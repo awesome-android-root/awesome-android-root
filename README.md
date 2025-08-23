@@ -676,6 +676,7 @@ Step-by-step instructions for every stage of rooting:
 
 #### Patching Tools
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (use with caution). `Proprietary`
+- **[E-Government Liberator](https://github.com/Crazyphil/digitales-amt-liberator)** - Removes root and bootloader checks from e-government apps. `FOSS` `[LSP]`
 
 [↑ Back to top](#table-of-contents)
 
