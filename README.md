@@ -20,17 +20,11 @@
 
 </div>
 
-### 🚀 Quick Start
+<div align="center" class="quick-nav>
 
-New to Android rooting? Follow this streamlined path:
+🚀 Quick Links: [Introduction](#what-is-root-access) | [Guides](#rooting-guides-and-resources) | [Apps & Modules](#root-apps) | [Resources](#resources--support)
 
-1. **Learn the Basics** → [What is Root Access?](#what-is-root-access)
-2. **Check Compatibility** → [Device-Specific Guides](#device-specific-root-guides)
-3. **Get Essential Apps** → [Featured Apps: The Essentials](#featured-apps-the-essentials)
-4. **Stay Safe** → [Important Notes](#important-safety-guidelines)
-
-
-> **Already rooted?** Jump to ✨[Root Apps by Category](#root-apps)✨
+</div>
 
 ---
 
