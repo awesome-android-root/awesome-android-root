@@ -163,9 +163,9 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       {
-        text: 'Root Apps',
-        link: '/android-root-apps/',
-        activeMatch: '^/android-root-apps/'
+        text: 'Apps & Modules',
+        link: '/android-root-apps/#root-apps',
+        activeMatch: '^/android-root-apps/#root-apps'
       },
       {
         text: 'Guides',
