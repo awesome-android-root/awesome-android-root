@@ -130,9 +130,9 @@ export default defineConfig({
           searchOptions: {
             fuzzy: 0.2,
             prefix: true,
-            boost: { 
-              title: 4, 
-              text: 2, 
+            boost: {
+              title: 4,
+              text: 2,
               titles: 3,
               'quick-start': 4,
               'troubleshooting': 4,
@@ -178,9 +178,9 @@ export default defineConfig({
         text: 'Resources',
         items: [
           { text: 'FAQ & Support', link: '/faqs', activeMatch: '^/faqs' },
-          { text: 'Glossary & Terms', link: '/android-root-apps/#glossary' },
-          { text: 'Community', link: '/android-root-apps/#community-and-connect' },
-          { text: 'Project Stats', link: '/android-root-apps/#stats' }
+          { text: 'Glossary & Terms', link: '/#glossary' },
+          { text: 'Community & Resources', link: '/#community-and-resources' },
+          { text: 'Project Stats', link: '/#stats' }
         ]
       },
       {
@@ -319,10 +319,10 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'Quick Start Guide', link: '/#-quick-start-guide' },
-            { text: 'What is Root Access?', link: '/#what-is-root-access' },
-            { text: 'Security & Safety First', link: '/#-security--safety-first' },
-            { text: 'Root Methods Comparison', link: '/#choose-your-root-method' },
-            { text: 'Device Compatibility', link: '/#-device-specific-root-guides' }
+            { text: 'What is Root Access?', link: '/#what-is-android-rooting' },
+            { text: 'Security & Safety First', link: '/#security--safety-first' },
+            { text: 'Root Methods Comparison', link: '/#choose-root-method' },
+            { text: 'Device Compatibility', link: '/#device-specific-root-guides' }
           ]
         },
         {
@@ -331,8 +331,8 @@ export default defineConfig({
           items: [
             { text: 'Complete Rooting Guides', link: '/android-root-guides/' },
             { text: 'Featured Root Apps', link: '/#featured-apps-the-essentials' },
-            { text: 'Troubleshooting Guide', link: '/#-quick-troubleshooting' },
-            { text: 'Glossary & Terms', link: '/#glossary--legend' }
+            { text: 'Troubleshooting Guide', link: '/#frequently-asked-questions-and-troubleshooting' },
+            { text: 'Glossary & Terms', link: '/#glossary' }
           ]
         },
         {
@@ -355,15 +355,15 @@ export default defineConfig({
             { text: 'Root Hiding & Integrity', link: '/#root-hiding--integrity' },
             { text: 'Developer Tools', link: '/#development-and-debugging' },
             { text: 'System Modifications', link: '/#system-modifications' },
-            { text: 'Network & Connectivity', link: '/#networking--connectivity' }
+            { text: 'Network & Connectivity', link: '/#network--connectivity' }
           ]
         },
         {
           text: 'Support & Community',
           collapsed: true,
           items: [
-            { text: 'FAQ & Troubleshooting', link: '/faqs' },
-            { text: 'Community & Connect', link: '/#community-and-connect' },
+            { text: 'FAQ & Troubleshooting', link: '/#frequently-asked-questions-and-troubleshooting' },
+            { text: 'Community & Resources', link: '/#community-and-resources' },
             { text: 'How to Contribute', link: '/contributing' },
             { text: 'About This Project', link: '/about' }
           ]
