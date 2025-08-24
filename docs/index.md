@@ -2,7 +2,7 @@
 layout: home
 title: Awesome Android Root
 titleTemplate: Ultimate Android Rooting Hub 2025
-description: "Discover 280+ hand-curated best root apps, Magisk & LSPosed (Xposed) modules of 2025 and step-by-step rooting guides"
+description: "Discover 290+ hand-curated best root apps, Magisk & LSPosed (Xposed) modules of 2025 and step-by-step rooting guides"
 head:
   - - meta
     - name: robots
@@ -30,7 +30,7 @@ head:
       content: "Awesome Android Root - Ultimate Android Rooting Hub 2025"
   - - meta
     - name: twitter:description
-      content: "The ultimate Android rooting resource! 280+ best root apps, Magisk, KernelSU, APatch & LSPosed Modules plus comprehensive rooting guides for 2025."
+      content: "The ultimate Android rooting resource! 290+ best root apps, Magisk, KernelSU, APatch & LSPosed Modules plus comprehensive rooting guides for 2025."
   - - meta
     - name: twitter:image
       content: "https://awesome-android-root.org/images/og.png"
@@ -76,7 +76,7 @@ head:
         "@type": "WebSite",
         "name": "Awesome Android Root",
         "alternateName": "Ultimate Android Rooting Hub",
-        "description": "The ultimate Android rooting resource! 280+ best root apps, Magisk,KernelSu & LSPosed Modules & rooting guides.",
+        "description": "The ultimate Android rooting resource! 290+ best root apps, Magisk,KernelSu & LSPosed Modules & rooting guides.",
         "url": "https://awesome-android-root.org",
         "inLanguage": "en-US",
         "publisher": {
@@ -92,7 +92,7 @@ head:
         "mainEntity": {
           "@type": "Article",
           "headline": "Ultimate Android Rooting Guide 2025",
-          "description": "Comprehensive collection of 280+ root apps, rooting guides, and expert tutorials",
+          "description": "Comprehensive collection of 290+ root apps, rooting guides, and expert tutorials",
           "author": {
             "@type": "Organization",
             "name": "Awesome Android Root Community"
@@ -213,13 +213,13 @@ head:
 hero:
   name: "Awesome Android Root"
   text: "The Ultimate Hub for Android Rooting"
-  tagline: "280+ top root apps, Magisk/KernelSU/LSPosed modules, and step-by-step rooting guides."
+  tagline: "290+ top root apps, Magisk/KernelSU/LSPosed modules, and step-by-step rooting guides."
   image:
     src: /images/logo_dark.svg
     alt: Awesome Android Root - Ultimate Android Rooting Resource
   actions:
     - theme: brand
-      text: 🚀 Browse 280+ Root Apps
+      text: 🚀 Browse 290+ Root Apps
       link: /android-root-apps/
     - theme: alt
       text: 📚 Complete Rooting Guides
