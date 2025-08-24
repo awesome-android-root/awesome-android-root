@@ -22,7 +22,7 @@
 
 <div align="center" class="quick-nav">
 
-🚀 Quick Links: [Introduction](#what-is-android-rooting) | [Guides](#rooting-guides-and-resources) | [Apps & Modules](#root-apps) | [Resources](#-community-and-resources)
+🚀 Quick Links: [Introduction](#what-is-android-rooting) | [Guides](#rooting-guides-and-resources) | [Apps & Modules](#root-apps) | [Resources](#community-and-resources)
 
 </div>
 
@@ -915,7 +915,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 ---
 
-## 🌐 Community and Resources
+## Community and Resources
 
 ### Official Project Channels
 
