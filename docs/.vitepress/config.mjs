@@ -178,9 +178,9 @@ export default defineConfig({
         text: 'Resources',
         items: [
           { text: 'FAQ & Support', link: '/faqs', activeMatch: '^/faqs' },
-          { text: 'Glossary & Terms', link: '/#glossary' },
-          { text: 'Community & Resources', link: '/#community-and-resources' },
-          { text: 'Project Stats', link: '/#stats' }
+          { text: 'Glossary & Terms', link: '/android-root-apps/#glossary' },
+          { text: 'Community & Resources', link: '/android-root-apps/#community-and-resources' },
+          { text: 'Project Stats', link: '/android-root-apps/#stats' }
         ]
       },
       {
@@ -291,7 +291,7 @@ export default defineConfig({
         { text: '📍 Location & GPS', link: '/android-root-apps/#location-and-gps' },
         { text: '📡 NFC Tools', link: '/android-root-apps/#nfc-tools' },
         { text: '🖼️ Screen & Display', link: '/android-root-apps/#screen-and-display' },
-        { text: '♿ Accessibility & Utilities', link: '/android-root-apps/#accessibility--utilities' },
+        { text: '♿ Accessibility Tools', link: '/android-root-apps/#accessibility-tools' },
         { text: '🧰 General Tools', link: '/android-root-apps/#tools' },
         { text: '▶️ ReVanced', link: '/android-root-apps/#revanced' },
         { text: '🧩 Kernel Management', link: '/android-root-apps/#kernel-management' }
