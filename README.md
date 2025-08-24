@@ -933,7 +933,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 ### Troubleshooting
 
-- **[Awesome Android Root FAQ & Troubleshooting Guide](./docs/faqs.md):** Solutions for common problems.
+- **[FAQ & Troubleshooting Guide](./docs/faqs.md):** Solutions for common problems.
 - **[XDA Forums Device Sections](https://forum.xda-developers.com/):** Device-specific help and support.
 - **[r/AndroidRoot](https://reddit.com/r/AndroidRoot):** Fast community response for emergencies.
 
