@@ -189,8 +189,7 @@ export default defineConfig({
           { text: 'About Project', link: '/about' },
           { text: 'How to Contribute', link: '/contributing' },
           { text: 'Support Us', link: 'https://opencollective.com/awesome-android-root-official' },
-          { text: 'Star on GitHub', link: 'https://github.com/awesome-android-root/awesome-android-root' },
-          { text: 'Reddit Community', link: 'https://www.reddit.com/r/Awesome_Android_Root/' }
+          { text: 'Star on GitHub', link: 'https://github.com/awesome-android-root/awesome-android-root' }
         ]
       }
     ],
