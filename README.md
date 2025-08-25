@@ -1054,6 +1054,6 @@ Quick answers to:
 
 ---
 
-*"Empowering Android users with the tools and knowledge to unlock their device's full potential"*
+[![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/awsm_and_root?style=social)](https://x.com/awsm_and_root) [![Website](https://img.shields.io/website?url=https%3A%2F%2Fawesome-android-root.org%2F)](https://awesome-android-root.org/)
 
 </div>
