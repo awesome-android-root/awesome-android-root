@@ -266,13 +266,15 @@ A typical rooting process involves these key steps:
 ---
 
 ## Root Apps
-> 💡 **New to Android Rooting?** Start with our [complete rooting guide](./docs/android-root-guides/index.md) before exploring the apps below.
+> 💡 **New to rooting?** Start with our [Complete Rooting Guide](./docs/android-root-guides/index.md) before exploring apps below.
 
-> ⚠️ **We strongly recommend installing *[Droid‑ify](https://github.com/Droid-ify/client/releases)* and [enabling the _IzzyOnDroid_ repo](https://apt.izzysoft.de/fdroid/) for private and easier app installs from this list.**
+> ⚠️ **Installer recommendation:** For privacy-friendly and convenient installs, we recommend using the F‑Droid ecosystem — for example, install the Droid‑ify client and enable the IzzyOnDroid repo:
+>
+> - Droid‑ify — https://github.com/Droid-ify/client/releases (modern F‑Droid client)
+> - IzzyOnDroid — https://apt.izzysoft.de/fdroid/ (additional F‑Droid repo with many packages)
 
-> - Clicking on the app name directs to the **F‑Droid** (FOSS) or **Google Play Store** (proprietary) page.
-> - If an app is available both on F‑Droid and Google Play, the **F‑Droid link is preferred**.
-
+> - Links point to **F‑Droid** (FOSS) when available, otherwise to the **Google Play Store**.
+> - If both exist, the **F‑Droid link is preferred**.
 
 ### Featured Apps: The Essentials
 
