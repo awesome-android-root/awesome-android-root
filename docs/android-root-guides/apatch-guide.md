@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Complete APatch Root Guide
-description: "Master APatch rooting - the next-generation kernel-based root solution. Step-by-step installation guide for Android 10+ with advanced module support."
+description: "Master APatch rooting — a modern kernel-based root solution. Step‑by‑step installation Guide."
 head:
   - - link
     - rel: canonical
@@ -14,7 +14,7 @@ head:
       content: Complete APatch Root Guide - Next-Generation Android Rooting
   - - meta
     - property: og:description
-      content: Install APatch root with our comprehensive guide. Kernel-based rooting solution for Android 10+ with advanced module system and security features.
+      content: Install APatch root with our comprehensive guide. Kernel-based rooting solution for Android 10+ with module support and modern security practices.
   - - meta
     - property: og:url
       content: https://awesome-android-root.org/android-root-guides/apatch-guide
@@ -29,10 +29,10 @@ head:
       content: Complete APatch Root Guide
   - - meta
     - name: twitter:description
-      content: Next-generation kernel-based Android rooting with APatch. Advanced module support and enhanced security.
+      content: Modern kernel-based Android rooting with APatch. Evolving module support and practical security.
   - - meta
     - name: keywords
-      content: apatch root guide, kernel-based rooting, android 10 root, apatch installation, next generation root, kernel patching
+      content: apatch root guide, kernel-based root, android 10 root, apatch installation, kernel patching, init_boot, boot.img, A/B slots
   - - meta
     - name: author
       content: Awesome Android Root Project
@@ -58,146 +58,292 @@ head:
 
 # Complete APatch Root Guide
 
-**Next-generation kernel-based rooting** - APatch brings advanced root capabilities with enhanced security and modern module system.
+Kernel-based, systemless root for modern Android. APatch integrates at the kernel layer, offering powerful root with minimal system partition changes and an evolving module ecosystem.
 
 ## 🔗 Essential Resources
-- **[📖 Main Rooting Guide](./index.md)** - Universal rooting principles and device preparation
-- **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - Required prerequisite
-- **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - Alternative installation method
-- **[❓ FAQ & Troubleshooting](../faqs.md)** - Solutions for common issues
+- [📖 Main Rooting Guide](./index.md) — Universal concepts and prep
+- [🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md) — Required prerequisite
+- [🛠️ Custom Recovery](./how-to-install-custom-recovery.md) — Optional/alternative flows
+- [❓ FAQ & Troubleshooting](../faqs.md) — Common fixes
 
-## ⚡ What is APatch?
+## What is APatch?
 
-APatch represents the next evolution in Android rooting technology, offering kernel-level modifications with advanced security features:
+APatch is a kernel-based rooting solution for Android 10+ that patches your boot or init_boot image to add an in-kernel superuser (su) implementation and systemless features.
 
-### Core Advantages
-- **Kernel-Level Integration** - Deep system access with enhanced stability
-- **Advanced Module System** - Modern plugin architecture for customizations
-- **Enhanced Security** - Improved safety mechanisms over traditional methods
-- **Android 10+ Support** - Optimized for modern Android versions
-- **SystemLess Design** - Maintains system integrity while providing root access
+### Core advantages
+- Kernel-level integration — root originates in the kernel, not via init hijack
+- Systemless by design — no need to remount or modify /system
+- Plays well with AVB — no need to disable verity or verification
+- OTA-friendly workflow — with correct slot handling and image matching
+- Evolving module ecosystem — designed for modern Android releases
 
-### APatch vs Traditional Root Methods
+### APatch vs other root solutions
 
 | Feature | APatch | Magisk | KernelSU |
-|---------|--------|--------|----------|
-| **Integration Level** | Kernel-based | System-level | Kernel-based |
-| **Android Support** | 10+ optimized | 5.0+ universal | 11+ focused |
-| **Module System** | Next-gen | Mature | Growing |
-| **Security Features** | Advanced | Standard | Enhanced |
-| **Setup Complexity** | Moderate | Beginner | Advanced |
+|---|---|---|---|
+| Integration layer | Kernel-based | Init/ramdisk + userspace | Kernel-based |
+| Android support | 10+ | 5.0+ | 11+ (varies) |
+| Modules | APatch modules (growing) | Mature Magisk modules + Zygisk | KSU modules (growing) |
+| Zygisk/Xposed | Not Magisk Zygisk; use compatible alternatives (app-level or APatch modules) | Zygisk + LSPosed widely used | No Zygisk; KSU-compatible alternatives |
+| OTA retention | Manual (patch inactive slot) | Built-in “Install to Inactive Slot” | Manual (patch inactive slot) |
+| Setup complexity | Moderate | Beginner | Moderate–Advanced |
+
+Notes:
+- Do not install APatch and Magisk/KernelSU simultaneously. Choose one.
+- Many Magisk modules (especially Zygisk-based) are not compatible with APatch. Use APatch- or KSU-compatible modules.
 
 ## ✅ Prerequisites & Compatibility
 
-### Essential Requirements
-- **[🔓 Unlocked Bootloader](./how-to-unlock-bootloader.md)** - Mandatory prerequisite
-- **Android 10+** - Minimum supported version
-- **Compatible Device** - Check [APatch Device List](https://github.com/bmax121/APatch#supported-devices)
-- **Platform Tools** - [Download ADB/Fastboot](https://developer.android.com/studio/releases/platform-tools)
-- **Stock Firmware** - For boot.img extraction
+### Essential requirements
+- [Unlocked bootloader](./how-to-unlock-bootloader.md) (mandatory)
+- Android 10 or newer
+- Compatible device/kernel (check APatch repo for notes and issues)
+- Platform Tools (ADB/Fastboot): https://developer.android.com/studio/releases/platform-tools
+- Matching stock firmware for your exact build (to extract boot/init_boot)
 
-### Critical Safety Checks
+### Critical safety checks
 ::: danger ⚠️ ESSENTIAL WARNINGS
-- **Warranty Voided** - Manufacturer warranty will be invalidated
-- **Brick Risk** - Incorrect installation can damage device
-- **Security Impact** - Root access introduces potential vulnerabilities
-- **OTA Updates** - May break over-the-air system updates
+- Unlocking wipes all data (including internal storage and eSIM).
+- Rooting can void warranty and may impact device security/DRM.
+- Flashing the wrong image will bootloop or brick your device.
+- OTAs require extra steps to preserve root.
+- Samsung support is limited/experimental; follow device-specific documentation (Odin required, fastboot is not available).
 :::
 
-### Preparation Steps
-1. **Verify Device Compatibility**
-   - Check APatch GitHub for device support
-   - Confirm Android version (10+ required)
-   - Note exact device model and build number
+### Preparation
+1) Verify device/build
+- Settings → About phone → note model and build.
+- Confirm boot or init_boot partition usage (see below).
+- Review APatch GitHub issues for your device/SoC.
 
-2. **Download Required Files**
-   - **APatch APK:** [Official GitHub Releases](https://github.com/bmax121/APatch/releases)
-   - **Stock Firmware:** Manufacturer's official ROM
-   - **Platform Tools:** ADB and Fastboot utilities
+2) Download required files
+- APatch app (official releases): https://github.com/bmax121/APatch/releases
+- Your exact firmware/OTA:
+  - Pixels: Factory image ZIP (google factory images)
+  - OnePlus/OPPO/realme: Full OTA (payload.bin)
+  - Xiaomi/Redmi/POCO: Fastboot ROM (tgz) or full OTA (payload.bin)
+  - Samsung: Full firmware (AP.tar, BL.tar, etc.) via Frija/SamFirm (support varies)
+- Platform Tools (ADB/Fastboot)
 
-### **Step-by-Step Guide to Rooting with APatch**
+3) Enable developer options
+- Settings → About phone → tap Build number 7×
+- In Developer options: enable OEM unlocking and USB debugging.
+- Charge to 50%+ and back up your data.
 
-#### **Step 1: Unlock the Bootloader**
-Most devices require an unlocked bootloader to flash custom images.
-1. Enable OEM Unlocking in Developer Options.
-2. Boot into Fastboot mode:
-   - Power off your device.
-   - Hold Volume Down + Power (varies by device; e.g., Pixel: Volume Down + Power).
-3. Connect your device to your computer via USB.
-4. Open a command prompt/terminal in the folder where ADB/Fastboot is installed.
-5. Type `fastboot devices` to confirm connection.
-6. Unlock the bootloader:
-   - For most devices: `fastboot oem unlock` or `fastboot flashing unlock`.
-   - For Google Pixel: `fastboot flashing unlock`.
-   - For Xiaomi: You may need to bind your Mi Account and wait 72-168 hours.
-7. Confirm on your device (it will warn about data wipe). Your device will reboot and erase all data (factory reset).
-8. Set up your device again after the reset.
+## Step-by-Step: Root with APatch
 
-**Note**: Samsung devices use Odin for unlocking—refer to device-specific guides. Some devices (e.g., newer Huaweis) can't be unlocked.
+### Step 1: Unlock the bootloader
+- Enter fastboot: adb reboot bootloader (or key combo)
+- Verify: fastboot devices
+- Unlock (data wipe):
+  - Most devices: fastboot flashing unlock
+  - Some older/alt: fastboot oem unlock
+  - Xiaomi: requires account binding + waiting period
+  - Samsung: uses Download Mode/Odin (no fastboot), follow OEM guide
+- Reboot, set up Android again, re-enable USB debugging.
 
-#### **Step 2: Extract the Boot Image (boot.img)**
-You need the stock boot.img from your device's firmware to patch it.
-1. Download your device's stock firmware (e.g., from official sites or tools like Frija for Samsung).
-2. Extract the firmware ZIP file using 7-Zip or similar.
-3. Locate the boot.img file (sometimes inside a .tar or .img file).
-   - For Samsung: Use tools like "payload_dumper" to extract from payload.bin.
-   - For Pixel: It's directly in the factory image ZIP.
-4. Transfer the boot.img to your device's internal storage (e.g., via USB or ADB: `adb push boot.img /sdcard/`).
+### Step 2: Get the correct image (boot or init_boot)
+You need the stock image that matches your current build.
 
-If you can't find boot.img, use tools like "Magisk" app to extract it (install Magisk temporarily, but we'll use APatch for rooting).
+- Which one to patch?
+  - If your device has ramdisk in boot → patch boot.img
+  - If not (e.g., many Android 13+ devices and Pixels 7/8) → patch init_boot.img
+  - Quick check:
+    - Presence of a dedicated init_boot partition often means you should patch init_boot.
+    - APatch app typically indicates which image to use.
 
-#### **Step 3: Install APatch and Patch the Boot Image**
-1. Download and install the APatch APK on your device (enable "Install from unknown sources" in Settings > Security).
-2. Open the APatch app.
-3. Grant necessary permissions (storage, etc.).
-4. In APatch, select "Patch Image" or "Install" option.
-5. Choose the boot.img file you transferred to your device.
-6. APatch will patch the image:
-   - It analyzes and modifies the kernel for root access.
-   - Options: You can choose to integrate KernelSU or Magisk modules if desired (APatch supports compatibility).
-   - The process takes 1-5 minutes. It will output a new file like "apatch_patched_boot.img" in your storage.
-7. Transfer the patched boot.img back to your computer (e.g., `adb pull /sdcard/apatch_patched_boot.img`).
+- How to extract:
+  - payload.bin (OnePlus/OPPO/realme, many Xiaomi):
+    - Use payload-dumper-go or Neo-Payload-Dumper to extract boot.img and/or init_boot.img.
+  - Pixel factory images:
+    - Extract image-*.zip → boot.img and (for some devices) init_boot.img are included.
+  - Xiaomi fastboot ROM:
+    - Extract tgz → find boot.img and (if present) init_boot.img in images/ directory.
+  - Samsung:
+    - Firmware is in AP.tar; extract boot.img(lz4) and possibly init_boot.img(lz4), then decompress with lz4.
+    - APatch support is limited on Samsung; use device-specific guides.
 
-**Tip**: If APatch fails to patch, ensure your kernel is compatible (APatch requires a kernel with certain features; check GitHub issues).
+Copy the needed image to your phone:
+```bash
+adb push boot_or_init_boot.img /sdcard/Download/
+```
 
-#### **Step 4: Flash the Patched Boot Image**
-1. Boot your device into Fastboot mode again (Volume Down + Power).
-2. Connect to your computer.
-3. In the command prompt/terminal:
-   - Confirm connection: `fastboot devices`.
-   - Flash the patched image: `fastboot flash boot apatch_patched_boot.img` (replace with your file name).
-   - For devices with A/B partitions (e.g., Pixel): `fastboot flash boot_a apatch_patched_boot.img` and `fastboot flash boot_b apatch_patched_boot.img`.
-   - For Samsung: Use Odin—place the patched boot in AP slot and flash (disable auto-reboot).
-4. Reboot: `fastboot reboot`.
-5. Your device should boot normally. If it bootloops, proceed to troubleshooting.
+### Step 3: Patch the image with APatch
+1) Install the APatch APK on your device.
+2) Open APatch → Patch Image / Install → select boot_or_init_boot.img.
+3) Wait for patching; output will be something like:
+   - /sdcard/Download/apatch_patched-XXXX.img
+4) Pull the patched image to your computer:
+```bash
+adb pull /sdcard/Download/apatch_patched-*.img ./
+```
 
-#### **Step 5: Set Up APatch and Verify Root**
-1. Open the APatch app on your device.
-2. It should detect the patched kernel and prompt for setup.
-3. Grant root permissions when asked (APatch uses its own superuser manager).
-4. Install any modules if needed (similar to Magisk modules; download from APatch repo).
-5. Verify root:
-   - Download a root checker app (e.g., Root Checker from Play Store).
-   - Or use ADB: `adb shell`, then `su`—if it prompts for permission and grants, root is successful.
-6. Test root apps like AdAway or Titanium Backup.
+If patching fails:
+- Ensure the image matches your exact build and partition (boot vs init_boot).
+- Some kernels may need specific configs; consult APatch issues/README for your device.
 
-**Congratulations!** Your device is now rooted with APatch.
+### Step 4: First boot safely, then flash
+Best practice is to test-boot the patched image first (if your device supports fastboot boot).
 
-### **Post-Rooting Tips**
-- **Hide Root**: Use APatch's built-in hiding features to pass SafetyNet/Play Integrity checks for banking apps (similar to MagiskHide).
-- **Modules**: Explore APatch modules for features like systemless hosts or font changers.
-- **Updates**: To update your ROM, re-patch the new boot.img with APatch before flashing.
-- **Unrooting**: To unroot, flash the stock boot.img via Fastboot/Odin, then lock the bootloader if desired (`fastboot oem lock`).
-- **Backup Root**: Use APatch to create a backup of your patched setup.
+```bash
+adb reboot bootloader
+# Optional: see active slot
+fastboot getvar current-slot
 
-### **Troubleshooting Common Issues**
-- **Bootloop**: Flash stock boot.img to recover. Ensure the patched image matches your firmware version.
-- **APatch App Crashes**: Clear app data or reinstall. Check for APK compatibility with your Android version.
-- **No Root Access**: Re-patch and re-flash. Ensure USB Debugging is enabled.
-- **Fastboot Not Detected**: Install proper drivers (e.g., Google USB drivers for Pixel). Try a different USB port/cable.
-- **SafetyNet Fail**: Use Universal SafetyNet Fix module via APatch.
-- **Device-Specific Errors**: For Samsung, disable Verified Boot. For Xiaomi, ensure anti-rollback is not triggered.
-- **Stuck in Fastboot**: Use `fastboot reboot` or hold Power button.
-- If bricked: Flash full stock firmware using official tools (e.g., Fastboot for Pixel, Mi Flash for Xiaomi).
+# Test boot (temporary, no flashing):
+fastboot boot apatch_patched-*.img
+```
 
-If you encounter issues, provide your device model, Android version, and error messages in forums for help. Remember, rooting is advanced—proceed at your own risk! If this guide helped, consider donating to APatch developers on GitHub.
+If the system boots:
+- Open APatch app → complete setup → verify root.
+- Then perform a permanent install:
+  - Either use APatch’s in-app direct install (if supported)
+  - Or flash the correct partition for your device and active slot:
+
+```bash
+# If you patched boot:
+fastboot flash boot apatch_patched-*.img
+# If you patched init_boot:
+fastboot flash init_boot apatch_patched-*.img
+
+fastboot reboot
+```
+
+Notes
+- Do not disable AVB or flash vbmeta with --disable-verity/verification for APatch; it’s unnecessary and risky.
+- A/B devices: normally flash only the active slot’s partition. You will handle OTAs by patching the inactive slot later.
+
+If fastboot boot is not supported:
+- Flash directly (as above), ensuring you target the correct partition and slot.
+
+Samsung
+- Use Odin to flash a repacked AP.tar containing the patched image (advanced and device-specific). APatch support is limited; follow Samsung-specific documentation.
+
+### Step 5: Set up APatch and verify root
+- Open APatch → complete initialization, configure superuser prompts.
+- Verify:
+```bash
+adb shell su -c id
+# Expect uid=0(root) gid=0(root) ...
+```
+- Optionally install a root checker app.
+- Explore APatch-compatible modules (see module section below).
+
+🎉 You’re rooted with APatch.
+
+## Post-Rooting Tips
+
+- **[⚡ Explore our collection of 300+ Root Apps & MOdules](../../README.md#root-apps)**
+
+- Root hiding/Play Integrity:
+  - Configure per-app deny/allow in APatch manager.
+  - Use only APatch/KSU-compatible integrity modules; Magisk Zygisk modules will not work as-is.
+  - Passing Play Integrity is an arms race; results vary by region/app/version.
+
+- Modules:
+  - Prefer modules explicitly labeled as APatch- or KernelSU-compatible.
+  - Typical needs: systemless hosts (ad-block), busybox, init tweaks, overlay mounts.
+
+- Updates/OTAs (A/B devices):
+  - Install OTA in Settings (it installs to the inactive slot but don’t reboot yet).
+  - Extract the new build’s boot/init_boot from the OTA payload.
+  - Patch with APatch on-device or off-device.
+  - Flash to the inactive slot explicitly:
+    - Example if inactive slot is b: fastboot flash boot_b apatch_patched-*.img (or init_boot_b)
+  - Reboot to finish OTA with root preserved.
+  - If you already rebooted and lost root, just patch the new image and flash the active slot again.
+
+- Unroot:
+  - Flash stock boot/init_boot for your current build:
+    - fastboot flash boot stock_boot.img
+    - or fastboot flash init_boot stock_init_boot.img
+  - Optionally re-lock bootloader (only when fully stock):
+    - fastboot flashing lock
+
+## Device-specific notes
+
+- Pixels:
+  - Pixel 7/8/9 (Android 13+): patch init_boot.img.
+  - Older Pixels: patch boot.img (unless your device/build explicitly uses init_boot).
+- OnePlus/OPPO/realme (ColorOS/OxygenOS 12+):
+  - Often use init_boot; confirm by checking partitions or APatch guidance.
+  - Full OTAs ship as payload.bin.
+- Xiaomi/Redmi/POCO:
+  - Many Android 13+ builds use init_boot; otherwise boot.
+  - Anti-rollback (ARB) applies to Xiaomi; never downgrade firmware across ARB boundaries.
+- Samsung:
+  - Uses Odin (AP/BL/CP/CSC). Fastboot is not available.
+  - Image handling involves AP.tar and lz4; support varies and may be experimental for APatch.
+
+## Troubleshooting
+
+- Bootloop or no boot:
+  - Flash back the stock image for the partition you modified (boot/init_boot on the correct slot).
+  - Ensure the patched image matches your exact build number and partition type.
+
+- APatch app crashes or fails to patch:
+  - Update to the latest APatch APK.
+  - Clear app data and retry.
+  - Verify kernel compatibility for your device/SoC and Android version.
+
+- Fastboot can’t see device:
+  - Use latest platform-tools, try a different USB port/cable.
+  - Windows: install Google USB driver; Linux: set up udev rules.
+
+- Lost root after OTA:
+  - Extract the new boot/init_boot, patch, flash to the active slot.
+  - For next OTA, follow the “patch inactive slot before reboot” method.
+
+- SafetyNet/Play Integrity fails:
+  - Use APatch/KSU-compatible integrity modules and configure per-app hiding.
+  - Do not expect guaranteed success; policies change frequently.
+
+- Stuck in fastboot/recovery:
+  - fastboot reboot, or long-press Power to force reboot.
+  - As a last resort, flash full stock firmware for your device.
+
+## Quick reference commands
+
+```bash
+# Check connection
+adb devices
+fastboot devices
+
+# Enter fastboot
+adb reboot bootloader
+
+# Active slot
+fastboot getvar current-slot
+
+# Test-boot patched image (if supported)
+fastboot boot apatch_patched-*.img
+
+# Flash permanently (choose correct partition)
+fastboot flash boot apatch_patched-*.img
+fastboot flash init_boot apatch_patched-*.img
+
+# Slot-specific flash if preserving OTA
+fastboot flash boot_b apatch_patched-*.img
+fastboot flash init_boot_b apatch_patched-*.img
+
+# Reboot
+fastboot reboot
+```
+
+## Resources
+- **Official APatch Website:** https://apatch.dev/
+- **Ofiicial APatch Github:** https://github.com/bmax121/APatch
+- **Official APatch instalation Guide:** https://apatch.dev/install.html
+- **Official APatch Telegram:** https://t.me/APatchChannel
+
+::: tip 💡 Best practices for APatch
+- Always patch the correct partition: boot vs init_boot.
+- Prefer fastboot boot for a safe first run when supported.
+- Keep a clean copy of stock boot/init_boot for your current build.
+- Don’t disable AVB; APatch works with verified boot.
+- Don’t mix APatch with Magisk or KernelSU on the same build.
+- Read device-specific threads (XDA/GitHub) before major OTAs or Android version jumps.
+:::
+
+---
+Need help? Check the [FAQ](./../faqs.md), and when asking for support include device model, region, exact build number, which partition you patched, and logs/screenshots from APatch.
