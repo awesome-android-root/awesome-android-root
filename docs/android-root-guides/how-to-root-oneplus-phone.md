@@ -328,11 +328,12 @@ adb shell su -c "id"
 
 ---
 
-💡 OnePlus Root Success Tips
+::: tip 💡 OnePlus Root Success Tips
 - Prefer “fastboot boot” the patched image first; then use Magisk’s Direct Install. It’s safer than flashing right away.
 - Do not disable AVB (vbmeta) for Magisk; it’s unnecessary and can cause issues.
 - Keep a copy of your stock boot/init_boot matching your current build.
 - MSM/EDL unbrick is not guaranteed on newer models; avoid risky flashes.
 - Use the exact firmware build for your device and region. Mismatches cause boot loops.
+:::
 
-Need help? See the [FAQ](../faqs.md) and the [universal guide](./index.md).
+**Need help? See the [FAQ](../faqs.md) and the [universal guide](./index.md).**
