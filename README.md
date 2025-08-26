@@ -15,8 +15,8 @@
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=blue&cacheSeconds=3600)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
 [![Total Entries](https://img.shields.io/badge/Total%20Entries-290+-blue?style=for-the-badge&logo=android&cacheSeconds=3600)](#root-apps)
-[![Support via Open Collective](https://img.shields.io/badge/Support%20via-Open%20Collective-blue?style=for-the-badge&logo=opencollective&cacheSeconds=3600)](https://opencollective.com/awesome-android-root-official)<br>
-[![Website](https://img.shields.io/badge/Website-awesome--android--root.org-green?style=for-the-badge&logo=googlechrome)](https://awesome-android-root.org)
+[![X (formerly Twitter) Follow](https://img.shields.io/badge/%20%20-Follow%20US-blue?logo=X&logoColor=white&style=for-the-badge&label=&#8203;)](https://x.com/awsm_and_root)<br>
+[![Website](https://img.shields.io/badge/Website-awesome--android--root.org-orange?style=for-the-badge&logo=googlechrome)](https://awesome-android-root.org)
 
 </div>
 
@@ -1055,6 +1055,6 @@ Quick answers to:
 
 ---
 
-[![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/awsm_and_root?style=social)](https://x.com/awsm_and_root) [![Website](https://img.shields.io/website?url=https%3A%2F%2Fawesome-android-root.org%2F)](https://awesome-android-root.org/)
+[![X (formerly Twitter) Follow](https://img.shields.io/badge/Follow%20US-000?logo=X&logoColor=fff&style=for-the-badge)](https://x.com/awsm_and_root) [![Website](https://img.shields.io/website?url=https%3A%2F%2Fawesome-android-root.org%2F&style=for-the-badge)](https://awesome-android-root.org/)
 
 </div>
