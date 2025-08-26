@@ -61,7 +61,11 @@ head:
 
 # Complete OnePlus Rooting Guide
 
-**Root any OnePlus device** - OnePlus 12, 11, 10, Nord series with simple bootloader unlock and Magisk installation.
+Root any OnePlus device — OnePlus 12/11/10/Nord series with simple bootloader unlock and Magisk
+
+- Works for: Global/Indian/Europe variants of OnePlus 5 → 12/Nord series
+- Not ideal for: Certain carrier variants (see warnings)
+- Approach: Unlock bootloader → Patch and boot/flash boot or init_boot with Magisk → Preserve root across OTAs
 
 ## 🔗 Essential Resources
 - **[📖 Main Rooting Guide](./index.md)** - Universal rooting principles and safety
@@ -69,313 +73,266 @@ head:
 - **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - TWRP installation guide
 - **[❓ FAQ & Troubleshooting](../faqs.md)** - Solutions for common issues
 
-## Why OnePlus Devices Are Ideal for Rooting
+::: tip Required Tools
+### Additional tools you’ll likely need:
+- Platform Tools (ADB/Fastboot): https://developer.android.com/studio/releases/platform-tools
+- Magisk (latest release): https://github.com/topjohnwu/Magisk/releases
+- Payload extractor (to get boot/init_boot from payload.bin):
+  - payload-dumper-go: https://github.com/ssut/payload-dumper-go
+- Optional local update enabler (for OxygenOS/ColorOS): “OPLocalUpdate” APK (varies by major Android version)
+- Windows USB drivers (Qualcomm + Google): OnePlus/Qualcomm/Google signed packages
+  
+**You can use this link for downloads**: [Click Me](https://droidwin.com/download-msm-download-tool-unbrick-any-oneplus-device/)
+:::
 
-**OnePlus Advantages:**
-- **Simple bootloader unlock** - No manufacturer approval needed
-- **Excellent custom ROM support** - Active development community
-- **MSM Download Tool** - Powerful unbrick recovery option
-- **Developer-friendly approach** - OnePlus supports customization
-- **Fast unlock process** - No waiting periods required
+## Why OnePlus Devices Are Ideal for Rooting
+- Simple bootloader unlock (no OEM token for most non-carrier variants)
+- Active custom ROM/kernel scene (especially 5/6/7/8/9 and Nord lines)
+- Seamless A/B updates make root retention predictable via Magisk
+- Generally developer-friendly policies and unlockable bootloaders
+
+Notes that changed recently:
+- MSM Download Tool (EDL unbrick) is widely available up to ~OnePlus 9 series. For OnePlus 10/11/12 and newer, EDL flashing may require authorized accounts (public MSM packages are often unavailable). Plan recovery accordingly.
 
 ## Critical Warnings
 
-::: danger ⚠️ OnePlus-Specific Considerations
-- **Warranty void** - Unlocking bootloader voids OnePlus warranty
-- **Complete data erasure** - All personal data will be wiped during unlock
-- **OTA updates may fail** - Custom modifications can break official updates
-- **ColorOS migration** - Newer models may use ColorOS instead of OxygenOS
-:::
+> ⚠️ OnePlus-specific considerations
+- Unlocking wipes everything (including internal storage and eSIM). Back up first.
+- Warranty/after-sales may be affected in your region.
+- Some carrier variants are bootloader-locked and/or not unlockable:
+  - Verizon OnePlus 8 5G UW and similar “UW” SKUs: typically not unlockable
+  - Some T‑Mobile variants: require SIM unlock first; some older models required an unlock token
+- OTAs can fail if partitions are modified beyond boot/init_boot (keep system partitions stock for smooth OTAs).
+- ColorOS/OxygenOS unification on newer devices changes recovery/EDL behaviors; TWRP support is sparse on 2022+ models.
+- Widevine may drop to L3 on some devices after unlock/root; bank/DRM apps may need extra steps (see Play Integrity section).
 
 ## Supported Devices
+All OnePlus devices with unlockable bootloaders.
 
-**All OnePlus devices with unlockable bootloaders:**
+- Flagship: OnePlus 12, 11, 10/10 Pro, 9/9 Pro, 8/8 Pro/8T, 7/7 Pro/7T/7T Pro
+- Nord series: Nord 3/2/2T, Nord CE/CE 2/CE 3, Nord N series (varies by region)
+- Legacy: OnePlus 6/6T, 5/5T
+- Newer flagships (e.g., 13) follow similar principles, but always verify partition layout (boot vs init_boot) and OTA mechanics for your exact build.
 
-### Flagship Series
-- **OnePlus 13** - Latest flagship with advanced features
-- **OnePlus 12** - Snapdragon 8 Gen 3
-- **OnePlus 11** - Snapdragon 8 Gen 2 
-- **OnePlus 10 Pro** - Previous generation flagship
-- **OnePlus 9/9 Pro** - Hasselblad camera collaboration
-- **OnePlus 8/8 Pro/8T** - 5G capable devices
-- **OnePlus 7/7 Pro/7T/7T Pro** - Popular modding devices
-
-### Nord Series
-- **OnePlus Nord 3** - Mid-range with flagship features
-- **OnePlus Nord 2T** - Balanced performance and price
-- **OnePlus Nord CE series** - Budget-friendly options
-- **OnePlus Nord N series** - Entry-level devices
-
-### Legacy Devices
-- **OnePlus 6/6T** - Classic OnePlus design
-- **OnePlus 5/5T** - Excellent custom ROM support
-- **Older models** - Most OnePlus devices support unlocking
+> Tip: Carrier/region variants can differ. Always check your exact model (Settings → About phone → Model/Build).
 
 ## Prerequisites & Setup
 
 ### Required Tools
-1. **[Platform Tools](https://developer.android.com/studio/releases/platform-tools)** - ADB/Fastboot
-2. **[OnePlus USB Drivers](https://onepluscom-aefd.kxcdn.com/support/softwareupgrade/OnePlus_USB_Drivers_setup.exe)** - Windows drivers
-3. **[Magisk APK](https://github.com/topjohnwu/Magisk/releases)** - Latest release
-4. **Stock firmware** - [OnePlus Support](https://www.oneplus.com/support/software-upgrade) or firmware sites
-5. **MSM Download Tool** - Emergency recovery (device-specific)
+1) Platform Tools (ADB/Fastboot)
+2) Magisk APK
+3) Full OTA/firmware for your exact build (to extract stock boot/init_boot)
+4) Payload dumper utility
+5) USB Drivers (Windows) or udev rules (Linux)
 
 ### Device Preparation
-1. **Enable Developer Options** - Settings → About Phone → Tap Build Number 7 times
-2. **Configure Developer Settings:**
-   - Enable **USB Debugging**
-   - Enable **OEM Unlocking**
-3. **Backup all data** - Photos, contacts, apps, settings
-4. **Charge to 50%+** - Ensure sufficient battery
+1) Enable Developer Options: Settings → About phone → tap Build number 7×
+2) In Developer options:
+   - Enable OEM unlocking
+   - Enable USB debugging
+3) Backup everything (this process wipes your device when unlocking)
+4) Charge to 50%+
+
+> Note: On newer OOS/ColorOS builds, OEM unlocking may appear only when the device is online and has contacted Google/OnePlus servers.
 
 ### Connection Verification
 ```bash
-# Test ADB connection
 adb devices
-
-# Should show your device with "device" status
-# If "unauthorized", accept USB debugging prompt on phone
+# Accept the debugging prompt on the phone if asked
 ```
 
 ## Bootloader Unlocking
-
-OnePlus devices have one of the simplest bootloader unlock processes in the Android ecosystem.
+Applies to global/unlocked variants. Carrier devices may differ.
 
 ### Enter Fastboot Mode
-```bash
-# Method 1: ADB command
-adb reboot bootloader
+- Easiest: adb reboot bootloader
+- Hardware: Power off → hold Volume Up + Power until you see Fastboot; or Power off → hold both Volume keys, then plug into USB (varies by model)
 
-# Method 2: Hardware keys
-# Power off device → Hold Volume Up + Volume Down + Power
-```
-
-### Verify Connection
+Verify:
 ```bash
 fastboot devices
-# Should show your device listed
 ```
 
-### Unlock Bootloader
-```bash
-fastboot oem unlock
-```
-
-**Device Response:**
-- Warning screen will appear about unlocking
-- Use Volume keys to navigate to "UNLOCK THE BOOTLOADER"
-- Press Power button to confirm
-- Device will erase all data and reboot
-
-### Alternative Command (Newer Devices)
-Some newer OnePlus devices may require:
+### Unlock
+Most modern OnePlus devices:
 ```bash
 fastboot flashing unlock
 ```
+Confirm on device → this wipes data.
 
-### Complete Setup
-After automatic factory reset:
-1. Complete initial device setup
-2. Re-enable Developer Options (Build Number × 7)
-3. Re-enable USB Debugging
+If you see a prompt/denial about “critical partitions,” some older models support:
+```bash
+fastboot flashing unlock_critical
+```
+Only use unlock_critical if you actually need to flash critical partitions (not required for Magisk root).
+
+After reboot, set up the device again and re-enable USB debugging.
+
+> Don’t use fastboot oem unlock on recent devices; fastboot flashing unlock is the current standard.
 
 ## Root Installation Methods
 
-### Method A: Boot Image Patching (Recommended)
+### Method A: Patch boot/init_boot with Magisk (Recommended)
 
-#### Step 1: Extract Boot Image
-1. **Download OxygenOS firmware** for your exact device model
-2. **Extract firmware files** using payload_dumper or similar tools
-3. **Locate boot.img** or payload.bin containing boot partition
-4. **Extract boot.img** if using payload.bin
+Why this method?
+- Works on all modern OnePlus devices
+- Keeps system partitions untouched for OTA friendliness
+- Safest when combined with fastboot boot + Magisk Direct Install
 
-#### Step 2: Patch Boot Image
-1. **Transfer boot.img to device:**
-   ```bash
-   adb push boot.img /sdcard/Download/
-   ```
+Step 1 — Get the right image
+1) Download the full OTA/firmware that exactly matches your current build.
+2) Extract payload.bin, then dump:
+   - boot.img
+   - init_boot.img (if present on your device/build)
+   - vendor_boot.img (do not patch/flash for Magisk)
+3) Which one to patch?
+   - Open Magisk → Check “Ramdisk”:
+     - Ramdisk = Yes → patch boot.img
+     - Ramdisk = No → patch init_boot.img
+   - If uncertain and you see an init_boot partition, patch init_boot.img.
 
-2. **Install Magisk APK:**
-   ```bash
-   adb install Magisk-v[version].apk
-   ```
-
-3. **Patch boot image:**
-   - Open Magisk app on device
-   - Tap **Install** → **Select and patch a file**
-   - Navigate to Downloads and select boot.img
-   - Wait for patching completion
-
-4. **Retrieve patched image:**
-   ```bash
-   adb pull /sdcard/Download/magisk_patched_[hash].img ./
-   ```
-
-#### Step 3: Flash Patched Boot
-1. **Boot to fastboot mode:**
-   ```bash
-   adb reboot bootloader
-   ```
-
-2. **Flash patched boot:**
-   ```bash
-   fastboot flash boot magisk_patched_[hash].img
-   ```
-
-3. **Reboot system:**
-   ```bash
-   fastboot reboot
-   ```
-
-### Method B: Custom Recovery Installation
-
-#### Step 1: Install Custom Recovery
-OnePlus devices have excellent custom recovery support.
-
-1. **Download recovery image:**
-   - **TWRP:** Most popular, extensive device support
-   - **OrangeFox:** Modern UI with advanced features
-   - **SKYHAWK:** Fast and lightweight option
-
-2. **Flash recovery:**
-   ```bash
-   fastboot flash recovery recovery.img
-   ```
-
-3. **Boot to recovery:**
-   ```bash
-   fastboot reboot recovery
-   # Or: Volume Down + Power, then select Recovery
-   ```
-
-#### Step 2: Install Magisk via Recovery
-1. **Transfer Magisk ZIP** to device storage
-2. **In recovery interface:**
-   - **TWRP:** Install → Select Magisk ZIP → Swipe to confirm
-   - **OrangeFox:** Files → Select Magisk ZIP → Install
-## OnePlus-Specific Troubleshooting
-
-### Common OnePlus Issues
-
-#### MSM Download Tool Recovery
-OnePlus devices include powerful recovery options:
-
-**When to Use MSM Tool:**
-- Device won't boot (hard brick)
-- Bootloop after rooting attempt
-- Recovery partition corruption
-- Fastboot mode not accessible
-
-**MSM Tool Process:**
-1. **Download MSM tool** for your exact model
-2. **Boot to EDL mode** - Volume Up + Volume Down + Power
-3. **Run MSM tool** with device connected
-4. **Wait for completion** - Tool will restore stock firmware
-
-#### OTA Update Conflicts
-After rooting, handle updates carefully:
-
-**Before Taking OTA:**
+Step 2 — Patch with Magisk
 ```bash
-# Remove Magisk temporarily
-# Use Magisk → Uninstall → Restore Images
-
-# Or flash stock boot image
-fastboot flash boot stock_boot.img
+adb push boot_or_init_boot.img /sdcard/Download/
+adb install Magisk-v[version].apk
+```
+On phone: Magisk → Install → “Select and patch a file” → choose the image you pushed.
+Pull the patched image back:
+```bash
+adb pull /sdcard/Download/magisk_patched-*.img ./
 ```
 
-**After OTA Completion:**
-- Re-patch new boot image with Magisk
-- Flash patched boot via fastboot
+Step 3 — Safest first run: fastboot boot (temporary boot)
+```bash
+adb reboot bootloader
+fastboot boot magisk_patched-*.img
+```
+- This boots once with Magisk without flashing anything. If it boots fine:
+  - Open Magisk → Install → “Direct Install (Recommended)” to patch the active slot permanently → Reboot.
 
-#### ColorOS vs OxygenOS
-Newer OnePlus devices may ship with ColorOS:
-- **Different root methods** may be required
-- **Check device software** in Settings → About Phone
-- **Use ColorOS-specific guides** if applicable
+If fastboot boot is not supported on your device:
+- Flash the correct partition directly (use the one you patched: boot OR init_boot):
+```bash
+fastboot getvar current-slot
+# Suppose current-slot is a
+fastboot flash boot magisk_patched-*.img        # if you patched boot.img
+# or
+fastboot flash init_boot magisk_patched-*.img   # if you patched init_boot.img
+fastboot reboot
+```
 
-### Performance Optimization
+> Important:
+> - Do NOT flash/disable vbmeta with “--disable-verity/verification” for Magisk. Magisk works with AVB; disabling AVB is unnecessary and risky.
+> - A/B slots: You only need to patch the active slot. For OTAs, use Magisk’s “Install to Inactive Slot (After OTA).”
 
-#### Recommended Root Modules
-**Essential Magisk Modules for OnePlus:**
-- **Zygisk LSPosed** - Xposed framework compatibility
-- **Universal SafetyNet Fix** - Pass banking app checks
-- **OnePlus Optimizations** - Device-specific improvements
-- **Thermal Throttling Control** - Performance management
+### Method B: Custom Recovery (limited on 2022+ devices)
+- Modern OnePlus devices (10/11/12 and many Nord CE/N) often lack stable TWRP with FBE v2 decryption due to dynamic/virtual A/B and ColorOS changes.
+- If your device has a maintained TWRP/OrangeFox:
+  - Prefer fastboot boot recovery.img (temporary) over flashing a non-existent recovery partition.
+  - Then Install → flash the Magisk APK renamed to .zip (Magisk-vXX.apk → Magisk-vXX.zip).
+  - Reboot system → open Magisk to finalize.
 
-#### Custom Kernel Benefits
-OnePlus devices benefit greatly from custom kernels:
-- **Improved battery life** - Better power management
-- **Enhanced performance** - CPU/GPU overclocking
-- **Additional features** - Sound enhancement, color calibration
-- **Thermal improvements** - Better heat dissipation
+> If your device does not have a stable custom recovery, stick to Method A.
+
+## OnePlus-Specific Troubleshooting
+
+### Unbrick/EDL
+- MSM Download Tool is commonly available up to OnePlus 9 series. For 10/11/12 and newer, EDL flashing typically requires an authorized account (public MSM packages may be unavailable).
+- If you hard brick on newer models without MSM access, your best options are:
+  - Working fastboot/fastbootd to flash stock images
+  - Service center assistance
+  - Community EDL services (ensure trustworthiness)
+
+Enter EDL (varies): Power off → hold both Volume keys while connecting USB (device shows as Qualcomm HS-USB QDLoader 9008 in Device Manager).
+
+### Bootloops after modules
+- Disable all Magisk modules without wiping:
+  - If you can get ADB after boot completes:
+    ```bash
+    adb shell su -c "magisk --remove-modules"
+    ```
+  - Or from recovery/adb shell, delete module folders:
+    /data/adb/modules/*
+- As a last resort, fastboot boot a stock boot/init_boot to get into system, then fix modules and re-root properly.
+
+### OTA update strategy on rooted devices
+- Best practice (A/B seamless):
+  1) System Settings → Download OTA (do NOT reboot yet)
+  2) Open Magisk → Install → “Install to Inactive Slot (After OTA)”
+  3) Return to System Updater → Reboot
+- If you took the OTA already and lost root:
+  - Extract the new build’s boot/init_boot, patch with Magisk, and flash/boot as before.
+- If OTA fails:
+  - Use a full OTA instead of incremental, keep partitions stock (don’t modify system/vendor), and avoid custom recoveries for OTAs on modern devices.
+
+### OxygenOS vs ColorOS (unified base)
+- On OnePlus 10/11/12 and most new Nord devices, OOS is ColorOS-based under the hood.
+- Root steps remain the same (boot vs init_boot decision is the key).
+- Local update UI may be hidden; use the “OPLocalUpdate” APK for sideloading full OTA zips when needed.
+
+## Performance & Modules
+
+Recommended Magisk setup on OnePlus:
+- Enable Zygisk in Magisk settings
+- Configure DenyList for sensitive apps
+- Play Integrity fix: Use a maintained module for BASIC/DEVICE integrity (e.g., “Play Integrity Fix” — community maintained; project names/forks change over time)
+- LSPosed (Zygisk) for module ecosystem
+- Optional privacy/root-hiding layer like Shamiko (where legal/allowed; requires Zygisk and DenyList not in enforcement mode)
+
+Custom kernels (device-dependent):
+- Gains: power efficiency, sched/tuning, sometimes GPU/perf or sound features
+- Ensure kernel is built for your exact build and supports Magisk/KernelSU if you use them
+
+> Note: Passing Google Play Integrity on rooted devices is an arms race; results may vary by region, app, and time.
 
 ## Alternative Root Methods
 
-### Method C: Direct Boot Partition Access
+### Method C: Direct partition backup (advanced)
+Useful to save a clean copy before you start:
+```bash
+# After first root or from recovery shell
+adb shell su -c "dd if=/dev/block/bootdevice/by-name/boot_a of=/sdcard/boot_a.img"
+adb shell su -c "dd if=/dev/block/bootdevice/by-name/boot_b of=/sdcard/boot_b.img"
+# If present:
+adb shell su -c "dd if=/dev/block/bootdevice/by-name/init_boot_a of=/sdcard/init_boot_a.img"
+adb shell su -c "dd if=/dev/block/bootdevice/by-name/init_boot_b of=/sdcard/init_boot_b.img"
+```
 
-For advanced users with specific firmware versions:
-
-1. **Extract boot partition directly:**
-   ```bash
-   # Using dd command (requires root access)
-   adb shell su -c "dd if=/dev/block/bootdevice/by-name/boot of=/sdcard/boot.img"
-   ```
-
-2. **Patch and flash** using standard method above
-
-### Method D: TWRP Installation First
-
-Some users prefer installing recovery before rooting:
-
-1. **Flash TWRP recovery**
-2. **Boot to TWRP**
-3. **Install Magisk ZIP** directly
-4. **Benefit:** Easy module management and backups
+### Method D: Custom recovery first (older devices)
+- On 5/5T/6/6T/7/7T/8/9 (varies by maintainer), you can install TWRP then flash Magisk.
+- On dynamic/virtual A/B devices, prefer “fastboot boot twrp.img” and install from within TWRP instead of flashing recovery to a non-existent partition.
 
 ## Success Verification
 
-### Root Access Confirmation
-1. **Open Magisk app** - Should show "Installed" status
-2. **Test root command:**
-   ```bash
-   adb shell su -c "id"
-   # Should return: uid=0(root) gid=0(root)
-   ```
-3. **Install root checker app** from Play Store
-4. **Verify SafetyNet** - Banking apps should work with proper modules
-
-### Post-Root Setup
-**Essential Configuration:**
-- **Enable Zygisk** in Magisk settings for module compatibility
-- **Configure DenyList** to hide root from banking apps
-- **Install LSPosed** for Xposed module support
-- **Set up Titanium Backup** for comprehensive app backups
+- Open Magisk → should show “Installed” with version
+- ADB root check:
+```bash
+adb shell su -c "id"
+# uid=0(root) gid=0(root) ...
+```
+- Play Integrity/SafetyNet:
+  - Use a Play Integrity checker app; with proper configuration, BASIC and sometimes DEVICE integrity can pass.
+  - Configure DenyList for banking/wallet/DRM apps.
 
 ## Staying Updated
 
-### OTA Handling Strategy
-**Recommended Approach:**
-1. **Wait for community testing** before taking updates
-2. **Use Magisk uninstall** before major OTA updates
-3. **Re-root after OTA** using same method
-4. **Consider custom ROMs** for faster Android updates
+- Wait for community confirmations before major OTAs (esp. Android version jumps).
+- Prefer full OTAs and the Magisk “Install to Inactive Slot (After OTA)” workflow.
+- Custom ROMs (LineageOS/etc.) can provide newer Android versions sooner, but recovery/root procedures change—follow each ROM’s specific instructions.
 
-### Community Resources
-- **[OnePlus XDA](https://xdaforums.com/c/oneplus.11993/)** - Development community
-- **[OnePlus Community](https://forums.oneplus.com/)** - Official support
-- **[r/OnePlus](https://reddit.com/r/oneplus)** - User discussions
-- **[OnePlus Telegram Groups](https://t.me/OnePlusUpdates)** - Update notifications
+## Community Resources
+- OnePlus @ XDA: https://xdaforums.com/c/oneplus.11993/
+- Official OnePlus Community: https://forums.oneplus.com/
+- r/OnePlus on Reddit: https://reddit.com/r/oneplus
+- Telegram channels/groups for device-specific updates (e.g., @OnePlusUpdates) and boot image shares
 
 ---
 
-::: tip 💡 OnePlus Root Success Tips
-**Best Practices:**
-- OnePlus devices are very forgiving for beginners
-- MSM tool provides excellent brick recovery
-- Custom ROM scene is very active
-- Community support is exceptional
-- OTA updates can usually be handled smoothly
-:::
+💡 OnePlus Root Success Tips
+- Prefer “fastboot boot” the patched image first; then use Magisk’s Direct Install. It’s safer than flashing right away.
+- Do not disable AVB (vbmeta) for Magisk; it’s unnecessary and can cause issues.
+- Keep a copy of your stock boot/init_boot matching your current build.
+- MSM/EDL unbrick is not guaranteed on newer models; avoid risky flashes.
+- Use the exact firmware build for your device and region. Mismatches cause boot loops.
 
-**Need more help?** Visit our **[FAQ section](../faqs.md)** or check the **[main rooting guide](./index.md)** for additional troubleshooting and advanced techniques.
+Need help? See the [FAQ](../faqs.md) and the [universal guide](./index.md).
