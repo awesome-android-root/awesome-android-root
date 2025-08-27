@@ -1029,11 +1029,11 @@ Quick answers to:
 
 <div class="img-cnt">
 
-![Total Entries](https://img.shields.io/badge/Total%20Entries-292-blue?style=for-the-badge&logo=android)
-![Root Apps](https://img.shields.io/badge/Root%20Apps-110-blue?style=for-the-badge&logo=android)
-![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-99-orange?style=for-the-badge&logo=magisk&logoColor=white)
-![KernelSU Modules](https://img.shields.io/badge/KernelSU%20Modules-14-green?style=for-the-badge&logo=keenetic&logoColor=white)
-![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-81-purple?style=for-the-badge&logo=local&logoColor=white)
+![Total Entries](https://img.shields.io/badge/Total%20Entries-303-blue?style=for-the-badge&logo=android&cacheSeconds=3600)
+![Root Apps](https://img.shields.io/badge/Root%20Apps-112-blue?style=for-the-badge&logo=android&cacheSeconds=3600)
+![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-105-orange?style=for-the-badge&logo=magisk&logoColor=white&cacheSeconds=3600)
+![KernelSU Modules](https://img.shields.io/badge/KernelSU%20Modules-16-green?style=for-the-badge&logo=keenetic&logoColor=white&cacheSeconds=3600)
+![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-84-purple?style=for-the-badge&logo=local&logoColor=white&cacheSeconds=3600)
 
 </div>
 
