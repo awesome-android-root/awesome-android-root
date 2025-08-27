@@ -140,24 +140,24 @@ head:
 
 ### 🚀 Getting Started
 - [Understanding Root Access](#understanding-root-access)
-- [Should You Root?](#why-root-your-device)
-- [Prerequisites & Safety](#prerequisites--safety)
+- [Why Root Your Device?](#why-root-your-device)
+- [Prerequisites & Safety](#prerequisites-and-safety)
 
 ### ⚙️ Root Solutions 
-- [Root Methods Comparison](#root-solutions-comparison)
+- [Root Solutions Comparison](#root-solutions-comparison)
 - [Universal Rooting Process](#universal-rooting-process)
 
 ### 📚 Step-by-Step Tutorials
-- [1. Unlock Bootloader](#step-1-bootloader-unlocking)
-- [2. Install Custom Recovery](#step-2-custom-recovery-installation)
-- [3. Choose Your Root Method](#step-3-root-installation)
-- [4. Post-Root Configuration](#step-4-post-root-setup)
+- [Step 1: Bootloader Unlocking](#step-1-bootloader-unlocking)
+- [Step 2: Custom Recovery Installation](#step-2-custom-recovery-installation)
+- [Step 3: Root Installation](#step-3-root-installation)
+- [Step 4: Post-Root Setup](#step-4-post-root-setup)
 
 ### 📱 Device-Specific Guides
-- [All Supported Devices](#device-specific-guides)
+- [Device-Specific Guides](#device-specific-guides)
 
 ### 🛠️ Advanced Topics
-- [Troubleshooting & Recovery](#troubleshooting--recovery)
+- [Troubleshooting & Recovery](#troubleshooting-and-recovery)
 - [Community Resources](#community-resources)
 
 ---
@@ -218,7 +218,7 @@ Users report 30-50% battery improvement, ad-free experience, 2-3x performance ga
 
 ---
 
-## Prerequisites & Safety
+## Prerequisites and Safety
 
 ### ⚠️ Critical Warnings
 
@@ -404,7 +404,7 @@ Choose your manufacturer for tailored instructions:
 
 ---
 
-## Troubleshooting & Recovery
+## Troubleshooting and Recovery
 
 ### Emergency Situations
 
@@ -473,7 +473,7 @@ Choose your manufacturer for tailored instructions:
 ---
 
 ::: tip 🚀 Ready to Begin?
-**Quick Start Path:** [Prerequisites](#prerequisites--safety) → [Choose Root Method](#root-solutions-comparison) → [Device-Specific Guide](#device-specific-guides) → [Emergency Help](../faqs.md#emergency-help)
+**Quick Start Path:** [Prerequisites](#prerequisites-and-safety) → [Choose Root Method](#root-solutions-comparison) → [Device-Specific Guide](#device-specific-guides) → [Emergency Help](../faqs.md#emergency-help)
 
 **Remember:** Take your time, backup everything, and ask for help. The community supports you! 🎯
 :::
