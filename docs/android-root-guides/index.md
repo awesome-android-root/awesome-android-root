@@ -131,7 +131,7 @@ head:
 **Unlock your Android's full potential.** Complete tutorials from basics to advanced techniques with proven safety practices.
 
 ::: tip 🚀 Quick Start
-**New to rooting??** → [What is Root?](#understanding-root-access) → [Safety first](#prerequisites--safety)  
+**New to rooting??** → [What is Root?](#understanding-root-access) → [Safety first](#prerequisites-and-safety)  
 **Ready to root?** → [Choose Method](#root-solutions-comparison) → [Device Guide](#device-specific-guides)  
 **Need Help?** → [Emergency Help](../faqs.md#emergency-help) → [Community](#community-resources)
 :::
