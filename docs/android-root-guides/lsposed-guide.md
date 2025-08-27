@@ -99,9 +99,9 @@ head:
 ### Essential Requirements
 
 - ✅ **Rooted Android device** – via [Magisk](./magisk-guide.md) or [KernelSU](./kernelsu-guide.md)
-- ✅ **Magisk v24.0+** – Latest version with Zygisk enabled
+- ✅ **Magisk** – Latest version with Zygisk enabled
 - ✅ **Zygisk Enabled** – Must be turned ON in Magisk settings
-- ✅ **Android 8.1–14+** – Supported versions
+- ✅ **Android 8.1–15+** – Supported versions
 - ✅ **Architecture Support** – arm64-v8a, x86_64, or arm32 (limited)
 
 ### Magisk Configuration
