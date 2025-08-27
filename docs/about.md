@@ -96,7 +96,6 @@ Democratize Android customization by providing free, comprehensive resources for
 **Official Channels:**
 - [📱 GitHub](https://github.com/awesome-android-root/awesome-android-root) - Source code and contributions
 - [𝕏 Twitter](https://x.com/awsm_and_root) - Updates and community highlights
-- [💬 Reddit](https://reddit.com/r/AwesomeAndroidRoot) - Discussions and questions
 
 **Need Help?**
 - Check our [FAQ](./faqs.md) for common questions
