@@ -14,7 +14,7 @@
 <sub>Discover 300+ top root apps, Magisk/KernelSU/LSPosed modules, and step-by-step guides for every device.</sub>
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=blue&cacheSeconds=3600)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
-[![Total Entries](https://img.shields.io/badge/Total%20Entries-290+-blue?style=for-the-badge&logo=android&cacheSeconds=3600)](#root-apps)
+[![Total Entries](https://img.shields.io/badge/Apps%20&%20Modules-300+-blue?style=for-the-badge&logo=android&cacheSeconds=3600)](#root-apps)
 [![X (formerly Twitter) Follow](https://img.shields.io/badge/%20%20-Follow%20US-blue?logo=X&logoColor=white&style=for-the-badge&label=&#8203;)](https://x.com/awsm_and_root)<br>
 [![Website](https://img.shields.io/badge/Website-awesome--android--root.org-orange?style=for-the-badge&logo=googlechrome)](https://awesome-android-root.org)
 
@@ -130,59 +130,105 @@ Start with these community-recommended apps:
 ### Apps by Category
 
 #### 🛠️ Root & System Management
-| Subcategory | Key Apps | Guide Link |
-|:---|:---|:---|
-| **Root Managers** | Magisk, KernelSU, SukiSU-Ultra | **[→ View Apps](docs/android-root-apps/index.md#root-managers)** |
-| **Zygisk Implementations** | Zygisk Next, Rezygisk | **[→ View Apps](docs/android-root-apps/index.md#zygisk-implementations)** |
-| **Root Hiding & Integrity** | Shamiko, HMAL, SUSFS | **[→ View Apps](docs/android-root-apps/index.md#root-hiding--integrity)** |
-| **Bootloop Protection** | TWRP,Anti bootloop  | **[→ View Apps](docs/android-root-apps/index.md#bootloop-protection)** |
+| Subcategory | Key Apps |
+|:---|:---|
+| **[Root Managers](docs/android-root-apps/index.md#root-managers)** | Magisk, KernelSU, APatch |
+| **[Zygisk Implementations](docs/android-root-apps/index.md#zygisk-implementations)** | Zygisk Next, ReZygisk |
+| **[Root Hiding & Integrity](docs/android-root-apps/index.md#root-hiding-and-integrity)** | Shamiko, HMAL, SUSFS |
+| **[Root Detection Tools](docs/android-root-apps/index.md#root-detection-tools)** | RootBeer, Root Checker |
+| **[Bootloop Protection](docs/android-root-apps/index.md#bootloop-protection)** | Anti-Bootloop Mod, TWRP |
 
 #### 🔐 Security & Privacy
-| Subcategory | Key Apps | Guide Link |
-|:---|:---|:---|
-| **Privacy & Security** | Orbot, NetGuard, Privacy Dashboard | **[→ View Apps](docs/android-root-apps/index.md#privacy-and-security)** |
-| **Ad & Tracking Blockers** | AdAway, Blokada, PersonalDNSFilter | **[→ View Apps](docs/android-root-apps/index.md#ads-and-tracking-blockers)** |
-| **Firewall Tools** | AFWall+, NoRoot Firewall | **[→ View Apps](docs/android-root-apps/index.md#firewall-tools)** |
-| **DNS Tools** | DNS66, Nebulo, RethinkDNS | **[→ View Apps](docs/android-root-apps/index.md#dns-tools)** |
+| Subcategory | Key Apps |
+|:---|:---|
+| **[Privacy & Security](docs/android-root-apps/index.md#privacy-and-security)** | Privacy Dashboard, AppOps |
+| **[Ad & Tracking Blockers](docs/android-root-apps/index.md#ads-and-tracking-blockers)** | AdAway, Blokada, PersonalDNSFilter |
+| **[Firewall Tools](docs/android-root-apps/index.md#firewall-tools)** | AFWall+, NetGuard |
+| **[DNS Tools](docs/android-root-apps/index.md#dns-tools)** | DNS66, Nebulo, RethinkDNS |
 
 #### 📦 App Management & Control
-| Subcategory | Key Apps | Guide Link |
-|:---|:---|:---|
-| **App Managers** | Neo Backup, App Manager, Inure | **[→ View Apps](docs/android-root-apps/index.md#app-managers-and-control)** |
-| **App Isolation & Cloning** | Island, Shelter | **[→ View Apps](docs/android-root-apps/index.md#app-isolation-and-cloning)** |
-| **App Permissions** | Permission Ruler, App Ops | **[→ View Apps](docs/android-root-apps/index.md#app-permissions)** |
-| **App Stores** | F-Droid, Aurora Store | **[→ View Apps](docs/android-root-apps/index.md#app-stores)** |
+| Subcategory | Key Apps |
+|:---|:---|
+| **[App Managers & Control](docs/android-root-apps/index.md#app-managers-and-control)** | App Manager, Neo Backup, Inure |
+| **[App Isolation & Cloning](docs/android-root-apps/index.md#app-isolation-and-cloning)** | Island, Shelter |
+| **[App Permissions](docs/android-root-apps/index.md#app-permissions)** | Permission Ruler, App Ops |
+| **[App Stores](docs/android-root-apps/index.md#app-stores)** | F-Droid, Aurora Store, Droid-ify |
 
 #### 🧹 System Optimization & Cleanup
-| Subcategory | Key Apps | Guide Link |
-|:---|:---|:---|
-| **System Optimization** | SD Maid 2/SE , Cleaner Royall  | **[→ View Apps](docs/android-root-apps/index.md#system-optimization)** |
-| **Debloating & Removal** | Canta, System App Remover | **[→ View Apps](docs/android-root-apps/index.md#debloating-and-system-app-removal)** |
-| **Battery & Power** | Xtreme battery Saver, Wakelock Detector | **[→ View Apps](docs/android-root-apps/index.md#battery-and-power-management)** |
+| Subcategory | Key Apps |
+|:---|:---|
+| **[System Optimization](docs/android-root-apps/index.md#system-optimization)** | L Speed, 3C All-in-One Toolbox |
+| **[Debloating & System App Removal](docs/android-root-apps/index.md#debloating-and-system-app-removal)** | Canta, System App Remover |
+| **[Memory & Storage Management](docs/android-root-apps/index.md#memory-and-storage-management)** | FolderSync, DiskUsage |
+| **[Cleaning & Maintenance](docs/android-root-apps/index.md#cleaning-and-maintenance)** | SD Maid 2/SE, Cleaner |
+| **[Battery & Power Management](docs/android-root-apps/index.md#battery-and-power-management)** | Greenify, Wakelock Detector |
 
 #### 🎨 Customization & UI
-| Subcategory | Key Apps | Guide Link |
-|:---|:---|:---|
-| **Themes & UI** |  PixelXpert,  Disable Target API Block, HyperCeiler | **[→ View Apps](docs/android-root-apps/index.md#themes-and-ui)** |
-| **Launchers** |Pixel Launcher Enhanced, Lawnchair  | **[→ View Apps](docs/android-root-apps/index.md#launchers)** |
-| **Fonts & Typography** | iFont, FontFix, Emoji Switcher | **[→ View Apps](docs/android-root-apps/index.md#fonts-and-typography)** |
-| **Navigation** | NavTweaks , Volume Key Track Control | **[→ View Apps](docs/android-root-apps/index.md#navigation)** |
+| Subcategory | Key Apps |
+|:---|:---|
+| **[Themes & UI](docs/android-root-apps/index.md#themes-and-ui)** | Substratum, Swift Installer |
+| **[Launchers](docs/android-root-apps/index.md#launchers)** | Nova Launcher, Lawnchair |
+| **[Boot Animations](docs/android-root-apps/index.md#boot-animations)** | Boot Animations for Superuser |
+| **[Fonts & Typography](docs/android-root-apps/index.md#fonts-and-typography)** | iFont, HiFont, Emoji Switcher |
+| **[Navigation](docs/android-root-apps/index.md#navigation)** | Navigation Gestures, Button Mapper |
+| **[Screen & Display](docs/android-root-apps/index.md#screen-and-display)** | Screen Shift, Resolution Changer |
+| **[OS Specific Mods](docs/android-root-apps/index.md#os-specific-mods)** | HyperCeiler, PixelXpert, OneUI mods |
 
 #### 🔧 App Modifications & Patches
-| Subcategory | Key Apps | Guide Link |
-|:---|:---|:---|
-| **ReVanced & Patching** | ReVanced Manager, Lucky Patcher | **[→ View Apps](docs/android-root-apps/index.md#revanced)** |
-| **Social Media Mods** | Instagram++, WhatsApp Plus, Telegram X | **[→ View Apps](docs/android-root-apps/index.md#modded-apps--tweaks)** |
-| **Entertainment Mods** | YouTube Vanced, Spotify Premium, Netflix Mod | **[→ View Apps](docs/android-root-apps/index.md#entertainment-media-mods)** |
-| **Utility Mods** | Wallet Tweaks, ChromeXt,  **[→ View Apps](docs/android-root-apps/index.md#general-app-mods)** |
+| Subcategory | Key Apps |
+|:---|:---|
+| **[General App Mods](docs/android-root-apps/index.md#general-app-mods)** | Lucky Patcher, Zygisk Detach |
+| **[Patching Tools](docs/android-root-apps/index.md#patching-tools)** | ReVanced Manager, Lucky Patcher |
+| **[ReVanced](docs/android-root-apps/index.md#revanced)** | ReVanced Manager, ReVanced Extended |
+| **[Social Media Mods](docs/android-root-apps/index.md#modded-apps--tweaks)** | Instagram mods, WhatsApp mods, Telegram X |
+| **[Entertainment & Media Mods](docs/android-root-apps/index.md#modded-apps--tweaks)** | YouTube mods, Spotify mods, Discord mods |
+| **[Regional App Mods](docs/android-root-apps/index.md#modded-apps--tweaks)** | WeChat mods, QQ mods, Bilibili mods |
 
 #### ⚡ Performance & Gaming
-| Subcategory | Key Apps | Guide Link |
-|:---|:---|:---|
-| **Performance** | 3C All-in-One Toolbox , Encore Tweaks  | **[→ View Apps](docs/android-root-apps/index.md#performance-and-gaming)** |
-| **Gaming** | GameResChange, FPS Unlocker | **[→ View Apps](docs/android-root-apps/index.md#performance-and-gaming)** |
-| **Kernel Management** | Franco Kernel Manager, EX Kernel Manager | **[→ View Apps](docs/android-root-apps/index.md#kernel-management)** |
-| **Automation** | Tasker, Automate, MacroDroid | **[→ View Apps](docs/android-root-apps/index.md#automation)** |
+| Subcategory | Key Apps |
+|:---|:---|
+| **[Performance & Gaming](docs/android-root-apps/index.md#performance-and-gaming)** | Game Booster, FPS Meter |
+| **[Kernel Management](docs/android-root-apps/index.md#kernel-management)** | Franco Kernel Manager, EX Kernel Manager |
+| **[System Modifications](docs/android-root-apps/index.md#system-modifications)** | Xposed Edge Pro, GravityBox |
+| **[Automation](docs/android-root-apps/index.md#automation)** | Tasker, Automate, MacroDroid |
+
+#### 🗃️ Data & Storage
+| Subcategory | Key Apps |
+|:---|:---|
+| **[File Management](docs/android-root-apps/index.md#file-management)** | MiXplorer, Solid Explorer |
+| **[Backup & Restore](docs/android-root-apps/index.md#backup-and-restore)** | Titanium Backup, Swift Backup |
+
+#### 🌐 Network & Connectivity
+| Subcategory | Key Apps |
+|:---|:---|
+| **[Wi‑Fi Tools](docs/android-root-apps/index.md#wi‑fi-tools)** | WiFi Analyzer, WiFi Password Recovery |
+| **[Hotspot/Tether](docs/android-root-apps/index.md#hotspot-tools)** | WiFi Tether Router, PdaNet+ |
+| **[Location & GPS](docs/android-root-apps/index.md#location-and-gps)** | Fake GPS Location, GPS Status |
+| **[NFC & Cards](docs/android-root-apps/index.md#nfc-tools)** | NFC Tools, TagInfo |
+
+#### 📞 Communication & Contacts
+| Subcategory | Key Apps |
+|:---|:---|
+| **[Call Recording](docs/android-root-apps/index.md#call-recording)** | Call Recorder, ACR |
+| **[Contact Management](docs/android-root-apps/index.md#contact-management)** | Contact Optimizer, Duplicate Contacts |
+| **[SMS Management](docs/android-root-apps/index.md#sms-management)** | SMS Backup & Restore |
+
+#### 🎵 Audio & Media
+| Subcategory | Key Apps |
+|:---|:---|
+| **[Audio & Media](docs/android-root-apps/index.md#audio-and-media)** | Viper4Android, Dolby Atmos |
+
+#### 🛠️ Developer & Technical Tools
+| Subcategory | Key Apps |
+|:---|:---|
+| **[Development & Debugging](docs/android-root-apps/index.md#development-and-debugging)** | aLogcat, Android Terminal |
+| **[Device Controls & Hardware](docs/android-root-apps/index.md#device-control-and-hardware)** | SetCPU, Device Control |
+| **[Terminal & Shell](docs/android-root-apps/index.md#terminal-and-shell-tools)** | Termux, Terminal Emulator |
+
+#### ♿ Accessibility & Utilities
+| Subcategory | Key Apps |
+|:---|:---|
+| **[Accessibility Tools](docs/android-root-apps/index.md#accessibility-tools)** | Voice Access, Switch Access |
 
 ### Project Statistics
 
@@ -202,27 +248,27 @@ Whether rooted or not, these guides help every Android user:
 
 | Topic | Guide | Benefits |
 |:---|:---|:---|
-| **🛡️ Ad Blocking** | **[Android Ad Blocking Guide](docs/guides/android-adblocking.md)** | Block ads across your entire device |
-| **🧹 Debloating** | **[Android App Debloating](docs/guides/android-apps-debloating.md)** | Remove bloatware and optimize performance |
-| **🔄 App Updates** | **[Stop Auto-Updates Guide](docs/guides/stop-android-app-auto-updates-play-store.md)** | Control app updates manually |
-| **💾 Backup** | **[App Backup & Restore](docs/guides/app-backup-restore-using-root.md)** | Comprehensive backup solutions |
+| **Ad Blocking** | **[Android Ad Blocking Guide](docs/guides/android-adblocking.md)** | Block ads across your entire device |
+| **Debloating** | **[Android App Debloating](docs/guides/android-apps-debloating.md)** | Remove bloatware and optimize performance |
+| **App Updates** | **[Stop Auto-Updates Guide](docs/guides/stop-android-app-auto-updates-play-store.md)** | Control app updates manually |
+| **Backup** | **[App Backup & Restore](docs/guides/app-backup-restore-using-root.md)** | Comprehensive backup solutions |
 
 ### Help & Troubleshooting
 
 | Resource | Description | Quick Access |
 |:---|:---|:---|
-| **❓ FAQ & Troubleshooting** | Common questions and solutions | **[→ Get Help](docs/faqs.md)** |
-| **ℹ️ About This Project** | Learn about our mission | **[→ About Us](docs/about.md)** |
-| **🤝 Contributing** | Help improve this resource | **[→ Contribute](docs/contributing.md)** |
+| **FAQ & Troubleshooting** | Common questions and solutions | **[→ Get Help](docs/faqs.md)** |
+| **ℹAbout This Project** | Learn about our mission | **[→ About Us](docs/about.md)** |
+| **Contributing** | Help improve this resource | **[→ Contribute](docs/contributing.md)** |
 
 ### Emergency Help
 
 | Issue | Quick Solution | Guide Link |
 |:---|:---|:---|
-| **🔴 Device Won't Boot** | Disable modules, restore backup | **[→ Bootloop Fix](docs/faqs.md#device-wont-boot)** |
-| **🛡️ Root Not Working** | Reinstall root method | **[→ Root Issues](docs/faqs.md#root-not-working)** |
-| **🏦 Banking Apps Blocked** | Configure root hiding | **[→ App Compatibility](docs/faqs.md#play-integrity-and-banking-apps)** |
-| **🧱 Hard Brick** | Recovery options | **[→ Recovery Guide](docs/faqs.md#bricked-device-recovery)** |
+| **Device Won't Boot** | Disable modules, restore backup | **[→ Bootloop Fix](docs/faqs.md#device-wont-boot)** |
+| **Root Not Working** | Reinstall root method | **[→ Root Issues](docs/faqs.md#root-not-working)** |
+| **Banking Apps Blocked** | Configure root hiding | **[→ App Compatibility](docs/faqs.md#play-integrity-and-banking-apps)** |
+| **Hard Brick** | Recovery options | **[→ Recovery Guide](docs/faqs.md#bricked-device-recovery)** |
 
 ---
 
