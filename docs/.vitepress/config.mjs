@@ -98,14 +98,6 @@ export default defineConfig({
       "name": "Awesome Android Root",
       "description": "Ultimate Android rooting hub with 280+ curated root apps, Magisk modules, and step-by-step guides",
       "url": "https://awesome-android-root.org",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://awesome-android-root.org/?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      },
       "publisher": {
         "@type": "Organization",
         "name": "Awesome Android Root Project",
@@ -143,8 +135,8 @@ export default defineConfig({
         },
         translations: {
           button: {
-            buttonText: 'Search apps, modules & guides',
-            buttonAriaLabel: 'Search apps, modules & guides'
+            buttonText: 'Search',
+            buttonAriaLabel: 'Search'
           },
           modal: {
             displayDetails: 'Display detailed list',
