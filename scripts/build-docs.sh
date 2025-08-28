@@ -40,7 +40,7 @@ echo -e "${GREEN}Starting build-docs process...${NC}"
 
 # 1. Remove .md extension from both HTML href links and Markdown links in docs/index.md
 remove_md_from_links() {
-    local target_file="../docs/index.md"
+    local target_file="docs/index.md"
 
     if [ ! -f "$target_file" ]; then
         log_warn "$target_file not found, skipping .md removal"
@@ -79,7 +79,7 @@ remove_md_from_links
 
 # 3. Adjust image paths in android-root-apps/index.md
 adjust_image_paths() {
-    local target="../docs/android-root-apps/index.md"
+    local target="docs/android-root-apps/index.md"
     
     if [ ! -f "$target" ]; then
         log_warn "$target not found, skipping image path adjustment"
