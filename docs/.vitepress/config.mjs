@@ -156,8 +156,8 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       {
         text: 'Apps & Modules',
-        link: '/android-root-apps/#root-apps',
-        activeMatch: '^/android-root-apps/#root-apps'
+        link: '/android-root-apps/',
+        activeMatch: '^/android-root-apps/'
       },
       {
         text: 'Guides',

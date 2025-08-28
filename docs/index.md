@@ -212,25 +212,23 @@ head:
 
 hero:
   name: "Awesome Android Root"
-  text: "The Ultimate Hub for Android Rooting"
-  tagline: "290+ top root apps, Magisk/KernelSU/LSPosed modules, and step-by-step rooting guides."
+  text: "Master Android Rooting in 2025"
+  tagline: "Exlore 300+ top root apps, Magisk/KernelSU/LSPosed modules, and step-by-step rooting guides."
   image:
     src: /images/logo_dark.svg
-    alt: Awesome Android Root - Ultimate Android Rooting Resource
+    alt: Awesome Android Root Logo
   actions:
     - theme: brand
-      text: 🚀 Browse 290+ Root Apps
+      text: 🚀 Start Rooting Journey
+      link: /android-root-guides/
+      size: large
+    - theme: alt
+      text: 📱 Browse Root Apps
       link: /android-root-apps/
     - theme: alt
-      text: 📚 Complete Rooting Guides
-      link: /android-root-guides/
-    - theme: alt
-      text: 💡 Essential Android Guides
-      link: /guides/
-    - theme: brand
-      text: 🌟 Star on GitHub
+      text: ⭐ GitHub
       link: https://github.com/awesome-android-root/awesome-android-root
-
+      target: _blank
 features:
   - icon: 🛡️
     title: System-Wide Ad Blocking
@@ -294,81 +292,109 @@ features:
 
 ---
 
-## 🎯 Getting Started - Choose Your Path
+<div class="vp-doc">
 
-### 🔰 New to Android Rooting?
+## 🚀 Start Your Rooting Journey
 
-**Essential first steps for safe rooting:**
+<div class="custom-journey-selector">
+  <div class="journey-card beginner">
+    <h3>Complete Beginner</h3>
+    <p>Never rooted before? We'll guide you step-by-step</p>
+    <ul>
+      <li>✅ Safety first approach</li>
+      <li>✅ Backup strategies</li>
+      <li>✅ Risk assessment</li>
+    </ul>
+    <a href="/android-root-guides/" class="journey-btn">Start Learning →</a>
+  </div>
+  
+  <div class="journey-card intermediate">
+    <h3>Ready to Root</h3>
+    <p>Know the basics? Let's root your device</p>
+    <ul>
+      <li>✅ Device-specific guides</li>
+      <li>✅ Tool selection</li>
+      <li>✅ Troubleshooting</li>
+    </ul>
+    <a href="/android-root-guides/#device-specific-guides" class="journey-btn">Find Your Device →</a>
+  </div>
+  
+  <div class="journey-card advanced">
+    <h3>Already Rooted</h3>
+    <p>Maximize your rooted device's potential</p>
+    <ul>
+      <li>✅ 290+ curated apps</li>
+      <li>✅ Advanced modules</li>
+      <li>✅ Custom ROMs</li>
+    </ul>
+    <a href="/android-root-apps/" class="journey-btn">Explore Apps →</a>
+  </div>
+</div>
 
-::: tip  Understanding Root Access
-**Start with the fundamentals:**
-- **[What is Root Access?](android-root-guides/#what-is-root-access)** - Learn the basics and benefits
-- **[Is Rooting Safe?](faqs#is-rooting-safe)** - Understand risks and safety measures  
-- **[Prerequisites Checklist](android-root-guides/#essential-prerequisites-checklist)** - Prepare your device safely
-:::
 
-### ⚡ Ready to Root? Follow the Proven 4-Step Process
+## 🎯 Popular Root Methods
 
-::: warning 🛠️ Step-by-Step Rooting Process
-**Used successfully by thousands of users:**
+<div class="method-comparison">
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>Difficulty</th>
+        <th>SafetyNet</th>
+        <th>Best For</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="recommended">
+        <td><strong>Magisk</strong> <span class="badge">Recommended</span></td>
+        <td>⭐⭐⭐</td>
+        <td>✅ Pass</td>
+        <td>Most users, banking apps work</td>
+        <td><a href="/android-root-guides/magisk-guide">Guide →</a></td>
+      </tr>
+      <tr>
+        <td><strong>KernelSU</strong></td>
+        <td>⭐⭐⭐⭐</td>
+        <td>✅ Pass</td>
+        <td>Advanced users, kernel control</td>
+        <td><a href="/android-root-guides/kernelsu-guide">Guide →</a></td>
+      </tr>
+      <tr>
+        <td><strong>APatch</strong></td>
+        <td>⭐⭐⭐</td>
+        <td>✅ Pass</td>
+        <td>Alternative to Magisk</td>
+        <td><a href="/android-root-guides/apatch-guide">Guide →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-**[🔓 Step 1: Unlock Bootloader](android-root-guides/how-to-unlock-bootloader)** → **[🛠️ Step 2: Install Custom Recovery](android-root-guides/how-to-install-custom-recovery)** → **[⚡ Step 3: Choose Root Method](android-root-guides/#root-methods-comparison)** → **[🎯 Step 4: Install Essential Apps](android-root-apps/#featured-apps-the-essentials)**
+## 🤝 Resources
 
-**Root Method Options:**
-- **[Magisk Guide](android-root-guides/magisk-guide)** - Most popular, systemless root with modules
-- **[KernelSU Guide](android-root-guides/kernelsu-guide)** - Kernel-based root solution
-- **[APatch Guide](android-root-guides/apatch-guide)** - Alternative root method
-- **[LSPosed Guide](android-root-guides/lsposed-guide)** - Xposed Framework for Android
-:::
+<div class="community-cards">
+  <a href="https://github.com/awesome-android-root/awesome-android-root" class="community-card github">
+    <span class="icon">⭐</span>
+    <strong>GitHub</strong>
+    <span>1.8k stars</span>
+  </a>
+  <a href="https://x.com/awsm_and_root" class="community-card twitter">
+    <span class="icon">🐦</span>
+    <strong>Twitter/X</strong>
+    <span>Daily updates</span>
+  </a>
+  <a href="https://reddit.com/r/AwesomeAndroidRoot" class="community-card reddit">
+    <span class="icon">💬</span>
+    <strong>Reddit</strong>
+    <span>45k members</span>
+  </a>
+  
+  <a href="https://t.me/awesomeandroidroot" class="community-card telegram">
+    <span class="icon">📱</span>
+    <strong>Telegram</strong>
+    <span>24/7 support</span>
+  </a>
+</div>
 
-::: details 📱 **Device-Specific Rooting Guides**
-**Get tailored instructions for your specific device:**
-
-📱 **[Google Pixel](android-root-guides/how-to-root-pixel-phone)** - Clean Android experience  
-📱 **[Samsung Galaxy](android-root-guides/how-to-root-samsung-phone)** - One UI devices  
-📱 **[Xiaomi/MIUI](android-root-guides/how-to-root-xiaomi-phone)** - MIUI-specific instructions  
-📱 **[OnePlus](android-root-guides/how-to-root-oneplus-phone)** - OxygenOS devices  
-📱 **[Nothing Phone](android-root-guides/how-to-root-nothing-phone)** - Nothing OS specific  
-📱 **[Motorola](android-root-guides/how-to-root-motorola-phone)** - Moto devices
-:::
-
-### 🎨 Already Rooted? Maximize Your Device
-
-::: details 💪 Transform Your Rooted Device
-**Essential categories to explore:**
-- **[🏆 Featured Apps](android-root-apps/#featured-apps-the-essentials)** - Community-recommended essentials
-- **[🚫 Ad & Tracking Blockers](android-root-apps/#ads-and-tracking-blockers)** - System-wide ad blocking
-- **[📱 App Management](android-root-apps/#app-isolation-and-cloning)** - Control every aspect of your apps
-- **[🎨 Customization](android-root-apps/#customization)** - Transform your UI completely
-- **[⚡ Performance](android-root-apps/#performance-and-gaming)** - Optimize for speed and battery
-- **[🛡️ Privacy & Security](android-root-apps/#privacy-and-security)** - Ultimate protection
-:::
-
-## 📚 Essential Guides for Everyone
-
-**Whether rooted or not, these guides help all Android users:**
-
-::: tip 🛡️ Privacy & Security 
-- **[Complete Android Ad Blocking Guide](guides/android-adblocking)** - Block ads across your device
-- **[Android App Debloating](guides/android-apps-debloating)** - Remove bloatware and optimize
-- **[Stop Auto-Updates in Play Store](guides/stop-android-app-auto-updates-play-store)** - Control app updates
-
-### 💾 Data Management  
-- **[App Backup and Restore Using Root](guides/app-backup-restore-using-root)** - Comprehensive backup solutions
-:::
-
-## Need Help?
-::: tip Browser the resources:
-- **[❓ FAQ & Troubleshooting](faqs)** - Common questions and solutions
-- **[🤝 Contributing Guidelines](contributing)** - Help improve this resource
-- **[ℹ️ About This Project](about)** - Learn more about our mission
-:::
-
-## 🏆 Community & Support
-
-::: warning **Join our thriving Android community:**
-
-⭐ **[GitHub Repository](https://github.com/awesome-android-root/awesome-android-root)** - Star, contribute, and follow updates  
-🐦 **[Twitter/X](https://x.com/awsm_and_root)** - Latest news and community highlights  
-💬 **[Reddit Community](https://reddit.com/r/AwesomeAndroidRoot)** - Discussions and support
-:::
+</div>
