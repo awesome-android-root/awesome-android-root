@@ -345,7 +345,7 @@ features:
     <strong>KernelSU</strong>
     <span>Advanced Users</span>
   </a>
-  <a href="./resources.md" class="community-card telegram">
+  <a href="./android-root-guides/apatch-guide.md" class="community-card telegram">
     <span class="icon">🤖</span>
     <strong>Apatch</strong>
     <span>Kernel-based root</span>
