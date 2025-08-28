@@ -14,11 +14,9 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "scripts/build-docs.sh && vitepress build docs",
-    "postdocs:build": "find docs/.vitepress/dist/assets -name '*.js' -exec terser {} -c -m -o {} \\;",
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
-    "terser": "^5.43.1",
     "vitepress": "^1.6.4"
   },
   "keywords": [

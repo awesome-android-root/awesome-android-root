@@ -177,6 +177,12 @@ div :has(img[src*="img.shields.io"]) {
   src: url('/assets/inter-roman-latin.Di8DUHzh.woff2') format('woff2');
 }
 
+/* Provide explicit font-family fallback chain */
+body, html {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+
 /* Image loading states */
 img {
   image-rendering: -webkit-optimize-contrast;

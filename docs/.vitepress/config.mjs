@@ -7,39 +7,11 @@ export default defineConfig({
   ignoreDeadLinks: true,
   cleanUrls: true,
 
-  // VitePress build optimizations
+  // Keep Vite config minimal. esbuild is fast and good enough for docs.
   vite: {
-    build: {
-      target: 'esnext',
-      minify: 'terser',
-      terserOptions: {
-        compress: {
-          drop_console: true,
-          drop_debugger: true,
-          pure_funcs: ['console.log'],
-          dead_code: true
-        }
-      },
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            'vue-vendor': ['vue'],
-            'vitepress-vendor': ['vitepress']
-          }
-        }
-      },
-      cssCodeSplit: true,
-      sourcemap: false
-    },
-    ssr: {
-      noExternal: ['vue']
-    },
-    optimizeDeps: {
-      include: ['vue'],
-      force: true
-    },
     esbuild: {
-      drop: ['console', 'debugger']
+      // Only drop logs in production; keep them in dev for DX
+      drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : []
     }
   },
 
@@ -66,7 +38,7 @@ export default defineConfig({
     ['link', { rel: 'preconnect', href: 'https://img.shields.io', crossorigin: '' }],
     ['link', { rel: 'dns-prefetch', href: 'https://img.shields.io' }],
     ['link', { rel: 'preconnect', href: 'https://github.com', crossorigin: '' }],
-    ['link', { rel: 'dns-prefetch', href: 'https:/github.com' }],
+    ['link', { rel: 'dns-prefetch', href: 'https://github.com' }],
 
     // SEO Meta Tags - Enhanced for Android Root niche
     ['meta', { name: 'keywords', content: 'android root 2025, magisk modules, kernelsu guide, lsposed framework, custom recovery, twrp guide, bootloader unlock, android customization, root apps, system modifications, android freedom, xposed modules, android debloating, performance optimization, privacy tools, android security, custom rom installation, android development, rooting tutorial, android hacking, mobile security' }],
