@@ -186,6 +186,7 @@ img {
   margin: auto 0.3rem ;
 }
 
+/* Custom Elements Styles */
 .custom-journey-selector {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -240,28 +241,6 @@ img {
 .journey-btn:hover {
   background: var(--vp-c-brand-dark);
   transform: translateX(4px);
-}
-
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 2rem 0;
-}
-
-.comparison-table th {
-  background: var(--vp-c-bg-soft);
-  padding: 1rem;
-  text-align: left;
-  font-weight: 600;
-}
-
-.comparison-table td {
-  padding: 1rem;
-  border-bottom: 1px solid var(--vp-c-divider);
-}
-
-.comparison-table tr.recommended {
-  background: var(--vp-c-brand-soft);
 }
 
 .badge {
