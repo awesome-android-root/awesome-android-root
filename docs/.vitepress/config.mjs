@@ -162,8 +162,17 @@ export default defineConfig({
       {
         text: 'Guides',
         items: [
-          { text: 'Rooting Guides', link: '/android-root-guides/', activeMatch: '^/android-root-guides/' },
-          { text: 'General Guides', link: '/guides/', activeMatch: '^/guides/' }
+          {
+            text: 'Rooting Guides',
+            items: [
+              { text: 'Master Guide', link: '/android-root-guides/', activeMatch: '^/android-root-guides/' },
+              { text: 'Magisk Guide', link: '/android-root-guides/magisk-guide' },
+              { text: 'LSPosed Guide', link: '/android-root-guides/lsposed-guide' }
+            ]
+          },
+          {
+            text: 'General Guides', link: '/guides/', activeMatch: '^/guides/' 
+          }
         ]
       },
       {
