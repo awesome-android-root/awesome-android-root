@@ -152,8 +152,7 @@ export default defineConfig({
         items: [
           { text: 'FAQ & Support', link: '/faqs', activeMatch: '^/faqs' },
           { text: 'Glossary & Terms', link: '/android-root-apps/#glossary' },
-          { text: 'Community & Resources', link: '/android-root-apps/#community-and-resources' },
-          { text: 'Project Stats', link: '/android-root-apps/#stats' }
+          { text: 'Resources Hub', link: '/resources' }
         ]
       },
       {
@@ -175,7 +174,6 @@ export default defineConfig({
           items: [
             { text: 'Understanding Root Access', link: '/android-root-guides/#understanding-root-access' },
             { text: 'Why Root Your Device?', link: '/android-root-guides/#why-root-your-device' },
-            { text: 'Security & Safety First', link: '/#-security--safety-first' },
             { text: 'Prerequisites & Safety', link: '/android-root-guides/#prerequisites-and-safety' }
           ]
         },
@@ -183,7 +181,7 @@ export default defineConfig({
           text: 'Choose Your Root Method',
           collapsed: false,
           items: [
-            { text: 'Root Methods Comparison', link: '/#choose-your-root-method' },
+            { text: 'Root Solutions Comparison', link: '/android-root-guides/#root-solutions-comparison' },
             { text: 'Magisk (Recommended)', link: '/android-root-guides/magisk-guide' },
             { text: 'KernelSU (Advanced)', link: '/android-root-guides/kernelsu-guide' },
             { text: 'APatch (Alternative)', link: '/android-root-guides/apatch-guide' }
@@ -193,7 +191,7 @@ export default defineConfig({
           text: 'Essential Steps',
           collapsed: false,
           items: [
-            { text: 'Step-by-Step Overview', link: '/#complete-process-overview' },
+            { text: 'Universal Rooting Process', link: '/android-root-guides/#universal-rooting-process' },
             { text: 'Unlock Bootloader', link: '/android-root-guides/how-to-unlock-bootloader' },
             { text: 'Install Custom Recovery', link: '/android-root-guides/how-to-install-custom-recovery' },
             { text: 'Install Custom ROM', link: '/android-root-guides/custom-rom-installation' }
@@ -204,15 +202,15 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'LSPosed Framework', link: '/android-root-guides/lsposed-guide' },
-            { text: 'Zygisk Implementation', link: '/#zygisk-implementations' },
-            { text: 'Root Hiding Setup', link: '/#root-hiding--integrity' }
+            { text: 'Zygisk Implementations', link: '/android-root-apps/#zygisk-implementations' },
+            { text: 'Root Hiding & Integrity', link: '/android-root-apps/#root-hiding-and-integrity' }
           ]
         },
         {
           text: 'Device-Specific Guides',
           collapsed: true,
           items: [
-            { text: 'Device Compatibility', link: '/#-device-specific-root-guides' },
+            { text: 'Device Guide Index', link: '/android-root-guides/#device-specific-guides' },
             { text: 'Google Pixel', link: '/android-root-guides/how-to-root-pixel-phone' },
             { text: 'Samsung Galaxy', link: '/android-root-guides/how-to-root-samsung-phone' },
             { text: 'Xiaomi/Redmi/POCO', link: '/android-root-guides/how-to-root-xiaomi-phone' },
@@ -225,10 +223,9 @@ export default defineConfig({
           text: 'Support & Troubleshooting',
           collapsed: true,
           items: [
-            { text: 'Quick Troubleshooting', link: '/#-quick-troubleshooting' },
-            { text: 'Complete FAQ', link: '/faqs' },
-            { text: 'Emergency Recovery', link: '/#bootloop-protection' },
-            { text: 'Community Support', link: '/#community-and-connect' }
+            { text: 'FAQ & Emergency Help', link: '/faqs/#emergency-help' },
+            { text: 'Bootloop Protection', link: '/android-root-apps/#bootloop-protection' },
+            { text: 'Root Hiding (Play Integrity)', link: '/faqs/#play-integrity-and-banking-apps' }
           ]
         }
       ],
@@ -239,22 +236,22 @@ export default defineConfig({
         { text: '📋 Browse All Categories', link: '/android-root-apps/' },
         { text: '---' },
         { text: '🔓 Root Management', link: '/android-root-apps/#root-management' },
-        { text: '🛡️ Root Hiding & Integrity', link: '/android-root-apps/#root-hiding--integrity' },
+  { text: '🛡️ Root Hiding & Integrity', link: '/android-root-apps/#root-hiding-and-integrity' },
         { text: '🚫 Ad & Tracker Blocking', link: '/android-root-apps/#ads-and-tracking-blockers' },
         { text: '📦 App Management', link: '/android-root-apps/#app-management' },
-        { text: '🛡  Privacy & Security', link: '/android-root-apps/#privacy-and-security' },
+  { text: '🛡️ Privacy & Security', link: '/android-root-apps/#privacy-and-security' },
         { text: '---' },
         { text: '⚡ Performance Tweaks', link: '/android-root-apps/#performance-tweaks' },
         { text: '🎨 Customization', link: '/android-root-apps/#customization' },
-        { text: '🪄 Modded Apps & Tweaks', link: '/android-root-apps/#modded-apps--tweaks' },
-        { text: '🌐 Networking & Connectivity', link: '/android-root-apps/#networking--connectivity' },
+  { text: '🪄 Modded Apps & Tweaks', link: '/android-root-apps/#modded-apps--tweaks' },
+  { text: '🌐 Networking & Connectivity', link: '/android-root-apps/#networking--connectivity' },
         { text: '---' },
         { text: '🛠️ Development & Debugging', link: '/android-root-apps/#development-and-debugging' },
         { text: '🔧 Device Control & Hardware', link: '/android-root-apps/#device-control-and-hardware' },
         { text: '🗂️ File Management', link: '/android-root-apps/#file-management' },
-        { text: '💻 Terminal & Shell', link: '/android-root-apps/#terminal-and-shell-environments' },
+  { text: '💻 Terminal & Shell', link: '/android-root-apps/#terminal-and-shell-tools' },
         { text: '---' },
-        { text: '� Audio Management', link: '/android-root-apps/#audio-and-media' },
+  { text: '🎵 Audio & Media', link: '/android-root-apps/#audio-and-media' },
         { text: '💾 Backup & Restore', link: '/android-root-apps/#backup-and-restore' },
         { text: '🧹 System Debloating', link: '/android-root-apps/#debloating-and-system-app-removal' },
         { text: '🔩 System Modifications', link: '/android-root-apps/#system-modifications' },
@@ -290,52 +287,52 @@ export default defineConfig({
           text: 'Quick Start',
           collapsed: false,
           items: [
-            { text: 'Quick Start Guide', link: '/#-quick-start-guide' },
-            { text: 'What is Root Access?', link: '/#what-is-android-rooting' },
-            { text: 'Security & Safety First', link: '/#security--safety-first' },
-            { text: 'Root Methods Comparison', link: '/#choose-root-method' },
-            { text: 'Device Compatibility', link: '/#device-specific-root-guides' }
+            { text: 'Start Your Journey', link: '/#start-your-rooting-journey' },
+            { text: 'Popular Root Methods', link: '/#popular-root-methods' },
+            { text: 'Resources', link: '/#resources' },
+            { text: 'Root Guides', link: '/android-root-guides/' },
+            { text: 'Root Apps', link: '/android-root-apps/' }
           ]
         },
         {
           text: 'Essential Resources',
           collapsed: false,
           items: [
-            { text: 'Complete Rooting Guides', link: '/android-root-guides/' },
-            { text: 'Featured Root Apps', link: '/#featured-apps-the-essentials' },
-            { text: 'Troubleshooting Guide', link: '/#frequently-asked-questions-and-troubleshooting' },
-            { text: 'Glossary & Terms', link: '/#glossary' }
+            { text: 'Rooting Guides', link: '/android-root-guides/' },
+            { text: 'Featured Root Apps', link: '/android-root-apps/#featured-apps-the-essentials' },
+            { text: 'FAQ & Troubleshooting', link: '/faqs/' },
+            { text: 'Glossary', link: '/android-root-apps/#glossary' }
           ]
         },
         {
           text: 'Popular Categories',
           collapsed: false,
           items: [
-            { text: 'Root Management', link: '/#root-managers' },
-            { text: 'Ad Blocking', link: '/#ads-and-tracking-blockers' },
-            { text: 'App Management', link: '/#app-managers-and-control' },
-            { text: 'System Performance', link: '/#performance-and-gaming' },
-            { text: 'Privacy & Security', link: '/#privacy-and-security' },
-            { text: 'System Customization', link: '/#customization' }
+            { text: 'Root Management', link: '/android-root-apps/#root-management' },
+            { text: 'Ad Blocking', link: '/android-root-apps/#ads-and-tracking-blockers' },
+            { text: 'App Management', link: '/android-root-apps/#app-management' },
+            { text: 'Performance Tweaks', link: '/android-root-apps/#performance-tweaks' },
+            { text: 'Privacy & Security', link: '/android-root-apps/#privacy-and-security' },
+            { text: 'Customization', link: '/android-root-apps/#customization' }
           ]
         },
         {
           text: 'Advanced Features',
           collapsed: true,
           items: [
-            { text: 'App Modifications', link: '/#modded-apps--tweaks' },
-            { text: 'Root Hiding & Integrity', link: '/#root-hiding--integrity' },
-            { text: 'Developer Tools', link: '/#development-and-debugging' },
-            { text: 'System Modifications', link: '/#system-modifications' },
-            { text: 'Network & Connectivity', link: '/#network--connectivity' }
+            { text: 'Modded Apps & Tweaks', link: '/android-root-apps/#modded-apps--tweaks' },
+            { text: 'Root Hiding & Integrity', link: '/android-root-apps/#root-hiding-and-integrity' },
+            { text: 'Development & Debugging', link: '/android-root-apps/#development-and-debugging' },
+            { text: 'System Modifications', link: '/android-root-apps/#system-modifications' },
+            { text: 'Networking & Connectivity', link: '/android-root-apps/#networking--connectivity' }
           ]
         },
         {
           text: 'Support & Community',
           collapsed: true,
           items: [
-            { text: 'FAQ & Troubleshooting', link: '/#frequently-asked-questions-and-troubleshooting' },
-            { text: 'Community & Resources', link: '/#community-and-resources' },
+            { text: 'FAQ & Emergency', link: '/faqs/#emergency-help' },
+            { text: 'Resources Hub', link: '/resources' },
             { text: 'How to Contribute', link: '/contributing' },
             { text: 'About This Project', link: '/about' }
           ]
