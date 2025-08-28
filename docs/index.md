@@ -2,7 +2,7 @@
 layout: home
 title: Awesome Android Root
 titleTemplate: Ultimate Android Rooting Hub 2025
-description: "Discover 290+ hand-curated best root apps, Magisk & LSPosed (Xposed) modules of 2025 and step-by-step rooting guides"
+description: "Discover 300+ hand-curated best root apps, Magisk & LSPosed (Xposed) modules of 2025 and step-by-step rooting guides"
 head:
   - - meta
     - name: robots
@@ -30,7 +30,7 @@ head:
       content: "Awesome Android Root - Ultimate Android Rooting Hub 2025"
   - - meta
     - name: twitter:description
-      content: "The ultimate Android rooting resource! 290+ best root apps, Magisk, KernelSU, APatch & LSPosed Modules plus comprehensive rooting guides for 2025."
+      content: "The ultimate Android rooting resource! 300+ best root apps, Magisk, KernelSU, APatch & LSPosed Modules plus comprehensive rooting guides for 2025."
   - - meta
     - name: twitter:image
       content: "https://awesome-android-root.org/images/og.png"
@@ -76,7 +76,7 @@ head:
         "@type": "WebSite",
         "name": "Awesome Android Root",
         "alternateName": "Ultimate Android Rooting Hub",
-        "description": "The ultimate Android rooting resource! 290+ best root apps, Magisk,KernelSu & LSPosed Modules & rooting guides.",
+        "description": "The ultimate Android rooting resource! 300+ best root apps, Magisk,KernelSu & LSPosed Modules & rooting guides.",
         "url": "https://awesome-android-root.org",
         "inLanguage": "en-US",
         "publisher": {
@@ -92,7 +92,7 @@ head:
         "mainEntity": {
           "@type": "Article",
           "headline": "Ultimate Android Rooting Guide 2025",
-          "description": "Comprehensive collection of 290+ root apps, rooting guides, and expert tutorials",
+          "description": "Comprehensive collection of 300+ root apps, rooting guides, and expert tutorials",
           "author": {
             "@type": "Organization",
             "name": "Awesome Android Root Community"
@@ -323,7 +323,7 @@ features:
     <h3>Already Rooted</h3>
     <p>Maximize your rooted device's potential</p>
     <ul>
-      <li>✅ 290+ curated apps</li>
+      <li>✅ 300+ curated apps</li>
       <li>✅ Advanced modules</li>
       <li>✅ Custom ROMs</li>
     </ul>
@@ -332,43 +332,29 @@ features:
 </div>
 
 
-## 🎯 Popular Root Methods
+## ⚡ Popular Root Methods
 
-<div class="method-comparison">
-  <table class="comparison-table">
-    <thead>
-      <tr>
-        <th>Method</th>
-        <th>Difficulty</th>
-        <th>SafetyNet</th>
-        <th>Best For</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="recommended">
-        <td><strong>Magisk</strong> <span class="badge">Recommended</span></td>
-        <td>⭐⭐⭐</td>
-        <td>✅ Pass</td>
-        <td>Most users, banking apps work</td>
-        <td><a href="/android-root-guides/magisk-guide">Guide →</a></td>
-      </tr>
-      <tr>
-        <td><strong>KernelSU</strong></td>
-        <td>⭐⭐⭐⭐</td>
-        <td>✅ Pass</td>
-        <td>Advanced users, kernel control</td>
-        <td><a href="/android-root-guides/kernelsu-guide">Guide →</a></td>
-      </tr>
-      <tr>
-        <td><strong>APatch</strong></td>
-        <td>⭐⭐⭐</td>
-        <td>✅ Pass</td>
-        <td>Alternative to Magisk</td>
-        <td><a href="/android-root-guides/apatch-guide">Guide →</a></td>
-      </tr>
-    </tbody>
-  </table>
+<div class="community-cards">
+  <a href="./android-root-guides/magisk-guide.md" class="community-card github">
+    <span class="icon">🏅</span>
+    <strong>Magisk</strong>
+    <span>Recommended</span>
+  </a>
+  <a href="./android-root-guides/kernelsu-guide.md" class="community-card twitter">
+    <span class="icon">⚡</span>
+    <strong>KernelSU</strong>
+    <span>Advanced Users</span>
+  </a>
+  <a href="./resources.md" class="community-card telegram">
+    <span class="icon">🤖</span>
+    <strong>Apatch</strong>
+    <span>Kernel-based root</span>
+  </a>
+  <a href="./android-root-guides/lsposed-guide.md" class="community-card reddit">
+    <span class="icon">⚙️</span>
+    <strong>LSPosed</strong>
+    <span>Customize your device</span>
+  </a>
 </div>
 
 ## 🤝 Resources
