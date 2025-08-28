@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: "en-US",
   title: "Awesome Android Root",
-  description: "Ultimate Android rooting hub with 280+ curated root apps, Magisk modules, and step-by-step guides for Android customization and freedom.",
+  description: "Ultimate Android rooting hub with 300+ curated root apps, Magisk modules, and step-by-step guides for Android customization and freedom.",
   ignoreDeadLinks: true,
   cleanUrls: true,
 
@@ -22,11 +22,11 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
-    ['meta', { name: 'apple-mobile-web-app-title', content: 'AAR' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
 
     // Additional browser compatibility meta tags
-    ['meta', { name: 'theme-color', content: '#ffffff' }],
+    ['meta', { name: 'theme-color', content: '#ffffff', media: '(prefers-color-scheme: light)' }],
+    ['meta', { name: 'theme-color', content: '#0b0b0c', media: '(prefers-color-scheme: dark)' }],
     ['meta', { name: 'color-scheme', content: 'light dark' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, viewport-fit=cover' }],
     ['meta', { name: 'apple-mobile-web-app-title', content: 'AAR' }],
@@ -68,12 +68,16 @@ export default defineConfig({
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Awesome Android Root",
-      "description": "Ultimate Android rooting hub with 280+ curated root apps, Magisk modules, and step-by-step guides",
+      "description": "Ultimate Android rooting hub with 300+ curated root apps, Magisk modules, and step-by-step guides",
       "url": "https://awesome-android-root.org",
       "publisher": {
         "@type": "Organization",
         "name": "Awesome Android Root Project",
-        "url": "https://github.com/awesome-android-root"
+        "url": "https://github.com/awesome-android-root",
+        sameAs: [
+            'https://github.com/awesome-android-root/awesome-android-root',
+            'https://x.com/awsm_and_root'
+          ]
       }
     })],
 
