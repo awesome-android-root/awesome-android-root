@@ -402,9 +402,11 @@ head:
 
 ---
 
-::: tip **Tips**
-> 💡 **New to rooting?** Start with our [Complete Rooting Guide](../android-root-guides/) before exploring apps below.
+::: warning **New to Rooting?**
+> 💡 Start with our [Complete Rooting Guide](../android-root-guides/) before exploring apps below.
+:::
 
+::: tip **Tips**
 > ⚠️ **Installer recommendation:** For privacy-friendly and convenient installs, we recommend using the F‑Droid ecosystem — for example, install the Droid‑ify client and enable the IzzyOnDroid repo:
 >
 > - Droid‑ify — https://github.com/Droid-ify/client/releases (modern F‑Droid client)
