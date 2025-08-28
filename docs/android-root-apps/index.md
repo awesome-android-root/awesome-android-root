@@ -314,7 +314,7 @@ head:
 #### 🛠️ **Root & System Management**
 - [Root Managers](#root-managers)
 - [Zygisk Implementations](#zygisk-implementations)
-- [Root Hiding & Integrity](#root-hiding--integrity)
+- [Root Hiding & Integrity](#root-hiding-and-integrity)
 - [Root Detection Tools](#root-detection-tools)
 - [Bootloop Protection](#bootloop-protection)
 
@@ -325,48 +325,49 @@ head:
 - [DNS Tools](#dns-tools)
 
 #### 📦 **App Management & Control**
-- [App Managers & Control](#app-managers-and-control)
-- [App Isolation & Cloning](#app-isolation-and-cloning)
-- [App Permissions](#app-permissions)
-- [App Stores](#app-stores)
+- [App Management](#app-management)
+  - [App Managers & Control](#app-managers-and-control)
+  - [App Isolation & Cloning](#app-isolation-and-cloning)
+  - [App Permissions](#app-permissions)
+  - [App Stores](#app-stores)
 
 #### 🧹 **System Optimization & Cleanup**
 - [System Optimization](#system-optimization)
+- [Performance Tweaks](#performance-tweaks)
+  - [Gaming & Performance Tweaks](#gaming-and-performance-tweak)
+  - [Memory & Storage Management](#memory-and-storage-management)
 - [Debloating & System App Removal](#debloating-and-system-app-removal)
-- [Memory & Storage Management](#memory-and-storage-management)
 - [Cleaning & Maintenance](#cleaning-and-maintenance)
 - [Battery & Power Management](#battery-and-power-management)
 
 #### 🎨 **Customization & UI**
-- [Themes & UI](#themes-and-ui)
-- [Launchers](#launchers)
-- [Boot Animations](#boot-animations)
-- [Fonts & Typography](#fonts-and-typography)
-- [Navigation](#navigation)
-- [Screen and Display](#screen-and-display)
-- [OS Specific Mods](#os-specific-mods)
-  - [AOSP](#aosp-android-open-source-project) • [ColorOS](#coloros-oppo) • [Global](#global)
-  - [HyperOS](#hyperos-xiaomi) • [One UI](#one-ui-samsung) • [Onyx](#onyx)
-  - [Oxygen OS](#oxygen-os-oneplus)
+- [Customization](#customization)
+  - [Themes & UI](#themes-and-ui)
+  - [Launchers](#launchers)
+  - [Boot Animations](#boot-animations)
+  - [Fonts & Typography](#fonts-and-typography)
+  - [Navigation](#navigation)
+  - [OS Specific Mods](#os-specific-mods)
+- [Screen & Display](#screen-and-display)
 
 #### 🔧 **App Modifications & Patches**
-- [General App Mods](#general-app-mods)
-- [Patching Tools](#patching-tools)
+- [Modded Apps & Tweaks](#modded-apps--tweaks)
+  - [General App Mods](#general-app-mods)
+  - [Patching Tools](#patching-tools)
+  - [Social Media Mods](#social-media-mods)
+    - [Instagram Mods](#instagram-mods) • [WhatsApp Mods](#whatsapp-mods) • [Telegram Mods](#telegram-mods)
+    - [X/Twitter Mods](#xtwitter-mods) • [TikTok Mods](#tiktok-mods) • [Reddit Mods](#reddit-mods)
+  - [Entertainment & Media Mods](#entertainment--media-mods)
+    - [YouTube, Spotify, & Google Photos Mods](#youtube-spotify--google-photos-mods)
+    - [Discord Mods](#discord-mods) • [Duolingo Mods](#duolingo-mods)
+  - [Regional App Mods](#regional-app-mods)
+    - [WeChat Mods](#wechat-mods) • [QQ Mods](#qq-mods) • [Bilibili Mods](#bilibili-mods) • [Weibo Mods](#weibo-mods)
+    - [Line Mods](#line-mods) • [Grindr Mods](#grindr-mods)
+  - [Utility App Mods](#utility-app-mods)
+    - [Maps Mods](#maps-mods)
 - [ReVanced](#revanced)
-- [Social Media Mods](#social-media-mods)
-  - [Instagram Mods](#instagram-mods) • [WhatsApp Mods](#whatsapp-mods) • [Telegram Mods](#telegram-mods)
-  - [X/Twitter Mods](#xtwitter-mods) • [TikTok Mods](#tiktok-mods) • [Reddit Mods](#reddit-mods)
-- [Entertainment & Media Mods](#entertainment-media-mods)
-  - [YouTube, Spotify, & Google Photos Mods](#youtube-spotify--google-photos-mods)
-  - [Discord Mods](#discord-mods) • [Duolingo Mods](#duolingo-mods)
-- [Regional App Mods](#regional-app-mods)
-  - [WeChat Mods](#wechat-mods) • [QQ Mods](#qq-mods) • [Bilibili Mods](#bilibili-mods) • [Weibo Mods](#weibo-mods)
-  - [Line Mods](#line-mods) • [Grindr Mods](#grindr-mods)
-- [Utility App Mods](#utility-app-mods)
-  - [Maps Mods](#maps-mods)
 
-#### ⚡ **Performance & Gaming**
-- [Performance & Gaming](#performance-and-gaming)
+#### ⚡ **Performance & System**
 - [Kernel Management](#kernel-management)
 - [System Modifications](#system-modifications)
 - [Automation](#automation)
@@ -376,27 +377,35 @@ head:
 - [Backup & Restore](#backup-and-restore)
 
 #### 🌐 **Network & Connectivity**
-- [Wi‑Fi Tools](#wi‑fi-tools)
-- [Hotspot/Tether](#hotspot-tools)
-- [Location & GPS](#location--gps)
-- [NFC & Cards](#nfc--cards)
+- [Networking & Connectivity](#networking--connectivity)
+  - [Firewall Tools](#firewall-tools)
+  - [DNS Tools](#dns-tools)
+  - [Hotspot Tools](#hotspot-tools)
+  - [Wi‑Fi Tools](#wi‑fi-tools)
+  - [Proxies & Misc Networking](#proxies--misc-networking)
+- [Location & GPS](#location-and-gps)
+- [NFC Tools](#nfc-tools)
 
 #### 📞 **Communication & Contacts**
-- [Call Recording](#call-recording)
-- [Contact Management](#contact-management)
-- [SMS Management](#sms-management)
+- [Communication](#communication)
+  - [Call Recording](#call-recording)
+  - [Contact Management](#contact-management)
+  - [SMS Management](#sms-management)
 
 #### 🎵 **Audio & Media**
 - [Audio & Media](#audio-and-media)
+  - [Audio Enhancement](#audio-enhancement)
+  - [Audio Control & Management](#audio-control--management)
+  - [Audio Configuration](#audio-configuration)
 
 #### 🛠️ **Developer & Technical Tools**
 - [Development & Debugging](#development-and-debugging)
-- [Device Controls & Hardware](#device-controls--hardware)
-- [Terminal & Shell Environments](#terminal-and-shell-environments)
+- [Device Control & Hardware](#device-control-and-hardware)
+- [Terminal & Shell Tools](#terminal-and-shell-tools)
 - [Tools](#tools)
 
 #### ♿ **Accessibility & Utilities**
-- [Accessibility & Utilities](#accessibility--utilities)
+- [Accessibility Tools](#accessibility-tools)
 
 </details>
 
@@ -1081,3 +1090,10 @@ After hiding root, you can check whether hiding works via root detection apps, s
 [↑ Back to top](#table-of-contents)
 
 ---
+
+<div align="center">
+
+
+[README](../../README.md) • [Root Guides](./../android-root-guides/index.md) • [FAQs](./../faqs.md)
+
+</div>
