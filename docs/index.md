@@ -384,16 +384,16 @@ features:
     <strong>Twitter/X</strong>
     <span>Daily updates</span>
   </a>
-  <a href="https://reddit.com/r/AwesomeAndroidRoot" class="community-card reddit">
-    <span class="icon">💬</span>
-    <strong>Reddit</strong>
-    <span>45k members</span>
+  <a href="./faqs.md" class="community-card reddit">
+    <span class="icon">📜</span>
+    <strong>FAQs</strong>
+    <span>Solve common problems</span>
   </a>
   
-  <a href="https://t.me/awesomeandroidroot" class="community-card telegram">
-    <span class="icon">📱</span>
-    <strong>Telegram</strong>
-    <span>24/7 support</span>
+  <a href="./resources.md" class="community-card telegram">
+    <span class="icon">📚</span>
+    <strong>Resources</strong>
+    <span>Big collection of resources</span>
   </a>
 </div>
 
