@@ -242,9 +242,7 @@ Start with these community-recommended apps:
 
 ## Resources and Support
 
-### Essential Guides for All Users
-
-Whether rooted or not, these guides help every Android user:
+### Essential Guides
 
 | Topic | Guide | Benefits |
 |:---|:---|:---|
@@ -325,13 +323,7 @@ Your support enables regular updates, comprehensive guides, community growth, an
 
 <div align="center">
 
-
-[![Contributors](https://contrib.rocks/image?repo=awesome-android-root/awesome-android-root)](https://github.com/awesome-android-root/awesome-android-root/graphs/contributors)
-
----
-
-⚡ Built with ❤️ **[Awesome Android Root](https://github.com/awesome-android-root/awesome-android-root)**
-
+⚡ Built with ❤️ by **[Awesome Android Root](https://github.com/awesome-android-root/awesome-android-root)**
 
 ---
 [![X Follow](https://img.shields.io/badge/Follow%20US-000?logo=X&logoColor=fff&style=for-the-badge)](https://x.com/awsm_and_root) [![Website](https://img.shields.io/website?url=https%3A%2F%2Fawesome-android-root.org%2F&style=for-the-badge)](https://awesome-android-root.org/)
