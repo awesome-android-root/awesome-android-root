@@ -289,6 +289,8 @@ Follow this proven 4-step process used successfully by thousands of users:
 
 ### Device-Specific Resources
 
+<details><summary><b>👉 Click to expand contents</b></summary>
+
 | Brand/ROM | Type | Bootloader/Download | Stock Firmware | Our Guide |
 |:---|:---|:---|:---|:---|
 | **Google Pixel** | Manufacturer | [Google Developers](https://developers.google.com/android/images) | [Factory Images](https://developers.google.com/android/images) | [Pixel Root Guide](docs/android-root-guides/how-to-root-pixel-phone.md) |
@@ -300,6 +302,8 @@ Follow this proven 4-step process used successfully by thousands of users:
 | **LineageOS** | Custom ROM | [lineageos.org](https://lineageos.org/) | Privacy-focused AOSP (200+ devices) | [ROM Installation Guide](docs/android-root-guides/custom-rom-installation.md) |
 | **Pixel Experience** | Custom ROM | [pixelexperience.org](https://pixelexperience.org/) | Pixel-like experience (Popular devices) | [ROM Installation Guide](docs/android-root-guides/custom-rom-installation.md) |
 | **Paranoid Android** | Custom ROM | [paranoidandroid.co](https://paranoidandroid.co/) | Feature-rich (Flagship devices) | [ROM Installation Guide](docs/android-root-guides/custom-rom-installation.md) |
+
+</details>
 
 ### Emergency & Recovery Resources
 
