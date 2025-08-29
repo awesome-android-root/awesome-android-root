@@ -74,46 +74,9 @@ remove_md_from_links() {
     log_info "Successfully removed .md extensions from links in $target_file"
 }
 
-# 2. Copy README.md from root to docs directory
-copy_readme_to_docs() {
-    local source_file="README.md"
-    local target_file="docs/README.md"
-
-    if [ ! -f "$source_file" ]; then
-        log_warn "$source_file not found, skipping README copy"
-        return
-    fi
-
-    log_info "Copying $source_file to $target_file"
-    
-    # Copy the README.md file to docs directory
-    cp "$source_file" "$target_file" || handle_error "Failed to copy $source_file to $target_file"
-
-    log_info "Successfully copied README.md to docs directory"
-}
-
-# 3. Adjust image paths in copied README.md
-adjust_readme_image_paths() {
-    local target="docs/README.md"
-    
-    if [ ! -f "$target" ]; then
-        log_warn "$target not found, skipping README image path adjustment"
-        return
-    fi
-
-    log_info "Adjusting image paths in $target"
-
-    # Replace docs/public/images/ → /images/
-    perl -pi -e 's|docs/public/images/|../public/images/|g' "$target" || \
-        handle_error "Failed to adjust image paths in $target"
-
-    log_info "Image paths updated in $target"
-}
-
-# 4. Call the functions
+# 3. Call the functions
 remove_md_from_links
-copy_readme_to_docs
-adjust_readme_image_paths
+
 
 # 5. Adjust image paths in android-root-apps/index.md
 adjust_image_paths() {
