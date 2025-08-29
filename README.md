@@ -40,28 +40,26 @@
 ## Introduction
 
 ### What is Android Rooting?
+Rooting grants superuser access on Android so you can modify system components, remove bloat, run powerful tools, and customize deeply—similar to admin rights on a desktop OS.
 
-Android rooting grants you **privileged administrative control** over your device's operating system. It elevates you to the "superuser" role, similar to an administrator on a computer, allowing you to modify system files, remove bloatware, install specialized apps, and unlock extensive customization options.
-
-
-### Why Root Your Android Device?
-
-- **🔒 Freedom and Control:** Remove restrictions and customize your device extensively
-- **⚡ Enhanced Performance:** Optimize system performance, battery life, and CPU/GPU behavior
-- **🛡️ Advanced Security and Privacy:** Gain granular control over app permissions, data access, and network traffic
-- **🎨 Complete Customization:** Apply themes, system modifications, and UI changes not possible otherwise
+### Why root?
+- 🔒 Freedom & control: Remove OEM limits and tailor your device
+- ⚡ Performance: Tune CPU/GPU, battery, and system services
+- 🛡️ Privacy/Security: Granular control over permissions and network access
+- 🎨 Customization: Themes, UI tweaks, system mods
 
 ### Benefits vs Risks
 
-| ✅ **Benefits** | ⚠️ **Risks & Considerations** |
-|:---|:---|
-| System-wide ad blocking | Warranty void |
-| Complete app control | Security vulnerabilities |
-| Performance tweaks | System instability potential |
-| Deep customization | OTA update issues |
-| Comprehensive backups | Banking/streaming app compatibility |
+| ✅ Benefits | ⚠️ Risks & Considerations |
+|:--|:--|
+| System-wide ad blocking | May void warranty |
+| Full app control | Security exposure if misused |
+| Performance tuning | Instability/bootloops possible |
+| Deep customization | OTA update friction |
+| True backups (app data) | App integrity checks may fail (banking/DRM) |
 
-> **🚨 CRITICAL:** Use this safety checklist before starting: **[✨ Safety Checklist ✨](https://fynks.github.io/check-list/)**
+
+> **🚨 CRITICAL:** Before you start, run through this preflight: [✨ Safety Checklist ✨](https://fynks.github.io/check-list/)
 
 
 ## 📚 Rooting Guides
@@ -70,59 +68,62 @@ Android rooting grants you **privileged administrative control** over your devic
 
 Follow this proven 4-step process used successfully by thousands of users:
 
-| Step | Guide | Description |
-|:---:|:---|:---|
-| **1** | **[🔓 Unlock Bootloader](docs/android-root-guides/how-to-unlock-bootloader.md)** | Essential first step for device modification |
-| **2** | **[🛠️ Install Custom Recovery](docs/android-root-guides/how-to-install-custom-recovery.md)** | Gateway to advanced modifications |
-| **3** | **[⚡ Choose Root Method](docs/android-root-guides/index.md#root-methods-comparison)** | Select between Magisk, KernelSU, or APatch |
-| **4** | **[🎯 Install Essential Apps](docs/android-root-apps/index.md#featured-apps-the-essentials)** | Get started with community-recommended apps |
+### Quickstart (4 steps)
+1) 🔓 Unlock bootloader  
+→ [Unlock Guide](docs/android-root-guides/how-to-unlock-bootloader.md)
+
+2) 🛠️ (Optional) Install a custom recovery  
+→ [Recovery Guide](docs/android-root-guides/how-to-install-custom-recovery.md)
+
+3) ⚡ Pick your root method  
+→ [Compare Magisk, KernelSU, APatch](docs/android-root-guides/index.md#root-methods-comparison)
+
+4) 🎯 First-boot setup + essentials  
+→ [Starter Apps](docs/android-root-apps/index.md#featured-apps-the-essentials)
 
 ### Root Methods Comparison
 
-| Method | Best For | Features | Guide |
-|:---|:---|:---|:---|
-| **Magisk** | Most users | Systemless root, modules, hiding | **[Magisk Guide](docs/android-root-guides/magisk-guide.md)** |
-| **KernelSU** | Advanced users | Kernel-based, high security | **[KernelSU Guide](docs/android-root-guides/kernelsu-guide.md)** |
-| **APatch** | Alternatives | Modern approach | **[APatch Guide](docs/android-root-guides/apatch-guide.md)** |
-| **LSPosed** | Framework mods | Xposed modules support | **[LSPosed Guide](docs/android-root-guides/lsposed-guide.md)** |
+| Method | Best For | Highlights | Guide |
+|:--|:--|:--|:--|
+| **Magisk** | Most users | Systemless root, modules, Zygisk | [Magisk Guide](docs/android-root-guides/magisk-guide.md) |
+| **KernelSU** | Power users with supported kernels | Kernel-level root, strong isolation | [KernelSU Guide](docs/android-root-guides/kernelsu-guide.md) |
+| **APatch** | Devices with limited options | Modern approach; no custom kernel required | [APatch Guide](docs/android-root-guides/apatch-guide.md) |
+| **LSPosed** | Framework mods | Xposed modules support | [LSPosed Guide](docs/android-root-guides/lsposed-guide.md) |
 
+### Device-specific Guides
 
-### Device-Specific Guides
-
-| Device Brand | Guide | Special Notes |
-|:---|:---|:---|
-| **Google Pixel** | **[Pixel Root Guide](docs/android-root-guides/how-to-root-pixel-phone.md)** | Clean Android experience |
-| **Samsung Galaxy** | **[Samsung Root Guide](docs/android-root-guides/how-to-root-samsung-phone.md)** | One UI specific instructions |
-| **Xiaomi/MIUI** | **[Xiaomi Root Guide](docs/android-root-guides/how-to-root-xiaomi-phone.md)** | MIUI/HyperOS-specific steps |
-| **OnePlus** | **[OnePlus Root Guide](docs/android-root-guides/how-to-root-oneplus-phone.md)** | OxygenOS devices |
-| **Nothing Phone** | **[Nothing Root Guide](docs/android-root-guides/how-to-root-nothing-phone.md)** | Nothing OS specific |
-| **Motorola** | **[Motorola Root Guide](docs/android-root-guides/how-to-root-motorola-phone.md)** | Moto devices |
+| Brand | Guide | Notes |
+|:--|:--|:--|
+| **Google Pixel** | [Pixel Root Guide](docs/android-root-guides/how-to-root-pixel-phone.md) | Straightforward A/B, AVB/verity nuances |
+| **Samsung** | [Samsung Root Guide](docs/android-root-guides/how-to-root-samsung-phone.md) | Patched AP via Odin; One UI caveats |
+| **Xiaomi/HyperOS** | [Xiaomi Root Guide](docs/android-root-guides/how-to-root-xiaomi-phone.md) | Mi Unlock wait times; fastbootd usage |
+| **OnePlus** | [OnePlus Root Guide](docs/android-root-guides/how-to-root-oneplus-phone.md) | OxygenOS/ColorOS merges |
+| **Nothing Phone** | [Nothing Root Guide](docs/android-root-guides/how-to-root-nothing-phone.md) | Slotting/firmware specifics |
+| **Motorola** | [Motorola Root Guide](docs/android-root-guides/how-to-root-motorola-phone.md) | Bootloader tokens, fastboot quirks |
 
 ### Additional Guides
 
 | Topic | Guide | Description |
 |:---|:---|:---|
-| **Custom ROMs** | **[ROM Installation Guide](docs/android-root-guides/custom-rom-installation.md)** | Transform your Android experience |
-| **Complete Overview** | **[Rooting Guides Index](docs/android-root-guides/index.md)** | All rooting tutorials in one place |
+| **Custom ROMs** | [ROM Installation Guide](docs/android-root-guides/custom-rom-installation.md) | Transform your Android experience |
+| **Complete Overview** | [Rooting Guides Index](docs/android-root-guides/index.md)| All rooting tutorials in one place |
+
+> Heads-up for Android 14/15: Play Integrity has tightened; hiding/unlocking is a moving target. Expect breakage and updates.
 
 
 ## 📱 Root Apps and Modules
 
-> **🚀 Quick Access:** Browse our complete collection of **[300+ Root Apps & Modules](docs/android-root-apps/index.md)**
+> 🚀 **[Browse our complete collection of 300+ Root Apps & Modules](docs/android-root-apps/index.md)**
 
-### 🏆 Featured Essentials
+### 🏆 Starter Pack (Essentials)
 
-Start with these community-recommended apps:
-
-
-| App | Category | Why it's essential |
-| :--- | :--- | :--- |
-| **[Magisk](https://github.com/topjohnwu/Magisk)** | Root Management | If you chose Magisk, this is your manager. |
-| **[App Manager](https://github.com/MuntashirAkon/AppManager)** | App Control | Inspect and manage apps with root privileges. |
-| **[MiXplorer](https://mixplorer.com/)** | File Management | A powerful file manager with full root access. |
-| **[AdAway](https://adaway.org/)** | Ad Blocking | Open-source system-wide ad blocker. |
-| **[Droid-ify](https://f-droid.org/packages/com.looker.droidify)** | F-Droid client | A modern F-Droid client for installing open-source apps. |
-
+| App | Category | Why |
+|:--|:--|:--|
+| [Magisk](https://github.com/topjohnwu/Magisk) | Root Manager | De-facto systemless root and modules |
+| [App Manager](https://github.com/MuntashirAkon/AppManager) | App Control | Inspect, freeze, export, block trackers |
+| [MiXplorer](https://mixplorer.com/) | File Manager | Full-featured with root access |
+| [AdAway](https://adaway.org/) | Ad Blocking | Open-source, system-wide blocking |
+| [Droid-ify](https://f-droid.org/packages/com.looker.droidify) | App Updates | Clean F-Droid client for OSS apps |
 
 ### Apps by Category
 
@@ -227,6 +228,8 @@ Start with these community-recommended apps:
 |:---|:---|
 | **[Accessibility Tools](docs/android-root-apps/index.md#accessibility-tools)** | Voice Access, Switch Access |
 
+---
+
 ### Project Statistics
 
 ![Total Entries](https://img.shields.io/badge/Total%20Entries-303-blue?style=flat-square&logo=android)
@@ -240,29 +243,40 @@ Start with these community-recommended apps:
 
 ### 🛠️ Essential Tools & Software
 
-| Tool Category | Tool | Purpose | Our Guide | Download Source |
-|:---|:---|:---|:---|:---|
-| **Root Management** | **Magisk** | Systemless root solution | [Magisk Guide](docs/android-root-guides/magisk-guide.md) | [GitHub](https://github.com/topjohnwu/Magisk) |
-| **Root Management** | **KernelSU** | Kernel-based root | [KernelSU Guide](docs/android-root-guides/kernelsu-guide.md) | [GitHub](https://github.com/tiann/KernelSU) |
-| **Root Management** | **APatch** | Alternative root method | [APatch Guide](docs/android-root-guides/apatch-guide.md) | [GitHub](https://github.com/bmax121/APatch) |
-| **Root Management** | **LSPosed** | Xposed Framework | [LSPosed Guide](docs/android-root-guides/lsposed-guide.md) | [GitHub](https://github.com/LSPosed/LSPosed) |
-| **Bootloader & Recovery** | **Android SDK Platform Tools** | ADB, Fastboot commands | [Bootloader Unlock Guide](docs/android-root-guides/how-to-unlock-bootloader.md) | [Android Developers](https://developer.android.com/studio/releases/platform-tools) |
-| **Bootloader & Recovery** | **TWRP Recovery** | Custom recovery solution | [Custom Recovery Guide](docs/android-root-guides/how-to-install-custom-recovery.md) | [TWRP Official](https://twrp.me/) |
-| **Bootloader & Recovery** | **OrangeFox Recovery** | Advanced custom recovery | [Custom Recovery Guide](docs/android-root-guides/how-to-install-custom-recovery.md) | [OrangeFox Website](https://orangefox.download/) |
-| **Firmware & ROM** | **Odin** | Samsung firmware flashing | [Samsung Root Guide](docs/android-root-guides/how-to-root-samsung-phone.md) | [Samsung Official](https://odin3.com/) |
-| **Firmware & ROM** | **Mi Flash Tool** | Xiaomi fastboot flashing | [Xiaomi Root Guide](docs/android-root-guides/how-to-root-xiaomi-phone.md) | [Xiaomi Official](https://xiaomiflashtool.com/) |
-| **Firmware & ROM** | **SP Flash Tool** | MediaTek device flashing | [Device Guides](docs/android-root-guides/index.md) | [SP Flash Tool](https://spflashtool.com/) |
+| Tool | Category | Purpose | Guide | Source |
+| :--- | :--- | :--- | :--- | :--- |
+| **Magisk** | Root | Systemless root &amp; modules | [Guide](docs/android-root-guides/magisk-guide.md) | [GitHub](https://github.com/topjohnwu/Magisk) |
+| **KernelSU** | Root | Kernel-level root | [Guide](docs/android-root-guides/kernelsu-guide.md) | [GitHub](https://github.com/tiann/KernelSU) |
+| **APatch** | Root | Alternative root approach | [Guide](docs/android-root-guides/apatch-guide.md) | [GitHub](https://github.com/bmax121/APatch) |
+| **LSPosed** | Framework | Zygisk/Riru module framework | [Guide](docs/android-root-guides/lsposed-guide.md) | [GitHub](https://github.com/LSPosed/LSPosed) |
+| **Platform Tools** | ADB/Fastboot | Core CLI (adb/fastboot/fastbootd) | [Bootloader Unlock](docs/android-root-guides/how-to-unlock-bootloader.md) | [Android Devs](https://developer.android.com/studio/releases/platform-tools) |
+| **TWRP** | Recovery | Custom recovery | [Recovery Guide](docs/android-root-guides/how-to-install-custom-recovery.md) | [TWRP](https://twrp.me/) |
+| **OrangeFox** | Recovery | Custom recovery (A/B-friendly) | [Recovery Guide](docs/android-root-guides/how-to-install-custom-recovery.md) | [OrangeFox](https://orangefox.download/) |
+| **Odin (Windows)** | Flashing (Samsung) | Flash AP/BL/CP/CSC | [Samsung Guide](docs/android-root-guides/how-to-root-samsung-phone.md) | [SamFw](https://samfw.com/blog/download-odin-all-version) |
+| **Mi Flash** | Flashing (Xiaomi) | Fastboot firmware | [Xiaomi Guide](docs/android-root-guides/how-to-root-xiaomi-phone.md) | [Xiaomi](https://xiaomiflashtool.com/) |
+| **SP Flash Tool** | Flashing (MediaTek) | MTK firmware | [Device Guides](docs/android-root-guides/index.md) | [SP Flash Tool](https://spflashtool.com/) |
 
-### 📚 Learning Resources & Community Guides
 
-| Topic | Guide | Benefits |
-|:---|:---|:---|
-| **Complete Rooting Guides** | **[All Rooting Tutorials](docs/android-root-guides/index.md)** | Step-by-step rooting for all methods |
-| **Device-Specific Guides** | **[Brand-Specific Instructions](docs/android-root-guides/index.md#device-specific-guides)** | Pixel • Samsung • Xiaomi • OnePlus • Nothing • Motorola |
-| **Ad Blocking** | **[Android Ad Blocking Guide](docs/guides/android-adblocking.md)** | Block ads across your entire device |
-| **Debloating** | **[Android App Debloating](docs/guides/android-apps-debloating.md)** | Remove bloatware and optimize performance |
-| **App Updates** | **[Stop Auto-Updates Guide](docs/guides/stop-android-app-auto-updates-play-store.md)** | Control app updates manually |
-| **Backup** | **[App Backup & Restore](docs/guides/app-backup-restore-using-root.md)** | Comprehensive backup solutions |
+### Firmware/Stock Rom downloading
+| Brand | Sources |
+| :--- | :--- |
+| **Samsung/One UI** | https://samfw.com/blog/download-odin-all-version |
+| **Xiaomi/HyperOS** | https://c.mi.com/global/miuidownload/index |
+| **NothingOS** | https://github.com/spike0en/nothing_archive |
+| **Google Pixel** | https://developers.google.com/android/images |
+| **Motorola** | https://mirrors.lolinet.com/firmware/lenomola/ |
+
+
+### 📚 How‑to Guides & Learning
+
+| Topic | Why it matters | Link |
+|:--|:--|:--|
+| **All Rooting Tutorials** | Methods, device quirks | [Guides Index](docs/android-root-guides/index.md) |
+| **Brand‑specific** | OEM expectations | [Device Index](docs/android-root-guides/index.md#device-specific-guides) |
+| **Ad Blocking** | Clean browsing & apps | [Ad Blocking Guide](docs/guides/android-adblocking.md) |
+| **Debloating** | Performance & privacy | [Debloat Guide](docs/guides/android-apps-debloating.md) |
+| **Backups** | Real, restorable backups | [Backup & Restore](docs/guides/app-backup-restore-using-root.md) |
+| **App Updates** | Control Play Store | [Stop Auto‑Updates](docs/guides/stop-android-app-auto-updates-play-store.md) |
 
 ### 👥 Communities & Forums
 
@@ -295,9 +309,6 @@ Start with these community-recommended apps:
 | **Root Not Working** | Reinstall root method | **[→ Root Issues](docs/faqs.md#root-not-working)** |
 | **Banking Apps Blocked** | Configure root hiding | **[→ App Compatibility](docs/faqs.md#play-integrity-and-banking-apps)** |
 | **Hard Brick** | Recovery options | **[→ Recovery Guide](docs/faqs.md#bricked-device-recovery)** |
-| **Heimdall** | Samsung recovery flashing | Cross-platform |
-| **Qualcomm Flash Tool** | Qualcomm device recovery | Windows/EDL Tool |
-| **MTK Flash Tool** | MediaTek recovery | Windows/SP Flash Tool |
 
 ### 📖 Help & Documentation
 
@@ -327,21 +338,18 @@ Start with these community-recommended apps:
 | **📱 GitHub** | Source code & issues | **[GitHub Repository](https://github.com/awesome-android-root/awesome-android-root)** |
 | **🐦 Twitter/X** | Updates & highlights | **[@awsm_and_root](https://x.com/awsm_and_root)** |
 
-### How to Help
-
-| Action | Impact | How |
-|:---|:---|:---|
-| **⭐ Star Repository** | Increases visibility | **[Star on GitHub](https://github.com/awesome-android-root/awesome-android-root)** |
-| **🐛 Report Issues** | Keeps content accurate | **[Report Problems](https://github.com/awesome-android-root/awesome-android-root/issues)** |
-| **💡 Suggest Apps** | Grows the collection | **[Suggest Apps](https://github.com/awesome-android-root/awesome-android-root/issues)** |
-| **📝 Contribute** | Direct community impact | **[Contribution Guide](docs/contributing.md)** |
-| **💖 Sponsor** | Sustains the project | **[Become a Sponsor](https://opencollective.com/awesome-android-root-official)** |
+### Ways to Help
+- ⭐ [Star the repo](https://github.com/awesome-android-root/awesome-android-root) to boost visibility  
+- 🐛 [File issues](https://github.com/awesome-android-root/awesome-android-root/issues) for fixes/updates  
+- 💡 [Suggest new apps/modules  ](https://github.com/awesome-android-root/awesome-android-root/issues)
+- 📝 Send PRs (see [Contributing](docs/contributing.md))  
+- 💖 **[Sponsor ongoing work](https://opencollective.com/awesome-android-root-official)**
 
 ---
 
 ## Support the Project
 
-Your support enables regular updates, comprehensive guides, community growth, and security research:
+Your support funds curation, testing, documentation, and community upkeep.
 
 [![Become a Sponsor](https://img.shields.io/badge/💖-Become%20a%20Sponsor-ff69b4?style=for-the-badge)](https://opencollective.com/awesome-android-root-official)
 [![GitHub Stars](https://img.shields.io/badge/⭐-Star%20this%20Repo-yellow?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root)
@@ -351,21 +359,23 @@ Your support enables regular updates, comprehensive guides, community growth, an
 
 ## Legal & Safety
 
-> **⚠️ DISCLAIMER:** This repository is for **educational purposes only**. Rooting may void warranties, cause data loss, or render devices unusable. The maintainers are **not responsible** for any damage, loss, or legal issues from using listed apps, modules, or guides. **Proceed at your own risk.**
+> ⚠️ Educational use only. Rooting and flashing can void warranties, erase data, or brick devices. You are responsible for any outcomes. Respect local laws and app terms.
 
-**Essential Safety:**
-- **Complete device backup** before any modifications
-- **Research your device** thoroughly before proceeding  
-- **Understand the risks** and consequences
-- **Have a recovery plan** ready
+Essentials:
+- Back up your data before any change
+- Research device‑specific quirks (AVB/verity, dynamic partitions)
+- Understand risks and prepare a recovery path
+- Keep a computer with ADB/Fastboot handy
 
 ---
 
 <div align="center">
 
-⚡ Built with ❤️ by **[Awesome Android Root](https://github.com/awesome-android-root/awesome-android-root)**
+**⚡ Built with ❤️ by [Awesome Android Root](https://github.com/awesome-android-root/awesome-android-root)**
 
 ---
-[![X Follow](https://img.shields.io/badge/Follow%20US-000?logo=X&logoColor=fff&style=for-the-badge)](https://x.com/awsm_and_root) [![Website](https://img.shields.io/website?url=https%3A%2F%2Fawesome-android-root.org%2F&style=for-the-badge)](https://awesome-android-root.org/)
+
+[![X Follow](https://img.shields.io/badge/Follow%20US-000?logo=X&logoColor=fff&style=for-the-badge)](https://x.com/awsm_and_root)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fawesome-android-root.org%2F&style=for-the-badge)](https://awesome-android-root.org/)
 
 </div>
