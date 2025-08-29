@@ -7,24 +7,22 @@ export default defineConfig({
   ignoreDeadLinks: true,
   cleanUrls: true,
 
-  // Keep Vite config minimal. esbuild is fast and good enough for docs.
   vite: {
     esbuild: {
-      // Only drop logs in production; keep them in dev for DX
+      // Only drop console/debugger in production builds
       drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : []
     }
   },
 
   head: [
-
-    // Favicons with improved metadata
+    // --- Favicons ---
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
 
-    // Additional browser compatibility meta tags
+    // --- Browser Meta ---
     ['meta', { name: 'theme-color', content: '#ffffff', media: '(prefers-color-scheme: light)' }],
     ['meta', { name: 'theme-color', content: '#0b0b0c', media: '(prefers-color-scheme: dark)' }],
     ['meta', { name: 'color-scheme', content: 'light dark' }],
@@ -34,16 +32,14 @@ export default defineConfig({
     ['meta', { name: 'mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }],
 
-    // Critical resource hints - prioritize most important resources
+    // --- Resource Hints (Preconnect/DNS-Prefetch) ---
     ['link', { rel: 'preconnect', href: 'https://img.shields.io', crossorigin: '' }],
     ['link', { rel: 'dns-prefetch', href: 'https://img.shields.io' }],
     ['link', { rel: 'preconnect', href: 'https://github.com', crossorigin: '' }],
     ['link', { rel: 'dns-prefetch', href: 'https://github.com' }],
-
-    // SEO Meta Tags - Enhanced for Android Root niche
-    ['meta', { name: 'keywords', content: 'android root 2025, magisk modules, kernelsu guide, lsposed framework, custom recovery, twrp guide, bootloader unlock, android customization, root apps, system modifications, android freedom, xposed modules, android debloating, performance optimization, privacy tools, android security, custom rom installation, android development, rooting tutorial, android hacking, mobile security' }],
-
-    // Enhanced SEO and performance meta tags
+    
+    // --- SEO Meta Tags ---
+    ['meta', { name: 'keywords', content: 'android root, magisk, kernelsu, lsposed, custom recovery, twrp, bootloader unlock, android customization, root apps, system modifications, xposed, android debloating, performance optimization, privacy tools, custom rom, rooting tutorial' }],
     ['meta', { name: 'author', content: 'Awesome Android Root Project' }],
     ['meta', { name: 'publisher', content: 'Awesome Android Root Project' }],
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1' }],
@@ -53,42 +49,39 @@ export default defineConfig({
     ['meta', { name: 'rating', content: 'general' }],
     ['meta', { name: 'referrer', content: 'no-referrer-when-downgrade' }],
 
-    // Open Graph structured data
-    ['meta', { property: 'og:site_name', content: 'Awesome Android Root' }],
-    ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:locale', content: 'en_US' }],
-
-    // Twitter Card data
+    // --- Twitter Card ---
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:site', content: '@awsm_and_root' }],
     ['meta', { name: 'twitter:creator', content: '@awsm_and_root' }],
 
-    // JSON-LD structured data for better SEO
+    // --- JSON-LD Structured Data ---
     ['script', { type: 'application/ld+json' }, JSON.stringify({
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Awesome Android Root",
-      "description": "Ultimate Android rooting hub with 300+ curated root apps, Magisk modules, and step-by-step guides",
-      "url": "https://awesome-android-root.org",
+      "description": "Ultimate Android rooting hub with 300+ curated root apps, Magisk modules, and step-by-step guides for Android customization and freedom.",
+      "url": "https://awesome-android-root.org/", 
       "publisher": {
         "@type": "Organization",
         "name": "Awesome Android Root Project",
         "url": "https://github.com/awesome-android-root",
-        sameAs: [
-            'https://github.com/awesome-android-root/awesome-android-root',
-            'https://x.com/awsm_and_root'
-          ]
+        "sameAs": [
+          "https://github.com/awesome-android-root/awesome-android-root",
+          "https://x.com/awsm_and_root",
+          "https://opencollective.com/awesome-android-root-official"
+        ]
       }
     })],
 
-    // Ahref Verification for Search Console
-    ['meta', { name: 'ahrefs-site-verification', content: '5fd5ad82113006dedaabbb7cc47ee96924361ceedafe09795ce9abbb7d32d6ff' }],
+    // --- Verification Tags ---
+    ['meta', { name: 'ahrefs-site-verification', content: '5fd5ad82113006dedaabbb7cc47ee96924361ceedafe09795ce9abbb7d32d6ff' }]
   ],
+
   themeConfig: {
     logo: {
       light: '/images/logo.svg',
       dark: '/images/logo_dark.svg',
-      alt: 'Site Logo'
+      alt: 'Awesome Android Root Logo'
     },
     search: {
       provider: 'local',
@@ -147,7 +140,7 @@ export default defineConfig({
             ]
           },
           {
-            text: 'General Guides', link: '/guides/', activeMatch: '^/guides/' 
+            text: 'General Guides', link: '/guides/', activeMatch: '^/guides/'
           }
         ]
       },
@@ -164,8 +157,8 @@ export default defineConfig({
         items: [
           { text: 'About Project', link: '/about' },
           { text: 'How to Contribute', link: '/contributing' },
-          { text: 'Support Us', link: 'https://opencollective.com/awesome-android-root-official' },
-          { text: 'Star on GitHub', link: 'https://github.com/awesome-android-root/awesome-android-root' }
+          { text: 'Support Us', link: 'https://opencollective.com/awesome-android-root-official' }, 
+          { text: 'Star on GitHub', link: 'https://github.com/awesome-android-root/awesome-android-root' } 
         ]
       }
     ],
@@ -206,8 +199,8 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'LSPosed Framework', link: '/android-root-guides/lsposed-guide' },
-            { text: 'Zygisk Implementations', link: '/android-root-apps/#zygisk-implementations' },
-            { text: 'Root Hiding & Integrity', link: '/android-root-apps/#root-hiding-and-integrity' }
+            { text: 'Zygisk Implementations', link: '/android-root-apps/#zygisk-implementations' }, 
+            { text: 'Root Hiding & Integrity', link: '/android-root-apps/#root-hiding-and-integrity' } 
           ]
         },
         {
@@ -228,38 +221,38 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: 'FAQ & Emergency Help', link: '/faqs/#emergency-help' },
-            { text: 'Bootloop Protection', link: '/android-root-apps/#bootloop-protection' },
-            { text: 'Root Hiding (Play Integrity)', link: '/faqs/#play-integrity-and-banking-apps' }
+            { text: 'Bootloop Protection', link: '/android-root-apps/#bootloop-protection' }, 
+            { text: 'Root Hiding (Play Integrity)', link: '/faqs/#play-integrity-and-banking-apps' } 
           ]
         }
       ],
 
-      // Root Apps Sidebar - Updated with proper hash anchors
+      // Root Apps Sidebar
       '/android-root-apps/': [
         { text: '⭐ Featured Essentials', link: '/android-root-apps/#featured-apps-the-essentials' },
         { text: '📋 Browse All Categories', link: '/android-root-apps/' },
-        { text: '---' },
+        { text: '---' }, // Divider
         { text: '🔓 Root Management', link: '/android-root-apps/#root-management' },
-  { text: '🛡️ Root Hiding & Integrity', link: '/android-root-apps/#root-hiding-and-integrity' },
+        { text: '🛡️ Root Hiding & Integrity', link: '/android-root-apps/#root-hiding-and-integrity' },
         { text: '🚫 Ad & Tracker Blocking', link: '/android-root-apps/#ads-and-tracking-blockers' },
         { text: '📦 App Management', link: '/android-root-apps/#app-management' },
-  { text: '🛡️ Privacy & Security', link: '/android-root-apps/#privacy-and-security' },
-        { text: '---' },
+        { text: '🛡️ Privacy & Security', link: '/android-root-apps/#privacy-and-security' },
+        { text: '---' }, // Divider
         { text: '⚡ Performance Tweaks', link: '/android-root-apps/#performance-tweaks' },
         { text: '🎨 Customization', link: '/android-root-apps/#customization' },
-  { text: '🪄 Modded Apps & Tweaks', link: '/android-root-apps/#modded-apps--tweaks' },
-  { text: '🌐 Networking & Connectivity', link: '/android-root-apps/#networking--connectivity' },
-        { text: '---' },
+        { text: '🪄 Modded Apps & Tweaks', link: '/android-root-apps/#modded-apps--tweaks' },
+        { text: '🌐 Networking & Connectivity', link: '/android-root-apps/#networking--connectivity' },
+        { text: '---' }, // Divider
         { text: '🛠️ Development & Debugging', link: '/android-root-apps/#development-and-debugging' },
         { text: '🔧 Device Control & Hardware', link: '/android-root-apps/#device-control-and-hardware' },
         { text: '🗂️ File Management', link: '/android-root-apps/#file-management' },
-  { text: '💻 Terminal & Shell', link: '/android-root-apps/#terminal-and-shell-tools' },
-        { text: '---' },
-  { text: '🎵 Audio & Media', link: '/android-root-apps/#audio-and-media' },
+        { text: '💻 Terminal & Shell', link: '/android-root-apps/#terminal-and-shell-tools' },
+        { text: '---' }, // Divider
+        { text: '🎵 Audio & Media', link: '/android-root-apps/#audio-and-media' },
         { text: '💾 Backup & Restore', link: '/android-root-apps/#backup-and-restore' },
         { text: '🧹 System Debloating', link: '/android-root-apps/#debloating-and-system-app-removal' },
         { text: '🔩 System Modifications', link: '/android-root-apps/#system-modifications' },
-        { text: '---' },
+        { text: '---' }, // Divider
         { text: '💬 Communication', link: '/android-root-apps/#communication' },
         { text: '📍 Location & GPS', link: '/android-root-apps/#location-and-gps' },
         { text: '📡 NFC Tools', link: '/android-root-apps/#nfc-tools' },
@@ -285,7 +278,7 @@ export default defineConfig({
         }
       ],
 
-      // Homepage Sidebar - Updated with proper hash anchors
+      // Homepage Sidebar
       '/': [
         {
           text: 'Quick Start',
@@ -360,10 +353,8 @@ export default defineConfig({
     },
     appearance: 'auto',
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/awesome-android-root/awesome-android-root' },
-      { icon: 'x', link: 'https://x.com/awsm_and_root' },
+      { icon: 'github', link: 'https://github.com/awesome-android-root/awesome-android-root' }, 
+      { icon: 'x', link: 'https://x.com/awsm_and_root' } 
     ],
-
   },
-
 })
