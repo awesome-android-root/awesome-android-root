@@ -22,7 +22,7 @@
 
 <div align="center" class="quick-nav">
 
-🚀 Quick Links: [Introduction](#what-is-android-rooting) | [Root Guides](#-rooting-guides-and-resources) | [Apps & Modules](#-root-apps-and-modules) | [Resources](#-community-and-contributing)
+🚀 Quick Links: [Introduction](#introduction) | [Root Guides](#-rooting-guides) | [Apps & Modules](#-root-apps-and-modules) | [Resources & Tools](#resources-and-support) | [Community](#-community-and-contributing)
 
 </div>
 
@@ -238,31 +238,83 @@ Start with these community-recommended apps:
 
 ## Resources and Support
 
-### Essential Guides
+### 🛠️ Essential Tools & Software
+
+| Tool Category | Tool | Purpose | Our Guide | Download Source |
+|:---|:---|:---|:---|:---|
+| **Root Management** | **Magisk** | Systemless root solution | [Magisk Guide](docs/android-root-guides/magisk-guide.md) | [GitHub](https://github.com/topjohnwu/Magisk) |
+| **Root Management** | **KernelSU** | Kernel-based root | [KernelSU Guide](docs/android-root-guides/kernelsu-guide.md) | [GitHub](https://github.com/tiann/KernelSU) |
+| **Root Management** | **APatch** | Alternative root method | [APatch Guide](docs/android-root-guides/apatch-guide.md) | [GitHub](https://github.com/bmax121/APatch) |
+| **Root Management** | **LSPosed** | Xposed Framework | [LSPosed Guide](docs/android-root-guides/lsposed-guide.md) | [GitHub](https://github.com/LSPosed/LSPosed) |
+| **Bootloader & Recovery** | **Android SDK Platform Tools** | ADB, Fastboot commands | [Bootloader Unlock Guide](docs/android-root-guides/how-to-unlock-bootloader.md) | [Android Developers](https://developer.android.com/studio/releases/platform-tools) |
+| **Bootloader & Recovery** | **TWRP Recovery** | Custom recovery solution | [Custom Recovery Guide](docs/android-root-guides/how-to-install-custom-recovery.md) | [TWRP Official](https://twrp.me/) |
+| **Bootloader & Recovery** | **OrangeFox Recovery** | Advanced custom recovery | [Custom Recovery Guide](docs/android-root-guides/how-to-install-custom-recovery.md) | [OrangeFox Website](https://orangefox.download/) |
+| **Firmware & ROM** | **Odin** | Samsung firmware flashing | [Samsung Root Guide](docs/android-root-guides/how-to-root-samsung-phone.md) | [Samsung Official](https://odin3.com/) |
+| **Firmware & ROM** | **Mi Flash Tool** | Xiaomi fastboot flashing | [Xiaomi Root Guide](docs/android-root-guides/how-to-root-xiaomi-phone.md) | [Xiaomi Official](https://xiaomiflashtool.com/) |
+| **Firmware & ROM** | **SP Flash Tool** | MediaTek device flashing | [Device Guides](docs/android-root-guides/index.md) | [SP Flash Tool](https://spflashtool.com/) |
+
+### 📚 Learning Resources & Community Guides
 
 | Topic | Guide | Benefits |
 |:---|:---|:---|
+| **Complete Rooting Guides** | **[All Rooting Tutorials](docs/android-root-guides/index.md)** | Step-by-step rooting for all methods |
+| **Device-Specific Guides** | **[Brand-Specific Instructions](docs/android-root-guides/index.md#device-specific-guides)** | Pixel • Samsung • Xiaomi • OnePlus • Nothing • Motorola |
 | **Ad Blocking** | **[Android Ad Blocking Guide](docs/guides/android-adblocking.md)** | Block ads across your entire device |
 | **Debloating** | **[Android App Debloating](docs/guides/android-apps-debloating.md)** | Remove bloatware and optimize performance |
 | **App Updates** | **[Stop Auto-Updates Guide](docs/guides/stop-android-app-auto-updates-play-store.md)** | Control app updates manually |
 | **Backup** | **[App Backup & Restore](docs/guides/app-backup-restore-using-root.md)** | Comprehensive backup solutions |
 
-### Help & Troubleshooting
+### 👥 Communities & Forums
 
-| Resource | Description | Quick Access |
-|:---|:---|:---|
-| **FAQ & Troubleshooting** | Common questions and solutions | **[→ Get Help](docs/faqs.md)** |
-| **ℹAbout This Project** | Learn about our mission | **[→ About Us](docs/about.md)** |
-| **Contributing** | Help improve this resource | **[→ Contribute](docs/contributing.md)** |
+| Community | Focus | Members | Best For |
+|:---|:---|:---|:---|
+| **[XDA Developers](https://forum.xda-developers.com/)** | Android development & modding | 2M+ | Device-specific help, ROMs, development |
+| **[r/AndroidRoot](https://reddit.com/r/AndroidRoot)** | General rooting discussions | 150K+ | Quick help, troubleshooting |
+| **[r/Magisk](https://reddit.com/r/Magisk)** | Magisk-specific support | 80K+ | Magisk modules, issues, updates |
+| **[r/LineageOS](https://reddit.com/r/LineageOS)** | LineageOS custom ROM | 100K+ | Custom ROM discussions |
 
-### Emergency Help
+### Device-Specific Resources
 
-| Issue | Quick Solution | Guide Link |
+| Brand/ROM | Type | Bootloader/Download | Stock Firmware | Our Guide |
+|:---|:---|:---|:---|:---|
+| **Google Pixel** | Manufacturer | [Google Developers](https://developers.google.com/android/images) | [Factory Images](https://developers.google.com/android/images) | [Pixel Root Guide](docs/android-root-guides/how-to-root-pixel-phone.md) |
+| **Samsung** | Manufacturer | [Samsung Developers](https://developer.samsung.com/) | [SamMobile](https://www.sammobile.com/firmwares/) | [Samsung Root Guide](docs/android-root-guides/how-to-root-samsung-phone.md) |
+| **Xiaomi** | Manufacturer | [Mi Unlock](https://en.miui.com/unlock/) | [Xiaomi Firmware](https://xiaomifirmwareupdater.com/) | [Xiaomi Root Guide](docs/android-root-guides/how-to-root-xiaomi-phone.md) |
+| **OnePlus** | Manufacturer | [OnePlus Support](https://www.oneplus.com/support) | [Oxygen Updater](https://oxygenupdater.com/) | [OnePlus Root Guide](docs/android-root-guides/how-to-root-oneplus-phone.md) |
+| **Nothing** | Manufacturer | [Nothing Support](https://nothing.tech/support) | [Nothing Firmware](https://nothing.tech/support) | [Nothing Root Guide](docs/android-root-guides/how-to-root-nothing-phone.md) |
+| **Motorola** | Manufacturer | [Motorola Support](https://motorola-global-portal.custhelp.com/) | [Lolinet](https://mirrors.lolinet.com/firmware/moto/) | [Motorola Root Guide](docs/android-root-guides/how-to-root-motorola-phone.md) |
+| **LineageOS** | Custom ROM | [lineageos.org](https://lineageos.org/) | Privacy-focused AOSP (200+ devices) | [ROM Installation Guide](docs/android-root-guides/custom-rom-installation.md) |
+| **Pixel Experience** | Custom ROM | [pixelexperience.org](https://pixelexperience.org/) | Pixel-like experience (Popular devices) | [ROM Installation Guide](docs/android-root-guides/custom-rom-installation.md) |
+| **Paranoid Android** | Custom ROM | [paranoidandroid.co](https://paranoidandroid.co/) | Feature-rich (Flagship devices) | [ROM Installation Guide](docs/android-root-guides/custom-rom-installation.md) |
+
+### Emergency & Recovery Resources
+
+| Issue/Tool | Quick Solution/Purpose | Platform/Guide Link |
 |:---|:---|:---|
 | **Device Won't Boot** | Disable modules, restore backup | **[→ Bootloop Fix](docs/faqs.md#device-wont-boot)** |
 | **Root Not Working** | Reinstall root method | **[→ Root Issues](docs/faqs.md#root-not-working)** |
 | **Banking Apps Blocked** | Configure root hiding | **[→ App Compatibility](docs/faqs.md#play-integrity-and-banking-apps)** |
 | **Hard Brick** | Recovery options | **[→ Recovery Guide](docs/faqs.md#bricked-device-recovery)** |
+| **Heimdall** | Samsung recovery flashing | Cross-platform |
+| **Qualcomm Flash Tool** | Qualcomm device recovery | Windows/EDL Tool |
+| **MTK Flash Tool** | MediaTek recovery | Windows/SP Flash Tool |
+
+### 📖 Help & Documentation
+
+| Resource | Description | Quick Access |
+|:---|:---|:---|
+| **FAQ & Troubleshooting** | Common questions and solutions | **[→ Get Help](docs/faqs.md)** |
+| **About This Project** | Learn about our mission | **[→ About Us](docs/about.md)** |
+| **Contributing** | Help improve this resource | **[→ Contribute](docs/contributing.md)** |
+
+### 🎥 Educational Channels
+
+| Channel | Focus | Platform |
+|:---|:---|:---|
+| **XDA Developers** | Android tutorials & development | [YouTube](https://www.youtube.com/user/xdadevelopers) |
+| **Android Authority** | Android guides & reviews | [YouTube](https://www.youtube.com/user/AndroidAuthority) |
+
+> **💡 Pro Tip:** Always verify video tutorials with our [written guides](docs/android-root-guides/index.md) for the most up-to-date instructions.
 
 
 ## 🤝 Community and Contributing
@@ -275,15 +327,6 @@ Start with these community-recommended apps:
 | **📱 GitHub** | Source code & issues | **[GitHub Repository](https://github.com/awesome-android-root/awesome-android-root)** |
 | **🐦 Twitter/X** | Updates & highlights | **[@awsm_and_root](https://x.com/awsm_and_root)** |
 
-
-### Active Communities
-
-| Community | Focus | Members |
-|:---|:---|:---|
-| **[XDA Developers](https://forum.xda-developers.com/)** | Android development & modding | 2M+ experts |
-| **[r/AndroidRoot](https://reddit.com/r/AndroidRoot)** | General rooting discussions | Active community |
-| **[r/Magisk](https://reddit.com/r/Magisk)** | Magisk-specific support | Module developers |
-
 ### How to Help
 
 | Action | Impact | How |
@@ -294,7 +337,9 @@ Start with these community-recommended apps:
 | **📝 Contribute** | Direct community impact | **[Contribution Guide](docs/contributing.md)** |
 | **💖 Sponsor** | Sustains the project | **[Become a Sponsor](https://opencollective.com/awesome-android-root-official)** |
 
-### Support the Project
+---
+
+## Support the Project
 
 Your support enables regular updates, comprehensive guides, community growth, and security research:
 
