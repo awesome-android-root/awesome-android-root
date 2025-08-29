@@ -92,11 +92,30 @@ copy_readme_to_docs() {
     log_info "Successfully copied README.md to docs directory"
 }
 
-# 3. Call the functions
+# 3. Adjust image paths in copied README.md
+adjust_readme_image_paths() {
+    local target="docs/README.md"
+    
+    if [ ! -f "$target" ]; then
+        log_warn "$target not found, skipping README image path adjustment"
+        return
+    fi
+
+    log_info "Adjusting image paths in $target"
+
+    # Replace docs/public/images/ → /images/
+    perl -pi -e 's|docs/public/images/|../public/images/|g' "$target" || \
+        handle_error "Failed to adjust image paths in $target"
+
+    log_info "Image paths updated in $target"
+}
+
+# 4. Call the functions
 remove_md_from_links
 copy_readme_to_docs
+adjust_readme_image_paths
 
-# 4. Adjust image paths in android-root-apps/index.md
+# 5. Adjust image paths in android-root-apps/index.md
 adjust_image_paths() {
     local target="docs/android-root-apps/index.md"
     
@@ -107,8 +126,8 @@ adjust_image_paths() {
 
     log_info "Adjusting image paths in $target"
 
-    # Replace docs/public/images/ → ../public/images/
-    perl -pi -e 's|docs/public/images/|../public/images/|g' "$target" || \
+    # Replace docs/public/images/ → /images/
+    perl -pi -e 's|docs/public/images/|/images/|g' "$target" || \
         handle_error "Failed to adjust image paths in $target"
 
     log_info "Image paths updated in $target"
