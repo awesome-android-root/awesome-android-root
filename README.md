@@ -30,13 +30,12 @@
 
 ## Table of Contents
 
-- [🚀 Introduction](#introduction)
-- [📚 Rooting Guides](#-rooting-guides)
-- [📱 Root Apps & Modules](#-root-apps-and-modules)
-- [📖 Resources & Support](#resources-and-support)
-- [🤝 Community & Contributing](#-community-and-contributing)
+- [Introduction](#introduction)
+- [Rooting Guides](#-rooting-guides)
+- [Root Apps & Modules](#-root-apps-and-modules)
+- [Resources & Support](#resources-and-support)
+- [Community & Contributing](#-community-and-contributing)
 
----
 
 ## Introduction
 
@@ -64,7 +63,6 @@ Android rooting grants you **privileged administrative control** over your devic
 
 > **🚨 CRITICAL:** Use this safety checklist before starting: **[✨ Safety Checklist ✨](https://fynks.github.io/check-list/)**
 
----
 
 ## 📚 Rooting Guides
 
@@ -107,7 +105,6 @@ Follow this proven 4-step process used successfully by thousands of users:
 | **Custom ROMs** | **[ROM Installation Guide](docs/android-root-guides/custom-rom-installation.md)** | Transform your Android experience |
 | **Complete Overview** | **[Rooting Guides Index](docs/android-root-guides/index.md)** | All rooting tutorials in one place |
 
----
 
 ## 📱 Root Apps and Modules
 
@@ -238,7 +235,6 @@ Start with these community-recommended apps:
 ![KernelSU Modules](https://img.shields.io/badge/KernelSU%20Modules-16-green?style=flat-square)
 ![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-84-purple?style=flat-square)
 
----
 
 ## Resources and Support
 
@@ -268,7 +264,6 @@ Start with these community-recommended apps:
 | **Banking Apps Blocked** | Configure root hiding | **[→ App Compatibility](docs/faqs.md#play-integrity-and-banking-apps)** |
 | **Hard Brick** | Recovery options | **[→ Recovery Guide](docs/faqs.md#bricked-device-recovery)** |
 
----
 
 ## 🤝 Community and Contributing
 
