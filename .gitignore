@@ -1,3 +1,4 @@
 docs/.vitepress/dist
 docs/.vitepress/cache
 node_modules
+docs/README.md
