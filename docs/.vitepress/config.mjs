@@ -156,7 +156,7 @@ export default defineConfig({
         items: [
           { text: 'FAQ & Support', link: '/faqs', activeMatch: '^/faqs' },
           { text: 'Glossary & Terms', link: '/android-root-apps/#glossary' },
-          { text: 'Resources Hub', link: '/resources' }
+          { text: 'Resources Hub', link: '/README#resources-and-support' }
         ]
       },
       {
