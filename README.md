@@ -69,16 +69,16 @@ Rooting grants superuser access on Android so you can modify system components, 
 Follow this proven 4-step process used successfully by thousands of users:
 
 ### Quickstart (4 steps)
-1) 🔓 Unlock bootloader  
+1) **Unlock bootloader**  
 → [Unlock Guide](docs/android-root-guides/how-to-unlock-bootloader.md)
 
-2) 🛠️ (Optional) Install a custom recovery  
+2) **(Optional) Install a custom recovery**    
 → [Recovery Guide](docs/android-root-guides/how-to-install-custom-recovery.md)
 
-3) ⚡ Pick your root method  
+3) **Pick your root method**  
 → [Compare Magisk, KernelSU, APatch](docs/android-root-guides/index.md#root-solutions-comparison)
 
-4) 🎯 First-boot setup + essentials  
+4) **First-boot setup + essentials**  
 → [Starter Apps](docs/android-root-apps/index.md#featured-apps-the-essentials)
 
 ### Root Methods Comparison
