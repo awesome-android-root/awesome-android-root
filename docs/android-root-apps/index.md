@@ -923,6 +923,7 @@ head:
 - **[MAGNETAR](https://github.com/Kyliekyler/MAGNETAR)** - Device Performance Optimizer — Aims To Provide An Optimal Experience At Every Usage Scenario. `FOSS` `[M]`
 - **[PerfMTK](https://github.com/JUANIMAN/PerfMTK)** - Designed to optimize performance and power efficiency on MediaTek devices with Mali GPUs. `FOSS` `[M]`
 - **[QuickSE](https://f-droid.org/packages/com.maazm7d.quickse/)** - Instantly check & toggle SELinux status on rooted Android devices. [📦](https://github.com/maazm7d/QuickSE) `FOSS`
+- **[Secure Element Access](https://github.com/jqssun/android-se-access)** - Enable access to secure element for trusted apps. `FOSS`
 - **[SpeedCool](https://github.com/Llucs/SpeedCool-Magisk-Module)** - Boost, cool down, and optimize your Android with SpeedCool: less lag, more performance, and a cooler system. `FOSS` `[M]`
 - **[SuperMario Tweaker](https://github.com/mrx7014/SuperMario-Tweaker)** - A tweaker module that can improve any device performance and stability (Gaming, Daily Useage, etc). `FOSS` `[M]`
 - **⭐ [TNF Tweaker](https://github.com/topnotchfreaks/tnf_tweaker)** - Optimization tool designed exclusively for devices running the TopNotchFreaks and Zephyr kernels. `FOSS` `[K]`
