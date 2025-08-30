@@ -76,7 +76,7 @@ Follow this proven 4-step process used successfully by thousands of users:
 → [Recovery Guide](docs/android-root-guides/how-to-install-custom-recovery.md)
 
 3) ⚡ Pick your root method  
-→ [Compare Magisk, KernelSU, APatch](docs/android-root-guides/index.md#root-methods-comparison)
+→ [Compare Magisk, KernelSU, APatch](docs/android-root-guides/index.md#root-solutions-comparison)
 
 4) 🎯 First-boot setup + essentials  
 → [Starter Apps](docs/android-root-apps/index.md#featured-apps-the-essentials)
