@@ -72,13 +72,13 @@ Follow this proven 4-step process used successfully by thousands of users:
 1) **Unlock bootloader**  
 → [Unlock Guide](docs/android-root-guides/how-to-unlock-bootloader.md)
 
-2) **(Optional) Install a custom recovery**    
+1) **Install a custom recovery**    
 → [Recovery Guide](docs/android-root-guides/how-to-install-custom-recovery.md)
 
-3) **Pick your root method**  
+1) **Pick your root method**  
 → [Compare Magisk, KernelSU, APatch](docs/android-root-guides/index.md#root-solutions-comparison)
 
-4) **First-boot setup + essentials**  
+1) **First-boot setup + essentials**  
 → [Starter Apps](docs/android-root-apps/index.md#featured-apps-the-essentials)
 
 ### Root Methods Comparison
