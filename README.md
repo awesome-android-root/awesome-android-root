@@ -22,7 +22,7 @@
 
 <div align="center" class="quick-nav">
 
-🚀 Quick Links: [Introduction](#introduction) | [Root Guides](#-rooting-guides) | [Apps & Modules](#-root-apps-and-modules) | [Resources & Tools](#resources-and-support) | [Community](#-community-and-contributing)
+🚀 Quick Links: [Introduction](#introduction) | [Root Guides](#rooting-guides) | [Apps & Modules](#root-apps-and-modules) | [Resources & Tools](#resources-and-support) | [Community](#-community-and-contributing)
 
 </div>
 
@@ -31,8 +31,8 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Rooting Guides](#-rooting-guides)
-- [Root Apps & Modules](#-root-apps-and-modules)
+- [Rooting Guides](#rooting-guides)
+- [Root Apps & Modules](#root-apps-and-modules)
 - [Resources & Support](#resources-and-support)
 - [Community & Contributing](#-community-and-contributing)
 
@@ -62,7 +62,7 @@ Rooting grants superuser access on Android so you can modify system components, 
 > **🚨 CRITICAL:** Before you start, run through this preflight: [✨ Safety Checklist ✨](https://fynks.github.io/check-list/)
 
 
-## 📚 Rooting Guides
+## Rooting Guides
 
 ### Complete Rooting Process
 
@@ -111,7 +111,7 @@ Follow this proven 4-step process used successfully by thousands of users:
 > Heads-up for Android 14/15: Play Integrity has tightened; hiding/unlocking is a moving target. Expect breakage and updates.
 
 
-## 📱 Root Apps and Modules
+## Root Apps and Modules
 
 > 🚀 **[Browse our complete collection of 300+ Root Apps & Modules](docs/android-root-apps/index.md)**
 
