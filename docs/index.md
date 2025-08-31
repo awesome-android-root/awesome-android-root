@@ -213,7 +213,7 @@ head:
 hero:
   name: "Awesome Android Root"
   text: "Master Android Rooting in 2025"
-  tagline: "Exlore 300+ top root apps, Magisk/KernelSU/LSPosed modules, and step-by-step rooting guides."
+  tagline: "Exlore 300+ top root apps, best Magisk/ KernelSU/ Apatch & LSPosed modules, and step-by-step rooting guides."
   image:
     src: /images/logo_dark.svg
     alt: Awesome Android Root Logo
