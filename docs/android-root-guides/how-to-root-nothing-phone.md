@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Complete Nothing & CMF by Nothing Phone Rooting Guide
+title: Nothing & CMF Phone Rooting Guide
 description: "Master guide to root all Nothing & CMF by Nothing Phone models with bootloader unlock and Magisk installation for Nothing OS."
 head:
   - - link
