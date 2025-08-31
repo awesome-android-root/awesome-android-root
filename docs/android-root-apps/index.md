@@ -1097,6 +1097,6 @@ After hiding root, you can check whether hiding works via root detection apps, s
 <div align="center">
 
 
-[README](../../README.md) • [Root Guides](./../android-root-guides/index.md) • [FAQs](./../faqs.md)
+[README]([../../README.md](https://github.com/awesome-android-root/awesome-android-root/blob/main/README.md)) • [Root Guides](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/android-root-guides/index.md) • [FAQs]([./../faqs.md](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/faqs.md))
 
 </div>
