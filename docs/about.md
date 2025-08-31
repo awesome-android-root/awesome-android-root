@@ -88,7 +88,7 @@ Our mission is to democratize advanced Android customization by providing free, 
 
 **Tailored Navigation:**
 *   **Beginners:** [Complete Rooting Guide](./android-root-guides/) → [Essential Apps](./android-root-apps/#essential-apps---start-here)
-*   **Intermediate:** [Device-Specific Guides](./android-root-guides/#device-specific-guides) → [Advanced Modules](/docs/android-root-apps/#root-managers)
+*   **Intermediate:** [Device-Specific Guides](./android-root-guides/#device-specific-guides) → [Advanced Modules](../android-root-apps/#root-managers)
 *   **Experts:** [Troubleshooting](./faqs) → [Community Contributions](./contributing)
 
 ## Community & Support
