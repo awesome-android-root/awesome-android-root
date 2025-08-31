@@ -219,12 +219,12 @@ hero:
     alt: Awesome Android Root Logo
   actions:
     - theme: brand
-      text: 🚀 Start Rooting Journey
-      link: /android-root-guides/
+      text: 🚀 Browse Root Apps
+      link: /android-root-apps/
       size: large
     - theme: alt
-      text: 📱 Browse Root Apps
-      link: /android-root-apps/
+      text: 📚 Learn Rooting 
+      link: /android-root-guides/
     - theme: alt
       text: ⭐ GitHub
       link: https://github.com/awesome-android-root/awesome-android-root
