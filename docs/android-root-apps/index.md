@@ -515,7 +515,7 @@ head:
 - **[Thor](https://play.google.com/store/apps/details?id=com.valhalla.thor)** - Android App Manager and App Installer utility. [📦](https://github.com/SmartPack/PackageManager) `FOSS`
 - **[Social STFU](https://github.com/V3rB0se/Social-STFU)** - Disable social media apps. it uses root to disable system/user level social apps. `FOSS`
 - **[Update Locker](https://github.com/Xposed-Modules-Repo/ru.mike.updatelocker/)** - Block updates (and auto-updates) selected apps via popular markets including Google Play Market, Huawei AppGallery and Samsung Galaxy Store. `Proprietary`
-- **⭐ [Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. Also checkout → [📖 Zygisk Detach Guide](./docs/guides/stop-android-app-auto-updates-play-store.md). `FOSS` `[M]`
+- **⭐ [Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. Also checkout → [📖 Zygisk Detach Guide](../guides/stop-android-app-auto-updates-play-store.md). `FOSS` `[M]`
 
 
 ### App Stores
@@ -563,7 +563,7 @@ head:
 ---
 
 ## Backup and Restore
-> 📚 **Related Guide**: [App Backup and Restore Using Root](./docs/guides/app-backup-restore-using-root.md)
+> 📚 **Related Guide**: [App Backup and Restore Using Root](../guides/app-backup-restore-using-root.md)
 
 - **[DataBackup](https://f-droid.org/zh_Hans/packages/com.xayah.databackup.foss/)** - DataBackup for Android 7.0+. [📦](https://github.com/XayahSuSuSu/Android-DataBackup) `FOSS`
 - **[DiskDigger](https://play.google.com/store/apps/details?id=com.defianttech.diskdigger)** - A powerful data recovery tool for Android devices. `Proprietary`
@@ -695,7 +695,7 @@ head:
 ---
 
 ## Debloating and System App Removal
-> 📚 **Related Guide**: [Android Apps Debloating Guide](./docs/guides/android-apps-debloating.md)
+> 📚 **Related Guide**: [Android Apps Debloating Guide](../guides/android-apps-debloating.md)
 
 - **⭐ [Canta](https://f-droid.org/en/packages/io.github.samolego.canta/)** -  Uninstall any app without root using Shizuku (Needs [Shizuku](https://shizuku.rikka.app/) to be installed and running). [📦](https://github.com/samolego/Canta) `FOSS`
 - **[De-Bloater](https://f-droid.org/packages/com.sunilpaulmathew.debloater)** - An application using the power of Magisk to debloat unwanted system apps!. [📦](https://github.com/sunilpaulmathew/De-Bloater) `FOSS`
