@@ -10,7 +10,7 @@
 
 <url>
   <loc>https://awesome-android-root.org/</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
@@ -18,19 +18,25 @@
 <!-- Top-level pages -->
 <url>
   <loc>https://awesome-android-root.org/about</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/contributing</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>yearly</changefreq>
   <priority>0.70</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/faqs</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://awesome-android-root.org/resources</loc>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.85</priority>
 </url>
@@ -38,7 +44,7 @@
 <!-- Android Root Apps section -->
 <url>
   <loc>https://awesome-android-root.org/android-root-apps/</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.95</priority>
 </url>
@@ -46,7 +52,7 @@
 <!-- Android Root Guides section -->
 <url>
   <loc>https://awesome-android-root.org/android-root-guides/</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.95</priority>
 </url>
@@ -54,43 +60,43 @@
 <!-- Primary guide pages -->
 <url>
   <loc>https://awesome-android-root.org/android-root-guides/how-to-unlock-bootloader</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/android-root-guides/how-to-install-custom-recovery</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/android-root-guides/custom-rom-installation</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/android-root-guides/magisk-guide</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.92</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/android-root-guides/kernelsu-guide</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/android-root-guides/apatch-guide</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/android-root-guides/lsposed-guide</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.85</priority>
 </url>
@@ -98,37 +104,37 @@
 <!-- Device-specific guides -->
 <url>
   <loc>https://awesome-android-root.org/android-root-guides/how-to-root-xiaomi-phone</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.82</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/android-root-guides/how-to-root-samsung-phone</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.82</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/android-root-guides/how-to-root-pixel-phone</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/android-root-guides/how-to-root-oneplus-phone</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.78</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/android-root-guides/how-to-root-nothing-phone</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.76</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/android-root-guides/how-to-root-motorola-phone</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.76</priority>
 </url>
@@ -136,31 +142,31 @@
 <!-- Guides section (general) -->
 <url>
   <loc>https://awesome-android-root.org/guides/</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/guides/android-adblocking</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.82</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/guides/android-apps-debloating</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/guides/app-backup-restore-using-root</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.78</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/guides/stop-android-app-auto-updates-play-store</loc>
-  <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.78</priority>
 </url>
