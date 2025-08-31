@@ -603,8 +603,8 @@ Performance
 - Optimization apps: [Performance & Gaming](./android-root-apps/index.md#performance-and-gaming)
 
 Resource links:
-- [Battery Management](../README.md#battery-management)
-- [Performance Improvements](../README.md#performance-improvements)
+- [Battery Management](./android-root-apps/index.md#battery-and-power-management)
+- [Performance Improvements](./android-root-apps/index.md#performance-tweaks)
 
 ---
 

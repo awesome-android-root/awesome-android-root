@@ -578,7 +578,7 @@ Remember to:
 
 <div align="center">
 
-*📚 Part of the [Awesome Android Root](../../README.md) collection*
+*📚 Part of the [Awesome Android Root](https://github.com/awesome-android-root/awesome-android-root) collection*
 
 [![Star on GitHub](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?style=social)](https://github.com/awesome-android-root/awesome-android-root)
 

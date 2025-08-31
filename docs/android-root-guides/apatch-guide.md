@@ -233,7 +233,7 @@ adb shell su -c id
 
 ## Post-Rooting Tips
 
-- **[⚡ Explore our collection of 300+ Root Apps & MOdules](../../README.md#root-apps)**
+- **[⚡ Explore our collection of 300+ Root Apps & MOdules](../android-root-apps/index.md)**
 
 - Root hiding/Play Integrity:
   - Configure per-app deny/allow in APatch manager.
