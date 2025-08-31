@@ -434,9 +434,9 @@ head:
 - **`📦`** - Source code of App/Module
 
 ### **Root Framework Badges**
-- **`[M]`** = Magisk Module (requires [_Magisk framework_](./docs/android-root-guides/magisk-guide.md))
-- **`[K]`** = KernelSU Module (requires [_KernelSU framework_](./docs/android-root-guides/kernelsu-guide.md)) 
-- **`[LSP]`** = LSPosed Module (requires [_LSPosed framework_](./docs/android-root-guides/lsposed-guide.md))
+- **`[M]`** = Magisk Module (requires [_Magisk framework_](../android-root-guides/magisk-guide.md))
+- **`[K]`** = KernelSU Module (requires [_KernelSU framework_](../android-root-guides/kernelsu-guide.md)) 
+- **`[LSP]`** = LSPosed Module (requires [_LSPosed framework_](../android-root-guides/lsposed-guide.md))
 
 ### **Common Rooting Terms**
 - **Bootloader** - Low-level software that starts your OS (must be unlocked for root)
