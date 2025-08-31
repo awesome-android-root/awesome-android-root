@@ -415,7 +415,7 @@ Notes:
 - [r/LineageOS](https://reddit.com/r/LineageOS) — user discussions
 - [GitHub Issues](https://github.com/LineageOS) — bugs and development
 - [FAQ & Troubleshooting](../faqs.md)
-- [Join Community](..//about.md#community)
+- [Join Community](../about.md#community)
 
 Official Resources:
 - [CustomROMBay.org](https://customrombay.org/)
