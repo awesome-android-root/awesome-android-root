@@ -136,6 +136,8 @@ export default defineConfig({
             items: [
               { text: 'Master Guide', link: '/android-root-guides/', activeMatch: '^/android-root-guides/' },
               { text: 'Magisk Guide', link: '/android-root-guides/magisk-guide' },
+              { text: 'KernelSU Guide', link: '/android-root-guides/kernelsu-guide' },
+              { text: 'APatch Guide', link: '/android-root-guides/apatch-guide' },
               { text: 'LSPosed Guide', link: '/android-root-guides/lsposed-guide' }
             ]
           },
@@ -199,8 +201,8 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'LSPosed Framework', link: '/android-root-guides/lsposed-guide' },
-            { text: 'Zygisk Implementations', link: '/android-root-apps/#zygisk-implementations' }, 
-            { text: 'Root Hiding & Integrity', link: '/android-root-apps/#root-hiding-and-integrity' } 
+            { text: 'Zygisk Implementations', link: '/android-root-apps/#zygisk-implementations' },
+            { text: 'Root Hiding & Integrity', link: '/android-root-apps/#root-hiding-and-integrity' }
           ]
         },
         {
@@ -220,9 +222,11 @@ export default defineConfig({
           text: 'Support & Troubleshooting',
           collapsed: true,
           items: [
+            { text: 'Troubleshooting & Recovery', link: '/android-root-guides/#troubleshooting-and-recovery' },
             { text: 'FAQ & Emergency Help', link: '/faqs/#emergency-help' },
-            { text: 'Bootloop Protection', link: '/android-root-apps/#bootloop-protection' }, 
-            { text: 'Root Hiding (Play Integrity)', link: '/faqs/#play-integrity-and-banking-apps' } 
+            { text: 'Bootloop Protection', link: '/android-root-apps/#bootloop-protection' },
+            { text: 'Root Hiding (Play Integrity)', link: '/faqs/#play-integrity-and-banking-apps' },
+            { text: 'Community Resources', link: '/android-root-guides/#community-resources' }
           ]
         }
       ],
@@ -230,6 +234,7 @@ export default defineConfig({
       // Root Apps Sidebar
       '/android-root-apps/': [
         { text: '⭐ Featured Essentials', link: '/android-root-apps/#featured-apps-the-essentials' },
+  { text: '📘 Glossary', link: '/android-root-apps/#glossary' },
         { text: '📋 Browse All Categories', link: '/android-root-apps/' },
         { text: '---' }, // Divider
         { text: '🔓 Root Management', link: '/android-root-apps/#root-management' },
@@ -239,8 +244,12 @@ export default defineConfig({
         { text: '🛡️ Privacy & Security', link: '/android-root-apps/#privacy-and-security' },
         { text: '---' }, // Divider
         { text: '⚡ Performance Tweaks', link: '/android-root-apps/#performance-tweaks' },
+  { text: '🧪 System Optimization', link: '/android-root-apps/#system-optimization' },
+  { text: '🔋 Battery & Power', link: '/android-root-apps/#battery-and-power-management' },
+  { text: '🧹 Cleaning & Maintenance', link: '/android-root-apps/#cleaning-and-maintenance' },
         { text: '🎨 Customization', link: '/android-root-apps/#customization' },
         { text: '🪄 Modded Apps & Tweaks', link: '/android-root-apps/#modded-apps--tweaks' },
+  { text: '🤖 Automation', link: '/android-root-apps/#automation' },
         { text: '🌐 Networking & Connectivity', link: '/android-root-apps/#networking--connectivity' },
         { text: '---' }, // Divider
         { text: '🛠️ Development & Debugging', link: '/android-root-apps/#development-and-debugging' },
