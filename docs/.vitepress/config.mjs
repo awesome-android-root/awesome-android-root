@@ -237,11 +237,11 @@ export default defineConfig({
   { text: '📘 Glossary', link: '/android-root-apps/#glossary' },
         { text: '📋 Browse All Categories', link: '/android-root-apps/' },
         { text: '---' }, // Divider
-        { text: '🔓 Root Management', link: '/android-root-apps/#root-management' },
-        { text: '🛡️ Root Hiding & Integrity', link: '/android-root-apps/#root-hiding-and-integrity' },
-        { text: '🚫 Ad & Tracker Blocking', link: '/android-root-apps/#ads-and-tracking-blockers' },
-        { text: '📦 App Management', link: '/android-root-apps/#app-management' },
-        { text: '🛡️ Privacy & Security', link: '/android-root-apps/#privacy-and-security' },
+  { text: '🔓 Root Managers', link: '/android-root-apps/#root-managers' },
+  { text: '🛡️ Root Hiding & Integrity', link: '/android-root-apps/#root-hiding-and-integrity' },
+  { text: '🚫 Ads & Tracking Blockers', link: '/android-root-apps/#ads-and-tracking-blockers' },
+  { text: '📦 App Management', link: '/android-root-apps/#app-management' },
+  { text: '🛡️ Privacy & Security', link: '/android-root-apps/#privacy-and-security' },
         { text: '---' }, // Divider
         { text: '⚡ Performance Tweaks', link: '/android-root-apps/#performance-tweaks' },
   { text: '🧪 System Optimization', link: '/android-root-apps/#system-optimization' },
@@ -257,9 +257,9 @@ export default defineConfig({
         { text: '🗂️ File Management', link: '/android-root-apps/#file-management' },
         { text: '💻 Terminal & Shell', link: '/android-root-apps/#terminal-and-shell-tools' },
         { text: '---' }, // Divider
-        { text: '🎵 Audio & Media', link: '/android-root-apps/#audio-and-media' },
-        { text: '💾 Backup & Restore', link: '/android-root-apps/#backup-and-restore' },
-        { text: '🧹 System Debloating', link: '/android-root-apps/#debloating-and-system-app-removal' },
+  { text: '🎵 Audio & Media', link: '/android-root-apps/#audio-and-media' },
+  { text: '💾 Backup & Restore', link: '/android-root-apps/#backup-and-restore' },
+  { text: '🧹 Debloating', link: '/android-root-apps/#debloating-and-system-app-removal' },
         { text: '🔩 System Modifications', link: '/android-root-apps/#system-modifications' },
         { text: '---' }, // Divider
         { text: '💬 Communication', link: '/android-root-apps/#communication' },
@@ -314,7 +314,7 @@ export default defineConfig({
           text: 'Popular Categories',
           collapsed: false,
           items: [
-            { text: 'Root Management', link: '/android-root-apps/#root-management' },
+            { text: 'Root Managers', link: '/android-root-apps/#root-managers' },
             { text: 'Ad Blocking', link: '/android-root-apps/#ads-and-tracking-blockers' },
             { text: 'App Management', link: '/android-root-apps/#app-management' },
             { text: 'Performance Tweaks', link: '/android-root-apps/#performance-tweaks' },
