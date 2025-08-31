@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Complete APatch Root Guide
-description: "Master APatch rooting — a modern kernel-based root solution. Step‑by‑step installation Guide."
+description: "Master APatch rooting — a modern kernel-based root solution. Step‑by‑step installation and configuration Guide."
 head:
   - - link
     - rel: canonical

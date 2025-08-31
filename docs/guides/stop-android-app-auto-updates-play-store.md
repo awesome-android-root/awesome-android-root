@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Stop Android App Auto Updates from Play Store
-description: Complete step-by-step guide to permanently disable automatic app updates from Google Play Store.
+description: A Complete step-by-step guide to permanently disable the automatic app updates from Google Play Store.
 head:
   # Canonical and preconnect links
   - - link

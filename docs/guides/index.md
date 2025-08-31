@@ -2,7 +2,7 @@
 layout: doc
 title: General Android Guides & Tutorials
 titleTemplate: Essential Android Tips & Tricks
-description: "Comprehensive collection of Android guides, tips, and tutorials for rooted devices."
+description: "Comprehensive collection of Android guides, tips, and tutorials for rooted devices for ultimate customizations."
 head:
   - - link
     - rel: canonical
