@@ -1051,6 +1051,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 ## Screen and Display
 - **[AlwaysOn](https://github.com/Domi04151309/AlwaysOn)** - Adds an always-on display with various customization options regarding watch face, behavior, and background. `FOSS` `[LSP]`
+- **[Anti Brightness Change](https://apt.izzysoft.de/fdroid/index/apk/com.programminghoch10.AntiBrightnessChange)** - Prevents every app from changing the screen brightness. [📦](https://github.com/binarynoise/XposedModulets) `FOSS` `[LSP]`
 - **[CaptureSposed](https://github.com/99keshav99/CaptureSposed)** - Xposed module that effectively disables the newly introduced screenshot detection API in Android 14. `FOSS` `[LSP]`
 - **[Disable Rotation Button](https://github.com/JavaCakeGames/disable-rotation-button)** - App to disable Android's floating rotation button. `FOSS`
 - **⭐ [Enable Screenshot](https://github.com/LSPosed/DisableFlagSecure)** - Enabling screenshots in apps that normally wouldn't allow it, and disabling screenshot(Android 14+) and screen record(Android 15+) detection. `FOSS` `[LSP]`
