@@ -497,10 +497,12 @@ head:
 ---
 
 ## App Management
+
 ### App Isolation and Cloning
 - **[Insular](https://f-droid.org/packages/com.oasisfeng.island.fdroid)** - Isolate your big brother app. A fork based on the excellent Island. [📦](https://gitlab.com/secure-system/Insular) `FOSS`
 - **[Island](https://play.google.com/store/apps/details?id=com.oasisfeng.island)** - App isolation and cloning. `FOSS`[📦](https://github.com/oasisfeng/island/tree/dev)
 - **[Shelter](https://f-droid.org/app/net.typeblog.shelter)** - Isolate and clone apps. [📦](https://gitea.angry.im/PeterCxy/Shelter) `FOSS`
+
 
 ### App Managers and Control
 - **⭐ [App Manager](https://github.com/MuntashirAkon/AppManager)** - A full-featured package manager and viewer for Android. [📦](https://github.com/MuntashirAkon/AppManager) `FOSS`
@@ -510,6 +512,7 @@ head:
 - **[BanUninstall](https://github.com/TinyHai/BanUninstall/)** - A Xposed Module that prevents apps be uninstalled or apps' data be cleared. `FOSS` `[LSP]`
 - **⭐ [Hail](https://f-droid.org/packages/com.aistra.hail/)** - Disable / Hide / Suspend / Uninstall Android apps. [📦](https://github.com/aistra0528/Hail) `FOSS`
 - **[Ice Box](https://play.google.com/store/apps/details?id=com.catchingnow.icebox)** - Freeze and hide apps rarely used. `Proprietary`
+- **[InstallerX-Revived](https://github.com/wxxsfxyzm/InstallerX-Revived)** - A modern and functional Android app installer. `FOSS` `[LSP]`
 - **[Inure](https://play.google.com/store/apps/details?id=app.simple.inure.play)** - An elegant and beautiful premium Android app manager for rooted and non-rooted devices. [📦](https://github.com/Hamza417/Inure) `FOSS`
 - **[Let Me Downgrade](https://github.com/DavidBerdik/Let-Me-Downgrade)** - Add support for downgrading apps on Android 12 through 15 QPR1. `FOSS` `[LSP]`
 - **[Package Manager](https://f-droid.org/packages/com.smartpack.packagemanager)** - A highly powerful app to manage both system and user apps installed on an Android device. [📦](https://github.com/SmartPack/PackageManager) `FOSS`
