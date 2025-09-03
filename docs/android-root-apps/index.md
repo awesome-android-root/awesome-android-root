@@ -1086,6 +1086,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[Rotation Suggestions Closed](https://github.com/Astoritin/RotationSuggestionsClosed)** - A Magisk module to stop showing rotation suggestion button as rotating screen. `FOSS` `[M]`
 - **[System Tools Android](https://play.google.com/store/apps/details?id=com.redhome.sta)** - A true utility processor that includes many small utilities for finer work with the system (including root utilities). `Proprietary`
 - **[TWRP A/B Retention Script](https://github.com/Magisk-Modules-Repo/twrp-keep)** - Keep TWRP installed after an A/B OTA. `FOSS` `[M]`
+- **[VBMeta Disguiser](https://github.com/Astoritin/VBMetaDisguiser)** - A Magisk module to disguise the properties of vbmeta. `FOSS` `[M]` `[K]`
 - **[XSpoofSignatures](https://github.com/rushiiMachine/XSpoofSignatures)** - Xposed module to spoof package signatures. `FOSS` `[LSP]`
 - **[zapret for Magisk](https://github.com/sevcator/zapret-magisk)** - DPI bypass on Android with additional features. `FOSS` `[M]`
 
