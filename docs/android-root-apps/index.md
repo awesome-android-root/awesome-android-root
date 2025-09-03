@@ -1137,6 +1137,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[MagiskGapps](https://github.com/wacko1805/MagiskGapps)** - Convert a regular GApps package into a Magisk flashable package using a simple website. `FOSS` `[M]`
 - **[Magisk Tailscaled](https://github.com/mgksu/tailscaled)** - Module for running Tailscale on rooted Android devices. `FOSS` `[M]`
 - **[ROM Toolbox Lite](https://play.google.com/store/apps/details?id=com.jrummy.liberty.toolbox)** - Combines several powerful apps to customize and enhance the performance of your device into one app. `Proprietary`
+- **[Rsync Magisk](https://github.com/KatelynTheStargazer/rsync-magisk)** - static rsync binary for magisk. `FOSS` `[M]`
 - **[SwitchAI – Switch AI Digital Assistant](https://github.com/WSTxda/SwitchAI)** - Easily select, start, and manage your preferred AI digital assistants. `FOSS`
 - **[Syncthing for Magisk](https://github.com/100pangci/syncthing-for-magisk)** - Allows Syncthing to run continuously in the background as a system service on your Android device. `FOSS` `[M]`
 - **[UotanToolbox NT](https://github.com/Uotan-Dev/UotanToolboxNT)** - A modern toolbox for geeks. `FOSS`
