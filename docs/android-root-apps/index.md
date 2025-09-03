@@ -946,6 +946,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 ### Gaming and Performance Tweak
 - **[AsoulOpt](https://github.com/nakixii/Magisk_AsoulOpt)** - Game threads tweaker for Android, suitable for mainstream games and some niche games. `FOSS` `[M]`
 - **[FPS Unlocker](https://github.com/yadavnikhil03/GameUnlocker#fps-unlocker)** - Enables 90 FPS options in BGMI and PUBG and other Games as well for smoother gameplay on low-end devices. `FOSS` `[M]`
+- **[Gaming-X Magisk Module](https://github.com/JordanTweaks/Gaming-X-Magisk-Module)** - Tweaking CPU, GPU, memory, and system settings for maximum FPS and responsiveness. `FOSS` `[M]`
 - **[GameResChange](https://github.com/Xposed-Modules-Repo/com.game.reschange)** - Change the resolution of any app/game on Android 13+. `Proprietary` `[LSP]`
 - **[iUnlocker GLTool](https://github.com/i-Taylo/iUnlockerGL)** - Designed to spoof GPU information, allowing users to modify GPU information for unlocking graphics in games and testing. `FOSS` `[M]`
 - **[PerfGame](https://github.com/adivenxnataly/PerfGame)** - Enable custom resolution and frame-rate mechanism for your games. `FOSS` `[M]`
