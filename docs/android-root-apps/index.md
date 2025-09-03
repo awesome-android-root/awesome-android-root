@@ -826,9 +826,10 @@ head:
 
 ## LSPosed Framework
 
-<summary><strong><bold>What is LSPosed?</bold></strong></summary>
+<details><summary><strong><bold>What is LSPosed?</bold></strong></summary>
 
 LSPosed allows you to use Xposed modules, which are small add-ons that can modify or extend the functionality of your Android system and apps. These modules can add features, tweak settings, and enhance the overall usability of your device.
+
 </details>
 
 - **[LSPosed Original](https://github.com/LSPosed/LSPosed)** - A Riru / Zygisk module trying to provide an ART hooking framework which delivers consistent APIs with the OG Xposed, leveraging LSPlant hooking framework. *Development of LSPosed has been stagnated for quite a while*
