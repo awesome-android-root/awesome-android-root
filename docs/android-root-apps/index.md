@@ -1111,6 +1111,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[LADB](https://play.google.com/store/apps/details?id=com.draco.ladb)** - Local ADB shell. [📦](https://github.com/tytydraco/LADB) `FOSS` - [LADB Free Build](https://github.com/hyperio546/ladb-builds)
 - **⭐ [Termux](https://f-droid.org/en/packages/com.termux)** - A terminal emulator application for Android OS extendible by variety of packages. [📦](https://github.com/termux/termux-app) `FOSS`
 - **[TermuxRootMods](https://github.com/rompelhd/TermuxRootMods)** - A Magisk module that enhances the Termux experience for rooted devices. `FOSS` `[M]`
+- **[Termux-Root-Recovery-Tool](https://github.com/Ishu43642/Termux-Root-Recovery-Tool)** - Install GSi Rom , Flashing Fastboot Rom, install Twrp Recovery, Boot.img & vbmeta.img files. `FOSS` 
 - **[Termux:API](https://github.com/termux/termux-api)** - Termux add-on app which exposes device functionality as API to command line programs. `FOSS`
 - **[Termux:Boot](https://github.com/termux/termux-boot)** - Run scripts at device boot. `FOSS`
 - **[Termux:Float](https://github.com/termux/termux-float)** - Run Termux in a floating window. `FOSS`
