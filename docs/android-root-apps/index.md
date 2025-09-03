@@ -635,7 +635,6 @@ head:
 - **[video-to-bootanimation](https://github.com/Magisk-Modules-Alt-Repo/video-to-bootanimation)** - A Magisk Module Which Can Set Videos as Android Device BootAnimation. `FOSS` `[M]`
 
 ### Fonts and Typography
-
 - **[FontLoader](https://github.com/JingMatrix/FontLoader)** - Modifying fonts is a common scenario using the Magisk module. `FOSS` `[M]`
 - **[Font Manager](https://play.google.com/store/apps/details?id=com.androidacy.fontmanager)** - A great font and emoji changer by Androidacy. `Proprietary`
 - **[G-Font Installer](https://xdaforums.com/t/development-magisk-module-g-font-installer.4617743/)** - Install Official Google font that is used in most Google apps like Google play and Google Pixel phones right to your phone. `Proprietary` `[M]`
@@ -645,6 +644,7 @@ head:
 - **[MiSans](https://github.com/adivenxnataly/MiSans)** - Enhance your font devices with MiSans. `FOSS` `[M]`
 - **[Nastaliq Urdu Font](https://xdaforums.com/t/module-font-nastaliq-urdu-font.4645787/)** - Nastaleeq Font Module for Urdu Users. `FOSS` `[M]`
 - **[Twemoji-Remastered](https://codeberg-org/Snowy/Twemoji-Remastered)** - This is Magisk module to systemlessly to replace your phone emojis with Twemoji (Twitter Emoji). `FOSS` `[M]`
+- **[Unicode Font Set](https://github.com/Losketch/UnicodeFontSet-magisk-module/blob/main/README.en.md)** - Installs a comprehensive Unicode font set and configuration files via the Magisk framework. `FOSS` `[M]`
 - **[zFont 3](https://play.google.com/store/apps/details?id=com.htetznaing.zfont2&hl=en)** - Change custom font styles on Samsung, Vivo, iQOO, LG, Huawei, Honor, OnePlus, ASUS, OPPO, Realme, Xiaomi, Tecno, and Infinix devices. `Proprietary`
 
 ### Launchers
