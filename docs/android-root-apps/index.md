@@ -1105,6 +1105,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[Notification Icon Fix](https://github.com/Xposed-Modules-Repo/io.github.howard20181.notificationiconfix/)** - A module for AOSP, MIUI and HyperOS. Using an algorithm to convert white notification icons into recognizable icons. `FOSS` `[LSP]`
 - **[Open WebView](https://github.com/Magisk-Modules-Alt-Repo/open_webview)** - Helps you to replace your system webview through Magisk. `FOSS` `[M]`
 - **⭐ [Pairipfix](https://github.com/ahmedmani/pairipfix)** - Bypasses the "Get this app from Play" screen that appears when installing Android apps as an APK instead of from the Google Play Store. `FOSS` `[LSP]`
+- **[Realme-GT3-neo5-CPU-limiter](https://github.com/Quantom2/Realme-GT3-neo5-CPU-limiter)** - A Magisk/KSU bazed module to slow down your CPU to make your screen time better. `FOSS` `[M]` `[K]`
 - **[Rotation Suggestions Closed](https://github.com/Astoritin/RotationSuggestionsClosed)** - A Magisk module to stop showing rotation suggestion button as rotating screen. `FOSS` `[M]`
 - **[Suppe](https://github.com/Familyye/Suppe)** - Xposed module to disable SSL verification and pinning on Android. `FOSS` `[LSP]`
 - **[System Tools Android](https://play.google.com/store/apps/details?id=com.redhome.sta)** - A true utility processor that includes many small utilities for finer work with the system (including root utilities). `Proprietary`
