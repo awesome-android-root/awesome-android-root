@@ -666,6 +666,7 @@ head:
 #### ColorOS (Oppo)
 - **[Breeno Source Changer](https://github.com/Xposed-Modules-Repo/com.niki.breeno.openai/tree/main)** - Allows ColorOS's Breeno Assistant to change its AI model source and customize large language model (LLM) APIs. `FOSS` `[LSP]`
 - **[OPCameraPro](https://github.com/Xposed-Modules-Repo/com.tlsu.opluscamerapro)** - Xposed module for ColorOS and realmeUI providing various AI functions, enhancing cameras and other photo related tweaks. `Proprietary` `[LSP]`
+- **[ColorOS Feature Enhance](https://github.com/ItosEO/ColorFeatureEnhance)** - Visually edit and managing ColorOS feature switches. `FOSS` `[LSP]`
 - **[ColorOS Notify Icon](https://github.com/fankes/ColorOSNotifyIcon)** - Optimize notification icons for ColorOS and adapt to native notification icon specifications. `FOSS` `[LSP]`
 - **[LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool/blob/main/README_EN.md)** - Extended and optimized Xposed module for ColorOS. `Proprietary` `[LSP]`
 
