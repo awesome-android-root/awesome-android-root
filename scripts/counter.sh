@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Set the README file
-readme_file="README.md"
+readme_file="../docs/android-root-apps/index.md"
 
 # Check if the file exists
 if [[ ! -f "$readme_file" ]]; then
