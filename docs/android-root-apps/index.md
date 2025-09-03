@@ -1096,6 +1096,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[Open WebView](https://github.com/Magisk-Modules-Alt-Repo/open_webview)** - Helps you to replace your system webview through Magisk. `FOSS` `[M]`
 - **⭐ [Pairipfix](https://github.com/ahmedmani/pairipfix)** - Bypasses the "Get this app from Play" screen that appears when installing Android apps as an APK instead of from the Google Play Store. `FOSS` `[LSP]`
 - **[Rotation Suggestions Closed](https://github.com/Astoritin/RotationSuggestionsClosed)** - A Magisk module to stop showing rotation suggestion button as rotating screen. `FOSS` `[M]`
+- **[Suppe](https://github.com/Familyye/Suppe)** - Xposed module to disable SSL verification and pinning on Android. `FOSS` `[LSP]`
 - **[System Tools Android](https://play.google.com/store/apps/details?id=com.redhome.sta)** - A true utility processor that includes many small utilities for finer work with the system (including root utilities). `Proprietary`
 - **[TWRP A/B Retention Script](https://github.com/Magisk-Modules-Repo/twrp-keep)** - Keep TWRP installed after an A/B OTA. `FOSS` `[M]`
 - **[VBMeta Disguiser](https://github.com/Astoritin/VBMetaDisguiser)** - A Magisk module to disguise the properties of vbmeta. `FOSS` `[M]` `[K]`
