@@ -170,6 +170,10 @@ div :has(img[src*="img.shields.io"]) {
   min-height: 60px; /* Reserve space for badges */
 }
 
+a[href*="f-droid.org"], a[href*="play.google.com"]{
+  text-decoration: none;
+}
+
 /* Font loading optimization - prevent FOIT/FOUT layout shifts */
 @font-face {
   font-family: 'Inter';
