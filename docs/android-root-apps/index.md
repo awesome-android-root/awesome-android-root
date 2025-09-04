@@ -1170,6 +1170,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[crond4Android](https://github.com/powerAn2020/crond4android)** - The Crond program that supports running on KernelSU, APatch and Magisk. `FOSS` `[M]` `[K]`
 - **[Hosts Manager Lite](https://play.google.com/store/apps/details?id=awais.hostsmanager.lite)** - Advanced /etc/hosts editor. `Proprietary`
 - **[Image Copy Hide](https://github.com/cookieof/ImageCopyHide)** - Automatically copy and hide files from /sdcard/DCIM/Camera to /sdcard/wot/cptp. `FOSS` `[M]` 
+- **[Google Webview Module](https://github.com/gmb7886/GoogleWebview_Module)** - Installs *com.google.android.webview* as a system app, to replace the AOSP implementation. `FOSS` `[M]`
 - **[MagiskGapps](https://github.com/wacko1805/MagiskGapps)** - Convert a regular GApps package into a Magisk flashable package using a simple website. `FOSS` `[M]`
 - **[Magisk Tailscaled](https://github.com/mgksu/tailscaled)** - Module for running Tailscale on rooted Android devices. `FOSS` `[M]`
 - **[ROM Toolbox Lite](https://play.google.com/store/apps/details?id=com.jrummy.liberty.toolbox)** - Combines several powerful apps to customize and enhance the performance of your device into one app. `Proprietary`
