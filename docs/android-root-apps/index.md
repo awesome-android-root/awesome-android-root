@@ -601,6 +601,7 @@ head:
 
 ## Cleaning and Maintenance
 - **[AutoPurge Pro](https://github.com/S123123sd/SmartClear)** - Junk cleaning automation tool that provides deep cleaning and resource management capabilities for Android devices. `FOSS` `[M]` `[K]`
+- **[BasicCleaner](https://github.com/WeirdMidas/BasicCleaner)** - A magisk/KSU module that applies a set of cleanups and fixups every 7-15-30 days. `FOSS` `[M]` [K]`
 - **[Cache Cleaner Widget](https://gitlab.com/Zinaro/CacheCleanerWidget)** - A root-based widget with no UI that clears all app caches in one tap. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.zinaro.cachecleanerwidget/)
 - **[Cleaner Royall](https://github.com/araafroyall/Cleaner-Royall)** - A light weight but ultra-fast and powerful cleaner for Android. `Proprietary` `[LSP]`
 - **[ClearBox](https://github.com/FLYCOM-E/ClearBox)** - Can delete all software caches, installation packages, compressed packages, garbage, empty folders etc. `FOSS` `[M]` `[K]`
