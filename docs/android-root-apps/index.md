@@ -313,78 +313,67 @@ head:
 ### 📱 Root Apps by Category
 
 #### 🛠️ **Root & System Management**
-- [Root Managers](#root-managers)
-- [Zygisk Implementations](#zygisk-implementations)
-- [Root Hiding & Integrity](#root-hiding-and-integrity)
-- [Root Detection Tools](#root-detection-tools)
-- [Bootloop Protection](#bootloop-protection)
+- [Root Management](#root-management)
+  - [Root Managers](#root-managers)
+  - [Zygisk Implementations](#zygisk-implementations)
+  - [Root Hiding & Integrity](#root-hiding-and-integrity)
+  - [Root Detection Tools](#root-detection-tools)
+  - [Bootloop Protection](#bootloop-protection)
 
 #### 🔐 **Security & Privacy**
-- [Privacy & Security](#privacy-and-security)
-- [Ad & Tracking Blockers](#ads-and-tracking-blockers)
-- [Firewall Tools](#firewall-tools)
-- [DNS Tools](#dns-tools)
+- [Privacy and Security](#privacy-and-security)
+- [Ads and Tracking Blockers](#ads-and-tracking-blockers)
 
 #### 📦 **App Management & Control**
-- [App Management](#app-management)
-  - [App Managers & Control](#app-managers-and-control)
-  - [App Isolation & Cloning](#app-isolation-and-cloning)
-  - [App Permissions](#app-permissions)
+- [App Management and Control](#app-management-and-control)
+  - [App Isolation and Cloning](#app-isolation-and-cloning)
+  - [App Managers](#app-managers)
   - [App Stores](#app-stores)
+  - [App Permissions](#app-permissions)
+  - [Detach Apps](#detach-apps)
+  - [Freeze Apps](#freeze-apps)
+  - [Package Management Mods](#package-management-mods)
+  - [App Signature Verification Mods](#app-signature-verification-mods)
 
 #### 🧹 **System Optimization & Cleanup**
-- [System Optimization](#system-optimization)
 - [Performance Tweaks](#performance-tweaks)
-  - [Gaming & Performance Tweaks](#gaming-and-performance-tweak)
-  - [Memory & Storage Management](#memory-and-storage-management)
-- [Debloating & System App Removal](#debloating-and-system-app-removal)
-- [Cleaning & Maintenance](#cleaning-and-maintenance)
-- [Battery & Power Management](#battery-and-power-management)
+- [Debloating and System App Removal](#debloating-and-system-app-removal)
+- [Cleaning and Maintenance](#cleaning-and-maintenance)
+- [Battery and Power Management](#battery-and-power-management)
 
 #### 🎨 **Customization & UI**
-- [Customization](#customization)
-  - [Themes & UI](#themes-and-ui)
-  - [Launchers](#launchers)
+- [Customization and UI](#customization-and-ui)
   - [Boot Animations](#boot-animations)
-  - [Fonts & Typography](#fonts-and-typography)
+  - [Digital Assistants](#digital-assistants)
+  - [Fonts and Typography](#fonts-and-typography)
+  - [Emojis](#emojis)
+  - [Launchers](#launchers)
   - [Navigation](#navigation)
   - [OS Specific Mods](#os-specific-mods)
-- [Screen & Display](#screen-and-display)
+  - [Themes and UI](#themes-and-ui)
+- [Screen and Display](#screen-and-display)
 
 #### 🔧 **App Modifications & Patches**
 - [Modded Apps & Tweaks](#modded-apps--tweaks)
-  - [General App Mods](#general-app-mods)
-  - [Patching Tools](#patching-tools)
   - [Social Media Mods](#social-media-mods)
-    - [Instagram Mods](#instagram-mods) • [WhatsApp Mods](#whatsapp-mods) • [Telegram Mods](#telegram-mods)
-    - [X/Twitter Mods](#xtwitter-mods) • [TikTok Mods](#tiktok-mods) • [Reddit Mods](#reddit-mods)
-  - [Entertainment & Media Mods](#entertainment--media-mods)
-    - [YouTube, Spotify, & Google Photos Mods](#youtube-spotify--google-photos-mods)
-    - [Discord Mods](#discord-mods) • [Duolingo Mods](#duolingo-mods)
-  - [Regional App Mods](#regional-app-mods)
-    - [WeChat Mods](#wechat-mods) • [QQ Mods](#qq-mods) • [Bilibili Mods](#bilibili-mods) • [Weibo Mods](#weibo-mods)
-    - [Line Mods](#line-mods) • [Grindr Mods](#grindr-mods)
-  - [Utility App Mods](#utility-app-mods)
-    - [Maps Mods](#maps-mods)
+  - [Hook Modules](#hook-modules)
+  - [Keyboard Mods](#keyboard-mods)
+  - [Patching Tools](#patching-tools)
+  - [Misc App Mods](#misc-app-mods)
 - [ReVanced](#revanced)
 
 #### ⚡ **Performance & System**
+- [Automation & Scheduling](#automation-and-scheduling)
 - [Kernel Management](#kernel-management)
 - [System Modifications](#system-modifications)
-- [Automation](#automation)
 
 #### 🗃️ **Data & Storage**
 - [File Management](#file-management)
-- [Backup & Restore](#backup-and-restore)
+- [Backup and Restore](#backup-and-restore)
 
 #### 🌐 **Network & Connectivity**
-- [Networking & Connectivity](#networking--connectivity)
-  - [Firewall Tools](#firewall-tools)
-  - [DNS Tools](#dns-tools)
-  - [Hotspot Tools](#hotspot-tools)
-  - [Wi‑Fi Tools](#wi‑fi-tools)
-  - [Proxies & Misc Networking](#proxies--misc-networking)
-- [Location & GPS](#location-and-gps)
+- [Network and Connectivity](#network-and-connectivity)
+- [Location and GPS](#location-and-gps)
 - [NFC Tools](#nfc-tools)
 
 #### 📞 **Communication & Contacts**
@@ -394,16 +383,19 @@ head:
   - [SMS Management](#sms-management)
 
 #### 🎵 **Audio & Media**
-- [Audio & Media](#audio-and-media)
+- [Audio and Media](#audio-and-media)
   - [Audio Enhancement](#audio-enhancement)
   - [Audio Control & Management](#audio-control--management)
   - [Audio Configuration](#audio-configuration)
 
 #### 🛠️ **Developer & Technical Tools**
-- [Development & Debugging](#development-and-debugging)
-- [Device Control & Hardware](#device-control-and-hardware)
-- [Terminal & Shell Tools](#terminal-and-shell-tools)
+- [Development and Debugging](#development-and-debugging)
+- [Device Control and Hardware](#device-control-and-hardware)
+- [Terminal and Shell Tools](#terminal-and-shell-tools)
 - [Tools](#tools)
+
+#### 🔍 **Frameworks & LSPosed**
+- [LSPosed Framework](#lsposed-framework)
 
 #### ♿ **Accessibility & Utilities**
 - [Accessibility Tools](#accessibility-tools)
@@ -416,12 +408,13 @@ head:
 > 💡 Start with our [Complete Rooting Guide](../android-root-guides/) before exploring apps below.
 :::
 
-::: tip **Tips**
-> ⚠️ **Installer recommendation:** For privacy-friendly and convenient installs, we recommend using the F‑Droid ecosystem — for example, install the Droid‑ify client and enable the IzzyOnDroid repo:
->
+::: tip **Reccomendations**
+> For privacy-friendly and convenient installs, we recommend using the F‑Droid ecosystem — for example, install the Droid‑ify client and enable the IzzyOnDroid repo:
 > - Droid‑ify — https://github.com/Droid-ify/client/releases (modern F‑Droid client)
 > - IzzyOnDroid — https://apt.izzysoft.de/fdroid/ (additional F‑Droid repo with many packages)
+:::
 
+::: warning **Default Links**
 > - Clicking on App/Module entry point to **Source Code page** (Github/Gitlab etc) *in case of `FOSS` apps* otherwise link pints to **Google Play Store**.
 :::
 
@@ -569,7 +562,7 @@ head:
 
 ---
 
-## Automation & Scheduling
+## Automation and Scheduling
 - **[Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate)** - Lets you create custom automation workflows using flowcharts, enabling seamless management of tasks, files, and device settings. `Proprietary`
 - **[crond4Android](https://github.com/powerAn2020/crond4android)** - The Crond program that supports running on KernelSU, APatch and Magisk. `FOSS` `[M]` `[K]`
 - **[⭐ MacroDroid](https://play.google.com/store/search?q=macrodroid&c=apps)** - Easy to use automation app. `Proprietary`
@@ -954,7 +947,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ---
 
-## Network & Connectivity
+## Network and Connectivity
 
 ### DNS Tools
 - **[DNS Accelerator](https://github.com/DEMONICCA/DNS-Accelerator)** - Module designed to improve system performance and network connectivity on Android devices. `FOSS` `[M]`
