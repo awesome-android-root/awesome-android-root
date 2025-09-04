@@ -944,6 +944,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[SimbaDroid](https://github.com/buttercookie42/SimbaDroid)** - A simple SMB file server for Android. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/de.buttercookie.simbadroid)
 - **[TCP Optimiser Module](https://github.com/fatalcoder524/TCP_Optimiser_Module)** - Change tcp congestion algorithm based on current active internet type and some network enhancements. `FOSS` `[M]` `[K]`
 - **[TTLChanger](https://github.com/aleksey-saenko/TTLChanger)** - Allows you to modify the default TTL (Time to Live) value. `FOSS` | [🌱 F-Droid](https://f-droid.org/en/packages/com.mrsep.ttlchanger/)
+- **[ZeroTier for Magisk](https://github.com/eventlOwOp/zerotier-magisk)** - Run zerotier in the background after booting with no conflicts with other Android VPN services.Use Android App to control ZeroTier. `FOSS` `[M]`
 
 ### Wi‑Fi Tools
 - **[DriFiCrack](https://github.com/ZeltNamizake/DriFiCrack)** - Brute Force Tool to Crack Wi-Fi Passwords. `FOSS` `[M]`
