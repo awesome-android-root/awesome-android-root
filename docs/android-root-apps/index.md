@@ -475,11 +475,11 @@ head:
 ## Ads and Tracking Blockers
 > 📚 **Related Guide**: [Complete Android Ad Blocking Tutorial](../guides/android-adblocking.md)
 
-- **⭐ [AdAway](https://github.com/AdAway/AdAway)** – Open-source ad blocker using the hosts file. Blocks ads without permissions. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/org.adaway)
+- **[⭐ AdAway](https://github.com/AdAway/AdAway)** – Open-source ad blocker using the hosts file. Blocks ads without permissions. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/org.adaway)
 - **[AdClose](https://github.com/Xposed-Modules-Repo/com.close.hook.ads/)** - Prevents the initial loading of the advertising SDK within the application and intercepts application advertising requests to block ads. `Proprietary` `[LSP]`
 - **[AdGuard](https://adguard.com/en/adguard-android/overview.html)** - Comprehensive ad blocking solution. `Proprietary` 
 - **[AdGuardHome for Root](https://github.com/twoone-3/AdGuardHomeForRoot/blob/main/README_en.md#adguardhome-for-root)** - A module to easily execute AdGuardHome on Android. `FOSS` `[M]`
-- **⭐ [bindhosts](https://github.com/bindhosts/bindhosts)** - Systemless hosts for APatch, KernelSU and Magisk that is fully standalone and self-updating. `FOSS` `[M]` `[K]`
+- **[⭐ bindhosts](https://github.com/bindhosts/bindhosts)** - Systemless hosts for APatch, KernelSU and Magisk that is fully standalone and self-updating. `FOSS` `[M]` `[K]`
 - **[BlockAds](https://github.com/pantsufan/BlockAds)** - BlockAds is an advertisement blocking Magisk module. `FOSS` `[M]`
 - **[Blokada](https://blokada.org/)** - Advanced ad blocker with VPN functionality. `Proprietary`
 - **[Cubic-AdBlock](https://github.com/Vaz15k/Cubic-AdBlock)** - A simple AdBlock module based on the hosts file. `FOSS` `[M]`
@@ -505,12 +505,12 @@ head:
 
 
 ### App Managers and Control
-- **⭐ [App Manager](https://github.com/MuntashirAkon/AppManager)** - A full-featured package manager and viewer for Android. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/io.github.muntashirakon.AppManager/)
+- **[⭐ App Manager](https://github.com/MuntashirAkon/AppManager)** - A full-featured package manager and viewer for Android. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/io.github.muntashirakon.AppManager/)
 - **[AppDash: App Manager & Backup](https://play.google.com/store/apps/details?id=flar2.appdashboard&hl=en)** - Makes it easy to manage APKs and apps installed on your device. `Proprietary`
 - **[App Manager](https://play.google.com/store/apps/details?id=com.lb.app_manager)** - A feature rich app manager with batch operation support. `Proprietary`
 - **[AppOps](https://play.google.com/store/apps/details?id=rikka.appops)** - Control the hidden appops conveniently. `Proprietary`
 - **[BanUninstall](https://github.com/TinyHai/BanUninstall/)** - A Xposed Module that prevents apps be uninstalled or apps' data be cleared. `FOSS` `[LSP]`
-- **⭐ [Hail](https://github.com/aistra0528/Hail)** - Disable / Hide / Suspend / Uninstall Android apps. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.aistra.hail/)
+- **[⭐ Hail](https://github.com/aistra0528/Hail)** - Disable / Hide / Suspend / Uninstall Android apps. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.aistra.hail/)
 - **[Ice Box](https://play.google.com/store/apps/details?id=com.catchingnow.icebox)** - Freeze and hide apps rarely used. `Proprietary`
 - **[InstallerX-Revived](https://github.com/wxxsfxyzm/InstallerX-Revived)** - A modern and functional Android app installer. `FOSS` `[LSP]`
 - **[Inure](https://github.com/Hamza417/Inure)** - An elegant and beautiful premium Android app manager for rooted and non-rooted devices. `FOSS` | [▶️ Play Store](https://play.google.com/store/apps/details?id=app.simple.inure.play)
@@ -519,12 +519,12 @@ head:
 - **[Thor](https://github.com/trinadhthatakula/Thor)** - Android App Manager and App Installer utility. `FOSS` | [🌱 F-Droid](https://apt.izzysoft.de/fdroid/index/apk/com.valhalla.thor) | [▶️ Play Store](https://play.google.com/store/apps/details?id=com.valhalla.thor)
 - **[Social STFU](https://github.com/V3rB0se/Social-STFU)** - Disable social media apps. it uses root to disable system/user level social apps. `FOSS`
 - **[Update Locker](https://github.com/Xposed-Modules-Repo/ru.mike.updatelocker/)** - Block updates (and auto-updates) selected apps via popular markets including Google Play Market, Huawei AppGallery and Samsung Galaxy Store. `Proprietary`
-- **⭐ [Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. Also checkout → [📖 Zygisk Detach Guide](../guides/stop-android-app-auto-updates-play-store.md). `FOSS` `[M]`
+- **[⭐ Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. Also checkout → [📖 Zygisk Detach Guide](../guides/stop-android-app-auto-updates-play-store.md). `FOSS` `[M]`
 
 
 ### App Stores
 - **[Aurora Store](https://github.com/whyorean/AuroraStore)** - A Google Play Store client to search, view app details, and download APKs directly to your device. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.aurora.store/)
-- **⭐ [Droid-ify](https://github.com/Droid-ify/client)** - F-Droid client with Material UI and auto updating apps using root. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.looker.droidify)
+- **[⭐ Droid-ify](https://github.com/Droid-ify/client)** - F-Droid client with Material UI and auto updating apps using root. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.looker.droidify)
 - **[Neo Store](https://github.com/NeoApplications/Neo-Store)** - An F-Droid client with modern UI and an arsenal of extra features. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.machiav3lli.fdroid)
 
 ### App Permissions
@@ -560,8 +560,8 @@ head:
 
 ## Automation
 - **[Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate)** - Lets you create custom automation workflows using flowcharts, enabling seamless management of tasks, files, and device settings. `Proprietary`
-- **⭐ [MacroDroid](https://play.google.com/store/search?q=macrodroid&c=apps)** - Easy to use automation app. `Proprietary`
-- **⭐ [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)** - An advanced and powerful automation app. `Proprietary`
+- **[⭐ MacroDroid](https://play.google.com/store/search?q=macrodroid&c=apps)** - Easy to use automation app. `Proprietary`
+- **[⭐ Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)** - An advanced and powerful automation app. `Proprietary`
 
 [↑ Back to top](#table-of-contents)
 
@@ -598,7 +598,7 @@ head:
 - **[Plus Plus Battery](https://github.com/dijia1124/plusplusbattery)** - Real-time battery stats & health estimator for OnePlus/Oppo/Realme phones. `FOSS` | [🌱 F-Droid](https://f-droid.org/en/packages/com.dijia1124.plusplusbattery/)
 - **[SaverTuner](https://codeberg.org/s1m/savertuner)** - Allows you to take advantage of this built-in battery saver. You can now set different profiles that save the battery more or less aggressively. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/s1m.savertuner/)
 - **[Shappky](https://github.com/YasserNull/shappky)** - A simple app to boost performance by stopping background apps, relying on Root/Shizuku permissions. `FOSS` `[M]`
-- **⭐ [Universal GMS Doze](https://github.com/gloeyisk/universal-gms-doze)** - Patches Google Play services app and certain processes/services to be able to use battery optimization. `FOSS` `[M]`
+- **[⭐ Universal GMS Doze](https://github.com/gloeyisk/universal-gms-doze)** - Patches Google Play services app and certain processes/services to be able to use battery optimization. `FOSS` `[M]`
 - **[Xtreme-Battery-Saver](https://github.com/Magisk-Modules-Alt-Repo/Xtreme-Battery-Saver)** - An extreme battery saver Magisk Module for users who want to really stretch their battery life. `FOSS` `[M]`
 
 [↑ Back to top](#table-of-contents)
@@ -613,7 +613,7 @@ head:
 - **[ClearBox](https://github.com/FLYCOM-E/ClearBox)** - Can delete all software caches, installation packages, compressed packages, garbage, empty folders etc. `FOSS` `[M]` `[K]`
 - **[DirCleaner](https://www.dircleaner.com/)** - A simple and practical cleaning tool. `Proprietary`
 - **[Risk](https://github.com/rakarmp/Risk)** - Clean RAM Cache And Stop Background Apps, Google Apps, Third Party Apps. `FOSS` `[M]`
-- **⭐ [SD Maid 2/SE](https://github.com/d4rken-org/sdmaid-se)** - A file management tool for Android that specialises in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS` | [🌱 F-Droid](https://f-droid.org/en/packages/eu.darken.sdmse/) | [▶️ Play Store](https://play.google.com/store/apps/details?id=eu.darken.sdmse)
+- **[⭐ SD Maid 2/SE](https://github.com/d4rken-org/sdmaid-se)** - A file management tool for Android that specialises in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS` | [🌱 F-Droid](https://f-droid.org/en/packages/eu.darken.sdmse/) | [▶️ Play Store](https://play.google.com/store/apps/details?id=eu.darken.sdmse)
 
 [↑ Back to top](#table-of-contents)
 
@@ -663,7 +663,7 @@ head:
 ### Launchers
 - **[Pixel Launcher Enhanced](https://github.com/Mahmud0808/PixelLauncherEnhanced)** - Xposed module designed to unlock a variety of exciting features including customizing the look to adding more functionality and many more. `FOSS` `[LSP]`
 - **[Pixel Launcher Mods](https://github.com/KieronQuinn/PixelLauncherMods/)** - Mods for enhancing the Pixel Launcher experience. `FOSS`
-- **⭐ [Lawnchair](https://github.com/Goooler/LawnchairRelease/)** - A customizable launcher offering a Pixel-like experience. `FOSS`
+- **[⭐ Lawnchair](https://github.com/Goooler/LawnchairRelease/)** - A customizable launcher offering a Pixel-like experience. `FOSS`
 - **[NovaInstaller](https://github.com/Minionguyjpro/NovaInstaller/)** - Installs Nova Launcher to /system/app/ on Android. `FOSS`
   
 ### Navigation
@@ -676,7 +676,7 @@ head:
 #### AOSP (Android Open Source Project)
 - **[PIXELIFY NEXT](https://github.com/BasGame1/Pixelify-Next)** - A Magisk Module which enables Pixel UI and some exclusive features. `FOSS` `[M]`
 - **[PixelUpdater](https://github.com/PixelUpdater/PixelUpdater)** - Pixel Updater is an app for installing Android A/B OTA updates from Google's OTA server. `FOSS` `[M]`
-- **⭐ [PixelXpert](https://github.com/siavash79/PixelXpert)** - A mixed Xposed+Magisk module, which is made to allow customizations that are not originally designed in AOSP. `FOSS` `[M]` `[LSP]`
+- **[⭐ PixelXpert](https://github.com/siavash79/PixelXpert)** - A mixed Xposed+Magisk module, which is made to allow customizations that are not originally designed in AOSP. `FOSS` `[M]` `[LSP]`
 
 #### ColorOS (Oppo)
 - **[Breeno Source Changer](https://github.com/Xposed-Modules-Repo/com.niki.breeno.openai/tree/main)** - Allows ColorOS's Breeno Assistant to change its AI model source and customize large language model (LLM) APIs. `FOSS` `[LSP]`
@@ -686,7 +686,7 @@ head:
 - **[LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool/blob/main/README_EN.md)** - Extended and optimized Xposed module for ColorOS. `Proprietary` `[LSP]`
 
 #### Global
-- **⭐ [Disable Target API Block](https://github.com/buttercookie42/DisableTargetAPIBlock)** - An Xposed module for disabling Android 14's installation block for old apps. `FOSS` `[LSP]`
+- **[⭐ Disable Target API Block](https://github.com/buttercookie42/DisableTargetAPIBlock)** - An Xposed module for disabling Android 14's installation block for old apps. `FOSS` `[LSP]`
 - **[SystemUI Tuner](https://github.com/zacharee/Tweaker?tab=readme-ov-file)** - View and modify hidden settings on Android devices. `FOSS` `[M]`
 
 #### HyperOS (Xiaomi)
@@ -694,7 +694,7 @@ head:
 - **[ClipboardList](https://github.com/HChenX/ClipboardList)** - Remove the 20-item limit and time limit for the Clipboard and Phrases feature.Only for MIUI and HyperOS. `FOSS` `[LSP]`
 - **[ColorOS_Control_Center](https://github.com/Mods-Center/ColorOS_Control_Center)** - Replace HyperOS control panel with ColorOS-style quick settings, featuring customizable and squared tiles. `Proprietary`
 - **[GreenDotHide](https://github.com/Dorian399/GreenDotHide)** - Hides the green dot indicating sensitive permission use. Works only on MIUI/HyperOS. `FOSS` `[LSP]`
-- **⭐ [HyperCeiler](https://github.com/ReChronoRain/HyperCeiler/blob/main/README_en-US.md)** - Extensive customizations for HyperOS. `FOSS` `[LSP]`
+- **[⭐ HyperCeiler](https://github.com/ReChronoRain/HyperCeiler/blob/main/README_en-US.md)** - Extensive customizations for HyperOS. `FOSS` `[LSP]`
 - **[Hyper Monet Icon Theme](https://github.com/AcardiaX/HyperMonetIconTheme/blob/main/README_en.md)** - Enables Material You Monet style icons for HyperOS. `FOSS` `[M]`
 - **[Hyper Helper](https://github.com/HowieHChen/XiaomiHelper/blob/master/README_EN-US.md)** - Lightweight customization module for HyperOS only. `FOSS` `[LSP]`
 - **[Hyper Optimize](https://github.com/TatshSiow/HyperOptimize)** - Tune HyperOS System and Kernel parameters to reduce power consumption. `FOSS` `[M]`
@@ -709,7 +709,7 @@ head:
 - **[Nothing EUICC Force Enabler](https://github.com/reindex-ot/nothing-euicc#note-english)** - Forcibly enables eSIM on Nothing devices that do not officially support it. `FOSS` `[M]`
 
 #### One UI (Samsung)
-- **⭐ [KnoxPatch](https://github.com/salvogiangri/KnoxPatch)** - Get Samsung apps/features working again in your rooted Galaxy device. For better experience, please also [read this ↗](https://github.com/salvogiangri/KnoxPatch?tab=readme-ov-file#knoxpatch-enhancer) . `FOSS` `[LSP]`
+- **[⭐ KnoxPatch](https://github.com/salvogiangri/KnoxPatch)** - Get Samsung apps/features working again in your rooted Galaxy device. For better experience, please also [read this ↗](https://github.com/salvogiangri/KnoxPatch?tab=readme-ov-file#knoxpatch-enhancer) . `FOSS` `[LSP]`
 
 #### Onyx
 - **[OnyxTweaks](https://github.com/timschneeb/OnyxTweaks)** -  Xposed module for Onyx Boox e-Ink devices with Android 12.It adds other mods to the SystemUI, Android Framework, and Onyx Launcher. `FOSS` `[LSP]`
@@ -735,7 +735,7 @@ head:
 ## Debloating and System App Removal
 > 📚 **Related Guide**: [Android Apps Debloating Guide](../guides/android-apps-debloating.md)
 
-- **⭐ [Canta](https://github.com/samolego/Canta)** -  Uninstall any app without root using Shizuku (Needs [Shizuku](https://shizuku.rikka.app/) to be installed and running). `FOSS` | [🌱 F-Droid](https://f-droid.org/en/packages/io.github.samolego.canta/) | [▶️ Play Store](https://play.google.com/store/apps/details?id=io.github.samolego.canta)
+- **[⭐ Canta](https://github.com/samolego/Canta)** -  Uninstall any app without root using Shizuku (Needs [Shizuku](https://shizuku.rikka.app/) to be installed and running). `FOSS` | [🌱 F-Droid](https://f-droid.org/en/packages/io.github.samolego.canta/) | [▶️ Play Store](https://play.google.com/store/apps/details?id=io.github.samolego.canta)
 - **[De-Bloater](https://github.com/sunilpaulmathew/De-Bloater)** - An application using the power of Magisk to debloat unwanted system apps!. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.sunilpaulmathew.debloater) | [▶️ Play Store](https://play.google.com/store/apps/details?id=com.sunilpaulmathew.debloater)
 - **[EXA System App Remover](https://play.google.com/store/apps/details?id=exa.free.saux)** - Remove Bloatware, clear memory and speed up your phone now by uninstalling unused system apps. `Proprietary`
 - **[System App Nuker](https://github.com/ChiseWaguri/systemapp_nuker)** - A module to debloat system apps with WebUI Interface. `FOSS` `[M]`
@@ -753,7 +753,7 @@ head:
 - **[Magisk Docker](https://github.com/mgksu/dockerd)** - Magisk and KernelSU module for running Docker on rooted Android devices. `FOSS` `[M]` `[K]`
 - **[Magisk Tailscaled](https://github.com/mgksu/tailscaled)** - Magisk and KernelSU module for running Tailscale on rooted Android devices. `FOSS` `[M]` `[K]`
 - **[Py2Droid](https://github.com/Mrakorez/py2droid)** - A Magisk module to install Python 3 on Android, including the standard library (STDLIB). `FOSS` `[M]`
-- **⭐ [Shizuku](https://github.com/RikkaApps/Shizuku)** - Use system APIs directly with ADB/root privileges. `FOSS` | [🌱 F-Droid](https://apt.izzysoft.de/fdroid/index/apk/moe.shizuku.privileged.api) | [▶️ Play Store](https://play.google.com/store/search?q=shizuku&c=apps)
+- **[⭐ Shizuku](https://github.com/RikkaApps/Shizuku)** - Use system APIs directly with ADB/root privileges. `FOSS` | [🌱 F-Droid](https://apt.izzysoft.de/fdroid/index/apk/moe.shizuku.privileged.api) | [▶️ Play Store](https://play.google.com/store/search?q=shizuku&c=apps)
 - **[Stealth Debug](https://github.com/sp11xy/StealthDebug)** - Hide USB-Debugging properties. `FOSS` `[M]`
 - **[Termux](https://termux.com/)** - Advanced terminal emulator and Linux environment. `FOSS` - **[More on Termux](#terminal-and-shell-tools)**
 - **[Wireless ADB Switch](https://github.com/Smooth-E/wireless-adb-switch)** - Quickly enable or disable Android's Wireless Debugging feature. Includes widgets and a quick settings tile for convenience.  `FOSS` | [🌱 F-Droid](https://f-droid.org/ru/packages/com.smoothie.wirelessDebuggingSwitch)
@@ -783,7 +783,7 @@ head:
 - **[File Manager - File Browser](https://play.google.com/store/apps/details?id=com.alc.filemanager)** - Manage your files (file explorer) like you do on your desktop or laptop using Multiple Select, Cut/Copy/Paste, Move, Create, Delete, Rename, Search etc. `Proprietary`
 - **[Fossify File Manager](https://github.com/FossifyOrg/File-Manager)** - Easy app for managing your files without ads, respecting your privacy and security. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/org.fossify.filemanager/) | [▶️ Play Store](https://play.google.com/store/apps/details?id=org.fossify.filemanager)
 - **[Material Files](https://github.com/zhanghai/MaterialFiles)** - Modern file manager with root capabilities. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/me.zhanghai.android.files)| [▶️ Play Store](https://play.google.com/store/apps/details?id=me.zhanghai.android.files)
-- **⭐ [MiXplorer](https://mixplorer.com/)** - Feature-rich file manager. `Proprietary`
+- **[⭐ MiXplorer](https://mixplorer.com/)** - Feature-rich file manager. `Proprietary`
 - **[MT Manager](https://mt2.cn/)** - File Management and Reverse Engineering Tool for Android. `Proprietary`
 - **[Root Explorer](https://play.google.com/store/apps/details?id=com.speedsoftware.rootexplorer)** - File manager with root access. `Proprietary`
 - **[RS File Manager File Explorer](https://play.google.com/store/apps/details?id=com.rs.explorer.filemanager)** - Free, Safe, Simple, Manage your files efficiently and easily with RS File Manager. `Proprietary`
@@ -891,11 +891,11 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[WeiboHelper](https://github.com/Xposed-Modules-Repo/com.skyhand.sinahelper)** - Remove all available advertisements and recommendations from Weibo. `Proprietary` `[LSP]`
 
 ### WhatsApp Mods
-- **⭐ [WA Enhancer](https://github.com/Dev4Mod/WaEnhancer)** - A Xposed module that enhances your WhatsApp experience. `FOSS` `[LSP]`
+- **[⭐ WA Enhancer](https://github.com/Dev4Mod/WaEnhancer)** - A Xposed module that enhances your WhatsApp experience. `FOSS` `[LSP]`
 - **[WA Revamp](https://github.com/Xposed-Modules-Repo/its.madruga.warevamp)** - Add various functions like download status and view once, hide read messages, statuses and archived chats to official WhatsApp. `Proprietary` `[LSP]`
 
 ### X/Twitter Mods
-- **⭐ [Hachidori](https://github.com/Xposed-Modules-Repo/com.twifucker.hachidori/)** - Adds downloading media, hiding ads and other privacy features to X (formerly Twitter). `Proprietary` `[LSP]`
+- **[⭐ Hachidori](https://github.com/Xposed-Modules-Repo/com.twifucker.hachidori/)** - Adds downloading media, hiding ads and other privacy features to X (formerly Twitter). `Proprietary` `[LSP]`
 
 ### YouTube, Spotify, & Google Photos Mods
 - **[RevancedXposed](https://github.com/chsbuffer/RevancedXposed)** - YouTube, Spotify and YT Music block ads and background playback, Google Photos unlimited backup Xposed module. `FOSS` `[LSP]`
@@ -903,15 +903,25 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 [↑ Back to top](#table-of-contents)
 
-### General App Mods
-- **[Boosteroid+](https://github.com/nitanmarcel/BoosteroidPlus)** - Customize advanced settings for the Boosteroid app, including frame rate, bitrate, and resolution options. `FOSS` `[LSP]`
-- **⭐ [ChromeXt](https://github.com/JingMatrix/ChromeXt)** - UserScript and DevTools support for Chromium-based and WebView-based browsers. `FOSS` `[LSP]`
-- **[EDS NG Crack](https://github.com/dumbasPL/EDS-NG-crack)** - Xposed module that unlocks all features in in [EDS NG](https://play.google.com/store/apps/details?id=com.sovworks.projecteds&hl=en_US). `FOSS` `[M]`
+### Hook Module
+
+<details><summary>What are hook modules?</summary>
+
+- These are modules that hook into android apps/system to provide extra/premium functionalities in a number of apps.
+
+</details>
+
 - **[Freely module](https://modules.lsposed.org/module/me.build/)** - Compatible with mainstream social and short video applications (such as WeChat, Tik Tok, Soul, etc.), and is designed to improve the user experience and functional freedom. `Proprietary` `[LSP]`
 - **[F*ck for VIP](https://github.com/bug-bit/fckvip)** - A module to unlock some software memberships and remove ads. Check releases section for list of supported apps. `Proprietary` `[LSP]`
 - **[JunZi Xposed Hook](https://github.com/Xposed-Modules-Repo/junzi.xposed.hook/)** - Software hooks in PicsArt, AudioLab, ES File Explorer, Cosmic Toolbox etc. `Proprietary` `[LSP]`
-- **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
 - **[NewHookVip](https://github.com/Xposed-Modules-Repo/top.hookvip.pro)** - Xposed module for unlocking some app memberships and adding some extended functions. Check releases section for list of supported apps. `Proprietary` `[LSP]`
+
+
+### General App Mods
+- **[Boosteroid+](https://github.com/nitanmarcel/BoosteroidPlus)** - Customize advanced settings for the Boosteroid app, including frame rate, bitrate, and resolution options. `FOSS` `[LSP]`
+- **[⭐ ChromeXt](https://github.com/JingMatrix/ChromeXt)** - UserScript and DevTools support for Chromium-based and WebView-based browsers. `FOSS` `[LSP]`
+- **[EDS NG Crack](https://github.com/dumbasPL/EDS-NG-crack)** - Xposed module that unlocks all features in in [EDS NG](https://play.google.com/store/apps/details?id=com.sovworks.projecteds&hl=en_US). `FOSS` `[M]`
+- **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
 - **[OOSGMS-OPTIMISER](https://github.com/epicmann24/OOSGMS-OPTIMISER)** - Magisk module to optimise and remove trackers for GMS and OOS. `FOSS` `[M]`
 - **[Rboard Theme Manager](https://github.com/DerTyp7214/RboardThemeManagerV3)** - A customizable manager app for Google Gboard that allows users to download, apply, and manage various themes and sound settings. `FOSS` `[LSP]`
 - **[Smule Mod](https://github.com/michei69/SmuleXposed)** - A Smule Xposed module which enables free VIP and many other features. `FOSS` `[LSP]`
@@ -946,11 +956,13 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[MACsposed](https://github.com/DavidBerdik/MACsposed)** - Adds support for MAC Address spoofing to Android 12 through 15. `FOSS` `[LSP]`
 - **[Telephony Spoofer](https://github.com/BrianWalczak/TelephonySpoofer)** - Spoof cellular information, including eSIM compatibility. `FOSS` `[LSP]`
 
-### Proxies & Misc Networking
+### Proxy Tools
 - **[Aurora](https://github.com/Tkocean/Aurora)** - This project deploys sing-box, mihome proxies via Magisk, KernelSU, or APatch. `FOSS` `[M]` `[K]`
 - **[Box for Root](https://github.com/taamarin/box_for_magisk)** - Box for Root (BFR) is a Magisk, KernelSU, APatch, module that provides a suite of proxy tools, including clash, sing-box, v2ray, hysteria and xray. It allows you to configure a transparent proxy on Android devices with root access. `FOSS` `[M]` `[K]`
-- **[Magisk LAN Auto Switch](https://github.com/NewFuture/magisk-modules/tree/main/magisk-lan-auto-switch)** - Automatically switch LAN and WiFi based on eth0 connection status. `FOSS` `[M]`
 - **[NetProxy-Magisk](https://github.com/Fanju6/NetProxy-Magisk)** - Magisk proxy module based on Xray kernel, supports one-click start/stop transparent proxy. `FOSS` `[M]`
+
+### Misc Network Tools
+- **[Magisk LAN Auto Switch](https://github.com/NewFuture/magisk-modules/tree/main/magisk-lan-auto-switch)** - Automatically switch LAN and WiFi based on eth0 connection status. `FOSS` `[M]`
 - **[Network Utilities](https://play.google.com/store/apps/details?id=com.myprog.netutils)** - Application contains a set of tools for networks diagnostics. `Proprietary`
 - **[SimbaDroid](https://github.com/buttercookie42/SimbaDroid)** - A simple SMB file server for Android. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/de.buttercookie.simbadroid)
 - **[TCP Optimiser Module](https://github.com/fatalcoder524/TCP_Optimiser_Module)** - Change tcp congestion algorithm based on current active internet type and some network enhancements. `FOSS` `[M]` `[K]`
@@ -962,7 +974,6 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[Cert-Fixer](https://github.com/pwnlogs/cert-fixer)** - Installs custom CA certificates to Android's system certificate store. `FOSS` `[M]`
 - **[Just Trust Me Pro](https://github.com/hang666/JustTrustMePro)** - Disables SSL certificate checking for the purposes of auditing an app with cert pinning. `FOSS` `[M]`
 - **[Suppe](https://github.com/Familyye/Suppe)** - Xposed module to disable SSL verification and pinning on Android. `FOSS` `[LSP]`
-
 
 ### Wi‑Fi Tools
 - **[DriFiCrack](https://github.com/ZeltNamizake/DriFiCrack)** - Brute Force Tool to Crack Wi-Fi Passwords. `FOSS` `[M]`
@@ -997,7 +1008,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[Uperf-Game-Turbo](https://github.com/yinwanxi/Uperf-Game-Turbo)** - Userspace performance controller for Android. `FOSS` `[M]`
 
 ### System Optimization
-- **⭐ [3C All-in-One Toolbox](https://play.google.com/store/apps/details?id=ccc71.at.free)** - A comprehensive utility that offers a wide range of tools for monitoring, controlling, and optimizing device performance in a user-friendly interface. `Proprietary`
+- **[⭐ 3C All-in-One Toolbox](https://play.google.com/store/apps/details?id=ccc71.at.free)** - A comprehensive utility that offers a wide range of tools for monitoring, controlling, and optimizing device performance in a user-friendly interface. `Proprietary`
 - **[Bye Blur](https://github.com/Magisk-Modules-Alt-Repo/Bye-Blur)** - Disable the blur effect, this improves performance by discarding this complex visual effect. `FOSS` `[M]`
 - **[Classic Power Menu](https://github.com/KieronQuinn/ClassicPowerMenu)** - Power Menu Replacement for Android 11+, with the main aim being restoring power menu options (Device Controls and Quick Access Wallet) on Android 12. `FOSS`
 - **[COPG](https://github.com/AlirezaParsi/COPG)** - Spoof your device to enjoy premium features, max performance, and exclusive benefits. `FOSS` `[M]`
@@ -1016,7 +1027,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[SELinux enforcer++](https://github.com/nanotink/SEL-enforcer)** - Makes SELINUX loop in enforcing state for Android. `FOSS` `[M]`
 - **[SpeedCool](https://github.com/Llucs/SpeedCool-Magisk-Module)** - Boost, cool down, and optimize your Android with SpeedCool: less lag, more performance, and a cooler system. `FOSS` `[M]`
 - **[SuperMario Tweaker](https://github.com/mrx7014/SuperMario-Tweaker)** - A tweaker module that can improve any device performance and stability (Gaming, Daily Useage, etc). `FOSS` `[M]`
-- **⭐ [TNF Tweaker](https://github.com/topnotchfreaks/tnf_tweaker)** - Optimization tool designed exclusively for devices running the TopNotchFreaks and Zephyr kernels. `FOSS` `[K]`
+- **[⭐ TNF Tweaker](https://github.com/topnotchfreaks/tnf_tweaker)** - Optimization tool designed exclusively for devices running the TopNotchFreaks and Zephyr kernels. `FOSS` `[K]`
 
 ### Memory and Storage Management
 - **[Magisk Swapspace](https://github.com/chickendrop89/magisk-swapspace)** - This module allows for creating a persistent swap space on android. `FOSS` `[M]`
@@ -1030,7 +1041,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ## Privacy and Security
 - **[AlternativeUnlockXposed](https://github.com/leohearts/AlternativeUnlockXposed)** - Unlock your Android phone with an alternative PIN. `FOSS` `[LSP]`
-- **⭐ [Amarok](https://github.com/deltazefiro/Amarok-Hider)** - Android application which enables you to hide your private files and apps with a single click. `FOSS` | [🌱 F-Droid](https://f-droid.org/zh_Hans/packages/deltazero.amarok.foss/)
+- **[⭐ Amarok](https://github.com/deltazefiro/Amarok-Hider)** - Android application which enables you to hide your private files and apps with a single click. `FOSS` | [🌱 F-Droid](https://f-droid.org/zh_Hans/packages/deltazero.amarok.foss/)
 - **[Geergit](https://github.com/pyshivam/geergit-discussion)** - Xposed Module For Changing (MASKING) the various IDs in the Phone. `Proprietary` `[LSP]`
 - **[Tarnhelm](https://github.com/lz233/Tarnhelm)** - The magic to clean sharing links up. `FOSS` `[LSP]`
 - **[XPL-EX](https://github.com/0bbedCode/XPL-EX)** - Really simple to use privacy manager for Android 6.0 Marshmallow and later. `FOSS` `[LSP]`
@@ -1055,11 +1066,11 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 ### Root Managers
 - **[APatch](https://github.com/bmax121/APatch)** - The patching of Android kernel and Android system. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/me.bmax.apatch/)
 - **[KernelSU](https://github.com/tiann/KernelSU)** - A Kernel based root solution for Android. `FOSS`
-- **⭐ [KernelSU-next](https://github.com/KernelSU-Next/KernelSU-Next)** - An advanced Kernel based root solution for Android.
-- **⭐ [Magisk Manager](https://github.com/topjohnwu/Magisk)** - Manage Magisk modules and root permissions. `FOSS`
+- **[⭐ KernelSU-next](https://github.com/KernelSU-Next/KernelSU-Next)** - An advanced Kernel based root solution for Android.
+- **[⭐ Magisk Manager](https://github.com/topjohnwu/Magisk)** - Manage Magisk modules and root permissions. `FOSS`
 - **[Magisk Manager for Recovery Mode](https://github.com/Rikj000/Magisk-Manager-for-Recovery-Mode)** - Easily manage your Magisk Modules from a terminal session in your custom recovery. `FOSS` `[M]`
-- **⭐ [SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra)** - A kernel-based root solution for Android devices, forked from `KernelSU` with some useful changes.
-- **⭐ [MMRL](https://github.com/DerGoogler/MMRL)** - An Android app that helps manage your own modules repository. `FOSS` | [🌱 F-Droid](https://f-droid.org/en/packages/com.dergoogler.mmrl/) | [▶️ Play Store](https://play.google.com/store/apps/details?id=com.dergoogler.mmrl)
+- **[⭐ SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra)** - A kernel-based root solution for Android devices, forked from `KernelSU` with some useful changes.
+- **[⭐ MMRL](https://github.com/DerGoogler/MMRL)** - An Android app that helps manage your own modules repository. `FOSS` | [🌱 F-Droid](https://f-droid.org/en/packages/com.dergoogler.mmrl/) | [▶️ Play Store](https://play.google.com/store/apps/details?id=com.dergoogler.mmrl)
 
 ### Zygisk Implementations
 
@@ -1073,7 +1084,7 @@ Zygisk is a feature that allows modules to inject code directly into the Zygote 
   Zygote injection module implemented using ptrace, providing Zygisk API support for APatch and KernelSU. Serves as a replacement for Magisk's built-in Zygisk. `FOSS` `[M]`
 - **[ReZygisk](https://github.com/PerformanC/ReZygisk)**  
   Standalone and open-source Zygisk implementation, offering Zygisk API support for KernelSU and as a drop-in replacement for Magisk's Zygisk. `FOSS` `[M]` `[K]`
-- **⭐ [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)**  
+- **[⭐ Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)**  
   Advanced standalone Zygisk implementation, supporting KernelSU and replacing Magisk's built-in Zygisk. `Proprietary` `[M]` `[K]`
 
 ::: tip **💡 Tip:**  
@@ -1091,8 +1102,8 @@ Use these modules if you need Zygisk features on alternative root frameworks (Ke
 - **[PlaycurlNEXT](https://github.com/daboynb/playcurlNEXT)** - Fix Play Integrity (and SafetyNet) verdicts, allowing custom fields and props. `FOSS` `[M]` `[K]`
 - **[Play Integrity Fork](https://github.com/osm0sis/PlayIntegrityFork)** - A fork of PIF that fixes "MEETS_DEVICE_INTEGRITY" for Android <13 "deviceRecognitionVerdict" with the Play Integrity API. `FOSS` `[M]`
 - **[Sensitive_Props Mod](https://github.com/Pixel-Props/sensitive-props)** - Helps you bypass SafetyNet and Play Integrity on rooted Android devices by modifying system properties and applying device-specific fixes. `FOSS` `[M]`
-- **⭐ [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)** - Hide Magisk. `Proprietary` `[M]`
-- **⭐ [SUSFS Module](https://github.com/sidex15/susfs4ksu-module)** - An addon root hiding service for KernelSU. `FOSS` `[M]`
+- **[⭐ Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)** - Hide Magisk. `Proprietary` `[M]`
+- **[⭐ SUSFS Module](https://github.com/sidex15/susfs4ksu-module)** - An addon root hiding service for KernelSU. `FOSS` `[M]`
 - **[TrickyStore](https://github.com/5ec1cff/TrickyStore)** - Modifying the certificate chain generated for android key attestation. `Proprietary` `[M]` `[K]`
 - **[Tricky Addon - Update Target List](https://github.com/KOWX712/Tricky-Addon-Update-Target-List)** - A KSU WebUI to configure Tricky Store target.txt. `FOSS` `[K]`
 - **[Tricky Store OSS](https://github.com/beakthoven/TrickyStoreOSS)** - Open source alternative to proprietary Tricky Store module. `[M]` `[K]`
@@ -1102,7 +1113,7 @@ Use these modules if you need Zygisk features on alternative root frameworks (Ke
 :exclamation: Root hiding is a constant cat‑and‑mouse game. These methods might break with updates to Google Play Services or specific apps.
 
 ### Root Detection Tools
-- **⭐ [Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector)** - A tool for detecting root on android. `FOSS`
+- **[⭐ Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector)** - A tool for detecting root on android. `FOSS`
 - **[MagiskDetection](https://github.com/apkunpacker/MagiskDetection)** - Collection of Some publicaly Available POC Apps to Detect Root/Magisk presence. `FOSS` `Proprietary`
 - **[Play Integrity API Checker](https://github.com/1nikolas/play-integrity-checker-app)** - This app shows info about your device integrity as reported by Google Play Services. If any of this fails could mean your device is rooted or tampered in a way. `FOSS` | [▶️ Play Store](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck)
 
@@ -1121,8 +1132,8 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[Anti Brightness Change](https://github.com/binarynoise/XposedModulets)** - Prevents every app from changing the screen brightness. `FOSS` `[LSP]` | [🌱 F-Droid](https://apt.izzysoft.de/fdroid/index/apk/com.programminghoch10.AntiBrightnessChange)
 - **[CaptureSposed](https://github.com/99keshav99/CaptureSposed)** - Xposed module that effectively disables the newly introduced screenshot detection API in Android 14. `FOSS` `[LSP]`
 - **[Disable Rotation Button](https://github.com/JavaCakeGames/disable-rotation-button)** - App to disable Android's floating rotation button. `FOSS`
-- **⭐ [Enable Screenshot](https://github.com/LSPosed/DisableFlagSecure)** - Enabling screenshots in apps that normally wouldn't allow it, and disabling screenshot(Android 14+) and screen record(Android 15+) detection. `FOSS` `[LSP]`
-- **⭐ [Flag Secure Patcher](https://github.com/j-hc/FlagSecurePatcher)** - Magisk module to patch service.jar on device to disable secure lock and screenshot listeners. `FOSS` `[M]`
+- **[⭐ Enable Screenshot](https://github.com/LSPosed/DisableFlagSecure)** - Enabling screenshots in apps that normally wouldn't allow it, and disabling screenshot(Android 14+) and screen record(Android 15+) detection. `FOSS` `[LSP]`
+- **[⭐ Flag Secure Patcher](https://github.com/j-hc/FlagSecurePatcher)** - Magisk module to patch service.jar on device to disable secure lock and screenshot listeners. `FOSS` `[M]`
 - **[Pointer Replacer](https://github.com/thesandipv/pointer_replacer)** - Replaces a dot appears when user touch the screen [Require Show Touches to be enabled in Developer Options]. `FOSS` `[LSP]`
 - **[Pseudo DC Dimming](https://github.com/dantmnf/PseudoDCDimming)** - Enable alternative dimming mode (likely DC-like) on low brightness for some OLED displays by using software brightness gain. `FOSS` [LSP]`
 - **[Simple Flag Secure](https://github.com/ShivamXD6/Simple-Flag-Secure)** - Disable Secure Flag and allow taking screenshots/screen recording in apps supports KSU/APatch . `FOSS` `[M]` `[K]`
@@ -1132,13 +1143,11 @@ After hiding root, you can check whether hiding works via root detection apps, s
 ---
 
 ## System Modifications
-- **[AnyWebView](https://github.com/neoblackxt/AnyWebView)** - Tries to detect all system webviews and add them to the developer options -> WebView implementation list. `FOSS` `[LSP]`
+
 - **[AutoNight](https://github.com/Chilly-Blaze/autonight)** - Controlling Android's Dark Mode through environmental brightness. `FOSS`
-- **⭐ [BetterKnownInstalled](https://github.com/Pixel-Props/BetterKnownInstalled)** - Patches packages to fix DroidGuard UNKNOWN_INSTALLED issues. `FOSS` `[LSP]`
-- **[Castro - system info](https://play.google.com/store/apps/details?id=com.itemstudio.castro)** - A huge collection of information about your device and a set of tools for monitoring its status. `Proprietary`
-- **⭐ [CorePatch](https://github.com/LSPosed/CorePatch)** - Disable signature verification For Android. `FOSS` `[LSP]`
+- **[⭐ BetterKnownInstalled](https://github.com/Pixel-Props/BetterKnownInstalled)** - Patches packages to fix DroidGuard UNKNOWN_INSTALLED issues. `FOSS` `[LSP]`
+- **[⭐ CorePatch](https://github.com/LSPosed/CorePatch)** - Disable signature verification For Android. `FOSS` `[LSP]`
 - **[DeviceID/SSAID Changer](https://github.com/sidex15/deviceidchanger)** - A simple WebUI Module to change SSAID/DeviceID on Rooted Android Devices with Apatch, KSU (And its forks), or Magisk. `FOSS` `[M]` `[K]`
-- **[Device Info HW](https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw)** - A hardware and software information app for Android devices. `Proprietary`
 - **[Disable Low Ram Flag](https://github.com/Magisk-Modules-Alt-Repo/disable-low-ram)** - Magisk module to disable Low‑RAM flag on Android Go devices. `FOSS` `[M]`
 - **[Do Not Try Accessibility](https://github.com/Nitsuya/DoNotTryAccessibility)** - Hook System Framework makes the app think that accessibility services are not enabled. `FOSS` `[LSP]`
 - **[Google Play System Update Uninstaller](https://github.com/daoquan1002/GPSU-Uninstaller)** - This module is used to uninstall Google Play System Update when the device encounters various issues (like Zygisk). `FOSS` `[M]`
@@ -1146,17 +1155,24 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[Multi Userui Enabler](https://github.com/InsertX2k/multiuseruienabler)** -  Magisk module that tries to enable Multi-User UI. `FOSS` `[M]`
 - **[Noogle Magisk](https://github.com/SelfRef/noogle-magisk)** - Magisk modules for removing/replacing Google applications on stock Android 11-15. `FOSS` `[M]`
 - **[Notification Icon Fix](https://github.com/Xposed-Modules-Repo/io.github.howard20181.notificationiconfix/)** - A module for AOSP, MIUI and HyperOS. Using an algorithm to convert white notification icons into recognizable icons. `FOSS` `[LSP]`
-- **[Open WebView](https://github.com/Magisk-Modules-Alt-Repo/open_webview)** - Helps you to replace your system webview through Magisk. `FOSS` `[M]`
-- **⭐ [Pairipfix](https://github.com/ahmedmani/pairipfix)** - Bypasses the "Get this app from Play" screen that appears when installing Android apps as an APK instead of from the Google Play Store. `FOSS` `[LSP]`
+- **[⭐ Pairipfix](https://github.com/ahmedmani/pairipfix)** - Bypasses the "Get this app from Play" screen that appears when installing Android apps as an APK instead of from the Google Play Store. `FOSS` `[LSP]`
 - **[Realme-GT3-neo5-CPU-limiter](https://github.com/Quantom2/Realme-GT3-neo5-CPU-limiter)** - A Magisk/KSU bazed module to slow down your CPU to make your screen time better. `FOSS` `[M]` `[K]`
 - **[Rotation Suggestions Closed](https://github.com/Astoritin/RotationSuggestionsClosed)** - A Magisk module to stop showing rotation suggestion button as rotating screen. `FOSS` `[M]`
-
 - **[System Tools Android](https://play.google.com/store/apps/details?id=com.redhome.sta)** - A true utility processor that includes many small utilities for finer work with the system (including root utilities). `Proprietary`
 - **[Turn Off Sensors](https://github.com/KatelynTheStargazer/TurnOffSensors-Magisk)** - Disables device sensors on startup via the sensor_privacy service on Android. `FOSS` `[M]`
 - **[TWRP A/B Retention Script](https://github.com/Magisk-Modules-Repo/twrp-keep)** - Keep TWRP installed after an A/B OTA. `FOSS` `[M]`
 - **[VBMeta Disguiser](https://github.com/Astoritin/VBMetaDisguiser)** - A Magisk module to disguise the properties of vbmeta. `FOSS` `[M]` `[K]`
 - **[XSpoofSignatures](https://github.com/rushiiMachine/XSpoofSignatures)** - Xposed module to spoof package signatures. `FOSS` `[LSP]`
 - **[zapret for Magisk](https://github.com/sevcator/zapret-magisk)** - DPI bypass on Android with additional features. `FOSS` `[M]`
+
+### System Info
+- **[Castro - system info](https://play.google.com/store/apps/details?id=com.itemstudio.castro)** - A huge collection of information about your device and a set of tools for monitoring its status. `Proprietary`
+- **[Device Info HW](https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw)** - A hardware and software information app for Android devices. `Proprietary`
+
+### Webview
+- **[AnyWebView](https://github.com/neoblackxt/AnyWebView)** - Tries to detect all system webviews and add them to the developer options -> WebView implementation list. `FOSS` `[LSP]`
+- **[Google Webview Module](https://github.com/gmb7886/GoogleWebview_Module)** - Installs *com.google.android.webview* as a system app, to replace the AOSP implementation. `FOSS` `[M]`
+- **[Open WebView](https://github.com/Magisk-Modules-Alt-Repo/open_webview)** - Helps you to replace your system webview through Magisk. `FOSS` `[M]`
 
 [↑ Back to top](#table-of-contents)
 
@@ -1165,7 +1181,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 ## Terminal and Shell Tools
 - **[aShell You](https://github.com/DP-Hridayan/aShellYou)** - Android shell utility app with Material Design 3 UI, letting you run ADB, root and shell commands. `FOSS` | [🌱 F-Droid](https://apt.izzysoft.de/fdroid/index/apk/in.hridayan.ashell)
 - **[LADB](https://github.com/tytydraco/LADB)** - Local ADB shell. `FOSS` | [LADB Free Build](https://github.com/hyperio546/ladb-builds) | [🌱 F-Droid](https://play.google.com/store/apps/details?id=com.draco.ladb)
-- **⭐ [Termux](https://github.com/termux/termux-app)** - A terminal emulator application for Android OS extendible by variety of packages. `FOSS` | [🌱 F-Droid](https://f-droid.org/en/packages/com.termux)
+- **[⭐ Termux](https://github.com/termux/termux-app)** - A terminal emulator application for Android OS extendible by variety of packages. `FOSS` | [🌱 F-Droid](https://f-droid.org/en/packages/com.termux)
 - **[TermuxRootMods](https://github.com/rompelhd/TermuxRootMods)** - A Magisk module that enhances the Termux experience for rooted devices. `FOSS` `[M]`
 - **[Termux-Root-Recovery-Tool](https://github.com/Ishu43642/Termux-Root-Recovery-Tool)** - Install GSi Rom , Flashing Fastboot Rom, install Twrp Recovery, Boot.img & vbmeta.img files. `FOSS` 
 - **[Termux:API](https://github.com/termux/termux-api)** - Termux add-on app which exposes device functionality as API to command line programs. `FOSS`
@@ -1182,10 +1198,9 @@ After hiding root, you can check whether hiding works via root detection apps, s
 ## Tools
 - **[AllTrans](https://github.com/pbzinwindows/AllTrans)** - Replaces ALL TEXT IN AN APP from one language to another at runtime. `FOSS` `[LSP]`
 - **[crond4Android](https://github.com/powerAn2020/crond4android)** - The Crond program that supports running on KernelSU, APatch and Magisk. `FOSS` `[M]` `[K]`
-- **[Dhizuku API for Xposed](https://github.com/iamr0s/Dhizuku-API-Xposed)** - xposed module that forces applications to support Dhizuku. `FOSS` `[LSP]`
+- **[Dhizuku API for Xposed](https://github.com/iamr0s/Dhizuku-API-Xposed)** - Xposed module that forces applications to support Dhizuku. `FOSS` `[LSP]`
 - **[Hosts Manager Lite](https://play.google.com/store/apps/details?id=awais.hostsmanager.lite)** - Advanced /etc/hosts editor. `Proprietary`
 - **[Image Copy Hide](https://github.com/cookieof/ImageCopyHide)** - Automatically copy and hide files from /sdcard/DCIM/Camera to /sdcard/wot/cptp. `FOSS` `[M]` 
-- **[Google Webview Module](https://github.com/gmb7886/GoogleWebview_Module)** - Installs *com.google.android.webview* as a system app, to replace the AOSP implementation. `FOSS` `[M]`
 - **[MagiskGapps](https://github.com/wacko1805/MagiskGapps)** - Convert a regular GApps package into a Magisk flashable package using a simple website. `FOSS` `[M]`
 - **[Magisk Tailscaled](https://github.com/mgksu/tailscaled)** - Module for running Tailscale on rooted Android devices. `FOSS` `[M]`
 - **[Notification Code](https://gitlab.com/n00byara/NotificationCode)** - Automatically extracting authentication codes and other useful information from notifications. `FOSS` `[LSP]`
