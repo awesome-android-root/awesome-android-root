@@ -703,6 +703,9 @@ head:
 - **[MIUIqol](https://github.com/Xposed-Modules-Repo/io.github.chsbuffer.miuihelper/blob/main/README_EN.md)** - Improves my experience of MIUI 12 to 14 and HyperOS. `Proprietary` `[LSP]`
 - **[Pengeek](https://github.com/monwf/customiuizer)** - Customize your HyperOS to your liking. For HyperOS based on Android 14. `FOSS` `[LSP]`
   
+#### NothingOS
+- **[Nothing EUICC Force Enabler](https://github.com/reindex-ot/nothing-euicc#note-english)** - Forcibly enables eSIM on Nothing devices that do not officially support it. `FOSS` `[M]`
+
 #### One UI (Samsung)
 - **⭐ [KnoxPatch](https://github.com/salvogiangri/KnoxPatch)** - Get Samsung apps/features working again in your rooted Galaxy device. For better experience, please also [read this ↗](https://github.com/salvogiangri/KnoxPatch?tab=readme-ov-file#knoxpatch-enhancer) . `FOSS` `[LSP]`
 
