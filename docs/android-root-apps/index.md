@@ -548,6 +548,7 @@ head:
 ### Audio Control & Management 
 - **[Audio jitter silencer](https://github.com/Magisk-Modules-Alt-Repo/audio-jitter-silencer)** - For avoiding distortion on all digital audio outputs, it disables audio jitter generators (w.r.t. battery draining and optimizations, and wireless connectivity). `FOSS` `[M]`
 - **[DisableAudioFocus](https://github.com/auag0/DisableAudioFocus)** - Allows you to disable audio focus, enabling you to play multiple videos and audios simultaneously. `FOSS` `[LSP]`
+- **[Lower Minimum Volume](https://github.com/dxwil/Lower-Minimum-Volume)** - A simple magisk module to lower the minimum volume of media from the device's speakers. `FOSS` `[M]`
 - **[XAudioCapture](https://github.com/Xposed-Modules-Repo/io.github.wzhy.xaudiocapture)** - Lets you capture any audio stream you desire, bypassing these restrictions. `Proprietary` `[LSP]`
 
 ### Audio Configuration
