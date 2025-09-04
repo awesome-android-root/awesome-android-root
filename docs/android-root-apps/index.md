@@ -902,6 +902,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[JunZi Xposed Hook](https://github.com/Xposed-Modules-Repo/junzi.xposed.hook/)** - Software hooks in PicsArt, AudioLab, ES File Explorer, Cosmic Toolbox etc. `Proprietary` `[LSP]`
 - **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
 - **[NewHookVip](https://github.com/Xposed-Modules-Repo/top.hookvip.pro)** - Xposed module for unlocking some app memberships and adding some extended functions. Check releases section for list of supported apps. `Proprietary` `[LSP]`
+- **[OOSGMS-OPTIMISER](https://github.com/epicmann24/OOSGMS-OPTIMISER)** - Magisk module to optimise and remove trackers for GMS and OOS. `FOSS` `[M]`
 - **[Rboard Theme Manager](https://github.com/DerTyp7214/RboardThemeManagerV3)** - A customizable manager app for Google Gboard that allows users to download, apply, and manage various themes and sound settings. `FOSS` `[LSP]`
 - **[Smule Mod](https://github.com/michei69/SmuleXposed)** - A Smule Xposed module which enables free VIP and many other features. `FOSS` `[LSP]`
 - **[Wallet Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.wallettweaks/releases)** - UI tweaks for Google Wallet. `Proprietary` `[LSP]`
