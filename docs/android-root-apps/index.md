@@ -422,8 +422,7 @@ head:
 > - Droid‑ify — https://github.com/Droid-ify/client/releases (modern F‑Droid client)
 > - IzzyOnDroid — https://apt.izzysoft.de/fdroid/ (additional F‑Droid repo with many packages)
 
-> - Links point to **F‑Droid** (FOSS) when available, otherwise to the **Google Play Store**.
-> - If both exist, the **F‑Droid link is preferred**.
+> - Clicking on App/Module entry point to **Source Code page** (Github/Gitlab etc) *in case of `FOSS` apps* otherwise link pints to **Google Play Store**.
 :::
 
 ---
@@ -432,7 +431,8 @@ head:
 - **⭐** = Community‑recommended (most popular/trusted in category)
 - **`FOSS`** = Free and Open Source Software (source code available)
 - **`Proprietary`** = Closed-source software or unclear licensing
-- **`📦`** - Source code of App/Module
+- **`[🌱 F-Droid]`** - F-Droid link
+- **`[▶️ Play Store]`** = Google Play Store link
 
 ### **Root Framework Badges**
 - **`[M]`** = Magisk Module (requires [_Magisk framework_](../android-root-guides/magisk-guide.md))
@@ -523,7 +523,7 @@ head:
 
 
 ### App Stores
-- **[Aurora Store](https://f-droid.org/packages/com.aurora.store/)** - A Google Play Store client to search, view app details, and download APKs directly to your device. [📦](https://github.com/whyorean/AuroraStore) `FOSS`
+- **[Aurora Store](https://github.com/whyorean/AuroraStore)** - A Google Play Store client to search, view app details, and download APKs directly to your device. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.aurora.store/)
 - **⭐ [Droid-ify](https://github.com/Droid-ify/client)** - F-Droid client with Material UI and auto updating apps using root. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.looker.droidify)
 - **[Neo Store](https://github.com/NeoApplications/Neo-Store)** - An F-Droid client with modern UI and an arsenal of extra features. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.machiav3lli.fdroid)
 
@@ -1130,7 +1130,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 ---
 
 ## Terminal and Shell Tools
-- **[aShell You](https://apt.izzysoft.de/fdroid/index/apk/in.hridayan.ashell)** - Android shell utility app with Material Design 3 UI, letting you run ADB, root and shell commands. [📦](https://github.com/DP-Hridayan/aShellYou) `FOSS`
+- **[aShell You](https://github.com/DP-Hridayan/aShellYou)** - Android shell utility app with Material Design 3 UI, letting you run ADB, root and shell commands. `FOSS` | [🌱 F-Droid](https://apt.izzysoft.de/fdroid/index/apk/in.hridayan.ashell)
 - **[LADB](https://github.com/tytydraco/LADB)** - Local ADB shell. `FOSS` | [LADB Free Build](https://github.com/hyperio546/ladb-builds) | [🌱 F-Droid](https://play.google.com/store/apps/details?id=com.draco.ladb)
 - **⭐ [Termux](https://github.com/termux/termux-app)** - A terminal emulator application for Android OS extendible by variety of packages. `FOSS` | [🌱 F-Droid](https://f-droid.org/en/packages/com.termux)
 - **[TermuxRootMods](https://github.com/rompelhd/TermuxRootMods)** - A Magisk module that enhances the Termux experience for rooted devices. `FOSS` `[M]`
