@@ -665,6 +665,7 @@ head:
 - **[Hide Navbar Keyboard](https://github.com/UNKNUW/Hide-Navbar-Keyboard)** - Magisk module to hide navbar when keyboard appears. Supports Android 10 -15+. `FOSS` `[M]`
 - **[NavTweaks](https://github.com/Magisk-Modules-Alt-Repo/HideNavBar)** - Fullscreen/Immersive Gesture Tweaks for Android 10-14. `FOSS` `[M]`
 - **[Volume Key Track Control Module](https://github.com/Hepolise/VolumeKeyTrackControlModule)** - An Xposed module that allows to skip and play/pause track with volume keys. `FOSS` `[LSP]`
+- **[Volume Scroll](https://github.com/farfromrefug/VolumeScroll)** -  Android app to scroll using volume keys. `FOSS` `[M]`
 
 ### OS Specific Mods
 #### AOSP (Android Open Source Project)
