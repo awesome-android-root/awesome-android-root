@@ -585,6 +585,7 @@ head:
 - **[Battery Guru](https://play.google.com/store/apps/details?id=com.paget96.batteryguru)** - Battery optimization and monitoring. `Proprietary`
 - **[Charging Bypass](https://github.com/AbhishekTor55/charging-bypass-magisk)** - Disables charging when screen is ON and re-enables when OFF. Useful for gaming/dev use. `FOSS` `[M]`
 - **[DeepSuppressor](https://github.com/Aurora-Nasa-1/DeepSuppressor)** - Background process management tool to monitor and control application processes. `FOSS` `[M]`
+- **[Doze Disabler](https://github.com/draumaz/dozedisabler)** - A Magisk module that disables Doze battery optimizations at boot time. `FOSS` `[M]`
 - **[Drowser](https://gitlab.com/juanitobananas/drowser)** - Drowser is a simple app that kills the apps you select when the screen turns off. `FOSS` | [🌱 F-Droid](https://f-droid.org/app/com.jarsilio.android.drowser)
 - **[EnforceDoze](https://github.com/farfromrefug/EnforceDoze)** - Enable Doze mode immediately after screen off and turn off motion sensing to get best battery life. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.akylas.enforcedoze/)
 - **[Extreme GMS Doze](https://github.com/Skyghost090/Extreme-Gms-Doze)** - Intelligently kills Google Play Services when your screen is turned off, dramatically boosting battery life. `FOSS` `[M]`
