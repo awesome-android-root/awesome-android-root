@@ -1088,6 +1088,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 <summary><strong><bold>What is Zygisk?</bold></strong></summary>
 
 Zygisk is a feature that allows modules to inject code directly into the Zygote process in Android. This enables **powerful system-level modifications**, such as **hiding root**, patching app behavior, and more, with minimal impact on device stability and performance.
+
 </details>
 
 - **[NeoZygisk](https://github.com/JingMatrix/NeoZygisk)**  
@@ -1184,7 +1185,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 - VBMeta is a critical component of Android Verified Boot (AVB), a security feature designed to **ensure the integrity of the software running on an Android device during the boot process**.
 
-</detials>
+</details>
 
 - **[Android VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer)** - A Magisk/KernelSU/Apatch module to fix VBMeta detections on Android. `FOSS` `[M]` `[K]`
 - **[VBMeta Disguiser](https://github.com/Astoritin/VBMetaDisguiser)** - A Magisk module to disguise the properties of vbmeta. `FOSS` `[M]` `[K]`
@@ -1248,7 +1249,6 @@ After hiding root, you can check whether hiding works via root detection apps, s
 ---
 
 <div align="center">
-
 
 [README](https://github.com/awesome-android-root/awesome-android-root/blob/main/README.md) • [Root Guides](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/android-root-guides/index.md) • [FAQs](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/faqs.md)
 
