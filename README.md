@@ -130,7 +130,7 @@
 
 ---
 
-<div class="readme-intro">
+<div class="root-intro">
 
 ## Introduction
 
@@ -171,6 +171,8 @@ Think of it like gaining **Administrator rights** on Windows or **sudo access** 
 </div>
 
 ---
+
+<div class="readme-guides-steps">
 
 :::tip ⚡ Recommendation
 **Follow all steps from [fynks.github.io/check-list](https://fynks.github.io/check-list/), ensure you’re fully prepared.**
@@ -234,7 +236,9 @@ Follow this proven path:
 
 ---
 
-<div align="center">
+</div>
+
+<div align="center" class="readme-apps-intro">
 
 ## Root Apps and Modules
 
