@@ -7,6 +7,7 @@ set -euo pipefail
 readonly GREEN='\033[0;32m'
 readonly NC='\033[0m' # No Color
 readonly RED='\033[0;31m'
+readonly BLUE='\033[0;34m'
 readonly YELLOW='\033[1;33m'
 
 # Script info
@@ -38,64 +39,37 @@ log_error() {
 
 echo -e "${GREEN}Starting build-docs process...${NC}"
 
-# 1. Remove .md extension from both HTML href links and Markdown links in docs/index.md
-remove_md_from_links() {
-    local target_file="docs/index.md"
+# 1. Check required files and directories (relative to parent directory)
+[ ! -d "../docs" ] && handle_error "'docs' directory not found."
+[ ! -f "../README.md" ] && handle_error "'README.md' not found."
 
-    if [ ! -f "$target_file" ]; then
-        log_warn "$target_file not found, skipping .md removal"
-        return
-    fi
+# 2. Create android-root-apps directory if it doesn't exist
+mkdir -p ../docs/android-root-apps || handle_error "Failed creating android-root-apps directory"
+log_info "Created docs/android-root-apps directory"
 
-    log_info "Removing .md extensions from internal links in $target_file"
-    
-    # Process the file to remove .md extensions
-    # Using simple string replacement approach
-    
-    # Create a temporary file
-    local temp_file="${target_file}.tmp"
-    cp "$target_file" "$temp_file"
-    
-    # Remove .md from href attributes (HTML links)
-    perl -pi -e 's/href="([^"]+?)\.md"/href="$1"/g' "$temp_file" || {
-        rm "$temp_file"
-        handle_error "Failed to process HTML links"
-    }
-    
-    # Remove .md from Markdown links
-    perl -pi -e 's/```KATEX_INLINE_OPEN([^)]+?)\.mdKATEX_INLINE_CLOSE/]($1)/g' "$temp_file" || {
-        rm "$temp_file"
-        handle_error "Failed to process Markdown links"
-    }
-    
-    # Move the processed file back
-    mv "$temp_file" "$target_file" || handle_error "Failed to update $target_file"
+# 3. Append README.md content to existing docs/android-root-apps/index.md
+if [ -f "../docs/android-root-apps/index.md" ]; then
+    tmp_file=$(mktemp) || handle_error "Failed creating temporary file"
+    {
+        cat ../docs/android-root-apps/index.md
+        echo ""  # Add blank line separator
+        cat ../README.md
+    } > "$tmp_file" && mv "$tmp_file" ../docs/android-root-apps/index.md || handle_error "Failed appending README.md to docs/android-root-apps/index.md"
+    log_info "Appended README.md content to existing docs/android-root-apps/index.md"
+else
+    # If index.md doesn't exist, just copy README.md
+    cp ../README.md ../docs/android-root-apps/index.md || handle_error "Failed copying README.md to docs/android-root-apps/index.md"
+    log_info "Copied README.md to docs/android-root-apps/index.md"
+fi
 
-    log_info "Successfully removed .md extensions from links in $target_file"
-}
+# 4. Adjust links in android-root-apps route
+sed -i '/http[s]*:\/\/\//! s|./docs/android-root-guides/|../android-root-guides/|g' ../docs/android-root-apps/index.md && \
+sed -i '/http[s]*:\/\/\//! s|./docs/|../|g' ../docs/android-root-apps/index.md && \
+sed -i 's|\([^:]\)//|\1/|g' ../docs/android-root-apps/index.md || handle_error "Failed adjusting links in docs/android-root-apps/index.md"
+log_info "Links adjusted in docs/android-root-apps/index.md"
 
-# 3. Call the functions
-remove_md_from_links
-
-
-# 5. Adjust image paths in android-root-apps/index.md
-adjust_image_paths() {
-    local target="docs/android-root-apps/index.md"
-    
-    if [ ! -f "$target" ]; then
-        log_warn "$target not found, skipping image path adjustment"
-        return
-    fi
-
-    log_info "Adjusting image paths in $target"
-
-    # Replace docs/public/images/ → /images/
-    perl -pi -e 's|docs/public/images/|/images/|g' "$target" || \
-        handle_error "Failed to adjust image paths in $target"
-
-    log_info "Image paths updated in $target"
-}
-
-adjust_image_paths
+# 5. Adjust image paths in android-root-apps route
+sed -i 's|docs/public/images/|../public/images/|g' ../docs/android-root-apps/index.md || handle_error "Failed adjusting image paths in docs/android-root-apps/index.md"
+log_info "Image paths adjusted in docs/android-root-apps/index.md"
 
 echo -e "${GREEN}Documentation build process completed successfully.${NC}"
