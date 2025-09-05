@@ -33,6 +33,12 @@
 <details>
 <summary>👉 Tap to expand complete navigation</summary>
 
+### 📚 Overview
+- [Introduction](#introduction)
+- [Rooting Guides](#rooting-guides)
+- [Glossary](#glossary)
+- [Root Apps and Modules](#root-apps-and-modules)
+
 ### ⭐ Featured Essentials
 - [Featured Apps: The Essentials](#featured-apps-the-essentials)
 
@@ -126,6 +132,10 @@
 #### ♿ **Accessibility & Utilities**
 - [Accessibility Tools](#accessibility-tools)
 
+### 📚 Support & Safety
+- [Resources and Support](#resources-and-support)
+- [Legal & Safety](#legal--safety)
+
 </details>
 
 ---
@@ -208,7 +218,7 @@ Follow this proven path:
 | **APatch** | Locked or complex devices | No kernel rebuild, modern alternative | [APatch Guide](docs/android-root-guides/apatch-guide.md) |
 | **LSPosed** | Xposed lovers | Run modules without system mods | [LSPosed Guide](docs/android-root-guides/lsposed-guide.md) |
 
-> You can checkout complete comparison here: **[Root Solutions Comparison](./docs/android-root-guides/index.md#root-solutions-comparison)
+> You can checkout complete comparison here: **[Root Solutions Comparison](./docs/android-root-guides/index.md#root-solutions-comparison)**
 
 ---
 
@@ -1166,26 +1176,40 @@ After hiding root, you can check whether hiding works via root detection apps, s
 ### Official Channels
 | Platform | Purpose | Link |
 |:---|:---|:---|
-| **Website** | Browse apps & modules | [awesome-android-root.org](https://awesome-android-root.org) |
-| **GitHub** | Source & issues | [GitHub Repo](https://github.com/awesome-android-root/awesome-android-root) |
-| **X/Twitter** | Updates & news | [@awsm_and_root](https://x.com/awsm_and_root) |
+|🌐 **Website** | Browse apps, modules & guides | [awesome-android-root.org](https://awesome-android-root.org) |
+|📂 **GitHub** | Source, discussions & issues | [GitHub Repo](https://github.com/awesome-android-root/awesome-android-root) |
+|𝕏 **X/Twitter** | Updates & news | [@awsm_and_root](https://x.com/awsm_and_root) |
 
+### Quick Help Paths
+- First time here? Start at the [Introduction](#introduction) & [The 4-Step Rooting Process](#the-4-step-rooting-process)
+- Unsure about a term? Open the [Glossary](#glossary)
+- Want tools? Jump to [Root Apps and Modules](#root-apps-and-modules)
+- Need a walkthrough? Browse the [Rooting Guides Index](./docs/android-root-guides/index.md)
+- Common questions? Check the (upcoming) FAQs: `docs/faqs.md`
 
-### Resources
-> Visit [resources.md](./docs/resources.md)
+### Resource Hub
+Extended references & external reading: [resources.md](./docs/resources.md)
 
-### How You Can Help
-- ⭐ [Star the repo](https://github.com/awesome-android-root/awesome-android-root)  
-- 🐛 [Report issues](https://github.com/awesome-android-root/awesome-android-root/issues)  
-- 💡 [Suggest new apps/modules](https://github.com/awesome-android-root/awesome-android-root/issues)  
-- 📝 [Submit PRs](docs/contributing.md)  
-- 💖 [Sponsor the project](https://opencollective.com/awesome-android-root-official)
+### Contribute & Participate
+- ⭐ Star the repo (boosts discovery)
+- 🐛 Report or triage [issues](https://github.com/awesome-android-root/awesome-android-root/issues)
+- 💡 Suggest new apps/modules (1 per issue for clarity)
+- 🧹 Improve formatting / dead link cleanup
+- 📝 Read [contributing guide](docs/contributing.md) before major PRs
+- 🗂️ Large edits? Organize commits per category
+- 💖 Sponsor ongoing maintenance via [Open Collective](https://opencollective.com/awesome-android-root-official)
 
 ---
 
 ### 💖 Support the Project
 
-Your contributions keep this resource alive:
+Sponsorships fund: app status verification, guide refresh, categorization improvements, automation & docs infra.
+
+Non‑financial impact ideas:
+- Replace dead or redirected links with active sources/forks
+- Mark unmaintained / archived projects (add note)
+- Suggest safer open‑source alternatives for proprietary tools
+- Improve clarity for beginners (simplify phrasing / add warnings)
 
 [![Become a Sponsor](https://img.shields.io/badge/%20💖-Become%20a%20Sponsor-ff69b4?style=for-the-badge)](https://opencollective.com/awesome-android-root-official)
 [![Star the Repo](https://img.shields.io/badge/%20⭐-Star%20this%20Repo-yellow?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root)
@@ -1195,17 +1219,33 @@ Your contributions keep this resource alive:
 
 ## Legal & Safety
 
-> ⚠️ **This project is for educational purposes only.**  
-Rooting can **void warranty**, **brick your device**, or **erase data**. Proceed at your own risk. Always back up and research your device.
+> ⚠️ Educational reference only. You accept all risk. Rooting / modifying firmware can void warranty, reduce security, break OTA updates, or trigger anti‑tamper (Knox, Play Integrity, DRM failures, banking app lockouts).
 
-### Key Safety Rules:
-- Always **back up** before flashing
-- Verify **file checksums**
-- Understand **AVB, verity, and dynamic partitions**
-- Keep **ADB/Fastboot tools** ready
-- Have a **recovery plan**
+### Core Principles
+- Research device specifics (A/B slots, dynamic partitions, AVB state) first
+- Change one variable at a time; test between steps
+- Favor systemless approaches before invasive modification
 
-Respect app ToS and local laws.
+### Pre‑Flash Checklist
+1. Full backup (apps + internal storage; partition images if possible)
+2. Download matching factory firmware / boot / vbmeta images
+3. Verify SHA256 hashes of critical images/modules
+4. Install latest platform‑tools (adb / fastboot) & confirm detection
+5. Ensure alternate access path (custom recovery / second device)
+
+### Risk Mitigation
+- Keep a pristine boot + vbmeta copy untouched
+- Avoid stacking overlapping modules (e.g. multiple host-based ad blockers)
+- Review open issues of a module before flashing
+- Monitor first boot logs (logcat | grep -i magisk\|zygisk)
+- Keep a change log for easy rollback
+
+### Avoid Proceeding If
+- Corporate / MDM‑managed or mission‑critical device
+- Reliance on unpatchable banking / DRM / enterprise apps
+- You can’t afford data loss & have no backup
+
+Respect licenses, ToS, and local laws. Don’t use root to unlawfully bypass paid features.
 
 ---
 
