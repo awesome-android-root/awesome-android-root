@@ -145,6 +145,11 @@
   font-size: 18px;
 }
 
+.intro-header, .quick-nav, .root-intro, .readme-guides, .readme-guides-steps, .readme-apps-intro{
+  display: none !important
+}
+
+
  .aar-intro p{
   display: flex;
   flex-direction: row;
