@@ -168,15 +168,13 @@ Think of it like gaining **Administrator rights** on Windows or **sudo access** 
 [![device-specific-guides](https://img.shields.io/badge/Device--Specific-Guides-lightgreen?style=for-the-badge&cacheSeconds=3600)](./docs/android-root-guides/index.md#device-specific-guides)
 [![how-to-guides](https://img.shields.io/badge/How--To-Guides-orange?style=for-the-badge&cacheSeconds=3600)](./docs/guides/index.md)
 
+> ⚡ Follow all steps from [fynks.github.io/check-list](https://fynks.github.io/check-list/), ensure you’re fully prepared.
+
 </div>
 
 ---
 
 <div class="readme-guides-steps">
-
-:::tip ⚡ Recommendation
-**Follow all steps from [fynks.github.io/check-list](https://fynks.github.io/check-list/), ensure you’re fully prepared.**
-:::
 
 ### The 4-Step Rooting Process
 
