@@ -39,37 +39,37 @@ log_error() {
 
 echo -e "${GREEN}Starting build-docs process...${NC}"
 
-# 1. Check required files and directories (relative to parent directory)
-[ ! -d "../docs" ] && handle_error "'docs' directory not found."
-[ ! -f "../README.md" ] && handle_error "'README.md' not found."
+# 1. Check required files and directories
+[ ! -d "docs" ] && handle_error "'docs' directory not found."
+[ ! -f "README.md" ] && handle_error "'README.md' not found."
 
 # 2. Create android-root-apps directory if it doesn't exist
-mkdir -p ../docs/android-root-apps || handle_error "Failed creating android-root-apps directory"
+mkdir -p docs/android-root-apps || handle_error "Failed creating android-root-apps directory"
 log_info "Created docs/android-root-apps directory"
 
 # 3. Append README.md content to existing docs/android-root-apps/index.md
-if [ -f "../docs/android-root-apps/index.md" ]; then
+if [ -f "docs/android-root-apps/index.md" ]; then
     tmp_file=$(mktemp) || handle_error "Failed creating temporary file"
     {
-        cat ../docs/android-root-apps/index.md
+        cat docs/android-root-apps/index.md
         echo ""  # Add blank line separator
-        cat ../README.md
-    } > "$tmp_file" && mv "$tmp_file" ../docs/android-root-apps/index.md || handle_error "Failed appending README.md to docs/android-root-apps/index.md"
+        cat README.md
+    } > "$tmp_file" && mv "$tmp_file" docs/android-root-apps/index.md || handle_error "Failed appending README.md to docs/android-root-apps/index.md"
     log_info "Appended README.md content to existing docs/android-root-apps/index.md"
 else
     # If index.md doesn't exist, just copy README.md
-    cp ../README.md ../docs/android-root-apps/index.md || handle_error "Failed copying README.md to docs/android-root-apps/index.md"
+    cp README.md docs/android-root-apps/index.md || handle_error "Failed copying README.md to docs/android-root-apps/index.md"
     log_info "Copied README.md to docs/android-root-apps/index.md"
 fi
 
 # 4. Adjust links in android-root-apps route
-sed -i '/http[s]*:\/\/\//! s|./docs/android-root-guides/|../android-root-guides/|g' ../docs/android-root-apps/index.md && \
-sed -i '/http[s]*:\/\/\//! s|./docs/|../|g' ../docs/android-root-apps/index.md && \
-sed -i 's|\([^:]\)//|\1/|g' ../docs/android-root-apps/index.md || handle_error "Failed adjusting links in docs/android-root-apps/index.md"
+sed -i '/http[s]*:\/\/\//! s|./docs/android-root-guides/|../android-root-guides/|g' docs/android-root-apps/index.md && \
+sed -i '/http[s]*:\/\/\//! s|./docs/|../|g' docs/android-root-apps/index.md && \
+sed -i 's|\([^:]\)//|\1/|g' docs/android-root-apps/index.md || handle_error "Failed adjusting links in docs/android-root-apps/index.md"
 log_info "Links adjusted in docs/android-root-apps/index.md"
 
 # 5. Adjust image paths in android-root-apps route
-sed -i 's|docs/public/images/|../public/images/|g' ../docs/android-root-apps/index.md || handle_error "Failed adjusting image paths in docs/android-root-apps/index.md"
+sed -i 's|docs/public/images/|../public/images/|g' docs/android-root-apps/index.md || handle_error "Failed adjusting image paths in docs/android-root-apps/index.md"
 log_info "Image paths adjusted in docs/android-root-apps/index.md"
 
 echo -e "${GREEN}Documentation build process completed successfully.${NC}"
