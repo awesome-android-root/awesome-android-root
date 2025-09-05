@@ -162,6 +162,8 @@ Think of it like gaining **Administrator rights** on Windows or **sudo access** 
 <br>
 <div align="center" class="readme-guides">
 
+---
+
 # Rooting Guides
 
 [![Master-rooting-guide](https://img.shields.io/badge/Master--Rooting-Guide-blue?style=for-the-badge&cacheSeconds=3600)](./docs/android-root-guides/index.md)
@@ -171,8 +173,6 @@ Think of it like gaining **Administrator rights** on Windows or **sudo access** 
 > ⚡ Follow all steps from [fynks.github.io/check-list](https://fynks.github.io/check-list/), ensure you’re fully prepared.
 
 </div>
-
----
 
 <div class="readme-guides-steps">
 
