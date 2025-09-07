@@ -313,9 +313,7 @@ Follow this proven path:
 | **[AdAway](https://adaway.org/)** | Ad Blocking | Open-source system-wide ad blocker. |
 | **[Droid-ify](https://f-droid.org/packages/com.looker.droidify)** | F-Droid client | A modern F-Droid client for installing open-source apps. |
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -344,9 +342,7 @@ Follow this proven path:
 - **[systemless-adblocker](https://github.com/Magisk-Modules-Alt-Repo/systemless-adblocker)** - Ultimate adblocker module derived from gloeyisk/systemless-hosts. `FOSS` `[M]`
 - **[Systemless hosts KernelSU module](https://github.com/symbuzzer/systemless-hosts-KernelSU-module)** - Required module to use applications such as AdAway on KernelSU and APatch. `FOSS` `[K]`
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -397,9 +393,7 @@ Follow this proven path:
 - **[⭐ Pairipfix](https://github.com/ahmedmani/pairipfix)** - Bypasses the "Get this app from Play" screen that appears when installing Android apps as an APK instead of from the Google Play Store. `FOSS` `[LSP]`
 - **[XSpoofSignatures](https://github.com/rushiiMachine/XSpoofSignatures)** - Xposed module to spoof package signatures. `FOSS` `[LSP]`
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -430,9 +424,7 @@ Follow this proven path:
 - **[⭐ MacroDroid](https://play.google.com/store/search?q=macrodroid&c=apps)** - Easy to use automation app. `Proprietary`
 - **[⭐ Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)** - An advanced and powerful automation app. `Proprietary`
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -446,9 +438,7 @@ Follow this proven path:
 - **[Partition Backup](https://github.com/rhythmcache/partition-backup)** - This Utility Allows You To Save Android Device Partition. `FOSS` `[M]`
 - **[Swift Backup](https://play.google.com/store/apps/details?id=org.swiftapps.swiftbackup)** - Modern backup solution with cloud support. `Proprietary`
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -473,9 +463,7 @@ Follow this proven path:
 - **[⭐ Universal GMS Doze](https://github.com/gloeyisk/universal-gms-doze)** - Patches Google Play services app and certain processes/services to be able to use battery optimization. `FOSS` `[M]`
 - **[Xtreme-Battery-Saver](https://github.com/Magisk-Modules-Alt-Repo/Xtreme-Battery-Saver)** - An extreme battery saver Magisk Module for users who want to really stretch their battery life. `FOSS` `[M]`
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -489,9 +477,7 @@ Follow this proven path:
 - **[Risk](https://github.com/rakarmp/Risk)** - Clean RAM Cache And Stop Background Apps, Google Apps, Third Party Apps. `FOSS` `[M]`
 - **[⭐ SD Maid 2/SE](https://github.com/d4rken-org/sdmaid-se)** - A file management tool for Android that specialises in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS` | [🌱 F-Droid](https://f-droid.org/en/packages/eu.darken.sdmse/) | [▶️ Play Store](https://play.google.com/store/apps/details?id=eu.darken.sdmse)
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -507,9 +493,7 @@ Follow this proven path:
 ### SMS Management
 - **[NekoSMS](https://github.com/apsun/NekoSMS)** - A pattern-based text message blocker for Android. `FOSS` `[LSP]`
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -610,9 +594,7 @@ Follow this proven path:
 - **[Iconify](https://github.com/Mahmud0808/Iconify)** - Customize your Android 12+ device easily. `FOSS` `[M]`
 - **[Project Themer](https://play.google.com/store/apps/details?id=com.drsants.eggproject)** - Provides tools and features for rooted devices. `Proprietary` `[M]`
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -625,9 +607,7 @@ Follow this proven path:
 - **[System App Nuker](https://github.com/ChiseWaguri/systemapp_nuker)** - A module to debloat system apps with WebUI Interface. `FOSS` `[M]`
 - **[System app remover](https://play.google.com/store/apps/details?id=com.jumobile.manager.systemapp)** - A system app remover and user app uninstaller, move app to sdcard, move app to phone, apk on sdcard scan/install/delete. `Proprietary`
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -645,9 +625,7 @@ Follow this proven path:
 - **[Wireless ADB Switch](https://github.com/Smooth-E/wireless-adb-switch)** - Quickly enable or disable Android's Wireless Debugging feature. Includes widgets and a quick settings tile for convenience.  `FOSS` | [🌱 F-Droid](https://f-droid.org/ru/packages/com.smoothie.wirelessDebuggingSwitch)
 - **[ZRAM Module](https://github.com/FurLC/ZRAM-Module)** -  A Magisk/KernelSU module that provides ZRAM compression algorithm support for Android devices. `FOSS` `[M]` `[K]`
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -680,9 +658,7 @@ Follow this proven path:
 - **[Xplore File Manager](https://play.google.com/store/apps/details?id=com.lonelycatgames.Xplore)** - A file manager with root support. `Proprietary` 
 - **[ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)** - A program for archive management (including managing of application backups in archives). `Proprietary`
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -694,9 +670,7 @@ Follow this proven path:
 - **[Kernel Flasher](https://github.com/fatalcoder524/KernelFlasher)** - An Android app to flash (AK3 files), backup, and restore kernels. `FOSS`
 - **[SmartPack-Kernel-Manager](https://github.com/SmartPack/SmartPack-Kernel-Manager)** - A Kernel Manager. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.smartpack.kernelmanager)
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -708,9 +682,7 @@ Follow this proven path:
 - **[XposedFakeLocation](https://github.com/noobexon1/XposedFakeLocation)** - Allows you to spoof your device's location globally or for specific apps without using "mock location" from the developer options. `FOSS` `[LSP]`
 > Also checkout [Maps Mods](#maps-mods)
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -726,9 +698,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[LSPosed Fork(JingMatrix)](https://github.com/JingMatrix/LSPosed)** - **FORK** of original LSPosed with Android 15 & 16 support along with other improvements.
 - **[ReLSPosed](https://github.com/ThePedroo/ReLSPosed)** - Fork of JingMatrix's Fork of LSPosed framework.
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -798,9 +768,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[RevancedXposed](https://github.com/chsbuffer/RevancedXposed)** - YouTube, Spotify and YT Music block ads and background playback, Google Photos unlimited backup Xposed module. `FOSS` `[LSP]`
 - **[XposedPhotosFix](https://github.com/RevealedSoulEven/XposedPhotosFIX)** - Prevents Google Photos app from merging all folders in Camera folder and creates separate albums for each folder, useful for backup. `FOSS` `[LSP]`
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ### Hook Modules
 
@@ -831,9 +799,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[Smule Mod](https://github.com/michei69/SmuleXposed)** - A Smule Xposed module which enables free VIP and many other features. `FOSS` `[LSP]`
 - **[Wallet Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.wallettweaks/releases)** - UI tweaks for Google Wallet. `Proprietary` `[LSP]`
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -886,9 +852,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 > Also visit our *[Ads and Tracker Blocking section](#ads-and-tracking-blockers)*
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -898,9 +862,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[NFCGate](https://github.com/nfcgate/nfcgate)** - Android application meant to capture, analyze, or modify NFC traffic. `FOSS` `[LSP]` | [🌱 F-Droid](https://f-droid.org/packages/de.tu_darmstadt.seemoo.nfcgate/)
 - **[NfcScreenOff](https://github.com/Jon8RFC/NfcScreenOff)** - Read NFC tags when screen is off and disable NFC tagging sound. `FOSS` `[M]`
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -946,9 +908,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[Hydrostellaire](https://github.com/AestasBritannia/Hydro-Br-leur)** - A magisk module for devices running on Dimensity flagship platforms and OnePlus, Realme devices. `FOSS` `[M]`
 - **[⭐ TNF Tweaker](https://github.com/topnotchfreaks/tnf_tweaker)** - Optimization tool designed exclusively for devices running the TopNotchFreaks and Zephyr kernels. `FOSS` `[K]`
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -962,9 +922,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[Turn Off Sensors](https://github.com/KatelynTheStargazer/TurnOffSensors-Magisk)** - Disables device sensors on startup via the sensor_privacy service on Android. `FOSS` `[M]`
 - **[XPL-EX](https://github.com/0bbedCode/XPL-EX)** - Really simple to use privacy manager for Android 6.0 Marshmallow and later. `FOSS` `[LSP]`
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -974,9 +932,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[ReVanced Manager](https://github.com/ReVanced/revanced-manager)** - Modify YouTube, YouTube Music, Spotify and many more with additional features. `FOSS`
 - **[ReVancedRepackaged](https://github.com/programminghoch10/ReVancedRepackaged)** - This magisk module contains only the ReVanced Patcher.It will patch any installed ReVanced compatible app right on your device during installation. `FOSS` `[M]`
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -1044,9 +1000,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[Anti bootloop](https://github.com/Magisk-Modules-Alt-Repo/abootloop)** - A Magisk Module to protect from bootloops. `FOSS` `[M]`
 - **[YetAnotherBootloopProtector](https://github.com/Magisk-Modules-Alt-Repo/YetAnotherBootloopProtector)** - A Magisk Module to monitor and fix potential Bootloops and SystemUI failures. `FOSS` `[M]`
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -1060,9 +1014,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[Pseudo DC Dimming](https://github.com/dantmnf/PseudoDCDimming)** - Enable alternative dimming mode (likely DC-like) on low brightness for some OLED displays by using software brightness gain. `FOSS` [LSP]`
 - **[Rotation Suggestions Closed](https://github.com/Astoritin/RotationSuggestionsClosed)** - A Magisk module to stop showing rotation suggestion button as rotating screen. `FOSS` `[M]`
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -1113,9 +1065,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[Google Webview Module](https://github.com/gmb7886/GoogleWebview_Module)** - Installs *com.google.android.webview* as a system app, to replace the AOSP implementation. `FOSS` `[M]`
 - **[Open WebView](https://github.com/Magisk-Modules-Alt-Repo/open_webview)** - Helps you to replace your system webview through Magisk. `FOSS` `[M]`
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -1135,9 +1085,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[Termux:Tasker](https://github.com/termux/termux-tasker)** - Termux add-on app for integration with [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm). `FOSS`
 - **[Termux:Widget](https://github.com/termux/termux-widget)** - Termux add-on app which adds shortcuts to commands on the home screen. `FOSS`
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -1167,9 +1115,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[Dhizuku API for Xposed](https://github.com/iamr0s/Dhizuku-API-Xposed)** - Xposed module that forces applications to support Dhizuku. `FOSS` `[LSP]`
 - **[XposedModulets](https://github.com/binarynoise/XposedModulets)** - A collection of many small useful Xposed Modules. `FOSS` `[LSP]`
 
-<div align="right">
-<a href="table-of-contents">↑ Back to top</a>
-</div>
+[↑ Back to top](#table-of-contents)
 
 ---
 
