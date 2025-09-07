@@ -188,59 +188,52 @@ Think of it like gaining **Administrator rights** on Windows or **sudo access** 
 
 ### The 4-Step Rooting Process
 
-Follow this proven path:
+Follow this path:
 
-1. **Unlock Bootloader**  
-   → [Bootloader Unlock Guide](docs/android-root-guides/how-to-unlock-bootloader.md)  
-   *Required for most root methods*
+#### Step 1: Unlock Bootloader
+   → **[Bootloader Unlock Guide](docs/android-root-guides/how-to-unlock-bootloader.md)**  
+   *(Required for most root methods)*
 
-2. **Install Custom Recovery**  
-   → [TWRP / OrangeFox Guide](docs/android-root-guides/how-to-install-custom-recovery.md)  
-   *Needed to flash root and mods*
+#### Step 2: Install Custom Recovery
+   → **[TWRP / OrangeFox Guide](docs/android-root-guides/how-to-install-custom-recovery.md)**  
+   *(Needed to flash root and mods)*
 
-3. **Choose & Install Root Method**  
-   → [Compare Magisk, KernelSU, APatch](#root-methods-comparison)
+#### Step 3: Choose & Install Root Method  
 
-4. **Post-Root Setup**  
-   → Install [essential apps and modules](./docs/android-root-apps/index.md#featured-apps-the-essentials)  
-   → Configure root hiding, backups, ad blockers
+| Method | Best for | Guide |
+| :--- | :--- | :--- |
+| Magisk | Most users | [Magisk Guide](docs/android-root-guides/magisk-guide.md) |
+| KernelSU | Kernel-savvy users | [KernelSU Guide](docs/android-root-guides/kernelsu-guide.md) |
+| APatch | Devices with tricky firmware | [APatch Guide](docs/android-root-guides/apatch-guide.md) |
+
+> 💡 You can check out the complete comparison here: **[Root Solutions Comparison](./docs/android-root-guides/index.md#root-solutions-comparison)**
+
+#### Step 4: **Post-Root Setup**  
+1. → Install [essential apps and modules](./docs/android-root-apps/index.md#featured-apps-the-essentials)
+2. → Configure backups: [Backup & Restore](./docs/guides/app-backup-restore-using-root.md)
+3. → Block Ads and trackers: [Ad Blocking](./docs/guides/android-adblocking.md)
+4. → Debloat your phone: [Debloating](./docs/guides/android-apps-debloating.md)
 
 > 📢 **Note for Android 14/15:** Play Integrity is stricter. Root hiding may break apps. Stay updated.
 
 ---
 
-### Root Methods Comparison
-
-| Method | Best For | Key Features | Guide |
-|:---|:---|:---|:---|
-| **Magisk** | Most users | Systemless root, Zygisk, rich module ecosystem | [Magisk Guide](docs/android-root-guides/magisk-guide.md) |
-| **KernelSU** | Kernel-savvy users | Kernel-level root, better isolation, no patching | [KernelSU Guide](docs/android-root-guides/kernelsu-guide.md) |
-| **APatch** | Locked or complex devices | No kernel rebuild, modern alternative | [APatch Guide](docs/android-root-guides/apatch-guide.md) |
-| **LSPosed** | Xposed lovers | Run modules without system mods | [LSPosed Guide](docs/android-root-guides/lsposed-guide.md) |
-
-> You can checkout complete comparison here: **[Root Solutions Comparison](./docs/android-root-guides/index.md#root-solutions-comparison)**
-
----
-
 ### Device-Specific Guides
 
-| Brand | Guide | Notes |
-|:---|:---|:---|
-| **Google Pixel** | [Root Guide](docs/android-root-guides/how-to-root-pixel-phone.md) | A/B partition, AVB/verity handling |
-| **Samsung** | [Root Guide](docs/android-root-guides/how-to-root-samsung-phone.md) | Odin flashing, Knox implications |
-| **Xiaomi/HyperOS** | [Root Guide](docs/android-root-guides/how-to-root-xiaomi-phone.md) | Mi Unlock wait, fastbootd quirks |
-| **OnePlus** | [Root Guide](docs/android-root-guides/how-to-root-oneplus-phone.md) | OxygenOS/ColorOS transition |
-| **Nothing Phone** | [Root Guide](docs/android-root-guides/how-to-root-nothing-phone.md) | Firmware slotting, custom recovery |
-| **Motorola** | [Root Guide](docs/android-root-guides/how-to-root-motorola-phone.md) | Fastboot token, minimal recovery |
+- [Google Pixel Root Guide](docs/android-root-guides/how-to-root-pixel-phone.md)
+- [Samsung Root Guide](docs/android-root-guides/how-to-root-samsung-phone.md)
+- [Xiaomi/HyperOS Root Guide](docs/android-root-guides/how-to-root-xiaomi-phone.md)
+- [OnePlus Root Guide](docs/android-root-guides/how-to-root-oneplus-phone.md)
+- [Nothing Phone Root Guide](docs/android-root-guides/how-to-root-nothing-phone.md)
+- [Motorola Root Guide](docs/android-root-guides/how-to-root-motorola-phone.md)
 
 ---
 
 ### Additional Guides
 
-| Topic | Guide |
-|:---|:---|
-| **Custom ROMs** | [ROM Installation Guide](docs/android-root-guides/custom-rom-installation.md) |
-| **All Rooting Tutorials** | [Rooting Guides Index](docs/android-root-guides/index.md) |
+- [LSPosed Framework Guide](docs/android-root-guides/lsposed-guide.md)
+- [Custom ROMs Guide](docs/android-root-guides/custom-rom-installation.md)
+- **[All Rooting Tutorials](docs/android-root-guides/index.md)**
 
 ---
 
