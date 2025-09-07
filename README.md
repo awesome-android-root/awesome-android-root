@@ -878,6 +878,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[Hosts Manager Lite](https://play.google.com/store/apps/details?id=awais.hostsmanager.lite)** - Advanced /etc/hosts editor. `Proprietary`
 - **[Magisk LAN Auto Switch](https://github.com/NewFuture/magisk-modules/tree/main/magisk-lan-auto-switch)** - Automatically switch LAN and WiFi based on eth0 connection status. `FOSS` `[M]`
 - **[Network Utilities](https://play.google.com/store/apps/details?id=com.myprog.netutils)** - Application contains a set of tools for networks diagnostics. `Proprietary`
+- **[PCAPdroid](https://github.com/emanuele-f/PCAPdroid#pcapdroid)** - Lets you track, analyze and block the connections made by the other apps in your device. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.emanuelef.remote_capture) | [▶️ Play Store](https://play.google.com/store/apps/details?id=com.emanuelef.remote_capture)
 - **[SimbaDroid](https://github.com/buttercookie42/SimbaDroid)** - A simple SMB file server for Android. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/de.buttercookie.simbadroid)
 - **[TCP Optimiser Module](https://github.com/fatalcoder524/TCP_Optimiser_Module)** - Change tcp congestion algorithm based on current active internet type and some network enhancements. `FOSS` `[M]` `[K]`
 - **[TTLChanger](https://github.com/aleksey-saenko/TTLChanger)** - Allows you to modify the default TTL (Time to Live) value. `FOSS` | [🌱 F-Droid](https://f-droid.org/en/packages/com.mrsep.ttlchanger/)
