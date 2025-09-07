@@ -1160,6 +1160,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 ### Translation & Language
 - **[AllTrans](https://github.com/pbzinwindows/AllTrans)** - Replaces ALL TEXT IN AN APP from one language to another at runtime. `FOSS` `[LSP]`
+- **[Xposed Translate Text](https://github.com/tianci-sh/XPTranslateText)** - Xposed module translate text by MLKit / gemini2.0 / google api. `FOSS` `[LSP]`
 
 ### Misc Tools
 - **[Dhizuku API for Xposed](https://github.com/iamr0s/Dhizuku-API-Xposed)** - Xposed module that forces applications to support Dhizuku. `FOSS` `[LSP]`
