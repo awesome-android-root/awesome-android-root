@@ -97,7 +97,7 @@ All unlockable Google Pixels, including:
 
 ---
 ::: tip
-## ✅ Quick TL;DR (experienced users)
+#### Quick TL;DR (experienced users)
 - Enable OEM unlocking + USB debugging
 - fastboot flashing unlock
 - Download matching factory image
