@@ -58,7 +58,7 @@ head:
 
 # Complete Motorola Rooting Guide
 
-**Root any Motorola device** - Edge series, Moto G series with official unlock codes and Magisk installation.
+This guide keeps Motorola‑specific details (unlock code portal, A/B flashing notes). For universal prep and Magisk steps, see: [Main Rooting Guide](./index.md), [Bootloader Unlocking](./how-to-unlock-bootloader.md), and [Magisk Guide](./magisk-guide.md).
 
 ## 🔗 Essential Resources
 - **[📖 Main Rooting Guide](./index.md)** - Universal rooting principles and safety

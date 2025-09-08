@@ -61,7 +61,7 @@ head:
 
 # Complete Xiaomi Rooting Guide (2025 Edition)
 
-Root Xiaomi’s ecosystem — Mi, Redmi, POCO devices on MIUI/HyperOS — with Mi Unlock Tool and Magisk. Updated for HyperOS-era devices, A/B/dynamic partitions, and Play Integrity changes.
+This page focuses on Xiaomi/Redmi/POCO specifics (Mi Unlock, ARB, HyperOS, payload extraction). For universal prep and Magisk steps, see: [Main Rooting Guide](./index.md), [Bootloader Unlocking](./how-to-unlock-bootloader.md), and [Magisk Guide](./magisk-guide.md).
 
 ## 🔗 Essential Resources
 - [📖 Main Rooting Guide](./index.md) — Universal rooting principles and safety
@@ -243,7 +243,7 @@ If your firmware contains init_boot.img, patch that. If not, patch boot.img.
 
 Never patch or flash an image from a different build or ARB index.
 
-#### Step 2: Patch with Magisk
+#### Step 2: Patch with Magisk (see [Magisk Guide](./magisk-guide.md#method-1-boot-image-patching-recommended))
 1. Transfer the image to the phone:
    ```bash
    adb push init_boot.img /sdcard/Download/   # if exists

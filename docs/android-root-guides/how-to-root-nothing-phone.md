@@ -61,7 +61,7 @@ head:
 
 # Complete Nothing & CMF by Nothing Phone Rooting Guide
 
-**Root any Nothing or CMF by Nothing Phone model** with bootloader unlock and Magisk installation.
+This page focuses on Nothing‑specific resources and notes. For universal prep and Magisk steps, see: [Main Rooting Guide](./index.md), [Bootloader Unlocking](./how-to-unlock-bootloader.md), and [Magisk Guide](./magisk-guide.md).
 
 ## 🔗 Essential Resources
 - **[📖 Main Rooting Guide](./index.md)** - Universal rooting principles and safety
@@ -172,7 +172,7 @@ After automatic factory reset:
    adb push init_boot.img /sdcard/Download/
    ```
 
-2. **Install Magisk APK** on device:
+2. **Install Magisk APK** on device (see [Magisk Guide](./magisk-guide.md#method-1-boot-image-patching-recommended)):
    ```bash
    adb install Magisk-v[version].apk
    ```
