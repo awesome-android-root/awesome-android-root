@@ -47,19 +47,24 @@ echo -e "${GREEN}Starting build-docs process...${NC}"
 mkdir -p docs/android-root-apps || handle_error "Failed creating android-root-apps directory"
 log_info "Created docs/android-root-apps directory"
 
-# 3. Append README.md content to existing docs/android-root-apps/index.md
+# 3. Filter README.md content and append to existing docs/android-root-apps/index.md
+filter_readme() {
+    # Remove div elements with specified classes using sed
+    sed '/<div[^>]*class="[^"]*\(intro-header\|quick-nav\|root-intro\|readme-guides\|readme-guides-steps\|readme-apps-intro\)[^"]*"[^>]*>/,/<\/div>/d' README.md
+}
+
 if [ -f "docs/android-root-apps/index.md" ]; then
     tmp_file=$(mktemp) || handle_error "Failed creating temporary file"
     {
         cat docs/android-root-apps/index.md
         echo ""  # Add blank line separator
-        cat README.md
-    } > "$tmp_file" && mv "$tmp_file" docs/android-root-apps/index.md || handle_error "Failed appending README.md to docs/android-root-apps/index.md"
-    log_info "Appended README.md content to existing docs/android-root-apps/index.md"
+        filter_readme
+    } > "$tmp_file" && mv "$tmp_file" docs/android-root-apps/index.md || handle_error "Failed appending filtered README.md to docs/android-root-apps/index.md"
+    log_info "Appended filtered README.md content to existing docs/android-root-apps/index.md"
 else
-    # If index.md doesn't exist, just copy README.md
-    cp README.md docs/android-root-apps/index.md || handle_error "Failed copying README.md to docs/android-root-apps/index.md"
-    log_info "Copied README.md to docs/android-root-apps/index.md"
+    # If index.md doesn't exist, just copy filtered README.md
+    filter_readme > docs/android-root-apps/index.md || handle_error "Failed copying filtered README.md to docs/android-root-apps/index.md"
+    log_info "Copied filtered README.md to docs/android-root-apps/index.md"
 fi
 
 # 4. Adjust links in android-root-apps route
