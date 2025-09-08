@@ -10,10 +10,10 @@
 
 **🛡️ The Ultimate Android Rooting Hub**
 
-<sub>Discover 370+ top root apps, Magisk/KernelSU/LSPosed modules, and step-by-step guides for every device.</sub>
+<sub>Discover 400+ top root apps, Magisk/KernelSU/LSPosed modules, and step-by-step guides for every device.</sub>
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=blue&cacheSeconds=3600)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-root.org)
-[![Total Entries](https://img.shields.io/badge/Apps%20%26%20Modules-370%2B-blue?style=for-the-badge&logo=android&cacheSeconds=3600)](#root-apps-and-modules)
+[![Total Entries](https://img.shields.io/badge/Apps%20%26%20Modules-400+%2B-blue?style=for-the-badge&logo=android&cacheSeconds=3600)](#root-apps-and-modules)
 [![X (formerly Twitter) Follow](https://img.shields.io/badge/%20%20-Follow%20US-blue?logo=X&logoColor=white&style=for-the-badge&label=&#8203;)](https://x.com/awsm_and_root)
 <br>
 [![Website](https://img.shields.io/badge/Website-awesome--android--root.org-orange?style=for-the-badge&logo=googlechrome)](https://awesome-android-root.org)
@@ -1023,7 +1023,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[Noogle Magisk](https://github.com/SelfRef/noogle-magisk)** - Magisk modules for removing/replacing Google applications on stock Android 11-15. `FOSS` `[M]`
 - **[QuickSE](https://github.com/maazm7d/QuickSE)** - Instantly check & toggle SELinux status on rooted Android devices. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.maazm7d.quickse/)
 - **[Secure Element Access](https://github.com/jqssun/android-se-access)** - Enable access to secure element for trusted apps. `FOSS`
-- **[SELinux enforcer++](https://github.com/nanotink/SEL-enforcer)** - Makes SELINUX loop in enforcing state for Android. `FOSS` `[M]`
+- **[SELinux enforcer+](https://github.com/nanotink/SEL-enforcer)** - Makes SELINUX loop in enforcing state for Android. `FOSS` `[M]`
 - **[TWRP A/B Retention Script](https://github.com/Magisk-Modules-Repo/twrp-keep)** - Keep TWRP installed after an A/B OTA. `FOSS` `[M]`
 - **[zapret for Magisk](https://github.com/sevcator/zapret-magisk)** - DPI bypass on Android with additional features. `FOSS` `[M]`
 
