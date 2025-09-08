@@ -178,12 +178,12 @@ Think of it like gaining **Administrator rights** on Windows or **sudo access** 
 | Deep customization | OTA update friction |
 | True backups (app data) | App integrity checks may fail (banking/DRM) |
 
+---
 
 </div>
-<br>
-<div align="center" class="readme-guides">
 
----
+<div align="center" class="readme-guides">
+<br><br><br>
 
 # Rooting Guides
 
@@ -251,6 +251,7 @@ Follow this path:
 </div>
 
 <div align="center" class="readme-apps-intro">
+<br><br><br>
 
 ## Root Apps and Modules
 
@@ -260,9 +261,10 @@ Follow this path:
 ![KernelSU Modules](https://img.shields.io/badge/KernelSU%20Modules-31-green?style=for-the-badge&logo=keenetic&logoColor=white&cacheSeconds=3600)
 ![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-112-purple?style=for-the-badge&logo=local&logoColor=white&cacheSeconds=3600)
 
-</div>
 
 ---
+
+</div>
 
 ::: warning **New to Rooting?**
 > 💡 Start with our [Complete Rooting Guide](../android-root-guides/) before exploring apps below.
