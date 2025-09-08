@@ -61,7 +61,7 @@ head:
 
 # Complete Samsung Galaxy Rooting Guide
 
-**Root Samsung's flagship phones** – Galaxy S24, S23, A series, and more – using bootloader unlock and careful Knox management. This updated guide reflects **2025 firmware standards**, **Android 15 (One UI 7)** compatibility, and the latest **Magisk**, **Play Integrity Fix**, and **Heimdall** tooling.
+This page focuses on Samsung‑specific differences (Knox, Odin/AP patching). For universal prep, safety, and troubleshooting, see: [Main Rooting Guide](./index.md), [Bootloader Unlocking](./how-to-unlock-bootloader.md), and [Magisk Guide](./magisk-guide.md).
 
 ---
 
@@ -141,80 +141,13 @@ head:
 
 ---
 
-## Prerequisites & Setup
-
-### Required Tools
-1. **[Samsung Odin](https://odindownload.com/)** – Official flashing tool
-2. **[Samsung USB Drivers](https://developer.samsung.com/mobile/android-usb-driver.html)** – Critical for ADB/Odin
-3. **[Magisk APK](https://github.com/topjohnwu/Magisk/releases)** – Latest stable
-4. **[SamFrew](https://samfrew.com/)** – Updated firmware downloader (successor to SamMobile/Frija)
-5. **[Heimdall](https://glassechidna.com.au/heimdall/)** – Open-source Odin alternative for Linux/macOS
-
-### Device Preparation
-1. **Check bootloader status:**
-   - Settings → About Phone → Software Information
-   - Look for **OEM Lock: ON/OFF**
-   - If "OFF" – bootloader already unlocked
-
-2. **Enable Developer Options:**
-   - Settings → About Phone → Tap **Build Number 7 times**
-   - Enable **USB Debugging**
-   - Enable **OEM Unlocking** (if available)
-
-3. **Backup everything:**
-   - **Samsung Cloud** – Sync contacts, messages
-   - **Smart Switch PC** – Full device backup
-   - **Manual backup** – Photos, downloads, EFS (if possible)
-
-4. **Charge to 70%+** – Flashing requires stable power
-
-### Connection Testing
-```bash
-# Test ADB connection
-adb devices
-
-# Should show device in list
-# Accept USB debugging prompt if shown
-```
+## Prerequisites & Setup (Samsung specifics)
+Required tools: [Odin](https://odindownload.com/) (Windows), [Samsung USB Drivers](https://developer.samsung.com/mobile/android-usb-driver.html), [Magisk APK](https://github.com/topjohnwu/Magisk/releases), firmware from [SamFrew](https://samfrew.com/) or Frija. Linux/macOS users can try [Heimdall](https://glassechidna.com.au/heimdall/) (compatibility varies). For general prep, see [Prerequisites & Safety](./index.md#prerequisites-and-safety).
 
 ---
 
-## Bootloader Unlocking Process
-
-Samsung bootloader unlocking varies significantly by model and region.
-
-### Step 1: Check Unlock Eligibility
-1. **Dial `*#197328640#`** or use **Samsung Members app**
-2. Navigate to: **System → Device Security → Knox Status**
-3. **Knox Status must show:** Not triggered / Normal
-4. **OEM Lock Status:** Must be available to disable
-
-> ⚠️ If Knox is already tripped (0x1), root is still possible, but Samsung Pay and Secure Folder are permanently disabled.
-
-### Step 2: Enable OEM Unlocking
-1. **Settings → Developer Options**
-2. **Enable "OEM Unlocking"**
-3. **May require internet connection** for Samsung server verification
-4. **Wait 7 days** if prompted (Samsung’s waiting period for new devices)
-
-### Step 3: Boot to Download Mode
-```bash
-# Method 1: ADB command
-adb reboot download
-
-# Method 2: Hardware keys
-# Power off → Hold Volume Up + Volume Down + Power
-```
-
-### Step 4: Unlock Bootloader
-1. **In Download Mode:**
-   - Long press **Volume Up** when prompted
-   - Accept bootloader unlock warning
-   - Device will factory reset and reboot
-
-2. **Verify unlock:**
-   - Should see **"CUSTOM"** in download mode
-   - Knox will show **"KNOX WARRANTY VOID: 0x1"**
+## Bootloader Unlocking
+Eligibility and flow differ by model/region. Follow the [Bootloader Unlocking Guide](./how-to-unlock-bootloader.md#samsung) for high‑level steps. US Snapdragon models are typically not unlockable. Unlocking trips Knox (0x1) permanently.
 
 ---
 
@@ -421,19 +354,7 @@ lz4 -d boot.img.lz4 boot.img
 ## Staying Updated
 
 ### OTA Update Handling
-Samsung OTA updates require careful management:
-
-**Before Update:**
-```bash
-# Method 1: Magisk uninstall (recommended)
-# Open Magisk → Uninstall → Restore Images
-```
-
-**After Update:**
-1. Download **new firmware** matching updated build
-2. Extract new AP file
-3. Patch with Magisk and flash via Odin
-4. Re-configure modules and DenyList
+Samsung OTA via Settings usually fails on rooted devices. Best practice: flash updated firmware with a newly Magisk‑patched AP via Odin for each update. See [Magisk OTA notes](./magisk-guide.md#ota-survival-ab-devices) for general guidance.
 
 
 ::: tip 💡 Samsung Root Success Tips

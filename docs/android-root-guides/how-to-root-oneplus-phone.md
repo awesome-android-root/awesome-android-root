@@ -61,17 +61,17 @@ head:
 
 # Complete OnePlus Rooting Guide
 
-Root any OnePlus device — OnePlus 12/11/10/Nord series with simple bootloader unlock and Magisk
+This page highlights OnePlus‑specific differences (payload extraction, OOS/ColorOS behaviors, MSM notes). For universal prep and Magisk steps, see: [Main Rooting Guide](./index.md), [Bootloader Unlocking](./how-to-unlock-bootloader.md), and [Magisk Guide](./magisk-guide.md).
 
 - Works for: Global/Indian/Europe variants of OnePlus 5 → 12/Nord series
 - Not ideal for: Certain carrier variants (see warnings)
 - Approach: Unlock bootloader → Patch and boot/flash boot or init_boot with Magisk → Preserve root across OTAs
 
 ## 🔗 Essential Resources
-- **[📖 Main Rooting Guide](./index.md)** - Universal rooting principles and safety
-- **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - General bootloader concepts
-- **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - TWRP installation guide
-- **[❓ FAQ & Troubleshooting](../faqs.md)** - Solutions for common issues
+- [Main Rooting Guide](./index.md)
+- [Bootloader Unlocking](./how-to-unlock-bootloader.md)
+- [Custom Recovery](./how-to-install-custom-recovery.md)
+- [FAQ & Troubleshooting](../faqs.md)
 
 ::: tip Required Tools
 ### Additional tools you’ll likely need:
@@ -116,59 +116,12 @@ All OnePlus devices with unlockable bootloaders.
 
 > Tip: Carrier/region variants can differ. Always check your exact model (Settings → About phone → Model/Build).
 
-## Prerequisites & Setup
-
-### Required Tools
-1) Platform Tools (ADB/Fastboot)
-2) Magisk APK
-3) Full OTA/firmware for your exact build (to extract stock boot/init_boot)
-4) Payload dumper utility
-5) USB Drivers (Windows) or udev rules (Linux)
-
-### Device Preparation
-1) Enable Developer Options: Settings → About phone → tap Build number 7×
-2) In Developer options:
-   - Enable OEM unlocking
-   - Enable USB debugging
-3) Backup everything (this process wipes your device when unlocking)
-4) Charge to 50%+
-
-> Note: On newer OOS/ColorOS builds, OEM unlocking may appear only when the device is online and has contacted Google/OnePlus servers.
-
-### Connection Verification
-```bash
-adb devices
-# Accept the debugging prompt on the phone if asked
-```
+## Prerequisites & Setup (OnePlus specifics)
+- Tools: Platform Tools, Magisk APK, full OTA/firmware, payload dumper (e.g., payload‑dumper‑go)
+- Note: On newer OOS/ColorOS builds, OEM Unlocking toggles may appear only after device contacts servers. See [Prerequisites](./index.md#prerequisites-and-safety).
 
 ## Bootloader Unlocking
-Applies to global/unlocked variants. Carrier devices may differ.
-
-### Enter Fastboot Mode
-- Easiest: adb reboot bootloader
-- Hardware: Power off → hold Volume Up + Power until you see Fastboot; or Power off → hold both Volume keys, then plug into USB (varies by model)
-
-Verify:
-```bash
-fastboot devices
-```
-
-### Unlock
-Most modern OnePlus devices:
-```bash
-fastboot flashing unlock
-```
-Confirm on device → this wipes data.
-
-If you see a prompt/denial about “critical partitions,” some older models support:
-```bash
-fastboot flashing unlock_critical
-```
-Only use unlock_critical if you actually need to flash critical partitions (not required for Magisk root).
-
-After reboot, set up the device again and re-enable USB debugging.
-
-> Don’t use fastboot oem unlock on recent devices; fastboot flashing unlock is the current standard.
+Use the universal process: [Bootloader Unlocking](./how-to-unlock-bootloader.md#oneplus). On modern devices use fastboot flashing unlock; some carrier variants may be restricted.
 
 ## Root Installation Methods
 
@@ -191,7 +144,7 @@ Step 1 — Get the right image
      - Ramdisk = No → patch init_boot.img
    - If uncertain and you see an init_boot partition, patch init_boot.img.
 
-Step 2 — Patch with Magisk
+Step 2 — Patch with Magisk (see [Magisk Guide](./magisk-guide.md#method-1-boot-image-patching-recommended))
 ```bash
 adb push boot_or_init_boot.img /sdcard/Download/
 adb install Magisk-v[version].apk
@@ -202,7 +155,7 @@ Pull the patched image back:
 adb pull /sdcard/Download/magisk_patched-*.img ./
 ```
 
-Step 3 — Safest first run: fastboot boot (temporary boot)
+Step 3 — Safer first run: fastboot boot (temporary boot)
 ```bash
 adb reboot bootloader
 fastboot boot magisk_patched-*.img
