@@ -131,14 +131,9 @@ export default defineConfig({
       {
         text: 'Guides',
         items: [
-          {
-            text: 'Guides',
-            items: [
-              { text: 'Rooting Guide', link: '/android-root-guides/', activeMatch: '^/android-root-guides/' },
+         { text: 'Rooting Guide', link: '/android-root-guides/', activeMatch: '^/android-root-guides/' },
               { text: 'Device Specific Guides', link: '/android-root-guides/#device-specific-guides' },
               { text: 'How-To Guides', link: '/guides/', activeMatch: '^/guides/' }
-            ]
-          }
         ]
       },
       {
