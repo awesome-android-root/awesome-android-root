@@ -14,7 +14,7 @@ head:
       content: About Awesome Android Root - Ultimate Android Rooting Resource 2025
   - - meta
     - property: og:description
-      content: Discover the story behind Awesome Android Root - the most comprehensive collection of 300+ Android root apps, Magisk, KernelSU & LSPosed (Xposed) modules & rooting guides.
+      content: Discover the story behind Awesome Android Root - the most comprehensive collection of 400+ Android root apps, Magisk, KernelSU & LSPosed (Xposed) modules & rooting guides.
   - - meta
     - property: og:url
       content: https://awesome-android-root.org/about
@@ -29,7 +29,7 @@ head:
       content: About Awesome Android Root - Ultimate Resource 2025
   - - meta
     - name: twitter:description
-      content: The story behind the most comprehensive Android rooting resource. 300+ apps, expert guides, and community-driven excellence.
+      content: The story behind the most comprehensive Android rooting resource. 400+ apps, expert guides, and community-driven excellence.
   - - meta
     - name: keywords
       content: about awesome android root, android rooting project, android root community, magisk modules collection, android customization resource, open source android, android freedom project, rooting guides 2025
@@ -64,7 +64,7 @@ head:
 
 # About Awesome Android Root
 
-Awesome Android Root serves as a premier, community-curated resource dedicated to Android rooting, deep customization, and user empowerment . It provides a comprehensive, up-to-date directory of over 300 vetted tools, applications, modules, and expert guides designed for power users and developers seeking to unlock the full potential of their devices .
+Awesome Android Root serves as a premier, community-curated resource dedicated to Android rooting, deep customization, and user empowerment . It provides a comprehensive, up-to-date directory of over 400 vetted tools, applications, modules, and expert guides designed for power users and developers seeking to unlock the full potential of their devices .
 
 ## Our Mission
 
@@ -74,7 +74,7 @@ Our mission is to democratize advanced Android customization by providing free, 
 
 **🔧 Comprehensive Rooting & Customization Resources**
 *   **[📖 Expert Guides](./android-root-guides/index.md)**: Detailed, step-by-step tutorials for various devices and methods.
-*   **[📱 300+ Curated Root Apps & Modules](/android-root-apps/#root-apps)**: A meticulously selected collection spanning ad-blocking, privacy, performance, automation, and more.
+*   **[📱 400+ Curated Root Apps & Modules](/android-root-apps/#root-apps)**: A meticulously selected collection spanning ad-blocking, privacy, performance, automation, and more.
 *   **[🛠️ Extensive Device Support](./android-root-guides/#device-specific-guides)**: Targeted guides for major brands including Xiaomi, Samsung, Pixel, OnePlus, and Motorola.
 *   **[❓ FAQ & Troubleshooting](./faqs.md)**: A dedicated resource for resolving common issues and finding support.
 
@@ -87,8 +87,8 @@ Our mission is to democratize advanced Android customization by providing free, 
 4.  **[🌟 Install Custom ROM](./android-root-guides/custom-rom-installation.md)**: (Optional) Experience a completely transformed Android operating system.
 
 **Tailored Navigation:**
-*   **Beginners:** [Complete Rooting Guide](./android-root-guides/) → [Essential Apps](./android-root-apps/#essential-apps---start-here)
-*   **Intermediate:** [Device-Specific Guides](./android-root-guides/#device-specific-guides) → [Advanced Modules](../android-root-apps/#root-managers)
+*   **Beginners:** [Complete Rooting Guide](./android-root-guides/) → [Essential Apps](./android-root-apps/#featured-apps-the-essentials)
+*   **Intermediate:** [Device-Specific Guides](./android-root-guides/#device-specific-guides) → [Root Management](../android-root-apps/#root-management)
 *   **Experts:** [Troubleshooting](./faqs) → [Community Contributions](./contributing)
 
 ## Community & Support
