@@ -36,6 +36,8 @@
 ### 📚 Overview
 - [Introduction](#introduction)
 - [Rooting Guides](#rooting-guides)
+- [Device-Specific Guides](#device-specific-guides)
+- [Additional Guides](#additional-guides)
 - [Glossary](#glossary)
 - [Root Apps and Modules](#root-apps-and-modules)
 
@@ -83,7 +85,6 @@
   - [Navigation](#navigation)
   - [OS Specific Mods](#os-specific-mods)
   - [Themes and UI](#themes-and-ui)
-- [Screen and Display](#screen-and-display)
 
 #### 🔧 **App Modifications & Patches**
 - [Modded Apps & Tweaks](#modded-apps--tweaks)
@@ -106,7 +107,6 @@
 #### 🌐 **Network & Connectivity**
 - [Network and Connectivity](#network-and-connectivity)
 - [Location and GPS](#location-and-gps)
-- [NFC Tools](#nfc-tools)
 
 #### 📞 **Communication & Contacts**
 - [Communication](#communication)
@@ -124,13 +124,24 @@
 - [Development and Debugging](#development-and-debugging)
 - [Device Control and Hardware](#device-control-and-hardware)
 - [Terminal and Shell Tools](#terminal-and-shell-tools)
-- [Tools](#tools)
+
+#### 🖥️ **Screen & Display**
+- [Screen and Display](#screen-and-display)
 
 #### 🔍 **Frameworks & LSPosed**
 - [LSPosed Framework](#lsposed-framework)
 
 #### ♿ **Accessibility & Utilities**
 - [Accessibility Tools](#accessibility-tools)
+
+### 🧰 Tools
+- [Tools](#tools)
+  - [NFC Tools](#nfc-tools)
+  - [Notification & Gesture Tools](#notification--gesture-tools)
+  - [Storage Tools](#storage-tools)
+  - [System Utilities](#system-utilities)
+  - [Translation & Language](#translation--language)
+  - [Misc Tools](#misc-tools)
 
 ### 📚 Support & Safety
 - [Resources and Support](#resources-and-support)
