@@ -1194,7 +1194,7 @@ Non‑financial impact ideas:
 - Reliance on unpatchable banking / DRM / enterprise apps
 - You can’t afford data loss & have no backup
 
-Respect licenses, ToS, and local laws. Don’t use root to unlawfully bypass paid features.
+> 📢 Respect licenses, ToS, and local laws. Don’t use root to unlawfully bypass paid features.
 
 ---
 
