@@ -43,10 +43,20 @@
  *   in custom container, badges, etc.
  * -------------------------------------------------------------------------- */
 
+/**
+ * Customize default theme styling by overriding CSS variables:
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+
 :root {
   --vp-c-default-1: var(--vp-c-gray-1);
   --vp-c-default-2: var(--vp-c-gray-2);
   --vp-c-default-3: var(--vp-c-gray-3);
+/* PWA prompt spacing on small screens */
+@media (max-width: 640px) {
+  .pwa-toast { left: 12px; right: 12px; }
+}
+
   --vp-c-default-soft: var(--vp-c-gray-soft);
 
   --vp-c-brand-1: var(--vp-c-indigo-1);
