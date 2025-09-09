@@ -1200,6 +1200,18 @@ Non‑financial impact ideas:
 
 ---
 
+### Other Projects
+If you liked this project please also checkout our other projects too:
+
+#### Debrid Services Comparison
+Interactive comparison of debrid services: Pricing, Host support etc. Real-Debrid, AllDebrid, Premiumize, TorBox, and more. 
+- **[Debrid Services Comparison](https://github.com/fynks/debrid-services-comparison) or [Website](https://debridcompare.pages.dev/)**
+
+#### Email Alising Comaprison
+Compare 10+ email alias services by features, pricing, security, privacy, and ease of use.
+- **[Email Aliasing Comparison](https://github.com/fynks/email-aliasing-comparison) or [Website](https://email-aliasing-comparison.netlify.app/)**
+---
+
 <div align="center">
 
 **⚡ Built with ❤️ by [Awesome Android Root](https://github.com/awesome-android-root/awesome-android-root)**
