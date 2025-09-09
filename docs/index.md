@@ -335,22 +335,22 @@ features:
 ## ⚡ Popular Root Methods
 
 <div class="community-cards">
-  <a href="./android-root-guides/magisk-guide.md" class="community-card github">
+  <a href="/android-root-guides/magisk-guide" class="community-card github">
     <span class="icon">🏅</span>
     <strong>Magisk</strong>
     <span>Recommended</span>
   </a>
-  <a href="./android-root-guides/kernelsu-guide.md" class="community-card twitter">
+  <a href="/android-root-guides/kernelsu-guide" class="community-card twitter">
     <span class="icon">⚡</span>
     <strong>KernelSU</strong>
     <span>Advanced Users</span>
   </a>
-  <a href="./android-root-guides/apatch-guide.md" class="community-card telegram">
+  <a href="/android-root-guides/apatch-guide" class="community-card telegram">
     <span class="icon">🤖</span>
     <strong>Apatch</strong>
     <span>Kernel-based root</span>
   </a>
-  <a href="./android-root-guides/lsposed-guide.md" class="community-card reddit">
+  <a href="/android-root-guides/lsposed-guide" class="community-card reddit">
     <span class="icon">⚙️</span>
     <strong>LSPosed</strong>
     <span>Customize your device</span>
@@ -370,13 +370,13 @@ features:
     <strong>Twitter/X</strong>
     <span>Daily updates</span>
   </a>
-  <a href="./faqs.md" class="community-card reddit">
+  <a href="/faqs" class="community-card reddit">
     <span class="icon">📜</span>
     <strong>FAQs</strong>
     <span>Solve common problems</span>
   </a>
   
-  <a href="./resources.md" class="community-card telegram">
+  <a href="/resources" class="community-card telegram">
     <span class="icon">📚</span>
     <strong>Resources</strong>
     <span>Big collection of resources</span>
