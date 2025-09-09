@@ -28,7 +28,7 @@ export default withPwa(defineConfig({
       'images/og.png'
     ],
     workbox: {
-      navigateFallback: '/offline/index.html',
+  navigateFallback: '/offline.html',
       navigationPreload: true,
       cleanupOutdatedCaches: true,
       clientsClaim: true,
@@ -97,7 +97,7 @@ export default withPwa(defineConfig({
     devOptions: {
       enabled: true,
       suppressWarnings: true,
-      navigateFallback: '/offline/index.html'
+  navigateFallback: '/offline.html'
     },
     experimental: {
       includeAllowlist: true
@@ -109,7 +109,7 @@ export default withPwa(defineConfig({
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
-    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
+  ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/images/apple-touch-icon.png' }],
 
     // Manifest is provided by the PWA plugin build output; keep link for browsers that prefetch
     ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
