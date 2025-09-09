@@ -17,6 +17,27 @@ head:
     - property: og:image
       content: "https://awesome-android-root.org/images/og.png"
   - - meta
+    - property: og:title
+      content: "Awesome Android Root - Ultimate Android Rooting Hub 2025"
+  - - meta
+    - property: og:description
+      content: "The ultimate Android rooting resource: 400+ best root apps, Magisk, KernelSU, APatch & LSPosed modules, plus comprehensive rooting guides for 2025."
+  - - meta
+    - property: og:image:secure_url
+      content: "https://awesome-android-root.org/images/og.png"
+  - - meta
+    - property: og:image:alt
+      content: "Awesome Android Root - Ultimate Android Rooting Hub 2025"
+  - - meta
+    - property: og:image:width
+      content: "1200"
+  - - meta
+    - property: og:image:height
+      content: "630"
+  - - meta
+    - property: og:image:type
+      content: "image/png"
+  - - meta
     - property: og:site_name
       content: "Awesome Android Root"
   - - meta
