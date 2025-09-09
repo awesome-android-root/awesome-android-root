@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
+import { withPwa } from '@vite-pwa/vitepress'
 
-export default defineConfig({
+export default withPwa(defineConfig({
   lang: "en-US",
   title: "Awesome Android Root",
   description: "Ultimate Android rooting hub with 300+ curated root apps, Magisk modules, and step-by-step guides for Android customization and freedom.",
@@ -14,13 +15,104 @@ export default defineConfig({
     }
   },
 
+  // Official VitePress PWA integration
+  pwa: {
+    strategies: 'generateSW',
+    registerType: 'autoUpdate',
+    includeAssets: [
+      'favicon.ico',
+      'favicon.svg',
+      'favicon-96x96.png',
+      'images/logo.svg',
+      'images/logo_dark.svg',
+      'images/og.png'
+    ],
+    workbox: {
+      navigateFallback: '/offline/index.html',
+      navigationPreload: true,
+      cleanupOutdatedCaches: true,
+      clientsClaim: true,
+      globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
+      runtimeCaching: [
+        // Stale-While-Revalidate for same-origin images
+        {
+          urlPattern: ({ url }) => url.origin === self.location.origin && url.pathname.startsWith('/images/'),
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'images-swr',
+            expiration: { maxEntries: 300, maxAgeSeconds: 60 * 60 * 24 * 30 },
+            cacheableResponse: { statuses: [0, 200] }
+          }
+        },
+        // SWR for CSS/JS
+        {
+          urlPattern: ({ request, url }) => ['script', 'style'].includes(request.destination) || /assets\/.*\.(js|css)$/.test(url.pathname),
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'assets-swr',
+            expiration: { maxEntries: 200, maxAgeSeconds: 60 * 60 * 24 * 30 },
+            cacheableResponse: { statuses: [0, 200] }
+          }
+        },
+        // SWR for fonts
+        {
+          urlPattern: ({ request, url }) => request.destination === 'font' || /\.(woff2?)$/.test(url.pathname),
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'fonts-swr',
+            expiration: { maxEntries: 50, maxAgeSeconds: 60 * 60 * 24 * 365 },
+            cacheableResponse: { statuses: [0, 200] }
+          }
+        },
+        // SWR for shields.io badges
+        {
+          urlPattern: ({ url }) => url.origin === 'https://img.shields.io',
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'shields-swr',
+            cacheableResponse: { statuses: [0, 200] },
+            expiration: { maxEntries: 150, maxAgeSeconds: 60 * 60 * 24 * 7 }
+          }
+        }
+      ]
+    },
+    manifest: {
+      name: 'Awesome Android Root',
+      short_name: 'AAR',
+      description: 'Ultimate Android rooting hub with curated apps, modules and guides.',
+      theme_color: '#ffffff',
+      background_color: '#ffffff',
+      start_url: '/',
+      scope: '/',
+      display: 'standalone',
+      orientation: 'any',
+      lang: 'en',
+      dir: 'ltr',
+      categories: ['utilities', 'developer tools'],
+      icons: [
+        { src: '/images/web-app-manifest-192x192.png', sizes: '192x192', type: 'image/png', purpose: 'any maskable' },
+        { src: '/images/web-app-manifest-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' }
+      ]
+    },
+    devOptions: {
+      enabled: true,
+      suppressWarnings: true,
+      navigateFallback: '/offline/index.html'
+    },
+    experimental: {
+      includeAllowlist: true
+    }
+  },
+
   head: [
     // --- Favicons ---
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
-    ['link', { rel: 'manifest', href: '/manifest.json' }],
+
+    // Manifest is provided by the PWA plugin build output; keep link for browsers that prefetch
+    ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
 
     // --- Browser Meta ---
     ['meta', { name: 'theme-color', content: '#ffffff', media: '(prefers-color-scheme: light)' }],
@@ -37,7 +129,7 @@ export default defineConfig({
     ['link', { rel: 'dns-prefetch', href: 'https://img.shields.io' }],
     ['link', { rel: 'preconnect', href: 'https://github.com', crossorigin: '' }],
     ['link', { rel: 'dns-prefetch', href: 'https://github.com' }],
-    
+
     // --- SEO Meta Tags ---
     ['meta', { name: 'keywords', content: 'android root, magisk, kernelsu, lsposed, custom recovery, twrp, bootloader unlock, android customization, root apps, system modifications, xposed, android debloating, performance optimization, privacy tools, custom rom, rooting tutorial' }],
     ['meta', { name: 'author', content: 'Awesome Android Root Project' }],
@@ -60,7 +152,7 @@ export default defineConfig({
       "@type": "WebSite",
       "name": "Awesome Android Root",
       "description": "Ultimate Android rooting hub with 300+ curated root apps, Magisk modules, and step-by-step guides for Android customization and freedom.",
-      "url": "https://awesome-android-root.org/", 
+      "url": "https://awesome-android-root.org/",
       "publisher": {
         "@type": "Organization",
         "name": "Awesome Android Root Project",
@@ -131,9 +223,9 @@ export default defineConfig({
       {
         text: 'Guides',
         items: [
-         { text: 'Rooting Guide', link: '/android-root-guides/', activeMatch: '^/android-root-guides/' },
-              { text: 'Device Specific Guides', link: '/android-root-guides/#device-specific-guides' },
-              { text: 'How-To Guides', link: '/guides/', activeMatch: '^/guides/' }
+          { text: 'Rooting Guide', link: '/android-root-guides/', activeMatch: '^/android-root-guides/' },
+          { text: 'Device Specific Guides', link: '/android-root-guides/#device-specific-guides' },
+          { text: 'How-To Guides', link: '/guides/', activeMatch: '^/guides/' }
         ]
       },
       {
@@ -149,8 +241,8 @@ export default defineConfig({
         items: [
           { text: 'About Project', link: '/about' },
           { text: 'How to Contribute', link: '/contributing' },
-          { text: 'Support Us', link: 'https://opencollective.com/awesome-android-root-official' }, 
-          { text: 'Star on GitHub', link: 'https://github.com/awesome-android-root/awesome-android-root' } 
+          { text: 'Support Us', link: 'https://opencollective.com/awesome-android-root-official' },
+          { text: 'Star on GitHub', link: 'https://github.com/awesome-android-root/awesome-android-root' }
         ]
       }
     ],
@@ -487,8 +579,8 @@ export default defineConfig({
     },
     appearance: 'auto',
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/awesome-android-root/awesome-android-root' }, 
-      { icon: 'x', link: 'https://x.com/awsm_and_root' } 
+      { icon: 'github', link: 'https://github.com/awesome-android-root/awesome-android-root' },
+      { icon: 'x', link: 'https://x.com/awsm_and_root' }
     ],
   },
-})
+}))
