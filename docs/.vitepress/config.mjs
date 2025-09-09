@@ -85,7 +85,7 @@ export default withPwa(defineConfig({
       start_url: '/',
       scope: '/',
       display: 'standalone',
-      orientation: 'any',
+      orientation: 'portrait',
       lang: 'en',
       dir: 'ltr',
       categories: ['utilities', 'developer tools'],
