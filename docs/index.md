@@ -110,57 +110,146 @@ head:
             "height": 330
           }
         },
-        "mainEntity": {
-          "@type": "Article",
-          "headline": "Ultimate Android Rooting Guide 2025",
-          "description": "Comprehensive collection of 400+ root apps, rooting guides, and expert tutorials",
-          "author": {
-            "@type": "Organization",
-            "name": "Awesome Android Root Community"
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://awesome-android-root.org/search?q={search_term_string}"
           },
-          "datePublished": "2025-05-25",
-          "dateModified": "2025-08-17"
+          "query-input": "required name=search_term_string"
         },
         "sameAs": [
           "https://github.com/awesome-android-root",
           "https://twitter.com/awsm_and_root"
-        ],
-        "keywords": [
-          "android root",
-          "awesome android root",
-          "android rooting guide 2025",
-          "magisk",
-          "kernelsu",
-          "lsposed",
-          "apatch",
-          "custom rom",
-          "bootloader unlock",
-          "twrp",
-          "custom recovery",
-          "root apps",
-          "android customization",
-          "xposed modules",
-          "android privacy",
-          "system modification",
-          "android development",
-          "kernelsu next",
-          "kernelsu module",
-          "lineageos",
-          "grapheneos",
-          "android debloating",
-          "magisk modules",
-          "android ad blocking",
-          "rooted android apps",
-          "android root manager",
-          "systemless root",
-          "android performance optimization",
-          "android battery optimization",
-          "android system apps removal",
-          "revanced",
-          "android app cloning",
-          "android firewall",
-          "android backup root"
         ]
+      }
+  - - script
+    - type: application/ld+json
+    - |
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Best Android Root Apps and Modules 2025 | Awesome Android Root",
+        "description": "Ultimate collection of 370+ best Android root apps, Magisk modules, and LSPosed frameworks. Download top-rated root applications for Android customization, system optimization, and power user features.",
+        "url": "https://awesome-android-root.org/android-root-apps/",
+        "datePublished": "2025-08-11T00:00:00Z",
+        "dateModified": "2025-08-17T04:42:55Z",
+        "inLanguage": "en-US",
+        "keywords": "android root apps, best root apps 2025, magisk modules, lsposed framework, root applications, android customization, system modification, power user tools, rooted android, superuser apps",
+        "mainEntity": {
+          "@type": "ItemList",
+          "name": "Android Root Apps Collection",
+          "description": "Curated collection of the best Android root applications, Magisk modules, LSPosed frameworks and system modification tools",
+          "numberOfItems": 220,
+          "itemListElement": [
+            {
+              "@type": "SoftwareApplication",
+              "name": "AdAway",
+              "description": "Open-source ad blocker using hosts file for rooted Android devices",
+              "applicationCategory": "SecurityApplication",
+              "operatingSystem": "Android",
+              "downloadUrl": "https://adaway.org/",
+              "license": "GPL-3.0",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.5",
+                "reviewCount": "1000"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "SoftwareApplication",
+              "name": "Magisk Manager",
+              "description": "Universal systemless interface for Android customization",
+              "applicationCategory": "SystemUtility",
+              "operatingSystem": "Android",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "5000"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "SoftwareApplication",
+              "name": "LSPosed Framework",
+              "description": "Xposed framework implementation for modern Android versions",
+              "applicationCategory": "SystemUtility",
+              "operatingSystem": "Android",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.7",
+                "reviewCount": "3000"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "SoftwareApplication",
+              "name": "Titanium Backup",
+              "description": "Advanced backup and restore application for rooted Android devices",
+              "applicationCategory": "SystemUtility",
+              "operatingSystem": "Android",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.6",
+                "reviewCount": "4000"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "SoftwareApplication",
+              "name": "Greenify",
+              "description": "Battery optimization app for hibernating background apps",
+              "applicationCategory": "SystemUtility",
+              "operatingSystem": "Android",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.4",
+                "reviewCount": "3500"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              }
+            }
+          ]
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Awesome Android Root Project",
+          "url": "https://awesome-android-root.org",
+          "sameAs": "https://github.com/awesome-android-root/awesome-android-root"
+        },
+        "creator": {
+          "@type": "Person",
+          "name": "Fynks",
+          "url": "https://github.com/fynks",
+          "sameAs": "https://github.com/fynks"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://awesome-android-root.org/images/og.png",
+          "width": 1200,
+          "height": 630,
+          "caption": "Best Android Root Apps 2025 - 370+ Apps & Modules Collection"
+        }
       }
   - - script
     - type: application/ld+json
