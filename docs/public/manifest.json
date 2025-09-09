@@ -21,7 +21,7 @@
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
   "display": "standalone",
-  "orientation": "any",
+  "orientation": "portrait",
   "categories": ["utilities", "developer tools"],
   "lang": "en",
   "dir": "ltr"
