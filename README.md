@@ -183,7 +183,7 @@ Think of it like gaining **Administrator rights** on Windows or **sudo access** 
 </div>
 
 <div align="center" class="readme-guides">
-<br><br><br>
+<br><br>
 
 # Rooting Guides
 
@@ -251,7 +251,7 @@ Follow this path:
 </div>
 
 <div align="center" class="readme-apps-intro">
-<br><br><br>
+<br><br>
 
 ## Root Apps and Modules
 
