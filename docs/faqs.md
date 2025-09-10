@@ -643,7 +643,7 @@ Contribute
 - Donate to tool and ROM developers.
 - Help expand our collection: [Contributing Guidelines](./contributing.md)
 
-More: [Community & Resources](../README.md#community--resources) | [About This Project](./about.md)
+More: [Resources](./resources.md) | [About This Project](./about.md)
 
 ---
 
