@@ -916,7 +916,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ### Flag Secure Mods
 
-<details><summary><bold>What is FLAG_SECURE</bold></summary>
+<details><summary><strong>What is FLAG_SECURE</strong></summary>
 
 - It is a window-level security flag in Android that **prevents the window's content from appearing in screenshots**, being viewed on non-secure displays like projectors or TVs, or being captured during screen recordings.
 
