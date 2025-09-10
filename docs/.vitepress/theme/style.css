@@ -357,3 +357,20 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* offline */
+.offline .online-only {
+  display: none;
+}
+
+.offline::before {
+  content: "You're currently offline";
+  display: block;
+  background: #ff6b6b;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}

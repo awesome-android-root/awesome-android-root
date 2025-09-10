@@ -8,76 +8,235 @@ export default withPwa(defineConfig({
   ignoreDeadLinks: true,
   cleanUrls: true,
 
+  // Performance optimizations for Vite
   vite: {
+    // Build optimizations
+    build: {
+      // Increase chunk size warning limit
+      chunkSizeWarningLimit: 1000,
+      // Better code splitting
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            // Split vendor chunks for better caching
+            'vue-vendor': ['vue', '@vue/runtime-dom', '@vue/runtime-core', '@vue/shared'],
+            'vitepress': ['vitepress']
+          }
+        }
+      },
+      // Enable minification
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          drop_console: true,
+          drop_debugger: true,
+          pure_funcs: ['console.log', 'console.debug']
+        }
+      }
+    },
+    
+    // Optimize dependencies
+    optimizeDeps: {
+      include: ['vue', 'vitepress'],
+      exclude: ['@vite-pwa/vitepress']
+    },
+
+    // Improve dev server performance
+    server: {
+      warmup: {
+        clientFiles: [
+          './app/**/*.{js,ts,vue}',
+          './theme/**/*.{js,ts,vue}'
+        ]
+      }
+    },
+
+    // CSS optimizations
+    css: {
+      devSourcemap: false,
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler'
+        }
+      }
+    },
+
+    // ESBuild optimizations
     esbuild: {
-      // Only drop console/debugger in production builds
-      drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : []
+      drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
+      legalComments: 'none',
+      target: 'es2020'
     }
   },
 
-  // Official VitePress PWA integration
+  // PWA Configuration - Runtime caching only, no precaching
   pwa: {
     strategies: 'generateSW',
     registerType: 'autoUpdate',
+    
+    // Only include critical assets that must be precached
     includeAssets: [
-      // files inside docs/public are served from root
       'favicon.ico',
-      'favicon.svg',
-      'favicon-96x96.png',
-      'images/logo.svg',
-      'images/logo_dark.svg',
-      'images/og.png',
-      'images/apple-touch-icon.png'
+      'offline.html' // Only precache the offline page
     ],
+    
     workbox: {
-      navigateFallback: '/offline.html',
-      navigationPreload: true,
-      cleanupOutdatedCaches: true,
+      // Disable precaching of build artifacts
+       globPatterns: ['offline.html'],
+      
+      // Service worker behavior
+      skipWaiting: true,
       clientsClaim: true,
-      globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
+      cleanupOutdatedCaches: true,
+      navigateFallback: null, // Disable navigateFallback for runtime-only caching
+      navigationPreload: true,
+      
+      // Ignore URL parameters for caching
+      ignoreURLParametersMatching: [/^utm_/, /^fbclid$/, /^gclid$/],
+      
+      // Runtime caching strategies (cache on demand)
       runtimeCaching: [
-        // Stale-While-Revalidate for same-origin images
+        // HTML pages - Network First with offline fallback
         {
-          urlPattern: ({ url }) => url.origin === self.location.origin && url.pathname.startsWith('/images/'),
-          handler: 'StaleWhileRevalidate',
+          urlPattern: ({ request, url }) => 
+            request.mode === 'navigate' || 
+            url.pathname.endsWith('.html') ||
+            url.pathname.endsWith('/'),
+          handler: 'NetworkFirst',
           options: {
-            cacheName: 'images-swr',
-            expiration: { maxEntries: 300, maxAgeSeconds: 60 * 60 * 24 * 30 },
-            cacheableResponse: { statuses: [0, 200] }
+            cacheName: 'pages-runtime',
+            networkTimeoutSeconds: 3,
+            expiration: {
+              maxEntries: 50,
+              maxAgeSeconds: 60 * 60 * 24 * 7 // 7 days
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            },
+            plugins: [
+              {
+                handlerDidError: async () => {
+                  return caches.match('/offline.html') || Response.error()
+                }
+              }
+            ]
           }
         },
-        // SWR for CSS/JS
+        
+        // JavaScript and CSS - Stale While Revalidate
         {
-          urlPattern: ({ request, url }) => ['script', 'style'].includes(request.destination) || /assets\/.*\.(js|css)$/.test(url.pathname),
+          urlPattern: ({ request, url }) => 
+            request.destination === 'script' || 
+            request.destination === 'style' ||
+            /\.(js|css)$/.test(url.pathname),
           handler: 'StaleWhileRevalidate',
           options: {
-            cacheName: 'assets-swr',
-            expiration: { maxEntries: 200, maxAgeSeconds: 60 * 60 * 24 * 30 },
-            cacheableResponse: { statuses: [0, 200] }
+            cacheName: 'assets-runtime',
+            expiration: {
+              maxEntries: 100,
+              maxAgeSeconds: 60 * 60 * 24 * 1, // 1 day
+              purgeOnQuotaError: true
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
           }
         },
-        // SWR for fonts
+        
+        // Images - Cache First
         {
-          urlPattern: ({ request, url }) => request.destination === 'font' || /\.(woff2?)$/.test(url.pathname),
-          handler: 'StaleWhileRevalidate',
+          urlPattern: ({ request, url }) => 
+            request.destination === 'image' ||
+            /\.(png|jpg|jpeg|svg|gif|webp|ico)$/i.test(url.pathname),
+          handler: 'CacheFirst',
           options: {
-            cacheName: 'fonts-swr',
-            expiration: { maxEntries: 50, maxAgeSeconds: 60 * 60 * 24 * 365 },
-            cacheableResponse: { statuses: [0, 200] }
+            cacheName: 'images-runtime',
+            expiration: {
+              maxEntries: 200,
+              maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
+              purgeOnQuotaError: true
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
           }
         },
-        // SWR for shields.io badges
+        
+        // Fonts - Cache First (long cache)
         {
-          urlPattern: ({ url }) => url.origin === 'https://img.shields.io',
+          urlPattern: ({ request, url }) => 
+            request.destination === 'font' || 
+            /\.(woff2?|ttf|otf|eot)$/i.test(url.pathname),
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'fonts-runtime',
+            expiration: {
+              maxEntries: 20,
+              maxAgeSeconds: 60 * 60 * 24 * 7 // 7 days
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
+          }
+        },
+        
+        // API/JSON data - Network First
+        {
+          urlPattern: ({ url }) => 
+            url.pathname.startsWith('/api/') || 
+            url.pathname.endsWith('.json'),
+          handler: 'NetworkFirst',
+          options: {
+            cacheName: 'api-runtime',
+            networkTimeoutSeconds: 5,
+            expiration: {
+              maxEntries: 50,
+              maxAgeSeconds: 60 * 60 // 1 hour
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
+          }
+        },
+        
+        // External resources - Stale While Revalidate
+        {
+          urlPattern: ({ url }) => 
+            url.origin === 'https://img.shields.io',
           handler: 'StaleWhileRevalidate',
           options: {
-            cacheName: 'shields-swr',
-            cacheableResponse: { statuses: [0, 200] },
-            expiration: { maxEntries: 150, maxAgeSeconds: 60 * 60 * 24 * 7 }
+            cacheName: 'external-runtime',
+            expiration: {
+              maxEntries: 100,
+              maxAgeSeconds: 60 * 60 * 24 * 1, // 1 day
+              purgeOnQuotaError: true
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
+          }
+        },
+        
+        // GitHub avatars and images
+        {
+          urlPattern: ({ url }) => 
+            url.origin === 'https://github.com' || 
+            url.origin === 'https://avatars.githubusercontent.com',
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'github-assets',
+            expiration: {
+              maxEntries: 50,
+              maxAgeSeconds: 60 * 60 * 24 * 7 // 7 days
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
           }
         }
       ]
     },
+    
     manifest: {
       name: 'Awesome Android Root',
       short_name: 'AAR',
@@ -90,32 +249,57 @@ export default withPwa(defineConfig({
       orientation: 'portrait',
       lang: 'en',
       dir: 'ltr',
-      categories: ['utilities', 'developer tools'],
+      categories: ['utilities', 'developer'],
       icons: [
-        { src: '/images/web-app-manifest-192x192.png', sizes: '192x192', type: 'image/png', purpose: 'any maskable' },
-        { src: '/images/web-app-manifest-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' }
+        { 
+          src: '/images/web-app-manifest-192x192.png', 
+          sizes: '192x192', 
+          type: 'image/png', 
+          purpose: 'any maskable' 
+        },
+        { 
+          src: '/images/web-app-manifest-512x512.png', 
+          sizes: '512x512', 
+          type: 'image/png', 
+          purpose: 'any maskable' 
+        }
       ]
     },
+    
     devOptions: {
-      enabled: true,
+      enabled: process.env.NODE_ENV === 'development',
       suppressWarnings: true,
-  // navigateFallback is not supported in devOptions, keep only in workbox
-    },
-    experimental: {
-      includeAllowlist: true
+      type: 'module'
+    }
+  },
+
+  // VitePress build optimizations
+  markdown: {
+    // Use cache for markdown rendering
+    cache: true,
+    // Optimize anchor generation
+    anchor: {
+      level: [2, 3, 4]
     }
   },
 
   head: [
-    // --- Favicons ---
+    // Add preload hints for critical resources
+    ['link', { 
+      rel: 'preload', 
+      href: '/fonts/inter-var.woff2', 
+      as: 'font', 
+      type: 'font/woff2', 
+      crossorigin: '' 
+    }],
+    
+    // Favicons and Touch Icons
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
-  ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/images/apple-touch-icon.png' }],
-
-  // The plugin will inject the correct manifest link during build/preview
-
-    // --- Browser Meta ---
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/images/apple-touch-icon.png' }],
+    
+    // Browser Meta
     ['meta', { name: 'theme-color', content: '#ffffff', media: '(prefers-color-scheme: light)' }],
     ['meta', { name: 'theme-color', content: '#0b0b0c', media: '(prefers-color-scheme: dark)' }],
     ['meta', { name: 'color-scheme', content: 'light dark' }],
@@ -124,13 +308,14 @@ export default withPwa(defineConfig({
     ['meta', { name: 'application-name', content: 'Awesome Android Root' }],
     ['meta', { name: 'mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }],
-
-    // --- Resource Hints (Preconnect/DNS-Prefetch) ---
+    
+    // Resource Hints
     ['link', { rel: 'preconnect', href: 'https://img.shields.io', crossorigin: '' }],
     ['link', { rel: 'dns-prefetch', href: 'https://img.shields.io' }],
     ['link', { rel: 'preconnect', href: 'https://github.com', crossorigin: '' }],
     ['link', { rel: 'dns-prefetch', href: 'https://github.com' }],
-
+    
+  
     // --- SEO Meta Tags ---
     ['meta', { name: 'keywords', content: 'android root, magisk, kernelsu, lsposed, custom recovery, twrp, bootloader unlock, android customization, root apps, system modifications, xposed, android debloating, performance optimization, privacy tools, custom rom, rooting tutorial' }],
     ['meta', { name: 'author', content: 'Awesome Android Root Project' }],
