@@ -12,7 +12,7 @@
 
 <sub>Discover 400+ top root apps, Magisk/KernelSU/LSPosed modules, and step-by-step guides for every device.</sub>
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=blue&cacheSeconds=3600)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-android-root.org)
+[![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=blue&cacheSeconds=3600)](https://github.com/awesome-android-root/awesome-android-root)
 [![Total Entries](https://img.shields.io/badge/Apps%20%26%20Modules-400+-blue?style=for-the-badge&logo=android&cacheSeconds=3600)](#root-apps-and-modules)
 [![X (formerly Twitter) Follow](https://img.shields.io/badge/%20%20-Follow%20US-blue?logo=X&logoColor=white&style=for-the-badge&label=&#8203;)](https://x.com/awsm_and_root)
 <br>
@@ -1122,7 +1122,16 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 ---
 
+<div align="center">
+<br><br>
+
 ## Resources and Support
+
+[![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=blue&cacheSeconds=3600)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-android-root.org)
+[![Website](https://img.shields.io/badge/%20%20-Website-yellow?style=for-the-badge&logo=googlechrome&logoColor=white&label=&#8203;)](https://awesome-android-root.org)
+[![X (formerly Twitter) Follow](https://img.shields.io/badge/%20%20-Follow%20US-blue?logo=X&logoColor=white&style=for-the-badge&label=&#8203;)](https://x.com/awsm_and_root)
+
+</div>
 
 ### Official Channels
 | Platform | Purpose | Link |
@@ -1149,22 +1158,6 @@ Extended references & external reading: [resources.md](./docs/resources.md)
 - 📝 Read [contributing guide](docs/contributing.md) before major PRs
 - 🗂️ Large edits? Organize commits per category
 - 💖 Sponsor ongoing maintenance via [Open Collective](https://opencollective.com/awesome-android-root-official)
-
----
-
-### 💖 Support the Project
-
-Sponsorships fund: app status verification, guide refresh, categorization improvements, automation & docs infra.
-
-Non‑financial impact ideas:
-- Replace dead or redirected links with active sources/forks
-- Mark unmaintained / archived projects (add note)
-- Suggest safer open‑source alternatives for proprietary tools
-- Improve clarity for beginners (simplify phrasing / add warnings)
-
-[![Become a Sponsor](https://img.shields.io/badge/%20💖-Become%20a%20Sponsor-ff69b4?style=for-the-badge)](https://opencollective.com/awesome-android-root-official)
-[![Star the Repo](https://img.shields.io/badge/%20⭐-Star%20this%20Repo-yellow?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root)
-[![Share Project](https://img.shields.io/badge/%20📢-Share%20Project-blue?style=for-the-badge)](https://twitter.com/intent/tweet?text=Check%20out%20this%20amazing%20Android%20rooting%20resource!&url=https://awesome-android-root.org)
 
 ---
 
@@ -1203,22 +1196,45 @@ Non‑financial impact ideas:
 ### Other Projects
 If you liked this project please also checkout our other projects too:
 
-#### Debrid Services Comparison
-Interactive comparison of debrid services: Pricing, Host support etc. Real-Debrid, AllDebrid, Premiumize, TorBox, and more. 
-- **[Debrid Services Comparison](https://github.com/fynks/debrid-services-comparison) or [Website](https://debridcompare.pages.dev/)**
+<p align="center">
+    <a href="https://github.com/fynks/debrid-services-comparison">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=fynks&repo=debrid-services-comparison&theme=radical&hide_border=true" />
+    </a>
+        <a href="https://github.com/fynks/email-aliasing-comparison">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=fynks&repo=email-aliasing-comparison&theme=radical&hide_border=true" />
+    </a>
+</p>
 
-#### Email Alising Comaprison
-Compare 10+ email alias services by features, pricing, security, privacy, and ease of use.
-- **[Email Aliasing Comparison](https://github.com/fynks/email-aliasing-comparison) or [Website](https://email-aliasing-comparison.netlify.app/)**
+---
+
+<div align="center">
+<br><br>
+
+
+## 💖 Support the Project
+
+[![Become a Sponsor](https://img.shields.io/badge/%20💖-Become%20a%20Sponsor-ff69b4?style=for-the-badge)](https://opencollective.com/awesome-android-root-official)
+[![Star the Repo](https://img.shields.io/badge/%20⭐-Star%20this%20Repo-yellow?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root)
+[![Share Project](https://img.shields.io/badge/%20📢-Share%20Project-blue?style=for-the-badge)](https://twitter.com/intent/tweet?text=Check%20out%20this%20amazing%20Android%20rooting%20resource!&url=https://awesome-android-root.org)
+
+</div>
+<br>
+
+**Sponsorships fund: app status verification, guide refresh, categorization improvements, automation & docs infra.**
+
+Non‑financial impact ideas:
+- Replace dead or redirected links with active sources/forks
+- Mark unmaintained / archived projects (add note)
+- Suggest safer open‑source alternatives for proprietary tools
+- Improve clarity for beginners (simplify phrasing / add warnings)
+
 ---
 
 <div align="center">
 
 **⚡ Built with ❤️ by [Awesome Android Root](https://github.com/awesome-android-root/awesome-android-root)**
 
----
-
 [![X Follow](https://img.shields.io/badge/Follow%20US-000?logo=X&logoColor=fff&style=for-the-badge)](https://x.com/awsm_and_root)
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fawesome-android-root.org%2F&style=for-the-badge)](https://awesome-android-root.org/)
+[![Back to Top](https://img.shields.io/badge/%20↑-Back%20to%20Top-blue?style=for-the-badge&color=blue)](#table-of-contents)
 
 </div>
