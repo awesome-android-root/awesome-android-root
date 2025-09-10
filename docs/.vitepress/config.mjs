@@ -4,7 +4,7 @@ import { withPwa } from '@vite-pwa/vitepress'
 export default withPwa(defineConfig({
   lang: "en-US",
   title: "Awesome Android Root",
-  description: "Ultimate Android rooting hub with 300+ curated root apps, Magisk modules, and step-by-step guides for Android customization and freedom.",
+  description: "Ultimate Android rooting hub with 400+ curated root apps, Magisk modules, and step-by-step guides for Android customization and freedom.",
   ignoreDeadLinks: true,
   cleanUrls: true,
 
@@ -17,10 +17,16 @@ export default withPwa(defineConfig({
       // Better code splitting
       rollupOptions: {
         output: {
-          manualChunks: {
-            // Split vendor chunks for better caching
-            'vue-vendor': ['vue', '@vue/runtime-dom', '@vue/runtime-core', '@vue/shared'],
-            'vitepress': ['vitepress']
+          manualChunks: (id) => {
+            // Only split node_modules vendor code
+            if (id.includes('node_modules')) {
+              // Group Vue-related packages together
+              if (id.includes('vue') || id.includes('@vue')) {
+                return 'vue-vendor';
+              }
+              // Other vendor packages
+              return 'vendor';
+            }
           }
         }
       },
@@ -35,9 +41,10 @@ export default withPwa(defineConfig({
       }
     },
     
-    // Optimize dependencies
+    // Optimize dependencies - remove vitepress from here
     optimizeDeps: {
-      include: ['vue', 'vitepress'],
+      include: ['vue'],
+      // Exclude PWA plugin from optimization
       exclude: ['@vite-pwa/vitepress']
     },
 
@@ -45,20 +52,14 @@ export default withPwa(defineConfig({
     server: {
       warmup: {
         clientFiles: [
-          './app/**/*.{js,ts,vue}',
-          './theme/**/*.{js,ts,vue}'
+          '.vitepress/theme/**/*.{js,ts,vue}'
         ]
       }
     },
 
     // CSS optimizations
     css: {
-      devSourcemap: false,
-      preprocessorOptions: {
-        scss: {
-          api: 'modern-compiler'
-        }
-      }
+      devSourcemap: false
     },
 
     // ESBuild optimizations
@@ -82,7 +83,7 @@ export default withPwa(defineConfig({
     
     workbox: {
       // Disable precaching of build artifacts
-       globPatterns: ['offline.html'],
+      globPatterns: [], // Empty array = no precaching
       
       // Service worker behavior
       skipWaiting: true,
@@ -108,7 +109,7 @@ export default withPwa(defineConfig({
             networkTimeoutSeconds: 3,
             expiration: {
               maxEntries: 50,
-              maxAgeSeconds: 60 * 60 * 24 * 7 // 7 days
+              maxAgeSeconds: 60 * 60 * 24 * 1 // 1 day
             },
             cacheableResponse: {
               statuses: [0, 200]
@@ -153,7 +154,7 @@ export default withPwa(defineConfig({
             cacheName: 'images-runtime',
             expiration: {
               maxEntries: 200,
-              maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
+              maxAgeSeconds: 60 * 60 * 24 * 7, // 7 days
               purgeOnQuotaError: true
             },
             cacheableResponse: {
@@ -337,7 +338,7 @@ export default withPwa(defineConfig({
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Awesome Android Root",
-      "description": "Ultimate Android rooting hub with 300+ curated root apps, Magisk modules, and step-by-step guides for Android customization and freedom.",
+      "description": "Ultimate Android rooting hub with 400+ curated root apps, Magisk modules, and step-by-step guides for Android customization and freedom.",
       "url": "https://awesome-android-root.org/",
       "publisher": {
         "@type": "Organization",
@@ -352,7 +353,7 @@ export default withPwa(defineConfig({
     })],
 
     // --- Verification Tags ---
-    ['meta', { name: 'ahrefs-site-verification', content: '5fd5ad82113006dedaabbb7cc47ee96924361ceedafe09795ce9abbb7d32d6ff' }]
+    ['meta', { name: 'ahrefs-site-verification', content: '5fd5ad82114006dedaabbb7cc47ee96924361ceedafe09795ce9abbb7d32d6ff' }]
   ],
 
   themeConfig: {
