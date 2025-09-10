@@ -277,15 +277,7 @@ export default withPwa(defineConfig({
   },
 
   head: [
-    // Add preload hints for critical resources
-    ['link', { 
-      rel: 'preload', 
-      href: '/fonts/inter-var.woff2', 
-      as: 'font', 
-      type: 'font/woff2', 
-      crossorigin: '' 
-    }],
-    
+        
     // Favicons and Touch Icons
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],

@@ -277,7 +277,7 @@ head:
 ---
 
 
-<div align="center" class="aar-intro">
+<div align="center" class="apps-intro">
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="../public/images/logo.svg">
