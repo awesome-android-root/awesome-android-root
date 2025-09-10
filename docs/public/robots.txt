@@ -1,6 +1,7 @@
+# robots.txt for https://awesome-android-root.org/
+
 User-agent: *
 Allow: /
 
-# Sitemap 
+# Sitemap
 Sitemap: https://awesome-android-root.org/sitemap.xml
-
