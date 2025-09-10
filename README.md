@@ -253,7 +253,7 @@ Follow this path:
 <div align="center" class="readme-apps-intro">
 <br><br>
 
-## Root Apps and Modules
+# Root Apps and Modules
 
 ![Total Entries](https://img.shields.io/badge/Total%20Entries-411-blue?style=for-the-badge&logo=android&cacheSeconds=3600)
 ![Root Apps](https://img.shields.io/badge/Root%20Apps-133-blue?style=for-the-badge&logo=android&cacheSeconds=3600)
@@ -1124,7 +1124,7 @@ After hiding root, you can check whether hiding works via root detection apps, s
 <div align="center">
 <br><br>
 
-## Resources and Support
+# Resources and Support
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=blue&cacheSeconds=3600)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-android-root.org)
 [![Website](https://img.shields.io/badge/%20%20-Website-yellow?style=for-the-badge&logo=googlechrome&logoColor=white&label=&#8203;)](https://awesome-android-root.org)
@@ -1210,7 +1210,7 @@ If you liked this project please also checkout our other projects too:
 <br><br>
 
 
-## 💖 Support the Project
+# 💖 Support the Project
 
 [![Become a Sponsor](https://img.shields.io/badge/%20💖-Become%20a%20Sponsor-ff69b4?style=for-the-badge)](https://opencollective.com/awesome-android-root-official)
 [![Star the Repo](https://img.shields.io/badge/%20⭐-Star%20this%20Repo-yellow?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root)
