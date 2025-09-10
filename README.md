@@ -28,7 +28,7 @@
 
 ---
 
-## Table of Contents
+### Table of Contents
 
 <details>
 <summary>👉 Tap to expand complete navigation</summary>
@@ -262,9 +262,8 @@ Follow this path:
 ![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-112-purple?style=for-the-badge&logo=local&logoColor=white&cacheSeconds=3600)
 
 
----
-
 </div>
+
 
 ::: warning **New to Rooting?**
 > 💡 Start with our [Complete Rooting Guide](../android-root-guides/) before exploring apps below.
