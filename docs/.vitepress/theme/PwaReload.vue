@@ -1,35 +1,51 @@
 <script setup>
-import { computed, shallowRef, onMounted } from 'vue'
+import { computed, onMounted, shallowRef } from 'vue'
 
-// SSR-safe: dynamically import virtual module on client only
+// Composable state
 const sw = shallowRef(null)
+const offlineReady = shallowRef(false)
+const needRefresh = shallowRef(false)
 
 onMounted(async () => {
-  const { useRegisterSW } = await import('virtual:pwa-register/vue')
-  sw.value = useRegisterSW({ immediate: true })
+  try {
+    const { useRegisterSW } = await import('virtual:pwa-register/vue')
+    // Register SW as soon as possible and sync state via callbacks
+    const r = useRegisterSW({
+      immediate: true,
+      onOfflineReady() {
+        offlineReady.value = true
+      },
+      onNeedRefresh() {
+        needRefresh.value = true
+      }
+    })
+    sw.value = r
+  } catch (e) {
+    // Module not present in non-PWA dev
+  }
 })
 
-const show = computed(() => !!sw.value && (sw.value.offlineReady.value || sw.value.needRefresh.value))
+const show = computed(() => offlineReady.value || needRefresh.value)
 
 const reload = () => {
-  if (sw.value) sw.value.updateServiceWorker()
+  // ensure the page reloads after the SW activates
+  sw.value?.updateServiceWorker?.(true)
 }
 
 const close = () => {
-  if (!sw.value) return
-  sw.value.offlineReady.value = false
-  sw.value.needRefresh.value = false
+  offlineReady.value = false
+  needRefresh.value = false
 }
 </script>
 
 <template>
   <div v-if="show" class="pwa-toast" role="status" aria-live="polite">
     <div class="pwa-message">
-      <span v-if="sw?.offlineReady?.value">App is ready to work offline.</span>
+      <span v-if="offlineReady">App is ready to work offline.</span>
       <span v-else>New content available, click reload to update.</span>
     </div>
     <div class="pwa-actions">
-      <button v-if="sw?.needRefresh?.value" class="pwa-btn primary" @click="reload">Reload</button>
+      <button v-if="needRefresh" class="pwa-btn primary" @click="reload">Reload</button>
       <button class="pwa-btn" @click="close">Close</button>
     </div>
   </div>

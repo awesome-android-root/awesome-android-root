@@ -52,10 +52,6 @@
   --vp-c-default-1: var(--vp-c-gray-1);
   --vp-c-default-2: var(--vp-c-gray-2);
   --vp-c-default-3: var(--vp-c-gray-3);
-/* PWA prompt spacing on small screens */
-@media (max-width: 640px) {
-  .pwa-toast { left: 12px; right: 12px; }
-}
 
   --vp-c-default-soft: var(--vp-c-gray-soft);
 
@@ -78,6 +74,11 @@
   --vp-c-danger-2: var(--vp-c-red-2);
   --vp-c-danger-3: var(--vp-c-red-3);
   --vp-c-danger-soft: var(--vp-c-red-soft);
+}
+
+/* PWA prompt spacing on small screens */
+@media (max-width: 640px) {
+  .pwa-toast { left: 12px; right: 12px; }
 }
 
 /**

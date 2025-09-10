@@ -20,15 +20,17 @@ export default withPwa(defineConfig({
     strategies: 'generateSW',
     registerType: 'autoUpdate',
     includeAssets: [
+      // files inside docs/public are served from root
       'favicon.ico',
       'favicon.svg',
       'favicon-96x96.png',
       'images/logo.svg',
       'images/logo_dark.svg',
-      'images/og.png'
+      'images/og.png',
+      'images/apple-touch-icon.png'
     ],
     workbox: {
-  navigateFallback: '/offline.html',
+      navigateFallback: '/offline.html',
       navigationPreload: true,
       cleanupOutdatedCaches: true,
       clientsClaim: true,
@@ -97,7 +99,7 @@ export default withPwa(defineConfig({
     devOptions: {
       enabled: true,
       suppressWarnings: true,
-  navigateFallback: '/offline.html'
+  // navigateFallback is not supported in devOptions, keep only in workbox
     },
     experimental: {
       includeAllowlist: true
@@ -111,8 +113,7 @@ export default withPwa(defineConfig({
     ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
   ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/images/apple-touch-icon.png' }],
 
-    // Manifest is provided by the PWA plugin build output; keep link for browsers that prefetch
-    ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
+  // The plugin will inject the correct manifest link during build/preview
 
     // --- Browser Meta ---
     ['meta', { name: 'theme-color', content: '#ffffff', media: '(prefers-color-scheme: light)' }],
