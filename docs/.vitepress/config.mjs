@@ -10,42 +10,34 @@ export default withPwa(defineConfig({
 
   // Performance optimizations for Vite
   vite: {
+    // Fix SSR resolution issues for mark.js used by VitePress search highlighting
+    resolve: {
+      alias: {
+        // Prefer the ESM distribution to avoid extensionless import issues in Node ESM
+        'mark.js/src/vanilla.js': 'mark.js/dist/mark.es6.js',
+        'mark.js/src/vanilla': 'mark.js/dist/mark.es6.js',
+        'mark.js': 'mark.js/dist/mark.es6.js'
+      }
+    },
+
     // Build optimizations
     build: {
       // Increase chunk size warning limit
       chunkSizeWarningLimit: 1000,
-      // Better code splitting
-      rollupOptions: {
-        output: {
-          manualChunks: (id) => {
-            // Only split node_modules vendor code
-            if (id.includes('node_modules')) {
-              // Group Vue-related packages together
-              if (id.includes('vue') || id.includes('@vue')) {
-                return 'vue-vendor';
-              }
-              // Other vendor packages
-              return 'vendor';
-            }
-          }
-        }
-      },
-      // Enable minification
-      minify: 'terser',
-      terserOptions: {
-        compress: {
-          drop_console: true,
-          drop_debugger: true,
-          pure_funcs: ['console.log', 'console.debug']
-        }
-      }
+  // Enable minification (use esbuild for stability in SSR builds)
+  minify: 'esbuild'
     },
     
     // Optimize dependencies - remove vitepress from here
     optimizeDeps: {
-      include: ['vue'],
+      include: ['vue', 'mark.js'],
       // Exclude PWA plugin from optimization
       exclude: ['@vite-pwa/vitepress']
+    },
+
+    // Ensure mark.js is bundled for SSR to avoid Node ESM resolver limitations
+    ssr: {
+      noExternal: ['mark.js']
     },
 
     // Improve dev server performance
