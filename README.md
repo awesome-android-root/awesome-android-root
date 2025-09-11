@@ -631,7 +631,6 @@ Follow this path:
 - **[Disable Log Request](https://github.com/QueallyTech/DisableLogRequest)** - Automatic approve for app to access device logs (Android 13+). `FOSS` `[LSP]`
 - **[IAmNotADeveloper](https://github.com/xfqwdsj/IAmNotADeveloper)** - A Xposed module for hiding Android developer-related switches status. `FOSS` `[LSP]`
 - **[Magisk Docker](https://github.com/mgksu/dockerd)** - Magisk and KernelSU module for running Docker on rooted Android devices. `FOSS` `[M]` `[K]`
-- **[Magisk Tailscaled](https://github.com/mgksu/tailscaled)** - Magisk and KernelSU module for running Tailscale on rooted Android devices. `FOSS` `[M]` `[K]`
 - **[Py2Droid](https://github.com/Mrakorez/py2droid)** - A Magisk module to install Python 3 on Android, including the standard library (STDLIB). `FOSS` `[M]`
 - **[⭐ Shizuku](https://github.com/RikkaApps/Shizuku)** - Use system APIs directly with ADB/root privileges. `FOSS` | [🌱 F-Droid](https://apt.izzysoft.de/fdroid/index/apk/moe.shizuku.privileged.api) | [▶️ Play Store](https://play.google.com/store/search?q=shizuku&c=apps)
 - **[Stealth Debug](https://github.com/sp11xy/StealthDebug)** - Hide USB-Debugging properties. `FOSS` `[M]`
@@ -1036,27 +1035,24 @@ After hiding root, you can check whether hiding works via root detection apps, s
 
 ## System Modifications
 
+- **[Classic Power Menu](https://github.com/KieronQuinn/ClassicPowerMenu)** - Power Menu Replacement for Android 11+, with the main aim being restoring power menu options (Device Controls and Quick Access Wallet) on Android 12. `FOSS`
+- **[Disable Low Ram Flag](https://github.com/Magisk-Modules-Alt-Repo/disable-low-ram)** - Magisk module to disable Low‑RAM flag on Android Go devices. `FOSS` `[M]`
+- **[Google Play System Update Uninstaller](https://github.com/daoquan1002/GPSU-Uninstaller)** - This module is used to uninstall Google Play System Update when the device encounters various issues (like Zygisk). `FOSS` `[M]`
+- **[Multi Userui Enabler](https://github.com/InsertX2k/multiuseruienabler)** -  Magisk module that tries to enable Multi-User UI. `FOSS` `[M]`
+- **[Noogle Magisk](https://github.com/SelfRef/noogle-magisk)** - Magisk modules for removing/replacing Google applications on stock Android 11-15. `FOSS` `[M]`
+- **[Secure Element Access](https://github.com/jqssun/android-se-access)** - Enable access to secure element for trusted apps. `FOSS`
+- **[TWRP A/B Retention Script](https://github.com/Magisk-Modules-Repo/twrp-keep)** - Keep TWRP installed after an A/B OTA. `FOSS` `[M]`
+- **[zapret for Magisk](https://github.com/sevcator/zapret-magisk)** - DPI bypass on Android with additional features. `FOSS` `[M]`
+
 ### Browser and Webview Mods
 - **[AnyWebView](https://github.com/neoblackxt/AnyWebView)** - Tries to detect all system webviews and add them to the developer options -> WebView implementation list. `FOSS` `[LSP]`
 - **[⭐ ChromeXt](https://github.com/JingMatrix/ChromeXt)** - UserScript and DevTools support for Chromium-based and WebView-based browsers. `FOSS` `[LSP]`
 - **[Google Webview Module](https://github.com/gmb7886/GoogleWebview_Module)** - Installs *com.google.android.webview* as a system app, to replace the AOSP implementation. `FOSS` `[M]`
 - **[Open WebView](https://github.com/Magisk-Modules-Alt-Repo/open_webview)** - Helps you to replace your system webview through Magisk. `FOSS` `[M]`
 
-- **[Classic Power Menu](https://github.com/KieronQuinn/ClassicPowerMenu)** - Power Menu Replacement for Android 11+, with the main aim being restoring power menu options (Device Controls and Quick Access Wallet) on Android 12. `FOSS`
-- **[Disable Low Ram Flag](https://github.com/Magisk-Modules-Alt-Repo/disable-low-ram)** - Magisk module to disable Low‑RAM flag on Android Go devices. `FOSS` `[M]`
-- **[Google Play System Update Uninstaller](https://github.com/daoquan1002/GPSU-Uninstaller)** - This module is used to uninstall Google Play System Update when the device encounters various issues (like Zygisk). `FOSS` `[M]`
-- **[Multi Userui Enabler](https://github.com/InsertX2k/multiuseruienabler)** -  Magisk module that tries to enable Multi-User UI. `FOSS` `[M]`
-- **[Noogle Magisk](https://github.com/SelfRef/noogle-magisk)** - Magisk modules for removing/replacing Google applications on stock Android 11-15. `FOSS` `[M]`
+### SELinux Management
 - **[QuickSE](https://github.com/maazm7d/QuickSE)** - Instantly check & toggle SELinux status on rooted Android devices. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.maazm7d.quickse/)
-- **[Secure Element Access](https://github.com/jqssun/android-se-access)** - Enable access to secure element for trusted apps. `FOSS`
 - **[SELinux enforcer+](https://github.com/nanotink/SEL-enforcer)** - Makes SELINUX loop in enforcing state for Android. `FOSS` `[M]`
-- **[TWRP A/B Retention Script](https://github.com/Magisk-Modules-Repo/twrp-keep)** - Keep TWRP installed after an A/B OTA. `FOSS` `[M]`
-- **[zapret for Magisk](https://github.com/sevcator/zapret-magisk)** - DPI bypass on Android with additional features. `FOSS` `[M]`
-
-### System Info
-- **[Castro - system info](https://play.google.com/store/apps/details?id=com.itemstudio.castro)** - A huge collection of information about your device and a set of tools for monitoring its status. `Proprietary`
-- **[Device Info HW](https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw)** - A hardware and software information app for Android devices. `Proprietary`
-- **[Infamick Script](https://github.com/Infamousmick/Infamick-script/)** - A powerful system utility script that provides easy access to various system information and settings. `FOSS` `[M]`
 
 ### VBMeta Mods
 
@@ -1112,6 +1108,11 @@ After hiding root, you can check whether hiding works via root detection apps, s
 - **[Magisk Tailscaled](https://github.com/mgksu/tailscaled)** - Module for running Tailscale on rooted Android devices. `FOSS` `[M]`
 - **[Rclone Magisk Module](https://github.com/NewFuture/rclone-fuse3-magisk)** - Integrates Rclone with FUSE support into Android, allowing you to manage remote storage mounts seamlessly. `FOSS` `[M]`
 - **[Rsync Magisk](https://github.com/KatelynTheStargazer/rsync-magisk)** - static rsync binary for magisk. `FOSS` `[M]`
+
+### System Info Tools
+- **[Castro - system info](https://play.google.com/store/apps/details?id=com.itemstudio.castro)** - A huge collection of information about your device and a set of tools for monitoring its status. `Proprietary`
+- **[Device Info HW](https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw)** - A hardware and software information app for Android devices. `Proprietary`
+- **[Infamick Script](https://github.com/Infamousmick/Infamick-script/)** - A powerful system utility script that provides easy access to various system information and settings. `FOSS` `[M]`
 
 ### System Utilities
 - **[MagiskGapps](https://github.com/wacko1805/MagiskGapps)** - Convert a regular GApps package into a Magisk flashable package using a simple website. `FOSS` `[M]`
