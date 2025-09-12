@@ -33,6 +33,8 @@
 <details>
 <summary>👉 Tap to expand complete navigation</summary>
 
+<div class="toc-overview>
+
 ### 📚 Overview
 - [Introduction](#introduction)
 - [Rooting Guides](#rooting-guides)
@@ -40,6 +42,8 @@
 - [Additional Guides](#additional-guides)
 - [Glossary](#glossary)
 - [Root Apps and Modules](#root-apps-and-modules)
+
+</div>
 
 ### ⭐ Featured Essentials
 - [Featured Apps: The Essentials](#featured-apps-the-essentials)
