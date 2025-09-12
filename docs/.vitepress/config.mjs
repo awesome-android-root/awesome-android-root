@@ -1,51 +1,27 @@
 import { defineConfig } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
 
+// NOTE: This file was refactored to correct structural issues and enhance navigation & sidebar UX.
 export default withPwa(defineConfig({
-  lang: "en-US",
-  title: "Awesome Android Root",
-  description: "Ultimate Android rooting hub with 400+ curated root apps, Magisk modules, and step-by-step guides for Android customization and freedom.",
+  lang: 'en-US',
+  title: 'Awesome Android Root',
+  description: 'Ultimate Android rooting hub with 400+ curated root apps, Magisk modules, and step-by-step guides for Android customization and freedom.',
   ignoreDeadLinks: true,
   cleanUrls: true,
 
-  // Performance optimizations for Vite
   vite: {
-
-    // Build optimizations
     build: {
-      // Increase chunk size warning limit
       chunkSizeWarningLimit: 1000,
-  // Enable minification (use esbuild for stability in SSR builds)
-  minify: 'esbuild'
+      minify: 'esbuild'
     },
-    
-    // Optimize dependencies - remove vitepress from here
     optimizeDeps: {
-      include: ['vue', 'mark.js'],
-      // Exclude PWA plugin from optimization
+      include: ['vue'],
       exclude: ['@vite-pwa/vitepress']
     },
-
-    // Ensure mark.js is bundled for SSR to avoid Node ESM resolver limitations
-    ssr: {
-      noExternal: ['mark.js']
-    },
-
-    // Improve dev server performance
     server: {
-      warmup: {
-        clientFiles: [
-          '.vitepress/theme/**/*.{js,ts,vue}'
-        ]
-      }
+      warmup: { clientFiles: ['.vitepress/theme/**/*.{js,ts,vue}'] }
     },
-
-    // CSS optimizations
-    css: {
-      devSourcemap: false
-    },
-
-    // ESBuild optimizations
+    css: { devSourcemap: false },
     esbuild: {
       drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
       legalComments: 'none',
@@ -53,174 +29,77 @@ export default withPwa(defineConfig({
     }
   },
 
-  // PWA Configuration - Runtime caching only, no precaching
   pwa: {
     strategies: 'generateSW',
     registerType: 'autoUpdate',
-    
-    // Only include critical assets that must be precached
-    includeAssets: [
-      'favicon.ico',
-      'offline.html' // Only precache the offline page
-    ],
-    
+    includeAssets: ['favicon.ico', 'offline.html'],
     workbox: {
-      // Disable precaching of build artifacts
-      globPatterns: [], // Empty array = no precaching
-      
-      // Service worker behavior
+      globPatterns: [],
       skipWaiting: true,
       clientsClaim: true,
       cleanupOutdatedCaches: true,
-      navigateFallback: null, // Disable navigateFallback for runtime-only caching
+      navigateFallback: null,
       navigationPreload: true,
-      
-      // Ignore URL parameters for caching
       ignoreURLParametersMatching: [/^utm_/, /^fbclid$/, /^gclid$/],
-      
-      // Runtime caching strategies (cache on demand)
       runtimeCaching: [
-        // HTML pages - Network First with offline fallback
         {
-          urlPattern: ({ request, url }) => 
-            request.mode === 'navigate' || 
-            url.pathname.endsWith('.html') ||
-            url.pathname.endsWith('/'),
+          urlPattern: ({ request, url }) => request.mode === 'navigate' || url.pathname.endsWith('.html') || url.pathname.endsWith('/'),
           handler: 'NetworkFirst',
           options: {
             cacheName: 'pages-runtime',
             networkTimeoutSeconds: 3,
-            expiration: {
-              maxEntries: 50,
-              maxAgeSeconds: 60 * 60 * 24 * 1 // 1 day
-            },
-            cacheableResponse: {
-              statuses: [0, 200]
-            },
-            plugins: [
-              {
-                handlerDidError: async () => {
-                  return caches.match('/offline.html') || Response.error()
-                }
-              }
-            ]
+            expiration: { maxEntries: 50, maxAgeSeconds: 60 * 60 * 24 },
+            cacheableResponse: { statuses: [0, 200] },
+            plugins: [{ handlerDidError: async () => caches.match('/offline.html') || Response.error() }]
           }
         },
-        
-        // JavaScript and CSS - Stale While Revalidate
         {
-          urlPattern: ({ request, url }) => 
-            request.destination === 'script' || 
-            request.destination === 'style' ||
-            /\.(js|css)$/.test(url.pathname),
+          urlPattern: ({ request, url }) => request.destination === 'script' || request.destination === 'style' || /\.(js|css)$/.test(url.pathname),
           handler: 'StaleWhileRevalidate',
           options: {
             cacheName: 'assets-runtime',
-            expiration: {
-              maxEntries: 100,
-              maxAgeSeconds: 60 * 60 * 24 * 1, // 1 day
-              purgeOnQuotaError: true
-            },
-            cacheableResponse: {
-              statuses: [0, 200]
-            }
+            expiration: { maxEntries: 100, maxAgeSeconds: 60 * 60 * 24, purgeOnQuotaError: true },
+            cacheableResponse: { statuses: [0, 200] }
           }
         },
-        
-        // Images - Cache First
         {
-          urlPattern: ({ request, url }) => 
-            request.destination === 'image' ||
-            /\.(png|jpg|jpeg|svg|gif|webp|ico)$/i.test(url.pathname),
+          urlPattern: ({ request, url }) => request.destination === 'image' || /\.(png|jpg|jpeg|svg|gif|webp|ico)$/i.test(url.pathname),
           handler: 'CacheFirst',
           options: {
             cacheName: 'images-runtime',
-            expiration: {
-              maxEntries: 200,
-              maxAgeSeconds: 60 * 60 * 24 * 7, // 7 days
-              purgeOnQuotaError: true
-            },
-            cacheableResponse: {
-              statuses: [0, 200]
-            }
+            expiration: { maxEntries: 200, maxAgeSeconds: 60 * 60 * 24 * 7, purgeOnQuotaError: true },
+            cacheableResponse: { statuses: [0, 200] }
           }
         },
-        
-        // Fonts - Cache First (long cache)
         {
-          urlPattern: ({ request, url }) => 
-            request.destination === 'font' || 
-            /\.(woff2?|ttf|otf|eot)$/i.test(url.pathname),
+          urlPattern: ({ request, url }) => request.destination === 'font' || /\.(woff2?|ttf|otf|eot)$/i.test(url.pathname),
           handler: 'CacheFirst',
           options: {
             cacheName: 'fonts-runtime',
-            expiration: {
-              maxEntries: 20,
-              maxAgeSeconds: 60 * 60 * 24 * 7 // 7 days
-            },
-            cacheableResponse: {
-              statuses: [0, 200]
-            }
+            expiration: { maxEntries: 20, maxAgeSeconds: 60 * 60 * 24 * 7 },
+            cacheableResponse: { statuses: [0, 200] }
           }
         },
-        
-        // API/JSON data - Network First
         {
-          urlPattern: ({ url }) => 
-            url.pathname.startsWith('/api/') || 
-            url.pathname.endsWith('.json'),
-          handler: 'NetworkFirst',
-          options: {
-            cacheName: 'api-runtime',
-            networkTimeoutSeconds: 5,
-            expiration: {
-              maxEntries: 50,
-              maxAgeSeconds: 60 * 60 // 1 hour
-            },
-            cacheableResponse: {
-              statuses: [0, 200]
-            }
-          }
-        },
-        
-        // External resources - Stale While Revalidate
-        {
-          urlPattern: ({ url }) => 
-            url.origin === 'https://img.shields.io',
+          urlPattern: ({ url }) => url.origin === 'https://img.shields.io',
           handler: 'StaleWhileRevalidate',
           options: {
             cacheName: 'external-runtime',
-            expiration: {
-              maxEntries: 100,
-              maxAgeSeconds: 60 * 60 * 24 * 1, // 1 day
-              purgeOnQuotaError: true
-            },
-            cacheableResponse: {
-              statuses: [0, 200]
-            }
+            expiration: { maxEntries: 100, maxAgeSeconds: 60 * 60 * 24, purgeOnQuotaError: true },
+            cacheableResponse: { statuses: [0, 200] }
           }
         },
-        
-        // GitHub avatars and images
         {
-          urlPattern: ({ url }) => 
-            url.origin === 'https://github.com' || 
-            url.origin === 'https://avatars.githubusercontent.com',
+          urlPattern: ({ url }) => url.origin === 'https://github.com' || url.origin === 'https://avatars.githubusercontent.com',
           handler: 'CacheFirst',
           options: {
             cacheName: 'github-assets',
-            expiration: {
-              maxEntries: 50,
-              maxAgeSeconds: 60 * 60 * 24 * 7 // 7 days
-            },
-            cacheableResponse: {
-              statuses: [0, 200]
-            }
+            expiration: { maxEntries: 50, maxAgeSeconds: 60 * 60 * 24 * 7 },
+            cacheableResponse: { statuses: [0, 200] }
           }
         }
       ]
     },
-    
     manifest: {
       name: 'Awesome Android Root',
       short_name: 'AAR',
@@ -235,37 +114,14 @@ export default withPwa(defineConfig({
       dir: 'ltr',
       categories: ['utilities', 'developer'],
       icons: [
-        { 
-          src: '/images/web-app-manifest-192x192.png', 
-          sizes: '192x192', 
-          type: 'image/png', 
-          purpose: 'any maskable' 
-        },
-        { 
-          src: '/images/web-app-manifest-512x512.png', 
-          sizes: '512x512', 
-          type: 'image/png', 
-          purpose: 'any maskable' 
-        }
+        { src: '/images/web-app-manifest-192x192.png', sizes: '192x192', type: 'image/png', purpose: 'any maskable' },
+        { src: '/images/web-app-manifest-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' }
       ]
     },
-    
-    devOptions: {
-      enabled: process.env.NODE_ENV === 'development',
-      suppressWarnings: true,
-      type: 'module'
-    }
+    devOptions: { enabled: process.env.NODE_ENV === 'development', suppressWarnings: true, type: 'module' }
   },
 
-  // VitePress build optimizations
-  markdown: {
-    // Use cache for markdown rendering
-    cache: true,
-    // Optimize anchor generation
-    anchor: {
-      level: [2, 3, 4]
-    }
-  },
+  markdown: { cache: true, anchor: { level: [2, 3, 4] } },
 
   head: [
         
@@ -348,11 +204,7 @@ export default withPwa(defineConfig({
             boost: {
               title: 4,
               text: 2,
-              titles: 3,
-              'quick-start': 4,
-              'troubleshooting': 4,
-              'safety': 4,
-              'featured': 3
+              titles: 3
             }
           }
         },
@@ -386,16 +238,16 @@ export default withPwa(defineConfig({
         text: 'Guides',
         items: [
           { text: 'Rooting Guide', link: '/android-root-guides/', activeMatch: '^/android-root-guides/' },
-          { text: 'Device Specific Guides', link: '/android-root-guides/#device-specific-guides' },
+          { text: 'Device Guides', link: '/android-root-guides/#device-specific-guides' },
           { text: 'How-To Guides', link: '/guides/', activeMatch: '^/guides/' }
         ]
       },
       {
         text: 'Resources',
         items: [
-          { text: 'FAQ & Support', link: '/faqs', activeMatch: '^/faqs' },
-          { text: 'Glossary & Terms', link: '/android-root-apps/#glossary' },
-          { text: 'Resources Hub', link: '/resources' }
+          { text: 'FAQ & Troubleshoting', link: '/faqs', activeMatch: '^/faqs' },
+          { text: 'Resources Hub', link: '/resources' },
+          { text: 'Glossary', link: '/android-root-apps/#glossary' }
         ]
       },
       {
@@ -476,52 +328,32 @@ export default withPwa(defineConfig({
       '/android-root-apps/': [
         { text: '⭐ Featured Essentials', link: '/android-root-apps/#featured-apps-the-essentials' },
         { text: '📘 Glossary', link: '/android-root-apps/#glossary' },
-        {
-          text: '🛠️ Root & System Management',
-          collapsed: false,
-          items: [
-            { text: 'Root Management', link: '/android-root-apps/#root-management' },
-            { text: 'Root Hiding & Integrity', link: '/android-root-apps/#root-hiding-and-integrity' },
-            { text: 'Bootloop Protection', link: '/android-root-apps/#bootloop-protection' }
-          ]
-        },
-        {
-          text: '🛡️ Security & Privacy',
-          collapsed: false,
-          items: [
-            { text: 'Privacy and Security', link: '/android-root-apps/#privacy-and-security' },
-            { text: 'Ads and Tracking Blockers', link: '/android-root-apps/#ads-and-tracking-blockers' }
-          ]
-        },
-        {
-          text: '📦 App Management & Control',
-          collapsed: false,
-          items: [
-            { text: 'App Management and Control', link: '/android-root-apps/#app-management-and-control' },
-            { text: 'App Isolation and Cloning', link: '/android-root-apps/#app-isolation-and-cloning' },
-            { text: 'App Signature Verification Mods', link: '/android-root-apps/#app-signature-verification-mods' }
-          ]
-        },
-        {
-          text: '🧹 System Optimization & Cleanup',
-          collapsed: false,
-          items: [
-            { text: 'Performance Tweaks', link: '/android-root-apps/#performance-tweaks' },
-            { text: 'Debloating and System App Removal', link: '/android-root-apps/#debloating-and-system-app-removal' },
-            { text: 'Cleaning and Maintenance', link: '/android-root-apps/#cleaning-and-maintenance' },
-            { text: 'Battery and Power Management', link: '/android-root-apps/#battery-and-power-management' }
-          ]
-        },
-        {
-          text: '🎨 Customization & UI',
-          collapsed: true,
-          items: [
-            { text: 'Customization and UI', link: '/android-root-apps/#customization-and-ui' },
-            { text: 'Boot Animations', link: '/android-root-apps/#boot-animations' },
-            { text: 'Themes and UI', link: '/android-root-apps/#themes-and-ui' },
-            { text: 'Screen and Display', link: '/android-root-apps/#screen-and-display' }
-          ]
-        },
+        { text: '🛠️ Root & System', collapsed: false, items: [
+          { text: 'Root Management', link: '/android-root-apps/#root-management' },
+          { text: 'Integrity / Safety', link: '/android-root-apps/#root-management' },
+          { text: 'Bootloop Protection', link: '/android-root-apps/#bootloop-protection' }
+        ]},
+        { text: '🛡️ Privacy & Security', collapsed: false, items: [
+          { text: 'Privacy & Security', link: '/android-root-apps/#privacy-and-security' },
+          { text: 'Ads & Tracking Blockers', link: '/android-root-apps/#ads-and-tracking-blockers' }
+        ]},
+        { text: '📦 App Management', collapsed: false, items: [
+          { text: 'App Management & Control', link: '/android-root-apps/#app-management-and-control' },
+          { text: 'App Isolation & Cloning', link: '/android-root-apps/#app-isolation-and-cloning' },
+          { text: 'Signature Verification Mods', link: '/android-root-apps/#app-signature-verification-mods' }
+        ]},
+        { text: '🧹 Optimization & Cleanup', collapsed: false, items: [
+          { text: 'Performance & Gaming', link: '/android-root-apps/#performance-and-gaming' },
+          { text: 'Debloating / Removal', link: '/android-root-apps/#debloating-and-system-app-removal' },
+          { text: 'Cleaning & Maintenance', link: '/android-root-apps/#cleaning-and-maintenance' },
+          { text: 'Battery & Power', link: '/android-root-apps/#battery-and-power-management' }
+        ]},
+        { text: '🎨 Customization & UI', collapsed: true, items: [
+          { text: 'Customization & UI', link: '/android-root-apps/#customization-and-ui' },
+          { text: 'Boot Animations', link: '/android-root-apps/#boot-animations' },
+          { text: 'Themes & UI Mods', link: '/android-root-apps/#themes-and-ui' },
+          { text: 'Screen & Display', link: '/android-root-apps/#screen-and-display' }
+        ]},
         {
           text: '🔧 App Modifications & Patches',
           collapsed: true,
@@ -532,15 +364,11 @@ export default withPwa(defineConfig({
             { text: 'ReVanced', link: '/android-root-apps/#revanced' }
           ]
         },
-        {
-          text: '⚡ Performance & System',
-          collapsed: true,
-          items: [
-            { text: 'Automation and Scheduling', link: '/android-root-apps/#automation-and-scheduling' },
-            { text: 'Kernel Management', link: '/android-root-apps/#kernel-management' },
-            { text: 'System Modifications', link: '/android-root-apps/#system-modifications' }
-          ]
-        },
+        { text: '⚡ Performance & System', collapsed: true, items: [
+          { text: 'Automation & Scheduling', link: '/android-root-apps/#automation-and-scheduling' },
+          { text: 'Kernel Management', link: '/android-root-apps/#system-and-kernel-management' },
+          { text: 'System Modifications', link: '/android-root-apps/#system-modifications' }
+        ]},
         {
           text: '🖴 Data & Storage',
           collapsed: true,
@@ -683,7 +511,7 @@ export default withPwa(defineConfig({
           collapsed: false,
           items: [
             { text: 'Privacy & Security', link: '/android-root-apps/#privacy-and-security' },
-            { text: 'Performance Tweaks', link: '/android-root-apps/#performance-tweaks' },
+            { text: 'Performance & Gaming', link: '/android-root-apps/#performance-and-gaming' },
             { text: 'Customization & UI', link: '/android-root-apps/#customization-and-ui' },
             { text: 'Modded Apps & Tweaks', link: '/android-root-apps/#modded-apps--tweaks' },
             { text: 'System Optimization', link: '/android-root-apps/#cleaning-and-maintenance' }
