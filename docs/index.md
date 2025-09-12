@@ -323,7 +323,7 @@ head:
 hero:
   name: "Awesome Android Root"
   text: "Master Android Rooting in 2025"
-  tagline: "Exlore 400+ top root apps, best Magisk/ KernelSU/ Apatch & LSPosed modules, and step-by-step rooting guides."
+  tagline: "Explore 400+ top root apps, best Magisk / KernelSU / APatch & LSPosed modules, and step-by-step rooting guides."
   image:
     src: /images/logo_dark.svg
     alt: Awesome Android Root Logo
@@ -348,22 +348,22 @@ features:
   - icon: 📱
     title: Complete App Management
     details: "Master app control with isolation, cloning, managers, and advanced permission systems. Take full control of every installed application."
-    link: /android-root-apps/#app-management
+    link: /android-root-apps/#app-management-and-control
     
   - icon: 🔧
     title: Premium App Modifications
     details: "Transform social media apps, streaming services, and more with powerful mods. Remove restrictions, unlock features, enhance functionality."
-    link: /android-root-apps/#app-modifications
+    link: /android-root-apps/#modded-apps-and-tweaks
 
   - icon: ⚡
     title: Performance & Gaming
     details: "Supercharge your device with performance optimization, gaming enhancements, CPU/GPU tuning, and intelligent automation."
-    link: /android-root-apps/#performance-and-gaming
+    link: /android-root-apps/#performance-tweaks-and-optimizations
 
   - icon: 🎨
     title: Complete UI Customization
     details: "Transform your Android interface with custom themes, boot animations, fonts, launchers, and unlimited visual customization."
-    link: /android-root-apps/#customization
+    link: /android-root-apps/#customization-and-ui
     
   - icon: 🔋
     title: Advanced Battery Management
@@ -378,7 +378,7 @@ features:
   - icon: 🧹
     title: System Debloating & Cleaning
     details: "Remove manufacturer bloatware, optimize system performance, and maintain a clean, efficient Android experience."
-    link: /android-root-apps/#debloating-and-system-app-removal
+    link: /android-root-apps/#debloating-and-cleaning
     
   - icon: 🔐
     title: Privacy & Security Arsenal
@@ -388,7 +388,7 @@ features:
   - icon: ⚙️
     title: System & Kernel Management
     details: "Fine-tune your device at the deepest level with kernel managers, system modifications, and hardware-level optimizations."
-    link: /android-root-apps/#system-management
+    link: /android-root-apps/#kernel-management
     
   - icon: 🌐
     title: Network & Connectivity Control
