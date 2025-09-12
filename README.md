@@ -65,7 +65,7 @@
 #### ⚡ **Performance & System**
 - [Automation and Scheduling](#automation-and-scheduling)
 - [Battery and Power Management](#battery-and-power-management)
-- [Performance Tweaks](#performance-tweaks)
+- [Performance Tweaks](#performance-tweaks-and-optimizations)
 - [Kernel Management](#kernel-management)
 - [System Modifications](#system-modifications)
 
@@ -88,7 +88,7 @@
 #### 🎵 **Audio & Media**
 - [Audio and Media](#audio-and-media)
   - [Audio Enhancement](#audio-enhancement)
-  - [Audio Control & Management](#audio-control--management)
+  - [Audio Control & Management](#audio-control-and-management)
   - [Audio Configuration](#audio-configuration)
 
 #### 🌐 **Network & Communication**
@@ -98,7 +98,7 @@
 
 
 #### 🔧 **App Modifications & Extensions**
-- [Modded Apps & Tweaks](#modded-apps--tweaks)
+- [Modded Apps & Tweaks](#modded-apps-and-tweaks)
   - [Social Media Mods](#social-media-mods)
 - [ReVanced](#revanced)
 
@@ -124,14 +124,14 @@
 - [Tools](#tools)
   - [System Utilities](#system-utilities)
   - [NFC Tools](#nfc-tools)
-  - [Notification & Gesture Tools](#notification--gesture-tools)
+  - [Notification & Gesture Tools](#notification-and-gesture-tools)
   - [Storage Tools](#storage-tools)
-  - [Translation & Language](#translation--language)
+  - [Translation and Languages](#translation-and-languages)
 
 ### 📚 Support & Safety
 - [Resources and Help](#resources-and-help)
-- [Legal & Safety](#legal--safety)
-- [Support us](#-support-the-project)
+- [Legal & Safety](#legal-and-safety)
+- [Support us](#support-the-project)
 
 </details>
 
@@ -395,7 +395,7 @@ Follow this path:
 - **[ViPER4Android FX Redesign](https://github.com/WSTxda/ViperFX-RE-Releases)** - Allows improving the audio quality by offering features such as equalizer settings, surround sound effects, bass boost, and more. `Proprietary` `[M]`
 - **[ViPER4AndroidRepackaged](https://github.com/programminghoch10/ViPER4AndroidRepackaged)** - Contains many useability enhancements and all the major fixes needed to run ViPER4Android on modern ROMs effortlessly. `FOSS` `[M]`
 
-### Audio Control & Management 
+### Audio Control and Management 
 - **[Audio jitter silencer](https://github.com/Magisk-Modules-Alt-Repo/audio-jitter-silencer)** - For avoiding distortion on all digital audio outputs, it disables audio jitter generators (w.r.t. battery draining and optimizations, and wireless connectivity). `FOSS` `[M]`
 - **[DisableAudioFocus](https://github.com/auag0/DisableAudioFocus)** - Allows you to disable audio focus, enabling you to play multiple videos and audios simultaneously. `FOSS` `[LSP]`
 - **[LibrePods](https://github.com/kavishdevar/librepods)** - Unlocks Apple's exclusive premium AirPods features on non-Apple devices. `FOSS` `[LSP]` [M]` [K]`
@@ -523,7 +523,7 @@ Follow this path:
 - **[Root Activity Launcher](https://play.google.com/store/apps/details?id=tk.zwander.rootactivitylauncher)** - Launch activities directly from your home screen with root access. `Proprietary`
 - **[NovaInstaller](https://github.com/Minionguyjpro/NovaInstaller/)** - Installs Nova Launcher to /system/app/ on Android. `FOSS`
   
-### Navigation & Gestures
+### Navigation and Gestures
 - **[Hide Navbar Keyboard](https://github.com/UNKNUW/Hide-Navbar-Keyboard)** - Magisk module to hide navbar when keyboard appears. Supports Android 10 -15+. `FOSS` `[M]`
 - **[NavTweaks](https://github.com/Magisk-Modules-Alt-Repo/HideNavBar)** - Fullscreen/Immersive Gesture Tweaks for Android 10-14. `FOSS` `[M]`
 - **[Three-Finger-Screenshot](https://github.com/MeowDump/Three-Finger-Screenshot)**- 3-Finger Screenshot Gesture KSU/Magisk Module. `FOSS` `[M]` `[K]`
@@ -711,7 +711,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ---
 
-## Modded Apps & Tweaks
+## Modded Apps and Tweaks
 
 ### Social Media Mods
 #### Bilibili Mods
@@ -770,7 +770,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 #### X/Twitter Mods
 - **[⭐ Hachidori](https://github.com/Xposed-Modules-Repo/com.twifucker.hachidori/)** - Adds downloading media, hiding ads and other privacy features to X (formerly Twitter). `Proprietary` `[LSP]`
 
-#### YouTube, Spotify, & Google Photos Mods
+#### YouTube, Spotify, Google Photos Mods
 - **[RevancedXposed](https://github.com/chsbuffer/RevancedXposed)** - YouTube, Spotify and YT Music block ads and background playback, Google Photos unlimited backup Xposed module. `FOSS` `[LSP]`
 - **[XposedPhotosFix](https://github.com/RevealedSoulEven/XposedPhotosFIX)** - Prevents Google Photos app from merging all folders in Camera folder and creates separate albums for each folder, useful for backup. `FOSS` `[LSP]`
 > Also checkout [Revanced section](#revanced)
@@ -863,7 +863,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ---
 
-## Performance tweaks & Optimizations
+## Performance tweaks and Optimizations
 
 ### All-in-One Performance Optimizers
 - **[⭐ 3C All-in-One Toolbox](https://play.google.com/store/apps/details?id=ccc71.at.free)** - A comprehensive utility that offers a wide range of tools for monitoring, controlling, and optimizing device performance in a user-friendly interface. `Proprietary`
@@ -1124,7 +1124,7 @@ VBMeta is a critical component of Android Verified Boot (AVB), a security featur
 - **[UotanToolbox NT](https://github.com/Uotan-Dev/UotanToolboxNT)** - A modern toolbox for geeks. `FOSS`
 - **[XposedModulets](https://github.com/binarynoise/XposedModulets)** - A collection of many small useful Xposed Modules. `FOSS` `[LSP]`
 
-### Translation & Language
+### Translation and Languages
 - **[AllTrans](https://github.com/pbzinwindows/AllTrans)** - Replaces ALL TEXT IN AN APP from one language to another at runtime. `FOSS` `[LSP]`
 - **[Xposed Translate Text](https://github.com/tianci-sh/XPTranslateText)** - Xposed module translate text by MLKit / gemini2.0 / google api. `FOSS` `[LSP]`
 
@@ -1171,7 +1171,7 @@ Extended references & external reading: [resources.md](./docs/resources.md)
 
 ---
 
-## Legal & Safety
+## Legal and Safety
 
 > ⚠️ Educational reference only. You accept all risk. Rooting / modifying firmware can void warranty, reduce security, break OTA updates, or trigger anti‑tamper (Knox, Play Integrity, DRM failures, banking app lockouts).
 
@@ -1207,7 +1207,7 @@ Extended references & external reading: [resources.md](./docs/resources.md)
 <br><br>
 
 
-# 💖 Support the Project
+# Support the Project
 
 [![Become a Sponsor](https://img.shields.io/badge/%20💖-Become%20a%20Sponsor-ff69b4?style=for-the-badge)](https://opencollective.com/awesome-android-root-official)
 [![Star the Repo](https://img.shields.io/badge/%20⭐-Star%20this%20Repo-yellow?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root)
