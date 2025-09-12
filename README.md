@@ -33,7 +33,7 @@
 <details>
 <summary>👉 Tap to expand complete navigation</summary>
 
-<div class="toc-overview>
+<div class="toc-overview">
 
 ### 📚 Overview
 - [Introduction](#introduction)
