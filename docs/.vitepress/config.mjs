@@ -10,15 +10,6 @@ export default withPwa(defineConfig({
 
   // Performance optimizations for Vite
   vite: {
-    // Fix SSR resolution issues for mark.js used by VitePress search highlighting
-    resolve: {
-      alias: {
-        // Prefer the ESM distribution to avoid extensionless import issues in Node ESM
-        'mark.js/src/vanilla.js': 'mark.js/dist/mark.es6.js',
-        'mark.js/src/vanilla': 'mark.js/dist/mark.es6.js',
-        'mark.js': 'mark.js/dist/mark.es6.js'
-      }
-    },
 
     // Build optimizations
     build: {
