@@ -40,15 +40,67 @@
 - [Rooting Guides](#rooting-guides)
 - [Device-Specific Guides](#device-specific-guides)
 - [Additional Guides](#additional-guides)
-- [Glossary](#glossary)
-- [Root Apps and Modules](#root-apps-and-modules)
 
 </div>
+
+### 📚 Glossary
+- [Glossary](#glossary)
 
 ### ⭐ Featured Essentials
 - [Featured Apps: The Essentials](#featured-apps-the-essentials)
 
 ### 📱 Root Apps by Category
+
+#### 🛡️ **Privacy & Security**
+- [Ads and Tracking Blockers](#ads-and-tracking-blockers)
+- [Privacy and Security](#privacy-and-security)
+
+#### 📦 **App Control & Management**
+- [App Management and Control](#app-management-and-control)
+  - [App Managers](#app-managers)
+  - [App Stores](#app-stores)
+  - [App Isolation and Cloning](#app-isolation-and-cloning)
+  - [App Permissions Management](#app-permissions-management)
+  
+#### ⚡ **Performance & System**
+- [Automation and Scheduling](#automation-and-scheduling)
+- [Battery and Power Management](#battery-and-power-management)
+- [Performance Tweaks](#performance-tweaks)
+- [Kernel Management](#kernel-management)
+- [System Modifications](#system-modifications)
+
+#### 🗃️ **Data & Storage**
+- [File Management](#file-management)
+- [Backup and Restore](#backup-and-restore)
+- [Debloating and Cleaning](#debloating-and-cleaning)
+
+#### 🎨 **Interface & Customization**
+- [Customization and UI](#customization-and-ui)
+  - [Launchers](#launchers)
+  - [Navigation](#navigation)
+  - [Themes and UI](#themes-and-ui)
+  - [Boot Animations](#boot-animations)
+  - [Fonts and Typography](#fonts-and-typography)
+  - [Emojis](#emojis)
+  - [OS Specific Mods](#os-specific-mods)
+  - [Digital Assistants](#digital-assistants)
+
+#### 🎵 **Audio & Media**
+- [Audio and Media](#audio-and-media)
+  - [Audio Enhancement](#audio-enhancement)
+  - [Audio Control & Management](#audio-control--management)
+  - [Audio Configuration](#audio-configuration)
+
+#### 🌐 **Network & Communication**
+- [Network and Connectivity](#network-and-connectivity)
+- [Location and GPS](#location-and-gps)
+- [Communication](#communication)
+
+
+#### 🔧 **App Modifications & Extensions**
+- [Modded Apps & Tweaks](#modded-apps--tweaks)
+  - [Social Media Mods](#social-media-mods)
+- [ReVanced](#revanced)
 
 #### 🛠️ **Root & System Management**
 - [Root Management](#root-management)
@@ -58,98 +110,28 @@
   - [Root Detection Tools](#root-detection-tools)
   - [Bootloop Protection](#bootloop-protection)
 
-#### 🔐 **Security & Privacy**
-- [Privacy and Security](#privacy-and-security)
-- [Ads and Tracking Blockers](#ads-and-tracking-blockers)
-
-#### 📦 **App Management & Control**
-- [App Management and Control](#app-management-and-control)
-  - [App Isolation and Cloning](#app-isolation-and-cloning)
-  - [App Managers](#app-managers)
-  - [App Stores](#app-stores)
-  - [App Permissions](#app-permissions)
-  - [Detach Apps](#detach-apps)
-  - [Freeze Apps](#freeze-apps)
-  - [Package Management Mods](#package-management-mods)
-  - [App Signature Verification Mods](#app-signature-verification-mods)
-
-#### 🧹 **System Optimization & Cleanup**
-- [Performance Tweaks](#performance-tweaks)
-- [Debloating and System App Removal](#debloating-and-system-app-removal)
-- [Cleaning and Maintenance](#cleaning-and-maintenance)
-- [Battery and Power Management](#battery-and-power-management)
-
-#### 🎨 **Customization & UI**
-- [Customization and UI](#customization-and-ui)
-  - [Boot Animations](#boot-animations)
-  - [Digital Assistants](#digital-assistants)
-  - [Fonts and Typography](#fonts-and-typography)
-  - [Emojis](#emojis)
-  - [Launchers](#launchers)
-  - [Navigation](#navigation)
-  - [OS Specific Mods](#os-specific-mods)
-  - [Themes and UI](#themes-and-ui)
-
-#### 🔧 **App Modifications & Patches**
-- [Modded Apps & Tweaks](#modded-apps--tweaks)
-  - [Social Media Mods](#social-media-mods)
-  - [Hook Modules](#hook-modules)
-  - [Keyboard Mods](#keyboard-mods)
-  - [Patching Tools](#patching-tools)
-  - [Misc App Mods](#misc-app-mods)
-- [ReVanced](#revanced)
-
-#### ⚡ **Performance & System**
-- [Automation & Scheduling](#automation-and-scheduling)
-- [Kernel Management](#kernel-management)
-- [System Modifications](#system-modifications)
-
-#### 🗃️ **Data & Storage**
-- [File Management](#file-management)
-- [Backup and Restore](#backup-and-restore)
-
-#### 🌐 **Network & Connectivity**
-- [Network and Connectivity](#network-and-connectivity)
-- [Location and GPS](#location-and-gps)
-
-#### 📞 **Communication & Contacts**
-- [Communication](#communication)
-  - [Call Recording](#call-recording)
-  - [Contact Management](#contact-management)
-  - [SMS Management](#sms-management)
-
-#### 🎵 **Audio & Media**
-- [Audio and Media](#audio-and-media)
-  - [Audio Enhancement](#audio-enhancement)
-  - [Audio Control & Management](#audio-control--management)
-  - [Audio Configuration](#audio-configuration)
-
-#### 🛠️ **Developer & Technical Tools**
-- [Development and Debugging](#developer-and-debugging-tools)
+#### 📥 **Frameworks & Advanced**
+- [LSPosed Framework](#lsposed-framework)
+- [Development and Debugging](#development-and-debugging)
 - [Device Control and Hardware](#device-control-and-hardware)
 - [Terminal and Shell Tools](#terminal-and-shell-tools)
 
-#### 🖥️ **Screen & Display**
+#### 🖥️ **Display & Accessibility**
 - [Screen and Display](#screen-and-display)
-
-#### 🔍 **Frameworks & LSPosed**
-- [LSPosed Framework](#lsposed-framework)
-
-#### ♿ **Accessibility & Utilities**
 - [Accessibility Tools](#accessibility-tools)
 
-### 🧰 Tools
+### 🧰 System Tools
 - [Tools](#tools)
+  - [System Utilities](#system-utilities)
   - [NFC Tools](#nfc-tools)
   - [Notification & Gesture Tools](#notification--gesture-tools)
   - [Storage Tools](#storage-tools)
-  - [System Utilities](#system-utilities)
   - [Translation & Language](#translation--language)
-  - [Misc Tools](#misc-tools)
 
 ### 📚 Support & Safety
-- [Resources and Support](#resources-and-support)
+- [Resources and Help](#resources-and-help)
 - [Legal & Safety](#legal--safety)
+- [Support us](#-support-the-project)
 
 </details>
 
@@ -1153,7 +1135,7 @@ VBMeta is a critical component of Android Verified Boot (AVB), a security featur
 <div align="center">
 <br><br>
 
-# Resources and Support
+# Resources and Help
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=blue&cacheSeconds=3600)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-android-root.org)
 [![Website](https://img.shields.io/badge/%20%20-Website-yellow?style=for-the-badge&logo=googlechrome&logoColor=white&label=&#8203;)](https://awesome-android-root.org)
@@ -1218,20 +1200,6 @@ Extended references & external reading: [resources.md](./docs/resources.md)
 - You can’t afford data loss & have no backup
 
 > 📢 Respect licenses, ToS, and local laws. Don’t use root to unlawfully bypass paid features.
-
----
-
-### Other Projects
-If you liked this project please also checkout our other projects too:
-
-<p align="center">
-    <a href="https://github.com/fynks/debrid-services-comparison">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=fynks&repo=debrid-services-comparison&theme=radical&hide_border=true" />
-    </a>
-        <a href="https://github.com/fynks/email-aliasing-comparison">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=fynks&repo=email-aliasing-comparison&theme=radical&hide_border=true" />
-    </a>
-</p>
 
 ---
 
