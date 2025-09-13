@@ -48,7 +48,7 @@ export default withPwa(defineConfig({
           options: {
             cacheName: 'pages-runtime',
             networkTimeoutSeconds: 3,
-            expiration: { maxEntries: 50, maxAgeSeconds: 60 * 60 * 24 },
+            expiration: { maxEntries: 50, maxAgeSeconds: 60 * 60 * 6, purgeOnQuotaError: true },
             cacheableResponse: { statuses: [0, 200] },
             plugins: [{ handlerDidError: async () => caches.match('/offline.html') || Response.error() }]
           }
@@ -58,7 +58,7 @@ export default withPwa(defineConfig({
           handler: 'StaleWhileRevalidate',
           options: {
             cacheName: 'assets-runtime',
-            expiration: { maxEntries: 100, maxAgeSeconds: 60 * 60 * 24, purgeOnQuotaError: true },
+            expiration: { maxEntries: 100, maxAgeSeconds: 60 * 60 * 6, purgeOnQuotaError: true },
             cacheableResponse: { statuses: [0, 200] }
           }
         },
@@ -85,7 +85,7 @@ export default withPwa(defineConfig({
           handler: 'StaleWhileRevalidate',
           options: {
             cacheName: 'external-runtime',
-            expiration: { maxEntries: 100, maxAgeSeconds: 60 * 60 * 24, purgeOnQuotaError: true },
+            expiration: { maxEntries: 100, maxAgeSeconds: 60 * 60 * 6, purgeOnQuotaError: true },
             cacheableResponse: { statuses: [0, 200] }
           }
         },
@@ -94,7 +94,7 @@ export default withPwa(defineConfig({
           handler: 'CacheFirst',
           options: {
             cacheName: 'github-assets',
-            expiration: { maxEntries: 50, maxAgeSeconds: 60 * 60 * 24 * 7 },
+            expiration: { maxEntries: 50, maxAgeSeconds: 60 * 60 * 24 * 6 },
             cacheableResponse: { statuses: [0, 200] }
           }
         }
