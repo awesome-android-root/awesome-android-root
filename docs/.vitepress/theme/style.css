@@ -374,3 +374,45 @@ img {
   top: 0;
   z-index: 9999;
 }
+
+/* Back To Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 1.25rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--vp-c-brand-3);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--vp-c-brand-2);
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+  z-index: 9998;
+  backdrop-filter: blur(4px);
+}
+
+.back-to-top:hover {
+  background: var(--vp-c-brand-2);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transform: translateY(-2px);
+}
+
+.back-to-top:active { transform: translateY(0); }
+
+.back-to-top:focus-visible {
+  outline: 3px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .back-to-top { bottom: 1.25rem; right: 1rem; width: 40px; height: 40px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top { transition: none; }
+}

@@ -3,14 +3,15 @@ import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import PwaReload from './PwaReload.vue'
+import BackToTop from './BackToTop.vue'
 
 /** @type {import('vitepress').Theme} */
 export default {
   extends: DefaultTheme,
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
-      'layout-bottom': () => h(PwaReload)
+      // Provide both PWA reload + BackToTop in bottom layout slot
+      'layout-bottom': () => [h(PwaReload), h(BackToTop)]
     })
   },
   enhanceApp({ app, router, siteData }) {
