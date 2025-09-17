@@ -73,7 +73,6 @@ Master your Android experience with our comprehensive collection of expert guide
 ## App Management & Optimization
 
 ### Data & App Management
-- **[App Backup & Restore Using Root](./app-backup-restore-using-root.md)** - Learn how to fully back up and restore apps, including their data, settings, and permissions, using App Manager.
 - **[Stop Android App Auto Updates from Play Store](./stop-android-app-auto-updates-play-store.md)** - Take control of your device by disabling automatic app updates using the Zygisk Detach module.
 
 ### Coming Soon
