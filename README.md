@@ -861,6 +861,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[TCP Optimiser Module](https://github.com/fatalcoder524/TCP_Optimiser_Module)** - Change tcp congestion algorithm based on current active internet type and some network enhancements. `FOSS` `[M]` `[K]`
 - **[TTLChanger](https://github.com/aleksey-saenko/TTLChanger)** - Allows you to modify the default TTL (Time to Live) value. `FOSS` | [🌱 F-Droid](https://f-droid.org/en/packages/com.mrsep.ttlchanger/)
 - **[ZeroTier for Magisk](https://github.com/eventlOwOp/zerotier-magisk)** - Run zerotier in the background after booting with no conflicts with other Android VPN services.Use Android App to control ZeroTier. `FOSS` `[M]`
+- **[ZDT&D Magisk Module](https://github.com/GAME-OVER-op/ZDT-D)** - Bpass DPI (Deep Packet Inspection) on the internet. It helps bypass service blocks and throttling for platforms like Discord, YouTube, and others. `FOSS` `[M]`
 
 > Also visit our *[Ads and Tracker Blocking section](#ads-and-tracking-blockers)*
 
