@@ -854,6 +854,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[Hosts Manager Lite](https://play.google.com/store/apps/details?id=awais.hostsmanager.lite)** - Advanced /etc/hosts editor. `Proprietary`
 - **[MacDroid](https://github.com/X-croot/MacDroid)** - A minimal, fast, and colorful CLI to manage and persist custom MAC addresses on Android via Magisk. `FOSS` `[M]`
 - **[Magisk LAN Auto Switch](https://github.com/NewFuture/magisk-modules/tree/main/magisk-lan-auto-switch)** - Automatically switch LAN and WiFi based on eth0 connection status. `FOSS` `[M]`
+- **[Network Switch](https://github.com/aunchagaonkar/NetworkSwitch#installation)** - Modern Android app for 4G/5G network mode switching. `FOSS` | [🌱 F-Droid](https://apt.izzysoft.de/packages/com.supernova.networkswitch)
 - **[Network Utilities](https://play.google.com/store/apps/details?id=com.myprog.netutils)** - Application contains a set of tools for networks diagnostics. `Proprietary`
 - **[PCAPdroid](https://github.com/emanuele-f/PCAPdroid#pcapdroid)** - Lets you track, analyze and block the connections made by the other apps in your device. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.emanuelef.remote_capture) | [▶️ Play Store](https://play.google.com/store/apps/details?id=com.emanuelef.remote_capture)
 - **[SimbaDroid](https://github.com/buttercookie42/SimbaDroid)** - A simple SMB file server for Android. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/de.buttercookie.simbadroid)
