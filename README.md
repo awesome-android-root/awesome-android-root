@@ -207,9 +207,8 @@ Follow this path:
 
 #### Step 4: **Post-Root Setup**  
 1. → Install [essential apps and modules](./docs/android-root-apps/index.md#featured-apps-the-essentials)
-2. → Configure backups: [Backup & Restore](./docs/guides/app-backup-restore-using-root.md)
-3. → Block Ads and trackers: [Ad Blocking](./docs/guides/android-adblocking.md)
-4. → Debloat your phone: [Debloating](./docs/guides/android-apps-debloating.md)
+2. → Block Ads and trackers: [Ad Blocking](./docs/guides/android-adblocking.md)
+3. → Debloat your phone: [Debloating](./docs/guides/android-apps-debloating.md)
 
 > 📢 **Note for Android 14/15:** Play Integrity is stricter. Root hiding may break apps. Stay updated.
 
