@@ -377,6 +377,7 @@ Follow this path:
 - **[⭐ Disable Target API Block](https://github.com/buttercookie42/DisableTargetAPIBlock)** - Disable Android 14's installation block for old apps. `FOSS` `[LSP]`
 - **[InstallerX-Revived](https://github.com/wxxsfxyzm/InstallerX-Revived)** - A modern and functional Android app installer. `FOSS` `[LSP]`
 - **[Let Me Downgrade](https://github.com/DavidBerdik/Let-Me-Downgrade)** - Add support for downgrading apps on Android 12 through 15 QPR1. `FOSS` `[LSP]` | [🌱 F-Droid](https://play.google.com/store/apps/details?id=com.berdik.letmedowngrade) | [▶️ Play Store](https://play.google.com/store/apps/details?id=com.berdik.letmedowngrade)
+- **[Play Store Self Update Blocker](https://github.com/himanshujjp/PlayStoreSelfUpdateBlocker)** - Prevents the Google Play Store from auto-updating itself. Useful for users trying to maintain valid device attestation under the newer Play Integrity API rules. `FOSS` `[M]` `[K]`
 
 ### App Signature Verification Mods
 - **[⭐ CorePatch](https://github.com/LSPosed/CorePatch)** - Disable signature verification For Android. `FOSS` `[LSP]`
