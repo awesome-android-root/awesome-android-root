@@ -174,7 +174,7 @@ Think of it like gaining **Administrator rights** on Windows or **sudo access** 
 # Rooting Guides
 
 [![Master-rooting-guide](https://img.shields.io/badge/Master--Rooting-Guide-blue?style=for-the-badge&cacheSeconds=3600)](./docs/android-root-guides/index.md)
-[![device-specific-guides](https://img.shields.io/badge/Device--Specific-Guides-lightgreen?style=for-the-badge&cacheSeconds=3600)](./docs/android-root-guides/index.md#device-specific-guides)
+[![device-specific-guides](https://img.shields.io/badge/Device--Specific-Guides-lightgreen?style=for-the-badge&cacheSeconds=3600)](#device-specific-guides)
 [![how-to-guides](https://img.shields.io/badge/How--To-Guides-orange?style=for-the-badge&cacheSeconds=3600)](./docs/guides/index.md)
 
 > ⚡ Follow all steps from [fynks.github.io/check-list](https://fynks.github.io/check-list/), ensure you’re fully prepared.
@@ -183,19 +183,19 @@ Think of it like gaining **Administrator rights** on Windows or **sudo access** 
 
 <div class="readme-guides-steps">
 
-### The 4-Step Rooting Process
+## The 4-Step Rooting Process
 
 Follow this path:
 
-#### Step 1: Unlock Bootloader
+### Step 1: Unlock Bootloader
    → **[Bootloader Unlock Guide](docs/android-root-guides/how-to-unlock-bootloader.md)**  
    *(Required for most root methods)*
 
-#### Step 2: Install Custom Recovery
+### Step 2: Install Custom Recovery
    → **[TWRP / OrangeFox Guide](docs/android-root-guides/how-to-install-custom-recovery.md)**  
    *(Needed to flash root and mods)*
 
-#### Step 3: Choose & Install Root Method  
+### Step 3: Choose & Install Root Method  
 
 | Method | Best for | Guide |
 | :--- | :--- | :--- |
@@ -205,7 +205,7 @@ Follow this path:
 
 > 💡 You can check out the complete comparison here: **[Root Solutions Comparison](./docs/android-root-guides/index.md#root-solutions-comparison)**
 
-#### Step 4: **Post-Root Setup**  
+### Step 4: **Post-Root Setup**  
 1. → Install [essential apps and modules](./docs/android-root-apps/index.md#featured-apps-the-essentials)
 2. → Block Ads and trackers: [Ad Blocking](./docs/guides/android-adblocking.md)
 3. → Debloat your phone: [Debloating](./docs/guides/android-apps-debloating.md)
@@ -214,7 +214,7 @@ Follow this path:
 
 ---
 
-### Device-Specific Guides
+## Device-Specific Guides
 
 - [Google Pixel Root Guide](docs/android-root-guides/how-to-root-pixel-phone.md)
 - [Samsung Root Guide](docs/android-root-guides/how-to-root-samsung-phone.md)
@@ -225,11 +225,11 @@ Follow this path:
 
 ---
 
-### Additional Guides
+## Additional Guides
 
 - [LSPosed Framework Guide](docs/android-root-guides/lsposed-guide.md)
 - [Custom ROMs Guide](docs/android-root-guides/custom-rom-installation.md)
-- **[All Rooting Tutorials](docs/android-root-guides/index.md)**
+- **[📚 All Rooting Tutorials →](docs/android-root-guides/index.md)**
 
 ---
 
