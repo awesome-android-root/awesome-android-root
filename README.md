@@ -22,7 +22,7 @@
 
 <div align="center" class="quick-nav">
 
-🚀 Quick Links: [Introduction](#introduction) | [Rooting Guides](#rooting-guides) | [Apps & Modules](#root-apps-and-modules) | [Support](#resources-and-support)
+🚀 Quick Links: [Introduction](#introduction) | [Rooting Guides](#rooting-guides) | [Apps & Modules](#root-apps-and-modules) | [Support](#resources-and-help)
 
 </div>
 
