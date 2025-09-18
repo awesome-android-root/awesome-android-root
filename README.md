@@ -984,8 +984,7 @@ Zygisk is a feature that allows modules to inject code directly into the Zygote 
   Standalone and open-source Zygisk implementation, offering Zygisk API support for KernelSU and as a drop-in replacement for Magisk's Zygisk. `FOSS` `[M]` `[K]`
 
 
-#### Comparison of Zygisk Implementations
-<details><summary><strong>👉 Tap to expand</strong></summary>
+<details><summary><strong>Comparison:</strong></summary>
 
 
 #### Main Feature Comparison
