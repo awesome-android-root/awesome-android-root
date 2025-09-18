@@ -20,9 +20,9 @@
 
 </div>
 
-<div align="center" class="quick-nav">
+<div align="center" class="quick-nav" style="word-spacing: 0.2em;">
 
-🚀 Quick Links: [Introduction](#introduction) | [Rooting Guides](#rooting-guides) | [Apps & Modules](#root-apps-and-modules) | [Support](#resources-and-help)
+> [Introduction](#introduction) · [Rooting Guides](#rooting-guides) · [Apps & Modules](#root-apps-and-modules) · [Support](#resources-and-help)
 
 </div>
 
