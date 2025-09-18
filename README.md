@@ -709,6 +709,8 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[LSPosed Fork(JingMatrix)](https://github.com/JingMatrix/LSPosed)** - **FORK** of original LSPosed with Android 15 & 16 support along with other improvements.
 - **[ReLSPosed](https://github.com/ThePedroo/ReLSPosed)** - Fork of JingMatrix's Fork of LSPosed framework.
 
+
+
 [↑ Back to top](#table-of-contents)
 
 ---
@@ -981,6 +983,63 @@ Zygisk is a feature that allows modules to inject code directly into the Zygote 
   Standalone and open-source Zygisk implementation, offering Zygisk API support for KernelSU and as a drop-in replacement for Magisk's Zygisk. `FOSS` `[M]` `[K]`
 - **[⭐ Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)**  
   Advanced standalone Zygisk implementation, supporting KernelSU and replacing Magisk's built-in Zygisk. `Proprietary` `[M]` `[K]`
+
+#### Comparison of Zygisk Implementations
+<details><summary><strong>👉 Tap to expand</strong></summary>
+
+
+#### Main Feature Comparison
+
+| Feature | **Magisk Built-in Zygisk** | **NeoZygisk** | **Zygisk Next** | **ReZygisk** |
+|---------|---------------------------|---------------|-----------------|--------------|
+| **License** | Open Source (GPL-3.0) | Open Source (FOSS) | Closed Source (Proprietary) | Open Source (FOSS) |
+| **Root Support** | Magisk only | Magisk, KernelSU, APatch | Magisk, KernelSU, APatch | Magisk, KernelSU, APatch |
+| **Implementation** | Built into Magisk core, PLT hooks | Ptrace injection | Standalone module | Standalone module |
+| **Performance** | Baseline | Minimal overhead | Enhanced, stable | ~20% faster than built-in |
+| **Root Detection Evasion** | Basic hiding | Advanced stealth with trace cleaning | Superior hiding (#1 ranked) | Good stealth capabilities |
+| **Module API** | Full Zygisk API | Full Zygisk API compatibility | Full API + extra features | Good compatibility, some limitations |
+| **Architecture** | arm64, arm32, x64, x86 | arm64, x86_64, armeabi-v7a | arm64, x86_64, armeabi-v7a | arm64, x86_64, armeabi-v7a |
+| **Updates** | Tied to Magisk releases | Active development | Regular updates | Most frequent updates |
+| **Community** | Official Magisk support | Growing community | Established but proprietary | Strong open-source community |
+| **Special Features** | Native Magisk integration | Trace cleaning, minimalistic | ZN Module system, advanced injection | KernelSU/APatch optimization |
+
+### Detailed Characteristics
+
+#### 🔷 **Magisk Built-in Zygisk**
+- Developed by Magisk's lead developer, deeply integrated
+- PLT hooks in essential system libraries
+- Stable and well-documented with guaranteed backward API compatibility
+- Updates follow Magisk's release schedule
+
+#### 🔶 **NeoZygisk**
+- Ptrace injection for minimal overhead and enhanced stealth
+- Advanced DenyList with granular mount namespace control
+- Lightweight and efficient design
+- Active development with growing community support
+
+#### 🔴 **Zygisk Next**
+- Initially created for KernelSU, now multi-root support
+- Proprietary closed-source with advanced root detection evasion
+- Supports system process modification and ZN module support
+- Ranked highest in stealth and module feature completeness
+- Requires disabling Magisk's built-in Zygisk
+
+#### 🟢 **ReZygisk**
+- Open-source fork of Zygisk Next
+- Rewritten in C for ~20% performance improvement
+- Deep integration with KernelSU and APatch
+- Most frequent updates with strong community
+
+### Strengths & Trade-offs
+
+| Implementation | **Strengths** | **Trade-offs** |
+|---------------|--------------|---------------|
+| **Magisk Built-in** | ✅ Official support<br>✅ Stable<br>✅ Well-documented | ❌ Limited to Magisk<br>❌ Baseline root hiding |
+| **NeoZygisk** | ✅ High stealth<br>✅ Multi-root compatibility<br>✅ Lightweight | ❌ Smaller community<br>❌ Some module compatibility issues |
+| **Zygisk Next** | ✅ Best detection evasion<br>✅ Advanced features<br>✅ Complete module support | ❌ Closed source<br>❌ Trust concerns |
+| **ReZygisk** | ✅ Open-source<br>✅ High performance<br>✅ Transparent | ❌ Less mature<br>❌ Some feature limitations |
+
+</details><br>
 
 ::: tip **💡 Tip:**  
 Use these modules if you need Zygisk features on alternative root frameworks (KernelSU, APatch), or want more control over Zygisk behavior than Magisk's
