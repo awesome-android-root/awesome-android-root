@@ -179,7 +179,7 @@ Think of it like gaining **Administrator rights** on Windows or **sudo access** 
 
 > ⚡ Follow all steps from [fynks.github.io/check-list](https://fynks.github.io/check-list/), ensure you’re fully prepared.
 
-</div>
+</div><br>
 
 <div class="readme-guides-steps">
 
@@ -248,7 +248,7 @@ Follow this path:
 ![KernelSU Modules](https://img.shields.io/badge/KernelSU%20Modules-32-green?style=for-the-badge&logo=keenetic&logoColor=white&cacheSeconds=3600)
 ![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-112-purple?style=for-the-badge&logo=local&logoColor=white&cacheSeconds=3600)
 
-</div>
+</div><br>
 
 ::: warning **New to Rooting?**
 > 💡 Start with our [Complete Rooting Guide](../android-root-guides/) before exploring apps below.
