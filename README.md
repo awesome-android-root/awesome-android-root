@@ -24,9 +24,8 @@
 
 [Introduction](#introduction) | [Rooting Guides](#rooting-guides) | [Apps & Modules](#root-apps-and-modules) | [Support](#resources-and-help)
 
-</div>
+</div><br>
 
----
 
 ### Table of Contents
 
@@ -106,7 +105,7 @@
 - [Root Management](#root-management)
   - [Root Managers](#root-managers)
   - [Zygisk Implementations](#zygisk-implementations)
-  - [Root Hiding & Integrity](#root-hiding-and-integrity)
+  - [Root Hiding & Integrity](#root-hiding-and-play-integrity)
   - [Root Detection Tools](#root-detection-tools)
   - [Bootloop Protection](#bootloop-protection)
 
@@ -212,7 +211,6 @@ Follow this path:
 
 > 📢 **Note for Android 14/15:** Play Integrity is stricter. Root hiding may break apps. Stay updated.
 
----
 
 ## Device-Specific Guides
 
@@ -223,7 +221,6 @@ Follow this path:
 - [Nothing Phone Root Guide](docs/android-root-guides/how-to-root-nothing-phone.md)
 - [Motorola Root Guide](docs/android-root-guides/how-to-root-motorola-phone.md)
 
----
 
 ## Additional Guides
 
