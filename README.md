@@ -16,7 +16,7 @@
 [![Total Entries](https://img.shields.io/badge/Apps%20%26%20Modules-400+-blue?style=for-the-badge&logo=android&cacheSeconds=3600)](#root-apps-and-modules)
 [![X (formerly Twitter) Follow](https://img.shields.io/badge/%20%20-Follow%20US-blue?logo=X&logoColor=white&style=for-the-badge&label=&#8203;)](https://x.com/awsm_and_root)
 <br>
-[![Website](https://img.shields.io/badge/Website-awesome--android--root.org-orange?style=for-the-badge&logo=googlechrome)](https://awesome-android-root.org)
+[![Website](https://img.shields.io/badge/Website-awesome--android--root.org-orange?style=for-the-badge&logo=googlechrome&logoColor=white)](https://awesome-android-root.org)
 
 </div>
 
