@@ -1198,7 +1198,7 @@ VBMeta is a critical component of Android Verified Boot (AVB), a security featur
 ---
 
 <div align="center">
-<br><br>
+<br>
 
 # Resources and Help
 
