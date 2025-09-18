@@ -20,13 +20,12 @@
 
 </div>
 
-<div align="center" class="quick-nav" style="word-spacing: 0.2em;">
+<div align="center" class="quick-nav" style="word-spacing: 0.25em;">
 
 > [Introduction](#introduction) · [Rooting Guides](#rooting-guides) · [Apps & Modules](#root-apps-and-modules) · [Support](#resources-and-help)
 
 </div>
 
----
 
 ### Table of Contents
 
