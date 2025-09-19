@@ -371,16 +371,13 @@ Samsung OTA via Settings usually fails on rooted devices. Best practice: flash u
 
 ## Additional Resources
 ### Community Resources
-- **[Samsung XDA Forums](https://forum.xda-developers.com/c/samsung.12063/)** – Device-specific development
+- **[Samsung XDA Forums](https://xdaforums.com/c/samsung.11975/)** – Device-specific development
 - **[One UI Mods Community](https://t.me/oneuimods)** – Samsung customization
 - **[r/GalaxyS24](https://reddit.com/r/GalaxyS24)** – Latest device discussions
 - **[Samsung Firmware Database](https://samfrew.com/)** – Firmware downloads
 
 ### **Essential Samsung Resources:**
 
-- **[Samsung XDA Forums](https://forum.xda-developers.com/c/samsung.12063/)** – Device-specific development
-- **[Samsung Members](https://www.samsung.com/us/support/mobile-devices/)** – Official support
-- **[One UI Mods Community](https://t.me/oneuimods)** – Samsung customization
 - **[Samsung Smart Switch](https://www.samsung.com/us/support/owners/app/smart-switch)** – Backup tool
 - **[SamFrew](https://samfrew.com/)** – Firmware downloads
 - **[ODIN Download](https://odindownload.com/)** – Latest Odin (v3.14.4)
