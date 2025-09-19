@@ -309,7 +309,7 @@ adb shell getprop ro.build.ab_update
 ## Community Resources
 
 ### Getting Help
-- **[XDA Motorola Forums](https://forum.xda-developers.com/c/motorola.54/)** - Device-specific communities
+- **[XDA Motorola Forums](https://xdaforums.com/c/motorola.11990/)** - Device-specific communities
 - **Telegram Groups** - Search "Motorola [model] development"
 - **Reddit** - r/MotorolaMods, r/AndroidRoot
 - **Official Support** - Limited to bootloader unlock only
