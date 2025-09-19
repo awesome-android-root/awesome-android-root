@@ -373,7 +373,7 @@ Samsung OTA via Settings usually fails on rooted devices. Best practice: flash u
 ### Community Resources
 - **[Samsung XDA Forums](https://xdaforums.com/c/samsung.11975/)** – Device-specific development
 - **[One UI Mods Community](https://t.me/oneuimods)** – Samsung customization
-- **[r/GalaxyS24](https://reddit.com/r/GalaxyS24)** – Latest device discussions
+- **[r/Samsung](https://www.reddit.com/r/samsung/)** – Latest device discussions
 - **[Samsung Firmware Database](https://samfrew.com/)** – Firmware downloads
 
 ### **Essential Samsung Resources:**
@@ -386,7 +386,6 @@ Samsung OTA via Settings usually fails on rooted devices. Best practice: flash u
 ### **Recovery & Backup:**
 - **[TWRP](https://twrp.me/)**
 - **[OrangeFox](https://orangefox.download/)**
-- **[Neo Backup](https://github.com/NeoApplications/Neo-Backup)**
 
 ---
 
