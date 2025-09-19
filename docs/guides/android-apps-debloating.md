@@ -356,5 +356,4 @@ With proper care and the right tools, you can significantly improve your Android
 ## Related Guides
 
 - [How to Enable ADB Debugging](../android-root-guides/how-to-unlock-bootloader.md)
-- [App Backup & Restore Using App Manager](./app-backup-restore-using-root.md)
 - [How to Root Android Devices](../android-root-guides/index.md)

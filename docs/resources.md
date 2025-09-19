@@ -179,7 +179,6 @@ head:
 | **Master Rooting Guide** | Complete rooting workflow | [Index](./android-root-guides/index.md) |
 | **Device-Specific Guides** | Brand-specific procedures | [Device Guides](./android-root-guides/index.md#device-specific-guides) |
 | **Method Comparisons** | Choose the right root method | [Comparison](./android-root-guides/index.md#root-solutions-comparison) |
-| **Safety & Backup** | Data protection strategies | [Backup Guide](./guides/app-backup-restore-using-root.md) |
 | **Debloating** | Remove unwanted apps safely | [Debloat Guide](./guides/android-apps-debloating.md) |
 | **Ad Blocking** | System-wide ad removal | [AdBlock Guide](./guides/android-adblocking.md) |
 
