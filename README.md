@@ -366,7 +366,7 @@ Follow this path:
 - **[InstallerX-Revived](https://github.com/wxxsfxyzm/InstallerX-Revived)** - A modern and functional Android app installer. `FOSS` `[LSP]`
 - **[Let Me Downgrade](https://github.com/DavidBerdik/Let-Me-Downgrade)** - Add support for downgrading apps on Android 12 through 15 QPR1. `FOSS` `[LSP]` | [🌱 F-Droid](https://play.google.com/store/apps/details?id=com.berdik.letmedowngrade) | [▶️ Play Store](https://play.google.com/store/apps/details?id=com.berdik.letmedowngrade)
 - **[Play Store Self Update Blocker](https://github.com/himanshujjp/PlayStoreSelfUpdateBlocker)** - Prevents the Google Play Store from auto-updating itself. Useful for users trying to maintain valid device attestation under the newer Play Integrity API rules. `FOSS` `[M]` `[K]`
-
+c
 ### App Stores
 - **[⭐ Droid-ify](https://github.com/Droid-ify/client)** - F-Droid client with Material UI and auto updating apps using root. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.looker.droidify)
 - **[Aurora Store](https://github.com/whyorean/AuroraStore)** - A Google Play Store client to search, view app details, and download APKs directly to your device. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.aurora.store/)
@@ -745,9 +745,6 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 #### Reddit Mods
 - **[Reddidn’t](https://modules.lsposed.org/module/com.wizpizz.reddidnt/)** - Dynamically finds methods within the Reddit app responsible for displaying ads and blocks them. [Warning](https://github.com/awesome-android-root/awesome-android-root/issues/71#issue-3327852351) `Proprietary` `[LSP]`
-
-#### TikTok Mods
-- **[TikTok Tracker Blocks Magisk Module](https://github.com/Scott-Nx/TikTok-Tracker-Blocks_Magisk)** - A simple Magisk module to block TikTok tracking domains on Android devices. `FOSS` `[M]`
 
 #### Telegram Mods
 - **[Re-Telegram](https://github.com/Sakion-Team/Re-Telegram/)** - Adds features like AntiAntiForward, AntiRecall, NoSponsoredMessages, ProhibitChannelSwitching and many more to various Telegram clients. `FOSS` `[LSP]`
