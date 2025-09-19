@@ -500,8 +500,8 @@ fastboot reboot
 **Best for:** Advanced users, custom ROM users
 
 #### **KernelSU-Compatible Kernels**
-- **[Sultan Kernel](https://github.com/kerneltoast/android_kernel_oneplus_sm8350)** - OnePlus devices
-- **[ArrowOS Kernel](https://github.com/ArrowOS-Devices)** - Various devices
+- **[Sultan Kernel](https://github.com/WildKernels/OnePlus_KernelSU_SUSFS)** - OnePlus devices
+
 
 #### **KernelSU Next-Compatible Kernels**
 - **Custom kernels** with KernelSU Next integration
