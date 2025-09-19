@@ -231,7 +231,6 @@ head:
 | **Pixel Experience** | AOSP | Pixel features | [pixelexperience.org](https://pixelexperience.org/) |
 | **crDroid** | LineageOS | Customization | [crdroid.net](https://crdroid.net/) |
 | **Evolution X** | AOSP | Features + stability | [evolution-x.org](https://evolution-x.org/) |
-| **ArrowOS** | AOSP | Minimal, clean | [arrowos.net](https://arrowos.net/) |
 | **Paranoid Android** | AOSP | Unique features | [paranoidandroid.co](https://paranoidandroid.co/) |
 | **GrapheneOS** | AOSP | Security-focused | [grapheneos.org](https://grapheneos.org/) |
 | **CalyxOS** | AOSP | Privacy-focused | [calyxos.org](https://calyxos.org/) |
