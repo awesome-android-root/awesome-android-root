@@ -137,7 +137,7 @@ head:
 | **Odin** | Samsung firmware | Windows | Common distribution |
 | **Mi Flash Tool** | Xiaomi devices | Windows | [xiaomiflashtool.com](https://xiaomiflashtool.com/) |
 | **SP Flash Tool** | MediaTek chips | Windows/Linux | [spflashtool.com](https://spflashtool.com/) |
-| **Fastboot Enhanced** | GUI for fastboot | Windows | [GitHub](https://github.com/K3V1991/Fastboot-Enhanced) |
+
 
 ### Firmware Sources (2025)
 
