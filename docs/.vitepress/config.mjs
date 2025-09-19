@@ -451,8 +451,7 @@ export default withPwa(defineConfig({
           items: [
             { text: 'App Management & Optimization', link: '/guides/#app-management--optimization' },
             { text: 'App Debloating Guide', link: '/guides/android-apps-debloating' },
-            { text: 'Stop App Auto Updates', link: '/guides/stop-android-app-auto-updates-play-store' },
-            { text: 'App Backup & Restore', link: '/guides/app-backup-restore-using-root' }
+            { text: 'Stop App Auto Updates', link: '/guides/stop-android-app-auto-updates-play-store' }
           ]
         },
         {
@@ -533,8 +532,7 @@ export default withPwa(defineConfig({
             { text: 'All Android Guides', link: '/guides/' },
             { text: 'Android Ad Blocking', link: '/guides/android-adblocking' },
             { text: 'App Debloating', link: '/guides/android-apps-debloating' },
-            { text: 'Stop Auto Updates', link: '/guides/stop-android-app-auto-updates-play-store' },
-            { text: 'App Backup & Restore', link: '/guides/app-backup-restore-using-root' }
+            { text: 'Stop Auto Updates', link: '/guides/stop-android-app-auto-updates-play-store' }
           ]
         },
         {

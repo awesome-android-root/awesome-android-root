@@ -663,7 +663,7 @@ More: [Resources](./resources.md) | [About This Project](./about.md)
 - **[Performance](./android-root-apps/index.md#performance-and-gaming)** • **[Privacy & Security](./android-root-apps/index.md#privacy-and-security)** • **[Backup Tools](./android-root-apps/index.md#backup-and-restore)**
 
 ### 📖 General Android Guides
-**[Android Ad Blocking](./guides/android-adblocking.md)** • **[App Debloating](./guides/android-apps-debloating.md)** • **[App Backup & Restore](./guides/app-backup-restore-using-root.md)** • **[Stop Auto-Updates](./guides/stop-android-app-auto-updates-play-store.md)**
+**[Android Ad Blocking](./guides/android-adblocking.md)** • **[App Debloating](./guides/android-apps-debloating.md)** • **[Stop Auto-Updates](./guides/stop-android-app-auto-updates-play-store.md)**
 
 ---
 

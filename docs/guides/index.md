@@ -194,8 +194,7 @@ To maintain quality and consistency, please adhere to the following when contrib
 **New to Android Root?** Start with these foundational guides:
 1. **[Complete Android Rooting Guide](../android-root-guides/)** - Master the fundamentals of rooting.
 2. **[Android Ad Blocking](./android-adblocking.md)** - Enhance your privacy from the start.
-3. **[App Backup & Restore](./app-backup-restore-using-root.md)** - Secure your data and settings.
-4. **[Remove Bloatware](./android-apps-debloating.md)** - Clean up your device and improve performance.
+3. **[Remove Bloatware](./android-apps-debloating.md)** - Clean up your device and improve performance.
 
 **Advanced Users:** Explore our **[300+ Root Apps Collection](../android-root-apps/index.md)** for the ultimate customization toolkit. Additionally, find detailed, device-specific rooting guides for **[Pixel](../android-root-guides/how-to-root-pixel-phone.md)**, **[Samsung](../android-root-guides/how-to-root-samsung-phone.md)**, **[Xiaomi](../android-root-guides/how-to-root-xiaomi-phone.md)**, and other major brands.
 
