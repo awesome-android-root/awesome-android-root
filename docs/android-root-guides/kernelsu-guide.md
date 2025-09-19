@@ -500,7 +500,6 @@ fastboot reboot
 **Best for:** Advanced users, custom ROM users
 
 #### **KernelSU-Compatible Kernels**
-- **[Proton Kernel](https://github.com/ProtonAOSP/android_kernel_google_gs101)** - Pixel devices
 - **[Sultan Kernel](https://github.com/kerneltoast/android_kernel_oneplus_sm8350)** - OnePlus devices
 - **[ArrowOS Kernel](https://github.com/ArrowOS-Devices)** - Various devices
 
