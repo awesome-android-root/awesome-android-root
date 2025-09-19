@@ -283,7 +283,7 @@ When removing OEM apps, consider these open-source alternatives:
 ### Communication
 - **SMS**: [QKSMS](https://github.com/moezbhatti/qksms)
 - **Email**: [FairEmail](https://email.faircode.eu/), [K-9 Mail](https://k9mail.app/)
-- **Browser**: [Firefox](https://www.mozilla.org/en-US/firefox/mobile/), [Brave](https://brave.com/mobile/)
+- **Browser**: [Firefox](https://www.mozilla.org/en-US/firefox/mobile/), [Brave](https://play.google.com/store/apps/details?id=com.brave.browser)
 
 ### Productivity
 - **Notes**: [Standard Notes](https://standardnotes.com/), [Joplin](https://joplinapp.org/)
