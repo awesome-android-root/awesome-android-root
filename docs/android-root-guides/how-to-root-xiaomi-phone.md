@@ -136,7 +136,7 @@ Xiaomi is among the strictest OEMs for unlocking/root.
 Note on waiting time: Xiaomi’s timer is variable now. Users report 72h, 168h (7 days), and up to 360–720h on some regions/devices. The exact value is server-assigned.
 
 ### Required Tools
-1. Mi Unlock Tool (Windows-only): https://en.miui.com/unlock/ (mirror: https://unlock.update.miui.com)
+1. Mi Unlock Tool (Windows-only): https://www.miui.com/unlock/index_en.html
 2. Platform Tools (ADB/Fastboot): https://developer.android.com/studio/releases/platform-tools
 3. Magisk APK (latest stable): https://github.com/topjohnwu/Magisk/releases
 4. Stock Firmware for your exact model/build:
