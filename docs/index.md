@@ -2,7 +2,7 @@
 layout: home
 title: Awesome Android Root
 titleTemplate: Ultimate Android Rooting Hub 2025
-description: "Discover 400+ hand-curated best root apps, Magisk & LSPosed (Xposed) modules of 2025 and step-by-step rooting guides"
+description: "Discover 400+ best android root apps, Magisk/KernelSU & LSPosed (Xposed) modules of 2025 and step-by-step rooting guides"
 head:
   - - meta
     - name: robots

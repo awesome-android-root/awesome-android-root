@@ -1,11 +1,9 @@
 import { defineConfig } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
 
-// NOTE: This file was refactored to correct structural issues and enhance navigation & sidebar UX.
 export default withPwa(defineConfig({
   lang: 'en-US',
   title: 'Awesome Android Root',
-  description: 'Ultimate Android rooting hub with 400+ curated root apps, Magisk modules, and step-by-step guides for Android customization and freedom.',
   ignoreDeadLinks: true,
   cleanUrls: true,
 
