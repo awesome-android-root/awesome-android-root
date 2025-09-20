@@ -7,11 +7,28 @@ head:
     - rel: canonical
       href: https://awesome-android-root.org/android-root-apps/
   - - link
+    - rel: alternate
+      hreflang: en
+      href: https://awesome-android-root.org/android-root-apps/
+  - - link
+    - rel: alternate
+      hreflang: x-default
+      href: https://awesome-android-root.org/android-root-apps/
+  - - link
     - rel: dns-prefetch
       href: https://api.github.com
   - - link
     - rel: dns-prefetch
       href: https://raw.githubusercontent.com
+  - - link
+    - rel: preconnect
+      href: https://img.shields.io
+      crossorigin: anonymous
+  - - link
+    - rel: sitemap
+      type: application/xml
+      title: Sitemap
+      href: https://awesome-android-root.org/sitemap.xml
   - - meta
     - property: og:type
       content: website
@@ -50,7 +67,7 @@ head:
       content: en_US
   - - meta
     - property: og:updated_time
-      content: '2025-08-09T00:00:00Z'
+      content: '2025-09-20T00:00:00Z'
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -60,6 +77,9 @@ head:
   - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
+  - - meta
+    - name: twitter:domain
+      content: awesome-android-root.org
   - - meta
     - name: twitter:title
       content: Best Android Root Apps and Modules 2025 | Awesome Android Root
@@ -76,6 +96,9 @@ head:
     - http-equiv: Content-Security-Policy
       content: upgrade-insecure-requests
   - - meta
+    - name: theme-color
+      content: '#0f172a'
+  - - meta
     - property: article:author
       content: https://github.com/fynks
   - - meta
@@ -86,7 +109,7 @@ head:
       content: '2025-08-11T00:00:00Z'
   - - meta
     - property: article:modified_time
-      content: '2025-08-09T00:00:00Z'
+      content: '2025-09-20T00:00:00Z'
   - - meta
     - property: article:section
       content: Android Root Apps
@@ -150,7 +173,7 @@ head:
         "description": "Ultimate collection of 400+ best Android root apps, Magisk modules, and LSPosed frameworks. Download top-rated root applications for Android customization, system optimization, and power user features.",
         "inLanguage": "en-US",
         "datePublished": "2025-08-11T00:00:00Z",
-        "dateModified": "2025-08-17T04:42:55Z",
+        "dateModified": "2025-09-20T00:00:00Z",
         "image": {
           "@type": "ImageObject",
           "url": "https://awesome-android-root.org/images/og.png",
@@ -172,18 +195,19 @@ head:
           "url": "https://awesome-android-root.org",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://awesome-android-root.org/images/logo.svg",
+            "url": "https://awesome-android-root.org/images/logo.png",
             "caption": "Awesome Android Root Logo"
           },
           "sameAs": [
-            "https://github.com/awesome-android-root/awesome-android-root"
+            "https://github.com/awesome-android-root/awesome-android-root",
+            "https://x.com/awsm_and_root"
           ]
         },
         "mainEntity": {
           "@type": "ItemList",
           "name": "Android Root Apps Collection",
           "description": "Curated collection of the best Android root applications, Magisk modules, LSPosed frameworks and system modification tools",
-          "numberOfItems": 220,
+          "numberOfItems": 414,
           "itemListElement": [
             {
               "@type": "SoftwareApplication",
