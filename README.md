@@ -1189,7 +1189,7 @@ VBMeta is a critical component of Android Verified Boot (AVB), a security featur
 - Unsure about a term? Open the [Glossary](#glossary)
 - Want tools? Jump to [Root Apps and Modules](#root-apps-and-modules)
 - Need a walkthrough? Browse the [Rooting Guides Index](./docs/android-root-guides/index.md)
-- Common questions? Check the (upcoming) FAQs: `docs/faqs.md`
+- Common questions? Check the FAQs: [faqs.md](./docs/faqs.md)
 
 ### Resource Hub
 Extended references & external reading: [resources.md](./docs/resources.md)
