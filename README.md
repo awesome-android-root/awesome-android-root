@@ -209,9 +209,8 @@ Follow this path:
 2. → Block Ads and trackers: [Ad Blocking](./docs/guides/android-adblocking.md)
 3. → Debloat your phone: [Debloating](./docs/guides/android-apps-debloating.md)
 
-> [!CAUTION] Android 14/15
-> Play Integrity is stricter. Root hiding may break apps. Stay updated.
-
+> [!CAUTION]
+> For Android 14/15: Play Integrity is stricter. Root hiding may break apps. Stay updated.
 
 ## Device-Specific Guides
 
