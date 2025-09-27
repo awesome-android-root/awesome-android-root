@@ -1,7 +1,7 @@
 {
   "name": "awesome-android-root",
   "version": "1.1.0",
-  "description": "A curated list of best Android root applications and best magisk modules. Features over 200+ apps across categories like system mods, privacy, customization, and development tools.",
+  "description": "A curated list of best Android root applications and best magisk modules. Features over 400+ apps across categories like system mods, privacy, customization, and development tools.",
   "private": true,
   "homepage": "https://awesome-android-root.org",
   "repository": {
@@ -15,17 +15,12 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "scripts/build-docs.sh && vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "docs:build:pwa": "cross-env NODE_ENV=production vitepress build docs",
-    "docs:analyze": "cross-env ANALYZE=true vitepress build docs",
-    "clean": "rimraf docs/.vitepress/dist docs/.vitepress/cache",
-    "clean:pwa": "rimraf docs/.vitepress/dist/sw.js docs/.vitepress/dist/workbox-*.js"
+    "docs:build:pwa": "cross-env NODE_ENV=production vitepress build docs"
   },
   "devDependencies": {
     "vitepress": "^1.6.4",
     "@vite-pwa/vitepress": "^1.0.0",
-    "terser": "^5.44.0",
-    "cross-env": "^10.0.0",
-    "rimraf": "^6.0.1"
+    "terser": "^5.44.0"
   },
   "optionalDependencies": {
     "workbox-window": "^7.3.0"
@@ -48,9 +43,5 @@
     "name": "awesome-android-root",
     "url": "https://github.com/awesome-android-root"
   },
-  "license": "MIT",
-  "engines": {
-    "node": ">=24.7.0",
-    "npm": ">=11.6.0"
-  }
+  "license": "MIT"
 }
