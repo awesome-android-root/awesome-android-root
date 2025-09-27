@@ -209,7 +209,8 @@ Follow this path:
 2. → Block Ads and trackers: [Ad Blocking](./docs/guides/android-adblocking.md)
 3. → Debloat your phone: [Debloating](./docs/guides/android-apps-debloating.md)
 
-> 📢 **Note for Android 14/15:** Play Integrity is stricter. Root hiding may break apps. Stay updated.
+> [!CAUTION] Android 14/15
+> Play Integrity is stricter. Root hiding may break apps. Stay updated.
 
 
 ## Device-Specific Guides
@@ -247,19 +248,17 @@ Follow this path:
 
 </div><br>
 
-::: warning **New to Rooting?**
+> [!TIP] New to Rooting?
 > 💡 Start with our [Complete Rooting Guide](../android-root-guides/) before exploring apps below.
-:::
 
-::: tip **📚 Recommendations**
+> [!TIP] Recommendations
 > For privacy-friendly and convenient installs, we **recommend using the F‑Droid** ecosystem — for example, install the Droid‑ify client **and enable the IzzyOnDroid repo**:
 > - Droid‑ify — https://github.com/Droid-ify/client/releases (modern F‑Droid client)
 > - IzzyOnDroid — https://apt.izzysoft.de/fdroid/ (additional F‑Droid repo with many packages)
-:::
 
-::: info **🔗 Default Links**
+
+> [!NOTE] Default Links
 > - Clicking on App/Module entry point to **Source Code page** (Github/Gitlab etc) *in case of `FOSS` apps* otherwise link points to **Google Play Store**.
-:::
 
 ---
 
