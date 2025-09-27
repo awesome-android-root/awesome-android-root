@@ -15,7 +15,7 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "scripts/build-docs.sh && vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "docs:build:pwa": "cross-env NODE_ENV=production vitepress build docs"
+    "docs:build:pwa": "vitepress build docs"
   },
   "devDependencies": {
     "vitepress": "^1.6.4",
