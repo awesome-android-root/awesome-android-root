@@ -210,7 +210,7 @@ Follow this path:
 3. → Debloat your phone: [Debloating](./docs/guides/android-apps-debloating.md)
 
 >[!CAUTION] 
-> **For Android 14/15:** Play Integrity is stricter. Root hiding may break apps. Stay updated.
+>**For Android 14/15:** Play Integrity is stricter. Root hiding may break apps. Stay updated.
 
 ## Device-Specific Guides
 
