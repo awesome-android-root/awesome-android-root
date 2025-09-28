@@ -60,7 +60,7 @@
   - [App Stores](#app-stores)
   - [App Isolation and Cloning](#app-isolation-and-cloning)
   - [App Permissions Management](#app-permissions-management)
-  
+
 #### ⚡ **Performance & System**
 - [Automation and Scheduling](#automation-and-scheduling)
 - [Battery and Power Management](#battery-and-power-management)
@@ -147,7 +147,7 @@ Think of it like gaining **Administrator rights** on Windows or **sudo access** 
 
 ### Why Root?
 
-- **Control** -Remove preinstalled bloat, disable telemetry |
+- **Control** - Remove preinstalled bloat, disable telemetry |
 - **Performance** - Tune CPU, GPU, battery, animations |
 - **Privacy** - Block trackers, restrict app permissions |
 - **Customization** - Change UI, fonts, boot animations, navigation |
@@ -359,12 +359,12 @@ Follow this path:
 
 #### Package Management Mods
 - **[⭐ Disable Target API Block](https://github.com/buttercookie42/DisableTargetAPIBlock)** - Disable Android 14's installation block for old apps. `FOSS` `[LSP]`
-- **[BanUninstall](https://github.com/TinyHai/BanUninstall/)** - A Xposed Module that prevents apps be uninstalled or apps' data be cleared. `FOSS` `[LSP]`
+- **[BanUninstall](https://github.com/TinyHai/BanUninstall/)** - A Xposed Module that prevents apps from being uninstalled or apps' data from being cleared. `FOSS` `[LSP]`
 - **[BetterKnownInstalled](https://github.com/Pixel-Props/BetterKnownInstalled)** - Patches packages to fix DroidGuard UNKNOWN_INSTALLED issues. `FOSS` `[LSP]`
 - **[InstallerX-Revived](https://github.com/wxxsfxyzm/InstallerX-Revived)** - A modern and functional Android app installer. `FOSS` `[LSP]`
 - **[Let Me Downgrade](https://github.com/DavidBerdik/Let-Me-Downgrade)** - Add support for downgrading apps on Android 12 through 15 QPR1. `FOSS` `[LSP]` | [🌱 F-Droid](https://play.google.com/store/apps/details?id=com.berdik.letmedowngrade) | [▶️ Play Store](https://play.google.com/store/apps/details?id=com.berdik.letmedowngrade)
 - **[Play Store Self Update Blocker](https://github.com/himanshujjp/PlayStoreSelfUpdateBlocker)** - Prevents the Google Play Store from auto-updating itself. Useful for users trying to maintain valid device attestation under the newer Play Integrity API rules. `FOSS` `[M]` `[K]`
-c
+
 ### App Stores
 - **[⭐ Droid-ify](https://github.com/Droid-ify/client)** - F-Droid client with Material UI and auto updating apps using root. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.looker.droidify)
 - **[Aurora Store](https://github.com/whyorean/AuroraStore)** - A Google Play Store client to search, view app details, and download APKs directly to your device. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.aurora.store/)
@@ -550,8 +550,8 @@ c
 
 #### HyperOS (Xiaomi)
 - **[⭐ HyperCeiler](https://github.com/ReChronoRain/HyperCeiler/blob/main/README_en-US.md)** - Extensive customizations for HyperOS. `FOSS` `[LSP]`
-- **[Better Miui Express](https://github.com/Robotxm/BetterMiuiExpress)** -Prevents MIUI/HyperOS's express widget from jumping to third-party applications such as Taobao and Cainiao, and use a customized interface to display express details. `FOSS` `[LSP]`
-- **[ClipboardList](https://github.com/HChenX/ClipboardList)** - Remove the 20-item limit and time limit for the Clipboard and Phrases feature.Only for MIUI and HyperOS. `FOSS` `[LSP]`
+- **[Better Miui Express](https://github.com/Robotxm/BetterMiuiExpress)** - Prevents MIUI/HyperOS's express widget from jumping to third-party applications such as Taobao and Cainiao, and uses a customized interface to display express details. `FOSS` `[LSP]`
+- **[ClipboardList](https://github.com/HChenX/ClipboardList)** - Remove the 20-item limit and time limit for the Clipboard and Phrases feature. Only for MIUI and HyperOS. `FOSS` `[LSP]`
 - **[ColorOS_Control_Center](https://github.com/Mods-Center/ColorOS_Control_Center)** - Replace HyperOS control panel with ColorOS-style quick settings, featuring customizable and squared tiles. `Proprietary`
 - **[GreenDotHide](https://github.com/Dorian399/GreenDotHide)** - Hides the green dot indicating sensitive permission use. Works only on MIUI/HyperOS. `FOSS` `[LSP]`
 - **[Hyper Monet Icon Theme](https://github.com/AcardiaX/HyperMonetIconTheme/blob/main/README_en.md)** - Enables Material You Monet style icons for HyperOS. `FOSS` `[M]`
@@ -601,11 +601,11 @@ c
 > 📚 **Related Guide**: [Android Apps Debloating Guide](../guides/android-apps-debloating.md)
 
 ### Cleaning Apps
-- **[⭐ SD Maid 2/SE](https://github.com/d4rken-org/sdmaid-se)** - A file management tool for Android that specialises in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS` | [🌱 F-Droid](https://f-droid.org/en/packages/eu.darken.sdmse/) | [▶️ Play Store](https://play.google.com/store/apps/details?id=eu.darken.sdmse)
+- **[⭐ SD Maid 2/SE](https://github.com/d4rken-org/sdmaid-se)** - A file management tool for Android that specializes in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS` | [🌱 F-Droid](https://f-droid.org/en/packages/eu.darken.sdmse/) | [▶️ Play Store](https://play.google.com/store/apps/details?id=eu.darken.sdmse)
 - **[AutoPurge Pro](https://github.com/S123123sd/SmartClear)** - Junk cleaning automation tool that provides deep cleaning and resource management capabilities for Android devices. `FOSS` `[M]` `[K]`
-- **[Basic Cleaner](https://github.com/WeirdMidas/BasicCleaner)** - A magisk/KSU module that applies a set of cleanups and fixups every 7-15-30 days. `FOSS` `[M]` [K]`
+- **[Basic Cleaner](https://github.com/WeirdMidas/BasicCleaner)** - A magisk/KSU module that applies a set of cleanups and fixups every 7-15-30 days. `FOSS` `[M]` `[K]`
 - **[Cache Cleaner Widget](https://gitlab.com/Zinaro/CacheCleanerWidget)** - A root-based widget with no UI that clears all app caches in one tap. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.zinaro.cachecleanerwidget/)
-- **[Cleaner Royall](https://github.com/araafroyall/Cleaner-Royall)** - A light weight but ultra-fast and powerful cleaner for Android. `Proprietary` `[LSP]`
+- **[Cleaner Royall](https://github.com/araafroyall/Cleaner-Royall)** - A lightweight but ultra-fast and powerful cleaner for Android. `Proprietary` `[LSP]`
 - **[ClearBox](https://github.com/FLYCOM-E/ClearBox)** - Can delete all software caches, installation packages, compressed packages, garbage, empty folders etc. `FOSS` `[M]` `[K]`
 - **[DirCleaner](https://www.dircleaner.com/)** - A simple and practical cleaning tool. `Proprietary`
 - **[Risk](https://github.com/rakarmp/Risk)** - Clean RAM Cache And Stop Background Apps, Google Apps, Third Party Apps. `FOSS` `[M]`
@@ -862,8 +862,8 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[SimbaDroid](https://github.com/buttercookie42/SimbaDroid)** - A simple SMB file server for Android. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/de.buttercookie.simbadroid)
 - **[TCP Optimiser Module](https://github.com/fatalcoder524/TCP_Optimiser_Module)** - Change tcp congestion algorithm based on current active internet type and some network enhancements. `FOSS` `[M]` `[K]`
 - **[TTLChanger](https://github.com/aleksey-saenko/TTLChanger)** - Allows you to modify the default TTL (Time to Live) value. `FOSS` | [🌱 F-Droid](https://f-droid.org/en/packages/com.mrsep.ttlchanger/)
-- **[ZeroTier for Magisk](https://github.com/eventlOwOp/zerotier-magisk)** - Run zerotier in the background after booting with no conflicts with other Android VPN services.Use Android App to control ZeroTier. `FOSS` `[M]`
-- **[ZDT&D Magisk Module](https://github.com/GAME-OVER-op/ZDT-D)** - Bpass DPI (Deep Packet Inspection) on the internet. It helps bypass service blocks and throttling for platforms like Discord, YouTube, and others. `FOSS` `[M]`
+- **[ZeroTier for Magisk](https://github.com/eventlOwOp/zerotier-magisk)** - Run zerotier in the background after booting with no conflicts with other Android VPN services. Use Android App to control ZeroTier. `FOSS` `[M]`
+- **[ZDT&D Magisk Module](https://github.com/GAME-OVER-op/ZDT-D)** - Bypass DPI (Deep Packet Inspection) on the internet. It helps bypass service blocks and throttling for platforms like Discord, YouTube, and others. `FOSS` `[M]`
 
 > Also visit our *[Ads and Tracker Blocking section](#ads-and-tracking-blockers)*
 
@@ -884,7 +884,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[Hydrostellaire](https://github.com/AestasBritannia/Hydro-Br-leur)** - A magisk module for devices running on Dimensity flagship platforms and OnePlus, Realme devices. `FOSS` `[M]`
 - **[MAGNETAR](https://github.com/Kyliekyler/MAGNETAR)** - Device Performance Optimizer — Aims To Provide An Optimal Experience At Every Usage Scenario. `FOSS` `[M]`
 - **[SpeedCool](https://github.com/Llucs/SpeedCool-Magisk-Module)** - Boost, cool down, and optimize your Android with SpeedCool: less lag, more performance, and a cooler system. `FOSS` `[M]`
-- **[SuperMario Tweaker](https://github.com/mrx7014/SuperMario-Tweaker)** - A tweaker module that can improve any device performance and stability (Gaming, Daily Useage, etc). `FOSS` `[M]`
+- **[SuperMario Tweaker](https://github.com/mrx7014/SuperMario-Tweaker)** - A tweaker module that can improve any device performance and stability (Gaming, Daily Usage, etc). `FOSS` `[M]`
 - **[TNF Tweaker](https://github.com/topnotchfreaks/tnf_tweaker)** - Optimization tool designed exclusively for devices running the TopNotchFreaks and Zephyr kernels. `FOSS` `[K]`
 - **[Uperf-Game-Turbo](https://github.com/yinwanxi/Uperf-Game-Turbo)** - Userspace performance controller for Android. `FOSS` `[M]`
 
@@ -1021,7 +1021,7 @@ Use these modules if you need Zygisk features on alternative root frameworks (Ke
 
 ### Root Detection Tools
 - **[⭐ Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector)** - A tool for detecting root on android. `FOSS`
-- **[MagiskDetection](https://github.com/apkunpacker/MagiskDetection)** - Collection of Some publicaly Available POC Apps to Detect Root/Magisk presence. `FOSS` `Proprietary`
+- **[MagiskDetection](https://github.com/apkunpacker/MagiskDetection)** - Collection of Some publicly Available POC Apps to Detect Root/Magisk presence. `FOSS` `Proprietary`
 - **[Play Integrity API Checker](https://github.com/1nikolas/play-integrity-checker-app)** - This app shows info about your device integrity as reported by Google Play Services. If any of this fails could mean your device is rooted or tampered in a way. `FOSS` | [▶️ Play Store](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck)
 
 ### Root Hiding and Play Integrity
