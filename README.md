@@ -245,10 +245,10 @@ Follow this path:
 ![KernelSU Modules](https://img.shields.io/badge/KernelSU%20Modules-34-green?style=for-the-badge&logo=keenetic&logoColor=white&cacheSeconds=3600)
 ![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-115-purple?style=for-the-badge&logo=local&logoColor=white&cacheSeconds=3600)
 
-</div><br>
+</div><br />
 
 > [!TIP] New to Rooting?
->  💡 Start with our [Complete Rooting Guide](../android-root-guides/) before exploring apps below.
+> 💡 Start with our [Complete Rooting Guide](../android-root-guides/) before exploring apps below.
 
 > [!TIP] Recommendations
 > For privacy-friendly and convenient installs, we **recommend using the F‑Droid** ecosystem — for example, install the Droid‑ify client **and enable the IzzyOnDroid repo**:
@@ -257,7 +257,7 @@ Follow this path:
 
 
 > [!NOTE] Default Links
-> - Clicking on App/Module entry point to **Source Code page** (Github/Gitlab etc) *in case of `FOSS` apps* otherwise link points to **Google Play Store**.
+> Clicking on App/Module entry point to **Source Code page** (Github/Gitlab etc) *in case of `FOSS` apps* otherwise link points to **Google Play Store**.
 
 ---
 
