@@ -247,16 +247,15 @@ Follow this path:
 
 </div><br />
 
-> [!TIP] New to Rooting?
+> [!TIP]
 > 💡 Start with our [Complete Rooting Guide](../android-root-guides/) before exploring apps below.
 
-> [!TIP] Recommendations
+> [!TIP]
 > For privacy-friendly and convenient installs, we **recommend using the F‑Droid** ecosystem — for example, install the Droid‑ify client **and enable the IzzyOnDroid repo**:
 > - Droid‑ify — https://github.com/Droid-ify/client/releases (modern F‑Droid client)
 > - IzzyOnDroid — https://apt.izzysoft.de/fdroid/ (additional F‑Droid repo with many packages)
 
-
-> [!NOTE] Default Links
+> [!NOTE]
 > Clicking on App/Module entry point to **Source Code page** (Github/Gitlab etc) *in case of `FOSS` apps* otherwise link points to **Google Play Store**.
 
 ---
