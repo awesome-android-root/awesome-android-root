@@ -474,7 +474,7 @@ Follow this path:
 
 ### SMS Management
 - **[NekoSMS](https://github.com/apsun/NekoSMS)** - A pattern-based text message blocker for Android. `FOSS` `[LSP]`
-
+- **[XposedForwardSms](https://github.com/XiaoMiHongZhaJi/XposedForwardSms)** - An Xposed module for forwarding text messages. `FOSS` `[LSP]`
 [↑ Back to top](#table-of-contents)
 
 ---
