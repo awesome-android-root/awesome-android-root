@@ -308,7 +308,7 @@ Follow this path:
 
 
 ## Ads and Tracking Blockers
-> 📚 **Related Guide**: [Complete Android Ad Blocking Tutorial](../guides/android-adblocking.md)
+> 📚 **Related Guide**: [Complete Android Ad Blocking Tutorial](./docs/guides/android-adblocking.md)
 
 - **[⭐ AdAway](https://github.com/AdAway/AdAway)** – Open-source ad blocker using the hosts file. Blocks ads without permissions. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/org.adaway)
 - **[⭐ bindhosts](https://github.com/bindhosts/bindhosts)** - Systemless hosts for APatch, KernelSU and Magisk that is fully standalone and self-updating. `FOSS` `[M]` `[K]`
