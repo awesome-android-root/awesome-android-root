@@ -1138,7 +1138,7 @@ VBMeta is a critical component of Android Verified Boot (AVB), a security featur
 
 ## Tools
 
-### Brower Tools
+### Browser Tools
 - **[⭐ ChromeXt](https://github.com/JingMatrix/ChromeXt)** - UserScript and DevTools support for Chromium-based and WebView-based browsers. `FOSS` `[LSP]`
 
 ### NFC Tools
