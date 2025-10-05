@@ -243,6 +243,10 @@ export default withPwa(defineConfig({
       {
         text: 'Resources',
         items: [
+          { text: 'Essential 10 Starter Kit', link: '/essential-starter-kit' },
+          { text: 'Root Framework Comparison', link: '/root-framework-comparison' },
+          { text: 'Troubleshooting Guide', link: '/troubleshooting-guide' },
+          { text: 'Non-Root Alternatives', link: '/non-root-alternatives' },
           { text: 'FAQ & Troubleshoting', link: '/faqs', activeMatch: '^/faqs' },
           { text: 'Resources Hub', link: '/resources' },
           { text: 'Glossary', link: '/android-root-apps/#glossary' }
@@ -253,6 +257,7 @@ export default withPwa(defineConfig({
         items: [
           { text: 'About Project', link: '/about' },
           { text: 'How to Contribute', link: '/contributing' },
+          { text: 'Legal Disclaimer', link: '/legal-disclaimer' },
           { text: 'Support Us', link: 'https://opencollective.com/awesome-android-root-official' },
           { text: 'Star on GitHub', link: 'https://github.com/awesome-android-root/awesome-android-root' }
         ]
@@ -549,7 +554,7 @@ export default withPwa(defineConfig({
       ]
     },
     footer: {
-      message: "Made with ❤️ for the Android Root community",
+      message: "Made with ❤️ for the Android Root community | <a href='/legal-disclaimer'>Legal Disclaimer</a>",
       copyright: `Copyright © ${new Date().getFullYear()} Awesome Android Root Project. All rights reserved.`
     },
     outline: {
