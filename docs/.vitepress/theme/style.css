@@ -519,3 +519,7 @@ margin-bottom: 0.5rem;
 @media (prefers-reduced-motion: reduce) {
   .back-to-top { transition: none; }
 }
+
+footer a{
+  text-decoration: none !important;
+}
