@@ -844,7 +844,6 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[Cert-Fixer](https://github.com/pwnlogs/cert-fixer)** - Installs custom CA certificates to Android's system certificate store. `FOSS` `[M]`
 - **[Just Trust Me Pro](https://github.com/hang666/JustTrustMePro)** - Disables SSL certificate checking for the purposes of auditing an app with cert pinning. `FOSS` `[M]`
 - **[SSL Killer](https://github.com/Xposed-Modules-Repo/com.simo.ssl.killer)** - An advanced XPosed module to bypass multiple ssl pinning implementations. `Proprietary` `[LSP]`
-- **[Suppe](https://github.com/Familyye/Suppe)** - Xposed module to disable SSL verification and pinning on Android. `FOSS` `[LSP]`
 
 ### Wi‑Fi Tools
 - **[DriFiCrack](https://github.com/ZeltNamizake/DriFiCrack)** - Brute Force Tool to Crack Wi-Fi Passwords. `FOSS` `[M]`
