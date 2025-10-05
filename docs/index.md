@@ -353,7 +353,32 @@ features:
   </a>
 </div>
 
-## 🤝 Resources
+## 📚 Resources
+
+<div class="community-cards">
+  <a href="/essential-starter-kit" class="community-card github">
+    <span class="icon">📥</span>
+    <strong>Essential 10 Starter Kit</strong>
+    <span>Begin your rooting journey right</span>
+  </a>
+  <a href="/root-framework-comparison" class="community-card twitter">
+    <span class="icon">⚖️</span>
+    <strong>Framework Comparison</strong>
+    <span>Magisk vs KernelSU vs APatch</span>
+  </a>
+  <a href="/troubleshooting-guide" class="community-card telegram">
+    <span class="icon">🔧</span>
+    <strong>Troubleshooting Guide</strong>
+    <span>Fix common rooting issues</span>
+  </a>
+  <a href="/non-root-alternatives" class="community-card reddit">
+    <span class="icon">🧰</span>
+    <strong>Non-Root Alternatives</strong>
+    <span>Customize without rooting</span>
+  </a>
+</div>
+
+## 🌐 Community
 
 <div class="community-cards">
   <a href="https://github.com/awesome-android-root/awesome-android-root" class="community-card github">
@@ -362,12 +387,12 @@ features:
     <span>2k stars</span>
   </a>
   <a href="https://x.com/awsm_and_root" class="community-card twitter">
-    <span class="icon">🐦</span>
+    <span class="icon">𝕏</span>
     <strong>Twitter/X</strong>
     <span>Daily updates</span>
   </a>
   <a href="/faqs" class="community-card reddit">
-    <span class="icon">📜</span>
+    <span class="icon">🗊</span>
     <strong>FAQs</strong>
     <span>Solve common problems</span>
   </a>
