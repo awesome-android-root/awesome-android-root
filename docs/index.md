@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Best Root Apps & Modules (2025)
+title: Best Root Apps & Modules
 titleTemplate: Awesome Android Root
 description: "Discover 400+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2025."
 head:
@@ -18,7 +18,7 @@ head:
       content: "https://awesome-android-root.org/images/og.png"
   - - meta
     - property: og:title
-      content: "Best Root Apps & Modules (2025) | Awesome Android Root"
+      content: "Best Root Apps & Modules | Awesome Android Root"
   - - meta
     - property: og:description
       content: "Discover 400+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2025."
@@ -27,7 +27,7 @@ head:
       content: "https://awesome-android-root.org/images/og.png"
   - - meta
     - property: og:image:alt
-      content: "Best Root Apps & Modules (2025) | Awesome Android Root"
+      content: "Best Root Apps & Modules | Awesome Android Root"
   - - meta
     - property: og:image:width
       content: "1200"
@@ -48,7 +48,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:title
-      content: "Best Root Apps & Modules (2025) | Awesome Android Root"
+      content: "Best Root Apps & Modules | Awesome Android Root"
   - - meta
     - name: twitter:description
       content: "Discover 400+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2025."
@@ -57,7 +57,7 @@ head:
       content: "https://awesome-android-root.org/images/og.png"
   - - meta
     - name: twitter:image:alt
-      content: "Best Root Apps & Modules (2025) | Awesome Android Root"
+      content: "Best Root Apps & Modules | Awesome Android Root"
   - - meta
     - property: og:locale
       content: "en_US"
