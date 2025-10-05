@@ -1,0 +1,65 @@
+name: Weekly Link Checker
+
+on:
+  schedule:
+    # Run every Monday at 9:00 AM UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  link-checker:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install link checker
+        run: npm install -g markdown-link-check
+        
+      - name: Check links in README
+        id: readme-check
+        continue-on-error: true
+        run: |
+          markdown-link-check README.md --config .github/link-check-config.json || echo "README_FAILED=true" >> $GITHUB_ENV
+          
+      - name: Check links in docs
+        id: docs-check
+        continue-on-error: true
+        run: |
+          find docs -name "*.md" -exec markdown-link-check {} --config .github/link-check-config.json \; || echo "DOCS_FAILED=true" >> $GITHUB_ENV
+          
+      - name: Create issue if links are broken
+        if: env.README_FAILED == 'true' || env.DOCS_FAILED == 'true'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const date = new Date().toISOString().split('T')[0];
+            const issue = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[Automated] Dead links detected - ${date}`,
+              body: `## Dead Links Detected
+              
+              The automated weekly link checker has found broken links in the repository.
+              
+              **Date:** ${date}
+              
+              Please review the workflow logs for details:
+              ${context.payload.repository.html_url}/actions/runs/${context.runId}
+              
+              ### Action Required
+              - Check the workflow logs above for specific broken links
+              - Update or remove broken links
+              - Verify all changes work correctly
+              
+              This issue was automatically created by the link checker workflow.`,
+              labels: ['automated', 'dead-link', 'maintenance']
+            });
+            console.log(`Created issue #${issue.data.number}`);
