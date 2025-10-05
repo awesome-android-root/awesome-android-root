@@ -556,8 +556,8 @@ export default withPwa(defineConfig({
       ]
     },
     footer: {
-      message: "Made with ❤️ for the Android Root community | <a href='/legal-disclaimer'>Legal Disclaimer</a>",
-      copyright: `Copyright © ${new Date().getFullYear()} Awesome Android Root Project. All rights reserved.`
+      message: "Made with ❤️ for the Android Root community. <a href='/legal-disclaimer'>Legal Disclaimer</a>",
+      copyright: `Copyright © ${new Date().getFullYear()} <a href="https://awesome-android-root.org/"> Awesome Android Root Project</a>. All rights reserved.`
     },
     outline: {
       level: [2, 3],
