@@ -356,17 +356,17 @@ features:
 ## 📚 Resources
 
 <div class="community-cards">
-  <a href="/essential-starter-kit" class="community-card github">
+  <a href="/docs/android-root-apps/essential-starter-kit.md" class="community-card github">
     <span class="icon">📥</span>
     <strong>Essential 10 Starter Kit</strong>
     <span>Begin your rooting journey right</span>
   </a>
-  <a href="/root-framework-comparison" class="community-card twitter">
+  <a href="/docs/android-root-guides/root-framework-comparison.md" class="community-card twitter">
     <span class="icon">⚖️</span>
     <strong>Framework Comparison</strong>
     <span>Magisk vs KernelSU vs APatch</span>
   </a>
-  <a href="/troubleshooting-guide" class="community-card telegram">
+  <a href="/troubleshooting" class="community-card telegram">
     <span class="icon">🔧</span>
     <strong>Troubleshooting Guide</strong>
     <span>Fix common rooting issues</span>
