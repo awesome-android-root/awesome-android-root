@@ -28,4 +28,4 @@ assignees: ''
 
 ---
 
-**Note:** For rooting help and technical support, please visit our [FAQ](/faqs) or [Troubleshooting Guide](/troubleshooting-guide) first. For community discussions, check [GitHub Discussions](https://github.com/awesome-android-root/awesome-android-root/discussions).
+**Note:** For rooting help and technical support, please visit our [FAQ](/faqs) or [Troubleshooting Guide](/troubleshooting) first. For community discussions, check [GitHub Discussions](https://github.com/awesome-android-root/awesome-android-root/discussions).

@@ -482,4 +482,4 @@ We may update this disclaimer:
 
 ---
 
-**Ready to proceed responsibly?** Start with our [Essential 10 Starter Kit](/essential-starter-kit) or [Rooting Guides](/android-root-guides/).
+**Ready to proceed responsibly?** Start with our [Essential Apps](/android-root-apps/essential-starter-kit) or [Rooting Guides](/android-root-guides/).

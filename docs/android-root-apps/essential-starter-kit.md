@@ -5,7 +5,7 @@ description: "Curated beginner-friendly list of the 6 most stable and essential 
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/essential-starter-kit
+      href: https://awesome-android-root.org/android-root-apps/essential-starter-kit
   - - meta
     - property: og:type
       content: article
@@ -17,7 +17,7 @@ head:
       content: Start your rooting journey right with these 6 stable, beginner-friendly apps that deliver maximum value without complexity.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/essential-starter-kit
+      content: https://awesome-android-root.org/android-root-apps/essential-starter-kit
   - - meta
     - name: keywords
       content: best root apps beginners, essential root apps 2025, starter kit root, beginner root apps, stable root apps, root apps for new users
