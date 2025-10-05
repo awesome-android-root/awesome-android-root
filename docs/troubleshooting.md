@@ -1470,7 +1470,7 @@ Error: Stuck on OnePlus logo, no response
 - [Complete Rooting Guide](./android-root-guides/index.md)
 - [Bootloader Unlock](./android-root-guides/how-to-unlock-bootloader.md)
 - [Custom Recovery Installation](./android-root-guides/how-to-install-custom-recovery.md)
-- [Root Framework Comparison](./root-framework-comparison.md)
+- [Root Framework Comparison](./android-root-guides/root-framework-comparison.md)
 
 **Device Guides:**
 - [Pixel](./android-root-guides/how-to-root-pixel-phone.md)

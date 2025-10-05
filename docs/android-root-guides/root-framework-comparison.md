@@ -5,7 +5,7 @@ description: "Detailed comparison of Magisk, KernelSU, and APatch root framework
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/root-framework-comparison
+      href: https://awesome-android-root.org//android-root-guides/root-framework-comparison
   - - meta
     - property: og:type
       content: article
