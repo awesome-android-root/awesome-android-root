@@ -294,7 +294,8 @@ head:
 ### Migrating from Magisk to APatch
 
 **Migration time:** 30-60 minutes
-<detials>
+
+<details>
   <summary>Click to expand detailed steps</summary>
 
 **Requirements:**
