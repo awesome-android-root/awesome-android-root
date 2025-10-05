@@ -82,7 +82,7 @@ head:
 - [ROM Selection Guide](#rom-selection-guide)
 - [Installation Process](#installation-process)
 - [Post-Installation Setup](#post-installation-setup)
-- [Troubleshooting Guide](#troubleshooting-guide)
+- [Troubleshooting Guide](#troubleshooting)
 - [Staying Updated](#staying-updated)    
 - [What’s Next?](#whats-next)
 

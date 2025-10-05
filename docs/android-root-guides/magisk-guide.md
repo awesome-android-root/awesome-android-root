@@ -141,7 +141,7 @@ The universal systemless root solution - Master Magisk installation, modules, an
 
 ### 🛠️ Advanced Topics
 - [Updates and Maintenance](#updates-and-maintenance)
-- [Troubleshooting Guide](#troubleshooting-guide)
+- [Troubleshooting Guide](#troubleshooting)
 
 ---
 
