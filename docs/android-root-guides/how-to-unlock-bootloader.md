@@ -94,11 +94,12 @@ head:
 ## Table of Contents
 - [Understanding Bootloaders](#what-is-a-bootloader)
 - [Before You Begin](#before-you-begin)
+- [OEM Policy Comparison](#oem-policy-comparison)
+- [What You Need](#what-you-need)
 - [Universal Preparation](#universal-preparation)
 - [Manufacturer Guides](#manufacturer-guides)
 - [Post-Unlock Steps](#post-unlock-steps)
 - [Troubleshooting](#troubleshooting)
-- [Wall of Shame](#bootloader-unlock-wall-of-shame)
 
 ## What is a Bootloader?
 
@@ -130,7 +131,102 @@ A **bootloader** is a small program that runs when your Android device powers on
 - **📱 BRICK RISK**: Improper procedures can render your device unusable
 :::
 
-### What You Need
+
+## OEM Policy Comparison
+
+**Complete overview of bootloader unlock policies, waiting periods, and restrictions across all major manufacturers.**
+
+| Manufacturer | Unlock Method | Waiting Period | Permanent Effects | Regional Restrictions | Official Support |
+|:---|:---|:---:|:---|:---|:---:|
+| **Google Pixel** | Fastboot command | None | Warranty void, data wipe | None | ✅ Yes |
+| **Xiaomi/Redmi/POCO** | Mi Unlock Tool | 7-30 days | Warranty void, data wipe | China ROMs: longer wait | ✅ Yes |
+| **OnePlus** | Fastboot command | None | Warranty void, data wipe | None | ✅ Yes |
+| **Motorola** | Official code | None | Warranty void, data wipe, permanent notice | None | ✅ Yes |
+| **Nothing Phone** | Fastboot command | None | Warranty void, data wipe | None | ✅ Yes |
+| **Sony** | Official code | None | Warranty void, DRM keys lost, camera degraded | None | ✅ Yes |
+| **ASUS ROG** | Official tool | None | Warranty void, data wipe | None | ✅ Yes |
+| **Realme** | Via Deep Testing app | 7 days | Warranty void, data wipe | Only select models | ⚠️ Limited |
+| **OPPO** | Via Deep Testing app | 7 days | Warranty void, data wipe | Very limited models | ⚠️ Limited |
+| **Samsung** | **Odin (unofficial)** | None | Knox EFUSE trips (permanent), warranty void forever, reduced resale value | **US/Canada models: IMPOSSIBLE** | ❌ No |
+| **Huawei** | **Discontinued** | N/A | N/A | **All models: IMPOSSIBLE** (since 2018) | ❌ No |
+| **Honor** | **Not supported** | N/A | N/A | **All models: IMPOSSIBLE** | ❌ No |
+| **Vivo** | **Not officially supported** | N/A | Warranty void if possible | Extremely limited | ❌ No |
+
+> [!Note]
+> **Typical waiting times:**
+> - **Xiaomi/Redmi/POCO:** 168 hours (7 days) for most accounts, 720 hours (30 days) for new accounts or China ROMs
+> - **Realme/OPPO:** 168 hours (7 days) via Deep Testing application
+> - **Most others:** Immediate unlock once enabled
+
+### Bootloader Unlock: Wall of Shame
+> [!IMPORTANT]
+> This community-maintained [repository](https://github.com/melontini/bootloader-unlock-wall-of-shame) tracks companies that make bootloader unlocking difficult or impossible:
+
+### Consequences of Unlocking
+
+<details><summary>Click to expand</summary>
+
+#### Knox EFUSE (Samsung)
+
+**What is Knox EFUSE?**
+- Physical fuse that burns permanently when bootloader unlocked
+- **Cannot be reset** even if bootloader re-locked
+- Permanently marks device as "modified"
+
+**Consequences:**
+- Samsung Knox features disabled forever
+- Secure Folder won't work
+- Samsung Pass disabled
+- Samsung Pay/Samsung Health may not work
+- Warranty void permanently
+- Resale value significantly reduced
+- OTA updates may be affected
+
+#### Sony DRM Keys Loss
+
+**Unique to Sony devices:**
+- Unlocking bootloader deletes DRM security keys **permanently**
+- Keys cannot be backed up or restored
+- Affects camera quality and some media playback
+
+**What's affected:**
+- Camera performance degraded (especially low-light)
+- Some DRM-protected content may not play
+- X-Reality Engine features may be limited
+
+**Workaround:** Some custom ROMs include camera patches to compensate
+
+#### Regional Lock Restrictions
+
+##### Samsung US/Canada Models
+- **Bootloader permanently locked** on carrier models
+- Snapdragon variants from US carriers: **IMPOSSIBLE to unlock**
+- International Exynos models: Can be unlocked (with Knox consequences)
+- Gray market international models can be used in US
+
+##### Xiaomi China ROM
+- Longer waiting periods (up to 30 days)
+- May require Chinese phone number for Mi Account
+- Global ROM devices: Standard 7-day wait
+
+##### Carrier-Locked Devices (All Brands)
+- US carriers (Verizon, AT&T, T-Mobile) often lock bootloaders
+- Even "unlocked" carrier phones may have bootloader locked
+- Always buy factory unlocked for bootloader unlock ability
+
+</details>
+
+####  Policy Changes
+Manufacturer policies change frequently. Always check current status before purchasing if bootloader unlocking is important to you.
+
+> [!TIP]
+>  **💡 Before Buying**:
+> Check the Wall of Shame repository and recent community discussions before purchasing. Newer models may have different restrictions than older ones from the same manufacturer.
+
+
+---
+
+## What You Need
 **Device Requirements:**
 - ✅ Supported device (check [Wall of Shame](#bootloader-unlock-wall-of-shame) first)
 - ✅ 50%+ battery charge
@@ -382,36 +478,6 @@ After installing custom recovery, **boot directly to recovery mode** before norm
 3. Restart: `fastboot reboot`
 
 **Prevention**: Always have stock firmware downloaded and know your device's emergency download mode.
-
-## Bootloader Unlock: Wall of Shame
-
-This community-maintained [repository](https://github.com/melontini/bootloader-unlock-wall-of-shame) tracks companies that make bootloader unlocking difficult or impossible:
-
-### 🚫 Most Restrictive (Avoid for Unlocking)
-- **Samsung US (Snapdragon)** - Permanently locked, no official method
-- **Huawei/Honor (2018+)** - Discontinued official unlocking  
-- **Verizon Devices** - Most models have locked bootloaders
-- **AT&T Devices** - Many models restrict unlocking
-
-### ⚠️ Partially Restrictive
-- **Xiaomi** - Requires waiting period (7-30 days) and approval
-- **Oppo/OnePlus (newer)** - Increasingly restrictive policies
-- **Realme** - Limited official support
-- **Carrier Variants** - Often more restrictive than unlocked models
-
-### ✅ Developer-Friendly (Recommended)
-- **Google Pixel** - Easy official unlocking, excellent custom ROM support
-- **Sony** - Official developer support, good documentation
-- **Motorola** - Official unlock portal, generally supportive
-- **OnePlus (older models)** - Traditionally developer-friendly
-- **Essential Phone** - Developer-focused (discontinued)
-
-### 🔄 Policy Changes
-Manufacturer policies change frequently. Always check current status before purchasing if bootloader unlocking is important to you.
-
-::: tip 💡 Before Buying
-Check the Wall of Shame repository and recent community discussions before purchasing. Newer models may have different restrictions than older ones from the same manufacturer.
-:::
 
 ---
 
