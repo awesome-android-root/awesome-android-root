@@ -181,7 +181,7 @@ Looking for troubleshooting? Visit our [Troubleshooting Guide](./troubleshooting
 
 **Related Resources:**
 - [Essential Root Apps](./android-root-apps/index.md#featured-apps-the-essentials)
-- [Root Framework Comparison](./root-framework-comparison.md)
+- [Root Framework Comparison](./android-root-guides/root-framework-comparison.md)
 - [Complete Rooting Guide](./android-root-guides/index.md)
 
 ---
@@ -349,7 +349,7 @@ Advanced user, specific needs? → Research all three
 ```
 
 **Learn More:**
-- [Root Framework Comparison](./root-framework-comparison.md) (detailed analysis)
+- [Root Framework Comparison](./android-root-guides/root-framework-comparison.md) (detailed analysis)
 - [Magisk Guide](./android-root-guides/magisk-guide.md)
 - [KernelSU Guide](./android-root-guides/kernelsu-guide.md)
 - [APatch Guide](./android-root-guides/apatch-guide.md)
@@ -360,7 +360,7 @@ Advanced user, specific needs? → Research all three
 
 ### Root Methods Comparison
 
-**See the detailed comparison:** [Root Framework Comparison Guide](./root-framework-comparison.md)
+**See the detailed comparison:** [Root Framework Comparison Guide](./android-root-guides/root-framework-comparison.md)
 
 **Quick Summary:**
 
@@ -375,7 +375,7 @@ Advanced user, specific needs? → Research all three
 | **Best For** | Most users, beginners | Custom ROM enthusiasts | Advanced users |
 
 **Learn More:**
-- [Detailed Framework Comparison](./root-framework-comparison.md)
+- [Detailed Framework Comparison](./android-root-guides/root-framework-comparison.md)
 - [Magisk Installation Guide](./android-root-guides/magisk-guide.md)
 - [KernelSU Installation Guide](./android-root-guides/kernelsu-guide.md)
 - [APatch Installation Guide](./android-root-guides/apatch-guide.md)
@@ -882,7 +882,7 @@ su -c "magisk --version"      # Check Magisk version
 
 **Guides:**
 - [Complete Rooting Guide](./android-root-guides/index.md)
-- [Root Framework Comparison](./root-framework-comparison.md)
+- [Root Framework Comparison](./android-root-guides/root-framework-comparison.md)
 - [Essential 10 Starter Kit](./android/root-apps/essential-starter-kit.md)
 - [Troubleshooting Guide](./troubleshooting.md)
 - [Non-Root Alternatives](./non-root-alternatives.md)

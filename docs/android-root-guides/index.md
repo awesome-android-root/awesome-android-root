@@ -282,7 +282,7 @@ Users report 30-50% battery improvement, ad-free experience, 2-3x performance ga
 ## Root Solutions Comparison
 
 > [!IMPORTANT]
-> Check detailed comaprison here: **[Root Framework Comparison](./root-framework-comparison.md)**
+> Check detailed comaprison here: **[Root Framework Comparison](./android-root-guides/root-framework-comparison.md)**
 
 Choose the best method for your needs.
 
