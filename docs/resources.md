@@ -164,9 +164,10 @@ head:
 
 ### Extraction & Utility Tools
 
-| Tool | Purpose | Use Case | Source |
-|:-----|:--------|:---------|:-------|
-| **payload-dumper-go** | Extract payload.bin | Pixel, OnePlus, Xiaomi | [GitHub](https://github.com/ssut/payload-dumper-go) |
+| Tool | Purpose |Source |
+|:-----|:--------|:-------|
+| **Payload-Dumper-Android** |Extract boot.img or any other partitions (images) from OTA.zip or payload.bin without PC without root on Android | [GitHub](https://github.com/rajmani7584/Payload-Dumper-Android) |
+| **payload-dumper-go** | Extract payload.bin | [GitHub](https://github.com/ssut/payload-dumper-go) |
 
 ---
 
