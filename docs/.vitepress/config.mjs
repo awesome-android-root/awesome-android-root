@@ -243,11 +243,11 @@ export default withPwa(defineConfig({
       {
         text: 'Resources',
         items: [
-          { text: 'Essential 10 Starter Kit', link: '/essential-starter-kit' },
-          { text: 'Root Framework Comparison', link: '/root-framework-comparison' },
-          { text: 'Troubleshooting Guide', link: '/troubleshooting-guide' },
+          { text: 'Essential Apps', link: '/android-root-apps/essential-starter-kit' },
+          { text: 'Root Framework Comparison', link: '/android-root-guides/root-framework-comparison' },
+          { text: 'Troubleshooting Guide', link: '/troubleshooting' },
           { text: 'Non-Root Alternatives', link: '/non-root-alternatives' },
-          { text: 'FAQ & Troubleshoting', link: '/faqs', activeMatch: '^/faqs' },
+          { text: 'FAQ', link: '/faqs' },
           { text: 'Resources Hub', link: '/resources' },
           { text: 'Glossary', link: '/android-root-apps/#glossary' }
         ]
@@ -322,7 +322,8 @@ export default withPwa(defineConfig({
           items: [
             { text: 'Troubleshooting and Recovery', link: '/android-root-guides/#troubleshooting-and-recovery' },
             { text: 'Community Resources', link: '/android-root-guides/#community-resources' },
-            { text: 'FAQ & Emergency Help', link: '/faqs/' }
+            { text: 'Troubleshooting Guide', link: '/troubleshooting' },
+            { text: 'FAQ', link: '/faqs' }
           ]
         }
       ],
@@ -544,7 +545,8 @@ export default withPwa(defineConfig({
           text: 'Support & Community',
           collapsed: true,
           items: [
-            { text: 'FAQ & Troubleshooting', link: '/faqs/' },
+            { text: 'Troubleshooting Guide', link: '/troubleshooting' },
+            { text: 'FAQ', link: '/faqs' },
             { text: 'Resources Hub', link: '/resources' },
             { text: 'Glossary', link: '/android-root-apps/#glossary' },
             { text: 'How to Contribute', link: '/contributing' },
