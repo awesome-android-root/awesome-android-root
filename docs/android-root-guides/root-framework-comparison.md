@@ -237,7 +237,7 @@ head:
 
 **Migration time:** 1-2 hours
 
-<detials>
+<details>
   <summary>Click to expand detailed steps</summary>
 
 **Requirements:**
