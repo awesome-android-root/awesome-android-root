@@ -297,33 +297,33 @@ features:
     <h3>Complete Beginner</h3>
     <p>Never rooted before? We'll guide you step-by-step</p>
     <ul>
-      <li>✅ Safety first approach</li>
-      <li>✅ Backup strategies</li>
-      <li>✅ Risk assessment</li>
+      <li>Safety first approach</li>
+      <li>Backup strategies</li>
+      <li>Risk assessment</li>
     </ul>
-    <a href="/android-root-guides/" class="journey-btn">Start Learning →</a>
+    <a href="/android-root-guides/" class="journey-btn">Start Learning</a>
   </div>
   
   <div class="journey-card intermediate">
     <h3>Ready to Root</h3>
     <p>Know the basics? Let's root your device</p>
     <ul>
-      <li>✅ Device-specific guides</li>
-      <li>✅ Tool selection</li>
-      <li>✅ Troubleshooting</li>
+      <li>Device-specific guides</li>
+      <li>Tool selection</li>
+      <li>Troubleshooting</li>
     </ul>
-    <a href="/android-root-guides/#device-specific-guides" class="journey-btn">Find Your Device →</a>
+    <a href="/android-root-guides/#device-specific-guides" class="journey-btn">Find Your Device</a>
   </div>
   
   <div class="journey-card advanced">
     <h3>Already Rooted</h3>
     <p>Maximize your rooted device's potential</p>
     <ul>
-      <li>✅ 400+ curated apps</li>
-      <li>✅ Advanced modules</li>
-      <li>✅ Custom ROMs</li>
+      <li>400+ curated apps</li>
+      <li>Advanced modules</li>
+      <li>Custom ROMs</li>
     </ul>
-    <a href="/android-root-apps/" class="journey-btn">Explore Apps →</a>
+    <a href="/android-root-apps/" class="journey-btn">Explore Apps</a>
   </div>
 </div>
 
@@ -358,7 +358,7 @@ features:
 <div class="community-cards">
   <a href="/android-root-apps/essential-starter-kit" class="community-card github">
     <span class="icon">📥</span>
-    <strong>Essential 10 Starter Kit</strong>
+    <strong>Starter Kit</strong>
     <span>Begin your rooting journey right</span>
   </a>
   <a href="/android-root-guides/root-framework-comparison" class="community-card twitter">
