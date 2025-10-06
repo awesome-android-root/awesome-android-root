@@ -180,7 +180,7 @@ Looking for troubleshooting? Visit our [Troubleshooting Guide](./troubleshooting
 - Enhanced privacy controls
 
 **Related Resources:**
-- [Essential Root Apps](./android-root-apps/index.md#featured-apps-the-essentials)
+- [Essential Root Apps](./android-root-apps/index.md#starter-kit-must-have-apps)
 - [Root Framework Comparison](./android-root-guides/root-framework-comparison.md)
 - [Complete Rooting Guide](./android-root-guides/index.md)
 
@@ -658,7 +658,7 @@ Modern devices use A/B (seamless) update system:
 2. **Install useful modules (Magisk):**
    - Start with essential modules only
    - Test one at a time
-   - [Essential Root Apps](./android-root-apps/index.md#featured-apps-the-essentials)
+   - [Essential Root Apps](./android-root-apps/index.md#starter-kit-must-have-apps)
 
 3. **Configure ad blocking:**
    - System-wide with AdAway or hosts file
@@ -888,7 +888,7 @@ su -c "magisk --version"      # Check Magisk version
 - [Non-Root Alternatives](./non-root-alternatives.md)
 
 **Apps:**
-- [Featured Root Apps](./android-root-apps/index.md#featured-apps-the-essentials)
+- [Featured Root Apps](./android-root-apps/index.md#starter-kit-must-have-apps)
 - [All Root Apps](./android-root-apps/index.md)
 
 **General Android:**

@@ -330,7 +330,7 @@ export default withPwa(defineConfig({
 
       // Root Apps Sidebar
       '/android-root-apps/': [
-        { text: '⭐ Featured Essentials', link: '/android-root-apps/#featured-apps-the-essentials' },
+        { text: '⭐ Featured Essentials', link: '/android-root-apps/#starter-kit-must-have-apps' },
         { text: '📘 Glossary', link: '/android-root-apps/#glossary' },
         { text: '🛠️ Root & System', collapsed: false, items: [
           { text: 'Root Management', link: '/android-root-apps/#root-management' },
@@ -503,7 +503,7 @@ export default withPwa(defineConfig({
           collapsed: false,
           items: [
             { text: 'Browse All Apps', link: '/android-root-apps/' },
-            { text: 'Featured Essentials', link: '/android-root-apps/#featured-apps-the-essentials' },
+            { text: 'Featured Essentials', link: '/android-root-apps/#starter-kit-must-have-apps' },
             { text: 'Root Management', link: '/android-root-apps/#root-management' },
             { text: 'Ad Blockers', link: '/android-root-apps/#ads-and-tracking-blockers' },
             { text: 'App Management', link: '/android-root-apps/#app-management-and-control' }

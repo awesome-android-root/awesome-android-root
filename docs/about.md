@@ -87,7 +87,7 @@ Our mission is to democratize advanced Android customization by providing free, 
 4.  **[🌟 Install Custom ROM](./android-root-guides/custom-rom-installation.md)**: (Optional) Experience a completely transformed Android operating system.
 
 **Tailored Navigation:**
-*   **Beginners:** [Complete Rooting Guide](./android-root-guides/) → [Essential Apps](./android-root-apps/#featured-apps-the-essentials)
+*   **Beginners:** [Complete Rooting Guide](./android-root-guides/) → [Essential Apps](./android-root-apps/#starter-kit-must-have-apps))
 *   **Intermediate:** [Device-Specific Guides](./android-root-guides/#device-specific-guides) → [Root Management](../android-root-apps/#root-management)
 *   **Experts:** [Troubleshooting](./faqs) → [Community Contributions](./contributing)
 

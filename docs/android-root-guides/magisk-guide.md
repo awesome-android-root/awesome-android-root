@@ -531,7 +531,7 @@ adb wait-for-device shell magisk --remove-modules
 :::
 
 **Continue Your Journey:**
-- **[Essential Magisk Modules](../android-root-apps/#featured-apps-the-essentials)**
+- **[Essential Magisk Modules](../android-root-apps/#starter-kit-must-have-apps)**
 - **[Banking App Solutions](../faqs.md#play-integrity-and-banking-apps)**
 - **[Advanced Root Management](../android-root-apps/#root-management)**
 - **[Need Help?](../faqs.md)**

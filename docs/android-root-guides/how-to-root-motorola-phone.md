@@ -328,7 +328,7 @@ adb shell getprop ro.build.ab_update
 ### Immediate Next Steps
 1. **[Browse Root Apps](../android-root-apps/#root-apps)** - Discover 300+ curated applications
 2. **[Setup Banking App Bypass](../faqs.md#play-integrity-and-banking-apps)** - Configure root hiding
-3. **[Install Essential Apps](../android-root-apps/#featured-apps-the-essentials)** - Start with recommended apps
+3. **[Install Essential Apps](../android-root-apps/#starter-kit-must-have-apps)** - Start with recommended apps
 
 ### Advanced Options
 - **[Custom Recovery](./how-to-install-custom-recovery.md)** - Install TWRP for advanced features
