@@ -286,7 +286,7 @@ Follow this path:
 
 ---
 
-## Featured Apps: The Essentials
+## Starter Kit: Must have Apps
 
 **Just rooted your device?** Start with these must-have applications that form the foundation of a great root experience.
 
