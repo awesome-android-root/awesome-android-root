@@ -379,7 +379,7 @@ Popular Options:
 
 1. **Verify Root Access** - Use root checker app
 2. **Configure Root Management** - Set permissions
-3. **Install Essential Apps** - [Must-have root apps](../android-root-apps/#featured-apps-the-essentials)
+3. **Install Essential Apps** - [Must-have root apps](../android-root-apps/#starter-kit-must-have-apps)
 4. **Create System Backup** - Full NANDroid backup
 5. **Configure Banking Apps** - Set up root hiding if needed
 6. **Security Hardening** - Enable appropriate measures

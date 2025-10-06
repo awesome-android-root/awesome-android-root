@@ -322,7 +322,7 @@ head:
 
 <div class="quick-nav">
 
-[Glossary](#glossary) • [Featured Apps](#featured-apps-the-essentials) • [Browse Apps/Modules](#accessibility-tools)
+[Glossary](#glossary) • [Featured Apps](#starter-kit-must-have-apps) • [Browse Apps/Modules](#accessibility-tools)
 
 </div>
 </div>

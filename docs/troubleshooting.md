@@ -1481,7 +1481,7 @@ Error: Stuck on OnePlus logo, no response
 - [Motorola](./android-root-guides/how-to-root-motorola-phone.md)
 
 **Root Apps:**
-- [Essential Root Apps](./android-root-apps/index.md#featured-apps-the-essentials)
+- [Essential Root Apps](./android-root-apps/index.md##starter-kit-must-have-apps)
 - [Ad Blockers](./android-root-apps/index.md#ads-and-tracking-blockers)
 - [Backup Tools](./android-root-apps/index.md#backup-and-restore)
 

@@ -46,7 +46,7 @@
 - [Glossary](#glossary)
 
 ### ⭐ Featured Essentials
-- [Featured Apps: The Essentials](#featured-apps-the-essentials)
+- [Starter Kit: Must have Apps](#starter-kit-must-have-apps)
 
 ### 📱 Root Apps by Category
 
@@ -205,7 +205,7 @@ Follow this path:
 > 💡 You can check out the complete comparison here: **[Root Solutions Comparison](./docs/android-root-guides/index.md#root-solutions-comparison)**
 
 ### Step 4: **Post-Root Setup**  
-1. → Install [essential apps and modules](./docs/android-root-apps/index.md#featured-apps-the-essentials)
+1. → Install [essential apps and modules](#starter-kit-must-have-apps)
 2. → Block Ads and trackers: [Ad Blocking](./docs/guides/android-adblocking.md)
 3. → Debloat your phone: [Debloating](./docs/guides/android-apps-debloating.md)
 
