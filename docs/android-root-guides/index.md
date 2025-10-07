@@ -126,47 +126,30 @@ head:
         ]
       }
 ---
-# Master Android Rooting Guide 2025
 
-**Unlock your Android's full potential.** Complete tutorials from basics to advanced techniques with proven safety practices.
+# Android Rooting Guide 2025
 
-::: tip 🚀 Quick Start
-**New to rooting??** → [What is Root?](#understanding-root-access) → [Safety first](#prerequisites-and-safety)  
-**Ready to root?** → [Choose Method](#root-solutions-comparison) → [Device Guide](#device-specific-guides)  
-**Need Help?** → [Emergency Help](../faqs.md#emergency-help) → [Community](#community-resources)
-:::
+Master Android rooting with comprehensive tutorials covering bootloader unlocking, root installation, and advanced customization techniques.
 
-## Table of Contents
+## Quick Navigation
 
-### 🚀 Getting Started
-- [Understanding Root Access](#understanding-root-access)
-- [Why Root Your Device?](#why-root-your-device)
-- [Prerequisites & Safety](#prerequisites-and-safety)
+**New to rooting?** Start with [Understanding Root Access](#understanding-root-access)
 
-### ⚙️ Root Solutions 
-- [Root Solutions Comparison](#root-solutions-comparison)
-- [Universal Rooting Process](#universal-rooting-process)
+**Ready to begin?** Choose your path:
+- [Prerequisites and Safety](#prerequisites-and-safety) - Critical preparations
+- [Universal Rooting Process](#universal-rooting-process) - Four-step guide for all devices
+- [Device-Specific Guides](#device-specific-guides) - Tailored instructions for your device
+- [Root Method Comparison](#choosing-a-root-method) - Magisk vs KernelSU vs APatch
 
-### 📚 Step-by-Step Tutorials
-- [Step 1: Bootloader Unlocking](#step-1-bootloader-unlocking)
-- [Step 2: Custom Recovery Installation](#step-2-custom-recovery-installation)
-- [Step 3: Root Installation](#step-3-root-installation)
-- [Step 4: Post-Root Setup](#step-4-post-root-setup)
-
-### 📱 Device-Specific Guides
-- [Device-Specific Guides](#device-specific-guides)
-
-### 🛠️ Advanced Topics
-- [Troubleshooting & Recovery](#troubleshooting-and-recovery)
-- [Community Resources](#community-resources)
+**Need help?** Visit [Troubleshooting](#troubleshooting) or [FAQ](../faqs.md)
 
 ---
 
 ## Understanding Root Access
 
-**Root access** grants you **superuser privileges**, the highest level of permissions in Android's Linux-based system.
+Root access grants **superuser (administrator) privileges** on Android, providing complete control over your device's operating system and hardware.
 
-### What It Means
+### What Root Enables
 
 - **System-level control** over files, processes, and hardware
 - **Bypass manufacturer restrictions**
@@ -174,38 +157,18 @@ head:
 - **Modify core system files**
 - **Access hidden hardware features**
 
-### Technical Foundation
+### Benefits vs Risks
 
-Root breaks the barriers of Android's default "sandbox" environment.
+| Benefits | Risks |
+|----------|-------|
+| Complete device control | Warranty void (usually permanent) |
+| System-wide ad blocking | Reduced security if misconfigured |
+| Performance tuning | Banking apps may fail |
+| Privacy enhancements | OTA updates blocked |
+| Bloatware removal | Potential for device bricking |
+| Full app backups | SafetyNet/Play Integrity issues |
 
-| **Without Root** | **With Root** |
-|------------------|---------------------|
-| Apps in isolated containers | Apps access system resources |
-| System files read-only | Full read/write access |
-| Limited hardware access | Direct hardware manipulation |
-| Cannot remove pre-installed apps | Complete bloatware removal |
-| Performance limited | Unlimited optimization |
-
----
-
-## Why Root Your Device?
-
-Root unlocks transformative capabilities.
-
-### ⚡ Benefits
-
-- **[Remove bloatware permanently](../guides/android-apps-debloating.md)**
-- **[System-wide ad blocking](../android-root-apps/#ad-blocking)** without VPN
-- **[Performance tuning](../android-root-apps/#performance-improvements)** (overclocking, battery)
-- **[Enhanced privacy & security](../android-root-apps/#privacy-and-security)** (granular control)
-- **[Unlimited customization](../android-root-apps/#customizations)** (UI, themes)
-- **[App mods](../android-root-apps/#app-mods)** (ads, features, cloning)
-
-::: tip 💡 Real-World Benefits
-Users report 30-50% battery improvement, ad-free experience, 2-3x performance gains, and full privacy control.
-:::
-
-### Should You Root? Decision Matrix
+### Is Rooting Right for You?
 
 | **✅ Root If:** | **❌ Don't Root If:** |
 |---------------------------|---------------------|
@@ -220,71 +183,56 @@ Users report 30-50% battery improvement, ad-free experience, 2-3x performance ga
 
 ## Prerequisites and Safety
 
-### ⚠️ Critical Warnings
+### Critical Warnings
 
-::: danger 🚨 PERMANENT CONSEQUENCES
-- **WARRANTY VOID**: Bootloader unlock permanently voids warranty
-- **DATA LOSS**: Unlocking **completely erases all data**  
-- **SECURITY RISKS**: Root can expose to malware
-- **BANKING APPS**: Many detect and block rooted devices
-- **BRICKING RISK**: Incorrect steps can permanently damage your device
+::: danger ⚠️ PERMANENT CONSEQUENCES
+**Data Loss** - Unlocking bootloader completely erases all device data. Backup everything before proceeding.
+
+**Warranty Void** - Bootloader unlocking permanently voids manufacturer warranty on most devices.
+
+**Security Risks** - Root access can expose your device to malware if misused. Only grant root to trusted apps.
+
+**Banking Apps** - Many financial apps detect and refuse to run on rooted devices.
+
+**Bricking Risk** - Incorrect procedures can permanently damage your device. Follow instructions exactly.
 :::
 
 ### Essential Requirements
 
 **Hardware:**
-- ✅ **Unlockable bootloader** - Verify compatibility
-- ✅ **50%+ battery**
-- ✅ **Quality USB cable**
-- ✅ **Computer** (Windows/macOS/Linux) with ADB/Fastboot
+- Android device with unlockable bootloader
+- 50% or higher battery charge
+- Quality USB cable (data-capable)
+- Computer (Windows, macOS, or Linux)
 
 **Software:**
-- ✅ **[Platform Tools (ADB/Fastboot)](https://developer.android.com/studio/releases/platform-tools)**
-- ✅ **Device drivers**
-- ✅ **Stock firmware** (for recovery)
-- ✅ **Backup solution**
+- [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools) (ADB/Fastboot)
+- Device-specific USB drivers (Windows only)
+- Stock firmware for your device (emergency recovery)
+- Backup solution for your data
 
-**Knowledge:**
-- ✅ **Basic command line**
-- ✅ **Device research** (e.g., XDA forums)
-- ✅ **Recovery plan**
+**Knowledge**
+- Basic command line familiarity
+- Understanding of your device model
+- Ability to research and follow instructions
+- Emergency recovery plan
 
-### Safety Best Practices
+### Pre-Rooting Checklist
 
-**Before Rooting:**
-1. **Backup everything**
-2. **Research thoroughly**
-3. **Verify compatibility**
-4. **Download recovery files**
-5. **Ensure stable internet**
-
-**During Process:**
-1. **Follow instructions exactly**
-2. **Wait for commands to finish**
-3. **Keep USB connection stable**
-4. **Monitor for errors**
-5. **Document progress**
-
-### Manufacturer Compatibility
-
-| Brand | Bootloader Unlock | Difficulty | Notes | Success Rate |
-|-------|------------------|------------|---------------------|--------------|
-| **Google Pixel** | ✅ Easy | 🟢 Beginner | Simple fastboot | 99% |
-| **OnePlus** | ✅ Easy | 🟢 Beginner | Official method | 95% |  
-| **Nothing** | ✅ Moderate | 🟡 Intermediate | Official tool | 90% |
-| **Xiaomi** | ✅ Complex | 🟡 Intermediate | Mi Unlock + wait | 85% |
-| **Motorola** | ✅ Moderate | 🟡 Intermediate | Unlock code | 80% |
-| **Samsung** | ⚠️ Limited | 🔴 Advanced | Exynos only | 60% |
-| **Huawei** | ❌ Blocked | 🔴 Expert | Legacy only | 20% |
+1. **Backup all data** - Photos, contacts, messages, app data
+2. **Charge device** - Minimum 50% battery
+3. **Verify device compatibility** - Check if bootloader can be unlocked
+4. **Download necessary files** - Stock firmware, root solution, recovery (if needed)
+5. **Research your device** - Read XDA forums and device-specific guides
+6. **Prepare recovery plan** - Know how to restore stock firmware
 
 ---
 
-## Root Solutions Comparison
+## Choosing a Root Method
 
-> [!IMPORTANT]
-> Check detailed comaprison here: **[Root Framework Comparison](./android-root-guides/root-framework-comparison.md)**
+Three primary rooting solutions exist, each with distinct advantages and trade-offs.
 
-Choose the best method for your needs.
+### Quick Comparison
 
 | Feature | Magisk | KernelSU | APatch |
 |---------|---------|----------|---------|
@@ -302,49 +250,59 @@ Choose the best method for your needs.
 | **Stability** | Stable | Stable | Experimental |
 | **Updates** | In-app | Manual | Manual |
 
-### Best Use Cases
 
-| Root Method | Ideal For |
-|-------------|-----------|
-| **Magisk** | Daily drivers, beginners, compatibility |
-| **KernelSU** | Advanced users, privacy, banking |
-| **APatch** | Developers, experiments, secondary devices |
+### Decision Guide
 
-### LSPosed Framework - App Modification Master
-**[📖 Complete LSPosed Guide](./lsposed-guide.md)**
+**Choose Magisk if:**
+- You are new to rooting
+- You need extensive module support
+- You want maximum device compatibility
+- You prefer easy installation
 
-**Note:** Requires existing root (Magisk, KernelSU, APatch).
+**Choose KernelSU if:**
+- You use a custom ROM
+- Security is your priority
+- You want better root hiding
+- You're comfortable with advanced procedures
 
-**✅ Capabilities:**
-- Deep app modification
-- Privacy enhancements
-- UI modifications
-- Legacy Xposed compatibility
+**Choose APatch if:**
+- Magisk doesn't work on your device
+- You want an alternative approach
+- You're willing to experiment
+
+> [!IMPORTANT]
+> For detailed comparison, see [Root Framework Comparison](./root-framework-comparison.md)
 
 ---
 
 ## Universal Rooting Process
 
-Follow this 4-step process regardless of method.
+All Android devices follow this four-step rooting process, regardless of manufacturer or root method.
 
-### Step 1: Bootloader Unlocking
-**[📖 Detailed Guide](./how-to-unlock-bootloader.md)**
+### Step 1: Unlock Bootloader
 
-1. **Enable Developer Options** - Settings → About Phone → Tap Build Number 7 times
-2. **Enable OEM Unlocking** - Developer Options → OEM Unlocking (ON)
-3. **Enable USB Debugging** - Developer Options → USB Debugging (ON)
-4. **Boot to Fastboot Mode** - Power + Volume Down (varies)
-5. **Execute Unlock Command** - `fastboot flashing unlock` or `fastboot oem unlock`
+Unlocking the bootloader is the essential first step that enables all subsequent modifications.
 
-**⚠️ Warning:** This **completely erases all data** and may void warranty.
+**Quick Steps:**
+1. **Enable Developer Options** (Settings > About > Tap Build Number 7 times)
+2. **Enable OEM Unlocking** (Developer Options > OEM Unlocking)
+3. **Enable USB Debugging** (Developer Options > USB Debugging)
+4. **Boot to fastboot mode** (Power + Volume Down or `adb reboot bootloader`)
+5. **Execute unlock command** (`fastboot flashing unlock` or `fastboot oem unlock`)
 
-### Step 2: Custom Recovery Installation  
-**[📖 Detailed Guide](./how-to-install-custom-recovery.md)**
+> [!CAUTION]
+> ⚠️ This step erases all data completely.
 
-Popular Options:
-- **TWRP** - Most popular
-- **OrangeFox** - Modern UI
-- **SHRP** - Feature-rich
+**[📖 Complete Bootloader Unlocking Guide](./how-to-unlock-bootloader.md)**
+
+### Step 2: Install Custom Recovery
+
+Custom recovery provides advanced features and safer modification workflows. Required for some devices and methods.
+
+**Popular Options:**
+- **TWRP** - Most widely supported
+- **OrangeFox** - Modern interface
+- **SKYHAWK** - Feature-rich
 
 **Process:**
 1. **Download device-specific recovery**
@@ -352,43 +310,61 @@ Popular Options:
 3. **Flash recovery image** - `fastboot flash recovery recovery.img`
 4. **Boot to recovery** - Test functionality
 
-### Step 3: Root Installation
+**[📖 Custom Recovery Installation Guide](./how-to-install-custom-recovery.md)**
 
-#### Option A: Magisk
-**[📖 Guide](./magisk-guide.md)**
-1. Download Magisk APK
-2. Patch stock boot image
-3. Flash patched boot image
-4. Install Magisk app
+### Step 3: Install Root Solution
 
-#### Option B: KernelSU  
-**[📖 Guide](./kernelsu-guide.md)**
-1. Verify kernel compatibility
-2. Download KernelSU kernel
-3. Flash kernel via recovery
-4. Install KernelSU app
+Choose and install your preferred root method.
+
+#### Option A: Magisk (Recommended)
+
+1. Download latest Magisk APK from [official GitHub](https://github.com/topjohnwu/Magisk/releases)
+2. Extract boot.img from your device's stock firmware
+3. Patch boot.img using Magisk app
+4. Flash patched boot image via fastboot
+5. Reboot and install Magisk app
+
+**[📖 Complete Magisk Guide](./magisk-guide.md)**
+
+#### Option B: KernelSU
+
+1. Verify your device has compatible GKI kernel
+2. Download KernelSU-supported kernel for your device
+3. Flash kernel via fastboot or custom recovery
+4. Install KernelSU manager app
+5. Configure app profiles
+
+**[📖 Complete KernelSU Guide](./kernelsu-guide.md)**
 
 #### Option C: APatch
-**[📖 Guide](./apatch-guide.md)**  
-1. Check device compatibility 
-2. Download APatch kernel patch
-3. Apply patch via recovery
-4. Configure APatch manager
 
-### Step 4: Post-Root Setup
+1. Verify device compatibility
+2. Download APatch manager and appropriate kernel patch
+3. Apply patch via APatch app or recovery
+4. Flash patched image
+5. Configure APatch manager
 
-1. **Verify Root Access** - Use root checker app
-2. **Configure Root Management** - Set permissions
-3. **Install Essential Apps** - [Must-have root apps](../android-root-apps/#starter-kit-must-have-apps)
-4. **Create System Backup** - Full NANDroid backup
-5. **Configure Banking Apps** - Set up root hiding if needed
-6. **Security Hardening** - Enable appropriate measures
+**[📖 Complete APatch Guide](./apatch-guide.md)**
+
+### Step 4: Post-Root Configuration
+
+After successful root installation, complete these essential steps:
+
+1. **Verify Root Access** - Verify superuser access works correctly
+2. **Install Essential Apps** - Visit [Starter Kit: Must-Have Apps](../android-root-apps/#starter-kit-must-have-apps)
+3. **Configure Root Management** - Set up root hiding if needed (banking apps) & module installation 
+4. **Create System Backup** - Create full system backup for safety
+
+**Recommended Next Steps:**
+- [Block Ads System-Wide](../guides/android-adblocking.md)
+- [Debloat Your Device](../guides/android-apps-debloating.md)
+- [Browse Root Apps Collection](../android-root-apps/)
 
 ---
 
 ## Device-Specific Guides
 
-Choose your manufacturer for tailored instructions:
+Detailed rooting instructions tailored for specific manufacturers and models.
 
 ### 📱 [Google Pixel Series](./how-to-root-pixel-phone.md)
 ### 📱 [Samsung Galaxy Series](./how-to-root-samsung-phone.md)
@@ -397,102 +373,169 @@ Choose your manufacturer for tailored instructions:
 ### 📱 [Motorola Devices](./how-to-root-motorola-phone.md)
 ### 📱 [Nothing Phone Series](./how-to-root-nothing-phone.md)
 
-::: tip 🔍 Can't Find Your Device?
-**Check these resources:**
-- [XDA Developers Forums](https://forum.xda-developers.com/)
-- [Reddit Android Communities](https://www.reddit.com/r/Android/)
-- [Telegram Root Groups](https://t.me/awesomeandroidroot)
-- **Search:** "[Your Device Model] root guide [Current Year]"
-:::
+> [!TIP]
+> **Can't find your device?** Check [XDA Developers Forums](https://forum.xda-developers.com/) or [Reddit Android Communities](https://www.reddit.com/r/Android/) for community-maintained guides.
 
 ---
 
-## Troubleshooting and Recovery
+## Troubleshooting
 
-### Emergency Situations
+### Common Issues and Solutions
 
-**Device Won't Boot (Bootloop):**
-1. **Enter Recovery Mode** - Power + Volume Up (varies)
-2. **Try Safe Mode** - May bypass issues
-3. **Restore from backup** - Use TWRP/custom recovery
-4. **Flash stock firmware** - Complete restoration
-5. **Seek help** - XDA forums
+**Device Won't Boot (Bootloop)**
 
-**Root Not Working:**
-1. **Verify installation** - Check root manager status
-2. **Grant permissions** - Ensure superuser access
-3. **Test with Root Checker** - Confirm functionality
-4. **Reinstall root solution** - Fresh installation
-5. **Check compatibility** - Verify firmware support
+Symptoms: Device stuck on boot logo, constantly rebooting
 
-**Banking Apps Not Working:**
-1. **Configure root hiding** - Enable MagiskHide/KernelSU hiding
-2. **Install bypass modules** - Play Integrity Fix
-3. **Use isolation** - Work profiles or app cloning
-4. **Research bypass techniques** - App-specific
+Solutions:
+1. Boot to recovery mode (Power + Volume Up, varies by device)
+2. Wipe cache partition
+3. Restore from backup if available
+4. Flash stock firmware via fastboot
+5. Seek help on device-specific XDA forum
 
-### Advanced Recovery Techniques
+**Root Not Detected**
 
-**Fastboot Recovery:**
-- **Boot temporary recovery:** `fastboot boot recovery.img`
-- **Flash original firmware:** `fastboot flash system system.img`
-- **Wipe user data:** `fastboot -w` (factory reset)
+Symptoms: Root checker shows no root, apps can't get superuser access
 
-**ADB Recovery:**
-- **Sideload updates:** `adb sideload update.zip`
-- **Install APKs:** `adb install app.apk`
-- **System debugging:** `adb logcat` for errors
+Solutions:
+1. Verify root manager app is installed
+2. Check if superuser daemon is running
+3. Grant root permission when prompted
+4. Reinstall root solution
+5. Verify boot image wasn't overwritten
+
+**Banking Apps Not Working**
+
+Symptoms: Apps detect root and refuse to run
+
+Solutions:
+1. Enable root hiding in Magisk (DenyList) or KernelSU
+2. Install Play Integrity Fix module
+3. Hide Magisk app (rename and repackage)
+4. Use app isolation (Island, Shelter)
+5. Consider alternative banking apps
+
+**OTA Updates Failing**
+
+Symptoms: System updates fail to install
+
+Solutions:
+1. Temporarily uninstall root (Magisk: Restore Images)
+2. Accept that OTA updates require manual work when rooted
+3. Flash full OTA package manually
+4. Wait for rooted OTA update method for your device
+5. Use custom ROM with built-in OTA support
+
+**Fastboot Not Recognized**
+
+Symptoms: Computer doesn't detect device in fastboot mode
+
+Solutions:
+1. Install proper USB drivers (Windows)
+2. Try different USB port (USB 2.0 often works better)
+3. Use different USB cable (must be data-capable)
+4. Disable USB Selective Suspend (Windows)
+5. Try different computer if available
+
+### Emergency Recovery
+
+**Factory Reset Protection (FRP)**
+
+If locked out after factory reset:
+1. Use previously synced Google account
+2. Follow manufacturer FRP bypass methods
+3. Flash stock firmware with all partitions
+4. Contact manufacturer support if purchased legitimately
+
+**Complete Brick Recovery**
+
+If device won't power on or enter any mode:
+1. Try emergency download mode (EDL/9008)
+2. Use manufacturer-specific unbrick tools
+3. Search XDA for device-specific unbrick guides
+4. Professional repair may be necessary
+
+**Prevention Tips:**
+- Always keep stock firmware downloaded
+- Create regular backups
+- Understand your device's emergency modes
+- Join device-specific communities for support
 
 ---
 
-## Community Resources
+## Additional Resources
 
-### Official Communities
-- **[GitHub Repository](https://github.com/awesome-android-root/awesome-android-root)** - Source, issues, contributions
-- **[Reddit Community](https://www.reddit.com/r/AwesomeAndroidRoot/)** - Discussions, help
-- **[Twitter Updates](https://twitter.com/awsm_and_root)** - News
-- **[Telegram Channel](https://t.me/awesomeandroidroot)** - Real-time chat
+### Framework and Advanced Guides
 
-### Essential Resources
-- **[FAQ & Troubleshooting](../faqs.md)** - Common issues
-- **[App Collection](../android-root-apps/)** - Curated root apps
-- **[General Android Guides](../guides/)** - Non-root tips
-- **[Contributing Guidelines](../contributing.md)** - Help improve
+**LSPosed Framework**
 
-### Getting Help
-**When asking for help, include:**
-- Device model & firmware
-- Root method attempted
+Advanced app modification framework for rooted devices
+
+- Requires existing root (Magisk/KernelSU/APatch)
+- Enables Xposed modules for app modifications
+- Privacy and customization enhancements
+
+**[📖 Complete LSPosed Guide](./lsposed-guide.md)**
+
+**Custom ROM Installation**
+
+Replace stock Android with custom ROMs
+
+- Requires unlocked bootloader
+- Usually requires custom recovery
+- Enhances privacy and removes bloatware
+
+**[📖 Custom ROM Installation Guide](./custom-rom-installation.md)**
+
+---
+
+## Community and Support
+
+### **Official Resources**
+- [GitHub Repository](https://github.com/awesome-android-root/awesome-android-root) - Source code and issues
+- [Troubleshooting Guide](./troubleshooting.md) - Common problems and fixes
+- [FAQ](../faqs.md) - Common questions
+- [Root Apps Collection](../android-root-apps/) - Curated apps and modules
+- [Twitter Updates](https://twitter.com/awsm_and_root) - News
+
+### **External Communities**
+- [XDA Developers](https://forum.xda-developers.com/) - Device-specific forums
+- [Reddit r/Android](https://www.reddit.com/r/Android/) - General Android discussion
+- [Reddit r/Rooting](https://www.reddit.com/r/Rooting/) - Rooting help and discussion
+- [Reddit r/Magisk](https://www.reddit.com/r/Magisk/) - Magisk-specific support
+
+### When Asking for Help
+
+Include this information:
+- Device model and exact variant
+- Android version and build number
+- Root method attempted (Magisk/KernelSU/APatch)
 - Exact error messages
-- Steps tried
-- Screenshots
-
-**Best places to get help:**
-1. **Our FAQ section**
-2. **XDA Developers**
-3. **Reddit communities**
-4. **Telegram groups**
+- Steps already tried
+- Screenshots if applicable
 
 ---
 
-::: tip 🚀 Ready to Begin?
-**Quick Start Path:** [Prerequisites](#prerequisites-and-safety) → [Choose Root Method](#root-solutions-comparison) → [Device-Specific Guide](#device-specific-guides) → [Emergency Help](../faqs.md#emergency-help)
-
-**Remember:** Take your time, backup everything, and ask for help. The community supports you! 🎯
-:::
+## Next Steps
 
 ### Your Path Forward
-1. **[🔓 Unlock Bootloader](./how-to-unlock-bootloader.md)**
-2. **[🛠️ Install Recovery](./how-to-install-custom-recovery.md)**
-3. **[📱 Device-Specific Guide](#device-specific-guides)**
-4. **[⚡ Choose Root Method](#root-method-comparison)**
+1. **[Unlock Bootloader](./how-to-unlock-bootloader.md)**
+2. **[Install Recovery](./how-to-install-custom-recovery.md)**
+3. **[Device-Specific Guide](#device-specific-guides)**
+4. **[Choose Root Method](#root-method-comparison)**
 
-### Success Principles
+> [!IMPORTANT]
+> - Join our [community discussions](../about.md#community-resources)
+> - Contribute to the [project](../contributing.md)
+> - Stay updated via [Twitter](https://twitter.com/awsm_and_root)
+
+
+#### Success Principles
 ✅ **Research thoroughly**  
 ✅ **Follow instructions precisely**  
 ✅ **Ask questions**  
 ✅ **Be patient**  
-✅ **Backup everything**  
+✅ **Backup everything**
 
 ---
 
