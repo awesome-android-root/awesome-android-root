@@ -3,3 +3,4 @@ docs/.vitepress/cache
 node_modules
 docs/README.md
 REFACTORING_PROGRESS.md
+docs/android-root-guides/*_NEW.md
