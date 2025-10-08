@@ -577,7 +577,7 @@ After DenyList configuration:
 
 **In-App Updates:**
 
-<details><summary>Click to expand details</summary>
+<details><summary>👉 Click to expand details</summary>
 
 1. Magisk > Settings
 2. Update channel: Stable (recommended)
@@ -598,7 +598,7 @@ After DenyList configuration:
 
 ### OTA System Updates
 
-<details><summary>Click to expand details</summary>
+<details><summary>👉 Click to expand details</summary>
 
 **For A/B Devices (Most Modern Devices):**
 
@@ -623,7 +623,7 @@ After DenyList configuration:
 
 ### Backup and Restore
 
-<details><summary>Click to expand details</summary>
+<details><summary>👉 Click to expand details</summary>
 
 **Backup Important Files:**
 - Original boot/init_boot image
@@ -653,7 +653,7 @@ fastboot flash boot stock_boot.img
 
 **Magisk Shows N/A After Installation**
 
-<details><summary>Click to expand details</summary>
+<details><summary>👉 Click to expand details</summary>
 
 Causes:
 - Wrong partition flashed (boot vs init_boot)
@@ -670,7 +670,7 @@ Solutions:
 
 **Device Bootloops After Flashing**
 
-<details><summary>Click to expand details</summary>
+<details><summary>👉 Click to expand details</summary>
 
 Solutions:
 1. Boot to fastboot
@@ -686,7 +686,7 @@ fastboot reboot
 
 **Fastboot Not Detecting Device**
 
-<details><summary>Click to expand details</summary>
+<details><summary>👉 Click to expand details</summary>
 
 Solutions:
 - Reinstall USB drivers (Windows)
@@ -701,7 +701,7 @@ Solutions:
 
 **Apps Not Detecting Root**
 
-<details><summary>Click to expand details</summary>
+<details><summary>👉 Click to expand details</summary>
 
 Solutions:
 1. Verify Magisk shows "Installed"
@@ -714,7 +714,7 @@ Solutions:
 
 **Root Randomly Lost**
 
-<details><summary>Click to expand details</summary>
+<details><summary>👉 Click to expand details</summary>
 
 Causes:
 - Module conflict
@@ -732,7 +732,7 @@ Solutions:
 
 **Module Causes Bootloop**
 
-<details><summary>Click to expand details</summary>
+<details><summary>👉 Click to expand details</summary>
 
 Solutions:
 
@@ -760,7 +760,7 @@ Via safe mode:
 
 **Module Not Working**
 
-<details><summary>Click to expand details</summary>
+<details><summary>👉 Click to expand details</summary>
 
 Solutions:
 1. Verify Zygisk enabled (if module requires it)
@@ -775,7 +775,7 @@ Solutions:
 
 **App Detects Root Despite DenyList**
 
-<details><summary>Click to expand details</summary>
+<details><summary>👉 Click to expand details</summary>
 
 Solutions:
 1. Hide Magisk app with different name
@@ -787,7 +787,7 @@ Solutions:
 
 **App Crashes on Launch**
 
-<details><summary>Click to expand details</summary>
+<details><summary>👉 Click to expand details</summary>
 
 Solutions:
 1. Remove app from DenyList temporarily
@@ -800,7 +800,7 @@ Solutions:
 
 ### Play Integrity Failures
 
-<details><summary>Click to expand details</summary>
+<details><summary>👉 Click to expand details</summary>
 
 **Basic Integrity Fails**
 
