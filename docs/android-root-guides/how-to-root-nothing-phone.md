@@ -59,24 +59,26 @@ head:
       content: index, follow
 ---
 
-# Complete Nothing & CMF by Nothing Phone Rooting Guide
+# Nothing & CMF Phone Root Guide
 
-This page focuses on Nothing‑specific resources and notes. For universal prep and Magisk steps, see: [Main Rooting Guide](./index.md), [Bootloader Unlocking](./how-to-unlock-bootloader.md), and [Magisk Guide](./magisk-guide.md).
+Root Nothing Phone devices with straightforward process. 
 
-## 🔗 Essential Resources
-- **[📖 Main Rooting Guide](./index.md)** - Universal rooting principles and safety
-- **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - General bootloader concepts
-- **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - TWRP installation guide
-- **[❓ FAQ & Troubleshooting](../faqs.md)** - Solutions for common issues
+## Quick Navigation
 
-## Critical Warnings
+- [Nothing Overview](#nothing-rooting-overview)
+- [Supported Devices](#supported-devices)
+- [Prerequisites](#prerequisites)
+- [Bootloader Unlock](#unlock-bootloader)
+- [Root Installation](#root-installation)
+- [Troubleshooting](#troubleshooting)
 
-::: danger ⚠️ Nothing-Specific Considerations
-- **Warranty void** - Unlocking bootloader voids Nothing warranty
-- **Complete data erasure** - All personal data will be wiped
-- **Banking app issues** - Some financial apps may detect root
-- **Nothing OS integrity** - Modifications may affect unique Nothing features
-:::
+**Related Guides:**
+- [Main Rooting Guide](./index.md) - Universal rooting concepts
+- [Bootloader Unlocking](./how-to-unlock-bootloader.md) - Detailed unlock guide
+- [Magisk Guide](./magisk-guide.md) - Complete Magisk documentation
+
+---
+
 
 ## Supported Devices
 
@@ -92,268 +94,417 @@ This page focuses on Nothing‑specific resources and notes. For universal prep 
 - **CMF Phone (1)** - Codename: `Tetris`
 - **CMF Phone (2) Pro** - Codename: `Galaga`
 
-## Prerequisites & Setup
-
-### Required Tools
-1. **[Platform Tools](https://developer.android.com/studio/releases/platform-tools)** - ADB/Fastboot
-2. **[Magisk APK](https://github.com/topjohnwu/Magisk/releases)** - Latest release
-3. **[Nothing Archive](https://github.com/spike0en/nothing_archive)** by spike0en - Stock boot/init_boot image
-4. **Custom recovery** (optional) - TWRP or OrangeFox
-
-### Device Preparation
-1. **Enable Developer Options** - Settings → About Phone → Tap Build Number 7 times
-2. **Configure Developer Settings:**
-   - Enable **USB Debugging**
-   - Enable **OEM Unlocking**
-3. **Backup all data** - Photos, contacts, apps, settings
-4. **Charge to 50%+** - Ensure sufficient battery
-
-### Connection Verification
-```bash
-# Test ADB connection
-adb devices
-
-# Should show your device with "device" status
-# If "unauthorized", accept USB debugging prompt on phone
-```
-
-## Bootloader Unlocking
-
-::: warning ⚠️ Data Erasure Warning
-Unlocking bootloader **COMPLETELY WIPES** your device. Ensure all important data is backed up.
-:::
-
-### Enter Fastboot Mode
-```bash
-# Method 1: ADB command
-adb reboot bootloader
-
-# Method 2: Hardware keys
-# Power off device → Hold Volume Down + Power buttons
-```
-
-### Verify Connection
-```bash
-fastboot devices
-# Should show your device listed
-```
-
-### Unlock Bootloader
-```bash
-fastboot flashing unlock
-```
-
-**On your device:**
-- Use Volume keys to navigate to **"Unlock the bootloader"**
-- Press Power button to confirm
-- Device will erase and reboot automatically
-
-### Complete Initial Setup
-After automatic factory reset:
-1. Complete initial device setup
-2. Re-enable Developer Options (Build Number × 7)
-3. Re-enable USB Debugging
-
-## Root Installation Methods
-
-### Method A: Boot Image Patching (Recommended)
-
-#### Step 1: Extract Boot Image
-1. **Download stock boot/init_boot image** from the Nothing Archive for your respective model.
-2. **Refer to the [downloads index](https://github.com/spike0en/nothing_archive#downloads-)**, click on OTA Images for your corresponding build version and model. Go to release assets. Download the `-image-boot.img.7z` file.
-3. **Locate the boot.img/init_boot.img** file within the archive. Note: if init_boot.img exists, that should be used for rooting instead of boot.img.
-4. **Copy boot.img/init_boot.img** to an easily accessible location.
-
-#### Step 2: Patch Boot Image
-1. **Transfer boot.img/init_boot.img to device:**
-   ```bash
-   adb push boot.img /sdcard/Download/
-   # or
-   adb push init_boot.img /sdcard/Download/
-   ```
-
-2. **Install Magisk APK** on device (see [Magisk Guide](./magisk-guide.md#method-1-boot-image-patching-recommended)):
-   ```bash
-   adb install Magisk-v[version].apk
-   ```
-
-3. **Patch boot image:**
-   - Open Magisk app on device
-   - Tap **Install** → **Select and patch a file**
-   - Navigate to Downloads and select boot.img or init_boot.img, as applicable.
-   - Wait for patching to complete
-
-4. **Retrieve patched image:**
-   ```bash
-   adb pull /sdcard/Download/magisk_patched_[hash].img ./
-   ```
-
-#### Step 3: Flash Patched Boot
-1. **Boot to fastboot mode:**
-   ```bash
-   adb reboot bootloader
-   ```
-
-2. **Flash patched boot:**
-   ```bash
-   fastboot flash boot magisk_patched_[hash].img
-   # or
-   fastboot flash init_boot magisk_patched_[hash].img
-   ```
-
-3. **Reboot system:**
-   ```bash
-   fastboot reboot
-   ```
-
-### Method B: Custom Recovery Installation
-
-#### Step 1: Install Custom Recovery
-1. **Download recovery image** for your specific Nothing Phone model
-2. **Flash recovery:**
-   ```bash
-   fastboot flash recovery recovery.img
-   ```
-
-3. **Boot to recovery:**
-   ```bash
-   fastboot reboot recovery
-   # Or: Volume Up + Power after powering off
-   ```
-
-#### Step 2: Install Magisk via Recovery
-1. **Transfer Magisk ZIP** to device storage
-2. **In recovery interface:**
-   - **TWRP:** Install → Select Magisk ZIP → Swipe to confirm
-   - **OrangeFox:** Files → Select Magisk ZIP → Install
-3. **Reboot system**
-
-## Verification & Setup
-
-### Confirm Root Access
-1. **Open Magisk app** - Should show "Magisk" and "Zygisk" as installed
-2. **Test root access** - Use Root Checker app or terminal `su` command
-3. **Grant permissions** - Approve root requests from apps as needed
-
-### Configure Security Settings
-1. **Enable Zygisk** - Magisk → Settings → Enable Zygisk
-2. **Configure DenyList** - Add banking apps, Netflix, etc.
-3. **Install bypass modules** - For Play Integrity if needed
-4. **Create backup** - TWRP NANDroid or Magisk backup
-
-## Alternative Root Solutions
-
-### KernelSU (Enhanced Security)
-**Ideal for advanced users seeking better banking app compatibility**
-
-1. **Check kernel compatibility** at [KernelSU.org](https://kernelsu.org/)
-2. **Flash KernelSU-supported kernel** for your device
-3. **Install KernelSU Manager** app
-4. **Configure App Profiles** for granular control
-
-### APatch (Experimental)
-**For developers and testing purposes**
-
-1. **Check device compatibility** at [APatch GitHub](https://github.com/bmax121/APatch)
-2. **Follow installation documentation** carefully
-3. **Requires advanced knowledge** for troubleshooting
-
-## Troubleshooting
-
-### Common Issues
-
-#### Fastboot Not Recognized
-- **Install proper USB drivers** (Windows)
-- **Try different USB ports/cables** (preferably original Nothing cable)
-- **Use USB 2.0 ports** if USB 3.0 causes issues
-
-#### Bootloop After Root
-```bash
-# Flash stock boot image to recover
-fastboot flash boot stock_boot.img
-```
-
-#### Banking Apps Not Working
-1. **Enable Zygisk** in Magisk settings
-2. **Configure DenyList** properly
-3. **Install bypass modules:** Universal SafetyNet Fix, Shamiko
-4. **Clear banking app data** and re-setup
-
-#### Recovery Not Booting
-- **Ensure correct recovery** for your exact model
-- **Try temporary boot first:**
-  ```bash
-  fastboot boot recovery.img
-  ```
-
-### Emergency Recovery Commands
-```bash
-# Flash complete stock firmware
-fastboot update firmware.zip
-
-# Factory reset via fastboot
-fastboot -w
-
-# Flash individual partitions
-fastboot flash boot boot.img
-fastboot flash recovery recovery.img
-```
-
-## Restore to Stock
-
-### Unroot Process
-1. **Uninstall Magisk** - Magisk → Settings → Complete Uninstall
-2. **Restore OTA Functionality** - Refer to [this guide](https://github.com/spike0en/nothing_archive#i-ota-sideloading-)
-2. **Flash stock firmware** - Refer to [this guide](https://github.com/spike0en/nothing_archive#iv-flashing-the-stock-rom-using-fastboot-)
-3. **Fastboot Flashing Script** - [Nothing Flasher](https://github.com/spike0en/nothing_flasher)
-
-### Lock Bootloader (Optional)
-```bash
-fastboot flashing lock
-```
-::: danger ⚠️ Critical Warning
-Only lock bootloader with completely stock firmware and android verified boot (AVB) enabled. Locking with custom firmware or modified partitions can permanently brick your device.
-:::
-
-## Banking App Compatibility
-
-### Modern Play Integrity Solutions
-1. **Tricky Store Module** - Latest bypass method
-2. **Enable Zygisk** - Required for modern bypasses
-3. **Configure DenyList** - Hide root from specific apps
-4. **Test with Play Integrity Checker** - Verify bypass success
-
-### Configuration Steps
-1. Install bypass modules through Magisk
-2. Enable Zygisk in Magisk settings
-3. Add problematic apps to DenyList
-4. Clear app data for banking/payment apps
-5. Re-login and test functionality
-6. Alternatively refer to [this guide](https://github.com/yashaswee-exe/AndroidGuides/wiki/Fix-integrity-and-root-detection) for fixing integrity & root detection
+> [!NOTE]
+> **Note:** All Nothing Phones are unlockable globally. No regional restrictions.
 
 ---
 
-## Success! Your Nothing Phone is Rooted
+## Prerequisites
 
-**Congratulations!** Your Nothing / CMF by Nothing Phone now has root access. Here's what to do next:
+### Critical Requirements
 
-### Explore Community Platforms & Resources
-- **[Nothing Resource Index](https://linkfly.to/NothingArchive)** – Updates, community projects, and resources related to the Nothing ecosystem
-- **[Nothing Telegram](https://t.me/Nothing_Archive)** – Channel indexing the Unofficial Telegram community for updates, ROMs, development and photography
-- **[Nothing Telegram Community Chat](https://t.me/NothingTelegramCommunity)** – General discussion and onboarding chat linked to the above channel
-- **[Nothing XDA](https://xdaforums.com/c/nothing.12583/)** – Developer community
-- **[Nothing Discord](https://discord.com/invite/nothingtech)** – Official Discord server
-- **[Community Website](https://nothing.community/)** – Official Nothing community website
-- **[r/NothingTech](https://www.reddit.com/r/NothingTech/)** – Unofficial Reddit community
+::: danger BEFORE YOU START
+**Data Wipe:** Unlocking bootloader erases everything including internal storage.
 
-### Immediate Next Steps
-1. **[Browse Root Apps](../android-root-apps/#root-apps)** - Discover 300+ curated applications
-2. **[Setup Banking App Bypass](../faqs.md#play-integrity-and-banking-apps)** - Configure root hiding
-3. **[Install Essential Apps](../android-root-apps/#starter-kit-must-have-apps)** - Start with recommended apps
+**Backup Everything:** Photos, contacts, messages, app data, authenticator codes.
 
-### Advanced Customization
-- **[Custom Recovery](./how-to-install-custom-recovery.md)** - Install TWRP for advanced features
-- **[Custom ROM](./custom-rom-installation.md)** - Explore LineageOS and other ROMs
-- **[LSPosed Framework](./lsposed-guide.md)** - Enable Xposed modules
+**Warranty Void:** Bootloader unlock voids manufacturer warranty permanently.
 
-**Welcome to unlimited Nothing Phone customization!** 🚀
+**Glyph Interface:** May not work on some custom ROMs. Test before full switch.
+:::
+
+### Hardware Requirements
+
+- Nothing Phone device (any model)
+- Quality USB-C cable
+- Computer (Windows, macOS, or Linux)
+- 50%+ battery charge
+
+### Software Requirements
+
+**On Computer:**
+
+1. **Platform Tools** (ADB/Fastboot)
+   - Download: [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools)
+
+2. **USB Drivers** (Windows)
+   - Usually auto-install
+   - Or download generic Android drivers
+
+3. **Stock Firmware** (for recovery)
+   - Download from [Github](https://github.com/spike0en/nothing_archive)
+   - Official updates via OTA
+
+**On Device:**
+
+1. **Magisk APK**
+   - Download: [Magisk GitHub](https://github.com/topjohnwu/Magisk/releases)
+
+### Device Preparation
+
+**Step 1: Enable Developer Options**
+
+1. Settings > About phone
+2. Tap "Build number" 7 times
+3. Enter PIN/password
+
+**Step 2: Enable Required Settings**
+
+Settings > System > Developer options:
+- **OEM unlocking**: Enable
+- **USB debugging**: Enable
+
+**Step 3: Verify ADB**
+
+```bash
+adb devices
+# Accept debugging prompt
+# Should show "device" status
+```
+
+---
+
+## Unlock Bootloader
+
+### Step 1: Enter Fastboot Mode
+
+**Method 1: ADB**
+```bash
+adb reboot bootloader
+```
+
+**Method 2: Hardware Keys**
+1. Power off
+2. Hold Volume Down + Power
+3. Release at fastboot screen
+
+### Step 2: Unlock Bootloader
+
+```bash
+# Verify connection
+fastboot devices
+
+# Unlock bootloader
+fastboot flashing unlock
+
+# Alternatively (if first doesn't work)
+fastboot oem unlock
+```
+
+**On Device:**
+1. Warning screen appears
+2. Use Volume keys to navigate
+3. Select "UNLOCK THE BOOTLOADER"
+4. Press Power to confirm
+5. Device wipes and reboots
+
+### Step 3: Complete Setup
+
+After automatic factory reset:
+1. Complete Android setup
+2. Re-enable Developer options
+3. Re-enable USB debugging
+
+---
+
+## Root Installation
+
+### Determine Correct Image
+
+| Device | Android Version | Image to Patch |
+|--------|-----------------|----------------|
+| Nothing Phone (2a) | Android 14 | init_boot.img |
+| Nothing Phone (2) | Android 13/14 | init_boot.img |
+| Nothing Phone (1) | Android 13/14 | init_boot.img |
+| Nothing Phone (1) | Android 12 | boot.img |
+
+**Check in Magisk app "Ramdisk" field if unsure.**
+
+### Method 1: Boot Image Patching
+
+**Step 1: Extract Boot Image**
+
+For Nothing Phone (2) and (2a):
+1. Download OTA update or firmware
+2. Extract payload.bin
+3. Use payload-dumper-go:
+```bash
+./payload-dumper-go -o extracted payload.bin
+```
+4. Find init_boot.img in extracted/
+
+For Nothing Phone (1):
+- Check current Android version
+- Android 13+ uses init_boot.img
+- Android 12 uses boot.img
+
+**Step 2: Transfer to Device**
+
+```bash
+adb push init_boot.img /sdcard/Download/
+# Or
+adb push boot.img /sdcard/Download/
+```
+
+**Step 3: Install Magisk and Patch**
+
+```bash
+adb install Magisk-v27.0.apk
+```
+
+On device:
+1. Open Magisk
+2. Install > Select and Patch a File
+3. Choose boot/init_boot image
+4. Wait for patching
+
+**Step 4: Transfer Patched Image**
+
+```bash
+adb pull /sdcard/Download/magisk_patched_xxxxx.img ./
+```
+
+**Step 5: Flash Patched Image**
+
+```bash
+adb reboot bootloader
+
+# For Android 13/14
+fastboot flash init_boot magisk_patched_xxxxx.img
+
+# For Android 12
+fastboot flash boot magisk_patched_xxxxx.img
+
+fastboot reboot
+```
+
+**Step 6: Verify Root**
+
+1. Open Magisk app
+2. Should show:
+   - Magisk: Installed
+   - App: Latest
+
+Test:
+```bash
+adb shell
+su
+id
+# Returns: uid=0(root)
+```
+
+---
+
+## Post-Root Setup
+
+### Configure Magisk
+
+**Settings:**
+- **Zygisk**: Enable
+- **Enforce DenyList**: Enable
+- **Hide Magisk app**: For banking apps
+
+**DenyList Configuration:**
+- Google Play Services
+- Google Play Store
+- Banking apps
+- Payment apps
+
+### Nothing OS Optimization
+
+**Battery Optimization:**
+1. Settings > Battery
+2. Find Magisk and root apps
+3. Set to "Unrestricted"
+
+**Background Activity:**
+1. Settings > Apps
+2. Magisk and root apps
+3. Allow background activity
+
+### Recommended Modules
+
+- **Universal SafetyNet Fix**
+- **Shamiko** - Root hiding
+- **LSPosed** - Framework
+- **Systemless Hosts** - Ad blocking
+
+---
+
+## OTA Handling
+
+### For A/B Devices (All Nothing Phones)
+
+**Step 1: Download OTA**
+
+Settings > System > System update
+
+Download but don't reboot yet
+
+**Step 2: Magisk Installation**
+
+1. Magisk > Install
+2. "Install to Inactive Slot (After OTA)"
+3. Wait for completion
+4. Reboot when prompted
+
+Root preserved after update!
+
+---
+
+## Troubleshooting
+
+<details><summary> Tap to expand common issues and fixes</summary>
+
+### Bootloader Issues
+
+**OEM Unlocking Greyed Out**
+
+Solutions:
+1. Remove all accounts
+2. Factory reset
+3. Wait 24 hours
+4. Try again
+
+**Fastboot Not Detecting**
+
+Solutions:
+- Update Platform Tools
+- Try USB 2.0 port
+- Different cable
+- Reinstall drivers
+
+### Installation Issues
+
+**Magisk Shows N/A**
+
+Solutions:
+1. Verify correct image
+2. Check Android version
+3. Re-patch correct image
+4. Flash to correct partition
+
+**Bootloop After Root**
+
+```bash
+fastboot flash init_boot stock_init_boot.img
+# Or
+fastboot flash boot stock_boot.img
+fastboot reboot
+```
+
+### Glyph Interface Issues
+
+**Glyph Not Working After Root**
+
+Usually continues working with Magisk. If issues:
+1. Check for Glyph-related modules
+2. Reinstall Nothing OS stock
+3. Some custom ROMs may not support Glyph
+
+</details>
+
+---
+
+## Unroot and Restore
+
+### Remove Root
+
+```bash
+# Magisk > Uninstall > Restore Images
+```
+
+### Flash Stock Firmware
+
+Via fastboot:
+```bash
+# Flash stock images
+fastboot flash boot stock_boot.img
+fastboot flash init_boot stock_init_boot.img
+fastboot reboot
+```
+
+### Relock Bootloader
+
+::: danger RELOCK WARNING
+Only when completely stock!
+:::
+
+```bash
+fastboot flashing lock
+```
+
+---
+
+## Custom ROMs
+
+### Available ROMs
+
+**LineageOS:**
+- Official builds for Nothing Phone (1)
+- Community builds for Phone (2)
+
+**Pixel Experience:**
+- Growing support
+- Pixel-like interface
+
+**Evolution X:**
+- Feature-rich
+- Good performance
+
+**Note:** Glyph Interface support varies by ROM!
+
+---
+
+## Best Practices
+
+### Security
+
+1. **Hide Magisk** for sensitive apps
+2. **Configure DenyList** properly
+3. **Only trusted modules**
+4. **Keep Magisk updated**
+
+---
+
+## Community Resources
+
+**Official Nothing:**
+- [Nothing Support](https://nothing.tech/support) - Official site
+- [Nothing Community](https://nothing.community/) - Forums
+
+**Developer Community:**
+- [XDA Nothing Forums](https://xdaforums.com/c/nothing.12583/) - Development
+- [Reddit r/NothingTech](https://www.reddit.com/r/NothingTech/) - Community
+
+**Awesome Android Root Resources:**
+- [FAQs](../faq)
+- [Troubleshooting Guide](../troubleshooting) 
+
+### Getting Help
+
+**Provide:**
+- Exact Nothing Phone model
+- Nothing OS version
+- Android version
+- Error messages
+- Steps attempted
+
+---
+
+## Next Steps
+
+**After Rooting:**
+
+1. **Essential apps:**
+   - [Root Apps Collection](../android-root-apps/)
+
+2. **Enhance experience:**
+   - [Ad Blocking Guide](../guides/android-adblocking.md)
+   - [Debloating Guide](../guides/android-apps-debloating.md)
+   - [LSPosed Guide](./lsposed-guide.md)
+
+3. **Explore ROMs:**
+   - [Custom ROM Guide](./custom-rom-installation.md)
+   - Test Glyph support before switching
+
