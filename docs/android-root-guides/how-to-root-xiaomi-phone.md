@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: Complete Xiaomi Rooting Guide
-description: "Master guide to root Xiaomi and Redmi devices - MIUI/HyperOS with Mi Unlock Tool and Magisk installation. Navigate complex unlock requirements."
+title: Xiaomi/Redmi/POCO Root Guide 2025
+description: Complete guide to root Xiaomi, Redmi, and POCO devices. Navigate HyperOS/MIUI, Mi Unlock Tool, anti-rollback protection, and Magisk installation.
 head:
   - - link
     - rel: canonical
@@ -149,7 +149,6 @@ Optional but recommended:
 - Payload extraction tools:
   - payload-dumper-go: https://github.com/ssut/payload-dumper-go
   - payload-dumper-ng: https://github.com/vm03/payload_dumper
-- Fastboot Enhance (GUI for dynamic partitions): https://github.com/MisterZtr/FastbootEnhance
 
 ### Device Preparation
 1. **Enable Developer Options:**
