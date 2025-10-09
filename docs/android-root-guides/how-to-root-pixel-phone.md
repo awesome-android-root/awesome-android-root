@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: Complete Google Pixel Rooting Guide
-description: "Master guide to root all Pixel devices — Pixel 9, 8, 7, 6 series — with bootloader unlock and Magisk. Clean, current, and safe."
+title: Google Pixel Root Guide 2025
+description: Complete guide to root Google Pixel devices. All models from Pixel 1 to Pixel 10 Pro. Bootloader unlock, Magisk installation, and OTA handling.
 head:
   - - link
     - rel: canonical
@@ -11,10 +11,10 @@ head:
       content: article
   - - meta
     - property: og:title
-      content: Complete Google Pixel Rooting Guide - All Models Supported
+      content: Google Pixel Root Guide 2025
   - - meta
     - property: og:description
-      content: Root any Google Pixel device with our comprehensive guide covering bootloader unlock, factory images, and Magisk installation for a clean Android experience.
+      content: Root any Google Pixel device with comprehensive guide covering bootloader unlock, factory images, and Magisk installation.
   - - meta
     - property: og:url
       content: https://awesome-android-root.org/android-root-guides/how-to-root-pixel-phone
@@ -25,355 +25,741 @@ head:
     - name: twitter:card
       content: summary_large_image
   - - meta
-    - name: twitter:title
-      content: Complete Google Pixel Rooting Guide - All Models
-  - - meta
-    - name: twitter:description
-      content: Root any Google Pixel phone with bootloader unlock and Magisk installation guide.
-  - - meta
     - name: keywords
-      content: google pixel root guide, pixel rooting, pixel bootloader unlock, pixel magisk guide, pixel factory images, pixel 9 root, pixel 8 root, pixel 7 root, pixel 6 root, lineageos pixel, pixel unbrick
-  - - meta
-    - name: author
-      content: Awesome Android Root Project
-  - - meta
-    - property: article:author
-      content: https://github.com/awesome-android-root/awesome-android-root
-  - - meta
-    - property: article:section
-      content: Device Rooting
-  - - meta
-    - property: article:tag
-      content: Google Pixel Root
-  - - meta
-    - property: article:tag
-      content: Bootloader Unlock
-  - - meta
-    - property: article:tag
-      content: Magisk Installation
+      content: pixel root 2025, pixel 9 root, pixel 8 root, google pixel magisk, pixel bootloader unlock
   - - meta
     - name: robots
       content: index, follow
 ---
 
-# Complete Google Pixel Rooting Guide
+# Google Pixel Root Guide
 
-**Root the world's best Android phones** - Pixel 9, 8, 7, 6 series with simple bootloader unlock and Magisk installation.
+Root any Google Pixel device with the easiest rooting process in Android. Clean bootloader unlock, official factory images, and Magisk support.
 
-## 🔗 Essential Resources
-- **[📖 Main Rooting Guide](./index.md) — universal concepts & safety**
-- **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)**
-- **[📚 Custom Recovery](./how-to-install-custom-recovery.md)**
-- **[❓ FAQ & Troubleshooting](../faqs.md)**
-- **[🧩 Magisk Guide](./magisk-guide.md)**
+## Quick Navigation
 
-## Why Pixels Are Great to Root
-**Google Pixel Advantages:**
-- **Developer-friendly approach** - Google supports customization
-- **No unlock restrictions** - Direct bootloader unlock without approvals
-- **Factory image availability** - Official Google recovery images
-- **Active development** - Best custom ROM community support
-- **Pure Android base** - No bloatware or skin modifications
+- [Why Root Pixels](#why-root-pixel-devices)
+- [Supported Devices](#supported-devices)
+- [Prerequisites](#prerequisites)
+- [Bootloader Unlock](#unlock-bootloader)
+- [Root Installation](#root-installation)
+- [OTA Updates](#ota-handling)
+- [Troubleshooting](#troubleshooting)
 
-## ⚠️ Pixel‑Specific Warnings
+**Related Guides:**
+- [Main Rooting Guide](./index.md) - Universal rooting concepts
+- [Bootloader Unlocking](./how-to-unlock-bootloader.md) - Detailed unlock guide
+- [Magisk Guide](./magisk-guide.md) - Complete Magisk documentation
+- [KernelSU Guide](./kernelsu-guide.md) - Alternative root method
 
-::: danger Important
-- Unlocking wipes the device completely.
-- May affect warranty/service eligibility; proceed informed.
-- OTA updates on rooted devices require extra steps (see below).
-- Anti‑rollback/AVB: only flash matching factory images for your build.
-:::
+---
+
+## Why Root Pixel Devices
+
+Google Pixel phones are the easiest and safest Android devices to root.
+
+### Pixel Advantages
+
+- **Developer-Friendly Design:** - No OEM approval required, Direct bootloader unlock, No waiting periods
+- **Official Support:** - Factory images from Google, Complete firmware packages
+- **Best Custom ROM Support:** - LineageOS, GrapheneOS, CalyxOS support
+- **Recovery Tools:** - Pixel Flash Tool (web-based), Android Flash Tool, Official rescue images, Easy unbrick process
+
+### Root Benefits for Pixels
+- Remove Google bloat apps
+- System-wide ad blocking
+- Full backup capabilities
+- Camera enhancements (GCam mods)
+- Kernel tweaking
+- Custom ROMs (GrapheneOS, CalyxOS)
+- Advanced privacy controls
+
+---
 
 ## Supported Devices
-All unlockable Google Pixels, including:
-- Current: Pixel 9 Pro XL/9 Pro/9, 8a
-- Previous: 8 Pro/8, 7a/7 Pro/7, 6a/6 Pro/6
-- Classics: 5a/5, 4a 5G/4a, 4/4 XL, 3 series, 2 series, 1 series
 
-::: warning **Notes:**
-- **Carrier‑locked variants (e.g., some Verizon models) may have OEM unlock disabled.**
-- **Always verify your exact model and build.**
+<details><summary>Click to expand all supported Pixel models</summary>
+
+### All Google Pixel Models
+
+**Pixel 10 Series (2025):**
+- Pixel 10 Pro XL
+- Pixel 10 Pro
+- Pixel 10
+
+**Pixel 9 Series (2024):**
+- Pixel 9 Pro XL
+- Pixel 9 Pro
+- Pixel 9
+- Pixel 9 Pro Fold
+
+**Pixel 8 Series (2023):**
+- Pixel 8 Pro
+- Pixel 8
+- Pixel 8a
+
+**Pixel 7 Series (2022):**
+- Pixel 7 Pro
+- Pixel 7
+- Pixel 7a
+
+**Pixel 6 Series (2021):**
+- Pixel 6 Pro
+- Pixel 6
+- Pixel 6a
+
+**Pixel 5 Series (2020):**
+- Pixel 5a 5G
+- Pixel 5
+
+**Pixel 4 Series (2019):**
+- Pixel 4 XL
+- Pixel 4
+- Pixel 4a 5G
+- Pixel 4a
+
+**Older Pixels:**
+- Pixel 3 XL / 3 / 3a XL / 3a
+- Pixel 2 XL / 2
+- Pixel XL / Pixel
+
+### Version-Specific Notes
+
+**Pixel 7, 8, 9 Series (Android 13+):**
+- Use **init_boot.img** for patching
+- Tensor chip architecture
+- Enhanced security features
+
+**Pixel 6 Series:**
+- First with Tensor chip
+- Use **init_boot.img** (Android 13+)
+- Use **boot.img** (Android 12)
+
+**Pixel 5 and Older:**
+- Use **boot.img** for patching
+- Qualcomm Snapdragon chips
+- Traditional rooting method
+
+::: warning CARRIER VARIANTS
+Some US carrier models (especially Verizon) have OEM unlock disabled. Verify your model can be unlocked before purchasing.
 :::
 
 ---
-::: tip
-#### Quick TL;DR (experienced users)
-- Enable OEM unlocking + USB debugging
-- fastboot flashing unlock
-- Download matching factory image
-- Patch the correct image in Magisk:
-  - Ramdisk: Yes → patch boot.img
-  - Ramdisk: No → patch init_boot.img
-- fastboot flash boot|init_boot magisk_patched.img
-- Reboot → open Magisk to complete setup
-- For OTAs: use “Install to Inactive Slot (After OTA)” in Magisk
+
+</details>
+
+## Prerequisites
+
+### Critical Requirements
+
+::: danger BEFORE YOU START
+**Full Data Wipe:** Unlocking bootloader erases everything on device including internal storage.
+
+**Backup Everything:** Photos, contacts, messages, app data, authenticator codes.
+
+**Verify Unlock Capability:** Settings > Developer Options > OEM Unlocking must be available and enabled.
 :::
 
----
+### Hardware Requirements
 
-## Prerequisites & Setup
+- Google Pixel device (any model)
+- Quality USB-C to USB-A/C cable
+- Computer (Windows, macOS, or Linux)
+- 50%+ battery charge
 
-### Required Tools
-1. **[Platform Tools](https://developer.android.com/studio/releases/platform-tools)** - ADB/Fastboot
-2. **[Google USB Drivers](https://developer.android.com/studio/run/win-usb)** - Windows drivers
-3. **[Magisk APK](https://github.com/topjohnwu/Magisk/releases)** - Latest release
-4. **[Factory Images](https://developers.google.com/android/images)** - Official Google recovery
-5. **[Pixel Flash Tool](https://flash.android.com/)** - Web-based flashing
+### Software Requirements
+
+**On Computer:**
+
+1. **Platform Tools** (ADB/Fastboot)
+   - Download: [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools)
+   - Extract to easy location (C:\platform-tools\ on Windows)
+
+2. **USB Drivers** (Windows only)
+   - Download: [Google USB Drivers](https://developer.android.com/studio/run/win-usb)
+   - Install before connecting device
+
+3. **Factory Image** for your device
+   - Download: [Google Factory Images](https://developers.google.com/android/images)
+   - Find exact model and build number
+
+**On Device:**
+
+1. **Magisk APK**
+   - Download: [Magisk GitHub](https://github.com/topjohnwu/Magisk/releases)
+   - Latest stable version
+
+2. **File Manager**
+   - Pre-installed Files app works
+   - Or download from Play Store
 
 ### Device Preparation
-1. **Enable Developer Options** - Settings → About Phone → Tap Build Number 7 times
-2. **Configure Developer Settings:**
-   - Enable **USB Debugging**
-   - Enable **OEM Unlocking**
-3. **Backup all data** - Photos, contacts, apps via Google backup
-4. **Charge to 50%+** - Ensure sufficient battery
 
-### Connection Verification
+**Step 1: Enable Developer Options**
+
+1. Settings > About phone
+2. Tap "Build number" 7 times
+3. Enter PIN/password
+4. "You are now a developer!" appears
+
+**Step 2: Enable Required Settings**
+
+Developer Options:
+- **OEM unlocking**: Enable (critical)
+- **USB debugging**: Enable
+
+**Step 3: Verify ADB Connection**
+
 ```bash
-# Test ADB connection
+# Connect device via USB
+# On device: Accept USB debugging prompt
+
+# Test ADB
 adb devices
 
-# Should show device with "device" status
-# If "unauthorized", accept debugging prompt on phone
+# Should show:
+# List of devices attached
+# ABC123456789    device
 ```
 
-## Bootloader Unlocking
+---
 
-Google Pixel devices have the simplest bootloader unlock process in Android.
+## Unlock Bootloader
 
-### Enter Fastboot Mode
+Simplest bootloader unlock process in Android.
+
+### Step 1: Enter Fastboot Mode
+
+**Method 1: ADB Command**
 ```bash
-# Method 1: ADB command
 adb reboot bootloader
-
-# Method 2: Hardware keys  
-# Power off → Hold Volume Down + Power
 ```
 
-### Verify Fastboot Connection
+**Method 2: Hardware Keys**
+1. Power off device completely
+2. Hold Volume Down + Power
+3. Release when fastboot screen appears
+
+### Step 2: Verify Fastboot Connection
+
 ```bash
 fastboot devices
-# Should show your device listed
+
+# Should show device serial number
+# Example: ABC123456789    fastboot
 ```
 
-### Unlock Bootloader
+### Step 3: Unlock Bootloader
+
 ```bash
 fastboot flashing unlock
 ```
 
-**Device Response:**
-- Warning screen about unlocking appears
-- Use Volume keys to navigate to "UNLOCK THE BOOTLOADER"  
-- Press Power button to confirm
-- Device will factory reset and reboot
+**On Device:**
+1. Warning screen appears
+2. Use Volume keys to navigate
+3. Select "UNLOCK THE BOOTLOADER"
+4. Press Power to confirm
+5. Device automatically wipes and reboots
 
-### Complete Setup
-After automatic factory reset:
+::: tip UNLOCK TIME
+Process takes 30-60 seconds. Device will show unlocked bootloader warning on every boot (normal).
+:::
+
+### Step 4: Complete Setup Again
+
+After automatic reboot:
 1. Complete initial Android setup
-2. Re-enable Developer Options (Build Number × 7)
-3. Re-enable USB Debugging
-
-## Root Installation Methods
-
-### Method A: Boot Image Patching (Recommended)
-
-#### Step 1: Extract Boot Image
-1. **Download factory image** for your exact Pixel model:
-   - Visit **[Google Factory Images](https://developers.google.com/android/images)**
-   - Find your device model and build number
-   - Download complete factory image ZIP
-
-2. **Extract boot image:**
-   ```bash
-   # Extract factory image
-   unzip image-device-buildnumber.zip
-   
-   # Extract individual images
-   unzip image-device-buildnumber/image-device-buildnumber.zip
-   
-   # boot.img is now available
-   ```
-
-#### Step 2: Patch Boot Image  
-1. **Transfer boot.img to device:**
-   ```bash
-   adb push boot.img /sdcard/Download/
-   ```
-
-2. **Install Magisk APK:**
-   ```bash
-   adb install Magisk-v[version].apk
-   ```
-
-3. **Patch boot image:**
-   - Open Magisk app on device
-   - Tap **Install** → **Select and patch a file**
-   - Navigate to Downloads and select boot.img
-   - Wait for patching completion
-
-4. **Retrieve patched image:**
-   ```bash
-   adb pull /sdcard/Download/magisk_patched_[hash].img ./
-   ```
-
-#### Step 3: Flash Patched Boot
-1. **Boot to fastboot mode:**
-   ```bash
-   adb reboot bootloader
-   ```
-
-2. **Flash patched boot:**
-   ```bash
-   fastboot flash boot magisk_patched_[hash].img
-   ```
-
-3. **Reboot system:**
-   ```bash
-   fastboot reboot
-   ```
-- **Excellent hardware support** - All features work on custom ROMs
-- **Strong root hiding** - Banking apps work with proper setup
+2. Skip most options for speed
+3. Re-enable Developer Options (Build Number × 7)
+4. Re-enable USB Debugging
+5. Reconnect via ADB
 
 ---
 
-### Method B: Custom Recovery Installation
+## Root Installation
 
-Pixel devices support various custom recoveries:
+### Determine Correct Image
 
-1. **Download custom recovery:**
-   - **TWRP:** Traditional choice with touch interface
-   - **OrangeFox:** Modern design with advanced features
-   - **LineageOS Recovery:** Clean and minimal
+**Critical decision: boot.img vs init_boot.img**
 
-2. **Flash recovery:**
-   ```bash
-   fastboot flash recovery recovery.img
-   ```
+| Device | Android Version | Image to Patch |
+|--------|-----------------|----------------|
+| Pixel 9 series | Android 14/15 | init_boot.img |
+| Pixel 8 series | Android 14/15 | init_boot.img |
+| Pixel 7 series | Android 13+ | init_boot.img |
+| Pixel 6 series | Android 13+ | init_boot.img |
+| Pixel 6 series | Android 12 | boot.img |
+| Pixel 5 and older | All versions | boot.img |
 
-3. **Boot to recovery:**
-   ```bash
-   fastboot reboot recovery
-   # Or: Volume Down + Power, select Recovery
-   ```
+**Quick Check in Magisk:**
+- Install Magisk app first
+- Open app
+- Check "Ramdisk" field:
+  - **Ramdisk: Yes** → Patch boot.img
+  - **Ramdisk: No** → Patch init_boot.img
 
-4. **Install Magisk via recovery:**
-   - Transfer Magisk ZIP to device
-   - Install ZIP through recovery interface
-   - Reboot system
+### Method 1: Boot Image Patching (Recommended)
 
+**Step 1: Download Factory Image**
 
----
+1. Visit [Google Factory Images](https://developers.google.com/android/images)
+2. Find your exact device model
+3. Find your exact build number (Settings > About phone)
+4. Download matching factory image ZIP
 
-## Keep Root Through OTAs (A/B Seamless Updates)
+**Example:**
+- Device: Pixel 8 Pro
+- Build: AP31.240517.015
+- File: husky-ap31.240517.015-factory-abc12345.zip
 
-Best practice on Pixels:
-1. In Settings → System → System update: Download and install the OTA
-2. Do NOT reboot when it finishes
-3. Open Magisk → Install → “Install to Inactive Slot (After OTA)”
-4. When Magisk completes, reboot from the system updater
+**Step 2: Extract Boot Image**
 
-This preserves root after the slot switch. If you already rebooted, simply re‑patch and flash the new boot/init_boot from the updated factory image.
-
----
-
-
-## Optional/Advanced
-
-### Using Android Flash Tool (web)
-- Good for clean factory restores/unbrick and quick updates
-- Steps: Unlock bootloader → flash factory image in the browser → then apply Magisk (patch and flash)
-
-### Custom Recovery on Pixel
-- Modern Pixels (esp. Tensor 6/7/8/9) generally lack official TWRP
-- Stock recovery + fastbootd cover most needs
-- Magisk ZIP flashing in recovery is deprecated; prefer boot/init_boot patching
-
-### Relock Bootloader (return to stock)
-1. Remove root and restore stock images:
-   - In Magisk: Uninstall → Restore images (or flash stock boot/init_boot)
-2. Ensure 100% stock partitions for your build
-3. Reboot to bootloader and run:
-   ```bash
-   fastboot flashing lock
-   ```
-   Confirm on device. Relocking with modified images can brick the device.
-
----
-
-## Troubleshooting Guide
-
-### Bootloop after flashing
-- Likely wrong image (boot vs init_boot) or wrong build
 ```bash
-# Flash back the stock image for your current build
+# Extract outer ZIP
+unzip husky-ap31.240517.015-factory-abc12345.zip
+
+# Navigate to extracted folder
+cd husky-ap31.240517.015/
+
+# Extract inner image ZIP
+unzip image-husky-ap31.240517.015.zip
+
+# For Pixel 7/8/9: init_boot.img is now available
+# For Pixel 6 and older: boot.img is now available
+```
+
+**Step 3: Transfer to Device**
+
+```bash
+# For Pixel 7/8/9
+adb push init_boot.img /sdcard/Download/
+
+# For Pixel 6 and older
+adb push boot.img /sdcard/Download/
+```
+
+**Step 4: Install Magisk and Patch**
+
+1. Transfer Magisk APK to device:
+```bash
+adb push Magisk.apk /sdcard/Download/
+```
+
+2. Install Magisk APK on device
+3. Open Magisk app
+4. Tap "Install" next to Magisk
+5. Select "Select and Patch a File"
+6. Navigate to Download folder
+7. Select boot.img or init_boot.img
+8. Tap "Let's Go"
+9. Wait for patching (30-60 seconds)
+
+**Output:** `magisk_patched_[random].img` in Download folder
+
+**Step 5: Transfer Patched Image to Computer**
+
+```bash
+adb pull /sdcard/Download/magisk_patched_xxxxx.img ./
+```
+
+**Step 6: Flash Patched Image**
+
+```bash
+# Boot to fastboot
+adb reboot bootloader
+
+# Verify connection
+fastboot devices
+
+# For Pixel 7/8/9 (init_boot)
+fastboot flash init_boot magisk_patched_xxxxx.img
+
+# For Pixel 6 and older (boot)
+fastboot flash boot magisk_patched_xxxxx.img
+
+# Reboot
+fastboot reboot
+```
+
+**Step 7: Verify Root**
+
+1. First boot takes 2-5 minutes (normal)
+2. Open Magisk app
+3. Should show:
+   - Magisk: Installed (version)
+   - App: Latest (version)
+
+Test root:
+```bash
+adb shell
+su
+id
+# Should show: uid=0(root) gid=0(root)
+```
+
+::: tip SUCCESS!
+If Magisk shows installed and su works, you're successfully rooted!
+:::
+
+---
+
+### Method 2: Fastboot Boot (Temporary Root)
+
+Test root without permanent changes.
+
+```bash
+# Boot to fastboot
+adb reboot bootloader
+
+# Boot patched image (temporary)
+fastboot boot magisk_patched_xxxxx.img
+
+# Device boots with temporary root
+# Test root functionality
+# If satisfied, use Method 1 to flash permanently
+```
+
+---
+
+### Method 3: Custom Recovery (Legacy)
+
+Not recommended for modern Pixels. Recovery-based installation deprecated. Use Method 1 instead.
+
+---
+
+## Post-Root Setup
+
+### Configure Magisk
+
+**Step 1: Basic Settings**
+
+Magisk > Settings:
+- **Update channel**: Stable
+- **Hide Magisk app**: Recommended for banking
+- **Zygisk**: Enable (for advanced modules)
+- **Enforce DenyList**: Enable (for root hiding)
+
+**Step 2: Configure DenyList**
+
+Add to DenyList:
+- Google Play Services (all components)
+- Google Play Store
+- Banking apps
+- Payment apps (Google Pay, etc.)
+- SafetyNet-sensitive apps
+
+**Step 3: Install Essential Modules**
+
+Recommended for Pixels:
+- **Universal SafetyNet Fix** - Banking app compatibility
+- **Shamiko** - Enhanced root hiding
+- **LSPosed (Zygisk)** - Xposed framework
+- **Systemless Hosts** - Ad blocking
+
+### Root Verification
+
+Test with root checker app:
+- Download Root Checker from Play Store
+- Run verification
+- Should pass all tests
+
+---
+
+## OTA Handling
+
+Preserve root when updating Pixel devices.
+
+### For A/B Devices (All Modern Pixels)
+
+**Step 1: Download OTA**
+
+Settings > System > System update
+
+Download update but **DO NOT reboot**
+
+**Step 2: Install with Magisk**
+
+1. Open Magisk app
+2. Tap "Install" next to Magisk
+3. Select "Install to Inactive Slot (After OTA)"
+4. Wait for installation
+5. Tap "Reboot" when prompted
+
+**Step 3: Verify After Update**
+
+1. System boots to updated version
+2. Magisk still installed
+3. Root preserved
+4. Modules still active
+
+::: tip MAGISK MAGIC
+Magisk's "Install to Inactive Slot" handles everything automatically for Pixels!
+:::
+
+### Manual OTA Method
+
+If automatic method fails:
+
+1. Extract boot/init_boot from new factory image
+2. Patch with Magisk
+3. After OTA installs, flash patched image
+4. Reboot to updated system with root
+
+---
+
+## Troubleshooting
+
+<details><summary>Click to expand common issues and fixes</summary>
+
+### Bootloader Issues
+
+**"OEM Unlocking" Greyed Out**
+
+Causes:
+- Carrier-locked device (Verizon often locks)
+- Device protection not cleared
+- Account lock active
+
+Solutions:
+1. Remove all Google accounts
+2. Wait 7 days after factory reset
+3. Check if device is carrier-locked
+4. Contact carrier to unlock if needed
+
+**Fastboot Not Detecting Device**
+
+Solutions:
+- Update Platform Tools to latest
+- Reinstall USB drivers (Windows)
+- Try different USB port (USB 2.0)
+- Try different USB cable
+- Disable USB debugging, re-enable
+- Try different computer
+
+### Installation Issues
+
+**Magisk Shows "N/A" After Flashing**
+
+Causes:
+- Wrong image patched (boot vs init_boot)
+- Image doesn't match current build
+- Patched wrong partition
+
+Solutions:
+1. Verify correct image for your device
+2. Check build numbers match exactly
+3. Re-extract and patch correct image
+4. Flash to correct partition
+
+**Device Bootloops After Root**
+
+Solutions:
+1. Boot to fastboot: Hold Volume Down + Power
+2. Flash stock boot/init_boot:
+```bash
 fastboot flash boot stock_boot.img
-# or
+# Or
 fastboot flash init_boot stock_init_boot.img
 fastboot reboot
 ```
-If needed, reflash the full factory image:
+3. Verify exact build match
+4. Try patching again
+
+### Root Access Issues
+
+**Apps Not Detecting Root**
+
+Solutions:
+1. Open Magisk and check status
+2. Grant root to shell: `adb shell su`
+3. Reinstall Magisk via Direct Install
+4. Check module conflicts
+5. Clear Magisk app data and reconfigure
+
+**SafetyNet/Play Integrity Fails**
+
+Solutions:
+1. Enable Zygisk in Magisk
+2. Enable and configure DenyList
+3. Add Google Play Services to DenyList
+4. Hide Magisk app
+5. Install Universal SafetyNet Fix module
+6. Install Shamiko module
+7. Clear Google Play Services data
+8. Reboot device
+
+### OTA Issues
+
+**"Install to Inactive Slot" Option Missing**
+
+Causes:
+- Not an A/B device (very old Pixel)
+- Magisk version too old
+
+Solutions:
+1. Update Magisk to latest version
+2. Use manual OTA method instead
+
+**Lost Root After OTA**
+
+Solution:
+1. Extract boot/init_boot from new build
+2. Patch with Magisk
+3. Flash patched image
+4. Root restored
+
+</details>
+
+---
+
+## Factory Reset / Unroot
+
+### Remove Root (Keep Unlocked Bootloader)
+
 ```bash
-# From extracted factory image:
-fastboot reboot bootloader
-fastboot -w update image-*.zip   # uses fastbootd; wipes data
+# Flash stock boot image
+adb reboot bootloader
+
+fastboot flash boot stock_boot.img
+# Or for Pixel 7/8/9
+fastboot flash init_boot stock_init_boot.img
+
+fastboot reboot
 ```
 
-### “fastboot waiting for device”
-- Windows: install Google USB driver; use a USB‑A port/cable if possible
-- macOS/Linux: update platform‑tools; check cable/port; on Linux add udev rules
+Root removed, bootloader still unlocked.
 
-### OTA fails on rooted device
-- Use the OTA flow described above (Install to Inactive Slot)
-- If already failed, restore stock boot/init_boot for the active slot, complete OTA, then re‑patch
+### Complete Stock Restore
 
-### Banking/DRM apps
-- Configure Magisk DenyList and hide root
-- Play Integrity is stricter on Android 14/15; compatibility varies by app and region
-- Respect app terms; we don’t guarantee bypass success
+**Method 1: Flash Full Factory Image**
 
-## Advanced Customization
+```bash
+# Extract factory image
+# Run flash-all script
 
-### Custom ROM Recommendations
+# Windows:
+flash-all.bat
 
-**For Privacy (Security-focused):**
-- **GrapheneOS** - Maximum security and privacy
-- **CalyxOS** - Privacy with usability balance
+# Linux/Mac:
+./flash-all.sh
+```
 
-**For Features (Customization-focused):**
-- **LineageOS** - Pure AOSP with extras
-- **Evolution X** - Feature-rich experience
-- **Pixel Experience** - Stock Pixel feel on other devices
----
+Device completely restored to stock.
 
-## Pixel Tips & Extras
+**Method 2: Pixel Flash Tool**
 
-- Keep platform‑tools updated (fastbootd support and bug fixes land frequently)
-- Verify ZIP hashes from Google when downloading factory images
-- Don’t disable AVB/verity on Pixels for Magisk; not needed and reduces security
-- Manage modules conservatively; they’re the #1 cause of bootloops
+1. Visit [Pixel Flash Tool](https://flash.android.com/)
+2. Connect device in fastboot mode
+3. Select device and build
+4. Click "Install"
+5. Web tool flashes complete stock firmware
 
----
-## Community Resources
+### Relock Bootloader (Optional)
 
-### Development Communities
-- **[Pixel XDA Forums](https://forum.xda-developers.com/c/google-pixel.12020/)** - Device development hub
-- **[GrapheneOS Community](https://grapheneos.org/contact)** - Privacy-focused development
-- **[r/GooglePixel](https://reddit.com/r/GooglePixel)** - General Pixel discussions
-- **[Pixel Telegram Groups](https://t.me/PixelCommunity)** - Real-time support
-
-### Official Resources
-- **[Google Factory Images](https://developers.google.com/android/images)** - Official firmware
-- **[Android Flash Tool](https://flash.android.com/)** - Web-based flashing
-- **[Google Issue Tracker](https://issuetracker.google.com/issues?q=componentid:190923%20status:open)** - Bug reports
-- **[Pixel Support](https://support.google.com/pixelphone/)** - Official help
-
----
-
-::: tip 🎉 Pixel Root Success Tips
-- Patch the right image (check Magisk: Ramdisk Yes → boot, No → init_boot)
-- Use “fastboot boot” for a safe first test, then Direct Install
-- Preserve root across updates via “Install to Inactive Slot (After OTA)”
-- Keep a copy of stock boot/init_boot for quick recovery
+::: danger RELOCK WARNING
+Only relock when completely stock. Relocking with modified system will brick device!
 :::
 
-**Need more help?** Visit our **[FAQ section](../faqs.md)** or check the **[main rooting guide](./index.md)** for additional troubleshooting and advanced techniques.
+```bash
+# Verify completely stock first
+# Boot to fastboot
+adb reboot bootloader
+
+# Relock
+fastboot flashing lock
+
+# Confirm on device
+# Device will factory reset again
+```
+
+---
+
+## Pixel-Specific Tips
+
+### GrapheneOS (Privacy-Focused ROM)
+
+Pixel-exclusive custom ROM with enhanced security:
+- Visit [GrapheneOS.org](https://grapheneos.org/)
+- Web-based installer
+- Enhanced privacy features
+- Regular security updates
+- Only available for Pixels
+
+### CalyxOS (Privacy ROM)
+
+Another privacy-focused option:
+- Visit [CalyxOS.org](https://calyxos.org/)
+- microG instead of Google Services
+- Built-in VPN
+- Excellent Pixel support
+
+---
+
+## Best Practices
+
+### Security Recommendations
+
+1. **Keep Magisk hidden** for banking apps
+2. **Configure DenyList** for all sensitive apps
+3. **Only install trusted modules**
+4. **Keep Magisk updated**
+5. **Backup working boot image** always
+
+### Module Management
+
+1. **Test modules individually**
+2. **Avoid conflicting modules**
+3. **Keep essential modules only**
+4. **Update modules cautiously**
+5. **Have stock boot.img ready**
+
+---
+
+## Community Resources
+
+**Official Google Resources:**
+- [Factory Images](https://developers.google.com/android/images) - Stock firmware
+- [OTA Images](https://developers.google.com/android/ota) - Update packages
+- [Pixel Flash Tool](https://flash.android.com/) - Web flasher
+- [Driver Downloads](https://developer.android.com/studio/run/win-usb) - USB drivers
+
+**Community Forums:**
+- [XDA Pixel Forums](https://forum.xda-developers.com/c/google-pixel.12391/) - Device discussions
+- [Reddit r/GooglePixel](https://www.reddit.com/r/GooglePixel/) - General Pixel community
+- [Reddit r/PixelROM](https://www.reddit.com/r/PixelROM/) - Custom ROM discussions
+
+**Custom ROM Resources:**
+- [GrapheneOS](https://grapheneos.org/) - Privacy-focused ROM
+- [CalyxOS](https://calyxos.org/) - Privacy ROM with microG
+- [LineageOS](https://lineageos.org/) - Classic custom ROM
+
+### Getting Help
+
+**When asking for help, provide:**
+- Exact Pixel model (Pixel 8 Pro, etc.)
+- Android version and build number
+- Which image you patched (boot/init_boot)
+- Exact error messages
+- Steps already attempted
+- Magisk version installed
+
+---
+
+## Next Steps
+
+**After Rooting Your Pixel:**
+
+1. **Install essential apps:**
+   - [Root Apps Collection](../android-root-apps/) - Curated list
+
+2. **Enhance your experience:**
+   - [Ad Blocking Guide](../guides/android-adblocking.md) - System-wide blocking
+   - [Debloating Guide](../guides/android-apps-debloating.md) - Remove Google bloat
+   - [LSPosed Guide](./lsposed-guide.md) - App modifications
+
+3. **Consider custom ROMs:**
+   - [Custom ROM Guide](./custom-rom-installation.md) - Installation steps
+   - GrapheneOS for maximum privacy
+   - CalyxOS for balanced privacy
+   - LineageOS for customization
