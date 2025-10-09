@@ -182,647 +182,647 @@ head:
         }
 ---
 
-# Complete KernelSU Root Guide
+# KernelSU Root Installation Guide
 
-**The kernel-based root solution** - Master KernelSU installation and management for enhanced security and advanced app control.
+Kernel-based root solution for Android. Install KernelSU for advanced security, granular app control, and superior root hiding.
 
-## 🔗 Essential Resources
-- **[📖 Main Rooting Guide](./index.md)** - Universal rooting principles and device preparation
-- **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - Required prerequisite
-- **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - Installation method option
-- **[❓ FAQ & Troubleshooting](../faqs.md)** - Solutions for common issues
+## Quick Navigation
 
-## ⚡ What is KernelSU?
+- [What is KernelSU](#understanding-kernelsu)
+- [Installation Modes](#installation-modes)
+- [Prerequisites](#prerequisites)
+- [Installation Guide](#installation-methods)
+- [App Profiles](#app-profile-system)
+- [Module Management](#managing-modules)
+- [Troubleshooting](#troubleshooting)
 
-KernelSU represents the evolution of Android rooting, operating at the kernel level for enhanced security and sophisticated app management:
+**Related Guides:**
+- [Main Rooting Guide](./index.md) - Complete rooting overview
+- [Bootloader Unlocking](./how-to-unlock-bootloader.md) - Required first step
+- [Root Comparison](./root-framework-comparison.md) - Compare with Magisk and APatch
+- [Troubleshooting Guide](#troubleshooting) - Common issues and fixes
+- [FAQ](../faqs.md) - Common questions
 
-### Core Innovation
+---
+
+## Understanding KernelSU
+
+KernelSU is a kernel-based root solution that operates at the Linux kernel level, providing enhanced security and advanced app permission control compared to traditional userspace root methods.
+
+### Core Features
+
 - **Kernel-Level Integration** - Direct kernel modification for enhanced security
 - **Advanced App Profiles** - Granular root permission control per application
 - **Superior Hiding** - Better detection evasion than traditional methods
 - **GKI Compatibility** - Optimized for Generic Kernel Image devices
 - **LKM Support** - Loadable Kernel Module architecture
+### KernelSU vs Alternatives
 
-### KernelSU vs Other Root Solutions
+| Feature | KernelSU | Magisk | APatch |
+|---------|----------|---------|--------|
+| Architecture | Kernel-based | Userspace overlay | Kernel-based |
+| Android Support | 11+ (GKI 2.0+) | 6.0+ | 9+ |
+| Root Hiding | Excellent | Good | Excellent |
+| App Control | Advanced Profiles | Basic | Basic |
+| Module System | Growing (300+) | Mature (1000+) | Limited (50+) |
+| Ease of Use | Moderate | Easy | Moderate |
+| Custom Kernel | Optional | Not needed | Not needed |
 
-| Feature | KernelSU | KernelSU Next | Magisk |
-|---------|----------|---------------|--------|
-| **Operation Level** | Kernel-based | Kernel-based | System overlay |
-| **Security Model** | Enhanced | Community fork | Standard |
-| **App Profiles** | Advanced | Enhanced | Basic |
-| **Detection Evasion** | Superior | Superior | Good |
-| **Module System** | Growing | Enhanced | Mature |
-| **Setup Complexity** | Advanced | Advanced | Moderate |
+**Choose KernelSU if:**
+- You have Android 11+ device
+- You want best root hiding
+- You need fine-grained app control
+- You use banking/payment apps
+- You prefer kernel-level security
 
-## ✅ Prerequisites & Compatibility
+> [!TIP]
+> Detailed comaprison with other root solutions: [Root Comparison](./root-framework-comparison.md)
 
-### Essential Requirements
-- **[🔓 Unlocked Bootloader](./how-to-unlock-bootloader.md)** - Mandatory prerequisite
-- **Android 11+** - Minimum supported version (GKI 2.0+)
-- **Compatible Kernel** - GKI-based or custom kernel with KernelSU support
-- **Platform Tools** - [Download ADB/Fastboot](https://developer.android.com/studio/releases/platform-tools)
-- **Custom Recovery** - TWRP, OrangeFox, or SKYHAWK
 
-### Installation Mode Options
-1. **GKI Mode** (Recommended for newer devices)
-   - Direct GKI kernel patching
-   - Best compatibility with Android 12+
-   
-2. **LKM Mode** (Advanced users)
-   - Loadable Kernel Module approach
-   - Requires custom kernel compilation
+---
 
-## What is KernelSU?
+## Installation Modes
 
-**KernelSU** is a kernel-based root solution for Android that operates at the kernel level, providing more granular control over root access and better security than traditional userspace root solutions.
+KernelSU supports two installation modes on GKI devices.
 
-**Key Innovation:** By running in kernel space, KernelSU can provide more reliable root hiding, better security controls, and finer app permission management through its App Profile system.
+### GKI Mode
 
-::: tip 🚀 Quick Start
-**Have a GKI-compatible device?** Jump to [Installation Methods](#installation-methods) to get started with KernelSU immediately.
+**How it works:** Replaces device's original kernel with KernelSU Generic Kernel Image.
+
+**Advantages:**
+- Universal GKI device compatibility
+- Works on Samsung Knox devices
+- Independent of firmware updates
+- Better for heavily modified devices
+
+**Disadvantages:**
+- Loses manufacturer kernel optimizations
+- Requires manual fastboot flashing
+- Must reflash after major updates
+
+**Best for:** Samsung devices, emulators, WSA, custom ROMs
+
+### LKM Mode (Loadable Kernel Module)
+
+**How it works:** Loads KernelSU as kernel module without replacing kernel.
+
+**Advantages:**
+- Preserves original kernel and optimizations
+- Easy in-app updates
+- OTA-friendly (install to inactive slot)
+- No AVB/dm-verity issues
+- Can disable without reboot
+
+**Disadvantages:**
+- Requires official firmware
+- May not work on all devices
+- Less compatible with modified firmwares
+
+**Best for:** Most modern phones with stock/near-stock firmware
+
+### Which Mode to Choose?
+
+| Device Type | Recommended Mode | Reason |
+|-------------|------------------|--------|
+| Stock firmware phones | LKM | Preserves optimizations, easy updates |
+| Samsung devices | GKI | Knox compatibility |
+| Custom ROMs | GKI | Better modified firmware support |
+| Emulators/WSA | GKI | Universal compatibility |
+| Heavily modified | GKI | More reliable |
+
+---
+
+## Prerequisites
+
+### Critical Requirements
+
+::: danger ESSENTIAL PREREQUISITES
+**Unlocked Bootloader** - KernelSU requires unlocked bootloader. Complete [bootloader unlocking](./how-to-unlock-bootloader.md) first.
+
+**GKI Compatible Device** - Android 11+ with GKI 2.0 kernel (5.10+) required.
+
+**Complete Backup** - Backup all important data before proceeding.
+
+**Battery 50%+** - Ensure sufficient battery to prevent interruption.
 :::
 
-### **Core Architecture**
-- **Kernel-level operation** - Runs in Linux kernel space
-- **GKI compatibility** - Works with Generic Kernel Image
-- **OverlayFS modules** - Systemless modifications
-- **App Profiles** - Fine-grained permission control
+### Hardware Requirements
 
-### **Why KernelSU?**
-- **Better hiding** - Kernel-level root is harder to detect
-- **Enhanced security** - App Profile system provides granular control
-- **Performance** - Lower overhead than userspace solutions
-- **Modern design** - Built for Android 12+ and GKI kernels
+- Android device with unlocked bootloader
+- Android 11+ with GKI 2.0 (kernel 5.10+)
+- 50% or higher battery charge
+- Quality USB cable (data-capable)
+- Computer (Windows, macOS, or Linux)
 
-## KernelSU Installation Modes
+### Software Requirements
 
-Since version 0.9.0, KernelSU supports two installation modes on GKI devices:
+**On Computer:**
+- [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools) (ADB/Fastboot)
+- Device-specific USB drivers (Windows only)
+- Stock firmware for your device
 
-### 🔧 **GKI Mode**
-**How it works:** Replaces device's original kernel with KernelSU's Generic Kernel Image
+**On Device:**
+- Latest KernelSU Manager APK from [GitHub](https://github.com/tiann/KernelSU/releases)
+- File manager app
+- At least 500MB free storage
 
-**Advantages:**
-- **Universal compatibility** - Works on most GKI devices
-- **Samsung Knox support** - Works on Knox-enabled devices
-- **Independent of firmware** - No need to wait for OTA updates
-- **Better compatibility** - Ideal for modified devices
+### Compatibility Check
 
-**Disadvantages:**
-- **Kernel replacement** - Loses original kernel optimizations
-- **Manual flashing** - Requires fastboot for upgrades
+**Verify GKI Compatibility:**
 
-### 🔧 **LKM Mode (Loadable Kernel Module)**
-**How it works:** Loads KernelSU as a kernel module without replacing the original kernel
-
-**Advantages:**
-- **Preserves original kernel** - Keeps device-specific optimizations
-- **Easy upgrades** - Update directly through manager
-- **OTA friendly** - Install to inactive slot after OTA
-- **No AVB issues** - Doesn't trigger Android Verified Boot
-- **Temporary disable** - Can unload module without reboot
-
-**Disadvantages:**
-- **Firmware dependent** - Requires official firmware
-- **Limited compatibility** - May not work on all devices
-
-### 🤔 **Which Mode to Choose?**
-- **Mobile phones** - LKM mode recommended
-- **Emulators/WSA** - GKI mode recommended
-- **Samsung Knox devices** - GKI mode only
-- **Custom ROMs** - Either mode works
-
-## KernelSU vs KernelSU Next vs Magisk
-
-### 📊 **Detailed Comparison**
-
-| Feature             | KernelSU            | KernelSU Next                  | Magisk                   |
-| ------------------- | ------------------- | ------------------------------ | ------------------------ |
-| **Root Method**     | Kernel-based        | Kernel-based                   | Userspace                |
-| **Android Support** | 12+ (GKI 5.10+)     | 4.4+ (Kernel 4.4-6.6)          | 6.0+                     |
-| **Architecture**    | arm64-v8a, x86_64   | arm64-v8a, armeabi-v7a, x86_64 | arm64-v8a, x86_64, arm32 |
-| **Installation**    | Boot image/LKM      | Boot image/LKM                 | Boot image               |
-| **Module System**   | OverlayFS           | Magic Mount + OverlayFS        | Magic Mount              |
-| **Root Hiding**     | Kernel-level        | Kernel-level                   | Userspace DenyList       |
-| **App Control**     | App Profiles        | App Profiles                   | Basic permissions        |
-| **SafetyNet**       | Better passing rate | Better passing rate            | Good with modules        |
-| **Performance**     | Lower overhead      | Lower overhead                 | Standard                 |
-| **Learning Curve**  | Moderate            | Moderate                       | Easy                     |
-| **Development**     | Official            | Community                      | Official                 |
-
-### 🎯 **Choose KernelSU If:**
-- You have a GKI 2.0 compatible device (Android 12+)
-- You want better root hiding capabilities
-- You need fine-grained app permission control
-- You prefer kernel-level security
-- You use banking/finance apps frequently
-
-### 🎯 **Choose KernelSU Next If:**
-- You have an older device (Android 4.4+)
-- You want Magic Mount compatibility with Magisk modules
-- You need broader architecture support
-- You want cutting-edge features
-- You're comfortable with community support
-
-### 🎯 **Choose Magisk If:**
-- You have an older Android device (< Android 12)
-- You want the largest module ecosystem
-- You prefer simpler setup and management
-- You need broader device compatibility
-- You want official support
-
-## Requirements
-
-### 📋 **Essential Prerequisites**
-
-#### **For KernelSU (Original)**
-- ✅ **Android 12+ with GKI 2.0** - Kernel 5.10 or newer
-- ✅ **Compatible architecture** - arm64-v8a or x86_64 only
-- ✅ **Unlocked bootloader** - [Bootloader unlock guide](./how-to-unlock-bootloader.md)
-- ✅ **ADB/Fastboot tools** - [Platform Tools](https://developer.android.com/studio/releases/platform-tools)
-- ✅ **Stock boot image** - Original boot.img for your firmware
-
-#### **For KernelSU Next (Community Fork)**
-- ✅ **Android 4.4+ with Kernel 4.4-6.6** - Much broader compatibility
-- ✅ **Compatible architecture** - arm64-v8a, armeabi-v7a, or x86_64
-- ✅ **Unlocked bootloader** - [Bootloader unlock guide](./how-to-unlock-bootloader.md)
-- ✅ **ADB/Fastboot tools** - [Platform Tools](https://developer.android.com/studio/releases/platform-tools)
-- ✅ **Stock boot image** - Original boot.img for your firmware
-
-### 🔍 **Compatibility Check**
-
-#### **Check GKI Compatibility**
 ```bash
 # Check kernel version
 adb shell uname -r
-# Should show 5.10+ for GKI 2.0, 4.4+ for KernelSU Next
+# Should show 5.10 or higher
 
-# Check GKI version
+# Check for GKI support
 adb shell cat /proc/version
-# Look for "GKI" in kernel string
-
-# Alternative method
-adb shell getprop ro.kernel.version
+# Look for "GKI" in output
 ```
 
-#### **KernelSU Next Compatibility Table**
-| Kernel Version       | Support Level  | Notes                                      |
-| -------------------- | -------------- | ------------------------------------------ |
-| 5.10+ (GKI 2.0)      | Full support   | Pre-built images and LKM/KMI               |
-| 4.19 – 5.4 (GKI 1.0) | Build required | Requires KernelSU driver built-in          |
-| < 4.14 (EOL)         | Experimental   | Requires driver (3.18+ may need backports) |
+**Android Version Support:**
 
-#### **Supported Devices**
-- Download KernelSU/KernelSU Next manager from respective GitHub releases:
-  - **KernelSU**: [GitHub Releases](https://github.com/tiann/KernelSU/releases)
-  - **KernelSU Next**: [GitHub Releases](https://github.com/KernelSU-Next/KernelSU-Next/releases)
-- Install and check compatibility:
-  - If the app shows `Unsupported`, you need to compile the kernel yourself
-  - If the app shows `Not installed`, your device is officially supported
+| Android Version | Kernel Version | KernelSU Support |
+|-----------------|----------------|------------------|
+| Android 15 | 6.6+ | Full support |
+| Android 14 | 6.1, 5.15 | Full support |
+| Android 13 | 5.15, 5.10 | Full support |
+| Android 12 | 5.10, 5.4 | Full support (GKI 2.0) |
+| Android 11 | 5.4, 4.19 | Partial support |
+| Android 10 and older | Various | Not supported |
 
-::: tip Check Official documentation
-- **KernelSU**: https://kernelsu.org/guide/installation.html
-- **KernelSU Next**: https://kernelsu-next.github.io/webpage/pages/installation.html
-:::
+**Check Device Compatibility:**
 
-### 💾 **Required Downloads**
+1. Download KernelSU Manager APK
+2. Install on device
+3. Open app and check status:
+   - "Not Installed" = Supported, proceed with install
+   - "Unsupported" = Custom kernel compilation required
 
-#### **KernelSU (Original)**
-- **[KernelSU Manager APK](https://github.com/tiann/KernelSU/releases/latest)** (Latest: v1.0.5)
-- **Stock firmware** with matching boot.img
-- **Custom kernel** with KernelSU support (if available)
-
-#### **KernelSU Next (Community Fork)**
-- **[KernelSU Next Manager APK](https://github.com/KernelSU-Next/KernelSU-Next/releases/latest)** (Latest: v1.0.8)
-- **[Nightly Build](https://nightly.link/KernelSU-Next/KernelSU-Next/workflows/build-manager-ci/next/Manager)** (Development version)
-- **Stock firmware** with matching boot.img
-- **Custom kernel** with KernelSU Next support (if available)
+---
 
 ## Installation Methods
 
-### Method 1: Pre-built Kernel Installation (Recommended)
+Four installation methods available. Choose based on your device and needs.
+
+### Method 1: Pre-Built GKI Kernel (Easiest)
 
 **Best for:** Users with officially supported devices
 
-#### **KernelSU (Original)**
-1. **Visit [KernelSU Device List](https://kernelsu.org/guide/installation.html)**
-2. **Find your device** in supported list
-3. **Download pre-built kernel** for your device model
+**Step 1: Check Supported Devices**
 
-**Installation Steps:**
+Visit [KernelSU Device List](https://kernelsu.org/guide/installation.html) to see if your device has pre-built kernel.
+
+**Step 2: Download Pre-Built Kernel**
+
+1. Visit [KernelSU Releases](https://github.com/tiann/KernelSU/releases/latest)
+2. Download GKI kernel for your Android version
+3. Example: `kernel-android13-5.15-2025.01.img`
+
+**Step 3: Flash Kernel**
+
 ```bash
-# Download device-specific kernel with KernelSU
-# Example for Pixel 7:
-wget https://github.com/tiann/KernelSU/releases/download/v1.0.5/kernel-pixel7-v1.0.5.img
-
-# Boot to fastboot mode
-adb reboot bootloader
-
-# Flash KernelSU kernel
-fastboot flash boot kernel-pixel7-v1.0.5.img
-
-# Reboot device
-fastboot reboot
-
-# Install KernelSU Manager APK
-adb install KernelSU_v1.0.5.apk
-```
-
-#### **KernelSU Next (Community Fork)**
-1. **Visit [KernelSU Next Device List](https://kernelsu-next.github.io/webpage/pages/devices.html)**
-2. **Download pre-built kernel** for your device (if available)
-3. **Or use community builds** from XDA/Telegram
-
-**Installation Steps:**
-```bash
-# Download KernelSU Next kernel
-# Example for supported device:
-wget https://github.com/KernelSU-Next/KernelSU-Next/releases/download/v1.0.8/kernel-device-v1.0.8.img
-
-# Boot to fastboot mode
-adb reboot bootloader
-
-# Flash KernelSU Next kernel
-fastboot flash boot kernel-device-v1.0.8.img
-
-# Reboot device
-fastboot reboot
-
-# Install KernelSU Next Manager APK
-adb install KernelSU-Next_v1.0.8.apk
-```
-
-### Method 2: Boot Image Patching
-
-**Best for:** Devices without pre-built kernels
-
-#### **Step 1: Extract Stock Boot Image**
-```bash
-# Method 1: From stock firmware
-unzip stock_firmware.zip boot.img
-
-# Method 2: From device (requires temporary root)
-adb shell su -c "dd if=/dev/block/bootdevice/by-name/boot of=/sdcard/boot.img"
-adb pull /sdcard/boot.img
-```
-
-#### **Step 2: Install Manager**
-1. **Download and install** KernelSU/KernelSU Next Manager APK
-2. **Open app** - May show "Not Installed" status
-
-#### **Step 3: Patch Boot Image**
-**For KernelSU:**
-1. **KernelSU Manager** → **Install**
-2. **Select boot.img** you extracted
-3. **Patch image** - Creates kernelsu_patched_[random].img
-
-**For KernelSU Next:**
-1. **KernelSU Next Manager** → **Install**
-2. **Select boot.img** you extracted
-3. **Choose patching method** (LKM or GKI)
-4. **Patch image** - Creates kernelsu_next_patched_[random].img
-
-#### **Step 4: Flash Patched Boot**
-```bash
+# Transfer kernel to computer
 # Boot to fastboot
 adb reboot bootloader
 
-# Flash patched boot image
-fastboot flash boot kernelsu_patched_[random].img
-# or
-fastboot flash boot kernelsu_next_patched_[random].img
+# Verify fastboot connection
+fastboot devices
+
+# Flash KernelSU kernel
+fastboot flash boot kernel-android13-5.15-2025.01.img
 
 # Reboot device
 fastboot reboot
 ```
 
-### Method 3: Custom Kernel with KernelSU
+**Step 4: Install Manager**
 
-**Best for:** Advanced users, custom ROM users
+1. Download KernelSU Manager APK
+2. Install on device
+3. Open app to verify installation
 
-#### **KernelSU-Compatible Kernels**
-- **[Sultan Kernel](https://github.com/WildKernels/OnePlus_KernelSU_SUSFS)** - OnePlus devices
+**Expected result:** App shows "Installed" with version number.
 
+---
 
-#### **KernelSU Next-Compatible Kernels**
-- **Custom kernels** with KernelSU Next integration
-- **Community builds** from XDA forums
-- **Telegram groups** for device-specific builds
+### Method 2: Boot Image Patching (LKM Mode)
 
-### Method 4: Building Custom Kernel
+**Best for:** Devices without pre-built kernels, LKM mode preference
 
-**For developers and unsupported devices**
+**Step 1: Extract Stock Boot Image**
 
-#### **KernelSU Integration**
+**From Stock Firmware:**
 ```bash
-# Clone KernelSU source
-git clone https://github.com/tiann/KernelSU.git
+# Extract boot.img from firmware ZIP
+unzip stock_firmware.zip boot.img
+```
 
-# Integrate with kernel source
-cd your_kernel_source
+**From Device (requires temporary root):**
+```bash
+adb shell su -c "dd if=/dev/block/by-name/boot of=/sdcard/boot.img"
+adb pull /sdcard/boot.img
+```
+
+**Step 2: Install Manager and Patch**
+
+1. Install KernelSU Manager APK on device
+2. Transfer boot.img to device Downloads folder
+3. Open KernelSU Manager
+4. Tap "Install"
+5. Select "Select and Patch a File"
+6. Choose boot.img
+7. Wait for patching
+
+**Output file:** `kernelsu_patched_[random].img` in Downloads
+
+**Step 3: Flash Patched Boot**
+
+```bash
+# Transfer to computer
+adb pull /sdcard/Download/kernelsu_patched_xxxxx.img
+
+# Boot to fastboot
+adb reboot bootloader
+
+# Flash patched image
+fastboot flash boot kernelsu_patched_xxxxx.img
+
+# Reboot device
+fastboot reboot
+```
+
+**Step 4: Verify Installation**
+
+1. First boot may take 2-5 minutes
+2. Open KernelSU Manager
+3. Should show:
+   - KernelSU: Installed (version)
+   - Mode: LKM or GKI
+
+::: tip LKM MODE BENEFITS
+LKM mode preserves manufacturer kernel optimizations and supports in-app updates.
+:::
+
+---
+
+### Method 3: Custom Kernel Installation
+
+**Best for:** Devices with custom kernel support, advanced users
+
+**Step 1: Find Custom Kernel**
+
+Search for device-specific kernels with KernelSU support:
+- XDA Developers forums
+- Telegram kernel groups
+- GitHub repositories
+
+**Popular kernels with KernelSU:**
+- Sultan Kernel (OnePlus)
+- Kirisakura Kernel (multiple devices)
+- Device-specific kernels
+
+**Step 2: Download and Flash**
+
+```bash
+# Download custom kernel ZIP or IMG
+# If IMG file:
+adb reboot bootloader
+fastboot flash boot custom_kernel_kernelsu.img
+fastboot reboot
+
+# If ZIP file (requires custom recovery):
+# Boot to TWRP/OrangeFox
+# Install ZIP from storage
+# Reboot system
+```
+
+**Step 3: Install Manager**
+
+1. Install KernelSU Manager APK
+2. Verify installation successful
+
+---
+
+### Method 4: Build Custom Kernel (Advanced)
+
+**Best for:** Developers, unsupported devices
+
+**Step 1: Setup Build Environment**
+
+```bash
+# Install required packages (Ubuntu/Debian)
+sudo apt update
+sudo apt install -y git build-essential bc bison flex libssl-dev
+
+# Clone your device's kernel source
+git clone https://github.com/yourdevice/kernel_source.git
+cd kernel_source
+```
+
+**Step 2: Integrate KernelSU**
+
+```bash
+# Use official integration script
 curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -
+
+# Or manual integration
+cd kernel_source
+git clone https://github.com/tiann/KernelSU.git KernelSU
 ```
 
-#### **KernelSU Next Integration**
-```bash
-# Clone KernelSU Next source
-git clone https://github.com/KernelSU-Next/KernelSU-Next.git
+**Step 3: Configure Kernel**
 
-# Integrate with kernel source
-cd your_kernel_source
-curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -
-```
-
-#### **Kernel Configuration**
+Add to kernel config file:
 ```bash
-# Add to kernel config
 CONFIG_KSU=y
-CONFIG_KSU_DEBUG=y
+CONFIG_KSU_DEBUG=n
+```
 
-# Build kernel
+**Step 4: Build Kernel**
+
+```bash
+# Export architecture
+export ARCH=arm64
+export SUBARCH=arm64
+
+# Build
+make clean
+make mrproper
+make defconfig
 make -j$(nproc)
 ```
 
-### Method 5: LKM Installation (KernelSU Next)
+**Step 5: Flash and Test**
 
-**Best for:** Devices that support LKM mode
-
-#### **Direct Install (if already rooted)**
-1. **KernelSU Next Manager** → **Install**
-2. **Choose "Direct Install"**
-3. **Manager automatically patches** and installs
-
-#### **Install to Inactive Slot (A/B devices)**
-1. **After OTA update**
-2. **KernelSU Next Manager** → **Install to inactive slot**
-3. **Reboot to new slot**
-
-## First Time Setup
-
-### 🎯 **Initial Configuration**
-
-#### **1. Verify Installation**
-After successful boot:
 ```bash
-# Check KernelSU status
-adb shell su -c "ksud version"
-# Should show KernelSU version
-
-# Alternative check via app
-# KernelSU Manager should show "Installed" status
+# Flash built kernel
+fastboot flash boot out/arch/arm64/boot/Image.gz-dtb
+fastboot reboot
 ```
 
-#### **2. Basic Setup**
-1. **Open KernelSU Manager**
-2. **Grant permissions** when prompted
-3. **Check status** - Should show:
-   - ✅ KernelSU Installed
-   - ✅ Version information
-   - ✅ Root access available
+---
 
-#### **3. Initial Configuration**
-- **Update channel** - Stable recommended for daily use
-- **Notification settings** - Configure manager notifications
-- **Security settings** - Set up authentication if desired
+## Post-Installation Setup
 
-### 🔐 **Root Permission Setup**
+### Initial Configuration
 
-#### **Understanding KernelSU Root**
-Unlike traditional root, KernelSU provides:
-- **Kernel-level root** - More secure and harder to detect
-- **App Profiles** - Granular permission control per app
-- **Better hiding** - Root access invisible to most detection methods
+**Step 1: Verify Root Access**
 
-#### **First Root Grant**
-1. **App requests root** - Similar to other root solutions
-2. **KernelSU prompt** appears with app information
-3. **Choose permission level:**
-   - **Grant** - Full root access
-   - **Deny** - Refuse root access
-   - **App Profile** - Custom permission set
-
-## KernelSU Manager
-
-### 🏠 **Interface Overview**
-
-#### **Main Sections**
-- **Status** - Installation status and device info
-- **Superuser** - Root permission management
-- **Modules** - Module installation and management
-- **App Profiles** - Advanced app permission control
-
-### 📊 **Status Tab**
-
-#### **System Information**
-- **KernelSU version** - Installed kernel version
-- **Kernel version** - Linux kernel information
-- **Safe mode** - Current boot status
-- **Manager version** - App version information
-
-#### **Device Details**
-- **Android version** - OS version and security patch
-- **Architecture** - CPU architecture (arm64/x86_64)
-- **SELinux status** - Security policy enforcement
-
-### 👥 **Superuser Management**
-
-#### **Root Access Control**
+Test with terminal:
 ```bash
-# View granted apps
-ksud list
-
-# Grant root to specific app
-ksud allow <package_name>
-
-# Revoke root access
-ksud deny <package_name>
+adb shell
+su
+# Should grant root access with KernelSU prompt
 ```
 
-#### **App Management**
-- **Permission history** - See which apps used root
-- **Access logs** - Detailed command history
-- **Automatic decisions** - Set default responses for trusted apps
+**Step 2: Configure Manager Settings**
 
-### ⚙️ **Settings Configuration**
+Open KernelSU Manager > Settings:
 
-#### **Security Settings**
-- **Require authentication** - Biometric/PIN for manager access
-- **Hide manager icon** - Prevent app detection
-- **Safe mode trigger** - Volume key combinations
+**General:**
+- Hide manager icon: Recommended for banking apps
+- Require authentication: Enable biometric lock
+- Update channel: Stable (recommended)
 
-#### **Advanced Options**
-- **Kernel logging** - Debug information collection
-- **Module debugging** - Enhanced module error reporting
-- **Performance monitoring** - Resource usage tracking
+**Advanced:**
+- Safe mode: Enable volume key trigger
+- Logs: Keep for troubleshooting
+- Restore on boot: Enable
 
-## App Profiles
+**Step 3: Security Settings**
 
-### 🎯 **Advanced Permission Control**
+Configure root access:
+- Default response: Prompt (recommended)
+- Automatic timeout: 10 seconds
+- Root logging: Enable for security
+- Notification settings: Configure alerts
 
-**App Profiles** are KernelSU's unique feature that allows fine-grained control over what each app can access, even with root permissions.
+### Understanding Superuser Access
 
-#### **Profile Concepts**
-- **Default Profile** - Standard root access
-- **Custom Profiles** - Tailored permission sets
-- **Sandbox Mode** - Isolated execution environment
-- **Permission Inheritance** - Parent-child app relationships
+**Unlike Magisk:**
+- KernelSU operates at kernel level
+- More secure by design
+- Better detection evasion
+- Requires App Profiles for advanced control
 
-### 📱 **Creating App Profiles**
+**Basic Superuser:**
+- Apps request root like normal
+- Grant or deny access
+- Access logged and tracked
 
-#### **Step-by-Step Profile Creation**
-1. **KernelSU Manager** → **App Profiles**
-2. **Select target app** from list
-3. **Create new profile** or modify existing
-4. **Configure permissions:**
+**Advanced Control:**
+- Create App Profiles
+- Set granular permissions
+- Control file system access
+- Limit hardware access
+
+---
+
+## App Profile System
+
+### What are App Profiles?
+
+App Profiles are KernelSU's unique feature providing granular control over each rooted app's permissions and capabilities.
+
+**Traditional Root:**
+- App gets root = Full system access
+- No granular control
+- Security risks
+
+**KernelSU App Profiles:**
+- Define exact permissions per app
+- Control file system access
+- Limit hardware access
+- Set resource limits
+- Create security boundaries
+
+### Creating App Profiles
+
+**Step 1: Access App Profiles**
+
+1. KernelSU Manager > App Profiles
+2. Tap "+" to create new profile
+3. Select target app
+
+**Step 2: Configure Basic Permissions**
 
 ```yaml
-Root Access: ON/OFF           # Basic root permission
-File System Access:
-  - /system: Read Only         # System partition access
-  - /data: Read/Write         # Data partition access
-  - /sdcard: Full Access      # Storage access
-Network Access: Controlled    # Network permission level
-Device Access:
-  - Camera: Denied            # Hardware access control
-  - Microphone: Allowed       # Audio device access
-  - Location: Restricted      # GPS access level
+Profile Name: Custom App Profile
+Root Access: ON/OFF
+UID/GID: Custom or default
+SELinux Context: App context or custom
+Mount Namespace: Isolated/Global
 ```
 
-#### **Advanced Profile Options**
-- **UID/GID control** - User and group ID management
-- **SELinux context** - Security context assignment
-- **Capabilities** - Linux capability restrictions
-- **Resource limits** - CPU, memory, and I/O limits
+**Step 3: Configure File System Access**
 
-### 🛡️ **Security Profiles**
-
-#### **Banking App Profile**
-Secure profile for financial applications:
 ```yaml
-Profile Name: "Banking Secure"
+System Partition:
+  /system: Read Only
+  /vendor: Read Only
+  /product: Restricted
+
+Data Access:
+  /data: Limited to app data
+  /data/app: Read only
+  /sdcard: Full access
+
+Critical Paths:
+  /system/bin: No write
+  /system/etc: No write
+```
+
+**Step 4: Hardware and Network**
+
+```yaml
+Hardware Access:
+  Camera: Allow/Deny
+  Microphone: Allow/Deny
+  GPS: Allow/Deny
+  Sensors: Restricted
+
+Network:
+  Internet: Allowed
+  Specific domains: Whitelist mode
+  Port restrictions: Custom
+```
+
+**Step 5: Resource Limits**
+
+```yaml
+Performance:
+  CPU Priority: Normal/High
+  Memory Limit: No limit/Custom
+  I/O Priority: Normal
+
+Logging:
+  Command logging: Enabled
+  Access logging: Full
+  Alert on violations: Yes
+```
+
+### Pre-Configured Profile Examples
+
+**Banking App Profile (Maximum Security):**
+
+```yaml
+Profile: Banking Secure
 Root Access: DENIED
+File System:
+  /system: Read only
+  /data: App data only
+  /sdcard: Denied
+Hardware:
+  Camera: Denied
+  Microphone: Denied
+  GPS: Denied
 Network: Banking domains only
-File System: Restricted to app data
-Hardware: No camera, no microphone
-Logging: Enhanced monitoring
+Logging: Full monitoring
 ```
 
-#### **Development App Profile**
-Profile for debugging and development tools:
+**Developer Tools Profile:**
+
 ```yaml
-Profile Name: "Developer Tools"
+Profile: Developer Access
 Root Access: FULL
-File System: Read/Write system
+File System:
+  /system: Read/Write
+  /data: Full access
+  /sdcard: Full access
+Hardware: All allowed
 Network: Unrestricted
-ADB Access: Allowed
-Debugging: Full access
+ADB Integration: Enabled
+Logging: Command history
 ```
 
-#### **Gaming App Profile**
-Optimized profile for mobile games:
+**Gaming Apps Profile:**
+
 ```yaml
-Profile Name: "Gaming Optimized"
+Profile: Gaming Optimized
 Root Access: DENIED
-Performance: High priority
-Graphics: Unrestricted GPU
+File System: App data only
+Hardware:
+  GPU: High priority
+  Touch: Low latency
 Network: Game servers only
-Anti-cheat: Bypass protection
+Performance: CPU/GPU boost
+Anti-cheat: Bypass root detection
 ```
 
-### 📋 **Profile Templates**
+**Privacy-Focused Profile:**
 
-#### **Pre-configured Templates**
-KernelSU includes several profile templates:
+```yaml
+Profile: Privacy Enhanced
+Root Access: LIMITED
+File System: Minimal access
+Hardware:
+  Camera: Denied
+  Microphone: Denied
+  GPS: Approximate only
+Network: Encrypted connections only
+Tracking: Blocked
+```
 
-- **🏦 Banking** - Maximum security, minimal access
-- **🎮 Gaming** - Performance optimized, restricted access
-- **🛠️ Development** - Full access for debugging tools
-- **🔒 Privacy** - Enhanced privacy protection
-- **⚡ Performance** - Resource optimization focus
+### Managing Profiles
 
-#### **Custom Template Creation**
+**Apply Profile to App:**
+
+1. KernelSU Manager > App Profiles
+2. Select profile
+3. Choose target app
+4. Apply and restart app
+
+**Export/Import Profiles:**
+
 ```bash
-# Export existing profile as template
-ksud profile export com.example.app > my_template.json
+# Export profile as template
+ksud profile export com.example.app > profile_template.json
 
-# Apply template to new app
-ksud profile import com.target.app < my_template.json
+# Import profile to new app
+ksud profile import com.target.app < profile_template.json
 ```
 
-## Module System
+**Profile Inheritance:**
 
-### 📦 **Module Architecture Comparison**
+- Create parent profiles for categories
+- Child apps inherit settings
+- Override specific permissions
+- Maintain consistency
 
-#### **KernelSU (Original)**
-- **Primary:** OverlayFS-based system
-- **Advantage:** More efficient, kernel-level integration
-- **Disadvantage:** Limited compatibility with some Magisk modules
+---
 
-#### **KernelSU Next (Community Fork)**
-- **Dual System:** Magic Mount + OverlayFS
-- **Magic Mount:** Full compatibility with Magisk modules
-- **OverlayFS:** Efficient kernel-level modifications
-- **Advantage:** Best of both worlds - compatibility and performance
+## Managing Modules
 
-### 🔧 **Module Structure**
+### Module System Overview
 
-#### **Standard KernelSU Module**
-```
-module_structure/
-├── META-INF/               # Installation metadata
-├── module.prop            # Module properties
-├── post-fs-data.sh        # Early boot script
-├── service.sh             # Late boot script
-├── system/                # System overlay files
-├── vendor/                # Vendor overlay files
-└── webroot/               # Web UI files (optional)
-```
+**KernelSU Modules:**
+- Use OverlayFS system
+- Kernel-level integration
+- Systemless modifications
+- Growing ecosystem (300+)
 
-#### **KernelSU Next Enhanced Module**
-```
-module_structure/
-├── META-INF/               # Installation metadata
-├── module.prop            # Module properties
-├── post-fs-data.sh        # Early boot script
-├── service.sh             # Late boot script
-├── boot-completed.sh      # Post-boot script (KSU Next)
-├── post-mount.sh          # Post-mount script (KSU Next)
-├── system/                # System overlay files
-├── vendor/                # Vendor overlay files
-└── webroot/               # Web UI files (optional)
-```
+**Module Compatibility:**
+- Most system overlay modules work
+- Some Magisk modules compatible
+- Zygisk modules need ZygiskNext
+- Growing native module support
 
-### 🔥 **Compatible Modules**
+### Installing Modules
 
-#### **KernelSU Next Enhanced Modules**
-- **All KernelSU modules** - Full backward compatibility
-- **Most Magisk modules** - Magic Mount support
-- **Zygisk modules** - Through [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext)
-- **Custom KSU Next modules** - Enhanced features
+**Method 1: Manager Installation**
 
-#### **Magisk Module Compatibility**
-
-| Module Type                     | KernelSU              | KernelSU Next          |
-| ------------------------------- | --------------------- | ---------------------- |
-| **System overlay modules**      | ✅ Compatible          | ✅ Compatible           |
-| **Simple modification modules** | ✅ Compatible          | ✅ Compatible           |
-| **Magic Mount modules**         | ❌ Not compatible      | ✅ Compatible           |
-| **Zygisk-dependent modules**    | ❌ Need ZygiskNext     | ✅ Better support       |
-| **Complex injection modules**   | ❌ May need adaptation | ✅ Better compatibility |
-
-### 📥 **Module Installation**
-
-#### **Method 1: Manager Installation**
-```bash
-# For both KernelSU and KernelSU Next
 1. Download module ZIP from trusted source
-2. Open KernelSU/KernelSU Next Manager → Modules
-3. Install from storage → Select ZIP
-4. Reboot device to activate
-```
+2. KernelSU Manager > Modules
+3. Tap "Install from storage"
+4. Select module ZIP
+5. Wait for installation
+6. Reboot when prompted
 
-#### **Method 2: Command Line (KernelSU)**
+**Method 2: Command Line**
+
 ```bash
-# Install module via command line
+# Install module
 ksud module install /path/to/module.zip
 
 # List installed modules
@@ -836,134 +836,281 @@ ksud module disable module_id
 ksud module remove module_id
 ```
 
-#### **Method 3: Command Line (KernelSU Next)**
-```bash
-# Install module via command line
-ksud_next module install /path/to/module.zip
-
-# List installed modules with more details
-ksud_next module list --verbose
-
-# Enable/disable module
-ksud_next module enable module_id
-ksud_next module disable module_id
-
-# Remove module
-ksud_next module remove module_id
-```
-
-## Troubleshooting
-
-### 🚨 **Common Issues**
-
-#### **KernelSU Not Working After Installation**
-**Symptoms:** Manager shows "Not Installed"
-```bash
-# Diagnostic steps:
-1. Check kernel compatibility: uname -r
-2. Verify GKI support: cat /proc/version | grep GKI
-3. Check boot image integrity
-4. Try different installation method
-```
-
-#### **Apps Can't Get Root Access**
-**Symptoms:** Root requests denied or not appearing
-```bash
-# Solutions:
-1. Check app profile settings
-2. Verify KernelSU daemon status: ksud status
-3. Clear app data and retry
-4. Check selinux status: getenforce
-```
-
-#### **Modules Not Loading**
-**Symptoms:** Installed modules have no effect
-```bash
-# Troubleshooting:
-1. Check module compatibility with KernelSU
-2. Verify module installation: ksud module list
-3. Check module logs: ksud module log module_id
-4. Try installing via different method
-```
-
-#### **Boot Loop After Installation**
-**Symptoms:** Device stuck in boot animation
-```bash
-# Recovery methods:
-1. Boot to fastboot: fastboot flash boot stock_boot.img
-2. Use emergency mode: Volume Up + Power during boot
-3. Flash stock firmware if necessary
-4. Check kernel compatibility before reinstalling
-```
-
-## Uninstallation
-
-### 🗑️ **Complete Removal**
-
-#### **Method 1: Flash Stock Boot**
-```bash
-# Most reliable method
-fastboot flash boot stock_boot.img
-fastboot reboot
-
-# Verify removal
-# KernelSU Manager should show "Not Installed"
-```
-
-#### **Method 2: Kernel Removal**
-```bash
-# If using custom kernel with KernelSU
-# Flash stock kernel or kernel without KernelSU
-fastboot flash boot stock_kernel.img
-fastboot reboot
-```
-
-#### **Method 3: Firmware Restore**
-```bash
-# Complete firmware flash (nuclear option)
-# Flash complete stock firmware
-# This will remove everything including data
-```
-
-### 🧹 **Clean App Data**
-```bash
-# Remove KernelSU app data
-adb shell pm uninstall com.ksu.kernelsu
-
-# Clear any remaining data
-adb shell rm -rf /data/data/com.ksu.kernelsu
-```
-
-### 📋 **Verification**
-After uninstallation:
-- ✅ No KernelSU in installed apps
-- ✅ No root access available
-- ✅ Banking apps work normally
-- ✅ SafetyNet passes (if was issue)
-
-::: tip 💡 Pro Tips
-- **Choose the right version** - KernelSU for stability, KernelSU Next for compatibility
-- **Start conservative** - Begin with minimal app profiles
-- **Test thoroughly** - Verify each profile before deployment
-- **Keep backups** - Always backup working boot images
-- **Stay updated** - Follow both projects for updates
-- **Join communities** - Get support from both official and community channels
-- **Document changes** - Keep track of profiles and modules
+::: warning MODULE SAFETY
+Only install modules from trusted sources. Always verify source code for open-source modules.
 :::
 
-## Next Steps
+### Module Troubleshooting
 
-🎯 **Optimize Your Setup:**
-- **[KernelSU Official Guide](https://kernelsu.org/)** - Official documentation
-- **[KernelSU Next Guide](https://kernelsu-next.github.io/webpage/)** - Community fork documentation
-- **[App Profile Templates](https://kernelsu.org/guide/app-profile.html)** - Pre-configured security profiles
-- **[Compatible Modules](../android-root-apps/)** - KernelSU-compatible modifications
-- **[Security Hardening](./index.md)** - Advanced security configurations
-- **[Performance Tuning](./magisk-guide.md)** - System optimization techniques
+<details><summary>Click to expand content</summary>
+
+**Module Causes Bootloop:**
+
+1. Force reboot: Hold power 10 seconds
+2. Boot to safe mode: Volume down at boot
+3. Disable module via recovery or ADB:
+
+```bash
+adb wait-for-device shell
+ksud --remove-modules
+# Or specific module:
+rm -rf /data/adb/modules/[module_name]
+```
+
+**Module Not Working:**
+
+1. Check KernelSU version compatibility
+2. Verify module logs: `/data/adb/modules/[module]/`
+3. Check if module requires Zygisk
+4. Try reinstalling module
+5. Check for module updates
+
+</details>
 
 ---
 
-**Need help?** 
-- **KernelSU Official**: Join the [KernelSU Telegram community](https://t.me/KernelSU)
-- **KernelSU Next**: Visit the [GitHub repository](https://github.com/KernelSU-Next/KernelSU-Next)
-- **General Support**: Check our [FAQ section](../faqs.md) for common questions and solutions
+## Root Hiding and Play Integrity
+
+### Root Detection Reality
+
+**Modern Banking Apps:**
+- Use Play Integrity API
+- Hardware-backed attestation
+- Increasingly difficult to bypass
+
+**KernelSU Advantages:**
+- Kernel-level hiding (better than userspace)
+- More effective root concealment
+- Better Play Integrity passing rates
+
+### Configure Root Hiding
+
+**Step 1: Hide Manager App**
+
+1. KernelSU Manager > Settings
+2. "Hide the KernelSU Manager"
+3. Enter custom name (e.g., "Settings")
+4. App repackages with new icon/name
+
+**Step 2: Create Banking Profile**
+
+Use strict App Profile (see examples above) to deny root access to sensitive apps.
+
+**Step 3: Install Root Hiding Modules**
+
+1. **SUSFS** - Advanced root hiding
+   - Download from GitHub
+   - Install via KernelSU Manager
+   - Configure for banking apps
+
+2. **Play Integrity Fix** - Pass integrity checks
+   - Download compatible version
+   - Install and configure
+   - Test with YASNAC app
+
+**Step 4: Clear App Data**
+
+After configuration:
+1. Settings > Apps
+2. Clear data for:
+   - Google Play Services
+   - Google Play Store
+   - Banking apps
+3. Reboot device
+4. Reopen apps
+
+### Testing Play Integrity
+
+**Testing Apps:**
+
+1. **YASNAC** - SafetyNet checker
+2. **Play Integrity API Checker** - Official checker
+3. **TB Checker** - Comprehensive tests
+
+**Expected Results:**
+- Basic Integrity: PASS (achievable with proper setup)
+- Device Integrity: FAIL (expected with unlocked bootloader)
+- Strong Integrity: FAIL (hardware attestation impossible)
+
+::: warning NO GUARANTEES
+Even with KernelSU's better hiding, some banking apps may still detect root. Always test your specific apps.
+:::
+
+---
+
+## Troubleshooting
+
+### Installation Issues
+
+<details><summary>Click to expand content</summary>
+
+**Manager Shows "Unsupported"**
+
+Causes:
+- Device kernel not GKI 2.0 compatible
+- Android version too old (< Android 11)
+- Non-GKI custom kernel
+
+Solutions:
+1. Verify Android 11+ and kernel 5.10+
+2. Check for custom kernel with KernelSU support
+3. Consider building custom kernel
+4. Try Magisk as alternative
+
+**Manager Shows "Not Installed" After Flashing**
+
+Causes:
+- Wrong kernel flashed for device
+- Flashed to wrong partition
+- GKI mismatch with Android version
+
+Solutions:
+1. Verify correct GKI kernel for Android version
+2. Re-flash with correct kernel
+3. Check fastboot output for errors
+4. Try LKM boot patching method
+
+**Device Bootloops After Installation**
+
+Solutions:
+1. Boot to fastboot immediately
+2. Flash stock boot.img:
+```bash
+fastboot flash boot stock_boot.img
+fastboot reboot
+```
+3. Verify correct GKI version
+4. Check for device-specific kernel requirements
+
+</details>
+
+### Root Access Issues
+
+<details><summary>Click to expand content</summary>
+
+**Apps Not Getting Root**
+
+Solutions:
+1. Check KernelSU Manager shows "Installed"
+2. Grant root to shell: `adb shell su`
+3. Check App Profile settings
+4. Verify app is requesting root properly
+5. Check logs in KernelSU Manager
+
+**Root Access Randomly Lost**
+
+Solutions:
+1. Check if KernelSU still showing installed
+2. Reinstall via Manager > Install > Direct Install
+3. Check for module conflicts
+4. Review recent app profile changes
+
+</details>
+
+### Module Problems
+
+<details><summary>Click to expand content</summary>
+
+**Module Not Loading**
+
+Solutions:
+1. Check module compatibility with KernelSU
+2. Verify module uses OverlayFS (not Magic Mount)
+3. Check if module needs ZygiskNext
+4. Review module logs
+5. Try reinstalling module
+
+**Need Zygisk Module Support**
+
+Solution:
+1. Install **ZygiskNext** module
+2. Download from GitHub
+3. Install via KernelSU Manager
+4. Reboot device
+5. Zygisk modules now supported
+
+</details>
+
+### Banking App Issues
+
+<details><summary>Click to expand content</summary>
+
+**App Detects Root Despite Profile**
+
+Solutions:
+1. Verify App Profile denies root completely
+2. Hide KernelSU Manager with different name
+3. Clear app data completely
+4. Install Shamiko module
+5. Install Play Integrity Fix
+6. Accept that some apps may be impossible (hardware attestation)
+
+**Play Integrity Fails**
+
+Solutions:
+1. Install Play Integrity Fix module
+2. Configure proper device fingerprint
+3. Clear Google Play Services data
+4. Wait 24-48 hours for propagation
+5. Accept Device/Strong may be impossible
+
+</details>
+
+---
+
+## Next Steps
+
+**After Installing KernelSU:**
+
+1. **Configure App Profiles:**
+   - Create profiles for sensitive apps
+   - Set up banking app restrictions
+   - Configure development tools
+
+2. **Install essential modules:**
+   - ZygiskNext for Zygisk support
+   - Shamiko for root hiding
+   - Play Integrity Fix for banking
+   - Ad blocking modules
+
+3. **Explore advanced features:**
+   - [LSPosed Framework](./lsposed-guide.md) - App modifications
+   - [Custom ROMs](./custom-rom-installation.md) - Next level
+   - [Root Apps Collection](../android-root-apps/) - Essential apps
+
+4. **Optimize security:**
+   - [Ad Blocking Guide](../guides/android-adblocking.md) - System-wide blocking
+   - [Debloating Guide](../guides/android-apps-debloating.md) - Remove bloat
+   - Profile hardening for all apps
+
+---
+
+## Community Resources
+
+**Official Resources:**
+- [KernelSU Website](https://kernelsu.org/) - Official documentation
+- [KernelSU GitHub](https://github.com/tiann/KernelSU) - Source code and releases
+- [KernelSU Telegram](https://t.me/KernelSU) - Official community
+
+**Module Repositories:**
+- [KernelSU Modules](https://github.com/rifsxd/kernelsu-modules-repo) - Module collection
+- [XDA KernelSU Forum](https://forum.xda-developers.com/) - Community modules
+
+**Support Communities:**
+- [Reddit r/KernelSU](https://www.reddit.com/r/KernelSU/) - Community discussions
+- XDA Device Forums - Device-specific help
+
+**Awesome Android Root resources:**
+- [FAQs](../faqs.md) - Common questions
+- [Troubleshooting Guide](./troubleshooting-guide.md) - Common issues
+
+### Getting Help
+
+**When asking for help, provide:**
+- Device model and Android version
+- Kernel version: `adb shell uname -r`
+- KernelSU version and mode (GKI/LKM)
+- Installation method used
+- Exact error messages
+- KernelSU logs from Manager
+- Steps already attempted
