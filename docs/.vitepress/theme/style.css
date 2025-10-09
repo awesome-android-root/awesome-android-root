@@ -538,3 +538,14 @@ footer a{
   border: none !important;
   box-shadow: none !important;
 }
+
+/* Inline SVG image sizing for icons in text */
+.vp-doc img[src*="fdroid.svg"],
+.vp-doc img[src*="playstore.svg"],
+.vp-doc img[alt*="icon"] {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin: 0 2px;
+}

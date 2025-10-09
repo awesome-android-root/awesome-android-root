@@ -263,8 +263,8 @@ Follow this path:
 - **⭐** = Community‑recommended (most popular/trusted in category)
 - **`FOSS`** = Free and Open Source Software (source code available)
 - **`Proprietary`** = Closed-source software or unclear licensing
-- **`[🌱 F-Droid]`** - F-Droid link
-- **`[▶️ Play Store]`** = Google Play Store link
+- **`[🌱 F-Droid]`** / ![fdroid-icon](./docs/public/images/fdroid.svg) = F-Droid link
+- **`[▶️ Play Store]`** / ![playstore-icon](./docs/public/images/playstore.svg) = Google Play Store link
 
 ### **Root Framework Badges**
 - **`[M]`** = Magisk Module (requires [_Magisk framework_](../android-root-guides/magisk-guide.md))
