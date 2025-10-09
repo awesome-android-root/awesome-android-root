@@ -243,7 +243,6 @@ export default withPwa(defineConfig({
       {
         text: 'Resources',
         items: [
-          { text: 'Essential Apps', link: '/android-root-apps/essential-starter-kit' },
           { text: 'Root Framework Comparison', link: '/android-root-guides/root-framework-comparison' },
           { text: 'Troubleshooting Guide', link: '/troubleshooting' },
           { text: 'Non-Root Alternatives', link: '/non-root-alternatives' },

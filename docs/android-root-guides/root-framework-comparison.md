@@ -583,7 +583,7 @@ Not if done correctly. Follow guides carefully, use correct files, maintain back
    - [Magisk Installation](./magisk-guide.md)
    - [KernelSU Installation](./kernelsu-guide.md)
    - [APatch Installation](./apatch-guide.md)
-3. Install essential apps: [Starter Kit](../android-root-apps/essential-starter-kit.md)
+3. Install essential apps: [Root Apps Collection](../android-root-apps/)
 4. Join community for support
 
 **Still unsure?**

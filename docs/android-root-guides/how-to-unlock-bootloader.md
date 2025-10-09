@@ -627,7 +627,7 @@ Look for "Device unlocked: true"
    - [APatch Guide](./apatch-guide.md) (alternative)
 
 3. **Post-Root Configuration**
-   - Install essential apps: [Starter Kit](../android-root-apps/essential-starter-kit.md)
+   - Install essential apps: [Root Apps Collection](../android-root-apps/)
    - Configure ad blocking: [Ad Blocking Guide](../guides/android-adblocking.md)
    - Debloat device: [Debloating Guide](../guides/android-apps-debloating.md)
 

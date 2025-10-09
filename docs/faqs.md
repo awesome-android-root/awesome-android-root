@@ -883,7 +883,6 @@ su -c "magisk --version"      # Check Magisk version
 **Guides:**
 - [Complete Rooting Guide](./android-root-guides/index.md)
 - [Root Framework Comparison](./android-root-guides/root-framework-comparison.md)
-- [Essential 10 Starter Kit](./android/root-apps/essential-starter-kit.md)
 - [Troubleshooting Guide](./troubleshooting.md)
 - [Non-Root Alternatives](./non-root-alternatives.md)
 

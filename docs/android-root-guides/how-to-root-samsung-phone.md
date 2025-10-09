@@ -671,7 +671,6 @@ Once Knox trips to 0x1, it is permanent. Flashing stock firmware does NOT reset 
 
 1. **Essential apps:**
    - [Root Apps Collection](../android-root-apps/) - Curated list
-   - [Starter Kit](../android-root-apps/essential-starter-kit.md) - Must-haves
 
 2. **Enhance experience:**
    - [Ad Blocking Guide](../guides/android-adblocking.md) - System-wide blocking

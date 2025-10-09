@@ -177,4 +177,4 @@ External links: We don't control third-party content. Always verify download sou
 
 ---
 
-**Ready?** Start with [Essential Apps](/android-root-apps/essential-starter-kit) or [Rooting Guides](/android-root-guides/).
+**Ready?** Start with [Rooting Guides](/android-root-guides/) or [Root Apps](/android-root-apps/).
