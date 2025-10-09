@@ -265,9 +265,9 @@ Follow this path:
 - **`Proprietary`** = Closed-source software or unclear licensing
 
 <div style="display: flex; gap: 10px; align-items: center; margin-top: 5px; margin-bottom: 10px;">
-  <span style="display: flex; align-items: center; gap: 5px;">
   <ul>
   <li>
+   <span style="display: flex; align-items: center; gap: 5px;">
   <code>[🌱 F-Droid]</code> /
     <img src="./docs/public/images/fdroid.svg" alt="F-Droid Icon" width="20" height="20" /> = F-Droid link
   </span>
