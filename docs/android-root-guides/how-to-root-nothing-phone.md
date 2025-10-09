@@ -64,8 +64,6 @@ head:
 Root Nothing Phone devices with straightforward process. 
 
 ## Quick Navigation
-
-- [Nothing Overview](#nothing-rooting-overview)
 - [Supported Devices](#supported-devices)
 - [Prerequisites](#prerequisites)
 - [Bootloader Unlock](#unlock-bootloader)
