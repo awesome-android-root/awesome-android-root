@@ -1212,7 +1212,9 @@ Extended references & external reading: [resources.md](./docs/resources.md)
 
 ## Legal and Safety
 
-> ⚠️ Educational reference only. You accept all risk. Rooting / modifying firmware can void warranty, reduce security, break OTA updates, or trigger anti‑tamper (Knox, Play Integrity, DRM failures, banking app lockouts).
+> [!IMPORTANT]
+> **⚠️ Educational reference only.**
+> You accept all risk. Rooting / modifying firmware can void warranty, reduce security, break OTA updates, or trigger anti‑tamper (Knox, Play Integrity, DRM failures, banking app lockouts).
 
 ### Core Principles
 - Research device specifics (A/B slots, dynamic partitions, AVB state) first
@@ -1238,7 +1240,15 @@ Extended references & external reading: [resources.md](./docs/resources.md)
 - Reliance on unpatchable banking / DRM / enterprise apps
 - You can’t afford data loss & have no backup
 
-> 📢 Respect licenses, ToS, and local laws. Don’t use root to unlawfully bypass paid features.
+<div align="center">
+
+```
+Respect licenses, ToS, and local laws. Don’t use root to unlawfully bypass paid features.
+```
+
+</div><br>
+
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -1252,10 +1262,9 @@ Extended references & external reading: [resources.md](./docs/resources.md)
 [![Star the Repo](https://img.shields.io/badge/%20⭐-Star%20this%20Repo-yellow?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root)
 [![Share Project](https://img.shields.io/badge/%20📢-Share%20Project-blue?style=for-the-badge)](https://twitter.com/intent/tweet?text=Check%20out%20this%20amazing%20Android%20rooting%20resource!&url=https://awesome-android-root.org)
 
-</div>
-<br>
-
 **Sponsorships fund: app status verification, guide refresh, categorization improvements, automation & docs infra.**
+
+</div>
 
 Non‑financial impact ideas:
 - Replace dead or redirected links with active sources/forks
