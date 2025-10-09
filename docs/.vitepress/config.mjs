@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
+import { storeLinkPlugin } from './markdown/storeLinkPlugin.mjs'
 
 export default withPwa(defineConfig({
   lang: 'en-US',
@@ -119,7 +120,13 @@ export default withPwa(defineConfig({
     devOptions: { enabled: process.env.NODE_ENV === 'development', suppressWarnings: true, type: 'module' }
   },
 
-  markdown: { cache: true, anchor: { level: [2, 3, 4] } },
+  markdown: { 
+    cache: true, 
+    anchor: { level: [2, 3, 4] },
+    config: (md) => {
+      md.use(storeLinkPlugin)
+    }
+  },
 
   head: [
         

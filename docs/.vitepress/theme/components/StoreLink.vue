@@ -1,0 +1,135 @@
+<template>
+  <a :href="href" class="store-badge" :class="store" target="_blank" rel="noopener noreferrer" :aria-label="ariaLabel">
+    <span class="store-icon" v-html="icon"></span>
+  </a>
+</template>
+
+<script setup>
+import { computed } from 'vue'
+
+const props = defineProps({
+  href: {
+    type: String,
+    required: true
+  },
+  store: {
+    type: String,
+    required: true,
+    validator: (value) => ['fdroid', 'playstore'].includes(value)
+  }
+})
+
+const ariaLabel = computed(() => {
+  return props.store === 'fdroid' ? 'Download on F-Droid' : 'Get it on Play Store'
+})
+
+const icon = computed(() => {
+  if (props.store === 'fdroid') {
+    return `<svg fill="currentColor" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20.472 10.081H3.528a1.59 1.59 0 0 0-1.589 1.589v10.59a1.59 1.59 0 0 0 1.589 1.589h16.944a1.59 1.59 0 0 0 1.589-1.589V11.67a1.59 1.59 0 0 0-1.589-1.589zM12 22.525c-3.066 0-5.56-2.494-5.56-5.56s2.494-5.56 5.56-5.56c3.066 0 5.56 2.494 5.56 5.56s-2.494 5.56-5.56 5.56zm0-10.114c-2.511 0-4.554 2.043-4.554 4.554S9.489 21.519 12 21.519s4.554-2.043 4.554-4.554-2.043-4.554-4.554-4.554zm0 7.863a3.322 3.322 0 0 1-3.221-2.568h1.67c.275.581.859.979 1.551.979.96 0 1.721-.761 1.721-1.721 0-.96-.761-1.721-1.721-1.721a1.7 1.7 0 0 0-1.493.874H8.805A3.322 3.322 0 0 1 12 13.655a3.321 3.321 0 0 1 3.309 3.309A3.321 3.321 0 0 1 12 20.274zM23.849.396l-.002.003-.006-.005.004-.004a.668.668 0 0 0-.519-.238.654.654 0 0 0-.512.259l-1.818 2.353a1.564 1.564 0 0 0-.523-.095H3.528c-.184 0-.358.038-.523.095L1.187.41A.657.657 0 0 0 .156.389L.16.393.153.399.151.396a.662.662 0 0 0-.012.824l1.909 2.471a1.587 1.587 0 0 0-.108.566v3.707a1.59 1.59 0 0 0 1.589 1.589h16.944a1.59 1.59 0 0 0 1.589-1.589V4.257c0-.2-.041-.39-.109-.566l1.909-2.471a.663.663 0 0 0-.013-.824zM6.904 8.228a1.787 1.787 0 1 1 0-3.574 1.787 1.787 0 0 1 0 3.574zm10.325 0a1.787 1.787 0 1 1 0-3.574 1.787 1.787 0 0 1 0 3.574z"/>
+    </svg>`
+  } else {
+    return `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M9.3,5.52a7,7,0,0,1,2,.76L32.52,18l-5.87,6L7.68,5.9A2.46,2.46,0,0,1,9.3,5.52ZM7.68,5.9l19,18.1L7.7,42.07c-.7-.56-1.07-1.69-1.07-3.36V9.29c0-1.67.36-2.82,1-3.38ZM32.52,18l7,3.87c2.49,1.38,2.49,2.84,0,4.22l-7,3.87-5.87-6,5.87-6Zm0,12L11.34,41.72c-1.16.64-2.72,1.19-3.64.35L26.65,24Z" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`
+  }
+})
+</script>
+
+<style scoped>
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  vertical-align: middle;
+  margin: 0 2px;
+  border: none;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.store-badge:hover {
+  transform: translateY(-1px) scale(1.1);
+  text-decoration: none;
+}
+
+.store-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.store-icon :deep(svg) {
+  display: block;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+  transition: filter 0.2s ease;
+}
+
+.store-badge:hover .store-icon :deep(svg) {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+/* F-Droid styling - Light mode */
+.store-badge.fdroid {
+  color: #1976d2;
+}
+
+.store-badge.fdroid:hover {
+  color: #1565c0;
+}
+
+/* Play Store styling - Light mode */
+.store-badge.playstore {
+  color: #1976d2;
+}
+
+.store-badge.playstore:hover {
+  color: #1565c0;
+}
+
+/* Dark mode adjustments */
+html.dark .store-badge.fdroid {
+  color: #64b5f6;
+}
+
+html.dark .store-badge.fdroid:hover {
+  color: #90caf9;
+}
+
+html.dark .store-badge.playstore {
+  color: #64b5f6;
+}
+
+html.dark .store-badge.playstore:hover {
+  color: #90caf9;
+}
+
+html.dark .store-icon :deep(svg) {
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
+}
+
+html.dark .store-badge:hover .store-icon :deep(svg) {
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+}
+
+/* Responsive sizing */
+@media (max-width: 768px) {
+  .store-badge {
+    width: 22px;
+    height: 22px;
+    padding: 3px;
+  }
+}
+</style>

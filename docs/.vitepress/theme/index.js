@@ -4,6 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import PwaReload from './PwaReload.vue'
 import BackToTop from './BackToTop.vue'
+import StoreLink from './components/StoreLink.vue'
 
 /** @type {import('vitepress').Theme} */
 export default {
@@ -15,6 +16,8 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
+    // Register StoreLink component globally
+    app.component('StoreLink', StoreLink)
     // Performance optimization: Add image loading attributes
     if (typeof window !== 'undefined') {
       // Add loading="lazy" to images after mount
