@@ -64,12 +64,6 @@
   <changefreq>weekly</changefreq>
   <priority>0.95</priority>
 </url>
-<url>
-  <loc>https://awesome-android-root.org/android-root-apps/essential-starter-kit</loc>
-  <lastmod>2025-10-05T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.90</priority>
-</url>
 
 <!-- Android Root Guides section -->
 <url>
