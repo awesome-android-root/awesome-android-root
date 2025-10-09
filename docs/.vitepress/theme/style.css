@@ -523,3 +523,18 @@ margin-bottom: 0.5rem;
 footer a{
   text-decoration: none !important;
 }
+/* Remove borders from inline code and badges */
+.vp-doc code {
+  border: none !important;
+}
+
+.vp-doc a code {
+  border: none !important;
+}
+
+/* Clean styling for inline elements */
+.vp-doc p code,
+.vp-doc li code {
+  border: none !important;
+  box-shadow: none !important;
+}
