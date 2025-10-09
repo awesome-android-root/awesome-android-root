@@ -56,283 +56,595 @@ head:
       content: index, follow
 ---
 
-# Complete Motorola Rooting Guide
+# Motorola Root Guide
 
-This guide keeps Motorola‑specific details (unlock code portal, A/B flashing notes). For universal prep and Magisk steps, see: [Main Rooting Guide](./index.md), [Bootloader Unlocking](./how-to-unlock-bootloader.md), and [Magisk Guide](./magisk-guide.md).
+Root Motorola devices via official unlock code system. Covers Edge 50, Edge 40, Edge 30, Moto G series, and legacy Moto devices.
 
-## 🔗 Essential Resources
-- **[📖 Main Rooting Guide](./index.md)** - Universal rooting principles and safety
-- **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - General bootloader concepts  
-- **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - TWRP installation guide
-- **[❓ FAQ & Troubleshooting](../faqs.md)** - Solutions for common issues
+## Quick Navigation
 
-## Critical Warnings
+- [Motorola Overview](#motorola-rooting-overview)
+- [Supported Devices](#supported-devices)
+- [Prerequisites](#prerequisites)
+- [Get Unlock Code](#get-unlock-code)
+- [Unlock Bootloader](#unlock-bootloader)
+- [Root Installation](#root-installation)
+- [Troubleshooting](#troubleshooting)
 
-::: danger ⚠️ Motorola-Specific Considerations
-- **Data wipe occurs multiple times** - Complete backup required
-- **7-10 day waiting period** required before OEM unlocking becomes available
-- **A/B partition devices** (G55 5G and newer) require special dual-partition flashing
-- **Exact model verification** essential - similar models may have different procedures
-:::
-
-## Prerequisites & Setup
-
-### Required Tools
-1. **[Platform Tools](https://developer.android.com/studio/releases/platform-tools)** - ADB/Fastboot
-2. **[Motorola USB Drivers](https://en-us.support.motorola.com/app/usb-drivers)** - Official device drivers
-3. **[Magisk APK](https://github.com/topjohnwu/Magisk/releases)** - Latest release
-4. **Stock ROM** for your exact device (for boot.img extraction)
-5. **Motorola Account** - Required for unlock code request
-
-### Device Preparation
-1. **Enable Developer Options** - Settings → About Phone → Tap Build Number 10 times
-2. **Configure Developer Settings:**
-   - Enable **USB Debugging**
-   - Note **OEM Unlocking** status (may be grayed out)
-3. **Record Build Number** - Needed for ROM identification
-4. **Disable Auto-Updates** - Prevent firmware changes
-
-### The Waiting Period
-**Mandatory Step:** Motorola requires **7-10 days** of internet connectivity before OEM unlocking becomes available.
-
-**During this period:**
-- Keep device connected to WiFi/mobile data
-- Use normally - timer runs automatically
-- Check OEM unlocking periodically
-- Enable immediately when available
-
-## Device Identification
-
-### Check Your Device Type
-Determine if your device uses A/B partitions:
-```bash
-adb shell getprop ro.build.ab_update
-```
-- **true** = A/B device (dual partitions)
-- **false/empty** = Standard device (single partition)
-
-### Confirmed Device Types
-- **Standard Devices:** Edge 30 Neo, G32, G24, most older models
-- **A/B Devices:** G55 5G, G54 5G, newer Edge models
-
-## Stock ROM Acquisition
-
-### Method 1: Direct Search
-1. **Get build number:** Settings → About Phone → Build Number
-2. **Search ROM sites:** Use exact build number (e.g., "U3UTS34.44-11-2-4")
-3. **Try motostockrom.com** or similar databases
-4. **Fallback:** Remove last number segment if exact match not found
-
-### Method 2: Motorola Software Fix Tool
-1. **Install [Motorola Software Fix](https://en-us.support.motorola.com/app/softwarefix)**
-2. **Connect device** → Backup & Restore tab
-3. **Download firmware** (auto-extracts files)
-4. **Navigate to:** `C:\ProgramData\RSA\RomFiles\[ROM folder]`
-5. **Copy boot.img** for patching
-
-## Bootloader Unlocking
-
-### Verification Steps
-Before proceeding, confirm:
-- OEM unlocking **enabled** (not grayed out)
-- Device properly connected (`adb devices` shows device)
-- Motorola account created and logged in
-
-### Unlock Process
-1. **Enter fastboot mode:**
-   ```bash
-   adb reboot bootloader
-   ```
-
-2. **Generate unlock token:**
-   ```bash
-   fastboot oem get_unlock_data
-   ```
-   Copy the complete token (remove line breaks)
-
-3. **Request unlock code:**
-   - Visit [Motorola Bootloader Unlock](https://en-us.support.motorola.com/app/standalone/bootloader/unlock-your-device-b)
-   - Login with Motorola account
-   - Paste token and submit request
-   - Check email for unlock code (usually arrives quickly)
-
-4. **Unlock bootloader:**
-   ```bash
-   fastboot oem unlock [your_unlock_code]
-   ```
-   Follow on-screen prompts to confirm
-
-5. **Reboot and setup:**
-   ```bash
-   fastboot reboot
-   ```
-
-### Post-Unlock Setup
-After automatic factory reset:
-1. Complete initial setup
-2. Re-enable Developer Options (Build Number × 10)
-3. Re-enable USB Debugging
-4. Install Magisk APK via ADB
-
-## Magisk Installation
-
-### Standard Devices (Single Partition)
-**For Edge 30 Neo, G32, G24, and similar models**
-
-1. **Extract boot.img** from stock ROM (7-Zip or unzip command)
-
-2. **Transfer to device:**
-   ```bash
-   adb push boot.img /sdcard/Download/
-   ```
-
-3. **Patch with Magisk:**
-   - Open Magisk app
-   - Tap **Install** → **Select and patch a file**
-   - Choose boot.img from Downloads
-   - Wait for patching completion
-
-4. **Retrieve patched file:**
-   ```bash
-   adb pull /sdcard/Download/magisk_patched_[hash].img ./magisk_patched.img
-   ```
-
-5. **Flash patched boot:**
-   ```bash
-   adb reboot bootloader
-   fastboot flash boot magisk_patched.img
-   fastboot reboot
-   ```
-
-### A/B Devices (Dual Partition)
-**For G55 5G, G54 5G, and newer models**
-
-::: warning ⚠️ A/B Device Critical Step
-A/B devices have dual boot partitions. Flashing only one partition causes bootloops when the system switches partitions.
-:::
-
-1. **Follow steps 1-4** from Standard Devices method
-
-2. **Enter fastbootd mode** (not regular fastboot):
-   ```bash
-   adb reboot bootloader
-   fastboot reboot fastboot
-   ```
-
-3. **Flash both boot partitions:**
-   ```bash
-   fastboot flash boot_a magisk_patched.img
-   fastboot flash boot_b magisk_patched.img
-   ```
-
-4. **Reboot system:**
-   ```bash
-   fastboot reboot
-   ```
-
-## Verification & Final Setup
-
-### Confirm Root Access
-1. **Open Magisk app** - Should show "Installed" status
-2. **Test with Root Checker** - Install from Play Store
-3. **Grant permissions** - Approve root requests from apps
-4. **Create backup** - TWRP NANDroid or Magisk backup
-
-### Configure Root Hiding (For Banking Apps)
-1. **Enable Zygisk** - Magisk Settings → Enable Zygisk
-2. **Configure DenyList** - Add banking/work apps
-3. **Install bypass modules** - Tricky Store, Shamiko as needed
-4. **Test functionality** - Use Play Integrity Checker
-
-## Troubleshooting
-
-### Common Issues
-
-#### OEM Unlocking Grayed Out
-- **Solution:** Wait full 7-10 days with internet connection
-- **Verify:** Keep WiFi/mobile data active throughout period
-
-#### Device Not Recognized
-```bash
-# Check connections
-adb devices
-fastboot devices
-
-# If no device shown
-- Reinstall Motorola USB drivers
-- Try different USB port/cable
-- Enable USB Debugging again
-```
-
-#### Bootloop After Rooting
-- **A/B devices:** Likely flashed only one partition
-  ```bash
-  # Flash both partitions
-  fastboot flash boot_a magisk_patched.img
-  fastboot flash boot_b magisk_patched.img
-  ```
-- **Any device:** Flash stock boot.img to recover
-  ```bash
-  fastboot flash boot stock_boot.img
-  ```
-
-#### Magisk Not Detected
-- **Check installation:** Magisk app should show "Installed"
-- **Wrong partition:** Re-flash ensuring both A/B partitions covered
-- **Corrupted patch:** Re-patch boot.img with fresh Magisk
-
-### Emergency Recovery
-If device won't boot:
-1. **Boot to recovery** - Power + Volume Up/Down combinations
-2. **Wipe cache** - Clear cache partition and Dalvik
-3. **Remove modifications** - Disable recent changes
-4. **Factory reset** - Last resort option
-5. **Flash stock firmware** - Complete restoration
-
-## Supported Device List
-
-### Confirmed Working Models
-- **Motorola Edge 30 Neo** - Standard partition method
-- **Motorola G55 5G** - A/B partition method  
-- **Motorola G54 5G** - A/B partition method
-- **Motorola G32** - Standard partition method
-- **Motorola G24** - Standard partition method
-- **Most Edge Series** - Check partition type first
-- **Most Moto G Series** - Newer models likely A/B
-
-### Verification Command
-Check your device partition type:
-```bash
-adb shell getprop ro.build.ab_update
-```
-
-## Community Resources
-
-### Getting Help
-- **[XDA Motorola Forums](https://xdaforums.com/c/motorola.11990/)** - Device-specific communities
-- **Telegram Groups** - Search "Motorola [model] development"
-- **Reddit** - r/MotorolaMods, r/AndroidRoot
-- **Official Support** - Limited to bootloader unlock only
-
-### Essential Links
-- **[Motorola Developer Portal](https://en-us.support.motorola.com/app/standalone/bootloader/unlock-your-device-b)** - Official unlock page
-- **[Motorola Software Fix](https://en-us.support.motorola.com/app/softwarefix)** - Official firmware tool
-- **[Motorola USB Drivers](https://en-us.support.motorola.com/app/usb-drivers)** - Official drivers
+**Related Guides:**
+- [Main Rooting Guide](./index.md) - Universal rooting concepts
+- [Bootloader Unlocking](./how-to-unlock-bootloader.md) - Detailed unlock guide
+- [Magisk Guide](./magisk-guide.md) - Complete Magisk documentation
+- [Custom ROMs](./custom-rom-installation.md) - Installing custom ROMs
+- [Root Apps](../android-root-apps/) - Best root apps collection
 
 ---
 
-## Success! You've Rooted Your Motorola Device
+## Supported Devices
 
-**Congratulations!** Your Motorola device now has root access. Here's what to do next:
+<details><sumary>Click to expand supported Motorola devices</summary><br>
 
-### Immediate Next Steps
-1. **[Browse Root Apps](../android-root-apps/#root-apps)** - Discover 300+ curated applications
-2. **[Setup Banking App Bypass](../faqs.md#play-integrity-and-banking-apps)** - Configure root hiding
-3. **[Install Essential Apps](../android-root-apps/#starter-kit-must-have-apps)** - Start with recommended apps
+### Motorola Edge Series
 
-### Advanced Options
-- **[Custom Recovery](./how-to-install-custom-recovery.md)** - Install TWRP for advanced features
-- **[Custom ROM](./custom-rom-installation.md)** - Upgrade to LineageOS or other ROMs
-- **[LSPosed Framework](./lsposed-guide.md)** - Enable Xposed modules
+**Edge 50 Series (2024):**
+- Edge 50 Ultra
+- Edge 50 Pro
+- Edge 50 Fusion
+- Growing support
+- Uses init_boot.img
 
-**Welcome to the world of Android freedom!** 🚀
+**Edge 40 Series (2023):**
+- Edge 40 Pro
+- Edge 40 Neo
+- Edge 40
+- Good community
+- Active development
+
+**Edge 30 Series (2022):**
+- Edge 30 Ultra
+- Edge 30 Fusion
+- Edge 30 Pro
+- Excellent support
+- Many custom ROMs
+
+**Older Edge:**
+- Edge+/Edge (2020-2021)
+- Edge 20 series
+- Mature support
+
+### Moto G Series
+
+**Moto G Power/Stylus (2024):**
+- G Power (2024)
+- G Stylus 5G (2024)
+- Budget-friendly
+- Basic root support
+
+**Moto G Series (2023):**
+- Moto G84/G73/G54
+- Popular mid-range
+- Good XDA support
+- Multiple ROMs
+
+**Moto G Series (2022):**
+- Moto G82/G72/G62/G52
+- Excellent community
+- Many custom ROMs
+- Active development
+
+**Legacy Moto G:**
+- G100/G60/G40
+- G9 Plus/Power/Play
+- G8 series
+- Strong custom ROM scene
+
+### Moto X/Z Series (Legacy)
+
+**Moto X:**
+- X4, X Style, X Play
+- Classic Motorola
+- Good ROM support
+
+**Moto Z:**
+- Z4/Z3/Z2/Z Play
+- Modular phones
+- Active community
+
+### Carrier Considerations
+
+**Unlockable:**
+- International models
+- Retail unlocked (US)
+- Most regions globally
+
+**Not Unlockable:**
+- Verizon (most models)
+- AT&T (some models)
+- Sprint/Boost/Cricket variants
+- Prepaid carrier-locked versions
+
+**ThinkShield:**
+- Business/enterprise Motorola
+- Usually locked down
+- Not rootable typically
+
+</details>
+
+
+## Prerequisites
+
+### Critical Requirements
+
+::: danger ⚠️ BEFORE YOU START
+
+**Warranty Void:** Motorola explicitly voids warranty upon unlock. No reversal.
+
+**Unlock Code Required:** Must request from Motorola website. Process takes time.
+
+**Data Wipe:** Unlocking erases all data including internal storage.
+
+**No Insurance:** Warranty and service completely void after unlock.
+
+**Carrier Check:** Verify your device can be unlocked. Many US carrier models cannot.
+:::
+
+### Hardware Requirements
+
+- Motorola device (unlockable model)
+- Quality USB cable
+- Computer (Windows, macOS, Linux)
+- 50%+ battery charge
+
+### Software Requirements
+
+**On Computer:**
+
+1. **Platform Tools**
+   - Download: [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools)
+
+2. **Motorola USB Drivers** (Windows)
+   - Usually auto-install
+   - Or [Download from Motorola](https://en-us.support.motorola.com/app/usb-drivers)
+
+3. **Web Browser**
+   - For unlock code request
+   - Valid email address
+
+**On Device:**
+
+1. **Magisk APK**
+   - Download: [Magisk GitHub](https://github.com/topjohnwu/Magisk/releases)
+
+2. **Motorola Account**
+   - For unlock code request
+   - Valid email
+
+### Device Preparation
+
+**Step 1: Enable Developer Options**
+
+1. Settings > About phone
+2. Tap "Build number" 7 times
+3. Enter PIN/password
+
+**Step 2: Enable Required Settings**
+
+Settings > System > Developer options:
+- **OEM unlocking**: Enable
+- **USB debugging**: Enable
+
+**Step 3: Verify ADB**
+
+```bash
+adb devices
+# Should show device
+```
+
+---
+
+## Get Unlock Code
+
+Motorola requires official unlock code from their website.
+
+### Step 1: Gather Device Information
+
+**Get Device ID String:**
+
+```bash
+# Reboot to fastboot
+adb reboot bootloader
+
+# Get device ID (unique string)
+fastboot oem get_unlock_data
+
+# Output will be multiple lines
+# Copy ALL lines together as one string
+# Remove spaces and (bootloader) prefixes
+```
+
+**Example output:**
+```
+(bootloader) 0A40040192024205#4C4D3556313
+(bootloader) 230800000000000#BD00A0A40310F0
+(bootloader) 0A40040192024205#4C4D355631
+```
+
+**Combine to:**
+```
+0A40040192024205#4C4D35563132308000000000000#BD00A0A40310F00A40040192024205#4C4D3556313
+```
+
+### Step 2: Request Unlock Code
+
+1. Visit [Motorola Bootloader Unlock](https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-a)
+
+2. **Read warnings carefully:**
+   - Warranty void
+   - Data wipe
+   - Permanent consequences
+
+3. **Enter device information:**
+   - Device model
+   - Device ID string (from Step 1)
+   - Valid email address
+
+4. **Submit request**
+
+5. **Check email:**
+   - Unlock code sent to email
+   - May take minutes to hours
+   - Check spam folder
+
+**Email contains unique unlock code (example):**
+```
+Your unique unlock code: ABCDEF1234567890
+```
+
+### Step 3: Save Unlock Code
+
+- Copy unlock code exactly
+- Save to text file
+- Keep safe for next steps
+
+---
+
+## Unlock Bootloader
+
+### Step 1: Enter Fastboot Mode
+
+```bash
+adb reboot bootloader
+```
+
+Or hardware keys:
+1. Power off
+2. Hold Volume Down + Power
+3. Release at fastboot screen
+
+### Step 2: Unlock with Code
+
+```bash
+# Verify fastboot connection
+fastboot devices
+
+# Unlock using code from email
+fastboot oem unlock ABCDEF1234567890
+# Replace with your actual unlock code
+```
+
+**On Device:**
+- Warning screen may appear
+- Device automatically wipes
+- Bootloader unlocks
+- Device reboots
+
+**Some Motorola devices use:**
+```bash
+fastboot flashing unlock
+# Then confirm on device screen
+```
+
+### Step 3: Verify Unlock
+
+After reboot:
+```bash
+adb reboot bootloader
+fastboot getvar unlocked
+# Should return: yes
+```
+
+Or check on boot:
+- "Bootloader unlocked" warning (normal)
+
+---
+
+## Root Installation
+
+### Determine Correct Image
+
+| Device | Android Version | Image to Patch |
+|--------|-----------------|----------------|
+| Edge 50 series | Android 14 | init_boot.img |
+| Edge 40 series | Android 13/14 | init_boot.img |
+| Edge 30 series | Android 12/13 | boot.img or init_boot.img |
+| Moto G (2023-2024) | Android 13/14 | init_boot.img |
+| Moto G (2022 and older) | Android 12 and below | boot.img |
+
+**Check Magisk app "Ramdisk" field if unsure.**
+
+### Method 1: Boot Image Patching
+
+**Step 1: Get Stock Firmware**
+
+1. Download from [Motorola Firmware](https://mirrors.lolinet.com/firmware/moto/) or XDA
+2. Extract firmware archive
+3. Find boot.img or init_boot.img
+
+**Step 2: Transfer to Device**
+
+```bash
+# For newer devices
+adb push init_boot.img /sdcard/Download/
+
+# For older devices
+adb push boot.img /sdcard/Download/
+```
+
+**Step 3: Patch with Magisk**
+
+```bash
+# Install Magisk
+adb install Magisk-v27.0.apk
+```
+
+On device:
+1. Open Magisk
+2. Install > Select and Patch a File
+3. Choose boot/init_boot image
+4. Wait for patching
+
+**Step 4: Flash Patched Image**
+
+```bash
+# Get patched image
+adb pull /sdcard/Download/magisk_patched_xxxxx.img ./
+
+# Boot to fastboot
+adb reboot bootloader
+
+# Flash
+# For Android 13/14
+fastboot flash init_boot magisk_patched_xxxxx.img
+
+# For Android 12 and older
+fastboot flash boot magisk_patched_xxxxx.img
+
+# Reboot
+fastboot reboot
+```
+
+**Step 5: Verify Root**
+
+1. Open Magisk app
+2. Should show installed
+3. Test: `adb shell su`
+
+---
+
+## Post-Root Setup
+
+### Configure Magisk
+
+**Settings:**
+- **Zygisk**: Enable
+- **Enforce DenyList**: Enable
+- **Hide Magisk**: For banking
+
+**DenyList:**
+- Google Play Services
+- Banking apps
+- Payment apps
+
+### Motorola Optimization
+
+**Battery:**
+1. Settings > Battery
+2. Magisk and root apps
+3. Set "Unrestricted"
+
+**Background:**
+- Allow background activity
+- Disable battery optimization
+
+### Recommended Modules
+
+- **Universal SafetyNet Fix**
+- **Shamiko**
+- **LSPosed**
+- **Systemless Hosts**
+
+---
+
+## OTA Handling
+
+### For A/B Devices
+
+**Process:**
+1. Download OTA
+2. Magisk > Install to Inactive Slot
+3. Reboot
+4. Root preserved
+
+---
+
+## Troubleshooting
+
+<details><summary>Click to expand troubleshooting</summary><br>
+
+### Unlock Code Issues
+
+**Code Not Received**
+
+Solutions:
+- Check spam folder
+- Wait 24-48 hours
+- Re-submit request
+- Use different email
+- Contact Motorola support
+
+**Code Doesn't Work**
+
+Solutions:
+- Verify copied correctly
+- Check for extra spaces
+- Try without hyphens
+- Re-request code
+
+### Bootloader Issues
+
+**OEM Unlocking Greyed Out**
+
+Causes:
+- Carrier-locked device
+- ThinkShield enabled
+- Business/enterprise model
+
+If grey: Device likely cannot unlock
+
+**Unlock Command Fails**
+
+Solutions:
+- Verify code exactly
+- Try both commands:
+  - `fastboot oem unlock CODE`
+  - `fastboot flashing unlock`
+- Check device compatibility
+
+### Installation Issues
+
+**Magisk Not Working**
+
+Solutions:
+1. Verify correct image
+2. Check Android version
+3. Re-patch and flash
+4. Clear Magisk data
+
+**Bootloop**
+
+```bash
+fastboot flash boot stock_boot.img
+# Or
+fastboot flash init_boot stock_init_boot.img
+fastboot reboot
+```
+
+</details>
+
+---
+
+## Unroot and Restore
+
+### Remove Root
+
+```bash
+# Magisk > Uninstall > Restore Images
+```
+
+### Flash Stock
+
+```bash
+# Flash stock firmware images
+fastboot flash boot stock_boot.img
+fastboot flash init_boot stock_init_boot.img
+fastboot reboot
+```
+
+### Relock Bootloader
+
+::: danger RELOCK WARNING
+Only when completely stock. Warranty already void (doesn't restore).
+:::
+
+```bash
+fastboot oem lock
+# Or
+fastboot flashing lock
+```
+
+---
+
+## Custom ROMs
+
+### Popular ROMs
+
+**LineageOS:**
+- Official for many Moto G
+- Stable and maintained
+
+**Pixel Experience:**
+- Pixel-like interface
+- Good performance
+
+**crDroid:**
+- Feature-rich
+- Active development
+
+**Evolution X:**
+- Customizable
+- Growing support
+
+---
+
+## Best Practices
+
+### Security
+
+1. **Hide Magisk** for apps
+2. **Configure DenyList**
+3. **Trusted modules only**
+4. **Keep updated**
+
+---
+
+## Community Resources
+
+**Official Motorola:**
+- [Bootloader Unlock](https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-a) - Official unlock
+- [Motorola Support](https://www.motorola.com/us/support) - General support
+
+**Developer Community:**
+- [XDA Motorola Forums](https://xdaforums.com/c/motorola.11990/) - Development
+- [Reddit r/MotoG](https://www.reddit.com/r/MotoG/) - Community
+- [Reddit r/Motorola](https://www.reddit.com/r/Motorola/) - General Motorola
+
+**Awesome Android Root help resources:**
+- [FAQs](../faq)
+- [Troubleshooting Guide](../troubleshooting)
+
+### Getting Help
+
+**Provide:**
+- Exact Motorola model
+- Android version
+- Unlock code status
+- Error messages
+- Steps attempted
+
+---
+
+## Next Steps
+
+**After Rooting:**
+
+1. **Essential apps:**
+   - [Root Apps Collection](../android-root-apps/)
+
+2. **Enhance:**
+   - [Ad Blocking Guide](../guides/android-adblocking.md)
+   - [Debloating Guide](../guides/android-apps-debloating.md)
+   - [LSPosed Guide](./lsposed-guide.md)
+
+3. **Explore ROMs:**
+   - [Custom ROM Guide](./custom-rom-installation.md)
+   - LineageOS for stability
+   - Pixel Experience for clean look
