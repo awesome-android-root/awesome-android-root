@@ -263,8 +263,23 @@ Follow this path:
 - **⭐** = Community‑recommended (most popular/trusted in category)
 - **`FOSS`** = Free and Open Source Software (source code available)
 - **`Proprietary`** = Closed-source software or unclear licensing
-- **`[🌱 F-Droid]`** / ![fdroid-icon](./docs/public/images/fdroid.svg) = F-Droid link
-- **`[▶️ Play Store]`** / ![playstore-icon](./docs/public/images/playstore.svg) = Google Play Store link
+
+<div style="display: flex; gap: 10px; align-items: center; margin-top: 5px; margin-bottom: 10px;">
+  <span style="display: flex; align-items: center; gap: 5px;">
+  <ul>
+  <li>
+  <code>[🌱 F-Droid]</code> /
+    <img src="./docs/public/images/fdroid.svg" alt="F-Droid Icon" width="20" height="20" /> = F-Droid link
+  </span>
+  </li>
+  <li>
+  <span style="display: flex; align-items: center; gap: 5px;">
+  <code>[▶️ Play Store]</code> /
+    <img src="./docs/public/images/playstore.svg" alt="Play Store Icon" width="20" height="20" /> = Google Play Store link
+    </span>
+  </li>
+  </ul>
+</div>
 
 ### **Root Framework Badges**
 - **`[M]`** = Magisk Module (requires [_Magisk framework_](../android-root-guides/magisk-guide.md))
