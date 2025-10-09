@@ -81,7 +81,7 @@ Root Motorola devices via official unlock code system. Covers Edge 50, Edge 40, 
 
 ## Supported Devices
 
-<details><sumary>Click to expand supported Motorola devices</summary><br>
+<details><summary>Click to expand supported Motorola devices</summary><br>
 
 ### Motorola Edge Series
 
