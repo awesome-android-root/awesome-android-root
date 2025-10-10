@@ -725,7 +725,7 @@ Another privacy-focused option:
 - [Driver Downloads](https://developer.android.com/studio/run/win-usb) - USB drivers
 
 **Community Forums:**
-- [XDA Pixel Forums](https://forum.xda-developers.com/c/google-pixel.12391/) - Device discussions
+- [XDA Pixel Forums](https://xdaforums.com/c/google.11976/) - Device discussions
 - [Reddit r/GooglePixel](https://www.reddit.com/r/GooglePixel/) - General Pixel community
 - [Reddit r/PixelROM](https://www.reddit.com/r/PixelROM/) - Custom ROM discussions
 
