@@ -520,9 +520,7 @@ margin-bottom: 0.5rem;
   .back-to-top { transition: none; }
 }
 
-footer a{
-  text-decoration: none !important;
-}
+
 /* Remove borders from inline code and badges */
 .vp-doc code {
   border: none !important;
