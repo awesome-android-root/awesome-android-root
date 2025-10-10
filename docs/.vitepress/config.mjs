@@ -28,78 +28,212 @@ export default withPwa(defineConfig({
     }
   },
 
+
   pwa: {
     strategies: 'generateSW',
     registerType: 'autoUpdate',
-    includeAssets: ['favicon.ico', 'offline.html'],
+    includeAssets: [
+      'favicon.ico',
+      'favicon.svg',
+      'images/web-app-manifest-192x192.png',
+      'images/web-app-manifest-512x512.png',
+      'offline.html',
+    ],
     workbox: {
       globPatterns: [],
+
+      // Service worker behavior
       skipWaiting: true,
       clientsClaim: true,
       cleanupOutdatedCaches: true,
-      navigateFallback: null,
+
+      // Navigation fallback for offline
+      navigateFallback: '/offline.html',
       navigationPreload: true,
-      ignoreURLParametersMatching: [/^utm_/, /^fbclid$/, /^gclid$/],
+
+      // Direct URL navigation handling
+      directoryIndex: 'index.html',
+      
+      // Maximum file size to cache (10MB)
+      maximumFileSizeToCacheInBytes: 10 * 1024 * 1024,
+      
+     // Runtime caching strategies
       runtimeCaching: [
-        {
-          urlPattern: ({ request, url }) => request.mode === 'navigate' || url.pathname.endsWith('.html') || url.pathname.endsWith('/'),
+        // HTML Pages - Network First with offline fallback
+
+         {
+          urlPattern: ({ request, url, sameOrigin }) => 
+            sameOrigin && (request.mode === 'navigate' || 
+            request.headers.get('accept')?.includes('text/html')),
           handler: 'NetworkFirst',
           options: {
-            cacheName: 'pages-runtime',
+            cacheName: 'pages-cache-v1',
             networkTimeoutSeconds: 3,
-            expiration: { maxEntries: 50, maxAgeSeconds: 60 * 60 * 6, purgeOnQuotaError: true },
-            cacheableResponse: { statuses: [0, 200] },
-            plugins: [{ handlerDidError: async () => caches.match('/offline.html') || Response.error() }]
+            expiration: {
+              maxEntries: 100,
+              maxAgeSeconds: 60 * 60 * 24 * 7, // 7 days
+              purgeOnQuotaError: true
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            },
+            plugins: [
+              {
+                handlerDidError: async () => {
+                  return caches.match('/offline.html') || Response.error()
+                },
+                fetchDidFail: async ({ originalRequest, error }) => {
+                  console.error('Fetch failed:', originalRequest.url, error)
+                },
+                requestWillFetch: async ({ request }) => {
+                  // Add custom headers if needed
+                  return request
+                }
+              }
+            ]
           }
         },
-        {
-          urlPattern: ({ request, url }) => request.destination === 'script' || request.destination === 'style' || /\.(js|css)$/.test(url.pathname),
+
+         {
+          urlPattern: ({ request, url, sameOrigin }) => 
+            sameOrigin && (
+              request.destination === 'script' || 
+              request.destination === 'style' ||
+              /\.(js|css)$/i.test(url.pathname)
+            ),
           handler: 'StaleWhileRevalidate',
           options: {
-            cacheName: 'assets-runtime',
-            expiration: { maxEntries: 100, maxAgeSeconds: 60 * 60 * 6, purgeOnQuotaError: true },
-            cacheableResponse: { statuses: [0, 200] }
+            cacheName: 'assets-cache-v1',
+            expiration: {
+              maxEntries: 200,
+              maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
+              purgeOnQuotaError: true
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
           }
         },
+         // Images - Cache First with progressive loading
         {
-          urlPattern: ({ request, url }) => request.destination === 'image' || /\.(png|jpg|jpeg|svg|gif|webp|ico)$/i.test(url.pathname),
+          urlPattern: ({ request, url, sameOrigin }) => 
+            sameOrigin && (
+              request.destination === 'image' ||
+              /\.(png|jpg|jpeg|svg|gif|webp|ico|bmp|tiff)$/i.test(url.pathname)
+            ),
           handler: 'CacheFirst',
           options: {
-            cacheName: 'images-runtime',
-            expiration: { maxEntries: 200, maxAgeSeconds: 60 * 60 * 24 * 7, purgeOnQuotaError: true },
-            cacheableResponse: { statuses: [0, 200] }
+            cacheName: 'images-cache-v1',
+            expiration: {
+              maxEntries: 300,
+              maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
+              purgeOnQuotaError: true
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            },
+            plugins: [
+              {
+                handlerDidError: async () => {
+                  // Return placeholder image on error
+                  return new Response(
+                    '<svg width="1" height="1" xmlns="http://www.w3.org/2000/svg"></svg>',
+                    { headers: { 'Content-Type': 'image/svg+xml' } }
+                  )
+                }
+              }
+            ]
           }
         },
+         // Fonts - Cache First (long term)
         {
-          urlPattern: ({ request, url }) => request.destination === 'font' || /\.(woff2?|ttf|otf|eot)$/i.test(url.pathname),
+          urlPattern: ({ request, url, sameOrigin }) => 
+            sameOrigin && (
+              request.destination === 'font' ||
+              /\.(woff2?|ttf|otf|eot)$/i.test(url.pathname)
+            ),
           handler: 'CacheFirst',
           options: {
-            cacheName: 'fonts-runtime',
-            expiration: { maxEntries: 20, maxAgeSeconds: 60 * 60 * 24 * 7 },
-            cacheableResponse: { statuses: [0, 200] }
+            cacheName: 'fonts-cache-v1',
+            expiration: {
+              maxEntries: 30,
+              maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
+              purgeOnQuotaError: true
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
           }
         },
+        // Shield.io badges - Stale While Revalidate
         {
-          urlPattern: ({ url }) => url.origin === 'https://img.shields.io',
+          urlPattern: ({ url }) => 
+            url.origin === 'https://img.shields.io',
           handler: 'StaleWhileRevalidate',
           options: {
-            cacheName: 'external-runtime',
-            expiration: { maxEntries: 100, maxAgeSeconds: 60 * 60 * 6, purgeOnQuotaError: true },
-            cacheableResponse: { statuses: [0, 200] }
+            cacheName: 'shields-cache-v1',
+            expiration: {
+              maxEntries: 200,
+              maxAgeSeconds: 60 * 60 * 24, // 24 hours
+              purgeOnQuotaError: true
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            },
+            plugins: [
+              {
+                requestWillFetch: async ({ request }) => {
+                  // Add cache busting for badges
+                  const url = new URL(request.url)
+                  url.searchParams.set('cacheBust', Date.now().toString())
+                  return new Request(url.href, request)
+                }
+              }
+            ]
           }
         },
+        // GitHub assets - Cache First
         {
-          urlPattern: ({ url }) => url.origin === 'https://github.com' || url.origin === 'https://avatars.githubusercontent.com',
+          urlPattern: ({ url }) => 
+            url.origin === 'https://github.com' || 
+            url.origin === 'https://raw.githubusercontent.com' ||
+            url.origin === 'https://avatars.githubusercontent.com' ||
+            url.origin === 'https://user-images.githubusercontent.com',
           handler: 'CacheFirst',
           options: {
-            cacheName: 'github-assets',
-            expiration: { maxEntries: 50, maxAgeSeconds: 60 * 60 * 24 * 6 },
-            cacheableResponse: { statuses: [0, 200] }
+            cacheName: 'github-cache-v1',
+            expiration: {
+              maxEntries: 100,
+              maxAgeSeconds: 60 * 60 * 24 * 7, // 7 days
+              purgeOnQuotaError: true
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
+          }
+        },
+        // Search index - Network First
+        {
+          urlPattern: ({ url }) => 
+            url.pathname.includes('search-index') ||
+            url.pathname.includes('@localSearchIndex'),
+          handler: 'NetworkFirst',
+          options: {
+            cacheName: 'search-index-cache-v1',
+            networkTimeoutSeconds: 3,
+            expiration: {
+              maxEntries: 5,
+              maxAgeSeconds: 60 * 60 * 24, // 24 hours
+              purgeOnQuotaError: true
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
           }
         }
       ]
     },
-    manifest: {
+   manifest: {
       name: 'Awesome Android Root',
       short_name: 'AAR',
       description: 'Ultimate Android rooting hub with curated apps, modules and guides.',
@@ -108,17 +242,78 @@ export default withPwa(defineConfig({
       start_url: '/',
       scope: '/',
       display: 'standalone',
-      orientation: 'portrait',
-      lang: 'en',
+      display_override: ['window-controls-overlay', 'standalone', 'minimal-ui'],
+      orientation: 'any',
+      lang: 'en-US',
       dir: 'ltr',
-      categories: ['utilities', 'developer'],
+      prefer_related_applications: false,
+      
+      // Categories for app stores
+      categories: ['utilities', 'developer', 'education', 'productivity'],
+       // Icons with multiple purposes
       icons: [
-        { src: '/images/web-app-manifest-192x192.png', sizes: '192x192', type: 'image/png', purpose: 'any maskable' },
-        { src: '/images/web-app-manifest-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' }
-      ]
+        {
+          src: '/favicon.ico',
+          sizes: '16x16 24x24 32x32 48x48',
+          type: 'image/x-icon'
+        },
+        {
+          src: '/favicon-96x96.png',
+          sizes: '96x96',
+          type: 'image/png',
+          purpose: 'any'
+        },
+        {
+          src: '/images/web-app-manifest-192x192.png',
+          sizes: '192x192',
+          type: 'image/png',
+          purpose: 'any'
+        },
+        {
+          src: '/images/web-app-manifest-192x192-maskable.png',
+          sizes: '192x192',
+          type: 'image/png',
+          purpose: 'maskable'
+        },
+        {
+          src: '/images/web-app-manifest-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any'
+        },
+        {
+          src: '/images/web-app-manifest-512x512-maskable.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'maskable'
+        }
+      ],
     },
-    devOptions: { enabled: process.env.NODE_ENV === 'development', suppressWarnings: true, type: 'module' }
+    // Development options
+    devOptions: {
+      enabled: process.env.NODE_ENV === 'development',
+      suppressWarnings: true,
+      navigateFallback: '/index.html',
+      type: 'module'
+    },
+
+    // Filename for the service worker
+    filename: 'sw.js',
+    
+    // Scope for the service worker
+    scope: '/',
+    
+    // Use credentials for fetching
+    useCredentials: false,
+    
+    // Inline the service worker
+    inlineRegister: false,
+    
+    // Minify the service worker
+    minify: true
   },
+
+  // End of pwa config
 
   markdown: { 
     cache: true, 
