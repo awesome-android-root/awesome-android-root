@@ -494,7 +494,6 @@ If enabled:
 - Community-vetted modules
 - Developer support threads
 - User feedback and reviews
-- [XDA Xposed Modules](https://forum.xda-developers.com/f/xposed.3530/)
 
 #### Unofficial Sources (Use with Caution)
 
