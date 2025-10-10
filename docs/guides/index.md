@@ -175,7 +175,7 @@ Help us build the most comprehensive collection of Android guides available. You
 ### Ways to Contribute
 - **[Report Issues](https://github.com/awesome-android-root/awesome-android-root/issues)** - Notify us of any errors or outdated information.
 - **[Suggest New Guides](https://github.com/awesome-android-root/awesome-android-root/discussions)** - Request tutorials on topics you'd like to see covered.
-- **[Write Guides](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/contributing.md)** - Share your knowledge by authoring new guides.
+- **[Write Guides](https://github.com/awesome-android-root/awesome-android-root?tab=contributing-ov-file)** - Share your knowledge by authoring new guides.
 - **[Submit Screenshots](https://github.com/awesome-android-root/awesome-android-root/discussions)** - Enhance existing guides with clear, helpful images.
 - **[Star Repository](https://github.com/awesome-android-root/awesome-android-root)** - Show your support and help increase the project's visibility.
 
