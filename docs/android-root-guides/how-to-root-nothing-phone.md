@@ -476,7 +476,7 @@ fastboot flashing lock
 - [Reddit r/NothingTech](https://www.reddit.com/r/NothingTech/) - Community
 
 **Awesome Android Root Resources:**
-- [FAQs](../faq)
+- [FAQs](../faqs)
 - [Troubleshooting Guide](../troubleshooting) 
 
 ### Getting Help

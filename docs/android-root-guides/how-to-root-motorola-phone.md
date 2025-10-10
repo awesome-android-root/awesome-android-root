@@ -618,7 +618,7 @@ fastboot flashing lock
 - [Reddit r/Motorola](https://www.reddit.com/r/Motorola/) - General Motorola
 
 **Awesome Android Root help resources:**
-- [FAQs](../faq)
+- [FAQs](../faqs)
 - [Troubleshooting Guide](../troubleshooting)
 
 ### Getting Help
