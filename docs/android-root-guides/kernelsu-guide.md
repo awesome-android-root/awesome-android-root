@@ -1092,10 +1092,6 @@ Solutions:
 - [KernelSU GitHub](https://github.com/tiann/KernelSU) - Source code and releases
 - [KernelSU Telegram](https://t.me/KernelSU) - Official community
 
-**Module Repositories:**
-- [KernelSU Modules](https://github.com/rifsxd/kernelsu-modules-repo) - Module collection
-- [XDA KernelSU Forum](https://forum.xda-developers.com/) - Community modules
-
 **Support Communities:**
 - [Reddit r/KernelSU](https://www.reddit.com/r/KernelSU/) - Community discussions
 - XDA Device Forums - Device-specific help
