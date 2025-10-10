@@ -493,7 +493,7 @@ Replace stock Android with custom ROMs
 
 ### **Official Resources**
 - [GitHub Repository](https://github.com/awesome-android-root/awesome-android-root) - Source code and issues
-- [Troubleshooting Guide](./troubleshooting.md) - Common problems and fixes
+- [Troubleshooting Guide](../troubleshooting.md) - Common problems and fixes
 - [FAQ](../faqs.md) - Common questions
 - [Root Apps Collection](../android-root-apps/) - Curated apps and modules
 - [Twitter Updates](https://twitter.com/awsm_and_root) - News
