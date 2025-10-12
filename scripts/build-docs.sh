@@ -77,7 +77,12 @@ log_info "Links adjusted in docs/android-root-apps/index.md"
 sed -i 's|docs/public/images/|../public/images/|g' docs/android-root-apps/index.md || handle_error "Failed adjusting image paths in docs/android-root-apps/index.md"
 log_info "Image paths adjusted in docs/android-root-apps/index.md"
 
-# 6. Display build summary
+# 6. Remove "docs/" prefix from internal documentation links
+sed -i 's|\(\[.*\](\)\./docs/|\1/|g' docs/android-root-apps/index.md && \
+sed -i 's|\(\[.*\](\)docs/|\1/|g' docs/android-root-apps/index.md || handle_error "Failed removing docs/ prefix from links in docs/android-root-apps/index.md"
+log_info "Removed 'docs/' prefix from internal documentation links in docs/android-root-apps/index.md"
+
+# 7. Display build summary
 echo ""
 echo -e "${BLUE}═══════════════════════════════════════════════════════════${NC}"
 echo -e "${GREEN}✓ Documentation build completed successfully!${NC}"
