@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Non-Root Alternatives - Android Customization Without Rooting
+title: Non-Root Alternatives
 description: "Achieve similar functionality without root access using ADB, Shizuku, wireless debugging, and alternative apps for devices where rooting isn't possible."
 head:
   - - link
