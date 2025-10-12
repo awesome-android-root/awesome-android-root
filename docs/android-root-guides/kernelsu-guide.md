@@ -1098,7 +1098,7 @@ Solutions:
 
 **Awesome Android Root resources:**
 - [FAQs](../faqs.md) - Common questions
-- [Troubleshooting Guide](./troubleshooting.md) - Common issues
+- [Troubleshooting Guide](../troubleshooting.md) - Common issues
 
 ### Getting Help
 
