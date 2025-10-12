@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Android Root Troubleshooting Guide - Fix Common Issues
+title: Troubleshooting Guide
 description: "Step-by-step diagnostic procedures for Android rooting problems including bootloops, detection issues, and installation failures organized by root method."
 head:
   - - link
