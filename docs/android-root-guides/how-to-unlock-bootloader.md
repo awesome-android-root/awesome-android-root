@@ -742,7 +742,7 @@ fastboot reboot
 - [Custom Recovery Installation](./how-to-install-custom-recovery.md) - Next step
 - [Magisk Root Guide](./magisk-guide.md) - Primary root method
 - [FAQ](../faqs.md) - Additional Q&A
-- [Troubleshooting Guide](../guides/troubleshooting.md) - Common issues
+- [Troubleshooting Guide](../troubleshooting.md) - Common issues
 
 ---
 
