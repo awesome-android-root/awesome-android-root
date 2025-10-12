@@ -7,11 +7,68 @@ head:
     - rel: canonical
       href: https://awesome-android-root.org/non-root-alternatives
   - - meta
+    - property: og:type
+      content: article
+  - - meta
+    - property: og:site_name
+      content: Awesome Android Root
+  - - meta
     - property: og:title
       content: Non-Root Alternatives - Customize Android Without Root Access 2025
   - - meta
+    - property: og:description
+      content: Achieve similar functionality without root access using ADB, Shizuku, wireless debugging, and alternative apps for devices where rooting isn't possible.
+  - - meta
+    - property: og:url
+      content: https://awesome-android-root.org/non-root-alternatives
+  - - meta
+    - property: og:image
+      content: https://awesome-android-root.org/images/og.png
+  - - meta
+    - property: og:image:secure_url
+      content: https://awesome-android-root.org/images/og.png
+  - - meta
+    - property: og:image:alt
+      content: Non-Root Alternatives - Customize Android Without Root 2025
+  - - meta
+    - property: og:image:width
+      content: '1200'
+  - - meta
+    - property: og:image:height
+      content: '630'
+  - - meta
+    - property: og:image:type
+      content: image/png
+  - - meta
+    - property: og:locale
+      content: en_US
+  - - meta
+    - name: twitter:card
+      content: summary_large_image
+  - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:creator
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:title
+      content: Non-Root Alternatives - Customize Android Without Root Access 2025
+  - - meta
+    - name: twitter:description
+      content: Achieve powerful Android customization without root using ADB, Shizuku, wireless debugging, and alternative apps.
+  - - meta
+    - name: twitter:image
+      content: https://awesome-android-root.org/images/og.png
+  - - meta
+    - name: twitter:image:alt
+      content: Non-Root Alternatives - ADB, Shizuku & More
+  - - meta
     - name: keywords
       content: android without root, non-root customization, adb alternatives, shizuku android, no root required apps
+  - - meta
+    - name: robots
+      content: index, follow
 ---
 
 # Non-Root Alternatives

@@ -10,11 +10,59 @@ head:
     - property: og:type
       content: article
   - - meta
+    - property: og:site_name
+      content: Awesome Android Root
+  - - meta
     - property: og:title
       content: Magisk vs KernelSU vs APatch - Which Root Method is Best in 2025?
   - - meta
     - property: og:description
       content: Complete comparison of Android root frameworks with device recommendations, performance analysis, and migration guides.
+  - - meta
+    - property: og:url
+      content: https://awesome-android-root.org/android-root-guides/root-framework-comparison
+  - - meta
+    - property: og:image
+      content: https://awesome-android-root.org/images/og.png
+  - - meta
+    - property: og:image:secure_url
+      content: https://awesome-android-root.org/images/og.png
+  - - meta
+    - property: og:image:alt
+      content: Magisk vs KernelSU vs APatch - Root Framework Comparison 2025
+  - - meta
+    - property: og:image:width
+      content: '1200'
+  - - meta
+    - property: og:image:height
+      content: '630'
+  - - meta
+    - property: og:image:type
+      content: image/png
+  - - meta
+    - property: og:locale
+      content: en_US
+  - - meta
+    - name: twitter:card
+      content: summary_large_image
+  - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:creator
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:title
+      content: Magisk vs KernelSU vs APatch - Which Root Method is Best in 2025?
+  - - meta
+    - name: twitter:description
+      content: Complete comparison of Android root frameworks with device recommendations, performance analysis, and migration guides.
+  - - meta
+    - name: twitter:image
+      content: https://awesome-android-root.org/images/og.png
+  - - meta
+    - name: twitter:image:alt
+      content: Root Framework Comparison - Magisk vs KernelSU vs APatch
   - - meta
     - name: keywords
       content: magisk vs kernelsu, apatch vs magisk, best root method 2025, root framework comparison, android root comparison
