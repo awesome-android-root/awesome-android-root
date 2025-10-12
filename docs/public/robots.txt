@@ -3,5 +3,19 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
 Sitemap: https://awesome-android-root.org/sitemap.xml
