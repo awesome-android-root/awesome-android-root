@@ -7,11 +7,68 @@ head:
     - rel: canonical
       href: https://awesome-android-root.org/troubleshooting
   - - meta
+    - property: og:type
+      content: article
+  - - meta
+    - property: og:site_name
+      content: Awesome Android Root
+  - - meta
     - property: og:title
       content: Android Root Troubleshooting Guide - Fix Bootloops, Detection & Installation Errors
   - - meta
+    - property: og:description
+      content: Step-by-step diagnostic procedures for Android rooting problems including bootloops, detection issues, and installation failures organized by root method.
+  - - meta
+    - property: og:url
+      content: https://awesome-android-root.org/troubleshooting
+  - - meta
+    - property: og:image
+      content: https://awesome-android-root.org/images/og.png
+  - - meta
+    - property: og:image:secure_url
+      content: https://awesome-android-root.org/images/og.png
+  - - meta
+    - property: og:image:alt
+      content: Android Root Troubleshooting Guide - Fix Common Rooting Issues
+  - - meta
+    - property: og:image:width
+      content: '1200'
+  - - meta
+    - property: og:image:height
+      content: '630'
+  - - meta
+    - property: og:image:type
+      content: image/png
+  - - meta
+    - property: og:locale
+      content: en_US
+  - - meta
+    - name: twitter:card
+      content: summary_large_image
+  - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:creator
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:title
+      content: Android Root Troubleshooting Guide - Fix Bootloops & Errors
+  - - meta
+    - name: twitter:description
+      content: Comprehensive solutions for Android rooting problems - bootloops, detection issues, installation failures organized by root method.
+  - - meta
+    - name: twitter:image
+      content: https://awesome-android-root.org/images/og.png
+  - - meta
+    - name: twitter:image:alt
+      content: Root Troubleshooting Guide - Fix Bootloops and Installation Errors
+  - - meta
     - name: keywords
       content: android bootloop fix, magisk troubleshooting, root detection fix, installation errors, kernelsu problems, recovery mode android
+  - - meta
+    - name: robots
+      content: index, follow
 ---
 
 # Root Troubleshooting Guide
