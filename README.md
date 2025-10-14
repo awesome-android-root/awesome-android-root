@@ -561,6 +561,7 @@ Follow this path:
 - **[ColorOS Notify Icon](https://github.com/fankes/ColorOSNotifyIcon)** - Optimize notification icons for ColorOS and adapt to native notification icon specifications. `FOSS` `[LSP]`
 - **[LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool/blob/main/README_EN.md)** - Extended and optimized Xposed module for ColorOS. `Proprietary` `[LSP]`
 - **[OPPO/OnePlus side button enhancement](https://github.com/ItosEO/OplusKey)** - Customize the side button behavior on Oppo and OnePlus devices. `Proprietary` `[M]`
+- **[OShin](https://github.com/suqi8/OShin/blob/master/README_EN.md)** - Auxiliary module deeply integrated with ColorOS, designed to enhance and optimize your operating system experience. `FOSS` `[LSP]`
 
 #### HyperOS (Xiaomi)
 - **[⭐ HyperCeiler](https://github.com/ReChronoRain/HyperCeiler/blob/main/README_en-US.md)** - Extensive customizations for HyperOS. `FOSS` `[LSP]`
