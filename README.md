@@ -13,7 +13,7 @@
 <sub>Discover 420+ top root apps, Magisk/ KernelSU/ LSPosed(xposed) modules & step-by-step guides for every device.</sub>
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=blue&cacheSeconds=3600)](https://github.com/awesome-android-root/awesome-android-root)
-[![Total Entries](https://img.shields.io/badge/Apps%20%26%20Modules-420+-blue?style=for-the-badge&logo=android&cacheSeconds=3600)](#root-apps-and-modules)
+[![Total Entries](https://img.shields.io/badge/Apps%20%26%20Modules-430+-blue?style=for-the-badge&logo=android&cacheSeconds=3600)](#root-apps-and-modules)
 [![X (formerly Twitter) Follow](https://img.shields.io/badge/%20%20-Follow%20US-blue?logo=X&logoColor=white&style=for-the-badge&label=&#8203;)](https://x.com/awsm_and_root)
 <br>
 [![Website](https://img.shields.io/badge/Website-awesome--android--root.org-orange?style=for-the-badge&logo=googlechrome&logoColor=white)](https://awesome-android-root.org)
@@ -238,11 +238,11 @@ Follow this path:
 
 <sub>Discover 420+ top root apps, Magisk/KernelSU/LSPosed modules</sub>
 
-![Total Entries](https://img.shields.io/badge/Total%20Entries-421-blue?style=for-the-badge&logo=android&cacheSeconds=3600)
+![Total Entries](https://img.shields.io/badge/Total%20Entries-431-blue?style=for-the-badge&logo=android&cacheSeconds=3600)
 ![Root Apps](https://img.shields.io/badge/Root%20Apps-134-blue?style=for-the-badge&logo=android&cacheSeconds=3600)
-![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-169-orange?style=for-the-badge&logo=magisk&logoColor=white&cacheSeconds=3600)
-![KernelSU Modules](https://img.shields.io/badge/KernelSU%20Modules-35-green?style=for-the-badge&logo=keenetic&logoColor=white&cacheSeconds=3600)
-![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-116-purple?style=for-the-badge&logo=local&logoColor=white&cacheSeconds=3600)
+![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-177-orange?style=for-the-badge&logo=magisk&logoColor=white&cacheSeconds=3600)
+![KernelSU Modules](https://img.shields.io/badge/KernelSU%20Modules-43-green?style=for-the-badge&logo=keenetic&logoColor=white&cacheSeconds=3600)
+![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-118-purple?style=for-the-badge&logo=local&logoColor=white&cacheSeconds=3600)
 
 </div><br />
 
