@@ -405,6 +405,18 @@ export default withPwa(defineConfig({
               title: 4,
               text: 2,
               titles: 3
+            },
+            boostDocument: (documentId, term, storedFields) => {
+              // Boost app and module pages significantly
+              if (documentId.includes('android-root-apps')) {
+                return 10
+              }
+              // Moderate boost for guide pages
+              if (documentId.includes('android-root-guides')) {
+                return 2
+              }
+              // Default boost for other pages
+              return 1
             }
           }
         },
