@@ -584,6 +584,8 @@ Follow this path:
 ##### HyperOS Mods
 - **[HyperOS App Vault](https://github.com/Mods-Center/HyperOS-App-Vault)** - Enhanced HyperOS App Vault with unlocked widgets, high-end device features, blur adjustments, and scrolling animations.  `Proprietary` `[M]` `[K]`
 - **[HyperOS AOD](https://github.com/Mods-Center/HyperOS-AOD)** - Enhanced HyperOS AOD and Lock Screen Editor app with unlocked features. `Proprietary` `[M]` `[K]`
+- **[HyperOS Launcher](https://github.com/Mods-Center/HyperOS-Launcher#hyperos-launcher-v5)** - Enhanced HyperOS Launcher with features from high-end devices, including customizable app drawer, icon packs, and more. `Proprietary` `[M]` `[K]`
+- 
   
 #### NothingOS
 - **[Nothing EUICC Force Enabler](https://github.com/reindex-ot/nothing-euicc#note-english)** - Forcibly enables eSIM on Nothing devices that do not officially support it. `FOSS` `[M]`
