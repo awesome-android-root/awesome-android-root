@@ -137,11 +137,14 @@ Master Android rooting with comprehensive tutorials covering bootloader unlockin
 > **New to rooting?**
 > Start with [Understanding Root Access](#understanding-root-access)
 
+::: info Steps
 **Ready to begin?** Choose your path:
 - [Prerequisites and Safety](#prerequisites-and-safety) - Critical preparations
 - [Universal Rooting Process](#universal-rooting-process) - Four-step guide for all devices
 - [Device-Specific Guides](#device-specific-guides) - Tailored instructions for your device
 - [Root Method Comparison](#choosing-a-root-method) - Magisk vs KernelSU vs APatch
+:::
+
 
 > [!NOTE]
 > **Need help?**
