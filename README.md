@@ -455,7 +455,7 @@ Follow this path:
 - **[NoWakeLock](https://github.com/NoWakeLock/NoWakeLock)** - An application that controls Android wakelocks can run on Android N and later. `FOSS` `[LSP]`
 - **[Plus Plus Battery](https://github.com/dijia1124/plusplusbattery)** - Real-time battery stats & health estimator for OnePlus/Oppo/Realme phones. `FOSS` | [🌱 F-Droid](https://f-droid.org/en/packages/com.dijia1124.plusplusbattery/)
 - **[Realme-GT3-neo5-CPU-limiter](https://github.com/Quantom2/Realme-GT3-neo5-CPU-limiter)** - A Magisk/KSU based module to slow down your CPU to make your screen time better. `FOSS` `[M]` `[K]`
-- **[SaverTuner](https://codeberg.org/s1m/savertuner)** - Allows you to take advantage of this built-in battery saver. You can now set different profiles that save the battery more or less aggressively. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/s1m.savertuner/)
+- **[SaverTuner](https://codeberg.org/s1m/savertuner)** - Allows you to take advantage of this built-in battery saver. You can now set different profiles that save the battery more or less aggressively. [❗Does not work on Xiaomi](https://codeberg.org/s1m/savertuner/issues/98#issuecomment-5777054). `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/s1m.savertuner/)
 - **[Xtreme-Battery-Saver](https://github.com/Magisk-Modules-Alt-Repo/Xtreme-Battery-Saver)** - An extreme battery saver Magisk Module for users who want to really stretch their battery life. `FOSS` `[M]`
 
 ### Background Apps Management
