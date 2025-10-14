@@ -133,7 +133,9 @@ Master Android rooting with comprehensive tutorials covering bootloader unlockin
 
 ## Quick Navigation
 
-**New to rooting?** Start with [Understanding Root Access](#understanding-root-access)
+> [!TIP]
+> **New to rooting?**
+> Start with [Understanding Root Access](#understanding-root-access)
 
 **Ready to begin?** Choose your path:
 - [Prerequisites and Safety](#prerequisites-and-safety) - Critical preparations
@@ -141,7 +143,9 @@ Master Android rooting with comprehensive tutorials covering bootloader unlockin
 - [Device-Specific Guides](#device-specific-guides) - Tailored instructions for your device
 - [Root Method Comparison](#choosing-a-root-method) - Magisk vs KernelSU vs APatch
 
-**Need help?** Visit [Troubleshooting](#troubleshooting) or [FAQ](../faqs.md)
+> [!NOTE]
+> **Need help?**
+> Visit [Troubleshooting](#troubleshooting) or [FAQ](../faqs.md)
 
 ---
 
@@ -541,6 +545,4 @@ Include this information:
 
 🎉 **Welcome to the World of Android Freedom!**
 
-You now have the knowledge to unlock your Android device's full potential. Join millions who have taken control of their digital experience.
-
-**Your journey to unlimited Android possibilities begins now!**
+Your journey to unlimited Android possibilities begins now!
