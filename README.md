@@ -380,6 +380,7 @@ Follow this path:
 ### App Stores
 - **[⭐ Droid-ify](https://github.com/Droid-ify/client)** - F-Droid client with Material UI and auto updating apps using root. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.looker.droidify)
 - **[Aurora Store](https://github.com/whyorean/AuroraStore)** - A Google Play Store client to search, view app details, and download APKs directly to your device. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.aurora.store/)
+- **[F-Droid Privileged Extension](https://gitlab.com/fdroid/privileged-extension)** - Eables F-Droid to install and delete apps without needing "Unknown Sources" & install updates in the background. `FOSS` | [🌱 F-Droid](https://f-droid.org/en/packages/org.fdroid.fdroid.privileged/)
 - **[Neo Store](https://github.com/NeoApplications/Neo-Store)** - An F-Droid client with modern UI and an arsenal of extra features. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.machiav3lli.fdroid)
 
 ### App Permissions management
