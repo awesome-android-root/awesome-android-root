@@ -360,7 +360,6 @@ Follow this path:
 - **[Inure](https://github.com/Hamza417/Inure)** - An elegant and beautiful premium Android app manager for rooted and non-rooted devices. `FOSS` | [▶️ Play Store](https://play.google.com/store/apps/details?id=app.simple.inure.play)
 - **[Thor](https://github.com/trinadhthatakula/Thor)** - Android App Manager and App Installer utility. `FOSS` | [🌱 F-Droid](https://apt.izzysoft.de/fdroid/index/apk/com.valhalla.thor) | [▶️ Play Store](https://play.google.com/store/apps/details?id=com.valhalla.thor)
 - **[Package Manager](https://github.com/SmartPack/PackageManager)** - A highly powerful app to manage both system and user apps installed on an Android device. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.smartpack.packagemanager) | [▶️ Play Store](https://play.google.com/store/apps/details?id=com.smartpack.packagemanager)
-- **[Social STFU](https://github.com/V3rB0se/Social-STFU)** - Disable social media apps. it uses root to disable system/user level social apps. `FOSS`
 
 #### Block App Updates
 - **[⭐ Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. Also check out → [📖 Zygisk Detach Guide](../guides/stop-android-app-auto-updates-play-store.md). `FOSS` `[M]`
