@@ -587,6 +587,7 @@ Follow this path:
 - **[HyperOS Launcher](https://github.com/Mods-Center/HyperOS-Launcher#hyperos-launcher-v5)** - Enhanced HyperOS Launcher with features from high-end devices, including customizable app drawer, icon packs, and more. `Proprietary` `[M]` `[K]`
 - **[HyperOS Security Center](https://github.com/Mods-Center/HyperOS-Security-Center)** - Advanced app info tools, system app Wi-Fi management, removal of root/account restrictions etc. `Proprietary` `[M]` `[K]`
 - **[HyperOS Theme Manager](https://github.com/Mods-Center/HyperOS-Theme-Manager)** - Multi-theme servers, premium themes, AI wallpapers, third-party imports, super icons/widgets etc. `Proprietary` `[M]` `[K]`
+- **[FPS Limitations Patcher](https://github.com/Mods-Center/FPS-Limitation-Patcher)** - Removes FPS limitations in system apps and games on HyperOS. `Proprietary` `[M]` `[K]`
 
 
 
