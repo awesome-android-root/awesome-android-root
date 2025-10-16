@@ -156,6 +156,13 @@ The bootloader is your device's startup manager - the first program that runs wh
 > ### Bootloader Unlock: Wall of Shame
 > This community-maintained [repository](https://github.com/melontini/bootloader-unlock-wall-of-shame) tracks companies that make bootloader unlocking difficult or impossible. Check it before buying a new device.
 
+or
+
+> [!IMPORTANT]
+> ### Wikipedia/Bootloader unlocking
+> Browse this page on wikipedia that lists and tracks android bootloader unlocking [Click me ↗](https://en.m.wikipedia.org/wiki/Bootloader_unlocking#Android).
+
+
 ---
 
 ## Universal Preparation (All Devices)
