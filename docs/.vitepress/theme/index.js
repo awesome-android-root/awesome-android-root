@@ -5,6 +5,7 @@ import './style.css'
 import PwaReload from './PwaReload.vue'
 import BackToTop from './BackToTop.vue'
 import StoreLink from './components/StoreLink.vue'
+import AppSearch from './components/AppSearch.vue'
 
 /**
  * Image optimization utility
@@ -122,8 +123,9 @@ export default {
     // Register global components with error handling
     try {
       app.component('StoreLink', StoreLink)
+      app.component('AppSearch', AppSearch)
     } catch (error) {
-      console.error('Failed to register StoreLink component:', error)
+      console.error('Failed to register components:', error)
     }
     
     // Client-side only enhancements

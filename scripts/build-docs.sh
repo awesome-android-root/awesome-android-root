@@ -82,7 +82,54 @@ sed -i 's|\(\[.*\](\)\./docs/|\1/|g' docs/android-root-apps/index.md && \
 sed -i 's|\(\[.*\](\)docs/|\1/|g' docs/android-root-apps/index.md || handle_error "Failed removing docs/ prefix from links in docs/android-root-apps/index.md"
 log_info "Removed 'docs/' prefix from internal documentation links in docs/android-root-apps/index.md"
 
-# 7. Display build summary
+# 7. Add AppSearch component and wrap content for searchability
+add_search_component() {
+    local file="docs/android-root-apps/index.md"
+    local tmp_file=$(mktemp) || handle_error "Failed creating temporary file for search component"
+    
+    # Find line numbers for both --- markers (frontmatter boundaries)
+    local frontmatter_lines=$(grep -n "^---$" "$file" | head -2 | cut -d: -f1)
+    local first_marker=$(echo "$frontmatter_lines" | head -1)
+    local second_marker=$(echo "$frontmatter_lines" | tail -1)
+    
+    if [ -z "$first_marker" ] || [ -z "$second_marker" ]; then
+        handle_error "Could not find frontmatter markers in $file"
+    fi
+    
+    # Find where the main content starts (looking for "## Glossary" or similar heading)
+    local content_marker_line=$(grep -n "^## Glossary" "$file" | head -1 | cut -d: -f1)
+    
+    if [ -z "$content_marker_line" ]; then
+        # Fallback to looking for any h2 heading
+        content_marker_line=$(grep -n "^## " "$file" | head -1 | cut -d: -f1)
+    fi
+    
+    if [ -z "$content_marker_line" ]; then
+        handle_error "Could not find content marker in $file"
+    fi
+    
+    # Split file and add search component
+    {
+        # Copy frontmatter and header content (before glossary)
+        head -n "$((content_marker_line - 1))" "$file"
+        echo ""
+        echo '<ClientOnly>'
+        echo '  <AppSearch />'
+        echo '</ClientOnly>'
+        echo ""
+        echo '<div class="app-search-content">'
+        echo ""
+        # Copy the rest of the content (from glossary onwards)
+        tail -n +"$content_marker_line" "$file"
+        echo ""
+        echo '</div>'
+    } > "$tmp_file" && mv "$tmp_file" "$file" || handle_error "Failed adding search component to $file"
+}
+
+add_search_component
+log_info "Added AppSearch component and wrapped content in docs/android-root-apps/index.md"
+
+# 8. Display build summary
 echo ""
 echo -e "${BLUE}═══════════════════════════════════════════════════════════${NC}"
 echo -e "${GREEN}✓ Documentation build completed successfully!${NC}"
