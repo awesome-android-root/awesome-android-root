@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "vitepress": "^1.6.4",
-    "@vite-pwa/vitepress": "^1.0.0",
+    "@vite-pwa/vitepress": "^1.0.1",
     "terser": "^5.44.0"
   },
   "optionalDependencies": {
