@@ -1,98 +1,147 @@
 <template>
-  <div class="app-search-container">
-    <div class="search-box">
-      <div class="search-input-wrapper">
-        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"></circle>
-          <path d="m21 21-4.35-4.35"></path>
-        </svg>
-        <input
-          v-model="searchQuery"
-          type="text"
-          class="search-input"
-          placeholder="Search apps, modules... (try: FOSS, [M], AdAway)"
-          @input="handleSearch"
-        />
-        <div class="input-actions">
-          <button 
-            class="filter-toggle-btn" 
-            @click="showFilters = !showFilters"
-            :class="{ active: showFilters || activeFilters.length > 0 }"
-            aria-label="Toggle filters"
-            :title="showFilters ? 'Hide filters' : 'Show filters'"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
-            </svg>
-            <span v-if="activeFilters.length > 0" class="filter-count">{{ activeFilters.length }}</span>
-          </button>
-          <button 
-            v-if="searchQuery" 
-            class="clear-btn" 
-            @click="clearSearch"
-            aria-label="Clear search"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Mobile Floating Filter Button -->
+  <transition name="filter-button-fade">
+    <button
+      v-show="isMobile && !showMobileFilter"
+      class="floating-filter-btn"
+      @click="openMobileFilter"
+      aria-label="Filter apps"
+      title="Filter apps"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+      </svg>
+      <span v-if="activeFilters.length > 0" class="filter-active-indicator">{{ activeFilters.length }}</span>
+    </button>
+  </transition>
+
+  <!-- Mobile Filter Overlay -->
+  <transition name="mobile-filter-fade">
+    <div v-if="isMobile && showMobileFilter" class="mobile-filter-overlay" @click="closeMobileFilter">
+      <div class="mobile-filter-panel" @click.stop>
+        <div class="mobile-filter-header">
+          <h3>Filter Apps & Modules</h3>
+          <button class="close-mobile-filter" @click="closeMobileFilter" aria-label="Close filters">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
           </button>
         </div>
+        
+        <div class="filter-box mobile">
+          <!-- Filter Pills -->
+          <div class="filter-pills">
+            <button 
+              v-for="filter in quickFilters" 
+              :key="filter.value"
+              class="filter-pill"
+              :class="{ active: activeFilters.includes(filter.value) }"
+              @click="toggleFilter(filter.value)"
+            >
+              <span class="pill-icon">{{ filter.icon }}</span>
+              <span class="pill-label">{{ filter.label }}</span>
+            </button>
+          </div>
+
+          <!-- Filter Stats -->
+          <div v-if="activeFilters.length > 0" class="filter-stats">
+            <span class="stats-text">
+              Showing <strong>{{ visibleCount }}</strong> of <strong>{{ totalCount }}</strong> entries
+            </span>
+            <button 
+              class="clear-filters-btn"
+              @click="clearFilters"
+            >
+              Clear all
+            </button>
+          </div>
+          
+          <div v-else class="filter-hint">
+            <p>Select badges to filter apps and modules</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </transition>
+
+  <!-- Desktop Filter Bar -->
+  <div v-if="!isMobile" class="app-filter-container" :class="{ sticky: isSticky }">
+    <div class="filter-box">
+      <div class="filter-header">
+        <div class="filter-header-left">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+          </svg>
+          <span class="filter-title">Filter</span>
+          <span v-if="activeFilters.length > 0" class="filter-badge">{{ activeFilters.length }}</span>
+        </div>
+        
+        <div class="filter-header-right">
+          <label class="sticky-toggle" title="Keep filter bar visible while scrolling">
+            <input type="checkbox" v-model="isSticky" />
+            <span class="toggle-text">Pin</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="17" x2="12" y2="22"></line>
+              <path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path>
+            </svg>
+          </label>
+          <button 
+            v-if="activeFilters.length > 0"
+            class="clear-all-btn"
+            @click="clearFilters"
+            title="Clear all filters"
+          >
+            Clear
+          </button>
+        </div>
       </div>
       
       <!-- Filter Pills -->
-      <transition name="slide-fade">
-        <div v-if="showFilters" class="filter-pills">
-          <button 
-            v-for="filter in quickFilters" 
-            :key="filter.value"
-            class="filter-pill"
-            :class="{ active: activeFilters.includes(filter.value) }"
-            @click="toggleFilter(filter.value)"
-          >
-            <span class="pill-icon">{{ filter.icon }}</span>
-            <span class="pill-label">{{ filter.label }}</span>
-          </button>
-        </div>
-      </transition>
-
-      <!-- Search Stats -->
-      <div v-if="searchQuery || activeFilters.length > 0" class="search-stats">
-        <span class="stats-text">
-          <strong>{{ visibleCount }}</strong> / <strong>{{ totalCount }}</strong>
-        </span>
+      <div class="filter-pills">
         <button 
-          v-if="activeFilters.length > 0" 
-          class="clear-filters-btn"
-          @click="clearFilters"
+          v-for="filter in quickFilters" 
+          :key="filter.value"
+          class="filter-pill"
+          :class="{ active: activeFilters.includes(filter.value) }"
+          @click="toggleFilter(filter.value)"
+          :title="`Filter by ${filter.label}`"
         >
-          Clear filters
+          <span class="pill-icon">{{ filter.icon }}</span>
+          <span class="pill-label">{{ filter.label }}</span>
         </button>
       </div>
+
+      <!-- Filter Stats -->
+      <transition name="stats-fade">
+        <div v-if="activeFilters.length > 0" class="filter-stats">
+          <span class="stats-text">
+            <strong>{{ visibleCount }}</strong> / {{ totalCount }} entries
+          </span>
+        </div>
+      </transition>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, watch, nextTick } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 
-const searchQuery = ref('')
 const activeFilters = ref([])
-const showFilters = ref(false)
 const visibleCount = ref(0)
 const totalCount = ref(0)
+const isMobile = ref(false)
+const showMobileFilter = ref(false)
+const isSticky = ref(false)
 
 const quickFilters = [
+  { label: 'Featured ⭐', value: '⭐', icon: '⭐' },
   { label: 'FOSS', value: 'FOSS', icon: '🔓' },
   { label: 'Proprietary', value: 'Proprietary', icon: '🔒' },
-  { label: 'Magisk', value: '[M]', icon: '🧲' },
-  { label: 'KernelSU', value: '[K]', icon: '🔧' },
-  { label: 'LSPosed', value: '[LSP]', icon: '⚡' },
-  { label: 'Featured', value: '⭐', icon: '⭐' },
+  { label: 'Magisk [M]', value: '[M]', icon: '🧲' },
+  { label: 'KernelSU [K]', value: '[K]', icon: '🔧' },
+  { label: 'LSPosed [LSP]', value: '[LSP]', icon: '⚡' },
 ]
-
-// Debounce timer
-let debounceTimer = null
 
 const toggleFilter = (filterValue) => {
   const index = activeFilters.value.indexOf(filterValue)
@@ -101,29 +150,27 @@ const toggleFilter = (filterValue) => {
   } else {
     activeFilters.value.push(filterValue)
   }
-  handleSearch()
+  applyFilters()
 }
 
 const clearFilters = () => {
   activeFilters.value = []
-  handleSearch()
+  applyFilters()
 }
 
-const clearSearch = () => {
-  searchQuery.value = ''
-  handleSearch()
+const openMobileFilter = () => {
+  showMobileFilter.value = true
 }
 
-const handleSearch = () => {
-  // Debounce search for performance
-  clearTimeout(debounceTimer)
-  debounceTimer = setTimeout(() => {
-    performSearch()
-  }, 150)
+const closeMobileFilter = () => {
+  showMobileFilter.value = false
 }
 
-const performSearch = () => {
-  const query = searchQuery.value.toLowerCase().trim()
+const checkMobile = () => {
+  isMobile.value = window.innerWidth <= 768
+}
+
+const applyFilters = () => {
   const filters = activeFilters.value
   
   // Get all app entries (list items containing apps)
@@ -133,56 +180,43 @@ const performSearch = () => {
   totalCount.value = allListItems.length
   let visible = 0
   
-  // Hide all sections initially
-  const allSections = new Set()
+  // If no filters, show all
+  if (filters.length === 0) {
+    allListItems.forEach(item => {
+      item.style.display = ''
+    })
+    appSections.forEach(section => {
+      section.style.display = ''
+    })
+    visibleCount.value = totalCount.value
+    return
+  }
   
+  // Apply filters
   allListItems.forEach(item => {
     const text = item.textContent.toLowerCase()
     const innerHTML = item.innerHTML
     
-    let matches = true
-    
-    // Check search query
-    if (query && !text.includes(query)) {
-      matches = false
-    }
-    
-    // Check filters (AND logic - must match all active filters)
-    if (filters.length > 0) {
-      const hasAllFilters = filters.every(filter => {
-        const filterLower = filter.toLowerCase()
-        // For badges like [M], [K], [LSP], check the exact format in code blocks
-        if (filter.startsWith('[') && filter.endsWith(']')) {
-          return innerHTML.includes(`<code>${filter}</code>`)
-        }
-        // For FOSS, Proprietary, check in code blocks
-        if (filter === 'FOSS' || filter === 'Proprietary') {
-          return innerHTML.includes(`<code>${filter}</code>`)
-        }
-        // For star, check directly in text
-        if (filter === '⭐') {
-          return text.includes('⭐')
-        }
-        return text.includes(filterLower)
-      })
-      
-      if (!hasAllFilters) {
-        matches = false
+    // Check filters (OR logic - must match at least one filter)
+    const hasAnyFilter = filters.some(filter => {
+      // For badges like [M], [K], [LSP], check the exact format in code blocks
+      if (filter.startsWith('[') && filter.endsWith(']')) {
+        return innerHTML.includes(`<code>${filter}</code>`)
       }
-    }
+      // For FOSS, Proprietary, check in code blocks
+      if (filter === 'FOSS' || filter === 'Proprietary') {
+        return innerHTML.includes(`<code>${filter}</code>`)
+      }
+      // For star, check directly in text
+      if (filter === '⭐') {
+        return text.includes('⭐')
+      }
+      return false
+    })
     
-    if (matches) {
+    if (hasAnyFilter) {
       item.style.display = ''
       visible++
-      
-      // Mark the parent section as having visible items
-      let currentElement = item.parentElement
-      while (currentElement && currentElement !== document.body) {
-        if (currentElement.tagName === 'UL') {
-          allSections.add(currentElement)
-        }
-        currentElement = currentElement.parentElement
-      }
     } else {
       item.style.display = 'none'
     }
@@ -222,170 +256,170 @@ const performSearch = () => {
   })
   
   visibleCount.value = visible
-  
-  // Scroll to first result if searching
-  if (query || filters.length > 0) {
-    nextTick(() => {
-      const firstVisible = document.querySelector('.app-search-content ul li:not([style*="display: none"])')
-      if (firstVisible) {
-        firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' })
-      }
-    })
-  }
 }
 
-// Initialize search on mount
+// Initialize on mount
 onMounted(() => {
+  // Check if mobile
+  checkMobile()
+  window.addEventListener('resize', checkMobile)
+  
   // Wait for content to be rendered
   setTimeout(() => {
     const allListItems = document.querySelectorAll('.app-search-content ul li')
     totalCount.value = allListItems.length
     visibleCount.value = allListItems.length
   }, 500)
-  
-  // Restore scroll position after search
-  const savedScroll = sessionStorage.getItem('appSearchScroll')
-  if (savedScroll) {
-    window.scrollTo(0, parseInt(savedScroll))
-    sessionStorage.removeItem('appSearchScroll')
-  }
 })
 
 onUnmounted(() => {
-  clearTimeout(debounceTimer)
+  window.removeEventListener('resize', checkMobile)
 })
 </script>
 
 <style scoped>
-.app-search-container {
+/* Desktop Filter Container */
+.app-filter-container {
+  position: relative;
+  background: linear-gradient(135deg, var(--vp-c-bg-soft) 0%, var(--vp-c-bg) 100%);
+  padding: 0.75rem 0;
+  margin: 1rem 0 1.25rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.app-filter-container.sticky {
   position: sticky;
   top: var(--vp-nav-height);
   z-index: 10;
-  background: var(--vp-c-bg);
-  padding: 1rem 0;
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid var(--vp-c-divider);
+  margin-top: 0;
+  border-radius: 0 0 12px 12px;
+  border-top: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.search-box {
-  max-width: 800px;
+.filter-box {
+  max-width: 100%;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
-.search-input-wrapper {
-  position: relative;
+.filter-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.625rem;
+  gap: 1rem;
 }
 
-.search-icon {
-  position: absolute;
-  left: 0.875rem;
-  color: var(--vp-c-text-2);
-  pointer-events: none;
+.filter-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.search-input {
-  width: 100%;
-  padding: 0.75rem 5.5rem 0.75rem 2.75rem;
-  font-size: 0.9375rem;
-  border: 2px solid var(--vp-c-divider);
-  border-radius: 10px;
-  background: var(--vp-c-bg-soft);
+.filter-header-left svg {
+  color: var(--vp-c-brand-1);
+  flex-shrink: 0;
+}
+
+.filter-title {
+  font-size: 0.875rem;
+  font-weight: 600;
   color: var(--vp-c-text-1);
-  transition: all 0.2s ease;
-  outline: none;
+  letter-spacing: 0.02em;
 }
 
-.search-input:focus {
-  border-color: var(--vp-c-brand-1);
-  background: var(--vp-c-bg);
-  box-shadow: 0 0 0 3px var(--vp-c-brand-soft);
+.filter-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  background: var(--vp-c-brand-1);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 10px;
+  line-height: 1;
 }
 
-.search-input::placeholder {
-  color: var(--vp-c-text-3);
-}
-
-.input-actions {
-  position: absolute;
-  right: 0.5rem;
+.filter-header-right {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.5rem;
 }
 
-.filter-toggle-btn,
-.clear-btn {
-  position: relative;
-  padding: 0.375rem;
-  background: transparent;
-  border: none;
+.sticky-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.3125rem 0.625rem;
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.sticky-toggle:hover {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+}
+
+.sticky-toggle input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  cursor: pointer;
+  accent-color: var(--vp-c-brand-1);
+}
+
+.toggle-text {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--vp-c-text-2);
+  line-height: 1;
+}
+
+.sticky-toggle svg {
+  color: var(--vp-c-text-3);
+  flex-shrink: 0;
+}
+
+.sticky-toggle:hover .toggle-text,
+.sticky-toggle:hover svg {
+  color: var(--vp-c-brand-1);
+}
+
+.clear-all-btn {
+  padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
   border-radius: 6px;
   cursor: pointer;
   color: var(--vp-c-text-2);
   transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  white-space: nowrap;
 }
 
-.filter-toggle-btn:hover,
-.clear-btn:hover {
-  background: var(--vp-c-bg-soft);
-  color: var(--vp-c-text-1);
-}
-
-.filter-toggle-btn.active {
+.clear-all-btn:hover {
+  border-color: var(--vp-c-brand-1);
   color: var(--vp-c-brand-1);
   background: var(--vp-c-brand-soft);
 }
 
-.filter-count {
-  position: absolute;
-  top: -2px;
-  right: -2px;
-  min-width: 16px;
-  height: 16px;
-  padding: 0 4px;
-  font-size: 10px;
-  font-weight: 600;
-  color: white;
-  background: var(--vp-c-brand-1);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-}
-
-/* Transition for filter pills */
-.slide-fade-enter-active {
-  transition: all 0.3s ease;
-}
-
-.slide-fade-leave-active {
-  transition: all 0.2s ease;
-}
-
-.slide-fade-enter-from {
-  transform: translateY(-10px);
-  opacity: 0;
-}
-
-.slide-fade-leave-to {
-  transform: translateY(-5px);
-  opacity: 0;
-}
-
+/* Filter Pills */
 .filter-pills {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 0.75rem;
-  padding: 0.625rem;
-  background: var(--vp-c-bg-soft);
-  border-radius: 8px;
 }
 
 .filter-pill {
@@ -397,22 +431,30 @@ onUnmounted(() => {
   font-weight: 500;
   background: var(--vp-c-bg);
   border: 1px solid var(--vp-c-divider);
-  border-radius: 6px;
+  border-radius: 7px;
   cursor: pointer;
   transition: all 0.2s ease;
   color: var(--vp-c-text-2);
 }
 
 .filter-pill:hover {
+  background: var(--vp-c-bg-soft);
   border-color: var(--vp-c-brand-1);
   color: var(--vp-c-text-1);
   transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 .filter-pill.active {
   background: var(--vp-c-brand-1);
   border-color: var(--vp-c-brand-1);
   color: white;
+  box-shadow: 0 2px 8px rgba(var(--vp-c-brand-1), 0.25);
+}
+
+.filter-pill.active:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(var(--vp-c-brand-1), 0.35);
 }
 
 .pill-icon {
@@ -423,34 +465,46 @@ onUnmounted(() => {
 .pill-label {
   white-space: nowrap;
   line-height: 1;
+  font-weight: 600;
 }
 
-.search-stats {
+/* Filter Stats */
+.stats-fade-enter-active,
+.stats-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.stats-fade-enter-from,
+.stats-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-4px);
+}
+
+.filter-stats {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 0.75rem;
-  padding: 0.5rem 0.875rem;
-  background: var(--vp-c-bg-soft);
+  justify-content: center;
+  margin-top: 0.625rem;
+  padding: 0.4375rem 0.75rem;
+  background: var(--vp-c-brand-soft);
   border-radius: 6px;
-  font-size: 0.8125rem;
 }
 
 .stats-text {
   color: var(--vp-c-text-2);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 .stats-text strong {
   color: var(--vp-c-brand-1);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .clear-filters-btn {
-  padding: 0.3125rem 0.75rem;
+  padding: 0.375rem 0.75rem;
   font-size: 0.75rem;
-  font-weight: 500;
-  background: transparent;
+  font-weight: 600;
+  background: var(--vp-c-bg);
   border: 1px solid var(--vp-c-divider);
   border-radius: 5px;
   cursor: pointer;
@@ -465,79 +519,222 @@ onUnmounted(() => {
   background: var(--vp-c-brand-soft);
 }
 
+.filter-hint {
+  margin-top: 0.75rem;
+  padding: 0.625rem 0.875rem;
+  background: var(--vp-c-bg);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.filter-hint p {
+  margin: 0;
+  color: var(--vp-c-text-3);
+  font-size: 0.8125rem;
+}
+
+/* Floating Filter Button (Mobile) */
+.floating-filter-btn {
+  position: fixed;
+  bottom: 5.5rem;
+  right: 1.25rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--vp-c-brand-3);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--vp-c-brand-2);
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+}
+
+.floating-filter-btn:hover {
+  background: var(--vp-c-brand-2);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transform: translateY(-2px);
+}
+
+.floating-filter-btn:active {
+  transform: translateY(0);
+}
+
+.filter-active-indicator {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: white;
+  background: #ef4444;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: 2px solid var(--vp-c-bg);
+}
+
+.filter-button-fade-enter-active,
+.filter-button-fade-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.filter-button-fade-enter-from,
+.filter-button-fade-leave-to {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+/* Mobile Filter Overlay */
+.mobile-filter-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 10000;
+  display: flex;
+  align-items: flex-end;
+}
+
+.mobile-filter-panel {
+  width: 100%;
+  max-height: 70vh;
+  background: var(--vp-c-bg);
+  border-radius: 16px 16px 0 0;
+  overflow-y: auto;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-filter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--vp-c-divider);
+  position: sticky;
+  top: 0;
+  background: var(--vp-c-bg);
+  z-index: 1;
+}
+
+.mobile-filter-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+.close-mobile-filter {
+  padding: 0.5rem;
+  background: var(--vp-c-bg-soft);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--vp-c-text-2);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-mobile-filter:hover {
+  background: var(--vp-c-bg-elv);
+  color: var(--vp-c-text-1);
+}
+
+.filter-box.mobile {
+  padding: 1.25rem 1.25rem 1.75rem;
+}
+
+.filter-box.mobile .filter-pills {
+  gap: 0.625rem;
+}
+
+.filter-box.mobile .filter-pill {
+  padding: 0.625rem 0.875rem;
+  font-size: 0.875rem;
+}
+
+.filter-box.mobile .pill-icon {
+  font-size: 1.0625rem;
+}
+
+.filter-box.mobile .filter-stats {
+  margin-top: 0.875rem;
+  padding: 0.625rem 0.875rem;
+}
+
+.filter-box.mobile .stats-text {
+  font-size: 0.875rem;
+}
+
+.filter-box.mobile .clear-filters-btn {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.8125rem;
+}
+
+.mobile-filter-fade-enter-active {
+  transition: opacity 0.3s ease;
+}
+
+.mobile-filter-fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.mobile-filter-fade-enter-from,
+.mobile-filter-fade-leave-to {
+  opacity: 0;
+}
+
+.mobile-filter-fade-enter-active .mobile-filter-panel {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-filter-fade-leave-active .mobile-filter-panel {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.mobile-filter-fade-enter-from .mobile-filter-panel {
+  transform: translateY(100%);
+}
+
+.mobile-filter-fade-leave-to .mobile-filter-panel {
+  transform: translateY(100%);
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
-  .app-search-container {
-    padding: 0.75rem 0;
-    margin-bottom: 1rem;
+  .app-filter-container {
+    display: none;
   }
   
-  .search-input {
-    padding: 0.625rem 5rem 0.625rem 2.5rem;
-    font-size: 0.875rem;
-    border-radius: 8px;
-  }
-  
-  .search-icon {
-    left: 0.75rem;
-    width: 18px;
-    height: 18px;
-  }
-  
-  .input-actions {
-    right: 0.375rem;
-  }
-  
-  .filter-toggle-btn svg,
-  .clear-btn svg {
-    width: 16px;
-    height: 16px;
-  }
-  
-  .filter-pills {
-    gap: 0.375rem;
-    margin-top: 0.625rem;
-    padding: 0.5rem;
-  }
-  
-  .filter-pill {
-    padding: 0.375rem 0.625rem;
-    font-size: 0.75rem;
-  }
-  
-  .pill-icon {
-    font-size: 0.875rem;
-  }
-  
-  .search-stats {
-    flex-direction: row;
-    gap: 0.5rem;
-    margin-top: 0.625rem;
-    padding: 0.4375rem 0.75rem;
-  }
-  
-  .stats-text {
-    font-size: 0.75rem;
-  }
-  
-  .clear-filters-btn {
-    font-size: 0.6875rem;
-    padding: 0.25rem 0.625rem;
+  .floating-filter-btn {
+    bottom: 5rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
   }
 }
 
-/* Extra small screens */
-@media (max-width: 480px) {
-  .search-input::placeholder {
-    font-size: 0.8125rem;
+@media (min-width: 769px) {
+  .floating-filter-btn {
+    display: none;
   }
   
-  .filter-pill .pill-label {
-    font-size: 0.6875rem;
-  }
-  
-  .pill-icon {
-    font-size: 0.8125rem;
+  .mobile-filter-overlay {
+    display: none;
   }
 }
 
@@ -549,6 +746,23 @@ onUnmounted(() => {
   
   .search-input:focus {
     background: var(--vp-c-bg);
+  }
+  
+  .mobile-search-overlay {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .floating-search-btn,
+  .search-button-fade-enter-active,
+  .search-button-fade-leave-active,
+  .mobile-search-fade-enter-active,
+  .mobile-search-fade-leave-active,
+  .mobile-search-fade-enter-active .mobile-search-panel,
+  .mobile-search-fade-leave-active .mobile-search-panel {
+    transition: none;
   }
 }
 </style>
