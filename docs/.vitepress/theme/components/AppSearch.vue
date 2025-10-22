@@ -1,12 +1,16 @@
 <template>
+  <!-- ARIA live region for screen reader announcements -->
+  <div id="filter-live-region" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+
   <!-- Mobile Floating Filter Button -->
   <transition name="filter-button-fade">
     <button
       v-show="isMobile && !showMobileFilter"
       class="floating-filter-btn"
       @click="openMobileFilter"
-      aria-label="Filter apps"
-      title="Filter apps"
+      aria-label="Open filter panel"
+      :aria-expanded="showMobileFilter"
+      title="Filter apps and modules"
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
@@ -17,11 +21,22 @@
 
   <!-- Mobile Filter Overlay -->
   <transition name="mobile-filter-fade">
-    <div v-if="isMobile && showMobileFilter" class="mobile-filter-overlay" @click="closeMobileFilter">
+    <div 
+      v-if="isMobile && showMobileFilter" 
+      class="mobile-filter-overlay" 
+      @click="closeMobileFilter"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="mobile-filter-title"
+    >
       <div class="mobile-filter-panel" @click.stop>
         <div class="mobile-filter-header">
-          <h3>Filter Apps & Modules</h3>
-          <button class="close-mobile-filter" @click="closeMobileFilter" aria-label="Close filters">
+          <h3 id="mobile-filter-title">Filter Apps & Modules</h3>
+          <button 
+            class="close-mobile-filter" 
+            @click="closeMobileFilter" 
+            aria-label="Close filter panel"
+          >
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -31,15 +46,18 @@
         
         <div class="filter-box mobile">
           <!-- Filter Pills -->
-          <div class="filter-pills">
+          <div class="filter-pills" role="group" aria-label="Filter options">
             <button 
               v-for="filter in quickFilters" 
               :key="filter.value"
               class="filter-pill"
               :class="{ active: activeFilters.includes(filter.value) }"
               @click="toggleFilter(filter.value)"
+              :aria-label="filter.ariaLabel"
+              :aria-pressed="activeFilters.includes(filter.value)"
+              role="button"
             >
-              <span class="pill-icon">{{ filter.icon }}</span>
+              <span class="pill-icon" aria-hidden="true">{{ filter.icon }}</span>
               <span class="pill-label">{{ filter.label }}</span>
             </button>
           </div>
@@ -52,9 +70,22 @@
             <button 
               class="clear-filters-btn"
               @click="clearFilters"
+              aria-label="Clear all active filters"
             >
               Clear all
             </button>
+          </div>
+          
+          <!-- Empty State -->
+          <div v-else-if="activeFilters.length > 0 && visibleCount === 0" class="empty-state">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            <h4>No apps match your filters</h4>
+            <p>Try selecting different filter options</p>
+            <button class="clear-filters-btn" @click="clearFilters">Clear all filters</button>
           </div>
           
           <div v-else class="filter-hint">
@@ -70,18 +101,22 @@
     <div class="filter-box">
       <div class="filter-header">
         <div class="filter-header-left">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
           </svg>
           <span class="filter-title">Filter</span>
-          <span v-if="activeFilters.length > 0" class="filter-badge">{{ activeFilters.length }}</span>
+          <span v-if="activeFilters.length > 0" class="filter-badge" :aria-label="`${activeFilters.length} filters active`">{{ activeFilters.length }}</span>
         </div>
         
         <div class="filter-header-right">
           <label class="sticky-toggle" title="Keep filter bar visible while scrolling">
-            <input type="checkbox" v-model="isSticky" />
+            <input 
+              type="checkbox" 
+              v-model="isSticky"
+              aria-label="Pin filter bar"
+            />
             <span class="toggle-text">Pin</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <line x1="12" y1="17" x2="12" y2="22"></line>
               <path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path>
             </svg>
@@ -90,6 +125,7 @@
             v-if="activeFilters.length > 0"
             class="clear-all-btn"
             @click="clearFilters"
+            aria-label="Clear all active filters"
             title="Clear all filters"
           >
             Clear
@@ -98,16 +134,19 @@
       </div>
       
       <!-- Filter Pills -->
-      <div class="filter-pills">
+      <div class="filter-pills" role="group" aria-label="Filter options">
         <button 
           v-for="filter in quickFilters" 
           :key="filter.value"
           class="filter-pill"
           :class="{ active: activeFilters.includes(filter.value) }"
           @click="toggleFilter(filter.value)"
-          :title="`Filter by ${filter.label}`"
+          :aria-label="filter.ariaLabel"
+          :aria-pressed="activeFilters.includes(filter.value)"
+          :title="filter.ariaLabel"
+          role="button"
         >
-          <span class="pill-icon">{{ filter.icon }}</span>
+          <span class="pill-icon" aria-hidden="true">{{ filter.icon }}</span>
           <span class="pill-label">{{ filter.label }}</span>
         </button>
       </div>
@@ -120,12 +159,25 @@
           </span>
         </div>
       </transition>
+      
+      <!-- Empty State for Desktop -->
+      <transition name="stats-fade">
+        <div v-if="activeFilters.length > 0 && visibleCount === 0" class="empty-state">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          <h4>No apps match your filters</h4>
+          <button class="clear-filters-btn" @click="clearFilters" aria-label="Clear all filters to show all apps">Clear filters</button>
+        </div>
+      </transition>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, nextTick } from 'vue'
+import { ref, onMounted, onUnmounted, onErrorCaptured, watch } from 'vue'
 
 const activeFilters = ref([])
 const visibleCount = ref(0)
@@ -133,15 +185,31 @@ const totalCount = ref(0)
 const isMobile = ref(false)
 const showMobileFilter = ref(false)
 const isSticky = ref(false)
+const isLoading = ref(false)
+
+// Cached DOM selectors for performance
+let cachedSections = null
+let cachedListItems = null
+let animationFrameId = null
+let resizeTimer = null
 
 const quickFilters = [
-  { label: 'Featured ⭐', value: '⭐', icon: '⭐' },
-  { label: 'FOSS', value: 'FOSS', icon: '🔓' },
-  { label: 'Proprietary', value: 'Proprietary', icon: '🔒' },
-  { label: 'Magisk [M]', value: '[M]', icon: '🧲' },
-  { label: 'KernelSU [K]', value: '[K]', icon: '🔧' },
-  { label: 'LSPosed [LSP]', value: '[LSP]', icon: '⚡' },
+  { label: 'Featured ⭐', value: '⭐', icon: '⭐', ariaLabel: 'Filter by featured apps' },
+  { label: 'FOSS', value: 'FOSS', icon: '🔓', ariaLabel: 'Filter by free and open source apps' },
+  { label: 'Proprietary', value: 'Proprietary', icon: '🔒', ariaLabel: 'Filter by proprietary apps' },
+  { label: 'Magisk [M]', value: '[M]', icon: '🧲', ariaLabel: 'Filter by Magisk modules' },
+  { label: 'KernelSU [K]', value: '[K]', icon: '🔧', ariaLabel: 'Filter by KernelSU modules' },
+  { label: 'LSPosed [LSP]', value: '[LSP]', icon: '⚡', ariaLabel: 'Filter by LSPosed modules' },
 ]
+
+// Error boundary
+onErrorCaptured((err) => {
+  console.error('Filter component error:', err)
+  // Fallback: show all items
+  activeFilters.value = []
+  applyFilters()
+  return false
+})
 
 const toggleFilter = (filterValue) => {
   const index = activeFilters.value.indexOf(filterValue)
@@ -150,134 +218,281 @@ const toggleFilter = (filterValue) => {
   } else {
     activeFilters.value.push(filterValue)
   }
+  
+  // Update URL state
+  updateURLState()
   applyFilters()
 }
 
 const clearFilters = () => {
   activeFilters.value = []
+  
+  // Update URL state
+  updateURLState()
   applyFilters()
 }
 
 const openMobileFilter = () => {
   showMobileFilter.value = true
+  // Set focus trap
+  document.body.style.overflow = 'hidden'
 }
 
 const closeMobileFilter = () => {
   showMobileFilter.value = false
+  // Release focus trap
+  document.body.style.overflow = ''
 }
 
+// Debounced resize handler
 const checkMobile = () => {
-  isMobile.value = window.innerWidth <= 768
+  clearTimeout(resizeTimer)
+  resizeTimer = setTimeout(() => {
+    isMobile.value = window.innerWidth <= 768
+  }, 150)
+}
+
+// URL state management
+const updateURLState = () => {
+  if (typeof window === 'undefined') return
+  
+  const url = new URL(window.location.href)
+  if (activeFilters.value.length > 0) {
+    url.searchParams.set('filters', activeFilters.value.join(','))
+  } else {
+    url.searchParams.delete('filters')
+  }
+  
+  // Update URL without reloading page
+  window.history.replaceState({}, '', url.toString())
+}
+
+const restoreURLState = () => {
+  if (typeof window === 'undefined') return
+  
+  const url = new URL(window.location.href)
+  const filtersParam = url.searchParams.get('filters')
+  
+  if (filtersParam) {
+    const filters = filtersParam.split(',')
+    // Only restore valid filters
+    activeFilters.value = filters.filter(f => 
+      quickFilters.some(qf => qf.value === f)
+    )
+  }
+}
+
+// Cache DOM selectors for performance
+const cacheDOMSelectors = () => {
+  cachedSections = document.querySelectorAll('.app-search-content h2, .app-search-content h3, .app-search-content ul')
+  cachedListItems = document.querySelectorAll('.app-search-content ul li')
+  totalCount.value = cachedListItems.length
+  visibleCount.value = cachedListItems.length
+}
+
+// Announce results to screen readers
+const announceResults = (count) => {
+  const liveRegion = document.getElementById('filter-live-region')
+  if (liveRegion) {
+    liveRegion.textContent = `Showing ${count} of ${totalCount.value} entries`
+  }
 }
 
 const applyFilters = () => {
-  const filters = activeFilters.value
-  
-  // Get all app entries (list items containing apps)
-  const appSections = document.querySelectorAll('.app-search-content h2, .app-search-content h3, .app-search-content ul')
-  const allListItems = document.querySelectorAll('.app-search-content ul li')
-  
-  totalCount.value = allListItems.length
-  let visible = 0
-  
-  // If no filters, show all
-  if (filters.length === 0) {
-    allListItems.forEach(item => {
-      item.style.display = ''
-    })
-    appSections.forEach(section => {
-      section.style.display = ''
-    })
-    visibleCount.value = totalCount.value
-    return
+  // Cancel any pending animation frame
+  if (animationFrameId) {
+    cancelAnimationFrame(animationFrameId)
   }
   
-  // Apply filters
-  allListItems.forEach(item => {
-    const text = item.textContent.toLowerCase()
-    const innerHTML = item.innerHTML
+  // Use requestAnimationFrame for better performance
+  animationFrameId = requestAnimationFrame(() => {
+    isLoading.value = true
     
-    // Check filters (OR logic - must match at least one filter)
-    const hasAnyFilter = filters.some(filter => {
-      // For badges like [M], [K], [LSP], check the exact format in code blocks
-      if (filter.startsWith('[') && filter.endsWith(']')) {
-        return innerHTML.includes(`<code>${filter}</code>`)
+    const filters = activeFilters.value
+    
+    // Use cached selectors
+    if (!cachedSections || !cachedListItems) {
+      cacheDOMSelectors()
+    }
+    
+    let visible = 0
+    
+    // If no filters, show all
+    if (filters.length === 0) {
+      cachedListItems.forEach(item => {
+        item.style.display = ''
+      })
+      cachedSections.forEach(section => {
+        section.style.display = ''
+      })
+      visibleCount.value = totalCount.value
+      announceResults(totalCount.value)
+      isLoading.value = false
+      return
+    }
+    
+    // Batch DOM reads and writes for better performance
+    const itemsToShow = []
+    const itemsToHide = []
+    
+    // Read phase - check all items
+    cachedListItems.forEach(item => {
+      const text = item.textContent.toLowerCase()
+      const innerHTML = item.innerHTML
+      
+      // Check filters (OR logic - must match at least one filter)
+      const hasAnyFilter = filters.some(filter => {
+        // For badges like [M], [K], [LSP], check the exact format in code blocks
+        if (filter.startsWith('[') && filter.endsWith(']')) {
+          return innerHTML.includes(`<code>${filter}</code>`)
+        }
+        // For FOSS, Proprietary, check in code blocks
+        if (filter === 'FOSS' || filter === 'Proprietary') {
+          return innerHTML.includes(`<code>${filter}</code>`)
+        }
+        // For star, check directly in text
+        if (filter === '⭐') {
+          return text.includes('⭐')
+        }
+        return false
+      })
+      
+      if (hasAnyFilter) {
+        itemsToShow.push(item)
+        visible++
+      } else {
+        itemsToHide.push(item)
       }
-      // For FOSS, Proprietary, check in code blocks
-      if (filter === 'FOSS' || filter === 'Proprietary') {
-        return innerHTML.includes(`<code>${filter}</code>`)
-      }
-      // For star, check directly in text
-      if (filter === '⭐') {
-        return text.includes('⭐')
-      }
-      return false
     })
     
-    if (hasAnyFilter) {
-      item.style.display = ''
-      visible++
-    } else {
-      item.style.display = 'none'
-    }
-  })
-  
-  // Show/hide section headers based on whether they have visible items
-  appSections.forEach(section => {
-    if (section.tagName === 'UL') {
-      const hasVisibleItems = Array.from(section.children).some(li => li.style.display !== 'none')
-      section.style.display = hasVisibleItems ? '' : 'none'
-    } else if (section.tagName === 'H2' || section.tagName === 'H3') {
-      // Check if the next sibling (or any following element until next heading) has visible items
-      let nextElement = section.nextElementSibling
-      let hasVisibleContent = false
-      
-      while (nextElement && nextElement.tagName !== 'H2' && nextElement.tagName !== 'H3') {
-        if (nextElement.tagName === 'UL' && nextElement.style.display !== 'none') {
-          hasVisibleContent = true
-          break
-        }
-        if (nextElement.tagName === 'H4') {
-          // Check subsections
-          let subElement = nextElement.nextElementSibling
-          while (subElement && subElement.tagName !== 'H2' && subElement.tagName !== 'H3' && subElement.tagName !== 'H4') {
-            if (subElement.tagName === 'UL' && subElement.style.display !== 'none') {
-              hasVisibleContent = true
-              break
-            }
-            subElement = subElement.nextElementSibling
+    // Write phase - update DOM in batches
+    itemsToShow.forEach(item => item.style.display = '')
+    itemsToHide.forEach(item => item.style.display = 'none')
+    
+    // Show/hide section headers based on whether they have visible items
+    cachedSections.forEach(section => {
+      if (section.tagName === 'UL') {
+        const hasVisibleItems = Array.from(section.children).some(li => li.style.display !== 'none')
+        section.style.display = hasVisibleItems ? '' : 'none'
+      } else if (section.tagName === 'H2' || section.tagName === 'H3') {
+        // Check if the next sibling (or any following element until next heading) has visible items
+        let nextElement = section.nextElementSibling
+        let hasVisibleContent = false
+        
+        while (nextElement && nextElement.tagName !== 'H2' && nextElement.tagName !== 'H3') {
+          if (nextElement.tagName === 'UL' && nextElement.style.display !== 'none') {
+            hasVisibleContent = true
+            break
           }
+          if (nextElement.tagName === 'H4') {
+            // Check subsections
+            let subElement = nextElement.nextElementSibling
+            while (subElement && subElement.tagName !== 'H2' && subElement.tagName !== 'H3' && subElement.tagName !== 'H4') {
+              if (subElement.tagName === 'UL' && subElement.style.display !== 'none') {
+                hasVisibleContent = true
+                break
+              }
+              subElement = subElement.nextElementSibling
+            }
+          }
+          nextElement = nextElement.nextElementSibling
         }
-        nextElement = nextElement.nextElementSibling
+        
+        section.style.display = hasVisibleContent ? '' : 'none'
       }
-      
-      section.style.display = hasVisibleContent ? '' : 'none'
-    }
+    })
+    
+    visibleCount.value = visible
+    announceResults(visible)
+    isLoading.value = false
   })
-  
-  visibleCount.value = visible
 }
 
 // Initialize on mount
 onMounted(() => {
   // Check if mobile
   checkMobile()
-  window.addEventListener('resize', checkMobile)
+  window.addEventListener('resize', checkMobile, { passive: true })
   
   // Wait for content to be rendered
   setTimeout(() => {
-    const allListItems = document.querySelectorAll('.app-search-content ul li')
-    totalCount.value = allListItems.length
-    visibleCount.value = allListItems.length
+    cacheDOMSelectors()
+    
+    // Restore filters from URL
+    restoreURLState()
+    
+    // Apply filters if any were restored
+    if (activeFilters.value.length > 0) {
+      applyFilters()
+    }
+    
+    // Add keyboard shortcuts
+    document.addEventListener('keydown', handleKeyboardShortcuts)
   }, 500)
 })
 
 onUnmounted(() => {
   window.removeEventListener('resize', checkMobile)
+  document.removeEventListener('keydown', handleKeyboardShortcuts)
+  document.body.style.overflow = '' // Cleanup overflow lock
+  
+  // Cancel any pending animation frames
+  if (animationFrameId) {
+    cancelAnimationFrame(animationFrameId)
+  }
+  
+  // Clear timers
+  clearTimeout(resizeTimer)
 })
+
+// Keyboard shortcuts
+const handleKeyboardShortcuts = (e) => {
+  // Escape key to clear filters or close mobile panel
+  if (e.key === 'Escape') {
+    if (showMobileFilter.value) {
+      closeMobileFilter()
+    } else if (activeFilters.value.length > 0) {
+      clearFilters()
+    }
+  }
+  
+  // Ctrl/Cmd + K to toggle mobile filter (on mobile only)
+  if ((e.ctrlKey || e.metaKey) && e.key === 'k' && isMobile.value) {
+    e.preventDefault()
+    showMobileFilter.value = !showMobileFilter.value
+  }
+}
+
+// Watch for filter changes to update sticky preference
+watch(isSticky, (newVal) => {
+  if (typeof localStorage !== 'undefined') {
+    localStorage.setItem('filter-sticky-preference', newVal ? 'true' : 'false')
+  }
+})
+
+// Restore sticky preference
+if (typeof localStorage !== 'undefined') {
+  const savedPreference = localStorage.getItem('filter-sticky-preference')
+  if (savedPreference === 'true') {
+    isSticky.value = true
+  }
+}
 </script>
 
 <style scoped>
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Desktop Filter Container */
 .app-filter-container {
   position: relative;
@@ -530,6 +745,59 @@ onUnmounted(() => {
 .filter-hint p {
   margin: 0;
   color: var(--vp-c-text-3);
+  font-size: 0.8125rem;
+}
+
+/* Empty State */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  text-align: center;
+  background: var(--vp-c-bg-soft);
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.empty-state svg {
+  color: var(--vp-c-text-3);
+  margin-bottom: 1rem;
+}
+
+.empty-state h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+.empty-state p {
+  margin: 0 0 1rem;
+  font-size: 0.875rem;
+  color: var(--vp-c-text-2);
+}
+
+.empty-state .clear-filters-btn {
+  margin-top: 0.5rem;
+}
+
+/* Mobile empty state adjustments */
+.filter-box.mobile .empty-state {
+  padding: 1.5rem 1rem;
+}
+
+.filter-box.mobile .empty-state svg {
+  width: 40px;
+  height: 40px;
+}
+
+.filter-box.mobile .empty-state h4 {
+  font-size: 0.9375rem;
+}
+
+.filter-box.mobile .empty-state p {
   font-size: 0.8125rem;
 }
 
