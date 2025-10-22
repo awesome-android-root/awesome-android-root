@@ -14,6 +14,8 @@ class ImageOptimizer {
   constructor() {
     this.observer = null
     this.processedImages = new WeakSet()
+    this.mutationTimeout = null
+    this.pendingMutations = []
   }
 
   /**
@@ -62,22 +64,41 @@ class ImageOptimizer {
   }
 
   /**
+   * Process pending mutations in batches
+   */
+  processPendingMutations() {
+    if (this.pendingMutations.length === 0) return
+    
+    // Batch process all pending mutations
+    requestAnimationFrame(() => {
+      const mutations = this.pendingMutations.splice(0)
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            this.processImages(node)
+          }
+        })
+      })
+    })
+  }
+
+  /**
    * Initialize the observer
    */
   init() {
     if (typeof window === 'undefined' || this.observer) return
 
     this.observer = new MutationObserver((mutations) => {
-      // Batch DOM reads/writes using requestAnimationFrame
-      requestAnimationFrame(() => {
-        mutations.forEach((mutation) => {
-          mutation.addedNodes.forEach((node) => {
-            if (node.nodeType === Node.ELEMENT_NODE) {
-              this.processImages(node)
-            }
-          })
-        })
-      })
+      // Collect mutations and debounce processing
+      this.pendingMutations.push(...mutations)
+      
+      // Clear existing timeout
+      clearTimeout(this.mutationTimeout)
+      
+      // Debounce mutations to avoid excessive processing
+      this.mutationTimeout = setTimeout(() => {
+        this.processPendingMutations()
+      }, 100)
     })
 
     // Observe with optimized options
@@ -101,6 +122,14 @@ class ImageOptimizer {
       this.observer.disconnect()
       this.observer = null
     }
+    
+    // Clear any pending timeouts
+    clearTimeout(this.mutationTimeout)
+    
+    // Clear pending mutations
+    this.pendingMutations = []
+    
+    // Reset processed images
     this.processedImages = new WeakSet()
   }
 }

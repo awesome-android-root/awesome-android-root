@@ -67,20 +67,16 @@ else
     log_info "Copied filtered README.md to docs/android-root-apps/index.md"
 fi
 
-# 4. Adjust links in android-root-apps route
-sed -i '/http[s]*:\/\/\//! s|./docs/android-root-guides/|../android-root-guides/|g' docs/android-root-apps/index.md && \
-sed -i '/http[s]*:\/\/\//! s|./docs/|../|g' docs/android-root-apps/index.md && \
-sed -i 's|\([^:]\)//|\1/|g' docs/android-root-apps/index.md || handle_error "Failed adjusting links in docs/android-root-apps/index.md"
-log_info "Links adjusted in docs/android-root-apps/index.md"
-
-# 5. Adjust image paths in android-root-apps route
-sed -i 's|docs/public/images/|../public/images/|g' docs/android-root-apps/index.md || handle_error "Failed adjusting image paths in docs/android-root-apps/index.md"
-log_info "Image paths adjusted in docs/android-root-apps/index.md"
-
-# 6. Remove "docs/" prefix from internal documentation links
-sed -i 's|\(\[.*\](\)\./docs/|\1/|g' docs/android-root-apps/index.md && \
-sed -i 's|\(\[.*\](\)docs/|\1/|g' docs/android-root-apps/index.md || handle_error "Failed removing docs/ prefix from links in docs/android-root-apps/index.md"
-log_info "Removed 'docs/' prefix from internal documentation links in docs/android-root-apps/index.md"
+# 4. Adjust links and image paths in android-root-apps route (combined sed operations)
+sed -i \
+  -e '/http[s]*:\/\/\//! s|./docs/android-root-guides/|../android-root-guides/|g' \
+  -e '/http[s]*:\/\/\//! s|./docs/|../|g' \
+  -e 's|\([^:]\)//|\1/|g' \
+  -e 's|docs/public/images/|../public/images/|g' \
+  -e 's|\(\[.*\](\)\./docs/|\1/|g' \
+  -e 's|\(\[.*\](\)docs/|\1/|g' \
+  docs/android-root-apps/index.md || handle_error "Failed adjusting links and paths in docs/android-root-apps/index.md"
+log_info "Links and image paths adjusted in docs/android-root-apps/index.md"
 
 # 7. Add AppSearch component and wrap content for searchability
 add_search_component() {
@@ -129,7 +125,29 @@ add_search_component() {
 add_search_component
 log_info "Added AppSearch component and wrapped content in docs/android-root-apps/index.md"
 
-# 8. Display build summary
+# 8. Validate generated content
+validate_build() {
+    local file="docs/android-root-apps/index.md"
+    
+    # Check if file exists and is not empty
+    [ ! -s "$file" ] && handle_error "Generated file is empty or does not exist"
+    
+    # Check if AppSearch component was added
+    grep -q "AppSearch" "$file" || log_warn "AppSearch component not found in generated file"
+    
+    # Check if wrapper div was added
+    grep -q "app-search-content" "$file" || log_warn "Content wrapper not found in generated file"
+    
+    # Count total lines to ensure content was copied
+    local line_count=$(wc -l < "$file")
+    [ "$line_count" -lt 100 ] && log_warn "Generated file seems too short (only $line_count lines)"
+    
+    log_info "Build validation completed"
+}
+
+validate_build
+
+# 9. Display build summary
 echo ""
 echo -e "${BLUE}═══════════════════════════════════════════════════════════${NC}"
 echo -e "${GREEN}✓ Documentation build completed successfully!${NC}"
