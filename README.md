@@ -10,7 +10,7 @@
 
 **🛡️ The Ultimate Android Rooting Hub**
 
-<sub>Discover 420+ top root apps, Magisk/ KernelSU/ LSPosed(xposed) modules & step-by-step guides for every device.</sub>
+<sub>Discover 430+ top root apps, Magisk/ KernelSU/ LSPosed(xposed) modules & step-by-step guides for every device.</sub>
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=blue&cacheSeconds=3600)](https://github.com/awesome-android-root/awesome-android-root)
 [![Total Entries](https://img.shields.io/badge/Apps%20%26%20Modules-430+-blue?style=for-the-badge&logo=android&cacheSeconds=3600)](#root-apps-and-modules)
