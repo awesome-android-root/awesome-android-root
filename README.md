@@ -147,11 +147,11 @@ Think of it like gaining **Administrator rights** on Windows or **sudo access** 
 
 ### Why Root?
 
-- **Control** - Remove preinstalled bloat, disable telemetry |
-- **Performance** - Tune CPU, GPU, battery, animations |
-- **Privacy** - Block trackers, restrict app permissions |
-- **Customization** - Change UI, fonts, boot animations, navigation |
-- **True Backups** - Backup app data and system settings |
+- **Control** - Remove preinstalled bloat, disable telemetry
+- **Performance** - Tune CPU, GPU, battery, animations
+- **Privacy** - Block trackers, restrict app permissions
+- **Customization** - Change UI, fonts, boot animations, navigation
+- **True Backups** - Backup app data and system settings
 
 ### Benefits vs Risks
 
