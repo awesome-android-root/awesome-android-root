@@ -222,20 +222,6 @@ head:
               "applicationCategory": "SystemUtility",
               "operatingSystem": "Android",
               "description": "Xposed framework implementation for modern Android versions"
-            },
-            {
-              "@type": "SoftwareApplication",
-              "name": "Titanium Backup",
-              "applicationCategory": "SystemUtility",
-              "operatingSystem": "Android",
-              "description": "Advanced backup and restore application for rooted Android devices"
-            },
-            {
-              "@type": "SoftwareApplication",
-              "name": "Greenify",
-              "applicationCategory": "SystemUtility",
-              "operatingSystem": "Android",
-              "description": "Battery optimization app for hibernating background apps"
             }
           ]
         },
