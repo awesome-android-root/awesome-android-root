@@ -973,6 +973,9 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[⭐ Amarok](https://github.com/deltazefiro/Amarok-Hider)** - Android application which enables you to hide your private files and apps with a single click. `FOSS` | [🌱 F-Droid](https://f-droid.org/zh_Hans/packages/deltazero.amarok.foss/)
 - **[Image Copy Hide](https://github.com/cookieof/ImageCopyHide)** - Automatically copy and hide files from /sdcard/DCIM/Camera to /sdcard/wot/cptp. `FOSS` `[M]` 
 
+### Privacy Tools
+- **[PrivacyFlip](https://github.com/dorumrr/privacyflip)** - Automatically disables/enables Wi-Fi, Bluetooth, mobile data, location services, NFC, and even camera/microphone sensors based on lock/unlock state. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/io.github.dorumrr.privacyflip/)
+
 ### Security and Pentesting Tools
 - **[AlternativeUnlockXposed](https://github.com/leohearts/AlternativeUnlockXposed)** - Unlock your Android phone with an alternative PIN. `FOSS` `[LSP]`
 - **[JEZAIL](https://github.com/zahidaz/jezail)** - Android pentesting toolkit running fully on rooted devices. `FOSS`
