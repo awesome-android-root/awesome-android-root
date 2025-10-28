@@ -657,6 +657,7 @@ Follow this path:
 - **[Debug Assistant](https://github.com/ThePedroo/DebugAssistant)** - The simplest yet powerful logcat capture system as Magisk module. `FOSS` `[M]`
 - **[Dhizuku API for Xposed](https://github.com/iamr0s/Dhizuku-API-Xposed)** - Xposed module that forces applications to support Dhizuku. `FOSS` `[LSP]`
 - **[Disable Log Request](https://github.com/QueallyTech/DisableLogRequest)** - Automatic approve for app to access device logs (Android 13+). `FOSS` `[LSP]`
+- **[FoldDevtools](https://github.com/achyuki/FoldDevtools)** - Using chrome devtools to debug webview on Android. `FOSS` `[LSP]`
 - **[IAmNotADeveloper](https://github.com/xfqwdsj/IAmNotADeveloper)** - A Xposed module for hiding Android developer-related switches status. `FOSS` `[LSP]`
 - **[Magisk Docker](https://github.com/mgksu/dockerd)** - Magisk and KernelSU module for running Docker on rooted Android devices. `FOSS` `[M]` `[K]`
 - **[Py2Droid](https://github.com/Mrakorez/py2droid)** - A Magisk module to install Python 3 on Android, including the standard library (STDLIB). `FOSS` `[M]`
