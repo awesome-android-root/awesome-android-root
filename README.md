@@ -202,7 +202,8 @@ Follow this path:
 | KernelSU | Kernel-savvy users | [KernelSU Guide](docs/android-root-guides/kernelsu-guide.md) |
 | APatch | Devices with tricky firmware | [APatch Guide](docs/android-root-guides/apatch-guide.md) |
 
-> 💡 You can check out the complete comparison here: **[Root Solutions Comparison](./docs/android-root-guides/index.md#root-solutions-comparison)**
+> [!TIP]
+> 💡 You can check out the complete comparison here: **[Root Solutions Comparison ➞](./docs/android-root-guides/index.md#root-solutions-comparison)**
 
 ### Step 4: **Post-Root Setup**  
 1. → Install [essential apps and modules](#starter-kit-must-have-apps)
@@ -225,7 +226,9 @@ Follow this path:
 
 - [LSPosed Framework Guide](docs/android-root-guides/lsposed-guide.md)
 - [Custom ROMs Guide](docs/android-root-guides/custom-rom-installation.md)
-- **[📚 All Rooting Tutorials →](docs/android-root-guides/index.md)**
+
+
+> **[📚 All Rooting Tutorials ➞](docs/android-root-guides/index.md)**
 
 ---
 
