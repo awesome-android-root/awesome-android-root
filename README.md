@@ -569,7 +569,7 @@ Follow this path:
 - **[OShin](https://github.com/suqi8/OShin/blob/master/README_EN.md)** - Auxiliary module deeply integrated with ColorOS, designed to enhance and optimize your operating system experience. `FOSS` `[LSP]` | [📨 TG](https://t.me/OPatchA)
 
 #### HyperOS (Xiaomi)
-- **[⭐ HyperCeiler](https://github.com/ReChronoRain/HyperCeiler/blob/main/README_en-US.md)** - Extensive customizations for HyperOS. `FOSS` `[LSP]`
+- **[⭐ HyperCeiler](https://github.com/ReChronoRain/HyperCeiler/blob/main/README_en-US.md)** - Extensive customizations for HyperOS. `FOSS` `[LSP]` | [📨 TG](https://t.me/cemiuiler_release)
 - **[Better Miui Express](https://github.com/Robotxm/BetterMiuiExpress)** - Prevents MIUI/HyperOS's express widget from jumping to third-party applications such as Taobao and Cainiao, and uses a customized interface to display express details. `FOSS` `[LSP]`
 - **[ClipboardList](https://github.com/HChenX/ClipboardList)** - Remove the 20-item limit and time limit for the Clipboard and Phrases feature. Only for MIUI and HyperOS. `FOSS` `[LSP]`
 - **[ColorOS_Control_Center](https://github.com/Mods-Center/ColorOS_Control_Center)** - Replace HyperOS control panel with ColorOS-style quick settings, featuring customizable and squared tiles. `Proprietary`
