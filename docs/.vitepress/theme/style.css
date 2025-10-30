@@ -547,3 +547,19 @@ margin-bottom: 0.5rem;
   vertical-align: middle;
   margin: 0 2px;
 }
+
+/* Style for pipe separators between store badges */
+.store-separator {
+  opacity: 0.3;
+  margin: 0 4px;
+  color: var(--vp-c-text-2);
+}
+
+html.dark .store-separator {
+  opacity: 0.25;
+}
+
+/* Remove underline from links that contain store badges */
+.vp-doc li a:has(.store-badge) {
+  text-decoration: none;
+}
