@@ -469,7 +469,7 @@ Follow this path:
 - **[Shappky](https://github.com/YasserNull/shappky)** - A simple app to boost performance by stopping background apps, relying on Root/Shizuku permissions. `FOSS` `[M]`
 
 ### Charging Mods
-- **[AccA](https://github.com/VR-25/acc)** - Advanced Charging Controller app. `FOSS`
+- **[AccA](https://github.com/VR-25/acc)** - Advanced Charging Controller app. `FOSS` | [📨 TG](https://t.me/vr25_xda)
 - **[Charging Bypass](https://github.com/AbhishekTor55/charging-bypass-magisk)** - Disables charging when screen is ON and re-enables when OFF. Useful for gaming/dev use. `FOSS` `[M]`
 
 ### GMS and Play Services Optimizers
