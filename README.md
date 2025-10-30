@@ -583,7 +583,7 @@ Follow this path:
 - **[Lite Blur Control Center For HyperOS2](https://github.com/fakerieh/Lite-Blur-Control-Center-For-HyperOS2)** - Control Center Blur for HyperOS2 but LIGHTER. `FOSS` `[M]`
 - **[MiNavBarImmerse](https://github.com/Ianzb/MiNavBarImmerse/blob/main/doc/en_us/README.md)** - Optimizes the Xiaomi NavBar immersion by replacing the NavBar configuration file of third-party applications built into Xiaomi HyperOS 2.2. `FOSS` `[LSP]` | [📨 TG](https://t.me/MiNavBarImmerse)
 - **[MIUIPerfSaver](https://github.com/rdtoy/MIUIPerfSaver)** -  Remove MIUI's performance limit, run app at maximum FPS. `FOSS` `[LSP]`
-- **[Pengeek](https://github.com/monwf/customiuizer)** - Customize your HyperOS to your liking. For HyperOS based on Android 14. `FOSS` `[LSP]`
+- **[Pengeek](https://github.com/monwf/customiuizer)** - Customize your HyperOS to your liking. For HyperOS based on Android 14. `FOSS` `[LSP]` | [📨 TG](https://t.me/pengeek)
 
 ##### HyperOS Mods
 - **[HyperOS App Vault](https://github.com/Mods-Center/HyperOS-App-Vault)** - Enhanced HyperOS App Vault with unlocked widgets, high-end device features, blur adjustments, and scrolling animations.  `Proprietary` `[M]` `[K]`
