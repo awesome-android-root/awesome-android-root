@@ -92,20 +92,20 @@ const icon = computed(() => {
 
 /* F-Droid styling - Light mode */
 .store-badge.fdroid {
-  color: #1976d2;
+  color: #1565c0;
 }
 
 .store-badge.fdroid:hover {
-  color: #1565c0;
+  color: #0d47a1;
 }
 
 /* Play Store styling - Light mode */
 .store-badge.playstore {
-  color: #1976d2;
+  color: #1565c0;
 }
 
 .store-badge.playstore:hover {
-  color: #1565c0;
+  color: #0d47a1;
 }
 
 /* Telegram styling - Light mode */
@@ -114,7 +114,7 @@ const icon = computed(() => {
 }
 
 .store-badge.telegram:hover {
-  color: #0077b3;
+  color: #006699;
 }
 
 /* Dark mode adjustments */
@@ -135,11 +135,11 @@ html.dark .store-badge.playstore:hover {
 }
 
 html.dark .store-badge.telegram {
-  color: #64b5f6;
+  color: #4fc3f7;
 }
 
 html.dark .store-badge.telegram:hover {
-  color: #90caf9;
+  color: #81d4fa;
 }
 
 html.dark .store-icon :deep(svg) {

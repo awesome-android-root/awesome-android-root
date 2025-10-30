@@ -85,10 +85,17 @@ export function storeLinkPlugin(md) {
   };
 
   // Override text rule to suppress original link text when inside store link
+  // and wrap pipe separators with span for styling
   md.renderer.rules.text = function(tokens, idx, options, env, self) {
     if (insideStoreLink) {
       // Return empty string - the StoreLink component will handle the icon
       return '';
+    }
+    
+    // Wrap pipe characters near store links with a styled span
+    const content = tokens[idx].content;
+    if (content.trim() === '|') {
+      return '<span class="store-separator">|</span>';
     }
     
     return defaultTextRender(tokens, idx, options, env, self);
