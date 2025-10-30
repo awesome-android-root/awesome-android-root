@@ -1,6 +1,6 @@
 /**
- * Markdown-it plugin to transform F-Droid and Play Store badge links into custom Vue components
- * Only converts links with specific text patterns (🌱 F-Droid or ▶️ Play Store)
+ * Markdown-it plugin to transform F-Droid, Play Store, and Telegram badge links into custom Vue components
+ * Only converts links with specific text patterns (🌱 F-Droid, ▶️ Play Store, or 📨 TG)
  * This provides a fast, efficient, and robust solution for rendering store links with icons
  */
 
@@ -53,6 +53,16 @@ export function storeLinkPlugin(md) {
             currentStoreType = 'playstore';
             currentHref = href;
             return `<StoreLink store="playstore" href="${href}">`;
+          }
+        }
+        
+        // Check if this is a Telegram badge link
+        if ((linkText.includes('📨') && linkText.includes('TG')) || linkText === '📨 TG') {
+          if (href.includes('t.me') || href.includes('telegram')) {
+            insideStoreLink = true;
+            currentStoreType = 'telegram';
+            currentHref = href;
+            return `<StoreLink store="telegram" href="${href}">`;
           }
         }
       }
