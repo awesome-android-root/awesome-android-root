@@ -120,34 +120,39 @@ body {
 }
 
 
- .apps-intro p{
+.apps-intro p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  
+  gap: 8px;
 }
 
-img[src*="img.shields.io"]{
+/* Shield.io badges - consistent sizing */
+img[src*="img.shields.io"] {
   width: auto;
-  height: 30px; /* Standard shields.io badge height */
-  min-height: 30px;
-  max-height: 30px;
+  height: 28px;
+  min-height: 28px;
+  max-height: 28px;
   vertical-align: middle;
-  margin: 0.5rem 0.25rem;
-    display: inline-block;
-    background-color: inherit; /* Ensure background is transparent */
+  margin: 4px;
+  display: inline-block;
+  background-color: transparent;
 }
 
 /* Container layout stability */
-div :has(img[src*="img.shields.io"]) {
-  min-height: 60px; /* Reserve space for badges */
+div:has(img[src*="img.shields.io"]) {
+  min-height: 40px;
 }
 
-a[href*="f-droid.org"], a[href*="play.google.com"]{
+/* Store link styling */
+a[href*="f-droid.org"],
+a[href*="play.google.com"],
+a[href*="t.me"] {
   text-decoration: none;
 }
+
 
 /* Font loading optimization - prevent FOIT/FOUT layout shifts */
 @font-face {
@@ -496,7 +501,9 @@ margin-bottom: 0.5rem;
   box-shadow: none !important;
 }
 
-/* Inline SVG image sizing for icons in text */
+
+
+/* Inline SVG icons */
 .vp-doc img[src*="fdroid.svg"],
 .vp-doc img[src*="playstore.svg"],
 .vp-doc img[alt*="icon"] {
@@ -504,21 +511,34 @@ margin-bottom: 0.5rem;
   width: 18px;
   height: 18px;
   vertical-align: middle;
-  margin: 0 2px;
+  margin: 0 4px;
 }
 
-/* Style for pipe separators between store badges */
+/* Store separator styling */
 .store-separator {
   opacity: 0.3;
-  margin: 0 4px;
+  margin: 0 6px;
   color: var(--vp-c-text-2);
 }
 
-html.dark .store-separator {
+.dark .store-separator {
   opacity: 0.25;
 }
+
 
 /* Remove underline from links that contain store badges */
 .vp-doc li a:has(.store-badge) {
   text-decoration: none;
+}
+
+
+/* Enhanced Footer */
+.VPFooter {
+  border-top: 1px solid var(--vp-c-divider);
+  padding: 32px 24px;
+  background: var(--vp-c-bg-soft);
+}
+
+.VPFooter a:hover {
+  color: var(--vp-c-brand-1) !important;
 }
