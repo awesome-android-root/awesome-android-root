@@ -194,7 +194,7 @@ let animationFrameId = null
 let resizeTimer = null
 
 const quickFilters = [
-  { label: 'Featured ⭐', value: '⭐', icon: '⭐', ariaLabel: 'Filter by featured apps' },
+  { label: 'Featured', value: '⭐', icon: '⭐', ariaLabel: 'Filter by featured apps' },
   { label: 'FOSS', value: 'FOSS', icon: '🔓', ariaLabel: 'Filter by free and open source apps' },
   { label: 'Proprietary', value: 'Proprietary', icon: '🔒', ariaLabel: 'Filter by proprietary apps' },
   { label: 'Magisk [M]', value: '[M]', icon: '🧲', ariaLabel: 'Filter by Magisk modules' },
