@@ -571,7 +571,7 @@ Follow this path:
 #### HyperOS (Xiaomi)
 - **[⭐ HyperCeiler](https://github.com/ReChronoRain/HyperCeiler/blob/main/README_en-US.md)** - Extensive customizations for HyperOS. `FOSS` `[LSP]` | [📨 TG](https://t.me/cemiuiler_release)
 - **[Better Miui Express](https://github.com/Robotxm/BetterMiuiExpress)** - Prevents MIUI/HyperOS's express widget from jumping to third-party applications such as Taobao and Cainiao, and uses a customized interface to display express details. `FOSS` `[LSP]`
-- **[ClipboardList](https://github.com/HChenX/ClipboardList)** - Remove the 20-item limit and time limit for the Clipboard and Phrases feature. Only for MIUI and HyperOS. `FOSS` `[LSP]`
+- **[ClipboardList](https://github.com/HChenX/ClipboardList/blob/master/README-en.md)** - Remove the 20-item limit and time limit for the Clipboard and Phrases feature. Only for MIUI and HyperOS. `FOSS` `[LSP]`
 - **[ColorOS_Control_Center](https://github.com/Mods-Center/ColorOS_Control_Center)** - Replace HyperOS control panel with ColorOS-style quick settings, featuring customizable and squared tiles. `Proprietary`
 - **[GreenDotHide](https://github.com/Dorian399/GreenDotHide)** - Hides the green dot indicating sensitive permission use. Works only on MIUI/HyperOS. `FOSS` `[LSP]`
 - **[Hyper Monet Icon Theme](https://github.com/AcardiaX/HyperMonetIconTheme/blob/main/README_en.md)** - Enables Material You Monet style icons for HyperOS. `FOSS` `[M]`
