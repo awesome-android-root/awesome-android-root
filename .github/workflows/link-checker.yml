@@ -59,22 +59,37 @@ jobs:
           EOF
           
           # Run link check and capture output
-          markdown-link-check README.md -c link-check-config.json -q > link-check-output.txt 2>&1 || true
+          markdown-link-check README.md -c link-check-config.json > link-check-output.txt 2>&1 || true
           
           cat link-check-output.txt
           
-          # Parse results
-          TOTAL_LINKS=$(grep -oP '\d+(?= links checked)' link-check-output.txt || echo "0")
-          DEAD_LINKS=$(grep '✖' link-check-output.txt | wc -l || echo "0")
+          # Parse results - try multiple patterns for total links
+          TOTAL_LINKS=$(grep -oP '\d+(?= links checked)' link-check-output.txt 2>/dev/null || \
+                       grep -oP '(?<=FILE: README\.md\n\s*)\d+(?= links)' link-check-output.txt 2>/dev/null || \
+                       grep -oP '\d+' link-check-output.txt | head -1 || echo "0")
+          
+          # Count dead links
+          DEAD_LINKS=$(grep -c '✖' link-check-output.txt 2>/dev/null || echo "0")
+          
+          # If we couldn't determine total links, estimate from output
+          if [ "$TOTAL_LINKS" = "0" ] && [ "$DEAD_LINKS" -gt 0 ]; then
+            # Count all link checks (both ✓ and ✖)
+            TOTAL_LINKS=$(grep -E '^\s*\[✓\]|^\s*\[✖\]' link-check-output.txt | wc -l || echo "$DEAD_LINKS")
+          fi
+          
           HEALTHY_LINKS=$((TOTAL_LINKS - DEAD_LINKS))
           
           echo "total_links=$TOTAL_LINKS" >> $GITHUB_OUTPUT
           echo "dead_links=$DEAD_LINKS" >> $GITHUB_OUTPUT
           echo "healthy_links=$HEALTHY_LINKS" >> $GITHUB_OUTPUT
           
-          # Extract dead link details
+          # Extract dead link details properly for multiline output
           echo "DEAD_LINK_DETAILS<<EOF" >> $GITHUB_OUTPUT
-          grep '✖' link-check-output.txt | sed 's/^[[:space:]]*//' || echo "None" >> $GITHUB_OUTPUT
+          if [ "$DEAD_LINKS" -gt 0 ]; then
+            grep '✖' link-check-output.txt | sed 's/^[[:space:]]*//' >> $GITHUB_OUTPUT
+          else
+            echo "None" >> $GITHUB_OUTPUT
+          fi
           echo "EOF" >> $GITHUB_OUTPUT
           
           # Set exit code based on dead links
@@ -157,15 +172,19 @@ jobs:
                 issue_number: existingIssues.data[0].number,
                 body: `🔄 **Updated**: Re-checked on ${new Date().toISOString().split('T')[0]}\n\nNew results: ${deadLinks} dead link(s) found.`
               });
+              
+              console.log(`Updated existing issue #${existingIssues.data[0].number}`);
             } else {
               // Create new issue
-              await github.rest.issues.create({
+              const newIssue = await github.rest.issues.create({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 title: issueTitle,
                 body: issueBody,
                 labels: ['automated-link-check', 'documentation', 'bug']
               });
+              
+              console.log(`Created new issue #${newIssue.data.number}`);
             }
 
       - name: Post success comment (no dead links)
