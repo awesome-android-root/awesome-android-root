@@ -7,7 +7,7 @@ export default withPwa(defineConfig({
   title: 'Awesome Android Root',
   ignoreDeadLinks: true,
   cleanUrls: true,
-
+  
   vite: {
     build: {
       chunkSizeWarningLimit: 1000,
@@ -438,7 +438,6 @@ export default withPwa(defineConfig({
     filename: 'sw.js',              // Service worker filename
     scope: '/',                     // Service worker scope (entire site)
     inlineRegister: false,          // Don't inline registration (better for updates)
-    registerType: 'autoUpdate',     // Automatically update when new SW available
     minify: true,                   // Minify service worker in production
     
     // Credentials handling for cross-origin requests
@@ -479,8 +478,6 @@ export default withPwa(defineConfig({
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }],
     
     // Resource Hints
-    ['link', { rel: 'preconnect', href: 'https://img.shields.io', crossorigin: '' }],
-    ['link', { rel: 'dns-prefetch', href: 'https://img.shields.io' }],
     ['link', { rel: 'preconnect', href: 'https://github.com', crossorigin: '' }],
     ['link', { rel: 'dns-prefetch', href: 'https://github.com' }],
     
