@@ -1,14 +1,51 @@
 ---
-title: Offline
+title: You're Offline
 layout: doc
 ---
 
-# You’re offline
+<div style="text-align: center; padding: 2rem 0;">
+  <div style="font-size: 4rem; margin-bottom: 1rem;">📡</div>
+  <h1>You're Currently Offline</h1>
+  <p style="font-size: 1.1rem; color: var(--vp-c-text-2); margin-bottom: 2rem;">
+    Don't worry! This page and cached content are still available.
+  </p>
+</div>
 
-This page and core content are available offline. Some external assets (like shields badges) may not load until you’re back online.
+## What You Can Do
 
-- Browse cached pages from the sidebar
-- Use the search to find content that’s cached
-- When online, a reload prompt will appear if new content is available
+<div style="display: grid; gap: 1.5rem; margin: 2rem 0;">
 
-[Go to Home](/)
+<div style="padding: 1.5rem; border: 1px solid var(--vp-c-divider); border-radius: 8px;">
+
+### 📚 Browse Cached Pages
+Use the **sidebar navigation** to access pages you've visited before. Previously loaded guides and documentation are available offline.
+
+</div>
+
+<div style="padding: 1.5rem; border: 1px solid var(--vp-c-divider); border-radius: 8px;">
+
+### 🔍 Search Offline Content
+The **search feature** (press `/` or click the search icon) works offline and will find content in your cached pages.
+
+</div>
+
+
+</div>
+
+## Quick Navigation
+
+Here are some key pages that might be in your cache:
+
+- [Home](/) - Main landing page
+- [Root Apps & Modules](/android-root-apps/) - Browse 430+ apps
+- [Rooting Guides](/android-root-guides/) - Complete rooting tutorials
+- [Essential Tutorials](/guides/) - How-to guides and tips
+- [FAQ](/faqs) - Frequently asked questions
+- [Troubleshooting](/troubleshooting) - Fix common issues
+
+---
+
+<div style="text-align: center; padding: 2rem 0; color: var(--vp-c-text-2);">
+  <p>💡 <strong>Tip:</strong> Once you're back online, this page will automatically detect the connection and you can continue browsing normally.</p>
+</div>
+

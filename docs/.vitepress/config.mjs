@@ -32,255 +32,383 @@ export default withPwa(defineConfig({
   pwa: {
     strategies: 'generateSW',
     registerType: 'autoUpdate',
+    
+    // Include critical assets for immediate caching
     includeAssets: [
       'favicon.ico',
       'favicon.svg',
+      'favicon-96x96.png',
+      'images/logo.svg',
+      'images/logo_dark.svg',
       'images/web-app-manifest-192x192.png',
       'images/web-app-manifest-512x512.png',
-      'offline.html',
+      'images/apple-touch-icon.png',
+      'offline.html'
     ],
+    
     workbox: {
-      globPatterns: [],
-
-      // Service worker behavior
-      skipWaiting: true,
-      clientsClaim: true,
-      cleanupOutdatedCaches: true,
-
-      // Navigation fallback for offline
-      navigateFallback: '/offline.html',
-      navigationPreload: true,
-
-      // Direct URL navigation handling
-      directoryIndex: 'index.html',
+      // ============================================================================
+      // PRE-CACHE CONFIGURATION
+      // ============================================================================
+      // Pre-cache critical files during service worker installation
+      // This ensures essential files are available offline immediately
+      globPatterns: [
+        // Core application shell - VitePress theme and framework
+        '**/*.{js,css}',
+        
+        // Essential HTML pages for offline navigation
+        '**/index.html',
+        '**/offline.html',
+        
+        // Critical images (logo, icons, etc.)
+        '**/images/logo*.{svg,png}',
+        '**/images/*-icon*.{png,svg}',
+        '**/images/web-app-manifest-*.png',
+        
+        // Favicons for proper offline branding
+        '**/{favicon,favicon-*}.{ico,svg,png}',
+      ],
       
-      // Maximum file size to cache (10MB)
-      maximumFileSizeToCacheInBytes: 10 * 1024 * 1024,
+      // Exclude patterns - don't pre-cache these
+      globIgnores: [
+        // Build artifacts and development files
+        '**/node_modules/**',
+        '**/dev-dist/**',
+        '**/.vitepress/cache/**',
+        
+        // Large files that should be cached on-demand
+        '**/images/og/**',
+        
+        // Don't pre-cache all markdown pages (too many)
+        // They'll be cached on-demand via runtimeCaching
+      ],
+
+      // ============================================================================
+      // SERVICE WORKER BEHAVIOR
+      // ============================================================================
+      // Immediate service worker activation and control
+      skipWaiting: true,              // Activate new SW immediately
+      clientsClaim: true,             // Take control of all pages immediately
+      cleanupOutdatedCaches: true,    // Remove old caches automatically
       
-     // Runtime caching strategies
+      // Navigation and offline handling
+      navigateFallback: '/offline.html',        // Offline page fallback
+      navigateFallbackDenylist: [
+        // Don't use offline fallback for these patterns
+        /^\/_/,                       // VitePress internal routes
+        /^\/api\//,                   // API routes
+        /\.[^/]+$/,                   // Files with extensions (assets)
+      ],
+      navigationPreload: true,        // Speed up navigation requests
+      
+      // Directory and file handling
+      directoryIndex: 'index.html',   // Default file for directories
+      
+      // Maximum file size to cache (15MB - increased for large guide pages)
+      maximumFileSizeToCacheInBytes: 15 * 1024 * 1024,
+
+      // ============================================================================
+      // RUNTIME CACHING STRATEGIES
+      // ============================================================================
+      // Define how different types of resources are cached at runtime
+      
       runtimeCaching: [
-        // HTML Pages - Network First with offline fallback
-
-         {
+        // ------------------------------------------------------------------------
+        // STRATEGY 1: HTML Pages (Documentation & Guides)
+        // Network First - Always try to get fresh content, fallback to cache
+        // ------------------------------------------------------------------------
+        {
           urlPattern: ({ request, url, sameOrigin }) => 
-            sameOrigin && (request.mode === 'navigate' || 
-            request.headers.get('accept')?.includes('text/html')),
+            sameOrigin && (
+              request.mode === 'navigate' || 
+              request.destination === 'document' ||
+              request.headers.get('accept')?.includes('text/html')
+            ),
           handler: 'NetworkFirst',
           options: {
-            cacheName: 'pages-cache-v1',
-            networkTimeoutSeconds: 3,
+            cacheName: 'aar-pages-v1',
+            networkTimeoutSeconds: 5,  // Wait 5s for network before using cache
             expiration: {
-              maxEntries: 100,
-              maxAgeSeconds: 60 * 60 * 24 * 7, // 7 days
-              purgeOnQuotaError: true
+              maxEntries: 150,         // Store up to 150 pages
+              maxAgeSeconds: 60 * 60 * 24 * 1,  // 1 day
+              purgeOnQuotaError: true, // Auto-cleanup if storage is full
             },
             cacheableResponse: {
-              statuses: [0, 200]
+              statuses: [0, 200],      // Cache successful responses
             },
             plugins: [
               {
-                handlerDidError: async () => {
+                // Fallback to offline page if both network and cache fail
+                handlerDidError: async ({ request }) => {
                   return caches.match('/offline.html') || Response.error()
                 },
+                // Log fetch failures for debugging
                 fetchDidFail: async ({ originalRequest, error }) => {
-                  console.error('Fetch failed:', originalRequest.url, error)
+                  if (process.env.NODE_ENV === 'development') {
+                    console.warn('Page fetch failed:', originalRequest.url, error)
+                  }
                 },
-                requestWillFetch: async ({ request }) => {
-                  // Add custom headers if needed
-                  return request
-                }
               }
             ]
           }
         },
 
-         {
+        // ------------------------------------------------------------------------
+        // STRATEGY 2: JavaScript & CSS Assets
+        // Stale While Revalidate - Serve from cache, update in background
+        // ------------------------------------------------------------------------
+        {
           urlPattern: ({ request, url, sameOrigin }) => 
             sameOrigin && (
               request.destination === 'script' || 
               request.destination === 'style' ||
-              /\.(js|css)$/i.test(url.pathname)
+              /\.(js|mjs|css)$/i.test(url.pathname)
             ),
           handler: 'StaleWhileRevalidate',
           options: {
-            cacheName: 'assets-cache-v1',
+            cacheName: 'aar-assets-v1',
             expiration: {
-              maxEntries: 200,
-              maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
-              purgeOnQuotaError: true
+              maxEntries: 250,         // More entries for various JS/CSS chunks
+              maxAgeSeconds: 60 * 60 * 24 * 7,  // 7 days
+              purgeOnQuotaError: true,
             },
             cacheableResponse: {
-              statuses: [0, 200]
-            }
+              statuses: [0, 200],
+            },
           }
         },
-         // Images - Cache First with progressive loading
+
+        // ------------------------------------------------------------------------
+        // STRATEGY 3: Images (Local & External)
+        // Cache First - Fastest loading, long-term storage
+        // ------------------------------------------------------------------------
         {
-          urlPattern: ({ request, url, sameOrigin }) => 
-            sameOrigin && (
-              request.destination === 'image' ||
-              /\.(png|jpg|jpeg|svg|gif|webp|ico|bmp|tiff)$/i.test(url.pathname)
-            ),
+          urlPattern: ({ request, url, sameOrigin }) => {
+            // Match local images and common external image hosts
+            const isImage = request.destination === 'image' ||
+              /\.(png|jpg|jpeg|svg|gif|webp|avif|ico|bmp)$/i.test(url.pathname)
+            
+            // Include external image hosts used in documentation
+            const isAllowedOrigin = sameOrigin || 
+              url.origin === 'https://raw.githubusercontent.com' ||
+              url.origin === 'https://avatars.githubusercontent.com' ||
+              url.origin === 'https://user-images.githubusercontent.com'
+            
+            return isImage && isAllowedOrigin
+          },
           handler: 'CacheFirst',
           options: {
-            cacheName: 'images-cache-v1',
+            cacheName: 'aar-images-v1',
             expiration: {
-              maxEntries: 300,
-              maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
-              purgeOnQuotaError: true
+              maxEntries: 400,         // Large capacity for many app icons/images
+              maxAgeSeconds: 60 * 60 * 24 * 60,  // 60 days (images rarely change)
+              purgeOnQuotaError: true,
             },
             cacheableResponse: {
-              statuses: [0, 200]
+              statuses: [0, 200],
             },
             plugins: [
               {
+                // Return placeholder SVG if image fails to load
                 handlerDidError: async () => {
-                  // Return placeholder image on error
                   return new Response(
-                    '<svg width="1" height="1" xmlns="http://www.w3.org/2000/svg"></svg>',
-                    { headers: { 'Content-Type': 'image/svg+xml' } }
+                    '<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">' +
+                    '<rect width="200" height="200" fill="#f0f0f0"/>' +
+                    '<text x="50%" y="50%" font-family="sans-serif" font-size="14" fill="#999" text-anchor="middle" dy=".3em">Image unavailable</text>' +
+                    '</svg>',
+                    { 
+                      headers: { 
+                        'Content-Type': 'image/svg+xml',
+                        'Cache-Control': 'no-cache'
+                      } 
+                    }
                   )
                 }
               }
             ]
           }
         },
-         // Fonts - Cache First (long term)
+
+        // ------------------------------------------------------------------------
+        // STRATEGY 4: Web Fonts
+        // Cache First - Fonts never change, permanent storage
+        // ------------------------------------------------------------------------
         {
-          urlPattern: ({ request, url, sameOrigin }) => 
-            sameOrigin && (
-              request.destination === 'font' ||
-              /\.(woff2?|ttf|otf|eot)$/i.test(url.pathname)
-            ),
+          urlPattern: ({ request, url }) => {
+            const isFontFile = /\.(woff2?|ttf|otf|eot)$/i.test(url.pathname)
+            const isFontRequest = request.destination === 'font'
+            const isFontHost = url.origin === location.origin ||
+              url.hostname.includes('fonts.googleapis.com') ||
+              url.hostname.includes('fonts.gstatic.com')
+            
+            return (isFontFile || isFontRequest) && isFontHost
+          },
           handler: 'CacheFirst',
           options: {
-            cacheName: 'fonts-cache-v1',
+            cacheName: 'aar-fonts-v1',
             expiration: {
-              maxEntries: 30,
-              maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
-              purgeOnQuotaError: true
+              maxEntries: 40,          // Fonts are few but important
+              maxAgeSeconds: 60 * 60 * 24 * 30,  // 30 days
+              purgeOnQuotaError: true,
             },
             cacheableResponse: {
-              statuses: [0, 200]
-            }
+              statuses: [0, 200],
+            },
           }
         },
-        // Shield.io badges - Stale While Revalidate
+
+        // ------------------------------------------------------------------------
+        // STRATEGY 5: Shield.io Badges
+        // Stale While Revalidate - Show cached badge, update in background
+        // ------------------------------------------------------------------------
         {
           urlPattern: ({ url }) => 
             url.origin === 'https://img.shields.io',
           handler: 'StaleWhileRevalidate',
           options: {
-            cacheName: 'shields-cache-v1',
+            cacheName: 'aar-badges-v1',
             expiration: {
-              maxEntries: 200,
-              maxAgeSeconds: 60 * 60 * 24, // 24 hours
-              purgeOnQuotaError: true
+              maxEntries: 300,         // Many badges across different pages
+              maxAgeSeconds: 60 * 60 * 12,  // 12 hours (shorter as badges can change)
+              purgeOnQuotaError: true,
             },
             cacheableResponse: {
-              statuses: [0, 200]
+              statuses: [0, 200],
             },
-            plugins: [
-              {
-                requestWillFetch: async ({ request }) => {
-                  // Add cache busting for badges
-                  const url = new URL(request.url)
-                  url.searchParams.set('cacheBust', Date.now().toString())
-                  return new Request(url.href, request)
-                }
-              }
-            ]
-          }
-        },
-        // GitHub assets - Cache First
-        {
-          urlPattern: ({ url }) => 
-            url.origin === 'https://github.com' || 
-            url.origin === 'https://raw.githubusercontent.com' ||
-            url.origin === 'https://avatars.githubusercontent.com' ||
-            url.origin === 'https://user-images.githubusercontent.com',
-          handler: 'CacheFirst',
-          options: {
-            cacheName: 'github-cache-v1',
-            expiration: {
-              maxEntries: 100,
-              maxAgeSeconds: 60 * 60 * 24 * 7, // 7 days
-              purgeOnQuotaError: true
-            },
-            cacheableResponse: {
-              statuses: [0, 200]
+            // Optional: Add cache name to request for better tracking
+            matchOptions: {
+              ignoreSearch: false,     // Different params = different badges
             }
           }
         },
-        // Search index - Network First
+
+
+        // ------------------------------------------------------------------------
+        // STRATEGY 6: VitePress Search Index
+        // Network First - Keep search results fresh but cache for offline
+        // ------------------------------------------------------------------------
         {
           urlPattern: ({ url }) => 
-            url.pathname.includes('search-index') ||
-            url.pathname.includes('@localSearchIndex'),
+            url.pathname.includes('search') ||
+            url.pathname.includes('@localSearchIndex') ||
+            url.pathname.includes('searchIndex'),
           handler: 'NetworkFirst',
           options: {
-            cacheName: 'search-index-cache-v1',
-            networkTimeoutSeconds: 3,
+            cacheName: 'aar-search-v1',
+            networkTimeoutSeconds: 3,   // Quick timeout for search
             expiration: {
-              maxEntries: 5,
-              maxAgeSeconds: 60 * 60 * 24, // 24 hours
-              purgeOnQuotaError: true
+              maxEntries: 10,           // Limited search index files
+              maxAgeSeconds: 60 * 60 * 24,  // 24 hours
+              purgeOnQuotaError: true,
             },
             cacheableResponse: {
-              statuses: [0, 200]
-            }
+              statuses: [0, 200],
+            },
           }
-        }
+        },
+
+
+        // ------------------------------------------------------------------------
+        // STRATEGY 7: API/JSON Data (if any)
+        // Network First - Fresh data priority with offline fallback
+        // ------------------------------------------------------------------------
+        {
+          urlPattern: ({ url, request }) =>
+            request.headers.get('accept')?.includes('application/json') ||
+            url.pathname.endsWith('.json'),
+          handler: 'NetworkFirst',
+          options: {
+            cacheName: 'aar-data-v1',
+            networkTimeoutSeconds: 3,
+            expiration: {
+              maxEntries: 50,
+              maxAgeSeconds: 60 * 60 * 6,  // 6 hours
+              purgeOnQuotaError: true,
+            },
+            cacheableResponse: {
+              statuses: [0, 200],
+            },
+          }
+        },
       ]
     },
-   manifest: {
+    // ============================================================================
+    // PWA MANIFEST CONFIGURATION
+    // ============================================================================
+    // Defines how the app appears when installed on user devices
+    manifest: {
+      // Application identity
       name: 'Awesome Android Root',
       short_name: 'AAR',
-      description: 'Ultimate Android rooting hub with curated apps, modules and guides.',
+      description: 'Ultimate Android rooting hub with 430+ curated apps, Magisk modules, KernelSU modules, LSPosed modules, and comprehensive step-by-step rooting guides for Android customization.',
+      
+      // Visual theming
       theme_color: '#ffffff',
       background_color: '#ffffff',
+      
+      // App behavior and navigation
       start_url: '/',
       scope: '/',
-      display: 'standalone',
-      display_override: ['window-controls-overlay', 'standalone', 'minimal-ui'],
-      orientation: 'any',
+      display: 'standalone',                    // Full-screen app experience
+      display_override: [
+        'window-controls-overlay',              // Modern window controls (if supported)
+        'standalone',                           // Fallback to standalone
+        'minimal-ui'                            // Fallback to minimal UI
+      ],
+      orientation: 'any',                       // Allow all orientations
+      
+      // Localization
       lang: 'en-US',
       dir: 'ltr',
-      prefer_related_applications: false,
       
-      // Categories for app stores
-      categories: ['utilities', 'developer', 'education', 'productivity'],
-       // Icons with multiple purposes
+      // App store settings
+      prefer_related_applications: false,       // Prefer PWA over native app
+      categories: [
+        'utilities', 
+        'developer', 
+        'education', 
+        'productivity',
+        'reference'                             // Added reference category
+      ],
+      
+      // Icons with multiple purposes for different contexts
       icons: [
+        // Favicon - Browser tab icon
         {
           src: '/favicon.ico',
           sizes: '16x16 24x24 32x32 48x48',
-          type: 'image/x-icon'
+          type: 'image/x-icon',
+          purpose: 'any'
         },
+        // Medium size - Browser bookmark, Windows taskbar
         {
           src: '/favicon-96x96.png',
           sizes: '96x96',
           type: 'image/png',
           purpose: 'any'
         },
+        // Standard PWA icon - Android home screen, Chrome app drawer
         {
           src: '/images/web-app-manifest-192x192.png',
           sizes: '192x192',
           type: 'image/png',
           purpose: 'any'
         },
+        // Maskable icon for adaptive icons on Android 8+
         {
           src: '/images/web-app-manifest-192x192-maskable.png',
           sizes: '192x192',
           type: 'image/png',
           purpose: 'maskable'
         },
+        // Large icon - Splash screens, app stores
         {
           src: '/images/web-app-manifest-512x512.png',
           sizes: '512x512',
           type: 'image/png',
           purpose: 'any'
         },
+        // Large maskable icon for high-res adaptive icons
         {
           src: '/images/web-app-manifest-512x512-maskable.png',
           sizes: '512x512',
@@ -288,29 +416,38 @@ export default withPwa(defineConfig({
           purpose: 'maskable'
         }
       ],
+      
+      
     },
-    // Development options
+    
+    // ============================================================================
+    // DEVELOPMENT & BUILD OPTIONS
+    // ============================================================================
+    // Development mode configuration for testing PWA features locally
     devOptions: {
       enabled: process.env.NODE_ENV === 'development',
       suppressWarnings: true,
-      navigateFallback: '/index.html',
+      navigateFallback: 'index.html',
       type: 'module'
     },
 
-    // Filename for the service worker
-    filename: 'sw.js',
+    // ============================================================================
+    // SERVICE WORKER FILE OPTIONS
+    // ============================================================================
+    // Service worker file settings
+    filename: 'sw.js',              // Service worker filename
+    scope: '/',                     // Service worker scope (entire site)
+    inlineRegister: false,          // Don't inline registration (better for updates)
+    registerType: 'autoUpdate',     // Automatically update when new SW available
+    minify: true,                   // Minify service worker in production
     
-    // Scope for the service worker
-    scope: '/',
-    
-    // Use credentials for fetching
+    // Credentials handling for cross-origin requests
     useCredentials: false,
     
-    // Inline the service worker
-    inlineRegister: false,
-    
-    // Minify the service worker
-    minify: true
+    // Inject manifest link automatically
+    injectManifest: {
+      globPatterns: ['**/*.{js,css,html,png,svg,ico,jpg,jpeg,gif,webp}']
+    }
   },
 
   // End of pwa config
