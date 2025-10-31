@@ -176,12 +176,18 @@ export default {
       router.onAfterRouteChanged = () => {
         // Reinitialize after route change
         setTimeout(() => imageOptimizer.init(), 100)
+        
+        // Add ARIA labels for accessibility
+        addAriaLabels()
       }
       
       // Cleanup on page unload
       window.addEventListener('beforeunload', () => {
         imageOptimizer.destroy()
       })
+      
+      // Add ARIA labels on initial load
+      setTimeout(() => addAriaLabels(), 500)
       
       // Optional: Add performance monitoring
       if (import.meta.env.DEV) {
@@ -199,4 +205,139 @@ export default {
       }
     }
   }
+}
+
+/**
+ * Add ARIA labels for improved accessibility
+ */
+function addAriaLabels() {
+  // Add ARIA label to main navigation
+  const nav = document.querySelector('.VPNav')
+  if (nav && !nav.hasAttribute('aria-label')) {
+    nav.setAttribute('aria-label', 'Main navigation')
+  }
+  
+  // Add ARIA label to menu items
+  const navMenu = document.querySelector('.VPMenu')
+  if (navMenu && !navMenu.hasAttribute('aria-label')) {
+    navMenu.setAttribute('aria-label', 'Primary navigation menu')
+  }
+  
+  // Add ARIA label to sidebar
+  const sidebar = document.querySelector('.VPSidebar')
+  if (sidebar && !sidebar.hasAttribute('aria-label')) {
+    sidebar.setAttribute('aria-label', 'Page navigation sidebar')
+  }
+  
+  // Add ARIA label to table of contents
+  const aside = document.querySelector('.VPAside')
+  if (aside && !aside.hasAttribute('aria-label')) {
+    aside.setAttribute('aria-label', 'Table of contents')
+  }
+  
+  // Add ARIA labels to navigation links
+  const navLinks = document.querySelectorAll('.VPNavBarMenuLink > a, .VPNavBarMenuGroup > button')
+  navLinks.forEach((link, index) => {
+    if (!link.hasAttribute('aria-label')) {
+      const text = link.textContent?.trim()
+      if (text) {
+        if (link.tagName === 'BUTTON') {
+          link.setAttribute('aria-label', `${text} menu`)
+          link.setAttribute('aria-haspopup', 'true')
+        } else {
+          link.setAttribute('aria-label', `Navigate to ${text}`)
+        }
+      }
+    }
+  })
+  
+  // Add ARIA labels to social links
+  const socialLinks = document.querySelectorAll('.VPSocialLink')
+  socialLinks.forEach(link => {
+    if (!link.hasAttribute('aria-label')) {
+      const href = link.getAttribute('href') || ''
+      let label = 'Social link'
+      
+      if (href.includes('github.com')) {
+        label = 'View source code on GitHub'
+      } else if (href.includes('twitter.com') || href.includes('x.com')) {
+        label = 'Follow us on Twitter/X'
+      } else if (href.includes('opencollective.com')) {
+        label = 'Support the project on Open Collective'
+      }
+      
+      link.setAttribute('aria-label', label)
+    }
+  })
+  
+  // Add ARIA labels to search button
+  const searchButton = document.querySelector('.DocSearch-Button')
+  if (searchButton && !searchButton.hasAttribute('aria-label')) {
+    searchButton.setAttribute('aria-label', 'Search documentation')
+  }
+  
+  // Add ARIA labels to mobile menu toggle
+  const menuToggle = document.querySelector('.VPNavBarHamburger')
+  if (menuToggle && !menuToggle.hasAttribute('aria-label')) {
+    menuToggle.setAttribute('aria-label', 'Toggle navigation menu')
+    menuToggle.setAttribute('aria-expanded', 'false')
+    
+    // Update aria-expanded on click
+    menuToggle.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true'
+      menuToggle.setAttribute('aria-expanded', (!expanded).toString())
+    })
+  }
+  
+  // Add ARIA labels to appearance toggle (dark mode)
+  const appearanceToggle = document.querySelector('.VPSwitch')
+  if (appearanceToggle) {
+    const button = appearanceToggle.querySelector('button')
+    if (button && !button.hasAttribute('aria-label')) {
+      button.setAttribute('aria-label', 'Toggle dark mode')
+    }
+  }
+  
+  // Add ARIA labels to pagination
+  const prevLink = document.querySelector('.pager-link.prev')
+  const nextLink = document.querySelector('.pager-link.next')
+  
+  if (prevLink && !prevLink.hasAttribute('aria-label')) {
+    const prevText = prevLink.querySelector('.desc')?.textContent || 'previous page'
+    prevLink.setAttribute('aria-label', `Go to ${prevText}`)
+  }
+  
+  if (nextLink && !nextLink.hasAttribute('aria-label')) {
+    const nextText = nextLink.querySelector('.desc')?.textContent || 'next page'
+    nextLink.setAttribute('aria-label', `Go to ${nextText}`)
+  }
+  
+  // Add ARIA labels to outline links
+  const outlineLinks = document.querySelectorAll('.VPDocOutlineItem a')
+  outlineLinks.forEach(link => {
+    if (!link.hasAttribute('aria-label')) {
+      const text = link.textContent?.trim()
+      if (text) {
+        link.setAttribute('aria-label', `Jump to section: ${text}`)
+      }
+    }
+  })
+  
+  // Add role and ARIA labels to main content
+  const content = document.querySelector('.VPContent')
+  if (content && !content.hasAttribute('role')) {
+    content.setAttribute('role', 'main')
+    content.setAttribute('aria-label', 'Main content')
+  }
+  
+  // Add ARIA labels to footer links
+  const footerLinks = document.querySelectorAll('.VPFooter a')
+  footerLinks.forEach(link => {
+    if (!link.hasAttribute('aria-label')) {
+      const text = link.textContent?.trim()
+      if (text) {
+        link.setAttribute('aria-label', text)
+      }
+    }
+  })
 }
