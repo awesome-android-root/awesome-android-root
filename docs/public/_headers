@@ -1,0 +1,29 @@
+/*
+  Content Security Policy Headers
+  Enhance security by controlling resource loading
+*/
+
+/*
+  X-Frame-Options: Prevent site from being embedded in iframes (clickjacking protection)
+*/
+X-Frame-Options: DENY
+
+/*
+  X-Content-Type-Options: Prevent MIME type sniffing
+*/
+X-Content-Type-Options: nosniff
+
+/*
+  X-XSS-Protection: Enable XSS filter in older browsers
+*/
+X-XSS-Protection: 1; mode=block
+
+/*
+  Permissions-Policy: Control browser features and APIs
+*/
+Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+
+/*
+  Strict-Transport-Security: Force HTTPS
+*/
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
