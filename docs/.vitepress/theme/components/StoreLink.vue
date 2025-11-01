@@ -15,14 +15,13 @@ const props = defineProps({
   store: {
     type: String,
     required: true,
-    validator: (value) => ['fdroid', 'playstore', 'telegram'].includes(value)
+    validator: (value) => ['fdroid', 'playstore'].includes(value)
   }
 })
 
 const ariaLabel = computed(() => {
   if (props.store === 'fdroid') return 'Download on F-Droid'
   if (props.store === 'playstore') return 'Get it on Play Store'
-  if (props.store === 'telegram') return 'Join on Telegram'
   return ''
 })
 
@@ -34,11 +33,6 @@ const icon = computed(() => {
   } else if (props.store === 'playstore') {
     return `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5">
       <path d="M9.3,5.52a7,7,0,0,1,2,.76L32.52,18l-5.87,6L7.68,5.9A2.46,2.46,0,0,1,9.3,5.52ZM7.68,5.9l19,18.1L7.7,42.07c-.7-.56-1.07-1.69-1.07-3.36V9.29c0-1.67.36-2.82,1-3.38ZM32.52,18l7,3.87c2.49,1.38,2.49,2.84,0,4.22l-7,3.87-5.87-6,5.87-6Zm0,12L11.34,41.72c-1.16.64-2.72,1.19-3.64.35L26.65,24Z" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`
-  } else if (props.store === 'telegram') {
-    return `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-      <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
     </svg>`
   }
   return ''
@@ -108,15 +102,6 @@ const icon = computed(() => {
   color: #0d47a1;
 }
 
-/* Telegram styling - Light mode */
-.store-badge.telegram {
-  color: #0088cc;
-}
-
-.store-badge.telegram:hover {
-  color: #006699;
-}
-
 /* Dark mode adjustments */
 html.dark .store-badge.fdroid {
   color: #64b5f6;
@@ -132,14 +117,6 @@ html.dark .store-badge.playstore {
 
 html.dark .store-badge.playstore:hover {
   color: #90caf9;
-}
-
-html.dark .store-badge.telegram {
-  color: #4fc3f7;
-}
-
-html.dark .store-badge.telegram:hover {
-  color: #81d4fa;
 }
 
 html.dark .store-icon :deep(svg) {
