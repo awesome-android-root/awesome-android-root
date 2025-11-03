@@ -558,6 +558,9 @@ Follow this path:
 [↑ Back to top](#table-of-contents)
 
 ### OS Specific Mods
+
+[AOSP](#aosp-android-open-source-project) | [ColorOS](#coloros-oppo) | [HyperOS](#hyperos-xiaomi) | [NothingOS](#nothingos) | [OneUI](#one-ui-samsung) | [Onyx](#onyx) | [OxygenOS](#oxygen-os-oneplus) | [ZUI](#zui)
+
 #### AOSP (Android Open Source Project)
 - **[⭐ PixelXpert](https://github.com/siavash79/PixelXpert)** - A mixed Xposed+Magisk module, which is made to allow customizations that are not originally designed in AOSP. `FOSS` `[M]` `[LSP]`
 - **[PIXELIFY NEXT](https://github.com/BasGame1/Pixelify-Next)** - A Magisk Module which enables Pixel UI and some exclusive features. `FOSS` `[M]`
