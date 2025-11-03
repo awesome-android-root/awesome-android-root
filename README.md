@@ -338,7 +338,7 @@ Follow this path:
 - **[Cubic-AdBlock](https://github.com/Vaz15k/Cubic-AdBlock)** - A simple AdBlock module based on the hosts file. `FOSS` `[M]`
 - **[F*ck AD](https://github.com/hujiayucc/Fuck-AD)** - As the name implies, this is an ad-blocking Xposed module. `FOSS` `[LSP]`
 - **[Magical Protection](https://github.com/programminghoch10/MagicalProtection)** - Magisk-only completely systemless adblocking. `FOSS` `[M]`
-- **[Magisk Ad Blocking Module](https://github.com/pantsufan/Magisk-Ad-Blocking-Module)** - Magisk module to block ads on android. `FOSS` `[M]`
+- **[Magisk Ad Blocking Module](https://github.com/pantsufan/Magisk-Ad-Blocking-Module)** - Block ads on android. `FOSS` `[M]`
 - **[Pi-hole-for-Android](https://github.com/DesktopECHO/Pi-hole-for-Android)** - Pi-hole/Unbound Raspbian APK installer for Android 5.0+ devices. `FOSS`
 - **[Re-Malwack](https://github.com/Magisk-Modules-Alt-Repo/Re-Malwack)** - A fully-fledged ad-block module. Contains all your needs. `FOSS` `[M]`
 - **[StevenBlock](https://github.com/mikropsoft/StevenBlock)** - Ad Blocking Module for Android supporting Magisk, KernelSU and APatch. `FOSS` `[M]`
@@ -391,7 +391,7 @@ Follow this path:
 
 ### App Permissions management
 - **[AppOps](https://play.google.com/store/apps/details?id=rikka.appops)** - Control the hidden appops conveniently. `Proprietary`
-- **[Net Switch](https://github.com/Rem01Gaming/net-switch)** - Magisk Module to isolate any app from Internet access. `FOSS` `[M]`
+- **[Net Switch](https://github.com/Rem01Gaming/net-switch)** - Isolate any app from Internet access. `FOSS` `[M]`
 - **[Permission Ruler](https://play.google.com/store/apps/details?id=com.stefanosiano.permissionruler&hl=en)** - Automatically manages app permissions when the screen is off for enhanced privacy. `Proprietary`
 - **[PermissionManagerX](https://github.com/mirfatif/PermissionManagerX)** - eXtended Permission Manager for Android to view and set Manifest Permissions and AppOps. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.mirfatif.permissionmanagerx) | [▶️ Play Store](https://play.google.com/store/apps/details?id=com.mirfatif.permissionmanagerx)
 - **[Thanox](https://github.com/Tornaco/Thanox)** - A system management tool that provide convenient functions like application startup management, background management, permission management etc. `FOSS` `[LSP]` | [🌱 F-Droid](https://apt.izzysoft.de/fdroid/index/apk/github.tornaco.android.thanos)
@@ -418,7 +418,7 @@ Follow this path:
 - **[Audio jitter silencer](https://github.com/Magisk-Modules-Alt-Repo/audio-jitter-silencer)** - For avoiding distortion on all digital audio outputs, it disables audio jitter generators (w.r.t. battery draining and optimizations, and wireless connectivity). `FOSS` `[M]`
 - **[DisableAudioFocus](https://github.com/auag0/DisableAudioFocus)** - Allows you to disable audio focus, enabling you to play multiple videos and audios simultaneously. `FOSS` `[LSP]`
 - **[LibrePods](https://github.com/kavishdevar/librepods)** - Unlocks Apple's exclusive premium AirPods features on non-Apple devices. `FOSS` `[LSP]` `[M]` `[K]`
-- **[Lower Minimum Volume](https://github.com/dxwil/Lower-Minimum-Volume)** - A simple magisk module to lower the minimum volume of media from the device's speakers. `FOSS` `[M]`
+- **[Lower Minimum Volume](https://github.com/dxwil/Lower-Minimum-Volume)** - Lower the minimum volume of media from the device's speakers. `FOSS` `[M]`
 - **[XAudioCapture](https://github.com/Xposed-Modules-Repo/io.github.wzhy.xaudiocapture)** - Lets you capture any audio stream you desire, bypassing these restrictions. `Proprietary` `[LSP]`
 
 ### Audio Configuration
@@ -454,7 +454,7 @@ Follow this path:
 
 ### Battery Savers and Optimizers
 - **[Battery Guru](https://play.google.com/store/apps/details?id=com.paget96.batteryguru)** - Battery optimization and monitoring. `Proprietary`
-- **[Battery Honey](https://github.com/kaminarich/BatteryHoney)** - A Magisk module to Optimize Battery Saving when screen OFF. `FOSS` `[M]`
+- **[Battery Honey](https://github.com/kaminarich/BatteryHoney)** - Optimize Battery Saving when screen OFF. `FOSS` `[M]`
 - **[Doze Disabler](https://github.com/draumaz/dozedisabler)** - A Magisk module that disables Doze battery optimizations at boot time. `FOSS` `[M]`
 - **[Drowser](https://gitlab.com/juanitobananas/drowser)** - Drowser is a simple app that kills the apps you select when the screen turns off. `FOSS` | [🌱 F-Droid](https://f-droid.org/app/com.jarsilio.android.drowser)
 - **[EnforceDoze](https://github.com/farfromrefug/EnforceDoze)** - Enable Doze mode immediately after screen off and turn off motion sensing to get best battery life. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.akylas.enforcedoze/)
@@ -479,7 +479,7 @@ Follow this path:
 - **[⭐ Universal GMS Doze](https://github.com/gloeyisk/universal-gms-doze)** - Patches Google Play services app and certain processes/services to be able to use battery optimization. `FOSS` `[M]`
 - **[Extreme GMS Doze](https://github.com/Skyghost090/Extreme-Gms-Doze)** - Intelligently kills Google Play Services when your screen is turned off, dramatically boosting battery life. `FOSS` `[M]`
 - **[GhostGMS](https://github.com/kaushikieeee/GhostGMS)** - Optimize Google Mobile Services for better battery life, privacy, and performance. `FOSS` `[M]`
-- **[OOSGMS-OPTIMISER](https://github.com/epicmann24/OOSGMS-OPTIMISER)** - Magisk module to optimise and remove trackers for GMS and OOS. `FOSS` `[M]`
+- **[OOSGMS-OPTIMISER](https://github.com/epicmann24/OOSGMS-OPTIMISER)** - Optimise and remove trackers for GMS and OOS. `FOSS` `[M]`
 
 [↑ Back to top](#table-of-contents)
 
@@ -532,7 +532,7 @@ Follow this path:
 - **[KernelSU-iOS-Emoji](https://github.com/n4bi10p/Ios-emoji)** - Systemlessly replaces emoji font with iOS Emoji. `FOSS` `[K]`
 - **[Magisk-iOS-Emoji](https://github.com/Keinta15/Magisk-iOS-Emoji)** - Systemlessly replaces the emoji font with iOS Emoji. `FOSS` `[M]`
 - **[OneUI Emoji Pack](https://github.com/aloozchips/OneUIEmojiPack)** - Systemlessly replaces the AOSP emoji pack with the OneUI emoji pack. `FOSS` `[M]` `[K]`
-- **[Twemoji-Remastered](https://codeberg.org/Snowy/Twemoji-Remastered)** - This is Magisk module to systemlessly to replace your phone emojis with Twemoji (Twitter Emoji). `FOSS` `[M]`
+- **[Twemoji-Remastered](https://codeberg.org/Snowy/Twemoji-Remastered)** - Systemlessly replaces your phone emojis with Twemoji (Twitter Emoji). `FOSS` `[M]`
 
 [↑ Back to top](#table-of-contents)
 
@@ -545,7 +545,7 @@ Follow this path:
 - **[NovaInstaller](https://github.com/Minionguyjpro/NovaInstaller/)** - Installs Nova Launcher to /system/app/ on Android. `FOSS`
   
 ### Navigation and Gestures
-- **[Hide Navbar Keyboard](https://github.com/UNKNUW/Hide-Navbar-Keyboard)** - Magisk module to hide navbar when keyboard appears. Supports Android 10 -15+. `FOSS` `[M]`
+- **[Hide Navbar Keyboard](https://github.com/UNKNUW/Hide-Navbar-Keyboard)** - Hide navbar when keyboard appears. Supports Android 10 -15+. `FOSS` `[M]`
 - **[NavTweaks](https://github.com/Magisk-Modules-Alt-Repo/HideNavBar)** - Fullscreen/Immersive Gesture Tweaks for Android 10-14. `FOSS` `[M]`
 - **[Three-Finger-Screenshot](https://github.com/MeowDump/Three-Finger-Screenshot)**- 3-Finger Screenshot Gesture KSU/Magisk Module. `FOSS` `[M]` `[K]`
 - **[Volume Key Track Control Module](https://github.com/Hepolise/VolumeKeyTrackControlModule)** - An Xposed module that allows to skip and play/pause track with volume keys. `FOSS` `[LSP]`
@@ -670,7 +670,7 @@ Follow this path:
 - **[FoldDevtools](https://github.com/achyuki/FoldDevtools)** - Using chrome devtools to debug webview on Android. `FOSS` `[LSP]`
 - **[IAmNotADeveloper](https://github.com/xfqwdsj/IAmNotADeveloper)** - A Xposed module for hiding Android developer-related switches status. `FOSS` `[LSP]`
 - **[Magisk Docker](https://github.com/mgksu/dockerd)** - Magisk and KernelSU module for running Docker on rooted Android devices. `FOSS` `[M]` `[K]`
-- **[Py2Droid](https://github.com/Mrakorez/py2droid)** - A Magisk module to install Python 3 on Android, including the standard library (STDLIB). `FOSS` `[M]`
+- **[Py2Droid](https://github.com/Mrakorez/py2droid)** - Install Python 3 on Android, including the standard library (STDLIB). `FOSS` `[M]`
 - **[Stealth Debug](https://github.com/sp11xy/StealthDebug)** - Hide USB-Debugging properties. `FOSS` `[M]`
 - **[Termux](https://termux.com/)** - Advanced terminal emulator and Linux environment. `FOSS` - **[More on Termux ↓](#terminal-and-shell-tools)**
 - **[Wireless ADB Switch](https://github.com/Smooth-E/wireless-adb-switch)** - Quickly enable or disable Android's Wireless Debugging feature. Includes widgets and a quick settings tile for convenience.  `FOSS` | [🌱 F-Droid](https://f-droid.org/ru/packages/com.smoothie.wirelessDebuggingSwitch)
@@ -894,7 +894,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ### Wi‑Fi Tools
 - **[DriFiCrack](https://github.com/ZeltNamizake/DriFiCrack)** - Brute Force Tool to Crack Wi-Fi Passwords. `FOSS` `[M]`
-- **[Magisk-WiFiADB](https://github.com/mrh929/magisk-wifiadb)** - A Magisk module to enable WiFi ADB automatically. `FOSS` `[M]`
+- **[Magisk-WiFiADB](https://github.com/mrh929/magisk-wifiadb)** - Enable WiFi ADB automatically. `FOSS` `[M]`
 - **[WiFi Password Viewer for MMRL](https://github.com/Googlers-Repo/wpd)** - WiFi Password Viewer for MMRL. `FOSS`
 
 ### Misc Network Tools
@@ -978,7 +978,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 </details>
 
 - **[⭐ Enable Screenshot](https://github.com/LSPosed/DisableFlagSecure)** - Enabling screenshots in apps that normally wouldn't allow it, and disabling screenshot(Android 14+) and screen record(Android 15+) detection. `FOSS` `[LSP]`
-- **[⭐ Flag Secure Patcher](https://github.com/j-hc/FlagSecurePatcher)** - Magisk module to patch service.jar on device to disable secure lock and screenshot listeners. `FOSS` `[M]`
+- **[⭐ Flag Secure Patcher](https://github.com/j-hc/FlagSecurePatcher)** - Patch service.jar on device to disable secure lock and screenshot listeners. `FOSS` `[M]`
 - **[CaptureSposed](https://github.com/99keshav99/CaptureSposed)** - Xposed module that effectively disables the newly introduced screenshot detection API in Android 14. `FOSS` `[LSP]`
 - **[Simple Flag Secure](https://github.com/ShivamXD6/Simple-Flag-Secure)** - Disable Secure Flag and allow taking screenshots/screen recording in apps supports KSU/APatch . `FOSS` `[M]` `[K]`
 
@@ -1013,8 +1013,8 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[KernelSU-next](https://github.com/KernelSU-Next/KernelSU-Next)** - An advanced Kernel based root solution for Android.
 
 ### Bootloop Protection
-- **[Anti bootloop](https://github.com/Magisk-Modules-Alt-Repo/abootloop)** - A Magisk Module to protect from bootloops. `FOSS` `[M]`
-- **[YetAnotherBootloopProtector](https://github.com/Magisk-Modules-Alt-Repo/YetAnotherBootloopProtector)** - A Magisk Module to monitor and fix potential Bootloops and SystemUI failures. `FOSS` `[M]`
+- **[Anti bootloop](https://github.com/Magisk-Modules-Alt-Repo/abootloop)** - Protect from bootloops. `FOSS` `[M]`
+- **[YetAnotherBootloopProtector](https://github.com/Magisk-Modules-Alt-Repo/YetAnotherBootloopProtector)** - Monitor and fix potential Bootloops and SystemUI failures. `FOSS` `[M]`
 
 ### Zygisk Implementations
 
@@ -1121,7 +1121,7 @@ Use these modules if you need Zygisk features on alternative root frameworks (Ke
 - **[Disable Rotation Button](https://github.com/JavaCakeGames/disable-rotation-button)** - App to disable Android's floating rotation button. `FOSS`
 - **[Pointer Replacer](https://github.com/thesandipv/pointer_replacer)** - Replaces a dot appears when user touch the screen [Require Show Touches to be enabled in Developer Options]. `FOSS` `[LSP]`
 - **[Pseudo DC Dimming](https://github.com/dantmnf/PseudoDCDimming)** - Enable alternative dimming mode (likely DC-like) on low brightness for some OLED displays by using software brightness gain. `FOSS` [LSP]`
-- **[Rotation Suggestions Closed](https://github.com/Astoritin/RotationSuggestionsClosed)** - A Magisk module to stop showing rotation suggestion button as rotating screen. `FOSS` `[M]`
+- **[Rotation Suggestions Closed](https://github.com/Astoritin/RotationSuggestionsClosed)** - Stop showing rotation suggestion button as rotating screen. `FOSS` `[M]`
 - **[SecondScreen](https://github.com/farmerbb/SecondScreen)** - Advanced solution to connect your Android device to external displays. `FOSS` | [🌱 F-Droid](https://f-droid.org/packages/com.farmerbb.secondscreen.free/) | [▶️ Play Store](https://play.google.com/store/apps/details?id=com.farmerbb.secondscreen.free)
 
 [↑ Back to top](#table-of-contents)
@@ -1131,7 +1131,7 @@ Use these modules if you need Zygisk features on alternative root frameworks (Ke
 ## System Modifications
 
 - **[Classic Power Menu](https://github.com/KieronQuinn/ClassicPowerMenu)** - Power Menu Replacement for Android 11+, with the main aim being restoring power menu options (Device Controls and Quick Access Wallet) on Android 12. `FOSS`
-- **[Disable Low Ram Flag](https://github.com/Magisk-Modules-Alt-Repo/disable-low-ram)** - Magisk module to disable Low‑RAM flag on Android Go devices. `FOSS` `[M]`
+- **[Disable Low Ram Flag](https://github.com/Magisk-Modules-Alt-Repo/disable-low-ram)** - Disable Low‑RAM flag on Android Go devices. `FOSS` `[M]`
 - **[Multi Userui Enabler](https://github.com/InsertX2k/multiuseruienabler)** -  Magisk module that tries to enable Multi-User UI. `FOSS` `[M]`
 - **[Noogle Magisk](https://github.com/SelfRef/noogle-magisk)** - Magisk modules for removing/replacing Google applications on stock Android 11-15. `FOSS` `[M]`
 - **[Secure Element Access](https://github.com/jqssun/android-se-access)** - Enable access to secure element for trusted apps. `FOSS`
@@ -1159,7 +1159,7 @@ VBMeta is a critical component of Android Verified Boot (AVB), a security featur
 </details>
 
 - **[Android VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer)** - A Magisk/KernelSU/Apatch module to fix VBMeta detections on Android. `FOSS` `[M]` `[K]`
-- **[VBMeta Disguiser](https://github.com/Astoritin/VBMetaDisguiser)** - A Magisk module to disguise the properties of vbmeta. `FOSS` `[M]` `[K]`
+- **[VBMeta Disguiser](https://github.com/Astoritin/VBMetaDisguiser)** - Disguises the properties of vbmeta. `FOSS` `[M]` `[K]`
 
 [↑ Back to top](#table-of-contents)
 
