@@ -731,7 +731,9 @@ Follow this path:
 - **[Location Indicator Whitelist](https://github.com/gilbsgilbs/LocationIndicatorWhitelist)** - Prevents applications from spamming the annoying location notification dot on Android 12 +. `FOSS` `[LSP]`
 - **[Hide Mock Location](https://github.com/auag0/HideMockLocation)** - Xposed Module to Hide Mock Location Settings. `FOSS` `[LSP]`
 - **[XposedFakeLocation](https://github.com/noobexon1/XposedFakeLocation)** - Allows you to spoof your device's location globally or for specific apps without using "mock location" from the developer options. `FOSS` `[LSP]`
-> Also check out [Maps Mods](#maps-mods)
+
+> [!TIP]
+> Also check out: [Maps Mods section](#maps-mods)
 
 [↑ Back to top](#table-of-contents)
 
@@ -739,7 +741,7 @@ Follow this path:
 
 ## LSPosed Framework
 
-<details><summary><strong>What is LSPosed?</strong></summary>
+<details><summary><strong>What is LSPosed? (Tap to expand)</strong></summary>
 
 LSPosed allows you to use Xposed modules, which are small add-ons that can modify or extend the functionality of your Android system and apps. These modules can add features, tweak settings, and enhance the overall usability of your device.
 
