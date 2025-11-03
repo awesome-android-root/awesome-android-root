@@ -620,6 +620,9 @@ Follow this path:
 
 [↑ Back to top](#table-of-contents)
 
+#### ZUI
+- **[Unfuck ZUI Tablet](https://github.com/Xposed-Modules-Repo/xyz.cirno.unfuckzui/)** - Adjust notification icon size, restore AOSP-style installers/permissions, enforce screen rotation persistence, and allow package querying etc. `Proprietary` `[LSP]`
+
 ### Themes and UI
 - **[ColorBlendr](https://github.com/Mahmud0808/ColorBlendr)** - Customize Material You colors of your device. `FOSS` | [🌱 F-Droid](https://f-droid.org/en/packages/com.drdisagree.colorblendr/)
 - **[Global Icon Pack](https://github.com/RichardLuo0/global-icon-pack-android)** - An Xposed module for applying icon packs globally. `FOSS` `[LSP]`
