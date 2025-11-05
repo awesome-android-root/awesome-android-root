@@ -1,6 +1,6 @@
 /**
  * Markdown-it plugin to transform F-Droid and Play Store badge links into custom Vue components
- * Only converts links with specific text patterns (🌱 F-Droid or ▶️ Play Store)
+ * Only converts links with specific text patterns (🌱 or ▶️)
  * This provides a fast, efficient, and robust solution for rendering store links with icons
  */
 
@@ -37,7 +37,7 @@ export function storeLinkPlugin(md) {
         const linkText = nextToken.content;
         
         // Check if this is an F-Droid badge link
-        if ((linkText.includes('🌱') && linkText.includes('F-Droid')) || linkText === '🌱 F-Droid') {
+        if (linkText === '🌱' || linkText === '🌱 F-Droid') {
           if (href.includes('f-droid.org') || href.includes('fdroid') || href.includes('izzysoft.de')) {
             insideStoreLink = true;
             currentStoreType = 'fdroid';
@@ -47,7 +47,7 @@ export function storeLinkPlugin(md) {
         }
         
         // Check if this is a Play Store badge link
-        if ((linkText.includes('▶️') && linkText.includes('Play Store')) || linkText === '▶️ Play Store') {
+        if (linkText === '▶️' || linkText === '▶️ Play Store') {
           if (href.includes('play.google.com')) {
             insideStoreLink = true;
             currentStoreType = 'playstore';
