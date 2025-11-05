@@ -518,6 +518,7 @@ Follow this path:
 
 ### Fonts and Emojis
 #### Custom Fonts
+- **[EvilFont](https://github.com/dedeadend/EvilFont)** - Cange your Arabic/Persian font to Teshrin + IOS emojis. `FOSS` `[M]` `[K]`
 - **[FontCraft Pro](https://github.com/RipperHybrid/FontCraft)** - Stylish fonts & emojis for a personalized experience. `FOSS` `[M]` `[K]`
 - **[FontLoader](https://github.com/JingMatrix/FontLoader)** - Modifying fonts is a common scenario using the Magisk module. `FOSS` `[M]`
 - **[Font Manager](https://play.google.com/store/apps/details?id=com.androidacy.fontmanager)** - A great font and emoji changer by Androidacy. `Proprietary`
