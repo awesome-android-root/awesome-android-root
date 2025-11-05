@@ -1072,9 +1072,8 @@ Zygisk is a feature that allows modules to inject code directly into the Zygote 
 
 </details><br>
 
-::: tip **💡 Tip:**  
-Use these modules if you need Zygisk features on alternative root frameworks (KernelSU, APatch), or want more control over Zygisk behavior than Magisk's
-:::
+> [!TIP]
+> 💡 Use these modules if you need Zygisk features on alternative root frameworks (KernelSU, APatch), or want more control over Zygisk behavior than Magisk's built-in implementation provides.
 
 ### Root Detection Tools
 - **[⭐ Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector)** - A tool for detecting root on android. `FOSS`
@@ -1113,10 +1112,8 @@ Use these modules if you need Zygisk features on alternative root frameworks (Ke
 - **[YuriKey](https://github.com/dpejoh/yurikey)** - A systemless module to get strong integrity easily. `FOSS` `[M]` `[K]`
 - **[Zygisk-Assistant](https://github.com/snake-4/Zygisk-Assistant)** - A Zygisk module to hide root for KernelSU, Magisk and APatch. `FOSS` `[M]`
 
-::: warning warning
-❗Root hiding is a constant cat‑and‑mouse game. These methods might break with updates to Google Play Services or specific apps.
-:::
-
+> [!WARNING]
+>❗Root hiding is a constant cat‑and‑mouse game. These methods might break with updates to Google Play Services or specific apps.
 
 [↑ Back to top](#table-of-contents)
 
