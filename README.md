@@ -1,9 +1,15 @@
+<!--
+awesome-android-root
+430+ Android root apps, Magisk/KernelSU modules, and complete rooting guides
+Topics: android, rooting, magisk, kernelsu, lsposed, xposed, root-apps
+-->
+
 <div align="center" class="intro-header">
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="docs/public/images/logo.svg">
   <source media="(prefers-color-scheme: dark)" srcset="docs/public/images/logo_dark.svg">
-  <img src="docs/public/images/logo.svg" alt="Awesome Android Root Logo" width="120" height="120" />
+  <img src="docs/public/images/logo.svg" alt="Awesome Android Root Logo" width="80" height="80" />
 </picture>
 
 # Awesome Android Root
@@ -12,11 +18,9 @@
 
 <sub>Discover 430+ top root apps, Magisk/ KernelSU/ LSPosed(xposed) modules & step-by-step guides for every device.</sub>
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=blue&cacheSeconds=3600)](https://github.com/awesome-android-root/awesome-android-root)
-[![Total Entries](https://img.shields.io/badge/Apps%20%26%20Modules-430+-blue?style=for-the-badge&logo=android&cacheSeconds=3600)](#root-apps-and-modules)
-[![X (formerly Twitter) Follow](https://img.shields.io/badge/%20%20-Follow%20US-blue?logo=X&logoColor=white&style=for-the-badge&label=&#8203;)](https://x.com/awsm_and_root)
-<br>
-[![Website](https://img.shields.io/badge/Website-awesome--android--root.org-orange?style=for-the-badge&logo=googlechrome&logoColor=white)](https://awesome-android-root.org)
+[![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=blue&cacheSeconds=3600)](https://github.com/awesome-android-root/awesome-android-root) [![Total Entries](https://img.shields.io/badge/Apps%20%26%20Modules-430+-blue?style=for-the-badge&logo=android&cacheSeconds=3600)](#root-apps-and-modules) [![X Follow](https://img.shields.io/badge/%20%20-Follow%20US-blue?logo=X&logoColor=white&style=for-the-badge&label=&#8203;)](https://x.com/awsm_and_root)
+
+[![Website](https://img.shields.io/badge/Website-awesome--android--root.org-green?style=for-the-badge&logo=googlechrome&logoColor=white)](https://awesome-android-root.org)
 
 </div>
 
@@ -24,7 +28,12 @@
 
 [Introduction](#introduction) | [Rooting Guides](#rooting-guides) | [Apps & Modules](#root-apps-and-modules) | [Support](#resources-and-help)
 
-</div><br>
+</div>
+
+> [!TIP]
+> **Mobile tip**: Tap the **⋮ menu** → **Find in file** to search for specific apps (or use your browser's find function)
+
+<br>
 
 
 ### Table of Contents
@@ -173,10 +182,8 @@ Think of it like gaining **Administrator rights** on Windows or **sudo access** 
 # Rooting Guides
 
 [![Master-rooting-guide](https://img.shields.io/badge/Master--Rooting-Guide-blue?style=for-the-badge&cacheSeconds=3600)](./docs/android-root-guides/index.md)
-[![device-specific-guides](https://img.shields.io/badge/Device--Specific-Guides-lightgreen?style=for-the-badge&cacheSeconds=3600)](#device-specific-guides)
-[![how-to-guides](https://img.shields.io/badge/How--To-Guides-orange?style=for-the-badge&cacheSeconds=3600)](./docs/guides/index.md)
 
-> ⚡ Follow all steps from [fynks.github.io/check-list](https://fynks.github.io/check-list/), ensure you’re fully prepared.
+> Follow all steps from "[fynks.github.io/check-list](https://fynks.github.io/check-list/)", ensure you’re fully prepared.
 
 </div><br>
 
@@ -203,17 +210,19 @@ Follow this path:
 | APatch | Devices with tricky firmware | [APatch Guide](docs/android-root-guides/apatch-guide.md) |
 
 > [!TIP]
-> 💡 You can check out the complete comparison here: **[Root Solutions Comparison ➞](./docs/android-root-guides/index.md#root-solutions-comparison)**
+> You can check out the complete comparison here: **[Root Solutions Comparison](./docs/android-root-guides/index.md#root-solutions-comparison)**
 
 ### Step 4: **Post-Root Setup**  
-1. → Install [essential apps and modules](#starter-kit-must-have-apps)
-2. → Block Ads and trackers: [Ad Blocking](./docs/guides/android-adblocking.md)
-3. → Debloat your phone: [Debloating](./docs/guides/android-apps-debloating.md)
+1. Install [essential apps and modules](#starter-kit-must-have-apps)
+2. Block Ads and trackers: [Ad Blocking](./docs/guides/android-adblocking.md)
+3. Debloat your phone: [Debloating](./docs/guides/android-apps-debloating.md)
 
-> 📢 **For Android 14/15:** Play Integrity is stricter. Root hiding may break apps. Stay updated.
+> [!NOTE]
+> **For Android 14/15:** Play Integrity is stricter. Root hiding may break apps. Stay updated.
 
 ## Device-Specific Guides
 
+**Choose your device:**
 - [Google Pixel Root Guide](docs/android-root-guides/how-to-root-pixel-phone.md)
 - [Samsung Root Guide](docs/android-root-guides/how-to-root-samsung-phone.md)
 - [Xiaomi/HyperOS Root Guide](docs/android-root-guides/how-to-root-xiaomi-phone.md)
@@ -227,8 +236,9 @@ Follow this path:
 - [LSPosed Framework Guide](docs/android-root-guides/lsposed-guide.md)
 - [Custom ROMs Guide](docs/android-root-guides/custom-rom-installation.md)
 
-
 > **[📚 All Rooting Tutorials ➞](docs/android-root-guides/index.md)**
+
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -239,23 +249,17 @@ Follow this path:
 
 # Root Apps and Modules
 
-<sub>Discover 430+ top root apps, Magisk/KernelSU/LSPosed modules</sub>
-
-![Total Entries](https://img.shields.io/badge/Total%20Entries-435-blue?style=for-the-badge&logo=android&cacheSeconds=3600)
-![Root Apps](https://img.shields.io/badge/Root%20Apps-136-blue?style=for-the-badge&logo=android&cacheSeconds=3600)
-![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-179-orange?style=for-the-badge&logo=magisk&logoColor=white&cacheSeconds=3600)
-![KernelSU Modules](https://img.shields.io/badge/KernelSU%20Modules-46-green?style=for-the-badge&logo=keenetic&logoColor=white&cacheSeconds=3600)
-![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-118-purple?style=for-the-badge&logo=local&logoColor=white&cacheSeconds=3600)
+![Apps & Modules](https://img.shields.io/badge/Apps%20&%20Modules%20&#8203;-430+-blue?style=for-the-badge&logo=stackblitz&cacheSeconds=3600)
 
 </div><br />
 
 > [!TIP]
-> 💡 Start with our [Complete Rooting Guide](../android-root-guides/) before exploring apps below.
+> **Start with our [Complete Rooting Guide](../android-root-guides/) before exploring apps below.**
 
 > [!TIP]
-> For privacy-friendly and convenient installs, we **recommend using the F‑Droid** ecosystem — for example, install the Droid‑ify client **and enable the IzzyOnDroid repo**:
-> - Droid‑ify — https://github.com/Droid-ify/client/releases (modern F‑Droid client)
-> - IzzyOnDroid — https://apt.izzysoft.de/fdroid/ (additional F‑Droid repo with many packages)
+> For privacy-friendly and convenient installs, we **recommend using the F-Droid** ecosystem, for example, install the Droid-ify client **and enable the IzzyOnDroid repo**:
+> - Droid-ify: https://github.com/Droid-ify/client/releases (modern F-Droid client)
+> - IzzyOnDroid: https://apt.izzysoft.de/fdroid/ (additional F-Droid repo with many packages)
 
 > [!NOTE]
 > Clicking on App/Module entry point to **Source Code page** (Github/Gitlab etc) *in case of `FOSS` apps* otherwise link points to **Google Play Store**.
@@ -263,33 +267,23 @@ Follow this path:
 ---
 
 ## Glossary
-- **⭐** = Community‑recommended (most popular/trusted in category)
-- **`FOSS`** = Free and Open Source Software (source code available)
-- **`Proprietary`** = Closed-source software or unclear licensing
 
-<div style="display: flex; gap: 10px; align-items: center; margin-top: 5px; margin-bottom: 10px;">
-  <ul>
-  <li>
-   <span style="display: flex; align-items: center; gap: 5px;">
-  <code>[🌱]</code> /
-    <img src="./docs/public/images/fdroid.svg" alt="F-Droid Icon" width="20" height="20" /> = F-Droid link
-  </span>
-  </li>
-  <li>
-  <span style="display: flex; align-items: center; gap: 5px;">
-  <code> [▶️]</code> /
-    <img src="./docs/public/images/playstore.svg" alt="Play Store Icon" width="20" height="20" /> = Google Play Store link
-    </span>
-  </li>
-  </ul>
-</div>
+| Symbol | Meaning |
+|:----|:---|
+| ⭐ | Community-recommended (most popular/trusted in category) |
+| `FOSS` | Free and Open Source Software (source code available) |
+| `Proprietary` | Closed-source software or unclear licensing |
+| 🌱 | Available on F-Droid |
+| ▶️ | Available on Google Play Store |
 
-### **Root Framework Badges**
-- **`[M]`** = Magisk Module (requires [_Magisk framework_](../android-root-guides/magisk-guide.md))
-- **`[K]`** = KernelSU Module (requires [_KernelSU framework_](../android-root-guides/kernelsu-guide.md)) 
-- **`[LSP]`** = LSPosed Module (requires [_LSPosed framework_](../android-root-guides/lsposed-guide.md))
+**Root Framework Badges:**
+- `[M]` = Magisk Module (requires [Magisk framework](../android-root-guides/magisk-guide.md))
+- `[K]` = KernelSU Module (requires [KernelSU framework](../android-root-guides/kernelsu-guide.md)) 
+- `[LSP]` = LSPosed Module (requires [LSPosed framework](../android-root-guides/lsposed-guide.md))
 
-### **Common Rooting Terms**
+<details>
+<summary><b>📚 Common Rooting Terms</b></summary>
+
 - **Bootloader** - Low-level software that starts your OS (must be unlocked for root)
 - **Recovery** - Special mode for system modifications (TWRP, CWM)
 - **Systemless Root** - Root method that doesn't modify system partition
@@ -298,9 +292,11 @@ Follow this path:
 - **Play Integrity** - Google's security check (replacing SafetyNet)
 - **Knox** - Samsung's security platform (trips when bootloader unlocked)
 
-### How Apps are Organized
-- In a category/sub-category, apps are sorted in following order: <br>
->  `⭐ (Community‑recommended) Apps > Alphabetically`
+</details>
+<br>
+
+**How Apps are Organized:**  
+In a category/sub-category, apps are sorted in following order: `⭐ (Community-recommended) Apps > Alphabetically`
 
 ---
 
@@ -308,13 +304,13 @@ Follow this path:
 
 **Just rooted your device?** Start with these must-have applications that form the foundation of a great root experience.
 
-| App | Category | Why it's essential |
-| :--- | :--- | :--- |
-| **[Magisk](https://github.com/topjohnwu/Magisk)** | Root Management | If you chose Magisk, this is your manager. |
-| **[App Manager](https://github.com/MuntashirAkon/AppManager)** | App Control | Inspect and manage apps with root privileges. |
-| **[MiXplorer](https://mixplorer.com/)** | File Management | A powerful file manager with full root access. |
-| **[AdAway](https://adaway.org/)** | Ad Blocking | Open-source system-wide ad blocker. |
-| **[Droid-ify](https://f-droid.org/packages/com.looker.droidify)** | F-Droid client | A modern F-Droid client for installing open-source apps. |
+| App  | Why it's essential |
+| :---: | :--- |
+| **[Magisk](https://github.com/topjohnwu/Magisk)** <br><small> `Root Management` </small> | If you chose Magisk, this is your manager. |
+| **[App Manager](https://github.com/MuntashirAkon/AppManager)** <br><small> `App Control` </small> | Inspect and manage apps with root privileges. |
+| **[MiXplorer](https://mixplorer.com/)** <br><small> `File Management` </small> | A powerful file manager with full root access. |
+| **[AdAway](https://adaway.org/)** <br><small> `Ad Blocking` </small> | Open-source system-wide ad blocker. |
+| **[Droid-ify](https://f-droid.org/packages/com.looker.droidify)** <br><small> `F-Droid client` </small> | A modern F-Droid client for installing open-source apps. |
 
 [↑ Back to top](#table-of-contents)
 
@@ -324,9 +320,14 @@ Follow this path:
 - **[Do Not Try Accessibility](https://github.com/Nitsuya/DoNotTryAccessibility)** - Hook System Framework makes the app think that accessibility services are not enabled. `FOSS` `[LSP]`
 - **[GreaseMilkyway](https://play.google.com/store/apps/details?id=net.kollnig.greasemilkyway)** - Android accessibility service designed to help people with attention-related conditions (such as ADHD) manage their digital environment and focus on what matters. `FOSS` `[LSP]`
 
+[↑ Back to top](#table-of-contents)
+
+---
 
 ## Ads and Tracking Blockers
-> 📚 **Related Guide**: [Complete Android Ad Blocking Tutorial](./docs/guides/android-adblocking.md)
+
+> [!NOTE]
+> **Related Guide**: [Complete Android Ad Blocking Tutorial](./docs/guides/android-adblocking.md)
 
 - **[⭐ AdAway](https://github.com/AdAway/AdAway)** – Open-source ad blocker using the hosts file. Blocks ads without permissions. `FOSS` | [🌱](https://f-droid.org/packages/org.adaway)
 - **[⭐ bindhosts](https://github.com/bindhosts/bindhosts)** - Systemless hosts for APatch, KernelSU and Magisk that is fully standalone and self-updating. `FOSS` `[M]` `[K]`
@@ -364,15 +365,15 @@ Follow this path:
 - **[Thor](https://github.com/trinadhthatakula/Thor)** - Android App Manager and App Installer utility. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.valhalla.thor) | [▶️](https://play.google.com/store/apps/details?id=com.valhalla.thor)
 - **[Package Manager](https://github.com/SmartPack/PackageManager)** - A highly powerful app to manage both system and user apps installed on an Android device. `FOSS` | [🌱](https://f-droid.org/packages/com.smartpack.packagemanager) | [▶️](https://play.google.com/store/apps/details?id=com.smartpack.packagemanager)
 
-#### Block App Updates
-- **[⭐ Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. Also check out → [📖 Zygisk Detach Guide](../guides/stop-android-app-auto-updates-play-store.md). `FOSS` `[M]`
+### Block App Updates
+- **[⭐ Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. Also check out [📖 Zygisk Detach Guide](../guides/stop-android-app-auto-updates-play-store.md). `FOSS` `[M]`
 - **[Update Locker](https://github.com/Xposed-Modules-Repo/ru.mike.updatelocker/)** - Block updates (and auto-updates) selected apps via popular markets including Google Play Market, Huawei AppGallery and Samsung Galaxy Store. `Proprietary`
 
-#### Freeze Apps
+### Freeze Apps
 - **[⭐ Hail](https://github.com/aistra0528/Hail)** - Disable / Hide / Suspend / Uninstall Android apps. `FOSS` | [🌱](https://f-droid.org/packages/com.aistra.hail/)
 - **[Ice Box](https://play.google.com/store/apps/details?id=com.catchingnow.icebox)** - Freeze and hide apps rarely used. `Proprietary`
 
-#### Package Management Mods
+### Package Management Mods
 - **[⭐ Disable Target API Block](https://github.com/buttercookie42/DisableTargetAPIBlock)** - Disable Android 14's installation block for old apps. `FOSS` `[LSP]`
 - **[Auto Uninstaller](https://github.com/MeRaazi/auto-uninstaller)** - Automatically uninstall blacklisted apps. `FOSS` `[K]`
 - **[BanUninstall](https://github.com/TinyHai/BanUninstall/)** - Prevents apps from being uninstalled or apps' data from being cleared. `FOSS` `[LSP]`
@@ -408,24 +409,27 @@ Follow this path:
 ---
 
 ## Audio and Media
-### Audio Enhancement
+
+**Audio Enhancement:**
 - **[Audio Modification Library Ryuki Mod](https://github.com/reiryuki/Audio-Modification-Library-Ryuki-Mod-Magisk-Module)** - Enables supported audio mods to share the same needed files, such as audio_effects. `FOSS` `[M]`
 - **[JamesDSP](https://github.com/james34602/JamesDSPManager)** - Audio DSP effects built on the Android system framework layer. This repository contains a pack of high-quality DSP algorithms specialized for audio processing. `FOSS` `[M]`
 - **[NLSound](https://github.com/Briclyaz/NLSound_module_QCom)** - Magisk module for improving audio and microphone quality in your Snapdragon SoC device. `FOSS` `[M]`
 - **[ViPER4Android FX Redesign](https://github.com/WSTxda/ViperFX-RE-Releases)** - Allows improving the audio quality by offering features such as equalizer settings, surround sound effects, bass boost, and more. `Proprietary` `[M]`
 - **[ViPER4AndroidRepackaged](https://github.com/programminghoch10/ViPER4AndroidRepackaged)** - Contains many usability enhancements and all the major fixes needed to run ViPER4Android on modern ROMs effortlessly. `FOSS` `[M]`
 
-### Audio Control and Management 
+**Audio Control and Management:**
 - **[Audio jitter silencer](https://github.com/Magisk-Modules-Alt-Repo/audio-jitter-silencer)** - For avoiding distortion on all digital audio outputs, it disables audio jitter generators (w.r.t. battery draining and optimizations, and wireless connectivity). `FOSS` `[M]`
 - **[DisableAudioFocus](https://github.com/auag0/DisableAudioFocus)** - Allows you to disable audio focus, enabling you to play multiple videos and audios simultaneously. `FOSS` `[LSP]`
 - **[LibrePods](https://github.com/kavishdevar/librepods)** - Unlocks Apple's exclusive premium AirPods features on non-Apple devices. `FOSS` `[LSP]` `[M]` `[K]`
 - **[Lower Minimum Volume](https://github.com/dxwil/Lower-Minimum-Volume)** - Lower the minimum volume of media from the device's speakers. `FOSS` `[M]`
 - **[XAudioCapture](https://github.com/Xposed-Modules-Repo/io.github.wzhy.xaudiocapture)** - Lets you capture any audio stream you desire, bypassing these restrictions. `Proprietary` `[LSP]`
 
-### Audio Configuration
+**Audio Configuration:**
 - **[Audio Misc Settings](https://github.com/Magisk-Modules-Alt-Repo/audio-misc-settings)** - For setting miscellaneous audio configuration values (media audio volume steps (100 steps), raising the resampling quality, disabling the effects framework, etc.) `FOSS` `[M]`
 - **[Audio SampleRate Changer](https://github.com/Magisk-Modules-Alt-Repo/audio-samplerate-changer)** - A Magisk module changing audio sample rates at the system-wide mixer for the best Hi-Fi experience. `FOSS` `[M]`
 - **[Hi-Res Audio Enabler](https://github.com/reiryuki/Hi-Res-Audio-Enabler-Magisk-Module)** - Enables high resolution 24 or 32-bit width audio output if device is supported. `FOSS` `[M]`
+
+[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -463,7 +467,7 @@ Follow this path:
 - **[NoWakeLock](https://github.com/NoWakeLock/NoWakeLock)** - An application that controls Android wakelocks can run on Android N and later. `FOSS` `[LSP]`
 - **[Plus Plus Battery](https://github.com/dijia1124/plusplusbattery)** - Real-time battery stats & health estimator for OnePlus/Oppo/Realme phones. `FOSS` | [🌱](https://f-droid.org/en/packages/com.dijia1124.plusplusbattery/)
 - **[Realme-GT3-neo5-CPU-limiter](https://github.com/Quantom2/Realme-GT3-neo5-CPU-limiter)** - A Magisk/KSU based module to slow down your CPU to make your screen time better. `FOSS` `[M]` `[K]`
-- **[SaverTuner](https://codeberg.org/s1m/savertuner)** - Allows you to take advantage of this built-in battery saver. You can now set different profiles that save the battery more or less aggressively. [❗Does not work on Xiaomi](https://codeberg.org/s1m/savertuner/issues/98#issuecomment-5777054). `FOSS` | [🌱](https://f-droid.org/packages/s1m.savertuner/)
+- **[SaverTuner](https://codeberg.org/s1m/savertuner)** - Allows you to take advantage of this built-in battery saver. You can now set different profiles that save the battery more or less aggressively. [Does not work on Xiaomi](https://codeberg.org/s1m/savertuner/issues/98#issuecomment-5777054). `FOSS` | [🌱](https://f-droid.org/packages/s1m.savertuner/)
 - **[Xtreme-Battery-Saver](https://github.com/Magisk-Modules-Alt-Repo/Xtreme-Battery-Saver)** - An extreme battery saver Magisk Module for users who want to really stretch their battery life. `FOSS` `[M]`
 
 ### Background Apps Management
@@ -564,7 +568,10 @@ Follow this path:
 
 ### OS Specific Mods
 
-[AOSP](#aosp-android-open-source-project) | [ColorOS](#coloros-oppo) | [HyperOS](#hyperos-xiaomi) | [NothingOS](#nothingos) | [OneUI](#one-ui-samsung) | [Onyx](#onyx) | [OxygenOS](#oxygen-os-oneplus) | [ZUI](#zui)
+|  | | | | | | | |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| [AOSP](#aosp-android-open-source-project) | [ColorOS](#coloros-oppo) | [HyperOS](#hyperos-xiaomi) | [NothingOS](#nothingos) | [OneUI](#one-ui-samsung) | [Onyx](#onyx) | [OxygenOS](#oxygen-os-oneplus) | [ZUI](#zui) |
+|  | | | | | | | |
 
 #### AOSP (Android Open Source Project)
 - **[⭐ PixelXpert](https://github.com/siavash79/PixelXpert)** - A mixed Xposed+Magisk module, which is made to allow customizations that are not originally designed in AOSP. `FOSS` `[M]` `[LSP]`
@@ -643,20 +650,22 @@ Follow this path:
 ---
 
 ## Debloating and Cleaning
-> 📚 **Related Guide**: [Android Apps Debloating Guide](../guides/android-apps-debloating.md)
 
-### Cleaning Apps
+> [!NOTE]
+> **Related Guide**: [Android Apps Debloating Guide](../guides/android-apps-debloating.md)
+
+**Cleaning Apps:**
 - **[⭐ SD Maid 2/SE](https://github.com/d4rken-org/sdmaid-se)** - A file management tool for Android that specializes in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS` | [🌱](https://f-droid.org/en/packages/eu.darken.sdmse/) | [▶️](https://play.google.com/store/apps/details?id=eu.darken.sdmse)
 - **[AutoPurge Pro](https://github.com/S123123sd/SmartClear)** - Junk cleaning automation tool that provides deep cleaning and resource management capabilities for Android devices. `FOSS` `[M]` `[K]`
 - **[Basic Cleaner](https://github.com/WeirdMidas/BasicCleaner)** - A magisk/KSU module that applies a set of cleanups and fixups every 7-15-30 days. `FOSS` `[M]` `[K]`
 - **[Cache Cleaner Widget](https://gitlab.com/Zinaro/CacheCleanerWidget)** - A root-based widget with no UI that clears all app caches in one tap. `FOSS` | [🌱](https://f-droid.org/packages/com.zinaro.cachecleanerwidget/)
 - **[Cleaner Royall](https://github.com/araafroyall/Cleaner-Royall)** - A lightweight but ultra-fast and powerful cleaner for Android. `Proprietary` `[LSP]`
 - **[ClearBox](https://github.com/FLYCOM-E/ClearBox)** - Can delete all software caches, installation packages, compressed packages, garbage, empty folders etc. `Proprietary` `[M]` `[K]`
-- **[EZ-Clean](https://github.com/045200/EZ-Clean)** - Android system cleaning module - supports magisk and kernelsu flashing. `FOSS` `[M]` `[K]`
+- **[EZ-Clean](https://github.com/045200/EZ-Clean)** - Android system cleaning module, supports magisk and kernelsu flashing. `FOSS` `[M]` `[K]`
 - **[Risk](https://github.com/rakarmp/Risk)** - Clean RAM Cache And Stop Background Apps, Google Apps, Third Party Apps. `FOSS` `[M]`
 
-### Debloating Tools (Remove system Apps)
-- **[⭐ Canta](https://github.com/samolego/Canta)** -  Uninstall any app without root using Shizuku (Needs [Shizuku](https://shizuku.rikka.app/) to be installed and running). `FOSS` | [🌱](https://f-droid.org/en/packages/io.github.samolego.canta/) | [▶️](https://play.google.com/store/apps/details?id=io.github.samolego.canta)
+**Debloating Tools (Remove system Apps):**
+- **[⭐ Canta](https://github.com/samolego/Canta)** - Uninstall any app without root using Shizuku (Needs [Shizuku](https://shizuku.rikka.app/) to be installed and running). `FOSS` | [🌱](https://f-droid.org/en/packages/io.github.samolego.canta/) | [▶️](https://play.google.com/store/apps/details?id=io.github.samolego.canta)
 - **[De-Bloater](https://github.com/sunilpaulmathew/De-Bloater)** - An application using the power of Magisk to debloat unwanted system apps!. `FOSS` | [🌱](https://f-droid.org/packages/com.sunilpaulmathew.debloater) | [▶️](https://play.google.com/store/apps/details?id=com.sunilpaulmathew.debloater)
 - **[EXA System App Remover](https://play.google.com/store/apps/details?id=exa.free.saux)** - Remove Bloatware, clear memory and speed up your phone now by uninstalling unused system apps. `Proprietary`
 - **[System App Nuker](https://github.com/ChiseWaguri/systemapp_nuker)** - A module to debloat system apps with WebUI Interface. `FOSS` `[M]`
@@ -1073,7 +1082,7 @@ Zygisk is a feature that allows modules to inject code directly into the Zygote 
 </details><br>
 
 > [!TIP]
-> 💡 Use these modules if you need Zygisk features on alternative root frameworks (KernelSU, APatch), or want more control over Zygisk behavior than Magisk's built-in implementation provides.
+> Use these modules if you need Zygisk features on alternative root frameworks (KernelSU, APatch), or want more control over Zygisk behavior than Magisk's built-in implementation provides.
 
 ### Root Detection Tools
 - **[⭐ Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector)** - A tool for detecting root on android. `FOSS`
@@ -1232,8 +1241,6 @@ VBMeta is a critical component of Android Verified Boot (AVB), a security featur
 
 # Resources and Help
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=blue&cacheSeconds=3600)](https://github.com/awesome-android-root/awesome-android-root?ref=awesome-android-root.org)
-[![Website](https://img.shields.io/badge/%20%20-Website-yellow?style=for-the-badge&logo=googlechrome&logoColor=white&label=&#8203;)](https://awesome-android-root.org)
 [![X (formerly Twitter) Follow](https://img.shields.io/badge/%20%20-Follow%20US-blue?logo=X&logoColor=white&style=for-the-badge&label=&#8203;)](https://x.com/awsm_and_root)
 
 </div>
@@ -1334,7 +1341,8 @@ Non‑financial impact ideas:
 
 **⚡ Built with ❤️ by [Awesome Android Root](https://github.com/awesome-android-root/awesome-android-root)**
 
-[![X Follow](https://img.shields.io/badge/Follow%20US-000?logo=X&logoColor=fff&style=for-the-badge)](https://x.com/awsm_and_root)
+[![X Follow](https://img.shields.io/badge/%20%20-Follow%20US-blue?logo=X&logoColor=white&style=for-the-badge&label=&#8203;)](https://x.com/awsm_and_root)
+[![Website](https://img.shields.io/badge/%20-Website-green?logo=google-chrome&logoColor=white&style=for-the-badge&label=&#8203;)](https://awesome-android-root.org)
 [![Back to Top](https://img.shields.io/badge/%20↑-Back%20to%20Top-blue?style=for-the-badge&color=blue)](#table-of-contents)
 
 </div>
