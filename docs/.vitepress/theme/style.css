@@ -101,18 +101,20 @@ body {
 
 
 /**
- * Component: Custom Fonts
+ * Component: Custom Fonts & Hero Typography
  * -------------------------------------------------------------------------- */
- .VPHero .name {
-  font-size: 50px;
+/* Fluid typography for better mobile scaling */
+.VPHero .name {
+  font-size: clamp(32px, 8vw, 50px);
 }
 
- .VPHero .text {
-  font-size: 25px;
+.VPHero .text {
+  font-size: clamp(18px, 4vw, 25px);
 }
 
- .VPHero .tagline {
-  font-size: 18px;
+.VPHero .tagline {
+  font-size: clamp(14px, 3vw, 18px);
+  line-height: 1.6;
 }
 
 .intro-header, .quick-nav, .root-intro, .readme-guides, .readme-guides-steps, .readme-apps-intro{
@@ -129,7 +131,7 @@ body {
   gap: 8px;
 }
 
-/* Shield.io badges - consistent sizing */
+/* Shield.io badges - consistent sizing and aspect ratio */
 img[src*="img.shields.io"] {
   width: auto;
   height: 28px;
@@ -139,6 +141,8 @@ img[src*="img.shields.io"] {
   margin: 4px;
   display: inline-block;
   background-color: transparent;
+  aspect-ratio: auto;
+  object-fit: contain;
 }
 
 /* Container layout stability */
@@ -147,11 +151,18 @@ div:has(img[src*="img.shields.io"]) {
 }
 
 /* Store link styling */
-a[href*="f-droid.org"],
-a[href*="play.google.com"]{
-  text-decoration: none;
-}
-
+  a[href*="f-droid.org"],
+  a[href*="play.google.com"],
+  a[href*="apt.izzysoft.de"] {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    min-width: 28px;
+    padding: 8px 12px;
+    margin: 4px;
+    text-decoration: none;
+  }
+  
 
 /* Font loading optimization - prevent FOIT/FOUT layout shifts */
 @font-face {
@@ -166,10 +177,24 @@ body, html {
 }
 
 
-/* Image loading states */
+/* Image loading states and optimization */
 img {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Lazy loading hint for performance */
+img[loading="lazy"] {
+  content-visibility: auto;
+}
+
+/* Logo images - fixed aspect ratio */
+.VPHero img,
+.community-card img {
+  aspect-ratio: 1;
+  object-fit: contain;
 }
 .quick-nav a{
   margin: auto 0.3rem ;
@@ -342,24 +367,135 @@ padding: 0.5rem;
 margin-bottom: 0.5rem;
 }
 
-/* Responsive adjustments */
+/**
+ * Mobile Optimizations
+ * -------------------------------------------------------------------------- */
+
+/* Optimal reading line length on all devices */
+.vp-doc {
+  max-width: min(65ch, 100%);
+}
+
+/* Responsive tables with scroll indicators */
+.vp-doc table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile-specific adjustments */
 @media (max-width: 768px) {
+  /* Better mobile reading */
+  .vp-doc {
+    font-size: 16px; /* Prevent zoom on iOS */
+    line-height: 1.7; /* Better readability */
+  }
+  
+  .vp-doc h2 {
+    font-size: clamp(20px, 5vw, 28px);
+    margin-top: 2rem;
+    scroll-margin-top: 80px; /* Account for sticky header */
+  }
+  
+  .vp-doc h3 {
+    font-size: clamp(18px, 4vw, 24px);
+    scroll-margin-top: 80px;
+  }
+  
+  /* Reduce vertical rhythm for tighter spacing */
+  .vp-doc p, .vp-doc ul, .vp-doc ol {
+    margin: 0.75em 0;
+  }
+  
+  /* App list items */
+  .vp-doc li {
+    margin: 0.5rem 0;
+  }
+  
+  /* Table scroll indicator */
+  .vp-doc table {
+    position: relative;
+  }
+  
+  .vp-doc table::after {
+    content: '';
+    position: sticky;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    background: linear-gradient(90deg, transparent, var(--vp-c-bg) 80%);
+    pointer-events: none;
+  }
+  
+  /* Better cell spacing on mobile */
+  .vp-doc td, .vp-doc th {
+    min-width: 120px;
+    padding: 12px 16px;
+  }
+
+  /* Navigation - Enhanced touch targets */
+  .VPNav .VPNavBarMenuLink,
+  .VPSidebar .VPSidebarItem a {
+    min-height: 44px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+
+  /* Inline code/badges in lists - better touch targets */
+  .vp-doc li a {
+    display: inline-block;
+    padding: 4px 2px;
+    margin: -4px -2px;
+  }
+
+  /* Journey cards - tighter spacing */
   .custom-journey-selector {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 1rem;
+    margin: 1.5rem 0;
   }
   
   .journey-card {
-    padding: 1.75rem 1.25rem;
+    padding: 1.25rem 1rem;
   }
   
+  /* Community cards - 2 columns max with tighter spacing */
   .community-cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.75rem;
   }
   
   .community-card {
     padding: 1.5rem 1rem;
+  }
+  
+  /* Search modal optimization */
+  .VPLocalSearchBox {
+    padding: 12px;
+  }
+  
+  .VPLocalSearchBox .backdrop {
+    background: var(--vp-c-bg);
+  }
+  
+  .VPLocalSearchBox input {
+    font-size: 16px; /* Prevent iOS zoom */
+    padding: 12px 16px;
+    min-height: 44px;
+  }
+  
+  .VPLocalSearchBox .result-item {
+    min-height: 48px;
+    padding: 12px 16px;
+  }
+  
+  .VPLocalSearchBox .close-button {
+    min-width: 44px;
+    min-height: 44px;
   }
 }
 
@@ -484,6 +620,10 @@ margin-bottom: 0.5rem;
 }
 
 
+/**
+ * Documentation Content Styling
+ * -------------------------------------------------------------------------- */
+
 /* Remove borders from inline code and badges */
 .vp-doc code {
   border: none !important;
@@ -500,9 +640,8 @@ margin-bottom: 0.5rem;
   box-shadow: none !important;
 }
 
-
-
 /* Inline SVG icons */
+.vp-doc img[src*="fdroid.svg"],
 .vp-doc img[src*="fdroid.svg"],
 .vp-doc img[src*="playstore.svg"],
 .vp-doc img[alt*="icon"] {
@@ -524,14 +663,9 @@ margin-bottom: 0.5rem;
   opacity: 0.25;
 }
 
-
-/* Remove underline from links that contain store badges */
-.vp-doc li a:has(.store-badge) {
-  text-decoration: none;
-}
-
-
-/* Enhanced Footer */
+/**
+ * Footer
+ * -------------------------------------------------------------------------- */
 .VPFooter {
   border-top: 1px solid var(--vp-c-divider);
   padding: 32px 24px;
