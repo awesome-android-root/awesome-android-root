@@ -30,13 +30,10 @@ Topics: android, rooting, magisk, kernelsu, lsposed, xposed, root-apps
 
 </div>
 
-<div class="mob-tip">
-
 > [!TIP]
 > **Mobile tip**: Tap the **⋮ menu** → **Find in file** to search for specific apps (or use your browser's find function)
 
 <br>
-</div>
 
 ### Table of Contents
 
@@ -62,20 +59,28 @@ Topics: android, rooting, magisk, kernelsu, lsposed, xposed, root-apps
 ### 📱 Root Apps by Category
 
 #### 🛡️ **Privacy & Security**
-- [Ads and Tracking Blockers](#ads-and-tracking-blockers)
-- [Privacy and Security](#privacy-and-security)
+- [Ads and Tracking Blockers](#-ads-and-tracking-blockers)
+- [Privacy and Security](#-privacy-and-security)
 
-#### 📦 **App Control & Management**
-- [App Management and Control](#app-management-and-control)
-  - [App Managers](#app-managers)
-  - [App Stores](#app-stores)
+#### 📦 **App Control and Management**
+- [App Management and Control](#-app-management-and-control)
   - [App Isolation and Cloning](#app-isolation-and-cloning)
-  - [App Permissions Management](#app-permissions-management)
+  - [App Managers](#app-managers)
+  - [App Update Control](#app-update-control)
+  - [Freeze Apps](#freeze-apps)
+  - [Package Management and Installation](#package-management-and-installation)
+  - [App Stores](#app-stores)
+  - [App Permissions and Control](#app-permissions-and-control)
+  - [Signature and Verification](#signature-and-verification)
 
-#### ⚡ **Performance & System**
-- [Automation and Scheduling](#automation-and-scheduling)
-- [Battery and Power Management](#battery-and-power-management)
-- [Performance Tweaks](#performance-tweaks-and-optimizations)
+#### ⚡ **Performance and System**
+- [Automation and Scheduling](#-automation-and-scheduling)
+- [Battery and Power Management](#-battery-and-power-management)
+  - [Battery Optimization](#battery-optimization)
+  - [Background App Control](#background-app-control)
+  - [Charging and Power Control](#charging-and-power-control)
+  - [Google Services Optimization](#google-services-optimization)
+- [Performance and Optimization](#-performance-and-optimization)
 - [Kernel Management](#kernel-management)
 - [System Modifications](#system-modifications)
 
@@ -84,63 +89,65 @@ Topics: android, rooting, magisk, kernelsu, lsposed, xposed, root-apps
 - [Backup and Restore](#backup-and-restore)
 - [Debloating and Cleaning](#debloating-and-cleaning)
 
-#### 🎨 **Interface & Customization**
-- [Customization and UI](#customization-and-ui)
-  - [Launchers](#launchers)
-  - [Navigation](#navigation)
-  - [Themes and UI](#themes-and-ui)
-  - [Boot Animations](#boot-animations)
-  - [Fonts and Typography](#fonts-and-typography)
-  - [Emojis](#emojis)
-  - [OS Specific Mods](#os-specific-mods)
+#### 🎨 **Interface and Customization**
+- [Boot and Startup](#-boot-and-startup)
+- [Customization and Theming](#-customization-and-theming)
   - [Digital Assistants](#digital-assistants)
+  - [Fonts](#fonts)
+  - [Emojis](#emojis)
+  - [Themes and Visual Mods](#themes-and-visual-mods)
+- [Launchers and Home Screen](#-launchers-and-home-screen)
+- [Gestures and Navigation](#-gestures-and-navigation)
+- [Notifications and UI Elements](#-notifications-and-ui-elements)
+- [OS-Specific Customization](#os-specific-customization)
 
-#### 🎵 **Audio & Media**
+#### 🎵 **Audio and Media**
 - [Audio and Media](#audio-and-media)
   - [Audio Enhancement](#audio-enhancement)
-  - [Audio Control & Management](#audio-control-and-management)
+  - [Audio Control and Management](#audio-control-and-management)
   - [Audio Configuration](#audio-configuration)
 
-#### 🌐 **Network & Communication**
+#### 🌐 **Network and Communication**
 - [Network and Connectivity](#network-and-connectivity)
 - [Location and GPS](#location-and-gps)
-- [Communication](#communication)
+- [Communication and Messaging](#-communication-and-messaging)
 
 
-#### 🔧 **App Modifications & Extensions**
-- [Modded Apps & Tweaks](#modded-apps-and-tweaks)
+#### 🔧 **App Modifications and Extensions**
+- [Modded Apps and Tweaks](#modded-apps-and-tweaks)
   - [Social Media Mods](#social-media-mods)
 - [ReVanced](#revanced)
 
-#### 🛠️ **Root & System Management**
+#### 🛠️ **Root and System Management**
 - [Root Management](#root-management)
   - [Root Managers](#root-managers)
   - [Zygisk Implementations](#zygisk-implementations)
-  - [Root Hiding & Integrity](#root-hiding-and-play-integrity)
+  - [Root Hiding and Integrity](#root-hiding-and-play-integrity)
   - [Root Detection Tools](#root-detection-tools)
   - [Bootloop Protection](#bootloop-protection)
 
-#### 📥 **Frameworks & Advanced**
+#### 📥 **Frameworks and Advanced**
 - [LSPosed Framework](#lsposed-framework)
-- [Development and Debugging](#development-and-debugging)
-- [Device Control and Hardware](#device-control-and-hardware)
+- [Development and Debugging](#-development-and-debugging)
+- [Hardware and Sensors](#-hardware-and-sensors)
 - [Terminal and Shell Tools](#terminal-and-shell-tools)
 
-#### 🖥️ **Display & Accessibility**
+#### 🖥️ **Display and Accessibility**
 - [Screen and Display](#screen-and-display)
 - [Accessibility Tools](#accessibility-tools)
 
 ### 🧰 System Tools
-- [Tools](#tools)
-  - [System Utilities](#system-utilities)
-  - [NFC Tools](#nfc-tools)
-  - [Notification & Gesture Tools](#notification-and-gesture-tools)
-  - [Storage Tools](#storage-tools)
-  - [Translation and Languages](#translation-and-languages)
+- [Utilities and System Tools](#-utilities-and-system-tools)
+  - [Browser Extensions](#browser-extensions)
+  - [NFC and Wireless](#nfc-and-wireless)
+  - [Cloud and Remote Storage](#cloud-and-remote-storage)
+  - [Device Information](#device-information)
+  - [Miscellaneous Utilities](#miscellaneous-utilities)
+  - [Translation and Localization](#translation-and-localization)
 
-### 📚 Support & Safety
+### 📚 Support and Safety
 - [Resources and Help](#resources-and-help)
-- [Legal & Safety](#legal-and-safety)
+- [Legal and Safety](#legal-and-safety)
 - [Support us](#support-the-project)
 
 </details>
@@ -203,7 +210,7 @@ Follow this path:
    → **[TWRP / OrangeFox Guide](docs/android-root-guides/how-to-install-custom-recovery.md)**  
    *(Needed to flash root and mods)*
 
-### Step 3: Choose & Install Root Method  
+### Step 3: Choose and Install Root Method  
 
 | Method | Best for | Guide |
 | :--- | :--- | :--- |
@@ -318,7 +325,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## Accessibility Tools
+## ♿ Accessibility Tools
 - **[Do Not Try Accessibility](https://github.com/Nitsuya/DoNotTryAccessibility)** - Hook System Framework makes the app think that accessibility services are not enabled. `FOSS` `[LSP]`
 - **[GreaseMilkyway](https://play.google.com/store/apps/details?id=net.kollnig.greasemilkyway)** - Android accessibility service designed to help people with attention-related conditions (such as ADHD) manage their digital environment and focus on what matters. `FOSS` `[LSP]`
 
@@ -326,7 +333,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## Ads and Tracking Blockers
+## 🛡️ Ads and Tracking Blockers
 
 > [!NOTE]
 > **Related Guide**: [Complete Android Ad Blocking Tutorial](./docs/guides/android-adblocking.md)
@@ -352,7 +359,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## App Management and Control
+## 📦 App Management and Control
 
 ### App Isolation and Cloning
 - **[Insular](https://gitlab.com/secure-system/Insular)** - Isolate your big brother app. A fork based on the excellent Island. `FOSS` | [🌱](https://f-droid.org/packages/com.oasisfeng.island.fdroid)
@@ -367,7 +374,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[Thor](https://github.com/trinadhthatakula/Thor)** - Android App Manager and App Installer utility. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.valhalla.thor) | [▶️](https://play.google.com/store/apps/details?id=com.valhalla.thor)
 - **[Package Manager](https://github.com/SmartPack/PackageManager)** - A highly powerful app to manage both system and user apps installed on an Android device. `FOSS` | [🌱](https://f-droid.org/packages/com.smartpack.packagemanager) | [▶️](https://play.google.com/store/apps/details?id=com.smartpack.packagemanager)
 
-### Block App Updates
+### App Update Control
 - **[⭐ Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. Also check out [📖 Zygisk Detach Guide](../guides/stop-android-app-auto-updates-play-store.md). `FOSS` `[M]`
 - **[Update Locker](https://github.com/Xposed-Modules-Repo/ru.mike.updatelocker/)** - Block updates (and auto-updates) selected apps via popular markets including Google Play Market, Huawei AppGallery and Samsung Galaxy Store. `Proprietary`
 
@@ -375,7 +382,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[⭐ Hail](https://github.com/aistra0528/Hail)** - Disable / Hide / Suspend / Uninstall Android apps. `FOSS` | [🌱](https://f-droid.org/packages/com.aistra.hail/)
 - **[Ice Box](https://play.google.com/store/apps/details?id=com.catchingnow.icebox)** - Freeze and hide apps rarely used. `Proprietary`
 
-### Package Management Mods
+### Package Management and Installation
 - **[⭐ Disable Target API Block](https://github.com/buttercookie42/DisableTargetAPIBlock)** - Disable Android 14's installation block for old apps. `FOSS` `[LSP]`
 - **[Auto Uninstaller](https://github.com/MeRaazi/auto-uninstaller)** - Automatically uninstall blacklisted apps. `FOSS` `[K]`
 - **[BanUninstall](https://github.com/TinyHai/BanUninstall/)** - Prevents apps from being uninstalled or apps' data from being cleared. `FOSS` `[LSP]`
@@ -393,14 +400,14 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[F-Droid Privileged Extension](https://gitlab.com/fdroid/privileged-extension)** - Eables F-Droid to install and delete apps without needing "Unknown Sources" & install updates in the background. `FOSS` | [🌱](https://f-droid.org/en/packages/org.fdroid.fdroid.privileged/)
 - **[Neo Store](https://github.com/NeoApplications/Neo-Store)** - An F-Droid client with modern UI and an arsenal of extra features. `FOSS` | [🌱](https://f-droid.org/packages/com.machiav3lli.fdroid)
 
-### App Permissions management
+### App Permissions and Control
 - **[AppOps](https://play.google.com/store/apps/details?id=rikka.appops)** - Control the hidden appops conveniently. `Proprietary`
 - **[Net Switch](https://github.com/Rem01Gaming/net-switch)** - Isolate any app from Internet access. `FOSS` `[M]`
 - **[Permission Ruler](https://play.google.com/store/apps/details?id=com.stefanosiano.permissionruler&hl=en)** - Automatically manages app permissions when the screen is off for enhanced privacy. `Proprietary`
 - **[PermissionManagerX](https://github.com/mirfatif/PermissionManagerX)** - eXtended Permission Manager for Android to view and set Manifest Permissions and AppOps. `FOSS` | [🌱](https://f-droid.org/packages/com.mirfatif.permissionmanagerx) | [▶️](https://play.google.com/store/apps/details?id=com.mirfatif.permissionmanagerx)
 - **[Thanox](https://github.com/Tornaco/Thanox)** - A system management tool that provide convenient functions like application startup management, background management, permission management etc. `FOSS` `[LSP]` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/github.tornaco.android.thanos)
 
-### App Signature Verification Mods
+### Signature and Verification
 - **[⭐ CorePatch](https://github.com/LSPosed/CorePatch)** - Disable signature verification For Android. `FOSS` `[LSP]`
 - **[⭐ Pairipfix](https://github.com/ahmedmani/pairipfix)** - Bypasses the "Get this app from Play" screen that appears when installing Android apps as an APK instead of from the Google Play Store. `FOSS` `[LSP]`
 - **[Apk Protection Patch](https://github.com/Mods-Center/Apk-Protection-Patch)** - Removes signature verification restrictions on AOSP and OEM ROMs (HyperOS, ColorOS, etc.), allowing installation of modified APKs. `Proprietary` `[M]` `[K]`
@@ -410,7 +417,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## Audio and Media
+## 🎵 Audio and Media
 
 **Audio Enhancement:**
 - **[Audio Modification Library Ryuki Mod](https://github.com/reiryuki/Audio-Modification-Library-Ryuki-Mod-Magisk-Module)** - Enables supported audio mods to share the same needed files, such as audio_effects. `FOSS` `[M]`
@@ -435,7 +442,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## Automation and Scheduling
+## 🤖 Automation and Scheduling
 - **[⭐ MacroDroid](https://play.google.com/store/search?q=macrodroid&c=apps)** - Easy to use automation app. `Proprietary`
 - **[⭐ Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)** - An advanced and powerful automation app. `Proprietary`
 - **[Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate)** - Lets you create custom automation workflows using flowcharts, enabling seamless management of tasks, files, and device settings. `Proprietary`
@@ -445,7 +452,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## Backup and Restore
+## 💾 Backup and Restore
 - **[DataBackup](https://github.com/XayahSuSuSu/Android-DataBackup)** - DataBackup for Android 7.0+. `FOSS` | [🌱](https://f-droid.org/zh_Hans/packages/com.xayah.databackup.foss/)
 - **[DiskDigger](https://play.google.com/store/apps/details?id=com.defianttech.diskdigger)** - A powerful data recovery tool for Android devices. `Proprietary`
 - **[Dumpster: Photo/Video Recovery](https://play.google.com/store/apps/details?id=com.baloota.dumpster)** - You can recover deleted videos, restore photos, undelete recently deleted apps, and other files. `Proprietary`
@@ -457,9 +464,9 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## Battery and Power Management
+## 🔋 Battery and Power Management
 
-### Battery Savers and Optimizers
+### Battery Optimization
 - **[Battery Guru](https://play.google.com/store/apps/details?id=com.paget96.batteryguru)** - Battery optimization and monitoring. `Proprietary`
 - **[Battery Honey](https://github.com/kaminarich/BatteryHoney)** - Optimize Battery Saving when screen OFF. `FOSS` `[M]`
 - **[Doze Disabler](https://github.com/draumaz/dozedisabler)** - A Magisk module that disables Doze battery optimizations at boot time. `FOSS` `[M]`
@@ -472,18 +479,18 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[SaverTuner](https://codeberg.org/s1m/savertuner)** - Allows you to take advantage of this built-in battery saver. You can now set different profiles that save the battery more or less aggressively. [Does not work on Xiaomi](https://codeberg.org/s1m/savertuner/issues/98#issuecomment-5777054). `FOSS` | [🌱](https://f-droid.org/packages/s1m.savertuner/)
 - **[Xtreme-Battery-Saver](https://github.com/Magisk-Modules-Alt-Repo/Xtreme-Battery-Saver)** - An extreme battery saver Magisk Module for users who want to really stretch their battery life. `FOSS` `[M]`
 
-### Background Apps Management
+### Background App Control
 - **[Background App Slayer (BAS)](https://github.com/UNKNUW/Background-App-Slayer)** - Automatic Killing Background apps. `FOSS` `[M]`
 - **[DeepSuppressor](https://github.com/Aurora-Nasa-1/DeepSuppressor)** - Background process management tool to monitor and control application processes. `FOSS` `[M]`
 - **[Greenify4Magisk/KSU Reborn](https://github.com/Drsexo/Greenify4Magisk-KSU-Reborn)** - Integrates Greenify as a privileged system app to enable Boost Mode, enhancing hibernation performance without modifying the ROM. `FOSS` `[M]` `[K]`
 - **[Shappky](https://github.com/YasserNull/shappky)** - A simple app to boost performance by stopping background apps, relying on Root/Shizuku permissions. `FOSS` `[M]`
 
-### Charging Mods
+### Charging and Power Control
 - **[AccA](https://github.com/VR-25/acc)** - Advanced Charging Controller app. `FOSS`
 - **[Charging Bypass](https://github.com/AbhishekTor55/charging-bypass-magisk)** - Disables charging when screen is ON and re-enables when OFF. Useful for gaming/dev use. `FOSS` `[M]`
 - **[FastCharge Next](https://github.com/Dev97633/Fastcharge-next)** - Boost charging speed with smart tweaks. `FOSS` `[M]`
 
-### GMS and Play Services Optimizers
+### Google Services Optimization
 - **[⭐ Universal GMS Doze](https://github.com/gloeyisk/universal-gms-doze)** - Patches Google Play services app and certain processes/services to be able to use battery optimization. `FOSS` `[M]`
 - **[Extreme GMS Doze](https://github.com/Skyghost090/Extreme-Gms-Doze)** - Intelligently kills Google Play Services when your screen is turned off, dramatically boosting battery life. `FOSS` `[M]`
 - **[GhostGMS](https://github.com/kaushikieeee/GhostGMS)** - Optimize Google Mobile Services for better battery life, privacy, and performance. `FOSS` `[M]`
@@ -493,38 +500,36 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## Communication
+## 💬 Communication and Messaging
+
 ### Call Recording
 - **[Basic Call Recorder](https://github.com/chenxiaolong/BCR)** - A Basic Call Recorder for rooted Android devices. Also check out [GUI for BCR ↗](https://github.com/nicorac/bcr-gui). `FOSS` `[M]` `[K]`
 - **[Call Recorder - SKVALEX](https://github.com/Magisk-Modules-Repo/callrecorder-skvalex)** - Call recording app to record both sides from the line with a power of root and magisk. `FOSS` `[M]`
 
-
 ### Contact Management
 - **[Contacts Sync](https://play.google.com/store/apps/details?id=com.lb.contacts_sync)** - Uses root to sync your address book with high-quality contacts photos from WhatsApp. `Proprietary`
 
-### SMS Management
+### SMS and Messaging
 - **[NekoSMS](https://github.com/apsun/NekoSMS)** - A pattern-based text message blocker for Android. `FOSS` `[LSP]`
 - **[XposedForwardSms](https://github.com/XiaoMiHongZhaJi/XposedForwardSms)** - Forward text messages. `FOSS` `[LSP]`
-
 
 [↑ Back to top](#table-of-contents)
 
 ---
 
-## Customization and UI
+## 🎨 Customization and Theming
 
-### Boot Animations
+### Boot and Startup
 - **[Bootanimation](https://github.com/Bitterneko/Bootanimation)** - A custom boot animation for Android. `Proprietary` `[M]`
 - **[Live Boot](https://play.google.com/store/apps/details?id=eu.chainfire.liveboot)** - Get a Linux-like live boot screen on Android. `Proprietary`
 - **[Samsung Boot Animation Module](https://github.com/John0n1/SMbootFX)** - Custom boot animations for Samsung devices via Magisk. `FOSS` `[M]`
 - **[video-to-bootanimation](https://github.com/Magisk-Modules-Alt-Repo/video-to-bootanimation)** - A Magisk Module Which Can Set Videos as Android Device BootAnimation. `FOSS` `[M]`
 
+
 ### Digital Assistants
 - **[SwitchAI – Switch AI Digital Assistant](https://github.com/WSTxda/SwitchAI)** - Easily select, start, and manage your preferred AI digital assistants. `FOSS`
 
-### Fonts and Emojis
-
-#### Custom Fonts
+### Fonts
 - **[EvilFont](https://github.com/dedeadend/EvilFont)** - Cange your Arabic/Persian font to Teshrin + IOS emojis. `FOSS` `[M]` `[K]`
 - **[FontCraft Pro](https://github.com/RipperHybrid/FontCraft)** - Stylish fonts & emojis for a personalized experience. `FOSS` `[M]` `[K]`
 - **[FontLoader](https://github.com/JingMatrix/FontLoader)** - Modifying fonts is a common scenario using the Magisk module. `FOSS` `[M]`
@@ -538,16 +543,25 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[Unicode Font Set](https://github.com/Losketch/UnicodeFontSet-magisk-module/blob/main/README.en.md)** - Installs a comprehensive Unicode font set and configuration files via the Magisk framework. `FOSS` `[M]`
 - **[zFont 3](https://play.google.com/store/apps/details?id=com.htetznaing.zfont2&hl=en)** - Change custom font styles on Samsung, Vivo, iQOO, LG, Huawei, Honor, OnePlus, ASUS, OPPO, Realme, Xiaomi, Tecno, and Infinix devices. `Proprietary`
 
-#### Emojis
+### Emojis
 - **[Emoji Replacer](https://play.google.com/work/apps/details?id=com.htetz.emojireplacer)** - Swap system emojis with styles from iOS 16.4, Samsung, Google, JoyPixels, Facebook, Twemoji etc. `Proprietary`
 - **[KernelSU-iOS-Emoji](https://github.com/n4bi10p/Ios-emoji)** - Systemlessly replaces emoji font with iOS Emoji. `FOSS` `[K]`
 - **[Magisk-iOS-Emoji](https://github.com/Keinta15/Magisk-iOS-Emoji)** - Systemlessly replaces the emoji font with iOS Emoji. `FOSS` `[M]`
 - **[OneUI Emoji Pack](https://github.com/aloozchips/OneUIEmojiPack)** - Systemlessly replaces the AOSP emoji pack with the OneUI emoji pack. `FOSS` `[M]` `[K]`
 - **[Twemoji-Remastered](https://codeberg.org/Snowy/Twemoji-Remastered)** - Systemlessly replaces your phone emojis with Twemoji (Twitter Emoji). `FOSS` `[M]`
 
+### Themes and Visual Mods
+- **[ColorBlendr](https://github.com/Mahmud0808/ColorBlendr)** - Customize Material You colors of your device. `FOSS` | [🌱](https://f-droid.org/en/packages/com.drdisagree.colorblendr/)
+- **[Global Icon Pack](https://github.com/RichardLuo0/global-icon-pack-android)** - Apply icon packs globally. `FOSS` `[LSP]`
+- **[Iconify](https://github.com/Mahmud0808/Iconify)** - Customize your Android 12+ device easily. `FOSS` `[M]` `[EOL]`
+- **[Project Themer](https://play.google.com/store/apps/details?id=com.drsants.eggproject)** - Provides tools and features for rooted devices. `Proprietary` `[M]`
+
 [↑ Back to top](#table-of-contents)
 
-### Launcher Mods
+---
+
+## 🏠 Launchers and Home Screen
+
 - **[⭐ Lawnchair](https://github.com/Goooler/LawnchairRelease/)** - A customizable launcher offering a Pixel-like experience. `FOSS`
 - **[Google Shortcuts Launcher](https://github.com/WSTxda/Google-Shortcuts-Launcher)** - Easily access essential Google apps features directly from your launcher app drawer. `FOSS`
 - **[Pixel Launcher Enhanced](https://github.com/Mahmud0808/PixelLauncherEnhanced)** - Unlock a variety of exciting features including customizing the look to adding more functionality and many more. `FOSS` `[LSP]`
@@ -555,20 +569,32 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[Root Activity Launcher](https://play.google.com/store/apps/details?id=tk.zwander.rootactivitylauncher)** - Launch activities directly from your home screen with root access. `Proprietary`
 - **[NovaInstaller](https://github.com/Minionguyjpro/NovaInstaller/)** - Installs Nova Launcher to /system/app/ on Android. `FOSS`
   
-### Navigation and Gestures
+[↑ Back to top](#table-of-contents)
+
+---
+
+## 👆 Gestures and Navigation
+
 - **[Hide Navbar Keyboard](https://github.com/UNKNUW/Hide-Navbar-Keyboard)** - Hide navbar when keyboard appears. Supports Android 10 -15+. `FOSS` `[M]`
 - **[NavTweaks](https://github.com/Magisk-Modules-Alt-Repo/HideNavBar)** - Fullscreen/Immersive Gesture Tweaks for Android 10-14. `FOSS` `[M]`
 - **[Three-Finger-Screenshot](https://github.com/MeowDump/Three-Finger-Screenshot)**- 3-Finger Screenshot Gesture KSU/Magisk Module. `FOSS` `[M]` `[K]`
 - **[Volume Key Track Control Module](https://github.com/Hepolise/VolumeKeyTrackControlModule)** - Allows to skip and play/pause track with volume keys. `FOSS` `[LSP]`
 - **[Volume Scroll](https://github.com/farfromrefug/VolumeScroll)** -  Android app to scroll using volume keys. `FOSS` `[M]`
 
-### Notifications
+[↑ Back to top](#table-of-contents)
+
+---
+
+## 🔔 Notifications and UI Elements
+
 - **[Notification Code](https://gitlab.com/n00byara/NotificationCode)** - Automatically extracting authentication codes and other useful information from notifications. `FOSS` `[LSP]`
 - **[Notification Icon Fix](https://github.com/Xposed-Modules-Repo/io.github.howard20181.notificationiconfix/)** - A module for AOSP, MIUI and HyperOS. Using an algorithm to convert white notification icons into recognizable icons. `FOSS` `[LSP]`
 
 [↑ Back to top](#table-of-contents)
 
-### OS Specific Mods
+---
+
+## 📱 OS-Specific Customization
 
 |  | | | | | | | |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
@@ -641,17 +667,11 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 #### ZUI
 - **[Unfuck ZUI Tablet](https://github.com/Xposed-Modules-Repo/xyz.cirno.unfuckzui/)** - Adjust notification icon size, restore AOSP-style installers/permissions, enforce screen rotation persistence, and allow package querying etc. `Proprietary` `[LSP]`
 
-### Themes and UI
-- **[ColorBlendr](https://github.com/Mahmud0808/ColorBlendr)** - Customize Material You colors of your device. `FOSS` | [🌱](https://f-droid.org/en/packages/com.drdisagree.colorblendr/)
-- **[Global Icon Pack](https://github.com/RichardLuo0/global-icon-pack-android)** - Apply icon packs globally. `FOSS` `[LSP]`
-- **[Iconify](https://github.com/Mahmud0808/Iconify)** - Customize your Android 12+ device easily. `FOSS` `[M]` `[EOL]`
-- **[Project Themer](https://play.google.com/store/apps/details?id=com.drsants.eggproject)** - Provides tools and features for rooted devices. `Proprietary` `[M]`
-
 [↑ Back to top](#table-of-contents)
 
 ---
 
-## Debloating and Cleaning
+## 🧹 Debloating and Cleaning
 
 > [!NOTE]
 > **Related Guide**: [Android Apps Debloating Guide](../guides/android-apps-debloating.md)
@@ -677,7 +697,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## Developer and Debugging Tools
+## 🔧 Development and Debugging
 - **[⭐ Shizuku](https://github.com/RikkaApps/Shizuku)** - Use system APIs directly with ADB/root privileges. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/moe.shizuku.privileged.api) | [▶️](https://play.google.com/store/search?q=shizuku&c=apps)
 - **[Chroot Distro](https://github.com/Magisk-Modules-Alt-Repo/chroot-distro)** - Install Gnu/Linux distributions on Android. `FOSS` `[M]`
 - **[Disable usb debugging](https://github.com/Aakif17/disable_usb_debugging)** - Disables USB Debugging after every reboot. `FOSS` `[M]`
@@ -696,7 +716,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## Device Control and Hardware
+## 🎮 Hardware and Sensors
 
 ### Control device Sensors
 - **[GyroHook Project](https://github.com/AFan4724/GyroHook)** - Allows users to modify the gyroscope sensor data of Android devices. `FOSS` `[M]`
@@ -712,7 +732,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## File Management
+## 📁 File Management
 - **[⭐ MiXplorer](https://mixplorer.com/)** - Feature-rich file manager. `Proprietary`
 - **[AnExplorer](https://github.com/1hakr/AnExplorer)** - A simple, Small, Fast and Efficient File Explorer. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=dev.dworks.apps.anexplorer)
 - **[File Manager](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager&hl=en)** - Easy and powerful file explorer for Android devices. It’s free, fast and full-featured. Because of its simple UI, it’s extremely easy to use. `Proprietary`
@@ -731,7 +751,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## Kernel Management
+## ⚙️ Kernel Management
 - **[EX Kernel Manager](https://play.google.com/store/apps/details?id=flar2.exkernelmanager)** - Root tool for backup and flashing kernels, tweaking color, sound, gestures and other kernel settings. `Proprietary`
 - **[Franco Kernel Manager](https://play.google.com/store/apps/details?id=com.franco.kernel)** - A complete toolbox for all devices with a rich interface that combines everything you need to manage, tweak and empower your device. `Proprietary`
 - **[Kernel Enhancer](https://github.com/RAAJK20Pro/KernelEnhancer)** - A Simple Kernel Parameters Optimization for all devices. `FOSS` `[M]`
@@ -742,7 +762,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## Location and GPS
+## 📍 Location and GPS
 - **[GPS Optimization](https://github.com/DEMONICCA/GPS-Optimization)** - Module designed to improve GPS performance and stability on Android devices. `FOSS` `[M]`
 - **[GPS Setter](https://github.com/jqssun/android-gps-setter)** - Allows to mock locations for any specific app or entire system. `FOSS` `[LSP]` | [🌱](https://f-droid.org/packages/io.github.jqssun.gpssetter)
 - **[Location Indicator Whitelist](https://github.com/gilbsgilbs/LocationIndicatorWhitelist)** - Prevents applications from spamming the annoying location notification dot on Android 12 +. `FOSS` `[LSP]`
@@ -756,7 +776,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## LSPosed Framework
+## 🎯 LSPosed Framework
 
 <details><summary><strong>What is LSPosed? (Tap to expand)</strong></summary>
 
@@ -774,7 +794,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ---
 
-## Modded Apps and Tweaks
+## 🔨 Modded Apps and Tweaks
 
 ### Social Media Mods
 #### Bilibili Mods
@@ -846,19 +866,6 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 [↑ Back to top](#table-of-contents)
 
-### Hook Modules
-
-<details><summary><strong>What are hook modules?</strong></summary>
-
-- These are modules that hook into android apps/system to provide extra/premium functionalities in a number of apps.
-
-</details>
-
-- **[Freely module](https://modules.lsposed.org/module/me.build/)** - Compatible with mainstream social and short video applications (such as WeChat, Tik Tok, Soul, etc.), and is designed to improve the user experience and functional freedom. `Proprietary` `[LSP]`
-- **[F*ck for VIP](https://github.com/bug-bit/fckvip)** - A module to unlock some software memberships and remove ads. Check releases section for list of supported apps. `Proprietary` `[LSP]`
-- **[JunZi Xposed Hook](https://github.com/Xposed-Modules-Repo/junzi.xposed.hook/)** - Software hooks in PicsArt, AudioLab, ES File Explorer, Cosmic Toolbox etc. `Proprietary` `[LSP]`
-- **[NewHookVip](https://github.com/Xposed-Modules-Repo/top.hookvip.pro)** - Unlock some app memberships and adding some extended functions. Check releases section for list of supported apps. `Proprietary` `[LSP]`
-
 ### Keyboard Mods
 - **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
 - **[Rboard Theme Manager](https://github.com/DerTyp7214/RboardThemeManagerV3)** - A customizable manager app for Google Gboard that allows users to download, apply, and manage various themes and sound settings. `FOSS` `[LSP]`
@@ -876,6 +883,10 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[Boosteroid+](https://github.com/nitanmarcel/BoosteroidPlus)** - Customize advanced settings for the Boosteroid app, including frame rate, bitrate, and resolution options. `FOSS` `[LSP]`
 - **[EDS NG Crack](https://github.com/dumbasPL/EDS-NG-crack)** - Unlocks all features in in [EDS NG](https://play.google.com/store/apps/details?id=com.sovworks.projecteds&hl=en_US). `FOSS` `[M]`
 - **[E-Government Liberator](https://github.com/Crazyphil/digitales-amt-liberator)** - Removes root and bootloader checks from e-government apps. `FOSS` `[LSP]`
+- **[Freely module](https://modules.lsposed.org/module/me.build/)** - Compatible with mainstream social and short video applications (such as WeChat, Tik Tok, Soul, etc.), and is designed to improve the user experience and functional freedom. `Proprietary` `[LSP]`
+- **[F*ck for VIP](https://github.com/bug-bit/fckvip)** - A module to unlock some software memberships and remove ads. Check releases section for list of supported apps. `Proprietary` `[LSP]`
+- **[JunZi Xposed Hook](https://github.com/Xposed-Modules-Repo/junzi.xposed.hook/)** - Software hooks in PicsArt, AudioLab, ES File Explorer, Cosmic Toolbox etc. `Proprietary` `[LSP]`
+- **[NewHookVip](https://github.com/Xposed-Modules-Repo/top.hookvip.pro)** - Unlock some app memberships and adding some extended functions. Check releases section for list of supported apps. `Proprietary` `[LSP]`
 - **[Smule Mod](https://github.com/michei69/SmuleXposed)** - A Smule Xposed module which enables free VIP and many other features. `FOSS` `[LSP]`
 - **[Wallet Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.wallettweaks/releases)** - UI tweaks for Google Wallet. `Proprietary` `[LSP]`
 
@@ -883,7 +894,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ---
 
-## Network and Connectivity
+## 🌐 Network and Connectivity
 
 ### DNS Tools
 - **[DNS Accelerator](https://github.com/DEMONICCA/DNS-Accelerator)** - Module designed to improve system performance and network connectivity on Android devices. `FOSS` `[M]`
@@ -936,7 +947,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ---
 
-## Performance tweaks and Optimizations
+## ⚡ Performance and Optimization
 
 ### All-in-One Performance Optimizers
 - **[⭐ 3C All-in-One Toolbox](https://play.google.com/store/apps/details?id=ccc71.at.free)** - A comprehensive utility that offers a wide range of tools for monitoring, controlling, and optimizing device performance in a user-friendly interface. `Proprietary`
@@ -978,7 +989,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ---
 
-## Privacy and Security
+## 🛡️ Privacy and Security
 
 ### Device ID and Spoofing Tools
 - **[DeviceID/SSAID Changer](https://github.com/sidex15/deviceidchanger)** - A simple WebUI Module to change SSAID/DeviceID on Rooted Android Devices with Apatch, KSU (And its forks), or Magisk. `FOSS` `[M]` `[K]`
@@ -1020,7 +1031,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 ---
 
 
-## Root Management
+## 🔐 Root Management
 
 ### Root Managers
 - **[⭐ Magisk Manager](https://github.com/topjohnwu/Magisk)** - Manage Magisk modules and root permissions. `FOSS`
@@ -1072,7 +1083,7 @@ Zygisk is a feature that allows modules to inject code directly into the Zygote 
 | **Community** | Official Magisk support | Growing community | Established but proprietary | Strong open-source community |
 | **Special Features** | Native Magisk integration | Trace cleaning, minimalistic | ZN Module system, advanced injection | KernelSU/APatch optimization |
 
-### Strengths & Trade-offs
+### Strengths and Trade-offs
 
 | Implementation | **Strengths** | **Trade-offs** |
 |---------------|--------------|---------------|
@@ -1130,7 +1141,7 @@ Zygisk is a feature that allows modules to inject code directly into the Zygote 
 
 ---
 
-## Screen and Display
+## 🖥️ Screen and Display
 
 - **[AlwaysOn](https://github.com/Domi04151309/AlwaysOn)** - Adds an always-on display with various customization options regarding watch face, behavior, and background. `FOSS` `[LSP]`
 - **[Anti Brightness Change](https://github.com/binarynoise/XposedModulets)** - Prevents every app from changing the screen brightness. `FOSS` `[LSP]` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.programminghoch10.AntiBrightnessChange)
@@ -1145,7 +1156,7 @@ Zygisk is a feature that allows modules to inject code directly into the Zygote 
 
 ---
 
-## System Modifications
+## 🔧 System Modifications
 
 - **[Classic Power Menu](https://github.com/KieronQuinn/ClassicPowerMenu)** - Power Menu Replacement for Android 11+, with the main aim being restoring power menu options (Device Controls and Quick Access Wallet) on Android 12. `FOSS`
 - **[Disable Low Ram Flag](https://github.com/Magisk-Modules-Alt-Repo/disable-low-ram)** - Disable Low‑RAM flag on Android Go devices. `FOSS` `[M]`
@@ -1182,7 +1193,7 @@ VBMeta is a critical component of Android Verified Boot (AVB), a security featur
 
 ---
 
-## Terminal and Shell Tools
+## 💻 Terminal and Shell Tools
 ### Shell Tools
 - **[aShell You](https://github.com/DP-Hridayan/aShellYou)** - Android shell utility app with Material Design 3 UI, letting you run ADB, root and shell commands. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/in.hridayan.ashell)
 - **[LADB](https://github.com/tytydraco/LADB)** - Local ADB shell. `FOSS` | [LADB Free Build](https://github.com/hyperio546/ladb-builds) | [🌱](https://play.google.com/store/apps/details?id=com.draco.ladb)
@@ -1202,27 +1213,27 @@ VBMeta is a critical component of Android Verified Boot (AVB), a security featur
 
 ---
 
-## Tools
+## 🧰 Utilities and System Tools
 
-### Browser Tools
+### Browser Extensions
 - **[⭐ ChromeXt](https://github.com/JingMatrix/ChromeXt)** - UserScript and DevTools support for Chromium-based and WebView-based browsers. `FOSS` `[LSP]`
 
-### NFC Tools
+### NFC and Wireless
 - **[NFC Card Emulator Pro (Root)](https://play.google.com/store/apps/details?id=com.yuanwofei.cardemulator.pro)** - An NFC Card Emulator that simulates various types of cards, e.g., access cards, elevator cards, factory (meal) cards, school (meal) cards, some library cards, and other IC cards. `Proprietary`
 - **[NFCGate](https://github.com/nfcgate/nfcgate)** - Android application meant to capture, analyze, or modify NFC traffic. `FOSS` `[LSP]` | [🌱](https://f-droid.org/packages/de.tu_darmstadt.seemoo.nfcgate/)
 - **[NfcScreenOff](https://github.com/Jon8RFC/NfcScreenOff)** - Read NFC tags when screen is off and disable NFC tagging sound. `FOSS` `[M]`
 
-### Storage Tools
+### Cloud and Remote Storage
 - **[Magisk Tailscaled](https://github.com/mgksu/tailscaled)** - Module for running Tailscale on rooted Android devices. `FOSS` `[M]`
 - **[Rclone Magisk Module](https://github.com/NewFuture/rclone-fuse3-magisk)** - Integrates Rclone with FUSE support into Android, allowing you to manage remote storage mounts seamlessly. `FOSS` `[M]`
 - **[Rsync Magisk](https://github.com/KatelynTheStargazer/rsync-magisk)** - static rsync binary for magisk. `FOSS` `[M]`
 
-### System Info Tools
+### Device Information
 - **[Castro - system info](https://play.google.com/store/apps/details?id=com.itemstudio.castro)** - A huge collection of information about your device and a set of tools for monitoring its status. `Proprietary`
 - **[Device Info HW](https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw)** - A hardware and software information app for Android devices. `Proprietary`
 - **[Infamick Script](https://github.com/Infamousmick/Infamick-script/)** - A powerful system utility script that provides easy access to various system information and settings. `FOSS` `[M]`
 
-### System Utilities
+### Miscellaneous Utilities
 - **[MagiskGapps](https://github.com/wacko1805/MagiskGapps)** - Convert a regular GApps package into a Magisk flashable package using a simple website. `FOSS` `[M]`
 - **[MicroGPlus](https://bitgapps.io/extra)** - Installs MicroG services and other useful apps. `Proprietary` `[M]` `[K]
 - **[System Tools Android](https://play.google.com/store/apps/details?id=com.redhome.sta)** - A true utility processor that includes many small utilities for finer work with the system (including root utilities). `Proprietary`
@@ -1230,7 +1241,7 @@ VBMeta is a critical component of Android Verified Boot (AVB), a security featur
 - **[UotanToolbox NT](https://github.com/Uotan-Dev/UotanToolboxNT)** - A modern toolbox for geeks. `FOSS`
 - **[XposedModulets](https://github.com/binarynoise/XposedModulets)** - A collection of many small useful Xposed Modules. `FOSS` `[LSP]`
 
-### Translation and Languages
+### Translation and Localization
 - **[AllTrans](https://github.com/pbzinwindows/AllTrans)** - Replaces ALL TEXT IN AN APP from one language to another at runtime. `FOSS` `[LSP]`
 - **[Xposed Translate Text](https://github.com/tianci-sh/XPTranslateText)** - Translate text by MLKit / gemini2.0 / google api. `FOSS` `[LSP]`
 
@@ -1264,7 +1275,7 @@ VBMeta is a critical component of Android Verified Boot (AVB), a security featur
 ### Resource Hub
 Extended references & external reading: [resources.md](./docs/resources.md)
 
-### Contribute & Participate
+### Contribute and Participate
 - ⭐ Star the repo (boosts discovery)
 - 🐛 Report or triage [issues](https://github.com/awesome-android-root/awesome-android-root/issues)
 - 💡 Suggest new apps/modules (1 per issue for clarity)
@@ -1275,7 +1286,7 @@ Extended references & external reading: [resources.md](./docs/resources.md)
 
 ---
 
-## Legal and Safety
+## ⚖️ Legal and Safety
 
 > [!IMPORTANT]
 > **⚠️ Educational reference only.**
