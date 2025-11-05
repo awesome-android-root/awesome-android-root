@@ -148,8 +148,7 @@ div:has(img[src*="img.shields.io"]) {
 
 /* Store link styling */
 a[href*="f-droid.org"],
-a[href*="play.google.com"],
-a[href*="t.me"] {
+a[href*="play.google.com"]{
   text-decoration: none;
 }
 
