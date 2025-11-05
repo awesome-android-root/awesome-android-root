@@ -30,11 +30,13 @@ Topics: android, rooting, magisk, kernelsu, lsposed, xposed, root-apps
 
 </div>
 
+<div class="mob-tip">
+
 > [!TIP]
 > **Mobile tip**: Tap the **⋮ menu** → **Find in file** to search for specific apps (or use your browser's find function)
 
 <br>
-
+</div>
 
 ### Table of Contents
 

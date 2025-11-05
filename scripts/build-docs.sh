@@ -50,7 +50,7 @@ log_info "Created docs/android-root-apps directory"
 # 3. Filter README.md content and append to existing docs/android-root-apps/index.md
 filter_readme() {
     # Remove div elements with specified classes using sed
-    sed '/<div[^>]*class="[^"]*\(toc-overview\|intro-header\|quick-nav\|root-intro\|readme-guides\|readme-guides-steps\|readme-apps-intro\)[^"]*"[^>]*>/,/<\/div>/d' README.md
+    sed '/<div[^>]*class="[^"]*\(mob-tip\|toc-overview\|intro-header\|quick-nav\|root-intro\|readme-guides\|readme-guides-steps\|readme-apps-intro\)[^"]*"[^>]*>/,/<\/div>/d' README.md
 }
 
 if [ -f "docs/android-root-apps/index.md" ]; then
