@@ -610,6 +610,7 @@ Follow this path:
 
 #### One UI (Samsung)
 - **[⭐ KnoxPatch](https://github.com/salvogiangri/KnoxPatch)** - Get Samsung apps/features working again in your rooted Galaxy device. For better experience, please also [read this ↗](https://github.com/salvogiangri/KnoxPatch?tab=readme-ov-file#knoxpatch-enhancer) . `FOSS` `[LSP]`
+- **[Samsung Dex Standalone Mode](https://github.com/supermarsx/magisk-samsung-dex-standalone-mode)** - Systemlessly enable Samsung DeX standalone mode. `FOSS` `[M]`
 
 #### Onyx
 - **[OnyxTweaks](https://github.com/timschneeb/OnyxTweaks)** -  Xposed module for Onyx Boox e-Ink devices with Android 12.It adds other mods to the SystemUI, Android Framework, and Onyx Launcher. `FOSS` `[LSP]`
