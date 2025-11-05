@@ -28,11 +28,10 @@ Topics: android, rooting, magisk, kernelsu, lsposed, xposed, root-apps
 
 [Introduction](#introduction) | [Rooting Guides](#rooting-guides) | [Apps & Modules](#root-apps-and-modules) | [Support](#resources-and-help)
 
+| <small> **Tip**: Tap the **⋮ menu** → **Find in file** to search for specific apps (or use your browser's find function) </small> |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
 </div>
-
-> [!TIP]
-> **Mobile tip**: Tap the **⋮ menu** → **Find in file** to search for specific apps (or use your browser's find function)
-
 <br>
 
 ### Table of Contents
