@@ -517,6 +517,7 @@ Follow this path:
 - **[SwitchAI – Switch AI Digital Assistant](https://github.com/WSTxda/SwitchAI)** - Easily select, start, and manage your preferred AI digital assistants. `FOSS`
 
 ### Fonts and Emojis
+
 #### Custom Fonts
 - **[EvilFont](https://github.com/dedeadend/EvilFont)** - Cange your Arabic/Persian font to Teshrin + IOS emojis. `FOSS` `[M]` `[K]`
 - **[FontCraft Pro](https://github.com/RipperHybrid/FontCraft)** - Stylish fonts & emojis for a personalized experience. `FOSS` `[M]` `[K]`
@@ -532,6 +533,7 @@ Follow this path:
 - **[zFont 3](https://play.google.com/store/apps/details?id=com.htetznaing.zfont2&hl=en)** - Change custom font styles on Samsung, Vivo, iQOO, LG, Huawei, Honor, OnePlus, ASUS, OPPO, Realme, Xiaomi, Tecno, and Infinix devices. `Proprietary`
 
 #### Emojis
+- **[Emoji Replacer](https://play.google.com/work/apps/details?id=com.htetz.emojireplacer)** - Swap system emojis with styles from iOS 16.4, Samsung, Google, JoyPixels, Facebook, Twemoji etc. `Proprietary`
 - **[KernelSU-iOS-Emoji](https://github.com/n4bi10p/Ios-emoji)** - Systemlessly replaces emoji font with iOS Emoji. `FOSS` `[K]`
 - **[Magisk-iOS-Emoji](https://github.com/Keinta15/Magisk-iOS-Emoji)** - Systemlessly replaces the emoji font with iOS Emoji. `FOSS` `[M]`
 - **[OneUI Emoji Pack](https://github.com/aloozchips/OneUIEmojiPack)** - Systemlessly replaces the AOSP emoji pack with the OneUI emoji pack. `FOSS` `[M]` `[K]`
