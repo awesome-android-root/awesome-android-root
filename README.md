@@ -241,10 +241,10 @@ Follow this path:
 
 <sub>Discover 430+ top root apps, Magisk/KernelSU/LSPosed modules</sub>
 
-![Total Entries](https://img.shields.io/badge/Total%20Entries-432-blue?style=for-the-badge&logo=android&cacheSeconds=3600)
-![Root Apps](https://img.shields.io/badge/Root%20Apps-135-blue?style=for-the-badge&logo=android&cacheSeconds=3600)
-![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-177-orange?style=for-the-badge&logo=magisk&logoColor=white&cacheSeconds=3600)
-![KernelSU Modules](https://img.shields.io/badge/KernelSU%20Modules-43-green?style=for-the-badge&logo=keenetic&logoColor=white&cacheSeconds=3600)
+![Total Entries](https://img.shields.io/badge/Total%20Entries-435-blue?style=for-the-badge&logo=android&cacheSeconds=3600)
+![Root Apps](https://img.shields.io/badge/Root%20Apps-136-blue?style=for-the-badge&logo=android&cacheSeconds=3600)
+![Magisk Modules](https://img.shields.io/badge/Magisk%20Modules-179-orange?style=for-the-badge&logo=magisk&logoColor=white&cacheSeconds=3600)
+![KernelSU Modules](https://img.shields.io/badge/KernelSU%20Modules-46-green?style=for-the-badge&logo=keenetic&logoColor=white&cacheSeconds=3600)
 ![LSPosed Modules](https://img.shields.io/badge/LSPosed%20Modules-118-purple?style=for-the-badge&logo=local&logoColor=white&cacheSeconds=3600)
 
 </div><br />
