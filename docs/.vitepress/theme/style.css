@@ -663,6 +663,28 @@ margin-bottom: 0.5rem;
   opacity: 0.25;
 }
 
+/* Back to top links alignment */
+.vp-doc p:has(a[href*="#table-of-contents"]) {
+  text-align: right;
+  margin: 1.5rem 0;
+}
+
+.vp-doc p a[href*="#table-of-contents"] {
+  display: inline-block;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.vp-doc p a[href*="#table-of-contents"]:hover {
+  background: var(--vp-c-brand-soft);
+  transform: translateY(-1px);
+}
+
 /**
  * Footer
  * -------------------------------------------------------------------------- */
