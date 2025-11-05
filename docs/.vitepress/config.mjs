@@ -792,7 +792,7 @@ export default withPwa(defineConfig({
     }
   ],
 
-  // Apps & Modules Sidebar
+  // Apps and Modules Sidebar
   '/android-root-apps/': [
     {
       text: '⭐ Quick Access',
@@ -807,21 +807,23 @@ export default withPwa(defineConfig({
       text: '🎨 Customization & Themes',
       collapsed: false,
       items: [
-        { text: 'UI Customization & Mods', link: '/android-root-apps/#customization-and-ui' },
-        { text: 'Themes & Visual Styles', link: '/android-root-apps/#themes-and-ui' },
-        { text: 'Boot Animations', link: '/android-root-apps/#boot-animations' },
-        { text: 'Display & Screen Tweaks', link: '/android-root-apps/#screen-and-display' },
-        { text: 'Custom Launchers', link: '/android-root-apps/#launchers' }
+        { text: 'Boot and Startup', link: '/android-root-apps/#boot-and-startup' },
+        { text: 'Customization and Theming', link: '/android-root-apps/#customization-and-theming' },
+        { text: 'Themes and Visual Styles', link: '/android-root-apps/#themes-and-visual-mods' },
+        { text: 'Launchers and Home Screen', link: '/android-root-apps/#launchers-and-home-screen' },
+        { text: 'Gestures and Navigation', link: '/android-root-apps/#gestures-and-navigation' },
+        { text: 'Notifications and UI Elements', link: '/android-root-apps/#notifications-and-ui-elements' },
+        { text: 'Display and Screen Tweaks', link: '/android-root-apps/#screen-and-display' },
+        { text: 'OS-Specific Customization', link: '/android-root-apps/#os-specific-customization' }
       ]
     },
     {
       text: '⚡ Performance & Optimization',
       collapsed: false,
       items: [
-        { text: 'Gaming & Speed Boost', link: '/android-root-apps/#performance-and-gaming' },
-        { text: 'Battery Optimizations', link: '/android-root-apps/#battery-and-power-management' },
-        { text: 'System Cleanup & Maintenance', link: '/android-root-apps/#cleaning-and-maintenance' },
-        { text: 'Debloating & Bloatware Removal', link: '/android-root-apps/#debloating-and-system-app-removal' },
+        { text: 'Performance and Optimization', link: '/android-root-apps/#performance-and-optimization' },
+        { text: 'Battery and Power Management', link: '/android-root-apps/#battery-and-power-management' },
+        { text: 'System Cleanup and Maintenance', link: '/android-root-apps/#debloating-and-cleaning' },
         { text: 'Kernel Management', link: '/android-root-apps/#kernel-management' }
       ]
     },
@@ -830,18 +832,18 @@ export default withPwa(defineConfig({
       collapsed: false,
       items: [
         { text: 'Root Access Managers', link: '/android-root-apps/#root-management' },
-        { text: 'Safety & Play Integrity', link: '/android-root-apps/#root-management' },
+        { text: 'Safety and Play Integrity', link: '/android-root-apps/#root-hiding-and-play-integrity' },
         { text: 'Bootloop Protection Tools', link: '/android-root-apps/#bootloop-protection' },
         { text: 'System Modifications', link: '/android-root-apps/#system-modifications' }
       ]
     },
     {
-      text: '🛡️ Privacy & Security',
+      text: '🛡️ Privacy and Security',
       collapsed: true,
       items: [
-        { text: 'Privacy Protection Tools', link: '/android-root-apps/#privacy-and-security' },
-        { text: 'Ad & Tracker Blockers', link: '/android-root-apps/#ads-and-tracking-blockers' },
-        { text: 'Permission Managers', link: '/android-root-apps/#app-permissions-management' }
+        { text: 'Privacy and Security', link: '/android-root-apps/#privacy-and-security' },
+        { text: 'Firewalls and Network Control', link: '/android-root-apps/#firewall-and-network-control' },
+        { text: 'Ad and Tracker Blocking', link: '/android-root-apps/#ad-blocking-and-tracker-blocking' }
       ]
     },
     {
@@ -849,7 +851,7 @@ export default withPwa(defineConfig({
       collapsed: true,
       items: [
         { text: 'Complete App Control', link: '/android-root-apps/#app-management-and-control' },
-        { text: 'App Isolation & Cloning', link: '/android-root-apps/#app-isolation-and-cloning' },
+        { text: 'App Isolation and Cloning', link: '/android-root-apps/#app-isolation-and-cloning' },
         { text: 'Signature Verification Mods', link: '/android-root-apps/#app-signature-verification-mods' },
         { text: 'App Managers', link: '/android-root-apps/#app-managers' }
       ]
@@ -869,15 +871,15 @@ export default withPwa(defineConfig({
       collapsed: true,
       items: [
         { text: 'File Managers', link: '/android-root-apps/#file-management' },
-        { text: 'Backup & Restore Solutions', link: '/android-root-apps/#backup-and-restore' }
+        { text: 'Backup and Restore Solutions', link: '/android-root-apps/#backup-and-restore' }
       ]
     },
     {
       text: '🌐 Network & Connectivity',
       collapsed: true,
       items: [
-        { text: 'Network Control & Tools', link: '/android-root-apps/#network-and-connectivity' },
-        { text: 'GPS & Location Tools', link: '/android-root-apps/#location-and-gps' },
+        { text: 'Network Control and Tools', link: '/android-root-apps/#network-and-connectivity' },
+        { text: 'GPS and Location Tools', link: '/android-root-apps/#location-and-gps' },
         { text: 'NFC Utilities', link: '/android-root-apps/#nfc-tools' }
       ]
     },
@@ -885,8 +887,8 @@ export default withPwa(defineConfig({
       text: '📞 Communication',
       collapsed: true,
       items: [
-        { text: 'Call Recording & Management', link: '/android-root-apps/#call-recording' },
-        { text: 'SMS Tools & Utilities', link: '/android-root-apps/#sms-management' },
+        { text: 'Call Recording and Management', link: '/android-root-apps/#call-recording' },
+        { text: 'SMS Tools and Utilities', link: '/android-root-apps/#sms-management' },
         { text: 'Other Communication Tools', link: '/android-root-apps/#communication' }
       ]
     },
@@ -894,7 +896,7 @@ export default withPwa(defineConfig({
       text: '🎵 Audio & Media',
       collapsed: true,
       items: [
-        { text: 'Audio Tools & Utilities', link: '/android-root-apps/#audio-and-media' },
+        { text: 'Audio Tools and Utilities', link: '/android-root-apps/#audio-and-media' },
         { text: 'Sound Enhancement', link: '/android-root-apps/#audio-enhancement' },
         { text: 'Audio Configuration', link: '/android-root-apps/#audio-configuration' }
       ]
@@ -933,7 +935,7 @@ export default withPwa(defineConfig({
       text: '📦 App Management',
       collapsed: false,
       items: [
-        { text: 'App Optimization', link: '/guides/#app-management--optimization' },
+        { text: 'App Optimization', link: '/guides/#app-management-and-optimization' },
         { text: 'Debloating Guide', link: '/guides/android-apps-debloating' },
         { text: 'Stop Auto Updates', link: '/guides/stop-android-app-auto-updates-play-store' }
       ]
