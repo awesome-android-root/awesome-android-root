@@ -1,5 +1,6 @@
 docs/.vitepress/dist
 docs/.vitepress/cache
+docs/dev-dist
 node_modules
 docs/README.md
 docs/android-root-guides/*_NEW.md
