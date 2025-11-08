@@ -1235,9 +1235,9 @@ VBMeta is a critical component of Android Verified Boot (AVB), a security featur
 
 ### Miscellaneous Utilities
 - **[MagiskGapps](https://github.com/wacko1805/MagiskGapps)** - Convert a regular GApps package into a Magisk flashable package using a simple website. `FOSS` `[M]`
-- **[MicroGPlus](https://bitgapps.io/extra)** - Installs MicroG services and other useful apps. `Proprietary` `[M]` `[K]
+- **[MicroGPlus](https://bitgapps.io/extra)** - Installs MicroG services and other useful apps. `Proprietary` `[M]` `[K]`
 - **[System Tools Android](https://play.google.com/store/apps/details?id=com.redhome.sta)** - A true utility processor that includes many small utilities for finer work with the system (including root utilities). `Proprietary`
-- **[TaskManager](github.com/RohitKushvaha01/TaskManager)** - Task Manager inspired from gnome system monitor for android. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.rk.taskmanager)
+- **[TaskManager](https://github.com/RohitKushvaha01/TaskManager)** - Task Manager inspired from gnome system monitor for android. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.rk.taskmanager)
 - **[UotanToolbox NT](https://github.com/Uotan-Dev/UotanToolboxNT)** - A modern toolbox for geeks. `FOSS`
 - **[XposedModulets](https://github.com/binarynoise/XposedModulets)** - A collection of many small useful Xposed Modules. `FOSS` `[LSP]`
 
