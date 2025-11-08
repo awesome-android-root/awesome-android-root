@@ -875,6 +875,14 @@ export default withPwa(defineConfig({
       ]
     },
     {
+      text: '🌐 Browser & Web Tools',
+      collapsed: true,
+      items: [
+        { text: 'Browser Extensions', link: '/android-root-apps/#browser-extensions' },
+        { text: 'Webview Modifications', link: '/android-root-apps/#webview-mods' }
+      ]
+    },
+    {
       text: '🌐 Network & Connectivity',
       collapsed: true,
       items: [
