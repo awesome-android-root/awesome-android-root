@@ -138,9 +138,13 @@ Topics: android, rooting, magisk, kernelsu, lsposed, xposed, root-apps
 - [Screen and Display](#screen-and-display)
 - [Accessibility Tools](#accessibility-tools)
 
+#### 🌐 **Browser Tools**
+- [Browser and Web Tools](#-browser-and-web-tools)
+  - [Browser Extensions](#browser-extensions)
+  - [Webview Mods](#webview-mods)
+
 ### 🧰 System Tools
 - [Utilities and System Tools](#-utilities-and-system-tools)
-  - [Browser Extensions](#browser-extensions)
   - [NFC and Wireless](#nfc-and-wireless)
   - [Cloud and Remote Storage](#cloud-and-remote-storage)
   - [Device Information](#device-information)
@@ -502,6 +506,28 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
+
+## 🌐 Browser and Web Tools
+
+### Browser Extensions
+- **[⭐ ChromeXt](https://github.com/JingMatrix/ChromeXt)** - UserScript and DevTools support for Chromium-based and WebView-based browsers. `FOSS` `[LSP]`
+- **[FoldDevtools](https://github.com/achyuki/FoldDevtools)** - Using chrome devtools to debug webview on Android. `FOSS` `[LSP]`
+
+### Webview Mods
+
+<details><summary><strong>What is Webview in Android?</strong></summary>
+
+It is a system component that **allows Android apps to display web content directly within the application**, essentially embedding a mini-browser within the app itself.
+
+</details>
+
+- **[AnyWebView](https://github.com/neoblackxt/AnyWebView)** - Tries to detect all system webviews and add them to the developer options -> WebView implementation list. `FOSS` `[LSP]`
+- **[Open WebView](https://github.com/Magisk-Modules-Alt-Repo/open_webview)** - Helps you to replace your system webview through Magisk. `FOSS` `[M]`
+
+[↑ Back to top](#table-of-contents)
+
+---
+
 ## 💬 Communication and Messaging
 
 ### Call Recording
@@ -706,7 +732,6 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[Debug Assistant](https://github.com/ThePedroo/DebugAssistant)** - The simplest yet powerful logcat capture system as Magisk module. `FOSS` `[M]`
 - **[Dhizuku API for Xposed](https://github.com/iamr0s/Dhizuku-API-Xposed)** - Force applications to support Dhizuku. `FOSS` `[LSP]`
 - **[Disable Log Request](https://github.com/QueallyTech/DisableLogRequest)** - Automatic approve for app to access device logs (Android 13+). `FOSS` `[LSP]`
-- **[FoldDevtools](https://github.com/achyuki/FoldDevtools)** - Using chrome devtools to debug webview on Android. `FOSS` `[LSP]`
 - **[IAmNotADeveloper](https://github.com/xfqwdsj/IAmNotADeveloper)** - Hide Android developer-related switches status. `FOSS` `[LSP]`
 - **[Magisk Docker](https://github.com/mgksu/dockerd)** - Magisk and KernelSU module for running Docker on rooted Android devices. `FOSS` `[M]` `[K]`
 - **[Py2Droid](https://github.com/Mrakorez/py2droid)** - Install Python 3 on Android, including the standard library (STDLIB). `FOSS` `[M]`
@@ -1164,17 +1189,6 @@ Zygisk is a feature that allows modules to inject code directly into the Zygote 
 - **[TWRP A/B Retention Script](https://github.com/Magisk-Modules-Repo/twrp-keep)** - Keep TWRP installed after an A/B OTA. `FOSS` `[M]`
 - **[zapret for Magisk](https://github.com/sevcator/zapret-magisk)** - DPI bypass on Android with additional features. `FOSS` `[M]`
 
-### Webview Mods
-
-<details><summary><strong>What is Webview in Android?</strong></summary>
-
-It is a system component that **allows Android apps to display web content directly within the application**, essentially embedding a mini-browser within the app itself.
-
-</details>
-
-- **[AnyWebView](https://github.com/neoblackxt/AnyWebView)** - Tries to detect all system webviews and add them to the developer options -> WebView implementation list. `FOSS` `[LSP]`
-- **[Open WebView](https://github.com/Magisk-Modules-Alt-Repo/open_webview)** - Helps you to replace your system webview through Magisk. `FOSS` `[M]`
-
 ### VBMeta Mods
 
 <details><summary><strong>What is VBMeta</strong></summary>
@@ -1211,9 +1225,6 @@ VBMeta is a critical component of Android Verified Boot (AVB), a security featur
 ---
 
 ## 🧰 Utilities and System Tools
-
-### Browser Extensions
-- **[⭐ ChromeXt](https://github.com/JingMatrix/ChromeXt)** - UserScript and DevTools support for Chromium-based and WebView-based browsers. `FOSS` `[LSP]`
 
 ### NFC and Wireless
 - **[NFC Card Emulator Pro (Root)](https://play.google.com/store/apps/details?id=com.yuanwofei.cardemulator.pro)** - An NFC Card Emulator that simulates various types of cards, e.g., access cards, elevator cards, factory (meal) cards, school (meal) cards, some library cards, and other IC cards. `Proprietary`
