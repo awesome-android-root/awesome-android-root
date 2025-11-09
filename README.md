@@ -847,6 +847,8 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 ### Yandex Music Mods
 - **[Yandex Music Downloader](https://github.com/errorman-awful/YMDownloaderXposed)** - Download flac Music from Yandex Music app. `Proprietary` `[LSP]`
 
+
+
 ### Social Media Mods
 #### Bilibili Mods
 - **[MBGA](https://github.com/cledwynl/mbga/)** - Add various features to Bilibili. `FOSS` `[LSP]`
@@ -869,6 +871,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 #### Reddit Mods
 - **[Reddidn’t](https://modules.lsposed.org/module/com.wizpizz.reddidnt/)** - Dynamically finds methods within the Reddit app responsible for displaying ads and blocks them. [Warning](https://github.com/awesome-android-root/awesome-android-root/issues/71#issue-3327852351) `Proprietary` `[LSP]`
+- **[Wchill's Patches](https://github.com/wchill/revanced-patches)** - Revanced custom patches with features like view: deleted Reddit posts & comments,Banned subreddits etc. `FOSS`
 
 #### Telegram Mods
 - **[Re-Telegram](https://github.com/Sakion-Team/Re-Telegram/)** - Adds features like AntiAntiForward, AntiRecall, NoSponsoredMessages, ProhibitChannelSwitching and many more to various Telegram clients. `FOSS` `[LSP]`
