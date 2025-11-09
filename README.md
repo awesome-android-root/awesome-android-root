@@ -83,13 +83,13 @@ Topics: android, rooting, magisk, kernelsu, lsposed, xposed, root-apps
   - [Charging and Power Control](#charging-and-power-control)
   - [Google Services Optimization](#google-services-optimization)
 - [Performance and Optimization](#-performance-and-optimization)
-- [Kernel Management](#kernel-management)
-- [System Modifications](#system-modifications)
+- [Kernel Management](#-kernel-management)
+- [System Modifications](#-system-modifications)
 
 #### 🗃️ **Data & Storage**
-- [File Management](#file-management)
-- [Backup and Restore](#backup-and-restore)
-- [Debloating and Cleaning](#debloating-and-cleaning)
+- [File Management](#-file-management)
+- [Backup and Restore](#-backup-and-restore)
+- [Debloating and Cleaning](#-debloating-and-cleaning)
 
 #### 🎨 **Interface and Customization**
 - [Boot and Startup](#-boot-and-startup)
@@ -101,7 +101,7 @@ Topics: android, rooting, magisk, kernelsu, lsposed, xposed, root-apps
 - [Launchers and Home Screen](#-launchers-and-home-screen)
 - [Gestures and Navigation](#-gestures-and-navigation)
 - [Notifications and UI Elements](#-notifications-and-ui-elements)
-- [OS-Specific Customization](#os-specific-customization)
+- [OS-Specific Customization](#-os-specific-customization)
 
 #### 🎵 **Audio and Media**
 - [Audio and Media](#audio-and-media)
@@ -116,7 +116,8 @@ Topics: android, rooting, magisk, kernelsu, lsposed, xposed, root-apps
 
 
 #### 🔧 **App Modifications and Extensions**
-- [Modded Apps and Tweaks](#modded-apps-and-tweaks)
+- [Modded Apps and Tweaks](#-modded-apps-and-tweaks)
+  - [General Mods](#general-mods)
   - [Social Media Mods](#social-media-mods)
 - [ReVanced](#revanced)
 
@@ -153,7 +154,7 @@ Topics: android, rooting, magisk, kernelsu, lsposed, xposed, root-apps
 
 ### 📚 Support and Safety
 - [Resources and Help](#resources-and-help)
-- [Legal and Safety](#legal-and-safety)
+- [Legal and Safety](#-legal-and-safety)
 - [Support us](#support-the-project)
 
 </details>
@@ -822,14 +823,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ## 🔨 Modded Apps and Tweaks
 
-### Social Media Mods
-#### Bilibili Mods
-- **[MBGA](https://github.com/cledwynl/mbga/)** - Add various features to Bilibili. `FOSS` `[LSP]`
-
-#### Discord Mods
-- **[BunnyXposed](https://github.com/bunny-mod/BunnyXposed)** - A mod for Discord's mobile apps. `FOSS` `[LSP]`
-- **[Revenge](https://github.com/revenge-mod/revenge-bundle-next)** - Revenge is a client modification for Discord Android. `FOSS`
-
+### General Mods
 #### Duolingo Mods
 - **[Duolingo Regret](https://github.com/TigerBeanst/Duolingo-Regret)** - Change Duolingo's time zone to any arbitrary time zone, makes it easier to go back and finish forgotten streaks. `FOSS` `[LSP]`
 
@@ -839,18 +833,29 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 #### Google News Mods
 - **[G-News Control](https://github.com/mango0oo/G-News-Control)** - Magisk / KernelSU module for control the Google News on the home screen. `Proprietary` `[M]` `[K]`
 
-#### Instagram Mods
-- **[InstaEclipse](https://github.com/ReSo7200/InstaEclipse/)** - Adds Features like Developer Options, Ghost Mode, Ad-Free browsing, and Distraction-Free Mode to Instagram. `FOSS` `[LSP]`
-
-#### Line Mods
-- **[LineXtra](https://github.com/yagiyuu/LineXtra)** - Removes Ads and Tabs from the LINE. `FOSS` `[LSP]`
-
 #### Maps Mods
 - **[Maps Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.mapstweaks)** - Collection of maps UI tweaks for Google Maps, Yandex Maps and Yandex Navi. `Proprietary` `[LSP]`
 - **[Yandex Maps Patcher](https://github.com/Xposed-Modules-Repo/ru.bluecat.yandexmapspatcher)** - Hides ads and intrusive services in the Yandex Maps app. `Proprietary` `[LSP]`
 
 ### Ozon App
 - **[NoAdsPlus](https://github.com/igormsc/ai.noads.NoAdsPlus)** - Removes ads from the Ozon app. `FOSS` `[LSP]`
+
+### Yandex Music Mods
+- **[Yandex Music Downloader](https://github.com/errorman-awful/YMDownloaderXposed)** - Download flac Music from Yandex Music app. `Proprietary` `[LSP]`
+
+### Social Media Mods
+#### Bilibili Mods
+- **[MBGA](https://github.com/cledwynl/mbga/)** - Add various features to Bilibili. `FOSS` `[LSP]`
+
+#### Discord Mods
+- **[BunnyXposed](https://github.com/bunny-mod/BunnyXposed)** - A mod for Discord's mobile apps. `FOSS` `[LSP]`
+- **[Revenge](https://github.com/revenge-mod/revenge-bundle-next)** - Revenge is a client modification for Discord Android. `FOSS`
+
+#### Instagram Mods
+- **[InstaEclipse](https://github.com/ReSo7200/InstaEclipse/)** - Adds Features like Developer Options, Ghost Mode, Ad-Free browsing, and Distraction-Free Mode to Instagram. `FOSS` `[LSP]`
+
+#### Line Mods
+- **[LineXtra](https://github.com/yagiyuu/LineXtra)** - Removes Ads and Tabs from the LINE. `FOSS` `[LSP]`
 
 #### QQ Mods
 - **[NewQStory](https://github.com/Xposed-Modules-Repo/lin.xposed/)** - Xposed QQ module. `Proprietary` `[LSP]`
