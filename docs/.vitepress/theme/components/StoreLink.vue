@@ -46,7 +46,8 @@ const icon = computed(() => {
   justify-content: center;
   width: 24px;
   height: 24px;
-  padding: 4px;
+  padding: 3px;
+  cursor: pointer;
   border-radius: 4px;
   text-decoration: none;
   transition: all 0.2s ease;
@@ -132,7 +133,7 @@ html.dark .store-badge:hover .store-icon :deep(svg) {
   .store-badge {
     width: 22px;
     height: 22px;
-    padding: 3px;
+    padding: 2px;
   }
 }
 </style>
