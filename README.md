@@ -20,23 +20,17 @@ Topics: android, rooting, magisk, kernelsu, lsposed, xposed, root-apps
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=blue&cacheSeconds=3600)](https://github.com/awesome-android-root/awesome-android-root) [![Total Entries](https://img.shields.io/badge/Apps%20%26%20Modules-430+-blue?style=for-the-badge&logo=android&cacheSeconds=3600)](#root-apps-and-modules) [![X Follow](https://img.shields.io/badge/%20%20-Follow%20US-blue?logo=X&logoColor=white&style=for-the-badge&label=&#8203;)](https://x.com/awsm_and_root)
 
-
 </div>
-
 <div align="center" class="quick-nav">
 
 [Introduction](#introduction) | [Rooting Guides](#rooting-guides) | [Apps & Modules](#root-apps-and-modules) | [Support](#resources-and-help)
 
 </div>
-
-
 <div class="mob-tip">
 
-> 💡 **Mobile Users:** Visit **[awesome-android-root.org](https://awesome-android-root.org)** for the best browsing experience with enhanced navigation and search functionality.
+> 💡 **Mobile Users:** Visit **[awesome-android-root.org](https://awesome-android-root.org)** for better navigation and search.
 
 </div><br>
-
-
 
 ### Table of Contents
 
