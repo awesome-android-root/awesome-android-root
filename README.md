@@ -32,7 +32,6 @@ Topics: android, rooting, magisk, kernelsu, lsposed, xposed, root-apps
 
 <div class="mob-tip">
 
-> [!TIP]
 > 💡 **Mobile Users:** Visit **[awesome-android-root.org](https://awesome-android-root.org)** for the best browsing experience with enhanced navigation and search functionality.
 
 </div><br>
