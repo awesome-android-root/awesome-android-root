@@ -1215,7 +1215,7 @@ VBMeta is a critical component of Android Verified Boot (AVB), a security featur
 ## 💻 Terminal and Shell Tools
 ### Shell Tools
 - **[aShell You](https://github.com/DP-Hridayan/aShellYou)** - Android shell utility app with Material Design 3 UI, letting you run ADB, root and shell commands. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/in.hridayan.ashell)
-- **[LADB](https://github.com/tytydraco/LADB)** - Local ADB shell. `FOSS` | [LADB Free Build](https://github.com/hyperio546/ladb-builds) | [▶️](https://play.google.com/store/apps/details?id=com.draco.ladb)
+- **[LADB](https://github.com/tytydraco/LADB)** - Local ADB shell. `FOSS` | [LADB Free Build ↗](https://github.com/hyperio546/ladb-builds) | [▶️](https://play.google.com/store/apps/details?id=com.draco.ladb)
 
 ### Termux
 - **[⭐ Termux](https://github.com/termux/termux-app)** - A terminal emulator application for Android OS extendible by variety of packages. `FOSS` | [🌱](https://f-droid.org/en/packages/com.termux)
