@@ -296,6 +296,7 @@ Follow this path:
 - `[M]` = Magisk Module (requires [Magisk framework](../android-root-guides/magisk-guide.md))
 - `[K]` = KernelSU Module (requires [KernelSU framework](../android-root-guides/kernelsu-guide.md)) 
 - `[LSP]` = LSPosed Module (requires [LSPosed framework](../android-root-guides/lsposed-guide.md))
+- `[R]` = ReVanced Patch (requires [ReVanced Manager](https://github.com/ReVanced/revanced-manager))
 
 <details>
 <summary><b>📚 Common Rooting Terms</b></summary>
@@ -826,10 +827,10 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 ### General Mods
 
 ### Cake Mods
-- **[Cake - Learn English & Korean Patches](https://github.com/hoo-dles/revanced-custom-patches)** - Enable Plus . `FOSS`
+- **[Cake - Learn English & Korean Patches](https://github.com/hoo-dles/revanced-custom-patches)** - Enable Plus . `FOSS` `[R]`
 #### Duolingo Mods
 - **[Duolingo Regret](https://github.com/TigerBeanst/Duolingo-Regret)** - Change Duolingo's time zone to any arbitrary time zone, makes it easier to go back and finish forgotten streaks. `FOSS` `[LSP]`
-- **[Duolingo Patches](https://github.com/hoo-dles/revanced-custom-patches)** - Disable practice reminder banner, Unlock licensed songs, Unlock Super Duolingo features. `FOSS`
+- **[Duolingo Patches](https://github.com/hoo-dles/revanced-custom-patches)** - Disable practice reminder banner, Unlock licensed songs, Unlock Super Duolingo features. `FOSS` `[R]`
 
 #### Google Photos Mods
 - **[LimitlessPhotos](https://github.com/daglaroglou/LimitlessPhotos)** - Unlock unlimited, original-quality backup plan on Google Photos. `FOSS` `[LSP]`
@@ -871,7 +872,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 #### Reddit Mods
 - **[Reddidn’t](https://modules.lsposed.org/module/com.wizpizz.reddidnt/)** - Dynamically finds methods within the Reddit app responsible for displaying ads and blocks them. [Warning](https://github.com/awesome-android-root/awesome-android-root/issues/71#issue-3327852351) `Proprietary` `[LSP]`
-- **[Wchill's Patches](https://github.com/wchill/revanced-patches)** - Revanced custom patches with features like view: deleted Reddit posts & comments,Banned subreddits etc. `FOSS`
+- **[Wchill's Patches](https://github.com/wchill/revanced-patches)** - Revanced custom patches with features like view: deleted Reddit posts & comments,Banned subreddits etc. `FOSS` `[R]`
 
 #### Telegram Mods
 - **[Re-Telegram](https://github.com/Sakion-Team/Re-Telegram/)** - Adds features like AntiAntiForward, AntiRecall, NoSponsoredMessages, ProhibitChannelSwitching and many more to various Telegram clients. `FOSS` `[LSP]`
@@ -912,10 +913,10 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (use with caution). `Proprietary`
 
 ### ReVanced
-- **[Awesome ReVanced](https://github.com/Jman-Github/Awesome-ReVanced)** - A curated list of awesome ReVanced patches, resources and projects. `FOSS`
-- **[Privacy ReVanced Patches](https://github.com/jkennethcarino/privacy-revanced-patches)** - Privacy Patches for ReVanced to disable ads, trackers and analytics, always open Gboard in incognito mode, and much more. `FOSS`
-- **[ReVanced Manager](https://github.com/ReVanced/revanced-manager)** - Modify YouTube, YouTube Music, Spotify and many more with additional features. `FOSS`
-- **[ReVancedRepackaged](https://github.com/programminghoch10/ReVancedRepackaged)** - This magisk module contains only the ReVanced Patcher.It will patch any installed ReVanced compatible app right on your device during installation. `FOSS` `[M]`
+- **[Awesome ReVanced](https://github.com/Jman-Github/Awesome-ReVanced)** - A curated list of awesome ReVanced patches, resources and projects. `FOSS` `[R]`
+- **[Privacy ReVanced Patches](https://github.com/jkennethcarino/privacy-revanced-patches)** - Privacy Patches for ReVanced to disable ads, trackers and analytics, always open Gboard in incognito mode, and much more. `FOSS` `[R]`
+- **[ReVanced Manager](https://github.com/ReVanced/revanced-manager)** - Modify YouTube, YouTube Music, Spotify and many more with additional features. `FOSS` `[R]`
+- **[ReVancedRepackaged](https://github.com/programminghoch10/ReVancedRepackaged)** - This magisk module contains only the ReVanced Patcher.It will patch any installed ReVanced compatible app right on your device during installation. `FOSS` `[M]` `[R]`
 
 ### Misc App Mods
 - **[Boosteroid+](https://github.com/nitanmarcel/BoosteroidPlus)** - Customize advanced settings for the Boosteroid app, including frame rate, bitrate, and resolution options. `FOSS` `[LSP]`
