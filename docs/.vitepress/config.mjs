@@ -1135,8 +1135,8 @@ export default withPwa(defineConfig({
     },
     appearance: 'auto',
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/awesome-android-root/awesome-android-root' },
-      { icon: 'x', link: 'https://x.com/awsm_and_root' }
+      { icon: 'x', link: 'https://x.com/awsm_and_root' },
+      { icon: 'github', link: 'https://github.com/awesome-android-root/awesome-android-root' }
     ],
   },
 }))
