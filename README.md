@@ -9,7 +9,7 @@ Topics: android, rooting, magisk, kernelsu, lsposed, xposed, root-apps
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="docs/public/images/logo.svg">
   <source media="(prefers-color-scheme: dark)" srcset="docs/public/images/logo_dark.svg">
-  <img src="docs/public/images/logo.svg" alt="Awesome Android Root Logo" width="80" height="80" />
+  <img src="docs/public/images/logo.svg" alt="Awesome Android Root Logo" width="120" height="120" />
 </picture>
 
 # Awesome Android Root
@@ -20,7 +20,6 @@ Topics: android, rooting, magisk, kernelsu, lsposed, xposed, root-apps
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=blue&cacheSeconds=3600)](https://github.com/awesome-android-root/awesome-android-root) [![Total Entries](https://img.shields.io/badge/Apps%20%26%20Modules-430+-blue?style=for-the-badge&logo=android&cacheSeconds=3600)](#root-apps-and-modules) [![X Follow](https://img.shields.io/badge/%20%20-Follow%20US-blue?logo=X&logoColor=white&style=for-the-badge&label=&#8203;)](https://x.com/awsm_and_root)
 
-[![Website](https://img.shields.io/badge/Website-awesome--android--root.org-green?style=for-the-badge&logo=googlechrome&logoColor=white)](https://awesome-android-root.org)
 
 </div>
 
@@ -30,12 +29,15 @@ Topics: android, rooting, magisk, kernelsu, lsposed, xposed, root-apps
 
 </div>
 
-<div class="mob-tip">
+---
 
-> 💡 Tap the **⋮ menu** → **Find in file** to search for specific apps (or use your browser's find function)
+<div align="center" class="mob-tip">
+
+> 💡 **Mobile Users:** Visit **[awesome-android-root.org](https://awesome-android-root.org)** for the best browsing experience with enhanced navigation and search functionality.
 
 </div>
-<br>
+
+---
 
 ### Table of Contents
 
