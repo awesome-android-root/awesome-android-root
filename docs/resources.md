@@ -56,7 +56,7 @@ head:
       content: 2025-08-28
   - - meta
     - property: article:modified_time
-      content: 2025-08-28
+      content: 2025-11-11
   - - meta
     - name: robots
       content: index, follow, max-image-preview:large
@@ -64,28 +64,30 @@ head:
 
 # Android Rooting Resources Hub 2025
 
-> **Comprehensive reference for Android rooting, customization, and recovery**  
-> Last Updated: January 2025 | Android 15 Compatible
+> Comprehensive reference for Android rooting, customization, and recovery.
+
+Last updated: November 2025 | Android 15 ready
 
 ---
 
 ## Quick Navigation
 
-- [Getting Started](#-getting-started)
-- [Essential Tools & Software](#️-essential-tools--software)
-- [Learning Resources](#-learning-resources)
-- [Communities & Support](#-communities--support)
-- [Device-Specific Resources](#-device-specific-resources)
-- [Emergency & Recovery](#-emergency--recovery)
-- [Advanced Resources](#-advanced-resources)
-- [Video Tutorials](#-video-tutorials)
-- [Official Project Links](#-official-project-links)
+- [Getting Started](#getting-started)
+- [Core Tooling](#core-tooling)
+- [Firmware and Device Data](#firmware-and-device-data)
+- [Modules and App Distribution](#modules-and-app-distribution)
+- [Learning and Reference](#learning-and-reference)
+- [Communities and Support](#communities-and-support)
+- [Emergency and Recovery](#emergency-and-recovery)
+- [Advanced Engineering](#advanced-engineering)
+- [Video Tutorials](#video-tutorials)
+- [Official Project Links](#official-project-links)
 
 ---
 
 ## 🚀 Getting Started
 
-### New to Rooting?
+### Core checklist
 
 | Step | Description | Resource |
 |:-----|:------------|:---------|
@@ -94,7 +96,7 @@ head:
 | **3. Device Guide** | Find your specific device | [Device Guides](./android-root-guides/index.md#device-specific-guides) |
 | **4. Preparation** | Backup and unlock bootloader | [Bootloader Guide](./android-root-guides/how-to-unlock-bootloader.md) |
 
-### Android Version Compatibility
+### Android version compatibility
 
 | Android Version | Recommended Method | Notes |
 |:----------------|:-------------------|:------|
@@ -106,20 +108,20 @@ head:
 
 ---
 
-## 🛠️ Essential Tools & Software
+## Core Tooling
 
-### Root Solutions (2025)
+### Root solutions
 
 | Solution | Best For | Android Support | Status | Source |
 |:---------|:---------|:----------------|:-------|:-------|
-| **[Magisk](./android-root-guides/magisk-guide.md)** | Universal compatibility | 5.0+ | ✅ Active | [GitHub](https://github.com/topjohnwu/Magisk) |
-| **[KernelSU](./android-root-guides/kernelsu-guide.md)** | Kernel-level root | 10+ (GKI) | ✅ Active | [GitHub](https://github.com/tiann/KernelSU) |
-| **[APatch](./android-root-guides/apatch-guide.md)** | Modern devices | 10+ | ✅ Active | [GitHub](https://github.com/bmax121/APatch) |
-| **[LSPosed (Fork)](./android-root-guides/lsposed-guide.md)** | Xposed framework | 8.1+ |  ✅ Active | [GitHub](https://github.com/JingMatrix/LSPosed) |
+| **[Magisk](./android-root-guides/magisk-guide.md)** | Universal compatibility | 5.0+ | Active | [GitHub](https://github.com/topjohnwu/Magisk) |
+| **[KernelSU](./android-root-guides/kernelsu-guide.md)** | Kernel-level root | 10+ (GKI) | Active | [GitHub](https://github.com/tiann/KernelSU) |
+| **[APatch](./android-root-guides/apatch-guide.md)** | Modern devices | 10+ | Active | [GitHub](https://github.com/bmax121/APatch) |
+| **[LSPosed (Fork)](./android-root-guides/lsposed-guide.md)** | Xposed framework | 8.1+ | Active | [GitHub](https://github.com/JingMatrix/LSPosed) |
 
-### Recovery & Flashing Tools
+### Recovery and flashing tools
 
-#### Custom Recoveries
+#### Custom recoveries
 
 | Recovery | Features | Compatibility | Source |
 |:---------|:---------|:--------------|:-------|
@@ -127,8 +129,9 @@ head:
 | **OrangeFox** | Enhanced UI, built-in tools | Select devices | [orangefox.download](https://orangefox.download/) |
 | **PitchBlack** | TWRP fork with extras | Select devices | [pitchblackrecovery.com](https://pitchblackrecovery.com/) |
 | **SkyHawk** | Lightweight alternative | Select devices | [GitHub](https://github.com/SHRP) |
+| **AOSP Recovery Source** | Offical base recovery | Reference | [AOSP](https://android.googlesource.com/platform/bootable/recovery/) |
 
-#### Platform Tools
+#### Platform tools
 
 | Tool | Purpose | Platform | Source |
 |:-----|:--------|:---------|:-------|
@@ -137,9 +140,10 @@ head:
 | **Odin** | Samsung firmware | Windows | Common distribution |
 | **Mi Flash Tool** | Xiaomi devices | Windows | [xiaomiflashtool.com](https://xiaomiflashtool.com/) |
 | **SP Flash Tool** | MediaTek chips | Windows/Linux | [spflashtool.com](https://spflashtool.com/) |
+| **Android Flash Tool** | Web-based flashing for Pixels | Web | [flash.android.com](https://flash.android.com/) |
+| **LineageOS Recovery Images** | Official recovery builds | Device specific | [LineageOS Wiki](https://wiki.lineageos.org/devices/) |
 
-
-### Firmware Sources (2025)
+### Firmware sources
 
 | Brand | Official Source | Alternative | Notes |
 |:------|:----------------|:------------|:------|
@@ -162,18 +166,19 @@ head:
 | **Root Apps Index** | Curated collection | 300+ root apps | [Collection](./android-root-apps/index.md) |
 | **IzzyOnDroid** | F-Droid repo | FOSS apps | [IzzyOnDroid](https://apt.izzysoft.de/fdroid/) |
 
-### Extraction & Utility Tools
+### Extraction and utility tools
 
 | Tool | Purpose |Source |
 |:-----|:--------|:-------|
-| **Payload-Dumper-Android** |Extract boot.img or any other partitions (images) from OTA.zip or payload.bin without PC without root on Android | [GitHub](https://github.com/rajmani7584/Payload-Dumper-Android) |
+| **Payload-Dumper-Android** | Extract partitions from OTA.zip or payload.bin on Android without a PC | [GitHub](https://github.com/rajmani7584/Payload-Dumper-Android) |
 | **payload-dumper-go** | Extract payload.bin | [GitHub](https://github.com/ssut/payload-dumper-go) |
+| **payload-dumper-py** | Python payload extractor | [GitHub](https://github.com/vm03/payload_dumper) |
 
 ---
 
-## 📚 Learning Resources
+## Learning and Reference
 
-### Comprehensive Guides
+### Comprehensive guides
 
 | Guide Category | Description | Link |
 |:---------------|:------------|:-----|
@@ -182,12 +187,13 @@ head:
 | **Method Comparisons** | Choose the right root method | [Comparison](./android-root-guides/index.md#root-solutions-comparison) |
 | **Debloating** | Remove unwanted apps safely | [Debloat Guide](./guides/android-apps-debloating.md) |
 | **Ad Blocking** | System-wide ad removal | [AdBlock Guide](./guides/android-adblocking.md) |
+| **Custom Recovery Basics** | Flashing and backup workflow | [How to Install Custom Recovery](./android-root-guides/how-to-install-custom-recovery.md) |
 
 ---
 
-## 👥 Communities & Support
+## Communities and Support
 
-### Primary Communities
+### Primary communities
 
 | Platform | Focus | Best For | Link |
 |:---------|:------|:---------|:-----|
@@ -196,34 +202,37 @@ head:
 | **r/Magisk** | Magisk specific | Modules, troubleshooting | [Reddit](https://reddit.com/r/Magisk) |
 | **r/LineageOS** | Custom ROMs | ROM support | [Reddit](https://reddit.com/r/LineageOS) |
 | **Telegram Groups** | Real-time chat | Quick responses | Various channels |
+| **Pixel Community** | Pixel specific rooting | Device updates | [Reddit](https://reddit.com/r/GooglePixel) |
 
-### Developer Communities
+
+### Developer communities
 
 | Community | Focus | Platform |
 |:----------|:------|:---------|
 | **Android Developers** | Official documentation | [developer.android.com](https://developer.android.com/) |
 | **AOSP** | Android Open Source | [source.android.com](https://source.android.com/) |
+| **GrapheneOS Discord** | Hardening and security insights | [grapheneos.org](https://discord.com/invite/grapheneos) |
 
 ---
 
-## 📱 Device-Specific Resources
+## Firmware and Device Data
 
-### Manufacturer Unlock Policies (2025)
+### Manufacturer unlock policies
 
 | Brand | Bootloader Unlock | Warranty | Wait Time | Guide |
 |:------|:------------------|:---------|:----------|:------|
-| **Google Pixel** | ✅ Official | Maintained | None | [Guide](./android-root-guides/how-to-root-pixel-phone.md) |
-| **OnePlus** | ✅ Official | Voided | None | [Guide](./android-root-guides/how-to-root-oneplus-phone.md) |
-| **Xiaomi** | ✅ Mi Unlock | Voided | 7-15 days | [Guide](./android-root-guides/how-to-root-xiaomi-phone.md) |
-| **Samsung** | ⚠️ Regional | Voided + Knox | None | [Guide](./android-root-guides/how-to-root-samsung-phone.md) |
-| **Nothing** | ✅ Official | Voided | None | [Guide](./android-root-guides/how-to-root-nothing-phone.md) |
-| **Motorola** | ✅ Official | Voided | None | [Guide](./android-root-guides/how-to-root-motorola-phone.md) |
-| **ASUS** | ✅ Official | Voided | None | ASUS Unlock app |
-| **Realme** | ✅ Official | Voided | None | Deep Testing app |
-| **OPPO** | ❌ Discontinued | N/A | N/A | No longer supported |
-| **Huawei** | ❌ Blocked | N/A | N/A | Since 2018 |
+| **Google Pixel** | Official | Maintained | None | [Guide](./android-root-guides/how-to-root-pixel-phone.md) |
+| **OnePlus** | Official | Voided | None | [Guide](./android-root-guides/how-to-root-oneplus-phone.md) |
+| **Xiaomi** | Mi Unlock | Voided | 7-15 days | [Guide](./android-root-guides/how-to-root-xiaomi-phone.md) |
+| **Samsung** | Regional restrictions | Voided including Knox | None | [Guide](./android-root-guides/how-to-root-samsung-phone.md) |
+| **Nothing** | Official | Voided | None | [Guide](./android-root-guides/how-to-root-nothing-phone.md) |
+| **Motorola** | Official | Voided | None | [Guide](./android-root-guides/how-to-root-motorola-phone.md) |
+| **ASUS** | Official | Voided | None | ASUS Unlock app |
+| **Realme** | Official | Voided | None | Deep Testing app |
+| **OPPO** | Discontinued | N/A | N/A | No longer supported |
+| **Huawei** | Blocked | N/A | N/A | Since 2018 |
 
-### Popular Custom ROMs (2025)
+### Popular custom ROMs
 
 | ROM | Base | Focus | Website |
 |:----|:-----|:------|:--------|
@@ -234,12 +243,13 @@ head:
 | **Paranoid Android** | AOSP | Unique features | [paranoidandroid.co](https://paranoidandroid.co/) |
 | **GrapheneOS** | AOSP | Security-focused | [grapheneos.org](https://grapheneos.org/) |
 | **CalyxOS** | AOSP | Privacy-focused | [calyxos.org](https://calyxos.org/) |
+| **PixelOS** | AOSP | Pixel-like features for non-Pixel devices | [pixelos.net](https://pixelos.net/) |
 
 ---
 
-## 🆘 Emergency & Recovery
+## Emergency and Recovery
 
-### Common Issues & Solutions
+### Common issues and solutions
 
 | Issue | Symptoms | Solution | Guide |
 |:------|:---------|:---------|:------|
@@ -249,7 +259,7 @@ head:
 | **IMEI Loss** | No network | Backup restoration | [IMEI Guide](./faqs.md#imei-backup) |
 | **SafetyNet Fail** | App detection | Hide root methods | [Hiding Guide](./faqs.md#play-integrity-and-banking-apps) |
 
-### Emergency Tools by Chipset
+### Emergency tools by chipset
 
 | Chipset | Tool | Mode | Purpose |
 |:--------|:-----|:-----|:--------|
@@ -258,7 +268,7 @@ head:
 | **Samsung Exynos** | Odin/Heimdall | Download Mode | Firmware restoration |
 | **Kirin (Huawei)** | HiSuite | Fastboot | Limited recovery |
 
-### Critical Backups
+### Critical backups
 
 | Backup Type | When | Tool | Restore Method |
 |:------------|:-----|:-----|:---------------|
@@ -269,9 +279,9 @@ head:
 
 ---
 
-## 🎓 Advanced Resources
+## Advanced Engineering
 
-### Development & Debugging
+### Development and debugging
 
 | Resource | Purpose | Link |
 |:---------|:--------|:-----|
@@ -280,23 +290,26 @@ head:
 | **Kernel Building** | Custom kernel development | [Kernel Guide](https://source.android.com/docs/setup/build/building-kernels) |
 | **SELinux Policies** | Security configuration | [SELinux Docs](https://source.android.com/docs/security/features/selinux) |
 | **Android Security Bulletin** | Security updates | [Security Updates](https://source.android.com/docs/security/bulletin) |
-
-### Technical Documentation
-
-| Topic | Description | Link |
-|:------|:------------|:-----|
-| **Verified Boot (AVB)** | Boot chain verification | [AVB Docs](https://source.android.com/docs/security/features/verifiedboot) |
-| **A/B Partitions** | Seamless updates | [A/B System](https://source.android.com/docs/core/ota/ab) |
-| **Dynamic Partitions** | Flexible partitioning | [Dynamic Parts](https://source.android.com/docs/core/ota/dynamic_partitions) |
+| **Android Verified Boot** | Chain of trust explained | [AVB Documentation](https://source.android.com/docs/security/features/verifiedboot) |
+| **Dynamic Partitions** | Flexible partitioning | [Dynamic Partitions](https://source.android.com/docs/core/ota/dynamic_partitions) |
 | **Generic Kernel Image** | GKI architecture | [GKI Docs](https://source.android.com/docs/core/architecture/kernel/generic-kernel-image) |
-| **Project Treble** | HAL abstraction | [Treble Docs](https://source.android.com/docs/core/architecture) |
-| **Mainline Modules** | Modular system updates | [Mainline](https://source.android.com/docs/core/architecture/modular-system) |
+
+### Security and compliance references
+
+| Topic | Coverage | Link |
+|:------|:---------|:-----|
+| **Play Integrity API** | Official guidance on root detection | [Developer Docs](https://developer.android.com/google/play/integrity) |
+| **A/B System Updates** | Seamless update flow | [A/B System](https://source.android.com/docs/core/ota/ab) |
+| **Project Treble** | HAL abstraction layers | [Treble Docs](https://source.android.com/docs/core/architecture) |
+| **Mainline Modules** | Modular update delivery | [Mainline](https://source.android.com/docs/core/architecture/modular-system) |
+| **Safety Guidelines** | Android device security best practices | [Android Enterprise](https://support.google.com/work/android/answer/9415890) |
+| **GSIs and Treble Testing** | Generic System Image reference | [GSI Guides](https://source.android.com/docs/setup/start/gsi) |
 
 ---
 
-## 📺 Video Tutorials
+## Video Tutorials
 
-### Recommended Channels
+### Recommended channels
 
 | Channel | Content Type | Quality | Link |
 |:--------|:-------------|:--------|:-----|
@@ -309,9 +322,9 @@ head:
 
 ---
 
-## 🔗 Official Project Links
+## Official Project Links
 
-### Project Resources
+### Project resources
 
 | Resource | Description | URL |
 |:---------|:------------|:----|
@@ -322,14 +335,14 @@ head:
 | **Contributing** | How to help | [Contributing](./contributing.md) |
 | **Twitter/X** | Updates | [@awsm_and_root](https://x.com/awsm_and_root) |
 
-### Quick Reference
+### Quick reference
 
 | Need | Primary Resource | Backup Resource |
 |:-----|:----------------|:----------------|
 | **Emergency Help** | [FAQ Emergency](./faqs.md#emergency-help) | [XDA Device Forums](https://forum.xda-developers.com/) |
 | **Root Apps** | [App Collection](./android-root-apps/index.md) | [F-Droid](https://f-droid.org/) |
 | **Module Discovery** | [MMRL](https://github.com/MMRLApp/MMRL) | [Telegram Channels](https://t.me/magiskmod_update) |
-| **Firmware** | Manufacturer site | [Firmware databases](#firmware-sources-2025) |
+| **Firmware** | Manufacturer site | [Firmware databases](#firmware-sources) |
 
 ---
 
