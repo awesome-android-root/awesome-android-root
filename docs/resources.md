@@ -329,7 +329,6 @@ head:
 | **Emergency Help** | [FAQ Emergency](./faqs.md#emergency-help) | [XDA Device Forums](https://forum.xda-developers.com/) |
 | **Root Apps** | [App Collection](./android-root-apps/index.md) | [F-Droid](https://f-droid.org/) |
 | **Module Discovery** | [MMRL](https://github.com/MMRLApp/MMRL) | [Telegram Channels](https://t.me/magiskmod_update) |
-| **ROM Downloads** | Device XDA forum | [SourceForge](https://sourceforge.net/) |
 | **Firmware** | Manufacturer site | [Firmware databases](#firmware-sources-2025) |
 
 ---
