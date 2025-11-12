@@ -3,15 +3,15 @@
 
 # Android Root Apps -> Apps and Modules
 /android-root-apps /apps-and-modules 301
-/android-root-apps/ /apps-and-modules/ 301
-/android-root-apps/* /apps-and-modules/:splat 301
+/apps-amd-modules/ /apps-and-modules/ 301
+/apps-amd-modules/* /apps-and-modules/:splat 301
 
 # Android Root Guides -> Rooting Guides  
 /android-root-guides /rooting-guides 301
-/android-root-guides/ /rooting-guides/ 301
-/android-root-guides/* /rooting-guides/:splat 301
+/rooting-guides/ /rooting-guides/ 301
+/rooting-guides/* /rooting-guides/:splat 301
 
 # Guides -> General Guides
 /guides /general-guides 301
-/guides/ /general-guides/ 301
-/guides/* /general-guides/:splat 301
+/general-guides/ /general-guides/ 301
+/general-guides/* /general-guides/:splat 301

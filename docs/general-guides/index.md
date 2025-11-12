@@ -6,7 +6,7 @@ description: "Comprehensive collection of Android guides, tips, and tutorials fo
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/guides/  
+      href: https://awesome-android-root.org/general-guides/  
   - - meta
     - property: og:type
       content: website
@@ -18,7 +18,7 @@ head:
       content: Master Android with our comprehensive collection of guides covering app management, privacy, performance optimization, and troubleshooting. Expert tips for rooted and non-rooted devices.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/guides/  
+      content: https://awesome-android-root.org/general-guides/  
   - - meta
     - property: og:image
       content: https://awesome-android-root.org/images/og.png  

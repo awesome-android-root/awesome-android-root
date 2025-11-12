@@ -22,7 +22,7 @@ head:
       content: https://awesome-android-root.org/images/og/android-debloating.png
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/guides/android-apps-debloating
+      content: https://awesome-android-root.org/general-guides/android-apps-debloating
   - - meta
     - property: og:site_name
       content: Awesome Android Root
@@ -40,7 +40,7 @@ head:
       content: https://awesome-android-root.org/images/og/android-debloating.png
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/guides/android-apps-debloating
+      href: https://awesome-android-root.org/general-guides/android-apps-debloating
 ---
 
 # How to Remove Bloatware Safely Using App Manager or Canta

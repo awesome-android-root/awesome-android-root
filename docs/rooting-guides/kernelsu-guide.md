@@ -5,7 +5,7 @@ description: "Master KernelSU rooting - the kernel-based root solution. Comprehe
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/android-root-guides/kernelsu-guide
+      href: https://awesome-android-root.org/rooting-guides/kernelsu-guide
   - - meta
     - property: og:type
       content: article
@@ -17,7 +17,7 @@ head:
       content: Install KernelSU root with our comprehensive guide. Kernel-based rooting solution with advanced module system and app profiles.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/android-root-guides/kernelsu-guide
+      content: https://awesome-android-root.org/rooting-guides/kernelsu-guide
   - - meta
     - property: og:image
       content: https://awesome-android-root.org/images/og/kernelsu-guide-2025.png
@@ -140,7 +140,7 @@ head:
           "dateModified": "2025-07-12",
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://awesome-android-root.org/android-root-guides/kernelsu-guide"
+            "@id": "https://awesome-android-root.org/rooting-guides/kernelsu-guide"
           },
           "about": [
             {

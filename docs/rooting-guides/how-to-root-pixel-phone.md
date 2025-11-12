@@ -5,7 +5,7 @@ description: Complete guide to root Google Pixel devices. All models from Pixel 
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/android-root-guides/how-to-root-pixel-phone
+      href: https://awesome-android-root.org/rooting-guides/how-to-root-pixel-phone
   - - meta
     - property: og:type
       content: article
@@ -17,7 +17,7 @@ head:
       content: Root any Google Pixel device with comprehensive guide covering bootloader unlock, factory images, and Magisk installation.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/android-root-guides/how-to-root-pixel-phone
+      content: https://awesome-android-root.org/rooting-guides/how-to-root-pixel-phone
   - - meta
     - property: og:image
       content: https://awesome-android-root.org/images/og/google-pixel.png

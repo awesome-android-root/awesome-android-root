@@ -5,7 +5,7 @@ description: "Master guide to root all Nothing & CMF by Nothing Phone models wit
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/android-root-guides/how-to-root-nothing-phone
+      href: https://awesome-android-root.org/rooting-guides/how-to-root-nothing-phone
   - - meta
     - property: og:type
       content: article
@@ -17,7 +17,7 @@ head:
       content: Root any Nothing Phone with our comprehensive guide covering bootloader unlock, custom recovery, and Magisk installation for Nothing OS.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/android-root-guides/how-to-root-nothing-phone
+      content: https://awesome-android-root.org/rooting-guides/how-to-root-nothing-phone
   - - meta
     - property: og:image
       content: https://awesome-android-root.org/images/og/nothing.png
