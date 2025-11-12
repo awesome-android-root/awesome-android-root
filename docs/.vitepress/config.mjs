@@ -842,8 +842,8 @@ export default withPwa(defineConfig({
       collapsed: true,
       items: [
         { text: 'Privacy and Security', link: '/android-root-apps/#privacy-and-security' },
-        { text: 'Firewalls and Network Control', link: '/android-root-apps/#firewall-and-network-control' },
-        { text: 'Ad and Tracker Blocking', link: '/android-root-apps/#ad-blocking-and-tracker-blocking' }
+        { text: 'Firewalls and Network Control', link: '/android-root-apps/#firewall-tools' },
+        { text: 'Ad and Tracker Blocking', link: '/android-root-apps/#ads-and-tracking-blockers' }
       ]
     },
     {
@@ -852,7 +852,7 @@ export default withPwa(defineConfig({
       items: [
         { text: 'Complete App Control', link: '/android-root-apps/#app-management-and-control' },
         { text: 'App Isolation and Cloning', link: '/android-root-apps/#app-isolation-and-cloning' },
-        { text: 'Signature Verification Mods', link: '/android-root-apps/#app-signature-verification-mods' },
+        { text: 'Signature Verification Mods', link: '/android-root-apps/#signature-and-verification' },
         { text: 'App Managers', link: '/android-root-apps/#app-managers' }
       ]
     },
@@ -860,7 +860,7 @@ export default withPwa(defineConfig({
       text: '🔧 Modified & Patched Apps',
       collapsed: true,
       items: [
-        { text: 'Modified App Collection', link: '/android-root-apps/#modded-apps--tweaks' },
+        { text: 'Modified App Collection', link: '/android-root-apps/#app-modifications' },
         { text: 'Social Media Mods', link: '/android-root-apps/#social-media-mods' },
         { text: 'ReVanced Patches', link: '/android-root-apps/#revanced' },
         { text: 'Other App Modifications', link: '/android-root-apps/#misc-app-mods' }
@@ -888,7 +888,7 @@ export default withPwa(defineConfig({
       items: [
         { text: 'Network Control and Tools', link: '/android-root-apps/#network-and-connectivity' },
         { text: 'GPS and Location Tools', link: '/android-root-apps/#location-and-gps' },
-        { text: 'NFC Utilities', link: '/android-root-apps/#nfc-tools' }
+        { text: 'NFC Utilities', link: '/android-root-apps/#nfc-and-wireless' }
       ]
     },
     {
@@ -896,8 +896,8 @@ export default withPwa(defineConfig({
       collapsed: true,
       items: [
         { text: 'Call Recording and Management', link: '/android-root-apps/#call-recording' },
-        { text: 'SMS Tools and Utilities', link: '/android-root-apps/#sms-management' },
-        { text: 'Other Communication Tools', link: '/android-root-apps/#communication' }
+        { text: 'SMS Tools and Utilities', link: '/android-root-apps/#sms-and-messaging' },
+        { text: 'Other Communication Tools', link: '/android-root-apps/#communication-and-messaging' }
       ]
     },
     {
@@ -915,7 +915,7 @@ export default withPwa(defineConfig({
       items: [
         { text: 'Dev Tools', link: '/android-root-apps/#development-and-debugging' },
         { text: 'Terminal', link: '/android-root-apps/#terminal-and-shell-tools' },
-        { text: 'Hardware Control', link: '/android-root-apps/#device-control-and-hardware' },
+        { text: 'Hardware Control', link: '/android-root-apps/#hardware-and-sensors' },
         { text: 'LSPosed', link: '/android-root-apps/#lsposed-framework' }
       ]
     }
