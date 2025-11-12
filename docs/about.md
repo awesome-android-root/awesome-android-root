@@ -73,22 +73,22 @@ Our mission is to democratize advanced Android customization by providing free, 
 ## What We Offer
 
 **Comprehensive Rooting & Customization Resources**
-*   **[Expert Guides](./android-root-guides/index.md)**: Detailed, step-by-step tutorials for various devices and methods.
+*   **[Expert Guides](./rooting-guides/index.md)**: Detailed, step-by-step tutorials for various devices and methods.
 *   **[400+ Curated Root Apps & Modules](/android-root-apps/#root-apps)**: A meticulously selected collection spanning ad-blocking, privacy, performance, automation, and more.
-*   **[Extensive Device Support](./android-root-guides/#device-specific-guides)**: Targeted guides for major brands including Xiaomi, Samsung, Pixel, OnePlus, and Motorola.
+*   **[Extensive Device Support](./rooting-guides/#device-specific-guides)**: Targeted guides for major brands including Xiaomi, Samsung, Pixel, OnePlus, and Motorola.
 *   **[FAQ & Troubleshooting](./faqs.md)**: A dedicated resource for resolving common issues and finding support.
 
 ## Getting Started
 
 **Essential Pathway for New Users:**
-1.  **[Unlock Bootloader](./android-root-guides/how-to-unlock-bootloader.md)**: The foundational step for device modification.
-2.  **[Install Custom Recovery](./android-root-guides/how-to-install-custom-recovery.md)**: Gain the ability to flash custom software.
-3.  **[Choose Root Method](./android-root-guides/index.md#root-solutions-comparison)**: Select the optimal solution (e.g., Magisk, KernelSU) for your device.
-4.  **[Install Custom ROM](./android-root-guides/custom-rom-installation.md)**: (Optional) Experience a completely transformed Android operating system.
+1.  **[Unlock Bootloader](./rooting-guides/how-to-unlock-bootloader.md)**: The foundational step for device modification.
+2.  **[Install Custom Recovery](./rooting-guides/how-to-install-custom-recovery.md)**: Gain the ability to flash custom software.
+3.  **[Choose Root Method](./rooting-guides/index.md#root-solutions-comparison)**: Select the optimal solution (e.g., Magisk, KernelSU) for your device.
+4.  **[Install Custom ROM](./rooting-guides/custom-rom-installation.md)**: (Optional) Experience a completely transformed Android operating system.
 
 **Tailored Navigation:**
-*   **Beginners:** [Complete Rooting Guide](./android-root-guides/) → [Essential Apps](./android-root-apps/#starter-kit-must-have-apps)
-*   **Intermediate:** [Device-Specific Guides](./android-root-guides/#device-specific-guides) → [Root Management](../android-root-apps/#root-management)
+*   **Beginners:** [Complete Rooting Guide](./rooting-guides/) → [Essential Apps](./android-root-apps/#starter-kit-must-have-apps)
+*   **Intermediate:** [Device-Specific Guides](./rooting-guides/#device-specific-guides) → [Root Management](../apps-and-modules/#root-management)
 *   **Experts:** [Troubleshooting](./faqs) → [Community Contributions](./contributing)
 
 ## Community & Support
@@ -121,4 +121,4 @@ You can help ensure the long-term availability and growth of this resource:
 
 ---
 
-Ready to unlock your device's full potential? Begin your journey with our [Complete Rooting Guide](./android-root-guides/index.md).
+Ready to unlock your device's full potential? Begin your journey with our [Complete Rooting Guide](./rooting-guides/index.md).

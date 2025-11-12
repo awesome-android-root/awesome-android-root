@@ -634,9 +634,9 @@ Look for "Device unlocked: true"
    - [APatch Guide](./apatch-guide.md) (alternative)
 
 3. **Post-Root Configuration**
-   - Install essential apps: [Root Apps Collection](../android-root-apps/)
-   - Configure ad blocking: [Ad Blocking Guide](../guides/android-adblocking.md)
-   - Debloat device: [Debloating Guide](../guides/android-apps-debloating.md)
+   - Install essential apps: [Root Apps Collection](../apps-and-modules/)
+   - Configure ad blocking: [Ad Blocking Guide](../general-guides/android-adblocking.md)
+   - Debloat device: [Debloating Guide](../general-guides/android-apps-debloating.md)
 
 ### Step 4: Security Considerations
 

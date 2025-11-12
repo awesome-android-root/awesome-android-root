@@ -181,8 +181,8 @@ Looking for troubleshooting? Visit our [Troubleshooting Guide](./troubleshooting
 
 **Related Resources:**
 - [Essential Root Apps](./android-root-apps/index.md#starter-kit-must-have-apps)
-- [Root Framework Comparison](./android-root-guides/root-framework-comparison.md)
-- [Complete Rooting Guide](./android-root-guides/index.md)
+- [Root Framework Comparison](./rooting-guides/root-framework-comparison.md)
+- [Complete Rooting Guide](./rooting-guides/index.md)
 
 ---
 
@@ -230,7 +230,7 @@ Avoid rooting if:
 - Keep backups of stock firmware
 
 **Learn More:**
-- [Bootloader Unlock Guide](./android-root-guides/how-to-unlock-bootloader.md)
+- [Bootloader Unlock Guide](./rooting-guides/how-to-unlock-bootloader.md)
 - [Legal Disclaimer](./legal-disclaimer.md)
 - [Troubleshooting Guide](./troubleshooting.md)
 
@@ -349,10 +349,10 @@ Advanced user, specific needs? → Research all three
 ```
 
 **Learn More:**
-- [Root Framework Comparison](./android-root-guides/root-framework-comparison.md) (detailed analysis)
-- [Magisk Guide](./android-root-guides/magisk-guide.md)
-- [KernelSU Guide](./android-root-guides/kernelsu-guide.md)
-- [APatch Guide](./android-root-guides/apatch-guide.md)
+- [Root Framework Comparison](./rooting-guides/root-framework-comparison.md) (detailed analysis)
+- [Magisk Guide](./rooting-guides/magisk-guide.md)
+- [KernelSU Guide](./rooting-guides/kernelsu-guide.md)
+- [APatch Guide](./rooting-guides/apatch-guide.md)
 
 ---
 
@@ -360,7 +360,7 @@ Advanced user, specific needs? → Research all three
 
 ### Root Methods Comparison
 
-**See the detailed comparison:** [Root Framework Comparison Guide](./android-root-guides/root-framework-comparison.md)
+**See the detailed comparison:** [Root Framework Comparison Guide](./rooting-guides/root-framework-comparison.md)
 
 **Quick Summary:**
 
@@ -375,10 +375,10 @@ Advanced user, specific needs? → Research all three
 | **Best For** | Most users, beginners | Custom ROM enthusiasts | Advanced users |
 
 **Learn More:**
-- [Detailed Framework Comparison](./android-root-guides/root-framework-comparison.md)
-- [Magisk Installation Guide](./android-root-guides/magisk-guide.md)
-- [KernelSU Installation Guide](./android-root-guides/kernelsu-guide.md)
-- [APatch Installation Guide](./android-root-guides/apatch-guide.md)
+- [Detailed Framework Comparison](./rooting-guides/root-framework-comparison.md)
+- [Magisk Installation Guide](./rooting-guides/magisk-guide.md)
+- [KernelSU Installation Guide](./rooting-guides/kernelsu-guide.md)
+- [APatch Installation Guide](./rooting-guides/apatch-guide.md)
 
 ---
 
@@ -412,8 +412,8 @@ Generally no, or not recommended:
 - Always flash stock firmware before locking
 
 **Learn More:**
-- [Complete Bootloader Unlock Guide](./android-root-guides/how-to-unlock-bootloader.md)
-- [OEM Unlock Policies by Manufacturer](./android-root-guides/how-to-unlock-bootloader.md#oem-unlock-policies)
+- [Complete Bootloader Unlock Guide](./rooting-guides/how-to-unlock-bootloader.md)
+- [OEM Unlock Policies by Manufacturer](./rooting-guides/how-to-unlock-bootloader.md#oem-unlock-policies)
 
 ---
 
@@ -586,37 +586,37 @@ Modern devices use A/B (seamless) update system:
 - Easy to root, excellent community support
 - Android 13+: Must patch `init_boot.img`
 - Factory images readily available
-- [Pixel Root Guide](./android-root-guides/how-to-root-pixel-phone.md)
+- [Pixel Root Guide](./rooting-guides/how-to-root-pixel-phone.md)
 
 **Samsung:**
 - KNOX permanently trips (0x1)
 - US/Canada models usually cannot unlock
 - Requires Odin for flashing
-- [Samsung Root Guide](./android-root-guides/how-to-root-samsung-phone.md)
+- [Samsung Root Guide](./rooting-guides/how-to-root-samsung-phone.md)
 
 **Xiaomi/Redmi/POCO:**
 - Requires Mi Unlock Tool and waiting period (3-30 days)
 - Beware Anti-Rollback (ARB) protection
 - MIUI heavily modified, some compatibility issues
-- [Xiaomi Root Guide](./android-root-guides/how-to-root-xiaomi-phone.md)
+- [Xiaomi Root Guide](./rooting-guides/how-to-root-xiaomi-phone.md)
 
 **OnePlus:**
 - Generally root-friendly
 - OxygenOS/ColorOS merge changed process on newer devices
 - MSMDownloadTool available for emergencies (older models)
-- [OnePlus Root Guide](./android-root-guides/how-to-root-oneplus-phone.md)
+- [OnePlus Root Guide](./rooting-guides/how-to-root-oneplus-phone.md)
 
 **Nothing Phone:**
 - Official unlock supported
 - Growing community
 - Standard process
-- [Nothing Phone Root Guide](./android-root-guides/how-to-root-nothing-phone.md)
+- [Nothing Phone Root Guide](./rooting-guides/how-to-root-nothing-phone.md)
 
 **Motorola:**
 - Official unlock via Motorola website
 - Voids warranty explicitly
 - Good community support
-- [Motorola Root Guide](./android-root-guides/how-to-root-motorola-phone.md)
+- [Motorola Root Guide](./rooting-guides/how-to-root-motorola-phone.md)
 
 ---
 
@@ -881,8 +881,8 @@ su -c "magisk --version"      # Check Magisk version
 ### Useful Resources
 
 **Guides:**
-- [Complete Rooting Guide](./android-root-guides/index.md)
-- [Root Framework Comparison](./android-root-guides/root-framework-comparison.md)
+- [Complete Rooting Guide](./rooting-guides/index.md)
+- [Root Framework Comparison](./rooting-guides/root-framework-comparison.md)
 - [Troubleshooting Guide](./troubleshooting.md)
 - [Non-Root Alternatives](./non-root-alternatives.md)
 

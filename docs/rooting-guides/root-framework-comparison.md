@@ -389,7 +389,7 @@ A: Negligible for all methods. Module choice matters more.
    - [Magisk Guide](./magisk-guide.md)
    - [KernelSU Guide](./kernelsu-guide.md)
    - [APatch Guide](./apatch-guide.md)
-3. **Install essential apps:** [Root Apps Collection](../android-root-apps/)
+3. **Install essential apps:** [Root Apps Collection](../apps-and-modules/)
 4. **Get support:** Join relevant communities
 
 ---

@@ -421,12 +421,12 @@ After rooting your Pixel:
 
 
 1. **Explore Root Apps:**
-   - [Root Apps Collection](../android-root-apps/)
+   - [Root Apps Collection](../apps-and-modules/)
    - [LSPosed Guide](./lsposed-guide.md)
 
 2. **Optimize Performance:**
-   - [Debloating Guide](../guides/android-apps-debloating.md)
-   - [Ad Blocking Guide](../guides/android-adblocking.md)
+   - [Debloating Guide](../general-guides/android-apps-debloating.md)
+   - [Ad Blocking Guide](../general-guides/android-adblocking.md)
 
 3. **Consider custom ROMs:**
    - [Custom ROM Guide](./custom-rom-installation.md) - Installation steps

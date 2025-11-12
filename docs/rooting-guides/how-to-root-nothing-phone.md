@@ -495,11 +495,11 @@ fastboot flashing lock
 **After Rooting:**
 
 1. **Essential apps:**
-   - [Root Apps Collection](../android-root-apps/)
+   - [Root Apps Collection](../apps-and-modules/)
 
 2. **Enhance experience:**
-   - [Ad Blocking Guide](../guides/android-adblocking.md)
-   - [Debloating Guide](../guides/android-apps-debloating.md)
+   - [Ad Blocking Guide](../general-guides/android-adblocking.md)
+   - [Debloating Guide](../general-guides/android-apps-debloating.md)
    - [LSPosed Guide](./lsposed-guide.md)
 
 3. **Explore ROMs:**

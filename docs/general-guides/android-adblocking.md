@@ -130,7 +130,7 @@ Root ad blocking operates by modifying the **hosts file** (`/system/etc/hosts`),
 ## Requirements
 
 ### 📱 **Device Requirements**
-- ✅ **Rooted Android device** ([Rooting Guide](../android-root-guides/index.md))
+- ✅ **Rooted Android device** ([Rooting Guide](../rooting-guides/index.md))
 - ✅ **Android 8.0+** for modern solutions
 - ✅ **Magisk**, **KernelSU**, or **APatch** installed
 - ✅ **Root access verification** (use Root Checker apps)
@@ -554,10 +554,10 @@ A: Systemless methods (Magisk modules) survive OTA updates. Traditional modifica
 
 ## Related Guides
 
-- 📖 [Complete Android Rooting Guide](../android-root-guides/index.md)
-- 🔧 [Magisk Installation Guide](../android-root-guides/magisk-guide.md)
-- ⚡ [KernelSU Setup Guide](../android-root-guides/kernelsu-guide.md)
-- 🛠️ [LSPosed Configuration](../android-root-guides/lsposed-guide.md)
+- 📖 [Complete Android Rooting Guide](../rooting-guides/index.md)
+- 🔧 [Magisk Installation Guide](../rooting-guides/magisk-guide.md)
+- ⚡ [KernelSU Setup Guide](../rooting-guides/kernelsu-guide.md)
+- 🛠️ [LSPosed Configuration](../rooting-guides/lsposed-guide.md)
 - 🧹 [Android Debloating Guide](./android-apps-debloating.md)
 
 ---

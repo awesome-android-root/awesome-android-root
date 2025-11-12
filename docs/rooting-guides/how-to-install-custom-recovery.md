@@ -821,7 +821,7 @@ Custom recovery successfully installed. Choose your path forward:
 - [APatch Guide](./apatch-guide.md) - Alternative approach
 
 **Essential root apps:**
-- [Root Apps Collection](../android-root-apps/) - Curated list of root apps
+- [Root Apps Collection](../apps-and-modules/) - Curated list of root apps
 
 ### For Custom ROMs
 

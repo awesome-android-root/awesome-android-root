@@ -828,11 +828,11 @@ Solutions:
    - Busybox for enhanced commands
 
 2. **Explore root apps:**
-   - [Root Apps Collection](../android-root-apps/) - Curated apps
+   - [Root Apps Collection](../apps-and-modules/) - Curated apps
 
 3. **Learn advanced techniques:**
-   - [Ad Blocking Guide](../guides/android-adblocking.md) - System-wide blocking
-   - [Debloating Guide](../guides/android-apps-debloating.md) - Remove bloat
+   - [Ad Blocking Guide](../general-guides/android-adblocking.md) - System-wide blocking
+   - [Debloating Guide](../general-guides/android-apps-debloating.md) - Remove bloat
    - [Custom ROMs](./custom-rom-installation.md) - Next level
 
 4. **Join community:**

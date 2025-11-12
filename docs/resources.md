@@ -91,10 +91,10 @@ Last updated: November 2025 | Android 15 ready
 
 | Step | Description | Resource |
 |:-----|:------------|:---------|
-| **1. Learn Basics** | Understand what root access means | [What is Root?](./android-root-guides/index.md#understanding-root-access) |
+| **1. Learn Basics** | Understand what root access means | [What is Root?](./rooting-guides/index.md#understanding-root-access) |
 | **2. Safety Check** | Review risks and benefits | [Is Rooting Safe?](./faqs.md#is-rooting-safe) |
-| **3. Device Guide** | Find your specific device | [Device Guides](./android-root-guides/index.md#device-specific-guides) |
-| **4. Preparation** | Backup and unlock bootloader | [Bootloader Guide](./android-root-guides/how-to-unlock-bootloader.md) |
+| **3. Device Guide** | Find your specific device | [Device Guides](./rooting-guides/index.md#device-specific-guides) |
+| **4. Preparation** | Backup and unlock bootloader | [Bootloader Guide](./rooting-guides/how-to-unlock-bootloader.md) |
 
 ### Android version compatibility
 
@@ -114,10 +114,10 @@ Last updated: November 2025 | Android 15 ready
 
 | Solution | Best For | Android Support | Status | Source |
 |:---------|:---------|:----------------|:-------|:-------|
-| **[Magisk](./android-root-guides/magisk-guide.md)** | Universal compatibility | 5.0+ | Active | [GitHub](https://github.com/topjohnwu/Magisk) |
-| **[KernelSU](./android-root-guides/kernelsu-guide.md)** | Kernel-level root | 10+ (GKI) | Active | [GitHub](https://github.com/tiann/KernelSU) |
-| **[APatch](./android-root-guides/apatch-guide.md)** | Modern devices | 10+ | Active | [GitHub](https://github.com/bmax121/APatch) |
-| **[LSPosed (Fork)](./android-root-guides/lsposed-guide.md)** | Xposed framework | 8.1+ | Active | [GitHub](https://github.com/JingMatrix/LSPosed) |
+| **[Magisk](./rooting-guides/magisk-guide.md)** | Universal compatibility | 5.0+ | Active | [GitHub](https://github.com/topjohnwu/Magisk) |
+| **[KernelSU](./rooting-guides/kernelsu-guide.md)** | Kernel-level root | 10+ (GKI) | Active | [GitHub](https://github.com/tiann/KernelSU) |
+| **[APatch](./rooting-guides/apatch-guide.md)** | Modern devices | 10+ | Active | [GitHub](https://github.com/bmax121/APatch) |
+| **[LSPosed (Fork)](./rooting-guides/lsposed-guide.md)** | Xposed framework | 8.1+ | Active | [GitHub](https://github.com/JingMatrix/LSPosed) |
 
 ### Recovery and flashing tools
 
@@ -182,12 +182,12 @@ Last updated: November 2025 | Android 15 ready
 
 | Guide Category | Description | Link |
 |:---------------|:------------|:-----|
-| **Master Rooting Guide** | Complete rooting workflow | [Index](./android-root-guides/index.md) |
-| **Device-Specific Guides** | Brand-specific procedures | [Device Guides](./android-root-guides/index.md#device-specific-guides) |
-| **Method Comparisons** | Choose the right root method | [Comparison](./android-root-guides/index.md#root-solutions-comparison) |
+| **Master Rooting Guide** | Complete rooting workflow | [Index](./rooting-guides/index.md) |
+| **Device-Specific Guides** | Brand-specific procedures | [Device Guides](./rooting-guides/index.md#device-specific-guides) |
+| **Method Comparisons** | Choose the right root method | [Comparison](./rooting-guides/index.md#root-solutions-comparison) |
 | **Debloating** | Remove unwanted apps safely | [Debloat Guide](./guides/android-apps-debloating.md) |
 | **Ad Blocking** | System-wide ad removal | [AdBlock Guide](./guides/android-adblocking.md) |
-| **Custom Recovery Basics** | Flashing and backup workflow | [How to Install Custom Recovery](./android-root-guides/how-to-install-custom-recovery.md) |
+| **Custom Recovery Basics** | Flashing and backup workflow | [How to Install Custom Recovery](./rooting-guides/how-to-install-custom-recovery.md) |
 
 ---
 
@@ -221,12 +221,12 @@ Last updated: November 2025 | Android 15 ready
 
 | Brand | Bootloader Unlock | Warranty | Wait Time | Guide |
 |:------|:------------------|:---------|:----------|:------|
-| **Google Pixel** | Official | Maintained | None | [Guide](./android-root-guides/how-to-root-pixel-phone.md) |
-| **OnePlus** | Official | Voided | None | [Guide](./android-root-guides/how-to-root-oneplus-phone.md) |
-| **Xiaomi** | Mi Unlock | Voided | 7-15 days | [Guide](./android-root-guides/how-to-root-xiaomi-phone.md) |
-| **Samsung** | Regional restrictions | Voided including Knox | None | [Guide](./android-root-guides/how-to-root-samsung-phone.md) |
-| **Nothing** | Official | Voided | None | [Guide](./android-root-guides/how-to-root-nothing-phone.md) |
-| **Motorola** | Official | Voided | None | [Guide](./android-root-guides/how-to-root-motorola-phone.md) |
+| **Google Pixel** | Official | Maintained | None | [Guide](./rooting-guides/how-to-root-pixel-phone.md) |
+| **OnePlus** | Official | Voided | None | [Guide](./rooting-guides/how-to-root-oneplus-phone.md) |
+| **Xiaomi** | Mi Unlock | Voided | 7-15 days | [Guide](./rooting-guides/how-to-root-xiaomi-phone.md) |
+| **Samsung** | Regional restrictions | Voided including Knox | None | [Guide](./rooting-guides/how-to-root-samsung-phone.md) |
+| **Nothing** | Official | Voided | None | [Guide](./rooting-guides/how-to-root-nothing-phone.md) |
+| **Motorola** | Official | Voided | None | [Guide](./rooting-guides/how-to-root-motorola-phone.md) |
 | **ASUS** | Official | Voided | None | ASUS Unlock app |
 | **Realme** | Official | Voided | None | Deep Testing app |
 | **OPPO** | Discontinued | N/A | N/A | No longer supported |
@@ -377,6 +377,6 @@ This is a community-driven project. Contributions are welcome!
 
 **Maintained by:** [Awesome Android Root Community](https://github.com/awesome-android-root/awesome-android-root)
 
-[Home](https://awesome-android-root.org) | [Root Apps](./android-root-apps/index.md) | [Guides](./android-root-guides/index.md) | [FAQ](./faqs.md)
+[Home](https://awesome-android-root.org) | [Root Apps](./android-root-apps/index.md) | [Guides](./rooting-guides/index.md) | [FAQ](./faqs.md)
 
 </div>

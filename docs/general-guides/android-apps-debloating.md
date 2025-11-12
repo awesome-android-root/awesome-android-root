@@ -355,5 +355,5 @@ With proper care and the right tools, you can significantly improve your Android
 
 ## Related Guides
 
-- [How to Enable ADB Debugging](../android-root-guides/how-to-unlock-bootloader.md)
-- [How to Root Android Devices](../android-root-guides/index.md)
+- [How to Enable ADB Debugging](../rooting-guides/how-to-unlock-bootloader.md)
+- [How to Root Android Devices](../rooting-guides/index.md)

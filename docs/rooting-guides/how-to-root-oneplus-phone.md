@@ -665,11 +665,11 @@ fastboot oem lock
 **After Rooting Your OnePlus:**
 
 1. **Essential apps:**
-   - [Root Apps Collection](../android-root-apps/) - Curated list
+   - [Root Apps Collection](../apps-and-modules/) - Curated list
 
 2. **Enhance experience:**
-   - [Ad Blocking Guide](../guides/android-adblocking.md) - System-wide blocking
-   - [Debloating Guide](../guides/android-apps-debloating.md) - Remove bloat
+   - [Ad Blocking Guide](../general-guides/android-adblocking.md) - System-wide blocking
+   - [Debloating Guide](../general-guides/android-apps-debloating.md) - Remove bloat
    - [LSPosed Guide](./lsposed-guide.md) - App modifications
 
 3. **Explore ROMs:**

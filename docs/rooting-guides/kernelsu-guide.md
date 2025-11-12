@@ -1076,11 +1076,11 @@ Solutions:
 3. **Explore advanced features:**
    - [LSPosed Framework](./lsposed-guide.md) - App modifications
    - [Custom ROMs](./custom-rom-installation.md) - Next level
-   - [Root Apps Collection](../android-root-apps/) - Essential apps
+   - [Root Apps Collection](../apps-and-modules/) - Essential apps
 
 4. **Optimize security:**
-   - [Ad Blocking Guide](../guides/android-adblocking.md) - System-wide blocking
-   - [Debloating Guide](../guides/android-apps-debloating.md) - Remove bloat
+   - [Ad Blocking Guide](../general-guides/android-adblocking.md) - System-wide blocking
+   - [Debloating Guide](../general-guides/android-apps-debloating.md) - Remove bloat
    - Profile hardening for all apps
 
 ---

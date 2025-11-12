@@ -582,8 +582,8 @@ export default withPwa(defineConfig({
       { text: 'Home', link: '/' },
       {
         text: 'Apps & Modules',
-        link: '/android-root-apps/',
-        activeMatch: '^/android-root-apps/'
+        link: '/apps-and-modules/',
+        activeMatch: '^/apps-and-modules/'
       },
       {
         text: 'Rooting Guides',
@@ -591,27 +591,27 @@ export default withPwa(defineConfig({
           {
             text: 'Getting Started',
             items: [
-              { text: 'Introduction to Rooting', link: '/android-root-guides/' },
-              { text: 'Choose Root Method', link: '/android-root-guides/root-framework-comparison' }
+              { text: 'Introduction to Rooting', link: '/rooting-guides/' },
+              { text: 'Choose Root Method', link: '/rooting-guides/root-framework-comparison' }
             ]
           },
           {
             text: 'Root Methods',
             items: [
-              { text: 'Magisk (Recommended)', link: '/android-root-guides/magisk-guide' },
-              { text: 'KernelSU', link: '/android-root-guides/kernelsu-guide' },
-              { text: 'APatch', link: '/android-root-guides/apatch-guide' },
-              { text: 'LSPosed Framework', link: '/android-root-guides/lsposed-guide' }
+              { text: 'Magisk (Recommended)', link: '/rooting-guides/magisk-guide' },
+              { text: 'KernelSU', link: '/rooting-guides/kernelsu-guide' },
+              { text: 'APatch', link: '/rooting-guides/apatch-guide' },
+              { text: 'LSPosed Framework', link: '/rooting-guides/lsposed-guide' }
             ]
           },
           {
             text: 'Device-Specific',
             items: [
-              { text: 'Google Pixel', link: '/android-root-guides/how-to-root-pixel-phone' },
-              { text: 'Samsung Galaxy', link: '/android-root-guides/how-to-root-samsung-phone' },
-              { text: 'Xiaomi/Redmi', link: '/android-root-guides/how-to-root-xiaomi-phone' },
-              { text: 'OnePlus', link: '/android-root-guides/how-to-root-oneplus-phone' },
-              { text: 'View All Devices', link: '/android-root-guides/#device-specific-guides' }
+              { text: 'Google Pixel', link: '/rooting-guides/how-to-root-pixel-phone' },
+              { text: 'Samsung Galaxy', link: '/rooting-guides/how-to-root-samsung-phone' },
+              { text: 'Xiaomi/Redmi', link: '/rooting-guides/how-to-root-xiaomi-phone' },
+              { text: 'OnePlus', link: '/rooting-guides/how-to-root-oneplus-phone' },
+              { text: 'View All Devices', link: '/rooting-guides/#device-specific-guides' }
             ]
           }
         ]
@@ -622,18 +622,18 @@ export default withPwa(defineConfig({
           {
             text: 'Essential Guides',
             items: [
-              { text: 'All Tutorials', link: '/guides/' },
-              { text: 'System-Wide Ad Blocking', link: '/guides/android-adblocking' },
-              { text: 'Debloat Your Device', link: '/guides/android-apps-debloating' },
-              { text: 'Stop Auto Updates', link: '/guides/stop-android-app-auto-updates-play-store' }
+              { text: 'All Tutorials', link: '/general-guides/' },
+              { text: 'System-Wide Ad Blocking', link: '/general-guides/android-adblocking' },
+              { text: 'Debloat Your Device', link: '/general-guides/android-apps-debloating' },
+              { text: 'Stop Auto Updates', link: '/general-guides/stop-android-app-auto-updates-play-store' }
             ]
           },
           {
             text: 'Advanced',
             items: [
-              { text: 'Custom Recovery', link: '/android-root-guides/how-to-install-custom-recovery' },
-              { text: 'Unlock Bootloader', link: '/android-root-guides/how-to-unlock-bootloader' },
-              { text: 'Custom ROM Installation', link: '/android-root-guides/custom-rom-installation' }
+              { text: 'Custom Recovery', link: '/rooting-guides/how-to-install-custom-recovery' },
+              { text: 'Unlock Bootloader', link: '/rooting-guides/how-to-unlock-bootloader' },
+              { text: 'Custom ROM Installation', link: '/rooting-guides/custom-rom-installation' }
             ]
           }
         ]
@@ -647,7 +647,7 @@ export default withPwa(defineConfig({
               { text: 'Frequently Asked Questions', link: '/faqs' },
               { text: 'Troubleshooting Guide', link: '/troubleshooting' },
               { text: 'Community Resources', link: '/resources' },
-              { text: 'Rooting Glossary', link: '/android-root-apps/#glossary' }
+              { text: 'Rooting Glossary', link: '/apps-and-modules/#glossary' }
             ]
           },
           {
@@ -688,34 +688,34 @@ export default withPwa(defineConfig({
         text: '🚀 Quick Start',
         collapsed: false,
         items: [
-          { text: 'What is Android Root?', link: '/android-root-guides/#understanding-root-access' },
-          { text: 'Complete Rooting Guide', link: '/android-root-guides/' },
-          { text: 'Browse All Apps & Modules', link: '/android-root-apps/' },
-          { text: 'Essential Must-Have Apps', link: '/android-root-apps/#starter-kit-must-have-apps' }
+          { text: 'What is Android Root?', link: '/rooting-guides/#understanding-root-access' },
+          { text: 'Complete Rooting Guide', link: '/rooting-guides/' },
+          { text: 'Browse All Apps & Modules', link: '/apps-and-modules/' },
+          { text: 'Essential Must-Have Apps', link: '/apps-and-modules/#starter-kit-must-have-apps' }
         ]
       },
       {
         text: '🏆 Root Methods',
         collapsed: false,
         items: [
-          { text: '⚖️ Compare Root Methods', link: '/android-root-guides/root-framework-comparison' },
-          { text: '🏅 Magisk (Recommended)', link: '/android-root-guides/magisk-guide' },
-          { text: '⚡ KernelSU', link: '/android-root-guides/kernelsu-guide' },
-          { text: '🤖 APatch', link: '/android-root-guides/apatch-guide' },
-          { text: '⚙️ LSPosed Framework', link: '/android-root-guides/lsposed-guide' }
+          { text: '⚖️ Compare Root Methods', link: '/rooting-guides/root-framework-comparison' },
+          { text: '🏅 Magisk (Recommended)', link: '/rooting-guides/magisk-guide' },
+          { text: '⚡ KernelSU', link: '/rooting-guides/kernelsu-guide' },
+          { text: '🤖 APatch', link: '/rooting-guides/apatch-guide' },
+          { text: '⚙️ LSPosed Framework', link: '/rooting-guides/lsposed-guide' }
         ]
       },
       {
         text: '📱 Device Guides',
         collapsed: true,
         items: [
-          { text: '🔷 Google Pixel', link: '/android-root-guides/how-to-root-pixel-phone' },
-          { text: '🔷 Samsung Galaxy', link: '/android-root-guides/how-to-root-samsung-phone' },
-          { text: '🔷 Xiaomi/Redmi/POCO', link: '/android-root-guides/how-to-root-xiaomi-phone' },
-          { text: '🔷 OnePlus', link: '/android-root-guides/how-to-root-oneplus-phone' },
-          { text: '🔷 Nothing Phone', link: '/android-root-guides/how-to-root-nothing-phone' },
-          { text: '🔷 Motorola', link: '/android-root-guides/how-to-root-motorola-phone' },
-          { text: '📋 View All Devices', link: '/android-root-guides/#device-specific-guides' }
+          { text: '🔷 Google Pixel', link: '/rooting-guides/how-to-root-pixel-phone' },
+          { text: '🔷 Samsung Galaxy', link: '/rooting-guides/how-to-root-samsung-phone' },
+          { text: '🔷 Xiaomi/Redmi/POCO', link: '/rooting-guides/how-to-root-xiaomi-phone' },
+          { text: '🔷 OnePlus', link: '/rooting-guides/how-to-root-oneplus-phone' },
+          { text: '🔷 Nothing Phone', link: '/rooting-guides/how-to-root-nothing-phone' },
+          { text: '🔷 Motorola', link: '/rooting-guides/how-to-root-motorola-phone' },
+          { text: '📋 View All Devices', link: '/rooting-guides/#device-specific-guides' }
         ]
       },
       {
@@ -724,58 +724,58 @@ export default withPwa(defineConfig({
         items: [
           { text: '❓ Frequently Asked Questions', link: '/faqs' },
           { text: '🔧 Troubleshooting Guide', link: '/troubleshooting' },
-          { text: '📖 Rooting Glossary', link: '/android-root-apps/#glossary' },
+          { text: '📖 Rooting Glossary', link: '/apps-and-modules/#glossary' },
           { text: '🌐 Community Resources', link: '/resources' },
           { text: '🔀 Non-Root Alternatives', link: '/non-root-alternatives' }
         ]
       }
     ],
   // Rooting Guides Sidebar
-  '/android-root-guides/': [
+  '/rooting-guides/': [
     {
       text: '📖 Guide Overview',
       collapsed: false,
       items: [
-        { text: 'Table of Contents', link: '/android-root-guides/' },
-        { text: 'Understanding Root', link: '/android-root-guides/#understanding-root-access' },
-        { text: 'Why Root?', link: '/android-root-guides/#why-root-your-device' },
-        { text: 'Safety First', link: '/android-root-guides/#prerequisites-and-safety' }
+        { text: 'Table of Contents', link: '/rooting-guides/' },
+        { text: 'Understanding Root', link: '/rooting-guides/#understanding-root-access' },
+        { text: 'Why Root?', link: '/rooting-guides/#why-root-your-device' },
+        { text: 'Safety First', link: '/rooting-guides/#prerequisites-and-safety' }
       ]
     },
     {
       text: 'Root Methods',
       items: [
-        { text: 'Compare Methods', link: '/android-root-guides/root-framework-comparison' },
-        { text: 'Magisk (Recommended)', link: '/android-root-guides/magisk-guide' },
-        { text: 'KernelSU', link: '/android-root-guides/kernelsu-guide' },
-        { text: 'APatch', link: '/android-root-guides/apatch-guide' }
+        { text: 'Compare Methods', link: '/rooting-guides/root-framework-comparison' },
+        { text: 'Magisk (Recommended)', link: '/rooting-guides/magisk-guide' },
+        { text: 'KernelSU', link: '/rooting-guides/kernelsu-guide' },
+        { text: 'APatch', link: '/rooting-guides/apatch-guide' }
       ]
     },
     {
       text: '🔧 Step-by-Step Process',
       collapsed: false,
       items: [
-        { text: '1️⃣ Unlock Bootloader', link: '/android-root-guides/how-to-unlock-bootloader' },
-        { text: '2️⃣ Install Custom Recovery', link: '/android-root-guides/how-to-install-custom-recovery' },
-        { text: '3️⃣ Root Your Device', link: '/android-root-guides/#universal-rooting-process' },
-        { text: '4️⃣ Install LSPosed Framework', link: '/android-root-guides/lsposed-guide' },
-        { text: '5️⃣ Install Custom ROM (Optional)', link: '/android-root-guides/custom-rom-installation' }
+        { text: '1️⃣ Unlock Bootloader', link: '/rooting-guides/how-to-unlock-bootloader' },
+        { text: '2️⃣ Install Custom Recovery', link: '/rooting-guides/how-to-install-custom-recovery' },
+        { text: '3️⃣ Root Your Device', link: '/rooting-guides/#universal-rooting-process' },
+        { text: '4️⃣ Install LSPosed Framework', link: '/rooting-guides/lsposed-guide' },
+        { text: '5️⃣ Install Custom ROM (Optional)', link: '/rooting-guides/custom-rom-installation' }
       ]
     },
     {
       text: '📱 Device-Specific Guides',
       collapsed: true,
       items: [
-        { text: '📋 All Supported Devices', link: '/android-root-guides/#device-specific-guides' },
+        { text: '📋 All Supported Devices', link: '/rooting-guides/#device-specific-guides' },
         { 
           text: '🏆 Popular Brands',
           items: [
-            { text: 'Google Pixel Phones', link: '/android-root-guides/how-to-root-pixel-phone' },
-            { text: 'Samsung Galaxy Devices', link: '/android-root-guides/how-to-root-samsung-phone' },
-            { text: 'Xiaomi/Redmi/POCO', link: '/android-root-guides/how-to-root-xiaomi-phone' },
-            { text: 'OnePlus Smartphones', link: '/android-root-guides/how-to-root-oneplus-phone' },
-            { text: 'Motorola Phones', link: '/android-root-guides/how-to-root-motorola-phone' },
-            { text: 'Nothing Phone Series', link: '/android-root-guides/how-to-root-nothing-phone' }
+            { text: 'Google Pixel Phones', link: '/rooting-guides/how-to-root-pixel-phone' },
+            { text: 'Samsung Galaxy Devices', link: '/rooting-guides/how-to-root-samsung-phone' },
+            { text: 'Xiaomi/Redmi/POCO', link: '/rooting-guides/how-to-root-xiaomi-phone' },
+            { text: 'OnePlus Smartphones', link: '/rooting-guides/how-to-root-oneplus-phone' },
+            { text: 'Motorola Phones', link: '/rooting-guides/how-to-root-motorola-phone' },
+            { text: 'Nothing Phone Series', link: '/rooting-guides/how-to-root-nothing-phone' }
           ]
         }
       ]
@@ -786,198 +786,198 @@ export default withPwa(defineConfig({
       items: [
         { text: 'Troubleshooting Guide', link: '/troubleshooting' },
         { text: 'Frequently Asked Questions', link: '/faqs' },
-        { text: 'Community Help & Resources', link: '/android-root-guides/#community-resources' },
-        { text: 'Rooting Glossary', link: '/android-root-apps/#glossary' }
+        { text: 'Community Help & Resources', link: '/rooting-guides/#community-resources' },
+        { text: 'Rooting Glossary', link: '/apps-and-modules/#glossary' }
       ]
     }
   ],
 
   // Apps and Modules Sidebar
-  '/android-root-apps/': [
+  '/apps-and-modules/': [
     {
       text: '⭐ Quick Access',
       collapsed: false,
       items: [
-        { text: '⭐ Must-Have Apps', link: '/android-root-apps/#starter-kit-must-have-apps' },
-        { text: '📘 Glossary', link: '/android-root-apps/#glossary' },
-        { text: '🔍 Browse All Apps', link: '/android-root-apps/' }
+        { text: '⭐ Must-Have Apps', link: '/apps-and-modules/#starter-kit-must-have-apps' },
+        { text: '📘 Glossary', link: '/apps-and-modules/#glossary' },
+        { text: '🔍 Browse All Apps', link: '/apps-and-modules/' }
       ]
     },
     {
       text: '🎨 Customization & Themes',
       collapsed: false,
       items: [
-        { text: 'Boot and Startup', link: '/android-root-apps/#boot-and-startup' },
-        { text: 'Customization and Theming', link: '/android-root-apps/#customization-and-theming' },
-        { text: 'Themes and Visual Styles', link: '/android-root-apps/#themes-and-visual-mods' },
-        { text: 'Launchers and Home Screen', link: '/android-root-apps/#launchers-and-home-screen' },
-        { text: 'Gestures and Navigation', link: '/android-root-apps/#gestures-and-navigation' },
-        { text: 'Notifications and UI Elements', link: '/android-root-apps/#notifications-and-ui-elements' },
-        { text: 'Display and Screen Tweaks', link: '/android-root-apps/#screen-and-display' },
-        { text: 'OS-Specific Customization', link: '/android-root-apps/#os-specific-customization' }
+        { text: 'Boot and Startup', link: '/apps-and-modules/#boot-and-startup' },
+        { text: 'Customization and Theming', link: '/apps-and-modules/#customization-and-theming' },
+        { text: 'Themes and Visual Styles', link: '/apps-and-modules/#themes-and-visual-mods' },
+        { text: 'Launchers and Home Screen', link: '/apps-and-modules/#launchers-and-home-screen' },
+        { text: 'Gestures and Navigation', link: '/apps-and-modules/#gestures-and-navigation' },
+        { text: 'Notifications and UI Elements', link: '/apps-and-modules/#notifications-and-ui-elements' },
+        { text: 'Display and Screen Tweaks', link: '/apps-and-modules/#screen-and-display' },
+        { text: 'OS-Specific Customization', link: '/apps-and-modules/#os-specific-customization' }
       ]
     },
     {
       text: '⚡ Performance & Optimization',
       collapsed: false,
       items: [
-        { text: 'Performance and Optimization', link: '/android-root-apps/#performance-and-optimization' },
-        { text: 'Battery and Power Management', link: '/android-root-apps/#battery-and-power-management' },
-        { text: 'System Cleanup and Maintenance', link: '/android-root-apps/#debloating-and-cleaning' },
-        { text: 'Kernel Management', link: '/android-root-apps/#kernel-management' }
+        { text: 'Performance and Optimization', link: '/apps-and-modules/#performance-and-optimization' },
+        { text: 'Battery and Power Management', link: '/apps-and-modules/#battery-and-power-management' },
+        { text: 'System Cleanup and Maintenance', link: '/apps-and-modules/#debloating-and-cleaning' },
+        { text: 'Kernel Management', link: '/apps-and-modules/#kernel-management' }
       ]
     },
     {
       text: '🛠️ Root & System Control',
       collapsed: false,
       items: [
-        { text: 'Root Access Managers', link: '/android-root-apps/#root-management' },
-        { text: 'Safety and Play Integrity', link: '/android-root-apps/#root-hiding-and-play-integrity' },
-        { text: 'Bootloop Protection Tools', link: '/android-root-apps/#bootloop-protection' },
-        { text: 'System Modifications', link: '/android-root-apps/#system-modifications' }
+        { text: 'Root Access Managers', link: '/apps-and-modules/#root-management' },
+        { text: 'Safety and Play Integrity', link: '/apps-and-modules/#root-hiding-and-play-integrity' },
+        { text: 'Bootloop Protection Tools', link: '/apps-and-modules/#bootloop-protection' },
+        { text: 'System Modifications', link: '/apps-and-modules/#system-modifications' }
       ]
     },
     {
       text: '🛡️ Privacy and Security',
       collapsed: true,
       items: [
-        { text: 'Privacy and Security', link: '/android-root-apps/#privacy-and-security' },
-        { text: 'Firewalls and Network Control', link: '/android-root-apps/#firewall-tools' },
-        { text: 'Ad and Tracker Blocking', link: '/android-root-apps/#ads-and-tracking-blockers' }
+        { text: 'Privacy and Security', link: '/apps-and-modules/#privacy-and-security' },
+        { text: 'Firewalls and Network Control', link: '/apps-and-modules/#firewall-tools' },
+        { text: 'Ad and Tracker Blocking', link: '/apps-and-modules/#ads-and-tracking-blockers' }
       ]
     },
     {
       text: '📦 App Management',
       collapsed: true,
       items: [
-        { text: 'Complete App Control', link: '/android-root-apps/#app-management-and-control' },
-        { text: 'App Isolation and Cloning', link: '/android-root-apps/#app-isolation-and-cloning' },
-        { text: 'Signature Verification Mods', link: '/android-root-apps/#signature-and-verification' },
-        { text: 'App Managers', link: '/android-root-apps/#app-managers' }
+        { text: 'Complete App Control', link: '/apps-and-modules/#app-management-and-control' },
+        { text: 'App Isolation and Cloning', link: '/apps-and-modules/#app-isolation-and-cloning' },
+        { text: 'Signature Verification Mods', link: '/apps-and-modules/#signature-and-verification' },
+        { text: 'App Managers', link: '/apps-and-modules/#app-managers' }
       ]
     },
     {
       text: '🔧 Modified & Patched Apps',
       collapsed: true,
       items: [
-        { text: 'Modified App Collection', link: '/android-root-apps/#app-modifications' },
-        { text: 'Social Media Mods', link: '/android-root-apps/#social-media-mods' },
-        { text: 'ReVanced Patches', link: '/android-root-apps/#revanced' },
-        { text: 'Other App Modifications', link: '/android-root-apps/#misc-app-mods' }
+        { text: 'Modified App Collection', link: '/apps-and-modules/#app-modifications' },
+        { text: 'Social Media Mods', link: '/apps-and-modules/#social-media-mods' },
+        { text: 'ReVanced Patches', link: '/apps-and-modules/#revanced' },
+        { text: 'Other App Modifications', link: '/apps-and-modules/#misc-app-mods' }
       ]
     },
     {
       text: '💾 Storage & Backup',
       collapsed: true,
       items: [
-        { text: 'File Managers', link: '/android-root-apps/#file-management' },
-        { text: 'Backup and Restore Solutions', link: '/android-root-apps/#backup-and-restore' }
+        { text: 'File Managers', link: '/apps-and-modules/#file-management' },
+        { text: 'Backup and Restore Solutions', link: '/apps-and-modules/#backup-and-restore' }
       ]
     },
     {
       text: '🌐 Browser & Web Tools',
       collapsed: true,
       items: [
-        { text: 'Browser Extensions', link: '/android-root-apps/#browser-extensions' },
-        { text: 'Webview Modifications', link: '/android-root-apps/#webview-mods' }
+        { text: 'Browser Extensions', link: '/apps-and-modules/#browser-extensions' },
+        { text: 'Webview Modifications', link: '/apps-and-modules/#webview-mods' }
       ]
     },
     {
       text: '🌐 Network & Connectivity',
       collapsed: true,
       items: [
-        { text: 'Network Control and Tools', link: '/android-root-apps/#network-and-connectivity' },
-        { text: 'GPS and Location Tools', link: '/android-root-apps/#location-and-gps' },
-        { text: 'NFC Utilities', link: '/android-root-apps/#nfc-and-wireless' }
+        { text: 'Network Control and Tools', link: '/apps-and-modules/#network-and-connectivity' },
+        { text: 'GPS and Location Tools', link: '/apps-and-modules/#location-and-gps' },
+        { text: 'NFC Utilities', link: '/apps-and-modules/#nfc-and-wireless' }
       ]
     },
     {
       text: '📞 Communication',
       collapsed: true,
       items: [
-        { text: 'Call Recording and Management', link: '/android-root-apps/#call-recording' },
-        { text: 'SMS Tools and Utilities', link: '/android-root-apps/#sms-and-messaging' },
-        { text: 'Other Communication Tools', link: '/android-root-apps/#communication-and-messaging' }
+        { text: 'Call Recording and Management', link: '/apps-and-modules/#call-recording' },
+        { text: 'SMS Tools and Utilities', link: '/apps-and-modules/#sms-and-messaging' },
+        { text: 'Other Communication Tools', link: '/apps-and-modules/#communication-and-messaging' }
       ]
     },
     {
       text: '🎵 Audio & Media',
       collapsed: true,
       items: [
-        { text: 'Audio Tools and Utilities', link: '/android-root-apps/#audio-and-media' },
-        { text: 'Sound Enhancement', link: '/android-root-apps/#audio-enhancement' },
-        { text: 'Audio Configuration', link: '/android-root-apps/#audio-configuration' }
+        { text: 'Audio Tools and Utilities', link: '/apps-and-modules/#audio-and-media' },
+        { text: 'Sound Enhancement', link: '/apps-and-modules/#audio-enhancement' },
+        { text: 'Audio Configuration', link: '/apps-and-modules/#audio-configuration' }
       ]
     },
     {
       text: '👨‍💻 Developer & Advanced',
       collapsed: true,
       items: [
-        { text: 'Dev Tools', link: '/android-root-apps/#development-and-debugging' },
-        { text: 'Terminal', link: '/android-root-apps/#terminal-and-shell-tools' },
-        { text: 'Hardware Control', link: '/android-root-apps/#hardware-and-sensors' },
-        { text: 'LSPosed', link: '/android-root-apps/#lsposed-framework' }
+        { text: 'Dev Tools', link: '/apps-and-modules/#development-and-debugging' },
+        { text: 'Terminal', link: '/apps-and-modules/#terminal-and-shell-tools' },
+        { text: 'Hardware Control', link: '/apps-and-modules/#hardware-and-sensors' },
+        { text: 'LSPosed', link: '/apps-and-modules/#lsposed-framework' }
       ]
     }
   ],
 
   // General Guides Sidebar
-  '/guides/': [
+  '/general-guides/': [
     {
       text: '📚 All Tutorials',
       collapsed: false,
       items: [
-        { text: 'Overview', link: '/guides/' },
-        { text: 'Quick Navigation', link: '/guides/#quick-navigation' }
+        { text: 'Overview', link: '/general-guides/' },
+        { text: 'Quick Navigation', link: '/general-guides/#quick-navigation' }
       ]
     },
     {
       text: '🛡️ Privacy & Security',
       collapsed: false,
       items: [
-        { text: 'Security Guides', link: '/guides/#privacy--security-guides' },
-        { text: 'Ad Blocking', link: '/guides/android-adblocking' }
+        { text: 'Security Guides', link: '/general-guides/#privacy--security-guides' },
+        { text: 'Ad Blocking', link: '/general-guides/android-adblocking' }
       ]
     },
     {
       text: '📦 App Management',
       collapsed: false,
       items: [
-        { text: 'App Optimization', link: '/guides/#app-management-and-optimization' },
-        { text: 'Debloating Guide', link: '/guides/android-apps-debloating' },
-        { text: 'Stop Auto Updates', link: '/guides/stop-android-app-auto-updates-play-store' }
+        { text: 'App Optimization', link: '/general-guides/#app-management-and-optimization' },
+        { text: 'Debloating Guide', link: '/general-guides/android-apps-debloating' },
+        { text: 'Stop Auto Updates', link: '/general-guides/stop-android-app-auto-updates-play-store' }
       ]
     },
     {
       text: '⚡ System Optimization',
       collapsed: true,
       items: [
-        { text: 'Performance Guides', link: '/guides/#performance--system-optimization' },
-        { text: 'Battery Optimization', link: '/guides/#battery-optimization' }
+        { text: 'Performance Guides', link: '/general-guides/#performance--system-optimization' },
+        { text: 'Battery Optimization', link: '/general-guides/#battery-optimization' }
       ]
     },
     {
       text: 'Customization',
       collapsed: true,
       items: [
-        { text: 'Theming Guides', link: '/guides/#customization--theming' },
-        { text: 'UI Modifications', link: '/guides/#ui-modifications' }
+        { text: 'Theming Guides', link: '/general-guides/#customization--theming' },
+        { text: 'UI Modifications', link: '/general-guides/#ui-modifications' }
       ]
     },
     {
       text: 'Advanced Topics',
       collapsed: true,
       items: [
-        { text: 'Technical Guides', link: '/guides/#development--technical-guides' },
-        { text: 'Android Knowledge', link: '/guides/#essential-android-knowledge' }
+        { text: 'Technical Guides', link: '/general-guides/#development--technical-guides' },
+        { text: 'Android Knowledge', link: '/general-guides/#essential-android-knowledge' }
       ]
     },
     {
       text: 'Community',
       collapsed: true,
       items: [
-        { text: 'Resources', link: '/guides/#community--resources' },
-        { text: 'Contributing', link: '/guides/#contributing-to-our-guides' }
+        { text: 'Resources', link: '/general-guides/#community--resources' },
+        { text: 'Contributing', link: '/general-guides/#contributing-to-our-guides' }
       ]
     }
   ],
@@ -996,7 +996,7 @@ export default withPwa(defineConfig({
     {
       text: 'Related',
       items: [
-        { text: 'Back to Guides', link: '/android-root-guides/' },
+        { text: 'Back to Guides', link: '/rooting-guides/' },
         { text: 'FAQ', link: '/faqs' },
         { text: 'Community Help', link: '/resources' }
       ]
@@ -1016,7 +1016,7 @@ export default withPwa(defineConfig({
     {
       text: 'Related',
       items: [
-        { text: 'Back to Guides', link: '/android-root-guides/' },
+        { text: 'Back to Guides', link: '/rooting-guides/' },
         { text: 'Troubleshooting', link: '/troubleshooting' },
         { text: 'Resources', link: '/resources' }
       ]
@@ -1036,8 +1036,8 @@ export default withPwa(defineConfig({
     {
       text: 'Quick Links',
       items: [
-        { text: 'Rooting Guides', link: '/android-root-guides/' },
-        { text: 'Browse Apps', link: '/android-root-apps/' },
+        { text: 'Rooting Guides', link: '/rooting-guides/' },
+        { text: 'Browse Apps', link: '/apps-and-modules/' },
         { text: 'FAQ', link: '/faqs' }
       ]
     }
@@ -1096,8 +1096,8 @@ export default withPwa(defineConfig({
     {
       text: 'Related',
       items: [
-        { text: 'Why Root?', link: '/android-root-guides/#why-root-your-device' },
-        { text: 'Root Apps', link: '/android-root-apps/' },
+        { text: 'Why Root?', link: '/rooting-guides/#why-root-your-device' },
+        { text: 'Root Apps', link: '/apps-and-modules/' },
         { text: 'Home', link: '/' }
       ]
     }
