@@ -180,7 +180,7 @@ Looking for troubleshooting? Visit our [Troubleshooting Guide](./troubleshooting
 - Enhanced privacy controls
 
 **Related Resources:**
-- [Essential Root Apps](./android-root-apps/index.md#starter-kit-must-have-apps)
+- [Essential Root Apps](./apps-amd-modules/index.md#starter-kit-must-have-apps)
 - [Root Framework Comparison](./rooting-guides/root-framework-comparison.md)
 - [Complete Rooting Guide](./rooting-guides/index.md)
 
@@ -266,8 +266,8 @@ Many customizations don't require root anymore:
 
 **Alternatives Without Root:**
 - [Non-Root Alternatives Guide](./non-root-alternatives.md)
-- [Android Ad Blocking](./guides/android-adblocking.md)
-- [App Debloating Guide](./guides/android-apps-debloating.md)
+- [Android Ad Blocking](./general-guides/android-adblocking.md)
+- [App Debloating Guide](./general-guides/android-apps-debloating.md)
 
 **Decision Flowchart:**
 
@@ -642,28 +642,28 @@ Modern devices use A/B (seamless) update system:
    - Copy to external storage/cloud
 
 4. **Essential apps to install:**
-   - [AdAway](./android-root-apps/index.md#adaway) - System-wide ad blocking
-   - [Swift Backup](./android-root-apps/index.md#swift-backup) - Complete backups
-   - [SD Maid SE](./android-root-apps/index.md#sd-maid-se) - System cleaner
-   - [AFWall+](./android-root-apps/index.md#afwall) - Firewall
-   - [Termux](./android-root-apps/index.md#termux) - Terminal emulator
+   - [AdAway](./apps-amd-modules/index.md#adaway) - System-wide ad blocking
+   - [Swift Backup](./apps-amd-modules/index.md#swift-backup) - Complete backups
+   - [SD Maid SE](./apps-amd-modules/index.md#sd-maid-se) - System cleaner
+   - [AFWall+](./apps-amd-modules/index.md#afwall) - Firewall
+   - [Termux](./apps-amd-modules/index.md#termux) - Terminal emulator
 
 **Next Steps:**
 
 1. **Debloat system:**
    - Remove manufacturer bloatware
    - Disable unused system apps
-   - [Debloating Guide](./guides/android-apps-debloating.md)
+   - [Debloating Guide](./general-guides/android-apps-debloating.md)
 
 2. **Install useful modules (Magisk):**
    - Start with essential modules only
    - Test one at a time
-   - [Essential Root Apps](./android-root-apps/index.md#starter-kit-must-have-apps)
+   - [Essential Root Apps](./apps-amd-modules/index.md#starter-kit-must-have-apps)
 
 3. **Configure ad blocking:**
    - System-wide with AdAway or hosts file
    - DNS-based blocking
-   - [Ad Blocking Guide](./guides/android-adblocking.md)
+   - [Ad Blocking Guide](./general-guides/android-adblocking.md)
 
 4. **Set up automation:**
    - Tasker with root actions
@@ -716,7 +716,7 @@ Modern devices use A/B (seamless) update system:
 - Magisk official repository
 - GitHub (open source, verifiable)
 - XDA Developers (established developers)
-- [Curated Root Apps List](./android-root-apps/index.md)
+- [Curated Root Apps List](./apps-amd-modules/index.md)
 
 **Troubleshooting Modules:**
 - [Module Conflicts](./troubleshooting.md#magisk-troubleshooting)
@@ -887,13 +887,13 @@ su -c "magisk --version"      # Check Magisk version
 - [Non-Root Alternatives](./non-root-alternatives.md)
 
 **Apps:**
-- [Featured Root Apps](./android-root-apps/index.md#starter-kit-must-have-apps)
-- [All Root Apps](./android-root-apps/index.md)
+- [Featured Root Apps](./apps-amd-modules/index.md#starter-kit-must-have-apps)
+- [All Root Apps](./apps-amd-modules/index.md)
 
 **General Android:**
-- [Ad Blocking Guide](./guides/android-adblocking.md)
-- [App Debloating](./guides/android-apps-debloating.md)
-- [Stop Auto-Updates](./guides/stop-android-app-auto-updates-play-store.md)
+- [Ad Blocking Guide](./general-guides/android-adblocking.md)
+- [App Debloating](./general-guides/android-apps-debloating.md)
+- [Stop Auto-Updates](./general-guides/stop-android-app-auto-updates-play-store.md)
 
 **Legal:**
 - [Legal Disclaimer](./legal-disclaimer.md)

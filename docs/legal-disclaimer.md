@@ -177,4 +177,4 @@ External links: We don't control third-party content. Always verify download sou
 
 ---
 
-**Ready?** Start with [Rooting Guides](/android-root-guides/) or [Root Apps](/android-root-apps/).
+**Ready?** Start with [Rooting Guides](/rooting-guides/) or [Root Apps](/apps-amd-modules/).

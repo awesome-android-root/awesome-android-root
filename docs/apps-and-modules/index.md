@@ -5,15 +5,15 @@ description: Download & explore 430+ best Android root apps, Magisk, KernelSU & 
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/android-root-apps/
+      href: https://awesome-android-root.org/apps-amd-modules/
   - - link
     - rel: alternate
       hreflang: en
-      href: https://awesome-android-root.org/android-root-apps/
+      href: https://awesome-android-root.org/apps-amd-modules/
   - - link
     - rel: alternate
       hreflang: x-default
-      href: https://awesome-android-root.org/android-root-apps/
+      href: https://awesome-android-root.org/apps-amd-modules/
   - - link
     - rel: dns-prefetch
       href: https://api.github.com
@@ -34,7 +34,7 @@ head:
       content: Download the best Android root apps, Magisk, KernelSU & LSPosed (Xposed) modules. Ultimate collection of 430+ curated root applications for Android customization, system optimization, and power user features.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/android-root-apps/
+      content: https://awesome-android-root.org/apps-amd-modules/
   - - meta
     - property: og:image
       content: https://awesome-android-root.org/images/og.png
@@ -160,7 +160,7 @@ head:
         "@type": ["WebPage", "CollectionPage", "SoftwareSourceCode"],
         "name": "Best Android Root Apps and Modules | Awesome Android Root",
         "alternateName": ["Android Root Apps", "Root Apps Collection", "Magisk Modules Collection"],
-        "url": "https://awesome-android-root.org/android-root-apps/",
+        "url": "https://awesome-android-root.org/apps-amd-modules/",
         "description": "Ultimate collection of 430+ best Android root apps, Magisk modules, and LSPosed frameworks. Download top-rated root applications for Android customization, system optimization, and power user features.",
         "inLanguage": "en-US",
         "datePublished": "2025-08-11T00:00:00Z",
@@ -270,7 +270,7 @@ head:
               "@type": "ListItem",
               "position": 2,
               "name": "Android Root Apps",
-              "item": "https://awesome-android-root.org/android-root-apps/"
+              "item": "https://awesome-android-root.org/apps-amd-modules/"
             }
           ]
         }

@@ -5,7 +5,7 @@ description: "Master guide to root all OnePlus devices - OnePlus 12, 11, 10, Nor
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/android-root-guides/how-to-root-oneplus-phone
+      href: https://awesome-android-root.org/rooting-guides/how-to-root-oneplus-phone
   - - meta
     - property: og:type
       content: article
@@ -17,7 +17,7 @@ head:
       content: Root any OnePlus device with our comprehensive guide covering bootloader unlock, MSM tool, custom recovery and Magisk installation for OxygenOS.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/android-root-guides/how-to-root-oneplus-phone
+      content: https://awesome-android-root.org/rooting-guides/how-to-root-oneplus-phone
   - - meta
     - property: og:image
       content: https://awesome-android-root.org/images/og/oneplus.png

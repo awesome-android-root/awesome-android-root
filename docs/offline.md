@@ -37,9 +37,9 @@ The **search feature** (press `/` or click the search icon) works offline and wi
 Here are some key pages that might be in your cache:
 
 - [Home](/) - Main landing page
-- [Root Apps & Modules](/android-root-apps/) - Browse 430+ apps
-- [Rooting Guides](/android-root-guides/) - Complete rooting tutorials
-- [Essential Tutorials](/guides/) - How-to guides and tips
+- [Root Apps & Modules](/apps-amd-modules/) - Browse 430+ apps
+- [Rooting Guides](/rooting-guides/) - Complete rooting tutorials
+- [Essential Tutorials](/general-guides/) - How-to guides and tips
 - [FAQ](/faqs) - Frequently asked questions
 - [Troubleshooting](/troubleshooting) - Fix common issues
 

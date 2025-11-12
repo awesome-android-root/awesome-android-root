@@ -5,7 +5,7 @@ description: "Master APatch rooting — a modern kernel-based root solution. Ste
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/android-root-guides/apatch-guide
+      href: https://awesome-android-root.org/rooting-guides/apatch-guide
   - - meta
     - property: og:type
       content: article
@@ -17,7 +17,7 @@ head:
       content: Install APatch root with our comprehensive guide. Kernel-based rooting solution for Android 10+ with module support and modern security practices.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/android-root-guides/apatch-guide
+      content: https://awesome-android-root.org/rooting-guides/apatch-guide
   - - meta
     - property: og:image
       content: https://awesome-android-root.org/images/og/apatch-guide.png
