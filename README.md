@@ -297,8 +297,8 @@ Follow this path:
 - **Play Integrity** - Google's security check (replacing SafetyNet)
 - **Knox** - Samsung's security platform (trips when bootloader unlocked)
 
-</details>
 <br>
+</details>
 
 **How Apps are Organized:**  
 In a category/sub-category, apps are sorted in following order: `⭐ (Community-recommended) Apps > Alphabetically`
@@ -619,7 +619,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 <details><summary><strong>What is Webview in Android?</strong></summary>
 
-It is a system component that **allows Android apps to display web content directly within the application**, essentially embedding a mini-browser within the app itself.
+- It is a system component that **allows Android apps to display web content directly within the application**, essentially embedding a mini-browser within the app itself.
 
 </details>
 
@@ -1030,6 +1030,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 - It is a window-level security flag in Android that **prevents the window's content from appearing in screenshots**, being viewed on non-secure displays like projectors or TVs, or being captured during screen recordings.
 
+<br>
 </details>
 
 - **[⭐ Enable Screenshot](https://github.com/LSPosed/DisableFlagSecure)** - Enabling screenshots in apps that normally wouldn't allow it, and disabling screenshot(Android 14+) and screen record(Android 15+) detection. `FOSS` `[LSP]`
@@ -1078,8 +1079,9 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 <summary><strong>What is Zygisk?</strong></summary>
 
-Zygisk is a feature that allows modules to inject code directly into the Zygote process in Android. This enables **powerful system-level modifications**, such as **hiding root**, patching app behavior, and more, with minimal impact on device stability and performance.
+- Zygisk is a feature that allows modules to inject code directly into the Zygote process in Android. This enables **powerful system-level modifications**, such as **hiding root**, patching app behavior, and more, with minimal impact on device stability and performance.
 
+<br>
 </details>
 
 - **[⭐ Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)**  
@@ -1117,7 +1119,8 @@ Zygisk is a feature that allows modules to inject code directly into the Zygote 
 | **Zygisk Next** | ✅ Best detection evasion<br>✅ Advanced features<br>✅ Complete module support | ❌ Closed source<br>❌ Trust concerns |
 | **ReZygisk** | ✅ Open-source<br>✅ High performance<br>✅ Transparent | ❌ Less mature<br>❌ Some feature limitations |
 
-</details><br>
+<br>
+</details>
 
 > [!TIP]
 > Use these modules if you need Zygisk features on alternative root frameworks (KernelSU, APatch), or want more control over Zygisk behavior than Magisk's built-in implementation provides.
@@ -1133,13 +1136,15 @@ Zygisk is a feature that allows modules to inject code directly into the Zygote 
 
 - It is an Android API that allows app developers to verify that an app is genuine, is installed from the Google Play Store and that it is running on a genuine and secure Android device. Primarily **used to detect and prevent fraud, cheating, and modifications**. 
 
+<br>
 </details>
 
 <details><summary><strong>Why even hide root?</strong></summary>
 
 - Because you may encounter issues where system or third-party applications (especially Banking Apps) detect the root status and refuse to operate
 
-</details><br>
+<br>
+</details>
 
 > [TheUnrealZaka's Guide for Hiding Root](https://gist.github.com/TheUnrealZaka/042040a1700ad869d54e781507a9ba4f)
 
@@ -1195,8 +1200,9 @@ Zygisk is a feature that allows modules to inject code directly into the Zygote 
 
 <details><summary><strong>What is VBMeta</strong></summary>
 
-VBMeta is a critical component of Android Verified Boot (AVB), a security feature designed to **ensure the integrity of the software running on an Android device during the boot process**.
+- VBMeta is a critical component of Android Verified Boot (AVB), a security feature designed to **ensure the integrity of the software running on an Android device during the boot process**.
 
+<br>
 </details>
 
 - **[Android VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer)** - A Magisk/KernelSU/Apatch module to fix VBMeta detections on Android. `FOSS` `[M]` `[K]`
