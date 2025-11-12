@@ -542,7 +542,7 @@ export default withPwa(defineConfig({
             },
             boostDocument: (documentId, term, storedFields) => {
               // Boost app and module pages significantly
-              if (documentId.includes('android-root-apps')) {
+              if (documentId.includes('apps-and-modules')) {
                 return 10
               }
               // Moderate boost for guide pages
