@@ -64,6 +64,12 @@
   - [App Permissions and Control](#app-permissions-and-control)
   - [Signature and Verification](#signature-and-verification)
 
+#### 🔧 **App Modifications and Extensions**
+- [Modded Apps and Tweaks](#modded-apps-and-tweaks)
+  - [General Mods](#general-mods)
+  - [Social Media Mods](#social-media-mods)
+- [ReVanced](#revanced)
+
 #### ⚡ **Performance and System**
 - [Automation and Scheduling](#automation-and-scheduling)
 - [Battery and Power Management](#battery-and-power-management)
@@ -102,13 +108,6 @@
 - [Network and Connectivity](#network-and-connectivity)
 - [Location and GPS](#location-and-gps)
 - [Communication and Messaging](#communication-and-messaging)
-
-
-#### 🔧 **App Modifications and Extensions**
-- [Modded Apps and Tweaks](#modded-apps-and-tweaks)
-  - [General Mods](#general-mods)
-  - [Social Media Mods](#social-media-mods)
-- [ReVanced](#revanced)
 
 #### 🛠️ **Root and System Management**
 - [Root Management](#root-management)
