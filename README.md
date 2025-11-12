@@ -185,7 +185,7 @@ Think of it like gaining **Administrator rights** on Windows or **sudo access** 
 
 # Rooting Guides
 
-[![Master-rooting-guide](https://img.shields.io/badge/Master--Rooting-Guide-blue?style=for-the-badge&cacheSeconds=3600)](./docs/android-root-guides/index.md)
+[![Master-rooting-guide](https://img.shields.io/badge/Master--Rooting-Guide-blue?style=for-the-badge&cacheSeconds=3600)](./docs/rooting-guides/index.md)
 
 > Follow all steps from "[fynks.github.io/check-list](https://fynks.github.io/check-list/)", ensure you’re fully prepared.
 
@@ -198,28 +198,28 @@ Think of it like gaining **Administrator rights** on Windows or **sudo access** 
 Follow this path:
 
 ### Step 1: Unlock Bootloader
-   → **[Bootloader Unlock Guide](docs/android-root-guides/how-to-unlock-bootloader.md)**  
+   → **[Bootloader Unlock Guide](docs/rooting-guides/how-to-unlock-bootloader.md)**  
    *(Required for most root methods)*
 
 ### Step 2: Install Custom Recovery
-   → **[TWRP / OrangeFox Guide](docs/android-root-guides/how-to-install-custom-recovery.md)**  
+   → **[TWRP / OrangeFox Guide](docs/rooting-guides/how-to-install-custom-recovery.md)**  
    *(Needed to flash root and mods)*
 
 ### Step 3: Choose and Install Root Method  
 
 | Method | Best for | Guide |
 | :--- | :--- | :--- |
-| Magisk | Most users | [Magisk Guide](docs/android-root-guides/magisk-guide.md) |
-| KernelSU | Kernel-savvy users | [KernelSU Guide](docs/android-root-guides/kernelsu-guide.md) |
-| APatch | Devices with tricky firmware | [APatch Guide](docs/android-root-guides/apatch-guide.md) |
+| Magisk | Most users | [Magisk Guide](docs/rooting-guides/magisk-guide.md) |
+| KernelSU | Kernel-savvy users | [KernelSU Guide](docs/rooting-guides/kernelsu-guide.md) |
+| APatch | Devices with tricky firmware | [APatch Guide](docs/rooting-guides/apatch-guide.md) |
 
 > [!TIP]
-> You can check out the complete comparison here: **[Root Solutions Comparison](./docs/android-root-guides/index.md#root-solutions-comparison)**
+> You can check out the complete comparison here: **[Root Solutions Comparison](./docs/rooting-guides/index.md#root-solutions-comparison)**
 
 ### Step 4: **Post-Root Setup**  
 1. Install [essential apps and modules](#starter-kit-must-have-apps)
-2. Block Ads and trackers: [Ad Blocking](./docs/guides/android-adblocking.md)
-3. Debloat your phone: [Debloating](./docs/guides/android-apps-debloating.md)
+2. Block Ads and trackers: [Ad Blocking](./docs/general-guides/android-adblocking.md)
+3. Debloat your phone: [Debloating](./docs/general-guides/android-apps-debloating.md)
 
 > [!NOTE]
 > **For Android 14/15:** Play Integrity is stricter. Root hiding may break apps. Stay updated.
@@ -227,20 +227,20 @@ Follow this path:
 ## Device-Specific Guides
 
 **Choose your device:**
-- [Google Pixel Root Guide](docs/android-root-guides/how-to-root-pixel-phone.md)
-- [Samsung Root Guide](docs/android-root-guides/how-to-root-samsung-phone.md)
-- [Xiaomi/HyperOS Root Guide](docs/android-root-guides/how-to-root-xiaomi-phone.md)
-- [OnePlus Root Guide](docs/android-root-guides/how-to-root-oneplus-phone.md)
-- [Nothing Phone Root Guide](docs/android-root-guides/how-to-root-nothing-phone.md)
-- [Motorola Root Guide](docs/android-root-guides/how-to-root-motorola-phone.md)
+- [Google Pixel Root Guide](docs/rooting-guides/how-to-root-pixel-phone.md)
+- [Samsung Root Guide](docs/rooting-guides/how-to-root-samsung-phone.md)
+- [Xiaomi/HyperOS Root Guide](docs/rooting-guides/how-to-root-xiaomi-phone.md)
+- [OnePlus Root Guide](docs/rooting-guides/how-to-root-oneplus-phone.md)
+- [Nothing Phone Root Guide](docs/rooting-guides/how-to-root-nothing-phone.md)
+- [Motorola Root Guide](docs/rooting-guides/how-to-root-motorola-phone.md)
 
 
 ## Additional Guides
 
-- [LSPosed Framework Guide](docs/android-root-guides/lsposed-guide.md)
-- [Custom ROMs Guide](docs/android-root-guides/custom-rom-installation.md)
+- [LSPosed Framework Guide](docs/rooting-guides/lsposed-guide.md)
+- [Custom ROMs Guide](docs/rooting-guides/custom-rom-installation.md)
 
-> **[📚 All Rooting Tutorials ➞](docs/android-root-guides/index.md)**
+> **[📚 All Rooting Tutorials ➞](docs/rooting-guides/index.md)**
 
 [↑ Back to top](#table-of-contents)
 
@@ -258,7 +258,7 @@ Follow this path:
 </div><br />
 
 > [!TIP]
-> **Start with our [Complete Rooting Guide](../android-root-guides/) before exploring apps below.**
+> **Start with our [Complete Rooting Guide](../rooting-guides/) before exploring apps below.**
 
 > [!TIP]
 > For privacy-friendly and convenient installs, we **recommend using the F-Droid** ecosystem, for example, install the Droid-ify client **and enable the IzzyOnDroid repo**:
@@ -281,9 +281,9 @@ Follow this path:
 | ▶️ | Available on Google Play Store |
 
 **Root Framework Badges:**
-- `[M]` = Magisk Module (requires [Magisk framework](../android-root-guides/magisk-guide.md))
-- `[K]` = KernelSU Module (requires [KernelSU framework](../android-root-guides/kernelsu-guide.md)) 
-- `[LSP]` = LSPosed Module (requires [LSPosed framework](../android-root-guides/lsposed-guide.md))
+- `[M]` = Magisk Module (requires [Magisk framework](../rooting-guides/magisk-guide.md))
+- `[K]` = KernelSU Module (requires [KernelSU framework](../rooting-guides/kernelsu-guide.md)) 
+- `[LSP]` = LSPosed Module (requires [LSPosed framework](../rooting-guides/lsposed-guide.md))
 - `[R]` = ReVanced Patch (requires [ReVanced Manager](https://github.com/ReVanced/revanced-manager))
 
 <details>
@@ -332,7 +332,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 ## Ads and Tracking Blockers
 
 > [!NOTE]
-> **Related Guide**: [Complete Android Ad Blocking Tutorial](./docs/guides/android-adblocking.md)
+> **Related Guide**: [Complete Android Ad Blocking Tutorial](./docs/general-guides/android-adblocking.md)
 
 - **[⭐ AdAway](https://github.com/AdAway/AdAway)** – Open-source ad blocker using the hosts file. Blocks ads without permissions. `FOSS` | [🌱](https://f-droid.org/packages/org.adaway)
 - **[⭐ bindhosts](https://github.com/bindhosts/bindhosts)** - Systemless hosts for APatch, KernelSU and Magisk that is fully standalone and self-updating. `FOSS` `[M]` `[K]`
@@ -371,7 +371,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[Package Manager](https://github.com/SmartPack/PackageManager)** - A highly powerful app to manage both system and user apps installed on an Android device. `FOSS` | [🌱](https://f-droid.org/packages/com.smartpack.packagemanager) | [▶️](https://play.google.com/store/apps/details?id=com.smartpack.packagemanager)
 
 ### App Update Control
-- **[⭐ Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. Also check out [📖 Zygisk Detach Guide](../guides/stop-android-app-auto-updates-play-store.md). `FOSS` `[M]`
+- **[⭐ Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. Also check out [📖 Zygisk Detach Guide](../general-guides/stop-android-app-auto-updates-play-store.md). `FOSS` `[M]`
 - **[Update Locker](https://github.com/Xposed-Modules-Repo/ru.mike.updatelocker/)** - Block updates (and auto-updates) selected apps via popular markets including Google Play Market, Huawei AppGallery and Samsung Galaxy Store. `Proprietary`
 
 ### Freeze Apps
@@ -804,7 +804,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 ## Debloating and Cleaning
 
 > [!NOTE]
-> **Related Guide**: [Android Apps Debloating Guide](../guides/android-apps-debloating.md)
+> **Related Guide**: [Android Apps Debloating Guide](../general-guides/android-apps-debloating.md)
 
 **Cleaning Apps:**
 - **[⭐ SD Maid 2/SE](https://github.com/d4rken-org/sdmaid-se)** - A file management tool for Android that specializes in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS` | [🌱](https://f-droid.org/en/packages/eu.darken.sdmse/) | [▶️](https://play.google.com/store/apps/details?id=eu.darken.sdmse)
@@ -1285,7 +1285,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - First time here? Start at the [Introduction](#introduction) & [The 4-Step Rooting Process](#the-4-step-rooting-process)
 - Unsure about a term? Open the [Glossary](#glossary)
 - Want tools? Jump to [Root Apps and Modules](#root-apps-and-modules)
-- Need a walkthrough? Browse the [Rooting Guides Index](./docs/android-root-guides/index.md)
+- Need a walkthrough? Browse the [Rooting Guides Index](./docs/rooting-guides/index.md)
 - Common questions? Check the FAQs: [faqs.md](./docs/faqs.md)
 
 ### Resource Hub

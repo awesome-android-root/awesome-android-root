@@ -358,14 +358,14 @@ Choose and install your preferred root method.
 After successful root installation, complete these essential steps:
 
 1. **Verify Root Access** - Verify superuser access works correctly
-2. **Install Essential Apps** - Visit [Starter Kit: Must-Have Apps](../android-root-apps/#starter-kit-must-have-apps)
+2. **Install Essential Apps** - Visit [Starter Kit: Must-Have Apps](../apps-and-modules/#starter-kit-must-have-apps)
 3. **Configure Root Management** - Set up root hiding if needed (banking apps) & module installation 
 4. **Create System Backup** - Create full system backup for safety
 
 **Recommended Next Steps:**
-- [Block Ads System-Wide](../guides/android-adblocking.md)
-- [Debloat Your Device](../guides/android-apps-debloating.md)
-- [Browse Root Apps Collection](../android-root-apps/)
+- [Block Ads System-Wide](../general-guides/android-adblocking.md)
+- [Debloat Your Device](../general-guides/android-apps-debloating.md)
+- [Browse Root Apps Collection](../apps-and-modules/)
 
 ---
 
@@ -502,7 +502,7 @@ Replace stock Android with custom ROMs
 - [GitHub Repository](https://github.com/awesome-android-root/awesome-android-root) - Source code and issues
 - [Troubleshooting Guide](../troubleshooting.md) - Common problems and fixes
 - [FAQ](../faqs.md) - Common questions
-- [Root Apps Collection](../android-root-apps/) - Curated apps and modules
+- [Root Apps Collection](../apps-and-modules/) - Curated apps and modules
 - [Twitter Updates](https://twitter.com/awsm_and_root) - News
 
 ### **External Communities**

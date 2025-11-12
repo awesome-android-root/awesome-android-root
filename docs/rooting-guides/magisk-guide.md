@@ -854,12 +854,12 @@ Some devices may pass Device with extensive workarounds, but no guarantees.
    - Performance modules - Device optimization
 
 2. **Explore root apps:**
-   - [Root Apps Collection](../android-root-apps/) - Curated apps
+   - [Root Apps Collection](../apps-and-modules/) - Curated apps
 
 3. **Learn advanced features:**
    - [Custom ROM Installation](./custom-rom-installation.md) - Next level
-   - [Ad Blocking Guide](../guides/android-adblocking.md) - Block all ads
-   - [Debloating Guide](../guides/android-apps-debloating.md) - Remove bloat
+   - [Ad Blocking Guide](../general-guides/android-adblocking.md) - Block all ads
+   - [Debloating Guide](../general-guides/android-apps-debloating.md) - Remove bloat
 
 ---
 

@@ -127,7 +127,7 @@ If your device won't boot, jump to [Emergency Recovery](#emergency-recovery) imm
      - **Xiaomi:** Power + Volume Up
      - **OnePlus:** Power + Volume Down
      - **Most others:** Power + Volume Up (recovery), Power + Volume Down (bootloader)
-   - Detailed instructions: [Custom Recovery Installation](./android-root-guides/how-to-install-custom-recovery.md)
+   - Detailed instructions: [Custom Recovery Installation](./rooting-guides/how-to-install-custom-recovery.md)
 
 3. **Wipe Dalvik/ART Cache**
    - Custom recovery: Wipe → Advanced wipe → Dalvik/ART cache + Cache
@@ -206,7 +206,7 @@ If your device won't boot, jump to [Emergency Recovery](#emergency-recovery) imm
    - **Samsung:** Odin with full firmware (AP/BL/CP/CSC). Use HOME_CSC to preserve data
    - **Xiaomi/POCO/Redmi:** Mi Flash Tool with fastboot ROM (beware Anti-Rollback)
    - **OnePlus:** MSMDownloadTool or fastboot packages
-   - Device guides: [Pixel](./android-root-guides/how-to-root-pixel-phone.md) • [Samsung](./android-root-guides/how-to-root-samsung-phone.md) • [Xiaomi](./android-root-guides/how-to-root-xiaomi-phone.md) • [OnePlus](./android-root-guides/how-to-root-oneplus-phone.md)
+   - Device guides: [Pixel](./rooting-guides/how-to-root-pixel-phone.md) • [Samsung](./rooting-guides/how-to-root-samsung-phone.md) • [Xiaomi](./rooting-guides/how-to-root-xiaomi-phone.md) • [OnePlus](./rooting-guides/how-to-root-oneplus-phone.md)
 
 4. **Factory Reset (Last Resort)**
    - Stock recovery: Wipe data/factory reset
@@ -1092,7 +1092,7 @@ fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
    ```
 
 **Resources:**
-- [How to Root Pixel Phone](./android-root-guides/how-to-root-pixel-phone.md)
+- [How to Root Pixel Phone](./rooting-guides/how-to-root-pixel-phone.md)
 
 ---
 
@@ -1122,7 +1122,7 @@ fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
    - Check "Binary" version in Download Mode
 
 **Resources:**
-- [How to Root Samsung Phone](./android-root-guides/how-to-root-samsung-phone.md)
+- [How to Root Samsung Phone](./rooting-guides/how-to-root-samsung-phone.md)
 
 ---
 
@@ -1150,7 +1150,7 @@ fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
    - Check partition layout before flashing
 
 **Resources:**
-- [How to Root Xiaomi Phone](./android-root-guides/how-to-root-xiaomi-phone.md)
+- [How to Root Xiaomi Phone](./rooting-guides/how-to-root-xiaomi-phone.md)
 
 ---
 
@@ -1173,7 +1173,7 @@ fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
    - Check model number carefully
 
 **Resources:**
-- [How to Root OnePlus Phone](./android-root-guides/how-to-root-oneplus-phone.md)
+- [How to Root OnePlus Phone](./rooting-guides/how-to-root-oneplus-phone.md)
 
 ---
 
@@ -1194,7 +1194,7 @@ fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
    - Keep stock images for your version
 
 **Resources:**
-- [How to Root Nothing Phone](./android-root-guides/how-to-root-nothing-phone.md)
+- [How to Root Nothing Phone](./rooting-guides/how-to-root-nothing-phone.md)
 
 ---
 
@@ -1216,7 +1216,7 @@ fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
    - Requires official firmware packages
 
 **Resources:**
-- [How to Root Motorola Phone](./android-root-guides/how-to-root-motorola-phone.md)
+- [How to Root Motorola Phone](./rooting-guides/how-to-root-motorola-phone.md)
 
 ---
 
@@ -1524,18 +1524,18 @@ Error: Stuck on OnePlus logo, no response
 ### Quick Links
 
 **Essential Guides:**
-- [Complete Rooting Guide](./android-root-guides/index.md)
-- [Bootloader Unlock](./android-root-guides/how-to-unlock-bootloader.md)
-- [Custom Recovery Installation](./android-root-guides/how-to-install-custom-recovery.md)
-- [Root Framework Comparison](./android-root-guides/root-framework-comparison.md)
+- [Complete Rooting Guide](./rooting-guides/index.md)
+- [Bootloader Unlock](./rooting-guides/how-to-unlock-bootloader.md)
+- [Custom Recovery Installation](./rooting-guides/how-to-install-custom-recovery.md)
+- [Root Framework Comparison](./rooting-guides/root-framework-comparison.md)
 
 **Device Guides:**
-- [Pixel](./android-root-guides/how-to-root-pixel-phone.md)
-- [Samsung](./android-root-guides/how-to-root-samsung-phone.md)
-- [Xiaomi](./android-root-guides/how-to-root-xiaomi-phone.md)
-- [OnePlus](./android-root-guides/how-to-root-oneplus-phone.md)
-- [Nothing](./android-root-guides/how-to-root-nothing-phone.md)
-- [Motorola](./android-root-guides/how-to-root-motorola-phone.md)
+- [Pixel](./rooting-guides/how-to-root-pixel-phone.md)
+- [Samsung](./rooting-guides/how-to-root-samsung-phone.md)
+- [Xiaomi](./rooting-guides/how-to-root-xiaomi-phone.md)
+- [OnePlus](./rooting-guides/how-to-root-oneplus-phone.md)
+- [Nothing](./rooting-guides/how-to-root-nothing-phone.md)
+- [Motorola](./rooting-guides/how-to-root-motorola-phone.md)
 
 **Root Apps:**
 - [Essential Root Apps](./android-root-apps/index.md##starter-kit-must-have-apps)

@@ -43,44 +43,44 @@ echo -e "${GREEN}Starting build-docs process...${NC}"
 [ ! -d "docs" ] && handle_error "'docs' directory not found."
 [ ! -f "README.md" ] && handle_error "'README.md' not found."
 
-# 2. Create android-root-apps directory if it doesn't exist
-mkdir -p docs/android-root-apps || handle_error "Failed creating android-root-apps directory"
-log_info "Created docs/android-root-apps directory"
+# 2. Create apps-and-modules directory if it doesn't exist
+mkdir -p docs/apps-and-modules || handle_error "Failed creating apps-and-modules directory"
+log_info "Created docs/apps-and-modules directory"
 
-# 3. Filter README.md content and append to existing docs/android-root-apps/index.md
+# 3. Filter README.md content and append to existing docs/apps-and-modules/index.md
 filter_readme() {
     # Remove div elements with specified classes using sed
     sed '/<div[^>]*class="[^"]*\(mob-tip\|toc-overview\|intro-header\|quick-nav\|root-intro\|readme-guides\|readme-guides-steps\|readme-apps-intro\)[^"]*"[^>]*>/,/<\/div>/d' README.md
 }
 
-if [ -f "docs/android-root-apps/index.md" ]; then
+if [ -f "docs/apps-and-modules/index.md" ]; then
     tmp_file=$(mktemp) || handle_error "Failed creating temporary file"
     {
-        cat docs/android-root-apps/index.md
+        cat docs/apps-and-modules/index.md
         echo ""  # Add blank line separator
         filter_readme
-    } > "$tmp_file" && mv "$tmp_file" docs/android-root-apps/index.md || handle_error "Failed appending filtered README.md to docs/android-root-apps/index.md"
-    log_info "Appended filtered README.md content to existing docs/android-root-apps/index.md"
+    } > "$tmp_file" && mv "$tmp_file" docs/apps-and-modules/index.md || handle_error "Failed appending filtered README.md to docs/apps-and-modules/index.md"
+    log_info "Appended filtered README.md content to existing docs/apps-and-modules/index.md"
 else
     # If index.md doesn't exist, just copy filtered README.md
-    filter_readme > docs/android-root-apps/index.md || handle_error "Failed copying filtered README.md to docs/android-root-apps/index.md"
-    log_info "Copied filtered README.md to docs/android-root-apps/index.md"
+    filter_readme > docs/apps-and-modules/index.md || handle_error "Failed copying filtered README.md to docs/apps-and-modules/index.md"
+    log_info "Copied filtered README.md to docs/apps-and-modules/index.md"
 fi
 
-# 4. Adjust links and image paths in android-root-apps route (combined sed operations)
+# 4. Adjust links and image paths in apps-and-modules route (combined sed operations)
 sed -i \
-  -e '/http[s]*:\/\/\//! s|./docs/android-root-guides/|../android-root-guides/|g' \
+  -e '/http[s]*:\/\/\//! s|./docs/rooting-guides/|../rooting-guides/|g' \
   -e '/http[s]*:\/\/\//! s|./docs/|../|g' \
   -e 's|\([^:]\)//|\1/|g' \
   -e 's|docs/public/images/|../public/images/|g' \
   -e 's|\(\[.*\](\)\./docs/|\1/|g' \
   -e 's|\(\[.*\](\)docs/|\1/|g' \
-  docs/android-root-apps/index.md || handle_error "Failed adjusting links and paths in docs/android-root-apps/index.md"
-log_info "Links and image paths adjusted in docs/android-root-apps/index.md"
+  docs/apps-and-modules/index.md || handle_error "Failed adjusting links and paths in docs/apps-and-modules/index.md"
+log_info "Links and image paths adjusted in docs/apps-and-modules/index.md"
 
 # 7. Add AppSearch component and wrap content for searchability
 add_search_component() {
-    local file="docs/android-root-apps/index.md"
+    local file="docs/apps-and-modules/index.md"
     local tmp_file=$(mktemp) || handle_error "Failed creating temporary file for search component"
     
     # Find line numbers for both --- markers (frontmatter boundaries)
@@ -123,11 +123,11 @@ add_search_component() {
 }
 
 add_search_component
-log_info "Added AppSearch component and wrapped content in docs/android-root-apps/index.md"
+log_info "Added AppSearch component and wrapped content in docs/apps-and-modules/index.md"
 
 # 8. Validate generated content
 validate_build() {
-    local file="docs/android-root-apps/index.md"
+    local file="docs/apps-and-modules/index.md"
     
     # Check if file exists and is not empty
     [ ! -s "$file" ] && handle_error "Generated file is empty or does not exist"

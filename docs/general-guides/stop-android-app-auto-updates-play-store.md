@@ -158,13 +158,13 @@ App detaching removes the connection between installed apps and Google Play Stor
 ## Prerequisites
 
 **Need to root your device first?** Check our device-specific guides:
-- 📱 [Samsung Phone Rooting Guide](../android-root-guides/how-to-root-samsung-phone.md)
-- 📱 [Pixel Phone Rooting Guide](../android-root-guides/how-to-root-pixel-phone.md)
-- 📱 [OnePlus Phone Rooting Guide](../android-root-guides/how-to-root-oneplus-phone.md)
-- 📱 [Xiaomi Phone Rooting Guide](../android-root-guides/how-to-root-xiaomi-phone.md)
-- 📱 [Nothing Phone Rooting Guide](../android-root-guides/how-to-root-nothing-phone.md)
-- 📱 [Motorola Phone Rooting Guide](../android-root-guides/how-to-root-motorola-phone.md)
-- 🔓 [Bootloader Unlocking Guide](../android-root-guides/how-to-unlock-bootloader.md)
+- 📱 [Samsung Phone Rooting Guide](../rooting-guides/how-to-root-samsung-phone.md)
+- 📱 [Pixel Phone Rooting Guide](../rooting-guides/how-to-root-pixel-phone.md)
+- 📱 [OnePlus Phone Rooting Guide](../rooting-guides/how-to-root-oneplus-phone.md)
+- 📱 [Xiaomi Phone Rooting Guide](../rooting-guides/how-to-root-xiaomi-phone.md)
+- 📱 [Nothing Phone Rooting Guide](../rooting-guides/how-to-root-nothing-phone.md)
+- 📱 [Motorola Phone Rooting Guide](../rooting-guides/how-to-root-motorola-phone.md)
+- 🔓 [Bootloader Unlocking Guide](../rooting-guides/how-to-unlock-bootloader.md)
 
 **Required:**
 - ✅ **Rooted Android device** (Magisk or KernelSU)
@@ -257,11 +257,11 @@ su -c /data/adb/modules/zygisk-detach/detach
 
 ## Related Guides
 
-- 📋 [Android Root Apps Collection](../android-root-apps/)
-- 🔧 [Custom Recovery Installation](../android-root-guides/how-to-install-custom-recovery.md)
-- 🏠 [Custom ROM Installation](../android-root-guides/custom-rom-installation.md)
-- 📚 [All Root Guides](../android-root-guides/)
+- 📋 [Android Root Apps Collection](../apps-and-modules/)
+- 🔧 [Custom Recovery Installation](../rooting-guides/how-to-install-custom-recovery.md)
+- 🏠 [Custom ROM Installation](../rooting-guides/custom-rom-installation.md)
+- 📚 [All Root Guides](../rooting-guides/)
 
 ---
 
-**Need help rooting your device first?** Check our [comprehensive rooting guides](../android-root-guides/) for step-by-step instructions tailored to your specific device.
+**Need help rooting your device first?** Check our [comprehensive rooting guides](../rooting-guides/) for step-by-step instructions tailored to your specific device.

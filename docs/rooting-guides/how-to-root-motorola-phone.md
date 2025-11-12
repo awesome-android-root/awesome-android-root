@@ -75,7 +75,7 @@ Root Motorola devices via official unlock code system. Covers Edge 50, Edge 40, 
 - [Bootloader Unlocking](./how-to-unlock-bootloader.md) - Detailed unlock guide
 - [Magisk Guide](./magisk-guide.md) - Complete Magisk documentation
 - [Custom ROMs](./custom-rom-installation.md) - Installing custom ROMs
-- [Root Apps](../android-root-apps/) - Best root apps collection
+- [Root Apps](../apps-and-modules/) - Best root apps collection
 
 ---
 
@@ -637,11 +637,11 @@ fastboot flashing lock
 **After Rooting:**
 
 1. **Essential apps:**
-   - [Root Apps Collection](../android-root-apps/)
+   - [Root Apps Collection](../apps-and-modules/)
 
 2. **Enhance:**
-   - [Ad Blocking Guide](../guides/android-adblocking.md)
-   - [Debloating Guide](../guides/android-apps-debloating.md)
+   - [Ad Blocking Guide](../general-guides/android-adblocking.md)
+   - [Debloating Guide](../general-guides/android-apps-debloating.md)
    - [LSPosed Guide](./lsposed-guide.md)
 
 3. **Explore ROMs:**

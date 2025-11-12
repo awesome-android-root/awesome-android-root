@@ -75,7 +75,7 @@ The modern Xposed implementation for Android 8.1-15. Master LSPosed Framework fo
 - [Magisk Guide](./magisk-guide.md) - Required root solution with Zygisk support
 - [KernelSU Guide](./kernelsu-guide.md) - Alternative kernel-based root (experimental LSPosed support)
 - [Custom Recovery Guide](./how-to-install-custom-recovery.md) - Alternative installation method
-- [Root Apps Collection](../android-root-apps/index.md) - Popular LSPosed modules directory
+- [Root Apps Collection](../apps-and-modules/index.md) - Popular LSPosed modules directory
 - [FAQ](../faqs.md) - Frequently asked questions
 - [Troubleshooting Guide](../faqs.md#troubleshooting) - Common issue solutions
 
@@ -1200,7 +1200,7 @@ adb shell pm list packages | grep lsposed
 1. [Custom ROM Installation](./custom-rom-installation.md) - Full system replacement
 2. [Magisk Modules Guide](./magisk-guide.md) - System-level modifications
 3. [KernelSU Guide](./kernelsu-guide.md) - Kernel-based root alternative
-4. [Root Apps Collection](../android-root-apps/index.md) - 300+ tested apps and modules
+4. [Root Apps Collection](../apps-and-modules/index.md) - 300+ tested apps and modules
 
 ### Advanced Customization
 
