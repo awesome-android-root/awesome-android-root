@@ -55,12 +55,6 @@
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
-<url>
-  <loc>https://awesome-android-root.org/non-root-alternatives</loc>
-  <lastmod>2025-10-05T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.75</priority>
-</url>
 
 
 <!-- Apps and Modules section -->
