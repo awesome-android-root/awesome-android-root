@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Legal Disclaimer & Safety Notice
-description: "Important legal information, warranty implications, and safety guidelines for Android rooting across different regions and manufacturers."
+description: "Important legal information, warranty implications, and safety guidelines for Android rooting."
 head:
   - - link
     - rel: canonical
@@ -9,6 +9,33 @@ head:
   - - meta
     - name: robots
       content: index, follow
+  - - meta
+    - property: og:type
+      content: article
+  - - meta
+    - property: og:title
+      content: Legal Disclaimer & Safety Notice for Android Rooting
+  - - meta
+    - property: og:description
+      content: "Important legal information, warranty implications, and safety guidelines for Android rooting."
+  - - meta
+    - property: og:url
+      content: https://awesome-android-root.org/legal-disclaimer
+  - - meta
+    - property: og:image
+      content: https://awesome-android-root.org/images/og/bootoader.png
+  - - meta
+    - name: twitter:card
+      content: summary_large_image
+  - - meta
+    - name: twitter:title
+      content: Legal Disclaimer & Safety Notice for Android Rooting
+  - - meta
+    - name: twitter:description
+      content: "Important legal information, warranty implications, and safety guidelines for Android rooting."
+  - - meta
+    - name: twitter:image
+      content: https://awesome-android-root.org/images/og/bootoader.png
 ---
 
 # Legal Disclaimer & Safety Notice
