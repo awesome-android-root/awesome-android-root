@@ -559,7 +559,7 @@ After DenyList configuration:
 **Note:** Shamiko works differently - don't enforce DenyList when using Shamiko.
 
 > [!TIP]
-> Check our [Root hiding section](./../apps-amd-modules/index.md#root-hiding-and-integrity)
+> Check our [Root hiding section](./../apps-and-modules/index.md#root-hiding-and-integrity)
 
 ### Testing Play Integrity
 
