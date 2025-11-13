@@ -7,7 +7,7 @@
 
 <url>
   <loc>https://awesome-android-root.org/</loc>
-  <lastmod>2025-10-05T00:00:00+00:00</lastmod>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
@@ -15,39 +15,45 @@
 <!-- Top-level pages -->
 <url>
   <loc>https://awesome-android-root.org/about</loc>
-  <lastmod>2025-10-05T00:00:00+00:00</lastmod>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/contributing</loc>
-  <lastmod>2025-10-05T00:00:00+00:00</lastmod>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
   <changefreq>yearly</changefreq>
   <priority>0.70</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/faqs</loc>
-  <lastmod>2025-10-05T00:00:00+00:00</lastmod>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/troubleshooting</loc>
-  <lastmod>2025-10-05T00:00:00+00:00</lastmod>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/resources</loc>
-  <lastmod>2025-10-05T00:00:00+00:00</lastmod>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/legal-disclaimer</loc>
-  <lastmod>2025-10-05T00:00:00+00:00</lastmod>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
   <changefreq>yearly</changefreq>
   <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://awesome-android-root.org/non-root-alternatives</loc>
+  <lastmod>2025-11-13T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/non-root-alternatives</loc>
