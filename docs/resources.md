@@ -163,7 +163,7 @@ Last updated: November 2025 | Android 15 ready
 | **MMRL** | Magisk modules | Community modules | [GitHub](https://github.com/MMRLApp/MMRL) |
 | **Fox MMRL** | Module manager | Alternative client | [GitHub](https://github.com/Fox2Code/FoxMagiskModuleManager) |
 | **LSPosed Modules** | Xposed modules | App modifications | [Repository](https://github.com/Xposed-Modules-Repo) |
-| **Root Apps Index** | Curated collection | 300+ root apps | [Collection](./apps-amd-modules/index.md) |
+| **Root Apps Index** | Curated collection | 300+ root apps | [Collection](./apps-and-modules/index.md) |
 | **IzzyOnDroid** | F-Droid repo | FOSS apps | [IzzyOnDroid](https://apt.izzysoft.de/fdroid/) |
 
 ### Extraction and utility tools
@@ -340,7 +340,7 @@ Last updated: November 2025 | Android 15 ready
 | Need | Primary Resource | Backup Resource |
 |:-----|:----------------|:----------------|
 | **Emergency Help** | [FAQ Emergency](./faqs.md#emergency-help) | [XDA Device Forums](https://forum.xda-developers.com/) |
-| **Root Apps** | [App Collection](./apps-amd-modules/index.md) | [F-Droid](https://f-droid.org/) |
+| **Root Apps** | [App Collection](./apps-and-modules/index.md) | [F-Droid](https://f-droid.org/) |
 | **Module Discovery** | [MMRL](https://github.com/MMRLApp/MMRL) | [Telegram Channels](https://t.me/magiskmod_update) |
 | **Firmware** | Manufacturer site | [Firmware databases](#firmware-sources) |
 
@@ -377,6 +377,6 @@ This is a community-driven project. Contributions are welcome!
 
 **Maintained by:** [Awesome Android Root Community](https://github.com/awesome-android-root/awesome-android-root)
 
-[Home](https://awesome-android-root.org) | [Root Apps](./apps-amd-modules/index.md) | [Guides](./rooting-guides/index.md) | [FAQ](./faqs.md)
+[Home](https://awesome-android-root.org) | [Root Apps](./apps-and-modules/index.md) | [Guides](./rooting-guides/index.md) | [FAQ](./faqs.md)
 
 </div>

@@ -1284,8 +1284,8 @@ fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
    - Use gaming profiles only during actual gaming
 
 **Apps for Performance:**
-- [Performance & Gaming Apps](./apps-amd-modules/index.md#performance-and-gaming)
-- [Battery Management Tools](./apps-amd-modules/index.md#battery-and-power-management)
+- [Performance & Gaming Apps](./apps-and-modules/index.md#performance-and-gaming)
+- [Battery Management Tools](./apps-and-modules/index.md#battery-and-power-management)
 
 **Storage Optimization:**
 
@@ -1538,9 +1538,9 @@ Error: Stuck on OnePlus logo, no response
 - [Motorola](./rooting-guides/how-to-root-motorola-phone.md)
 
 **Root Apps:**
-- [Essential Root Apps](./apps-amd-modules/index.md##starter-kit-must-have-apps)
-- [Ad Blockers](./apps-amd-modules/index.md#ads-and-tracking-blockers)
-- [Backup Tools](./apps-amd-modules/index.md#backup-and-restore)
+- [Essential Root Apps](./apps-and-modules/index.md##starter-kit-must-have-apps)
+- [Ad Blockers](./apps-and-modules/index.md#ads-and-tracking-blockers)
+- [Backup Tools](./apps-and-modules/index.md#backup-and-restore)
 
 **General Resources:**
 - [FAQ](./faqs.md)

@@ -180,7 +180,7 @@ Looking for troubleshooting? Visit our [Troubleshooting Guide](./troubleshooting
 - Enhanced privacy controls
 
 **Related Resources:**
-- [Essential Root Apps](./apps-amd-modules/index.md#starter-kit-must-have-apps)
+- [Essential Root Apps](./apps-and-modules/index.md#starter-kit-must-have-apps)
 - [Root Framework Comparison](./rooting-guides/root-framework-comparison.md)
 - [Complete Rooting Guide](./rooting-guides/index.md)
 
@@ -642,11 +642,11 @@ Modern devices use A/B (seamless) update system:
    - Copy to external storage/cloud
 
 4. **Essential apps to install:**
-   - [AdAway](./apps-amd-modules/index.md#adaway) - System-wide ad blocking
-   - [Swift Backup](./apps-amd-modules/index.md#swift-backup) - Complete backups
-   - [SD Maid SE](./apps-amd-modules/index.md#sd-maid-se) - System cleaner
-   - [AFWall+](./apps-amd-modules/index.md#afwall) - Firewall
-   - [Termux](./apps-amd-modules/index.md#termux) - Terminal emulator
+   - [AdAway](./apps-and-modules/index.md#adaway) - System-wide ad blocking
+   - [Swift Backup](./apps-and-modules/index.md#swift-backup) - Complete backups
+   - [SD Maid SE](./apps-and-modules/index.md#sd-maid-se) - System cleaner
+   - [AFWall+](./apps-and-modules/index.md#afwall) - Firewall
+   - [Termux](./apps-and-modules/index.md#termux) - Terminal emulator
 
 **Next Steps:**
 
@@ -658,7 +658,7 @@ Modern devices use A/B (seamless) update system:
 2. **Install useful modules (Magisk):**
    - Start with essential modules only
    - Test one at a time
-   - [Essential Root Apps](./apps-amd-modules/index.md#starter-kit-must-have-apps)
+   - [Essential Root Apps](./apps-and-modules/index.md#starter-kit-must-have-apps)
 
 3. **Configure ad blocking:**
    - System-wide with AdAway or hosts file
@@ -716,7 +716,7 @@ Modern devices use A/B (seamless) update system:
 - Magisk official repository
 - GitHub (open source, verifiable)
 - XDA Developers (established developers)
-- [Curated Root Apps List](./apps-amd-modules/index.md)
+- [Curated Root Apps List](./apps-and-modules/index.md)
 
 **Troubleshooting Modules:**
 - [Module Conflicts](./troubleshooting.md#magisk-troubleshooting)
@@ -887,8 +887,8 @@ su -c "magisk --version"      # Check Magisk version
 - [Non-Root Alternatives](./non-root-alternatives.md)
 
 **Apps:**
-- [Featured Root Apps](./apps-amd-modules/index.md#starter-kit-must-have-apps)
-- [All Root Apps](./apps-amd-modules/index.md)
+- [Featured Root Apps](./apps-and-modules/index.md#starter-kit-must-have-apps)
+- [All Root Apps](./apps-and-modules/index.md)
 
 **General Android:**
 - [Ad Blocking Guide](./general-guides/android-adblocking.md)
