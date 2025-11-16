@@ -26,48 +26,6 @@ head:
       content: Awesome Android Root
   - - meta
     - name: twitter:card
-  - - script
-    - type: application/ld+json
-    - |
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is Android root?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Android root is the process of gaining privileged control (known as root access) over various Android subsystems. This allows users to alter or replace system applications and settings, run specialized apps that require administrator-level permissions, or perform other operations that are otherwise inaccessible to a normal Android user."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is rooting Android safe?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Rooting can be safe when you follow trusted, device-specific instructions and back up your data first. It may void your warranty and carries risk if done incorrectly. Our guides focus on safety, backups, and verified steps to reduce mistakes."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What are the benefits of rooting Android?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Rooting enables deeper customization, powerful backups, ad blocking, performance tuning, automation, and system-level controls. It also unlocks advanced modules (Magisk/KernelSU/APatch) and frameworks like LSPosed for fine-grained tweaks."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Magisk vs KernelSU vs APatch — what's the difference?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Magisk is a widely used systemless root solution with a robust module ecosystem. KernelSU integrates root at the kernel level for advanced users and developers. APatch uses kernel-based patching for certain devices. Choose based on your device support and needs—see our guides for details."
-            }
-          }
-        ]
-      }
-      content: summary_large_image
   - - meta
     - name: twitter:title
       content: Android Rooting FAQ & Troubleshooting Guide 2025
@@ -103,10 +61,10 @@ head:
       content: Play Integrity
   - - meta
     - property: article:published_time
-      content: 2024-01-05T12:00:00Z
+      content: 2025-11-15T12:00:00Z
   - - meta
     - property: article:modified_time
-      content: 2025-08-24T10:00:00Z
+      content: 2025-11-15T10:00:00Z
   - - meta
     - name: robots
       content: index, follow, max-image-preview:large
