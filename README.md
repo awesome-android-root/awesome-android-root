@@ -286,6 +286,9 @@ Follow this path:
 - `[LSP]` = LSPosed Module (requires [LSPosed framework](../rooting-guides/lsposed-guide.md))
 - `[R]` = ReVanced Patch (requires [ReVanced Manager](https://github.com/ReVanced/revanced-manager))
 
+> [!IMPORTANT]
+> Some Apps/Modules may have mislabelled licenses. We try our best to verify them, but please double-check before use.
+
 <details>
 <summary><b>📚 Common Rooting Terms</b></summary>
 
