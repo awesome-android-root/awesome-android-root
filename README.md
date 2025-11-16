@@ -280,14 +280,15 @@ Follow this path:
 | 🌱 | Available on F-Droid |
 | ▶️ | Available on Google Play Store |
 
+> [!NOTE]
+> Some Apps/Modules may have mislabelled licenses. We try our best to verify them, but please double-check before use.
+
+
 **Root Framework Badges:**
 - `[M]` = Magisk Module (requires [Magisk framework](../rooting-guides/magisk-guide.md))
 - `[K]` = KernelSU Module (requires [KernelSU framework](../rooting-guides/kernelsu-guide.md)) 
 - `[LSP]` = LSPosed Module (requires [LSPosed framework](../rooting-guides/lsposed-guide.md))
 - `[R]` = ReVanced Patch (requires [ReVanced Manager](https://github.com/ReVanced/revanced-manager))
-
-> [!IMPORTANT]
-> Some Apps/Modules may have mislabelled licenses. We try our best to verify them, but please double-check before use.
 
 <details>
 <summary><b>📚 Common Rooting Terms</b></summary>
