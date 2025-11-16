@@ -303,7 +303,6 @@ Last updated: November 2025 | Android 15 ready
 | **Project Treble** | HAL abstraction layers | [Treble Docs](https://source.android.com/docs/core/architecture) |
 | **Mainline Modules** | Modular update delivery | [Mainline](https://source.android.com/docs/core/architecture/modular-system) |
 | **Safety Guidelines** | Android device security best practices | [Android Enterprise](https://support.google.com/work/android/answer/9415890) |
-| **GSIs and Treble Testing** | Generic System Image reference | [GSI Guides](https://source.android.com/docs/setup/start/gsi) |
 
 ---
 
