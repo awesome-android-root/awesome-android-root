@@ -246,13 +246,6 @@ adb reboot download
 
 **Device restarts and wipes completely.**
 
-### Step 4: Verify Knox Trip
-
-After setup:
-1. Dial `*#0*#` for service mode
-2. Check Knox warranty status
-3. Should show "0x1" (tripped, permanent)
-
 ---
 
 ## Root Installation
@@ -380,6 +373,15 @@ id
 If Magisk shows both installed and su works, you're rooted!
 :::
 
+
+### Step 6: Verify Knox Trip
+
+After setup:
+1. Dial `*#0*#` for service mode
+2. Check Knox warranty status
+3. Should show "0x1" (tripped, permanent)
+
+
 ---
 
 ### Method 2: TWRP Recovery (Legacy Devices)
@@ -393,6 +395,15 @@ For older Samsung devices with TWRP support:
 5. Reboot system
 
 **Note:** Most modern Samsung devices lack TWRP support due to A/B partitions and encryption changes.
+
+
+### Verify Knox Trip
+
+After setup:
+1. Dial `*#0*#` for service mode
+2. Check Knox warranty status
+3. Should show "0x1" (tripped, permanent)
+
 
 ---
 
