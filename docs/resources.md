@@ -302,7 +302,6 @@ Last updated: November 2025 | Android 15 ready
 | **A/B System Updates** | Seamless update flow | [A/B System](https://source.android.com/docs/core/ota/ab) |
 | **Project Treble** | HAL abstraction layers | [Treble Docs](https://source.android.com/docs/core/architecture) |
 | **Mainline Modules** | Modular update delivery | [Mainline](https://source.android.com/docs/core/architecture/modular-system) |
-| **Safety Guidelines** | Android device security best practices | [Android Enterprise](https://support.google.com/work/android/answer/9415890) |
 
 ---
 
