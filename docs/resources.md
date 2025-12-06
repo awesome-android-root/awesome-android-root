@@ -173,6 +173,8 @@ Last updated: November 2025 | Android 15 ready
 | **Payload-Dumper-Android** | Extract partitions from OTA.zip or payload.bin on Android without a PC | [GitHub](https://github.com/rajmani7584/Payload-Dumper-Android) |
 | **payload-dumper-go** | Extract payload.bin | [GitHub](https://github.com/ssut/payload-dumper-go) |
 | **payload-dumper-py** | Python payload extractor | [GitHub](https://github.com/vm03/payload_dumper) |
+| **payload-dumper-rust** | Android OTA payload dumper | [GitHub](https://github.com/rhythmcache/payload-dumper-rust) |
+
 
 ---
 
