@@ -423,17 +423,17 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 #### Cake Mods
 - **[Cake - Learn English & Korean Patches](https://github.com/hoo-dles/revanced-custom-patches)** - Enable Plus . `FOSS` `[R]`
-##### Duolingo Mods
+#### Duolingo Mods
 - **[Duolingo Regret](https://github.com/TigerBeanst/Duolingo-Regret)** - Change Duolingo's time zone to any arbitrary time zone, makes it easier to go back and finish forgotten streaks. `FOSS` `[LSP]`
 - **[Duolingo Patches](https://github.com/hoo-dles/revanced-custom-patches)** - Disable practice reminder banner, Unlock licensed songs, Unlock Super Duolingo features. `FOSS` `[R]`
 
-##### Google KeyBoard Mods
+#### Google KeyBoard Mods
 - **[GboardHook](https://github.com/chenyue404/GboardHook)** - Modifies the number of clipboard items displayed and their expiration time. `FOSS` `[LSP]`
 
-##### Google Photos Mods
+#### Google Photos Mods
 - **[LimitlessPhotos](https://github.com/daglaroglou/LimitlessPhotos)** - Unlock unlimited, original-quality backup plan on Google Photos. `FOSS` `[LSP]`
 
-##### Google News Mods
+#### Google News Mods
 - **[G-News Control](https://github.com/mango0oo/G-News-Control)** - Magisk / KernelSU module for control the Google News on the home screen. `Proprietary` `[M]` `[K]`
 
 #### Maps Mods
@@ -442,6 +442,9 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 #### Ozon App
 - **[NoAdsPlus](https://github.com/igormsc/ai.noads.NoAdsPlus)** - Removes ads from the Ozon app. `FOSS` `[LSP]`
+
+#### Via Brower Mods
+- **[BetterVia](https://github.com/JiGuroLGC/BetterVia)** - Bypass whitelist restrictions, Screenshot protection, Block components, One-tap theme switching etc. `FOSS` `[LSP]`
 
 #### Yandex Music Mods
 - **[Yandex Music Downloader](https://github.com/errorman-awful/YMDownloaderXposed)** - Download flac Music from Yandex Music app. `Proprietary` `[LSP]`
