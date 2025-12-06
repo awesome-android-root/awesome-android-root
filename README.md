@@ -1218,6 +1218,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ## Terminal and Shell Tools
 ### Shell Tools
+- **[Android 16 Linux Terminal VM Persistence](https://github.com/DigijEth/VM_Magisk_Module)** - Keeps Androids Linux terminal running in the background. `FOSS` `[M]` 
 - **[aShell You](https://github.com/DP-Hridayan/aShellYou)** - Android shell utility app with Material Design 3 UI, letting you run ADB, root and shell commands. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/in.hridayan.ashell)
 - **[LADB](https://github.com/tytydraco/LADB)** - Local ADB shell. `FOSS` | [LADB Free Build ↗](https://github.com/hyperio546/ladb-builds) | [▶️](https://play.google.com/store/apps/details?id=com.draco.ladb)
 
