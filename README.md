@@ -427,6 +427,9 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[Duolingo Regret](https://github.com/TigerBeanst/Duolingo-Regret)** - Change Duolingo's time zone to any arbitrary time zone, makes it easier to go back and finish forgotten streaks. `FOSS` `[LSP]`
 - **[Duolingo Patches](https://github.com/hoo-dles/revanced-custom-patches)** - Disable practice reminder banner, Unlock licensed songs, Unlock Super Duolingo features. `FOSS` `[R]`
 
+##### Google KeyBoard Mods
+- **[GboardHook](https://github.com/chenyue404/GboardHook)** - Modifies the number of clipboard items displayed and their expiration time. `FOSS` `[LSP]`
+
 ##### Google Photos Mods
 - **[LimitlessPhotos](https://github.com/daglaroglou/LimitlessPhotos)** - Unlock unlimited, original-quality backup plan on Google Photos. `FOSS` `[LSP]`
 
@@ -442,7 +445,6 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 #### Yandex Music Mods
 - **[Yandex Music Downloader](https://github.com/errorman-awful/YMDownloaderXposed)** - Download flac Music from Yandex Music app. `Proprietary` `[LSP]`
-
 
 
 ### Social Media Mods
