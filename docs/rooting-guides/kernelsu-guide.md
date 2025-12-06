@@ -794,30 +794,78 @@ ksud profile import com.target.app < profile_template.json
 
 ## Managing Modules
 
-### Module System Overview
+### Understanding Metamodules
 
-**KernelSU Modules:**
-- Use OverlayFS system
-- Kernel-level integration
-- Systemless modifications
-- Growing ecosystem (300+)
+::: warning IMPORTANT CHANGE
+KernelSU no longer has built-in module mounting. Fresh installations require a **metamodule** for modules to function. Without a metamodule, modules will NOT be mounted.
+:::
 
-**Module Compatibility:**
-- Most system overlay modules work
-- Some Magisk modules compatible
-- Zygisk modules need ZygiskNext
-- Growing native module support
+**What is a Metamodule?**
 
-### Installing Modules
+A metamodule is a special type of KernelSU module that provides core infrastructure for the module system. Unlike regular modules that modify system files, metamodules control how regular modules are installed and mounted.
+
+**Why Metamodules?**
+- **Reduced detection surface** - KernelSU itself doesn't perform mounts, reducing detection vectors
+- **Flexibility** - Users can choose mounting implementation (OverlayFS, Magic Mount, hybrid)
+- **Stability** - Core KernelSU remains stable while mounting implementations can evolve
+- **Innovation** - Community can develop alternative mounting strategies
+
+**Single Metamodule Constraint:**
+- Only one metamodule can be installed at a time
+- To switch metamodules: uninstall all regular modules → uninstall metamodule → reboot → install new metamodule → reinstall modules
+
+### Available Metamodules
+
+| Metamodule | Description | Best For |
+|------------|-------------|----------|
+| [meta-overlayfs](https://github.com/KernelSU-Modules-Repo/meta-overlayfs) | Official reference implementation using OverlayFS | Most users, standard setup |
+| [mountify](https://github.com/backslashxx/mountify) | OverlayFS with tmpfs/ext4 sparse support, works on APatch/Magisk too | Reduced detection, multi-root support |
+| [meta-magic_mount](https://github.com/7a72/meta-magic_mount) | Magic Mount implementation (C-based) | Magisk-style mounting compatibility |
+| [meta-magic_mount-rs](https://github.com/Tools-cx-app/meta-magic_mount) | Magic Mount implementation (Rust-based) | Magisk-style mounting with WebUI |
+| [meta-hybrid_mount](https://github.com/YuzakiKokuban/meta-hybrid_mount) | Hybrid OverlayFS + Magic Mount with auto-fallback | Maximum compatibility, stealth mode |
+
+::: tip RECOMMENDATION
+For most users, **meta-overlayfs** (official) or **mountify** are recommended starting points. If you need advanced features like automatic fallback or better stealth, try **meta-hybrid_mount**.
+:::
+
+### Installing a Metamodule
+
+**Before installing regular modules, you MUST install a metamodule:**
+
+1. Download metamodule ZIP from GitHub releases
+2. Open KernelSU Manager > Modules
+3. Tap "Install from storage" (➕ button)
+4. Select the metamodule ZIP file
+5. Reboot device
+
+The active metamodule will be displayed in your module list with a special designation.
+
+### Module Compatibility
+
+**With a metamodule installed:**
+- Most Magisk modules work (when using compatible metamodule)
+- Zygisk modules require ZygiskNext
+- Growing native KernelSU module support
+
+**Module locations:**
+- Metadata: `/data/adb/modules/` - Contains module.prop, disable, skip_mount markers
+- Content: `/data/adb/metamodule/mnt/` - Contains actual module files (when using meta-overlayfs)
+
+### Installing Regular Modules Modules
+
+::: danger PREREQUISITE
+**You must have a metamodule installed first!** Without a metamodule, modules will be installed but NOT mounted.
+:::
 
 **Method 1: Manager Installation**
 
-1. Download module ZIP from trusted source
-2. KernelSU Manager > Modules
-3. Tap "Install from storage"
-4. Select module ZIP
-5. Wait for installation
-6. Reboot when prompted
+1. Verify a metamodule is active (check Modules list)
+2. Download module ZIP from trusted source
+3. KernelSU Manager > Modules
+4. Tap "Install from storage" (➕ button)
+5. Select module ZIP
+6. Wait for installation
+7. Reboot when prompted
 
 **Method 2: Command Line**
 
@@ -844,26 +892,51 @@ Only install modules from trusted sources. Always verify source code for open-so
 
 <details><summary>Click to expand content</summary>
 
+**Modules Not Being Mounted:**
+
+1. **Check if metamodule is installed** - This is the #1 cause!
+   - Open KernelSU Manager > Modules
+   - Look for active metamodule (meta-overlayfs, mountify, etc.)
+   - If no metamodule: install one and reboot
+
+2. **Check for skip_mount flag**
+   - Some modules may have `skip_mount` set
+   - Check `/data/adb/modules/[module_name]/skip_mount`
+
 **Module Causes Bootloop:**
 
 1. Force reboot: Hold power 10 seconds
-2. Boot to safe mode: Volume down at boot
+2. Boot to safe mode: Volume down at boot (disables all modules)
 3. Disable module via recovery or ADB:
 
 ```bash
 adb wait-for-device shell
 ksud --remove-modules
-# Or specific module:
+# Or disable specific module:
+touch /data/adb/modules/[module_name]/disable
+# Or remove specific module:
 rm -rf /data/adb/modules/[module_name]
 ```
 
 **Module Not Working:**
 
-1. Check KernelSU version compatibility
-2. Verify module logs: `/data/adb/modules/[module]/`
-3. Check if module requires Zygisk
-4. Try reinstalling module
-5. Check for module updates
+1. Verify metamodule is active
+2. Check KernelSU version compatibility
+3. Check metamodule compatibility (some modules work better with specific metamodules)
+4. Verify module logs: `/data/adb/modules/[module]/`
+5. Check if module requires Zygisk (install ZygiskNext)
+6. Try reinstalling module
+7. Check for module updates
+
+**Switching Metamodules:**
+
+If you need to change your metamodule:
+1. Uninstall all regular modules
+2. Uninstall current metamodule
+3. Reboot
+4. Install new metamodule
+5. Reboot
+6. Reinstall your regular modules
 
 </details>
 
@@ -1011,13 +1084,27 @@ Solutions:
 
 <details><summary>Click to expand content</summary>
 
+**Modules Not Being Mounted (Most Common Issue)**
+
+::: danger CHECK THIS FIRST
+Fresh KernelSU installations require a **metamodule** for modules to function!
+:::
+
+Solutions:
+1. **Install a metamodule** - This is the #1 cause of module issues!
+   - Download [meta-overlayfs](https://github.com/KernelSU-Modules-Repo/meta-overlayfs) or another metamodule
+   - Install via KernelSU Manager > Modules
+   - Reboot device
+2. Verify metamodule is active in Modules list
+3. Check for `skip_mount` file in module directory
+
 **Module Not Loading**
 
 Solutions:
-1. Check module compatibility with KernelSU
-2. Verify module uses OverlayFS (not Magic Mount)
+1. Verify metamodule is installed and active
+2. Check module compatibility with your metamodule
 3. Check if module needs ZygiskNext
-4. Review module logs
+4. Review module logs: `/data/adb/modules/[module]/`
 5. Try reinstalling module
 
 **Need Zygisk Module Support**
@@ -1028,6 +1115,16 @@ Solution:
 3. Install via KernelSU Manager
 4. Reboot device
 5. Zygisk modules now supported
+
+**Switching Metamodules**
+
+If your current metamodule has compatibility issues:
+1. Uninstall all regular modules
+2. Uninstall current metamodule
+3. Reboot
+4. Install different metamodule ([mountify](https://github.com/backslashxx/mountify), [meta-hybrid_mount](https://github.com/YuzakiKokuban/meta-hybrid_mount), etc.)
+5. Reboot
+6. Reinstall modules
 
 </details>
 

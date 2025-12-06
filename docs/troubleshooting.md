@@ -594,21 +594,32 @@ resetprop --delete ro.secure
 
 **Diagnosis:**
 
-1. **Check module compatibility**
+1. **Check if metamodule is installed (Most Common Issue!)**
+   - KernelSU requires a **metamodule** to mount modules
+   - Without a metamodule, modules are installed but NOT mounted
+   - Open KernelSU Manager > Modules and verify a metamodule is active
+
+2. **Check module compatibility**
    - KernelSU modules use different format
    - Some Magisk modules incompatible
 
-2. **Verify module format**
+3. **Verify module format**
    - Must be KernelSU-compatible
    - Check module description
 
 **Solutions:**
 
-1. **Convert Magisk module**
+1. **Install a metamodule first**
+   - Download [meta-overlayfs](https://github.com/KernelSU-Modules-Repo/meta-overlayfs) (official)
+   - Or [mountify](https://github.com/backslashxx/mountify), [meta-hybrid_mount](https://github.com/YuzakiKokuban/meta-hybrid_mount)
+   - Install via KernelSU Manager > Modules
+   - Reboot and try installing modules again
+
+2. **Convert Magisk module**
    - Some modules work with minor changes
    - Check module developer notes
 
-2. **Find KernelSU alternatives**
+3. **Find KernelSU alternatives**
    - Growing KernelSU module ecosystem
    - Check KernelSU module repos
 
