@@ -13,7 +13,7 @@
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
-    "docs:build": "scripts/build-docs.sh && vitepress build docs",
+    "docs:build": "node scripts/build-docs.js && vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "docs:build:pwa": "vitepress build docs"
   },
