@@ -524,7 +524,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ### ReVanced
 
-> [!INFO]
+> [!NOTE]
 > ReVanced allows you to patch apps without root, but root access enables additional features like mounting patched apps as system apps.
 
 - **[Awesome ReVanced](https://github.com/Jman-Github/Awesome-ReVanced)** - A curated list of awesome ReVanced patches, resources and projects. `FOSS` `[R]`
