@@ -339,12 +339,6 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ## Ads and Tracking Blockers
 
-> [!NOTE]
-> **Related Guide**: [Complete Android Ad Blocking Tutorial](./docs/general-guides/android-adblocking.md)
-
-> [!TIP]
-> For network-level blocking, also check [DNS Tools](#dns-tools) and [Firewall Tools](#firewall-tools)
-
 - **[⭐ AdAway](https://github.com/AdAway/AdAway)** – Open-source ad blocker using the hosts file. Blocks ads without permissions. `FOSS` | [🌱](https://f-droid.org/packages/org.adaway)
 - **[⭐ bindhosts](https://github.com/bindhosts/bindhosts)** - Systemless hosts for APatch, KernelSU and Magisk that is fully standalone and self-updating. `FOSS` `[M]` `[K]`
 - **[AdClose](https://github.com/Xposed-Modules-Repo/com.close.hook.ads/)** - Prevents the initial loading of the advertising SDK within the application and intercepts application advertising requests to block ads. `Proprietary` `[LSP]`
@@ -361,6 +355,12 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[StevenBlock](https://github.com/mikropsoft/StevenBlock)** - Ad Blocking Module for Android supporting Magisk, KernelSU and APatch. `FOSS` `[M]`
 - **[systemless-adblocker](https://github.com/Magisk-Modules-Alt-Repo/systemless-adblocker)** - Ultimate adblocker module derived from gloeyisk/systemless-hosts. `FOSS` `[M]`
 - **[Systemless hosts KernelSU module](https://github.com/symbuzzer/systemless-hosts-KernelSU-module)** - Required module to use applications such as AdAway on KernelSU and APatch. `FOSS` `[K]`
+
+> [!NOTE]
+> **Related Guide**: [Complete Android Ad Blocking Tutorial](./docs/general-guides/android-adblocking.md)
+
+> [!TIP]
+> For network-level blocking, also check [DNS Tools](#dns-tools) and [Firewall Tools](#firewall-tools)
 
 [↑ Back to top](#table-of-contents)
 
@@ -524,7 +524,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ### ReVanced
 
-> [!TIP]
+> [!INFO]
 > ReVanced allows you to patch apps without root, but root access enables additional features like mounting patched apps as system apps.
 
 - **[Awesome ReVanced](https://github.com/Jman-Github/Awesome-ReVanced)** - A curated list of awesome ReVanced patches, resources and projects. `FOSS` `[R]`
@@ -954,9 +954,6 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ## Network and Connectivity
 
-> [!TIP]
-> For ad blocking at network level, combine these tools with our [ad blockers](#ads-and-tracking-blockers). See the [ad blocking guide](./docs/general-guides/android-adblocking.md).
-
 ### DNS Tools
 - **[ForceDNS Cloudflare](https://github.com/LuferOS/forcedns_Magisk-kernelsu)** - Forces all standard DNS traffic (port 53) to use 1.1.1.1 via iptables. Overrides network DNS. `FOSS` `[M]` `[K]`
 - **[personalDNSfilter](https://github.com/IngoZenz/personaldnsfilter)** - A DNS filter proxy that provides local filtering of ads, malware, and tracking servers, supporting secure DNS protocols like DOH and DOT for enhanced privacy. `FOSS` | [🌱](https://f-droid.org/packages/dnsfilter.android/)
@@ -1001,7 +998,8 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[ZeroTier for Magisk](https://github.com/eventlOwOp/zerotier-magisk)** - Run zerotier in the background after booting with no conflicts with other Android VPN services. Use Android App to control ZeroTier. `FOSS` `[M]`
 - **[ZDT&D Magisk Module](https://github.com/GAME-OVER-op/ZDT-D)** - Bypass DPI (Deep Packet Inspection) on the internet. It helps bypass service blocks and throttling for platforms like Discord, YouTube, and others. `FOSS` `[M]`
 
-> Also check: [Ads and Tracker Blocking](#ads-and-tracking-blockers) | [Firewall Tools](#firewall-tools) | [Privacy Tools](#privacy-tools)
+> [!TIP]
+> For ad blocking at network level, combine these tools with our [ad blockers](#ads-and-tracking-blockers). See the [ad blocking guide](./docs/general-guides/android-adblocking.md).
 
 [↑ Back to top](#table-of-contents)
 
