@@ -162,11 +162,11 @@ Think of it like gaining **Administrator rights** on Windows or **sudo access** 
 
 ### Why Root?
 
-- **Control** - Remove preinstalled bloat, disable telemetry
-- **Performance** - Tune CPU, GPU, battery, animations
-- **Privacy** - Block trackers, restrict app permissions
-- **Customization** - Change UI, fonts, boot animations, navigation
-- **True Backups** - Backup app data and system settings
+- **Control** - [Remove preinstalled bloat](./docs/general-guides/android-apps-debloating.md), disable telemetry
+- **Performance** - Tune CPU, GPU, battery, animations with [optimization tools](#performance-and-optimization)
+- **Privacy** - [Block trackers](./docs/general-guides/android-adblocking.md), restrict app permissions
+- **Customization** - Change UI, fonts, [boot animations](#boot-and-startup), navigation
+- **True Backups** - [Backup app data](#backup-and-restore) and system settings
 
 ### Benefits vs Risks
 
@@ -220,8 +220,10 @@ Follow this path:
 
 ### Step 4: **Post-Root Setup**  
 1. Install [essential apps and modules](#starter-kit-must-have-apps)
-2. Block Ads and trackers: [Ad Blocking](./docs/general-guides/android-adblocking.md)
-3. Debloat your phone: [Debloating](./docs/general-guides/android-apps-debloating.md)
+2. Block Ads and trackers: [Ad Blocking Guide](./docs/general-guides/android-adblocking.md)
+3. [Debloat your phone](./docs/general-guides/android-apps-debloating.md) to improve performance
+4. Configure [root hiding](#root-hiding-and-play-integrity) for banking apps
+5. Set up [LSPosed Framework](./docs/rooting-guides/lsposed-guide.md) for advanced customization
 
 > [!NOTE]
 > **For Android 14/15:** Play Integrity is stricter. Root hiding may break apps. Stay updated.
@@ -340,6 +342,9 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 > [!NOTE]
 > **Related Guide**: [Complete Android Ad Blocking Tutorial](./docs/general-guides/android-adblocking.md)
 
+> [!TIP]
+> For network-level blocking, also check [DNS Tools](#dns-tools) and [Firewall Tools](#firewall-tools)
+
 - **[⭐ AdAway](https://github.com/AdAway/AdAway)** – Open-source ad blocker using the hosts file. Blocks ads without permissions. `FOSS` | [🌱](https://f-droid.org/packages/org.adaway)
 - **[⭐ bindhosts](https://github.com/bindhosts/bindhosts)** - Systemless hosts for APatch, KernelSU and Magisk that is fully standalone and self-updating. `FOSS` `[M]` `[K]`
 - **[AdClose](https://github.com/Xposed-Modules-Repo/com.close.hook.ads/)** - Prevents the initial loading of the advertising SDK within the application and intercepts application advertising requests to block ads. `Proprietary` `[LSP]`
@@ -377,7 +382,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[Package Manager](https://github.com/SmartPack/PackageManager)** - A highly powerful app to manage both system and user apps installed on an Android device. `FOSS` | [🌱](https://f-droid.org/packages/com.smartpack.packagemanager) | [▶️](https://play.google.com/store/apps/details?id=com.smartpack.packagemanager)
 
 ### App Update Control
-- **[⭐ Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. Also check out [📖 Zygisk Detach Guide](../general-guides/stop-android-app-auto-updates-play-store.md). `FOSS` `[M]`
+- **[⭐ Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. Also check out [📖 Zygisk Detach Guide](./docs/general-guides/stop-android-app-auto-updates-play-store.md). Requires [Zygisk implementation](#zygisk-implementations). `FOSS` `[M]`
 - **[Update Locker](https://github.com/Xposed-Modules-Repo/ru.mike.updatelocker/)** - Block updates (and auto-updates) selected apps via popular markets including Google Play Market, Huawei AppGallery and Samsung Galaxy Store. `Proprietary`
 
 ### Freeze Apps
@@ -518,8 +523,12 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (use with caution). `Proprietary`
 
 ### ReVanced
+
+> [!TIP]
+> ReVanced allows you to patch apps without root, but root access enables additional features like mounting patched apps as system apps.
+
 - **[Awesome ReVanced](https://github.com/Jman-Github/Awesome-ReVanced)** - A curated list of awesome ReVanced patches, resources and projects. `FOSS` `[R]`
-- **[Privacy ReVanced Patches](https://github.com/jkennethcarino/privacy-revanced-patches)** - Privacy Patches for ReVanced to disable ads, trackers and analytics, always open Gboard in incognito mode, and much more. `FOSS` `[R]`
+- **[Privacy ReVanced Patches](https://github.com/jkennethcarino/privacy-revanced-patches)** - Privacy Patches for ReVanced to disable ads, trackers and analytics, always open Gboard in incognito mode, and much more. Enhances your [privacy](#privacy-and-security). `FOSS` `[R]`
 - **[ReVanced Manager](https://github.com/ReVanced/revanced-manager)** - Modify YouTube, YouTube Music, Spotify and many more with additional features. `FOSS` `[R]`
 - **[ReVancedRepackaged](https://github.com/programminghoch10/ReVancedRepackaged)** - This magisk module contains only the ReVanced Patcher.It will patch any installed ReVanced compatible app right on your device during installation. `FOSS` `[M]` `[R]`
 
@@ -820,7 +829,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 ## Debloating and Cleaning
 
 > [!NOTE]
-> **Related Guide**: [Android Apps Debloating Guide](../general-guides/android-apps-debloating.md)
+> **Related Guide**: [Complete Debloating Tutorial](../general-guides/android-apps-debloating.md)
 
 **Cleaning Apps:**
 - **[⭐ SD Maid 2/SE](https://github.com/d4rken-org/sdmaid-se)** - A file management tool for Android that specializes in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS` | [🌱](https://f-droid.org/en/packages/eu.darken.sdmse/) | [▶️](https://play.google.com/store/apps/details?id=eu.darken.sdmse)
@@ -924,6 +933,9 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ## LSPosed Framework
 
+> [!NOTE]
+> LSPosed requires root access and a [Zygisk implementation](#zygisk-implementations). See our [LSPosed installation guide](./docs/rooting-guides/lsposed-guide.md) for setup instructions.
+
 <details><summary><strong>What is LSPosed? (Tap to expand)</strong></summary>
 
 LSPosed allows you to use Xposed modules, which are small add-ons that can modify or extend the functionality of your Android system and apps. These modules can add features, tweak settings, and enhance the overall usability of your device.
@@ -941,6 +953,9 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 ---
 
 ## Network and Connectivity
+
+> [!TIP]
+> For ad blocking at network level, combine these tools with our [ad blockers](#ads-and-tracking-blockers). See the [ad blocking guide](./docs/general-guides/android-adblocking.md).
 
 ### DNS Tools
 - **[ForceDNS Cloudflare](https://github.com/LuferOS/forcedns_Magisk-kernelsu)** - Forces all standard DNS traffic (port 53) to use 1.1.1.1 via iptables. Overrides network DNS. `FOSS` `[M]` `[K]`
@@ -986,13 +1001,16 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[ZeroTier for Magisk](https://github.com/eventlOwOp/zerotier-magisk)** - Run zerotier in the background after booting with no conflicts with other Android VPN services. Use Android App to control ZeroTier. `FOSS` `[M]`
 - **[ZDT&D Magisk Module](https://github.com/GAME-OVER-op/ZDT-D)** - Bypass DPI (Deep Packet Inspection) on the internet. It helps bypass service blocks and throttling for platforms like Discord, YouTube, and others. `FOSS` `[M]`
 
-> Also visit our *[Ads and Tracker Blocking section](#ads-and-tracking-blockers)*
+> Also check: [Ads and Tracker Blocking](#ads-and-tracking-blockers) | [Firewall Tools](#firewall-tools) | [Privacy Tools](#privacy-tools)
 
 [↑ Back to top](#table-of-contents)
 
 ---
 
 ## Performance and Optimization
+
+> [!TIP]
+> For CPU/GPU management, see [Kernel Management](#kernel-management). For memory optimization, check [Memory Management](#memory-management).
 
 ### All-in-One Performance Optimizers
 - **[⭐ 3C All-in-One Toolbox](https://play.google.com/store/apps/details?id=ccc71.at.free)** - A comprehensive utility that offers a wide range of tools for monitoring, controlling, and optimizing device performance in a user-friendly interface. `Proprietary`
@@ -1117,6 +1135,9 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ### Zygisk Implementations
 
+> [!TIP]
+> Zygisk is essential for advanced [root hiding](#root-hiding-and-play-integrity) and many [LSPosed modules](#lsposed-framework).
+
 <details>
 
 <summary><strong>What is Zygisk?</strong></summary>
@@ -1174,6 +1195,9 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ### Root Hiding and Play Integrity
 
+> [!TIP]
+> Having trouble with banking apps? Check our [troubleshooting guide](./docs/troubleshooting.md) and [FAQs](./docs/faqs.md).
+
 <details><summary><strong>What is Play Integrity?</strong></summary>
 
 - It is an Android API that allows app developers to verify that an app is genuine, is installed from the Google Play Store and that it is running on a genuine and secure Android device. Primarily **used to detect and prevent fraud, cheating, and modifications**. 
@@ -1207,7 +1231,10 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[Zygisk-Assistant](https://github.com/snake-4/Zygisk-Assistant)** - A Zygisk module to hide root for KernelSU, Magisk and APatch. `FOSS` `[M]`
 
 > [!WARNING]
->❗Root hiding is a constant cat‑and‑mouse game. These methods might break with updates to Google Play Services or specific apps.
+>❗Root hiding is a constant cat‑and‑mouse game. These methods might break with updates to Google Play Services or specific apps. Stay updated with our [community resources](./docs/resources.md).
+
+> [!TIP]
+> Combine multiple tools from this list with proper [Zygisk implementations](#zygisk-implementations) for best results.
 
 [↑ Back to top](#table-of-contents)
 
