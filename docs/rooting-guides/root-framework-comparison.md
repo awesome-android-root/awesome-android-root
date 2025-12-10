@@ -382,6 +382,11 @@ A: Negligible for all methods. Module choice matters more.
 
 ---
 
+> [!TIP]
+> Don't want to root? Check out our [Non-Root Alternatives Guide](../non-root-alternatives.md) for alternatives to enhance your Android experience without rooting.
+
+---
+
 ## Next Steps
 
 1. **Choose your method** based on this comparison
