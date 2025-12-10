@@ -112,6 +112,7 @@
 #### 🛠️ **Root and System Management**
 - [Root Management](#root-management)
   - [Root Managers](#root-managers)
+  - [Module Managers](#module-managers)
   - [Zygisk Implementations](#zygisk-implementations)
   - [Root Hiding and Integrity](#root-hiding-and-play-integrity)
   - [Root Detection Tools](#root-detection-tools)
@@ -1077,12 +1078,35 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ### Root Managers
 - **[⭐ Magisk Manager](https://github.com/topjohnwu/Magisk)** - Manage Magisk modules and root permissions. `FOSS`
-- **[Magisk Manager for Recovery Mode](https://github.com/Rikj000/Magisk-Manager-for-Recovery-Mode)** - Easily manage your Magisk Modules from a terminal session in your custom recovery. `FOSS` `[M]`
 - **[⭐ SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra)** - A kernel-based root solution for Android devices, forked from `KernelSU` with some useful changes.
-- **[⭐ MMRL](https://github.com/DerGoogler/MMRL)** - An Android app that helps manage your own modules repository. `FOSS` | [🌱](https://f-droid.org/en/packages/com.dergoogler.mmrl/) | [▶️](https://play.google.com/store/apps/details?id=com.dergoogler.mmrl)
 - **[APatch](https://github.com/bmax121/APatch)** - The patching of Android kernel and Android system. `FOSS` | [🌱](https://f-droid.org/packages/me.bmax.apatch/)
 - **[KernelSU](https://github.com/tiann/KernelSU)** - A Kernel based root solution for Android. `FOSS`
 - **[KernelSU-next](https://github.com/KernelSU-Next/KernelSU-Next)** - An advanced Kernel based root solution for Android.
+
+### Module Managers
+
+- **[⭐ MMRL](https://github.com/DerGoogler/MMRL)** - An Android app that helps manage your own modules repository. `FOSS` | [🌱](https://f-droid.org/en/packages/com.dergoogler.mmrl/) | [▶️](https://play.google.com/store/apps/details?id=com.dergoogler.mmrl)
+- **[Magisk Manager for Recovery Mode](https://github.com/Rikj000/Magisk-Manager-for-Recovery-Mode)** - Easily manage your Magisk Modules from a terminal session in your custom recovery. `FOSS` `[M]`
+
+<details>
+
+<summary><strong>What are Metamodules?</strong></summary>
+
+- A metamodule is a special type of KernelSU module that provides core infrastructure for the module system. Unlike regular modules that modify system files, metamodules control how regular modules are installed and mounted.
+- **Fresh KernelSU installations require a metamodule for modules to function.** Without a metamodule, modules will NOT be mounted.
+- Only one metamodule can be installed at a time.
+
+<br>
+</details>
+
+- **[⭐ Meta-overlayfs](https://github.com/5ec1cff/OverlayFS-module)** - Official reference implementation using OverlayFS for most users and standard setup. `FOSS` `[K]`
+- **[⭐ Mountify](https://github.com/backslashxx/mountify)** - OverlayFS with tmpfs/ext4 sparse support for reduced detection, works on APatch/Magisk too. `FOSS` `[M]` `[K]`
+- **[meta-magic_mount](https://github.com/5ec1cff/magic_mount)** - Magic Mount implementation (C-based) for Magisk-style mounting compatibility. `FOSS` `[K]`
+- **[meta-magic_mount-rs](https://github.com/backslashxx/magic_mount-rs)** - Magic Mount implementation (Rust-based) with WebUI support. `FOSS` `[K]`
+- **[meta-hybrid_mount](https://github.com/5ec1cff/meta-hybrid_mount)** - Hybrid OverlayFS + Magic Mount with auto-fallback for maximum compatibility and stealth mode. `FOSS` `[K]`
+
+> [!TIP]
+> For most users, **meta-overlayfs** (official) or **Mountify** are recommended starting points. If you need advanced features like automatic fallback or better stealth, try **meta-hybrid_mount**.
 
 ### Bootloop Protection
 - **[AshReXcue - Bootloop Protector](https://github.com/RipperHybrid/AshLooper)** - Prevent boot loops caused by problematic modules installed via KernelSU or Magisk. `FOSS` `[M]` `[K]`
@@ -1108,7 +1132,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
   Standalone and open-source Zygisk implementation, offering Zygisk API support for KernelSU and as a drop-in replacement for Magisk's Zygisk. `FOSS` `[M]` `[K]`
 
 
-<details><summary><strong>Comparison:</strong></summary>
+<details><summary><strong>Comparison:</strong></summary><br>
 
 
 #### Main Feature Comparison
@@ -1136,7 +1160,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 | **ReZygisk** | ✅ Open-source<br>✅ High performance<br>✅ Transparent | ❌ Less mature<br>❌ Some feature limitations |
 
 <br>
-</details>
+</details><br>
 
 > [!TIP]
 > Use these modules if you need Zygisk features on alternative root frameworks (KernelSU, APatch), or want more control over Zygisk behavior than Magisk's built-in implementation provides.
