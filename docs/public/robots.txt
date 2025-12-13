@@ -1,5 +1,66 @@
-# robots.txt for https://awesome-android-root.org/
+# Awesome Android Root - Robots.txt
+# Updated: December 2025
 
 User-agent: *
 Allow: /
 Sitemap: https://awesome-android-root.org/sitemap.xml
+
+# Priority paths - high-value content
+Crawl-delay: 0
+
+# High priority pages
+Allow: /apps-and-modules/
+Allow: /rooting-guides/
+Allow: /general-guides/
+Allow: /faqs
+Allow: /troubleshooting
+
+# Block common bot paths
+Disallow: /.vitepress/
+Disallow: /node_modules/
+Disallow: /.git/
+
+
+# Search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Bingbot
+Allow: /
+
+# Social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# AI crawlers - allow for better assistance
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Block aggressive crawlers
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Block scrapers
+User-agent: HTTrack
+Disallow: /
+
+User-agent: wget
+Disallow: /
