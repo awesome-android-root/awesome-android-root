@@ -160,7 +160,7 @@ Magisk is a systemless root solution that provides superuser access without modi
 
 **Choose Magisk if:**
 - You want easiest installation
-- You need extensive modules
+- You need extensive modules (explore [430+ apps](../apps-and-modules/))
 - You want maximum compatibility
 - You're new to rooting
 
@@ -218,7 +218,7 @@ Magisk is a systemless root solution that provides superuser access without modi
 **Check device compatibility:**
 1. Verify bootloader is unlockable
 2. Confirm stock firmware availability
-3. Check XDA forums for device-specific notes
+3. Check [device-specific guides](./index.md#device-specific-guides) or [XDA forums](https://forum.xda-developers.com/) for device notes
 
 ---
 
@@ -332,7 +332,7 @@ If Magisk app shows version numbers for both Magisk and App, installation succee
 
 **Note:** Not officially supported on modern Android. Use Method 1 instead.
 
-If you must use recovery:
+If you must use recovery ([installation guide](./how-to-install-custom-recovery.md)):
 
 1. Patch boot image using Method 1
 2. Boot to custom recovery (TWRP/OrangeFox)
@@ -453,6 +453,7 @@ Only install modules from trusted sources. Malicious modules can damage your sys
 **Trusted Module Sources:**
 - Official GitHub repositories
 - [Magisk Module Manager](https://github.com/MMRLApp/MMRL)
+- [Our curated module collection](../apps-and-modules/)
 - XDA Developers forums
 - Known developers only
 
@@ -630,6 +631,7 @@ After DenyList configuration:
 - Magisk installation files
 - Module ZIPs
 - DenyList configuration (screenshot)
+- Full device backup using [backup tools](../apps-and-modules/#backup-and-restore)
 
 **Restore to Stock:**
 
@@ -681,6 +683,7 @@ fastboot reboot
 ```
 3. Verify correct image for your device
 4. Try different Magisk version
+5. See [emergency recovery guide](../troubleshooting.md#emergency-recovery) for advanced solutions
 
 </details>
 
@@ -781,7 +784,9 @@ Solutions:
 1. Hide Magisk app with different name
 2. Clear app data completely
 3. Install Shamiko module
-4. Check if app requires Device/Strong integrity (may be impossible)
+4. Try [Play Integrity Fix modules](../apps-and-modules/#root-hiding-and-play-integrity)
+5. Check if app requires Device/Strong integrity (may be impossible)
+6. See [comprehensive banking app solutions](../troubleshooting.md#play-integrity-and-banking-apps)
 
 </details>
 
@@ -849,12 +854,13 @@ Some devices may pass Device with extensive workarounds, but no guarantees.
 **After Installing Magisk:**
 
 1. **Install essential modules:**
-   - [LSPosed Framework](./lsposed-guide.md) - App modifications
-   - Ad blocking modules - System-wide ad blocking
-   - Performance modules - Device optimization
+   - [LSPosed Framework](./lsposed-guide.md) - Advanced app modifications and Xposed modules
+   - [Ad blocking modules](../apps-and-modules/#ads-and-tracking-blockers) - System-wide ad blocking
+   - [Performance modules](../apps-and-modules/#performance-and-optimization) - Device optimization and battery management
 
 2. **Explore root apps:**
-   - [Root Apps Collection](../apps-and-modules/) - Curated apps
+   - [Browse 430+ Root Apps](../apps-and-modules/) - Curated collection by category
+   - [Starter Kit](../apps-and-modules/#starter-kit-must-have-apps) - Essential apps for new root users
 
 3. **Learn advanced features:**
    - [Custom ROM Installation](./custom-rom-installation.md) - Next level

@@ -202,11 +202,11 @@ If your device won't boot, jump to [Emergency Recovery](#emergency-recovery) imm
 
 3. **Flash Full Stock Firmware**
 3. **Flash Full Stock Firmware**
-   - **Pixel:** Use [Android Flash Tool](https://flash.android.com) (web) or factory image scripts
-   - **Samsung:** Odin with full firmware (AP/BL/CP/CSC). Use HOME_CSC to preserve data
-   - **Xiaomi/POCO/Redmi:** Mi Flash Tool with fastboot ROM (beware Anti-Rollback)
-   - **OnePlus:** MSMDownloadTool or fastboot packages
-   - Device guides: [Pixel](./rooting-guides/how-to-root-pixel-phone.md) • [Samsung](./rooting-guides/how-to-root-samsung-phone.md) • [Xiaomi](./rooting-guides/how-to-root-xiaomi-phone.md) • [OnePlus](./rooting-guides/how-to-root-oneplus-phone.md)
+   - **Pixel:** Use [Android Flash Tool](https://flash.android.com) (web) or factory image scripts ([guide](./rooting-guides/how-to-root-pixel-phone.md))
+   - **Samsung:** Odin with full firmware (AP/BL/CP/CSC). Use HOME_CSC to preserve data ([guide](./rooting-guides/how-to-root-samsung-phone.md))
+   - **Xiaomi/POCO/Redmi:** Mi Flash Tool with fastboot ROM - beware Anti-Rollback ([guide](./rooting-guides/how-to-root-xiaomi-phone.md))
+   - **OnePlus:** MSMDownloadTool or fastboot packages ([guide](./rooting-guides/how-to-root-oneplus-phone.md))
+   - More device guides: [All rooting guides](./rooting-guides/)
 
 4. **Factory Reset (Last Resort)**
    - Stock recovery: Wipe data/factory reset
@@ -271,9 +271,10 @@ fastboot -w
 **Magisk:**
 
 1. **Reinstall to Current Slot**
-   - Download latest Magisk APK from official GitHub
+   - Download latest Magisk APK from [official GitHub](https://github.com/topjohnwu/Magisk/releases)
    - Open → Install → Direct Install (or "Install to Inactive Slot" after OTA)
    - Reboot
+   - See [complete Magisk guide](./rooting-guides/magisk-guide.md) for detailed instructions
 
 2. **Ensure Correct Target Image**
    - **Android 13+:** Patch `init_boot.img` (not boot.img)
@@ -293,10 +294,11 @@ fastboot -w
 - Confirm kernel has KSU integrated for your exact build
 - Match kernel to your ROM/firmware version and vendor partition
 - Use official KernelSU Manager
+- See [complete KernelSU guide](./rooting-guides/kernelsu-guide.md) for installation help
 
 **APatch:**
 - Ensure device/kernel is supported (ARM64 only)
-- Follow official documentation for your device/ROM
+- Follow [official APatch guide](./rooting-guides/apatch-guide.md) for your device/ROM
 
 **Clean Re-install (Magisk):**
 

@@ -252,7 +252,7 @@ If device not listed:
 - Photos and videos (Google Photos, cloud storage)
 - Contacts (Google Contacts sync)
 - Messages (SMS Backup & Restore)
-- App data (Google Backup, Helium)
+- App data (Google Backup, Helium, or see [backup apps](../apps-and-modules/#backup-and-restore))
 - Important documents
 - Two-factor authentication recovery codes
 
@@ -307,6 +307,7 @@ Should return: `unlocked: yes`
 - Simplest unlock process
 - No waiting period or approval needed
 - Carrier models should work (verify OEM Unlocking available)
+- Ready for next step? See [Pixel rooting guide](./how-to-root-pixel-phone.md)
 
 ---
 
@@ -355,6 +356,8 @@ adb reboot bootloader
 - "Account not bound": Ensure Mi Account added to device
 - "Unlock failed": Try different USB port, reinstall drivers
 
+**Next:** See [Xiaomi rooting guide](./how-to-root-xiaomi-phone.md) for device-specific instructions
+
 > [!TIP]
 > #### Bypass Mi Unlock Waiting Period
 > Some users report success using older Mi Unlock Tool versions or modified tools. check this [XDA Guide](https://xdaforums.com/t/how-to-unlock-bootloader-on-xiaomi-hyperos-all-devices-except-cn.4654009/). Proceed with caution.
@@ -399,6 +402,7 @@ fastboot flashing unlock
 - Straightforward process like Pixel
 - T-Mobile variants may have restrictions
 - Some models show "Bootloader Unlocked" warning on boot
+- Continue with [OnePlus rooting guide](./how-to-root-oneplus-phone.md)
 
 ---
 
@@ -441,7 +445,9 @@ fastboot flashing unlock
 - Warranty permanently void
 - Resale value significantly reduced
 
-**Alternative:** Consider buying international Exynos model if bootloader unlock is priority.
+**Next Steps:**
+- Continue with [Samsung rooting guide](./how-to-root-samsung-phone.md)
+- Or consider [Custom ROM alternatives](./custom-rom-installation.md) that work without root
 
 ---
 
@@ -492,6 +498,7 @@ Replace `UNLOCK_CODE` with code from email
 - Shows permanent "Bootloader Unlocked" warning on every boot
 - Warranty void
 - Process usually smooth once code received
+- Next: [Motorola rooting guide](./how-to-root-motorola-phone.md)
 
 ---
 
@@ -523,6 +530,7 @@ fastboot flashing unlock
 - Similar to Pixel process
 - Good community support
 - Nothing OS specific considerations minimal
+- Continue with [Nothing Phone rooting guide](./how-to-root-nothing-phone.md)
 
 ---
 
@@ -625,27 +633,29 @@ Look for "Device unlocked: true"
 **Typical progression:**
 
 1. **Install Custom Recovery** (optional but recommended)
-   - [TWRP Installation Guide](./how-to-install-custom-recovery.md)
-   - Enables easier rooting and backups
+   - [TWRP Installation Guide](./how-to-install-custom-recovery.md) - Enables easier rooting and backups
 
-2. **Root Your Device**
-   - [Magisk Guide](./magisk-guide.md) (most popular)
-   - [KernelSU Guide](./kernelsu-guide.md) (advanced)
-   - [APatch Guide](./apatch-guide.md) (alternative)
+2. **Root Your Device** - Choose your preferred method:
+   - [Magisk Guide](./magisk-guide.md) - Most popular, easiest for beginners
+   - [KernelSU Guide](./kernelsu-guide.md) - Advanced kernel-level root with superior hiding
+   - [APatch Guide](./apatch-guide.md) - Alternative kernel-based solution
+   - [Compare all methods](./root-framework-comparison.md)
 
 3. **Post-Root Configuration**
-   - Install essential apps: [Root Apps Collection](../apps-and-modules/)
-   - Configure ad blocking: [Ad Blocking Guide](../general-guides/android-adblocking.md)
-   - Debloat device: [Debloating Guide](../general-guides/android-apps-debloating.md)
+   - Install [essential starter apps](../apps-and-modules/#starter-kit-must-have-apps)
+   - Configure [system-wide ad blocking](../general-guides/android-adblocking.md)
+   - [Safely remove bloatware](../general-guides/android-apps-debloating.md)
+   - Browse [430+ root apps and modules](../apps-and-modules/)
 
 ### Step 4: Security Considerations
 
 **Important reminders:**
-- Banking apps may detect unlocked bootloader
+- Banking apps may detect unlocked bootloader (see [root hiding solutions](../apps-and-modules/#root-hiding-and-play-integrity))
 - Set up strong screen lock
 - Only install trusted software
 - Be cautious with root permissions
 - Keep device software updated
+- Review our [troubleshooting guide](../troubleshooting.md) for common issues
 
 ---
 
