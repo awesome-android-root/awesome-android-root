@@ -2,22 +2,27 @@
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
   <loc>https://awesome-android-root.org/</loc>
-  <lastmod>2025-12-09T00:00:00+00:00</lastmod>
+  <lastmod>2025-12-13T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
+  <image:image>
+    <image:loc>https://awesome-android-root.org/images/og.png</image:loc>
+    <image:title>Awesome Android Root - Ultimate Rooting Hub</image:title>
+  </image:image>
 </url>
 
 <!-- Top-level pages -->
 <url>
   <loc>https://awesome-android-root.org/about</loc>
-  <lastmod>2025-12-09T00:00:00+00:00</lastmod>
+  <lastmod>2025-12-13T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/contributing</loc>
@@ -27,21 +32,21 @@
 </url>
 <url>
   <loc>https://awesome-android-root.org/faqs</loc>
-  <lastmod>2025-12-09T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.85</priority>
+  <lastmod>2025-12-13T00:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/troubleshooting</loc>
-  <lastmod>2025-12-09T00:00:00+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.85</priority>
+  <lastmod>2025-12-13T00:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/resources</loc>
-  <lastmod>2025-12-09T00:00:00+00:00</lastmod>
+  <lastmod>2025-12-13T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
-  <priority>0.85</priority>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://awesome-android-root.org/legal-disclaimer</loc>
@@ -57,20 +62,28 @@
 </url>
 
 
-<!-- Apps and Modules section -->
+<!-- Apps and Modules section - HIGH VALUE -->
 <url>
   <loc>https://awesome-android-root.org/apps-and-modules/</loc>
-  <lastmod>2025-12-09T00:00:00+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.95</priority>
+  <lastmod>2025-12-13T00:00:00+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.98</priority>
 </url>
 
-<!-- Rooting Guides section -->
+<!-- Rooting Guides section - HIGH VALUE -->
 <url>
   <loc>https://awesome-android-root.org/rooting-guides/</loc>
-  <lastmod>2025-12-09T00:00:00+00:00</lastmod>
+  <lastmod>2025-12-13T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.95</priority>
+  <priority>0.98</priority>
+</url>
+
+<!-- General Guides section -->
+<url>
+  <loc>https://awesome-android-root.org/general-guides/</loc>
+  <lastmod>2025-12-13T00:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
 </url>
 
 <!-- Primary guide pages -->

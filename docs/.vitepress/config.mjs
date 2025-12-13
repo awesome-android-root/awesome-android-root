@@ -481,9 +481,12 @@ export default withPwa(defineConfig({
     ['link', { rel: 'preconnect', href: 'https://github.com', crossorigin: '' }],
     ['link', { rel: 'dns-prefetch', href: 'https://github.com' }],
     
+    // Sitemap
+    ['link', { rel: 'sitemap', type: 'application/xml', href: '/sitemap.xml' }],
+    
   
     // --- SEO Meta Tags ---
-    ['meta', { name: 'keywords', content: 'android root, magisk, kernelsu, lsposed, custom recovery, twrp, bootloader unlock, android customization, root apps, system modifications, xposed, android debloating, performance optimization, privacy tools, custom rom, rooting tutorial' }],
+    ['meta', { name: 'keywords', content: 'android root 2025, how to root android, magisk installation guide, kernelsu tutorial, lsposed framework, best root apps, magisk modules 2025, systemless root, custom recovery twrp, bootloader unlock guide, android customization apps, rooting tutorial step by step, pixel root guide, samsung root knox, xiaomi unlock bootloader, oneplus root guide, android privacy tools, ad blocker root, android debloating, system-wide adblock, play integrity fix, root hide banking apps, custom rom installation, android performance optimization, root apps collection, xposed modules 2025, apatch android, android power user, superuser apps, root manager apps, android system tweaks, kernel management, titanium backup alternative, android automation root, tasker root plugins, firewall root android, network monitor root, android theming root, substratum android, android terminal emulator, adb commands root, fastboot guide, android modding, app cloning root, dual apps android, android backup root, nandroid backup, root detection bypass, safetynet fix, google pay root' }],
     ['meta', { name: 'author', content: 'Awesome Android Root Project' }],
     ['meta', { name: 'publisher', content: 'Awesome Android Root Project' }],
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1' }],
@@ -501,21 +504,96 @@ export default withPwa(defineConfig({
     // --- JSON-LD Structured Data ---
     ['script', { type: 'application/ld+json' }, JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Awesome Android Root",
-      "description": "Ultimate Android rooting hub with 400+ curated root apps, Magisk modules, and step-by-step guides for Android customization and freedom.",
-      "url": "https://awesome-android-root.org/",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Awesome Android Root Project",
-        "url": "https://github.com/awesome-android-root",
-        "sameAs": [
-          "https://github.com/awesome-android-root/awesome-android-root",
-          "https://x.com/awsm_and_root",
-          "https://opencollective.com/awesome-android-root-official"
-        ]
-      }
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://awesome-android-root.org/#website",
+          "name": "Awesome Android Root",
+          "description": "Ultimate Android rooting hub with 430+ curated root apps, Magisk/KernelSU/APatch modules, LSPosed framework, and comprehensive rooting guides.",
+          "url": "https://awesome-android-root.org/",
+          "inLanguage": "en-US",
+          "publisher": {
+            "@type": "Organization",
+            "@id": "https://awesome-android-root.org/#organization",
+            "name": "Awesome Android Root Project",
+            "url": "https://awesome-android-root.org/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://awesome-android-root.org/images/logo.png",
+              "width": 330,
+              "height": 330
+            },
+            "sameAs": [
+              "https://github.com/awesome-android-root/awesome-android-root",
+              "https://x.com/awsm_and_root",
+              "https://opencollective.com/awesome-android-root-official"
+            ]
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://awesome-android-root.org/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://awesome-android-root.org/#mainnavigation",
+          "name": "Main Navigation",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Root Apps & Modules",
+              "url": "https://awesome-android-root.org/apps-and-modules/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Rooting Guides",
+              "url": "https://awesome-android-root.org/rooting-guides/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Tutorials",
+              "url": "https://awesome-android-root.org/general-guides/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "FAQ",
+              "url": "https://awesome-android-root.org/faqs"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "name": "Troubleshooting",
+              "url": "https://awesome-android-root.org/troubleshooting"
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://awesome-android-root.org/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://awesome-android-root.org/"
+            }
+          ]
+        }
+      ]
     })],
+    
+    // Open Graph Enhanced
+    ['meta', { property: 'og:site_name', content: 'Awesome Android Root' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:locale', content: 'en_US' }],
 
     // --- Verification Tags ---
     ['meta', { name: 'ahrefs-site-verification', content: '5fd5ad82114006dedaabbb7cc47ee96924361ceedafe09795ce9abbb7d32d6ff' }]
