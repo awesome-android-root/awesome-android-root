@@ -224,7 +224,7 @@ KernelSU is a kernel-based root solution that operates at the Linux kernel level
 | Android Support | 11+ (GKI 2.0+) | 6.0+ | 9+ |
 | Root Hiding | Excellent | Good | Excellent |
 | App Control | Advanced Profiles | Basic | Basic |
-| Module System | Growing (300+) | Mature (1000+) | Limited (50+) |
+| Module System | Growing ([300+](../apps-and-modules/)) | Mature (1000+) | Limited (50+) |
 | Ease of Use | Moderate | Easy | Moderate |
 | Custom Kernel | Optional | Not needed | Not needed |
 
@@ -232,8 +232,11 @@ KernelSU is a kernel-based root solution that operates at the Linux kernel level
 - You have Android 11+ device
 - You want best root hiding
 - You need fine-grained app control
-- You use banking/payment apps
+- You use banking/payment apps (see [root hiding apps](../apps-and-modules/#root-hiding-and-play-integrity))
 - You prefer kernel-level security
+
+> [!NOTE]
+> For easier installation on any Android version, consider [Magisk](./magisk-guide.md) instead
 
 > [!TIP]
 > Detailed comaprison with other root solutions: [Root Comparison](./root-framework-comparison.md)
@@ -285,7 +288,7 @@ KernelSU supports two installation modes on GKI devices.
 | Device Type | Recommended Mode | Reason |
 |-------------|------------------|--------|
 | Stock firmware phones | LKM | Preserves optimizations, easy updates |
-| Samsung devices | GKI | Knox compatibility |
+| Samsung devices ([guide](./how-to-root-samsung-phone.md)) | GKI | Knox compatibility |
 | Custom ROMs | GKI | Better modified firmware support |
 | Emulators/WSA | GKI | Universal compatibility |
 | Heavily modified | GKI | More reliable |

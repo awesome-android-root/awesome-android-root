@@ -130,9 +130,9 @@ Root ad blocking operates by modifying the **hosts file** (`/system/etc/hosts`),
 ## Requirements
 
 ### 📱 **Device Requirements**
-- ✅ **Rooted Android device** ([Rooting Guide](../rooting-guides/index.md))
+- ✅ **Rooted Android device** ([Complete rooting guide](../rooting-guides/))
 - ✅ **Android 8.0+** for modern solutions
-- ✅ **Magisk**, **KernelSU**, or **APatch** installed
+- ✅ **Magisk**, **KernelSU**, or **APatch** installed ([compare methods](../rooting-guides/root-framework-comparison.md))
 - ✅ **Root access verification** (use Root Checker apps)
 
 ### 🔧 **Supported Root Managers**
@@ -166,7 +166,7 @@ Root ad blocking operates by modifying the **hosts file** (`/system/etc/hosts`),
 
 ## Method 1: AdAway (Recommended)
 
-**AdAway** is the most user-friendly and widely-adopted root ad blocker for Android.
+**AdAway** is the most user-friendly and widely-adopted root ad blocker for Android. Also available in our [ad blocker collection](../apps-and-modules/#ads-and-tracking-blockers).
 
 ### 📥 **Installation**
 
@@ -235,7 +235,7 @@ su -c "ndc resolver clearnetdns"
 
 ## Method 2: Bindhosts (Advanced)
 
-**Bindhosts** offers advanced systemless ad blocking with superior root hiding and auto-updating capabilities.
+**Bindhosts** offers advanced systemless ad blocking with superior root hiding and auto-updating capabilities. Find it in our [ad blocking modules](../apps-and-modules/#ads-and-tracking-blockers).
 
 ### 🎯 **Why Choose Bindhosts?**
 - **Fully systemless** - No permanent system modifications
@@ -420,12 +420,9 @@ am start -a android.intent.action.VIEW -d "market://details?id=com.google.androi
    - AdAway: Add problematic domains to "Allowed Hosts"
    - Bindhosts: Add to whitelist file
 
-2. **Temporary disable**:
-   ```bash
-   # AdAway: Use toggle in app
-   # Bindhosts: Reset hosts
-   bindhosts --force-reset
-   ```
+2. **Configure root hiding** for banking apps:
+   - See [root hiding solutions](../apps-and-modules/#root-hiding-and-play-integrity)
+   - Check [Play Integrity troubleshooting](../troubleshooting.md#play-integrity-and-banking-apps)
 
 #### **Issue: Slow Internet or Connection Problems**
 
@@ -486,7 +483,7 @@ sync; echo 3 > /proc/sys/vm/drop_caches
 ### 🔐 **Security Enhancements**
 
 #### **Malware Protection**
-Add malware-blocking hosts sources:
+Add malware-blocking hosts sources (also check our [privacy & security apps](../apps-and-modules/#privacy-and-security)):
 ```
 • Malware Domain List: https://www.malwaredomainlist.com/hostslist/hosts.txt
 • URLVoid: https://www.urlvoid.com/downloads/hostformat.php
@@ -554,11 +551,13 @@ A: Systemless methods (Magisk modules) survive OTA updates. Traditional modifica
 
 ## Related Guides
 
-- 📖 [Complete Android Rooting Guide](../rooting-guides/index.md)
-- 🔧 [Magisk Installation Guide](../rooting-guides/magisk-guide.md)
-- ⚡ [KernelSU Setup Guide](../rooting-guides/kernelsu-guide.md)
-- 🛠️ [LSPosed Configuration](../rooting-guides/lsposed-guide.md)
-- 🧹 [Android Debloating Guide](./android-apps-debloating.md)
+- 📖 [Complete Android Rooting Guide](../rooting-guides/) - Start your rooting journey
+- 🔧 [Magisk Installation Guide](../rooting-guides/magisk-guide.md) - Popular systemless root
+- ⚡ [KernelSU Setup Guide](../rooting-guides/kernelsu-guide.md) - Kernel-based root with advanced hiding
+- 🛠️ [LSPosed Configuration](../rooting-guides/lsposed-guide.md) - Advanced app modifications
+- 🧹 [Android Debloating Guide](./android-apps-debloating.md) - Remove bloatware for better performance
+- 🛡️ [Privacy & Security Apps](../apps-and-modules/#privacy-and-security) - Additional privacy tools
+- 🔍 [More Ad Blocking Solutions](../apps-and-modules/#ads-and-tracking-blockers) - Alternative blockers
 
 ---
 

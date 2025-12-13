@@ -160,19 +160,19 @@ Root access grants **superuser (administrator) privileges** on Android, providin
 
 - **System-level control** over files, processes, and hardware
 - **Bypass manufacturer restrictions**
-- **Install powerful apps** requiring deep system integration
-- **Modify core system files**
-- **Access hidden hardware features**
+- **Install powerful apps** requiring deep system integration (see [430+ Root Apps](../apps-and-modules/))
+- **Modify core system files** and customize every aspect
+- **Access hidden hardware features** and advanced configurations
 
 ### Benefits vs Risks
 
 | Benefits | Risks |
 |----------|-------|
 | Complete device control | Warranty void (usually permanent) |
-| System-wide ad blocking | Reduced security if misconfigured |
-| Performance tuning | Banking apps may fail |
+| [System-wide ad blocking](../general-guides/android-adblocking.md) | Reduced security if misconfigured |
+| [Performance tuning](../apps-and-modules/#performance-and-optimization) | Banking apps may fail ([solutions](../troubleshooting.md#play-integrity-and-banking-apps)) |
 | Privacy enhancements | OTA updates blocked |
-| Bloatware removal | Potential for device bricking |
+| [Bloatware removal](../general-guides/android-apps-debloating.md) | Potential for device bricking |
 | Full app backups | SafetyNet/Play Integrity issues |
 
 ### Is Rooting Right for You?
@@ -201,7 +201,7 @@ Root access grants **superuser (administrator) privileges** on Android, providin
 
 **Banking Apps** - Many financial apps detect and refuse to run on rooted devices.
 
-**Bricking Risk** - Incorrect procedures can permanently damage your device. Follow instructions exactly.
+**Bricking Risk** - Incorrect procedures can permanently damage your device. Follow instructions exactly and have [recovery plan ready](../troubleshooting.md#emergency-recovery).
 :::
 
 ### Essential Requirements
@@ -226,7 +226,7 @@ Root access grants **superuser (administrator) privileges** on Android, providin
 
 ### Pre-Rooting Checklist
 
-1. **Backup all data** - Photos, contacts, messages, app data
+1. **Backup all data** - Photos, contacts, messages, app data (see [Backup Apps](../apps-and-modules/#backup-and-restore))
 2. **Charge device** - Minimum 50% battery
 3. **Verify device compatibility** - Check if bootloader can be unlocked
 4. **Download necessary files** - Stock firmware, root solution, recovery (if needed)
@@ -247,7 +247,7 @@ Three primary rooting solutions exist, each with distinct advantages and trade-o
 | **Target Users** | Beginners, banking users | GKI 2.0, privacy users | Developers, experimental |
 | **Architecture** | Systemless | Kernel-level | Kernel patching |
 | **Community Size** | Largest | Growing | Small |
-| **Modules** | 1000+ | Modified Magisk | Limited |
+| **Modules** | 1000+ ([browse](../apps-and-modules/)) | Modified Magisk | Limited |
 | **Android Support** | 6.0 - 15 | GKI 2.0+ | Latest |
 | **Banking Compatibility** | Weak hiding | Advanced hiding | Sophisticated evasion |
 | **Installation** | Easy | Complex | Very complex |
@@ -304,7 +304,7 @@ Unlocking the bootloader is the essential first step that enables all subsequent
 
 ### Step 2: Install Custom Recovery
 
-Custom recovery provides advanced features and safer modification workflows. Required for some devices and methods.
+Custom recovery provides advanced features and safer modification workflows. Required for some devices and methods (check your [device-specific guide](#device-specific-guides)).
 
 **Popular Options:**
 - **TWRP** - Most widely supported
@@ -363,9 +363,10 @@ After successful root installation, complete these essential steps:
 4. **Create System Backup** - Create full system backup for safety
 
 **Recommended Next Steps:**
-- [Block Ads System-Wide](../general-guides/android-adblocking.md)
-- [Debloat Your Device](../general-guides/android-apps-debloating.md)
-- [Browse Root Apps Collection](../apps-and-modules/)
+- [Block Ads System-Wide](../general-guides/android-adblocking.md) - Eliminate ads across all apps
+- [Debloat Your Device](../general-guides/android-apps-debloating.md) - Remove bloatware safely
+- [Install LSPosed Framework](./lsposed-guide.md) - Advanced app customization
+- [Browse 430+ Root Apps](../apps-and-modules/) - Discover essential tools
 
 ---
 
@@ -417,10 +418,10 @@ Symptoms: Apps detect root and refuse to run
 
 Solutions:
 1. Enable root hiding in Magisk (DenyList) or KernelSU
-2. Install Play Integrity Fix module
+2. Install [Play Integrity Fix module](../apps-and-modules/#root-hiding-and-play-integrity)
 3. Hide Magisk app (rename and repackage)
-4. Use app isolation (Island, Shelter)
-5. Consider alternative banking apps
+4. Use [app isolation](../apps-and-modules/#app-isolation-and-cloning) (Island, Shelter)
+5. See [detailed troubleshooting](../troubleshooting.md#play-integrity-and-banking-apps)
 
 **OTA Updates Failing**
 

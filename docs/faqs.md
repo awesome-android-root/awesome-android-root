@@ -171,12 +171,12 @@ Looking for troubleshooting? Visit our [Troubleshooting Guide](./troubleshooting
 - **Module System:** Install Magisk/KernelSU modules for systemless modifications
 
 **Popular Uses:**
-- System-wide ad blocking (AdAway, hosts-based blocking)
-- Complete device backups
-- Custom recovery and ROM installation
-- Removing carrier bloatware
-- Advanced theming and customization
-- Enhanced privacy controls
+- System-wide ad blocking ([AdAway guide](./general-guides/android-adblocking.md))
+- Complete device backups ([backup apps](./apps-and-modules/#backup-and-restore))
+- Custom recovery and ROM installation ([guide](./rooting-guides/custom-rom-installation.md))
+- Removing carrier bloatware ([debloating guide](./general-guides/android-apps-debloating.md))
+- Advanced theming and customization ([customization apps](./apps-and-modules/#customization-and-theming))
+- Enhanced privacy controls ([privacy apps](./apps-and-modules/#privacy-and-security))
 
 **Related Resources:**
 - [Essential Root Apps](./apps-and-modules/index.md#starter-kit-must-have-apps)
@@ -264,9 +264,9 @@ Many customizations don't require root anymore:
 - **Work Profile:** Separate work/personal apps with Shelter
 
 **Alternatives Without Root:**
-- [Non-Root Alternatives Guide](./non-root-alternatives.md)
-- [Android Ad Blocking](./general-guides/android-adblocking.md)
-- [App Debloating Guide](./general-guides/android-apps-debloating.md)
+- [Non-Root Alternatives Guide](./non-root-alternatives.md) - Comprehensive options
+- [Android Ad Blocking](./general-guides/android-adblocking.md) - Including DNS-based methods
+- [App Debloating Guide](./general-guides/android-apps-debloating.md) - ADB-based debloating
 
 **Decision Flowchart:**
 
@@ -521,6 +521,7 @@ Modern devices use A/B (seamless) update system:
    - Enable Zygisk in Magisk
    - Add banking apps to DenyList
    - Hide Magisk app (rename it)
+   - Install [Play Integrity Fix modules](./apps-and-modules/#root-hiding-and-play-integrity)
 
 2. **Clear app data:**
    ```
@@ -641,11 +642,12 @@ Modern devices use A/B (seamless) update system:
    - Copy to external storage/cloud
 
 4. **Essential apps to install:**
-   - [AdAway](./apps-and-modules/index.md#adaway) - System-wide ad blocking
-   - [Swift Backup](./apps-and-modules/index.md#swift-backup) - Complete backups
-   - [SD Maid SE](./apps-and-modules/index.md#sd-maid-se) - System cleaner
-   - [AFWall+](./apps-and-modules/index.md#afwall) - Firewall
-   - [Termux](./apps-and-modules/index.md#termux) - Terminal emulator
+   - See our [complete starter kit](./apps-and-modules/#starter-kit-must-have-apps) for must-have apps
+   - [AdAway](./apps-and-modules/#ads-and-tracking-blockers) - System-wide ad blocking
+   - [Backup apps](./apps-and-modules/#backup-and-restore) - Complete backups
+   - [File managers](./apps-and-modules/#file-management) - Root-enabled file access
+   - [Firewall tools](./apps-and-modules/#firewall-tools) - Network control
+   - [Browse 430+ root apps](./apps-and-modules/) for more
 
 **Next Steps:**
 
