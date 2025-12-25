@@ -823,12 +823,12 @@ A metamodule is a special type of KernelSU module that provides core infrastruct
 |------------|-------------|----------|
 | [meta-overlayfs](https://github.com/KernelSU-Modules-Repo/meta-overlayfs) | Official reference implementation using OverlayFS | Most users, standard setup |
 | [mountify](https://github.com/backslashxx/mountify) | OverlayFS with tmpfs/ext4 sparse support, works on APatch/Magisk too | Reduced detection, multi-root support |
-| [meta-magic_mount](https://github.com/7a72/meta-magic_mount) | Magic Mount implementation (C-based) | Magisk-style mounting compatibility |
-| [meta-magic_mount-rs](https://github.com/Tools-cx-app/meta-magic_mount) | Magic Mount implementation (Rust-based) | Magisk-style mounting with WebUI |
-| [meta-hybrid_mount](https://github.com/YuzakiKokuban/meta-hybrid_mount) | Hybrid OverlayFS + Magic Mount with auto-fallback | Maximum compatibility, stealth mode |
+| [meta-magic_mount](https://github.com/7a72/meta-magic_mount) ([Mirror](https://codeberg.org/ovo/meta-magic_mount)) | Magic Mount implementation in C with WebUI support | Magisk-style mounting, official KSU branch support |
+| [meta-magic_mount (Rust)](https://github.com/Tools-cx-app/meta-magic_mount) | Rust-based Magic Mount with WebUI and active development | Enhanced performance, modern codebase |
+| [meta-hybrid_mount](https://github.com/YuzakiKokuban/meta-hybrid_mount) | Dual engine (OverlayFS + Magic Mount) with conflict monitor, diagnostics & auto-fallback | Maximum compatibility, advanced control, stealth mode |
 
 ::: tip RECOMMENDATION
-For most users, **meta-overlayfs** (official) or **mountify** are recommended starting points. If you need advanced features like automatic fallback or better stealth, try **meta-hybrid_mount**.
+For most users, **meta-overlayfs** (official) or **mountify** are recommended starting points. If you need advanced features like automatic fallback, diagnostics, or better stealth, try **meta-hybrid_mount**.
 :::
 
 ### Installing a Metamodule
