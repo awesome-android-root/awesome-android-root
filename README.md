@@ -1121,11 +1121,9 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 <br>
 </details>
 
-- **[⭐ Meta-overlayfs](https://github.com/5ec1cff/OverlayFS-module)** - Official reference implementation using OverlayFS for most users and standard setup. `FOSS` `[K]`
+- **[⭐ Meta-overlayfs](https://github.com/KernelSU-Modules-Repo/meta-overlayfs)** - Official reference implementation using OverlayFS for most users and standard setup. `FOSS` `[K]`
 - **[⭐ Mountify](https://github.com/backslashxx/mountify)** - OverlayFS with tmpfs/ext4 sparse support for reduced detection, works on APatch/Magisk too. `FOSS` `[M]` `[K]`
-- **[meta-magic_mount](https://github.com/5ec1cff/magic_mount)** - Magic Mount implementation (C-based) for Magisk-style mounting compatibility. `FOSS` `[K]`
-- **[meta-magic_mount-rs](https://github.com/backslashxx/magic_mount-rs)** - Magic Mount implementation (Rust-based) with WebUI support. `FOSS` `[K]`
-- **[meta-hybrid_mount](https://github.com/5ec1cff/meta-hybrid_mount)** - Hybrid OverlayFS + Magic Mount with auto-fallback for maximum compatibility and stealth mode. `FOSS` `[K]`
+
 
 > [!TIP]
 > For most users, **meta-overlayfs** (official) or **Mountify** are recommended starting points. If you need advanced features like automatic fallback or better stealth, try **meta-hybrid_mount**.
