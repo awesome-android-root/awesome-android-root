@@ -383,6 +383,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ### App Update Control
 - **[⭐ Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. Also check out [📖 Zygisk Detach Guide](./docs/general-guides/stop-android-app-auto-updates-play-store.md). Requires [Zygisk implementation](#zygisk-implementations). `FOSS` `[M]`
+- **[Play Version Spoofer](https://github.com/byemaxx/PlayVersionSpoofer)** - Prevents the Google Play Store from automatically updating itself. `FOSS` `[LSP]`
 - **[Update Locker](https://github.com/Xposed-Modules-Repo/ru.mike.updatelocker/)** - Block updates (and auto-updates) selected apps via popular markets including Google Play Market, Huawei AppGallery and Samsung Galaxy Store. `Proprietary`
 
 ### Freeze Apps
