@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Android Rooting Resources 2025
+title: Android Rooting Resources 2026
 description: "Complete collection of Android rooting resources, tools, communities, guides, and expert materials for safe rooting, custom ROMs, and device customization."
 head:
   - - link
@@ -11,7 +11,7 @@ head:
       content: website
   - - meta
     - property: og:title
-      content: Android Rooting Resources 2025 - Complete Guide & Tools Collection
+      content: Android Rooting Resources 2026 - Complete Guide & Tools Collection
   - - meta
     - property: og:description
       content: Ultimate collection of Android rooting resources including tools, communities, guides, and expert materials for safe device customization and root access.
@@ -26,13 +26,13 @@ head:
       content: summary_large_image
   - - meta
     - name: twitter:title
-      content: Android Rooting Resources 2025 - Complete Collection
+      content: Android Rooting Resources 2026 - Complete Collection
   - - meta
     - name: twitter:description
       content: Everything you need for Android rooting - tools, communities, guides, and expert resources in one comprehensive collection.
   - - meta
     - name: keywords
-      content: android rooting resources, rooting tools 2025, android root communities, magisk resources, kernelsu tools, android development resources, custom rom resources, bootloader unlock tools, recovery tools, android debugging resources, root learning materials, android modding resources, xda developers, android root forums, rooting guides collection
+      content: android rooting resources, rooting tools 2026, android root communities, magisk resources, kernelsu tools, android development resources, custom rom resources, bootloader unlock tools, recovery tools, android debugging resources, root learning materials, android modding resources, xda developers, android root forums, rooting guides collection
   - - meta
     - name: author
       content: Awesome Android Root Project
@@ -62,11 +62,11 @@ head:
       content: index, follow, max-image-preview:large
 ---
 
-# Android Rooting Resources Hub 2025
+# Android Rooting Resources Hub 2026
 
 > Comprehensive reference for Android rooting, customization, and recovery.
 
-Last updated: November 2025 | Android 15 ready
+Last updated: November 2026 | Android 15 ready
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: Android Rooting Guide 2025
-description: "The ultimate Android rooting guide for 2025. Learn Magisk, KernelSU & APatch with step-by-step instructions with device-specific guides."
+title: Android Rooting Guide 2026
+description: "The ultimate Android rooting guide for 2026. Learn Magisk, KernelSU & APatch with step-by-step instructions with device-specific guides."
 head:
   - - link
     - rel: canonical
@@ -32,7 +32,7 @@ head:
       content: Complete Android rooting tutorial with Magisk, KernelSU, APatch guides and device-specific instructions for safe rooting.
   - - meta
     - name: keywords
-      content: android root guide 2025, magisk installation guide, kernelsu tutorial, apatch rooting, android rooting methods, systemless root, bootloader unlock tutorial, custom recovery guide, twrp installation, android root safety, pixel root guide, samsung root guide, xiaomi root guide, oneplus root guide, android customization, lsposed framework, android debloating
+      content: android root guide 2026, magisk installation guide, kernelsu tutorial, apatch rooting, android rooting methods, systemless root, bootloader unlock tutorial, custom recovery guide, twrp installation, android root safety, pixel root guide, samsung root guide, xiaomi root guide, oneplus root guide, android customization, lsposed framework, android debloating
   - - meta
     - name: author
       content: Awesome Android Root Project
@@ -44,7 +44,7 @@ head:
       content: Android Rooting Tutorials
   - - meta
     - property: article:tag
-      content: Android Root 2025
+      content: Android Root 2026
   - - meta
     - property: article:tag
       content: Magisk Guide
@@ -84,7 +84,7 @@ head:
       {
         "@context": "https://schema.org  ",
         "@type": "HowTo",
-        "name": "Android Rooting Guide 2025",
+        "name": "Android Rooting Guide 2026",
         "description": "Complete tutorial for rooting Android devices using Magisk, KernelSU, or APatch with safety practices",
         "totalTime": "PT2H",
         "estimatedCost": {
@@ -127,7 +127,7 @@ head:
       }
 ---
 
-# Android Rooting Guide 2025
+# Android Rooting Guide 2026
 
 Master Android rooting with comprehensive tutorials covering bootloader unlocking, root installation, and advanced customization techniques.
 

@@ -821,7 +821,7 @@ fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
 
 ### SafetyNet/Play Integrity Failing
 
-**Current status (2025):** Increasingly difficult to pass
+**Current status (2026):** Increasingly difficult to pass
 
 **Basic troubleshooting:**
 
@@ -856,7 +856,7 @@ fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
 - Some corporate apps
 
 :::warning Reality Check
-As of 2025, passing strong Play Integrity attestation is very difficult. Consider if rooting is worth losing access to these apps for your use case.
+As of 2026, passing strong Play Integrity attestation is very difficult. Consider if rooting is worth losing access to these apps for your use case.
 :::
 
 ---

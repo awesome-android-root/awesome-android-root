@@ -32,7 +32,7 @@ head:
       content: Master Android with expert tutorials covering ad blocking, debloating, privacy, optimization, and customization for rooted and stock devices.
   - - meta
     - name: keywords
-      content: android guides 2025, android tutorials, how to root android, android ad blocking tutorial, android debloating guide, app manager android, remove bloatware android, android privacy tips, android security guide, android optimization tutorial, play store tips, android customization guide, android performance boost, battery optimization android, kernel tuning android, android theming tutorial, custom recovery guide, magisk tutorial, kernelsu setup, lsposed guide, android automation, tasker android, android networking guide, adb commands tutorial, fastboot guide, android backup guide, android troubleshooting, fix bootloop android, play integrity fix, banking apps root, android tips and tricks 2025
+      content: android guides 2026, android tutorials, how to root android, android ad blocking tutorial, android debloating guide, app manager android, remove bloatware android, android privacy tips, android security guide, android optimization tutorial, play store tips, android customization guide, android performance boost, battery optimization android, kernel tuning android, android theming tutorial, custom recovery guide, magisk tutorial, kernelsu setup, lsposed guide, android automation, tasker android, android networking guide, adb commands tutorial, fastboot guide, android backup guide, android troubleshooting, fix bootloop android, play integrity fix, banking apps root, android tips and tricks 2026
   - - meta
     - name: author
       content: Awesome Android Root Project
@@ -93,7 +93,7 @@ head:
       }
 ---
 
-# Android Tutorials & Guides (2025)
+# Android Tutorials & Guides (2026)
 
 Master your Android experience with our comprehensive collection of expert tutorials and step-by-step guides. Designed for users of all skill levels—from beginners to advanced power users—covering privacy enhancement, performance optimization, system customization, and efficient app management for both rooted and stock Android devices.
 

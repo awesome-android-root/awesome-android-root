@@ -20,7 +20,7 @@ head:
       content: https://awesome-android-root.org/rooting-guides/kernelsu-guide
   - - meta
     - property: og:image
-      content: https://awesome-android-root.org/images/og/kernelsu-guide-2025.png
+      content: https://awesome-android-root.org/images/og/kernelsu-guide-2026.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -95,16 +95,16 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:title
-      content: "KernelSU Guide 2025 | Awesome Android Root"
+      content: "KernelSU Guide 2026 | Awesome Android Root"
   - - meta
     - name: twitter:description
-      content: "Ultimate KernelSU guide for 2025! Learn to install KernelSU & KernelSU Next, manage kernel-based root, modules, app profiles. Step-by-step tutorial for Android 4.4+ devices."
+      content: "Ultimate KernelSU guide for 2026! Learn to install KernelSU & KernelSU Next, manage kernel-based root, modules, app profiles. Step-by-step tutorial for Android 4.4+ devices."
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.org/images/og/kernelsu-guide-2025.png
+      content: https://awesome-android-root.org/images/og/kernelsu-guide-2026.png
   - - meta
     - name: twitter:image:alt
-      content: KernelSU Guide 2025 - Complete Installation Tutorial
+      content: KernelSU Guide 2026 - Complete Installation Tutorial
   - - link
     - rel: dns-prefetch
       href: https://github.com
@@ -120,9 +120,9 @@ head:
         {
           "@context": "https://schema.org",
           "@type": "TechArticle",
-          "headline": "KernelSU Guide 2025 | Awesome Android Root",
-          "description": "Ultimate KernelSU guide for 2025! Learn to install KernelSU & KernelSU Next, manage kernel-based root, modules, app profiles. Step-by-step tutorial for Android 4.4+ devices.",
-          "image": "https://awesome-android-root.org/images/og/kernelsu-guide-2025.png",
+          "headline": "KernelSU Guide 2026 | Awesome Android Root",
+          "description": "Ultimate KernelSU guide for 2026! Learn to install KernelSU & KernelSU Next, manage kernel-based root, modules, app profiles. Step-by-step tutorial for Android 4.4+ devices.",
+          "image": "https://awesome-android-root.org/images/og/kernelsu-guide-2026.png",
           "author": {
             "@type": "Organization",
             "name": "Awesome Android Root Project",
@@ -160,7 +160,7 @@ head:
             }
           ],
           "keywords": [
-            "kernelsu guide 2025",
+            "kernelsu guide 2026",
             "kernelsu installation",
             "kernelsu next",
             "kernel root android",
@@ -174,7 +174,7 @@ head:
           "articleSection": "Android Rooting Guides",
           "inLanguage": "en-US",
           "isAccessibleForFree": true,
-          "copyrightYear": 2025,
+          "copyrightYear": 2026,
           "copyrightHolder": {
             "@type": "Organization",
             "name": "Awesome Android Root Project"
@@ -380,7 +380,7 @@ Visit [KernelSU Device List](https://kernelsu.org/guide/installation.html) to se
 
 1. Visit [KernelSU Releases](https://github.com/tiann/KernelSU/releases/latest)
 2. Download GKI kernel for your Android version
-3. Example: `kernel-android13-5.15-2025.01.img`
+3. Example: `kernel-android13-5.15-2026.01.img`
 
 **Step 3: Flash Kernel**
 
@@ -393,7 +393,7 @@ adb reboot bootloader
 fastboot devices
 
 # Flash KernelSU kernel
-fastboot flash boot kernel-android13-5.15-2025.01.img
+fastboot flash boot kernel-android13-5.15-2026.01.img
 
 # Reboot device
 fastboot reboot

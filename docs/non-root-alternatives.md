@@ -14,7 +14,7 @@ head:
       content: Awesome Android Root
   - - meta
     - property: og:title
-      content: Non-Root Alternatives - Customize Android Without Root Access 2025
+      content: Non-Root Alternatives - Customize Android Without Root Access 2026
   - - meta
     - property: og:description
       content: Achieve similar functionality without root access using ADB, Shizuku, wireless debugging, and alternative apps for devices where rooting isn't possible.
@@ -29,7 +29,7 @@ head:
       content: https://awesome-android-root.org/images/og.png
   - - meta
     - property: og:image:alt
-      content: Non-Root Alternatives - Customize Android Without Root 2025
+      content: Non-Root Alternatives - Customize Android Without Root 2026
   - - meta
     - property: og:image:width
       content: '1200'
@@ -53,7 +53,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:title
-      content: Non-Root Alternatives - Customize Android Without Root Access 2025
+      content: Non-Root Alternatives - Customize Android Without Root 2026
   - - meta
     - name: twitter:description
       content: Achieve powerful Android customization without root using ADB, Shizuku, wireless debugging, and alternative apps.

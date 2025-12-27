@@ -17,7 +17,7 @@ head:
       content: Awesome Android Root
   - - meta
     - property: og:title
-      content: How to Stop Android App Auto Updates from Play Store 2025 | Complete Zygisk Detach Guide
+      content: How to Stop Android App Auto Updates from Play Store 2026 | Complete Zygisk Detach Guide
   - - meta
     - property: og:description
       content: Learn how to permanently disable automatic app updates from Google Play Store using Zygisk Detach module. Complete step-by-step guide for rooted Android devices with Magisk/KernelSU. Prevent unwanted app updates today!
@@ -32,7 +32,7 @@ head:
       content: https://awesome-android-root.org/images/og/zygisk-detach.png
   - - meta
     - property: og:image:alt
-      content: How to Stop Android App Auto Updates from Play Store - Zygisk Detach Guide 2025
+      content: How to Stop Android App Auto Updates from Play Store - Zygisk Detach Guide 2026
   - - meta
     - property: og:image:width
       content: '1200'
@@ -61,7 +61,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:title
-      content: Stop Android App Auto Updates from Play Store 2025 | Zygisk Detach Tutorial
+      content: Stop Android App Auto Updates from Play Store 2026 | Zygisk Detach Tutorial
   - - meta
     - name: twitter:description
       content: Permanently disable automatic app updates from Google Play Store using Zygisk Detach module. Complete guide for rooted Android devices with Magisk/KernelSU. Step-by-step tutorial included!

@@ -40,7 +40,7 @@ head:
 
 # Legal Disclaimer & Safety Notice
 
-**Last Updated:** October 2025
+**Last Updated:** October 2026
 
 ## ⚠️ Critical Warning
 
