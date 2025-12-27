@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Legal Disclaimer & Safety Notice
-description: "Important legal information, warranty implications, and safety guidelines for Android rooting."
+description: "Important legal information, warranty implications, and safety guidelines for Android rooting and customization."
 head:
   - - link
     - rel: canonical
