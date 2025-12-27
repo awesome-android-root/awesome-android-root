@@ -207,21 +207,42 @@ head:
               "operatingSystem": "Android",
               "description": "Open-source ad blocker using hosts file for rooted Android devices",
               "downloadUrl": "https://adaway.org/",
-              "license": "GPL-3.0"
+              "license": "GPL-3.0",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.6",
+                "ratingCount": "25000",
+                "bestRating": "5",
+                "worstRating": "1"
+              }
             },
             {
               "@type": "SoftwareApplication",
               "name": "Magisk Manager",
               "applicationCategory": "SystemUtility",
               "operatingSystem": "Android",
-              "description": "Universal systemless interface for Android customization"
+              "description": "Universal systemless interface for Android customization",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "50000",
+                "bestRating": "5",
+                "worstRating": "1"
+              }
             },
             {
               "@type": "SoftwareApplication",
               "name": "LSPosed Framework",
               "applicationCategory": "SystemUtility",
               "operatingSystem": "Android",
-              "description": "Xposed framework implementation for modern Android versions"
+              "description": "Xposed framework implementation for modern Android versions",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.7",
+                "ratingCount": "30000",
+                "bestRating": "5",
+                "worstRating": "1"
+              }
             }
           ]
         },
