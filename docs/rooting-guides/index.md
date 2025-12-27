@@ -11,7 +11,7 @@ head:
       content: article
   - - meta
     - property: og:title
-      content: Android Rooting Guide 2025 - Awesome Android Root
+      content: Android Rooting Guide 2026 | Awesome Android Root
   - - meta
     - property: og:description
       content: The ultimate Android rooting guide covering Magisk, KernelSU, APatch installation with device-specific tutorials for Pixel, Samsung, Xiaomi, OnePlus & more.
@@ -26,7 +26,7 @@ head:
       content: summary_large_image
   - - meta
     - name: twitter:title
-      content: Android Rooting Guide 2025 - Awesome Android Root
+      content: Android Rooting Guide 2026 | Awesome Android Root
   - - meta
     - name: twitter:description
       content: Complete Android rooting tutorial with Magisk, KernelSU, APatch guides and device-specific instructions for safe rooting.
@@ -74,7 +74,7 @@ head:
       content: 2024-01-15T10:00:00Z
   - - meta
     - property: article:modified_time
-      content: 2025-01-30T12:00:00Z
+      content: 2025-12-26T12:00:00Z
   - - meta
     - name: robots
       content: index, follow, max-image-preview:large
