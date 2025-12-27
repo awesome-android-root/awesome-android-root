@@ -114,7 +114,7 @@ head:
             "description": "Discover 400+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026.",
             "url": "https://awesome-android-root.org/",
             "datePublished": "2025-05-25T00:00:00Z",
-            "dateModified": "2025-10-04T00:00:00Z",
+            "dateModified": "2025-12-26T00:00:00Z",
             "inLanguage": "en-US",
             "isPartOf": {
               "@id": "https://awesome-android-root.org/#website"

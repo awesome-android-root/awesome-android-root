@@ -44,7 +44,7 @@ head:
       content: 2025-07-28
   - - meta
     - property: article:modified_time
-      content: 2025-12-13
+      content: 2025-12-26
   - - meta
     - name: robots
       content: index, follow, max-image-preview:large, max-snippet:-1
