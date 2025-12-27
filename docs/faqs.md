@@ -26,6 +26,7 @@ head:
       content: Awesome Android Root
   - - meta
     - name: twitter:card
+      content: summary_large_image
   - - meta
     - name: twitter:title
       content: Android Rooting FAQ & Troubleshooting Guide 2025
