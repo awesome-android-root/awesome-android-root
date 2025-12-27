@@ -59,7 +59,7 @@ head:
       content: 2025-01-12T00:00:00Z
   - - meta
     - property: article:modified_time
-      content: 2025-07-12T00:00:00Z
+      content: 2025-12-26T00:00:00Z
   - - meta
     - property: article:tag
       content: KernelSU
@@ -137,7 +137,7 @@ head:
             }
           },
           "datePublished": "2025-01-12",
-          "dateModified": "2025-07-12",
+          "dateModified": "2025-12-26",
           "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://awesome-android-root.org/rooting-guides/kernelsu-guide"

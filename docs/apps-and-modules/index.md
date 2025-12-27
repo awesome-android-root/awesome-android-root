@@ -100,7 +100,7 @@ head:
       content: '2025-08-11T00:00:00Z'
   - - meta
     - property: article:modified_time
-      content: '2025-09-20T00:00:00Z'
+      content: '2025-12-26T00:00:00Z'
   - - meta
     - property: article:section
       content: Android Root Apps
@@ -164,7 +164,7 @@ head:
         "description": "Ultimate collection of 430+ best Android root apps, Magisk modules, and LSPosed frameworks. Download top-rated root applications for Android customization, system optimization, and power user features.",
         "inLanguage": "en-US",
         "datePublished": "2025-08-11T00:00:00Z",
-        "dateModified": "2025-09-20T00:00:00Z",
+        "dateModified": "2025-12-26T00:00:00Z",
         "image": {
           "@type": "ImageObject",
           "url": "https://awesome-android-root.org/images/og.png",
