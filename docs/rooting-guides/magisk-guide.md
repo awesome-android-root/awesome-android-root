@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Complete Magisk Root Guide 2025
+title: Complete Magisk Root Guide 2026
 description: "Master Magisk rooting with our comprehensive guide. Install systemless root, modules, and advanced root management for all Android devices safely."
 head:
   - - link
@@ -11,7 +11,7 @@ head:
       content: article
   - - meta
     - property: og:title
-      content: Complete Magisk Root Guide 2025 - Universal Android Rooting Solution
+      content: Complete Magisk Root Guide 2026 - Universal Android Rooting Solution
   - - meta
     - property: og:description
       content: Install Magisk root with our comprehensive guide. Master systemless rooting with advanced module system, root hiding, and complete device management.
@@ -26,13 +26,13 @@ head:
       content: summary_large_image
   - - meta
     - name: twitter:title
-      content: Complete Magisk Root Guide 2025 - Universal Systemless Root
+      content: Complete Magisk Root Guide 2026 - Universal Systemless Root
   - - meta
     - name: twitter:description
       content: Master Magisk installation with systemless rooting, module support, and advanced root management for all Android devices.
   - - meta
     - name: keywords
-      content: magisk root guide 2025, systemless root installation, magisk modules, android rooting, zygisk magisk, magisk manager, root hiding, play integrity fix, magisk delta, magisk boot image patching, magisk installation tutorial, android root 2025, magisk denylist, magisk shamiko
+      content: magisk root guide 2026, systemless root installation, magisk modules, android rooting, zygisk magisk, magisk manager, root hiding, play integrity fix, magisk delta, magisk boot image patching, magisk installation tutorial, android root 2026, magisk denylist, magisk shamiko
   - - meta
     - name: author
       content: Awesome Android Root Project
@@ -44,7 +44,7 @@ head:
       content: Android Rooting Solutions
   - - meta
     - property: article:tag
-      content: Magisk Root 2025
+      content: Magisk Root 2026
   - - meta
     - property: article:tag
       content: Systemless Root

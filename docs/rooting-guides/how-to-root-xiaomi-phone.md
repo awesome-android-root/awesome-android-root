@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Xiaomi/Redmi/POCO Root Guide 2025
+title: Xiaomi/Redmi/POCO Root Guide 2026
 description: Complete guide to root Xiaomi, Redmi, and POCO devices. Navigate HyperOS/MIUI, Mi Unlock Tool, anti-rollback protection, and Magisk installation.
 head:
   - - link
@@ -59,7 +59,7 @@ head:
       content: index, follow
 ---
 
-# Complete Xiaomi Rooting Guide (2025 Edition)
+# Complete Xiaomi Rooting Guide (2026 Edition)
 
 This page focuses on Xiaomi/Redmi/POCO specifics (Mi Unlock, ARB, HyperOS, payload extraction). For universal prep and Magisk steps, see: [Main Rooting Guide](./index.md), [Bootloader Unlocking](./how-to-unlock-bootloader.md), and [Magisk Guide](./magisk-guide.md).
 

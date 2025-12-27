@@ -59,7 +59,7 @@ head:
       content: index, follow
 ---
 
-# Complete Custom ROM Installation Guide (2025 Edition)
+# Complete Custom ROM Installation Guide (2026 Edition)
 
 **Transform your Android experience** - Install privacy-focused, security-enhanced custom ROMs to revive and enhance your device.
 
