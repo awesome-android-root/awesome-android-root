@@ -533,6 +533,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[Privacy ReVanced Patches](https://github.com/jkennethcarino/privacy-revanced-patches)** - Privacy Patches for ReVanced to disable ads, trackers and analytics, always open Gboard in incognito mode, and much more. Enhances your [privacy](#privacy-and-security). `FOSS` `[R]`
 - **[ReVanced Manager](https://github.com/ReVanced/revanced-manager)** - Modify YouTube, YouTube Music, Spotify and many more with additional features. `FOSS` `[R]`
 - **[ReVancedRepackaged](https://github.com/programminghoch10/ReVancedRepackaged)** - This magisk module contains only the ReVanced Patcher.It will patch any installed ReVanced compatible app right on your device during installation. `FOSS` `[M]` `[R]`
+- **[ReVanced Extended Magisk](https://github.com/Susheate/revanced-extended-magisk)** - [RVX](https://github.com/inotia00/revanced-patches) Magisk module builder based on [j-hc's template](https://github.com/j-hc/revanced-magisk-module), it builds modules for YouTube and YouTube Music without human interventions whenever a ReVanced Extended patch releases, allowing to easily install and update ReVanced Extended patched apps directly through Magisk Manager. `FOSS` `[M]` `[K]` `[R]`
 
 ### Misc App Mods
 - **[Boosteroid+](https://github.com/nitanmarcel/BoosteroidPlus)** - Customize advanced settings for the Boosteroid app, including frame rate, bitrate, and resolution options. `FOSS` `[LSP]`
