@@ -787,7 +787,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[HyperStar](https://github.com/YunZiA/HyperStar/blob/master/README_EN-US.md)** - An LSPosed module mainly designed to customize the Xiaomi HyperOS Control Center, along with some features. `FOSS` `[LSP]`
 - **[Hyper Unlocked](https://github.com/ukriu/HyperUnlocked)** - Unlock all high-end features possible to be unlocked on low-end xiaomi devices. `FOSS` `[M]`
 - **[Lite Blur Control Center For HyperOS2](https://github.com/fakerieh/Lite-Blur-Control-Center-For-HyperOS2)** - Control Center Blur for HyperOS2 but LIGHTER. `FOSS` `[M]`
-- **[MiNavBarImmerse](https://github.com/Ianzb/MiNavBarImmerse/blob/main/doc/en_us/README.md)** - Optimizes the Xiaomi NavBar immersion by replacing the NavBar configuration file of third-party applications built into Xiaomi HyperOS 2.2. `FOSS` `[LSP]`
+- **[MiNavBarImmerse](https://github.com/Ianzb/MiNavBarImmerse)** - Optimizes the Xiaomi NavBar immersion by replacing the NavBar configuration file of third-party applications built into Xiaomi HyperOS 2.2. `FOSS` `[LSP]`
 - **[MIUIPerfSaver](https://github.com/rdtoy/MIUIPerfSaver)** -  Remove MIUI's performance limit, run app at maximum FPS. `FOSS` `[LSP]`
 - **[Pengeek](https://github.com/monwf/customiuizer)** - Customize your HyperOS to your liking. For HyperOS based on Android 14. `FOSS` `[LSP]`
 
