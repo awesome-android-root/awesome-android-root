@@ -61,7 +61,7 @@ head:
 
 # OnePlus Root Guide
 
-Root OnePlus devices with straightforward bootloader unlock. Covers OxygenOS and ColorOS, OnePlus 12, 11, 10, 9, Nord series, and legacy devices.
+Root OnePlus devices with straightforward bootloader unlock. Covers OxygenOS and ColorOS, OnePlus 15, 13, 12, 11, 10, 9, Nord series, and legacy devices.
 
 ## Quick Navigation
 
