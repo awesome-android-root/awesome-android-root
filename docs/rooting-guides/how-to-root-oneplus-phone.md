@@ -121,6 +121,10 @@ Root OnePlus devices with straightforward bootloader unlock. Covers OxygenOS and
    - Download: [Magisk GitHub](https://github.com/topjohnwu/Magisk/releases)
    - Latest stable version
 
+::: tip Alternative Root Methods
+For the OnePlus 15 and 13 series, **KernelSU** is recommended instead of Magisk. KernelSU patches the kernel directly and is often more successful at bypassing the latest Play Integrity (Strong Integrity) checks.
+:::
+
 2. **File Manager**
    - OxygenOS Files app
    - Or any from Play Store
@@ -232,6 +236,7 @@ Or check on device boot:
 ::: tip Verified Boot
 Always ensure you have a copy of the stock `vbmeta.img`. When flashing a patched image on newer OxygenOS versions, you may need to disable verity using:
 `fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img`
+:::
 
 ---
 
