@@ -20,7 +20,7 @@ head:
       content: https://awesome-android-root.org/rooting-guides/kernelsu-guide
   - - meta
     - property: og:image
-      content: https://awesome-android-root.org/images/og/kernelsu-guide-2026.png
+      content: https://awesome-android-root.org/images/og/kernelsu-guide.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -101,7 +101,7 @@ head:
       content: "Ultimate KernelSU guide for 2026! Learn to install KernelSU & KernelSU Next, manage kernel-based root, modules, app profiles. Step-by-step tutorial for Android 4.4+ devices."
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.org/images/og/kernelsu-guide-2026.png
+      content: https://awesome-android-root.org/images/og/kernelsu-guide.png
   - - meta
     - name: twitter:image:alt
       content: KernelSU Guide 2026 - Complete Installation Tutorial
@@ -122,7 +122,7 @@ head:
           "@type": "TechArticle",
           "headline": "KernelSU Guide 2026 | Awesome Android Root",
           "description": "Ultimate KernelSU guide for 2026! Learn to install KernelSU & KernelSU Next, manage kernel-based root, modules, app profiles. Step-by-step tutorial for Android 4.4+ devices.",
-          "image": "https://awesome-android-root.org/images/og/kernelsu-guide-2026.png",
+          "image": "https://awesome-android-root.org/images/og/kernelsu-guide.png",
           "author": {
             "@type": "Organization",
             "name": "Awesome Android Root Project",
