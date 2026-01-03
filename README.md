@@ -441,6 +441,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 #### Google Photos Mods
 - **[LimitlessPhotos](https://github.com/daglaroglou/LimitlessPhotos)** - Unlock unlimited, original-quality backup plan on Google Photos. `FOSS` `[LSP]`
+- **[XposedPhotosFix](https://github.com/RevealedSoulEven/XposedPhotosFIX)** - Prevents Google Photos app from merging all folders in Camera folder and creates separate albums for each folder, useful for backups. `FOSS` `[LSP]`
 
 #### Google News Mods
 - **[G-News Control](https://github.com/mango0oo/G-News-Control)** - Magisk / KernelSU module for control the Google News on the home screen. `Proprietary` `[M]` `[K]`
@@ -451,6 +452,9 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 #### Ozon App
 - **[NoAdsPlus](https://github.com/igormsc/ai.noads.NoAdsPlus)** - Removes ads from the Ozon app. `FOSS` `[LSP]`
+
+#### Spotify
+- **[ReVancedXposed_Spotify](https://github.com/chsbuffer/ReVancedXposed_Spotify)** - Unlocks premium features of Spotify.  `FOSS` `[LSP]`
 
 #### Via Brower Mods
 - **[BetterVia](https://github.com/JiGuroLGC/BetterVia)** - Bypass whitelist restrictions, Screenshot protection, Block components, One-tap theme switching etc. `FOSS` `[LSP]`
@@ -510,9 +514,8 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 #### X/Twitter Mods
 - **[⭐ Hachidori](https://github.com/Xposed-Modules-Repo/com.twifucker.hachidori/)** - Adds downloading media, hiding ads and other privacy features to X (formerly Twitter). `Proprietary` `[LSP]`
 
-#### YouTube, Spotify, Google Photos Mods
-- **[RevancedXposed](https://github.com/chsbuffer/RevancedXposed)** - YouTube, Spotify and YT Music block ads and background playback, Google Photos unlimited backup Xposed module. `FOSS` `[LSP]`
-- **[XposedPhotosFix](https://github.com/RevealedSoulEven/XposedPhotosFIX)** - Prevents Google Photos app from merging all folders in Camera folder and creates separate albums for each folder, useful for backup. `FOSS` `[LSP]`
+#### YouTube, YT Music Mods
+- **[RevancedXposed](https://github.com/chsbuffer/RevancedXposed)** - YouTube, YT Music block ads, background playback, sponsorblock and much more. Also unlocks premium features of Strava and Photomath. Unlimited Google Photos backup. `FOSS` `[LSP]`
 > Also check out [Revanced section](#revanced)
 
 [↑ Back to top](#table-of-contents)
