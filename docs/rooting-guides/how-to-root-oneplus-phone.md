@@ -78,85 +78,6 @@ Root OnePlus devices with straightforward bootloader unlock. Covers OxygenOS and
 
 ---
 
-## Supported Devices
-
-<details><summary>Click to expand device list</summary>
-
-### OnePlus Flagship Series
-
-**OnePlus 12 (2024):**
-- ColorOS/OxygenOS 14
-- Snapdragon 8 Gen 3
-- Uses init_boot.img
-- Active development
-
-**OnePlus 11 (2023):**
-- OxygenOS 13
-- Snapdragon 8 Gen 2
-- Uses init_boot.img
-- Excellent support
-
-**OnePlus 10 Pro/10T (2022):**
-- ColorOS-based OxygenOS
-- Snapdragon 8 Gen 1/+
-- Transition to OPPO codebase
-- Good community support
-
-**OnePlus 9 Series (2021):**
-- OnePlus 9 Pro / 9 / 9R
-- OxygenOS 11/12
-- Excellent custom ROM options
-- Strong TWRP support
-
-**OnePlus 8 Series (2020):**
-- OnePlus 8 Pro / 8 / 8T
-- Mature rooting support
-- Many ROMs available
-- Stable TWRP
-
-**Older Flagships:**
-- OnePlus 7/7 Pro/7T
-- OnePlus 6/6T
-- OnePlus 5/5T
-- OnePlus 3/3T
-- Full custom ROM support
-
-### OnePlus Nord Series
-
-**Nord 3/2T/2 (2023-2022):**
-- Mid-range with good support
-- ColorOS-based
-- Growing development
-
-**Nord CE 3/2/1 (Various):**
-- Budget-friendly
-- Basic root support
-- Limited ROMs
-
-**Nord N Series:**
-- Entry-level OnePlus
-- Varies by region
-- Check XDA for support
-
-### Regional Variants
-
-**Global/International:**
-- Best developer support
-- Easiest to root
-- Most ROMs available
-
-**T-Mobile (US):**
-- Some models locked
-- Verify unlock capability
-- May require SIM unlock
-
-**China/India:**
-- Different firmware
-- May need conversion
-- Check compatibility
-
-</details>
-
 ## Prerequisites
 
 ### Critical Requirements
@@ -290,18 +211,29 @@ Or check on device boot:
 ### Determine Correct Image
 
 | Device | Android Version | Image to Patch | Notes |
-|--------|-----------------|----------------|-------|
-| OnePlus 12 | Android 14 | init_boot.img | ColorOS base |
-| OnePlus 11 | Android 13 | init_boot.img | OxygenOS 13 |
-| OnePlus 10 series | Android 12/13 | init_boot.img | ColorOS transition |
-| OnePlus 9 series | Android 11+ | boot.img or init_boot.img | Check Magisk app |
-| OnePlus 8 series | Android 10/11 | boot.img | OxygenOS 11 |
-| Older OnePlus | Android 10 and below | boot.img | Legacy OxygenOS |
+| --- | --- | --- | --- |
+| **OnePlus 15 / 15R** | Android 15 / 16 | `init_boot.img` | 2026 Flagships; Snapdragon 8 Gen 5 / 8s Gen 4 |
+| **OnePlus 13 / 13R** | Android 15 | `init_boot.img` | 2025 Flagships; uses GKI 2.0 |
+| **OnePlus Open 1 / 2** | Android 14 / 15 | `init_boot.img` | Foldable series; requires specific Magisk versions for UI |
+| **OnePlus 12 / 12R** | Android 14 / 15 | `init_boot.img` | Transitioned to unified OxygenOS/ColorOS base |
+| **OnePlus 11 / 11R** | Android 13 / 14 / 15 | `init_boot.img` | Snapdragon 8 Gen 2; standard GKI layout |
+| **Nord 5 / 6 Series** | Android 15 / 16 | `init_boot.img` | Latest mid-range (Nord 6 / CE 6 / Nord 5) |
+| **Nord 4 / CE 4** | Android 14 | `init_boot.img` | Mid-range 2024 releases |
+| **OnePlus 10 Pro / 10T** | Android 12 / 13 / 14 | `init_boot.img` | If running OOS 13+, use `init_boot`; OOS 12 uses `boot` |
+| **OnePlus 9 Series** | Android 11 / 12 / 13 | `boot.img` | Check Magisk for "Ramdisk: Yes" status |
+| **OnePlus 8 / 8T / 8 Pro** | Android 11 / 12 / 13 | `boot.img` | Legacy OxygenOS architecture |
+| **Nord 1 / 2 / 3** | Android 11 - 14 | `boot.img` | Use `boot.img` unless updated to Android 14 GKI |
 
 **Quick Check in Magisk:**
 - Install Magisk app first
 - Check "Ramdisk" field
 - "Yes" = boot.img, "No" = init_boot.img
+
+::: tip Verified Boot
+Always ensure you have a copy of the stock `vbmeta.img`. When flashing a patched image on newer OxygenOS versions, you may need to disable verity using:
+`fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img`
+
+---
 
 ### Method 1: Boot Image Patching (Recommended)
 
