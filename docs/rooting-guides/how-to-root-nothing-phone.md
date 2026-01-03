@@ -81,16 +81,18 @@ Root Nothing Phone devices with straightforward process.
 ## Supported Devices
 
 **All Nothing Phone models supported:**
-- **Nothing Phone (1)** - Codename: `Spacewar`
-- **Nothing Phone (2)** - Codename: `Pong`
-- **Nothing Phone (2a)** - Codename: `Pacman`
-- **Nothing Phone (2a) Plus** - Codename: `PacmanPro`
-- **Nothing Phone (3a) Series** - Codename: `Asteroids`
-- **Nothing Phone (3)** - Codename: `Metroid`
+- **Nothing Phone (1)** - Codename: `Spacewar` - Released July 2022
+- **Nothing Phone (2)** - Codename: `Pong` - Released July 2023
+- **Nothing Phone (2a)** - Codename: `Pacman` - Released March 2024
+- **Nothing Phone (2a) Plus** - Codename: `PacmanPro` - Released August 2024
+- **Nothing Phone (3)** - Codename: `Metroid` - Released July 2025
+- **Nothing Phone (3a)** - Codename: `Asteroids` - Released March 2025
+- **Nothing Phone (3a) Pro** - Codename: `Asteroids` - Released March 2025
+- **Nothing Phone (3a) Lite** - Codename: `Asteroids` - Released October 2025
 
 **All CMF by Nothing Phone models supported:**
-- **CMF Phone (1)** - Codename: `Tetris`
-- **CMF Phone (2) Pro** - Codename: `Galaga`
+- **CMF Phone (1)** - Codename: `Tetris` - Released July 2024
+- **CMF Phone (2) Pro** - Codename: `Galaga` - Released April 2025
 
 > [!NOTE]
 > **Note:** All Nothing Phones are unlockable globally. No regional restrictions.
@@ -132,6 +134,7 @@ Root Nothing Phone devices with straightforward process.
 3. **Stock Firmware** (for recovery)
    - Download from [Github](https://github.com/spike0en/nothing_archive)
    - Official updates via OTA
+   - Nothing Phone (2) OTA: [XDA Thread](https://xdaforums.com/t/nothing-phone-2-official-ota-zip-full-incremental.4604803/)
 
 **On Device:**
 
@@ -211,10 +214,12 @@ After automatic factory reset:
 
 | Device | Android Version | Image to Patch |
 |--------|-----------------|----------------|
-| Nothing Phone (2a) | Android 14 | init_boot.img |
-| Nothing Phone (2) | Android 13/14 | init_boot.img |
-| Nothing Phone (1) | Android 13/14 | init_boot.img |
+| Nothing Phone (3) Series | Android 15/16 | init_boot.img |
+| Nothing Phone (2a) Series | Android 14/15 | init_boot.img |
+| Nothing Phone (2) | Android 13/14/15 | init_boot.img |
+| Nothing Phone (1) | Android 13/14/15 | init_boot.img |
 | Nothing Phone (1) | Android 12 | boot.img |
+| CMF Phone Series | Android 14/15 | init_boot.img |
 
 **Check in Magisk app "Ramdisk" field if unsure.**
 
@@ -247,8 +252,10 @@ adb push boot.img /sdcard/Download/
 **Step 3: Install Magisk and Patch**
 
 ```bash
-adb install Magisk-v27.0.apk
+adb install magisk.apk
 ```
+
+**Note:** Use latest Magisk version from [GitHub Releases](https://github.com/topjohnwu/Magisk/releases)
 
 On device:
 1. Open Magisk
@@ -439,18 +446,49 @@ fastboot flashing lock
 ### Available ROMs
 
 **LineageOS:**
-- Official builds for Nothing Phone (1)
-- Community builds for Phone (2)
+- Official builds for Nothing Phone (1) and (2)
+- Available for Phone (3a) series (unofficial)
 
-**Pixel Experience:**
-- Growing support
-- Pixel-like interface
+**crDroid:**
+- Available for Phone (3a) series
+- Based on LineageOS 23
 
-**Evolution X:**
-- Feature-rich
-- Good performance
+**/e/OS:**
+- Privacy-focused option
+- Available for Phone (2)
 
-**Note:** Glyph Interface support varies by ROM!
+**OrangeFox Recovery:**
+- Available for Phone (2), (3), and (3a) series
+- Alternative to TWRP
+
+**Note:** Glyph Interface support varies by ROM! Most custom ROMs have limited or no Glyph support.
+
+---
+
+## Device-Specific Notes
+
+### Nothing Phone (3) Series
+
+**Nothing Phone (3):**
+- Released July 2025
+- Snapdragon 8s Gen 4
+- Android 15/16
+- Monochrome LED display (489 LEDs)
+- IP68 water resistance
+- 5 major Android upgrades promised
+
+**Nothing Phone (3a/3a Pro):**
+- Released March 2025
+- Snapdragon 7s Gen 3
+- Android 15/16
+- 3 major Android upgrades promised
+- IP64 water resistance
+- Shared codename: `Asteroids`
+
+### CMF Phone (2) Pro
+- Released April 2025
+- Dimensity 7300 Pro chipset
+- No Glyph Interface (CMF brand)
 
 ---
 
