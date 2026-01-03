@@ -191,8 +191,8 @@ Root OnePlus devices with straightforward bootloader unlock. Covers OxygenOS and
    - Or download from OnePlus site
 
 3. **Stock Firmware** (for recovery)
-   - Download from [OnePlus Downloads](https://www.oneplus.com/support)
-   - Or [XDA Forums](https://xdaforums.com/)
+   - Download via [Oxygen Updater](https://play.google.com/store/apps/details?id=com.arjanvlek.oxygenupdater) (Recommended)
+   - Or [XDA Forums](https://xdaforums.com/) (Alternative)
 
 **On Device:**
 
@@ -307,16 +307,25 @@ Or check on device boot:
 
 **Step 1: Download Stock Firmware**
 
-For OxygenOS:
-1. Visit [OnePlus Downloads](https://www.oneplus.com/support)
-2. Find your model
-3. Download OxygenOS ROM (Full Package)
+**Using Oxygen Updater (Recommended):**
+1. Install [Oxygen Updater](https://play.google.com/store/apps/details?id=com.arjanvlek.oxygenupdater) on your device
+2. Launch app and verify device name
+3. Go to Settings > Update Method > Select "Full"
+4. Enable "Advanced Mode" in settings
+5. Return to Home tab and tap "Download Update"
+6. Firmware ZIP will be downloaded to internal storage
+7. Transfer ZIP to computer for extraction
+8. Extract payload.bin from the downloaded ZIP
+
+**Alternative Method (XDA Forums):**
+1. Visit [XDA OnePlus Forums](https://xdaforums.com/c/oneplus.11993/)
+2. Find your device section
+3. Download matching firmware
 4. Extract payload.bin
 
-For ColorOS:
-1. Visit OnePlus Downloads or XDA
-2. Download matching firmware
-3. Extract payload.bin
+::: tip WHY OXYGEN UPDATER?
+OnePlus no longer provides direct firmware downloads. Oxygen Updater is the most reliable method to get official firmware files.
+:::
 
 **Step 2: Extract Boot Image**
 
@@ -641,8 +650,12 @@ fastboot oem lock
 ## Community Resources
 
 **Official OnePlus:**
-- [OnePlus Downloads](https://www.oneplus.com/support) - Stock firmware
 - [OnePlus Forums](https://forums.oneplus.com/) - Official community
+- [OnePlus Support](https://www.oneplus.com/support) - Official support
+
+**Firmware Downloads:**
+- [Oxygen Updater](https://play.google.com/store/apps/details?id=com.arjanvlek.oxygenupdater) - Primary firmware source (App)
+- [Oxygen Updater GitHub](https://github.com/oxygen-updater/oxygen-updater) - Alternative download
 
 **Developer Community:**
 - [XDA OnePlus Forums](https://xdaforums.com/c/oneplus.11993/) - Device discussions
