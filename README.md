@@ -1089,7 +1089,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ### Security and Pentesting Tools
 - **[AlternativeUnlockXposed](https://github.com/leohearts/AlternativeUnlockXposed)** - Unlock your Android phone with an alternative PIN. `FOSS` `[LSP]`
-- **[Biometric Bypass Module](https://github.com/hxreborn/biometric-bypass)** - Fast-forwards face unlock by skipping the biometric confirmation step in System UI on Android 10+. `FOSS` `[LSP]`
+- **[Biometric Bypass Module](https://github.com/hxreborn/biometric-bypass)** - Fast-forwards face unlock by skipping the biometric confirmation step in System UI on Android 10+. `FOSS` `[LSP]` | [🌱](https://f-droid.org/packages/eu.rafareborn.biometricbypass)
 - **[JEZAIL](https://github.com/zahidaz/jezail)** - Android pentesting toolkit running fully on rooted devices. `FOSS`
 
 ### Url Cleaners
