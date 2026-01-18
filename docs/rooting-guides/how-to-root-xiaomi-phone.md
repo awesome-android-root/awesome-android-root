@@ -140,7 +140,7 @@ Note on waiting time: Xiaomi’s timer is variable now. Users report 72h, 168h (
 2. Platform Tools (ADB/Fastboot): https://developer.android.com/studio/releases/platform-tools
 3. Magisk APK (latest stable): https://github.com/topjohnwu/Magisk/releases
 4. Stock Firmware for your exact model/build:
-   - Xiaomi Firmware Updater: https://xiaomifirmwareupdater.com
+   - Xiaomi Firmware Updater: https://xmfirmwareupdater.com/
    - Official MIUI/HyperOS Downloads: https://c.mi.com/global/miuidownload/index
 5. USB Drivers:
    - [Google USB Driver](https://developer.android.com/studio/run/win-usb) or Xiaomi USB drivers; avoid outdated Mi PC Suite (“Mi Assistant”) unless specifically needed.
