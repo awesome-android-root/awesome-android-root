@@ -531,6 +531,25 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 ### Patching Tools
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (use with caution). `Proprietary`
 
+
+### Morphe
+
+> [!IMPORTANT]
+> Recently a lot of revanced original dev have left the project due to internal conflicts and new project called **[Morphe](https://morphe.software/)** has been started by some of the original revanced devs. We recommend checking out Morphe as well for future updates.
+
+- **[⭐ Morphe](https://morphe.software/)** - A next-generation app patcher built by some of the original ReVanced developers. It offers a modern interface, enhanced stability, and a growing list of supported apps and features. `FOSS`
+
+
+<details>
+<summary>For more details click me</summary>
+
+- [What happened](https://www.reddit.com/r/BoostForReddit/comments/1q2he9s/fyi_migration_to_morphe/)
+- [Announcement](https://www.reddit.com/r/Piracy/comments/1q1we4e/the_revanced_situation_is_crazy_a_new_project/)
+- [More info here](https://www.reddit.com/r/revancedextended/comments/1q1rjdd/do_you_want_to_know_what_happened_to_inotia/)
+
+</details><br>
+
+
 ### ReVanced
 
 > [!NOTE]
