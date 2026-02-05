@@ -81,6 +81,18 @@ Root Samsung Galaxy devices while navigating Knox security, Odin flashing, and O
 ## Samsung Rooting Challenges
 ### Critical Warnings
 
+::: danger 🚨 One UI 8 Bootloader Lock
+**One UI 8 (Android 16) eliminates bootloader unlocking support on Samsung Galaxy devices.**
+
+- **OEM Unlocking toggle removed** from Developer Options; unlock logic stripped from firmware (`androidboot.other.locked=1`)
+- **Affected globally**: S25 series, Z Fold 7, Z Flip 7, and any device updated to One UI 8
+- **Blocks rooting, custom ROMs, and custom kernels** entirely through official methods
+- **Applies to all regions**: International and US devices (both previously unlockable and restricted models)
+
+**⚠️ Do NOT update to One UI 8 if you plan to root or unlock your bootloader** until verified unlock methods emerge.
+:::
+
+
 ::: danger ⚠️ Samsung-Specific Risks
 - **Knox permanently tripped (0x1)** – **Cannot be reversed**, affects Samsung Pay, Health, Secure Folder
 - **Warranty completely void** – Samsung will refuse all service once Knox is tripped
@@ -89,6 +101,8 @@ Root Samsung Galaxy devices while navigating Knox security, Odin flashing, and O
 - **OTA updates blocked** – Official updates will fail unless root is temporarily uninstalled
 - **Samsung Cloud & Find My Mobile** – May flag device as compromised
 :::
+
+
 
 ---
 
