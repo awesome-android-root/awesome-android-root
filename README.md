@@ -443,7 +443,6 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[Gboard Material Expressive Black](https://github.com/hxreborn/gboard-material-expressive-black)** - Enables pitch black Gboard background on Android 16 dynamic theme. `FOSS` `[LSP]`
 
 #### Google Photos Mods
-- **[LimitlessPhotos](https://github.com/daglaroglou/LimitlessPhotos)** - Unlock unlimited, original-quality backup plan on Google Photos. `FOSS` `[LSP]`
 - **[XposedPhotosFix](https://github.com/RevealedSoulEven/XposedPhotosFIX)** - Prevents Google Photos app from merging all folders in Camera folder and creates separate albums for each folder, useful for backups. `FOSS` `[LSP]`
 
 #### Google News Mods
