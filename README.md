@@ -1016,6 +1016,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[DriFiCrack](https://github.com/ZeltNamizake/DriFiCrack)** - Brute Force Tool to Crack Wi-Fi Passwords. `FOSS` `[M]`
 - **[Magisk-WiFiADB](https://github.com/mrh929/magisk-wifiadb)** - Enable WiFi ADB automatically. `FOSS` `[M]`
 - **[Wi‑Fi Passwords Exporter](https://github.com/mlm-games/wifi-exporter)** - Android app that exports wifi passwords. `FOSS`
+- **[WiFi Password Manager](https://github.com/Khh-vu/wifi-password-manager)** -  Simple app using Shizuku or root access to manage WiFi passwords. `FOSS` | [🌱](https://apt.izzysoft.de/packages/io.github.wifi_password_manager)
 - **[WiFi Password Viewer for MMRL](https://github.com/Googlers-Repo/wpd)** - WiFi Password Viewer for MMRL. `FOSS`
 
 ### Misc Network Tools
