@@ -496,6 +496,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 #### Telegram Mods
 - **[Re-Telegram](https://github.com/Sakion-Team/Re-Telegram/)** - Adds features like AntiAntiForward, AntiRecall, NoSponsoredMessages, ProhibitChannelSwitching and many more to various Telegram clients. `FOSS` `[LSP]`
+- **[Telegami](https://github.com/aoya111/Telegami)** - Various tweaks for Telegram. `FOSS` `[LSP]`
 - **[Telegram Speed Hook](https://github.com/araafroyall/Telegram-Speed-Hook)** - Increase Telegram speed. `FOSS` `[LSP]`
 - **[Telegram Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.sidestories)** - Remove action bar stories in the Telegram messenger (+block unmute button). `Proprietary` `[LSP]`
 - **[TeleVip](https://github.com/Xposed-Modules-Repo/com.my.televip/)** - A module for modifying Telegram with hide seen status, unlocking channel restrictions etc. `Proprietary` `[LSP]`
