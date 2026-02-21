@@ -824,7 +824,6 @@ A metamodule is a special type of KernelSU module that provides core infrastruct
 | [meta-overlayfs](https://github.com/KernelSU-Modules-Repo/meta-overlayfs) | Official reference implementation using OverlayFS | Most users, standard setup |
 | [mountify](https://github.com/backslashxx/mountify) | OverlayFS with tmpfs/ext4 sparse support, works on APatch/Magisk too | Reduced detection, multi-root support |
 | [meta-magic_mount](https://github.com/7a72/meta-magic_mount) ([Mirror](https://codeberg.org/ovo/meta-magic_mount)) | Magic Mount implementation in C with WebUI support | Magisk-style mounting, official KSU branch support |
-| [meta-magic_mount (Rust)](https://github.com/Tools-cx-app/meta-magic_mount) | Rust-based Magic Mount with WebUI and active development | Enhanced performance, modern codebase |
 | [meta-hybrid_mount](https://github.com/YuzakiKokuban/meta-hybrid_mount) | Dual engine (OverlayFS + Magic Mount) with conflict monitor, diagnostics & auto-fallback | Maximum compatibility, advanced control, stealth mode |
 
 ::: tip RECOMMENDATION
