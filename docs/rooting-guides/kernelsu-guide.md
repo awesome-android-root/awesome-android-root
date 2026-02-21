@@ -853,6 +853,14 @@ The active metamodule will be displayed in your module list with a special desig
 - Metadata: `/data/adb/modules/` - Contains module.prop, disable, skip_mount markers
 - Content: `/data/adb/metamodule/mnt/` - Contains actual module files (when using meta-overlayfs)
 
+### Advanced Module Support
+
+**KPM (KernelSU Patch Module) Support:**
+
+If you need to run kernel patch modules that require KPM functionality, you can use:
+
+- **[KPatch Next Module](https://github.com/KernelSU-Next/KPatch-Next-Module)** - Standalone implementation of KPM support for both Magisk and KernelSU with WebUI interface for advanced kernel patching capabilities.
+
 ### Installing Regular Modules Modules
 
 ::: danger PREREQUISITE
