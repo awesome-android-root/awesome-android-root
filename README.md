@@ -1008,6 +1008,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ### Proxy Tools
 - **[Aurora](https://github.com/Tkocean/Aurora)** - This project deploys sing-box, mihome proxies via Magisk, KernelSU, or APatch. `FOSS` `[M]` `[K]`
+- **[Box4Magisk / KernelSU / APatch](https://github.com/CHIZI-0618/box4magisk)** - Deploy multiple proxy cores on Android devices, including clash, mihomo, sing-box, v2ray, xray, and hysteria. `FOSS` `[M]` `[K]`
 - **[Box for Root](https://github.com/taamarin/box_for_magisk)** - Box for Root (BFR) is a Magisk, KernelSU, APatch, module that provides a suite of proxy tools, including clash, sing-box, v2ray, hysteria and xray. It allows you to configure a transparent proxy on Android devices with root access. `FOSS` `[M]` `[K]`
 - **[NetProxy-Magisk](https://github.com/Fanju6/NetProxy-Magisk)** - Magisk proxy module based on Xray kernel, supports one-click start/stop transparent proxy. `FOSS` `[M]`
 
