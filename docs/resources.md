@@ -66,8 +66,6 @@ head:
 
 > Comprehensive reference for Android rooting, customization, and recovery.
 
-Last updated: November 2026 | Android 15 ready
-
 ---
 
 ## Quick Navigation
@@ -98,13 +96,17 @@ Last updated: November 2026 | Android 15 ready
 
 ### Android version compatibility
 
-| Android Version | Recommended Method | Notes |
-|:----------------|:-------------------|:------|
-| **Android 15** | APatch / KernelSU | Latest kernel support |
-| **Android 14** | Magisk / APatch | Stable across methods |
-| **Android 13** | Magisk / KernelSU | Well-tested |
-| **Android 12** | Magisk | Most compatible |
-| **Android 11 & below** | Magisk | Legacy support |
+| Android Version | Recommended Method | Kernel | Notes |
+|:----------------|:-------------------|:-------|:------|
+| **Android 16** | APatch / KernelSU | GKI 2.0 | Developer Preview — experimental support |
+| **Android 15** | APatch / KernelSU / Magisk | GKI 2.0 | Stable across all methods |
+| **Android 14** | Magisk / APatch / KernelSU | GKI 2.0 | Mature and well-tested |
+| **Android 13** | Magisk / KernelSU | GKI / Legacy | Broad device support |
+| **Android 12–12L** | Magisk | GKI / Legacy | Most compatible |
+| **Android 11 & below** | Magisk | Legacy | Long-term support |
+
+> [!TIP]
+> **GKI (Generic Kernel Image)** devices — typically Android 12+ with kernel 5.10+ — have the widest method compatibility. Check your kernel version in **Settings → About Phone → Kernel Version**.
 
 ---
 
@@ -112,12 +114,23 @@ Last updated: November 2026 | Android 15 ready
 
 ### Root solutions
 
-| Solution | Best For | Android Support | Status | Source |
-|:---------|:---------|:----------------|:-------|:-------|
-| **[Magisk](./rooting-guides/magisk-guide.md)** | Universal compatibility | 5.0+ | Active | [GitHub](https://github.com/topjohnwu/Magisk) |
-| **[KernelSU](./rooting-guides/kernelsu-guide.md)** | Kernel-level root | 10+ (GKI) | Active | [GitHub](https://github.com/tiann/KernelSU) |
-| **[APatch](./rooting-guides/apatch-guide.md)** | Modern devices | 10+ | Active | [GitHub](https://github.com/bmax121/APatch) |
-| **[LSPosed (Fork)](./rooting-guides/lsposed-guide.md)** | Xposed framework | 8.1+ | Active | [GitHub](https://github.com/JingMatrix/LSPosed) |
+| Solution | Best For | Android | Zygisk | Hide Root | Status | Source |
+|:---------|:---------|:--------|:-------|:----------|:-------|:-------|
+| **[Magisk](./rooting-guides/magisk-guide.md)** | Universal compatibility | 6.0+ | ✅ Built-in | DenyList | Active | [GitHub](https://github.com/topjohnwu/Magisk) |
+| **[KernelSU](./rooting-guides/kernelsu-guide.md)** | Kernel-level stealth root | 12+ (GKI) | Via module | Built-in | Active | [GitHub](https://github.com/tiann/KernelSU) |
+| **[APatch](./rooting-guides/apatch-guide.md)** | Modern GKI devices | 12+ (GKI) | Via module | KPM-based | Active | [GitHub](https://github.com/bmax121/APatch) |
+| **[LSPosed (Fork)](./rooting-guides/lsposed-guide.md)** | Xposed framework modules | 8.1–16 | Required | N/A | Active | [GitHub](https://github.com/JingMatrix/LSPosed) |
+
+> [!NOTE]
+> **Magisk** remains the most universally compatible solution. **KernelSU** and **APatch** offer superior stealth on GKI devices but require kernel-level integration. For Xposed modules, **LSPosed** (JingMatrix fork) is the actively maintained option.
+
+### Non-root privilege tools
+
+| Tool | Purpose | Root Required | Source |
+|:-----|:--------|:--------------|:-------|
+| **Shizuku** | Delegated ADB/system API access without full root | No | [GitHub](https://github.com/RikkaApps/Shizuku) |
+| **Dhizuku** | Device owner delegation via Shizuku | No | [GitHub](https://github.com/nichuanfang/Dhizuku) |
+| **aShell You** | Modern ADB shell interface | No | [GitHub](https://github.com/AShellYou/aShell-You) |
 
 ### Recovery and flashing tools
 
@@ -135,13 +148,15 @@ Last updated: November 2026 | Android 15 ready
 
 | Tool | Purpose | Platform | Source |
 |:-----|:--------|:---------|:-------|
-| **ADB & Fastboot** | Core Android tools | All | [Android SDK](https://developer.android.com/studio/releases/platform-tools) |
-| **Heimdall** | Samsung flashing | All | [glassechidna](https://glassechidna.com.au/heimdall/) |
-| **Odin** | Samsung firmware | Windows | Common distribution |
-| **Mi Flash Tool** | Xiaomi devices | Windows | [xiaomiflashtool.com](https://xiaomiflashtool.com/) |
-| **SP Flash Tool** | MediaTek chips | Windows/Linux | [spflashtool.com](https://spflashtool.com/) |
-| **Android Flash Tool** | Web-based flashing for Pixels | Web | [flash.android.com](https://flash.android.com/) |
-| **LineageOS Recovery Images** | Official recovery builds | Device specific | [LineageOS Wiki](https://wiki.lineageos.org/devices/) |
+| **ADB & Fastboot** | Core Android debug/flash tools | All | [Android SDK](https://developer.android.com/studio/releases/platform-tools) |
+| **Android Flash Tool** | Web-based flashing (Pixel/AOSP) | Web | [flash.android.com](https://flash.android.com/) |
+| **Heimdall** | Open-source Samsung flashing | All | [GitHub](https://github.com/Benjamin-Dobell/Heimdall) |
+| **Odin** | Samsung firmware flashing (official) | Windows | Samsung community distribution |
+| **Mi Flash Tool** | Xiaomi fastboot flashing | Windows | [xiaomiflashtool.com](https://xiaomiflashtool.com/) |
+| **SP Flash Tool** | MediaTek SoC flashing | Windows/Linux | [spflashtool.com](https://spflashtool.com/) |
+| **MTK Client** | Open-source MediaTek bypass/flash | Python | [GitHub](https://github.com/bkerler/mtkclient) |
+| **QFIL (Qualcomm)** | Qualcomm EDL mode flashing | Windows | Qualcomm package |
+| **LineageOS Recovery** | Official LineageOS recovery builds | Device-specific | [LineageOS Wiki](https://wiki.lineageos.org/devices/) |
 
 ### Firmware sources
 
@@ -221,31 +236,34 @@ Last updated: November 2026 | Android 15 ready
 
 ### Manufacturer unlock policies
 
-| Brand | Bootloader Unlock | Warranty | Wait Time | Guide |
-|:------|:------------------|:---------|:----------|:------|
-| **Google Pixel** | Official | Maintained | None | [Guide](./rooting-guides/how-to-root-pixel-phone.md) |
-| **OnePlus** | Official | Voided | None | [Guide](./rooting-guides/how-to-root-oneplus-phone.md) |
-| **Xiaomi** | Mi Unlock | Voided | 7-15 days | [Guide](./rooting-guides/how-to-root-xiaomi-phone.md) |
-| **Samsung** | Regional restrictions | Voided including Knox | None | [Guide](./rooting-guides/how-to-root-samsung-phone.md) |
-| **Nothing** | Official | Voided | None | [Guide](./rooting-guides/how-to-root-nothing-phone.md) |
-| **Motorola** | Official | Voided | None | [Guide](./rooting-guides/how-to-root-motorola-phone.md) |
-| **ASUS** | Official | Voided | None | ASUS Unlock app |
-| **Realme** | Official | Voided | None | Deep Testing app |
-| **OPPO** | Discontinued | N/A | N/A | No longer supported |
-| **Huawei** | Blocked | N/A | N/A | Since 2018 |
+| Brand | Unlock Method | Warranty Impact | Wait Period | Reversible | Guide |
+|:------|:--------------|:----------------|:------------|:-----------|:------|
+| **Google Pixel** | OEM unlock toggle | Maintained | None | ✅ | [Guide](./rooting-guides/how-to-root-pixel-phone.md) |
+| **OnePlus** | OEM unlock toggle | Voided | None | ✅ | [Guide](./rooting-guides/how-to-root-oneplus-phone.md) |
+| **Xiaomi** | Mi Unlock Tool | Voided | 7–30 days | ✅ | [Guide](./rooting-guides/how-to-root-xiaomi-phone.md) |
+| **Samsung** | OEM unlock (regional) | Voided + Knox tripped | None | ❌ Knox permanent | [Guide](./rooting-guides/how-to-root-samsung-phone.md) |
+| **Nothing** | OEM unlock toggle | Voided | None | ✅ | [Guide](./rooting-guides/how-to-root-nothing-phone.md) |
+| **Motorola** | Unlock code request | Voided | None | ✅ | [Guide](./rooting-guides/how-to-root-motorola-phone.md) |
+| **ASUS** | ASUS Unlock app | Voided | None | ✅ | ASUS Unlock Tool |
+| **Realme** | Deep Testing app | Voided | Application required | ✅ | Realme Community |
+| **Sony** | Unlock code via website | Voided + DRM keys lost | None | ⚠️ DRM permanent | Sony Developer portal |
+| **Fairphone** | OEM unlock toggle | Maintained | None | ✅ | Fairphone docs |
+| **OPPO** | Discontinued | N/A | N/A | N/A | No longer available |
+| **Huawei** | Blocked since 2018 | N/A | N/A | N/A | Third-party only (risky) |
 
 ### Popular custom ROMs
 
-| ROM | Base | Focus | Website |
-|:----|:-----|:------|:--------|
-| **LineageOS** | AOSP | Privacy, stability | [lineageos.org](https://lineageos.org/) |
-| **Pixel Experience** | AOSP | Pixel features | [pixelexperience.org](https://pixelexperience.org/) |
-| **crDroid** | LineageOS | Customization | [crdroid.net](https://crdroid.net/) |
-| **Evolution X** | AOSP | Features + stability | [evolution-x.org](https://evolution-x.org/) |
-| **Paranoid Android** | AOSP | Unique features | [paranoidandroid.co](https://paranoidandroid.co/) |
-| **GrapheneOS** | AOSP | Security-focused | [grapheneos.org](https://grapheneos.org/) |
-| **CalyxOS** | AOSP | Privacy-focused | [calyxos.org](https://calyxos.org/) |
-| **PixelOS** | AOSP | Pixel-like features for non-Pixel devices | [pixelos.net](https://pixelos.net/) |
+| ROM | Base | Focus | Root Support | Website |
+|:----|:-----|:------|:-------------|:--------|
+| **LineageOS** | AOSP | Stability, privacy, broad device support | Optional (add-on) | [lineageos.org](https://lineageos.org/) |
+| **GrapheneOS** | AOSP | Hardened security | Discouraged | [grapheneos.org](https://grapheneos.org/) |
+| **CalyxOS** | AOSP | Privacy with usability | Optional | [calyxos.org](https://calyxos.org/) |
+| **/e/OS (Murena)** | LineageOS | De-Googled, microG built-in | Optional | [e.foundation](https://e.foundation/) |
+| **crDroid** | LineageOS | Heavy customization | Built-in support | [crdroid.net](https://crdroid.net/) |
+| **Evolution X** | AOSP | Pixel features + customization | Built-in support | [evolution-x.org](https://evolution-x.org/) |
+| **Paranoid Android** | AOSP | Unique UX features | Optional | [paranoidandroid.co](https://paranoidandroid.co/) |
+| **PixelOS** | AOSP | Pixel experience on non-Pixels | Built-in support | [pixelos.net](https://pixelos.net/) |
+| **Pixel Experience** | AOSP | Pixel features (broader devices) | Built-in support | [pixelexperience.org](https://pixelexperience.org/) |
 
 ---
 
