@@ -65,7 +65,7 @@ head:
       content:  2025-10-07T09:00:00Z
   - - meta
     - property: article:modified_time
-      content: 2025-12-26T00:00:00Z
+      content: 2026-02-21T00:00:00Z
   - - meta
     - name: robots
       content: index, follow, max-image-preview:large
@@ -165,7 +165,7 @@ Magisk is a systemless root solution that provides superuser access without modi
 - You're new to rooting
 
 > [!TIP]
-> Detailed comaprison with other root solutions: [Root Comparison](./root-framework-comparison.md)
+> Detailed comparison with other root solutions: [Root Comparison](./root-framework-comparison.md)
 
 ---
 
@@ -208,7 +208,8 @@ Magisk is a systemless root solution that provides superuser access without modi
 
 | Android Version | Magisk Support | Notes |
 |-----------------|----------------|-------|
-| Android 15 | Yes | Latest Magisk required |
+| Android 16 | Yes | Latest Magisk required (DP/Beta) |
+| Android 15 | Yes | Full support |
 | Android 14 | Yes | Full support |
 | Android 13 | Yes | May require init_boot patching |
 | Android 12 | Yes | Zygisk fully supported |
@@ -493,7 +494,7 @@ adb wait-for-device shell magisk --remove-modules
 
 ### Understanding Play Integrity
 
-Google Play Integrity replaced SafetyNet in 2024. Three levels exist:
+Google Play Integrity fully replaced SafetyNet (shut down in January 2025). Three verdict levels exist:
 
 | Level | Description | Rooted Devices |
 |-------|-------------|----------------|
@@ -566,9 +567,12 @@ After DenyList configuration:
 
 **Apps to Test:**
 
-1. **YASNAC** - SafetyNet checker
-2. **Play Integrity API Checker** - Official checker
-3. **TB Checker** - Comprehensive checker
+1. **Play Integrity API Checker** - Primary Play Integrity checker
+2. **TB Checker** - Comprehensive device integrity checker
+3. **SPIC** - Simple Play Integrity Checker
+
+> [!NOTE]
+> YASNAC and other SafetyNet checkers are obsolete — SafetyNet was fully shut down in January 2025. Use Play Integrity API Checker instead.
 
 ---
 
