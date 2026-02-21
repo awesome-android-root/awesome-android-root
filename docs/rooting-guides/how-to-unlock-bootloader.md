@@ -645,7 +645,7 @@ Look for "Device unlocked: true"
    - Install [essential starter apps](../apps-and-modules/#starter-kit-must-have-apps)
    - Configure [system-wide ad blocking](../general-guides/android-adblocking.md)
    - [Safely remove bloatware](../general-guides/android-apps-debloating.md)
-   - Browse [430+ root apps and modules](../apps-and-modules/)
+   - Browse [470+ root apps and modules](../apps-and-modules/)
 
 ### Step 4: Security Considerations
 

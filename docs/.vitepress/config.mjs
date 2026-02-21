@@ -340,7 +340,7 @@ export default withPwa(defineConfig({
       // Application identity
       name: 'Awesome Android Root',
       short_name: 'AAR',
-      description: 'Ultimate Android rooting hub with 430+ curated apps, Magisk modules, KernelSU modules, LSPosed modules, and comprehensive step-by-step rooting guides for Android customization.',
+      description: 'Ultimate Android rooting hub with 470+ curated apps, Magisk modules, KernelSU modules, LSPosed modules, and comprehensive step-by-step rooting guides for Android customization.',
       
       // Visual theming
       theme_color: '#ffffff',
@@ -509,7 +509,7 @@ export default withPwa(defineConfig({
           "@type": "WebSite",
           "@id": "https://awesome-android-root.org/#website",
           "name": "Awesome Android Root",
-          "description": "Ultimate Android rooting hub with 430+ curated root apps, Magisk/KernelSU/APatch modules, LSPosed framework, and comprehensive rooting guides.",
+          "description": "Ultimate Android rooting hub with 470+ curated root apps, Magisk/KernelSU/APatch modules, LSPosed framework, and comprehensive rooting guides.",
           "url": "https://awesome-android-root.org/",
           "inLanguage": "en-US",
           "publisher": {

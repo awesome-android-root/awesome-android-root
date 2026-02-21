@@ -2,7 +2,7 @@
 layout: home
 title: Best Root Apps & Modules
 titleTemplate: Awesome Android Root
-description: "Discover 430+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026."
+description: "Discover 470+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026."
 head:
   - - meta
     - name: robots
@@ -160,7 +160,7 @@ head:
 hero:
   name: "Awesome Android Root"
   text: "Master Android Rooting in 2026"
-  tagline: "Explore 430+ top root apps, best Magisk / KernelSU / APatch & LSPosed modules, and step-by-step rooting guides."
+  tagline: "Explore 470+ top root apps, best Magisk / KernelSU / APatch & LSPosed modules, and step-by-step rooting guides."
   image:
     src: /images/logo_dark.svg
     alt: Awesome Android Root - Ultimate Rooting Hub Logo

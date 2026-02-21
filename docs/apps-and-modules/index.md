@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Best Android Root Apps and Modules
-description: Download & explore 430+ best Android root apps, Magisk, KernelSU & LSPosed (Xposed) modules & rooting guides.
+description: Download & explore 470+ best Android root apps, Magisk, KernelSU & LSPosed (Xposed) modules & rooting guides.
 head:
   - - link
     - rel: canonical
@@ -31,7 +31,7 @@ head:
       content: Best Android Root Apps and Modules | Awesome Android Root
   - - meta
     - property: og:description
-      content: Download the best Android root apps, Magisk, KernelSU & LSPosed (Xposed) modules. Ultimate collection of 430+ curated root applications for Android customization, system optimization, and power user features.
+      content: Download the best Android root apps, Magisk, KernelSU & LSPosed (Xposed) modules. Ultimate collection of 470+ curated root applications for Android customization, system optimization, and power user features.
   - - meta
     - property: og:url
       content: https://awesome-android-root.org/apps-and-modules/
@@ -43,7 +43,7 @@ head:
       content: https://awesome-android-root.org/images/og.png
   - - meta
     - property: og:image:alt
-      content: Best Android Root Apps - 430+ Apps & Modules Collection
+      content: Best Android Root Apps - 470+ Apps & Modules Collection
   - - meta
     - property: og:image:width
       content: '1200'
@@ -76,13 +76,13 @@ head:
       content: Best Android Root Apps and Modules | Awesome Android Root
   - - meta
     - name: twitter:description
-      content: Download top Android root apps, Magisk, KernelSU & LSPosed (Xposed) modules. Ultimate collection of 430+ curated root applications for system optimization & customization.
+      content: Download top Android root apps, Magisk, KernelSU & LSPosed (Xposed) modules. Ultimate collection of 470+ curated root applications for system optimization & customization.
   - - meta
     - name: twitter:image
       content: https://awesome-android-root.org/images/og.png
   - - meta
     - name: twitter:image:alt
-      content: Android Root Apps Collection - 430+ curated applications and modules
+      content: Android Root Apps Collection - 470+ curated applications and modules
   - - meta
     - http-equiv: Content-Security-Policy
       content: upgrade-insecure-requests
@@ -161,7 +161,7 @@ head:
         "name": "Best Android Root Apps and Modules | Awesome Android Root",
         "alternateName": ["Android Root Apps", "Root Apps Collection", "Magisk Modules Collection"],
         "url": "https://awesome-android-root.org/apps-and-modules/",
-        "description": "Ultimate collection of 430+ best Android root apps, Magisk modules, and LSPosed frameworks. Download top-rated root applications for Android customization, system optimization, and power user features.",
+        "description": "Ultimate collection of 470+ best Android root apps, Magisk modules, and LSPosed frameworks. Download top-rated root applications for Android customization, system optimization, and power user features.",
         "inLanguage": "en-US",
         "datePublished": "2025-08-11T00:00:00Z",
         "dateModified": "2025-12-26T00:00:00Z",
@@ -170,7 +170,7 @@ head:
           "url": "https://awesome-android-root.org/images/og.png",
           "width": 1200,
           "height": 630,
-          "caption": "Best Android Root Apps - 430+ Apps & Modules Collection"
+          "caption": "Best Android Root Apps - 470+ Apps & Modules Collection"
         },
         "author": {
           "@type": "Person",
@@ -310,7 +310,7 @@ head:
 
 # Root Apps & Modules
 
-<sub>Discover 430+ top root apps, Magisk/KernelSU/LSPosed modules</sub>
+<sub>Discover 470+ top root apps, Magisk/KernelSU/LSPosed modules</sub>
 
 <div class="quick-nav">
 

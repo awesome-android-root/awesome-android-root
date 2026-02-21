@@ -160,7 +160,7 @@ Root access grants **superuser (administrator) privileges** on Android, providin
 
 - **System-level control** over files, processes, and hardware
 - **Bypass manufacturer restrictions**
-- **Install powerful apps** requiring deep system integration (see [430+ Root Apps](../apps-and-modules/))
+- **Install powerful apps** requiring deep system integration (see [470+ Root Apps](../apps-and-modules/))
 - **Modify core system files** and customize every aspect
 - **Access hidden hardware features** and advanced configurations
 
@@ -366,7 +366,7 @@ After successful root installation, complete these essential steps:
 - [Block Ads System-Wide](../general-guides/android-adblocking.md) - Eliminate ads across all apps
 - [Debloat Your Device](../general-guides/android-apps-debloating.md) - Remove bloatware safely
 - [Install LSPosed Framework](./lsposed-guide.md) - Advanced app customization
-- [Browse 430+ Root Apps](../apps-and-modules/) - Discover essential tools
+- [Browse 470+ Root Apps](../apps-and-modules/) - Discover essential tools
 
 ---
 

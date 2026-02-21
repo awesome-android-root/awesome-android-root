@@ -10,9 +10,9 @@
 
 **🛡️ The Ultimate Android Rooting Hub**
 
-<sub>Discover 430+ top root apps, Magisk/ KernelSU/ LSPosed(xposed) modules & step-by-step guides for every device.</sub>
+<sub>Discover 470+ top root apps, Magisk/ KernelSU/ LSPosed(xposed) modules & step-by-step guides for every device.</sub>
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=blue&cacheSeconds=3600)](https://github.com/awesome-android-root/awesome-android-root) [![Total Entries](https://img.shields.io/badge/Apps%20%26%20Modules-430+-blue?style=for-the-badge&logo=android&cacheSeconds=3600)](#root-apps-and-modules) [![X Follow](https://img.shields.io/badge/%20%20-Follow%20US-blue?logo=X&logoColor=white&style=for-the-badge&label=&#8203;)](https://x.com/awsm_and_root)
+[![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=blue&cacheSeconds=3600)](https://github.com/awesome-android-root/awesome-android-root) [![Total Entries](https://img.shields.io/badge/Apps%20%26%20Modules-470+-blue?style=for-the-badge&logo=android&cacheSeconds=3600)](#root-apps-and-modules) [![X Follow](https://img.shields.io/badge/%20%20-Follow%20US-blue?logo=X&logoColor=white&style=for-the-badge&label=&#8203;)](https://x.com/awsm_and_root)
 
 </div>
 <div align="center" class="quick-nav">
@@ -256,7 +256,7 @@ Follow this path:
 
 # Root Apps and Modules
 
-![Apps & Modules](https://img.shields.io/badge/Apps%20&%20Modules%20&#8203;-430+-blue?style=for-the-badge&logo=stackblitz&cacheSeconds=3600)
+![Apps & Modules](https://img.shields.io/badge/Apps%20&%20Modules%20&#8203;-470+-blue?style=for-the-badge&logo=stackblitz&cacheSeconds=3600)
 
 </div><br />
 
