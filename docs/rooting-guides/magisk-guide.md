@@ -65,7 +65,7 @@ head:
       content:  2025-10-07T09:00:00Z
   - - meta
     - property: article:modified_time
-      content: 2026-02-21T00:00:00Z
+      content: 2025-12-26T00:00:00Z
   - - meta
     - name: robots
       content: index, follow, max-image-preview:large
@@ -153,8 +153,8 @@ Magisk is a systemless root solution that provides superuser access without modi
 | Feature | Magisk | KernelSU | APatch |
 |---------|--------|----------|---------|
 | Ease of Use | Excellent | Moderate | Moderate |
-| Module Support | 1000+ | 300+ | 50+ |
-| Root Hiding | Good | Excellent | Good |
+| Module Support | Excellent | Excellent | Good |
+| Root Hiding | Good | Excellent | Excellent |
 | Device Support | Universal | Limited | Limited |
 | Custom Kernel Required | No | Yes | No |
 
@@ -165,7 +165,7 @@ Magisk is a systemless root solution that provides superuser access without modi
 - You're new to rooting
 
 > [!TIP]
-> Detailed comparison with other root solutions: [Root Comparison](./root-framework-comparison.md)
+> Detailed comaprison with other root solutions: [Root Comparison](./root-framework-comparison.md)
 
 ---
 
@@ -208,13 +208,12 @@ Magisk is a systemless root solution that provides superuser access without modi
 
 | Android Version | Magisk Support | Notes |
 |-----------------|----------------|-------|
-| Android 16 | Yes | Latest Magisk required (DP/Beta) |
+| Android 16 | Yes | Preview/Beta support |
 | Android 15 | Yes | Full support |
 | Android 14 | Yes | Full support |
 | Android 13 | Yes | May require init_boot patching |
 | Android 12 | Yes | Zygisk fully supported |
-| Android 11 | Yes | Mature support |
-| Android 6-10 | Yes | Use appropriate Magisk version |
+| Android 6-11 | Yes | Mature support |
 
 **Check device compatibility:**
 1. Verify bootloader is unlockable
@@ -237,7 +236,7 @@ This is the official and safest method.
 
 **Magisk APK:**
 1. Visit [Magisk GitHub Releases](https://github.com/topjohnwu/Magisk/releases)
-2. Download latest `Magisk-vXX.X.apk`
+2. Download the latest `Magisk-v30.X.apk` (or newer)
 3. Transfer to device
 
 **Stock Boot Image:**
@@ -494,18 +493,17 @@ adb wait-for-device shell magisk --remove-modules
 
 ### Understanding Play Integrity
 
-Google Play Integrity fully replaced SafetyNet (shut down in January 2025). Three verdict levels exist:
+Google Play Integrity replaced SafetyNet. Three levels exist:
 
 | Level | Description | Rooted Devices |
 |-------|-------------|----------------|
-| Basic | Basic app integrity | Passable with tricks |
-| Device | Device integrity verified | Very difficult |
+| Basic | Basic app integrity | Easily passable |
+| Device | Device integrity verified | Passable with Play Integrity Fix |
 | Strong | Hardware attestation | Nearly impossible |
 
 **Reality for Rooted Devices:**
-- Basic Integrity: Can pass with proper setup
-- Device Integrity: Extremely difficult, device-dependent
-- Strong Integrity: Impossible with unlocked bootloader
+- Basic & Device Integrity: Can pass using the Play Integrity Fix (PIF) module.
+- Strong Integrity: Impossible with an unlocked bootloader.
 
 ### Configuring Root Hiding
 
@@ -526,12 +524,14 @@ Google Play Integrity fully replaced SafetyNet (shut down in January 2025). Thre
 **Step 3: Configure DenyList**
 
 Add these to DenyList:
-- Google Play Services (all sub-components)
-- Google Play Store
 - All banking/financial apps
-- Payment apps (Google Pay, etc.)
+- Payment apps (Google Wallet, etc.)
 - Apps that detect root
 - Games with anti-cheat
+
+::: warning IMPORTANT
+**Do NOT** add Google Play Services (GMS) or Google Play Store to the DenyList if you are using the Play Integrity Fix (PIF) module. Doing so will break the module's ability to spoof device integrity.
+:::
 
 For each app:
 - Expand app entry
@@ -543,8 +543,8 @@ For each app:
 After DenyList configuration:
 1. Settings > Apps
 2. Clear data for:
-   - Google Play Services
    - Google Play Store
+   - Google Wallet / Pay
    - Banking apps
 3. Reboot device
 4. Reopen apps
@@ -553,12 +553,14 @@ After DenyList configuration:
 
 **Install Shamiko Module:**
 
+Shamiko hides root more effectively than the built-in DenyList.
+
 1. Download Shamiko from [GitHub](https://github.com/LSPosed/LSPosed.github.io/releases)
 2. Install via Magisk
 3. Reboot
-4. DenyList items now hidden more effectively
+4. DenyList items are now hidden more effectively
 
-**Note:** Shamiko works differently - don't enforce DenyList when using Shamiko.
+**Note:** When using Shamiko, you must **configure** the DenyList but **do NOT enforce** it in Magisk settings. Shamiko reads the list and handles the hiding automatically.
 
 > [!TIP]
 > Check our [Root hiding section](./../apps-and-modules/index.md#root-hiding-and-integrity)
@@ -567,12 +569,9 @@ After DenyList configuration:
 
 **Apps to Test:**
 
-1. **Play Integrity API Checker** - Primary Play Integrity checker
-2. **TB Checker** - Comprehensive device integrity checker
-3. **SPIC** - Simple Play Integrity Checker
-
-> [!NOTE]
-> YASNAC and other SafetyNet checkers are obsolete — SafetyNet was fully shut down in January 2025. Use Play Integrity API Checker instead.
+1. **Play Integrity API Checker** - Standard checker
+2. **SPIC (Simple Play Integrity Checker)** - Open-source and fast
+3. **TB Checker** - Comprehensive checker
 
 ---
 
@@ -785,7 +784,7 @@ Solutions:
 <details><summary>👉 Click to expand details</summary>
 
 Solutions:
-1. Hide Magisk app with different name
+1. Hide Magisk app with a different name
 2. Clear app data completely
 3. Install Shamiko module
 4. Try [Play Integrity Fix modules](../apps-and-modules/#root-hiding-and-play-integrity)
@@ -811,23 +810,20 @@ Solutions:
 
 <details><summary>👉 Click to expand details</summary>
 
-**Basic Integrity Fails**
+**Basic or Device Integrity Fails**
 
 Solutions:
-1. Install Play Integrity Fix module
-2. Configure proper device fingerprint
-3. Clear Google Play Services data
-4. Reboot device
-5. Wait 24-48 hours for propagation
+1. Try the latest [Play Integrity Fix modules](../apps-and-modules/#root-hiding-and-play-integrity)
+2. Clear Google Play Store data.
+3. Reboot device.
+4. If it still fails, the current fingerprint might be banned. Wait for a PIF update or use a custom `pif.json`.
 
-**Device/Strong Integrity Fails**
+**Strong Integrity Fails**
 
-Reality: Nearly impossible to pass with:
+Reality: Impossible to pass with:
 - Unlocked bootloader
 - Custom boot image
 - Hardware attestation
-
-Some devices may pass Device with extensive workarounds, but no guarantees.
 
 </details>
 
