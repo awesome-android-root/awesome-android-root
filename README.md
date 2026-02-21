@@ -428,6 +428,9 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ### General Mods
 
+#### Amazon
+- **[AmznKiller](https://github.com/hxreborn/amznkiller)** - Hides sponsored content and ads in the Amazon Shopping app. `FOSS` `[LSP]`
+
 #### Cake Mods
 - **[Cake - Learn English & Korean Patches](https://github.com/hoo-dles/revanced-custom-patches)** - Enable Plus . `FOSS` `[R]`
 
