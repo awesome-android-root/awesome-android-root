@@ -96,23 +96,23 @@ Comprehensive analysis of Magisk, KernelSU, and APatch to help you choose the ri
 
 | Aspect | Magisk | KernelSU | APatch |
 |--------|--------|----------|---------|
-| **Target Users** | Most users | Advanced users | Alternative seekers |
+| **Target Users** | Most users | Advanced users | Tinkerers / edge cases |
 | **Setup Difficulty** | Easy | Moderate | Moderate |
-| **Android Support** | 6.0-15 | 11+ (GKI 2.0+) | 10+ |
-| **Kernel Requirements** | Stock/Custom | Custom with KSU | Stock/Custom |
-| **Root Hiding** | Good (DenyList) | Excellent | Good |
+| **Official Support Scope** | Android 6.0+ | GKI 2.0 devices (kernel 5.10+); manual builds for some older kernels | ARM64 only, kernel 3.18-6.12 |
+| **Kernel Requirements** | Stock/custom boot image patching | Kernel support required (built-in or patched) | KernelPatch/APatch compatibility required |
+| **Root Hiding** | Good with careful setup | Often strong in practice | Device-dependent |
 | **Community Size** | Largest | Growing rapidly | Small |
-| **Development Status** | Community maintained | Very active | Active |
-| **OTA Updates** | Manual re-patch | Sometimes survives | Manual re-patch |
-| **Best Feature** | Ecosystem | Security | Compatibility |
+| **Development Status** | Active upstream | Very active | Active |
+| **OTA Updates** | Usually requires re-patch | Can survive some OTA flows, not guaranteed | Usually requires re-patch |
+| **Best Feature** | Ecosystem and compatibility | Kernel-level control and profiles | Alternative path when others fail |
 
 ### Quick Decision Matrix
 
 | Choose Framework | When You Need |
 |-----------------|---------------|
-| **Magisk** | • First-time rooting<br>• Maximum module support<br>• Wide device compatibility<br>• Established solutions |
-| **KernelSU** | • Enhanced security<br>• Better root hiding<br>• Custom ROM usage<br>• Kernel-level control |
-| **APatch** | • Magisk failures<br>• Alternative approach<br>• Specific device issues<br>• Experimental features |
+| **Magisk** | • First-time rooting<br>• Broadest guide/module coverage<br>• Fast troubleshooting via community |
+| **KernelSU** | • Supported kernel available<br>• Strong app-level root control needs<br>• You prefer kernel-first architecture |
+| **APatch** | • Magisk/KernelSU path is blocked<br>• You have a known compatible ARM64 device<br>• You need APatch-specific behavior |
 
 ---
 
@@ -124,16 +124,15 @@ Comprehensive analysis of Magisk, KernelSU, and APatch to help you choose the ri
 **Architecture:** Boot image modification with systemless implementation via Zygisk
 
 **Strengths:**
-- Largest module ecosystem with 1000+ modules
+- Largest module ecosystem and compatibility footprint
 - Extensive documentation and community support
-- Universal device compatibility
+- Broad device compatibility
 - User-friendly interface and management
 - Mature, stable codebase
 
 **Limitations:**
-- Community-maintained (original developer inactive)
 - Requires boot image re-patching after OTA
-- Increasing Play Integrity detection challenges
+- Play Integrity bypass is inconsistent and changes frequently
 
 **Installation:** [📖 Magisk Guide](./magisk-guide.md)
 
@@ -142,20 +141,19 @@ Comprehensive analysis of Magisk, KernelSU, and APatch to help you choose the ri
 ### KernelSU
 **Kernel-Level Root Solution**
 
-**Architecture:** Direct kernel integration providing root at the lowest system level
+**Architecture:** Direct kernel integration with modern **metamodule**-based module flow
 
 **Strengths:**
 - Superior security through kernel isolation
 - Better performance (kernel-space operations)
-- Module signature verification
+- Fine-grained app profiles and privilege controls
 - Survives some OTA updates
-- Advanced app profile system
-- Most effective root hiding
+- Strong root visibility control for non-authorized apps
 
 **Limitations:**
-- Requires custom kernel support
-- Limited device/kernel availability
-- ~80% Magisk module compatibility
+- Requires kernel support (GKI 2.0 preferred upstream)
+- Device availability depends on kernel/community ports
+- Magisk module compatibility varies by module and metamodule setup
 - More complex initial setup
 
 **Installation:** [📖 KernelSU Guide](./kernelsu-guide.md)
@@ -165,17 +163,18 @@ Comprehensive analysis of Magisk, KernelSU, and APatch to help you choose the ri
 ### APatch
 **Alternative Patching Method**
 
-**Architecture:** Hybrid kernel patching combining Magisk and KernelSU approaches
+**Architecture:** KernelPatch-based root framework with APModule and kernel patch capabilities
 
 **Strengths:**
 - Works where Magisk fails
-- Handles complex firmware scenarios
-- Alternative injection methods
+- Supports powerful kernel-level patch workflows (advanced users)
 - Growing device support
 
 **Limitations:**
+- ARM64-only support
+- Kernel support constraints (officially documented kernel range)
 - Smallest module ecosystem
-- Limited documentation
+- Documentation is improving but still less complete than Magisk/KernelSU
 - Less mature codebase
 - Smaller community
 
@@ -194,9 +193,9 @@ Comprehensive analysis of Magisk, KernelSU, and APatch to help you choose the ri
 | **Xiaomi/Redmi/POCO** | Magisk³ | KernelSU⁴ | ROM-dependent |
 | **OnePlus** | Magisk | KernelSU | Both work excellently |
 | **Nothing Phone** | Magisk | KernelSU | Active development |
-| **Motorola** | Magisk | APatch | Straightforward process |
+| **Motorola** | Magisk | APatch | Check bootloader policy per region |
 | **ASUS ROG/Zenfone** | Magisk | KernelSU | Gaming optimizations available |
-| **Realme/OPPO** | Magisk | APatch | Region-specific quirks |
+| **Realme/OPPO** | Magisk | APatch | Region/firmware quirks are common |
 
 ¹ Requires custom kernel  
 ² For problematic devices  
@@ -216,31 +215,31 @@ Bootloader unlock permanently trips Knox eFuse, disabling Samsung Pay, Secure Fo
 | Security Feature | Magisk | KernelSU | APatch |
 |-----------------|--------|----------|---------|
 | **Permission Model** | App-based | Profile-based | App-based |
-| **UID Isolation** | Limited | Strong | Limited |
+| **UID/GID Control** | Standard `su` control | Fine-grained profile controls | Standard `su` + key-based model |
 | **Namespace Isolation** | No | Yes | No |
-| **Module Verification** | Basic | Signature-based | Basic |
+| **Module Verification** | Varies by module source | Better structured metamodule flow | Varies by module source |
 | **Root Access Control** | Standard | Advanced | Standard |
 
 ### Module Ecosystem
 
 | Metric | Magisk | KernelSU | APatch |
 |--------|--------|----------|---------|
-| **Available Modules** | 1000+ | 300+ | 50+ |
-| **Cross-Compatibility** | Native | ~80% Magisk | ~60% Magisk |
-| **Popular Modules** | All available | Most work | Limited selection |
+| **Available Modules** | Largest catalog | Medium, growing | Smallest catalog |
+| **Cross-Compatibility** | Native | Many Magisk modules can work (not all) | Some Magisk-style modules can work |
+| **Popular Modules** | Broad availability | Good coverage on common modules | More limited selection |
 | **Update Frequency** | Regular | Active | Varies |
 
 ### Root Detection Evasion
 
 | Detection Method | Magisk | KernelSU | APatch |
 |-----------------|--------|----------|---------|
-| **Basic Integrity** | Pass⁵ | Pass⁵ | Pass⁵ |
-| **Device Integrity** | Difficult | Difficult | Difficult |
-| **Strong Integrity** | Very rare | Very rare | Very rare |
-| **Banking Apps** | Variable | Better | Variable |
-| **Gaming Anti-Cheat** | Hit/miss | Better | Hit/miss |
+| **Basic Integrity** | Sometimes possible⁵ | Sometimes possible⁵ | Sometimes possible⁵ |
+| **Device Integrity** | Inconsistent | Inconsistent | Inconsistent |
+| **Strong Integrity** | Generally not reliable on unlocked/rooted devices | Generally not reliable | Generally not reliable |
+| **Banking Apps** | App/device dependent | App/device dependent | App/device dependent |
+| **Gaming Anti-Cheat** | Hit/miss | Hit/miss | Hit/miss |
 
-⁵ Requires additional modules (Shamiko, SUSFS, Tricky Store)
+⁵ Typically requires extra tooling/modules and frequent retuning as detections change.
 
 ---
 
@@ -258,10 +257,7 @@ Bootloader unlock permanently trips Knox eFuse, disabling Samsung Pay, Secure Fo
 <details>
 <summary><b>Magisk → KernelSU</b> (1-2 hours)</summary>
 
-1. **Backup & Document**
-   ```bash
-   adb backup -apk -shared -all -system
-   ```
+1. **Backup & Document** (cloud/app exports + internal storage copy)
 2. **Uninstall Magisk completely**
 3. **Flash KernelSU-enabled kernel**
 4. **Install KernelSU Manager**
@@ -314,9 +310,9 @@ graph TD
 | Scenario | Recommended | Reason |
 |----------|-------------|---------|
 | **Daily Driver Phone** | Magisk | Stability & support |
-| **Gaming Device** | KernelSU | Better anti-cheat evasion |
+| **Gaming Device** | Magisk / KernelSU | Depends heavily on title anti-cheat behavior |
 | **Development/Testing** | KernelSU | Advanced features |
-| **Banking Phone** | KernelSU | Superior hiding |
+| **Banking Phone** | No root preferred | Highest reliability for financial apps |
 | **Problematic Device** | APatch | Alternative approach |
 | **Learning Rooting** | Magisk | Best documentation |
 
@@ -331,16 +327,16 @@ graph TD
 A: Yes, but requires uninstalling current method and clean installation of new one.
 
 **Q: Which has best Play Integrity bypass?**  
-A: All struggle equally with modern attestation. Success depends on additional modules and device.
+A: None can guarantee passing all tiers. Results vary by device fingerprint, ROM state, bootloader status, and current detection updates.
 
 **Q: Do all Magisk modules work on KernelSU?**  
-A: About 80% compatibility. Check module documentation.
+A: No. Many work, but compatibility depends on module design and whether required metamodules are present.
 
 **Q: Which method is safest?**  
 A: All are safe when properly installed. KernelSU offers best architectural security.
 
 **Q: Will OTA updates work?**  
-A: Only KernelSU sometimes survives OTA. Others require re-rooting.
+A: Expect to re-check root after every OTA on all frameworks. Some KernelSU setups survive specific OTA flows, but this is not guaranteed.
 
 **Q: Battery impact?**  
 A: Negligible for all methods. Module choice matters more.
@@ -351,9 +347,9 @@ A: Negligible for all methods. Module choice matters more.
 ## Community Resources
 
 ### Official Channels
-- **Magisk:** [GitHub](https://github.com/topjohnwu/Magisk) | [XDA](https://forum.xda-developers.com/f/magisk.5903/) | [Telegram](https://t.me/magiskapp)
+- **Magisk:** [GitHub](https://github.com/topjohnwu/Magisk) | [Official Docs](https://topjohnwu.github.io/Magisk/) | [XDA](https://forum.xda-developers.com/f/magisk.5903/)
 - **KernelSU:** [GitHub](https://github.com/tiann/KernelSU) | [Docs](https://kernelsu.org/) | [Telegram](https://t.me/KernelSU)
-- **APatch:** [GitHub](https://github.com/bmax121/APatch) | [Telegram](https://t.me/APatchGroup)
+- **APatch:** [GitHub](https://github.com/bmax121/APatch) | [Docs](https://apatch.dev/) | [Telegram](https://t.me/APatchGroup)
 
 ### General Support
 - [XDA Developers Forums](https://forum.xda-developers.com/)
@@ -364,14 +360,14 @@ A: Negligible for all methods. Module choice matters more.
 
 ## Final Recommendations
 
-### For 95% of Users
-**Start with Magisk** - proven, documented, supported
+### For Most Users
+**Start with Magisk** - best documentation, easiest recovery path, broad support
 
 ### For Power Users
-**Consider KernelSU** if kernel available and security matters
+**Consider KernelSU** if your device/kernel is supported and you want deeper root control
 
 ### For Edge Cases
-**Try APatch** when standard methods fail
+**Try APatch** when Magisk/KernelSU paths are blocked on your specific firmware
 
 ### Universal Tips
 1. Research device-specific quirks first
