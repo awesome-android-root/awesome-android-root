@@ -167,9 +167,9 @@ Root Samsung Galaxy devices while navigating Knox security, Odin flashing, and O
    - Download: [Samsung Developers](https://developer.samsung.com/android-usb-driver)
    - Install before connecting device
 
-2. **Odin Flash Tool**
-   - Download: [Odin Download](https://odindownload.com/)
-   - Latest version (Odin 3.14.4 or newer)
+2. **Odin Flash Tool** or **Brokkr**
+   - Download: [Odin Download](https://odindownload.com/) or [Brokkr Download](https://github.com/Gabriel2392/brokkr-flash/releases)
+   - Latest version (For Odin, 3.14.4 or newer)
    - Extract to easy location
 
 3. **Stock Firmware**
