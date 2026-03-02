@@ -29,7 +29,7 @@ head:
       content: Complete APatch Root Guide
   - - meta
     - name: twitter:description
-      content: Updated APatch setup for modern Android devices: compatibility, install, OTA, and recovery.
+      content: "Updated APatch setup for modern Android devices: compatibility, install, OTA, and recovery."
   - - meta
     - name: keywords
       content: apatch guide 2026, android root apatch, kernel root, init_boot patch, boot image patch, a/b ota root
