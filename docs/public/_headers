@@ -1,29 +1,68 @@
-/*
-  Content Security Policy Headers
-  Enhance security by controlling resource loading
-*/
 
-/*
-  X-Frame-Options: Prevent site from being embedded in iframes (clickjacking protection)
-*/
-X-Frame-Options: DENY
+# -----------------------------------------------------------------------------
+# Service Worker — MUST never be cached by browser or CDN.
+# Without this Cloudflare's default caching breaks SW updates entirely.
+# -----------------------------------------------------------------------------
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+  Content-Type: application/javascript; charset=UTF-8
 
-/*
-  X-Content-Type-Options: Prevent MIME type sniffing
-*/
-X-Content-Type-Options: nosniff
+# Workbox runtime chunks (generated alongside sw.js)
+/workbox-*.js
+  Cache-Control: no-cache, no-store, must-revalidate
 
-/*
-  X-XSS-Protection: Enable XSS filter in older browsers
-*/
-X-XSS-Protection: 1; mode=block
+# -----------------------------------------------------------------------------
+# PWA Manifest — keep fresh so installs reflect latest metadata.
+# -----------------------------------------------------------------------------
+/manifest.webmanifest
+  Cache-Control: no-cache
+  Content-Type: application/manifest+json; charset=UTF-8
 
-/*
-  Permissions-Policy: Control browser features and APIs
-*/
-Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+# -----------------------------------------------------------------------------
+# VitePress hashed assets — filename includes content hash → immutable.
+# 1-year TTL + immutable = zero revalidation cost from Cloudflare edge.
+# -----------------------------------------------------------------------------
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
 
+# -----------------------------------------------------------------------------
+# Public images — no content hash in filename, so allow revalidation.
+# -----------------------------------------------------------------------------
+/images/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/favicon*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# -----------------------------------------------------------------------------
+# Global security headers applied to every response
+# -----------------------------------------------------------------------------
 /*
-  Strict-Transport-Security: Force HTTPS
-*/
-Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  # Clickjacking protection
+  X-Frame-Options: DENY
+
+  # Prevent MIME-type sniffing attacks
+  X-Content-Type-Options: nosniff
+
+  # Disable the legacy XSS filter — it can *introduce* XSS vulnerabilities
+  # in some browsers. Modern browsers rely on CSP instead.
+  X-XSS-Protection: 0
+
+  # Restrict browser feature access
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=(), browsing-topics=()
+
+  # HSTS — 2-year max-age satisfies the HSTS preload list minimum requirement
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+
+  # Send origin-only on cross-origin requests; full URL on same-origin
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Protects against cross-origin window access while allowing outbound
+  # popups needed for GitHub / Play Store / F-Droid links
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
+
+  # Content Security Policy
+  # unsafe-inline (scripts): required by VitePress inline hydration code
+  # unsafe-inline (styles):  required by VitePress inline style injection
+  # img-src https: data: blob:: covers shields.io, GitHub avatars, SVG data URIs
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; font-src 'self'; connect-src 'self'; media-src 'none'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests

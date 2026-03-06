@@ -79,7 +79,7 @@ export default withPwa(defineConfig({
      
       directoryIndex: 'index.html', 
       
-      maximumFileSizeToCacheInBytes: 15 * 1024 * 1024,
+      maximumFileSizeToCacheInBytes: 10 * 1024 * 1024, 
       
       runtimeCaching: [
        
@@ -298,13 +298,31 @@ export default withPwa(defineConfig({
 
       prefer_related_applications: false,       // Prefer PWA over native app
       categories: [
-        'utilities', 
-        'developer', 
-        'education', 
+        'utilities',
+        'developer',
+        'education',
         'productivity',
-        'reference'                            
+        'reference'
       ],
-      
+
+      // App shortcuts appear in the install prompt and long-press menu on Android
+      shortcuts: [
+        {
+          name: 'Apps & Modules',
+          short_name: 'Apps',
+          description: 'Browse 470+ curated root apps and Magisk/KernelSU modules',
+          url: '/apps-and-modules/',
+          icons: [{ src: '/images/web-app-manifest-192x192.png', sizes: '192x192' }]
+        },
+        {
+          name: 'Rooting Guides',
+          short_name: 'Guides',
+          description: 'Step-by-step rooting guides for all Android devices',
+          url: '/rooting-guides/',
+          icons: [{ src: '/images/web-app-manifest-192x192.png', sizes: '192x192' }]
+        }
+      ],
+
       icons: [
         {
           src: '/favicon.ico',
@@ -361,9 +379,9 @@ export default withPwa(defineConfig({
   
     useCredentials: false,
     
-    injectManifest: {
-      globPatterns: ['**/*.{js,css,html,png,svg,ico,jpg,jpeg,gif,webp}']
-    }
+    // NOTE: injectManifest block only applies when strategies: 'injectManifest'.
+    // With generateSW (current strategy) workbox handles precache manifest generation
+    // automatically — no manual globPatterns needed here.
   },
 
 
@@ -540,7 +558,7 @@ export default withPwa(defineConfig({
                 return 10
               }
               // Moderate boost for guide pages
-              if (documentId.includes('android-root-guides')) {
+              if (documentId.includes('rooting-guides')) {
                 return 2
               }
               // Default boost for other pages
