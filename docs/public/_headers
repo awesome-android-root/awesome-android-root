@@ -60,9 +60,3 @@
   # Protects against cross-origin window access while allowing outbound
   # popups needed for GitHub / Play Store / F-Droid links
   Cross-Origin-Opener-Policy: same-origin-allow-popups
-
-  # Content Security Policy
-  # unsafe-inline (scripts): required by VitePress inline hydration code
-  # unsafe-inline (styles):  required by VitePress inline style injection
-  # img-src https: data: blob:: covers shields.io, GitHub avatars, SVG data URIs
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; font-src 'self'; connect-src 'self'; media-src 'none'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
