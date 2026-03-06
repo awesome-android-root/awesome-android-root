@@ -1369,7 +1369,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[Xposed Translate Text](https://github.com/tianci-sh/XPTranslateText)** - Translate text by MLKit / gemini2.0 / google api. `FOSS` `[LSP]`
 
 ### Miscellaneous Utilities
-- **[CleanShare](https://github.com/hxreborn/cleanshare)** - Removes Direct Share's suggested contact/conversation shortcuts from Android's Share Sheet. `FOSS` `[LSP]`
+- **[⭐ CleanShare](https://github.com/hxreborn/cleanshare)** - Removes Direct Share's suggested contact/conversation shortcuts from Android's Share Sheet. `FOSS` `[LSP]`
 - **[APatch Utilities](https://github.com/lzghzr/APatch_kpm)** - Some APatch modules . `FOSS`
 - **[MagiskGapps](https://github.com/wacko1805/MagiskGapps)** - Convert a regular GApps package into a Magisk flashable package using a simple website. `FOSS` `[M]`
 - **[MicroGPlus](https://bitgapps.io/extra)** - Installs MicroG services and other useful apps. `Proprietary` `[M]` `[K]`
