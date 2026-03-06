@@ -47,76 +47,42 @@ export default withPwa(defineConfig({
     ],
     
     workbox: {
-      // ============================================================================
-      // PRE-CACHE CONFIGURATION
-      // ============================================================================
-      // Pre-cache critical files during service worker installation
-      // This ensures essential files are available offline immediately
       globPatterns: [
-        // Core application shell - VitePress theme and framework
         '**/*.{js,css}',
-        
-        // Essential HTML pages for offline navigation
         '**/index.html',
         '**/offline.html',
-        
-        // Critical images (logo, icons, etc.)
         '**/images/logo*.{svg,png}',
         '**/images/*-icon*.{png,svg}',
         '**/images/web-app-manifest-*.png',
-        
-        // Favicons for proper offline branding
         '**/{favicon,favicon-*}.{ico,svg,png}',
       ],
-      
-      // Exclude patterns - don't pre-cache these
+
       globIgnores: [
-        // Build artifacts and development files
         '**/node_modules/**',
         '**/dev-dist/**',
         '**/.vitepress/cache/**',
-        
-        // Large files that should be cached on-demand
         '**/images/og/**',
-        
-        // Don't pre-cache all markdown pages (too many)
-        // They'll be cached on-demand via runtimeCaching
       ],
 
-      // ============================================================================
-      // SERVICE WORKER BEHAVIOR
-      // ============================================================================
-      // Immediate service worker activation and control
-      skipWaiting: true,              // Activate new SW immediately
-      clientsClaim: true,             // Take control of all pages immediately
-      cleanupOutdatedCaches: true,    // Remove old caches automatically
+      skipWaiting: true,              
+      clientsClaim: true,             
+      cleanupOutdatedCaches: true,   
       
-      // Navigation and offline handling
-      navigateFallback: '/offline.html',        // Offline page fallback
+      navigateFallback: '/offline.html',       
       navigateFallbackDenylist: [
-        // Don't use offline fallback for these patterns
-        /^\/_/,                       // VitePress internal routes
-        /^\/api\//,                   // API routes
-        /\.[^/]+$/,                   // Files with extensions (assets)
+        /^\/_/,                      
+        /^\/api\//,                   
+        /\.[^/]+$/,                   
       ],
-      navigationPreload: true,        // Speed up navigation requests
+      navigationPreload: true,       
       
-      // Directory and file handling
-      directoryIndex: 'index.html',   // Default file for directories
+     
+      directoryIndex: 'index.html', 
       
-      // Maximum file size to cache (15MB - increased for large guide pages)
       maximumFileSizeToCacheInBytes: 15 * 1024 * 1024,
-
-      // ============================================================================
-      // RUNTIME CACHING STRATEGIES
-      // ============================================================================
-      // Define how different types of resources are cached at runtime
       
       runtimeCaching: [
-        // ------------------------------------------------------------------------
-        // STRATEGY 1: HTML Pages (Documentation & Guides)
-        // Network First - Always try to get fresh content, fallback to cache
-        // ------------------------------------------------------------------------
+       
         {
           urlPattern: ({ request, url, sameOrigin }) => 
             sameOrigin && (
@@ -127,22 +93,22 @@ export default withPwa(defineConfig({
           handler: 'NetworkFirst',
           options: {
             cacheName: 'aar-pages-v1',
-            networkTimeoutSeconds: 5,  // Wait 5s for network before using cache
+            networkTimeoutSeconds: 5,  
             expiration: {
-              maxEntries: 150,         // Store up to 150 pages
-              maxAgeSeconds: 60 * 60 * 24 * 1,  // 1 day
-              purgeOnQuotaError: true, // Auto-cleanup if storage is full
+              maxEntries: 150,         
+              maxAgeSeconds: 60 * 60 * 24 * 1, 
+              purgeOnQuotaError: true, 
             },
             cacheableResponse: {
-              statuses: [0, 200],      // Cache successful responses
+              statuses: [0, 200],      
             },
             plugins: [
               {
-                // Fallback to offline page if both network and cache fail
+                
                 handlerDidError: async ({ request }) => {
                   return caches.match('/offline.html') || Response.error()
                 },
-                // Log fetch failures for debugging
+                
                 fetchDidFail: async ({ originalRequest, error }) => {
                   if (process.env.NODE_ENV === 'development') {
                     console.warn('Page fetch failed:', originalRequest.url, error)
@@ -153,10 +119,6 @@ export default withPwa(defineConfig({
           }
         },
 
-        // ------------------------------------------------------------------------
-        // STRATEGY 2: JavaScript & CSS Assets
-        // Stale While Revalidate - Serve from cache, update in background
-        // ------------------------------------------------------------------------
         {
           urlPattern: ({ request, url, sameOrigin }) => 
             sameOrigin && (
@@ -168,7 +130,7 @@ export default withPwa(defineConfig({
           options: {
             cacheName: 'aar-assets-v1',
             expiration: {
-              maxEntries: 250,         // More entries for various JS/CSS chunks
+              maxEntries: 250,        
               maxAgeSeconds: 60 * 60 * 24 * 7,  // 7 days
               purgeOnQuotaError: true,
             },
@@ -178,17 +140,12 @@ export default withPwa(defineConfig({
           }
         },
 
-        // ------------------------------------------------------------------------
-        // STRATEGY 3: Images (Local & External)
-        // Cache First - Fastest loading, long-term storage
-        // ------------------------------------------------------------------------
+
         {
           urlPattern: ({ request, url, sameOrigin }) => {
-            // Match local images and common external image hosts
             const isImage = request.destination === 'image' ||
               /\.(png|jpg|jpeg|svg|gif|webp|avif|ico|bmp)$/i.test(url.pathname)
             
-            // Include external image hosts used in documentation
             const isAllowedOrigin = sameOrigin || 
               url.origin === 'https://raw.githubusercontent.com' ||
               url.origin === 'https://avatars.githubusercontent.com' ||
@@ -200,7 +157,7 @@ export default withPwa(defineConfig({
           options: {
             cacheName: 'aar-images-v1',
             expiration: {
-              maxEntries: 400,         // Large capacity for many app icons/images
+              maxEntries: 400,         
               maxAgeSeconds: 60 * 60 * 24 * 60,  // 60 days (images rarely change)
               purgeOnQuotaError: true,
             },
@@ -209,7 +166,6 @@ export default withPwa(defineConfig({
             },
             plugins: [
               {
-                // Return placeholder SVG if image fails to load
                 handlerDidError: async () => {
                   return new Response(
                     '<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">' +
@@ -229,10 +185,6 @@ export default withPwa(defineConfig({
           }
         },
 
-        // ------------------------------------------------------------------------
-        // STRATEGY 4: Web Fonts
-        // Cache First - Fonts never change, permanent storage
-        // ------------------------------------------------------------------------
         {
           urlPattern: ({ request, url }) => {
             const isFontFile = /\.(woff2?|ttf|otf|eot)$/i.test(url.pathname)
@@ -247,7 +199,7 @@ export default withPwa(defineConfig({
           options: {
             cacheName: 'aar-fonts-v1',
             expiration: {
-              maxEntries: 40,          // Fonts are few but important
+              maxEntries: 40,          
               maxAgeSeconds: 60 * 60 * 24 * 30,  // 30 days
               purgeOnQuotaError: true,
             },
@@ -257,10 +209,6 @@ export default withPwa(defineConfig({
           }
         },
 
-        // ------------------------------------------------------------------------
-        // STRATEGY 5: Shield.io Badges
-        // Stale While Revalidate - Show cached badge, update in background
-        // ------------------------------------------------------------------------
         {
           urlPattern: ({ url }) => 
             url.origin === 'https://img.shields.io',
@@ -268,25 +216,20 @@ export default withPwa(defineConfig({
           options: {
             cacheName: 'aar-badges-v1',
             expiration: {
-              maxEntries: 300,         // Many badges across different pages
-              maxAgeSeconds: 60 * 60 * 12,  // 12 hours (shorter as badges can change)
+              maxEntries: 300,        
+              maxAgeSeconds: 60 * 60 * 12,  // 12 hours
               purgeOnQuotaError: true,
             },
             cacheableResponse: {
               statuses: [0, 200],
             },
-            // Optional: Add cache name to request for better tracking
+            
             matchOptions: {
-              ignoreSearch: false,     // Different params = different badges
+              ignoreSearch: false,     
             }
           }
         },
 
-
-        // ------------------------------------------------------------------------
-        // STRATEGY 6: VitePress Search Index
-        // Network First - Keep search results fresh but cache for offline
-        // ------------------------------------------------------------------------
         {
           urlPattern: ({ url }) => 
             url.pathname.includes('search') ||
@@ -295,9 +238,9 @@ export default withPwa(defineConfig({
           handler: 'NetworkFirst',
           options: {
             cacheName: 'aar-search-v1',
-            networkTimeoutSeconds: 3,   // Quick timeout for search
+            networkTimeoutSeconds: 3,   
             expiration: {
-              maxEntries: 10,           // Limited search index files
+              maxEntries: 10,          
               maxAgeSeconds: 60 * 60 * 24,  // 24 hours
               purgeOnQuotaError: true,
             },
@@ -307,11 +250,6 @@ export default withPwa(defineConfig({
           }
         },
 
-
-        // ------------------------------------------------------------------------
-        // STRATEGY 7: API/JSON Data (if any)
-        // Network First - Fresh data priority with offline fallback
-        // ------------------------------------------------------------------------
         {
           urlPattern: ({ url, request }) =>
             request.headers.get('accept')?.includes('application/json') ||
@@ -332,21 +270,17 @@ export default withPwa(defineConfig({
         },
       ]
     },
-    // ============================================================================
-    // PWA MANIFEST CONFIGURATION
-    // ============================================================================
-    // Defines how the app appears when installed on user devices
+    
     manifest: {
-      // Application identity
       name: 'Awesome Android Root',
       short_name: 'AAR',
       description: 'Ultimate Android rooting hub with 470+ curated apps, Magisk modules, KernelSU modules, LSPosed modules, and comprehensive step-by-step rooting guides for Android customization.',
       
-      // Visual theming
+
       theme_color: '#ffffff',
       background_color: '#ffffff',
       
-      // App behavior and navigation
+   
       start_url: '/',
       scope: '/',
       display: 'standalone',                    // Full-screen app experience
@@ -357,58 +291,51 @@ export default withPwa(defineConfig({
       ],
       orientation: 'any',                       // Allow all orientations
       
-      // Localization
+
       lang: 'en-US',
       dir: 'ltr',
       
-      // App store settings
+
       prefer_related_applications: false,       // Prefer PWA over native app
       categories: [
         'utilities', 
         'developer', 
         'education', 
         'productivity',
-        'reference'                             // Added reference category
+        'reference'                            
       ],
       
-      // Icons with multiple purposes for different contexts
       icons: [
-        // Favicon - Browser tab icon
         {
           src: '/favicon.ico',
           sizes: '16x16 24x24 32x32 48x48',
           type: 'image/x-icon',
           purpose: 'any'
         },
-        // Medium size - Browser bookmark, Windows taskbar
         {
           src: '/favicon-96x96.png',
           sizes: '96x96',
           type: 'image/png',
           purpose: 'any'
         },
-        // Standard PWA icon - Android home screen, Chrome app drawer
         {
           src: '/images/web-app-manifest-192x192.png',
           sizes: '192x192',
           type: 'image/png',
           purpose: 'any'
         },
-        // Maskable icon for adaptive icons on Android 8+
         {
           src: '/images/web-app-manifest-192x192-maskable.png',
           sizes: '192x192',
           type: 'image/png',
           purpose: 'maskable'
         },
-        // Large icon - Splash screens, app stores
         {
           src: '/images/web-app-manifest-512x512.png',
           sizes: '512x512',
           type: 'image/png',
           purpose: 'any'
         },
-        // Large maskable icon for high-res adaptive icons
         {
           src: '/images/web-app-manifest-512x512-maskable.png',
           sizes: '512x512',
@@ -420,10 +347,6 @@ export default withPwa(defineConfig({
       
     },
     
-    // ============================================================================
-    // DEVELOPMENT & BUILD OPTIONS
-    // ============================================================================
-    // Development mode configuration for testing PWA features locally
     devOptions: {
       enabled: process.env.NODE_ENV === 'development',
       suppressWarnings: true,
@@ -431,25 +354,18 @@ export default withPwa(defineConfig({
       type: 'module'
     },
 
-    // ============================================================================
-    // SERVICE WORKER FILE OPTIONS
-    // ============================================================================
-    // Service worker file settings
-    filename: 'sw.js',              // Service worker filename
-    scope: '/',                     // Service worker scope (entire site)
-    inlineRegister: false,          // Don't inline registration (better for updates)
-    minify: true,                   // Minify service worker in production
-    
-    // Credentials handling for cross-origin requests
+    filename: 'sw.js',              
+    scope: '/',                     
+    inlineRegister: false,          
+    minify: true,                  
+  
     useCredentials: false,
     
-    // Inject manifest link automatically
     injectManifest: {
       globPatterns: ['**/*.{js,css,html,png,svg,ico,jpg,jpeg,gif,webp}']
     }
   },
 
-  // End of pwa config
 
   markdown: { 
     cache: true, 
