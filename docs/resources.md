@@ -129,8 +129,8 @@ head:
 | Tool | Purpose | Root Required | Source |
 |:-----|:--------|:--------------|:-------|
 | **Shizuku** | Delegated ADB/system API access without full root | No | [GitHub](https://github.com/RikkaApps/Shizuku) |
-| **Dhizuku** | Device owner delegation via Shizuku | No | [GitHub](https://github.com/nichuanfang/Dhizuku) |
-| **aShell You** | Modern ADB shell interface | No | [GitHub](https://github.com/AShellYou/aShell-You) |
+| **Dhizuku** | Device owner delegation via Shizuku | No | [GitHub](https://github.com/iamr0s/Dhizuku) |
+| **aShell You** | Modern ADB shell interface | No | [GitHub](https://github.com/DP-Hridayan/aShellYou) |
 
 ### Recovery and flashing tools
 
