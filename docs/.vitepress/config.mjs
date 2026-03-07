@@ -816,13 +816,6 @@ export default withPwa(defineConfig({
       ]
     },
     {
-      text: '🤖 AI & Smart Tools',
-      collapsed: false,
-      items: [
-        { text: 'AI & Smart Tools', link: '/apps-and-modules/#ai-and-smart-tools' }
-      ]
-    },
-    {
       text: '🎨 Customization & Themes',
       collapsed: false,
       items: [
@@ -833,6 +826,13 @@ export default withPwa(defineConfig({
         { text: 'Notifications and UI Elements', link: '/apps-and-modules/#notifications-and-ui-elements' },
         { text: 'Display and Screen Tweaks', link: '/apps-and-modules/#screen-and-display' },
         { text: 'ROM & OEM Customization', link: '/apps-and-modules/#rom-and-oem-customization' }
+      ]
+    },
+     {
+      text: '🤖 AI & Smart Tools',
+      collapsed: false,
+      items: [
+        { text: 'AI & Smart Tools', link: '/apps-and-modules/#ai-and-smart-tools' }
       ]
     },
     {
