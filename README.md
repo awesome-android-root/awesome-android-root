@@ -133,8 +133,8 @@
   - [Browser Extensions](#browser-extensions)
   - [Webview Mods](#webview-mods)
 
-### 🧰 System Tools
-- [Utilities and System Tools](#utilities-and-system-tools)
+### 🧰 System Utilities
+- [System Utilities](#system-utilities)
   - [NFC and Wireless](#nfc-and-wireless)
   - [Cloud and Remote Storage](#cloud-and-remote-storage)
   - [Device Information](#device-information)
@@ -462,7 +462,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 #### Spotify
 - **[ReVancedXposed_Spotify](https://github.com/chsbuffer/ReVancedXposed_Spotify)** - Unlocks premium features of Spotify.  `FOSS` `[LSP]`
 
-#### Via Brower Mods
+#### Via Browser Mods
 - **[BetterVia](https://github.com/JiGuroLGC/BetterVia)** - Bypass whitelist restrictions, Screenshot protection, Block components, One-tap theme switching etc. `FOSS` `[LSP]`
 
 #### Yandex Music Mods
@@ -1347,7 +1347,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ---
 
-## Utilities and System Tools
+## System Utilities
 
 ### Cloud and Remote Storage
 - **[Magisk Tailscaled](https://github.com/mgksu/tailscaled)** - Module for running Tailscale on rooted Android devices. `FOSS` `[M]`
