@@ -54,7 +54,7 @@
 - [Privacy and Security](#privacy-and-security)
 
 #### 🤖 **AI & Smart Tools**
-- [AI & Smart Tools](#ai--smart-tools)
+- [AI and Smart Tools](#ai-and-smart-tools)
 
 #### 📦 **App Control and Management**
 - [App Management and Control](#app-management-and-control)
@@ -111,7 +111,7 @@
 
 #### 🌐 **Network and Communication**
 - [Network and Connectivity](#network-and-connectivity)
-- [VPN & Proxy Tools](#vpn--proxy-tools)
+- [VPN & Proxy Tools](#vpn-and-proxy-tools)
 - [Location and GPS](#location-and-gps)
 - [Communication and Messaging](#communication-and-messaging)
 
@@ -364,7 +364,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## AI & Smart Tools
+## AI and Smart Tools
 
 - **[SwitchAI – Switch AI Digital Assistant](https://github.com/WSTxda/SwitchAI)** - Easily select, start, and manage your preferred AI digital assistants. `FOSS`
 - **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
@@ -1045,7 +1045,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ---
 
-## VPN & Proxy Tools
+## VPN and Proxy Tools
 
 - **[Aurora](https://github.com/Tkocean/Aurora)** - This project deploys sing-box, mihome proxies via Magisk, KernelSU, or APatch. `FOSS` `[M]` `[K]`
 - **[Box4Magisk / KernelSU / APatch](https://github.com/CHIZI-0618/box4magisk)** - Deploy multiple proxy cores on Android devices, including clash, mihomo, sing-box, v2ray, xray, and hysteria. `FOSS` `[M]` `[K]`

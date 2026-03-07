@@ -819,7 +819,7 @@ export default withPwa(defineConfig({
       text: '🤖 AI & Smart Tools',
       collapsed: false,
       items: [
-        { text: 'AI & Smart Tools', link: '/apps-and-modules/#ai--smart-tools' }
+        { text: 'AI & Smart Tools', link: '/apps-and-modules/#ai-and-smart-tools' }
       ]
     },
     {
@@ -916,7 +916,7 @@ export default withPwa(defineConfig({
       collapsed: true,
       items: [
         { text: 'Network Control and Tools', link: '/apps-and-modules/#network-and-connectivity' },
-        { text: 'VPN & Proxy Tools', link: '/apps-and-modules/#vpn--proxy-tools' },
+        { text: 'VPN and Proxy Tools', link: '/apps-and-modules/#vpn-and-proxy-tools' },
         { text: 'GPS and Location Tools', link: '/apps-and-modules/#location-and-gps' },
         { text: 'NFC Utilities', link: '/apps-and-modules/#nfc-and-wireless' }
       ]
