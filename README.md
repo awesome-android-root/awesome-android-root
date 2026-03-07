@@ -96,7 +96,7 @@
 - [Launchers and Home Screen](#launchers-and-home-screen)
 - [Gestures and Navigation](#gestures-and-navigation)
 - [Notifications and UI Elements](#notifications-and-ui-elements)
-- [OS-Specific Customization](#os-specific-customization)
+- [ROM and OEM Customization](#rom-and-oem-customization)
 
 #### 🎵 **Audio and Media**
 - [Audio and Media](#audio-and-media)
@@ -786,7 +786,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## OS-Specific Customization
+## ROM and OEM Customization
 
 |  | | | | | | | |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |

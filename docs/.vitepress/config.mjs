@@ -826,7 +826,7 @@ export default withPwa(defineConfig({
         { text: 'Gestures and Navigation', link: '/apps-and-modules/#gestures-and-navigation' },
         { text: 'Notifications and UI Elements', link: '/apps-and-modules/#notifications-and-ui-elements' },
         { text: 'Display and Screen Tweaks', link: '/apps-and-modules/#screen-and-display' },
-        { text: 'OS-Specific Customization', link: '/apps-and-modules/#os-specific-customization' }
+        { text: 'ROM & OEM Customization', link: '/apps-and-modules/#rom-and-oem-customization' }
       ]
     },
     {
