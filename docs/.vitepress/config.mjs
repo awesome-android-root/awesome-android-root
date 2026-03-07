@@ -816,10 +816,16 @@ export default withPwa(defineConfig({
       ]
     },
     {
+      text: '🤖 AI & Smart Tools',
+      collapsed: false,
+      items: [
+        { text: 'AI & Smart Tools', link: '/apps-and-modules/#ai--smart-tools' }
+      ]
+    },
+    {
       text: '🎨 Customization & Themes',
       collapsed: false,
       items: [
-        { text: 'Boot and Startup', link: '/apps-and-modules/#boot-and-startup' },
         { text: 'Customization and Theming', link: '/apps-and-modules/#customization-and-theming' },
         { text: 'Themes and Visual Styles', link: '/apps-and-modules/#themes-and-visual-mods' },
         { text: 'Launchers and Home Screen', link: '/apps-and-modules/#launchers-and-home-screen' },
@@ -834,9 +840,18 @@ export default withPwa(defineConfig({
       collapsed: false,
       items: [
         { text: 'Performance and Optimization', link: '/apps-and-modules/#performance-and-optimization' },
+        { text: 'Task Managers', link: '/apps-and-modules/#task-managers' },
         { text: 'Battery and Power Management', link: '/apps-and-modules/#battery-and-power-management' },
         { text: 'System Cleanup and Maintenance', link: '/apps-and-modules/#debloating-and-cleaning' },
         { text: 'Kernel Management', link: '/apps-and-modules/#kernel-management' }
+      ]
+    },
+    {
+      text: '🎮 Gaming',
+      collapsed: false,
+      items: [
+        { text: 'Gaming Tweaks', link: '/apps-and-modules/#gaming-tweaks' },
+        { text: 'Graphics Optimization', link: '/apps-and-modules/#graphics-optimization' }
       ]
     },
     {
@@ -846,6 +861,7 @@ export default withPwa(defineConfig({
         { text: 'Root Access Managers', link: '/apps-and-modules/#root-management' },
         { text: 'Safety and Play Integrity', link: '/apps-and-modules/#root-hiding-and-play-integrity' },
         { text: 'Bootloop Protection Tools', link: '/apps-and-modules/#bootloop-protection' },
+        { text: 'Boot and Startup', link: '/apps-and-modules/#boot-and-startup' },
         { text: 'System Modifications', link: '/apps-and-modules/#system-modifications' }
       ]
     },
@@ -874,8 +890,9 @@ export default withPwa(defineConfig({
       items: [
         { text: 'Modified App Collection', link: '/apps-and-modules/#app-patches-and-mods' },
         { text: 'Social Media Mods', link: '/apps-and-modules/#social-media-mods' },
+        { text: 'Non-Social App Mods', link: '/apps-and-modules/#non-social-app-mods' },
         { text: 'ReVanced Patches', link: '/apps-and-modules/#revanced' },
-        { text: 'Other App Modifications', link: '/apps-and-modules/#misc-app-mods' }
+        { text: 'Other App Modifications', link: '/apps-and-modules/#other-app-mods' }
       ]
     },
     {
@@ -899,6 +916,7 @@ export default withPwa(defineConfig({
       collapsed: true,
       items: [
         { text: 'Network Control and Tools', link: '/apps-and-modules/#network-and-connectivity' },
+        { text: 'VPN & Proxy Tools', link: '/apps-and-modules/#vpn--proxy-tools' },
         { text: 'GPS and Location Tools', link: '/apps-and-modules/#location-and-gps' },
         { text: 'NFC Utilities', link: '/apps-and-modules/#nfc-and-wireless' }
       ]
@@ -925,10 +943,22 @@ export default withPwa(defineConfig({
       text: '👨‍💻 Developer & Advanced',
       collapsed: true,
       items: [
-        { text: 'Dev Tools', link: '/apps-and-modules/#development-and-debugging' },
+        { text: 'Developer Tools', link: '/apps-and-modules/#developer-tools' },
         { text: 'Terminal', link: '/apps-and-modules/#terminal-and-shell-tools' },
         { text: 'Hardware Control', link: '/apps-and-modules/#hardware-and-sensors' },
         { text: 'LSPosed', link: '/apps-and-modules/#lsposed-framework' }
+      ]
+    },
+    {
+      text: '🧰 System Utilities',
+      collapsed: true,
+      items: [
+        { text: 'System Utilities', link: '/apps-and-modules/#system-utilities' },
+        { text: 'Automation and Scheduling', link: '/apps-and-modules/#automation-and-scheduling' },
+        { text: 'Cloud and Remote Storage', link: '/apps-and-modules/#cloud-and-remote-storage' },
+        { text: 'Device Information', link: '/apps-and-modules/#device-information' },
+        { text: 'Translation and Localization', link: '/apps-and-modules/#translation-and-localization' },
+        { text: 'Miscellaneous Utilities', link: '/apps-and-modules/#miscellaneous-utilities' }
       ]
     }
   ],
