@@ -53,6 +53,9 @@
 - [Ads and Tracking Blockers](#ads-and-tracking-blockers)
 - [Privacy and Security](#privacy-and-security)
 
+#### 🤖 **AI & Smart Tools**
+- [AI & Smart Tools](#ai--smart-tools)
+
 #### 📦 **App Control and Management**
 - [App Management and Control](#app-management-and-control)
   - [App Isolation and Cloning](#app-isolation-and-cloning)
@@ -66,20 +69,24 @@
 
 #### 🔧 **App Modifications and Extensions**
 - [App Patches & Mods](#app-patches-and-mods)
-  - [General Mods](#general-mods)
   - [Social Media Mods](#social-media-mods)
+  - [Non-Social App Mods](#non-social-app-mods)
 - [ReVanced](#revanced)
 
 #### ⚡ **Performance and System**
-- [Automation and Scheduling](#automation-and-scheduling)
 - [Battery and Power Management](#battery-and-power-management)
   - [Battery Optimization](#battery-optimization)
   - [Charging and Power Control](#charging-and-power-control)
   - [Google Services Optimization](#google-services-optimization)
-  - [Task Managers](#task-managers)
 - [Performance and Optimization](#performance-and-optimization)
+  - [Task Managers](#task-managers)
 - [Kernel Management](#kernel-management)
 - [System Modifications](#system-modifications)
+
+#### 🎮 **Gaming**
+- [Gaming](#gaming)
+  - [Gaming Tweaks](#gaming-tweaks)
+  - [Graphics Optimization](#graphics-optimization)
 
 #### 🗃️ **Data & Storage**
 - [File Management](#file-management)
@@ -87,9 +94,7 @@
 - [Debloating and Cleaning](#debloating-and-cleaning)
 
 #### 🎨 **Interface and Customization**
-- [Boot and Startup](#boot-and-startup)
 - [Customization and Theming](#customization-and-theming)
-  - [Digital Assistants](#digital-assistants)
   - [Fonts](#fonts)
   - [Emojis](#emojis)
   - [Themes and Visual Mods](#themes-and-visual-mods)
@@ -106,6 +111,7 @@
 
 #### 🌐 **Network and Communication**
 - [Network and Connectivity](#network-and-connectivity)
+- [VPN & Proxy Tools](#vpn--proxy-tools)
 - [Location and GPS](#location-and-gps)
 - [Communication and Messaging](#communication-and-messaging)
 
@@ -120,13 +126,13 @@
 
 #### 📥 **Frameworks and Advanced**
 - [LSPosed Framework](#lsposed-framework)
-- [Development and Debugging](#development-and-debugging)
+- [Developer Tools](#developer-tools)
 - [Hardware and Sensors](#hardware-and-sensors)
 - [Terminal and Shell Tools](#terminal-and-shell-tools)
 
 #### 🖥️ **Display and Accessibility**
 - [Screen and Display](#screen-and-display)
-- [Accessibility Tools](#accessibility-tools)
+  - [Accessibility Tools](#accessibility-tools)
 
 #### 🌐 **Browser Tools**
 - [Browser and Web Tools](#browser-and-web-tools)
@@ -135,6 +141,7 @@
 
 ### 🧰 System Utilities
 - [System Utilities](#system-utilities)
+  - [Automation and Scheduling](#automation-and-scheduling)
   - [NFC and Wireless](#nfc-and-wireless)
   - [Cloud and Remote Storage](#cloud-and-remote-storage)
   - [Device Information](#device-information)
@@ -145,7 +152,6 @@
 - [Resources and Help](#resources-and-help)
 - [Legal and Safety](#legal-and-safety)
 - [Support us](#support-the-project)
-
 </details>
 
 ---
@@ -328,13 +334,6 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## Accessibility Tools
-- **[Do Not Try Accessibility](https://github.com/Nitsuya/DoNotTryAccessibility)** - Hook System Framework makes the app think that accessibility services are not enabled. `FOSS` `[LSP]`
-- **[GreaseMilkyway](https://play.google.com/store/apps/details?id=net.kollnig.greasemilkyway)** - Android accessibility service designed to help people with attention-related conditions (such as ADHD) manage their digital environment and focus on what matters. `FOSS` `[LSP]`
-
-[↑ Back to top](#table-of-contents)
-
----
 
 ## Ads and Tracking Blockers
 
@@ -360,6 +359,19 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 > [!TIP]
 > For network-level blocking, also check [DNS Tools](#dns-tools) and [Firewall Tools](#firewall-tools)
+
+[↑ Back to top](#table-of-contents)
+
+---
+
+## AI & Smart Tools
+
+- **[SwitchAI – Switch AI Digital Assistant](https://github.com/WSTxda/SwitchAI)** - Easily select, start, and manage your preferred AI digital assistants. `FOSS`
+- **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
+- **[Xposed Translate Text](https://github.com/tianci-sh/XPTranslateText)** - Translate text by MLKit / gemini2.0 / google api. `FOSS` `[LSP]`
+
+> [!NOTE]
+> Also see [Breeno Source Changer](#coloros-oppo) in ROM & OEM Customization > ColorOS for AI assistant customization on ColorOS devices.
 
 [↑ Back to top](#table-of-contents)
 
@@ -427,48 +439,6 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ## App Patches and Mods
 
-### General Mods
-
-#### Amazon
-- **[AmznKiller](https://github.com/hxreborn/amznkiller)** - Hides sponsored content and ads in the Amazon Shopping app. `FOSS` `[LSP]`
-
-#### Cake Mods
-- **[Cake - Learn English & Korean Patches](https://github.com/hoo-dles/revanced-custom-patches)** - Enable Plus . `FOSS` `[R]`
-
-#### Duolingo Mods
-- **[Duolingo Regret](https://github.com/TigerBeanst/Duolingo-Regret)** - Change Duolingo's time zone to any arbitrary time zone, makes it easier to go back and finish forgotten streaks. `FOSS` `[LSP]`
-- **[Duolingo Patches](https://github.com/hoo-dles/revanced-custom-patches)** - Disable practice reminder banner, Unlock licensed songs, Unlock Super Duolingo features. `FOSS` `[R]`
-
-#### Google Keyboard Mods
-- **[GboardHook](https://github.com/chenyue404/GboardHook)** - Modifies the number of clipboard items displayed and their expiration time. `FOSS` `[LSP]`
-- **[Gboard Material Expressive Black](https://github.com/hxreborn/gboard-material-expressive-black)** - Enables pitch black Gboard background on Android 16 dynamic theme. `FOSS` `[LSP]`
-
-#### Google Photos Mods
-- **[XposedPhotosFix](https://github.com/RevealedSoulEven/XposedPhotosFIX)** - Prevents Google Photos app from merging all folders in Camera folder and creates separate albums for each folder, useful for backups. `FOSS` `[LSP]`
-
-#### Google News Mods
-- **[G-News Control](https://github.com/mango0oo/G-News-Control)** - Magisk / KernelSU module for control the Google News on the home screen. `Proprietary` `[M]` `[K]`
-
-#### Maps Mods
-- **[Maps Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.mapstweaks)** - Collection of maps UI tweaks for Google Maps, Yandex Maps and Yandex Navi. `Proprietary` `[LSP]`
-- **[Yandex Maps Patcher](https://github.com/Xposed-Modules-Repo/ru.bluecat.yandexmapspatcher)** - Hides ads and intrusive services in the Yandex Maps app. `Proprietary` `[LSP]`
-
-#### Ozon App
-- **[NoAdsPlus](https://github.com/igormsc/ai.noads.NoAdsPlus)** - Removes ads from the Ozon app. `FOSS` `[LSP]`
-
-#### Solid Explorer
-- **[F**k Solid Explorer](https://github.com/fzer0x/dev.fzer0x.fucksolidexplorer)** - Unlock premium features and remove advertisements from Solid Explorer. `FOSS` `[LSP]`
-
-#### Spotify
-- **[ReVancedXposed_Spotify](https://github.com/chsbuffer/ReVancedXposed_Spotify)** - Unlocks premium features of Spotify.  `FOSS` `[LSP]`
-
-#### Via Browser Mods
-- **[BetterVia](https://github.com/JiGuroLGC/BetterVia)** - Bypass whitelist restrictions, Screenshot protection, Block components, One-tap theme switching etc. `FOSS` `[LSP]`
-
-#### Yandex Music Mods
-- **[Yandex Music Downloader](https://github.com/errorman-awful/YMDownloaderXposed)** - Download flac Music from Yandex Music app. `Proprietary` `[LSP]`
-
-
 ### Social Media Mods
 #### Bilibili Mods
 - **[MBGA](https://github.com/cledwynl/mbga/)** - Add various features to Bilibili. `FOSS` `[LSP]`
@@ -527,9 +497,42 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 [↑ Back to top](#table-of-contents)
 
-### Keyboard Mods
-- **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
+
+### Non-Social App Mods
+
+#### Amazon
+- **[AmznKiller](https://github.com/hxreborn/amznkiller)** - Hides sponsored content and ads in the Amazon Shopping app. `FOSS` `[LSP]`
+
+#### Duolingo Mods
+- **[Duolingo Regret](https://github.com/TigerBeanst/Duolingo-Regret)** - Change Duolingo's time zone to any arbitrary time zone, makes it easier to go back and finish forgotten streaks. `FOSS` `[LSP]`
+- **[Duolingo Patches](https://github.com/hoo-dles/revanced-custom-patches)** - Disable practice reminder banner, Unlock licensed songs, Unlock Super Duolingo features. `FOSS` `[R]`
+
+#### Google Keyboard Mods
+- **[GboardHook](https://github.com/chenyue404/GboardHook)** - Modifies the number of clipboard items displayed and their expiration time. `FOSS` `[LSP]`
+- **[Gboard Material Expressive Black](https://github.com/hxreborn/gboard-material-expressive-black)** - Enables pitch black Gboard background on Android 16 dynamic theme. `FOSS` `[LSP]`
 - **[Rboard Theme Manager](https://github.com/DerTyp7214/RboardThemeManagerV3)** - A customizable manager app for Google Gboard that allows users to download, apply, and manage various themes and sound settings. `FOSS` `[LSP]`
+
+#### Google News Mods
+- **[G-News Control](https://github.com/mango0oo/G-News-Control)** - Magisk / KernelSU module for control the Google News on the home screen. `Proprietary` `[M]` `[K]`
+
+#### Google Photos Mods
+- **[XposedPhotosFix](https://github.com/RevealedSoulEven/XposedPhotosFIX)** - Prevents Google Photos app from merging all folders in Camera folder and creates separate albums for each folder, useful for backups. `FOSS` `[LSP]`
+
+#### Maps Mods
+- **[Maps Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.mapstweaks)** - Collection of maps UI tweaks for Google Maps, Yandex Maps and Yandex Navi. `Proprietary` `[LSP]`
+- **[Yandex Maps Patcher](https://github.com/Xposed-Modules-Repo/ru.bluecat.yandexmapspatcher)** - Hides ads and intrusive services in the Yandex Maps app. `Proprietary` `[LSP]`
+
+#### Solid Explorer
+- **[F**k Solid Explorer](https://github.com/fzer0x/dev.fzer0x.fucksolidexplorer)** - Unlock premium features and remove advertisements from Solid Explorer. `FOSS` `[LSP]`
+
+#### Spotify
+- **[ReVancedXposed_Spotify](https://github.com/chsbuffer/ReVancedXposed_Spotify)** - Unlocks premium features of Spotify.  `FOSS` `[LSP]`
+
+#### Via Browser Mods
+- **[BetterVia](https://github.com/JiGuroLGC/BetterVia)** - Bypass whitelist restrictions, Screenshot protection, Block components, One-tap theme switching etc. `FOSS` `[LSP]`
+
+#### Yandex Music Mods
+- **[Yandex Music Downloader](https://github.com/errorman-awful/YMDownloaderXposed)** - Download flac Music from Yandex Music app. `Proprietary` `[LSP]`
 
 ### Patching Tools
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (use with caution). `Proprietary`
@@ -563,7 +566,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[ReVanced Manager](https://github.com/ReVanced/revanced-manager)** - Modify YouTube, YouTube Music, Spotify and many more with additional features. `FOSS` `[R]`
 - **[ReVancedRepackaged](https://github.com/programminghoch10/ReVancedRepackaged)** - This magisk module contains only the ReVanced Patcher.It will patch any installed ReVanced compatible app right on your device during installation. `FOSS` `[M]` `[R]`
 
-### Misc App Mods
+### Other App Mods
 - **[Boosteroid+](https://github.com/nitanmarcel/BoosteroidPlus)** - Customize advanced settings for the Boosteroid app, including frame rate, bitrate, and resolution options. `FOSS` `[LSP]`
 - **[EDS NG Crack](https://github.com/dumbasPL/EDS-NG-crack)** - Unlocks all features in in [EDS NG](https://play.google.com/store/apps/details?id=com.sovworks.projecteds&hl=en_US). `FOSS` `[M]`
 - **[E-Government Liberator](https://github.com/Crazyphil/digitales-amt-liberator)** - Removes root and bootloader checks from e-government apps. `FOSS` `[LSP]`
@@ -573,6 +576,8 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[NewHookVip](https://github.com/Xposed-Modules-Repo/top.hookvip.pro)** - Unlock some app memberships and adding some extended functions. Check releases section for list of supported apps. `Proprietary` `[LSP]`
 - **[Smule Mod](https://github.com/michei69/SmuleXposed)** - A Smule Xposed module which enables free VIP and many other features. `FOSS` `[LSP]`
 - **[Wallet Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.wallettweaks/releases)** - UI tweaks for Google Wallet. `Proprietary` `[LSP]`
+- **[Cake - Learn English & Korean Patches](https://github.com/hoo-dles/revanced-custom-patches)** - Enable Plus . `FOSS` `[R]`
+- **[NoAdsPlus](https://github.com/igormsc/ai.noads.NoAdsPlus)** - Removes ads from the Ozon app. `FOSS` `[LSP]`
 
 [↑ Back to top](#table-of-contents)
 
@@ -605,15 +610,6 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## Automation and Scheduling
-- **[⭐ MacroDroid](https://play.google.com/store/search?q=macrodroid&c=apps)** - Easy to use automation app. `Proprietary`
-- **[⭐ Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)** - An advanced and powerful automation app. `Proprietary`
-- **[Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate)** - Lets you create custom automation workflows using flowcharts, enabling seamless management of tasks, files, and device settings. `Proprietary`
-- **[crond4Android](https://github.com/powerAn2020/crond4android)** - The Crond program that supports running on KernelSU, APatch and Magisk. `FOSS` `[M]` `[K]`
-
-[↑ Back to top](#table-of-contents)
-
----
 
 ## Backup and Restore
 - **[DataBackup](https://github.com/XayahSuSuSu/Android-DataBackup)** - DataBackup for Android 7.0+. `FOSS` | [🌱](https://f-droid.org/zh_Hans/packages/com.xayah.databackup.foss/)
@@ -654,14 +650,8 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[GhostGMS](https://github.com/kaushikieeee/GhostGMS)** - Optimize Google Mobile Services for better battery life, privacy, and performance. `FOSS` `[M]`
 - **[OOSGMS-OPTIMISER](https://github.com/epicmann24/OOSGMS-OPTIMISER)** - Optimise and remove trackers for GMS and OOS. `FOSS` `[M]`
 
-### Task Managers
-- **[Appzuku](https://github.com/northmendo/Appzuku)** - Simple app to boost performance by stopping background apps, relying on Root/Shizuku permissions. `FOSS`
-- **[Background App Slayer (BAS)](https://github.com/UNKNUW/Background-App-Slayer)** - Automatic Killing Background apps. `FOSS` `[M]`
-- **[DeepSuppressor](https://github.com/Aurora-Nasa-1/DeepSuppressor)** - Background process management tool to monitor and control application processes. `FOSS` `[M]`
-- **[Greenify4Magisk/KSU Reborn](https://github.com/Drsexo/Greenify4Magisk-KSU-Reborn)** - Integrates Greenify as a privileged system app to enable Boost Mode, enhancing hibernation performance without modifying the ROM. `FOSS` `[M]` `[K]`
-- **[Operator](https://github.com/by-architect/Operator)** - Matrix-inspired Android Task Manager that lets you monitor, manage, and terminate processes directly from your device. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.byarchitect.operator)
-- **[Shappky](https://github.com/YasserNull/shappky)** - A simple app to boost performance by stopping background apps, relying on Root/Shizuku permissions. `FOSS` `[M]`
-- **[TaskManager](https://github.com/RohitKushvaha01/TaskManager)** - Task Manager inspired from gnome system monitor for android.Must read [F-Droid inclusion](https://github.com/RohitKushvaha01/TaskManager/issues/24) `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.rk.taskmanager)
+> [!TIP]
+> For privacy benefits of reducing Google Services activity, also see [Privacy and Security](#privacy-and-security).
 
 [↑ Back to top](#table-of-contents)
 
@@ -708,17 +698,6 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 ---
 
 ## Customization and Theming
-
-### Boot and Startup
-- **[Bootanimation](https://github.com/Bitterneko/Bootanimation)** - A custom boot animation for Android. `Proprietary` `[M]`
-- **[Live Boot](https://play.google.com/store/apps/details?id=eu.chainfire.liveboot)** - Get a Linux-like live boot screen on Android. `Proprietary`
-- **[Live Boot Module](https://github.com/symbuzzer/livebootmodule)** - Enables unix-style (verbose) boot animation for Android devices. `FOSS` `[M]` `[K]`
-- **[Samsung Boot Animation Module](https://github.com/John0n1/SMbootFX)** - Custom boot animations for Samsung devices via Magisk. `FOSS` `[M]`
-- **[video-to-bootanimation](https://github.com/Magisk-Modules-Alt-Repo/video-to-bootanimation)** - A Magisk Module Which Can Set Videos as Android Device BootAnimation. `FOSS` `[M]`
-
-
-### Digital Assistants
-- **[SwitchAI – Switch AI Digital Assistant](https://github.com/WSTxda/SwitchAI)** - Easily select, start, and manage your preferred AI digital assistants. `FOSS`
 
 ### Fonts
 - **[EvilFont](https://github.com/dedeadend/EvilFont)** - Cange your Arabic/Persian font to Teshrin + IOS emojis. `FOSS` `[M]` `[K]`
@@ -890,7 +869,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## Development and Debugging
+## Developer Tools
 - **[⭐ Shizuku](https://github.com/RikkaApps/Shizuku)** - Use system APIs directly with ADB/root privileges. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/moe.shizuku.privileged.api) | [▶️](https://play.google.com/store/search?q=shizuku&c=apps)
 - **[Bluetooth Hook](https://github.com/jingyu233/bluetoothhook#english)** - Inject virtual BLE devices into Android system Bluetooth scan results, facilitating Bluetooth application debugging for developers. `FOSS` `[LSP]`
 - **[Chroot Distro](https://github.com/Magisk-Modules-Alt-Repo/chroot-distro)** - Install Gnu/Linux distributions on Android. `FOSS` `[M]`
@@ -904,7 +883,6 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[Stealth Debug](https://github.com/sp11xy/StealthDebug)** - Hide USB-Debugging properties. `FOSS` `[M]`
 - **[Termux](https://termux.com/)** - Advanced terminal emulator and Linux environment. `FOSS` - **[More on Termux ↓](#terminal-and-shell-tools)**
 - **[Trixie.apk](https://github.com/DesktopECHO/trixie.apk)** - Debian 13 (Trixie) Server/Desktop container for rooted Android 5.0+ devices. `FOSS`
-- **[Wireless ADB Switch](https://github.com/Smooth-E/wireless-adb-switch)** - Quickly enable or disable Android's Wireless Debugging feature. Includes widgets and a quick settings tile for convenience.  `FOSS` | [🌱](https://f-droid.org/ru/packages/com.smoothie.wirelessDebuggingSwitch)
 
 [↑ Back to top](#table-of-contents)
 
@@ -925,6 +903,31 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[Sortify](https://github.com/xCaptaiN09/Sortify)** - Automatically organizes files in your Download folder. `FOSS` `[M]` `[K]`
 - **[Total Commander](https://play.google.com/store/apps/details?id=com.ghisler.android.TotalCommander)** - A feature rich file manager for Android supporting root and shizuku. For  a better experience, please read [this](https://www.ghisler.ch/board/viewforum.php?f=22). `Proprietary`
 - **[ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)** - A program for archive management (including managing of application backups in archives). `Proprietary`
+
+[↑ Back to top](#table-of-contents)
+
+---
+
+## Gaming
+
+> [!TIP]
+> For overall device performance tuning, see [Performance and Optimization](#performance-and-optimization). For CPU/GPU management, see [Kernel Management](#kernel-management).
+
+### Gaming Tweaks
+- **[AsoulOpt](https://github.com/nakixii/Magisk_AsoulOpt)** - Game threads tweaker for Android, suitable for mainstream games and some niche games. `FOSS` `[M]`
+- **[Encore Tweaks](https://github.com/Rem01Gaming/encore)** - Enhance device performance during gaming sessions, while keeping battery life optimized for normal use. `Proprietary` `[M]`
+- **[EnCorinVest](https://github.com/LoggingNewMemory/EnCorinVest)** - Performance Module, Collaboration between CorinXMTKVest and Encore Tweaks. `FOSS` `[M]`
+- **[FPS Unlocker](https://github.com/yadavnikhil03/GameUnlocker#fps-unlocker)** - Enables 90 FPS options in BGMI and PUBG and other Games as well for smoother gameplay on low-end devices. `FOSS` `[M]`
+- **[GameResChange](https://github.com/Xposed-Modules-Repo/com.game.reschange)** - Change the resolution of any app/game on Android 13+. `Proprietary` `[LSP]`
+- **[Gaming-X Magisk Module](https://github.com/JordanTweaks/Gaming-X-Magisk-Module)** - Tweaking CPU, GPU, memory, and system settings for maximum FPS and responsiveness. `FOSS` `[M]`
+- **[PerfGame](https://github.com/adivenxnataly/PerfGame)** - Enable custom resolution and frame-rate mechanism for your games. `FOSS` `[M]`
+- **[TMPAD: Per App Downscale](https://github.com/Osanosa/ThemedManager/tree/main/PerAppDownscale)** - Allows users with root or shizuku to run games at lower resolutions to get better performance and change other related settings. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=pro.themed.perappdownscale)
+
+### Graphics Optimization
+- **[iUnlocker GLTool](https://github.com/i-Taylo/iUnlockerGL)** - Designed to spoof GPU information, allowing users to modify GPU information for unlocking graphics in games and testing. `FOSS` `[M]`
+- **[KonaBess](https://github.com/libxzr/KonaBess)** - A straightforward application designed to customize GPU frequency and voltage tables without the need for kernel recompilation. `FOSS` 
+- **[KonaBess Next](https://github.com/KonaBess-Next/KonaBess-Next)** - Fork of KonaBess, Custom GPU overclocking and undervolting tool with granulated voltage for rooted Snapdragon Android devices.  `FOSS`
+- **[PerfMTK](https://github.com/JUANIMAN/PerfMTK)** - Designed to optimize performance and power efficiency on MediaTek devices with Mali GPUs. `FOSS` `[M]`
 
 [↑ Back to top](#table-of-contents)
 
@@ -988,7 +991,6 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[ReLSPosed](https://github.com/ThePedroo/ReLSPosed)** - Fork of JingMatrix's Fork of LSPosed framework.
 
 
-
 [↑ Back to top](#table-of-contents)
 
 ---
@@ -1010,12 +1012,6 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[Unlimited Hotspot](https://github.com/felikcat/unlimited-hotspot)** - Remove speed restrictions on your hotspot internet and allows hotspots on any plan. `FOSS` `[M]`
 - **[VPN Hotspot](https://github.com/Mygod/VPNHotspot)** - Share your VPN connection over hotspot or repeater. `FOSS`
 
-### Proxy Tools
-- **[Aurora](https://github.com/Tkocean/Aurora)** - This project deploys sing-box, mihome proxies via Magisk, KernelSU, or APatch. `FOSS` `[M]` `[K]`
-- **[Box4Magisk / KernelSU / APatch](https://github.com/CHIZI-0618/box4magisk)** - Deploy multiple proxy cores on Android devices, including clash, mihomo, sing-box, v2ray, xray, and hysteria. `FOSS` `[M]` `[K]`
-- **[Box for Root](https://github.com/taamarin/box_for_magisk)** - Box for Root (BFR) is a Magisk, KernelSU, APatch, module that provides a suite of proxy tools, including clash, sing-box, v2ray, hysteria and xray. It allows you to configure a transparent proxy on Android devices with root access. `FOSS` `[M]` `[K]`
-- **[NetProxy-Magisk](https://github.com/Fanju6/NetProxy-Magisk)** - Magisk proxy module based on Xray kernel, supports one-click start/stop transparent proxy. `FOSS` `[M]`
-
 ### SSL and certificates
 - **[Always Trust User Certs](https://github.com/NVISOsecurity/AlwaysTrustUserCerts)** - A Magisk/KernelSU module that automatically adds user certificates to the system root CA store. `FOSS` `[M]` `[K]`
 - **[Cert-Fixer](https://github.com/pwnlogs/cert-fixer)** - Installs custom CA certificates to Android's system certificate store. `FOSS` `[M]`
@@ -1028,8 +1024,9 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[Wi‑Fi Passwords Exporter](https://github.com/mlm-games/wifi-exporter)** - Android app that exports wifi passwords. `FOSS`
 - **[WiFi Password Manager](https://github.com/Khh-vu/wifi-password-manager)** -  Simple app using Shizuku or root access to manage WiFi passwords. `FOSS` | [🌱](https://apt.izzysoft.de/packages/io.github.wifi_password_manager)
 - **[WiFi Password Viewer for MMRL](https://github.com/Googlers-Repo/wpd)** - WiFi Password Viewer for MMRL. `FOSS`
+- **[Wireless ADB Switch](https://github.com/Smooth-E/wireless-adb-switch)** - Quickly enable or disable Android's Wireless Debugging feature. Includes widgets and a quick settings tile for convenience.  `FOSS` | [🌱](https://f-droid.org/ru/packages/com.smoothie.wirelessDebuggingSwitch)
 
-### Misc Network Tools
+### Network Utilities
 - **[Hosts Manager Lite](https://play.google.com/store/apps/details?id=awais.hostsmanager.lite)** - Advanced /etc/hosts editor. `Proprietary`
 - **[Magisk LAN Auto Switch](https://github.com/NewFuture/magisk-modules/tree/main/magisk-lan-auto-switch)** - Automatically switch LAN and WiFi based on eth0 connection status. `FOSS` `[M]`
 - **[Network Switch](https://github.com/aunchagaonkar/NetworkSwitch#installation)** - Modern Android app for 4G/5G network mode switching. `FOSS` | [🌱](https://apt.izzysoft.de/packages/com.supernova.networkswitch)
@@ -1048,10 +1045,21 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ---
 
+## VPN & Proxy Tools
+
+- **[Aurora](https://github.com/Tkocean/Aurora)** - This project deploys sing-box, mihome proxies via Magisk, KernelSU, or APatch. `FOSS` `[M]` `[K]`
+- **[Box4Magisk / KernelSU / APatch](https://github.com/CHIZI-0618/box4magisk)** - Deploy multiple proxy cores on Android devices, including clash, mihomo, sing-box, v2ray, xray, and hysteria. `FOSS` `[M]` `[K]`
+- **[Box for Root](https://github.com/taamarin/box_for_magisk)** - Box for Root (BFR) is a Magisk, KernelSU, APatch, module that provides a suite of proxy tools, including clash, sing-box, v2ray, hysteria and xray. It allows you to configure a transparent proxy on Android devices with root access. `FOSS` `[M]` `[K]`
+- **[NetProxy-Magisk](https://github.com/Fanju6/NetProxy-Magisk)** - Magisk proxy module based on Xray kernel, supports one-click start/stop transparent proxy. `FOSS` `[M]`
+
+[↑ Back to top](#table-of-contents)
+
+---
+
 ## Performance and Optimization
 
 > [!TIP]
-> For CPU/GPU management, see [Kernel Management](#kernel-management). For memory optimization, check [Memory Management](#memory-management).
+> For gaming-specific tweaks, see [Gaming](#gaming). For CPU/GPU management, see [Kernel Management](#kernel-management). For memory optimization, check [Memory Management](#memory-management).
 
 ### All-in-One Performance Optimizers
 - **[⭐ 3C All-in-One Toolbox](https://play.google.com/store/apps/details?id=ccc71.at.free)** - A comprehensive utility that offers a wide range of tools for monitoring, controlling, and optimizing device performance in a user-friendly interface. `Proprietary`
@@ -1066,21 +1074,15 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[TNF Tweaker](https://github.com/topnotchfreaks/tnf_tweaker)** - Optimization tool designed exclusively for devices running the TopNotchFreaks and Zephyr kernels. `FOSS` `[K]`
 - **[Uperf-Game-Turbo](https://github.com/yinwanxi/Uperf-Game-Turbo)** - Userspace performance controller for Android. `FOSS` `[M]`
 
-### Gaming Tweaks
-- **[AsoulOpt](https://github.com/nakixii/Magisk_AsoulOpt)** - Game threads tweaker for Android, suitable for mainstream games and some niche games. `FOSS` `[M]`
-- **[Encore Tweaks](https://github.com/Rem01Gaming/encore)** - Enhance device performance during gaming sessions, while keeping battery life optimized for normal use. `Proprietary` `[M]`
-- **[EnCorinVest](https://github.com/LoggingNewMemory/EnCorinVest)** - Performance Module, Collaboration between CorinXMTKVest and Encore Tweaks. `FOSS` `[M]`
-- **[FPS Unlocker](https://github.com/yadavnikhil03/GameUnlocker#fps-unlocker)** - Enables 90 FPS options in BGMI and PUBG and other Games as well for smoother gameplay on low-end devices. `FOSS` `[M]`
-- **[GameResChange](https://github.com/Xposed-Modules-Repo/com.game.reschange)** - Change the resolution of any app/game on Android 13+. `Proprietary` `[LSP]`
-- **[Gaming-X Magisk Module](https://github.com/JordanTweaks/Gaming-X-Magisk-Module)** - Tweaking CPU, GPU, memory, and system settings for maximum FPS and responsiveness. `FOSS` `[M]`
-- **[PerfGame](https://github.com/adivenxnataly/PerfGame)** - Enable custom resolution and frame-rate mechanism for your games. `FOSS` `[M]`
-- **[TMPAD: Per App Downscale](https://github.com/Osanosa/ThemedManager/tree/main/PerAppDownscale)** - Allows users with root or shizuku to run games at lower resolutions to get better performance and change other related settings. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=pro.themed.perappdownscale)
 
-### Graphics Optimization
-- **[iUnlocker GLTool](https://github.com/i-Taylo/iUnlockerGL)** - Designed to spoof GPU information, allowing users to modify GPU information for unlocking graphics in games and testing. `FOSS` `[M]`
-- **[KonaBess](https://github.com/libxzr/KonaBess)** - A straightforward application designed to customize GPU frequency and voltage tables without the need for kernel recompilation. `FOSS` 
-- **[KonaBess Next](https://github.com/KonaBess-Next/KonaBess-Next)** - Fork of KonaBess, Custom GPU overclocking and undervolting tool with granulated voltage for rooted Snapdragon Android devices.  `FOSS`
-- **[PerfMTK](https://github.com/JUANIMAN/PerfMTK)** - Designed to optimize performance and power efficiency on MediaTek devices with Mali GPUs. `FOSS` `[M]`
+### Task Managers
+- **[Appzuku](https://github.com/northmendo/Appzuku)** - Simple app to boost performance by stopping background apps, relying on Root/Shizuku permissions. `FOSS`
+- **[Background App Slayer (BAS)](https://github.com/UNKNUW/Background-App-Slayer)** - Automatic Killing Background apps. `FOSS` `[M]`
+- **[DeepSuppressor](https://github.com/Aurora-Nasa-1/DeepSuppressor)** - Background process management tool to monitor and control application processes. `FOSS` `[M]`
+- **[Greenify4Magisk/KSU Reborn](https://github.com/Drsexo/Greenify4Magisk-KSU-Reborn)** - Integrates Greenify as a privileged system app to enable Boost Mode, enhancing hibernation performance without modifying the ROM. `FOSS` `[M]` `[K]`
+- **[Operator](https://github.com/by-architect/Operator)** - Matrix-inspired Android Task Manager that lets you monitor, manage, and terminate processes directly from your device. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.byarchitect.operator)
+- **[Shappky](https://github.com/YasserNull/shappky)** - A simple app to boost performance by stopping background apps, relying on Root/Shizuku permissions. `FOSS` `[M]`
+- **[TaskManager](https://github.com/RohitKushvaha01/TaskManager)** - Task Manager inspired from gnome system monitor for android.Must read [F-Droid inclusion](https://github.com/RohitKushvaha01/TaskManager/issues/24) `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.rk.taskmanager)
 
 ### Memory Management
 - **[Magisk Swapspace](https://github.com/chickendrop89/magisk-swapspace)** - This module allows for creating a persistent swap space on android. `FOSS` `[M]`
@@ -1296,11 +1298,23 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[Rotation Suggestions Closed](https://github.com/Astoritin/RotationSuggestionsClosed)** - Stop showing rotation suggestion button as rotating screen. `FOSS` `[M]`
 - **[SecondScreen](https://github.com/farmerbb/SecondScreen)** - Advanced solution to connect your Android device to external displays. `FOSS` | [🌱](https://f-droid.org/packages/com.farmerbb.secondscreen.free/) | [▶️](https://play.google.com/store/apps/details?id=com.farmerbb.secondscreen.free)
 
+### Accessibility Tools
+- **[Do Not Try Accessibility](https://github.com/Nitsuya/DoNotTryAccessibility)** - Hook System Framework makes the app think that accessibility services are not enabled. `FOSS` `[LSP]`
+- **[GreaseMilkyway](https://play.google.com/store/apps/details?id=net.kollnig.greasemilkyway)** - Android accessibility service designed to help people with attention-related conditions (such as ADHD) manage their digital environment and focus on what matters. `FOSS` `[LSP]`
+
 [↑ Back to top](#table-of-contents)
 
 ---
 
 ## System Modifications
+
+### Boot and Startup
+- **[Bootanimation](https://github.com/Bitterneko/Bootanimation)** - A custom boot animation for Android. `Proprietary` `[M]`
+- **[Live Boot](https://play.google.com/store/apps/details?id=eu.chainfire.liveboot)** - Get a Linux-like live boot screen on Android. `Proprietary`
+- **[Live Boot Module](https://github.com/symbuzzer/livebootmodule)** - Enables unix-style (verbose) boot animation for Android devices. `FOSS` `[M]` `[K]`
+- **[Samsung Boot Animation Module](https://github.com/John0n1/SMbootFX)** - Custom boot animations for Samsung devices via Magisk. `FOSS` `[M]`
+- **[video-to-bootanimation](https://github.com/Magisk-Modules-Alt-Repo/video-to-bootanimation)** - A Magisk Module Which Can Set Videos as Android Device BootAnimation. `FOSS` `[M]`
+
 
 - **[Classic Power Menu](https://github.com/KieronQuinn/ClassicPowerMenu)** - Power Menu Replacement for Android 11+, with the main aim being restoring power menu options (Device Controls and Quick Access Wallet) on Android 12. `FOSS`
 - **[Disable Low Ram Flag](https://github.com/Magisk-Modules-Alt-Repo/disable-low-ram)** - Disable Low‑RAM flag on Android Go devices. `FOSS` `[M]`
@@ -1349,6 +1363,12 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ## System Utilities
 
+### Automation and Scheduling
+- **[⭐ MacroDroid](https://play.google.com/store/search?q=macrodroid&c=apps)** - Easy to use automation app. `Proprietary`
+- **[⭐ Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)** - An advanced and powerful automation app. `Proprietary`
+- **[Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate)** - Lets you create custom automation workflows using flowcharts, enabling seamless management of tasks, files, and device settings. `Proprietary`
+- **[crond4Android](https://github.com/powerAn2020/crond4android)** - The Crond program that supports running on KernelSU, APatch and Magisk. `FOSS` `[M]` `[K]`
+
 ### Cloud and Remote Storage
 - **[Magisk Tailscaled](https://github.com/mgksu/tailscaled)** - Module for running Tailscale on rooted Android devices. `FOSS` `[M]`
 - **[Rclone Magisk Module](https://github.com/NewFuture/rclone-fuse3-magisk)** - Integrates Rclone with FUSE support into Android, allowing you to manage remote storage mounts seamlessly. `FOSS` `[M]`
@@ -1366,7 +1386,6 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ### Translation and Localization
 - **[AllTrans](https://github.com/pbzinwindows/AllTrans)** - Replaces ALL TEXT IN AN APP from one language to another at runtime. `FOSS` `[LSP]`
-- **[Xposed Translate Text](https://github.com/tianci-sh/XPTranslateText)** - Translate text by MLKit / gemini2.0 / google api. `FOSS` `[LSP]`
 
 ### Miscellaneous Utilities
 - **[⭐ CleanShare](https://github.com/hxreborn/cleanshare)** - Removes Direct Share's suggested contact/conversation shortcuts from Android's Share Sheet. `FOSS` `[LSP]`
