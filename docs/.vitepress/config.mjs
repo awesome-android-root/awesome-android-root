@@ -11,10 +11,8 @@ export default withPwa(defineConfig({
   vite: {
     build: {
       chunkSizeWarningLimit: 1000,
-      minify: 'esbuild'
     },
     optimizeDeps: {
-      include: ['vue'],
       exclude: ['@vite-pwa/vitepress']
     },
     server: {
@@ -372,12 +370,8 @@ export default withPwa(defineConfig({
       type: 'module'
     },
 
-    filename: 'sw.js',              
-    scope: '/',                     
-    inlineRegister: false,          
-    minify: true,                  
-  
-    useCredentials: false,
+    inlineRegister: false,
+    minify: true,
     
     // NOTE: injectManifest block only applies when strategies: 'injectManifest'.
     // With generateSW (current strategy) workbox handles precache manifest generation
@@ -413,8 +407,7 @@ export default withPwa(defineConfig({
     
     // Resource Hints
     ['link', { rel: 'preconnect', href: 'https://github.com', crossorigin: '' }],
-    ['link', { rel: 'dns-prefetch', href: 'https://github.com' }],
-    
+    ['link', { rel: 'dns-prefetch', href: 'https://github.com' }],    
     // Sitemap
     ['link', { rel: 'sitemap', type: 'application/xml', href: '/sitemap.xml' }],
     
@@ -463,14 +456,6 @@ export default withPwa(defineConfig({
               "https://opencollective.com/awesome-android-root-official"
             ]
           },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": {
-              "@type": "EntryPoint",
-              "urlTemplate": "https://awesome-android-root.org/?q={search_term_string}"
-            },
-            "query-input": "required name=search_term_string"
-          }
         },
         {
           "@type": "ItemList",
