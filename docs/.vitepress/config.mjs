@@ -872,7 +872,7 @@ export default withPwa(defineConfig({
       text: '🔧 Modified & Patched Apps',
       collapsed: true,
       items: [
-        { text: 'Modified App Collection', link: '/apps-and-modules/#app-modifications' },
+        { text: 'Modified App Collection', link: '/apps-and-modules/#app-patches-and-mods' },
         { text: 'Social Media Mods', link: '/apps-and-modules/#social-media-mods' },
         { text: 'ReVanced Patches', link: '/apps-and-modules/#revanced' },
         { text: 'Other App Modifications', link: '/apps-and-modules/#misc-app-mods' }
