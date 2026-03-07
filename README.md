@@ -65,7 +65,7 @@
   - [Signature and Verification](#signature-and-verification)
 
 #### 🔧 **App Modifications and Extensions**
-- [Modded Apps and Tweaks](#modded-apps-and-tweaks)
+- [App Patches & Mods](#app-patches-and-mods)
   - [General Mods](#general-mods)
   - [Social Media Mods](#social-media-mods)
 - [ReVanced](#revanced)
@@ -425,7 +425,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## App Modifications
+## App Patches and Mods
 
 ### General Mods
 
