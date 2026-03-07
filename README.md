@@ -439,7 +439,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[Duolingo Regret](https://github.com/TigerBeanst/Duolingo-Regret)** - Change Duolingo's time zone to any arbitrary time zone, makes it easier to go back and finish forgotten streaks. `FOSS` `[LSP]`
 - **[Duolingo Patches](https://github.com/hoo-dles/revanced-custom-patches)** - Disable practice reminder banner, Unlock licensed songs, Unlock Super Duolingo features. `FOSS` `[R]`
 
-#### Google KeyBoard Mods
+#### Google Keyboard Mods
 - **[GboardHook](https://github.com/chenyue404/GboardHook)** - Modifies the number of clipboard items displayed and their expiration time. `FOSS` `[LSP]`
 - **[Gboard Material Expressive Black](https://github.com/hxreborn/gboard-material-expressive-black)** - Enables pitch black Gboard background on Android 16 dynamic theme. `FOSS` `[LSP]`
 
