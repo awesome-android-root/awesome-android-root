@@ -21,7 +21,7 @@ head:
       content: "Best Root Apps & Modules | Awesome Android Root"
   - - meta
     - property: og:description
-      content: "Discover 400+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026."
+      content: "Discover 470+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026."
   - - meta
     - property: og:image:secure_url
       content: "https://awesome-android-root.org/images/og.png"
