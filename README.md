@@ -526,6 +526,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[F**k Solid Explorer](https://github.com/fzer0x/dev.fzer0x.fucksolidexplorer)** - Unlock premium features and remove advertisements from Solid Explorer. `FOSS` `[LSP]`
 
 #### Spotify
+- **[Spotify Plus](https://github.com/LeNerd46/SpotifyPlus)** - Adds beautiful lyrics to Spotify. `FOSS` `[LSP]`
 - **[ReVancedXposed_Spotify](https://github.com/chsbuffer/ReVancedXposed_Spotify)** - Unlocks premium features of Spotify.  `FOSS` `[LSP]`
 
 #### Via Browser Mods
