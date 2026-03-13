@@ -173,9 +173,8 @@ hero:
       text: 📚 Complete Rooting Guides
       link: /rooting-guides/
     - theme: alt
-      text: ⭐ Star on GitHub
-      link: https://github.com/awesome-android-root/awesome-android-root
-      target: _blank
+      text: "🔧 Fix Issues Now"
+      link: /troubleshooting
 features:
   - icon: 🛡️
     title: System-Wide Ad Blocking
@@ -279,48 +278,54 @@ features:
 </div>
 
 
-## ⚡ Popular Root Methods
+## 🗊 Major Guides
 
-<div class="community-cards">
-  <a href="/rooting-guides/magisk-guide" class="community-card github">
+<div class="guide-time-grid">
+  <a href="/rooting-guides/how-to-unlock-bootloader" class="community-card">
+    <span class="icon">🔓</span>
+    <strong>Unlock Bootloader</strong>
+    <span>~10-30 min</span>
+  </a>
+  <a href="/rooting-guides/how-to-install-custom-recovery" class="community-card">
+    <span class="icon">💽</span>
+    <strong>Install Recovery</strong>
+    <span>~10-25 min</span>
+  </a>
+  <a href="/rooting-guides/magisk-guide" class="community-card">
     <span class="icon">🏅</span>
-    <strong>Magisk</strong>
-    <span>Recommended</span>
+    <strong>Root With Magisk</strong>
+    <span>~15-40 min</span>
   </a>
-  <a href="/rooting-guides/kernelsu-guide" class="community-card twitter">
-    <span class="icon">⚡</span>
-    <strong>KernelSU</strong>
-    <span>Advanced Users</span>
-  </a>
-  <a href="/rooting-guides/apatch-guide" class="community-card telegram">
-    <span class="icon">🤖</span>
-    <strong>APatch</strong>
-    <span>Kernel-based root</span>
-  </a>
-  <a href="/rooting-guides/lsposed-guide" class="community-card reddit">
+  <a href="/rooting-guides/kernelsu-guide" class="community-card">
     <span class="icon">⚙️</span>
-    <strong>LSPosed</strong>
-    <span>Customize your device</span>
+    <strong>Root with KernelSU</strong>
+    <span>~15-35 min</span>
   </a>
 </div>
+
 
 ## 📚 Resources
 
 <div class="community-cards">
+  <a href="/rooting-guides/lsposed-guide" class="community-card github">
+    <span class="icon">📖</span>
+    <strong>LSposed Guide</strong>
+    <span>Understanding and using LSposed</span>
+  </a>
   <a href="/rooting-guides/root-framework-comparison" class="community-card twitter">
     <span class="icon">⚖️</span>
     <strong>Framework Comparison</strong>
     <span>Magisk vs KernelSU vs APatch</span>
   </a>
-  <a href="/troubleshooting" class="community-card telegram">
-    <span class="icon">🔧</span>
-    <strong>Troubleshooting Guide</strong>
-    <span>Fix common rooting issues</span>
-  </a>
   <a href="/non-root-alternatives" class="community-card reddit">
     <span class="icon">🧰</span>
     <strong>Non-Root Alternatives</strong>
     <span>Customize without rooting</span>
+  </a>
+    <a href="/troubleshooting" class="community-card telegram">
+    <span class="icon">🔧</span>
+    <strong>Troubleshooting Guide</strong>
+    <span>Fix common rooting issues</span>
   </a>
 </div>
 
@@ -330,7 +335,7 @@ features:
   <a href="https://github.com/awesome-android-root/awesome-android-root" class="community-card github">
     <span class="icon">⭐</span>
     <strong>GitHub</strong>
-    <span>2k stars</span>
+    <span>2.9k stars</span>
   </a>
   <a href="https://x.com/awsm_and_root" class="community-card twitter">
     <span class="icon">𝕏</span>
