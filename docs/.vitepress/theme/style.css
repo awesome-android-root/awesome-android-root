@@ -367,13 +367,26 @@ padding: 0.5rem;
 margin-bottom: 0.5rem;
 }
 
+.guide-time-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+
 /**
  * Mobile Optimizations
  * -------------------------------------------------------------------------- */
 
 /* Optimal reading line length on all devices */
 .vp-doc {
-  max-width: min(65ch, 100%);
+  max-width: min(72ch, 100%);
+}
+
+/* Home page needs wider content lanes on desktop for card-based sections */
+.VPHome .vp-doc {
+  max-width: min(1160px, 100%);
 }
 
 /* Responsive tables with scroll indicators */
@@ -468,6 +481,10 @@ margin-bottom: 0.5rem;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 0.75rem;
   }
+
+  .guide-time-grid {
+    grid-template-columns: 1fr;
+  }
   
   .community-card {
     padding: 1.5rem 1rem;
@@ -508,6 +525,20 @@ margin-bottom: 0.5rem;
     font-size: 1.2rem;
   }
   
+}
+
+@media (min-width: 1280px) {
+  .custom-journey-selector,
+  .community-cards,
+  .guide-time-grid {
+    max-width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .community-cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 /* Dark mode enhancements */
