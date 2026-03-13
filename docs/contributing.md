@@ -66,7 +66,7 @@ head:
 ---
 # Contribution Guidelines
 
-Thank you for contributing to **Awesome Android Root**! This guide helps you add quality entries to our collection of **400+ root apps and modules**.
+Thank you for contributing to **Awesome Android Root**! This guide helps you add quality entries to our collection of **470+ root apps and modules**.
 
 ## Quick Start
 

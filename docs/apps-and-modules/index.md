@@ -198,7 +198,7 @@ head:
           "@type": "ItemList",
           "name": "Android Root Apps Collection",
           "description": "Curated collection of the best Android root applications, Magisk modules, LSPosed frameworks and system modification tools",
-          "numberOfItems": 414,
+          "numberOfItems": 470,
           "itemListElement": [
             {
               "@type": "SoftwareApplication",
