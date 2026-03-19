@@ -95,16 +95,16 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:title
-      content: "KernelSU Guide 2026 | Awesome Android Root"
+      content: "KernelSU Root Guide | Awesome Android Root"
   - - meta
     - name: twitter:description
-      content: "Ultimate KernelSU guide for 2026! Learn to install KernelSU & KernelSU Next, manage kernel-based root, modules, app profiles. Step-by-step tutorial for Android 4.4+ devices."
+      content: "Complete KernelSU guide covering KernelSU and KernelSU Next installation, modules."
   - - meta
     - name: twitter:image
       content: https://awesome-android-root.org/images/og/kernelsu-guide.png
   - - meta
     - name: twitter:image:alt
-      content: KernelSU Guide 2026 - Complete Installation Tutorial
+      content: KernelSU Root Guide - Complete Installation Tutorial
   - - link
     - rel: dns-prefetch
       href: https://github.com
@@ -120,8 +120,8 @@ head:
         {
           "@context": "https://schema.org",
           "@type": "TechArticle",
-          "headline": "KernelSU Guide 2026 | Awesome Android Root",
-          "description": "Ultimate KernelSU guide for 2026! Learn to install KernelSU & KernelSU Next, manage kernel-based root, modules, app profiles. Step-by-step tutorial for Android 4.4+ devices.",
+          "headline": "KernelSU Root Guide | Awesome Android Root",
+          "description": "Complete KernelSU guide covering KernelSU and KernelSU Next installation, modules, and app profile management.",
           "image": "https://awesome-android-root.org/images/og/kernelsu-guide.png",
           "author": {
             "@type": "Organization",
@@ -160,7 +160,7 @@ head:
             }
           ],
           "keywords": [
-            "kernelsu guide 2026",
+            "kernelsu root guide",
             "kernelsu installation",
             "kernelsu next",
             "kernel root android",
@@ -239,7 +239,7 @@ KernelSU is a kernel-based root solution that operates at the Linux kernel level
 > For easier installation on any Android version, consider [Magisk](./magisk-guide.md) instead
 
 > [!TIP]
-> Detailed comaprison with other root solutions: [Root Comparison](./root-framework-comparison.md)
+> Detailed comparison with other root solutions: [Root Comparison](./root-framework-comparison.md)
 
 
 ---

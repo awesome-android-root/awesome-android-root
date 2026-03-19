@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Google Pixel Root Guide 2026
+title: Google Pixel Root Guide
 description: Complete guide to root Google Pixel devices. All models from Pixel 1 to Pixel 10 Pro. Bootloader unlock, Magisk installation, and OTA handling.
 head:
   - - link
@@ -11,7 +11,7 @@ head:
       content: article
   - - meta
     - property: og:title
-      content: Google Pixel Root Guide 2026
+      content: Google Pixel Root Guide
   - - meta
     - property: og:description
       content: Root any Google Pixel device with comprehensive guide covering bootloader unlock, factory images, and Magisk installation.
@@ -26,7 +26,7 @@ head:
       content: summary_large_image
   - - meta
     - name: keywords
-      content: pixel root 2026, pixel 9 root, pixel 8 root, google pixel magisk, pixel bootloader unlock
+      content: pixel root guide, pixel 9 root, pixel 8 root, google pixel magisk, pixel bootloader unlock
   - - meta
     - name: robots
       content: index, follow
