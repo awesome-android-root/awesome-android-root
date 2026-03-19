@@ -59,7 +59,7 @@ head:
       content: index, follow
 ---
 
-# Complete Custom ROM Installation Guide (2026 Edition)
+# Complete Custom ROM Installation Guide
 
 **Transform your Android experience** - Install privacy-focused, security-enhanced custom ROMs to revive and enhance your device.
 
@@ -94,7 +94,7 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 ### Why Choose Custom ROMs?
 
 - **Extended device lifespan** — updates beyond OEM EOL
-- **Enhanced privacy — reduce** tracking/telemetry
+- **Enhanced privacy** — reduced tracking/telemetry
 - **Bloatware-free** — clean system without vendor apps
 - **Performance gains** — better battery, responsiveness
 - **Deep customization** — theming, features, system tweaks
@@ -105,7 +105,7 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 
 #### Privacy & Security Focused:
 - **GrapheneOS** — Maximum security for Pixel devices (relockable bootloader)
-- **CalyxOS** — Privacy-first, optional Sandboxed Google Play (no longer microG-first)
+- **CalyxOS** — Privacy-first with optional Sandboxed Google Play
 
 #### General Use & Features:
 - **LineageOS** — Most popular, widest device support

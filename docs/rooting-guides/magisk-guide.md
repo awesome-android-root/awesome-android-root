@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Complete Magisk Root Guide 2026
+title: Complete Magisk Root Guide
 description: "Master Magisk rooting with our comprehensive guide. Install systemless root, modules, and advanced root management for all Android devices safely."
 head:
   - - link
@@ -11,7 +11,7 @@ head:
       content: article
   - - meta
     - property: og:title
-      content: Complete Magisk Root Guide 2026 - Universal Android Rooting Solution
+      content: Complete Magisk Root Guide - Universal Android Rooting Solution
   - - meta
     - property: og:description
       content: Install Magisk root with our comprehensive guide. Master systemless rooting with advanced module system, root hiding, and complete device management.
@@ -26,13 +26,13 @@ head:
       content: summary_large_image
   - - meta
     - name: twitter:title
-      content: Complete Magisk Root Guide 2026 - Universal Systemless Root
+      content: Complete Magisk Root Guide - Universal Systemless Root
   - - meta
     - name: twitter:description
       content: Master Magisk installation with systemless rooting, module support, and advanced root management for all Android devices.
   - - meta
     - name: keywords
-      content: magisk root guide 2026, systemless root installation, magisk modules, android rooting, zygisk magisk, magisk manager, root hiding, play integrity fix, magisk delta, magisk boot image patching, magisk installation tutorial, android root 2026, magisk denylist, magisk shamiko
+      content: magisk root guide, systemless root installation, magisk modules, android rooting, zygisk magisk, root hiding, play integrity fix, magisk boot image patching, magisk installation tutorial, magisk denylist, magisk shamiko
   - - meta
     - name: author
       content: Awesome Android Root Project
@@ -44,7 +44,7 @@ head:
       content: Android Rooting Solutions
   - - meta
     - property: article:tag
-      content: Magisk Root 2026
+      content: Magisk Root
   - - meta
     - property: article:tag
       content: Systemless Root
@@ -62,7 +62,7 @@ head:
       content: Play Integrity Fix
   - - meta
     - property: article:published_time
-      content:  2025-10-07T09:00:00Z
+      content: 2025-10-07T09:00:00Z
   - - meta
     - property: article:modified_time
       content: 2025-12-26T00:00:00Z
@@ -165,7 +165,7 @@ Magisk is a systemless root solution that provides superuser access without modi
 - You're new to rooting
 
 > [!TIP]
-> Detailed comaprison with other root solutions: [Root Comparison](./root-framework-comparison.md)
+> Detailed comparison with other root solutions: [Root Comparison](./root-framework-comparison.md)
 
 ---
 
