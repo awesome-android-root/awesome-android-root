@@ -532,7 +532,6 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 #### Spotify
 - **[Spotify Plus](https://github.com/LeNerd46/SpotifyPlus)** - Adds beautiful lyrics to Spotify. `FOSS` `[LSP]`
-- **[ReVancedXposed_Spotify](https://github.com/chsbuffer/ReVancedXposed_Spotify)** - Unlocks premium features of Spotify.  `FOSS` `[LSP]`
 
 #### Via Browser Mods
 - **[BetterVia](https://github.com/JiGuroLGC/BetterVia)** - Bypass whitelist restrictions, Screenshot protection, Block components, One-tap theme switching etc. `FOSS` `[LSP]`
