@@ -4,3 +4,4 @@ docs/dev-dist
 node_modules
 docs/README.md
 docs/rooting-guides/*_NEW.md
+improvements.md
