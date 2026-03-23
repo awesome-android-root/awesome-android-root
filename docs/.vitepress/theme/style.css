@@ -179,8 +179,6 @@ body, html {
 
 /* Image loading states and optimization */
 img {
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
   height: auto;
   max-width: 100%;
 }

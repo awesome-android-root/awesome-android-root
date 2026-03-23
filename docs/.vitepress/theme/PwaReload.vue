@@ -1,5 +1,12 @@
 <template>
-  <div v-if="showReload || isOffline" class="pwa-toast" :class="{ 'pwa-toast--offline': isOffline }">
+  <div
+    v-if="showReload || isOffline"
+    class="pwa-toast"
+    :class="{ 'pwa-toast--offline': isOffline }"
+    role="status"
+    aria-live="polite"
+    aria-atomic="true"
+  >
     <!-- Offline notification -->
     <div v-if="isOffline" class="pwa-toast__content">
       <svg class="pwa-toast__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,6 +45,27 @@ const isAutoUpdate = ref(true) // Since you're using autoUpdate
 // Service worker registration
 let registration = null
 let updateCheckInterval = null
+let updateHideTimer = null
+let swUpdateFoundHandler = null
+let swControllerChangeHandler = null
+let swMessageHandler = null
+let installingWorker = null
+let installingWorkerStateHandler = null
+
+const clearUpdateTimer = () => {
+  if (updateHideTimer) {
+    clearTimeout(updateHideTimer)
+    updateHideTimer = null
+  }
+}
+
+const scheduleReloadToastHide = (delayMs) => {
+  clearUpdateTimer()
+  updateHideTimer = setTimeout(() => {
+    showReload.value = false
+    updateHideTimer = null
+  }, delayMs)
+}
 
 // Check for updates
 const checkForUpdates = async () => {
@@ -60,9 +88,7 @@ const showUpdateNotification = () => {
   
   // Auto-hide after 3 seconds for autoUpdate
   if (isAutoUpdate.value) {
-    setTimeout(() => {
-      showReload.value = false
-    }, 3000)
+    scheduleReloadToastHide(3000)
   }
 }
 
@@ -77,14 +103,11 @@ const reload = () => {
 // Handle online/offline status
 const updateOnlineStatus = () => {
   isOffline.value = !navigator.onLine
-  
-  // Hide offline message after 5 seconds when back online
-  if (!isOffline.value && showReload.value) {
-    setTimeout(() => {
-      if (!showReload.value) {
-        isOffline.value = false
-      }
-    }, 5000)
+
+  // Prioritize offline status and avoid stale update prompts while disconnected.
+  if (isOffline.value) {
+    showReload.value = false
+    clearUpdateTimer()
   }
 }
 
@@ -137,36 +160,44 @@ onMounted(async () => {
 
 // Setup service worker event listeners
 const setupServiceWorkerListeners = () => {
-  if (!registration) return
+  if (!registration || swUpdateFoundHandler) return
 
   // Listen for waiting service worker
-  registration.addEventListener('updatefound', () => {
-    const newWorker = registration.installing
-    
-    newWorker?.addEventListener('statechange', () => {
-      if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+  swUpdateFoundHandler = () => {
+    installingWorker = registration.installing
+
+    if (!installingWorker) return
+
+    installingWorkerStateHandler = () => {
+      if (installingWorker?.state === 'installed' && navigator.serviceWorker.controller) {
         showUpdateNotification()
       }
-    })
-  })
+    }
+
+    installingWorker.addEventListener('statechange', installingWorkerStateHandler)
+  }
+
+  registration.addEventListener('updatefound', swUpdateFoundHandler)
 
   // Listen for controller change (autoUpdate)
-  navigator.serviceWorker.addEventListener('controllerchange', () => {
+  swControllerChangeHandler = () => {
     // With autoUpdate, the page will reload automatically
     // Show a brief notification
     updateMessage.value = 'App updated successfully!'
     showReload.value = true
-    setTimeout(() => {
-      showReload.value = false
-    }, 2000)
-  })
+    scheduleReloadToastHide(2000)
+  }
+
+  navigator.serviceWorker.addEventListener('controllerchange', swControllerChangeHandler)
 
   // Listen for messages from service worker
-  navigator.serviceWorker.addEventListener('message', (event) => {
+  swMessageHandler = (event) => {
     if (event.data?.type === 'CACHE_UPDATED') {
       console.log('Cache updated:', event.data.updatedCache)
     }
-  })
+  }
+
+  navigator.serviceWorker.addEventListener('message', swMessageHandler)
 }
 
 onUnmounted(() => {
@@ -174,6 +205,29 @@ onUnmounted(() => {
   window.removeEventListener('online', updateOnlineStatus)
   window.removeEventListener('offline', updateOnlineStatus)
   document.removeEventListener('visibilitychange', handleVisibilityChange)
+
+  if (registration && swUpdateFoundHandler) {
+    registration.removeEventListener('updatefound', swUpdateFoundHandler)
+    swUpdateFoundHandler = null
+  }
+
+  if (navigator.serviceWorker && swControllerChangeHandler) {
+    navigator.serviceWorker.removeEventListener('controllerchange', swControllerChangeHandler)
+    swControllerChangeHandler = null
+  }
+
+  if (navigator.serviceWorker && swMessageHandler) {
+    navigator.serviceWorker.removeEventListener('message', swMessageHandler)
+    swMessageHandler = null
+  }
+
+  if (installingWorker && installingWorkerStateHandler) {
+    installingWorker.removeEventListener('statechange', installingWorkerStateHandler)
+    installingWorkerStateHandler = null
+  }
+
+  installingWorker = null
+  clearUpdateTimer()
   
   // Clear interval
   if (updateCheckInterval) {

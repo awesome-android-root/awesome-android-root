@@ -55,7 +55,6 @@
               @click="toggleFilter(filter.value)"
               :aria-label="filter.ariaLabel"
               :aria-pressed="activeFilters.includes(filter.value)"
-              role="button"
             >
               <span class="pill-icon" aria-hidden="true">{{ filter.icon }}</span>
               <span class="pill-label">{{ filter.label }}</span>
@@ -63,7 +62,7 @@
           </div>
 
           <!-- Filter Stats -->
-          <div v-if="activeFilters.length > 0" class="filter-stats">
+          <div v-if="activeFilters.length > 0 && visibleCount > 0" class="filter-stats">
             <span class="stats-text">
               Showing <strong>{{ visibleCount }}</strong> of <strong>{{ totalCount }}</strong> entries
             </span>
@@ -144,7 +143,6 @@
           :aria-label="filter.ariaLabel"
           :aria-pressed="activeFilters.includes(filter.value)"
           :title="filter.ariaLabel"
-          role="button"
         >
           <span class="pill-icon" aria-hidden="true">{{ filter.icon }}</span>
           <span class="pill-label">{{ filter.label }}</span>
@@ -192,6 +190,7 @@ let cachedSections = null
 let cachedListItems = null
 let animationFrameId = null
 let resizeTimer = null
+let initializationFrameId = null
 
 const quickFilters = [
   { label: 'Featured', value: '⭐', icon: '⭐', ariaLabel: 'Filter by featured apps' },
@@ -288,6 +287,23 @@ const cacheDOMSelectors = () => {
   cachedListItems = document.querySelectorAll('.app-search-content ul li')
   totalCount.value = cachedListItems.length
   visibleCount.value = cachedListItems.length
+}
+
+const initializeFiltersWhenReady = (attempt = 0) => {
+  cacheDOMSelectors()
+
+  if (cachedListItems.length === 0 && attempt < 20) {
+    initializationFrameId = requestAnimationFrame(() => initializeFiltersWhenReady(attempt + 1))
+    return
+  }
+
+  restoreURLState()
+
+  if (activeFilters.value.length > 0) {
+    applyFilters()
+  }
+
+  document.addEventListener('keydown', handleKeyboardShortcuts)
 }
 
 // Announce results to screen readers
@@ -413,22 +429,8 @@ onMounted(() => {
   // Check if mobile
   checkMobile()
   window.addEventListener('resize', checkMobile, { passive: true })
-  
-  // Wait for content to be rendered
-  setTimeout(() => {
-    cacheDOMSelectors()
-    
-    // Restore filters from URL
-    restoreURLState()
-    
-    // Apply filters if any were restored
-    if (activeFilters.value.length > 0) {
-      applyFilters()
-    }
-    
-    // Add keyboard shortcuts
-    document.addEventListener('keydown', handleKeyboardShortcuts)
-  }, 500)
+
+  initializationFrameId = requestAnimationFrame(() => initializeFiltersWhenReady())
 })
 
 onUnmounted(() => {
@@ -439,6 +441,10 @@ onUnmounted(() => {
   // Cancel any pending animation frames
   if (animationFrameId) {
     cancelAnimationFrame(animationFrameId)
+  }
+
+  if (initializationFrameId) {
+    cancelAnimationFrame(initializationFrameId)
   }
   
   // Clear timers
@@ -664,12 +670,12 @@ if (typeof localStorage !== 'undefined') {
   background: var(--vp-c-brand-1);
   border-color: var(--vp-c-brand-1);
   color: white;
-  box-shadow: 0 2px 8px rgba(var(--vp-c-brand-1), 0.25);
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--vp-c-brand-1) 25%, transparent);
 }
 
 .filter-pill.active:hover {
   transform: translateY(-1px);
-  box-shadow: 0 3px 10px rgba(var(--vp-c-brand-1), 0.35);
+  box-shadow: 0 3px 10px color-mix(in srgb, var(--vp-c-brand-1) 35%, transparent);
 }
 
 .pill-icon {

@@ -16,6 +16,7 @@ class ImageOptimizer {
     this.processedImages = new WeakSet()
     this.mutationTimeout = null
     this.pendingMutations = []
+    this.rootElement = null
   }
 
   /**
@@ -85,8 +86,10 @@ class ImageOptimizer {
   /**
    * Initialize the observer
    */
-  init() {
+  init(rootElement = document.querySelector('.VPContent') || document.body) {
     if (typeof window === 'undefined' || this.observer) return
+
+    this.rootElement = rootElement
 
     this.observer = new MutationObserver((mutations) => {
       // Collect mutations and debounce processing
@@ -102,7 +105,7 @@ class ImageOptimizer {
     })
 
     // Observe with optimized options
-    this.observer.observe(document.body, {
+    this.observer.observe(this.rootElement, {
       childList: true,
       subtree: true,
       // Only observe element additions, not attributes or character data
@@ -111,7 +114,7 @@ class ImageOptimizer {
     })
 
     // Process existing images on initialization
-    this.processImages(document.body)
+    this.processImages(this.rootElement)
   }
 
   /**
@@ -131,7 +134,16 @@ class ImageOptimizer {
     
     // Reset processed images
     this.processedImages = new WeakSet()
+
+    // Reset observer root
+    this.rootElement = null
   }
+}
+
+function runAfterRender(callback) {
+  requestAnimationFrame(() => {
+    requestAnimationFrame(callback)
+  })
 }
 
 /** @type {import('vitepress').Theme} */
@@ -160,11 +172,15 @@ export default {
     // Client-side only enhancements
     if (typeof window !== 'undefined') {
       const imageOptimizer = new ImageOptimizer()
-      
-      // Initialize after app is mounted
-      app.config.globalProperties.$onMounted = () => {
-        // Delay initialization to ensure DOM is ready
-        setTimeout(() => imageOptimizer.init(), 0)
+      const onBeforeUnload = () => {
+        imageOptimizer.destroy()
+      }
+
+      const initializeClientEnhancements = () => {
+        imageOptimizer.destroy()
+        const contentRoot = document.querySelector('.VPContent') || document.body
+        imageOptimizer.init(contentRoot)
+        addAriaLabels()
       }
       
       // Properly handle route changes
@@ -174,20 +190,15 @@ export default {
       }
       
       router.onAfterRouteChanged = () => {
-        // Reinitialize after route change
-        setTimeout(() => imageOptimizer.init(), 100)
-        
-        // Add ARIA labels for accessibility
-        addAriaLabels()
+        // Reinitialize after route change when DOM settles
+        runAfterRender(initializeClientEnhancements)
       }
       
       // Cleanup on page unload
-      window.addEventListener('beforeunload', () => {
-        imageOptimizer.destroy()
-      })
-      
-      // Add ARIA labels on initial load
-      setTimeout(() => addAriaLabels(), 500)
+      window.addEventListener('beforeunload', onBeforeUnload)
+
+      // Initialize on first load
+      runAfterRender(initializeClientEnhancements)
       
       // Optional: Add performance monitoring
       if (import.meta.env.DEV) {
@@ -281,7 +292,11 @@ function addAriaLabels() {
   if (menuToggle && !menuToggle.hasAttribute('aria-label')) {
     menuToggle.setAttribute('aria-label', 'Toggle navigation menu')
     menuToggle.setAttribute('aria-expanded', 'false')
-    
+  }
+
+  if (menuToggle && menuToggle.dataset.aarBoundExpanded !== 'true') {
+    menuToggle.dataset.aarBoundExpanded = 'true'
+
     // Update aria-expanded on click
     menuToggle.addEventListener('click', () => {
       const expanded = menuToggle.getAttribute('aria-expanded') === 'true'
