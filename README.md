@@ -1249,7 +1249,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[⭐ Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)** - Hide Magisk. `Proprietary` `[M]`
 - **[⭐ SUSFS Module](https://github.com/sidex15/susfs4ksu-module)** - An addon root hiding service for KernelSU. `FOSS` `[M]`
 - **[Hide My Applist](https://github.com/Dr-TSNG/Hide-My-Applist)** - Intercept applist detections. `Proprietary` `[LSP]`
-- **[HMAL Fork](https://github.com/pumPCin/HMAL)** - FOSS version of Hide My Applist with no Google Services, ads, logcat logs, filtered counters, network activity. `FOSS` `[LSP]`
+- **[HMAL OSS](https://github.com/frknkrc44/HMA-OSS)** - FOSS version of Hide My Applist to hide your app list, settings, package installers and more. `FOSS` `[LSP]`
 - **[Komodo Build Props](https://github.com/Elcapitanoe/Komodo-Build-Prop#komodo-build-props)** - Spoof your Android device as the Pixel 9 Pro XL (komodo/komodo_beta). `FOSS` `[M]`
 - **[Mountify](https://github.com/backslashxx/mountify)** - Globally mounted modules via OverlayFS. `FOSS` `[M]`
 - **[NoHello](https://github.com/MhmRdd/NoHello)** -  A Zygisk module to hide root. `FOSS` `[M]`
