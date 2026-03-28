@@ -58,7 +58,7 @@ head:
 
 # Motorola Root Guide
 
-Root Motorola devices via official unlock code system. Covers Edge 50, Edge 40, Edge 30, Moto G series, and legacy Moto devices.
+Root Motorola devices via the official unlock code system. Covers Edge 60, Edge 50, Edge 40, Edge 30, Moto G series, and legacy Moto devices.
 
 ## Quick Navigation
 
@@ -85,26 +85,25 @@ Root Motorola devices via official unlock code system. Covers Edge 50, Edge 40, 
 
 ### Motorola Edge Series
 
+**Edge 60 Series (2025):**
+- Edge 60, Edge 60 Fusion, Edge 60 Stylus, Edge 60 Pro
+- Runs Android 15; eligible for three OS upgrades
+- Uses init_boot.img
+- Ensure init_boot.img matches your current build number; do NOT use launch firmware if you've already updated
+
 **Edge 50 Series (2024):**
-- Edge 50 Ultra
-- Edge 50 Pro
-- Edge 50 Fusion
-- Growing support
+- Edge 50 Ultra, Edge 50 Pro, Edge 50 Fusion, Edge 50 Neo
 - Uses init_boot.img
 
 **Edge 40 Series (2023):**
-- Edge 40 Pro
-- Edge 40 Neo
-- Edge 40
-- Good community
-- Active development
+- Edge 40 Pro, Edge 40 Neo, Edge 40
+- Uses init_boot.img
+- Good community support, active LineageOS development
 
 **Edge 30 Series (2022):**
-- Edge 30 Ultra
-- Edge 30 Fusion
-- Edge 30 Pro
-- Excellent support
-- Many custom ROMs
+- Edge 30 Ultra, Edge 30 Fusion, Edge 30 Pro
+- Uses boot.img or init_boot.img (check Magisk Ramdisk field)
+- Excellent support, many custom ROMs
 
 **Older Edge:**
 - Edge+/Edge (2020-2021)
@@ -113,62 +112,47 @@ Root Motorola devices via official unlock code system. Covers Edge 50, Edge 40, 
 
 ### Moto G Series
 
-**Moto G Power/Stylus (2024):**
-- G Power (2024)
-- G Stylus 5G (2024)
-- Budget-friendly
-- Basic root support
+**Moto G (2024-2025):**
+- G Power, G Stylus 5G, G85, G75, G55
+- Uses init_boot.img
+- Many recent Moto G devices on Android 13/14/15 encounter "Preflash validation failed" when flashing images patched with Magisk v27/28+
 
-**Moto G Series (2023):**
-- Moto G84/G73/G54
-- Popular mid-range
+**Moto G (2023):**
+- Moto G84/G73/G54/G64
+- Uses init_boot.img
 - Good XDA support
-- Multiple ROMs
 
-**Moto G Series (2022):**
+**Moto G (2022 and older):**
 - Moto G82/G72/G62/G52
-- Excellent community
-- Many custom ROMs
-- Active development
-
-**Legacy Moto G:**
-- G100/G60/G40
-- G9 Plus/Power/Play
-- G8 series
+- Moto G100/G60/G40
+- Moto G9 Plus/Power/Play, G8 series
+- Uses boot.img
 - Strong custom ROM scene
 
 ### Moto X/Z Series (Legacy)
 
 **Moto X:**
 - X4, X Style, X Play
-- Classic Motorola
-- Good ROM support
 
 **Moto Z:**
 - Z4/Z3/Z2/Z Play
-- Modular phones
-- Active community
 
 ### Carrier Considerations
 
 **Unlockable:**
-- International models
+- International/global models
 - Retail unlocked (US)
-- Most regions globally
 
 **Not Unlockable:**
-- Verizon (most models)
-- AT&T (some models)
-- Sprint/Boost/Cricket variants
-- Prepaid carrier-locked versions
+- Carrier-exclusive models (e.g. Verizon, AT&T, Tracfone) are almost never unlockable
+- Bootloader unlock codes are not available for Amazon Branded devices
+- Prepaid carrier-locked variants
 
 **ThinkShield:**
-- Business/enterprise Motorola
-- Usually locked down
-- Not rootable typically
+- Business/enterprise Motorola devices
+- Usually locked down, not rootable
 
 </details>
-
 
 ## Prerequisites
 
@@ -176,21 +160,19 @@ Root Motorola devices via official unlock code system. Covers Edge 50, Edge 40, 
 
 ::: danger ⚠️ BEFORE YOU START
 
-**Warranty Void:** Motorola explicitly voids warranty upon unlock. No reversal.
+**Warranty Void:** Once you get the unlock code, your device is no longer covered by the Motorola warranty.
 
-**Unlock Code Required:** Must request from Motorola website. Process takes time.
+**Unlock Code Required:** Must request from Motorola's official website. May take minutes to hours.
 
 **Data Wipe:** Unlocking erases all data including internal storage.
 
-**No Insurance:** Warranty and service completely void after unlock.
-
-**Carrier Check:** Verify your device can be unlocked. Many US carrier models cannot.
+**Carrier Check:** There are certain restrictions such as carrier-exclusive models. To find out if your phone supports bootloader unlock you will need to visit Motorola's page and proceed to follow the process.
 :::
 
 ### Hardware Requirements
 
 - Motorola device (unlockable model)
-- Quality USB cable
+- Quality USB cable (try multiple cables if you encounter issues)
 - Computer (Windows, macOS, Linux)
 - 50%+ battery charge
 
@@ -202,21 +184,20 @@ Root Motorola devices via official unlock code system. Covers Edge 50, Edge 40, 
    - Download: [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools)
 
 2. **Motorola USB Drivers** (Windows)
-   - Usually auto-install
-   - Or [Download from Motorola](https://en-us.support.motorola.com/app/usb-drivers)
+   - Download: [Motorola USB Drivers](https://en-us.support.motorola.com/app/usb-drivers)
 
 3. **Web Browser**
    - For unlock code request
-   - Valid email address
+   - Valid email address (Gmail recommended)
 
 **On Device:**
 
 1. **Magisk APK**
-   - Download: [Magisk GitHub](https://github.com/topjohnwu/Magisk/releases)
+   - Download: [Magisk GitHub Releases](https://github.com/topjohnwu/Magisk/releases)
+   - Android compatibility: Android 6.0 and higher
 
 2. **Motorola Account**
    - For unlock code request
-   - Valid email
 
 ### Device Preparation
 
@@ -243,7 +224,7 @@ adb devices
 
 ## Get Unlock Code
 
-Motorola requires official unlock code from their website.
+Motorola requires an official unlock code from their website.
 
 ### Step 1: Gather Device Information
 
@@ -263,41 +244,34 @@ fastboot oem get_unlock_data
 
 **Example output:**
 ```
-(bootloader) 0A40040192024205#4C4D3556313
-(bootloader) 230800000000000#BD00A0A40310F0
-(bootloader) 0A40040192024205#4C4D355631
+(bootloader) 0A40040192024205#4C4D3556313230
+(bootloader) 30373731363031303332323239#BD00
+(bootloader) 8A672BA4746C2CE02328A2AC0C39F95
+(bootloader) 1A3E5#1F53280002000000000000000
+(bootloader) 0000000
 ```
 
-**Combine to:**
+Copy the code part off of each line (exclude the `(bootloader)` part and remove all spaces) and make it a single string:
 ```
-0A40040192024205#4C4D35563132308000000000000#BD00A0A40310F00A40040192024205#4C4D3556313
+0A40040192024205#4C4D355631323030373731363031303332323239#BD008A672BA4746C2CE02328A2AC0C39F951A3E5#1F532800020000000000000000000000
 ```
+
+::: tip DATA SCRUB TOOL
+Be careful not to remove part of the unlock key when removing the junk, spaces and extra lines. You can paste it into the online Motorola dataScrubTool to clean it up automatically.
+:::
 
 ### Step 2: Request Unlock Code
 
-1. Visit [Motorola Bootloader Unlock](https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-a)
+1. Visit [Motorola Bootloader Unlock](https://en-us.support.motorola.com/app/standalone/bootloader/unlock-your-device-a)
 
-2. **Read warnings carefully:**
-   - Warranty void
-   - Data wipe
-   - Permanent consequences
+2. Sign in with your Motorola account
 
-3. **Enter device information:**
-   - Device model
-   - Device ID string (from Step 1)
-   - Valid email address
+3. Unlocking your device and installing your own software might cause the device to stop working, disable important features and functionality.
 
-4. **Submit request**
+4. Paste the string on the website. Click "Can my device be unlocked?" You'll receive an email with your unlock key.
 
 5. **Check email:**
-   - Unlock code sent to email
-   - May take minutes to hours
-   - Check spam folder
-
-**Email contains unique unlock code (example):**
-```
-Your unique unlock code: ABCDEF1234567890
-```
+   - Try to use Gmail as your account email for Motorola. If you don't receive the unlock code (which should come in about a minute or so), try changing your account email address and requesting the code again.
 
 ### Step 3: Save Unlock Code
 
@@ -327,8 +301,7 @@ Or hardware keys:
 fastboot devices
 
 # Unlock using code from email
-fastboot oem unlock ABCDEF1234567890
-# Replace with your actual unlock code
+fastboot oem unlock UNIQUE_KEY_FROM_EMAIL
 ```
 
 **On Device:**
@@ -336,12 +309,6 @@ fastboot oem unlock ABCDEF1234567890
 - Device automatically wipes
 - Bootloader unlocks
 - Device reboots
-
-**Some Motorola devices use:**
-```bash
-fastboot flashing unlock
-# Then confirm on device screen
-```
 
 ### Step 3: Verify Unlock
 
@@ -352,8 +319,7 @@ fastboot getvar unlocked
 # Should return: yes
 ```
 
-Or check on boot:
-- "Bootloader unlocked" warning (normal)
+On boot you will see a "Bootloader unlocked" warning - this is normal.
 
 ---
 
@@ -363,29 +329,34 @@ Or check on boot:
 
 | Device | Android Version | Image to Patch |
 |--------|-----------------|----------------|
-| Edge 50 series | Android 14 | init_boot.img |
+| Edge 60 series | Android 15 | init_boot.img |
+| Edge 50 series | Android 14/15 | init_boot.img |
 | Edge 40 series | Android 13/14 | init_boot.img |
 | Edge 30 series | Android 12/13 | boot.img or init_boot.img |
-| Moto G (2023-2024) | Android 13/14 | init_boot.img |
+| Moto G (2023-2025) | Android 13-15 | init_boot.img |
 | Moto G (2022 and older) | Android 12 and below | boot.img |
 
-**Check Magisk app "Ramdisk" field if unsure.**
+**Open the Magisk app and check the "Ramdisk" field if unsure. If Ramdisk = Yes, use boot.img. If your device has a separate init_boot partition, use init_boot.img.**
 
-### Method 1: Boot Image Patching
+### Method 1: Boot Image Patching (Standard)
 
 **Step 1: Get Stock Firmware**
 
-1. Download from [Motorola Firmware](https://mirrors.lolinet.com/firmware/moto/) or XDA
+1. Download from [Motorola Rescue and Smart Assistant (Software Fix)](https://en-us.support.motorola.com/app/softwarefix) or [Lolinet Motorola Firmware Mirror](https://mirrors.lolinet.com/firmware/moto/)
 2. Extract firmware archive
-3. Find boot.img or init_boot.img
+3. Find `boot.img` or `init_boot.img`
+
+::: warning FIRMWARE VERSION MATCH
+If you already installed an official update before rooting: Do NOT extract init_boot.img from the initial/launch firmware. DO extract init_boot.img from the updated firmware that matches your current build number.
+:::
 
 **Step 2: Transfer to Device**
 
 ```bash
-# For newer devices
+# For newer devices (Android 13+)
 adb push init_boot.img /sdcard/Download/
 
-# For older devices
+# For older devices (Android 12 and below)
 adb push boot.img /sdcard/Download/
 ```
 
@@ -393,29 +364,29 @@ adb push boot.img /sdcard/Download/
 
 ```bash
 # Install Magisk
-adb install Magisk-v27.0.apk
+adb install magisk.apk
 ```
 
 On device:
 1. Open Magisk
 2. Install > Select and Patch a File
 3. Choose boot/init_boot image
-4. Wait for patching
+4. Wait for patching to complete
 
 **Step 4: Flash Patched Image**
 
 ```bash
-# Get patched image
+# Get patched image back to PC
 adb pull /sdcard/Download/magisk_patched_xxxxx.img ./
 
-# Boot to fastboot
+# Reboot to fastboot
 adb reboot bootloader
 
-# Flash
-# For Android 13/14
+# Flash (use the correct partition for your device)
+# For devices with init_boot partition:
 fastboot flash init_boot magisk_patched_xxxxx.img
 
-# For Android 12 and older
+# For devices using boot.img:
 fastboot flash boot magisk_patched_xxxxx.img
 
 # Reboot
@@ -425,8 +396,20 @@ fastboot reboot
 **Step 5: Verify Root**
 
 1. Open Magisk app
-2. Should show installed
+2. Should show "Installed" with version number
 3. Test: `adb shell su`
+
+### Method 2: Fastboot Boot + Direct Install (Edge 50 Fusion and similar)
+
+Some Motorola devices (especially MediaTek-based ones like the Edge 50 Fusion) don't work with the standard flash method. Use this alternative:
+
+1. Unlock bootloader like any other Motorola device
+2. Install Magisk app
+3. Patch boot.img with Magisk and transfer to PC
+4. Execute `adb reboot bootloader`
+5. Execute `fastboot boot patched_boot.img`
+6. Open Magisk app and select "Direct Install"
+7. Reboot - device is now rooted
 
 ---
 
@@ -437,10 +420,10 @@ fastboot reboot
 **Settings:**
 - **Zygisk**: Enable
 - **Enforce DenyList**: Enable
-- **Hide Magisk**: For banking
 
 **DenyList:**
 - Google Play Services
+- Google Play Store
 - Banking apps
 - Payment apps
 
@@ -448,31 +431,34 @@ fastboot reboot
 
 **Battery:**
 1. Settings > Battery
-2. Magisk and root apps
-3. Set "Unrestricted"
+2. Magisk and root apps > Set "Unrestricted"
 
 **Background:**
-- Allow background activity
-- Disable battery optimization
+- Allow background activity for root apps
+- Disable battery optimization for Magisk
 
 ### Recommended Modules
 
-- **Universal SafetyNet Fix**
-- **Shamiko**
-- **LSPosed**
-- **Systemless Hosts**
+- **Play Integrity Fix** (replaces Universal SafetyNet Fix)
+- **Shamiko** (hide root from detection)
+- **LSPosed** (Xposed framework)
+- **Systemless Hosts** (ad blocking support)
 
 ---
 
 ## OTA Handling
 
-### For A/B Devices
+### For A/B Devices (All Modern Motorola)
 
 **Process:**
 1. Download OTA
 2. Magisk > Install to Inactive Slot
 3. Reboot
 4. Root preserved
+
+::: warning
+After rooting, OTA updates may fail with "package verification failed." The only way to update is to download the full firmware package and flash it yourself using Rescue and Smart Assistant or fastboot.
+:::
 
 ---
 
@@ -486,18 +472,16 @@ fastboot reboot
 
 Solutions:
 - Check spam folder
-- Wait 24-48 hours
+- Wait up to 24 hours
 - Re-submit request
-- Use different email
+- Try to use Gmail as your account email for Motorola
 - Contact Motorola support
 
 **Code Doesn't Work**
 
 Solutions:
-- Verify copied correctly
-- Check for extra spaces
-- Try without hyphens
-- Re-request code
+- Verify copied correctly - no extra spaces
+- Be careful not to remove part of the unlock key when removing the junk, spaces and extra lines
 
 ### Bootloader Issues
 
@@ -505,33 +489,49 @@ Solutions:
 
 Causes:
 - Carrier-locked device
-- ThinkShield enabled
-- Business/enterprise model
+- ThinkShield/enterprise model
+- Device not eligible
 
-If grey: Device likely cannot unlock
+If greyed out: device likely cannot be unlocked.
 
-**Unlock Command Fails**
+**Device Shows "Not Eligible" on Motorola Website**
 
-Solutions:
-- Verify code exactly
-- Try both commands:
-  - `fastboot oem unlock CODE`
-  - `fastboot flashing unlock`
-- Check device compatibility
+- The site often gives false ineligible responses
+- The device's CID is one of the factors that can determine if it is eligible for unlocking
+- Check your CID with: `fastboot getvar cid`
+- Try submitting again or use a different browser
+
+### "Preflash Validation Failed"
+
+This is a common Motorola-specific error when flashing patched images.
+
+**Cause:** This can mean multiple things including flashing an older image, or DMVerity/Verification still being enabled. If DMVerity/Verification is still enabled and you try to flash a rooted image, it will be denied because the device can detect it's been modified.
+
+**Solution 1: Use fastbootd mode**
+Reboot into Fastboot-Fastboot mode (fastbootd) instead of Fastboot-bootloader. While still in bootloader mode, send: `fastboot reboot fastboot`. While in fastbootd mode, repeat flashing the images - they should succeed this time.
+
+**Solution 2: Disable vbmeta verification**
+```bash
+fastboot flash --disable-verity --disable-verification vbmeta vbmeta.img
+```
+
+**Solution 3: Use the fastboot boot method**
+Instead of flashing directly, use `fastboot boot patched_boot.img`, then do a Direct Install from within the Magisk app.
 
 ### Installation Issues
 
-**Magisk Not Working**
+**Magisk Not Working After Flash**
 
 Solutions:
-1. Verify correct image
-2. Check Android version
+1. On some devices like the Edge 50 Ultra, flashing patched boot.img alone doesn't work - you may need to patch init_boot.img instead
+2. Verify firmware version matches your current build
 3. Re-patch and flash
 4. Clear Magisk data
 
 **Bootloop**
 
 ```bash
+# Restore stock image
 fastboot flash boot stock_boot.img
 # Or
 fastboot flash init_boot stock_init_boot.img
@@ -555,6 +555,7 @@ fastboot reboot
 ```bash
 # Flash stock firmware images
 fastboot flash boot stock_boot.img
+# Or for newer devices:
 fastboot flash init_boot stock_init_boot.img
 fastboot reboot
 ```
@@ -562,13 +563,11 @@ fastboot reboot
 ### Relock Bootloader
 
 ::: danger RELOCK WARNING
-Only when completely stock. Warranty already void (doesn't restore).
+Don't relock the bootloader if it was unlocked by any other method than official. Reflash stock firmware, factory reset, reboot, and make sure everything is working correctly before relocking. Warranty remains void after relocking.
 :::
 
 ```bash
 fastboot oem lock
-# Or
-fastboot flashing lock
 ```
 
 ---
@@ -578,8 +577,8 @@ fastboot flashing lock
 ### Popular ROMs
 
 **LineageOS:**
-- Official for many Moto G
-- Stable and maintained
+- Official for many Moto G and Edge devices
+- Stable and well-maintained
 
 **Pixel Experience:**
 - Pixel-like interface
@@ -599,22 +598,25 @@ fastboot flashing lock
 
 ### Security
 
-1. **Hide Magisk** for apps
-2. **Configure DenyList**
-3. **Trusted modules only**
-4. **Keep updated**
+1. **Configure DenyList** for sensitive apps
+2. **Trusted modules only** - verify sources
+3. **Keep Magisk updated** - latest versions support new sepolicy binary format introduced in Android 16
+4. **Back up boot images** before every update
 
 ---
 
 ## Community Resources
 
 **Official Motorola:**
-- [Bootloader Unlock](https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-a) - Official unlock
-- [Motorola Support](https://www.motorola.com/us/support) - General support
+- [Bootloader Unlock](https://en-us.support.motorola.com/app/standalone/bootloader/unlock-your-device-a) - Official unlock portal
+- [Supported Devices Info](https://en-us.support.motorola.com/app/answers/detail/a_id/87215) - Official eligibility info
+- [Motorola USB Drivers](https://en-us.support.motorola.com/app/usb-drivers) - Official drivers
+- [Motorola Rescue & Smart Assistant](https://en-us.support.motorola.com/app/softwarefix) - Stock firmware tool
 
 **Developer Community:**
-- [XDA Motorola Forums](https://xdaforums.com/c/motorola.11990/) - Development
-- [Reddit r/MotoG](https://www.reddit.com/r/MotoG/) - Community
+- [XDA Motorola Forums](https://xdaforums.com/c/motorola.11990/) - Development & guides
+- [XDA Bootloader Unlock Guide](https://xdaforums.com/t/guide-un-locking-motorola-bootloader.4079111/) - Comprehensive unlock reference
+- [Reddit r/MotoG](https://www.reddit.com/r/MotoG/) - Moto G community
 - [Reddit r/Motorola](https://www.reddit.com/r/Motorola/) - General Motorola
 
 **Awesome Android Root help resources:**
@@ -624,11 +626,12 @@ fastboot flashing lock
 ### Getting Help
 
 **Provide:**
-- Exact Motorola model
-- Android version
+- Exact Motorola model and codename
+- Android version and build number
 - Unlock code status
-- Error messages
+- Exact error messages (especially fastboot output)
 - Steps attempted
+- Which Magisk version was used to patch
 
 ---
 
