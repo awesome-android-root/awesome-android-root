@@ -93,30 +93,30 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 
 ### Why Choose Custom ROMs?
 
-- **Extended device lifespan** — updates beyond OEM EOL
-- **Enhanced privacy** — reduced tracking/telemetry
-- **Bloatware-free** — clean system without vendor apps
-- **Performance gains** — better battery, responsiveness
-- **Deep customization** — theming, features, system tweaks
-- **Faster security patches** — community-maintained
-- **Optional Google services** — choose microG/sandboxed Play/none
+- **Extended device lifespan** - updates beyond OEM EOL
+- **Enhanced privacy** - reduced tracking/telemetry
+- **Bloatware-free** - clean system without vendor apps
+- **Performance gains** - better battery, responsiveness
+- **Deep customization** - theming, features, system tweaks
+- **Faster security patches** - community-maintained
+- **Optional Google services** - choose microG/sandboxed Play/none
 
 ### ROM Categories
 
 #### Privacy & Security Focused:
-- **GrapheneOS** — Maximum security for Pixel devices (relockable bootloader)
-- **CalyxOS** — Privacy-first with optional Sandboxed Google Play
+- **GrapheneOS** - Maximum security for Pixel devices (relockable bootloader)
+- **CalyxOS** - Privacy-first with optional Sandboxed Google Play
 
 #### General Use & Features:
-- **LineageOS** — Most popular, widest device support
-- **Pixel Experience** — Pixel-like UX for non-Pixel devices
-- **crDroid** — Feature-rich with heavy customization
-- **PixelOS** / ArrowOS — Lightweight, clean, frequent updates
-- **iodéOS** — Privacy-focused with built-in ad/tracker blocking
+- **LineageOS** - Most popular, widest device support
+- **Pixel Experience** - Pixel-like UX for non-Pixel devices
+- **crDroid** - Feature-rich with heavy customization
+- **PixelOS** / ArrowOS - Lightweight, clean, frequent updates
+- **iodéOS** - Privacy-focused with built-in ad/tracker blocking
 
 #### Gaming & Performance:
-- **Evolution X** — Balanced features and performance
-- **Project Sakura** — Performance-focused builds
+- **Evolution X** - Balanced features and performance
+- **Project Sakura** - Performance-focused builds
 
 ::: warning **Notes:**
 - GrapheneOS is Pixel-only and supports secure bootloader re-locking. Most other ROMs require leaving the bootloader unlocked; do NOT relock unless the ROM explicitly supports AVB re-lock.
@@ -126,11 +126,11 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 ## Critical Warnings
 
 ::: danger ⚠️ **Custom ROM Risks**
-- **Warranty implications** — may void warranty depending on region (statutory warranty rights may still apply in some jurisdictions)
-- **Brick risk** — wrong images or wrong partition can hard-brick
-- **App compatibility** — Banking/government apps rely on Play Integrity and may refuse to run
-- **Your responsibility** — updates, security patches, backups, and recovery
-- **Bootloader re-locking** — relocking on unsupported ROMs can hard-brick; only relock when ROM explicitly supports AVB 2.0 with proper vbmeta signing
+- **Warranty implications** - may void warranty depending on region (statutory warranty rights may still apply in some jurisdictions)
+- **Brick risk** - wrong images or wrong partition can hard-brick
+- **App compatibility** - Banking/government apps rely on Play Integrity and may refuse to run
+- **Your responsibility** - updates, security patches, backups, and recovery
+- **Bootloader re-locking** - relocking on unsupported ROMs can hard-brick; only relock when ROM explicitly supports AVB 2.0 with proper vbmeta signing
 :::
 
 ---
@@ -140,9 +140,9 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 ### Essential Prerequisites
 1. **[Unlocked bootloader](./how-to-unlock-bootloader.md)**
 2. **[Custom recovery](./how-to-install-custom-recovery.md)** (TWRP/OrangeFox) or ROM’s own recovery
-3. **Compatible ROM** — for your exact device codename/variant
-4. **Backup everything** — consider both a NANDroid (if supported) and app/data backups
-5. **Stock firmware on hand** — for emergency restore (EDL/Odin/Mi Flash/fastboot images)
+3. **Compatible ROM** - for your exact device codename/variant
+4. **Backup everything** - consider both a NANDroid (if supported) and app/data backups
+5. **Stock firmware on hand** - for emergency restore (EDL/Odin/Mi Flash/fastboot images)
 
 ### Required Tools
 - **Latest Android Platform Tools (ADB/Fastboot**) from Google
@@ -192,7 +192,7 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 - adb shell getprop ro.product.device (codename)
 - fastboot getvar product
 - Beware of regional/carrier variants (e.g., SM-G991B ≠ SM-G991U)
-- Xiaomi anti-rollback (ARB) can brick if you flash older firmware — always match required base firmware
+- Xiaomi anti-rollback (ARB) can brick if you flash older firmware - always match required base firmware
 
 ---
 
@@ -200,7 +200,7 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 
 There are two primary install flows:
 - **Recovery-based** (TWRP/OrangeFox/Lineage Recovery) via Install or ADB Sideload
-- **Fastboot-based** (images/graphical web installers) — common for Pixels/GrapheneOS
+- **Fastboot-based** (images/graphical web installers) - common for Pixels/GrapheneOS
 
 ### Step 1: Create Complete Backup
 
@@ -337,9 +337,9 @@ Notes:
 - Be mindful: aggressive adblocking/VPNs may break push notifications; exclude FCM if needed
 
 ### App Installation
-- F-Droid — open-source apps
-- Aurora Store — access Play Store without Google account
-- APKMirror — verify signatures; prefer official dev sources where possible
+- F-Droid - open-source apps
+- Aurora Store - access Play Store without Google account
+- APKMirror - verify signatures; prefer official dev sources where possible
 
 ### Banking/Government Apps
 - Many now enforce Play Integrity API (hardware-backed attestation).
@@ -411,9 +411,9 @@ Notes:
 
 ### Community Resources
 
-- [XDA Developers](https://forum.xda-developers.com/) — device forums, guides, kernels
-- [r/LineageOS](https://reddit.com/r/LineageOS) — user discussions
-- [GitHub Issues](https://github.com/LineageOS) — bugs and development
+- [XDA Developers](https://forum.xda-developers.com/) - device forums, guides, kernels
+- [r/LineageOS](https://reddit.com/r/LineageOS) - user discussions
+- [GitHub Issues](https://github.com/LineageOS) - bugs and development
 - [FAQ & Troubleshooting](../faqs.md)
 - [Join Community](../about.md#community)
 
@@ -438,7 +438,7 @@ Official Resources:
 ::: tip **Congratulations! You’ve installed a custom ROM.**
 
 #### What’s Next?
-- [Add Root Access](./index.md#root-solutions-comparison) — Magisk (Zygisk), KernelSU (kernel-based), APatch
-- [Custom Kernels](./index.md#advanced-framework-solutions) — performance/battery tuning
-- [LSPosed Modules](./index.md#lsposed-framework) — modern Xposed-compatible modules (Zygisk/LSPosed)
+- [Add Root Access](./index.md#root-solutions-comparison) - Magisk (Zygisk), KernelSU (kernel-based), APatch
+- [Custom Kernels](./index.md#advanced-framework-solutions) - performance/battery tuning
+- [LSPosed Modules](./index.md#lsposed-framework) - modern Xposed-compatible modules (Zygisk/LSPosed)
 :::

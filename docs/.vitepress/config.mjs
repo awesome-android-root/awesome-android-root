@@ -375,7 +375,7 @@ export default withPwa(defineConfig({
     
     // NOTE: injectManifest block only applies when strategies: 'injectManifest'.
     // With generateSW (current strategy) workbox handles precache manifest generation
-    // automatically — no manual globPatterns needed here.
+    // automatically - no manual globPatterns needed here.
   },
 
 

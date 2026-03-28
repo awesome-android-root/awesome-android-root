@@ -883,7 +883,7 @@ Custom recovery successfully installed. Choose your path forward:
 - [🌐 GitHub](https://github.com/awesome-android-root/awesome-android-root): Contribute to the project's source and development.
 - [𝕏 Twitter](https://x.com/awsm_and_root): Stay updated with the latest news and community highlights.
 - [Complete FAQ](../faqs.md)
-- XDA Forums — Device-specific help and threads
+- XDA Forums - Device-specific help and threads
 
 ---
 
