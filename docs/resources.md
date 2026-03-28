@@ -118,11 +118,27 @@ head:
 |:---------|:---------|:--------|:-------|:----------|:-------|:-------|
 | **[Magisk](./rooting-guides/magisk-guide.md)** | Universal compatibility | 6.0+ | ✅ Built-in | DenyList | Active | [GitHub](https://github.com/topjohnwu/Magisk) |
 | **[KernelSU](./rooting-guides/kernelsu-guide.md)** | Kernel-level stealth root | 12+ (GKI) | Via module | Built-in | Active | [GitHub](https://github.com/tiann/KernelSU) |
+| **[KernelSU Next](./rooting-guides/kernelsu-guide.md)** | Advanced kernel root, broader kernel support | 4.4–6.6 kernels | Via module | Built-in + SUSFS | Active | [GitHub](https://github.com/KernelSU-Next/KernelSU-Next) |
 | **[APatch](./rooting-guides/apatch-guide.md)** | Modern GKI devices | 12+ (GKI) | Via module | KPM-based | Active | [GitHub](https://github.com/bmax121/APatch) |
 | **[LSPosed (Fork)](./rooting-guides/lsposed-guide.md)** | Xposed framework modules | 8.1–16 | Required | N/A | Active | [GitHub](https://github.com/JingMatrix/LSPosed) |
 
 > [!NOTE]
-> **Magisk** remains the most universally compatible solution. **KernelSU** and **APatch** offer superior stealth on GKI devices but require kernel-level integration. For Xposed modules, **LSPosed** (JingMatrix fork) is the actively maintained option.
+> **Magisk** remains the most universally compatible solution. **KernelSU** and **APatch** offer superior stealth on GKI devices but require kernel-level integration. **KernelSU Next** is an advanced kernel-based root solution supporting kernels from 4.4 up to 6.6, extending compatibility to non-GKI and older devices.
+ 
+> [!TIP]
+> For the best root hiding currently, **KernelSU Next + SUSFS** is recommended by the community. For Xposed modules, **LSPosed** (JingMatrix fork) is the actively maintained option.
+
+
+### Zygisk implementations
+
+| Tool | Purpose | Compatibility | Source |
+|:-----|:--------|:--------------|:-------|
+| **Magisk Built-in Zygisk** | Default Zygisk in Magisk | Magisk 24+ | Built into [Magisk](https://github.com/topjohnwu/Magisk) |
+| **ZygiskNext** | Standalone Zygisk for KSU/Magisk/APatch | Magisk, KernelSU, APatch | [GitHub](https://github.com/Dr-TSNG/ZygiskNext) |
+| **ReZygisk** | Transparent, open-source Zygisk fork | Magisk, KernelSU, APatch | [GitHub](https://github.com/PerformanC/ReZygisk) |
+
+> [!TIP]
+> View the [Zygisk Implementations Comparison](#comparison-of-zygisk-implementations) for detailed strengths and trade-offs of each option.
 
 ### Non-root privilege tools
 
@@ -142,7 +158,7 @@ head:
 | **OrangeFox** | Enhanced UI, built-in tools | Select devices | [orangefox.download](https://orangefox.download/) |
 | **PitchBlack** | TWRP fork with extras | Select devices | [pitchblackrecovery.com](https://pitchblackrecovery.com/) |
 | **SkyHawk** | Lightweight alternative | Select devices | [GitHub](https://github.com/SHRP) |
-| **AOSP Recovery Source** | Offical base recovery | Reference | [AOSP](https://android.googlesource.com/platform/bootable/recovery/) |
+| **AOSP Recovery Source** | Official base recovery | Reference | [AOSP](https://android.googlesource.com/platform/bootable/recovery/) |
 
 #### Platform tools
 
@@ -157,6 +173,7 @@ head:
 | **MTK Client** | Open-source MediaTek bypass/flash | Python | [GitHub](https://github.com/bkerler/mtkclient) |
 | **QFIL (Qualcomm)** | Qualcomm EDL mode flashing | Windows | Qualcomm package |
 | **LineageOS Recovery** | Official LineageOS recovery builds | Device-specific | [LineageOS Wiki](https://wiki.lineageos.org/devices/) |
+
 
 ### Firmware sources
 
@@ -178,8 +195,10 @@ head:
 | **MMRL** | Magisk modules | Community modules | [GitHub](https://github.com/MMRLApp/MMRL) |
 | **Fox MMRL** | Module manager | Alternative client | [GitHub](https://github.com/Fox2Code/FoxMagiskModuleManager) |
 | **LSPosed Modules** | Xposed modules | App modifications | [Repository](https://github.com/Xposed-Modules-Repo) |
-| **Root Apps Index** | Curated collection | 300+ root apps | [Collection](./apps-and-modules/index.md) |
+| **Root Apps Index** | Curated collection | 470+ root apps | [Collection](./apps-and-modules/index.md) |
 | **IzzyOnDroid** | F-Droid repo | FOSS apps | [IzzyOnDroid](https://apt.izzysoft.de/fdroid/) |
+| **KernelSU Module Repo** | KernelSU modules | Official module repository | [modules.kernelsu.org](https://modules.kernelsu.org/) |
+
 
 ### Extraction and utility tools
 
@@ -189,7 +208,18 @@ head:
 | **payload-dumper-go** | Extract payload.bin | [GitHub](https://github.com/ssut/payload-dumper-go) |
 | **payload-dumper-py** | Python payload extractor | [GitHub](https://github.com/vm03/payload_dumper) |
 | **payload-dumper-rust** | Android OTA payload dumper | [GitHub](https://github.com/rhythmcache/payload-dumper-rust) |
+| **AnyKernel3** | Kernel packaging/flashing framework | [GitHub](https://github.com/osm0sis/AnyKernel3) |
 
+
+
+---
+
+### GKI kernel builds with root support
+
+| Project | Features | Source |
+|:--------|:---------|:-------|
+| **WildKernels GKI** | KernelSU/KernelSU-Next with WildKSU Manager support, SUSFS root hiding patches, BBG Baseband Guard security | [GitHub](https://github.com/WildKernels/GKI_KernelSU_SUSFS) |
+| **WildKernels OnePlus** | KSU + SUSFS builds for OnePlus GKI devices | [GitHub](https://github.com/WildKernels/OnePlus_KernelSU_SUSFS) |
 
 ---
 
@@ -220,6 +250,7 @@ head:
 | **r/LineageOS** | Custom ROMs | ROM support | [Reddit](https://reddit.com/r/LineageOS) |
 | **Telegram Groups** | Real-time chat | Quick responses | Various channels |
 | **Pixel Community** | Pixel specific rooting | Device updates | [Reddit](https://reddit.com/r/GooglePixel) |
+| **ReZygisk Telegram** | ReZygisk support | Module updates & discussion | [Telegram](https://t.me/rezygisk) |
 
 
 ### Developer communities
@@ -264,6 +295,9 @@ head:
 | **Paranoid Android** | AOSP | Unique UX features | Optional | [paranoidandroid.co](https://paranoidandroid.co/) |
 | **PixelOS** | AOSP | Pixel experience on non-Pixels | Built-in support | [pixelos.net](https://pixelos.net/) |
 | **Pixel Experience** | AOSP | Pixel features (broader devices) | Built-in support | [pixelexperience.org](https://pixelexperience.org/) |
+
+> [!NOTE]
+> Some ROMs (like Evolution X) include spoofing in the ROM itself. Check your ROM's documentation before adding PIF, you might not need it. Custom ROMs like CrDroid, InfinityX, and Matrixx already come with Keybox injection by default. Instead of using a PIF module, you can use TrickyStore + Keybox injection from your own ROM.
 
 ---
 
