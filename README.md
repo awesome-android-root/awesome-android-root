@@ -581,7 +581,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[Smule Mod](https://github.com/michei69/SmuleXposed)** - A Smule Xposed module which enables free VIP and many other features. `FOSS` `[LSP]`
 - **[Wallet Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.wallettweaks/releases)** - UI tweaks for Google Wallet. `Proprietary` `[LSP]`
 - **[Cake - Learn English & Korean Patches](https://github.com/hoo-dles/revanced-custom-patches)** - Enable Plus . `FOSS` `[R]`
-- **[NoAdsPlus](https://github.com/igormsc/ai.noads.NoAdsPlus)** - Removes ads from the Ozon app. `FOSS` `[LSP]`
+
 
 [↑ Back to top](#table-of-contents)
 
