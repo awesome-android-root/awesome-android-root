@@ -1184,7 +1184,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
   * **[ReZygisk](https://github.com/PerformanC/ReZygisk)** A high-performance implementation **entirely rewritten in C**. It introduces **custom linkers** to bypass modern linker-based detections, offering a WebUI for status monitoring and compatibility with Android 15 and 16. `FOSS` `[M]` `[K]` `[A]`
 
 
-<details><summary><strong>Comparison:</strong></summary><br>
+<details><summary><strong>Comparison of Zygisk Implementations:</strong></summary><br>
 
 
 #### Main Feature Comparison
@@ -1208,12 +1208,12 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 | Implementation | **Strengths** | **Trade-offs** |
 | :--- | :--- | :--- |
-| **Magisk Built-in** | ✅ Official, stable, well-documented&lt;br&gt;✅ Widest arch support (incl. x86)&lt;br&gt;✅ No extra modules needed | ❌ Magisk-only&lt;br&gt;❌ Easily detected by modern banking apps. |
-| **Zygisk Next** | ✅ Most feature-rich (ZN Linker, anon memory, Shamiko)&lt;br&gt;✅ Three DenyList modes&lt;br&gt;✅ WebUI + CLI, largest community | ❌ Fully closed source, no audit possible&lt;br&gt;❌ ZN Linker still experimental&lt;br&gt;❌ No prop/font hiding from Shamiko |
-| **NeoZygisk** | ✅ Ptrace approach is harder to trace in memory&lt;br&gt;✅ Multi-root (incl. KSU Next)&lt;br&gt;✅ Minimal, open source | ❌ 64-bit devices&lt;br&gt;❌ Smaller community, no WebUI yet |
-| **ReZygisk** | ✅ Full C rewrite - lightest/fastest&lt;br&gt;✅ Custom linker defeats linker detection&lt;br&gt;✅ Fully open &amp; auditable | ❌ Still RC phase&lt;br&gt;❌ Some compat issues &amp; bug reports (bootloops, Zygisk-Sui conflicts) |
+| **Magisk Built-in** | ✅ Official, stable, well-documented <br> ✅ Widest arch support (incl. x86)<br>✅ No extra modules needed | ❌ Magisk-only <br> ❌ Easily detected by modern banking apps. |
+| **Zygisk Next** | ✅ Most feature-rich (ZN Linker, anon memory, Shamiko) <br> ✅ Three DenyList modes <br> ✅ WebUI + CLI, largest community | ❌ Fully closed source, no audit possible <br> ❌ ZN Linker still experimental <br> ❌ No prop/font hiding from Shamiko |
+| **NeoZygisk** | ✅ Ptrace approach is harder to trace in memory <br> ✅ Multi-root (incl. KSU Next) <br> ✅ Minimal, open source | ❌ 64-bit devices <br> ❌ Smaller community, no WebUI yet |
+| **ReZygisk** | ✅ Full C rewrite - lightest/fastest <br> ✅ Custom linker defeats linker detection <br> ✅ Fully open &amp; auditable | ❌ Still RC phase <br> ❌ Some compat issues &amp; bug reports (bootloops, Zygisk-Sui conflicts) |
 
-<br>
+<br> 
 </details><br>
 
 > [!TIP]
