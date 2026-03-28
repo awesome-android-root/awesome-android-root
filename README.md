@@ -1179,12 +1179,9 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 <br>
 </details>
 
-- **[⭐ Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)**  
-  Advanced standalone Zygisk implementation, supporting KernelSU and replacing Magisk's built-in Zygisk. `Proprietary` `[M]` `[K]`
-- **[NeoZygisk](https://github.com/JingMatrix/NeoZygisk)**  
-  Zygote injection module implemented using ptrace, providing Zygisk API support for APatch and KernelSU. Serves as a replacement for Magisk's built-in Zygisk. `FOSS` `[M]`
-- **[ReZygisk](https://github.com/PerformanC/ReZygisk)**  
-  Standalone and open-source Zygisk implementation, offering Zygisk API support for KernelSU and as a drop-in replacement for Magisk's Zygisk. `FOSS` `[M]` `[K]`
+  * **[⭐ Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)** The "Gold Standard" for detection evasion. It is a standalone Zygisk implementation that offers the most advanced stealth features, including a dedicated **Zygote Monitor** and dashboard. `Proprietary` `[M]` `[K]` `[A]`
+  * **[NeoZygisk](https://github.com/JingMatrix/NeoZygisk)** A minimalist, high-stealth implementation using **ptrace injection**. It focuses on "trace cleaning," aiming to remove all injection artifacts from memory once modules are loaded. `FOSS` `[M]` `[K]` `[A]`
+  * **[ReZygisk](https://github.com/PerformanC/ReZygisk)** A high-performance implementation **entirely rewritten in C**. It introduces **custom linkers** to bypass modern linker-based detections, offering a WebUI for status monitoring and compatibility with Android 15 and 16. `FOSS` `[M]` `[K]` `[A]`
 
 
 <details><summary><strong>Comparison:</strong></summary><br>
@@ -1192,27 +1189,29 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 #### Main Feature Comparison
 
-| Feature | **Magisk Built-in Zygisk** | **NeoZygisk** | **Zygisk Next** | **ReZygisk** |
-|---------|---------------------------|---------------|-----------------|--------------|
-| **License** | Open Source (GPL-3.0) | Open Source (FOSS) | Closed Source (Proprietary) | Open Source (FOSS) |
-| **Root Support** | Magisk only | Magisk, KernelSU, APatch | Magisk, KernelSU, APatch | Magisk, KernelSU, APatch |
-| **Implementation** | Built into Magisk core, PLT hooks | Ptrace injection | Standalone module | Standalone module |
-| **Performance** | Baseline | Minimal overhead | Enhanced, stable | ~20% faster than built-in |
-| **Root Detection Evasion** | Basic hiding | Advanced stealth with trace cleaning | Superior hiding (#1 ranked) | Good stealth capabilities |
-| **Module API** | Full Zygisk API | Full Zygisk API compatibility | Full API + extra features | Good compatibility, some limitations |
-| **Architecture** | arm64, arm32, x64, x86 | arm64, x86_64, armeabi-v7a | arm64, x86_64, armeabi-v7a | arm64, x86_64, armeabi-v7a |
-| **Updates** | Tied to Magisk releases | Active development | Regular updates | Most frequent updates |
-| **Community** | Official Magisk support | Growing community | Established but proprietary | Strong open-source community |
-| **Special Features** | Native Magisk integration | Trace cleaning, minimalistic | ZN Module system, advanced injection | KernelSU/APatch optimization |
+| Feature | **Magisk Built-in** | **Zygisk Next** | **NeoZygisk** | **ReZygisk** |
+| :--- | :--- | :--- | :--- | :--- |
+| **Android Ver.** | 9.0 – 15 | 10 – 16 | 8.1 – 16 (Beta) | 9 – 16 |
+| **Key Advantage** | Official / Simple | Detection Evasion | Stealth / Cleaning | Speed / Open Source |
+| **License** | GPL-3.0 | All Rights Reserved (since v4-0.9.2) | GPL-3.0 (forked pre-license-change) | GPL-3.0 / AGPL-3.0 |
+| **Root Support** | Magisk only | Magisk, KSU, APatch | Magisk, KSU, KSU Next, APatch | Magisk (Official &amp; Kitsune), KSU, APatch |
+| **Performance** | Baseline | Very Stable | Minimalist / Low RAM | **Fastest (Native C)** |
+| **Implementation** | Built-in, PLT hooks | Standalone, built-in ZN Linker | Ptrace injection | Standalone, full C rewrite, custom linker |
+| **Hiding Power** | Basic DenyList | ZN Linker, anon memory loading, Shamiko integration | Dual-strategy unmounting, atexit neutralization | Custom linker, SoInfo hiding, maps hiding |
+| **Shamiko** | ❌ Separate module | ✅ Built-in (excludes prop/font hiding) | ❌ Own DenyList | ❌ Own hiding mechanisms |
+| **DenyList Modes** | Enforce/disable | Disabled / enabled / unmount-only (WebUI + CLI) | Direct unmount (primary) + namespace switching (fallback) | Monitor-based |
+| **Module Loading** | System linker | ZN Linker + anonymous memory | Standard | Custom linker (bypasses system linker) |
+| **API** | Full Zygisk API | Full (no Magisk internals guaranteed) | Full compatibility | Compatible |
+| **Config UI** | Magisk Manager | WebUI + CLI | Status via module.prop (WebUI pending) | WebUI (in dev), module.prop |
 
-### Strengths and Trade-offs
+### Strengths & Trade-offs
 
 | Implementation | **Strengths** | **Trade-offs** |
-|---------------|--------------|---------------|
-| **Magisk Built-in** | ✅ Official support<br>✅ Stable<br>✅ Well-documented | ❌ Limited to Magisk<br>❌ Baseline root hiding |
-| **NeoZygisk** | ✅ High stealth<br>✅ Multi-root compatibility<br>✅ Lightweight | ❌ Smaller community<br>❌ Some module compatibility issues |
-| **Zygisk Next** | ✅ Best detection evasion<br>✅ Advanced features<br>✅ Complete module support | ❌ Closed source<br>❌ Trust concerns |
-| **ReZygisk** | ✅ Open-source<br>✅ High performance<br>✅ Transparent | ❌ Less mature<br>❌ Some feature limitations |
+| :--- | :--- | :--- |
+| **Magisk Built-in** | ✅ Official, stable, well-documented&lt;br&gt;✅ Widest arch support (incl. x86)&lt;br&gt;✅ No extra modules needed | ❌ Magisk-only&lt;br&gt;❌ Easily detected by modern banking apps. |
+| **Zygisk Next** | ✅ Most feature-rich (ZN Linker, anon memory, Shamiko)&lt;br&gt;✅ Three DenyList modes&lt;br&gt;✅ WebUI + CLI, largest community | ❌ Fully closed source, no audit possible&lt;br&gt;❌ ZN Linker still experimental&lt;br&gt;❌ No prop/font hiding from Shamiko |
+| **NeoZygisk** | ✅ Ptrace approach is harder to trace in memory&lt;br&gt;✅ Multi-root (incl. KSU Next)&lt;br&gt;✅ Minimal, open source | ❌ 64-bit devices&lt;br&gt;❌ Smaller community, no WebUI yet |
+| **ReZygisk** | ✅ Full C rewrite - lightest/fastest&lt;br&gt;✅ Custom linker defeats linker detection&lt;br&gt;✅ Fully open &amp; auditable | ❌ Still RC phase&lt;br&gt;❌ Some compat issues &amp; bug reports (bootloops, Zygisk-Sui conflicts) |
 
 <br>
 </details><br>
