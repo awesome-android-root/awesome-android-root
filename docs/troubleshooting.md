@@ -465,7 +465,7 @@ Recovery options vary by SoC/manufacturer:
 
    **Strategy A: Shamiko (popular choice)**
    - Install Shamiko module
-   - Shamiko doesn't work with enforced DenyList — disable "Enforce DenyList" when using Shamiko
+   - Shamiko doesn't work with enforced DenyList - disable "Enforce DenyList" when using Shamiko
    - Add target apps to DenyList (Shamiko reads it but uses its own hiding method)
    - Rename Magisk app (Settings → Hide the Magisk app)
 
@@ -666,7 +666,7 @@ KernelSU-Next is a fork that provides Non-GKI kernel support from 4.x – 5.4 wi
 
 4. **Check device compatibility**
    - APatch allows Linux kernels on compatible ARM64 devices (versions 3.18 to 6.1) to be modified. The official docs now list support up to kernel version 6.12.
-   - KernelPatch doesn't support 6.6 in some older APatch releases — check the latest release notes.
+   - KernelPatch doesn't support 6.6 in some older APatch releases - check the latest release notes.
 
 ---
 
@@ -891,7 +891,7 @@ Root survival with APatch is image-based, so OTAs usually require repatching the
 **Important:** Bypassing security requirements of protected apps is against their terms of service. This section focuses on legitimate compatibility best practices.
 
 **Realistic expectations (2026):**
-- Realistic target: BASIC + DEVICE. Strong integrity requires a locked bootloader — not possible on custom ROMs.
+- Realistic target: BASIC + DEVICE. Strong integrity requires a locked bootloader - not possible on custom ROMs.
 - Play Integrity behavior changes frequently server-side. There is no permanent bypass guarantee.
 - MEETS_STRONG_INTEGRITY is only available with a valid keybox.
 
@@ -904,17 +904,17 @@ The Play Integrity ecosystem has evolved significantly. The current typical stac
    - ZygiskNext, ReZygisk, or NeoZygisk (for KernelSU/APatch)
 
 2. **Play Integrity Fix Module** (choose one):
-   - PlayIntegrityFork — a Zygisk module which fixes "MEETS_DEVICE_INTEGRITY" for the Play Integrity API. On Android 13+ ROMs it still helps to pass checks in Google Wallet and Google Messages RCS support.
-   - PlayIntegrityFix (PIF) — the original by chiteroman (the official PIF by chiteroman has been removed from GitHub; community mirrors exist, e.g. [KOWX712's mirror](https://github.com/KOWX712/PlayIntegrityFix))
-   - PIF-Next — not a root hiding module; it only has integration with TrickyStore to ensure valid hardware attestation
+   - PlayIntegrityFork - a Zygisk module which fixes "MEETS_DEVICE_INTEGRITY" for the Play Integrity API. On Android 13+ ROMs it still helps to pass checks in Google Wallet and Google Messages RCS support.
+   - PlayIntegrityFix (PIF) - the original by chiteroman (the official PIF by chiteroman has been removed from GitHub; community mirrors exist, e.g. [KOWX712's mirror](https://github.com/KOWX712/PlayIntegrityFix))
+   - PIF-Next - not a root hiding module; it only has integration with TrickyStore to ensure valid hardware attestation
 
 3. **Root Hiding** (choose one):
-   - Shamiko — hides root & Magisk from detection
+   - Shamiko - hides root & Magisk from detection
    - Zygisk Assistant / NoHello
 
 4. **Key Attestation** (for STRONG integrity):
    - For attempting to pass STRONG integrity, only the latest official Tricky Store or TEESimulator release is recommended.
-   - Tricky Store Addon — updates target list
+   - Tricky Store Addon - updates target list
    - Requires a valid keybox (device-specific, may need periodic refresh)
 
 **Configuration by Root Method:**
@@ -973,7 +973,7 @@ The Play Integrity ecosystem has evolved significantly. The current typical stac
 
 3. **Android 16 QPR2 Rooting Issues**
    - After certain 2026 firmware updates, some users lost root and re-rooting failed, resulting in bootloops.
-   - Magisk 30.7 was released with support for Android 16 QPR2 — ensure you are using the latest Magisk version
+   - Magisk 30.7 was released with support for Android 16 QPR2 - ensure you are using the latest Magisk version
    - If rooting fails after a firmware update, try waiting for a Magisk update that addresses your specific build
 
 4. **OTA updates**

@@ -98,7 +98,7 @@ head:
 
 | Android Version | Recommended Method | Kernel | Notes |
 |:----------------|:-------------------|:-------|:------|
-| **Android 16** | APatch / KernelSU | GKI 2.0 | Developer Preview — experimental support |
+| **Android 16** | APatch / KernelSU | GKI 2.0 | Developer Preview - experimental support |
 | **Android 15** | APatch / KernelSU / Magisk | GKI 2.0 | Stable across all methods |
 | **Android 14** | Magisk / APatch / KernelSU | GKI 2.0 | Mature and well-tested |
 | **Android 13** | Magisk / KernelSU | GKI / Legacy | Broad device support |
@@ -106,7 +106,7 @@ head:
 | **Android 11 & below** | Magisk | Legacy | Long-term support |
 
 > [!TIP]
-> **GKI (Generic Kernel Image)** devices — typically Android 12+ with kernel 5.10+ — have the widest method compatibility. Check your kernel version in **Settings → About Phone → Kernel Version**.
+> **GKI (Generic Kernel Image)** devices - typically Android 12+ with kernel 5.10+ - have the widest method compatibility. Check your kernel version in **Settings → About Phone → Kernel Version**.
 
 ---
 

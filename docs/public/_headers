@@ -1,6 +1,6 @@
 
 # -----------------------------------------------------------------------------
-# Service Worker — MUST never be cached by browser or CDN.
+# Service Worker - MUST never be cached by browser or CDN.
 # Without this Cloudflare's default caching breaks SW updates entirely.
 # -----------------------------------------------------------------------------
 /sw.js
@@ -12,21 +12,21 @@
   Cache-Control: no-cache, no-store, must-revalidate
 
 # -----------------------------------------------------------------------------
-# PWA Manifest — keep fresh so installs reflect latest metadata.
+# PWA Manifest - keep fresh so installs reflect latest metadata.
 # -----------------------------------------------------------------------------
 /manifest.webmanifest
   Cache-Control: no-cache
   Content-Type: application/manifest+json; charset=UTF-8
 
 # -----------------------------------------------------------------------------
-# VitePress hashed assets — filename includes content hash → immutable.
+# VitePress hashed assets - filename includes content hash → immutable.
 # 1-year TTL + immutable = zero revalidation cost from Cloudflare edge.
 # -----------------------------------------------------------------------------
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
 # -----------------------------------------------------------------------------
-# Public images — no content hash in filename, so allow revalidation.
+# Public images - no content hash in filename, so allow revalidation.
 # -----------------------------------------------------------------------------
 /images/*
   Cache-Control: public, max-age=604800, stale-while-revalidate=86400
@@ -44,14 +44,14 @@
   # Prevent MIME-type sniffing attacks
   X-Content-Type-Options: nosniff
 
-  # Disable the legacy XSS filter — it can *introduce* XSS vulnerabilities
+  # Disable the legacy XSS filter - it can *introduce* XSS vulnerabilities
   # in some browsers. Modern browsers rely on CSP instead.
   X-XSS-Protection: 0
 
   # Restrict browser feature access
   Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=(), browsing-topics=()
 
-  # HSTS — 2-year max-age satisfies the HSTS preload list minimum requirement
+  # HSTS - 2-year max-age satisfies the HSTS preload list minimum requirement
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 
   # Send origin-only on cross-origin requests; full URL on same-origin

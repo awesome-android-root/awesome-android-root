@@ -148,7 +148,7 @@ Comprehensive analysis of Magisk, KernelSU, and APatch to help you choose the ri
 **Strengths:**
 - Runs inside the Linux kernel; only permitted apps can access or see su
 - Customization of su's uid, gid, groups, capabilities, and SELinux rules
-- Metamodule system — plugin-based extension that allows complete customization of module management; avoids being a fragile detection point
+- Metamodule system - plugin-based extension that allows complete customization of module management; avoids being a fragile detection point
 - Multiple metamodule options: meta-overlayfs (official reference), Meta-Hybrid Mount (Rust-native, combines OverlayFS + Magic Mount)
 - LKM mode loads kernel module without replacing original kernel
 - Supports android12–16 GKI kernels (5.10 through 6.12)
@@ -167,7 +167,7 @@ Comprehensive analysis of Magisk, KernelSU, and APatch to help you choose the ri
 **Architecture:** KernelPatch-based root combining Magisk's convenient boot.img install with KernelSU's powerful kernel patching. Runs in kernel space with greater concealment; only permitted apps may access or see su.
 
 **Strengths:**
-- Works with just your stock boot.img — no kernel source needed
+- Works with just your stock boot.img - no kernel source needed
 - Magisk-like modules (APModule) plus kernel code injection (KPM) with inline-hook and syscall-table-hook
 - SuperKey system with privileges higher than root access
 - Initial A/B OTA upgrade support
@@ -204,7 +204,7 @@ Comprehensive analysis of Magisk, KernelSU, and APatch to help you choose the ri
 ⁴ Custom ROMs preferred
 
 ::: warning SAMSUNG KNOX
-Bootloader unlock permanently trips Knox eFuse, disabling Samsung Pay, Secure Folder, and Samsung Pass forever — regardless of root method.
+Bootloader unlock permanently trips Knox eFuse, disabling Samsung Pay, Secure Folder, and Samsung Pass forever - regardless of root method.
 :::
 
 
@@ -263,7 +263,7 @@ Bootloader unlock permanently trips Knox eFuse, disabling Samsung Pay, Secure Fo
 2. **Uninstall Magisk completely**
 3. **Flash KernelSU-enabled kernel** (GKI or LKM mode)
 4. **Install KernelSU Manager**
-5. **Install a metamodule** (e.g., meta-overlayfs or hybrid_mount) — required for modules to function
+5. **Install a metamodule** (e.g., meta-overlayfs or hybrid_mount) - required for modules to function
 6. **Reinstall compatible modules**
 7. **Configure app profiles**
 </details>

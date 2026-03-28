@@ -64,10 +64,10 @@ head:
 This page focuses on Xiaomi/Redmi/POCO specifics (Mi Unlock, ARB, HyperOS, payload extraction). For universal prep and Magisk steps, see: [Main Rooting Guide](./index.md), [Bootloader Unlocking](./how-to-unlock-bootloader.md), and [Magisk Guide](./magisk-guide.md).
 
 ## 🔗 Essential Resources
-- [📖 Main Rooting Guide](./index.md) — Universal rooting principles and safety
-- [🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md) — General bootloader concepts
-- [🛠️ Custom Recovery](./how-to-install-custom-recovery.md) — TWRP installation guide
-- [❓ FAQ & Troubleshooting](../faqs.md) — Solutions for common issues
+- [📖 Main Rooting Guide](./index.md) - Universal rooting principles and safety
+- [🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md) - General bootloader concepts
+- [🛠️ Custom Recovery](./how-to-install-custom-recovery.md) - TWRP installation guide
+- [❓ FAQ & Troubleshooting](../faqs.md) - Solutions for common issues
 
 ## Xiaomi Rooting Complexity
 
