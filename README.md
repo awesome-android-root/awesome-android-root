@@ -671,7 +671,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 </details>
 
 - **[AnyWebView](https://github.com/neoblackxt/AnyWebView)** - Tries to detect all system webviews and add them to the developer options -> WebView implementation list. `FOSS` `[LSP]`
-- **[Open WebView](https://github.com/Magisk-Modules-Alt-Repo/open_webview)** - Helps you to replace your system webview through Magisk. `FOSS` `[M]`
+
 
 [↑ Back to top](#table-of-contents)
 
