@@ -111,6 +111,7 @@ Root Samsung Galaxy devices while navigating Knox security, Odin flashing, and O
 <details><summary>Click to expand supported Samsung devices</summary>
 
 **Galaxy S Series (Flagship):**
+- **Galaxy S25/S25+/S25 Ultra** – One UI 8 (Android 16) blocks bootloader unlock globally
 - **Galaxy S24/S24+/S24 Ultra** – Snapdragon only (Exynos not yet supported by Magisk)  
 - **Galaxy S23/S23+/S23 Ultra** – Global, Canadian, and unlocked models supported
 - **Galaxy S22/S22+/S22 Ultra** – All regions except carrier-locked US models
