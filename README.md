@@ -662,17 +662,6 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[EdgeX](https://github.com/SoClear/EdgeX)** - An Xposed module for Microsoft Edge on Android, designed to enhance your browsing experience with UI tweaks and functional improvements. `FOSS` `[LSP]`
 - **[FoldDevtools](https://github.com/achyuki/FoldDevtools)** - Using chrome devtools to debug webview on Android. `FOSS` `[LSP]`
 
-### Webview Mods
-
-<details><summary><strong>What is Webview in Android?</strong></summary>
-
-- It is a system component that **allows Android apps to display web content directly within the application**, essentially embedding a mini-browser within the app itself.
-
-</details>
-
-- **[AnyWebView](https://github.com/neoblackxt/AnyWebView)** - Tries to detect all system webviews and add them to the developer options -> WebView implementation list. `FOSS` `[LSP]`
-
-
 [↑ Back to top](#table-of-contents)
 
 ---
