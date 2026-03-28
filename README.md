@@ -82,6 +82,8 @@
   - [Task Managers](#task-managers)
 - [Kernel Management](#kernel-management)
 - [System Modifications](#system-modifications)
+  - [Boot and Startup](#boot-and-startup)
+  - [System Tweaks](#system-tweaks-and-patches)
 
 #### 🎮 **Gaming**
 - [Gaming](#gaming)
@@ -137,7 +139,6 @@
 #### 🌐 **Browser Tools**
 - [Browser and Web Tools](#browser-and-web-tools)
   - [Browser Extensions](#browser-extensions)
-  - [Webview Mods](#webview-mods)
 
 ### 🧰 System Utilities
 - [System Utilities](#system-utilities)
@@ -584,20 +585,20 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ## Audio and Media
 
-**Audio Enhancement:**
+### **Audio Enhancement:**
 - **[Audio Modification Library Ryuki Mod](https://github.com/reiryuki/Audio-Modification-Library-Ryuki-Mod-Magisk-Module)** - Enables supported audio mods to share the same needed files, such as audio_effects. `FOSS` `[M]`
 - **[JamesDSP](https://github.com/james34602/JamesDSPManager)** - Audio DSP effects built on the Android system framework layer. This repository contains a pack of high-quality DSP algorithms specialized for audio processing. `FOSS` `[M]`
 - **[NLSound](https://github.com/Briclyaz/NLSound_module_QCom)** - Magisk module for improving audio and microphone quality in your Snapdragon SoC device. `FOSS` `[M]`
 - **[ViPER4Android FX Redesign](https://github.com/WSTxda/ViperFX-RE-Releases)** - Allows improving the audio quality by offering features such as equalizer settings, surround sound effects, bass boost, and more. `Proprietary` `[M]`
 
-**Audio Control and Management:**
+### **Audio Control and Management:**
 - **[Audio jitter silencer](https://github.com/Magisk-Modules-Alt-Repo/audio-jitter-silencer)** - For avoiding distortion on all digital audio outputs, it disables audio jitter generators (w.r.t. battery draining and optimizations, and wireless connectivity). `FOSS` `[M]`
 - **[DisableAudioFocus](https://github.com/auag0/DisableAudioFocus)** - Allows you to disable audio focus, enabling you to play multiple videos and audios simultaneously. `FOSS` `[LSP]`
 - **[LibrePods](https://github.com/kavishdevar/librepods)** - Unlocks Apple's exclusive premium AirPods features on non-Apple devices. `FOSS` `[LSP]` `[M]` `[K]`
 - **[Lower Minimum Volume](https://github.com/dxwil/Lower-Minimum-Volume)** - Lower the minimum volume of media from the device's speakers. `FOSS` `[M]`
 - **[XAudioCapture](https://github.com/Xposed-Modules-Repo/io.github.wzhy.xaudiocapture)** - Lets you capture any audio stream you desire, bypassing these restrictions. `Proprietary` `[LSP]`
 
-**Audio Configuration:**
+### **Audio Configuration:**
 - **[DSP AudioFix](https://github.com/ahmed-alnassif/DSP-AudioFix)** - A simple fix for distorted audio on Xiaomi/MediaTek devices with Awinic smart amps. `FOSS` `[M]` `[K]`
 - **[Audio Misc Settings](https://github.com/Magisk-Modules-Alt-Repo/audio-misc-settings)** - For setting miscellaneous audio configuration values (media audio volume steps (100 steps), raising the resampling quality, disabling the effects framework, etc.) `FOSS` `[M]`
 - **[Audio SampleRate Changer](https://github.com/Magisk-Modules-Alt-Repo/audio-samplerate-changer)** - A Magisk module changing audio sample rates at the system-wide mixer for the best Hi-Fi experience. `FOSS` `[M]`
