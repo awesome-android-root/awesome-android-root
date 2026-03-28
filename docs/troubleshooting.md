@@ -71,6 +71,7 @@ head:
       content: index, follow
 ---
 
+
 # Root Troubleshooting Guide
 
 **Comprehensive solutions** for common rooting problems organized by root method and failure type with step-by-step diagnostic procedures.
@@ -110,8 +111,7 @@ If your device won't boot, jump to [Emergency Recovery](#emergency-recovery) imm
 **Immediate Actions:**
 
 1. **Try Magisk Safe Mode** (if Magisk installed)
-   - Hold Volume Up during early boot to trigger module safe mode
-   - Works on many devices/Magisk builds
+   - Hold Volume Down during early boot to trigger module safe mode (timing varies by device/Magisk build)
    - If accessible via recovery/adb:
      ```bash
      adb shell magisk --remove-modules
@@ -172,9 +172,8 @@ If your device won't boot, jump to [Emergency Recovery](#emergency-recovery) imm
    - Reboot
 
 2. **Flash Correct Stock/Patched Image**
-2. **Flash Correct Stock/Patched Image**
    
-   **For Android 13+ devices** (Pixel 7/8/9, some Samsung/OnePlus/Xiaomi):
+   **For Android 13+ devices** (Pixel 7/8/9/10, some Samsung/OnePlus/Xiaomi):
    - Patch/flash `init_boot.img` (not boot.img)
    
    **For older devices:**
@@ -200,7 +199,6 @@ If your device won't boot, jump to [Emergency Recovery](#emergency-recovery) imm
    fastboot reboot
    ```
 
-3. **Flash Full Stock Firmware**
 3. **Flash Full Stock Firmware**
    - **Pixel:** Use [Android Flash Tool](https://flash.android.com) (web) or factory image scripts ([guide](./rooting-guides/how-to-root-pixel-phone.md))
    - **Samsung:** Odin with full firmware (AP/BL/CP/CSC). Use HOME_CSC to preserve data ([guide](./rooting-guides/how-to-root-samsung-phone.md))
@@ -251,13 +249,12 @@ fastboot -w
 
 **Symptoms:** Apps report "no root," superuser prompts don't appear, or manager shows N/A.
 
-**Symptoms:** Apps report "no root," superuser prompts don't appear, or manager shows N/A.
-
 **Basic Verification:**
 
 1. **Check Root Manager Status**
    - **Magisk:** App should show version numbers. "Installed" should display. If N/A, installation failed
    - **KernelSU:** App shows kernel supported/enabled. If unsupported, flash KSU-enabled kernel
+   - **APatch:** App shows KernelPatch status. Check SuperKey configuration
    - Test with a simple root checker app or Termux + `su`
 
 2. **Verify Correct Image**
@@ -271,7 +268,7 @@ fastboot -w
 **Magisk:**
 
 1. **Reinstall to Current Slot**
-   - Download latest Magisk APK from [official GitHub](https://github.com/topjohnwu/Magisk/releases)
+   - Download latest Magisk APK (v30.7 as of February 2026) from [official GitHub](https://github.com/topjohnwu/Magisk/releases)
    - Open → Install → Direct Install (or "Install to Inactive Slot" after OTA)
    - Reboot
    - See [complete Magisk guide](./rooting-guides/magisk-guide.md) for detailed instructions
@@ -290,14 +287,20 @@ fastboot -w
    - Disable all modules and re-enable one at a time
    - See [Emergency Recovery](#emergency-recovery)
 
+5. **Android 16 QPR2 Compatibility**
+   - Magisk now supports the new sepolicy binary format introduced in Android 16 QPR2. Ensure you are on the latest stable release (v30.7+) if running Android 16.
+   - Magisk 30.7 was released with support for Android 16 QPR2; if you updated your firmware recently, update Magisk before re-patching.
+
 **KernelSU:**
-- Confirm kernel has KSU integrated for your exact build
+- KernelSU officially supports Android GKI 2.0 devices (kernel 5.10+). Older kernels (4.14+) are also supported, but the kernel will need to be built manually.
 - Match kernel to your ROM/firmware version and vendor partition
 - Use official KernelSU Manager
+- KernelSU now provides LKM modules for kernels up through android16-6.12
 - See [complete KernelSU guide](./rooting-guides/kernelsu-guide.md) for installation help
 
 **APatch:**
-- Ensure device/kernel is supported (ARM64 only)
+- APatch is a universal root solution for Android kernel versions 3.18 – 6.12
+- Do not run APatch together with Magisk or KernelSU on the same active slot. Use one root stack at a time.
 - Follow [official APatch guide](./rooting-guides/apatch-guide.md) for your device/ROM
 
 **Clean Re-install (Magisk):**
@@ -315,7 +318,7 @@ fastboot reboot
 
 **Method B: Recovery flash** (legacy devices with custom recovery)
 - Boot to TWRP/OrangeFox
-- Flash Magisk ZIP/APK
+- Flash Magisk ZIP/APK (rename .apk to .zip)
 - Reboot and install Magisk app if needed
 
 ---
@@ -401,16 +404,16 @@ Recovery options vary by SoC/manufacturer:
 **Solutions:**
 
 1. **Update Magisk**
-   - Download latest version
-   - Alpha/Beta may support newer devices
+   - Download latest version (v30.7+ for Android 16 QPR2 support)
+   - Alpha/Beta may support newer devices first
 
 2. **Check device compatibility**
    - Some devices need special Magisk builds
    - Search XDA for device-specific versions
 
-3. **Try APatch as alternative**
+3. **Try KernelSU or APatch as alternative**
    - Some devices incompatible with Magisk
-   - APatch may work
+   - KernelSU or APatch may work where Magisk doesn't
 
 ---
 
@@ -445,20 +448,9 @@ Recovery options vary by SoC/manufacturer:
 
 ---
 
-### MagiskHide/DenyList Not Working
+### DenyList / Root Hiding Not Working
 
-**For older Magisk (before v24):**
-
-1. **Enable MagiskHide**
-   - Settings → MagiskHide
-   - Add apps to hide list
-
-2. **If still detected:**
-   - Install Shamiko module
-   - Configure hide settings
-   - Clear app data of banking app
-
-**For Magisk v24+:**
+**For Magisk v24+ (current):**
 
 1. **Configure DenyList**
    - Settings → Enable Zygisk
@@ -469,64 +461,27 @@ Recovery options vary by SoC/manufacturer:
    - Enable "Enforce DenyList"
    - Reboot device
 
-3. **Additional hiding:**
-   - Install Shamiko
-   - Rename Magisk app
-   - Use Zygisk-Assistant
+3. **Additional hiding (pick one strategy):**
+
+   **Strategy A: Shamiko (popular choice)**
+   - Install Shamiko module
+   - Shamiko doesn't work with enforced DenyList — disable "Enforce DenyList" when using Shamiko
+   - Add target apps to DenyList (Shamiko reads it but uses its own hiding method)
+   - Rename Magisk app (Settings → Hide the Magisk app)
+
+   **Strategy B: Zygisk Assistant / NoHello**
+   - For best results, enable Magisk's Enforce DenyList option if NOT also using Shamiko or Zygisk Assistant or NoHello
+
+4. **Clear target app data after setup**
+   - Force stop banking/target app
+   - Clear its cache and data
+   - Reboot, then re-open app
 
 **Advanced detection evasion:**
 
 ```bash
-# Hide Magisk app
-adb shell
-su
-magisk --sqlite "UPDATE settings SET value='com.random.package' WHERE key='requester'"
-
-# Clear props
-resetprop --delete ro.debuggable
-resetprop --delete ro.secure
-```
-
----
-
-### MagiskHide/DenyList Not Working
-
-**For older Magisk (before v24):**
-
-1. **Enable MagiskHide**
-   - Settings → MagiskHide
-   - Add apps to hide list
-
-2. **If still detected:**
-   - Install Shamiko module
-   - Configure hide settings
-   - Clear app data of banking app
-
-**For Magisk v24+:**
-
-1. **Configure DenyList**
-   - Settings → Enable Zygisk
-   - Settings → Configure DenyList
-   - Add apps needing root hidden
-
-2. **Enforce DenyList**
-   - Enable "Enforce DenyList"
-   - Reboot device
-
-3. **Additional hiding:**
-   - Install Shamiko module
-   - Rename Magisk app
-   - Use Zygisk-Assistant
-
-**Advanced detection evasion:**
-
-```bash
-# Hide Magisk app
-adb shell
-su
-magisk --sqlite "UPDATE settings SET value='com.random.package' WHERE key='requester'"
-
-# Clear props
+# Hide Magisk app (via Magisk settings or manually)
+# Hide props
 resetprop --delete ro.debuggable
 resetprop --delete ro.secure
 ```
@@ -555,7 +510,7 @@ resetprop --delete ro.secure
    - Reboot
 
 **Prevention:**
-- Always uninstall Magisk before OTA
+- Always uninstall Magisk before OTA, or use "Install to Inactive Slot"
 - Use OTA preservation modules with caution
 - Consider custom ROM for seamless updates
 
@@ -565,11 +520,12 @@ resetprop --delete ro.secure
 
 ### Installation Issues
 
-#### Error: "No KernelSU detected"
+#### Error: "No KernelSU detected" / App shows "Unsupported"
 
 **Causes:**
 - Wrong kernel flashed
 - Kernel doesn't have KernelSU built-in
+- LKM module not loaded
 
 **Solutions:**
 
@@ -580,41 +536,40 @@ resetprop --delete ro.secure
    # Should show KernelSU in version string
    ```
 
-2. **Flash correct kernel**
-   - Download KernelSU-supported kernel for your device
-   - Verify source and version
-   - Flash via fastboot or recovery
+2. **Understand running modes**
+   - Since version 0.9.0, KernelSU supports two running modes on GKI devices: GKI: Replace the original kernel of the device with the Generic Kernel Image (GKI) provided by KernelSU.
+   - **LKM mode:** Load KernelSU as a kernel module (recommended for GKI devices). Use `ksud boot-patch` to patch boot image with LKM.
+   - Kernel version and Android version aren't necessarily the same! If you find that your kernel version is android12-5.10.101, but your Android system version is Android 13 or other, don't be surprised.
 
-3. **Build kernel with KernelSU (advanced)**
+3. **Use ksud tool to patch**
+   - The ksud tool provided by KernelSU can help you quickly patch the official firmware and then flash it. This tool supports macOS, Linux, and Windows. You can download the corresponding version from GitHub Release.
+
+4. **Build kernel with KernelSU (advanced)**
    - Follow KernelSU documentation
    - Compile custom kernel
    - Flash and test
 
 ---
 
-#### Modules Don't Install
+#### Modules Don't Install / Don't Work
 
 **Diagnosis:**
 
-1. **Check if metamodule is installed (Most Common Issue!)**
+1. **Check if a metamodule is installed (Most Common Issue!)**
    - KernelSU requires a **metamodule** to mount modules
    - Without a metamodule, modules are installed but NOT mounted
-   - Open KernelSU Manager > Modules and verify a metamodule is active
+   - Open KernelSU Manager → Modules and verify a metamodule is active
 
 2. **Check module compatibility**
-   - KernelSU modules use different format
-   - Some Magisk modules incompatible
-
-3. **Verify module format**
-   - Must be KernelSU-compatible
-   - Check module description
+   - KernelSU modules use a different format
+   - Some Magisk modules are incompatible
 
 **Solutions:**
 
 1. **Install a metamodule first**
    - Download [meta-overlayfs](https://github.com/KernelSU-Modules-Repo/meta-overlayfs) (official)
    - Or [mountify](https://github.com/backslashxx/mountify), [meta-hybrid_mount](https://github.com/YuzakiKokuban/meta-hybrid_mount)
-   - Install via KernelSU Manager > Modules
+   - Install via KernelSU Manager → Modules
    - Reboot and try installing modules again
 
 2. **Convert Magisk module**
@@ -632,6 +587,7 @@ resetprop --delete ro.secure
 **Causes:**
 - Kernel reverted
 - Security patches interfering
+- Only flashed one slot on A/B device
 
 **Solutions:**
 
@@ -653,9 +609,18 @@ resetprop --delete ro.secure
 
 ---
 
+### KernelSU-Next (Fork)
+
+KernelSU-Next is a fork that provides Non-GKI kernel support from 4.x – 5.4 with LTS mode (3.x is experimental), GKI kernels support from 5.10 – 6.6 with GKI mode (6.6+ is experimental), includes both Magic Mount and OverlayFS which can be switched from settings with a single toggle, and features a redesigned manager app.
+
+- WARNING: Non-GKI devices should not upgrade to the mainline KernelSU v3.x releases! Use KernelSU-Next instead for non-GKI devices.
+- KernelSU-Next latest release is v3.1.0 (February 2026)
+
+---
+
 ### App Profile Issues
 
-**KernelSU uses profile system instead of per-app permissions**
+**KernelSU uses a profile system instead of per-app permissions**
 
 **Configuration:**
 
@@ -663,6 +628,7 @@ resetprop --delete ro.secure
    - KernelSU Manager → Profiles
    - Create profiles for different use cases
    - Assign apps to profiles
+   - Only permitted apps can access or see su; all other apps remain unaware of it. KernelSU allows customization of su's uid, gid, groups, capabilities, and SELinux rules, hardening root privileges.
 
 2. **Profile not applying**
    - Force stop app
@@ -680,24 +646,37 @@ resetprop --delete ro.secure
 
 | Error | Solution |
 |:---|:---|
-| "Unsupported boot image" | Try different extraction method |
-| "Patching timeout" | Increase timeout, try on PC |
+| "Unsupported boot image" | Try different extraction method; check kernel version compatibility |
+| "Patching timeout" | Increase timeout, try on PC with kptools |
 | "Verification failed" | Disable AVB/DM-verity |
 | "Flash failed" | Use different flash method |
 
 **General steps:**
 
 1. **Verify boot image source**
-   - Extract from official firmware only
+   - Always patch the image extracted from the same build currently running on your phone. You need boot.img or init_boot.img from your exact current firmware build.
    - Check MD5 hash
 
-2. **Try alternative patching**
-   - Patch on PC instead of device
-   - Use different APatch version
+2. **Set a strong SuperKey**
+   - The SuperKey should be 8-63 characters long and include numbers and letters, but no special characters. It's strictly prohibited to set weak keys like 12345678. The latest versions of APatch require the use of strong keys.
 
-3. **Check device compatibility**
-   - Some devices need specific builds
-   - Check APatch GitHub issues
+3. **Try alternative patching methods**
+   - Patch on PC using kptools instead of on-device
+   - The latest version of APatch Manager supports directly flashing via third-party Recovery such as TWRP. Change the APatch Manager file suffix from .apk to .zip. After doing this, you can flash this .zip file via Recovery's Flash function. APatch will be automatically installed, just like Magisk.
+
+4. **Check device compatibility**
+   - APatch allows Linux kernels on compatible ARM64 devices (versions 3.18 to 6.1) to be modified. The official docs now list support up to kernel version 6.12.
+   - KernelPatch doesn't support 6.6 in some older APatch releases — check the latest release notes.
+
+---
+
+### APatch Module System
+
+APatch features two main modules: APM for modules similar to Magisk; and KPM to modify and inject code directly into the kernel.
+
+**Mount method changes:**
+- APatch has changed to Magic Mount instead of OverlayFS for better compatibility. However, you can still use OverlayFS as default mounting method by creating the /data/adb/.overlay_enable file.
+- You can create /data/adb/.litemode_enable to skip all mounts so that detection is minimized.
 
 ---
 
@@ -715,149 +694,14 @@ resetprop --delete ro.secure
    fastboot flash boot_b apatched-boot.img
    ```
 
-3. **Disable verification**
+3. **Disable verification if needed**
    ```bash
    fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img
    ```
 
----
+### APatch OTA Updates
 
-## General Rooting Problems
-
-### Bootloader Won't Unlock
-
-**Solutions by manufacturer:**
-
-#### Google Pixel
-```bash
-# Enable OEM unlocking in Developer Options
-# Boot to fastboot
-fastboot flashing unlock
-# Or for newer devices
-fastboot flashing unlock_critical
-```
-
-#### Samsung
-- No official bootloader unlock for US/Canada models
-- International models: Check Samsung Developer site
-- Knox will trip permanently
-
-#### Xiaomi
-- Apply for unlock permission on official site
-- Wait period varies (3-7 days typically)
-- Use official Mi Unlock Tool
-
-#### OnePlus
-```bash
-fastboot oem unlock
-# Or newer models
-fastboot flashing unlock
-```
-
-**If unlock command fails:**
-- Update platform-tools
-- Try different USB cable/port
-- Enable USB debugging
-- Allow bootloader unlock in Developer Options
-
----
-
-### fastboot/ADB Not Recognized
-
-**Windows:**
-
-1. **Install drivers**
-   - Download SDK Platform Tools
-   - Install universal ADB drivers
-   - Install manufacturer-specific drivers
-
-2. **Driver signature enforcement**
-   ```powershell
-   # Disable driver signature enforcement
-   # Advanced startup → Troubleshoot → Advanced → Startup Settings
-   # Choose "Disable driver signature enforcement"
-   ```
-
-**Linux:**
-
-1. **Set up udev rules**
-   ```bash
-   sudo nano /etc/udev/rules.d/51-android.rules
-   # Add:
-   SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", MODE="0666", GROUP="plugdev"
-   # Reload rules
-   sudo udevadm control --reload-rules
-   ```
-
-**Mac:**
-- Usually works without setup
-- Ensure USB debugging enabled
-- Trust computer on device
-
----
-
-### "dm-verity" or "AVB" Errors
-
-**What is it:**
-- Android Verified Boot
-- Prevents modified system from booting
-
-**Solution:**
-
-```bash
-# Download vbmeta.img for your firmware
-# Flash with disabled verification
-fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img
-
-# Some devices need
-fastboot flash vbmeta --disable-verity --disable-verification vbmeta.img
-
-# For A/B devices, flash both slots
-fastboot --disable-verity --disable-verification flash vbmeta_a vbmeta.img
-fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
-```
-
----
-
-### SafetyNet/Play Integrity Failing
-
-**Current status (2026):** Increasingly difficult to pass
-
-**Basic troubleshooting:**
-
-1. **Enable hiding features**
-   - Magisk: DenyList + Zygisk
-   - KernelSU: App profiles
-   - APatch: Built-in hiding
-
-2. **Install supplementary modules**
-   - Play Integrity Fix
-   - Universal SafetyNet Fix
-   - Shamiko (Magisk)
-   - Tricky Store
-
-3. **Hide root artifacts**
-   ```bash
-   # Rename Magisk app
-   # Clear app data of checking app
-   # Hide props
-   resetprop --delete ro.debuggable
-   ```
-
-4. **Spoof device fingerprint**
-   - Use device fingerprint from passing device
-   - Install fingerprint spoofing modules
-
-**Apps known to be strict:**
-- Google Wallet
-- Banking apps
-- Netflix
-- Pokemon GO
-- Some corporate apps
-
-:::warning Reality Check
-As of 2026, passing strong Play Integrity attestation is very difficult. Consider if rooting is worth losing access to these apps for your use case.
-:::
+Root survival with APatch is image-based, so OTAs usually require repatching the updated boot chain image. Always patch image from the newly installed build, not from an older firmware package.
 
 ---
 
@@ -877,10 +721,17 @@ fastboot flashing unlock_critical
 ```
 
 **Samsung:**
-- No official bootloader unlock for US/Canada models
-- International models: Check Samsung Developer site
-- KNOX will trip permanently (0x1 flag)
-- Warranty void and Samsung Pay/Health secured features affected
+
+:::danger One UI 8 / Android 16 Critical Change
+One UI 8 (Android 16) eliminates bootloader unlocking support on Samsung Galaxy devices. OEM Unlocking toggle removed from Developer Options; unlock logic stripped from firmware. Affected globally: S25 series, Z Fold 7, Z Flip 7, and any device updated to One UI 8. Blocks rooting, custom ROMs, and custom kernels entirely through official methods. Applies to all regions.
+
+⚠️ **Do NOT update to One UI 8 if you plan to root or unlock your bootloader** until verified unlock methods emerge.
+:::
+
+- For devices still on One UI 7 or earlier:
+  - No official bootloader unlock for US/Canada carrier models
+  - International models: Check Samsung Developer site
+  - Knox will trip permanently and irreversibly. Data wipe: Unlocking erases everything. Warranty void: Samsung will refuse all service.
 
 **Xiaomi/Redmi/POCO:**
 - Apply for unlock permission on official Xiaomi site
@@ -943,7 +794,7 @@ fastboot flashing unlock
 - Usually works without setup
 - Ensure USB debugging enabled
 - Trust computer on device
-- For M1/M2 Macs, may need to disable SIP in some cases
+- For Apple Silicon Macs, may need to disable SIP in some cases
 
 ---
 
@@ -1022,6 +873,10 @@ fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
 3. Re-patch new boot image
 4. Flash via fastboot or custom recovery
 
+### OTA Survival with APatch
+
+Root survival with APatch is image-based, so OTAs usually require repatching the updated boot chain image. Always patch image from the newly installed build, not from an older firmware package.
+
 ---
 
 ## Play Integrity and Banking Apps
@@ -1029,43 +884,60 @@ fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
 ### Understanding Play Integrity
 
 **Integrity Levels:**
-- **BASIC:** Device appears unmodified at basic level
-- **DEVICE:** Device passes device-level integrity
-- **STRONG:** Hardware-backed attestation (typically fails on unlocked bootloaders)
+- **MEETS_BASIC_INTEGRITY:** Device appears unmodified at basic level
+- **MEETS_DEVICE_INTEGRITY:** Device passes device-level integrity
+- **MEETS_STRONG_INTEGRITY:** Hardware-backed attestation (typically fails on unlocked bootloaders)
 
 **Important:** Bypassing security requirements of protected apps is against their terms of service. This section focuses on legitimate compatibility best practices.
 
-**Best Practices for Compatibility:**
+**Realistic expectations (2026):**
+- Realistic target: BASIC + DEVICE. Strong integrity requires a locked bootloader — not possible on custom ROMs.
+- Play Integrity behavior changes frequently server-side. There is no permanent bypass guarantee.
+- MEETS_STRONG_INTEGRITY is only available with a valid keybox.
 
-1. **Keep System Updated**
-   - Update firmware and Play Services
-   - Use latest stable root method version
+### Current Module Stack (2026)
 
-2. **Configure Root Hiding**
-   - **Magisk:** Enable Zygisk + Configure DenyList
-   - **KernelSU:** Set up app profiles
-   - Limit root visibility to sensitive apps
+The Play Integrity ecosystem has evolved significantly. The current typical stack includes:
 
-3. **Clear Play Services Data**
-   ```bash
-   # After major changes, clear cache and reboot
-   # Settings → Apps → Google Play Services → Storage
-   # Clear cache and data
-   # Settings → Apps → Google Play Store → Storage
-   # Clear cache and data
-   # Reboot device
-   ```
+1. **Zygisk Implementation** (choose one):
+   - Magisk built-in Zygisk
+   - ZygiskNext, ReZygisk, or NeoZygisk (for KernelSU/APatch)
 
-4. **Check Device Certification**
-   - Play Store → Settings → About → "Play Protect certification"
-   - Should show "Device is certified"
+2. **Play Integrity Fix Module** (choose one):
+   - PlayIntegrityFork — a Zygisk module which fixes "MEETS_DEVICE_INTEGRITY" for the Play Integrity API. On Android 13+ ROMs it still helps to pass checks in Google Wallet and Google Messages RCS support.
+   - PlayIntegrityFix (PIF) — the original by chiteroman (the official PIF by chiteroman has been removed from GitHub; community mirrors exist, e.g. [KOWX712's mirror](https://github.com/KOWX712/PlayIntegrityFix))
+   - PIF-Next — not a root hiding module; it only has integration with TrickyStore to ensure valid hardware attestation
+
+3. **Root Hiding** (choose one):
+   - Shamiko — hides root & Magisk from detection
+   - Zygisk Assistant / NoHello
+
+4. **Key Attestation** (for STRONG integrity):
+   - For attempting to pass STRONG integrity, only the latest official Tricky Store or TEESimulator release is recommended.
+   - Tricky Store Addon — updates target list
+   - Requires a valid keybox (device-specific, may need periodic refresh)
+
+**Configuration by Root Method:**
+
+| Root Method | Zygisk | PIF Module | Root Hiding |
+|:---|:---|:---|:---|
+| Magisk | Built-in Zygisk | PlayIntegrityFork / PIF | Shamiko or DenyList |
+| KernelSU | ZygiskNext / ReZygisk / NeoZygisk | PlayIntegrityFork / PIF | App Profiles + Shamiko |
+| APatch | ZygiskNext / ReZygisk / NeoZygisk | PlayIntegrityFork / PIF | Built-in exclusion + Shamiko |
 
 **Testing Tools:**
-- Play Integrity API Checker (use reputable sources)
+- SPIC (Simple Play Integrity Checker)
+- Play Store → Settings → Tap "Play Store version" seven times → General → Developer options → Verify integrity
+- Open the Play Store → Settings → Tap 'Play Store version' seven times. Go to 'General' → 'Developer options' → 'Verify integrity'. Your attestation will appear immediately!
 - Note: YASNAC is legacy (SafetyNet) and no longer authoritative
 
+**Check Device Certification:**
+- Play Store → Settings → About → "Play Protect certification"
+- Should show "Device is certified"
+
 **Reality Check:**
-- STRONG integrity typically requires locked bootloader
+- STRONG integrity typically requires locked bootloader + valid keybox
+- You might need to run PIF and/or get a new keybox from Tricky Store every 2 or 3 days to keep Google Wallet working.
 - Some apps will not work on rooted/unlocked devices regardless of configuration
 - Consider:
   - Secondary unmodified device for critical apps
@@ -1074,7 +946,9 @@ fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
 
 **Apps Known to Be Strict:**
 - Google Wallet/Pay
-- Banking apps
+- Banking apps (varies by region and app)
+- Macdonald's app
+- Revolut
 - Netflix (in some regions)
 - Pokemon GO
 - Corporate MDM apps
@@ -1083,7 +957,7 @@ fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
 
 ## Device-Specific Issues
 
-### Google Pixel (6/7/8/9 Series)
+### Google Pixel (6/7/8/9/10 Series)
 
 **Common Issues:**
 
@@ -1092,11 +966,21 @@ fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
    - Boot.img patching will fail to root
    - Extract from factory image payload.bin using payload-dumper-go
 
-2. **OTA updates**
+2. **Pixel 10 Series**
+   - The Pixel 10 series, launched in August 2025, ships with Android 16 pre-installed.
+   - Pixel 10 Pro can be rooted with SukiSU/SUSFS and needs a metamodule, TrickyStore with valid keybox and PIFork to get Strong Integrity.
+   - Use init_boot.img patching workflow
+
+3. **Android 16 QPR2 Rooting Issues**
+   - After certain 2026 firmware updates, some users lost root and re-rooting failed, resulting in bootloops.
+   - Magisk 30.7 was released with support for Android 16 QPR2 — ensure you are using the latest Magisk version
+   - If rooting fails after a firmware update, try waiting for a Magisk update that addresses your specific build
+
+4. **OTA updates**
    - Use "Install to Inactive Slot (After OTA)" method
    - Keep both slots in sync
 
-3. **Fastbootd for flashing**
+5. **Fastbootd for flashing**
    ```bash
    # Use userspace fastboot for dynamic partitions
    adb reboot fastboot
@@ -1111,7 +995,13 @@ fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
 
 ### Samsung Galaxy (S21-S25, Fold/Flip)
 
-**Common Issues:**
+:::danger One UI 8 (Android 16) Bootloader Lock
+One UI 8 (Android 16) eliminates bootloader unlocking support on Samsung Galaxy devices. OEM Unlocking toggle removed from Developer Options. Affected globally: S25 series, Z Fold 7, Z Flip 7, and any device updated to One UI 8.
+
+If you want to root a Samsung device, **do NOT update to One UI 8** until the community finds a workaround. Devices already on One UI 7 or earlier can still be unlocked using existing methods.
+:::
+
+**Common Issues (Pre-One UI 8):**
 
 1. **KNOX permanently trips**
    - Once bootloader unlocked, KNOX 0x1 flag is permanent
@@ -1134,6 +1024,11 @@ fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
    - Don't downgrade firmware below certain versions
    - Check "Binary" version in Download Mode
 
+5. **Galaxy S25 Series**
+   - The Galaxy S25 March 2026 update is based on One UI 8 and Android 16.
+   - Users on rooted S25 Ultra (European model) wanting to upgrade to Android 16 without losing data should follow the standard Odin re-root procedure with the new firmware's AP file.
+   - **Critical:** Updating to One UI 8 may permanently remove the ability to unlock the bootloader again if you re-lock.
+
 **Resources:**
 - [How to Root Samsung Phone](./rooting-guides/how-to-root-samsung-phone.md)
 
@@ -1153,10 +1048,10 @@ fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
    - Check ARB version in fastboot ROM
    - Use Mi Flash Tool anti setting carefully
 
-3. **MIUI-specific issues**
-   - MIUI heavily modified; some modules incompatible
+3. **HyperOS-specific issues**
+   - HyperOS (successor to MIUI) heavily modified; some modules incompatible
    - Battery optimization aggressive; whitelist root apps
-   - MIUI Security may interfere with root
+   - Security features may interfere with root
 
 4. **A/B vs A-only partitions**
    - Varies by model
@@ -1321,20 +1216,21 @@ fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
 **Strategies:**
 
 1. **Hide root completely**
-   - Enable all hiding features
+   - Enable all hiding features (see [Play Integrity section](#play-integrity-and-banking-apps))
    - Rename root manager app
    - Clear banking app data
-   - Add to DenyList/profile
+   - Add to DenyList/profile/exclusion list
 
 2. **Use alternate methods**
    - Browser-based banking
    - Secondary non-rooted device
-   - Dual boot setup
+   - Work profile separation
 
-3. **Module-based solutions**
-   - Shamiko
-   - MagiskHide Props Config
-   - Universal SafetyNet Fix
+3. **Module-based solutions (current 2026 stack)**
+   - Shamiko (for Magisk)
+   - PlayIntegrityFork or PIF
+   - Tricky Store (for attestation)
+   - Hide My Applist (via LSPosed)
 
 ---
 
@@ -1371,14 +1267,14 @@ su -c "cat /cache/magisk.log | grep [app-package-name]"
 **Solutions:**
 
 1. **Fix certification**
-   - MagiskHide Props Config
-   - Spoof certified device
-   - Clear app data
+   - Ensure Play Store shows "Device is certified"
+   - Use PlayIntegrityFork/PIF module
+   - Clear app data after fixing certification
 
 2. **Use older version**
    - Install from APKMirror
    - Disable auto-updates
-   - Use Zygisk Detach
+   - Use Zygisk Detach to prevent Play Store updates
 
 ---
 
@@ -1449,6 +1345,7 @@ cat /data/tombstones/tombstone_XX
    ```bash
    fastboot flashing lock
    # Warning: Will wipe data again
+   # Warning: On some devices, relocking with non-stock system can brick
    ```
 
 ---
