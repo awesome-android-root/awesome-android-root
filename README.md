@@ -624,6 +624,9 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ## Battery and Power Management
 
+### Battery Stats and Monitoring
+- **[BatStats](https://github.com/mlm-games/BatStats)** - Battery monitor with stats via Shizuku/root. `FOSS`
+
 ### Battery Optimization
 - **[Battery Guru](https://play.google.com/store/apps/details?id=com.paget96.batteryguru)** - Battery optimization and monitoring. `Proprietary`
 - **[Battery Honey](https://github.com/kaminarich/BatteryHoney)** - Optimize Battery Saving when screen OFF. `FOSS` `[M]`
