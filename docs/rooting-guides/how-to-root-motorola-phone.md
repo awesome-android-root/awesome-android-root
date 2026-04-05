@@ -342,9 +342,9 @@ On boot you will see a "Bootloader unlocked" warning - this is normal.
 
 **Step 1: Get Stock Firmware**
 
-1. Download from [Motorola Rescue and Smart Assistant (Software Fix)](https://en-us.support.motorola.com/app/softwarefix) or [Lolinet Motorola Firmware Mirror](https://mirrors.lolinet.com/firmware/moto/)
-2. Extract firmware archive
-3. Find `boot.img` or `init_boot.img`
+1. Download from [Motorola Rescue and Smart Assistant (Software Fix)](https://en-us.support.motorola.com/app/softwarefix) or [Lolinet Motorola Firmware Mirror](https://mirrors.lolinet.com/firmware/moto/). 
+2. If using the Motorola Rescue and Smart Assistant software, the installer must be run on an x86-based Windows machine. The firmware image must be downloaded by specifying the exact model, though the IMEI number can also be provided.
+3. Find `boot.img` or `init_boot.img` in the installed directory.
 
 ::: warning FIRMWARE VERSION MATCH
 If you already installed an official update before rooting: Do NOT extract init_boot.img from the initial/launch firmware. DO extract init_boot.img from the updated firmware that matches your current build number.
