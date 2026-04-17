@@ -80,7 +80,7 @@ Unlocking bootloader **erases everything** on your device. Backup all data first
 2. **[Google USB Drivers](https://developer.android.com/studio/run/win-usb)** - Windows only
 3. **[Magisk APK](https://github.com/topjohnwu/Magisk/releases)** - Latest stable
     - **Google Pixel / Pixel XL (1st gen):** use **[Magisk v30.6](https://github.com/topjohnwu/Magisk/releases/tag/v30.6)** until [issue #9808](https://github.com/topjohnwu/Magisk/issues/9808) is resolved.
-5. **[Pixel Flasher](https://github.com/badabing2005/PixelFlasher)** - GUI tool (optional)
+4. **[Pixel Flasher](https://github.com/badabing2005/PixelFlasher)** - GUI tool (optional)
 
 ### Enable Developer Options
 
