@@ -79,6 +79,7 @@ Unlocking bootloader **erases everything** on your device. Backup all data first
 1. **[Android Platform Tools](https://developer.android.com/studio/releases/platform-tools)** - ADB/Fastboot
 2. **[Google USB Drivers](https://developer.android.com/studio/run/win-usb)** - Windows only
 3. **[Magisk APK](https://github.com/topjohnwu/Magisk/releases)** - Latest stable
+    - **Google Pixel / Pixel XL (1st gen):** use **[Magisk v30.6](https://github.com/topjohnwu/Magisk/releases/tag/v30.6)** until [issue #9808](https://github.com/topjohnwu/Magisk/issues/9808) is resolved.
 4. **[Pixel Flasher](https://github.com/badabing2005/PixelFlasher)** - GUI tool (optional)
 
 ### Enable Developer Options
@@ -437,5 +438,5 @@ After rooting your Pixel:
 ---
 
 ::: tip SUCCESS
-Your Pixel is now rooted! Remember to keep Magisk updated and always backup before major changes.
+Your Pixel is now rooted! Remember to keep Magisk updated and always backup before major changes — except on Pixel 1 / 1st gen Pixel devices, where you should stay on Magisk v30.6 until the upstream issue is resolved.
 :::
