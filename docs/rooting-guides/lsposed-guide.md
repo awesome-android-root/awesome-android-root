@@ -65,72 +65,119 @@ head:
       content: index, follow
 ---
 
-# Complete LSPosed Framework Guide
+# Complete LSPosed / Vector Framework Guide
 
-The modern Xposed implementation for Android 8.1-15. Master LSPosed Framework for advanced app modifications and system customization without touching system partitions.
+The modern Xposed implementation for Android 8.1–16+. Master the Vector (formerly LSPosed) framework for advanced app modifications and system customization without touching system partitions.
+
+> [!IMPORTANT]
+> **Project Rename Notice:** The old `JingMatrix/LSPosed` has officially been renamed from LSPosed to Vector.
+
+---
 
 ## Essential Resources
 
 - [Main Rooting Guide](./index.md) - Universal rooting principles and device preparation
 - [Magisk Guide](./magisk-guide.md) - Required root solution with Zygisk support
-- [KernelSU Guide](./kernelsu-guide.md) - Alternative kernel-based root (experimental LSPosed support)
+- [KernelSU Guide](./kernelsu-guide.md) - Alternative kernel-based root
 - [Custom Recovery Guide](./how-to-install-custom-recovery.md) - Alternative installation method
-- [Root Apps Collection](../apps-and-modules/index.md) - Popular LSPosed modules directory
+- [Root Apps Collection](../apps-and-modules/index.md) - Popular Vector/LSPosed modules directory
 - [FAQ](../faqs.md) - Frequently asked questions
 - [Troubleshooting Guide](../faqs.md#troubleshooting) - Common issue solutions
 
-## What is LSPosed?
+---
 
-LSPosed is the modern successor to the classic Xposed framework, completely redesigned for Android 8.1+ with focus on stability, performance, and compatibility. It leverages Zygisk (Magisk) or KernelSU to hook into Android system and apps without modifying system partitions, **enabling powerful modifications while maintaining SafetyNet/Play Integrity compatibility when configured properly.**
+## What is Vector (LSPosed)?
+
+Vector is a Zygisk module providing an ART hooking framework that maintains API consistency with the original Xposed. The framework allows modules to modify system and application behavior in-memory.
 
 ### Key Features
 
 **Modern Architecture**
-- Zygisk-based hooking - Runs securely inside Magisk's Zygisk module system
-- KernelSU support - Experimental compatibility with kernel-based root
+- Completely rewritten, modern Zygisk architecture following the Vector & Zygisk Overhaul.
+- Supports both legacy and modern hooking standards to ensure broad module compatibility.
 
 **Compatibility & Performance**
-- Android support - 8.1 (Oreo) through 16 (current)
-- Minimal overhead - Lightweight implementation with negligible battery impact
+- Supports devices running Android 8.1 through Android 17 Beta.
+- Reflection Parity Overhaul: Completely rebuilt the `invokeSpecialMethod` backend to improve performance, enhance robustness, and mirror standard Java reflection behavior.
 
 **Module Ecosystem**
-- Modern API - Compatible with latest Xposed module standards
-- Repository access - Official LSPosed module repository integration
+- A module based on the LSPosed framework is fully compatible with the original Xposed Framework, and vice versa - a classic Xposed-based module will work well with LSPosed/Vector too.
 
-### LSPosed vs Classic Xposed
+<br>
+<details><summary>What's New in Vector 2.0</summary>
 
-| Feature | LSPosed (Modern) | Classic Xposed |
-|---------|------------------|----------------|
-| Android support | 8.1 to 15+ | 4.0 to 8.1 |
+While the major internal refactoring is still underway, version 2.0 was released to provide a stable, feature-complete environment for those relying on legacy libxposed APIs.
+
+### Key Changes
+
+| Feature | Details |
+|---------|---------|
+| **Project Rename** | Officially renamed from LSPosed to Vector |
+| **Zygisk Overhaul** | Completely rewritten modern Zygisk architecture |
+| **API 100 Finalized** | Definitive API 100 implementation before the API 101 jump |
+| **Android 16 Support** | Full support added |
+| **Telemetry Removed** | All telemetry monitoring has been stripped out |
+| **LSPlt Hook Removed** | Abandoned for efficiency |
+| **C++ Library** | Switched to official C++ implementation (larger archive) |
+
+</details>
+
+### API 101 Notice
+
+> [!WARNING]
+> With the recent publication of libxposed API 101, the ecosystem is moving toward a new standard with significant breaking changes. If a module requires API 101, use the older API 100-compatible version of that module in the meantime.
+
+### Ongoing Refactor
+
+The current LSPosed fork is undergoing a complete refactor into the new Vector project. The Java layer is being rewritten into Kotlin, with extensive documentation being added for the native layer.
+
+---
+
+## Vector vs Classic Xposed
+
+| Feature | Vector 2.0 (Current) | Classic Xposed |
+|---------|----------------------|----------------|
+| Android support | 8.1 to 17 Beta | 4.0 to 8.1 |
 | Installation method | Magisk/Zygisk module | System modification |
 | OTA compatibility | Survives updates | Requires reinstall |
 | SafetyNet/Integrity | Hideable with Magisk | Detectable |
 | Module scoping | Per-app control | System-wide only |
-| Development status | Active (JingMatrix fork) | Discontinued |
+| Development status | Active (Vector/JingMatrix) | Discontinued |
 | Performance impact | Minimal | Moderate |
+| libxposed API | 100 (101 in progress) | Legacy only |
+| In-memory hooking | ✅ Non-destructive | ❌ System files modified |
+
+---
 
 ## Prerequisites
 
 ### Mandatory Requirements
 
 > [!IMPORTANT]
-> LSPosed will NOT work without these requirements met. Do not proceed until all are satisfied.
+> Vector/LSPosed will **NOT** work without these requirements met. Do not proceed until all are satisfied.
 
 **Root Access**
-- Magisk 30+ with Zygisk enabled (recommended)
-- KernelSU latest version (experimental, limited compatibility)
+- Magisk 26+ with Zygisk enabled (recommended)
+- KernelSU with Zygisk Next/NeoZygisk (supported)
+- KernelSU Next (supported via Zygisk Next/NeoZygisk)
 
 **Android Version**
 - Android 8.1 (Oreo) minimum
-- Android 9-15 (full feature support)
-- Android 16 (latest builds, may have module compatibility issues)
+- Android 8.1 through Android 17 Beta supported.
+- Android 16 - fully supported as of the latest stable release
+
+**Zygisk Environment**
+- This framework requires a recent installation of Magisk or KernelSU with Zygisk enabled.
+- Ensure a Zygisk environment (e.g., Zygisk Next/NeoZygisk) is present.
+
+---
 
 ### Magisk Configuration Checklist
 
 **Required Settings**
-- Magisk version - 24.0 or newer (26.4+ recommended for Android 14+)
+- Magisk version - 26.0 or newer (recommended)
 - Zygisk - Must be enabled in Magisk settings
-- Magisk Hide/DenyList - Optional, for hiding root from specific apps
+- Magisk DenyList - Optional, for hiding root from specific apps
 - Systemless installation - Magisk should be installed via patched boot image
 
 **Verification Commands**
@@ -138,7 +185,7 @@ LSPosed is the modern successor to the classic Xposed framework, completely rede
 ```bash
 # Check Magisk version
 su -c "magisk --version"
-# Should return 26400 or higher (26.4)
+# Should return 26000 or higher
 
 # Verify Zygisk status
 su -c "magisk --status | grep Zygisk"
@@ -153,30 +200,27 @@ su -c "id"
 # Should show "uid=0(root)"
 ```
 
-### KernelSU Configuration (Experimental)
+---
 
-::: warning KernelSU Compatibility
-LSPosed support for KernelSU is experimental. Many modules may not work correctly. Use Magisk + Zygisk for best compatibility.
-:::
+### KernelSU Configuration
+
+> [!WARNING]
+> KernelSU support requires Zygisk Next/NeoZygisk for proper Vector/LSPosed functionality. Install the Zygisk provider first, then Vector.
 
 **KernelSU Requirements**
 - KernelSU kernel installed (GKI or LKM mode)
 - KernelSU Manager app installed
+- Zygisk Next/NeoZygisk installed (required for Zygisk environment)
 - Root access verified
 - SELinux properly configured
 
-**Known Limitations with KernelSU**
-- Some modules fail to load
-- Resource hooks may not work
-- System framework hooks unstable
-- Limited community support
+---
 
 ## Device Compatibility
 
 - ✅ **Supported:** Pixel, Nexus, OnePlus, Samsung (stock OneUI), AOSP-based ROMs
-- ⚠️ **Limited:** MIUI, EMUI (especially older versions)
+- ⚠️ **Limited:** MIUI/HyperOS (some versions have known crashes - see Troubleshooting), EMUI
 - ❌ **Not Supported:** Android Go, Fire OS
-
 
 ### ROM Compatibility
 
@@ -186,480 +230,295 @@ LSPosed support for KernelSU is experimental. Many modules may not work correctl
 | AOSP-based ROMs | Excellent | LineageOS, PixelOS, etc. |
 | OneUI (Samsung) | Good | Works with Magisk + Zygisk |
 | OxygenOS (OnePlus) | Good | ColorOS base also works |
-| MIUI/HyperOS (Xiaomi) | Moderate | Some modules incompatible |
+| MIUI/HyperOS (Xiaomi) | Moderate | Known crashes on some HyperOS 2.x versions |
 | Nothing OS | Good | Growing compatibility |
 | Custom GSI | Variable | Depends on implementation |
-| GrapheneOS | Poor | Security restrictions conflict |
+| GrapheneOS | Now Supported* | *Via Zygisk Next/NeoZygisk stable |
 | CalyxOS | Good | Works with microG |
+
+> **GrapheneOS Note:** Support for GrapheneOS has been added in the Zygisk Next/NeoZygisk stable release. This changes previous guidance - GrapheneOS users should use Zygisk Next/NeoZygisk as their Zygisk provider.
 
 ---
 
 ## Installation Guide
 
 > [!WARNING]
-> **⚠️ Important Note:**
-> We use the [JingMatrix LSPosed fork](https://github.com/JingMatrix/LSPosed) as the original LSPosed project is no longer maintained. JingMatrix's fork provides continued updates for Android 14-15 and bug fixes.
+> We use the **[JingMatrix/Vector](https://github.com/JingMatrix/Vector)** project (formerly JingMatrix/LSPosed). The original LSPosed project (`LSPosed/LSPosed`) is no longer maintained. Vector provides continued updates for Android 14–16+ and ongoing bug fixes.
 
+---
 
 ### Method 1: Magisk Manager Installation (Recommended)
 
-**Best for**: Most users, easiest method, automatic updates
+**Best for**: Most users, easiest method
 
 #### Step 1: Enable Zygisk
 
-1. **Open Magisk Manager** app
-2. **Tap the gear icon** (Settings) in the top right
-3. **Scroll to "Zygisk"** section
-4. **Enable the Zygisk toggle** (it will turn blue)
-5. **Magisk will prompt for reboot** - tap "Reboot" button
-6. **Wait for device to restart** (1-2 minutes)
+1. Open **Magisk Manager** app
+2. Tap the **gear icon** (Settings)
+3. Scroll to **"Zygisk"** and enable the toggle
+4. Tap **"Reboot"** when prompted
+5. Wait for device to restart (1–2 minutes)
 
-**Verification After Reboot**
+**Verification after reboot:**
 
 ```bash
 # Via ADB
 adb shell su -c "magisk --status | grep Zygisk"
 # Should show: Zygisk: enabled
-
-# Via Terminal Emulator (on device)
-su
-magisk --status | grep Zygisk
 ```
 
-#### Step 2: Download LSPosed Module
+#### Step 2: Download Vector (LSPosed) Module
 
-**Option A: GitHub Actions (Latest Builds)**
+**Option A: GitHub Releases (Stable)**
+1. Visit [Vector Releases](https://github.com/JingMatrix/Vector/releases)
+2. Download the latest **release ZIP** (e.g., `LSPosed-v2.0-XXXX-zygisk-release.zip`)
+3. Verify the filename says **"zygisk"** (not riru)
 
-1. Visit [LSPosed GitHub Actions](https://github.com/JingMatrix/LSPosed/actions/workflows/core.yml?query=branch%3Amaster)
-2. Click the **latest successful workflow run** (green checkmark)
-3. Scroll to **"Artifacts"** section
-4. Download **"LSPosed-master-[version]-release.zip"**
-5. Transfer to device if downloaded on PC
+**Option B: GitHub Actions (Latest CI Build)**
+1. Visit [Vector GitHub Actions](https://github.com/JingMatrix/Vector/actions/workflows/core.yml?query=branch%3Amaster)
+2. Click the latest **successful workflow run** (green checkmark)
+3. Download the artifact ZIP from the **"Artifacts"** section
+4. Note: GitHub requires users to be logged in to download CI artifacts.
+5. Debug builds are recommended for users encountering issues or performing troubleshooting. Users are encouraged to test CI builds to help identify bugs and accelerate development.
 
-**Option B: GitHub Releases (Stable)**
-
-1. Visit [LSPosed Releases](https://github.com/JingMatrix/LSPosed/releases)
-2. Download **latest release ZIP** (e.g., LSPosed-v1.9.2-7024-zygisk-release.zip)
-3. Verify it says **"zygisk"** in filename (not riru)
+> [!NOTE]
+> Builds from Pull Requests (PRs) are often unstable and potentially unsafe depending on the author. Stay on the master branch for verified builds, unless you are asked to help with debugging.
 
 **Version Selection**
-- **Zygisk version** - For Magisk 24.0+ (recommended)
-- **Riru version** - Legacy, deprecated, DO NOT use
-- **KernelSU version** - Experimental, for KernelSU only
+- **Zygisk version** - For Magisk 26.0+ (recommended)
+- **Riru version** - Legacy, deprecated. **DO NOT use.**
 
-#### Step 3: Install LSPosed Module
+#### Step 3: Install Vector Module
 
-1. **Open Magisk Manager** app
-2. **Tap "Modules"** tab at bottom
-3. **Tap "Install from storage"** button
-4. **Navigate to downloaded LSPosed ZIP**
-5. **Select the ZIP file**
-6. **Wait for installation** - Will show console output:
+1. Open **Magisk Manager** > **Modules** tab
+2. Tap **"Install from storage"**
+3. Navigate to and select the downloaded Vector ZIP
+4. Wait for the console output:
    ```
-   - Installing LSPosed
+   - Installing LSPosed / Vector
    - Extracting module files
    - Setting up Zygisk module
    - Installation complete
    ```
-7. **Tap "Reboot"** button when prompted
-8. **Device will restart** (2-3 minutes for first boot)
+5. Tap **"Reboot"** when prompted
 
 #### Step 4: Verify Installation
 
-**Check for LSPosed Notification**
-
-After reboot, you should see:
-- Notification from LSPosed in status bar
-- Notification says "LSPosed is activated"
-- Tapping opens LSPosed Manager
-
-**If No Notification Appears**
+After reboot, you should see a persistent notification from LSPosed/Vector in the status bar.
 
 ```bash
-# Check if LSPosed module is loaded
+# Check if module is loaded
 adb shell su -c "ls -la /data/adb/modules/lsposed*"
-# Should show lsposed module directory
 
-# Check LSPosed daemon
+# Check daemon is running
 adb shell su -c "ps -ef | grep lspd"
-# Should show lspd process running
 
-# Check Zygisk status again
-adb shell su -c "magisk --status"
 # Verify Zygisk still enabled
+adb shell su -c "magisk --status"
 ```
 
-#### Step 5: Open LSPosed Manager
+#### Step 5: Open the Manager
 
-1. **Tap the LSPosed notification** (if visible)
+1. Tap the **LSPosed/Vector notification** in the status bar
    - OR -
-2. **Find "LSPosed" app** in app drawer
-3. **Grant root permission** when prompted
-4. **Manager will open** showing main dashboard
+2. Open the manager via the Action button (new in the latest release)
+   - OR -
+3. Find the **"LSPosed"** app in the app drawer
 
-**LSPosed Manager Interface**
-
+**Manager Interface:**
 - **Modules tab** - Installed modules list
 - **Logs tab** - System and module logs for debugging
-- **Settings tab** - LSPosed configuration
-- **Repository tab** - Official module repository (if connected)
+- **Settings tab** - Framework configuration
+- **Repository tab** - Official module repository
+
+---
 
 ### Method 2: Custom Recovery Installation
 
 **Best for**: Devices without Magisk Manager access, advanced users
 
 #### Prerequisites
-
 - TWRP, OrangeFox, or LineageOS Recovery installed
-- LSPosed ZIP downloaded (see Method 1, Step 2)
-- Magisk already installed and Zygisk enabled
+- Vector ZIP downloaded
+- Magisk already installed with Zygisk enabled
 
-#### Installation Steps
+#### Steps
 
-1. **Boot to custom recovery**
+1. Boot to custom recovery:
    ```bash
-   # Via ADB
    adb reboot recovery
-   
-   # Via Power Menu (if available)
-   # Power + Volume Up (or device-specific combo)
    ```
+2. Navigate to **Install** section in your recovery
+3. Select the Vector ZIP file
+4. Swipe to confirm flash
+5. **Reboot system** (do NOT wipe cache/dalvik - unnecessary)
+6. Verify following Method 1, Step 4
 
-2. **Navigate to Install section**
-   - TWRP: Tap "Install"
-   - OrangeFox: Tap "Install"
-   - LineageOS Recovery: "Apply update" > "Apply from ADB"
+---
 
-3. **Select LSPosed ZIP**
-   - Browse to downloaded ZIP location
-   - Tap the ZIP file
-   - Swipe to confirm flash (TWRP/OrangeFox)
+### Method 3: KernelSU Installation (via Zygisk Next/NeoZygisk)
 
-4. **Flash process**
-   ```
-   Installing zip file...
-   - Detecting installation environment
-   - Installing LSPosed Zygisk module
-   - Setting up daemon
-   - Installation successful
-   ```
+> [!WARNING]
+> KernelSU requires Zygisk Next/NeoZygisk for Vector to work properly. Install the Zygisk provider **before** installing Vector.
 
-5. **Reboot system**
-   - Tap "Reboot System" button
-   - Do NOT wipe cache/dalvik (unnecessary)
+#### Steps
 
-6. **Verify** - Follow Method 1, Step 4 verification
+1. Install KernelSU kernel and Manager
+2. Install **Zygisk Next/NeoZygisk** via KernelSU Manager
+3. Reboot
+4. Download the **Zygisk** version of Vector (same ZIP as Magisk method)
+5. Install via KernelSU Manager > Modules > Install from storage
+6. Reboot
+7. Open manager from notification
 
-### Method 3: KernelSU Installation (Experimental)
-
-::: warning Experimental Feature
-KernelSU support is experimental. Expect module incompatibilities and instability. Only use if you specifically need KernelSU over Magisk.
-:::
-
-#### Prerequisites
-
-- KernelSU kernel installed (GKI or LKM mode)
-- KernelSU Manager app working
-- Root access verified
-
-#### Installation Steps
-
-1. **Download KernelSU-specific LSPosed build**
-   - Visit [LSPosed KernelSU releases](https://github.com/JingMatrix/LSPosed/releases)
-   - Download **"kernelsu"** version (NOT zygisk)
-
-2. **Install via KernelSU Manager**
-   - Open KernelSU Manager
-   - Go to Modules section
-   - Install from storage
-   - Select LSPosed ZIP
-   - Reboot
-
-3. **Verify installation**
-   ```bash
-   # Check KernelSU module
-   su -c "ksud module list"
-   # Should show lsposed in list
-   ```
-
-**Known Issues with KernelSU**
-- Resource hooks may fail
-- Some modules crash on launch
-- System framework hooks unstable
-- Limited community support
+```bash
+# Verify KernelSU module list
+su -c "ksud module list"
+# Should show lsposed/vector in list
+```
 
 ---
 
 ## First-Time Setup & Configuration
 
-### Initial Configuration Wizard
+### Step 1: Grant Root Permission
 
-After first opening LSPosed Manager:
+- LSPosed requests root access on first launch
+- Tap **"Grant"** or **"Allow"** - select **"Remember choice"** for permanent access
 
-#### Step 1: Grant Root Permission
+### Step 2: Enable Essential Features
 
-- **LSPosed requests root access**
-- **Tap "Grant" or "Allow"** in Magisk/KernelSU prompt
-- **Permanent grant recommended** (check "Remember choice")
+Navigate to the **Settings Tab** in the manager:
 
-#### Step 2: Enable Essential Features
+1. **Enable resources hook** - Required for UI theming, icon packs, font changers *(recommended)*
+2. **Enable verbose logs** - Required for troubleshooting *(enable during setup, disable later)*
+3. **Enable modules for system framework** - Required for system-level modifications *(use with caution - can cause bootloops)*
+4. **Toggle off detectable logging** - Users can now toggle off detectable logging of LSPosed for improved privacy/stealth *(new in latest release)*
 
-**Navigate to Settings Tab**
+### Step 3: Configure Manager Shortcut
 
-1. **Enable resources hook**
-   - Required for: UI theming modules, icon packs, font changers
-   - Toggle ON (recommended)
+**Settings > Manager shortcut**
 
-2. **Enable verbose logs**
-   - Required for: Troubleshooting module issues
-   - Toggle ON (recommended for setup, can disable later)
-
-3. **Enable modules for system framework**
-   - Required for: System-level modifications
-   - Toggle ON if you plan to use system-modifying modules
-   - Warning: Can cause bootloops if module misbehaves
-
-4. **Manager protection**
-   - Optional: Enable biometric lock for LSPosed Manager
-   - Optional: Hide manager icon from launcher
-
-#### Step 3: Configure Manager Shortcut
-
-**Create Quick Access**
-
-- **Settings** > **Manager shortcut**
-- **Options:**
-  - Notification - Persistent notification for quick access
-  - Launcher icon - Traditional app launcher icon
-  - Both - Maximum accessibility
-
-**Notification Configuration**
-
-If enabled:
-- Shows in notification bar
-- Quick tap to open manager
-- Can configure priority (silent or alerting)
+Options:
+- **Notification** - Persistent notification for quick access (default)
+- **Launcher icon** - Traditional app icon
+- **Action button** - The LSPosed manager can now be opened via the Action button *(new)*
 
 ### Verify Installation Status
 
-#### Check Dashboard
-
-**Open LSPosed Manager** > **Home tab**
-
-**Status Indicators**
-- LSPosed version (e.g., v1.9.2)
+**Open LSPosed Manager > Home tab** and check:
+- Vector/LSPosed version (e.g., v2.0)
 - Zygisk status (should show "Active")
-- API level (Android version)
-- Magisk version
-
-### Configure Advanced Settings
-
-#### Scope Management Defaults
-
-**Settings** > **Default scope behavior**
-
-- **System framework** - Apply modules to Android system (risky)
-- **All apps** - Apply modules globally (not recommended)
-- **Manual selection** - Per-app control (recommended)
-
-#### Module Update Settings
-
-**Settings** > **Module repository**
-
-- **Auto-check updates** - Daily update checking
-- **Update notifications** - Alert when module updates available
-- **Repository mirrors** - Select fastest server
+- Android API level
+- Magisk/KernelSU version
 
 ---
 
 ## Installing & Managing Modules
 
-### Module Sources & Safety
+### Module API Compatibility
+
+> [!IMPORTANT]
+> With the recent publication of libxposed API 101, the ecosystem is moving toward a new standard with significant breaking changes. Vector 2.0 implements **API 100** only. Modules that require **API 101 will not load**. Check your module's requirements before installing. The Vector project has confirmed API 101 support is being planned.
+
+### Module Sources
 
 #### Official Sources (Recommended)
 
-**1. LSPosed Repository**
-- Built-in to LSPosed Manager
-- Verified modules only
-- Automatic update notifications
-- Access: LSPosed Manager > Repository tab
-
-**2. GitHub Releases**
-- Developer official releases
-- Verify repository authenticity
-- Check release signatures
-- Examples: ChromeXt, QAuxiliary, WA Enhancer
-
-**3. XDA Developers Forums**
-- Community-vetted modules
-- Developer support threads
-- User feedback and reviews
+1. **Vector/LSPosed Repository** - Built-in to manager, verified modules, automatic updates. Access via: *Manager > Repository tab*
+2. **GitHub Releases** - Developer official releases (e.g., ChromeXt, QAuxiliary, WA Enhancer)
+3. **XDA Developers Forums** - Community-vetted modules with user feedback
 
 #### Unofficial Sources (Use with Caution)
 
-::: warning Source Safety
-Only install modules from trusted developers. Malicious modules can:
-- Steal passwords and credentials
-- Log sensitive information
-- Cause system instability
-- Brick devices if system-modifying
-:::
+> [!WARNING]
+> Only install modules from trusted developers. Malicious modules can steal credentials, log sensitive data, cause system instability, or brick devices.
 
+---
 
 ### Installation Methods
 
 #### Method 1: LSPosed Repository (Easiest)
 
-1. **Open LSPosed Manager** > **Repository tab**
-2. **Browse or search** for modules
-3. **Tap module** to view details
-   - Description
-   - Compatibility
-   - Permissions
-   - User reviews
-4. **Tap "Install"** button
-5. **Grant installation permission** (if first time)
-6. **Module installs** automatically
-7. **Enable module** (toggle switch)
-8. **Configure scope** (select target apps)
-9. **Reboot if required** (usually needed)
-
-**Repository Features**
-- Category browsing (Customization, Privacy, Tweaks, etc.)
-- Search function
-- Update notifications
-- Compatibility filtering (Android version)
+1. Open Manager > **Repository tab**
+2. Browse/search for a module
+3. Tap module > review details
+4. Tap **"Install"**
+5. Enable the module toggle
+6. Configure scope
+7. Reboot if required
 
 #### Method 2: Manual APK Installation
 
-**Best for**: Modules not in repository, beta versions, custom builds
+```bash
+# Via ADB
+adb install module.apk
+```
 
-1. **Download module APK**
-   - GitHub releases
-   - Developer website
-   - XDA thread
+Or install via file manager on-device, then:
+1. Open Manager > **Modules tab** (module appears automatically)
+2. Enable toggle
+3. Configure scope
+4. Reboot
 
-2. **Install APK**
-   ```bash
-   # Via ADB
-   adb install module.apk
-   
-   # Or on device
-   # File manager > Tap APK > Install
-   ```
-
-3. **Open LSPosed Manager** > **Modules tab**
-4. **Module appears** in list automatically
-5. **Enable module** (toggle ON)
-6. **Configure scope** (tap module)
-7. **Reboot device**
-
+---
 
 ### Scope Configuration
 
-**Scope** determines which apps a module affects. Proper scope configuration prevents conflicts and improves stability.
+New options have been added to the Select menu for scopes in the latest release.
 
 #### Scope Types
 
-**1. System Framework**
-- Affects Android system itself
-- Required for: System UI mods, global theming, system tweaks
-- Risk: High (bootloops possible)
-- Use for: Modules that must modify system behavior
-
-**2. Specific Apps**
-- Affects only selected apps
-- Required for: App-specific mods (WhatsApp, Instagram, etc.)
-- Risk: Low (only affects target app)
-- Use for: Most modules (recommended)
-
-**3. All Apps (Global)**
-- Affects every installed app
-- Required for: Rare cases (global ad blocking, etc.)
-- Risk: High (conflicts, crashes, performance issues)
-- Use for: Only when explicitly required
+| Type | Risk | Use Case |
+|------|------|----------|
+| System Framework | High | System UI mods, global tweaks |
+| Specific Apps | Low | App-specific mods (recommended) |
+| All Apps (Global) | High | Only when explicitly required |
 
 #### How to Configure Scope
 
-1. **Open LSPosed Manager** > **Modules tab**
-2. **Tap the module** you want to configure
-3. **Tap "Application Scope"** section
-4. **Select target apps:**
-   - **Search bar** - Find apps quickly
-   - **System apps** - Toggle to show/hide
-   - **Checkboxes** - Select multiple apps
-5. **Tap back** to save
+1. Manager > **Modules tab** > Tap a module
+2. Tap **"Application Scope"**
+3. Use the **Search bar**, toggle **System apps**, and check target apps
+4. Tap back to save
 
-**Scope Configuration Example (WhatsApp Module)**
-- Enable: WhatsApp (com.whatsapp)
-- Enable: WhatsApp Business (com.whatsapp.w4b)
-- Disable: System Framework
-- Disable: All other apps
+**Example - WhatsApp Module:**
+- ✅ Enable: `com.whatsapp`
+- ✅ Enable: `com.whatsapp.w4b`
+- ❌ Disable: System Framework (unless required)
 
 #### Scope Best Practices
 
-**Performance Optimization**
 - Only enable scope for necessary apps
-- Avoid system framework unless required
+- Avoid system framework unless explicitly required
 - Never use "all apps" scope without good reason
+- Test modules on one app before expanding scope
 
-**Stability Management**
-- Test modules on one app first
-- Expand scope gradually
-- Disable problematic apps from scope
-
-**Troubleshooting with Scope**
-- If module doesn't work: Verify correct app selected
-- If app crashes: Remove from module scope temporarily
-- If system unstable: Disable system framework scope
+---
 
 ### Module Management
 
-#### Enable/Disable Modules
+#### Enable/Disable
 
-**Toggle Individual Modules**
-1. **LSPosed Manager** > **Modules tab**
-2. **Locate module** in list
-3. **Tap toggle switch** (right side)
-   - ON = Module active after reboot
-   - OFF = Module inactive
-4. **Reboot device** to apply
-
-**Batch Operations**
-- Long-press module for options
-- Select multiple modules
-- Enable/disable selected
-- Uninstall selected
+1. Manager > **Modules tab**
+2. Tap toggle switch (right side)
+3. Reboot to apply
 
 #### Update Modules
 
-**Automatic Updates (Repository Modules)**
-1. **LSPosed Manager** > **Repository tab**
-2. **"Updates" section** shows available updates
-3. **Tap "Update" button** for each module
-4. **Or "Update All"** for batch updates
-5. **Reboot after updates**
+- **Repository modules:** Manager > Repository > "Updates" section > tap Update / Update All > reboot
+- **Manual:** Install new APK over existing, reboot
 
-**Manual Updates**
-1. Download new APK from source
-2. Install over existing module
-3. LSPosed detects update
-4. Reboot to apply
+#### Uninstall
 
-#### Uninstall Modules
+**Via Manager:** Long-press module > "Uninstall" > confirm > reboot
 
-**Method 1: Via LSPosed Manager**
-1. **Modules tab** > Long-press module
-2. **Select "Uninstall"**
-3. **Confirm uninstall**
-4. **Reboot device**
-
-**Method 2: Via System Settings**
-1. **Settings** > **Apps**
-2. **Find module app**
-3. **Tap "Uninstall"**
-4. **LSPosed auto-detects** removal
-5. **Reboot device**
+**Via ADB:**
+```bash
+adb shell pm uninstall com.example.module
+adb shell su -c "rm -rf /data/data/com.example.module"
+adb reboot
+```
 
 ---
 
@@ -669,77 +528,48 @@ Only install modules from trusted developers. Malicious modules can:
 
 <details><summary>Click to expand</summary>
 
-#### LSPosed Not Appearing After Install
+#### Vector Not Appearing After Install
 
-**Symptom:** Module installed in Magisk, but no LSPosed notification
+**Symptom:** Module installed in Magisk, but no notification appears.
 
-**Diagnosis:**
 ```bash
-# Check if module installed
+# Check if module is installed
 adb shell su -c "ls /data/adb/modules/ | grep lsposed"
 
 # Check Zygisk status
 adb shell su -c "magisk --status | grep Zygisk"
 
-# Check for errors in Magisk log
+# Check Magisk log for errors
 adb shell su -c "cat /cache/magisk.log | grep lsposed"
 ```
 
 **Solutions:**
 
-**Solution 1: Verify Zygisk**
-1. Open Magisk Manager
-2. Settings > Zygisk > Ensure enabled
-3. Reboot device
-4. Check for LSPosed notification
+1. **Verify Zygisk:** Magisk Settings > Zygisk > enabled > reboot
+2. **Reinstall Module:** Remove > reboot > reinstall > reboot
+3. **Clear Magisk cache:**
+   ```bash
+   adb shell su -c "rm -rf /data/adb/magisk/*cache*"
+   adb reboot
+   ```
+4. **Verify correct ZIP:** Ensure filename contains "zygisk", not "riru"
 
-**Solution 2: Reinstall Module**
-1. Magisk Manager > Modules
-2. Remove LSPosed module
-3. Reboot
-4. Install LSPosed again
-5. Reboot
+#### Manager Won't Open
 
-**Solution 3: Clear Magisk Cache**
 ```bash
-adb shell su -c "rm -rf /data/adb/magisk/*cache*"
-adb reboot
-```
-
-**Solution 4: Check Module Version**
-- Ensure you downloaded Zygisk version (not Riru)
-- Verify Android version compatibility
-- Try different release version
-
-#### LSPosed Manager Won't Open
-
-**Symptom:** Notification appears but tapping does nothing
-
-**Solutions:**
-
-**Solution 1: Force Stop and Clear Cache**
-```bash
-# Stop manager
+# Force stop manager
 adb shell am force-stop org.lsposed.manager
 
 # Clear cache
 adb shell pm clear org.lsposed.manager
 
-# Try opening again
+# Relaunch
 adb shell am start -n org.lsposed.manager/.ui.activity.MainActivity
 ```
 
-**Solution 2: Reinstall Manager**
-1. Uninstall manager app (keep module)
-2. Reboot
-3. Reinstall from notification
-
-**Solution 3: Check Permissions**
-- Settings > Apps > LSPosed Manager
-- Ensure notification permission granted
-- Ensure root permission granted in Magisk
-
 </details>
+
+---
 
 ### Module Loading Issues
 
@@ -747,82 +577,36 @@ adb shell am start -n org.lsposed.manager/.ui.activity.MainActivity
 
 #### Modules Not Working After Enable
 
-**Symptom:** Module enabled, but features don't work
-
-**Diagnosis Checklist:**
-- [ ] Module enabled in LSPosed Manager
-- [ ] Scope configured correctly (target apps selected)
-- [ ] Device rebooted after enable
+**Checklist:**
+- [ ] Module enabled in manager
+- [ ] Scope configured correctly (target app selected)
+- [ ] Device rebooted after enabling
 - [ ] Module compatible with Android version
+- [ ] Module does **not** require libxposed API 101 (Vector 2.0 only supports API 100)
 - [ ] No conflicting modules
 
-**Solutions:**
+**Check Logs:**
 
-**Solution 1: Verify Scope**
-1. LSPosed Manager > Modules
-2. Tap problematic module
-3. Check "Application Scope"
-4. Ensure target app is checked
-5. Save and reboot
-
-**Solution 2: Check Module Logs**
-1. LSPosed Manager > Logs tab
+1. Manager > **Logs tab**
 2. Filter by module package
-3. Look for errors:
-   - "ClassNotFoundException" - Module incompatible
-   - "MethodNotFoundException" - App updated, module outdated
-   - "SecurityException" - Permission issue
+3. Common errors:
+   - `ClassNotFoundException` - Module incompatible with Android version
+   - `MethodNotFoundException` - App updated, module outdated
+   - `SecurityException` - Permission issue
+   - `api version too old` - Module requires API 101, not supported yet
 
-**Solution 3: Reinstall Module**
-```bash
-# Uninstall module
-adb shell pm uninstall com.example.module
+**Fix API Mismatch:**
 
-# Clear module data
-adb shell su -c "rm -rf /data/data/com.example.module"
-
-# Reinstall from source
-# Enable and configure again
-```
-
-**Solution 4: Test on Different App Version**
-- If possible, try older app version
-- Or wait for module update
-- Check module XDA/GitHub for known issues
+If a module won't activate due to API version requirements, download an older version of that module that targets API 100, or wait for Vector to implement API 101 support.
 
 #### Module Causes App Crashes
 
-**Symptom:** App crashes immediately after module enabled
-
-**Solutions:**
-
-**Solution 1: Disable Module for Specific App**
-1. LSPosed Manager > Modules
-2. Tap crashing module
-3. Remove problematic app from scope
-4. Reboot
-
-**Solution 2: Safe Mode Boot**
-```bash
-# Boot to safe mode (disables all modules)
-# Method varies by device
-
-# Via ADB
-adb reboot recovery
-# In recovery, select "Reboot to safe mode"
-
-# Or disable in recovery
-# Mount system
-# Delete module: rm -rf /data/data/com.example.module
-```
-
-**Solution 3: Incremental Scope Testing**
-1. Remove all apps from module scope
-2. Add one app at a time
-3. Test each addition
-4. Identify problematic app
+1. Manager > Modules > tap module > remove the crashing app from scope > reboot
+2. If system-wide instability, disable the module entirely and reboot
 
 </details>
+
+---
 
 ### System Stability Issues
 
@@ -830,179 +614,101 @@ adb reboot recovery
 
 #### Bootloop After Enabling Module
 
-**Symptom:** Device continuously reboots, can't reach home screen
+> [!DANGER]
+> Bootloops require immediate action to prevent data loss or extended downtime.
 
-::: danger Critical Issue
-Bootloops require immediate action to prevent data loss or extended downtime.
-:::
-
-**Emergency Recovery Steps:**
+**Emergency Recovery:**
 
 **Step 1: Boot to Recovery**
-- Power off device (hold power 10+ seconds)
+- Hold power 10+ seconds to force off
 - Boot to recovery (device-specific combo)
-  - Most Android: Power + Volume Down/Up
-  - Pixel: Power + Volume Down, select Recovery
 
-**Step 2: Disable LSPosed Modules**
+**Step 2: Disable LSPosed/Vector Modules**
 
-**Method A: Via Recovery File Manager (TWRP)**
+*Method A - Via Recovery ADB:*
 ```bash
-# Navigate to:
-/data/adb/modules/lsposed/
-
-# Rename folder to disable:
-mv lsposed lsposed.disabled
-
-# Or delete module:
-rm -rf lsposed
-```
-
-**Method B: Via Recovery ADB**
-```bash
-# Connect device to PC
 adb devices
 
-# Disable all modules
+# Disable all Magisk modules
 adb shell rm -rf /data/adb/modules/*/
 
-# Or just LSPosed
+# Or just Vector/LSPosed
 adb shell rm -rf /data/adb/modules/lsposed/
 
-# Reboot
 adb reboot
 ```
 
-**Method C: Via Recovery Terminal**
+*Method B - Via TWRP File Manager:*
+```
+Navigate to: /data/adb/modules/lsposed/
+Rename folder to: lsposed.disabled
+```
+
+*Method C - Via Recovery Terminal:*
 ```bash
-# Mount system
-mount /system
 mount /data
-
-# Disable problematic module
-cd /data/data/
-rm -rf com.example.problematic.module
-
-# Or disable LSPosed entirely
 rm -rf /data/adb/lspd/
 ```
 
 **Step 3: Boot and Diagnose**
 1. Device should boot normally
-2. Open LSPosed Manager
-3. Check Logs tab for cause
-4. Re-enable modules one by one
-5. Identify culprit
-
-**Prevention:**
-- Always keep recovery access available
-- Enable system framework modules cautiously
-- Test new modules individually
-- Keep backup of working configuration
-
-#### Sluggish Performance
-
-**Symptom:** Device slower after installing LSPosed/modules
-
-**Diagnosis:**
-```bash
-# Check CPU usage
-adb shell top -n 1 | grep lspd
-
-# Check memory usage
-adb shell dumpsys meminfo | grep lsposed
-
-# Check module impact
-adb shell ps -A | grep -E "lspd|com.example.module"
-```
-
-**Solutions:**
-
-**Solution 1: Reduce Module Count**
-- Disable non-essential modules
-- Combine functionality where possible
-- Monitor performance after each disable
-
-**Solution 2: Optimize Module Scope**
-- Reduce number of apps in each module's scope
-- Remove system apps from scope unless necessary
-- Use app-specific modules instead of global ones
-
-**Solution 3: Disable Resource Hooks**
-- If not using theming modules:
-  - Settings > Disable "Enable resources hook"
-  - Reboot
-
-**Solution 4: Check for Rogue Modules**
-```bash
-# Monitor CPU per module
-adb shell top -d 1 | grep -E "lsposed|module"
-
-# High CPU usage indicates problematic module
-# Disable and test
-```
+2. Open Manager > Logs tab
+3. Re-enable modules one by one
+4. Identify the culprit module
 
 </details>
+
+---
 
 ### App Compatibility Issues
 
 <details><summary>Click to expand</summary>
 
-#### Banking Apps Not Working
+#### Banking / Payment Apps Not Working
 
-**Symptom:** Banking/payment apps detect root and refuse to run
-
-**Root Cause:** Apps use Play Integrity API to detect:
-- Unlocked bootloader
-- Root access
-- Modified system
-- LSPosed framework
+**Root Cause:** Apps use Play Integrity API to detect unlocked bootloaders, root access, modified systems, or the LSPosed/Vector framework presence.
 
 **Solutions:**
 
-**Solution 1: Magisk DenyList**
-1. Magisk Manager > Settings
-2. Enable "Enforce DenyList"
-3. Configure DenyList > Add banking apps
-4. Reboot
-5. Test banking app
+1. **Magisk DenyList:**
+   - Magisk > Settings > Enable "Enforce DenyList"
+   - DenyList > Add banking apps > reboot
 
-**Solution 2: Shamiko Module**
-```bash
-# Download Shamiko from GitHub
-# https://github.com/LSPosed/LSPosed.github.io/releases
+2. **Shamiko Module:**
+   - Download from [LSPosed/LSPosed.github.io releases](https://github.com/LSPosed/LSPosed.github.io/releases)
+   - Install via Magisk > reboot (hides Magisk from apps)
 
-# Install via Magisk Manager
-# Reboot
+3. **Exclude from Vector scope:**
+   - Check all enabled modules - ensure banking apps are **not** in any module's scope
+   - Some banking apps detect the LSPosed/Vector presence independently
 
-# Shamiko hides Magisk from apps
-```
+4. **Play Integrity Fix Module:**
+   - [chiteroman/PlayIntegrityFix](https://github.com/chiteroman/PlayIntegrityFix)
+   - Configure device profile, then test
 
-**Solution 3: Exclude from LSPosed**
-- Ensure banking apps NOT in any module scope
-- Check all modules, remove if listed
-- Some apps detect LSPosed presence alone
-
-**Solution 4: Play Integrity Fix Module**
-```bash
-# Warning: May violate app ToS
-# https://github.com/chiteroman/PlayIntegrityFix
-
-# Install module
-# Configure device profile
-# Test app
-```
-
-::: warning Legal & ToS Notice
-Bypassing app security measures may violate Terms of Service and local laws. Use at your own risk. Consider maintaining a non-rooted device/profile for critical apps.
-:::
-
-**Solution 5: Dual Profile/Island**
-- Use work profile or app cloner
-- Install banking app in isolated profile
-- Profile won't have root access
+> [!WARNING]
+> Bypassing app security measures may violate Terms of Service and local laws. Consider maintaining a non-rooted work profile for critical banking apps.
 
 </details>
+
+---
+
+### HyperOS / Xiaomi-Specific Issues
+
+<details><summary>Click to expand</summary>
+
+#### Vector Shows as Activated but Modules Don't Work (HyperOS 2.x)
+
+LSPosed/Vector may show as "Activated" in the manager, but modules fail to work. In verbose logs, a large number of Java-related errors may appear even with all modules disabled. This is a known issue on certain HyperOS 2.x (MTK) builds.
+
+**Workarounds:**
+- Check the [Vector Issues tracker](https://github.com/JingMatrix/Vector/issues) for your specific device/ROM version
+- Try switching between KernelSU and KernelSU Next with NeoZygisk
+- Use Magisk + Zygisk instead of KernelSU if possible on your device
+
+</details>
+
+---
 
 ### Manager & Configuration Issues
 
@@ -1010,66 +716,30 @@ Bypassing app security measures may violate Terms of Service and local laws. Use
 
 #### Lost Access to Manager
 
-**Symptom:** LSPosed Manager icon missing, notification gone
-
-**Solutions:**
-
-**Solution 1: Launch via ADB**
 ```bash
-# Direct launch
+# Direct launch via ADB
 adb shell am start -n org.lsposed.manager/.ui.activity.MainActivity
 
-# Or via notification
+# Or via intent
 adb shell am start -a android.intent.action.VIEW -d lsposed://
 ```
 
-**Solution 2: Reinstall Manager**
+Or reinstall the manager APK:
 ```bash
-# Keep module, just reinstall app
-# Download manager APK from GitHub
 adb install -r lsposed-manager.apk
-
-# Reboot
 adb reboot
 ```
 
-**Solution 3: Check Notification Settings**
-- Settings > Apps > LSPosed
-- Notifications > Ensure enabled
-- Allow persistent notifications
-
 #### Settings Not Saving
 
-**Symptom:** Configuration changes don't persist after reboot
-
-**Solutions:**
-
-**Solution 1: Clear Manager Data**
 ```bash
-# Warning: Resets all LSPosed configuration
+# Clear manager data (resets all config - reconfigure after)
 adb shell pm clear org.lsposed.manager
 
-# Reconfigure from scratch
-```
-
-**Solution 2: Check SELinux**
-```bash
 # Check SELinux mode
 adb shell getenforce
-# Should return: Permissive or disabled
-
-# If Enforcing, LSPosed may have issues
-# Some ROMs enforce strict SELinux
+# Enforcing may cause config issues on some ROMs
 ```
-
-**Solution 3: Reinstall LSPosed**
-1. Export module list (screenshot)
-2. Uninstall all modules
-3. Remove LSPosed from Magisk
-4. Reboot
-5. Reinstall LSPosed
-6. Reinstall modules
-7. Reconfigure
 
 </details>
 
@@ -1081,68 +751,36 @@ adb shell getenforce
 
 #### Method 1: Magisk Manager (Recommended)
 
-1. **Open Magisk Manager** app
-2. **Navigate to Modules** tab
-3. **Find "LSPosed" module**
-4. **Tap trash icon** or three-dot menu > Remove
-5. **Confirm removal**
-6. **Reboot device**
+1. Magisk Manager > **Modules tab**
+2. Find **"LSPosed"** > tap trash icon or three-dot menu > **Remove**
+3. Confirm > **Reboot**
 
-**Verification:**
 ```bash
-# Check module removed
-adb shell su -c "ls /data/adb/modules/ | grep lsposed"
-# Should return nothing
+# Verify removal
+adb shell su -c "ls /data/adb/modules/"
+# Should NOT show lsposed
 ```
 
-#### Method 2: Manual Removal via ADB
+#### Method 2: ADB
 
 ```bash
-# Remove LSPosed module
 adb shell su -c "rm -rf /data/adb/modules/lsposed*"
-
-# Remove LSPosed daemon
 adb shell su -c "rm -rf /data/adb/lspd"
-
-# Remove LSPosed configuration
 adb shell su -c "rm -rf /data/misc/lspd"
-
-# Reboot
 adb reboot
 ```
 
-#### Method 3: Recovery Removal
+#### Method 3: Recovery
 
-1. **Boot to TWRP/OrangeFox** recovery
-2. **Navigate to Advanced** > **File Manager**
-3. **Go to /data/adb/modules/**
-4. **Delete lsposed folder**
-5. **Go to /data/adb/**
-6. **Delete lspd folder**
-7. **Reboot system**
+1. Boot to TWRP/OrangeFox
+2. File Manager > `/data/adb/modules/` > delete `lsposed` folder
+3. Go to `/data/adb/` > delete `lspd` folder
+4. Reboot system
 
 ### Remove Individual Modules
 
-#### Via LSPosed Manager
-
-1. **Open LSPosed Manager**
-2. **Modules tab** > Long-press module
-3. **Select "Uninstall"**
-4. **Confirm**
-5. **Reboot** (if prompted)
-
-#### Via System Settings
-
-1. **Settings** > **Apps**
-2. **Find module** (e.g., "WA Enhancer")
-3. **Tap module** > **Uninstall**
-4. **LSPosed auto-detects** removal
-5. **Reboot device**
-
-#### Via ADB
-
 ```bash
-# Uninstall specific module
+# Uninstall module APK
 adb shell pm uninstall com.example.module
 
 # Remove module data
@@ -1151,43 +789,31 @@ adb shell su -c "rm -rf /data/data/com.example.module"
 # Clear module from LSPosed cache
 adb shell su -c "rm -rf /data/adb/lspd/cache/com.example.module*"
 
-# Reboot
 adb reboot
 ```
 
-### Clean Module Data
-
-After uninstalling modules, clean residual data:
+### Clean Residual Data
 
 ```bash
-# Remove all module data directories
+# Remove residual Xposed data
 adb shell su -c "find /data/data -name '*xposed*' -exec rm -rf {} +"
 
-# Clear LSPosed cache
+# Clear LSPosed cache and logs
 adb shell su -c "rm -rf /data/adb/lspd/cache/*"
-
-# Clear LSPosed logs
 adb shell su -c "rm -rf /data/adb/lspd/log/*"
 ```
 
 ### Verify Complete Removal
 
 ```bash
-# Check for LSPosed module
+# Check no module remains
 adb shell su -c "ls /data/adb/modules/"
-# Should NOT show lsposed
 
-# Check for daemon
+# Check daemon is gone
 adb shell su -c "ps -ef | grep lspd"
-# Should return nothing
 
-# Check for manager app
+# Check manager app removed
 adb shell pm list packages | grep lsposed
-# Should return nothing if uninstalled
-
-# Check Magisk modules list
-# Magisk Manager > Modules
-# Should NOT show LSPosed
 ```
 
 ---
