@@ -112,7 +112,7 @@ Root OnePlus devices with straightforward bootloader unlock. Covers OxygenOS and
    - Or download from OnePlus site
 
 3. **Stock Firmware** (for recovery)
-   - Download via [Oxygen Updater](https://play.google.com/store/apps/details?id=com.arjanvlek.oxygenupdater) (Recommended)
+   - Download via [Oxygen Updater](https://github.com/oxygen-updater/os-updater/releases/latest) (Recommended)
    - Or [XDA Forums](https://xdaforums.com/) (Alternative)
 
 **On Device:**
@@ -245,7 +245,7 @@ Always ensure you have a copy of the stock `vbmeta.img`. When flashing a patched
 **Step 1: Download Stock Firmware**
 
 **Using Oxygen Updater (Recommended):**
-1. Install [Oxygen Updater](https://play.google.com/store/apps/details?id=com.arjanvlek.oxygenupdater) on your device
+1. Install [Oxygen Updater](https://github.com/oxygen-updater/os-updater/releases/latest) on your device
 2. Launch app and verify device name
 3. Go to Settings > Update Method > Select "Full"
 4. Enable "Advanced Mode" in settings
@@ -591,7 +591,7 @@ fastboot oem lock
 - [OnePlus Support](https://www.oneplus.com/support) - Official support
 
 **Firmware Downloads:**
-- [Oxygen Updater](https://play.google.com/store/apps/details?id=com.arjanvlek.oxygenupdater) - Primary firmware source (App)
+- [Oxygen Updater](https://github.com/oxygen-updater/os-updater/releases/latest) - Primary firmware source (App)
 - [Oxygen Updater GitHub](https://github.com/oxygen-updater/oxygen-updater) - Alternative download
 
 **Developer Community:**
