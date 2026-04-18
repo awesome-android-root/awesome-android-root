@@ -956,7 +956,6 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 ---
 
 ## Location and GPS
-- **[GhostMapX](https://github.com/Xposed-Modules-Repo/com.ghostmapx.app)** - System-level location spoofing that works globally without per-app configuration. `Proprietary` `[LSP]`
 - **[GPS Setter](https://github.com/jqssun/android-gps-setter)** - Allows to mock locations for any specific app or entire system. `FOSS` `[LSP]` | [🌱](https://f-droid.org/packages/io.github.jqssun.gpssetter)
 - **[Location Indicator Whitelist](https://github.com/gilbsgilbs/LocationIndicatorWhitelist)** - Prevents applications from spamming the annoying location notification dot on Android 12 +. `FOSS` `[LSP]`
 - **[Location Joystick](https://github.com/fzer0x/LocationJoystick)** - Realtime Location Spoofer by using a Overlay Joystick to control the mock location. `Proprietary` `[LSP]`
