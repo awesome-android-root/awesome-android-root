@@ -682,10 +682,6 @@ rm -rf /data/adb/lspd/
    - Check all enabled modules - ensure banking apps are **not** in any module's scope
    - Some banking apps detect the LSPosed/Vector presence independently
 
-4. **Play Integrity Fix Module:**
-   - [chiteroman/PlayIntegrityFix](https://github.com/chiteroman/PlayIntegrityFix)
-   - Configure device profile, then test
-
 > [!WARNING]
 > Bypassing app security measures may violate Terms of Service and local laws. Consider maintaining a non-rooted work profile for critical banking apps.
 
