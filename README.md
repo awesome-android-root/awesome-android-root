@@ -869,6 +869,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[Disable usb debugging](https://github.com/Aakif17/disable_usb_debugging)** - Disables USB Debugging after every reboot. `FOSS` `[M]`
 - **[Disable Log Request](https://github.com/QueallyTech/DisableLogRequest)** - Automatic approve for app to access device logs (Android 13+). `FOSS` `[LSP]`
 - **[Droidspaces](https://github.com/ravindu644/Droidspaces-OSS)** - Lets you run full Linux environments on top of Android or Linux, with complete init system support including systemd, OpenRC, and other init systems (runit, s6, etc.). `FOSS`
+- **[Hotspot Wireless Debugging](https://github.com/droserasprout/io.drsr.hotspotadb)** - Xposed module to allow Wireless Debugging over Wi-Fi Hotspot. `FOSS` `[LSP]`
 - **[IAmNotADeveloper](https://github.com/xfqwdsj/IAmNotADeveloper)** - Hide Android developer-related switches status. `FOSS` `[LSP]`
 - **[Magisk Docker](https://github.com/mgksu/dockerd)** - Magisk and KernelSU module for running Docker on rooted Android devices. `FOSS` `[M]` `[K]`
 - **[Py2Droid](https://github.com/Mrakorez/py2droid)** - Install Python 3 on Android, including the standard library (STDLIB). `FOSS` `[M]`
