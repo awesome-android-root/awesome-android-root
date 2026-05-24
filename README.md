@@ -458,6 +458,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[InstaEclipse](https://github.com/ReSo7200/InstaEclipse/)** - Adds Features like Developer Options, Ghost Mode, Ad-Free browsing, and Distraction-Free Mode to Instagram. `FOSS` `[LSP]`
 
 #### QQ Mods
+- **[Elaris](https://github.com/Xposed-Modules-Repo/com.mr.elaris)** - A lightweight module for QQ with various features. `Proprietary` `[LSP]`
 - **[NewQStory](https://github.com/Xposed-Modules-Repo/lin.xposed/)** - Xposed QQ module. `Proprietary` `[LSP]`
 - **[QAuxiliary](https://github.com/cinit/QAuxiliary)** - Xposed module based on QNotified. `FOSS` `[LSP]`
 - **[QFun](https://github.com/oneQAQone/QFun)** - Functionality enhancement module developed based on the Xposed framework. `FOSS` `[LSP]`
