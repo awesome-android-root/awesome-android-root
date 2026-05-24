@@ -722,7 +722,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## Launchers and Home Screen
+### Launchers and Home Screen
 
 - **[⭐ Lawnchair](https://github.com/Goooler/LawnchairRelease/)** - A customizable launcher offering a Pixel-like experience. `FOSS`
 - **[Google Shortcuts Launcher](https://github.com/WSTxda/Google-Shortcuts-Launcher)** - Easily access essential Google apps features directly from your launcher app drawer. `FOSS`
@@ -735,11 +735,12 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## Gestures and Navigation
+### Gestures and Navigation
 
 - **[Hide Navbar Keyboard](https://github.com/UNKNUW/Hide-Navbar-Keyboard)** - Hide navbar when keyboard appears. Supports Android 10 -15+. `FOSS` `[M]`
 - **[NavTweaks](https://github.com/Magisk-Modules-Alt-Repo/HideNavBar)** - Fullscreen/Immersive Gesture Tweaks for Android 10-14. `FOSS` `[M]`
 - **[QS Boundless Tiles](https://github.com/hxreborn/qs-boundless-tiles)** - Keeps third-party Quick Settings tiles responsive on Android 13+. `FOSS` `[LSP]`
+- **[Hide App from Recent](https://github.com/Young-Lord/hideRecent)** - Hide any app from recent task list. `FOSS` `[LSP]`
 - **[Three-Finger-Screenshot](https://github.com/hxreborn/three-finger-swipe)**- Standalone LSPosed implementation of three-finger swipe. `FOSS` `[LSP]`
 - **[Volume Key Track Control Module](https://github.com/Hepolise/VolumeKeyTrackControlModule)** - Allows to skip and play/pause track with volume keys. `FOSS` `[LSP]`
 - **[Volume Scroll](https://github.com/farfromrefug/VolumeScroll)** -  Android app to scroll using volume keys. `FOSS` `[M]`
@@ -748,7 +749,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## Notifications and UI Elements
+### Notifications and UI Elements
 - **[Notification Code](https://gitlab.com/n00byara/NotificationCode)** - Automatically extracting authentication codes and other useful information from notifications. `FOSS` `[LSP]`
 - **[Notification Icon Fix](https://github.com/Xposed-Modules-Repo/io.github.howard20181.notificationiconfix/)** - A module for AOSP, MIUI and HyperOS. Using an algorithm to convert white notification icons into recognizable icons. `FOSS` `[LSP]`
 - **[Punch-hole Download Progress](https://github.com/hxreborn/punch-hole-download-progress)** - Displays download progress as an animated ring around the camera cutout. `FOSS` `[LSP]` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/eu.hxreborn.phdp)
@@ -757,7 +758,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 ---
 
-## ROM and OEM Customization
+### ROM and OEM Customization
 
 |  | | | | | | | |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
