@@ -143,11 +143,13 @@
 ### 🧰 System Utilities
 - [System Utilities](#system-utilities)
   - [Automation and Scheduling](#automation-and-scheduling)
-  - [NFC and Wireless](#nfc-and-wireless)
-  - [Cloud and Remote Storage](#cloud-and-remote-storage)
-  - [Device Information](#device-information)
-  - [Translation and Localization](#translation-and-localization)
-  - [Miscellaneous Utilities](#miscellaneous-utilities)
+  - [Remote Access, Sync and Storage](#remote-access-sync-and-storage)
+  - [Device Information and Diagnostics](#device-information-and-diagnostics)
+  - [NFC and Wireless Utilities](#nfc-and-wireless-utilities)
+  - [Google Apps and microG](#google-apps-and-microg)
+  - [Power and Reboot Tools](#power-and-reboot-tools)
+  - [Android Sharing and Picker Tweaks](#android-sharing-and-picker-tweaks)
+  - [General Toolboxes and Module Collections](#general-toolboxes-and-module-collections)
 
 ### 📚 Support and Safety
 - [Resources and Help](#resources-and-help)
@@ -312,10 +314,11 @@ Follow this path:
 - **Knox** - Samsung's security platform (trips when bootloader unlocked)
 
 <br>
-</details>
+</details><br>
 
-**How Apps are Organized:**  
-In a category/sub-category, apps are sorted in following order: `⭐ (Community-recommended) Apps > Alphabetically`
+> [!NOTE] How Apps are Organized:
+> In a category/sub-category, apps are sorted in following order: `⭐ (Community-recommended) Apps > Alphabetically`
+
 
 ---
 
@@ -1369,38 +1372,47 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[⭐ MacroDroid](https://play.google.com/store/search?q=macrodroid&c=apps)** - Easy to use automation app. `Proprietary`
 - **[⭐ Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)** - An advanced and powerful automation app. `Proprietary`
 - **[Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate)** - Lets you create custom automation workflows using flowcharts, enabling seamless management of tasks, files, and device settings. `Proprietary`
-- **[crond4Android](https://github.com/powerAn2020/crond4android)** - The Crond program that supports running on KernelSU, APatch and Magisk. `FOSS` `[M]` `[K]`
+- **[crond4Android](https://github.com/powerAn2020/crond4android)** - Cron daemon for scheduled jobs on KernelSU, APatch, and Magisk. `FOSS` `[M]` `[K]`
 
-### Cloud and Remote Storage
-- **[Magisk Tailscaled](https://github.com/mgksu/tailscaled)** - Module for running Tailscale on rooted Android devices. `FOSS` `[M]`
-- **[Rclone Magisk Module](https://github.com/NewFuture/rclone-fuse3-magisk)** - Integrates Rclone with FUSE support into Android, allowing you to manage remote storage mounts seamlessly. `FOSS` `[M]`
-- **[Rsync Magisk](https://github.com/KatelynTheStargazer/rsync-magisk)** - static rsync binary for magisk. `FOSS` `[M]`
+### Android Sharing and Picker Tweaks
+- **[⭐ CleanShare](https://github.com/hxreborn/cleanshare)** - Removes Direct Share's suggested contact/conversation shortcuts from Android's Share Sheet. `FOSS` `[LSP]`
+- **[No Photo Picker API](https://github.com/yureitzk/NoPhotoPickerAPI)** - Bypasses the Android Photo Picker API and lets apps use the classic document/file picker. `FOSS` `[LSP]`
+- **[Transparent Screenshot](https://github.com/Dszsu/Transparent_screenshot)** - Hide the application window during screenshots, screen recording, and screen casting. `FOSS` `[LSP]`
 
-### Device Information
+### Device Information and Diagnostics
 - **[Castro - system info](https://play.google.com/store/apps/details?id=com.itemstudio.castro)** - A huge collection of information about your device and a set of tools for monitoring its status. `Proprietary`
 - **[Device Info HW](https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw)** - A hardware and software information app for Android devices. `Proprietary`
 - **[Infamick Script](https://github.com/Infamousmick/Infamick-script/)** - A powerful system utility script that provides easy access to various system information and settings. `FOSS` `[M]`
 
-### NFC and Wireless
-- **[NFC Card Emulator Pro (Root)](https://play.google.com/store/apps/details?id=com.yuanwofei.cardemulator.pro)** - An NFC Card Emulator that simulates various types of cards, e.g., access cards, elevator cards, factory (meal) cards, school (meal) cards, some library cards, and other IC cards. `Proprietary`
+### MicroG
+- **[MagiskGapps](https://github.com/wacko1805/MagiskGapps)** - Convert a regular GApps package into a Magisk-flashable package using a simple website. `FOSS` `[M]`
+- **[MicroGPlus](https://bitgapps.io/extra)** - Installs microG services and other useful apps. `Proprietary` `[M]` `[K]`
+- **[microG Installer Revived Again](https://modules.kernelsu.org/module/microg_installer_revived_again/)** - Promote microG GmsCore, GsfProxy, Companion/Play Store, and MapsV1 to system with privileged permissions. `FOSS` `[M]` `[K]`
+
+### NFC and Wireless Utilities
+- **[NFC Card Emulator Pro (Root)](https://play.google.com/store/apps/details?id=com.yuanwofei.cardemulator.pro)** - NFC card emulator for access cards, elevator cards, meal cards, school cards, library cards, and other IC cards. `Proprietary`
 - **[NFCGate](https://github.com/nfcgate/nfcgate)** - Android application meant to capture, analyze, or modify NFC traffic. `FOSS` `[LSP]` | [🌱](https://f-droid.org/packages/de.tu_darmstadt.seemoo.nfcgate/)
 
-### Miscellaneous Utilities
-- **[⭐ CleanShare](https://github.com/hxreborn/cleanshare)** - Removes Direct Share's suggested contact/conversation shortcuts from Android's Share Sheet. `FOSS` `[LSP]`
-- **[⭐ Essentials](https://github.com/sameerasw/essentials)** - Mods for Display, Notifications and Alerts, Security and Privacy, Sound and Haptics & App Freezing. `FOSS`
-- **[APatch Utilities](https://github.com/lzghzr/APatch_kpm)** - Some APatch modules . `FOSS`
-- **[MagiskGapps](https://github.com/wacko1805/MagiskGapps)** - Convert a regular GApps package into a Magisk flashable package using a simple website. `FOSS` `[M]`
-- **[MicroGPlus](https://bitgapps.io/extra)** - Installs MicroG services and other useful apps. `Proprietary` `[M]` `[K]`
-- **[microG Installer Revived Again](modules.kernelsu.org/module/microg_installer_revived_again/)** - Promote microG GmsCore, GsfProxy, Companion/Play Store and MapsV1 to system with privileged permissions. `FOSS` `[M]` `[K]`
-- **[No Photo Picker API](https://github.com/yureitzk/NoPhotoPickerAPI)** - Bypasses the Android Photo Picker API and lets apps use the classic document/file picker. `FOSS` `[LSP]`
-- **[RebootNya](https://github.com/daisukiKaffuChino/RebootNya)** - Asimple yet advanced reboot utility for Android devices. `FOSS`
-- **[SD Flasher](https://github.com/theblazehen/sd_flasher)** - Flash disk images (.img, .img.gz, .img.xz, .zip) directly to SD cards from your Android device. `FOSS`
-- **[System Tools Android](https://play.google.com/store/apps/details?id=com.redhome.sta)** - A true utility processor that includes many small utilities for finer work with the system (including root utilities). `Proprietary`
-- **[Transparent Screenshot](https://github.com/Dszsu/Transparent_screenshot)** - Hide the application window during screenshots, screen recording, and screen casting. `FOSS` `[LSP]`
-- **[UotanToolbox NT](https://github.com/Uotan-Dev/UotanToolboxNT)** - A modern toolbox for geeks. `FOSS`
-- **[XposedModulets](https://github.com/binarynoise/XposedModulets)** - A collection of many small useful Xposed Modules. `FOSS` `[LSP]`
+### Power and Reboot Tools
+- **[RebootNya](https://github.com/daisukiKaffuChino/RebootNya)** - A simple yet advanced reboot utility for Android devices. `FOSS`
+
+### Remote Access, Sync and Storage
+- **[Magisk Tailscaled](https://github.com/mgksu/tailscaled)** - Runs the Tailscale mesh VPN daemon on rooted Android devices for private remote access. `FOSS` `[M]`
+- **[Rclone Magisk Module](https://github.com/NewFuture/rclone-fuse3-magisk)** - Integrates Rclone with FUSE support into Android, allowing you to manage remote storage mounts seamlessly. `FOSS` `[M]`
+- **[Rsync Magisk](https://github.com/KatelynTheStargazer/rsync-magisk)** - Static rsync binary for Magisk-based file sync and backup workflows. `FOSS` `[M]`
+
+### General Toolboxes and Module Collections
+- **[⭐ Essentials](https://github.com/sameerasw/essentials)** - Multi-purpose tweaks for display, notifications and alerts, security and privacy, sound and haptics, and app freezing. `FOSS`
+- **[APatch Utilities](https://github.com/lzghzr/APatch_kpm)** - Collection of utility modules for APatch. `FOSS`
 - **[KernelSU Grant Toast](https://github.com/NativeStar/KernelSUGrantToast)** - Make KernelSU show a root granted toast like Magisk. `FOSS` `[K]`
-- **[Zygisk Sui](https://github.com/XiaoTong6666/Sui)** - Modern super user interface (SUI) implementation for Android. `FOSS` `[M]` `[K]`
+- **[SD Flasher](https://github.com/theblazehen/sd_flasher)** - Flash disk images (.img, .img.gz, .img.xz, .zip) directly to SD cards from your Android device. `FOSS`
+- **[System Tools Android](https://play.google.com/store/apps/details?id=com.redhome.sta)** - A system utility suite with many small tools for finer system work, including root utilities. `Proprietary`
+- **[UotanToolbox NT](https://github.com/Uotan-Dev/UotanToolboxNT)** - A modern toolbox for Android power users and geeks. `FOSS`
+- **[XposedModulets](https://github.com/binarynoise/XposedModulets)** - A collection of many small useful Xposed Modules. `FOSS` `[LSP]`
+- **[Zygisk Sui](https://github.com/XiaoTong6666/Sui)** - Modern superuser interface (SUI) implementation for Android. `FOSS` `[M]` `[K]`
+
+> [!TIP]
+> If you are looking for classic root managers and module managers, start with [Root Management](#root-management). If you need shell commands or Linux tooling, see [Terminal and Shell Tools](#terminal-and-shell-tools).
 
 [↑ Back to top](#table-of-contents)
 
