@@ -1387,6 +1387,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ### Miscellaneous Utilities
 - **[⭐ CleanShare](https://github.com/hxreborn/cleanshare)** - Removes Direct Share's suggested contact/conversation shortcuts from Android's Share Sheet. `FOSS` `[LSP]`
+- **[⭐ Essentials](https://github.com/sameerasw/essentials)** - Mods for Display, Notifications and Alerts, Security and Privacy, Sound and Haptics & App Freezing. `FOSS`
 - **[APatch Utilities](https://github.com/lzghzr/APatch_kpm)** - Some APatch modules . `FOSS`
 - **[MagiskGapps](https://github.com/wacko1805/MagiskGapps)** - Convert a regular GApps package into a Magisk flashable package using a simple website. `FOSS` `[M]`
 - **[MicroGPlus](https://bitgapps.io/extra)** - Installs MicroG services and other useful apps. `Proprietary` `[M]` `[K]`
