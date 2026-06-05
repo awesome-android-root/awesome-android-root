@@ -1389,6 +1389,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[APatch Utilities](https://github.com/lzghzr/APatch_kpm)** - Some APatch modules . `FOSS`
 - **[MagiskGapps](https://github.com/wacko1805/MagiskGapps)** - Convert a regular GApps package into a Magisk flashable package using a simple website. `FOSS` `[M]`
 - **[MicroGPlus](https://bitgapps.io/extra)** - Installs MicroG services and other useful apps. `Proprietary` `[M]` `[K]`
+- **[microG Installer Revived Again](modules.kernelsu.org/module/microg_installer_revived_again/)** - Promote microG GmsCore, GsfProxy, Companion/Play Store and MapsV1 to system with privileged permissions. `FOSS` `[M]` `[K]`
 - **[No Photo Picker API](https://github.com/yureitzk/NoPhotoPickerAPI)** - Bypasses the Android Photo Picker API and lets apps use the classic document/file picker. `FOSS` `[LSP]`
 - **[RebootNya](https://github.com/daisukiKaffuChino/RebootNya)** - Asimple yet advanced reboot utility for Android devices. `FOSS`
 - **[SD Flasher](https://github.com/theblazehen/sd_flasher)** - Flash disk images (.img, .img.gz, .img.xz, .zip) directly to SD cards from your Android device. `FOSS`
