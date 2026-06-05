@@ -782,6 +782,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 - **[Oplus Launcher Radius Optimization](https://github.com/Qjj7679/Oplus-Luncher-RadiusOptimization)** - Optimize the rounded corners of the recent tasks card on the ColorOS system desktop. `FOSS` `[LSP]`
 - **[OPPO/OnePlus side button enhancement](https://github.com/ItosEO/OplusKey)** - Customize the side button behavior on Oppo and OnePlus devices. `Proprietary` `[M]`
 - **[OShin](https://github.com/suqi8/OShin/blob/master/README_EN.md)** - Auxiliary module deeply integrated with ColorOS, designed to enhance and optimize your operating system experience. `FOSS` `[LSP]`
+- **[XposedFluidCloud](https://github.com/servant1228/XposedFluidCloud)** - ColorOS 16 Fluid Cloud UI Adjustments to Xposed Modules. `FOSS` `[LSP]`
 
 #### HyperOS (Xiaomi)
 - **[⭐ HyperCeiler](https://github.com/ReChronoRain/HyperCeiler/blob/main/README_en-US.md)** - Extensive customizations for HyperOS. `FOSS` `[LSP]`
