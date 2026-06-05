@@ -1395,6 +1395,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[Transparent Screenshot](https://github.com/Dszsu/Transparent_screenshot)** - Hide the application window during screenshots, screen recording, and screen casting. `FOSS` `[LSP]`
 - **[UotanToolbox NT](https://github.com/Uotan-Dev/UotanToolboxNT)** - A modern toolbox for geeks. `FOSS`
 - **[XposedModulets](https://github.com/binarynoise/XposedModulets)** - A collection of many small useful Xposed Modules. `FOSS` `[LSP]`
+- **[Zygisk Sui](https://github.com/XiaoTong6666/Sui)** - Modern super user interface (SUI) implementation for Android. `FOSS` `[M]` `[K]`
 
 [↑ Back to top](#table-of-contents)
 
