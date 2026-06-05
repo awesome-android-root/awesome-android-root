@@ -820,6 +820,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 
 #### One UI (Samsung)
 - **[⭐ KnoxPatch](https://github.com/salvogiangri/KnoxPatch)** - Get Samsung apps/features working again in your rooted Galaxy device. For better experience, please also [read this ↗](https://github.com/salvogiangri/KnoxPatch?tab=readme-ov-file#knoxpatch-enhancer) . `FOSS` `[LSP]`
+- **[One Design](https://github.com/Xposed-Modules-Repo/qyz.onedesign)** - Customize multiple applications at the system level, providing feature enhancements, and system optimizations. `Proprietary` `[LSP]`
 - **[One UI X](https://github.com/SoClear/OneUIX)** - Remove annoying restrictions, and inject powerful enhancements into the Status Bar, Quick Settings, and native apps etc on Samsung's One UI. `FOSS` `[LSP]`
 - **[Samsung Dex Standalone Mode](https://github.com/supermarsx/magisk-samsung-dex-standalone-mode)** - Systemlessly enable Samsung DeX standalone mode. `FOSS` `[M]`
 
