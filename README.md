@@ -548,6 +548,7 @@ In a category/sub-category, apps are sorted in following order: `⭐ (Community-
 > Recently a lot of revanced original dev have left the project due to internal conflicts and new project called **[Morphe](https://morphe.software/)** has been started by some of the original revanced devs. We recommend checking out Morphe as well for future updates.
 
 - **[⭐ Morphe](https://morphe.software/)** - A next-generation app patcher built by some of the original ReVanced developers. It offers a modern interface, enhanced stability, and a growing list of supported apps and features. `FOSS`
+- **[NexAlloy](https://github.com/NexAlloy/NexAlloy)** - An LSPosed module, powered by Morphe, ReVanced, and beyond. `FOSS` `[LSP]`
 
 
 <details>
