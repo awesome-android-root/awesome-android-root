@@ -1127,6 +1127,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[⭐ Enable Screenshot](https://github.com/LSPosed/DisableFlagSecure)** - Enabling screenshots in apps that normally wouldn't allow it, and disabling screenshot(Android 14+) and screen record(Android 15+) detection. `FOSS` `[LSP]`
 - **[⭐ Flag Secure Patcher](https://github.com/j-hc/FlagSecurePatcher)** - Patch service.jar on device to disable secure lock and screenshot listeners. `FOSS` `[M]`
 - **[CaptureSposed](https://github.com/99keshav99/CaptureSposed)** - Disables the newly introduced screenshot detection API in Android 14. `FOSS` `[LSP]`
+- **[ih8SecureLock](https://github.com/j-hc/ih8SecureLock)** - Prevent apps from blocking and listening to your screenshots with Zygisk. `FOSS` `[M]` `[K]`
 - **[Simple Flag Secure](https://github.com/ShivamXD6/Simple-Flag-Secure)** - Disable Secure Flag and allow taking screenshots/screen recording in apps supports KSU/APatch . `FOSS` `[M]` `[K]`
 
 ### Hide Files
