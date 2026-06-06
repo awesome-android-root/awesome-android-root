@@ -647,6 +647,7 @@ Follow this path:
 - **[BatStats](https://github.com/mlm-games/BatStats)** - Battery monitor with stats via Shizuku/root. `FOSS`
 
 ### Battery Optimization
+- **[AntiWakeLock](https://github.com/binarynoise/XposedModulets/releases?q=AntiWakeLock)** - Disable WAKE_LOCK and FLAG_KEEP_SCREEN_ON to save battery. `FOSS` `[LSP]`
 - **[Battery Guru](https://play.google.com/store/apps/details?id=com.paget96.batteryguru)** - Battery optimization and monitoring. `Proprietary`
 - **[Battery Honey](https://github.com/kaminarich/BatteryHoney)** - Optimize Battery Saving when screen OFF. `FOSS` `[M]`
 - **[Doze Disabler](https://github.com/draumaz/dozedisabler)** - A Magisk module that disables Doze battery optimizations at boot time. `FOSS` `[M]`
