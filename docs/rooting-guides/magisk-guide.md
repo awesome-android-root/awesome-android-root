@@ -160,7 +160,7 @@ Magisk is a systemless root solution that provides superuser access without modi
 
 **Choose Magisk if:**
 - You want easiest installation
-- You need extensive modules (explore [470+ apps](../apps-and-modules/))
+- You need extensive modules (explore [500+ apps](../apps-and-modules/))
 - You want maximum compatibility
 - You're new to rooting
 
@@ -859,7 +859,7 @@ Reality: Impossible to pass with:
    - [Performance modules](../apps-and-modules/#performance-and-optimization) - Device optimization and battery management
 
 2. **Explore root apps:**
-   - [Browse 470+ Root Apps](../apps-and-modules/) - Curated collection by category
+   - [Browse 500+ Root Apps](../apps-and-modules/) - Curated collection by category
    - [Starter Kit](../apps-and-modules/#starter-kit-must-have-apps) - Essential apps for new root users
 
 3. **Learn advanced features:**
