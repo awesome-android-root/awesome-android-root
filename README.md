@@ -584,6 +584,7 @@ Follow this path:
 - **[Boosteroid+](https://github.com/nitanmarcel/BoosteroidPlus)** - Customize advanced settings for the Boosteroid app, including frame rate, bitrate, and resolution options. `FOSS` `[LSP]`
 - **[EDS NG Crack](https://github.com/dumbasPL/EDS-NG-crack)** - Unlocks all features in in [EDS NG](https://play.google.com/store/apps/details?id=com.sovworks.projecteds&hl=en_US). `FOSS` `[M]`
 - **[E-Government Liberator](https://github.com/Crazyphil/digitales-amt-liberator)** - Removes root and bootloader checks from e-government apps. `FOSS` `[LSP]`
+- **[FingerprintPay](https://github.com/eritpchy/FingerprintPay)** - Enables fingerprint payment via WeChat, Alipay, Taobao, Tencent QQ, and UnionPay on phones that support fingerprint recognition. `FOSS` `[M]` `[LSP]`
 - **[Freely module](https://modules.lsposed.org/module/me.build/)** - Compatible with mainstream social and short video applications (such as WeChat, TikTok, Soul, etc.), and is designed to improve the user experience and functional freedom. `Proprietary` `[LSP]`
 - **[F*ck for VIP](https://github.com/bug-bit/fckvip)** - A module to unlock some software memberships and remove ads. Check releases section for list of supported apps. `Proprietary` `[LSP]`
 - **[JunZi Xposed Hook](https://github.com/Xposed-Modules-Repo/junzi.xposed.hook/)** - Software hooks in PicsArt, AudioLab, ES File Explorer, Cosmic Toolbox etc. `Proprietary` `[LSP]`
