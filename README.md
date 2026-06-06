@@ -621,7 +621,7 @@ Follow this path:
 
 ### Lyrics
 - **[Lyricon](https://github.com/tomakino/lyricon)** - An Android status bar lyric enhancement tool based on the Xposed framework. `FOSS` `[LSP]`
-- **[LyricProvider](https://github.com/tomakino/LyricProvider/tree/master)** - 
+- **[LyricProvider](https://github.com/tomakino/LyricProvider/tree/master)** - A lyric provider for Lyricon. `FOSS` `[LSP]`
 
 [↑ Back to top](#table-of-contents)
 
