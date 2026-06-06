@@ -1067,6 +1067,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[Surfing](https://github.com/GitMetaio/Surfing)** - Magisk and KernelSU modules for Clash/mihomo, sing-box, v2ray, xray, hysteria services. `FOSS` `[M]` `[K]`
 
 ### Hide VPN/Proxy Usage
+- **[NoVPNDetect](https://github.com/RuslanUC/NoVPNDetect)** - Prevents some apps from detecting your phone is connected to a VPN. `FOSS` `[LSP]`
 - **[VPN Hide](https://github.com/okhsunrog/vpnhide)** - Hide active VPN from selected Android apps (kernel module + LSPosed + Zygisk) `FOSS` `[M]` `[K]`
 
 [↑ Back to top](#table-of-contents)
