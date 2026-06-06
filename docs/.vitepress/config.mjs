@@ -635,47 +635,36 @@ export default withPwa(defineConfig({
           }
         ]
       },
-      {
-        text: 'Support',
-        items: [
-          {
-            text: 'Help Center',
-            items: [
-              { text: 'Frequently Asked Questions', link: '/faqs' },
-              { text: 'Troubleshooting Guide', link: '/troubleshooting' },
-              { text: 'Community Resources', link: '/resources' },
-              { text: 'Rooting Glossary', link: '/apps-and-modules/#glossary' }
-            ]
-          },
-          {
-            text: 'Alternatives',
-            items: [
-              { text: 'Non-Root Solutions', link: '/non-root-alternatives' }
-            ]
-          }
-        ]
-      },
-      {
-        text: 'About',
-        items: [
-          {
-            text: 'Information',
-            items: [
-              { text: 'About the Project', link: '/about' },
-              { text: 'How to Contribute', link: '/contributing' },
-              { text: 'Legal Disclaimer', link: '/legal-disclaimer' }
-            ]
-          },
-          {
-            text: 'Connect',
-            items: [
-              { text: '💝 Support Us', link: 'https://opencollective.com/awesome-android-root-official' },
-              { text: '⭐ GitHub Repository', link: 'https://github.com/awesome-android-root/awesome-android-root' },
-              { text: '🐦 Follow on Twitter/X', link: 'https://x.com/awsm_and_root' }
-            ]
-          }
-        ]
-      }
+        {
+          text: 'Help',
+          items: [
+            {
+              text: 'Resources',
+              items: [
+                { text: 'Glossary', link: '/apps-and-modules/#glossary' },
+                { text: 'FAQ', link: '/faqs' },
+                { text: 'Troubleshooting', link: '/troubleshooting' },
+                { text: 'Community Resources', link: '/resources' },
+                {
+                  text: 'Non-Root Alternatives',
+                  link: '/non-root-alternatives',
+                },
+              ],
+            },
+            {
+              text: 'Project',
+              items: [
+                { text: 'About', link: '/about' },
+                { text: 'Contributing', link: '/contributing' },
+                { text: 'Legal Disclaimer', link: '/legal-disclaimer' },
+                {
+                  text: '⭐ GitHub',
+                  link: 'https://github.com/awesome-android-root/awesome-android-root',
+                },
+              ],
+            },
+          ],
+        },
     ],
 
     sidebar: {
