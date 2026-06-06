@@ -894,6 +894,8 @@ Follow this path:
 - **[Stealth Debug](https://github.com/sp11xy/StealthDebug)** - Hide USB-Debugging properties. `FOSS` `[M]`
 - **[Termux](https://termux.com/)** - Advanced terminal emulator and Linux environment. `FOSS` - **[More on Termux ↓](#terminal-and-shell-tools)**
 - **[Trixie.apk](https://github.com/DesktopECHO/trixie.apk)** - Debian 13 (Trixie) Server/Desktop container for rooted Android 5.0+ devices. `FOSS`
+- **[USB Mass Storage](https://github.com/Enginex0/UsbMassStorage)** - Turn Your Phone Into a USB Drive.
+Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 
 [↑ Back to top](#table-of-contents)
 
