@@ -1066,6 +1066,9 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[NetProxy-Magisk](https://github.com/Fanju6/NetProxy-Magisk)** - Magisk proxy module based on Xray kernel, supports one-click start/stop transparent proxy. `FOSS` `[M]`
 - **[Surfing](https://github.com/GitMetaio/Surfing)** - Magisk and KernelSU modules for Clash/mihomo, sing-box, v2ray, xray, hysteria services. `FOSS` `[M]` `[K]`
 
+### Hide VPN/Proxy Usage
+- **[VPN Hide](https://github.com/okhsunrog/vpnhide)** - Hide active VPN from selected Android apps (kernel module + LSPosed + Zygisk) `FOSS` `[M]` `[K]`
+
 [↑ Back to top](#table-of-contents)
 
 ---
