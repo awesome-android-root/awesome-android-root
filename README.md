@@ -1416,6 +1416,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 ### NFC and Wireless Utilities
 - **[NFC Card Emulator Pro (Root)](https://play.google.com/store/apps/details?id=com.yuanwofei.cardemulator.pro)** - NFC card emulator for access cards, elevator cards, meal cards, school cards, library cards, and other IC cards. `Proprietary`
 - **[NFCGate](https://github.com/nfcgate/nfcgate)** - Android application meant to capture, analyze, or modify NFC traffic. `FOSS` `[LSP]` | [🌱](https://f-droid.org/packages/de.tu_darmstadt.seemoo.nfcgate/)
+- **[onHit](https://github.com/0penPublic/onHit)** -  Trigger Android NFC events without a physical tag by Xposed. `FOSS` `[LSP]`
 
 ### Power and Reboot Tools
 - **[RebootNya](https://github.com/daisukiKaffuChino/RebootNya)** - A simple yet advanced reboot utility for Android devices. `FOSS`
