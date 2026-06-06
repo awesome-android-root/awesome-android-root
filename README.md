@@ -619,6 +619,10 @@ Follow this path:
 - **[Audio SampleRate Changer](https://github.com/Magisk-Modules-Alt-Repo/audio-samplerate-changer)** - A Magisk module changing audio sample rates at the system-wide mixer for the best Hi-Fi experience. `FOSS` `[M]`
 - **[Hi-Res Audio Enabler](https://github.com/reiryuki/Hi-Res-Audio-Enabler-Magisk-Module)** - Enables high resolution 24 or 32-bit width audio output if device is supported. `FOSS` `[M]`
 
+### Lyrics
+- **[Lyricon](https://github.com/tomakino/lyricon)** - An Android status bar lyric enhancement tool based on the Xposed framework. `FOSS` `[LSP]`
+- **[LyricProvider](https://github.com/tomakino/LyricProvider/tree/master)** - 
+
 [↑ Back to top](#table-of-contents)
 
 ---
