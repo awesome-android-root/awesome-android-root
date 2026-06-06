@@ -1279,11 +1279,12 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 > [TheUnrealZaka's Guide for Hiding Root](https://gist.github.com/TheUnrealZaka/042040a1700ad869d54e781507a9ba4f)
 
-- **[⭐ Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)** - Hide Magisk. `Proprietary` `[M]`
+
 - **[⭐ SUSFS Module](https://github.com/sidex15/susfs4ksu-module)** - An addon root hiding service for KernelSU. `FOSS` `[M]`
+- **[⭐ HMA-OSS](https://github.com/frknkrc44/HMA-OSS)** - FOSS version of Hide My Applist to hide your app list, settings, package installers and more. `FOSS` `[LSP]`
+- **[⭐ Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)** - Hide Magisk. `Proprietary` `[M]`
 - **[BRENE](https://github.com/rrr333nnn333/BRENE)** - A SuSFS/KernelSU module for SuSFS patched kernels that provides enhanced root hiding & spoofing capabilities. `FOSS` `[M]` `[K]`
 - **[Hide My Applist](https://github.com/Dr-TSNG/Hide-My-Applist)** - Intercept applist detections. `Proprietary` `[LSP]`
-- **[HMA-OSS](https://github.com/frknkrc44/HMA-OSS)** - FOSS version of Hide My Applist to hide your app list, settings, package installers and more. `FOSS` `[LSP]`
 - **[Komodo Build Props](https://github.com/Elcapitanoe/Komodo-Build-Prop#komodo-build-props)** - Spoof your Android device as the Pixel 9 Pro XL (komodo/komodo_beta). `FOSS` `[M]`
 - **[Mountify](https://github.com/backslashxx/mountify)** - Globally mounted modules via OverlayFS. `FOSS` `[M]`
 - **[NoHello](https://github.com/MhmRdd/NoHello)** -  A Zygisk module to hide root. `FOSS` `[M]`
