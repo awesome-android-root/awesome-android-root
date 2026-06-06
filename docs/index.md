@@ -2,7 +2,7 @@
 layout: home
 title: Best Root Apps & Modules
 titleTemplate: Awesome Android Root
-description: "Discover 470+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026."
+description: "Discover 500+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026."
 head:
   - - meta
     - name: robots
@@ -21,7 +21,7 @@ head:
       content: "Best Root Apps & Modules | Awesome Android Root"
   - - meta
     - property: og:description
-      content: "Discover 470+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026."
+      content: "Discover 500+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026."
   - - meta
     - property: og:image:secure_url
       content: "https://awesome-android-root.org/images/og.png"
@@ -51,7 +51,7 @@ head:
       content: "Best Root Apps & Modules | Awesome Android Root"
   - - meta
     - name: twitter:description
-      content: "Discover 470+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026."
+      content: "Discover 500+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026."
   - - meta
     - name: twitter:image
       content: "https://awesome-android-root.org/images/og.png"
@@ -88,7 +88,7 @@ head:
             "@id": "https://awesome-android-root.org/#website",
             "name": "Awesome Android Root",
             "alternateName": "Ultimate Android Rooting Hub",
-            "description": "Discover 470+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026.",
+            "description": "Discover 500+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026.",
             "url": "https://awesome-android-root.org/",
             "inLanguage": "en-US",
             "publisher": {
@@ -111,7 +111,7 @@ head:
             "@type": ["WebPage", "CollectionPage"],
             "@id": "https://awesome-android-root.org/#webpage",
             "name": "Best Android Root Apps & Modules (2026) | Awesome Android Root",
-            "description": "Discover 470+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026.",
+            "description": "Discover 500+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026.",
             "url": "https://awesome-android-root.org/",
             "datePublished": "2025-05-25T00:00:00Z",
             "dateModified": "2025-12-26T00:00:00Z",
@@ -160,7 +160,7 @@ head:
 hero:
   name: "Awesome Android Root"
   text: "Master Android Rooting in 2026"
-  tagline: "Explore 470+ top root apps, best Magisk / KernelSU / APatch & LSPosed modules, and step-by-step rooting guides."
+  tagline: "Explore 500+ top root apps, best Magisk / KernelSU / APatch & LSPosed modules, and step-by-step rooting guides."
   image:
     src: /images/logo_dark.svg
     alt: Awesome Android Root - Ultimate Rooting Hub Logo
@@ -269,7 +269,7 @@ features:
     <h3>Already Rooted</h3>
     <p>Maximize your rooted device's potential</p>
     <ul>
-      <li>470+ curated apps</li>
+      <li>500+ curated apps</li>
       <li>Advanced modules</li>
       <li>Custom ROMs</li>
     </ul>

@@ -195,7 +195,7 @@ head:
 | **MMRL** | Magisk modules | Community modules | [GitHub](https://github.com/MMRLApp/MMRL) |
 | **Fox MMRL** | Module manager | Alternative client | [GitHub](https://github.com/Fox2Code/FoxMagiskModuleManager) |
 | **LSPosed Modules** | Xposed modules | App modifications | [Repository](https://github.com/Xposed-Modules-Repo) |
-| **Root Apps Index** | Curated collection | 470+ root apps | [Collection](./apps-and-modules/index.md) |
+| **Root Apps Index** | Curated collection | 500+ root apps | [Collection](./apps-and-modules/index.md) |
 | **IzzyOnDroid** | F-Droid repo | FOSS apps | [IzzyOnDroid](https://apt.izzysoft.de/fdroid/) |
 | **KernelSU Module Repo** | KernelSU modules | Official module repository | [modules.kernelsu.org](https://modules.kernelsu.org/) |
 
