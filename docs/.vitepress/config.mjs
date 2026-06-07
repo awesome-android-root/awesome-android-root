@@ -794,19 +794,52 @@ export default withPwa(defineConfig({
       collapsed: false,
       items: [
         { text: 'Customization and Theming', link: '/apps-and-modules/#customization-and-theming' },
+        { text: 'Fonts', link: '/apps-and-modules/#fonts' },
+        { text: 'Emojis', link: '/apps-and-modules/#emojis' },
         { text: 'Themes and Visual Styles', link: '/apps-and-modules/#themes-and-visual-mods' },
         { text: 'Launchers and Home Screen', link: '/apps-and-modules/#launchers-and-home-screen' },
         { text: 'Gestures and Navigation', link: '/apps-and-modules/#gestures-and-navigation' },
         { text: 'Notifications and UI Elements', link: '/apps-and-modules/#notifications-and-ui-elements' },
         { text: 'Display and Screen Tweaks', link: '/apps-and-modules/#screen-and-display' },
+        { text: 'Accessibility Tools', link: '/apps-and-modules/#accessibility-tools' },
         { text: 'ROM & OEM Customization', link: '/apps-and-modules/#rom-and-oem-customization' }
       ]
     },
-     {
-      text: '🤖 AI & Smart Tools',
+    {
+      text: '🔧 Modified & Patched Apps',
       collapsed: false,
       items: [
-        { text: 'AI & Smart Tools', link: '/apps-and-modules/#ai-and-smart-tools' }
+        { text: 'Modified App Collection', link: '/apps-and-modules/#app-patches-and-mods' },
+        { text: 'Social Media Mods', link: '/apps-and-modules/#social-media-mods' },
+        { text: 'Non-Social App Mods', link: '/apps-and-modules/#non-social-app-mods' },
+        { text: 'Patching Tools', link: '/apps-and-modules/#patching-tools' },
+        { text: 'Morphe', link: '/apps-and-modules/#morphe' },
+        { text: 'ReVanced Patches', link: '/apps-and-modules/#revanced' },
+        { text: 'Other App Modifications', link: '/apps-and-modules/#other-app-mods' }
+      ]
+    },
+    {
+      text: '🎮 Gaming',
+      collapsed: false,
+      items: [
+        { text: 'Gaming', link: '/apps-and-modules/#gaming' },
+        { text: 'Gaming Tweaks', link: '/apps-and-modules/#gaming-tweaks' },
+        { text: 'Graphics Optimization', link: '/apps-and-modules/#graphics-optimization' }
+      ]
+    },
+    {
+      text: '🛡️ Privacy and Security',
+      collapsed: false,
+      items: [
+        { text: 'Privacy and Security', link: '/apps-and-modules/#privacy-and-security' },
+        { text: 'Device ID and Spoofing Tools', link: '/apps-and-modules/#device-id-and-spoofing-tools' },
+        { text: 'Flag Secure Patchers', link: '/apps-and-modules/#flag-secure-patchers' },
+        { text: 'Hide Files', link: '/apps-and-modules/#hide-files' },
+        { text: 'Privacy Tools', link: '/apps-and-modules/#privacy-tools' },
+        { text: 'Security and Pentesting Tools', link: '/apps-and-modules/#security-and-pentesting-tools' },
+        { text: 'URL Cleaners', link: '/apps-and-modules/#url-cleaners' },
+        { text: 'Firewalls and Network Control', link: '/apps-and-modules/#firewall-tools' },
+        { text: 'Ad and Tracker Blocking', link: '/apps-and-modules/#ads-and-tracking-blockers' }
       ]
     },
     {
@@ -815,37 +848,31 @@ export default withPwa(defineConfig({
       items: [
         { text: 'Performance and Optimization', link: '/apps-and-modules/#performance-and-optimization' },
         { text: 'Task Managers', link: '/apps-and-modules/#task-managers' },
+        { text: 'Memory Management', link: '/apps-and-modules/#memory-management' },
         { text: 'Battery and Power Management', link: '/apps-and-modules/#battery-and-power-management' },
+        { text: 'Battery Stats and Monitoring', link: '/apps-and-modules/#battery-stats-and-monitoring' },
+        { text: 'Battery Optimization', link: '/apps-and-modules/#battery-optimization' },
+        { text: 'Charging and Power Control', link: '/apps-and-modules/#charging-and-power-control' },
+        { text: 'Google Services Optimization', link: '/apps-and-modules/#google-services-optimization' },
         { text: 'System Cleanup and Maintenance', link: '/apps-and-modules/#debloating-and-cleaning' },
         { text: 'Kernel Management', link: '/apps-and-modules/#kernel-management' }
       ]
     },
     {
-      text: '🎮 Gaming',
-      collapsed: false,
-      items: [
-        { text: 'Gaming Tweaks', link: '/apps-and-modules/#gaming-tweaks' },
-        { text: 'Graphics Optimization', link: '/apps-and-modules/#graphics-optimization' }
-      ]
-    },
-    {
       text: '🛠️ Root & System Control',
-      collapsed: false,
-      items: [
-        { text: 'Root Access Managers', link: '/apps-and-modules/#root-management' },
-        { text: 'Safety and Play Integrity', link: '/apps-and-modules/#root-hiding-and-play-integrity' },
-        { text: 'Bootloop Protection Tools', link: '/apps-and-modules/#bootloop-protection' },
-        { text: 'Boot and Startup', link: '/apps-and-modules/#boot-and-startup' },
-        { text: 'System Modifications', link: '/apps-and-modules/#system-modifications' }
-      ]
-    },
-    {
-      text: '🛡️ Privacy and Security',
       collapsed: true,
       items: [
-        { text: 'Privacy and Security', link: '/apps-and-modules/#privacy-and-security' },
-        { text: 'Firewalls and Network Control', link: '/apps-and-modules/#firewall-tools' },
-        { text: 'Ad and Tracker Blocking', link: '/apps-and-modules/#ads-and-tracking-blockers' }
+        { text: 'Root Management', link: '/apps-and-modules/#root-management' },
+        { text: 'Root Managers', link: '/apps-and-modules/#root-managers' },
+        { text: 'Module Managers', link: '/apps-and-modules/#module-managers' },
+        { text: 'Zygisk Implementations', link: '/apps-and-modules/#zygisk-implementations' },
+        { text: 'Root Detection Tools', link: '/apps-and-modules/#root-detection-tools' },
+        { text: 'Root Hiding and Play Integrity', link: '/apps-and-modules/#root-hiding-and-play-integrity' },
+        { text: 'Bootloop Protection Tools', link: '/apps-and-modules/#bootloop-protection' },
+        { text: 'System Modifications', link: '/apps-and-modules/#system-modifications' },
+        { text: 'Boot and Startup', link: '/apps-and-modules/#boot-and-startup' },
+        { text: 'System Tweaks and Patches', link: '/apps-and-modules/#system-tweaks-and-patches' },
+        { text: 'VBMeta Mods', link: '/apps-and-modules/#vbmeta-mods' }
       ]
     },
     {
@@ -854,19 +881,20 @@ export default withPwa(defineConfig({
       items: [
         { text: 'Complete App Control', link: '/apps-and-modules/#app-management-and-control' },
         { text: 'App Isolation and Cloning', link: '/apps-and-modules/#app-isolation-and-cloning' },
-        { text: 'Signature Verification Mods', link: '/apps-and-modules/#signature-and-verification' },
-        { text: 'App Managers', link: '/apps-and-modules/#app-managers' }
+        { text: 'App Managers', link: '/apps-and-modules/#app-managers' },
+        { text: 'App Update Control', link: '/apps-and-modules/#app-update-control' },
+        { text: 'Freeze Apps', link: '/apps-and-modules/#freeze-apps' },
+        { text: 'Package Management and Installation', link: '/apps-and-modules/#package-management-and-installation' },
+        { text: 'App Stores', link: '/apps-and-modules/#app-stores' },
+        { text: 'App Permissions and Control', link: '/apps-and-modules/#app-permissions-and-control' },
+        { text: 'Signature Verification Mods', link: '/apps-and-modules/#signature-and-verification' }
       ]
     },
-    {
-      text: '🔧 Modified & Patched Apps',
+     {
+      text: '🤖 AI & Smart Tools',
       collapsed: true,
       items: [
-        { text: 'Modified App Collection', link: '/apps-and-modules/#app-patches-and-mods' },
-        { text: 'Social Media Mods', link: '/apps-and-modules/#social-media-mods' },
-        { text: 'Non-Social App Mods', link: '/apps-and-modules/#non-social-app-mods' },
-        { text: 'ReVanced Patches', link: '/apps-and-modules/#revanced' },
-        { text: 'Other App Modifications', link: '/apps-and-modules/#other-app-mods' }
+        { text: 'AI & Smart Tools', link: '/apps-and-modules/#ai-and-smart-tools' }
       ]
     },
     {
@@ -874,13 +902,15 @@ export default withPwa(defineConfig({
       collapsed: true,
       items: [
         { text: 'File Managers', link: '/apps-and-modules/#file-management' },
-        { text: 'Backup and Restore Solutions', link: '/apps-and-modules/#backup-and-restore' }
+        { text: 'Backup and Restore Solutions', link: '/apps-and-modules/#backup-and-restore' },
+        { text: 'Debloating and Cleaning', link: '/apps-and-modules/#debloating-and-cleaning' }
       ]
     },
     {
       text: '🌐 Browser & Web Tools',
       collapsed: true,
       items: [
+        { text: 'Browser and Web Tools', link: '/apps-and-modules/#browser-and-web-tools' },
         { text: 'Browser Extensions', link: '/apps-and-modules/#browser-extensions' }
       ]
     },
@@ -889,18 +919,24 @@ export default withPwa(defineConfig({
       collapsed: true,
       items: [
         { text: 'Network Control and Tools', link: '/apps-and-modules/#network-and-connectivity' },
+        { text: 'DNS Tools', link: '/apps-and-modules/#dns-tools' },
+        { text: 'Hotspot Tools', link: '/apps-and-modules/#hotspot-tools' },
+        { text: 'SSL and Certificates', link: '/apps-and-modules/#ssl-and-certificates' },
+        { text: 'Wi-Fi Tools', link: '/apps-and-modules/#wi‐fi-tools' },
+        { text: 'Network Utilities', link: '/apps-and-modules/#network-utilities' },
         { text: 'VPN and Proxy Tools', link: '/apps-and-modules/#vpn-and-proxy-tools' },
-        { text: 'GPS and Location Tools', link: '/apps-and-modules/#location-and-gps' },
-        { text: 'NFC & Wireless Utilities', link: '/apps-and-modules/#nfc-and-wireless-utilities' }
+        { text: 'Hide VPN/Proxy Usage', link: '/apps-and-modules/#hide-vpn-proxy-usage' },
+        { text: 'GPS and Location Tools', link: '/apps-and-modules/#location-and-gps' }
       ]
     },
     {
       text: '📞 Communication',
       collapsed: true,
       items: [
+        { text: 'Communication and Messaging', link: '/apps-and-modules/#communication-and-messaging' },
         { text: 'Call Recording and Management', link: '/apps-and-modules/#call-recording' },
-        { text: 'SMS Tools and Utilities', link: '/apps-and-modules/#sms-and-messaging' },
-        { text: 'Other Communication Tools', link: '/apps-and-modules/#communication-and-messaging' }
+        { text: 'Contact Management', link: '/apps-and-modules/#contact-management' },
+        { text: 'SMS Tools and Utilities', link: '/apps-and-modules/#sms-and-messaging' }
       ]
     },
     {
@@ -909,7 +945,9 @@ export default withPwa(defineConfig({
       items: [
         { text: 'Audio Tools and Utilities', link: '/apps-and-modules/#audio-and-media' },
         { text: 'Sound Enhancement', link: '/apps-and-modules/#audio-enhancement' },
-        { text: 'Audio Configuration', link: '/apps-and-modules/#audio-configuration' }
+        { text: 'Audio Control and Management', link: '/apps-and-modules/#audio-control-and-management' },
+        { text: 'Audio Configuration', link: '/apps-and-modules/#audio-configuration' },
+        { text: 'Lyrics', link: '/apps-and-modules/#lyrics' }
       ]
     },
     {
@@ -917,9 +955,13 @@ export default withPwa(defineConfig({
       collapsed: true,
       items: [
         { text: 'Developer Tools', link: '/apps-and-modules/#developer-tools' },
-        { text: 'Terminal', link: '/apps-and-modules/#terminal-and-shell-tools' },
         { text: 'Hardware Control', link: '/apps-and-modules/#hardware-and-sensors' },
-        { text: 'LSPosed', link: '/apps-and-modules/#lsposed-framework' }
+        { text: 'Control Device Sensors', link: '/apps-and-modules/#control-device-sensors' },
+        { text: 'Input Devices and Controllers', link: '/apps-and-modules/#input-devices-and-controllers' },
+        { text: 'LSPosed', link: '/apps-and-modules/#lsposed-framework' },
+        { text: 'Terminal and Shell Tools', link: '/apps-and-modules/#terminal-and-shell-tools' },
+        { text: 'Shell Tools', link: '/apps-and-modules/#shell-tools' },
+        { text: 'Termux', link: '/apps-and-modules/#termux' }
       ]
     },
     {
@@ -928,8 +970,24 @@ export default withPwa(defineConfig({
       items: [
         { text: 'System Utilities', link: '/apps-and-modules/#system-utilities' },
         { text: 'Automation and Scheduling', link: '/apps-and-modules/#automation-and-scheduling' },
+        { text: 'Android Sharing and Picker Tweaks', link: '/apps-and-modules/#android-sharing-and-picker-tweaks' },
+        { text: 'Device Information', link: '/apps-and-modules/#device-information-and-diagnostics' },
+        { text: 'MicroG', link: '/apps-and-modules/#microg' },
+        { text: 'NFC & Wireless Utilities', link: '/apps-and-modules/#nfc-and-wireless-utilities' },
+        { text: 'Power and Reboot Tools', link: '/apps-and-modules/#power-and-reboot-tools' },
         { text: 'Cloud and Remote Storage', link: '/apps-and-modules/#remote-access-sync-and-storage' },
-        { text: 'Device Information', link: '/apps-and-modules/#device-information-and-diagnostics' }
+        { text: 'General Toolboxes and Module Collections', link: '/apps-and-modules/#general-toolboxes-and-module-collections' }
+      ]
+    },
+    {
+      text: '📚 Support and Safety',
+      collapsed: true,
+      items: [
+        { text: 'Legal and Safety', link: '/apps-and-modules/#legal-and-safety' },
+        { text: 'Core Principles', link: '/apps-and-modules/#core-principles' },
+        { text: 'Pre-Flash Checklist', link: '/apps-and-modules/#pre‐flash-checklist' },
+        { text: 'Risk Mitigation', link: '/apps-and-modules/#risk-mitigation' },
+        { text: 'Avoid Proceeding If', link: '/apps-and-modules/#avoid-proceeding-if' }
       ]
     }
   ],
