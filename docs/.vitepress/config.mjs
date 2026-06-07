@@ -881,8 +881,7 @@ export default withPwa(defineConfig({
       text: '🌐 Browser & Web Tools',
       collapsed: true,
       items: [
-        { text: 'Browser Extensions', link: '/apps-and-modules/#browser-extensions' },
-        { text: 'Webview Modifications', link: '/apps-and-modules/#webview-mods' }
+        { text: 'Browser Extensions', link: '/apps-and-modules/#browser-extensions' }
       ]
     },
     {
@@ -892,7 +891,7 @@ export default withPwa(defineConfig({
         { text: 'Network Control and Tools', link: '/apps-and-modules/#network-and-connectivity' },
         { text: 'VPN and Proxy Tools', link: '/apps-and-modules/#vpn-and-proxy-tools' },
         { text: 'GPS and Location Tools', link: '/apps-and-modules/#location-and-gps' },
-        { text: 'NFC Utilities', link: '/apps-and-modules/#nfc-and-wireless' }
+        { text: 'NFC & Wireless Utilities', link: '/apps-and-modules/#nfc-and-wireless-utilities' }
       ]
     },
     {
@@ -929,10 +928,8 @@ export default withPwa(defineConfig({
       items: [
         { text: 'System Utilities', link: '/apps-and-modules/#system-utilities' },
         { text: 'Automation and Scheduling', link: '/apps-and-modules/#automation-and-scheduling' },
-        { text: 'Cloud and Remote Storage', link: '/apps-and-modules/#cloud-and-remote-storage' },
-        { text: 'Device Information', link: '/apps-and-modules/#device-information' },
-        { text: 'Translation and Localization', link: '/apps-and-modules/#translation-and-localization' },
-        { text: 'Miscellaneous Utilities', link: '/apps-and-modules/#miscellaneous-utilities' }
+        { text: 'Cloud and Remote Storage', link: '/apps-and-modules/#remote-access-sync-and-storage' },
+        { text: 'Device Information', link: '/apps-and-modules/#device-information-and-diagnostics' }
       ]
     }
   ],
