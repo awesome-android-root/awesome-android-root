@@ -53,4 +53,4 @@ assignees: ''
 
 ---
 
-**Note:** Submissions that don't meet the checklist requirements may be closed. Please review our [Contribution Guidelines](https://awesome-android-root.org/contributing) before submitting.
+**Note:** Submissions that don't meet the checklist requirements may be closed. Please review our [Contribution Guidelines](https://awesome-android-root.pages.dev/contributing) before submitting.

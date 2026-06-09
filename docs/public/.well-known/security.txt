@@ -4,15 +4,15 @@ Contact: https://github.com/awesome-android-root/awesome-android-root/security/a
 Contact: https://github.com/awesome-android-root/awesome-android-root/issues/new/
 Expires: 2026-12-31T23:59:59.000Z
 Preferred-Languages: en
-Canonical: https://awesome-android-root.org/.well-known/security.txt
+Canonical: https://awesome-android-root.pages.dev/.well-known/security.txt
 
 # Security Disclosure Policy
 
-Policy: https://awesome-android-root.org/legal-disclaimer
+Policy: https://awesome-android-root.pages.dev/legal-disclaimer
 
 
 # PGP Key (if available in future)
-# Encryption: https://awesome-android-root.org/pgp-key.txt
+# Encryption: https://awesome-android-root.pages.dev/pgp-key.txt
 
 # About this file
 # This file complies with RFC 9116: https://www.rfc-editor.org/rfc/rfc9116.html
@@ -21,7 +21,7 @@ Policy: https://awesome-android-root.org/legal-disclaimer
 # If you discover a security vulnerability, please:
 # 1. DO NOT create a public GitHub issue
 # 2. Report privately through GitHub Security Advisories (preferred)
-# 3. Or email us at security@awesome-android-root.org
+# 3. Or email us at security@awesome-android-root.pages.dev
 # 4. Include detailed information about the vulnerability
 # 5. Allow reasonable time for us to respond and fix the issue
 #

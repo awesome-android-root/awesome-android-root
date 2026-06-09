@@ -434,19 +434,19 @@ export default withPwa(defineConfig({
       "@graph": [
         {
           "@type": "WebSite",
-          "@id": "https://awesome-android-root.org/#website",
+          "@id": "https://awesome-android-root.pages.dev/#website",
           "name": "Awesome Android Root",
           "description": "Ultimate Android rooting hub with 500+ curated root apps, Magisk/KernelSU/APatch modules, LSPosed framework, and comprehensive rooting guides.",
-          "url": "https://awesome-android-root.org/",
+          "url": "https://awesome-android-root.pages.dev/",
           "inLanguage": "en-US",
           "publisher": {
             "@type": "Organization",
-            "@id": "https://awesome-android-root.org/#organization",
+            "@id": "https://awesome-android-root.pages.dev/#organization",
             "name": "Awesome Android Root Project",
-            "url": "https://awesome-android-root.org/",
+            "url": "https://awesome-android-root.pages.dev/",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://awesome-android-root.org/images/logo.png",
+              "url": "https://awesome-android-root.pages.dev/images/logo.png",
               "width": 330,
               "height": 330
             },
@@ -459,50 +459,50 @@ export default withPwa(defineConfig({
         },
         {
           "@type": "ItemList",
-          "@id": "https://awesome-android-root.org/#mainnavigation",
+          "@id": "https://awesome-android-root.pages.dev/#mainnavigation",
           "name": "Main Navigation",
           "itemListElement": [
             {
               "@type": "ListItem",
               "position": 1,
               "name": "Root Apps & Modules",
-              "url": "https://awesome-android-root.org/apps-and-modules/"
+              "url": "https://awesome-android-root.pages.dev/apps-and-modules/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Rooting Guides",
-              "url": "https://awesome-android-root.org/rooting-guides/"
+              "url": "https://awesome-android-root.pages.dev/rooting-guides/"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Tutorials",
-              "url": "https://awesome-android-root.org/general-guides/"
+              "url": "https://awesome-android-root.pages.dev/general-guides/"
             },
             {
               "@type": "ListItem",
               "position": 4,
               "name": "FAQ",
-              "url": "https://awesome-android-root.org/faqs"
+              "url": "https://awesome-android-root.pages.dev/faqs"
             },
             {
               "@type": "ListItem",
               "position": 5,
               "name": "Troubleshooting",
-              "url": "https://awesome-android-root.org/troubleshooting"
+              "url": "https://awesome-android-root.pages.dev/troubleshooting"
             }
           ]
         },
         {
           "@type": "BreadcrumbList",
-          "@id": "https://awesome-android-root.org/#breadcrumb",
+          "@id": "https://awesome-android-root.pages.dev/#breadcrumb",
           "itemListElement": [
             {
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://awesome-android-root.org/"
+              "item": "https://awesome-android-root.pages.dev/"
             }
           ]
         }

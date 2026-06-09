@@ -5,7 +5,7 @@ description: "The ultimate Android rooting guide for 2026. Learn Magisk, KernelS
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/rooting-guides/  
+      href: https://awesome-android-root.pages.dev/rooting-guides/  
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: The ultimate Android rooting guide covering Magisk, KernelSU, APatch installation with device-specific tutorials for Pixel, Samsung, Xiaomi, OnePlus & more.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/rooting-guides/  
+      content: https://awesome-android-root.pages.dev/rooting-guides/  
   - - meta
     - property: og:image
-      content: https://awesome-android-root.org/images/og.png  
+      content: https://awesome-android-root.pages.dev/images/og.png  
   - - meta
     - name: twitter:card
       content: summary_large_image

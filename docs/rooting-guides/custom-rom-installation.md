@@ -5,7 +5,7 @@ description: "Master guide to install custom Android ROMs - LineageOS, GrapheneO
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/rooting-guides/custom-rom-installation
+      href: https://awesome-android-root.pages.dev/rooting-guides/custom-rom-installation
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: Install custom Android ROMs with our comprehensive guide covering LineageOS, GrapheneOS, Pixel Experience and privacy-focused alternatives.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/rooting-guides/custom-rom-installation
+      content: https://awesome-android-root.pages.dev/rooting-guides/custom-rom-installation
   - - meta
     - property: og:image
-      content: https://awesome-android-root.org/images/og/custom-rom.png
+      content: https://awesome-android-root.pages.dev/images/og/custom-rom.png
   - - meta
     - name: twitter:card
       content: summary_large_image

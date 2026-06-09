@@ -5,7 +5,7 @@ description: "Master bootloader unlocking for all Android manufacturers. Step-by
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/rooting-guides/how-to-unlock-bootloader
+      href: https://awesome-android-root.pages.dev/rooting-guides/how-to-unlock-bootloader
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: Master Android bootloader unlocking with comprehensive guides for all major manufacturers including Google Pixel, Xiaomi, Samsung, OnePlus, and Motorola.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/rooting-guides/how-to-unlock-bootloader
+      content: https://awesome-android-root.pages.dev/rooting-guides/how-to-unlock-bootloader
   - - meta
     - property: og:image
-      content: https://awesome-android-root.org/images/og/bootoader.png
+      content: https://awesome-android-root.pages.dev/images/og/bootoader.png
   - - meta
     - name: twitter:card
       content: summary_large_image

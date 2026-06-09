@@ -7,55 +7,55 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://awesome-android-root.org/</loc>
+  <loc>https://awesome-android-root.pages.dev/</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
   <image:image>
-    <image:loc>https://awesome-android-root.org/images/og.png</image:loc>
+    <image:loc>https://awesome-android-root.pages.dev/images/og.png</image:loc>
     <image:title>Awesome Android Root - Ultimate Rooting Hub</image:title>
   </image:image>
 </url>
 
 <!-- Top-level pages -->
 <url>
-  <loc>https://awesome-android-root.org/about</loc>
+  <loc>https://awesome-android-root.pages.dev/about</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.70</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.org/contributing</loc>
+  <loc>https://awesome-android-root.pages.dev/contributing</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>yearly</changefreq>
   <priority>0.70</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.org/faqs</loc>
+  <loc>https://awesome-android-root.pages.dev/faqs</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.org/troubleshooting</loc>
+  <loc>https://awesome-android-root.pages.dev/troubleshooting</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.org/resources</loc>
+  <loc>https://awesome-android-root.pages.dev/resources</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.org/legal-disclaimer</loc>
+  <loc>https://awesome-android-root.pages.dev/legal-disclaimer</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>yearly</changefreq>
   <priority>0.60</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.org/non-root-alternatives</loc>
+  <loc>https://awesome-android-root.pages.dev/non-root-alternatives</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
@@ -64,7 +64,7 @@
 
 <!-- Apps and Modules section - HIGH VALUE -->
 <url>
-  <loc>https://awesome-android-root.org/apps-and-modules/</loc>
+  <loc>https://awesome-android-root.pages.dev/apps-and-modules/</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.98</priority>
@@ -72,7 +72,7 @@
 
 <!-- Rooting Guides section - HIGH VALUE -->
 <url>
-  <loc>https://awesome-android-root.org/rooting-guides/</loc>
+  <loc>https://awesome-android-root.pages.dev/rooting-guides/</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.98</priority>
@@ -80,7 +80,7 @@
 
 <!-- General Guides section -->
 <url>
-  <loc>https://awesome-android-root.org/general-guides/</loc>
+  <loc>https://awesome-android-root.pages.dev/general-guides/</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.85</priority>
@@ -88,49 +88,49 @@
 
 <!-- Primary guide pages -->
 <url>
-  <loc>https://awesome-android-root.org/rooting-guides/how-to-unlock-bootloader</loc>
+  <loc>https://awesome-android-root.pages.dev/rooting-guides/how-to-unlock-bootloader</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.org/rooting-guides/how-to-install-custom-recovery</loc>
+  <loc>https://awesome-android-root.pages.dev/rooting-guides/how-to-install-custom-recovery</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.org/rooting-guides/custom-rom-installation</loc>
+  <loc>https://awesome-android-root.pages.dev/rooting-guides/custom-rom-installation</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.org/rooting-guides/magisk-guide</loc>
+  <loc>https://awesome-android-root.pages.dev/rooting-guides/magisk-guide</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.92</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.org/rooting-guides/kernelsu-guide</loc>
+  <loc>https://awesome-android-root.pages.dev/rooting-guides/kernelsu-guide</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.org/rooting-guides/apatch-guide</loc>
+  <loc>https://awesome-android-root.pages.dev/rooting-guides/apatch-guide</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.org/rooting-guides/lsposed-guide</loc>
+  <loc>https://awesome-android-root.pages.dev/rooting-guides/lsposed-guide</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.org/rooting-guides/root-framework-comparison</loc>
+  <loc>https://awesome-android-root.pages.dev/rooting-guides/root-framework-comparison</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.88</priority>
@@ -138,37 +138,37 @@
 
 <!-- Device-specific guides -->
 <url>
-  <loc>https://awesome-android-root.org/rooting-guides/how-to-root-xiaomi-phone</loc>
+  <loc>https://awesome-android-root.pages.dev/rooting-guides/how-to-root-xiaomi-phone</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.82</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.org/rooting-guides/how-to-root-samsung-phone</loc>
+  <loc>https://awesome-android-root.pages.dev/rooting-guides/how-to-root-samsung-phone</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.82</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.org/rooting-guides/how-to-root-pixel-phone</loc>
+  <loc>https://awesome-android-root.pages.dev/rooting-guides/how-to-root-pixel-phone</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.org/rooting-guides/how-to-root-oneplus-phone</loc>
+  <loc>https://awesome-android-root.pages.dev/rooting-guides/how-to-root-oneplus-phone</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.78</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.org/rooting-guides/how-to-root-nothing-phone</loc>
+  <loc>https://awesome-android-root.pages.dev/rooting-guides/how-to-root-nothing-phone</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.76</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.org/rooting-guides/how-to-root-motorola-phone</loc>
+  <loc>https://awesome-android-root.pages.dev/rooting-guides/how-to-root-motorola-phone</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.76</priority>
@@ -176,25 +176,25 @@
 
 <!-- General Guides section -->
 <url>
-  <loc>https://awesome-android-root.org/general-guides/</loc>
+  <loc>https://awesome-android-root.pages.dev/general-guides/</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.org/general-guides/android-adblocking</loc>
+  <loc>https://awesome-android-root.pages.dev/general-guides/android-adblocking</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.82</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.org/general-guides/android-apps-debloating</loc>
+  <loc>https://awesome-android-root.pages.dev/general-guides/android-apps-debloating</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.org/general-guides/stop-android-app-auto-updates-play-store</loc>
+  <loc>https://awesome-android-root.pages.dev/general-guides/stop-android-app-auto-updates-play-store</loc>
   <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.78</priority>

@@ -22,7 +22,7 @@
 </div>
 <div class="mob-tip">
 
-> 💡 **Mobile Users:** Visit **[awesome-android-root.org](https://awesome-android-root.org)** for better navigation and search.
+> 💡 **Mobile Users:** Visit **[awesome-android-root.org](https://awesome-android-root.pages.dev)** for better navigation and search.
 
 </div><br>
 
@@ -1459,7 +1459,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 ### Official Channels
 | Platform | Purpose | Link |
 |:---|:---|:---|
-|🌐 **Website** | Browse apps, modules & guides | [awesome-android-root.org](https://awesome-android-root.org) |
+|🌐 **Website** | Browse apps, modules & guides | [awesome-android-root.pages.dev](https://awesome-android-root.pages.dev) |
 |📂 **GitHub** | Source, discussions & issues | [GitHub Repo](https://github.com/awesome-android-root/awesome-android-root) |
 |𝕏 **X/Twitter** | Updates & news | [@awsm_and_root](https://x.com/awsm_and_root) |
 
@@ -1534,7 +1534,7 @@ Respect licenses, ToS, and local laws. Don’t use root to unlawfully bypass pai
 
 [![Become a Sponsor](https://img.shields.io/badge/%20💖-Become%20a%20Sponsor-ff69b4?style=for-the-badge)](https://opencollective.com/awesome-android-root-official)
 [![Star the Repo](https://img.shields.io/badge/%20⭐-Star%20this%20Repo-yellow?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root)
-[![Share Project](https://img.shields.io/badge/%20📢-Share%20Project-blue?style=for-the-badge)](https://twitter.com/intent/tweet?text=Check%20out%20this%20amazing%20Android%20rooting%20resource!&url=https://awesome-android-root.org)
+[![Share Project](https://img.shields.io/badge/%20📢-Share%20Project-blue?style=for-the-badge)](https://twitter.com/intent/tweet?text=Check%20out%20this%20amazing%20Android%20rooting%20resource!&url=https://awesome-android-root.pages.dev)
 
 **Sponsorships fund: app status verification, guide refresh, categorization improvements, automation & docs infra.**
 
@@ -1553,7 +1553,7 @@ Non‑financial impact ideas:
 **⚡ Built with ❤️ by [Awesome Android Root](https://github.com/awesome-android-root/awesome-android-root)**
 
 [![X Follow](https://img.shields.io/badge/%20%20-Follow%20US-blue?logo=X&logoColor=white&style=for-the-badge&label=&#8203;)](https://x.com/awsm_and_root)
-[![Website](https://img.shields.io/badge/%20-Website-green?logo=google-chrome&logoColor=white&style=for-the-badge&label=&#8203;)](https://awesome-android-root.org)
+[![Website](https://img.shields.io/badge/%20-Website-green?logo=google-chrome&logoColor=white&style=for-the-badge&label=&#8203;)](https://awesome-android-root.pages.dev)
 [![Back to Top](https://img.shields.io/badge/%20↑-Back%20to%20Top-blue?style=for-the-badge&color=blue)](#table-of-contents)
 
 </div>
