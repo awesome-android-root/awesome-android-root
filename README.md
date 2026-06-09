@@ -482,7 +482,7 @@ Follow this path:
 #### Telegram Mods
 - **[Re-Telegram](https://github.com/Sakion-Team/Re-Telegram/)** - Adds features like AntiAntiForward, AntiRecall, NoSponsoredMessages, ProhibitChannelSwitching and many more to various Telegram clients. `FOSS` `[LSP]`
 - **[Telegami](https://github.com/aoya111/Telegami)** - Various tweaks for Telegram. `FOSS` `[LSP]`
-- **[Telegram Speed Hook](https://github.com/araafroyall/Telegram-Speed-Hook)** - Increase Telegram speed. `FOSS` `[LSP]`
+- **[Telegram Speed Hook](https://github.com/araafroyall/Telegram-Speed-Hook)** - Increase Telegram files/media downloading speed. `FOSS` `[LSP]`
 - **[Telegram Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.sidestories)** - Remove action bar stories in the Telegram messenger (+block unmute button). `Proprietary` `[LSP]`
 - **[TeleVip](https://github.com/Xposed-Modules-Repo/com.my.televip/)** - A module for modifying Telegram with hide seen status, unlocking channel restrictions etc. `Proprietary` `[LSP]`
 - **[TMoe](https://github.com/cinit/TMoe)** - Adds various tweaks to various Telegram clients. `FOSS` `[LSP]`
@@ -505,7 +505,7 @@ Follow this path:
 - **[⭐ Hachidori](https://github.com/Xposed-Modules-Repo/com.twifucker.hachidori/)** - Adds downloading media, hiding ads and other privacy features to X (formerly Twitter). `Proprietary` `[LSP]`
 
 #### YouTube, YT Music Mods
-- **[RevancedXposed](https://github.com/chsbuffer/RevancedXposed)** - YouTube, YT Music block ads, background playback, sponsorblock and much more. Also unlocks premium features of Strava and Photomath. Unlimited Google Photos backup. `FOSS` `[LSP]`
+- **[NexAlloy](https://github.com/NexAlloy/NexAlloy)** - YouTube, YT Music block ads, background playback, sponsorblock and much more. Also unlocks premium features of Strava and Photomath. Unlimited Google Photos backup. `FOSS` `[LSP]`
 > Also check out [Revanced section](#revanced)
 
 [↑ Back to top](#table-of-contents)
@@ -1128,8 +1128,6 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ## Privacy and Security
 
-- **[NoVPNDetect Enhanced](https://github.com/BlueCat300/NoVPNDetectEnhanced/blob/master/README_en.md)** - Prevents some apps from detecting your phone is connected to a VPN. `FOSS` `[LSP]`
-
 ### Device ID and Spoofing Tools
 - **[DeviceID/SSAID Changer](https://github.com/sidex15/deviceidchanger)** - A simple WebUI Module to change SSAID/DeviceID on Rooted Android Devices with Apatch, KSU (And its forks), or Magisk. `FOSS` `[M]` `[K]`
 - **[Device Faker](https://github.com/Seyud/device_faker/)** - A device model spoofing module based on Zygisk that can configure different device models for different applications. `FOSS` `[M]` `[K]`
@@ -1309,6 +1307,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[NoHello](https://github.com/MhmRdd/NoHello)** -  A Zygisk module to hide root. `FOSS` `[M]`
 - **[PlaycurlNEXT](https://github.com/daboynb/playcurlNEXT)** - Fix Play Integrity (and SafetyNet) verdicts, allowing custom fields and props. `FOSS` `[M]` `[K]`
 - **[Play Integrity Fork](https://github.com/osm0sis/PlayIntegrityFork)** - A fork of PIF that fixes "MEETS_DEVICE_INTEGRITY" for Android <13 "deviceRecognitionVerdict" with the Play Integrity API. `FOSS` `[M]`
+- **[Play Integrity Fix INJECT](https://github.com/KOWX712/PlayIntegrityFix)** - Play Integrity device verdicts and certification using injected GMS/Play Store spoofing. `FOSS` `[M]`
 - **[Sensitive_Props Mod](https://github.com/Pixel-Props/sensitive-props)** - Helps you bypass SafetyNet and Play Integrity on rooted Android devices by modifying system properties and applying device-specific fixes. `FOSS` `[M]`
 - **[TrickyStore](https://github.com/5ec1cff/TrickyStore)** - Modifying the certificate chain generated for android key attestation. `Proprietary` `[M]` `[K]`
 - **[Tricky Addon - Update Target List](https://github.com/KOWX712/Tricky-Addon-Update-Target-List)** - A KSU WebUI to configure Tricky Store target.txt. `FOSS` `[K]`
