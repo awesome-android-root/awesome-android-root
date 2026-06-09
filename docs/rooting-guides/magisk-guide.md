@@ -5,7 +5,7 @@ description: "Master Magisk rooting with our comprehensive guide. Install system
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/rooting-guides/magisk-guide
+      href: https://awesome-android-root.pages.dev/rooting-guides/magisk-guide
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: Install Magisk root with our comprehensive guide. Master systemless rooting with advanced module system, root hiding, and complete device management.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/rooting-guides/magisk-guide
+      content: https://awesome-android-root.pages.dev/rooting-guides/magisk-guide
   - - meta
     - property: og:image
-      content: https://awesome-android-root.org/images/og/magisk-guide.png
+      content: https://awesome-android-root.pages.dev/images/og/magisk-guide.png
   - - meta
     - name: twitter:card
       content: summary_large_image

@@ -5,7 +5,7 @@ description: "Step-by-step diagnostic procedures for Android rooting problems in
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/troubleshooting
+      href: https://awesome-android-root.pages.dev/troubleshooting
   - - meta
     - property: og:type
       content: article
@@ -20,13 +20,13 @@ head:
       content: Step-by-step diagnostic procedures for Android rooting problems including bootloops, detection issues, and installation failures organized by root method.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/troubleshooting
+      content: https://awesome-android-root.pages.dev/troubleshooting
   - - meta
     - property: og:image
-      content: https://awesome-android-root.org/images/og.png
+      content: https://awesome-android-root.pages.dev/images/og.png
   - - meta
     - property: og:image:secure_url
-      content: https://awesome-android-root.org/images/og.png
+      content: https://awesome-android-root.pages.dev/images/og.png
   - - meta
     - property: og:image:alt
       content: Android Root Troubleshooting Guide - Fix Common Rooting Issues
@@ -59,7 +59,7 @@ head:
       content: Comprehensive solutions for Android rooting problems - bootloops, detection issues, installation failures organized by root method.
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.org/images/og.png
+      content: https://awesome-android-root.pages.dev/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Root Troubleshooting Guide - Fix Bootloops and Installation Errors

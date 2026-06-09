@@ -5,7 +5,7 @@ description: "Complete collection of Android rooting resources, tools, communiti
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/resources
+      href: https://awesome-android-root.pages.dev/resources
   - - meta
     - property: og:type
       content: website
@@ -17,10 +17,10 @@ head:
       content: Ultimate collection of Android rooting resources including tools, communities, guides, and expert materials for safe device customization and root access.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/resources
+      content: https://awesome-android-root.pages.dev/resources
   - - meta
     - property: og:image
-      content: https://awesome-android-root.org/images/og.png
+      content: https://awesome-android-root.pages.dev/images/og.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -380,7 +380,7 @@ head:
 
 | Resource | Description | URL |
 |:---------|:------------|:----|
-| **Official Website** | Main hub | [awesome-android-root.org](https://awesome-android-root.org) |
+| **Official Website** | Main hub | [awesome-android-root.pages.dev](https://awesome-android-root.pages.dev) |
 | **GitHub Repository** | Source code | [GitHub](https://github.com/awesome-android-root/awesome-android-root) |
 | **Issue Tracker** | Bug reports | [Issues](https://github.com/awesome-android-root/awesome-android-root/issues) |
 | **Discussions** | Community Q&A | [Discussions](https://github.com/awesome-android-root/awesome-android-root/discussions) |
@@ -429,6 +429,6 @@ This is a community-driven project. Contributions are welcome!
 
 **Maintained by:** [Awesome Android Root Community](https://github.com/awesome-android-root/awesome-android-root)
 
-[Home](https://awesome-android-root.org) | [Root Apps](./apps-and-modules/index.md) | [Guides](./rooting-guides/index.md) | [FAQ](./faqs.md)
+[Home](https://awesome-android-root.pages.dev) | [Root Apps](./apps-and-modules/index.md) | [Guides](./rooting-guides/index.md) | [FAQ](./faqs.md)
 
 </div>

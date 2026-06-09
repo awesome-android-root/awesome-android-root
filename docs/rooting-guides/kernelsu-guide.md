@@ -5,7 +5,7 @@ description: "Master KernelSU rooting - the kernel-based root solution. Comprehe
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/rooting-guides/kernelsu-guide
+      href: https://awesome-android-root.pages.dev/rooting-guides/kernelsu-guide
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: Install KernelSU root with our comprehensive guide. Kernel-based rooting solution with advanced module system and app profiles.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/rooting-guides/kernelsu-guide
+      content: https://awesome-android-root.pages.dev/rooting-guides/kernelsu-guide
   - - meta
     - property: og:image
-      content: https://awesome-android-root.org/images/og/kernelsu-guide.png
+      content: https://awesome-android-root.pages.dev/images/og/kernelsu-guide.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -101,7 +101,7 @@ head:
       content: "Complete KernelSU guide covering KernelSU and KernelSU Next installation, modules."
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.org/images/og/kernelsu-guide.png
+      content: https://awesome-android-root.pages.dev/images/og/kernelsu-guide.png
   - - meta
     - name: twitter:image:alt
       content: KernelSU Root Guide - Complete Installation Tutorial
@@ -122,25 +122,25 @@ head:
           "@type": "TechArticle",
           "headline": "KernelSU Root Guide | Awesome Android Root",
           "description": "Complete KernelSU guide covering KernelSU and KernelSU Next installation, modules, and app profile management.",
-          "image": "https://awesome-android-root.org/images/og/kernelsu-guide.png",
+          "image": "https://awesome-android-root.pages.dev/images/og/kernelsu-guide.png",
           "author": {
             "@type": "Organization",
             "name": "Awesome Android Root Project",
-            "url": "https://awesome-android-root.org"
+            "url": "https://awesome-android-root.pages.dev"
           },
           "publisher": {
             "@type": "Organization",
             "name": "Awesome Android Root",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://awesome-android-root.org/images/logo.png"
+              "url": "https://awesome-android-root.pages.dev/images/logo.png"
             }
           },
           "datePublished": "2025-01-12",
           "dateModified": "2025-12-26",
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://awesome-android-root.org/rooting-guides/kernelsu-guide"
+            "@id": "https://awesome-android-root.pages.dev/rooting-guides/kernelsu-guide"
           },
           "about": [
             {

@@ -12,10 +12,10 @@ head:
       content: "website"
   - - meta
     - property: og:url
-      content: "https://awesome-android-root.org"
+      content: "https://awesome-android-root.pages.dev"
   - - meta
     - property: og:image
-      content: "https://awesome-android-root.org/images/og.png"
+      content: "https://awesome-android-root.pages.dev/images/og.png"
   - - meta
     - property: og:title
       content: "Best Root Apps & Modules | Awesome Android Root"
@@ -24,7 +24,7 @@ head:
       content: "Discover 500+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026."
   - - meta
     - property: og:image:secure_url
-      content: "https://awesome-android-root.org/images/og.png"
+      content: "https://awesome-android-root.pages.dev/images/og.png"
   - - meta
     - property: og:image:alt
       content: "Best Root Apps & Modules | Awesome Android Root"
@@ -54,7 +54,7 @@ head:
       content: "Discover 500+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026."
   - - meta
     - name: twitter:image
-      content: "https://awesome-android-root.org/images/og.png"
+      content: "https://awesome-android-root.pages.dev/images/og.png"
   - - meta
     - name: twitter:image:alt
       content: "Best Root Apps & Modules | Awesome Android Root"
@@ -66,11 +66,11 @@ head:
       content: "2025-10-04T00:00:00Z"
   - - link
     - rel: canonical
-      href: "https://awesome-android-root.org"
+      href: "https://awesome-android-root.pages.dev"
   - - link
     - rel: alternate
       hreflang: "en"
-      href: "https://awesome-android-root.org"
+      href: "https://awesome-android-root.pages.dev"
   - - link
     - rel: prefetch
       href: "/apps-and-modules/"
@@ -85,20 +85,20 @@ head:
         "@graph": [
           {
             "@type": "WebSite",
-            "@id": "https://awesome-android-root.org/#website",
+            "@id": "https://awesome-android-root.pages.dev/#website",
             "name": "Awesome Android Root",
             "alternateName": "Ultimate Android Rooting Hub",
             "description": "Discover 500+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026.",
-            "url": "https://awesome-android-root.org/",
+            "url": "https://awesome-android-root.pages.dev/",
             "inLanguage": "en-US",
             "publisher": {
-              "@id": "https://awesome-android-root.org/#organization"
+              "@id": "https://awesome-android-root.pages.dev/#organization"
             },
             "potentialAction": {
               "@type": "SearchAction",
               "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": "https://awesome-android-root.org/search?q={search_term_string}"
+                "urlTemplate": "https://awesome-android-root.pages.dev/search?q={search_term_string}"
               },
               "query-input": "required name=search_term_string"
             },
@@ -109,31 +109,31 @@ head:
           },
           {
             "@type": ["WebPage", "CollectionPage"],
-            "@id": "https://awesome-android-root.org/#webpage",
+            "@id": "https://awesome-android-root.pages.dev/#webpage",
             "name": "Best Android Root Apps & Modules (2026) | Awesome Android Root",
             "description": "Discover 500+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026.",
-            "url": "https://awesome-android-root.org/",
+            "url": "https://awesome-android-root.pages.dev/",
             "datePublished": "2025-05-25T00:00:00Z",
             "dateModified": "2025-12-26T00:00:00Z",
             "inLanguage": "en-US",
             "isPartOf": {
-              "@id": "https://awesome-android-root.org/#website"
+              "@id": "https://awesome-android-root.pages.dev/#website"
             },
             "image": {
               "@type": "ImageObject",
-              "url": "https://awesome-android-root.org/images/og.png",
+              "url": "https://awesome-android-root.pages.dev/images/og.png",
               "width": 1200,
               "height": 630
             }
           },
           {
             "@type": "Organization",
-            "@id": "https://awesome-android-root.org/#organization",
+            "@id": "https://awesome-android-root.pages.dev/#organization",
             "name": "Awesome Android Root",
-            "url": "https://awesome-android-root.org/",
+            "url": "https://awesome-android-root.pages.dev/",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://awesome-android-root.org/images/logo.png",
+              "url": "https://awesome-android-root.pages.dev/images/logo.png",
               "width": 330,
               "height": 330
             },
@@ -146,12 +146,12 @@ head:
             "@type": "SiteNavigationElement",
             "name": "Primary Navigation",
             "about": "Top-level sections of Awesome Android Root",
-            "url": "https://awesome-android-root.org/",
+            "url": "https://awesome-android-root.pages.dev/",
             "hasPart": [
-              { "@type": "WebPage", "name": "Root Apps", "url": "https://awesome-android-root.org/apps-and-modules/" },
-              { "@type": "WebPage", "name": "Root Guides", "url": "https://awesome-android-root.org/rooting-guides/" },
-              { "@type": "WebPage", "name": "Resources", "url": "https://awesome-android-root.org/resources" },
-              { "@type": "WebPage", "name": "FAQs", "url": "https://awesome-android-root.org/faqs" }
+              { "@type": "WebPage", "name": "Root Apps", "url": "https://awesome-android-root.pages.dev/apps-and-modules/" },
+              { "@type": "WebPage", "name": "Root Guides", "url": "https://awesome-android-root.pages.dev/rooting-guides/" },
+              { "@type": "WebPage", "name": "Resources", "url": "https://awesome-android-root.pages.dev/resources" },
+              { "@type": "WebPage", "name": "FAQs", "url": "https://awesome-android-root.pages.dev/faqs" }
             ]
           }
         ]

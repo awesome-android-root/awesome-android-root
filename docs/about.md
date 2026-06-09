@@ -5,7 +5,7 @@ description: "Learn about the Awesome Android Root project - the most comprehens
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/about
+      href: https://awesome-android-root.pages.dev/about
   - - meta
     - property: og:type
       content: website
@@ -17,10 +17,10 @@ head:
       content: Discover the story behind Awesome Android Root - the most comprehensive collection of 500+ Android root apps, Magisk, KernelSU & LSPosed (Xposed) modules & rooting guides.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/about
+      content: https://awesome-android-root.pages.dev/about
   - - meta
     - property: og:image
-      content: https://awesome-android-root.org/images/og.png
+      content: https://awesome-android-root.pages.dev/images/og.png
   - - meta
     - name: twitter:card
       content: summary_large_image

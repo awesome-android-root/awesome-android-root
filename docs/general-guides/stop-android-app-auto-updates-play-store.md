@@ -6,7 +6,7 @@ head:
   # Canonical and preconnect links
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/general-guides/stop-android-app-auto-updates-play-store
+      href: https://awesome-android-root.pages.dev/general-guides/stop-android-app-auto-updates-play-store
 
   # Stop App Updates specific OpenGraph
   - - meta
@@ -23,13 +23,13 @@ head:
       content: Learn how to permanently disable automatic app updates from Google Play Store using Zygisk Detach module. Complete step-by-step guide for rooted Android devices with Magisk/KernelSU. Prevent unwanted app updates today!
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/general-guides/stop-android-app-auto-updates-play-store
+      content: https://awesome-android-root.pages.dev/general-guides/stop-android-app-auto-updates-play-store
   - - meta
     - property: og:image
-      content: https://awesome-android-root.org/images/og/zygisk-detach.png
+      content: https://awesome-android-root.pages.dev/images/og/zygisk-detach.png
   - - meta
     - property: og:image:secure_url
-      content: https://awesome-android-root.org/images/og/zygisk-detach.png
+      content: https://awesome-android-root.pages.dev/images/og/zygisk-detach.png
   - - meta
     - property: og:image:alt
       content: How to Stop Android App Auto Updates from Play Store - Zygisk Detach Guide
@@ -67,7 +67,7 @@ head:
       content: Permanently disable automatic app updates from Google Play Store using Zygisk Detach module. Complete guide for rooted Android devices with Magisk/KernelSU. Step-by-step tutorial included!
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.org/images/og/zygisk-detach.png
+      content: https://awesome-android-root.pages.dev/images/og/zygisk-detach.png
   - - meta
     - name: twitter:image:alt
       content: Android app auto updates disable guide - Zygisk Detach method for rooted devices
@@ -79,7 +79,7 @@ head:
       content: https://github.com/awesome-android-root
   - - meta
     - property: article:publisher
-      content: https://awesome-android-root.org
+      content: https://awesome-android-root.pages.dev
   - - meta
     - property: article:published_time
       content: '2025-07-03T00:00:00Z'

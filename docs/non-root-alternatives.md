@@ -5,7 +5,7 @@ description: "Achieve similar functionality without root access using ADB, Shizu
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/non-root-alternatives
+      href: https://awesome-android-root.pages.dev/non-root-alternatives
   - - meta
     - property: og:type
       content: article
@@ -20,13 +20,13 @@ head:
       content: Achieve similar functionality without root access using ADB, Shizuku, wireless debugging, and alternative apps for devices where rooting isn't possible.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/non-root-alternatives
+      content: https://awesome-android-root.pages.dev/non-root-alternatives
   - - meta
     - property: og:image
-      content: https://awesome-android-root.org/images/og.png
+      content: https://awesome-android-root.pages.dev/images/og.png
   - - meta
     - property: og:image:secure_url
-      content: https://awesome-android-root.org/images/og.png
+      content: https://awesome-android-root.pages.dev/images/og.png
   - - meta
     - property: og:image:alt
       content: Non-Root Alternatives - Customize Android Without Root 2026
@@ -59,7 +59,7 @@ head:
       content: Achieve powerful Android customization without root using ADB, Shizuku, wireless debugging, and alternative apps.
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.org/images/og.png
+      content: https://awesome-android-root.pages.dev/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Non-Root Alternatives - ADB, Shizuku & More

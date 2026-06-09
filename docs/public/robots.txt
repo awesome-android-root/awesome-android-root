@@ -3,7 +3,7 @@
 
 User-agent: *
 Allow: /
-Sitemap: https://awesome-android-root.org/sitemap.xml
+Sitemap: https://awesome-android-root.pages.dev/sitemap.xml
 
 # Priority paths - high-value content
 Crawl-delay: 0

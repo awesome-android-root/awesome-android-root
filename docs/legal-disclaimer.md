@@ -5,7 +5,7 @@ description: "Important legal information, warranty implications, and safety gui
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.org/legal-disclaimer
+      href: https://awesome-android-root.pages.dev/legal-disclaimer
   - - meta
     - name: robots
       content: index, follow
@@ -20,10 +20,10 @@ head:
       content: "Important legal information, warranty implications, and safety guidelines for Android rooting."
   - - meta
     - property: og:url
-      content: https://awesome-android-root.org/legal-disclaimer
+      content: https://awesome-android-root.pages.dev/legal-disclaimer
   - - meta
     - property: og:image
-      content: https://awesome-android-root.org/images/og/bootoader.png
+      content: https://awesome-android-root.pages.dev/images/og/bootoader.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -35,7 +35,7 @@ head:
       content: "Important legal information, warranty implications, and safety guidelines for Android rooting."
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.org/images/og/bootoader.png
+      content: https://awesome-android-root.pages.dev/images/og/bootoader.png
 ---
 
 # Legal Disclaimer & Safety Notice
