@@ -515,7 +515,8 @@ export default withPwa(defineConfig({
     ['meta', { property: 'og:locale', content: 'en_US' }],
 
     // --- Verification Tags ---
-    ['meta', { name: 'ahrefs-site-verification', content: '5fd5ad82114006dedaabbb7cc47ee96924361ceedafe09795ce9abbb7d32d6ff' }]
+    ['meta', { name: 'ahrefs-site-verification', content: '5fd5ad82114006dedaabbb7cc47ee96924361ceedafe09795ce9abbb7d32d6ff' }],
+    ['meta', { name: 'google-site-verification', content: 'yh6OZ9qZhOAVRs3tkFAwwBYIb3BKrveBy6C0QEVHpw0' }]
   ],
 
   themeConfig: {
