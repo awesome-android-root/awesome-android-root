@@ -1128,8 +1128,6 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ## Privacy and Security
 
-- **[NoVPNDetect Enhanced](https://github.com/BlueCat300/NoVPNDetectEnhanced/blob/master/README_en.md)** - Prevents some apps from detecting your phone is connected to a VPN. `FOSS` `[LSP]`
-
 ### Device ID and Spoofing Tools
 - **[DeviceID/SSAID Changer](https://github.com/sidex15/deviceidchanger)** - A simple WebUI Module to change SSAID/DeviceID on Rooted Android Devices with Apatch, KSU (And its forks), or Magisk. `FOSS` `[M]` `[K]`
 - **[Device Faker](https://github.com/Seyud/device_faker/)** - A device model spoofing module based on Zygisk that can configure different device models for different applications. `FOSS` `[M]` `[K]`
