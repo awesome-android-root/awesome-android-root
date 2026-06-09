@@ -174,7 +174,7 @@ Root Samsung Galaxy devices while navigating Knox security, Odin flashing, and O
    - Extract to easy location
 
 3. **Stock Firmware**
-   - Download from [SamFrew](https://samfrew.com/) or [Frija](https://github.com/SlackingVeteran/frija/releases)
+   - Download from [SamFrew](https://samfrew.com/) or [Bifrost](https://github.com/zacharee/Bifrost) or [Frija](https://github.com/SlackingVeteran/frija/releases)
    - Match exact model and region
    - Contains: AP, BL, CP, CSC files
 
