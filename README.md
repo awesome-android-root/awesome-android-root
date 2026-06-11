@@ -225,7 +225,6 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 
 [↑ Back to top](#table-of-contents)
 
-</div>
 
 ---
 
