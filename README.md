@@ -22,7 +22,7 @@
 </div><br>
 <div class="mob-tip">
 
-> 💡 **Mobile Users:** Use **[Web App  ↗](https://awesome-android-root.pages.dev)** for better navigation and search.
+> 💡 **TIP:** Use &nbsp; [![Web App](https://img.shields.io/badge/Web-App%E2%86%97-yellow?style=flat-square&logo=googlechrome&logoColor=white&labelColor=blue)](https://awesome-android-root.pages.dev) &nbsp; for better navigation and search.
 
 </div><br>
 
