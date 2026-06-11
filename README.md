@@ -164,97 +164,70 @@
 ## Introduction
 
 ### What is Android Rooting?
-Rooting grants **superuser (admin) access** to your Android device, enabling deep system modifications - removing bloatware, enhancing privacy, boosting performance, and unlocking advanced customization.
-
-Think of it like gaining **Administrator rights** on Windows or **sudo access** on Linux.
+Rooting grants **superuser access** to Android, enabling deep customization, bloatware removal, and performance tuning. Think of it as gaining **Administrator** or **sudo** rights for your mobile device.
 
 ### Why Root?
 
 - **Control** - [Remove preinstalled bloat](./docs/general-guides/android-apps-debloating.md), disable telemetry
 - **Performance** - Tune CPU, GPU, battery, animations with [optimization tools](#performance-and-optimization)
 - **Privacy** - [Block trackers](./docs/general-guides/android-adblocking.md), restrict app permissions
-- **Customization** - Change UI, fonts, [boot animations](#boot-and-startup), navigation
-- **True Backups** - [Backup app data](#backup-and-restore) and system settings
+- **Customization** - Change UI, [fonts](#fonts), [boot animations](#boot-and-startup), navigation
 
-### Benefits vs Risks
-
-| Benefits | Risks & Considerations |
-|:--|:--|
-| System-wide ad blocking | May void warranty |
-| Full app control | Security exposure if misused |
-| Performance tuning | Instability/bootloops possible |
-| Deep customization | OTA update friction |
-| True backups (app data) | App integrity checks may fail (banking/DRM) |
+| **Benefits** | **Risks** |
+| :--- | :--- |
+| Ad-blocking & Privacy | May void warranty |
+| Bloatware removal | Security risks if misused |
+| Full data backups | OTA update friction |
+| Performance tuning | Banking app detection |
 
 ---
 
 </div>
 
 <div align="center" class="readme-guides">
-<br><br>
 
 # Rooting Guides
 
-[![Master-rooting-guide](https://img.shields.io/badge/Master--Rooting-Guide-blue?style=for-the-badge&cacheSeconds=3600)](./docs/rooting-guides/index.md)
+[![Master Rooting Guide](https://img.shields.io/badge/Master--Rooting-Guide-blue?style=for-the-badge&cacheSeconds=3600)](./docs/rooting-guides/index.md)
 
-> Follow all steps from "[fynks.github.io/check-list](https://fynks.github.io/check-list/)", ensure you’re fully prepared.
+> Ensure you are prepared: [Preparation Checklist](https://fynks.github.io/check-list/)
 
-</div><br>
+</div>
 
 <div class="readme-guides-steps">
 
-## The 4-Step Rooting Process
+## The 4-Step Rooting Roadmap
 
-Follow this path:
+1. **[Unlock Bootloader](./docs/rooting-guides/how-to-unlock-bootloader.md)**: Required for all system modifications.
+2. **[Install Recovery](./docs/rooting-guides/how-to-install-custom-recovery.md)**: Flash TWRP or OrangeFox to manage mods.
+3. **Choose Root Method**:
+   | Method | Best For | Guide |
+   | :--- | :--- | :--- |
+   | **Magisk** | Most Users | [Guide](./docs/rooting-guides/magisk-guide.md) |
+   | **KernelSU** | Stealth/Kernel | [Guide](./docs/rooting-guides/kernelsu-guide.md) |
+   | **APatch** | New Devices | [Guide](./docs/rooting-guides/apatch-guide.md) |
 
-### Step 1: Unlock Bootloader
-   → **[Bootloader Unlock Guide](docs/rooting-guides/how-to-unlock-bootloader.md)**  
-   *(Required for most root methods)*
-
-### Step 2: Install Custom Recovery
-   → **[TWRP / OrangeFox Guide](docs/rooting-guides/how-to-install-custom-recovery.md)**  
-   *(Needed to flash root and mods)*
-
-### Step 3: Choose and Install Root Method  
-
-| Method | Best for | Guide |
-| :--- | :--- | :--- |
-| Magisk | Most users | [Magisk Guide](docs/rooting-guides/magisk-guide.md) |
-| KernelSU | Kernel-savvy users | [KernelSU Guide](docs/rooting-guides/kernelsu-guide.md) |
-| APatch | Devices with tricky firmware | [APatch Guide](docs/rooting-guides/apatch-guide.md) |
-
-> [!TIP]
-> You can check out the complete comparison here: **[Root Solutions Comparison](./docs/rooting-guides/index.md#root-solutions-comparison)**
-
-### Step 4: **Post-Root Setup**  
-1. Install [essential apps and modules](#starter-kit-must-have-apps)
-2. Block Ads and trackers: [Ad Blocking Guide](./docs/general-guides/android-adblocking.md)
-3. [Debloat your phone](./docs/general-guides/android-apps-debloating.md) to improve performance
-4. Configure [root hiding](#root-hiding-and-play-integrity) for banking apps
-5. Set up [LSPosed Framework](./docs/rooting-guides/lsposed-guide.md) for advanced customization
+   > 💡 *Compare them all: [Root Solutions Comparison](./docs/rooting-guides/index.md#root-solutions-comparison)*
+   
+4. **Post-Root Setup**:
+   * [LSPosed Framework](./docs/rooting-guides/lsposed-guide.md) (Customization)
+   * [Ad-Blocking](./docs/general-guides/android-adblocking.md) & [Debloating](./docs/general-guides/android-apps-debloating.md)
+   * [Root Hiding](./docs/rooting-guides/index.md#root-hiding-and-play-integrity) (for Banking/Integrity)
 
 > [!NOTE]
-> **For Android >14:** Play Integrity is stricter. Root hiding may break apps. Stay updated.
+> **Android 14+:** Play Integrity is significantly stricter. Check the guide for updated hiding methods.
 
 ## Device-Specific Guides
+[Google Pixel](./docs/rooting-guides/how-to-root-pixel-phone.md) • [Samsung](./docs/rooting-guides/how-to-root-samsung-phone.md) • [Xiaomi/HyperOS](./docs/rooting-guides/how-to-root-xiaomi-phone.md) • [OnePlus](./docs/rooting-guides/how-to-root-oneplus-phone.md) • [Nothing](./docs/rooting-guides/how-to-root-nothing-phone.md) • [Motorola](./docs/rooting-guides/how-to-root-motorola-phone.md)
 
-**Choose your device:**
-- [Google Pixel Root Guide](docs/rooting-guides/how-to-root-pixel-phone.md)
-- [Samsung Root Guide](docs/rooting-guides/how-to-root-samsung-phone.md)
-- [Xiaomi/HyperOS Root Guide](docs/rooting-guides/how-to-root-xiaomi-phone.md)
-- [OnePlus Root Guide](docs/rooting-guides/how-to-root-oneplus-phone.md)
-- [Nothing Phone Root Guide](docs/rooting-guides/how-to-root-nothing-phone.md)
-- [Motorola Root Guide](docs/rooting-guides/how-to-root-motorola-phone.md)
-
-
-## Additional Guides
-
-- [LSPosed Framework Guide](docs/rooting-guides/lsposed-guide.md)
-- [Custom ROMs Guide](docs/rooting-guides/custom-rom-installation.md)
-
-> **[📚 All Rooting Tutorials ➞](docs/rooting-guides/index.md)**
+## Additional Resources
+- [LSPosed Framework Guide](./docs/rooting-guides/lsposed-guide.md)
+- [Custom ROMs Installation](./docs/rooting-guides/custom-rom-installation.md)
+- **[📚 View All Rooting Tutorials ➞](./docs/rooting-guides/index.md)**
 
 [↑ Back to top](#table-of-contents)
+
+</div>
 
 ---
 
