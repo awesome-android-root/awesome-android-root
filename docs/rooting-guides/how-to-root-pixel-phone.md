@@ -253,7 +253,7 @@ adb pull /sdcard/Download/magisk_patched_*.img
 
 # Flash it
 adb reboot bootloader
-fastboot flash init_boot magisk_patched_*.img  # Or "boot" for older devices
+fastboot flash boot magisk_patched_*.img  # Or "init_boot" for older devices
 fastboot reboot
 ```
 
