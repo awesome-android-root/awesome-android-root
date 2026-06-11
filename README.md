@@ -22,7 +22,7 @@
 </div><br>
 <div class="mob-tip">
 
-> 💡 **Mobile Users:** Visit **[awesome-android-root.org](https://awesome-android-root.pages.dev)** for better navigation and search.
+> 💡 **Mobile Users:** Use **[Web App  ↗](https://awesome-android-root.pages.dev)** for better navigation and search.
 
 </div><br>
 
