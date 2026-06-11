@@ -212,9 +212,8 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 4. **Post-Root Setup**:
    * [LSPosed Framework](./docs/rooting-guides/lsposed-guide.md) (Customization)
    * [Ad-Blocking](./docs/general-guides/android-adblocking.md) & [Debloating](./docs/general-guides/android-apps-debloating.md)
-   * [Root Hiding](./docs/rooting-guides/index.md#root-hiding-and-play-integrity) (for Banking/Integrity)
+   * [Root Hiding and Play Integrity](./docs/rooting-guides/index.md#root-hiding-and-play-integrity) (for Banking/Integrity)
 
-> ⚠️ **Android 14+:** Play Integrity is significantly stricter. Check" [root hiding tools section](./docs/rooting-guides/index.md#root-hiding-and-play-integrity)
 
 ## Device-Specific Guides
 [Google Pixel](./docs/rooting-guides/how-to-root-pixel-phone.md) • [Samsung](./docs/rooting-guides/how-to-root-samsung-phone.md) • [Xiaomi/HyperOS](./docs/rooting-guides/how-to-root-xiaomi-phone.md) • [OnePlus](./docs/rooting-guides/how-to-root-oneplus-phone.md) • [Nothing](./docs/rooting-guides/how-to-root-nothing-phone.md) • [Motorola](./docs/rooting-guides/how-to-root-motorola-phone.md)
