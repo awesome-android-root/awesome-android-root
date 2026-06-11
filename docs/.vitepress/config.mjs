@@ -452,8 +452,7 @@ export default withPwa(defineConfig({
             },
             "sameAs": [
               "https://github.com/awesome-android-root/awesome-android-root",
-              "https://x.com/awsm_and_root",
-              "https://opencollective.com/awesome-android-root-official"
+              "https://x.com/awsm_and_root"
             ]
           },
         },
@@ -1129,7 +1128,6 @@ export default withPwa(defineConfig({
       text: 'Get Involved',
       items: [
         { text: 'Contribute', link: '/contributing' },
-        { text: 'Support Us', link: 'https://opencollective.com/awesome-android-root-official' },
         { text: 'GitHub', link: 'https://github.com/awesome-android-root/awesome-android-root' }
       ]
     }
@@ -1181,8 +1179,6 @@ export default withPwa(defineConfig({
       message: `
         <div style="display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; align-items: center; margin-bottom: 8px; font-size: 14px;">
           <a href="/contributing" style="color: var(--vp-c-text-2); transition: color 0.2s; text-decoration: none; font-weight: 500;">Contribute</a>
-          <span style="color: var(--vp-c-divider);">•</span>
-          <a href="https://opencollective.com/awesome-android-root-official" style="color: var(--vp-c-text-2); transition: color 0.2s; text-decoration: none; font-weight: 500;">Support Us</a>
           <span style="color: var(--vp-c-divider);">•</span>
           <a href="/legal-disclaimer" style="color: var(--vp-c-text-2); transition: color 0.2s; text-decoration: none; font-weight: 500;">Legal</a>
           <span style="color: var(--vp-c-divider);">•</span>

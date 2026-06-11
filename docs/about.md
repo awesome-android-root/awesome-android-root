@@ -116,7 +116,6 @@ We are part of a vibrant ecosystem of Android developers and enthusiasts, simila
 You can help ensure the long-term availability and growth of this resource:
 *   [⭐ Star our GitHub Repository](https://github.com/awesome-android-root/awesome-android-root)
 *   [Contribute](https://github.com/awesome-android-root/awesome-android-root?tab=contributing-ov-file) new tools, guides, or improvements
-*   [Donate](https://opencollective.com/awesome-android-root-official) to support project hosting and development
 *   Share Awesome Android Root with others in the community
 
 ---

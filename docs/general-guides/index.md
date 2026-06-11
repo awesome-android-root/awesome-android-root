@@ -188,7 +188,6 @@ Master your Android experience with our comprehensive collection of expert tutor
 ### Official Project Links
 - **[GitHub Repository](https://github.com/awesome-android-root/awesome-android-root)** - Access source code, report issues, and contribute to the project.
 - **[Twitter/X](https://x.com/awsm_and_root)** - Stay informed with the latest project updates and community highlights.
-- **[Open Collective](https://opencollective.com/awesome-android-root-official)** - Support the project financially to ensure its continued development.
 
 ### Essential External Resources
 - **[XDA Developers](https://forum.xda-developers.com/)** - The largest community for Android development and discussion.

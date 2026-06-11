@@ -1452,8 +1452,6 @@ Extended references & external reading: [resources.md](./docs/resources.md)
 - 🧹 Improve formatting / dead link cleanup
 - 📝 Read [contributing guide](docs/contributing.md) before major PRs
 - 🗂️ Large edits? Organize commits per category
-- 💖 Sponsor ongoing maintenance via [Open Collective](https://opencollective.com/awesome-android-root-official)
-
 ---
 
 ## Legal and Safety
@@ -1504,11 +1502,8 @@ Respect licenses, ToS, and local laws. Don’t use root to unlawfully bypass pai
 
 # Support the Project
 
-[![Become a Sponsor](https://img.shields.io/badge/%20💖-Become%20a%20Sponsor-ff69b4?style=for-the-badge)](https://opencollective.com/awesome-android-root-official)
 [![Star the Repo](https://img.shields.io/badge/%20⭐-Star%20this%20Repo-yellow?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root)
 [![Share Project](https://img.shields.io/badge/%20📢-Share%20Project-blue?style=for-the-badge)](https://twitter.com/intent/tweet?text=Check%20out%20this%20amazing%20Android%20rooting%20resource!&url=https://awesome-android-root.pages.dev)
-
-**Sponsorships fund: app status verification, guide refresh, categorization improvements, automation & docs infra.**
 
 </div>
 
