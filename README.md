@@ -588,6 +588,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[DSP AudioFix](https://github.com/ahmed-alnassif/DSP-AudioFix)** - A simple fix for distorted audio on Xiaomi/MediaTek devices with Awinic smart amps. `FOSS` `[M]` `[K]`
 - **[Audio Misc Settings](https://github.com/Magisk-Modules-Alt-Repo/audio-misc-settings)** - For setting miscellaneous audio configuration values (media audio volume steps (100 steps), raising the resampling quality, disabling the effects framework, etc.) `FOSS` `[M]`
 - **[Audio SampleRate Changer](https://github.com/Magisk-Modules-Alt-Repo/audio-samplerate-changer)** - A Magisk module changing audio sample rates at the system-wide mixer for the best Hi-Fi experience. `FOSS` `[M]`
+- **[Hifi-maximizer-mod](https://github.com/yzyhk904/hifi-maximizer-mod)** - Maximize the digital audio fidelity by reducing jitters on audio outputs (USB DACs, Bluetooth a2dp, DLNA, etc.) `FOSS` `[M]`
 - **[High Performance DAC](https://github.com/ahkehra/high_perf_dac)** -  Kernel-level audio tuning module for Qualcomm devices, providing enhanced audio quality and performance. `FOSS` `[K]`
 - **[Hi-Res Audio Enabler](https://github.com/reiryuki/Hi-Res-Audio-Enabler-Magisk-Module)** - Enables high resolution 24 or 32-bit width audio output if device is supported. `FOSS` `[M]`
 
