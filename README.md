@@ -270,7 +270,6 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 | `[K]` | KernelSU Module | [KernelSU](../rooting-guides/kernelsu-guide.md) |
 | `[A]` | APatch Module | [APatch](../rooting-guides/apatch-guide.md) |
 | `[LSP]` | LSPosed / Xposed Module | [LSPosed](../rooting-guides/lsposed-guide.md) |
-| `[R]` | ReVanced Patch | [ReVanced Manager](https://github.com/ReVanced/revanced-manager) |
 
 ### Store & Source Icons
 
@@ -497,7 +496,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 
 #### Duolingo Mods
 - **[Duolingo Regret](https://github.com/TigerBeanst/Duolingo-Regret)** - Change Duolingo's time zone to any arbitrary time zone, makes it easier to go back and finish forgotten streaks. `FOSS` `[LSP]`
-- **[Duolingo Patches](https://github.com/hoo-dles/revanced-custom-patches)** - Disable practice reminder banner, Unlock licensed songs, Unlock Super Duolingo features. `FOSS` `[R]`
+- **[Duolingo Patches](https://github.com/hoo-dles/revanced-custom-patches)** - Disable practice reminder banner, Unlock licensed songs, Unlock Super Duolingo features. `FOSS`
 
 #### Google Discover Mods
 - **[Discover Ads Filter](https://github.com/hxreborn/discover-ads-filter)** - Hides sponsored cards and ads from the Google Discover feed in the Pixel Launcher -1 screen and inside the Google app itself. `FOSS` `[LSP]`
@@ -552,14 +551,14 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 > [!NOTE]
 > ReVanced allows you to patch apps without root, but root access enables additional features like mounting patched apps as system apps.
 
-- **[Awesome ReVanced](https://github.com/Jman-Github/Awesome-ReVanced)** - A curated list of awesome ReVanced patches, resources and projects. `FOSS` `[R]`
-- **[Privacy ReVanced Patches](https://github.com/jkennethcarino/privacy-revanced-patches)** - Privacy Patches for ReVanced to disable ads, trackers and analytics, always open Gboard in incognito mode, and much more. Enhances your [privacy](#privacy-and-security). `FOSS` `[R]`
-- **[ReVanced Manager](https://github.com/ReVanced/revanced-manager)** - Modify YouTube, YouTube Music, Spotify and many more with additional features. `FOSS` `[R]`
-- **[ReVancedRepackaged](https://github.com/programminghoch10/ReVancedRepackaged)** - This magisk module contains only the ReVanced Patcher.It will patch any installed ReVanced compatible app right on your device during installation. `FOSS` `[M]` `[R]`
+- **[Awesome ReVanced](https://github.com/Jman-Github/Awesome-ReVanced)** - A curated list of awesome ReVanced patches, resources and projects. `FOSS`
+- **[Privacy ReVanced Patches](https://github.com/jkennethcarino/privacy-revanced-patches)** - Privacy Patches for ReVanced to disable ads, trackers and analytics, always open Gboard in incognito mode, and much more. Enhances your [privacy](#privacy-and-security). `FOSS`
+- **[ReVanced Manager](https://github.com/ReVanced/revanced-manager)** - Modify YouTube, YouTube Music, Spotify and many more with additional features. `FOSS` 
+- **[ReVancedRepackaged](https://github.com/programminghoch10/ReVancedRepackaged)** - This magisk module contains only the ReVanced Patcher.It will patch any installed ReVanced compatible app right on your device during installation. `FOSS` `[M]`
 
 ### Other App Mods
 - **[Boosteroid+](https://github.com/nitanmarcel/BoosteroidPlus)** - Customize advanced settings for the Boosteroid app, including frame rate, bitrate, and resolution options. `FOSS` `[LSP]`
-- **[Cake - Learn English & Korean Patches](https://github.com/hoo-dles/revanced-custom-patches)** - Enable Plus . `FOSS` `[R]`
+- **[Cake - Learn English & Korean Patches](https://github.com/hoo-dles/revanced-custom-patches)** - Enable Plus . `FOSS`
 - **[EDS NG Crack](https://github.com/dumbasPL/EDS-NG-crack)** - Unlocks all features in in [EDS NG](https://play.google.com/store/apps/details?id=com.sovworks.projecteds&hl=en_US). `FOSS` `[M]`
 - **[E-Government Liberator](https://github.com/Crazyphil/digitales-amt-liberator)** - Removes root and bootloader checks from e-government apps. `FOSS` `[LSP]`
 - **[FingerprintPay](https://github.com/eritpchy/FingerprintPay)** - Enables fingerprint payment via WeChat, Alipay, Taobao, Tencent QQ, and UnionPay on phones that support fingerprint recognition. `FOSS` `[M]` `[LSP]`
