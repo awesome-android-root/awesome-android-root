@@ -311,7 +311,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 
 ## Ads and Tracking Blockers
 
-- **[⭐ AdAway](https://github.com/AdAway/AdAway)** – Open-source ad blocker using the hosts file. Blocks ads without permissions. `FOSS` | [🌱](https://f-droid.org/packages/org.adaway)
+- **[⭐ AdAway](https://github.com/AdAway/AdAway)** - Open-source ad blocker using the hosts file. Blocks ads without permissions. `FOSS` | [🌱](https://f-droid.org/packages/org.adaway)
 - **[⭐ bindhosts](https://github.com/bindhosts/bindhosts)** - Systemless hosts for APatch, KernelSU and Magisk that is fully standalone and self-updating. [Download ↗](https://www.opendesktop.org/p/2323798) `FOSS` `[M]` `[K]`
 - **[AdAway Helper](https://github.com/DEMONNICA/AdAway-Helper)** - Enables AdAway to work on KernelSU, its variants by managing /system/etc/hosts via bind mount and overlay. `FOSS` `[M]` `[K]`
 - **[AdClose](https://github.com/Xposed-Modules-Repo/com.close.hook.ads/)** - Prevents the initial loading of the advertising SDK within the application and intercepts application advertising requests to block ads. `Proprietary` `[LSP]`
@@ -341,7 +341,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 
 ## AI and Smart Tools
 
-- **[SwitchAI – Switch AI Digital Assistant](https://github.com/WSTxda/SwitchAI)** - Easily select, start, and manage your preferred AI digital assistants. `FOSS`
+- **[SwitchAI - Switch AI Digital Assistant](https://github.com/WSTxda/SwitchAI)** - Easily select, start, and manage your preferred AI digital assistants. `FOSS`
 - **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
 - **[Xposed Translate Text](https://github.com/tianci-sh/XPTranslateText)** - Translate text by MLKit / gemini2.0 / google api. `FOSS` `[LSP]`
 
@@ -782,7 +782,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[GreenDotHide](https://github.com/Dorian399/GreenDotHide)** - Hides the green dot indicating sensitive permission use. Works only on MIUI/HyperOS. `FOSS` `[LSP]`
 - **[Hyper 5G Switch](https://github.com/buffcow/Hyper5GSwitch)** - Add a 5G switch to the mobile network panel, only for devices that support 5G net and equipped with HyperOS. `FOSS` `[LSP]`
 - **[Hyper Helper](https://github.com/HowieHChen/XiaomiHelper/blob/master/README_EN-US.md)** - Lightweight customization module for HyperOS only. `FOSS` `[LSP]`
-- **[HyperIsland](https://github.com/1812z/HyperIsland/blob/main/README_EN.md)** - Dynamic Island–style notifications for HyperOS 3, powered by LSPosed. `FOSS` `[LSP]`
+- **[HyperIsland](https://github.com/1812z/HyperIsland/blob/main/README_EN.md)** - Dynamic Island-style notifications for HyperOS 3, powered by LSPosed. `FOSS` `[LSP]`
 - **[HyperLight](https://github.com/KiminonawaResa/HyperLight#english)** - Completes the highlight blur effects for HyperOS 3, bringing a unified visual experience to the desktop, notification shade, and control center. `FOSS` `[LSP]`
 - **[Hyper Optimize](https://github.com/TatshSiow/HyperOptimize)** - Tune HyperOS System and Kernel parameters to reduce power consumption. `FOSS` `[M]`
 - **[HyperStar](https://github.com/YunZiA/HyperStar/blob/master/README_EN-US.md)** - An LSPosed module mainly designed to customize the Xiaomi HyperOS Control Center, along with some features. `FOSS` `[LSP]`
@@ -1180,8 +1180,8 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[⭐ Meta-overlayfs](https://github.com/KernelSU-Modules-Repo/meta-overlayfs)** - Official reference implementation using OverlayFS for most users and standard setup. `FOSS` `[K]`
 - **[⭐ Mountify](https://github.com/backslashxx/mountify)** - OverlayFS with tmpfs/ext4 sparse support for reduced detection, works on APatch/Magisk too. `FOSS` `[M]` `[K]` `[A]`
 - **[Meta-hybrid_mount](https://github.com/YuzakiKokuban/meta-hybrid_mount)** - Three-engine mount orchestration (OverlayFS + Magic Mount + Kasumi LKM) with conflict monitor, SolidJS WebUI, auto-fallback, and EROFS storage backend support. `FOSS` `[K]` `[A]`
-- **[meta-magic_mount](https://github.com/7a72/meta-magic_mount)** – Magic Mount metamodule written in C with WebUI support. Provides Magisk-style bind-mount module loading on KernelSU. Supports only the official KSU branch. `FOSS` `[K]`
-- **[meta-mm](https://github.com/KernelSU-Modules-Repo/meta-mm)** – The official KernelSU Modules Repo's Magic Mount metamodule. Lighter alternative to meta-magic_mount for users who just want Magisk-compatible mounting without extra tooling. `FOSS` `[K]`
+- **[meta-magic_mount](https://github.com/7a72/meta-magic_mount)** - Magic Mount metamodule written in C with WebUI support. Provides Magisk-style bind-mount module loading on KernelSU. Supports only the official KSU branch. `FOSS` `[K]`
+- **[meta-mm](https://github.com/KernelSU-Modules-Repo/meta-mm)** - The official KernelSU Modules Repo's Magic Mount metamodule. Lighter alternative to meta-magic_mount for users who just want Magisk-compatible mounting without extra tooling. `FOSS` `[K]`
 - **[ZeroMount](https://github.com/Enginex0/zeromount)** - Mountless module loading with Kernel-level VFS path redirection & SUSFS integration, WebUI, bootloop guard, and strategy fallback. `FOSS` `[M]` `[K]` `[A]`
 
 
@@ -1220,7 +1220,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 | Feature | **Magisk Built-in** | **Zygisk Next** | **NeoZygisk** | **ReZygisk** |
 | :--- | :--- | :--- | :--- | :--- |
-| **Android Ver.** | 9.0 – 15 | 10 – 16 | 8.1 – 16 (Beta) | 9 – 16 |
+| **Android Ver.** | 9.0 - 15 | 10 - 16 | 8.1 - 16 (Beta) | 9 - 16 |
 | **Key Advantage** | Official / Simple | Detection Evasion | Stealth / Cleaning | Speed / Open Source |
 | **License** | GPL-3.0 | All Rights Reserved (since v4-0.9.2) | GPL-3.0 (forked pre-license-change) | GPL-3.0 / AGPL-3.0 |
 | **Root Support** | Magisk only | Magisk, KSU, APatch | Magisk, KSU, KSU Next, APatch | Magisk (Official &amp; Kitsune), KSU, APatch |
