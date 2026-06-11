@@ -254,23 +254,35 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 
 ## Glossary
 
-| Symbol | Meaning |
+### Entry Tags
+
+| Tag | Meaning |
 |:----|:---|
-| ⭐ | Community-recommended (most popular/trusted in category) |
+| ⭐ | Community-recommended (most trusted/popular in category) |
 | `FOSS` | Free and Open Source Software (source code available) |
 | `Proprietary` | Closed-source software or unclear licensing |
-| 🌱 | Available on F-Droid |
+
+### Framework & Module Badges
+
+| Badge | Framework | Requires |
+|:---|:---|:---|
+| `[M]` | Magisk Module | [Magisk](../rooting-guides/magisk-guide.md) |
+| `[K]` | KernelSU Module | [KernelSU](../rooting-guides/kernelsu-guide.md) |
+| `[A]` | APatch Module | [APatch](../rooting-guides/apatch-guide.md) |
+| `[LSP]` | LSPosed / Xposed Module | [LSPosed](../rooting-guides/lsposed-guide.md) |
+| `[R]` | ReVanced Patch | [ReVanced Manager](https://github.com/ReVanced/revanced-manager) |
+
+### Store & Source Icons
+
+| Icon | Source |
+|:---|:---|
+| 🌱 | Available on F-Droid / IzzyOnDroid |
 | ▶️ | Available on Google Play Store |
 
 > [!NOTE]
 > Some Apps/Modules may have mislabelled licenses. We try our best to verify them, but please double-check before use.
-
-
-**Root Framework Badges:**
-- `[M]` = Magisk Module (requires [Magisk framework](../rooting-guides/magisk-guide.md))
-- `[K]` = KernelSU Module (requires [KernelSU framework](../rooting-guides/kernelsu-guide.md)) 
-- `[LSP]` = LSPosed Module (requires [LSPosed framework](../rooting-guides/lsposed-guide.md))
-- `[R]` = ReVanced Patch (requires [ReVanced Manager](https://github.com/ReVanced/revanced-manager))
+>
+> **How entries are ordered:** ⭐ (Community-recommended) first, then alphabetically within each (sub-)category.
 
 <details>
 <summary><b>📚 Common Rooting Terms</b></summary>
@@ -278,16 +290,12 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **Bootloader** - Low-level software that starts your OS (must be unlocked for root)
 - **Recovery** - Special mode for system modifications (TWRP, CWM)
 - **Systemless Root** - Root method that doesn't modify system partition
-- **Zygisk** - Magisk feature for advanced app hooking and hiding
-- **DenyList** - Magisk feature to hide root from specific apps
+- **Zygisk** - Feature for advanced app hooking and hiding
+- **DenyList** - Feature to hide root from specific apps
 - **Play Integrity** - Google's security check (replacing SafetyNet)
 - **Knox** - Samsung's security platform (trips when bootloader unlocked)
 
-<br>
 </details><br>
-
-> [!NOTE] How Apps are Organized:
-> In a category/sub-category, apps are sorted in following order: `⭐ (Community-recommended) Apps > Alphabetically`
 
 
 ---
