@@ -885,6 +885,8 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[Trixie.apk](https://github.com/DesktopECHO/trixie.apk)** - Debian 13 (Trixie) Server/Desktop container for rooted Android 5.0+ devices. `FOSS`
 - **[USB Mass Storage](https://github.com/Enginex0/UsbMassStorage)** - Turn Your Phone Into a USB Drive.
 Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
+- **[Zygisk-Loader](https://github.com/HanSoBored/Zygisk-Loader)** - Module for hot-swapping native libraries into Android applications without rebooting. `FOSS` `[K]`
+
 
 [↑ Back to top](#table-of-contents)
 
