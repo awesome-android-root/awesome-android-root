@@ -1158,29 +1158,27 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ### Module Managers
 
-- **[⭐ MMRL](https://github.com/DerGoogler/MMRL)** - An Android app that helps manage your own modules repository. `FOSS` | [🌱](https://f-droid.org/en/packages/com.dergoogler.mmrl/) | [▶️](https://play.google.com/store/apps/details?id=com.dergoogler.mmrl)
+- **[⭐ MMRL](https://github.com/DerGoogler/MMRL)** - An Android app that helps manage your own modules repository. `FOSS` `[M]` `[K]` `[A]` | [🌱](https://f-droid.org/en/packages/com.dergoogler.mmrl/) | [▶️](https://play.google.com/store/apps/details?id=com.dergoogler.mmrl)
 - **[Magisk Manager for Recovery Mode](https://github.com/Rikj000/Magisk-Manager-for-Recovery-Mode)** - Easily manage your Magisk Modules from a terminal session in your custom recovery. `FOSS` `[M]`
 - **[KPatch Next Module](https://github.com/KernelSU-Next/KPatch-Next-Module)** - Standalone implementation of KPM (KernelSU Patch Module) support for Magisk/KernelSU with WebUI. `FOSS` `[M]` `[K]`
 
-<details>
+#### Metamodules
+> [!NOTE]
+> **What are Metamodules?**
+> A metamodule is a special type of KernelSU module that provides the core mounting infrastructure for the module system. Unlike regular modules that modify system files, metamodules control *how* regular modules are installed and mounted.
 
-<summary><strong>What are Metamodules?</strong></summary>
-
-- A metamodule is a special type of KernelSU module that provides core infrastructure for the module system. Unlike regular modules that modify system files, metamodules control how regular modules are installed and mounted.
-- **Fresh KernelSU installations require a metamodule for modules to function.** Without a metamodule, modules will NOT be mounted.
-- Only one metamodule can be installed at a time.
-
-<br>
-</details>
 
 - **[⭐ Meta-overlayfs](https://github.com/KernelSU-Modules-Repo/meta-overlayfs)** - Official reference implementation using OverlayFS for most users and standard setup. `FOSS` `[K]`
-- **[⭐ Mountify](https://github.com/backslashxx/mountify)** - OverlayFS with tmpfs/ext4 sparse support for reduced detection, works on APatch/Magisk too. `FOSS` `[M]` `[K]`
-- **[Meta-hybrid_mount](https://github.com/YuzakiKokuban/meta-hybrid_mount)** - Advanced dual engine (OverlayFS + Magic Mount) with conflict monitor, diagnostics, auto-fallback, and EROFS storage backend support. `FOSS` `[K]`
+- **[⭐ Mountify](https://github.com/backslashxx/mountify)** - OverlayFS with tmpfs/ext4 sparse support for reduced detection, works on APatch/Magisk too. `FOSS` `[M]` `[K]` `[A]`
+- **[Meta-hybrid_mount](https://github.com/YuzakiKokuban/meta-hybrid_mount)** - Three-engine mount orchestration (OverlayFS + Magic Mount + Kasumi LKM) with conflict monitor, SolidJS WebUI, auto-fallback, and EROFS storage backend support. `FOSS` `[K]` `[A]`
+- **[meta-magic_mount](https://github.com/7a72/meta-magic_mount)** – Magic Mount metamodule written in C with WebUI support. Provides Magisk-style bind-mount module loading on KernelSU. Supports only the official KSU branch. `FOSS` `[K]`
+- **[meta-mm](https://github.com/KernelSU-Modules-Repo/meta-mm)** – The official KernelSU Modules Repo's Magic Mount metamodule. Lighter alternative to meta-magic_mount for users who just want Magisk-compatible mounting without extra tooling. `FOSS` `[K]`
 - **[ZeroMount](https://github.com/Enginex0/zeromount)** - Mountless module loading with Kernel-level VFS path redirection & SUSFS integration, WebUI, bootloop guard, and strategy fallback. `FOSS` `[M]` `[K]` `[A]`
 
 
 > [!TIP]
-> For most users, **meta-overlayfs** (official) or **Mountify** are recommended starting points. If you need advanced features like automatic fallback, diagnostics, or better stealth, try **meta-hybrid_mount**.
+> **Only one metamodule can be active at a time.**
+> For most users, **meta-overlayfs** (official) or **Mountify** are recommended starting points.
 
 ### Bootloop Protection
 - **[AshReXcue - Bootloop Protector](https://github.com/RipperHybrid/AshLooper)** - Prevent boot loops caused by problematic modules installed via KernelSU or Magisk. `FOSS` `[M]` `[K]`
@@ -1265,7 +1263,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - Because you may encounter issues where system or third-party applications (especially Banking Apps) detect the root status and refuse to operate
 
 <br>
-</details>
+</details><br>
 
 > [TheUnrealZaka's Guide for Hiding Root](https://gist.github.com/TheUnrealZaka/042040a1700ad869d54e781507a9ba4f)
 
