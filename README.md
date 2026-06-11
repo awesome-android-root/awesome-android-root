@@ -553,6 +553,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 
 ### Other App Mods
 - **[Boosteroid+](https://github.com/nitanmarcel/BoosteroidPlus)** - Customize advanced settings for the Boosteroid app, including frame rate, bitrate, and resolution options. `FOSS` `[LSP]`
+- **[Cake - Learn English & Korean Patches](https://github.com/hoo-dles/revanced-custom-patches)** - Enable Plus . `FOSS` `[R]`
 - **[EDS NG Crack](https://github.com/dumbasPL/EDS-NG-crack)** - Unlocks all features in in [EDS NG](https://play.google.com/store/apps/details?id=com.sovworks.projecteds&hl=en_US). `FOSS` `[M]`
 - **[E-Government Liberator](https://github.com/Crazyphil/digitales-amt-liberator)** - Removes root and bootloader checks from e-government apps. `FOSS` `[LSP]`
 - **[FingerprintPay](https://github.com/eritpchy/FingerprintPay)** - Enables fingerprint payment via WeChat, Alipay, Taobao, Tencent QQ, and UnionPay on phones that support fingerprint recognition. `FOSS` `[M]` `[LSP]`
@@ -562,7 +563,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[Smule Mod](https://github.com/michei69/SmuleXposed)** - A Smule Xposed module which enables free VIP and many other features. `FOSS` `[LSP]`
 - **[VideoSpeed](https://github.com/MarsGao/io.github.MarsGao.speed)** - An Xposed module for adjusting the playback speed of videos across multiple applications. `FOSS` `[LSP]`
 - **[Wallet Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.wallettweaks/releases)** - UI tweaks for Google Wallet. `Proprietary` `[LSP]`
-- **[Cake - Learn English & Korean Patches](https://github.com/hoo-dles/revanced-custom-patches)** - Enable Plus . `FOSS` `[R]`
+
 
 
 [↑ Back to top](#table-of-contents)
