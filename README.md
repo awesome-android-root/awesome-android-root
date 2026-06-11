@@ -19,7 +19,7 @@
 
 [Introduction](#introduction) | [Rooting Guides](#rooting-guides) | [Apps & Modules](#root-apps-and-modules) | [Support](#resources-and-help)
 
-</div>
+</div><br>
 <div class="mob-tip">
 
 > 💡 **Mobile Users:** Visit **[awesome-android-root.org](https://awesome-android-root.pages.dev)** for better navigation and search.
