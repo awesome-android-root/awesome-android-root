@@ -1039,7 +1039,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[SimbaDroid](https://github.com/buttercookie42/SimbaDroid)** - A simple SMB file server for Android. `FOSS` | [🌱](https://f-droid.org/packages/de.buttercookie.simbadroid)
 - **[TCP Optimiser Module](https://github.com/fatalcoder524/TCP_Optimiser_Module)** - Change tcp congestion algorithm based on current active internet type and some network enhancements. `FOSS` `[M]` `[K]`
 - **[ZeroTier for Magisk](https://github.com/eventlOwOp/zerotier-magisk)** - Run zerotier in the background after booting with no conflicts with other Android VPN services. Use Android App to control ZeroTier. `FOSS` `[M]`
-- **[ZDT&D Magisk Module](https://github.com/GAME-OVER-op/ZDT-D)** - Bypass DPI (Deep Packet Inspection) on the internet. It helps bypass service blocks and throttling for platforms like Discord, YouTube, and others. `FOSS` `[M]`
+- **[ZDT-D Root Module](https://github.com/GAME-OVER-op/ZDT-D)** - Module for traffic routing, DPI bypass, proxy chaining, DNS control, and per-app network management.  `FOSS` `[M]` `[K]`
 
 > [!TIP]
 > For ad blocking at network level, combine these tools with our [ad blockers](#ads-and-tracking-blockers). See the [ad blocking guide](./docs/general-guides/android-adblocking.md).
