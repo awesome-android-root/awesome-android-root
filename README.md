@@ -1457,40 +1457,27 @@ Extended references & external reading: [resources.md](./docs/resources.md)
 ## Legal and Safety
 
 > [!IMPORTANT]
-> **⚠️ Educational reference only.**
-> You accept all risk. Rooting / modifying firmware can void warranty, reduce security, break OTA updates, or trigger anti‑tamper (Knox, Play Integrity, DRM failures, banking app lockouts).
+> **Educational reference only. Proceed at your own risk.**
+> Rooting can void warranty, break security (Knox/Integrity), and lockout banking/DRM apps. **Avoid proceeding** if this is a mission-critical device or if you lack a verified backup.
 
-### Core Principles
-- Research device specifics (A/B slots, dynamic partitions, AVB state) first
-- Change one variable at a time; test between steps
-- Favor systemless approaches before invasive modification
+### 🛠️ Pre-Flash Checklist
+- [ ] **Backups:** Full app data and internal storage images.
+- [ ] **Firmware:** Matching factory boot/vbmeta images on hand.
+- [ ] **Tools:** Latest `platform-tools` (ADB/Fastboot) installed.
+- [ ] **Access:** Alternate path available (Custom Recovery or 2nd device).
 
-### Pre‑Flash Checklist
-1. Full backup (apps + internal storage; partition images if possible)
-2. Download matching factory firmware / boot / vbmeta images
-3. Verify SHA256 hashes of critical images/modules
-4. Install latest platform‑tools (adb / fastboot) & confirm detection
-5. Ensure alternate access path (custom recovery / second device)
-
-### Risk Mitigation
-- Keep a pristine boot + vbmeta copy untouched
-- Avoid stacking overlapping modules (e.g. multiple host-based ad blockers)
-- Review open issues of a module before flashing
-- Monitor first boot logs (logcat | grep -i magisk\|zygisk)
-- Keep a change log for easy rollback
-
-### Avoid Proceeding If
-- Corporate / MDM‑managed or mission‑critical device
-- Reliance on unpatchable banking / DRM / enterprise apps
-- You can’t afford data loss & have no backup
+### 🛡️ Risk Mitigation
+- **Systemless First:** Favor Magisk/KernelSU over invasive system partition mods.
+- **One at a Time:** Change one variable and test before moving to the next.
+- **Clean Rollback:** Keep pristine copies of original `boot` and `vbmeta` images.
+- **Module Safety:** Check "Open Issues" and avoid overlapping mods (e.g., multiple ad-blockers).
 
 <div align="center">
 
-```
-Respect licenses, ToS, and local laws. Don’t use root to unlawfully bypass paid features.
-```
+*Respect licenses, ToS, and local laws. Do not use root to unlawfully bypass paid features.*
 
-</div><br>
+<br>
+</div>
 
 [↑ Back to top](#table-of-contents)
 
