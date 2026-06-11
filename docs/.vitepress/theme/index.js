@@ -273,6 +273,7 @@ function addAriaLabels() {
         label = 'View source code on GitHub'
       } else if (href.includes('twitter.com') || href.includes('x.com')) {
         label = 'Follow us on Twitter/X'
+      }
       link.setAttribute('aria-label', label)
     }
   })
