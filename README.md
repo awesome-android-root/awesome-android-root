@@ -234,7 +234,7 @@ Follow this path:
 5. Set up [LSPosed Framework](./docs/rooting-guides/lsposed-guide.md) for advanced customization
 
 > [!NOTE]
-> **For Android 14/15:** Play Integrity is stricter. Root hiding may break apps. Stay updated.
+> **For Android >14:** Play Integrity is stricter. Root hiding may break apps. Stay updated.
 
 ## Device-Specific Guides
 
