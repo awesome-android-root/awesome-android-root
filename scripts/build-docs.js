@@ -143,7 +143,7 @@ try {
         // Find content marker
         let contentMarkerIndex = -1;
         for (let i = 0; i < lines.length; i++) {
-            if (lines[i].startsWith('## Glossary')) {
+            if (lines[i].startsWith('## 📋 Legend')) {
                 contentMarkerIndex = i;
                 break;
             }
