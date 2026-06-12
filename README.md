@@ -57,7 +57,7 @@
 - [AI and Smart Tools](#ai-and-smart-tools)
 
 #### 📦 **App Control and Management**
-- [App Management and Control](#app-management-and-control)
+- [App Management](#app-management)
   - [App Isolation and Cloning](#app-isolation-and-cloning)
   - [App Managers](#app-managers)
   - [App Update Control](#app-update-control)
@@ -80,6 +80,7 @@
   - [Google Services Optimization](#google-services-optimization)
 - [Performance and Optimization](#performance-and-optimization)
   - [Task Managers](#task-managers)
+  - [Memory Management](#memory-management)
 - [Kernel Management](#kernel-management)
 - [System Modifications](#system-modifications)
   - [Boot and Startup](#boot-and-startup)
@@ -113,21 +114,21 @@
 
 #### 🌐 **Network and Communication**
 - [Network and Connectivity](#network-and-connectivity)
-- [VPN & Proxy Tools](#vpn-and-proxy-tools)
 - [Location and GPS](#location-and-gps)
 - [Communication and Messaging](#communication-and-messaging)
 
 #### 🛠️ **Root and System Management**
 - [Root Management](#root-management)
   - [Root Managers](#root-managers)
+  - [LSPosed Framework](#lsposed-framework)
   - [Module Managers](#module-managers)
-  - [Zygisk Implementations](#zygisk-implementations)
-  - [Root Hiding and Integrity](#root-hiding-and-play-integrity)
-  - [Root Detection Tools](#root-detection-tools)
+  - [Metamodules](#metamodules)
   - [Bootloop Protection](#bootloop-protection)
+  - [Zygisk Implementations](#zygisk-implementations)
+  - [Root Detection Tools](#root-detection-tools)
+  - [Root Hiding and Play Integrity](#root-hiding-and-play-integrity)
 
 #### 📥 **Frameworks and Advanced**
-- [LSPosed Framework](#lsposed-framework)
 - [Developer Tools](#developer-tools)
 - [Hardware and Sensors](#hardware-and-sensors)
 - [Terminal and Shell Tools](#terminal-and-shell-tools)
@@ -146,7 +147,7 @@
   - [Remote Access, Sync and Storage](#remote-access-sync-and-storage)
   - [Device Information and Diagnostics](#device-information-and-diagnostics)
   - [NFC and Wireless Utilities](#nfc-and-wireless-utilities)
-  - [Google Apps and microG](#google-apps-and-microg)
+  - [MicroG](#microg)
   - [Power and Reboot Tools](#power-and-reboot-tools)
   - [Android Sharing and Picker Tweaks](#android-sharing-and-picker-tweaks)
   - [General Toolboxes and Module Collections](#general-toolboxes-and-module-collections)
