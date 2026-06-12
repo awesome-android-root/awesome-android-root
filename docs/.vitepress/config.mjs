@@ -801,7 +801,6 @@ export default withPwa(defineConfig({
         { text: 'Gestures and Navigation', link: '/apps-and-modules/#gestures-and-navigation' },
         { text: 'Notifications and UI Elements', link: '/apps-and-modules/#notifications-and-ui-elements' },
         { text: 'Display and Screen Tweaks', link: '/apps-and-modules/#screen-and-display' },
-        { text: 'Accessibility Tools', link: '/apps-and-modules/#accessibility-tools' },
         { text: 'ROM & OEM Customization', link: '/apps-and-modules/#rom-and-oem-customization' }
       ]
     },
@@ -809,13 +808,11 @@ export default withPwa(defineConfig({
       text: '🔧 Modified & Patched Apps',
       collapsed: false,
       items: [
-        { text: 'Modified App Collection', link: '/apps-and-modules/#app-patches-and-mods' },
+        { text: 'App Patchers', link: '/apps-and-modules/#app-patchers' },
+        { text: 'Browser Mods', link: '/apps-and-modules/#browser-mods' },
         { text: 'Social Media Mods', link: '/apps-and-modules/#social-media-mods' },
         { text: 'Non-Social App Mods', link: '/apps-and-modules/#non-social-app-mods' },
-        { text: 'Patching Tools', link: '/apps-and-modules/#patching-tools' },
-        { text: 'Morphe', link: '/apps-and-modules/#morphe' },
-        { text: 'ReVanced Patches', link: '/apps-and-modules/#revanced' },
-        { text: 'Other App Modifications', link: '/apps-and-modules/#other-app-mods' }
+        { text: 'Other App Mods', link: '/apps-and-modules/#other-app-mods' }
       ]
     },
     {
@@ -850,7 +847,6 @@ export default withPwa(defineConfig({
         { text: 'Task Managers', link: '/apps-and-modules/#task-managers' },
         { text: 'Memory Management', link: '/apps-and-modules/#memory-management' },
         { text: 'Battery and Power Management', link: '/apps-and-modules/#battery-and-power-management' },
-        { text: 'Battery Stats and Monitoring', link: '/apps-and-modules/#battery-stats-and-monitoring' },
         { text: 'Battery Optimization', link: '/apps-and-modules/#battery-optimization' },
         { text: 'Charging and Power Control', link: '/apps-and-modules/#charging-and-power-control' },
         { text: 'Google Services Optimization', link: '/apps-and-modules/#google-services-optimization' },
@@ -864,6 +860,7 @@ export default withPwa(defineConfig({
       items: [
         { text: 'Root Management', link: '/apps-and-modules/#root-management' },
         { text: 'Root Managers', link: '/apps-and-modules/#root-managers' },
+        { text: 'LSPosed Framework', link: '/apps-and-modules/#lsposed-framework' },
         { text: 'Module Managers', link: '/apps-and-modules/#module-managers' },
         { text: 'Zygisk Implementations', link: '/apps-and-modules/#zygisk-implementations' },
         { text: 'Root Detection Tools', link: '/apps-and-modules/#root-detection-tools' },
@@ -879,7 +876,7 @@ export default withPwa(defineConfig({
       text: '📦 App Management',
       collapsed: true,
       items: [
-        { text: 'Complete App Control', link: '/apps-and-modules/#app-management-and-control' },
+        { text: 'Complete App Control', link: '/apps-and-modules/#app-management' },
         { text: 'App Isolation and Cloning', link: '/apps-and-modules/#app-isolation-and-cloning' },
         { text: 'App Managers', link: '/apps-and-modules/#app-managers' },
         { text: 'App Update Control', link: '/apps-and-modules/#app-update-control' },
@@ -907,14 +904,6 @@ export default withPwa(defineConfig({
       ]
     },
     {
-      text: '🌐 Browser & Web Tools',
-      collapsed: true,
-      items: [
-        { text: 'Browser and Web Tools', link: '/apps-and-modules/#browser-and-web-tools' },
-        { text: 'Browser Extensions', link: '/apps-and-modules/#browser-extensions' }
-      ]
-    },
-    {
       text: '🌐 Network & Connectivity',
       collapsed: true,
       items: [
@@ -923,8 +912,9 @@ export default withPwa(defineConfig({
         { text: 'Hotspot Tools', link: '/apps-and-modules/#hotspot-tools' },
         { text: 'SSL and Certificates', link: '/apps-and-modules/#ssl-and-certificates' },
         { text: 'Wi-Fi Tools', link: '/apps-and-modules/#wi‐fi-tools' },
-        { text: 'Network Utilities', link: '/apps-and-modules/#network-utilities' },
-        { text: 'VPN and Proxy Tools', link: '/apps-and-modules/#vpn-and-proxy-tools' },
+        { text: 'Misc Network Utilities', link: '/apps-and-modules/#misc-network-utilities' },
+
+        { text: 'Proxy Tools', link: '/apps-and-modules/#proxy-tools' },
         { text: 'Hide VPN/Proxy Usage', link: '/apps-and-modules/#hide-vpn-proxy-usage' },
         { text: 'GPS and Location Tools', link: '/apps-and-modules/#location-and-gps' }
       ]
@@ -955,10 +945,12 @@ export default withPwa(defineConfig({
       collapsed: true,
       items: [
         { text: 'Developer Tools', link: '/apps-and-modules/#developer-tools' },
+        { text: 'Debugging', link: '/apps-and-modules/#debugging' },
+        { text: 'Install and Run Linux', link: '/apps-and-modules/#install-and-run-linux-environments' },
+        { text: 'Misc Developer Tools', link: '/apps-and-modules/#misc-developer-tools' },
         { text: 'Hardware Control', link: '/apps-and-modules/#hardware-and-sensors' },
         { text: 'Control Device Sensors', link: '/apps-and-modules/#control-device-sensors' },
         { text: 'Input Devices and Controllers', link: '/apps-and-modules/#input-devices-and-controllers' },
-        { text: 'LSPosed', link: '/apps-and-modules/#lsposed-framework' },
         { text: 'Terminal and Shell Tools', link: '/apps-and-modules/#terminal-and-shell-tools' },
         { text: 'Shell Tools', link: '/apps-and-modules/#shell-tools' },
         { text: 'Termux', link: '/apps-and-modules/#termux' }
@@ -969,6 +961,7 @@ export default withPwa(defineConfig({
       collapsed: true,
       items: [
         { text: 'System Utilities', link: '/apps-and-modules/#system-utilities' },
+        { text: 'Accessibility Tools', link: '/apps-and-modules/#accessibility-tools' },
         { text: 'Automation and Scheduling', link: '/apps-and-modules/#automation-and-scheduling' },
         { text: 'Android Sharing and Picker Tweaks', link: '/apps-and-modules/#android-sharing-and-picker-tweaks' },
         { text: 'Device Information', link: '/apps-and-modules/#device-information-and-diagnostics' },
@@ -984,10 +977,8 @@ export default withPwa(defineConfig({
       collapsed: true,
       items: [
         { text: 'Legal and Safety', link: '/apps-and-modules/#legal-and-safety' },
-        { text: 'Core Principles', link: '/apps-and-modules/#core-principles' },
-        { text: 'Pre-Flash Checklist', link: '/apps-and-modules/#pre‐flash-checklist' },
-        { text: 'Risk Mitigation', link: '/apps-and-modules/#risk-mitigation' },
-        { text: 'Avoid Proceeding If', link: '/apps-and-modules/#avoid-proceeding-if' }
+        { text: 'Pre-Flash Checklist', link: '/apps-and-modules/#🛠️-pre-flash-checklist' },
+        { text: 'Risk Mitigation', link: '/apps-and-modules/#🛡️-risk-mitigation' }
       ]
     }
   ],
