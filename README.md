@@ -1137,7 +1137,7 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 - **[ReSukiSU](https://github.com/ReSukiSU/ReSukiSU)** - Fork of SukiSU-Ultra with additional features. `FOSS`
 - **[SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra)** - A kernel-based root solution for Android devices, forked from `KernelSU` with some useful changes.
 
-## LSPosed Framework
+### LSPosed Framework
 
 > [!INFO]
 > LSPosed allows you to use Xposed modules, that can modify or extend the functionality of your Android system and apps.
