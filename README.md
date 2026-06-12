@@ -424,6 +424,15 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 
 ## App Patches and Mods
 
+### App Patchers
+- **[⭐ Morphe](https://morphe.software/)** - A next-generation app patcher built by some of the original ReVanced developers. It offers a modern interface, enhanced stability, and a growing list of supported apps and features. `FOSS`
+- **[ReVanced](https://revanced.app/)** - A powerful app patcher that allows you to modify popular apps like YouTube, Spotify, and more with additional features and customizations. `FOSS`
+
+### Browser Mods
+- **[⭐ ChromeXt](https://github.com/JingMatrix/ChromeXt)** - UserScript and DevTools support for Chromium-based and WebView-based browsers. `FOSS` `[LSP]`
+- **[EdgeX](https://github.com/SoClear/EdgeX)** - An Xposed module for Microsoft Edge on Android, designed to enhance your browsing experience with UI tweaks and functional improvements. `FOSS` `[LSP]`
+- **[FoldDevtools](https://github.com/achyuki/FoldDevtools)** - Using chrome devtools to debug webview on Android. `FOSS` `[LSP]`
+
 ### Social Media Mods
 #### Bilibili Mods
 - **[MBGA](https://github.com/cledwynl/mbga/)** - Add various features to Bilibili. `FOSS` `[LSP]`
@@ -526,36 +535,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 #### Yandex Music Mods
 - **[Yandex Music Downloader](https://github.com/errorman-awful/YMDownloaderXposed)** - Download flac Music from Yandex Music app. `Proprietary` `[LSP]`
 
-### Patching Tools
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (use with caution). `Proprietary`
-
-
-### Morphe
-
-> [!IMPORTANT]
-> Recently a lot of revanced original dev have left the project due to internal conflicts and new project called **[Morphe](https://morphe.software/)** has been started by some of the original revanced devs. We recommend checking out Morphe as well for future updates.
-
-- **[⭐ Morphe](https://morphe.software/)** - A next-generation app patcher built by some of the original ReVanced developers. It offers a modern interface, enhanced stability, and a growing list of supported apps and features. `FOSS`
-
-<details>
-<summary>For more details click me</summary>
-
-- [What happened](https://www.reddit.com/r/BoostForReddit/comments/1q2he9s/fyi_migration_to_morphe/)
-- [Announcement](https://www.reddit.com/r/Piracy/comments/1q1we4e/the_revanced_situation_is_crazy_a_new_project/)
-- [More info here](https://www.reddit.com/r/revancedextended/comments/1q1rjdd/do_you_want_to_know_what_happened_to_inotia/)
-
-</details><br>
-
-
-### ReVanced
-
-> [!NOTE]
-> ReVanced allows you to patch apps without root, but root access enables additional features like mounting patched apps as system apps.
-
-- **[Awesome ReVanced](https://github.com/Jman-Github/Awesome-ReVanced)** - A curated list of awesome ReVanced patches, resources and projects. `FOSS`
-- **[Privacy ReVanced Patches](https://github.com/jkennethcarino/privacy-revanced-patches)** - Privacy Patches for ReVanced to disable ads, trackers and analytics, always open Gboard in incognito mode, and much more. Enhances your [privacy](#privacy-and-security). `FOSS`
-- **[ReVanced Manager](https://github.com/ReVanced/revanced-manager)** - Modify YouTube, YouTube Music, Spotify and many more with additional features. `FOSS` 
-- **[ReVancedRepackaged](https://github.com/programminghoch10/ReVancedRepackaged)** - This magisk module contains only the ReVanced Patcher.It will patch any installed ReVanced compatible app right on your device during installation. `FOSS` `[M]`
 
 ### Other App Mods
 - **[Boosteroid+](https://github.com/nitanmarcel/BoosteroidPlus)** - Customize advanced settings for the Boosteroid app, including frame rate, bitrate, and resolution options. `FOSS` `[LSP]`
@@ -568,8 +548,6 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[NewHookVip](https://github.com/Xposed-Modules-Repo/top.hookvip.pro)** - Unlock some app memberships and adding some extended functions. Check releases section for list of supported apps. `Proprietary` `[LSP]`
 - **[Smule Mod](https://github.com/michei69/SmuleXposed)** - A Smule Xposed module which enables free VIP and many other features. `FOSS` `[LSP]`
 - **[VideoSpeed](https://github.com/MarsGao/io.github.MarsGao.speed)** - An Xposed module for adjusting the playback speed of videos across multiple applications. `FOSS` `[LSP]`
-- **[Wallet Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.wallettweaks/releases)** - UI tweaks for Google Wallet. `Proprietary` `[LSP]`
-
 
 
 [↑ Back to top](#table-of-contents)
