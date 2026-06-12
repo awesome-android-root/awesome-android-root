@@ -427,6 +427,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 ### App Patchers
 - **[⭐ Morphe](https://morphe.software/)** - A next-generation app patcher built by some of the original ReVanced developers. It offers a modern interface, enhanced stability, and a growing list of supported apps and features. `FOSS`
 - **[ReVanced](https://revanced.app/)** - A powerful app patcher that allows you to modify popular apps like YouTube, Spotify, and more with additional features and customizations. `FOSS`
+- **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (use with caution). `Proprietary`
 
 ### Browser Mods
 - **[⭐ ChromeXt](https://github.com/JingMatrix/ChromeXt)** - UserScript and DevTools support for Chromium-based and WebView-based browsers. `FOSS` `[LSP]`
@@ -534,8 +535,6 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 
 #### Yandex Music Mods
 - **[Yandex Music Downloader](https://github.com/errorman-awful/YMDownloaderXposed)** - Download flac Music from Yandex Music app. `Proprietary` `[LSP]`
-
-- **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (use with caution). `Proprietary`
 
 ### Other App Mods
 - **[Boosteroid+](https://github.com/nitanmarcel/BoosteroidPlus)** - Customize advanced settings for the Boosteroid app, including frame rate, bitrate, and resolution options. `FOSS` `[LSP]`
