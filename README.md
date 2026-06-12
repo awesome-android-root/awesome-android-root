@@ -957,25 +957,6 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 
 [↑ Back to top](#table-of-contents)
 
----
-
-## LSPosed Framework
-
-> [!NOTE]
-> LSPosed requires root access and a [Zygisk implementation](#zygisk-implementations). See our [LSPosed installation guide](./docs/rooting-guides/lsposed-guide.md) for setup instructions.
-
-<details><summary><strong>What is LSPosed? (Tap to expand)</strong></summary>
-
-LSPosed allows you to use Xposed modules, which are small add-ons that can modify or extend the functionality of your Android system and apps. These modules can add features, tweak settings, and enhance the overall usability of your device.
-
-</details>
-
-- **[LSPosed Original](https://github.com/LSPosed/LSPosed)** - A Riru / Zygisk module trying to provide an ART hooking framework which delivers consistent APIs with the OG Xposed, leveraging LSPlant hooking framework. *Development of LSPosed has been stagnated for quite a while*
-- **[LSPosed Fork(JingMatrix)](https://github.com/JingMatrix/LSPosed)** - **FORK** of original LSPosed with Android 15 & 16 support along with other improvements.
-- **[ReLSPosed](https://github.com/ThePedroo/ReLSPosed)** - Fork of JingMatrix's Fork of LSPosed framework.
-
-
-[↑ Back to top](#table-of-contents)
 
 ---
 
@@ -1032,6 +1013,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 
 ## VPN and Proxy Tools
 
+### Proxy Tools
 - **[Aurora](https://github.com/Tkocean/Aurora)** - This project deploys sing-box, mihome proxies via Magisk, KernelSU, or APatch. `FOSS` `[M]` `[K]`
 - **[Box4Magisk / KernelSU / APatch](https://github.com/CHIZI-0618/box4magisk)** - Deploy multiple proxy cores on Android devices, including clash, mihomo, sing-box, v2ray, xray, and hysteria. `FOSS` `[M]` `[K]`
 - **[Box for Root](https://github.com/taamarin/box_for_magisk)** - Box for Root (BFR) is a Magisk, KernelSU, APatch, module that provides a suite of proxy tools, including clash, sing-box, v2ray, hysteria and xray. It allows you to configure a transparent proxy on Android devices with root access. `FOSS` `[M]` `[K]`
@@ -1143,6 +1125,20 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[APatch](https://github.com/bmax121/APatch)** - The patching of Android kernel and Android system. `FOSS` | [🌱](https://f-droid.org/packages/me.bmax.apatch/)
 - **[KernelSU](https://github.com/tiann/KernelSU)** - A Kernel based root solution for Android. `FOSS`
 - **[KernelSU-next](https://github.com/KernelSU-Next/KernelSU-Next)** - An advanced Kernel based root solution for Android.
+
+## LSPosed Framework
+
+<details><summary><strong>What is LSPosed? (Tap to expand)</strong></summary>
+
+LSPosed allows you to use Xposed modules, which are small add-ons that can modify or extend the functionality of your Android system and apps. These modules can add features, tweak settings, and enhance the overall usability of your device.
+
+</details>
+
+- **[⭐ LSPosed](https://lsposed.zip)** - A Riru / Zygisk module trying to provide an ART hooking framework which delivers consistent APIs with the OG Xposed, leveraging LSPlant hooking framework.
+- **[Vector)](https://github.com/JingMatrix/Vector)** - **FORK** of original LSPosed with Android 15 & 16 support along with other improvements.
+
+> [!TIP]
+> See our [LSPosed installation guide](./docs/rooting-guides/lsposed-guide.md) for setup instructions.
 
 ### Module Managers
 
