@@ -1438,9 +1438,8 @@ Extended references & external reading: [resources.md](./docs/resources.md)
 
 </div>
 
-Non‑financial impact ideas:
 - Replace dead or redirected links with active sources/forks
-- Mark unmaintained / archived projects (add note)
+- Remove unmaintained / archived projects
 - Suggest safer open‑source alternatives for proprietary tools
 - Improve clarity for beginners (simplify phrasing / add warnings)
 
