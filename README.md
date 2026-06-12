@@ -37,7 +37,6 @@
 - [Introduction](#introduction)
 - [Rooting Guides](#rooting-guides)
 - [Device-Specific Guides](#device-specific-guides)
-- [Additional Guides](#additional-guides)
 
 </div>
 
@@ -69,9 +68,10 @@
 
 #### 🔧 **App Modifications and Extensions**
 - [App Patches & Mods](#app-patches-and-mods)
+  - [App Patchers](#app-patchers)
+  - [Browser Mods](#browser-mods)
   - [Social Media Mods](#social-media-mods)
   - [Non-Social App Mods](#non-social-app-mods)
-- [ReVanced](#revanced)
 
 #### ⚡ **Performance and System**
 - [Battery and Power Management](#battery-and-power-management)
@@ -136,10 +136,6 @@
 #### 🖥️ **Display and Accessibility**
 - [Screen and Display](#screen-and-display)
   - [Accessibility Tools](#accessibility-tools)
-
-#### 🌐 **Browser Tools**
-- [Browser and Web Tools](#browser-and-web-tools)
-  - [Browser Extensions](#browser-extensions)
 
 ### 🧰 System Utilities
 - [System Utilities](#system-utilities)
@@ -496,7 +492,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 #### YouTube, YT Music Mods
 - **[NexAlloy](https://github.com/NexAlloy/NexAlloy)** - YouTube, YT Music block ads, background playback, sponsorblock and much more. Also unlocks premium features of Strava and Photomath. Unlimited Google Photos backup. `FOSS` `[LSP]`
 
-> Also check out [Morphe section](#morphe)
+> Also check out [App Patchers section](#app-patchers)
 
 [↑ Back to top](#table-of-contents)
 
@@ -1381,7 +1377,7 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 |𝕏 **X/Twitter** | Updates & news | [@awsm_and_root](https://x.com/awsm_and_root) |
 
 ### Quick Help Paths
-- First time here? Start at the [Introduction](#introduction) & [The 4-Step Rooting Process](#the-4-step-rooting-process)
+- First time here? Start at the [Introduction](#introduction) & [The 4-Step Rooting Process](#the-4-step-rooting-roadmap)
 - Unsure about a term? Open the [Glossary](#glossary)
 - Want tools? Jump to [Root Apps and Modules](#root-apps-and-modules)
 - Need a walkthrough? Browse the [Rooting Guides Index](./docs/rooting-guides/index.md)
