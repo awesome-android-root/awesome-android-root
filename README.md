@@ -1122,14 +1122,11 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 
 ## LSPosed Framework
 
-<details><summary><strong>What is LSPosed? (Tap to expand)</strong></summary>
+> [!INFO]
+> LSPosed allows you to use Xposed modules, that can modify or extend the functionality of your Android system and apps.
 
-LSPosed allows you to use Xposed modules, which are small add-ons that can modify or extend the functionality of your Android system and apps. These modules can add features, tweak settings, and enhance the overall usability of your device.
-
-</details>
-
-- **[⭐ LSPosed](https://lsposed.zip)** - A Riru / Zygisk module trying to provide an ART hooking framework which delivers consistent APIs with the OG Xposed, leveraging LSPlant hooking framework.
-- **[Vector)](https://github.com/JingMatrix/Vector)** - **FORK** of original LSPosed with Android 15 & 16 support along with other improvements.
+- **[⭐ LSPosed](https://lsposed.zip)** - A Riru / Zygisk module that provides an ART hooking framework delivering consistent APIs with the OG Xposed, leveraging the LSPlant hooking framework. `Proprietary`
+- **[⭐ Vector](https://github.com/JingMatrix/Vector)** - **Fork** of original LSPosed with Android 15 & 16 support, dynamic module loading, and other improvements. `FOSS` `[M]`
 
 > [!TIP]
 > See our [LSPosed installation guide](./docs/rooting-guides/lsposed-guide.md) for setup instructions.
@@ -1143,7 +1140,7 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 #### Metamodules
 > [!NOTE]
 > **What are Metamodules?**
-> A metamodule is a special type of KernelSU module that provides the core mounting infrastructure for the module system. Unlike regular modules that modify system files, metamodules control *how* regular modules are installed and mounted.
+> It provides the core mounting infrastructure for the module system. Unlike regular modules that modify system files, metamodules control *how* regular modules are installed and mounted.
 
 
 - **[⭐ Meta-overlayfs](https://github.com/KernelSU-Modules-Repo/meta-overlayfs)** - Official reference implementation using OverlayFS for most users and standard setup. `FOSS` `[K]`
@@ -1152,7 +1149,6 @@ LSPosed allows you to use Xposed modules, which are small add-ons that can modif
 - **[meta-magic_mount](https://github.com/7a72/meta-magic_mount)** - Magic Mount metamodule written in C with WebUI support. Provides Magisk-style bind-mount module loading on KernelSU. Supports only the official KSU branch. `FOSS` `[K]`
 - **[meta-mm](https://github.com/KernelSU-Modules-Repo/meta-mm)** - The official KernelSU Modules Repo's Magic Mount metamodule. Lighter alternative to meta-magic_mount for users who just want Magisk-compatible mounting without extra tooling. `FOSS` `[K]`
 - **[ZeroMount](https://github.com/Enginex0/zeromount)** - Mountless module loading with Kernel-level VFS path redirection & SUSFS integration, WebUI, bootloop guard, and strategy fallback. `FOSS` `[M]` `[K]` `[A]`
-
 
 > [!TIP]
 > **Only one metamodule can be active at a time.**
