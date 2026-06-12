@@ -1161,14 +1161,11 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 
 ### Zygisk Implementations
 
-> [!TIP]
-> Zygisk is essential for advanced [root hiding](#root-hiding-and-play-integrity) and many [LSPosed modules](#lsposed-framework).
-
 <details>
 
 <summary><strong>What is Zygisk?</strong></summary>
 
-- Zygisk is a feature that allows modules to inject code directly into the Zygote process in Android. This enables **powerful system-level modifications**, such as **hiding root**, patching app behavior, and more, with minimal impact on device stability and performance.
+A feature that lets modules inject code into Android's Zygote process for system-level modifications like root hiding and app patching.
 
 <br>
 </details>
@@ -1178,40 +1175,22 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
   * **[ReZygisk](https://github.com/PerformanC/ReZygisk)** A high-performance implementation **entirely rewritten in C**. It introduces **custom linkers** to bypass modern linker-based detections, offering a WebUI for status monitoring and compatibility with Android 15 and 16. `FOSS` `[M]` `[K]` `[A]`
 
 
-<details><summary><strong>Comparison of Zygisk Implementations:</strong></summary><br>
+<details><summary><strong>Comparison table</strong></summary><br>
 
-
-#### Main Feature Comparison
-
-| Feature | **Magisk Built-in** | **Zygisk Next** | **NeoZygisk** | **ReZygisk** |
+| | **Magisk Built-in** | **Zygisk Next** | **NeoZygisk** | **ReZygisk** |
 | :--- | :--- | :--- | :--- | :--- |
-| **Android Ver.** | 9.0 - 15 | 10 - 16 | 8.1 - 16 (Beta) | 9 - 16 |
-| **Key Advantage** | Official / Simple | Detection Evasion | Stealth / Cleaning | Speed / Open Source |
-| **License** | GPL-3.0 | All Rights Reserved (since v4-0.9.2) | GPL-3.0 (forked pre-license-change) | GPL-3.0 / AGPL-3.0 |
-| **Root Support** | Magisk only | Magisk, KSU, APatch | Magisk, KSU, KSU Next, APatch | Magisk (Official &amp; Kitsune), KSU, APatch |
-| **Performance** | Baseline | Very Stable | Minimalist / Low RAM | **Fastest (Native C)** |
-| **Implementation** | Built-in, PLT hooks | Standalone, built-in ZN Linker | Ptrace injection | Standalone, full C rewrite, custom linker |
-| **Hiding Power** | Basic DenyList | ZN Linker, anon memory loading, Shamiko integration | Dual-strategy unmounting, atexit neutralization | Custom linker, SoInfo hiding, maps hiding |
-| **Shamiko** | ❌ Separate module | ✅ Built-in (excludes prop/font hiding) | ❌ Own DenyList | ❌ Own hiding mechanisms |
-| **DenyList Modes** | Enforce/disable | Disabled / enabled / unmount-only (WebUI + CLI) | Direct unmount (primary) + namespace switching (fallback) | Monitor-based |
-| **Module Loading** | System linker | ZN Linker + anonymous memory | Standard | Custom linker (bypasses system linker) |
-| **API** | Full Zygisk API | Full (no Magisk internals guaranteed) | Full compatibility | Compatible |
-| **Config UI** | Magisk Manager | WebUI + CLI | Status via module.prop (WebUI pending) | WebUI (in dev), module.prop |
+| **Key Advantage** | Official &amp; simple | Detection evasion | Stealth / cleaning | Speed / open source |
+| **License** | GPL-3.0 | Proprietary | GPL-3.0 | GPL-3.0 / AGPL-3.0 |
+| **Root Support** | Magisk only | Magisk, KSU, APatch | Magisk, KSU, KSU Next, APatch | Magisk, KSU, APatch |
+| **Hiding Approach** | Basic DenyList | ZN Linker + anon memory + Shamiko | Ptrace injection + unmounting | Custom linker + maps hiding |
+| **Strengths** | ✅ Stable, well-documented<br>✅ Widest arch (incl. x86) | ✅ Most feature-rich<br>✅ Largest community | ✅ Hard to trace in memory<br>✅ Minimal &amp; open | ✅ **Fastest (native C)**<br>✅ Fully open &amp; auditable |
+| **Trade-offs** | ❌ Magisk-only<br>❌ Easily detected | ❌ Closed source<br>❌ ZN Linker experimental | ❌ 64-bit only<br>❌ Smaller community | ❌ RC phase<br>❌ Some compat issues |
 
-### Strengths & Trade-offs
-
-| Implementation | **Strengths** | **Trade-offs** |
-| :--- | :--- | :--- |
-| **Magisk Built-in** | ✅ Official, stable, well-documented <br> ✅ Widest arch support (incl. x86)<br>✅ No extra modules needed | ❌ Magisk-only <br> ❌ Easily detected by modern banking apps. |
-| **Zygisk Next** | ✅ Most feature-rich (ZN Linker, anon memory, Shamiko) <br> ✅ Three DenyList modes <br> ✅ WebUI + CLI, largest community | ❌ Fully closed source, no audit possible <br> ❌ ZN Linker still experimental <br> ❌ No prop/font hiding from Shamiko |
-| **NeoZygisk** | ✅ Ptrace approach is harder to trace in memory <br> ✅ Multi-root (incl. KSU Next) <br> ✅ Minimal, open source | ❌ 64-bit devices <br> ❌ Smaller community, no WebUI yet |
-| **ReZygisk** | ✅ Full C rewrite - lightest/fastest <br> ✅ Custom linker defeats linker detection <br> ✅ Fully open &amp; auditable | ❌ Still RC phase <br> ❌ Some compat issues &amp; bug reports (bootloops, Zygisk-Sui conflicts) |
-
-<br> 
+<br>
 </details><br>
 
 > [!TIP]
-> Use these modules if you need Zygisk features on alternative root frameworks (KernelSU, APatch), or want more control over Zygisk behavior than Magisk's built-in implementation provides.
+> Use these for Zygisk features on KernelSU/APatch, or for more control than Magisk's built-in provides.
 
 ### Root Detection Tools
 - **[⭐ Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector)** - A tool for detecting root on android. `FOSS`
@@ -1221,9 +1200,6 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 - **[Securify](https://github.com/RabehX/Securify)** - Yet Another Root Checker and Play Integrity API Application. `FOSS`
 
 ### Root Hiding and Play Integrity
-
-> [!TIP]
-> Having trouble with banking apps? Check our [troubleshooting guide](./docs/troubleshooting.md) and [FAQs](./docs/faqs.md).
 
 <details><summary><strong>What is Play Integrity?</strong></summary>
 
