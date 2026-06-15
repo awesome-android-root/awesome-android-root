@@ -1046,6 +1046,7 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 ### All-in-One Performance Optimizers
 - **[⭐ 3C All-in-One Toolbox](https://play.google.com/store/apps/details?id=ccc71.at.free)** - A comprehensive utility that offers a wide range of tools for monitoring, controlling, and optimizing device performance in a user-friendly interface. `Proprietary`
 - **[Androoster](https://github.com/cioccarellia/androoster)** - Android root tweak toolbox. It is built to help you tweak your device, keeping it cool, fast and responsive. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.andreacioccarelli.androoster)
+- **[AZenith](https://github.com/Liliya2727/AZenith)** - All-In-One (AIO) system optimization module designed to enhance Android performance. `FOSS` `[M]` `[K]`
 - **[COPG](https://github.com/AlirezaParsi/COPG)** - Spoof your device to enjoy premium features, max performance, and exclusive benefits. `FOSS` `[M]`
 - **[Dynamic System Tweaks Magisk Module](https://github.com/PS2ClassicsVault/Dynamic-System-Tweaks-Magisk-Module)** - Improves overall System performance without overheating and losing battery power for armeabi-v7a devices. `FOSS` `[M]`
 - **[FDE.AI](https://github.com/feravolt/FDE.AI-docs)** - All-in-One ultimate optimizer for all devices running Android OS. `Proprietary` `[LSP]`
