@@ -438,7 +438,6 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[MBGA](https://github.com/cledwynl/mbga/)** - Add various features to Bilibili. `FOSS` `[LSP]`
 
 #### Discord Mods
-- **[BunnyXposed](https://github.com/bunny-mod/BunnyXposed)** - A mod for Discord's mobile apps. `FOSS` `[LSP]`
 - **[Kettu](https://github.com/C0C0B01/KettuXposed)** - A Discord mobile app client modification continuing Bunny's mission. `FOSS` `[LSP]`
 - **[Revenge](https://github.com/revenge-mod/revenge-bundle-next)** - Revenge is a client modification for Discord Android. `FOSS`
 
