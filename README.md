@@ -1338,7 +1338,6 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 - **[RebootNya](https://github.com/daisukiKaffuChino/RebootNya)** - A simple yet advanced reboot utility for Android devices. `FOSS`
 
 ### Remote Access, Sync and Storage
-- **[Magisk Tailscaled](https://github.com/mgksu/tailscaled)** - Runs the Tailscale mesh VPN daemon on rooted Android devices for private remote access. `FOSS` `[M]`
 - **[Rclone Magisk Module](https://github.com/NewFuture/rclone-fuse3-magisk)** - Integrates Rclone with FUSE support into Android, allowing you to manage remote storage mounts seamlessly. `FOSS` `[M]`
 - **[Rsync Magisk](https://github.com/KatelynTheStargazer/rsync-magisk)** - Static rsync binary for Magisk-based file sync and backup workflows. `FOSS` `[M]`
 
