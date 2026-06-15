@@ -1081,7 +1081,6 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 - **[Geergit](https://github.com/pyshivam/geergit-discussion)** - Change (MASKE) the various IDs in the Phone. `Proprietary` `[LSP]`
 - **[MACsposed](https://github.com/DavidBerdik/MACsposed)** - Adds support for MAC Address spoofing to Android 12 through 15. `FOSS` `[LSP]`
 - **[MAC Editor for Android](https://github.com/jqssun/android-mac-editor)** - Securely edit Wi-Fi MAC address on Android. `FOSS` `[LSP]`
-- **[XPL-EX](https://github.com/0bbedCode/XPL-EX)** - Really simple to use privacy manager for Android 6.0 Marshmallow and later. `FOSS` `[LSP]`
 - **[Telephony Spoofer](https://github.com/BrianWalczak/TelephonySpoofer)** - Spoof cellular information, including eSIM compatibility. `FOSS` `[LSP]`
 
 ### Flag Secure Patchers
