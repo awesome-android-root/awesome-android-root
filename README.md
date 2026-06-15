@@ -912,7 +912,6 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 - **[EnCorinVest](https://github.com/LoggingNewMemory/EnCorinVest)** - Performance Module, Collaboration between CorinXMTKVest and Encore Tweaks. `FOSS` `[M]`
 - **[FPS Unlocker](https://github.com/yadavnikhil03/GameUnlocker#fps-unlocker)** - Enables 90 FPS options in BGMI and PUBG and other Games as well for smoother gameplay on low-end devices. `FOSS` `[M]`
 - **[GameResChange](https://github.com/Xposed-Modules-Repo/com.game.reschange)** - Change the resolution of any app/game on Android 13+. `Proprietary` `[LSP]`
-- **[Gaming-X Magisk Module](https://github.com/JordanTweaks/Gaming-X-Magisk-Module)** - Tweaking CPU, GPU, memory, and system settings for maximum FPS and responsiveness. `FOSS` `[M]`
 - **[PerfGame](https://github.com/adivenxnataly/PerfGame)** - Enable custom resolution and frame-rate mechanism for your games. `FOSS` `[M]`
 - **[Uperf-Game-Turbo](https://github.com/yinwanxi/Uperf-Game-Turbo)** - Userspace performance controller for Android. `FOSS` `[M]`
 
