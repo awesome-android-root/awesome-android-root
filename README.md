@@ -1024,6 +1024,7 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 - **[Magisk LAN Auto Switch](https://github.com/NewFuture/magisk-modules/tree/main/magisk-lan-auto-switch)** - Automatically switch LAN and WiFi based on eth0 connection status. `FOSS` `[M]`
 - **[Network Switch](https://github.com/aunchagaonkar/NetworkSwitch#installation)** - Modern Android app for 4G/5G network mode switching. `FOSS` | [🌱](https://apt.izzysoft.de/packages/com.supernova.networkswitch)
 - **[Network Utilities](https://play.google.com/store/apps/details?id=com.myprog.netutils)** - Application contains a set of tools for networks diagnostics. `Proprietary`
+- **[MagicNet](https://github.com/LIghtJUNction/MagicNet#english-summary)** - Module for device-side traffic governance that enforce network rules below the app layer instead of relying on every app to respect a proxy setting. `FOSS` `[M]` `[K]`
 - **[PCAPdroid](https://github.com/emanuele-f/PCAPdroid#pcapdroid)** - Lets you track, analyze and block the connections made by the other apps in your device. `FOSS` | [🌱](https://f-droid.org/packages/com.emanuelef.remote_capture) | [▶️](https://play.google.com/store/apps/details?id=com.emanuelef.remote_capture)
 - **[SAM](https://github.com/5MayRain/SAM)** - A module combining SmartDNS, AdGuardHome, and mihomo, suitable for Magisk and KernelSU. `FOSS` `[M]` `[K]`
 - **[SimbaDroid](https://github.com/buttercookie42/SimbaDroid)** - A simple SMB file server for Android. `FOSS` | [🌱](https://f-droid.org/packages/de.buttercookie.simbadroid)
