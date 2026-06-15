@@ -434,8 +434,6 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[FoldDevtools](https://github.com/achyuki/FoldDevtools)** - Using chrome devtools to debug webview on Android. `FOSS` `[LSP]`
 
 ### Social Media Mods
-#### Bilibili Mods
-- **[MBGA](https://github.com/cledwynl/mbga/)** - Add various features to Bilibili. `FOSS` `[LSP]`
 
 #### Discord Mods
 - **[Kettu](https://github.com/C0C0B01/KettuXposed)** - A Discord mobile app client modification continuing Bunny's mission. `FOSS` `[LSP]`
