@@ -857,6 +857,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[Auto-Linux](https://github.com/HanSoBored/Auto-Linux)** - A TUI application to install and manage Linux (chroot) environments on rooted Android devices. `FOSS`
 - **[Chroot Distro](https://github.com/Magisk-Modules-Alt-Repo/chroot-distro)** - Install Gnu/Linux distributions on Android. `FOSS` `[M]`
 - **[Droidspaces](https://github.com/ravindu644/Droidspaces-OSS)** - Lets you run full Linux environments on top of Android or Linux, with complete init system support including systemd, OpenRC, and other init systems (runit, s6, etc.). `FOSS`
+- **[Ubuntu Chroot](https://github.com/ravindu644/Ubuntu-Chroot)** - Run Ubuntu 24.04 on Android With full Hardware Access and pure namespace isolation. `FOSS` `[M]` `[K]`
 
 ### Misc developer tools
 - **[ADB Root](https://github.com/evdenis/adb_root)** - A Magisk module that runs the adbd daemon as root and skips USB authentication. `FOSS` `[M]`
