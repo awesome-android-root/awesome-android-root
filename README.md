@@ -1330,6 +1330,7 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 - **[microG Installer Revived Again](https://modules.kernelsu.org/module/microg_installer_revived_again/)** - Promote microG GmsCore, GsfProxy, Companion/Play Store, and MapsV1 to system with privileged permissions. `FOSS` `[M]` `[K]`
 
 ### NFC and Wireless Utilities
+- **[KonamikU](https://github.com/C-F0x/KonamikU)** - Extend NFC Capabilities of your device. `FOSS` `[LSP]`
 - **[NFC Card Emulator Pro (Root)](https://play.google.com/store/apps/details?id=com.yuanwofei.cardemulator.pro)** - NFC card emulator for access cards, elevator cards, meal cards, school cards, library cards, and other IC cards. `Proprietary`
 - **[NFCGate](https://github.com/nfcgate/nfcgate)** - Android application meant to capture, analyze, or modify NFC traffic. `FOSS` `[LSP]` | [🌱](https://f-droid.org/packages/de.tu_darmstadt.seemoo.nfcgate/)
 - **[onHit](https://github.com/0penPublic/onHit)** -  Trigger Android NFC events without a physical tag by Xposed. `FOSS` `[LSP]`
