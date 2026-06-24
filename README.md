@@ -1139,7 +1139,7 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 
 ### LSPosed Framework
 
-> [!INFO]
+> [!NOTE]
 > 
 > LSPosed allows you to use Xposed modules, that can modify or extend the functionality of your Android system and apps.
 
