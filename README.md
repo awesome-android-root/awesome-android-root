@@ -509,6 +509,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 #### Google Keyboard Mods
 - **[GboardHook](https://github.com/chenyue404/GboardHook)** - Modifies the number of clipboard items displayed and their expiration time. `FOSS` `[LSP]`
 - **[Gboard Material Expressive Black](https://github.com/hxreborn/gboard-material-expressive-black)** - Enables pitch black Gboard background on Android 16 dynamic theme. `FOSS` `[LSP]`
+- **[KeyFlux](https://github.com/NawafCode/KeyFlux)** - Customize Google Gboard, exposing selected hidden features, and adding clipboard-related enhancements. `FOSS` `[LSP]`
 - **[Rboard Theme Manager](https://github.com/DerTyp7214/RboardThemeManagerV3)** - A customizable manager app for Google Gboard that allows users to download, apply, and manage various themes and sound settings. `FOSS` `[LSP]`
 
 #### Google News Mods
