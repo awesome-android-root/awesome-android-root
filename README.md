@@ -1220,20 +1220,17 @@ A feature that lets modules inject code into Android's Zygote process for system
 <details><summary><strong>What is Play Integrity?</strong></summary>
 
 A Google API that lets apps verify a device is "genuine" - unmodified, Play-certified, and bootloader-locked. Apps use it to block rooted/modified devices. Verdicts: `MEETS_BASIC_INTEGRITY` < `MEETS_DEVICE_INTEGRITY` < `MEETS_STRONG_INTEGRITY`.
-</details><br>
+</details>
 
 <details><summary><strong>Why hide root?</strong></summary>
 
 Banking, payment, and some streaming/game apps detect root and refuse to run. Hiding root lets them work on a rooted device.
-</details><br>
+</details>
 
 <details><summary><strong>What's realistic in 2026?</strong></summary>
 
 Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootloader on Android 13+**, and `STRONG_INTEGRITY` needs an **unrevoked hardware keybox** (increasingly scarce). For most rooted users, passing `BASIC` + `DEVICE` integrity (via PIF + TrickyStore) is the practical ceiling - chasing `STRONG` is a deep, often futile rabbit hole.
 </details>
-<br>
-
-> 📖 [TheUnrealZaka's Guide to Hiding Root](https://gist.github.com/TheUnrealZaka/042040a1700ad869d54e781507a9ba4f)
 
 - **[⭐ SUSFS for KernelSU](https://github.com/sidex15/susfs4ksu-module)** - Add-on root-hiding service for SUSFS-patched kernels (KernelSU/Next). The core of modern KSU hiding setups. `FOSS` `[M]` `[K]`
 - **[⭐ Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)** - Hides Magisk root from detection. `Proprietary` `[M]`
