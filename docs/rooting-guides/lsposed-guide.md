@@ -67,17 +67,19 @@ head:
 
 # Complete LSPosed / Vector Framework Guide
 
-The modern Xposed implementation for Android 8.1–16+. Master the LSPosed framework (including the new API 101 release) and the Vector fork for advanced app modifications and system customization.
+The modern Xposed implementation for Android 8.1–17 Beta. This guide covers both the original LSPosed project (now distributed as closed-source builds via Telegram) and the fully open-source **Vector** fork - helping you make an informed choice about which framework to trust on your device.
 
-> [!TIP]
-> **Official Release:** The original LSPosed project has released the **API 101** update via their official channels. This version is highly recommended for its stability, fewer bugs, and support for the latest Android features. You can always find the latest official release at **[lsposed.zip](https://lsposed.zip/)**.
+> [!WARNING]
+> **Transparency Advisory:** The original LSPosed GitHub repository ([LSPosed/LSPosed](https://github.com/LSPosed/LSPosed)) has been **archived** since January 2024 with no public releases since October 2023. Current "official" builds are distributed exclusively as **closed-source** binaries via the LSPosed Telegram channel and **[lsposed.zip](https://lsposed.zip/)**. This violates the GPLv3 license under which the original code was released. Users should be aware of the [ongoing controversy](https://exposelsposed.pages.dev/) and make an informed decision.
+>
+> The fully open-source **[Vector](https://github.com/JingMatrix/Vector)** fork (GPLv3) is actively maintained, has a transparent development process, and now supports libxposed API 101 in CI/canary builds.
 
 ---
 
 ## Essential Resources
 
-- **[Latest Official LSPosed](https://lsposed.zip/)** - API 101 (Recommended)
-- **[Official Telegram](https://t.me/LSPosed)** - Real-time updates and support
+- **[Vector (JingMatrix Fork)](https://github.com/JingMatrix/Vector)** - Fully open-source (GPLv3), actively maintained - **Recommended**
+- **[lsposed.zip](https://lsposed.zip/)** - Closed-source builds from the original LSPosed team (distributed via [Telegram](https://t.me/LSPosed))
 - [Magisk Guide](./magisk-guide.md) - Required root solution with Zygisk support
 - [KernelSU Guide](./kernelsu-guide.md) - Alternative kernel-based root
 - [Root Apps Collection](../apps-and-modules/index.md) - Popular LSPosed/Vector modules directory
@@ -86,50 +88,68 @@ The modern Xposed implementation for Android 8.1–16+. Master the LSPosed frame
 
 ## Choosing Your Version
 
-There are currently two primary versions of the framework. Choosing the right one depends on your module requirements.
+There are currently two primary sources for the framework. Choosing the right one involves trade-offs between open-source transparency, API compatibility, and stability.
 
-| Feature | Official LSPosed (Recommended) | Vector (JingMatrix Fork) |
-|---------|--------------------------------|--------------------------|
-| **Primary URL** | **[lsposed.zip](https://lsposed.zip/)** | [JingMatrix/Vector](https://github.com/JingMatrix/Vector) |
-| **API Version** | **API 101** | API 100 |
-| **Stability** | High (Fewer bugs) | Moderate (Active refactor) |
-| **Target Audience** | Most users, modern modules | Legacy API 100 modules |
-| **Android Support** | 8.1 - 16+ | 8.1 - 17 Beta |
-| **Detection Hiding** | Enhanced (ACE, Banks, etc.) | Standard |
+| Feature | Vector (JingMatrix Fork) | "Official" LSPosed (lsposed.zip) |
+|---------|--------------------------|-----------------------------------|
+| **Primary URL** | [JingMatrix/Vector](https://github.com/JingMatrix/Vector) | **[lsposed.zip](https://lsposed.zip/)** |
+| **Open Source** | ✅ Fully open-source (GPLv3) | ❌ Closed-source (GPL violation) |
+| **Source Available** | [Yes - public repo](https://github.com/JingMatrix/Vector) | No - distributed via Telegram only |
+| **Stable API** | API 100 (v2.0) | API 101 |
+| **Canary/CI API** | API 101 (CI builds) | N/A |
+| **Active Development** | ✅ Active (commits, issues, PRs) | ⚠️ Telegram-only, no public tracker |
+| **Android Support** | 8.1 - 17 Beta | 8.1 - 16+ |
+| **Detection Hiding** | Standard | Enhanced (ACE, Banks, etc.) |
+| **Trust & Transparency** | ✅ Public code, community audit | ⚠️ [Controversy](https://exposelsposed.pages.dev/), [malware in beta](https://xdaforums.com/t/security-analysis-of-the-lsposed-beta-version.4750843/) |
+
+> [!NOTE]
+> **About lsposed.zip:** This domain is operated by the original LSPosed team. Builds are distributed through their [official Telegram channel](https://t.me/LSPosed) and are **closed-source** - meaning the code cannot be independently audited. The original LSPosed GitHub repository at [LSPosed/LSPosed](https://github.com/LSPosed/LSPosed) is archived and no longer reflects these builds.
 
 ### Which one should I use?
-- **Use Official LSPosed (API 101)** if you want the most stable experience and support for the newest modules.
-- **Use Vector (API 100)** only if you rely on specific modules that haven't updated to API 101 or if you are testing Android 17 Beta features specifically mentioned in their CI.
+- **Use Vector** if you value open-source transparency, want publicly auditable code, and prefer a project with an active public development process. Vector's stable v2.0 supports API 100, and its CI (canary) builds already support API 101 for testing.
+- **Use Official LSPosed (lsposed.zip)** if you specifically need stable API 101 support right now and are comfortable with closed-source binaries. Be aware that new modules are increasingly targeting API 101 and the upcoming API 102, so this version may offer better compatibility with the latest modules.
+- **The ecosystem is moving toward API 101/102.** Vector's CI builds already support API 101, and a stable release is expected. If you can wait for Vector's stable API 101 release, it will likely be the best option combining open-source trust with modern API support.
 
 ---
 
-## What is LSPosed?
+## Background: The LSPosed Ecosystem
 
-LSPosed is a Zygisk module providing an ART hooking framework that maintains API consistency with the original Xposed. It allows modules to modify system and application behavior in-memory without touching system partitions.
+### What is LSPosed?
 
-## What is Vector?
-Vector is a (fork of LSPosed), Zygisk module providing an ART hooking framework that maintains API consistency with the original Xposed. The framework allows modules to modify system and application behavior in-memory.
+LSPosed is a Zygisk module providing an ART hooking framework that maintains API consistency with the original Xposed. It allows modules to modify system and application behavior in-memory without touching system partitions. The original project was developed as open-source (GPLv3) on [GitHub](https://github.com/LSPosed/LSPosed), but the repository was **archived in January 2024** after the core developers announced they would stop maintaining it.
+
+Following the archival, the original team continued distributing closed-source builds through their Telegram channel and `lsposed.zip`. These builds cannot be independently audited and their distribution in closed-source form violates the GPLv3 license.
+
+### What is Vector?
+
+[Vector](https://github.com/JingMatrix/Vector) is a fully open-source (GPLv3) fork of LSPosed maintained by [JingMatrix](https://github.com/JingMatrix) and [84+ contributors](https://github.com/JingMatrix/Vector/graphs/contributors). It provides the same ART hooking framework with active public development, issue tracking, and community contributions. Vector v2.0 (stable) implements API 100, while CI/canary builds already support API 101.
 
 ### Key Features
 
-**Official API 101 Release**
-- **Modern Standard:** Moves the ecosystem to the latest libxposed standard.
-- **Improved Stability:** Significant bug fixes over previous versions and forks.
-- **Better Detection Hiding:** Enhanced capabilities to hide from banking apps and integrity checks (ACE, GoTyme, etc.).
-- **KernelSU Support:** Improved compatibility with KernelSU and Zygisk Next.
+**Vector (Open-Source - Recommended)**
+- **Fully Transparent:** All source code publicly available, auditable by anyone.
+- **Active Development:** Regular commits, community issue tracker, pull requests.
+- **API 101 via CI:** Canary builds already support libxposed API 101 (stable release expected).
+- **Broad Compatibility:** Supports Android 8.1 through 17 Beta.
+- **Java-to-Kotlin Refactor:** Ongoing modernization for maintainability.
 
-**Vector (Legacy API 100 Support)**
-- Maintains the definitive API 100 implementation for legacy modules.
-- Undergoing a Java-to-Kotlin refactor for future-proofing.
+**"Official" LSPosed (lsposed.zip - Closed-Source)**
+- **API 101 Stable:** Stable support for the latest libxposed API standard.
+- **Better Detection Hiding:** Enhanced capabilities to hide from banking apps and integrity checks (ACE, GoTyme, etc.).
+- **Closed-Source:** Code is not publicly available; builds cannot be audited.
+- **KernelSU Support:** Compatible with KernelSU and Zygisk Next.
 
 <br>
-<details><summary>Technical Details: API 100 vs 101</summary>
+<details><summary>Technical Details: API 100 vs 101 vs 102</summary>
 
-### API 101 (The New Standard)
-The libxposed API 101 includes significant changes compared to API 82/100. It is designed for better performance and compatibility with modern Android internals. Official LSPosed now prioritizes this standard.
+### API 101 (The Current Standard)
+The libxposed API 101 includes significant changes compared to API 82/100. It is designed for better performance and compatibility with modern Android internals. Both lsposed.zip (stable) and Vector (CI/canary) now support this API.
+
+### API 102 (Upcoming)
+The ecosystem is moving toward API 102. New modules are increasingly being developed for API 101+, making it the recommended target for future compatibility. Users stuck on API 100 may find themselves unable to use newer modules.
 
 ### API 100 (Legacy)
-Version 2.0 of the Vector fork finalized the API 100 implementation. If a module specifically requires API 100 and fails on API 101, you may need to stay on this version temporarily.
+Version 2.0 of the Vector fork finalized the API 100 implementation. If a module specifically requires API 100 and fails on API 101, Vector v2.0 is the recommended stable option.
 
 </details>
 
@@ -143,9 +163,8 @@ Version 2.0 of the Vector fork finalized the API 100 implementation. If a module
 > LSPosed will **NOT** work without these requirements met. Do not proceed until all are satisfied.
 
 **Root Access**
-- Magisk 26+ with Zygisk enabled (recommended)
-- KernelSU with Zygisk Next/NeoZygisk (supported)
-- KernelSU Next (supported via Zygisk Next/NeoZygisk)
+- Magisk 26+ with Zygisk enabled
+- KernelSU (and its forks) with Zygisk Next/NeoZygisk
 
 **Android Version**
 - Android 8.1 (Oreo) minimum through Android 16+ (Official) or 17 Beta (Vector).
@@ -192,13 +211,13 @@ Version 2.0 of the Vector fork finalized the API 100 implementation. If a module
 
 #### Step 2: Download the Framework
 
-**Option A: Official LSPosed (Recommended)**
+**Option A: Vector (Open-Source - Recommended)**
+1. Visit [Vector Releases](https://github.com/JingMatrix/Vector/releases) on GitHub.
+2. Download the latest **stable release ZIP** (v2.0 for API 100) or a **CI build** (for API 101).
+
+**Option B: Official LSPosed (Closed-Source)**
 1. Visit **[lsposed.zip](https://lsposed.zip/)** or the [Official Telegram](https://t.me/LSPosed).
 2. Download the latest **Zygisk release ZIP**.
-
-**Option B: Vector (Legacy/Experimental)**
-1. Visit [Vector Releases](https://github.com/JingMatrix/Vector/releases)
-2. Download the API 100 compatible ZIP.
 
 #### Step 3: Install the Module
 
@@ -218,12 +237,14 @@ After reboot, look for the LSPosed notification or app icon.
 ### Method 2: KernelSU Installation
 
 > [!WARNING]
-> KernelSU requires **Zygisk Next** or **NeoZygisk** to be installed first for LSPosed to function.
+> KernelSU requires **Zygisk Next** or **NeoZygisk** to be installed first for LSPosed/Vector to function.
 
 1. Install KernelSU and the Manager app.
 2. Install **Zygisk Next** via KernelSU Manager > Modules.
 3. Reboot.
-4. Download the Official LSPosed ZIP from **[lsposed.zip](https://lsposed.zip/)**.
+4. Download the ZIP from your chosen source:
+   - **Vector:** [GitHub Releases](https://github.com/JingMatrix/Vector/releases) (open-source)
+   - **lsposed.zip:** [lsposed.zip](https://lsposed.zip/) (closed-source)
 5. Install via KernelSU Manager > Modules > Install from storage.
 6. Reboot and open the manager from the notification.
 
@@ -234,8 +255,8 @@ After reboot, look for the LSPosed notification or app icon.
 ### API Compatibility Check
 
 > [!IMPORTANT]
-> - **API 101 Modules:** Require the latest Official LSPosed.
-> - **API 100 Modules:** Compatible with Vector and some may work on Official via legacy support, but for strict compatibility, Vector v2.0 is the baseline.
+> - **API 101 Modules:** Require lsposed.zip (stable) or Vector CI builds (canary).
+> - **API 100 Modules:** Compatible with Vector v2.0 (stable) and some may work on lsposed.zip via legacy support. For strict API 100 compatibility, Vector v2.0 is the baseline.
 
 ### How to Enable a Module
 
@@ -252,14 +273,14 @@ After reboot, look for the LSPosed notification or app icon.
 ## Troubleshooting
 
 ### "API Version Too New/Old"
-- If a module says it requires API 101, you **must** use the official release from `lsposed.zip`.
-- If a module is very old and only supports API 82/100, and fails on the new Official release, try the Vector v2.0 fork.
+- If a module says it requires API 101, use either `lsposed.zip` (stable) or a Vector CI build (canary).
+- If a module is very old and only supports API 82/100, and fails on API 101, try the Vector v2.0 stable release.
 
 ### Detection Issues (Banking Apps)
-Official LSPosed (API 101) has significantly better success in hiding its presence. If you still face issues:
+The closed-source lsposed.zip builds have better success in hiding their presence. If you still face issues:
 1. Ensure the banking app is **NOT** in the scope of any module.
-2. Use **Shamiko** or **Zygisk Next**'s built-in hiding features.
-3. Disable "Verbose Logs" in LSPosed settings.
+2. Use **Shamiko** (closed-source, from LSPosed team) or the open-source alternative **[Zygisk Assistant](https://xdaforums.com/t/module-zygisk-assistant-foss-root-hider.4664761/)**.
+3. Disable "Verbose Logs" in LSPosed/Vector settings.
 
 ### Installation Issues
 
@@ -378,8 +399,8 @@ adb reboot
 
 | Version | Status | Best For |
 |---------|--------|----------|
-| **Official (API 101)** | **Recommended** | Stability, latest features, detection hiding. |
-| **Vector (API 100)** | Legacy | Modules that haven't updated to API 101. |
+| **Vector (Open-Source)** | **Recommended** | Transparency, auditable code, active development. CI builds support API 101. |
+| **lsposed.zip (Closed-Source)** | Use with caution | Stable API 101, better detection hiding. Be aware of closed-source risks. |
 | **LSPatch** | Non-Root | Modifying apps on non-rooted devices. |
 
 ---
@@ -397,7 +418,9 @@ adb reboot
 ### Stay Updated
 
 **Follow Development**
-- [LSPosed GitHub](https://github.com/JingMatrix/LSPosed) - Official updates
-- [LSPosed Telegram](https://t.me/LSPosed) - Real-time support
+- [Vector GitHub](https://github.com/JingMatrix/Vector) - Open-source fork (actively maintained)
+- [lsposed.zip](https://lsposed.zip/) - Closed-source builds from the original LSPosed team
+- [LSPosed Telegram](https://t.me/LSPosed) - Official team channel (closed-source builds distributed here)
+- [Expose LSPosed](https://exposelsposed.pages.dev/) - Community documentation of GPL violations and controversy
 
 **Need help?** Visit our [FAQ section](../faqs.md) or [Troubleshooting Guide](../troubleshooting.md).
