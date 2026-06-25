@@ -92,39 +92,53 @@ Thank you for contributing to **Awesome Android Root**! This guide helps you add
 
 **Template:**
 ```markdown
-- **[App Name](primary-link)** - Description of functionality. `FOSS/Proprietary` `[M]` `[K]` `[LSP]`
+- **[⭐ App Name](primary-link)** - Description of functionality. `FOSS/Proprietary` `[M]` `[K]` `[A]` `[LSP]` | [🌱](f-droid-link) | [▶️](play-store-link)
 ```
 
 **Required Elements:**
 - **App Name** in bold with link
-- **Primary Link** (best available source)
+- **Primary Link** (best available source, see priority below)
 - **Description** (1-2 sentences, focus on what it does)
 - **License** (`FOSS` or `Proprietary`)
-- **Framework Tags** (if applicable): `[M]` `[K]` `[LSP]`
+- **Framework Tags** (if applicable): `[M]` `[K]` `[A]` `[LSP]`
+- **Store Icons** (optional): Add `| [🌱](link)` for F-Droid and/or `| [▶️](link)` for Play Store alongside the main entry
 
 **Link Priority:**
-1. F-Droid → 2. GitHub → 3. Official Site → 4. Play Store
+1. GitHub → 2. F-Droid → 3. Official Site → 4. Play Store
+
+**Store Icon Reference:**
+| Icon | Source |
+|:---|:---|
+| `🌱` | Available on F-Droid / IzzyOnDroid |
+| `▶️` | Available on Google Play Store |
 
 **Examples:**
 ```markdown
-- **⭐ [AdAway](https://f-droid.org/packages/org.adaway/)** - System-wide ad blocker using hosts file. `FOSS`
+- **⭐ [AdAway](https://github.com/AdAway/AdAway)** - Open-source ad blocker using the hosts file. Blocks ads without permissions. `FOSS` | [🌱](https://f-droid.org/packages/org.adaway)
 - **[Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Detach apps from Play Store to prevent updates. `FOSS` `[M]`
 - **[Magisk](https://github.com/topjohnwu/Magisk)** - Systemless root solution with module support. `FOSS`
+- **[CorePatch](https://github.com/LSPosed/CorePatch)** - Disable signature verification for Android. `FOSS` `[LSP]`
+- **[bindhosts](https://github.com/bindhosts/bindhosts)** - Systemless hosts for APatch, KernelSU and Magisk. `FOSS` `[M]` `[K]`
 ```
 
 ## Categories & Tags
 
 ### Framework Tags
-- **`[M]`** = Magisk Module
-- **`[K]`** = KernelSU Module  
-- **`[LSP]`** = LSPosed/Xposed Module
+- **`[M]`** = Magisk Module (requires [Magisk](../rooting-guides/magisk-guide.md))
+- **`[K]`** = KernelSU Module (requires [KernelSU](../rooting-guides/kernelsu-guide.md))
+- **`[A]`** = APatch Module (requires [APatch](../rooting-guides/apatch-guide.md))
+- **`[LSP]`** = LSPosed / Xposed Module (requires [LSPosed](../rooting-guides/lsposed-guide.md))
 
 ### License Tags
-- **`FOSS`** = Open source (source code available)
-- **`Proprietary`** = Closed source
+- **`FOSS`** = Free and Open Source Software (source code available)
+- **`Proprietary`** = Closed-source software or unclear licensing
 
 ### Special Badges
 - **⭐** = Community recommended (widely trusted apps)
+
+### Store & Source Icons
+- **`🌱`** = Available on F-Droid / IzzyOnDroid
+- **`▶️`** = Available on Google Play Store
 
 
 ## Quality Requirements
@@ -151,7 +165,7 @@ When submitting, use this format:
 ### What I'm Adding
 - [App Name] - Brief description
 - Category: [Category Name]
-- Framework: [Magisk/KernelSU/LSPosed/Root App]
+- Framework: [Magisk/KernelSU/APatch/LSPosed/Root App]
 
 ### Checklist
 - [ ] Tested all links
@@ -159,20 +173,24 @@ When submitting, use this format:
 - [ ] No duplicates found
 - [ ] Correct format used
 - [ ] Placed in right category alphabetically
-- [ ] Added proper tags
+- [ ] Added proper tags (license, framework, store icons)
 
 ### Links
 - Primary: [Best available link]
 - Source: [GitHub/GitLab if available]
+- F-Droid: [F-Droid link if available]
+- Play Store: [Play Store link if available]
 ```
 
 ## Need Help?
 
 **Common Questions:**
 - **Where to place my app?** Look for similar apps in the categories
-- **What if it's both FOSS and has modules?** Use multiple tags: `FOSS` `[M]` `[LSP]`
+- **What if it's both FOSS and has modules?** Use multiple tags: `FOSS` `[M]` `[K]` `[LSP]`
+- **Can I add F-Droid or Play Store links?** Yes! Add store icons after the description: `| [🌱](f-droid-link) | [▶️](play-store-link)`
 - **App works without root too?** If main features need root, include it
 - **Unsure about tags?** Check similar apps for examples
+- **What if an app supports multiple frameworks?** List all applicable tags: `[M]` `[K]` `[A]`
 
 **Get Support:**
 - 🐛 **[Issues](https://github.com/awesome-android-root/awesome-android-root/issues):** For bugs or questions
