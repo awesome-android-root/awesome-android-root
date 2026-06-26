@@ -82,14 +82,27 @@ try {
     const readmeContent = fs.readFileSync(README_PATH, 'utf8');
     const filteredReadme = filterReadme(readmeContent);
 
+    const SENTINEL = '<!-- AUTO-GENERATED-CONTENT -->';
     let finalContent = '';
+
     if (fs.existsSync(INDEX_MD_PATH)) {
         const existingContent = fs.readFileSync(INDEX_MD_PATH, 'utf8');
-        finalContent = existingContent + '\n\n' + filteredReadme;
-        logInfo("Appended filtered README.md content to existing docs/apps-and-modules/index.md");
+        const sentinelIndex = existingContent.indexOf(SENTINEL);
+
+        if (sentinelIndex !== -1) {
+            // Idempotent mode: keep hand-written header, replace everything after sentinel
+            const header = existingContent.substring(0, sentinelIndex + SENTINEL.length);
+            finalContent = header + '\n\n' + filteredReadme;
+            logInfo("Updated README content in docs/apps-and-modules/index.md");
+        } else {
+            // Legacy fallback: no sentinel found, append (one-time)
+            logWarn("Sentinel '<!-- AUTO-GENERATED-CONTENT -->' not found in index.md — appending.");
+            logWarn("Add the sentinel comment after the hand-written header to make builds idempotent.");
+            finalContent = existingContent + '\n\n' + filteredReadme;
+        }
     } else {
-        finalContent = filteredReadme;
-        logInfo("Copied filtered README.md to docs/apps-and-modules/index.md");
+        finalContent = SENTINEL + '\n\n' + filteredReadme;
+        logInfo("Created docs/apps-and-modules/index.md with README content");
     }
 
     // 4. Adjust links and image paths
@@ -128,9 +141,16 @@ try {
     fs.writeFileSync(INDEX_MD_PATH, finalContent);
     logInfo("Links and image paths adjusted in docs/apps-and-modules/index.md");
 
-    // 7. Add AppSearch component
+    // 7. Add AppSearch component (idempotent — skips if already present)
     const addSearchComponent = () => {
         const content = fs.readFileSync(INDEX_MD_PATH, 'utf8');
+
+        // Skip if AppSearch is already present in the file
+        if (content.includes('<AppSearch />')) {
+            logInfo("AppSearch component already present, skipping insertion");
+            return;
+        }
+
         const lines = content.split('\n');
         
         // Find frontmatter boundaries (YAML frontmatter MUST start on line 0;
