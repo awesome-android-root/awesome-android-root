@@ -459,7 +459,10 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[XAutoDaily](https://github.com/LuckyPray/XAutoDaily)** - Various tweaks for QQ. `FOSS` `[LSP]`
 
 #### Reddit Mods
+- **[Morphe Reddit Patches](https://github.com/MorpheApp/morphe-patches#-patches-list)** - Various patches for reddit. `FOSS`
 - **[Patcheddit](https://github.com/wchill/patcheddit)** - Custom patches with features like view: deleted Reddit posts & comments,Banned subreddits etc. Requires [Morphe App ↗](https://morphe.software/). `FOSS`
+
+
 
 #### TikTok Mods
 - **[TikTok AntiBurn](https://github.com/0mnr0/TikTokAntiBurn)** - Overlap the TikTok app elements to prevent the screen from burning out. `FOSS` `[LSP]`
