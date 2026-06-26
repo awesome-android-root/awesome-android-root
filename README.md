@@ -543,32 +543,30 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[Smule Mod](https://github.com/michei69/SmuleXposed)** - A Smule Xposed module which enables free VIP and many other features. `FOSS` `[LSP]`
 - **[VideoSpeed](https://github.com/MarsGao/io.github.MarsGao.speed)** - An Xposed module for adjusting the playback speed of videos across multiple applications. `FOSS` `[LSP]`
 
-
 [↑ Back to top](#table-of-contents)
 
 ---
 
-
 ## Audio and Media
 
-### **Audio Enhancement:**
+### Audio Enhancement
 - **[Audio Modification Library Ryuki Mod](https://github.com/reiryuki/Audio-Modification-Library-Ryuki-Mod-Magisk-Module)** - Enables supported audio mods to share the same needed files, such as audio_effects. `FOSS` `[M]`
 - **[JamesDSP](https://github.com/james34602/JamesDSPManager)** - Audio DSP effects built on the Android system framework layer. This repository contains a pack of high-quality DSP algorithms specialized for audio processing. `FOSS` `[M]`
 - **[NLSound](https://github.com/Briclyaz/NLSound_module_QCom)** - Magisk module for improving audio and microphone quality in your Snapdragon SoC device. `FOSS` `[M]`
 - **[ViPER4Android FX Redesign](https://github.com/WSTxda/ViperFX-RE-Releases)** - Allows improving the audio quality by offering features such as equalizer settings, surround sound effects, bass boost, and more. `Proprietary` `[M]`
 
-### **Audio Control and Management:**
+### Audio Control and Management
 - **[Audio jitter silencer](https://github.com/Magisk-Modules-Alt-Repo/audio-jitter-silencer)** - For avoiding distortion on all digital audio outputs, it disables audio jitter generators (w.r.t. battery draining and optimizations, and wireless connectivity). `FOSS` `[M]`
 - **[DisableAudioFocus](https://github.com/auag0/DisableAudioFocus)** - Allows you to disable audio focus, enabling you to play multiple videos and audios simultaneously. `FOSS` `[LSP]`
 - **[LibrePods](https://github.com/kavishdevar/librepods)** - Unlocks Apple's exclusive premium AirPods features on non-Apple devices. `FOSS` `[LSP]` `[M]` `[K]`
 - **[XAudioCapture](https://github.com/Xposed-Modules-Repo/io.github.wzhy.xaudiocapture)** - Lets you capture any audio stream you desire, bypassing these restrictions. `Proprietary` `[LSP]`
 
-### **Audio Configuration:**
+### Audio Configuration
 - **[DSP AudioFix](https://github.com/ahmed-alnassif/DSP-AudioFix)** - A simple fix for distorted audio on Xiaomi/MediaTek devices with Awinic smart amps. `FOSS` `[M]` `[K]`
 - **[Audio Misc Settings](https://github.com/Magisk-Modules-Alt-Repo/audio-misc-settings)** - For setting miscellaneous audio configuration values (media audio volume steps (100 steps), raising the resampling quality, disabling the effects framework, etc.) `FOSS` `[M]`
 - **[Audio SampleRate Changer](https://github.com/Magisk-Modules-Alt-Repo/audio-samplerate-changer)** - A Magisk module changing audio sample rates at the system-wide mixer for the best Hi-Fi experience. `FOSS` `[M]`
 - **[Hifi-maximizer-mod](https://github.com/yzyhk904/hifi-maximizer-mod)** - Maximize the digital audio fidelity by reducing jitters on audio outputs (USB DACs, Bluetooth a2dp, DLNA, etc.) `FOSS` `[M]`
-- **[High Performance DAC](https://github.com/ahkehra/high_perf_dac)** -  Kernel-level audio tuning module for Qualcomm devices, providing enhanced audio quality and performance. `FOSS` `[K]`
+- **[High Performance DAC](https://github.com/ahkehra/high_perf_dac)** - Kernel-level audio tuning module for Qualcomm devices, providing enhanced audio quality and performance. `FOSS` `[K]`
 - **[Hi-Res Audio Enabler](https://github.com/reiryuki/Hi-Res-Audio-Enabler-Magisk-Module)** - Enables high resolution 24 or 32-bit width audio output if device is supported. `FOSS` `[M]`
 
 ### Lyrics
@@ -704,7 +702,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[Hide App from Recent](https://github.com/Young-Lord/hideRecent)** - Hide any app from recent task list. `FOSS` `[LSP]`
 - **[Three-Finger-Screenshot](https://github.com/hxreborn/three-finger-swipe)**- Standalone LSPosed implementation of three-finger swipe. `FOSS` `[LSP]`
 - **[Volume Key Track Control Module](https://github.com/Hepolise/VolumeKeyTrackControlModule)** - Allows to skip and play/pause track with volume keys. `FOSS` `[LSP]`
-- **[Volume Scroll](https://github.com/farfromrefug/VolumeScroll)** -  Android app to scroll using volume keys. `FOSS` `[M]`
+- **[Volume Scroll](https://github.com/farfromrefug/VolumeScroll)** - Android app to scroll using volume keys. `FOSS` `[M]`
 
 [↑ Back to top](#table-of-contents)
 
@@ -726,7 +724,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[Anti Brightness Change](https://github.com/binarynoise/XposedModulets)** - Prevents every app from changing the screen brightness. `FOSS` `[LSP]` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.programminghoch10.AntiBrightnessChange)
 - **[DPIS](https://github.com/Kwensiu/DPIS)** - LSPosed module for per-app interface scale, smallest width, and font size tuning. `FOSS` `[LSP]`
 - **[Pointer Replacer](https://github.com/thesandipv/pointer_replacer)** - Replaces a dot appears when user touch the screen [Require Show Touches to be enabled in Developer Options]. `FOSS` `[LSP]`
-- **[Pseudo DC Dimming](https://github.com/dantmnf/PseudoDCDimming)** - Enable alternative dimming mode (likely DC-like) on low brightness for some OLED displays by using software brightness gain. `FOSS` [LSP]`
+- **[Pseudo DC Dimming](https://github.com/dantmnf/PseudoDCDimming)** - Enable alternative dimming mode (likely DC-like) on low brightness for some OLED displays by using software brightness gain. `FOSS` `[LSP]`
 - **[Rotation Suggestions Closed](https://github.com/Astoritin/RotationSuggestionsClosed)** - Stop showing rotation suggestion button as rotating screen. `FOSS` `[M]`
 
 [↑ Back to top](#table-of-contents)
@@ -762,7 +760,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[ColorOS_Control_Center](https://github.com/Mods-Center/ColorOS_Control_Center)** - Replace HyperOS control panel with ColorOS-style quick settings, featuring customizable and squared tiles. `Proprietary`
 - **[Fingerprint Catalog](https://github.com/custombeta/fingerprint-cataloge)** - Allows you to create, upload, import, and apply your own fingerprint icons and animations on HyperOS. `FOSS` `[LSP]`
 - **[GreenDotHide](https://github.com/Dorian399/GreenDotHide)** - Hides the green dot indicating sensitive permission use. Works only on MIUI/HyperOS. `FOSS` `[LSP]`
-- **[HyperOS Accessibility Fix](https://github.com/chickendrop89/hyperos-accessibility-fix)** - Stop HyperOS from randomly disabling accessibillity services. `FOSS` `[M` `[K]`
+- **[HyperOS Accessibility Fix](https://github.com/chickendrop89/hyperos-accessibility-fix)** - Stop HyperOS from randomly disabling accessibillity services. `FOSS` `[M]` `[K]`
 - **[Hyper 5G Switch](https://github.com/buffcow/Hyper5GSwitch)** - Add a 5G switch to the mobile network panel, only for devices that support 5G net and equipped with HyperOS. `FOSS` `[LSP]`
 - **[Hyper Helper](https://github.com/HowieHChen/XiaomiHelper/blob/master/README_EN-US.md)** - Lightweight customization module for HyperOS only. `FOSS` `[LSP]`
 - **[HyperIsland](https://github.com/1812z/HyperIsland/blob/main/README_EN.md)** - Dynamic Island-style notifications for HyperOS 3, powered by LSPosed. `FOSS` `[LSP]`
@@ -773,11 +771,11 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[Janus](https://modules.lsposed.org/module/org.pysh.janus/)** - Enhances Xiaomi rear screens with multitasking, app shortcuts, gestures, notification mirroring, and power-saving features. `Proprietary` `[LSP]`
 - **[Lite Blur Control Center For HyperOS2](https://github.com/fakerieh/Lite-Blur-Control-Center-For-HyperOS2)** - Control Center Blur for HyperOS2 but LIGHTER. `FOSS` `[M]`
 - **[MiNavBarImmerse](https://github.com/Ianzb/MiNavBarImmerse)** - Optimizes the Xiaomi NavBar immersion by replacing the NavBar configuration file of third-party applications built into Xiaomi HyperOS 2.2. `FOSS` `[LSP]`
-- **[MIUIPerfSaver](https://github.com/rdtoy/MIUIPerfSaver)** -  Remove MIUI's performance limit, run app at maximum FPS. `FOSS` `[LSP]`
+- **[MIUIPerfSaver](https://github.com/rdtoy/MIUIPerfSaver)** - Remove MIUI's performance limit, run app at maximum FPS. `FOSS` `[LSP]`
 - **[Pengeek](https://github.com/monwf/customiuizer)** - Customize your HyperOS to your liking. For HyperOS based on Android 14. `FOSS` `[LSP]`
 
 #### HyperOS Mods
-- **[HyperOS App Vault](https://github.com/Mods-Center/HyperOS-App-Vault)** - Enhanced HyperOS App Vault with unlocked widgets, high-end device features, blur adjustments, and scrolling animations.  `Proprietary` `[M]` `[K]`
+- **[HyperOS App Vault](https://github.com/Mods-Center/HyperOS-App-Vault)** - Enhanced HyperOS App Vault with unlocked widgets, high-end device features, blur adjustments, and scrolling animations. `Proprietary` `[M]` `[K]`
 - **[HyperOS AOD](https://github.com/Mods-Center/HyperOS-AOD)** - Enhanced HyperOS AOD and Lock Screen Editor app with unlocked features. `Proprietary` `[M]` `[K]`
 - **[HyperOS Launcher](https://github.com/Mods-Center/HyperOS-Launcher#hyperos-launcher-v5)** - Enhanced HyperOS Launcher with features from high-end devices, including customizable app drawer, icon packs, and more. `Proprietary` `[M]` `[K]`
 - **[HyperOS Security Center](https://github.com/Mods-Center/HyperOS-Security-Center)** - Advanced app info tools, system app Wi-Fi management, removal of root/account restrictions etc. `Proprietary` `[M]` `[K]`
@@ -797,7 +795,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[Samsung Dex Standalone Mode](https://github.com/supermarsx/magisk-samsung-dex-standalone-mode)** - Systemlessly enable Samsung DeX standalone mode. `FOSS` `[M]`
 
 ### Onyx
-- **[OnyxTweaks](https://github.com/timschneeb/OnyxTweaks)** -  Xposed module for Onyx Boox e-Ink devices with Android 12.It adds other mods to the SystemUI, Android Framework, and Onyx Launcher. `FOSS` `[LSP]`
+- **[OnyxTweaks](https://github.com/timschneeb/OnyxTweaks)** - Xposed module for Onyx Boox e-Ink devices with Android 12.It adds other mods to the SystemUI, Android Framework, and Onyx Launcher. `FOSS` `[LSP]`
   
 ### Oxygen OS (OnePlus)
 - **[Auto Expand Notifications](https://github.com/kvmy666/-AutoExpandNotifications)** - Notification Tweaks for OxygenOS. `FOSS` `[LSP]`
@@ -922,7 +920,7 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 ### Graphics Optimization
 - **[iUnlocker GLTool](https://github.com/i-Taylo/iUnlockerGL)** - Designed to spoof GPU information, allowing users to modify GPU information for unlocking graphics in games and testing. `FOSS` `[M]`
 - **[KonaBess](https://github.com/libxzr/KonaBess)** - A straightforward application designed to customize GPU frequency and voltage tables without the need for kernel recompilation. `FOSS` 
-- **[KonaBess Next](https://github.com/KonaBess-Next/KonaBess-Next)** - Fork of KonaBess, Custom GPU overclocking and undervolting tool with granulated voltage for rooted Snapdragon Android devices.  `FOSS`
+- **[KonaBess Next](https://github.com/KonaBess-Next/KonaBess-Next)** - Fork of KonaBess, Custom GPU overclocking and undervolting tool with granulated voltage for rooted Snapdragon Android devices. `FOSS`
 - **[PerfMTK](https://github.com/JUANIMAN/PerfMTK)** - Designed to optimize performance and power efficiency on MediaTek devices with Mali GPUs. `FOSS` `[M]`
 
 [↑ Back to top](#table-of-contents)
@@ -1014,9 +1012,9 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 - **[Magisk-WiFiADB](https://github.com/mrh929/magisk-wifiadb)** - Enable WiFi ADB automatically. `FOSS` `[M]`
 - **[VirtualAP](https://github.com/ravindu644/VirtualAP)** - Turn a rooted Android phone into Wi-Fi access point with static gateway, selectable upstream (mobile data, Wi-Fi, Ethernet, or a VPN tunnel) etc. `FOSS` `[LSP]`
 - **[Wi‑Fi Passwords Exporter](https://github.com/mlm-games/wifi-exporter)** - Android app that exports wifi passwords. `FOSS`
-- **[WiFi Password Manager](https://github.com/Khh-vu/wifi-password-manager)** -  Simple app using Shizuku or root access to manage WiFi passwords. `FOSS` | [🌱](https://apt.izzysoft.de/packages/io.github.wifi_password_manager)
+- **[WiFi Password Manager](https://github.com/Khh-vu/wifi-password-manager)** - Simple app using Shizuku or root access to manage WiFi passwords. `FOSS` | [🌱](https://apt.izzysoft.de/packages/io.github.wifi_password_manager)
 - **[WiFi Password Viewer for MMRL](https://github.com/Googlers-Repo/wpd)** - WiFi Password Viewer for MMRL. `FOSS`
-- **[Wireless ADB Switch](https://github.com/Smooth-E/wireless-adb-switch)** - Quickly enable or disable Android's Wireless Debugging feature. Includes widgets and a quick settings tile for convenience.  `FOSS` | [🌱](https://f-droid.org/ru/packages/com.smoothie.wirelessDebuggingSwitch)
+- **[Wireless ADB Switch](https://github.com/Smooth-E/wireless-adb-switch)** - Quickly enable or disable Android's Wireless Debugging feature. Includes widgets and a quick settings tile for convenience. `FOSS` | [🌱](https://f-droid.org/ru/packages/com.smoothie.wirelessDebuggingSwitch)
 
 ### Misc Network Utilities
 - **[AndroidSpect](https://github.com/thecybersandeep/androidspect)** - Live runtime audit for installed Android apps, serves a browser dashboard. `FOSS` `[LSP]`
@@ -1030,7 +1028,7 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 - **[SimbaDroid](https://github.com/buttercookie42/SimbaDroid)** - A simple SMB file server for Android. `FOSS` | [🌱](https://f-droid.org/packages/de.buttercookie.simbadroid)
 - **[TCP Optimiser Module](https://github.com/fatalcoder524/TCP_Optimiser_Module)** - Change tcp congestion algorithm based on current active internet type and some network enhancements. `FOSS` `[M]` `[K]`
 - **[ZeroTier for Magisk](https://github.com/eventlOwOp/zerotier-magisk)** - Run zerotier in the background after booting with no conflicts with other Android VPN services. Use Android App to control ZeroTier. `FOSS` `[M]`
-- **[ZDT-D Root Module](https://github.com/GAME-OVER-op/ZDT-D)** - Module for traffic routing, DPI bypass, proxy chaining, DNS control, and per-app network management.  `FOSS` `[M]` `[K]`
+- **[ZDT-D Root Module](https://github.com/GAME-OVER-op/ZDT-D)** - Module for traffic routing, DPI bypass, proxy chaining, DNS control, and per-app network management. `FOSS` `[M]` `[K]`
 
 > [!TIP]
 > For ad blocking at network level, combine these tools with our [ad blockers](#ads-and-tracking-blockers). See the [ad blocking guide](./docs/general-guides/android-adblocking.md).
@@ -1073,7 +1071,7 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 - **[SkyScene Add-on](https://github.com/WeirdMidas/SkySceneAddon)** - Optimizations for most memory management subsystems, as well as integrated intelligent memory expansion, a way to expand memory that mimics OEMs like Ram Plus. `FOSS` `[M]` `[K]`
 - **[Swap Disabler](https://github.com/rompelhd/Swap-Disabler)** - Disable swap at system startup. `FOSS` `[M]`
 - **[SwapBoost Pro](https://github.com/yadavnikhil03/SwapBoost-Pro)** - Optimizes your device's memory performance through persistent zRAM + Swapfile optimization with VM tweaks. `FOSS` `[M]`
-- **[ZRAM Module](https://github.com/FurLC/ZRAM-Module)** -  A Magisk/KernelSU module that provides ZRAM compression algorithm support for Android devices. `FOSS` `[M]` `[K]`
+- **[ZRAM Module](https://github.com/FurLC/ZRAM-Module)** - A Magisk/KernelSU module that provides ZRAM compression algorithm support for Android devices. `FOSS` `[M]` `[K]`
 
 [↑ Back to top](#table-of-contents)
 
@@ -1186,9 +1184,9 @@ A feature that lets modules inject code into Android's Zygote process for system
 <br>
 </details>
 
-  * **[⭐ Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)** The "Gold Standard" for detection evasion. It is a standalone Zygisk implementation that offers the most advanced stealth features, including a dedicated **Zygote Monitor** and dashboard. `Proprietary` `[M]` `[K]` `[A]`
-  * **[NeoZygisk](https://github.com/JingMatrix/NeoZygisk)** A minimalist, high-stealth implementation using **ptrace injection**. It focuses on "trace cleaning," aiming to remove all injection artifacts from memory once modules are loaded. `FOSS` `[M]` `[K]` `[A]`
-  * **[ReZygisk](https://github.com/PerformanC/ReZygisk)** A high-performance implementation **entirely rewritten in C**. It introduces **custom linkers** to bypass modern linker-based detections, offering a WebUI for status monitoring and compatibility with Android 15 and 16. `FOSS` `[M]` `[K]` `[A]`
+- **[⭐ Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)** The "Gold Standard" for detection evasion. It is a standalone Zygisk implementation that offers the most advanced stealth features, including a dedicated **Zygote Monitor** and dashboard. `Proprietary` `[M]` `[K]` `[A]`
+- **[NeoZygisk](https://github.com/JingMatrix/NeoZygisk)** A minimalist, high-stealth implementation using **ptrace injection**. It focuses on "trace cleaning," aiming to remove all injection artifacts from memory once modules are loaded. `FOSS` `[M]` `[K]` `[A]`
+- **[ReZygisk](https://github.com/PerformanC/ReZygisk)** A high-performance implementation **entirely rewritten in C**. It introduces **custom linkers** to bypass modern linker-based detections, offering a WebUI for status monitoring and compatibility with Android 15 and 16. `FOSS` `[M]` `[K]` `[A]`
 
 
 <details><summary><strong>Comparison table</strong></summary><br>
@@ -1271,7 +1269,7 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 ### System Tweaks and Patches
 - **[Disable Low Ram Flag](https://github.com/Magisk-Modules-Alt-Repo/disable-low-ram)** - Disable Low‑RAM flag on Android Go devices. `FOSS` `[M]`
 - **[Cromite SystemWebView](https://github.com/hddq/magisk-cromite-webview)** - Replaces the Android System WebView with Cromite WebView. `FOSS` `[M]`
-- **[Multi Userui Enabler](https://github.com/InsertX2k/multiuseruienabler)** -  Magisk module that tries to enable Multi-User UI. `FOSS` `[M]`
+- **[Multi Userui Enabler](https://github.com/InsertX2k/multiuseruienabler)** - Magisk module that tries to enable Multi-User UI. `FOSS` `[M]`
 - **[Noogle Magisk](https://github.com/SelfRef/noogle-magisk)** - Magisk modules for removing/replacing Google applications on stock Android 11-15. `FOSS` `[M]`
 - **[Secure Element Access](https://github.com/jqssun/android-se-access)** - Enable access to secure element for trusted apps. `FOSS`
 - **[TWRP A/B Retention Script](https://github.com/Magisk-Modules-Repo/twrp-keep)** - Keep TWRP installed after an A/B OTA. `FOSS` `[M]`
@@ -1338,7 +1336,7 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 - **[KonamikU](https://github.com/C-F0x/KonamikU)** - Extend NFC Capabilities of your device. `FOSS` `[LSP]`
 - **[NFC Card Emulator Pro (Root)](https://play.google.com/store/apps/details?id=com.yuanwofei.cardemulator.pro)** - NFC card emulator for access cards, elevator cards, meal cards, school cards, library cards, and other IC cards. `Proprietary`
 - **[NFCGate](https://github.com/nfcgate/nfcgate)** - Android application meant to capture, analyze, or modify NFC traffic. `FOSS` `[LSP]` | [🌱](https://f-droid.org/packages/de.tu_darmstadt.seemoo.nfcgate/)
-- **[onHit](https://github.com/0penPublic/onHit)** -  Trigger Android NFC events without a physical tag by Xposed. `FOSS` `[LSP]`
+- **[onHit](https://github.com/0penPublic/onHit)** - Trigger Android NFC events without a physical tag by Xposed. `FOSS` `[LSP]`
 
 ### Power and Reboot Tools
 - **[RebootNya](https://github.com/daisukiKaffuChino/RebootNya)** - A simple yet advanced reboot utility for Android devices. `FOSS`
