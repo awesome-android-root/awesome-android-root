@@ -32,6 +32,13 @@
   .pwa-toast { left: 12px; right: 12px; }
 }
 
+/* Box-model reset — consistent sizing across all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Better text rendering */
 body {
   font-feature-settings: "liga" 1, "calt" 1;
@@ -596,23 +603,6 @@ margin-bottom: 0.5rem;
   }
 }
 
-/* offline */
-.offline .online-only {
-  display: none;
-}
-
-.offline::before {
-  content: "You're currently offline";
-  display: block;
-  background: #ff6b6b;
-  color: white;
-  padding: 8px;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 9999;
-}
-
 /* Back To Top Button */
 .back-to-top {
   position: fixed;
@@ -677,7 +667,6 @@ margin-bottom: 0.5rem;
 }
 
 /* Inline SVG icons */
-.vp-doc img[src*="fdroid.svg"],
 .vp-doc img[src*="fdroid.svg"],
 .vp-doc img[src*="playstore.svg"],
 .vp-doc img[alt*="icon"] {
