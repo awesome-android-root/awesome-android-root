@@ -183,9 +183,16 @@ img {
   max-width: 100%;
 }
 
-/* Lazy loading hint for performance */
-img[loading="lazy"] {
+/* Lazy loading hint for performance.
+   content-visibility: auto is powerful but can cause scroll-position
+   jumps and CLS when applied indiscriminately. Only enable it on images
+   inside the main content area where the browser can reasonably estimate
+   the containing block size. */
+.app-search-content img[loading="lazy"],
+.VPDoc img[loading="lazy"] {
   content-visibility: auto;
+  /* Reserve approximate space to minimize layout shift */
+  contain-intrinsic-size: auto 300px;
 }
 
 /* Logo images - fixed aspect ratio */

@@ -51,6 +51,7 @@ let swControllerChangeHandler = null
 let swMessageHandler = null
 let installingWorker = null
 let installingWorkerStateHandler = null
+let isInitialized = false // Guard against duplicate init on SPA remounts
 
 const clearUpdateTimer = () => {
   if (updateHideTimer) {
@@ -120,6 +121,9 @@ const handleVisibilityChange = () => {
 }
 
 onMounted(async () => {
+  // Guard: prevent duplicate initialization during SPA route changes
+  if (isInitialized) return
+
   // Check if service worker is supported
   if (!('serviceWorker' in navigator)) {
     return
@@ -152,13 +156,15 @@ onMounted(async () => {
     
     // Check for updates on mount
     await checkForUpdates()
+
+    isInitialized = true
     
   } catch (error) {
     console.error('PWA initialization error:', error)
   }
 })
 
-// Setup service worker event listeners
+// Setup service worker event listeners (idempotent — skips if already set up)
 const setupServiceWorkerListeners = () => {
   if (!registration || swUpdateFoundHandler) return
 
