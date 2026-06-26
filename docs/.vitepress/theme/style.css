@@ -124,9 +124,27 @@ body {
   line-height: 1.6;
 }
 
-.intro-header, .quick-nav, .root-intro, .readme-guides, .readme-guides-steps, .readme-apps-intro{
-  display: none !important
+
+/* ── Feature cards (home page) ── */
+.VPFeatures .VPFeature {
+  border-color: var(--vp-c-divider);
 }
+
+.VPFeatures .VPFeature.link:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 4px 20px -6px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.VPFeatures .VPFeature .icon {
+  background-color: var(--vp-c-brand-soft);
+  border-radius: 12px;
+}
+
+.VPHome .VPFeatures {
+  padding-bottom: 3rem;
+}
+
 
 
 .apps-intro p {
@@ -551,6 +569,10 @@ margin-bottom: 0.5rem;
   .community-cards {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+
+  .guide-time-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 /* Dark mode enhancements */
@@ -593,6 +615,13 @@ margin-bottom: 0.5rem;
   outline: 2px solid var(--vp-c-brand-1);
   outline-offset: 2px;
   border-color: var(--vp-c-brand-2);
+}
+
+/* ── Guide time grid card icons ── */
+.guide-time-grid .community-card .icon {
+  font-size: 1.75rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* High contrast mode support */
