@@ -871,6 +871,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 
 
 ### Misc developer tools
+- **[AndroidSpect](https://github.com/thecybersandeep/androidspect)** - Live runtime audit for installed Android apps, serves a browser dashboard. `FOSS` `[LSP]`
 - **[Bluetooth Hook](https://github.com/jingyu233/bluetoothhook#english)** - Inject virtual BLE devices into Android system Bluetooth scan results, facilitating Bluetooth application debugging for developers. `FOSS` `[LSP]`
 - **[Dhizuku API for Xposed](https://github.com/iamr0s/Dhizuku-API-Xposed)** - Force applications to support Dhizuku. `FOSS` `[LSP]`
 - **[Hotspot Wireless Debugging](https://github.com/droserasprout/io.drsr.hotspotadb)** - Xposed module to allow Wireless Debugging over Wi-Fi Hotspot. `FOSS` `[LSP]`
@@ -1023,7 +1024,6 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 
 
 ### Misc Network Utilities
-- **[AndroidSpect](https://github.com/thecybersandeep/androidspect)** - Live runtime audit for installed Android apps, serves a browser dashboard. `FOSS` `[LSP]`
 - **[Hosts Manager Lite](https://play.google.com/store/apps/details?id=awais.hostsmanager.lite)** - Advanced /etc/hosts editor. `Proprietary`
 - **[Magisk LAN Auto Switch](https://github.com/NewFuture/magisk-modules/tree/main/magisk-lan-auto-switch)** - Automatically switch LAN and WiFi based on eth0 connection status. `FOSS` `[M]`
 - **[Network Switch](https://github.com/aunchagaonkar/NetworkSwitch#installation)** - Modern Android app for 4G/5G network mode switching. `FOSS` | [🌱](https://apt.izzysoft.de/packages/com.supernova.networkswitch)
