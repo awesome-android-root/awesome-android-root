@@ -412,9 +412,6 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[Play Store Self Update Blocker](https://github.com/himanshujjp/PlayStoreSelfUpdateBlocker)** - Prevents the Google Play Store from auto-updating itself. Useful for users trying to maintain valid device attestation under the newer Play Integrity API rules. `FOSS` `[M]` `[K]`
 - **[Universal Installer](https://github.com/pass-with-high-score/universal-installer)** - Install and manage APK packages with split APK support. `FOSS` `[LSP]`
 
-> [!TIP]
-> You can also try [Install with Options](https://github.com/zacharee/InstallWithOptions) that allows installing, uninstalling, and updating apps with allowing downgrades, etc.
-
 ### Signature and Verification
 - **[⭐ CorePatch](https://github.com/LSPosed/CorePatch)** - Disable signature verification For Android. `FOSS` `[LSP]`
 - **[⭐ Pairipfix](https://github.com/ahmedmani/pairipfix)** - Bypasses the "Get this app from Play" screen that appears when installing Android apps as an APK instead of from the Google Play Store. `FOSS` `[LSP]`
