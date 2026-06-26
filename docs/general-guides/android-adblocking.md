@@ -31,6 +31,9 @@ head:
     - property: og:image
       content: https://awesome-android-root.pages.dev/images/og/android-adblocking.png
   - - meta
+    - property: og:locale
+      content: en_US
+  - - meta
     - property: og:site_name
       content: Awesome Android Root
   - - meta
@@ -43,8 +46,17 @@ head:
     - name: twitter:description
       content: "Complete guide to system-wide ad blocking on rooted Android using AdAway and Bindhosts. Block ads in all apps, improve performance, and enhance privacy."
   - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:creator
+      content: "@awsm_and_root"
+  - - meta
     - name: twitter:image
       content: https://awesome-android-root.pages.dev/images/og/android-adblocking.png
+  - - meta
+    - name: twitter:image:alt
+      content: Android Ad Blocking Guide - System-Wide Ad Blocking for Rooted Devices
   - - meta
     - name: article:author
       content: Awesome Android Root

@@ -58,7 +58,7 @@ head:
       content: en_US
   - - meta
     - property: og:updated_time
-      content: '2026-06-05T00:00:00Z'
+      content: '2026-06-26T00:00:00Z'
   - - meta
     - name: twitter:card
       content: summary_large_image

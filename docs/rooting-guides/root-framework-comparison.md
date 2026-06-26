@@ -67,6 +67,33 @@ head:
     - name: keywords
       content: magisk vs kernelsu, apatch vs magisk, android root framework comparison, kernel root android, best android root method
   - - meta
+    - name: author
+      content: Awesome Android Root Project
+  - - meta
+    - property: article:author
+      content: https://github.com/awesome-android-root/awesome-android-root
+  - - meta
+    - property: article:section
+      content: Android Rooting
+  - - meta
+    - property: article:tag
+      content: Magisk
+  - - meta
+    - property: article:tag
+      content: KernelSU
+  - - meta
+    - property: article:tag
+      content: APatch
+  - - meta
+    - property: article:tag
+      content: Root Framework Comparison
+  - - meta
+    - property: article:published_time
+      content: 2025-06-01T00:00:00Z
+  - - meta
+    - property: article:modified_time
+      content: 2026-06-05T00:00:00Z
+  - - meta
     - name: robots
       content: index, follow
 ---

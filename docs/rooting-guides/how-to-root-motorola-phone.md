@@ -31,6 +31,18 @@ head:
     - name: twitter:description
       content: Root any Motorola phone with bootloader unlock codes and Magisk installation guide.
   - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:creator
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:image
+      content: https://awesome-android-root.pages.dev/images/og/motorola.png
+  - - meta
+    - name: twitter:image:alt
+      content: Motorola Root Guide - All Models
+  - - meta
     - name: keywords
       content: motorola root guide, motorola edge root, moto g root, motorola bootloader unlock, motorola unlock code, motorola magisk, motorola a/b partition, motorola rooting tutorial
   - - meta
@@ -51,6 +63,12 @@ head:
   - - meta
     - property: article:tag
       content: Magisk Installation
+  - - meta
+    - property: article:published_time
+      content: 2025-05-25T00:00:00Z
+  - - meta
+    - property: article:modified_time
+      content: 2026-06-05T00:00:00Z
   - - meta
     - name: robots
       content: index, follow

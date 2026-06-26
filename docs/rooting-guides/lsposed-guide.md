@@ -25,11 +25,23 @@ head:
     - name: twitter:card
       content: summary_large_image
   - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:creator
+      content: "@awsm_and_root"
+  - - meta
     - name: twitter:title
       content: Complete LSPosed Framework Guide
   - - meta
     - name: twitter:description
       content: Modern Xposed framework implementation with LSPosed. Advanced Android customization and module management.
+  - - meta
+    - name: twitter:image
+      content: https://awesome-android-root.pages.dev/images/og/lsposed-guide.png
+  - - meta
+    - name: twitter:image:alt
+      content: LSPosed Framework Installation Guide
   - - meta
     - name: keywords
       content: lsposed guide, xposed framework, zygisk modules, lsposed installation, android customization, xposed modules
@@ -52,14 +64,14 @@ head:
     - property: article:tag
       content: Android Customization
   - - meta
-    - name: robots
-      content: index, follow
-  - - meta
-    - property: article:tag
-      content: Android Customization
-  - - meta
     - property: article:tag
       content: Zygisk
+  - - meta
+    - property: article:published_time
+      content: 2025-06-01T00:00:00Z
+  - - meta
+    - property: article:modified_time
+      content: 2026-06-05T00:00:00Z
   - - meta
     - name: robots
       content: index, follow

@@ -23,7 +23,13 @@ head:
       content: https://awesome-android-root.pages.dev/legal-disclaimer
   - - meta
     - property: og:image
-      content: https://awesome-android-root.pages.dev/images/og/bootoader.png
+      content: https://awesome-android-root.pages.dev/images/og/bootloader.png
+  - - meta
+    - property: og:locale
+      content: en_US
+  - - meta
+    - property: og:site_name
+      content: Awesome Android Root
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -34,8 +40,23 @@ head:
     - name: twitter:description
       content: "Important legal information, warranty implications, and safety guidelines for Android rooting."
   - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:creator
+      content: "@awsm_and_root"
+  - - meta
     - name: twitter:image
-      content: https://awesome-android-root.pages.dev/images/og/bootoader.png
+      content: https://awesome-android-root.pages.dev/images/og/bootloader.png
+  - - meta
+    - name: twitter:image:alt
+      content: Legal Disclaimer & Safety Notice for Android Rooting
+  - - meta
+    - property: article:published_time
+      content: 2025-05-25T00:00:00Z
+  - - meta
+    - property: article:modified_time
+      content: 2026-06-05T00:00:00Z
 ---
 
 # Legal Disclaimer & Safety Notice

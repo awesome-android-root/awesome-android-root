@@ -22,8 +22,26 @@ head:
     - property: og:image
       content: https://awesome-android-root.pages.dev/images/og.png
   - - meta
+    - property: og:locale
+      content: en_US
+  - - meta
+    - property: og:site_name
+      content: Awesome Android Root
+  - - meta
     - name: twitter:card
       content: summary_large_image
+  - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:creator
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:image
+      content: https://awesome-android-root.pages.dev/images/og.png
+  - - meta
+    - name: twitter:image:alt
+      content: About Awesome Android Root - Ultimate Rooting Resource
   - - meta
     - name: twitter:title
       content: About Awesome Android Root - Ultimate Resource 2026
@@ -51,6 +69,9 @@ head:
   - - meta
     - property: article:tag
       content: Community
+  - - meta
+    - property: article:modified_time
+      content: 2026-06-05T00:00:00Z
   - - meta
     - property: article:published_time
       content: 2025-10-21

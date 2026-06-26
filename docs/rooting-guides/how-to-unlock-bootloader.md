@@ -20,7 +20,13 @@ head:
       content: https://awesome-android-root.pages.dev/rooting-guides/how-to-unlock-bootloader
   - - meta
     - property: og:image
-      content: https://awesome-android-root.pages.dev/images/og/bootoader.png
+      content: https://awesome-android-root.pages.dev/images/og/bootloader.png
+  - - meta
+    - property: og:locale
+      content: en_US
+  - - meta
+    - property: og:site_name
+      content: Awesome Android Root
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -30,6 +36,18 @@ head:
   - - meta
     - name: twitter:description
       content: Master bootloader unlocking for all Android manufacturers with step-by-step instructions.
+  - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:creator
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:image
+      content: https://awesome-android-root.pages.dev/images/og/bootloader.png
+  - - meta
+    - name: twitter:image:alt
+      content: Bootloader Unlocking Guide - All Android Manufacturers
   - - meta
     - name: keywords
       content: bootloader unlock guide, android bootloader unlock, fastboot unlock bootloader, xiaomi mi unlock tool, samsung bootloader unlock, google pixel unlock, oneplus bootloader unlock, motorola unlock code, sony bootloader unlock, oem unlocking, fastboot commands, adb fastboot guide
@@ -54,6 +72,12 @@ head:
   - - meta
     - property: article:tag
       content: OEM Unlocking
+  - - meta
+    - property: article:published_time
+      content: 2025-05-25T00:00:00Z
+  - - meta
+    - property: article:modified_time
+      content: 2026-06-05T00:00:00Z
   - - meta
     - name: robots
       content: index, follow

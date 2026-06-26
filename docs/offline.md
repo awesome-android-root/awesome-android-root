@@ -1,6 +1,41 @@
 ---
-title: You're Offline
 layout: doc
+title: You're Offline - Awesome Android Root
+description: "You're currently offline but cached pages and guides from Awesome Android Root are still available. Browse saved rooting content without an internet connection."
+head:
+  - - link
+    - rel: canonical
+      href: https://awesome-android-root.pages.dev/offline
+  - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
+    - property: og:type
+      content: website
+  - - meta
+    - property: og:site_name
+      content: Awesome Android Root
+  - - meta
+    - property: og:title
+      content: You're Offline - Awesome Android Root
+  - - meta
+    - property: og:description
+      content: You're currently offline but cached Android rooting guides and resources from Awesome Android Root are still available.
+  - - meta
+    - property: og:url
+      content: https://awesome-android-root.pages.dev/offline
+  - - meta
+    - name: twitter:card
+      content: summary
+  - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:title
+      content: You're Offline - Awesome Android Root
+  - - meta
+    - name: twitter:description
+      content: Offline mode — cached Android rooting guides still available.
 ---
 
 <div style="text-align: center; padding: 2rem 0;">

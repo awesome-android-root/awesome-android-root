@@ -31,6 +31,18 @@ head:
     - name: twitter:description
       content: Root any Xiaomi device with Mi Unlock Tool and Magisk installation guide.
   - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:creator
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:image
+      content: https://awesome-android-root.pages.dev/images/og/xiaomi.png
+  - - meta
+    - name: twitter:image:alt
+      content: Xiaomi Root Guide - All Models
+  - - meta
     - name: keywords
       content: xiaomi root guide, xiaomi rooting, miui root, hyperos root, mi unlock tool, xiaomi bootloader unlock, xiaomi magisk, redmi root guide, poco root guide
   - - meta
@@ -54,6 +66,12 @@ head:
   - - meta
     - property: article:tag
       content: Mi Unlock Tool
+  - - meta
+    - property: article:published_time
+      content: 2025-05-25T00:00:00Z
+  - - meta
+    - property: article:modified_time
+      content: 2026-06-05T00:00:00Z
   - - meta
     - name: robots
       content: index, follow
