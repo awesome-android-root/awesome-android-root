@@ -178,62 +178,62 @@ hero:
 features:
   - icon: 🛡️
     title: System-Wide Ad Blocking
-    details: "Block ads, trackers & malware across your entire system with AdAway, DNS66, and advanced blocking solutions. Complete ad-free Android experience."
+    details: "Block ads, trackers & malware across your entire system."
     link: /apps-and-modules/#ads-and-tracking-blockers
     
   - icon: 📱
     title: Complete App Management
-    details: "Master app control with isolation, cloning, managers, and advanced permission systems. Take full control of every installed application."
+    details: "Take full control of every installed application."
     link: /apps-and-modules/#app-management
     
   - icon: 🔧
-    title: Premium App Modifications
-    details: "Transform social media apps, streaming services, and more with powerful mods. Remove restrictions, unlock features, enhance functionality."
+    title: App Modifications
+    details: "Remove restrictions, unlock features, enhance functionality."
     link: /apps-and-modules/#app-patches-and-mods
 
   - icon: ⚡
     title: Performance & Gaming
-    details: "Supercharge your device with performance optimization, gaming enhancements, CPU/GPU tuning, and intelligent automation."
+    details: "Performance optimization, gaming enhancements, CPU/GPU tuning."
     link: /apps-and-modules/#performance-and-optimization
 
   - icon: 🎨
     title: Complete UI Customization
-    details: "Transform your Android interface with custom themes, boot animations, fonts, launchers, and unlimited visual customization."
+    details: "Custom themes, boot animations, fonts, launchers, & visual customization."
     link: /apps-and-modules/#customization-and-theming
     
   - icon: 🔋
     title: Advanced Battery Management
-    details: "Extend battery life with intelligent power management, charging optimization, and system-level battery control solutions."
+    details: "Power management, charging optimization, & system-level battery control."
     link: /apps-and-modules/#battery-and-power-management
     
   - icon: 💾
-    title: Professional Backup Solutions
-    details: "Never lose data with comprehensive backup systems, TWRP integration, and advanced file management capabilities."
+    title: Backup Solutions
+    details: "Never lose data with comprehensive backup systems."
     link: /apps-and-modules/#backup-and-restore
     
   - icon: 🧹
     title: System Debloating & Cleaning
-    details: "Remove manufacturer bloatware, optimize system performance, and maintain a clean, efficient Android experience."
+    details: "Remove bloatware & optimize system performance."
     link: /apps-and-modules/#debloating-and-cleaning
     
   - icon: 🔐
     title: Privacy & Security Arsenal
-    details: "Achieve ultimate privacy with advanced permission managers, security tools, and comprehensive data protection systems."
+    details: "Advanced permission managers, security tools, & data protection systems."
     link: /apps-and-modules/#privacy-and-security
     
   - icon: ⚙️
     title: System & Kernel Management
-    details: "Fine-tune your device at the deepest level with kernel managers, system modifications, and hardware-level optimizations."
+    details: "Kernel managers, system modifications, and hardware-level optimizations."
     link: /apps-and-modules/#kernel-management
     
   - icon: 🌐
     title: Network & Connectivity Control
-    details: "Master network management with firewall tools, DNS control, Wi-Fi optimization, and advanced connectivity features."
+    details: "Firewall tools, DNS control, Wi-Fi optimization."
     link: /apps-and-modules/#network-and-connectivity
     
   - icon: 🛠️
     title: Root Management & Hiding
-    details: "Manage root access, hide root from banking apps, ensure integrity checks pass, and maintain system security."
+    details: "Manage & hide root, integrity checks pass, and maintain system security."
     link: /apps-and-modules/#root-management
 
 ---
@@ -278,33 +278,33 @@ features:
 </div>
 
 
-## 🗊 Major Guides
+## 📚 Major Guides
 
 <div class="guide-time-grid">
   <a href="/rooting-guides/how-to-unlock-bootloader" class="community-card">
     <span class="icon">🔓</span>
     <strong>Unlock Bootloader</strong>
-    <span>~10-30 min</span>
+    <span>10-30 min</span>
   </a>
   <a href="/rooting-guides/how-to-install-custom-recovery" class="community-card">
-    <span class="icon">💽</span>
+    <span class="icon">💾</span>
     <strong>Install Recovery</strong>
-    <span>~10-25 min</span>
+    <span>10-25 min</span>
   </a>
   <a href="/rooting-guides/magisk-guide" class="community-card">
-    <span class="icon">🏅</span>
+    <span class="icon">🪄</span>
     <strong>Root With Magisk</strong>
-    <span>~15-40 min</span>
+    <span>15-40 min</span>
   </a>
   <a href="/rooting-guides/kernelsu-guide" class="community-card">
     <span class="icon">⚙️</span>
     <strong>Root with KernelSU</strong>
-    <span>~15-35 min</span>
+    <span>15-35 min</span>
   </a>
 </div>
 
 
-## 📚 Resources
+## 🧰 Resources
 
 <div class="community-cards">
   <a href="/rooting-guides/lsposed-guide" class="community-card github">
@@ -318,7 +318,7 @@ features:
     <span>Magisk vs KernelSU vs APatch</span>
   </a>
   <a href="/non-root-alternatives" class="community-card reddit">
-    <span class="icon">🧰</span>
+    <span class="icon">🛡️</span>
     <strong>Non-Root Alternatives</strong>
     <span>Customize without rooting</span>
   </a>
@@ -335,7 +335,7 @@ features:
   <a href="https://github.com/awesome-android-root/awesome-android-root" class="community-card github">
     <span class="icon">⭐</span>
     <strong>GitHub</strong>
-    <span>3.1k stars</span>
+    <span>3.5k stars</span>
   </a>
   <a href="https://x.com/awsm_and_root" class="community-card twitter">
     <span class="icon">𝕏</span>
@@ -343,7 +343,7 @@ features:
     <span>Daily updates</span>
   </a>
   <a href="/faqs" class="community-card reddit">
-    <span class="icon">🗊</span>
+    <span class="icon">❓</span>
     <strong>FAQs</strong>
     <span>Solve common problems</span>
   </a>
