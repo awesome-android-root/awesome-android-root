@@ -409,7 +409,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[Universal Installer](https://github.com/pass-with-high-score/universal-installer)** - Install and manage APK packages with split APK support. `FOSS` `[LSP]`
 
 > [!TIP]
-> You can also try [Install with Options](https://github.com/zacharee/InstallWithOptions) which needs `Shizuku` to work. It allows installing, uninstalling, and updating apps with various options like allowing downgrades, ignoring version checks, etc.
+> You can also try [Install with Options](https://github.com/zacharee/InstallWithOptions) that allows installing, uninstalling, and updating apps with allowing downgrades, etc.
 
 ### Signature and Verification
 - **[⭐ CorePatch](https://github.com/LSPosed/CorePatch)** - Disable signature verification For Android. `FOSS` `[LSP]`
@@ -831,7 +831,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[ClearBox](https://github.com/FLYCOM-E/ClearBox)** - Can delete all software caches, installation packages, compressed packages, garbage, empty folders etc. `Proprietary` `[M]` `[K]`
 
 ### Debloating Tools
-- **[⭐ Canta](https://github.com/samolego/Canta)** - Uninstall any app without root using Shizuku (Needs [Shizuku](https://shizuku.rikka.app/) to be installed and running). `FOSS` | [🌱](https://f-droid.org/en/packages/io.github.samolego.canta/) | [▶️](https://play.google.com/store/apps/details?id=io.github.samolego.canta)
+- **[⭐ Canta](https://github.com/samolego/Canta)** - Uninstall any app without root using [Shizuku](#shizuku). `FOSS` | [🌱](https://f-droid.org/en/packages/io.github.samolego.canta/) | [▶️](https://play.google.com/store/apps/details?id=io.github.samolego.canta)
 - **[De-Bloater](https://github.com/sunilpaulmathew/De-Bloater)** - An application using the power of Magisk to debloat unwanted system apps!. `FOSS` | [🌱](https://f-droid.org/packages/com.sunilpaulmathew.debloater) | [▶️](https://play.google.com/store/apps/details?id=com.sunilpaulmathew.debloater)
 - **[EXA System App Remover](https://play.google.com/store/apps/details?id=exa.free.saux)** - Remove Bloatware, clear memory and speed up your phone now by uninstalling unused system apps. `Proprietary`
 - **[Scalpel](https://github.com/Enginex0/Scalpel)** - Precision Debloat & Systemize for Rooted Android. `FOSS` `[M]` `[K]`
@@ -898,7 +898,7 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 - **[RS File Manager File Explorer](https://play.google.com/store/apps/details?id=com.rs.explorer.filemanager)** - Free, Safe, Simple, Manage your files efficiently and easily with RS File Manager. `Proprietary`
 - **[Solid Explorer](https://play.google.com/store/apps/details?id=pl.solidexplorer2)** - Powerful file manager with root support. `Proprietary`
 - **[Sortify](https://github.com/xCaptaiN09/Sortify)** - Automatically organizes files in your Download folder. `FOSS` `[M]` `[K]`
-- **[Total Commander](https://play.google.com/store/apps/details?id=com.ghisler.android.TotalCommander)** - A feature rich file manager for Android supporting root and shizuku. For  a better experience, please read [this](https://www.ghisler.ch/board/viewforum.php?f=22). `Proprietary`
+- **[Total Commander](https://play.google.com/store/apps/details?id=com.ghisler.android.TotalCommander)** - A feature rich file manager for Android. For  a better experience, please read [this](https://www.ghisler.ch/board/viewforum.php?f=22). `Proprietary`
 - **[ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)** - A program for archive management (including managing of application backups in archives). `Proprietary`
 
 [↑ Back to top](#table-of-contents)
@@ -1014,7 +1014,7 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 - **[Magisk-WiFiADB](https://github.com/mrh929/magisk-wifiadb)** - Enable WiFi ADB automatically. `FOSS` `[M]`
 - **[VirtualAP](https://github.com/ravindu644/VirtualAP)** - Turn a rooted Android phone into Wi-Fi access point with static gateway, selectable upstream (mobile data, Wi-Fi, Ethernet, or a VPN tunnel) etc. `FOSS` `[LSP]`
 - **[Wi‑Fi Passwords Exporter](https://github.com/mlm-games/wifi-exporter)** - Android app that exports wifi passwords. `FOSS`
-- **[WiFi Password Manager](https://github.com/Khh-vu/wifi-password-manager)** - Simple app using Shizuku or root access to manage WiFi passwords. `FOSS` | [🌱](https://apt.izzysoft.de/packages/io.github.wifi_password_manager)
+- **[WiFi Password Manager](https://github.com/Khh-vu/wifi-password-manager)** - Simple app to manage WiFi passwords. `FOSS` | [🌱](https://apt.izzysoft.de/packages/io.github.wifi_password_manager)
 - **[WiFi Password Viewer for MMRL](https://github.com/Googlers-Repo/wpd)** - WiFi Password Viewer for MMRL. `FOSS`
 - **[Wireless ADB Switch](https://github.com/Smooth-E/wireless-adb-switch)** - Quickly enable or disable Android's Wireless Debugging feature. Includes widgets and a quick settings tile for convenience. `FOSS` | [🌱](https://f-droid.org/ru/packages/com.smoothie.wirelessDebuggingSwitch)
 
