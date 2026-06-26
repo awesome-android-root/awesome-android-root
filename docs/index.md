@@ -184,22 +184,22 @@ features:
   - icon: 📱
     title: Complete App Management
     details: "Master app control with isolation, cloning, managers, and advanced permission systems. Take full control of every installed application."
-    link: /apps-and-modules/#app-management-and-control
+    link: /apps-and-modules/#app-management
     
   - icon: 🔧
     title: Premium App Modifications
     details: "Transform social media apps, streaming services, and more with powerful mods. Remove restrictions, unlock features, enhance functionality."
-    link: /apps-and-modules/#modded-apps-and-tweaks
+    link: /apps-and-modules/#app-patches-and-mods
 
   - icon: ⚡
     title: Performance & Gaming
     details: "Supercharge your device with performance optimization, gaming enhancements, CPU/GPU tuning, and intelligent automation."
-    link: /apps-and-modules/#performance-tweaks-and-optimizations
+    link: /apps-and-modules/#performance-and-optimization
 
   - icon: 🎨
     title: Complete UI Customization
     details: "Transform your Android interface with custom themes, boot animations, fonts, launchers, and unlimited visual customization."
-    link: /apps-and-modules/#customization-and-ui
+    link: /apps-and-modules/#customization-and-theming
     
   - icon: 🔋
     title: Advanced Battery Management
