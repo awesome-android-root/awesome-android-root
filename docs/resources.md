@@ -22,14 +22,47 @@ head:
     - property: og:image
       content: https://awesome-android-root.pages.dev/images/og.png
   - - meta
+    - property: og:locale
+      content: en_US
+  - - meta
+    - property: og:site_name
+      content: Awesome Android Root
+  - - meta
+    - property: og:image:secure_url
+      content: https://awesome-android-root.pages.dev/images/og.png
+  - - meta
+    - property: og:image:alt
+      content: Android Rooting Resources - Complete Guide & Tools Collection
+  - - meta
+    - property: og:image:width
+      content: '1200'
+  - - meta
+    - property: og:image:height
+      content: '630'
+  - - meta
+    - property: og:image:type
+      content: image/png
+  - - meta
     - name: twitter:card
       content: summary_large_image
+  - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:creator
+      content: "@awsm_and_root"
   - - meta
     - name: twitter:title
       content: Android Rooting Resources 2026 - Complete Collection
   - - meta
     - name: twitter:description
       content: Everything you need for Android rooting - tools, communities, guides, and expert resources in one comprehensive collection.
+  - - meta
+    - name: twitter:image
+      content: https://awesome-android-root.pages.dev/images/og.png
+  - - meta
+    - name: twitter:image:alt
+      content: Android Rooting Resources 2026 - Tools, Communities & Guides
   - - meta
     - name: keywords
       content: android rooting resources, rooting tools 2026, android root communities, magisk resources, kernelsu tools, android development resources, custom rom resources, bootloader unlock tools, recovery tools, android debugging resources, root learning materials, android modding resources, xda developers, android root forums, rooting guides collection

@@ -31,6 +31,18 @@ head:
     - name: twitter:description
       content: Root any Nothing & CMF by Nothing Phone with bootloader unlock and Magisk installation guide.
   - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:creator
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:image
+      content: https://awesome-android-root.pages.dev/images/og/nothing.png
+  - - meta
+    - name: twitter:image:alt
+      content: Nothing Phone Root Guide - All Models
+  - - meta
     - name: keywords
       content: nothing phone root, nothing os root, nothing phone bootloader unlock, nothing phone magisk, twrp nothing phone, nothing phone 1 root, nothing phone 2 root, nothing phone 2a root, nothing phone 3 root
   - - meta
@@ -54,6 +66,12 @@ head:
   - - meta
     - property: article:tag
       content: Magisk Installation
+  - - meta
+    - property: article:published_time
+      content: 2025-06-15T00:00:00Z
+  - - meta
+    - property: article:modified_time
+      content: 2026-06-05T00:00:00Z
   - - meta
     - name: robots
       content: index, follow

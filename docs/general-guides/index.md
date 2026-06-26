@@ -22,8 +22,20 @@ head:
     - property: og:image
       content: https://awesome-android-root.pages.dev/images/og.png  
   - - meta
+    - property: og:locale
+      content: en_US
+  - - meta
+    - property: og:site_name
+      content: Awesome Android Root
+  - - meta
     - name: twitter:card
       content: summary_large_image
+  - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:creator
+      content: "@awsm_and_root"
   - - meta
     - name: twitter:title
       content: Android Guides & Tutorials | Awesome Android Root

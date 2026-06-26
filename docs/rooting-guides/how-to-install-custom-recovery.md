@@ -22,6 +22,12 @@ head:
     - property: og:image
       content: https://awesome-android-root.pages.dev/images/og/custom-recovery.png
   - - meta
+    - property: og:locale
+      content: en_US
+  - - meta
+    - property: og:site_name
+      content: Awesome Android Root
+  - - meta
     - name: twitter:card
       content: summary_large_image
   - - meta
@@ -30,6 +36,18 @@ head:
   - - meta
     - name: twitter:description
       content: Install TWRP, OrangeFox, and SKYHAWK custom recovery for Android rooting and customization.
+  - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:creator
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:image
+      content: https://awesome-android-root.pages.dev/images/og/custom-recovery.png
+  - - meta
+    - name: twitter:image:alt
+      content: Custom Recovery Installation Guide - TWRP, OrangeFox, SKYHAWK
   - - meta
     - name: keywords
       content: custom recovery installation, twrp installation, orangefox recovery, skyhawk recovery, android recovery mode, custom recovery guide
@@ -51,6 +69,12 @@ head:
   - - meta
     - property: article:tag
       content: Android Rooting  
+  - - meta
+    - property: article:published_time
+      content: 2025-05-25T00:00:00Z
+  - - meta
+    - property: article:modified_time
+      content: 2026-06-05T00:00:00Z
   - - meta
     - name: robots
       content: index, follow

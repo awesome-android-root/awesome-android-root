@@ -22,17 +22,32 @@ head:
     - property: og:image
       content: https://awesome-android-root.pages.dev/images/og.png
   - - meta
+    - property: og:locale
+      content: en_US
+  - - meta
     - property: og:site_name
       content: Awesome Android Root
   - - meta
     - name: twitter:card
       content: summary_large_image
   - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:creator
+      content: "@awsm_and_root"
+  - - meta
     - name: twitter:title
       content: Android Rooting FAQ & Troubleshooting Guide 2026
   - - meta
     - name: twitter:description
       content: Complete FAQ and troubleshooting solutions for Android rooting with emergency fixes and app compatibility tips.
+  - - meta
+    - name: twitter:image
+      content: https://awesome-android-root.pages.dev/images/og.png
+  - - meta
+    - name: twitter:image:alt
+      content: Android Rooting FAQ & Troubleshooting Guide 2026
   - - meta
     - name: keywords
       content: android rooting faq 2026, android 15 root, rooting troubleshooting guide, bootloop fix, magisk troubleshooting, kernelsu, apatch, play integrity, root detection, adb fastboot, bootloader unlock, emergency android recovery

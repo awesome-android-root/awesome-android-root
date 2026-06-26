@@ -22,6 +22,12 @@ head:
     - property: og:image
       content: https://awesome-android-root.pages.dev/images/og/custom-rom.png
   - - meta
+    - property: og:locale
+      content: en_US
+  - - meta
+    - property: og:site_name
+      content: Awesome Android Root
+  - - meta
     - name: twitter:card
       content: summary_large_image
   - - meta
@@ -30,6 +36,18 @@ head:
   - - meta
     - name: twitter:description
       content: Install custom Android ROMs like LineageOS, GrapheneOS, Pixel Experience with step-by-step guide.
+  - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:creator
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:image
+      content: https://awesome-android-root.pages.dev/images/og/custom-rom.png
+  - - meta
+    - name: twitter:image:alt
+      content: Custom ROM Installation Guide - LineageOS, GrapheneOS & More
   - - meta
     - name: keywords
       content: custom rom installation, lineageos installation, grapheneos guide, pixel experience rom, android alternatives, aosp distribution, degoogled android, custom android firmware
@@ -54,6 +72,12 @@ head:
   - - meta
     - property: article:tag
       content: Android Privacy
+  - - meta
+    - property: article:published_time
+      content: 2025-05-25T00:00:00Z
+  - - meta
+    - property: article:modified_time
+      content: 2026-06-05T00:00:00Z
   - - meta
     - name: robots
       content: index, follow

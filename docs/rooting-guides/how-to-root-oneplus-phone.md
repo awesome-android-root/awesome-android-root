@@ -31,6 +31,18 @@ head:
     - name: twitter:description
       content: Root any OnePlus phone with bootloader unlock and Magisk installation guide.
   - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:creator
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:image
+      content: https://awesome-android-root.pages.dev/images/og/oneplus.png
+  - - meta
+    - name: twitter:image:alt
+      content: OnePlus Root Guide - All Models
+  - - meta
     - name: keywords
       content: oneplus root guide, oneplus rooting, oneplus bootloader unlock, oneplus magisk guide, oneplus custom recovery, oneplus 12 root, oneplus 11 root, oneplus 10 root, oxygenos root, oneplus msm tool, oneplus nord root
   - - meta
@@ -54,6 +66,12 @@ head:
   - - meta
     - property: article:tag
       content: Magisk Installation
+  - - meta
+    - property: article:published_time
+      content: 2025-05-25T00:00:00Z
+  - - meta
+    - property: article:modified_time
+      content: 2026-06-05T00:00:00Z
   - - meta
     - name: robots
       content: index, follow

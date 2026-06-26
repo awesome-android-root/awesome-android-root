@@ -31,6 +31,18 @@ head:
     - name: twitter:description
       content: Root any Samsung Galaxy device with bootloader unlock and Magisk installation guide.
   - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:creator
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:image
+      content: https://awesome-android-root.pages.dev/images/og/samsung.png
+  - - meta
+    - name: twitter:image:alt
+      content: Samsung Galaxy Root Guide - All Models
+  - - meta
     - name: keywords
       content: samsung galaxy root guide, samsung rooting, samsung bootloader unlock, samsung magisk guide, one ui root, galaxy s25 root, galaxy s24 root, galaxy s23 root, galaxy a series root, samsung knox, odin samsung
   - - meta
@@ -54,6 +66,12 @@ head:
   - - meta
     - property: article:tag
       content: Magisk Installation
+  - - meta
+    - property: article:published_time
+      content: 2025-05-25T00:00:00Z
+  - - meta
+    - property: article:modified_time
+      content: 2026-06-05T00:00:00Z
   - - meta
     - name: robots
       content: index, follow

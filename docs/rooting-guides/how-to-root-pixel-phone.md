@@ -25,8 +25,53 @@ head:
     - name: twitter:card
       content: summary_large_image
   - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:creator
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:title
+      content: Google Pixel Root Guide
+  - - meta
+    - name: twitter:description
+      content: Root any Google Pixel device with comprehensive guide covering bootloader unlock, factory images, and Magisk installation.
+  - - meta
+    - name: twitter:image
+      content: https://awesome-android-root.pages.dev/images/og/google-pixel.png
+  - - meta
+    - name: twitter:image:alt
+      content: Google Pixel Root Guide - Bootloader Unlock & Magisk Installation
+  - - meta
     - name: keywords
       content: pixel root guide, pixel 9 root, pixel 8 root, google pixel magisk, pixel bootloader unlock
+  - - meta
+    - name: author
+      content: Awesome Android Root Project
+  - - meta
+    - property: article:author
+      content: https://github.com/awesome-android-root/awesome-android-root
+  - - meta
+    - property: article:section
+      content: Device Rooting
+  - - meta
+    - property: article:tag
+      content: Google Pixel
+  - - meta
+    - property: article:tag
+      content: Magisk
+  - - meta
+    - property: article:tag
+      content: Bootloader Unlock
+  - - meta
+    - property: article:tag
+      content: Android Rooting
+  - - meta
+    - property: article:published_time
+      content: 2025-05-25T00:00:00Z
+  - - meta
+    - property: article:modified_time
+      content: 2026-06-05T00:00:00Z
   - - meta
     - name: robots
       content: index, follow

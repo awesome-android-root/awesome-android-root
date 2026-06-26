@@ -25,11 +25,23 @@ head:
     - name: twitter:card
       content: summary_large_image
   - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:creator
+      content: "@awsm_and_root"
+  - - meta
     - name: twitter:title
       content: Complete APatch Root Guide
   - - meta
     - name: twitter:description
       content: "Updated APatch setup for modern Android devices: compatibility, install, OTA, and recovery."
+  - - meta
+    - name: twitter:image
+      content: https://awesome-android-root.pages.dev/images/og/apatch-guide.png
+  - - meta
+    - name: twitter:image:alt
+      content: APatch Installation Guide - Modern Kernel-Based Android Rooting
   - - meta
     - name: keywords
       content: apatch guide 2026, android root apatch, kernel root, init_boot patch, boot image patch, a/b ota root
@@ -51,6 +63,9 @@ head:
   - - meta
     - property: article:tag
       content: Android Rooting
+  - - meta
+    - property: article:published_time
+      content: 2025-07-15T00:00:00Z
   - - meta
     - property: article:modified_time
       content: 2026-02-21T00:00:00Z

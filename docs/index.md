@@ -63,7 +63,7 @@ head:
       content: "en_US"
   - - meta
     - property: og:updated_time
-      content: "2025-10-04T00:00:00Z"
+      content: "2026-06-26T00:00:00Z"
   - - link
     - rel: canonical
       href: "https://awesome-android-root.pages.dev"
@@ -114,7 +114,7 @@ head:
             "description": "Discover 500+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026.",
             "url": "https://awesome-android-root.pages.dev/",
             "datePublished": "2025-05-25T00:00:00Z",
-            "dateModified": "2025-12-26T00:00:00Z",
+            "dateModified": "2026-06-26T00:00:00Z",
             "inLanguage": "en-US",
             "isPartOf": {
               "@id": "https://awesome-android-root.pages.dev/#website"

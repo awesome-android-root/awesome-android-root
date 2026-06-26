@@ -22,6 +22,12 @@ head:
     - property: og:image
       content: https://awesome-android-root.pages.dev/images/og/magisk-guide.png
   - - meta
+    - property: og:locale
+      content: en_US
+  - - meta
+    - property: og:site_name
+      content: Awesome Android Root
+  - - meta
     - name: twitter:card
       content: summary_large_image
   - - meta
@@ -30,6 +36,18 @@ head:
   - - meta
     - name: twitter:description
       content: Master Magisk installation with systemless rooting, module support, and advanced root management for all Android devices.
+  - - meta
+    - name: twitter:site
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:creator
+      content: "@awsm_and_root"
+  - - meta
+    - name: twitter:image
+      content: https://awesome-android-root.pages.dev/images/og/magisk-guide.png
+  - - meta
+    - name: twitter:image:alt
+      content: Magisk Root Guide - Universal Systemless Rooting
   - - meta
     - name: keywords
       content: magisk root guide, systemless root installation, magisk modules, android rooting, zygisk magisk, root hiding, play integrity fix, magisk boot image patching, magisk installation tutorial, magisk denylist, magisk shamiko
