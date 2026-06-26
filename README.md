@@ -431,6 +431,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 
 ### Browser Mods
 - **[⭐ ChromeXt](https://github.com/JingMatrix/ChromeXt)** - UserScript and DevTools support for Chromium-based and WebView-based browsers. `FOSS` `[LSP]`
+- **[BetterVia](https://github.com/JiGuroLGC/BetterVia)** - Bypass whitelist restrictions, Screenshot protection, Block components, One-tap theme switching etc. `FOSS` `[LSP]`
 - **[EdgeX](https://github.com/SoClear/EdgeX)** - An Xposed module for Microsoft Edge on Android, designed to enhance your browsing experience with UI tweaks and functional improvements. `FOSS` `[LSP]`
 - **[FoldDevtools](https://github.com/achyuki/FoldDevtools)** - Using chrome devtools to debug webview on Android. `FOSS` `[LSP]`
 - **[Fxxk-MiBrowser](https://github.com/DuhMatt/Fxxk-MiBrowser)** - Redirects forced Xiaomi Browser links to the system default browser. `FOSS` `[LSP]`
@@ -531,9 +532,6 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 
 #### Spotify
 - **[Spotify Plus](https://github.com/LeNerd46/SpotifyPlus)** - Adds beautiful lyrics to Spotify. `FOSS` `[LSP]`
-
-#### Via Browser Mods
-- **[BetterVia](https://github.com/JiGuroLGC/BetterVia)** - Bypass whitelist restrictions, Screenshot protection, Block components, One-tap theme switching etc. `FOSS` `[LSP]`
 
 #### Yandex Music Mods
 - **[Yandex Music Downloader](https://github.com/errorman-awful/YMDownloaderXposed)** - Download flac Music from Yandex Music app. `Proprietary` `[LSP]`
