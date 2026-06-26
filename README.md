@@ -387,10 +387,14 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[Shelter](https://gitea.angry.im/PeterCxy/Shelter)** - Isolate and clone apps. `FOSS` | [🌱](https://f-droid.org/app/net.typeblog.shelter)
 
 ### App Update Control
-- **[⭐ Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. Also check out [📖 Zygisk Detach Guide](./docs/general-guides/stop-android-app-auto-updates-play-store.md). Requires [Zygisk implementation](#zygisk-implementations). `FOSS` `[M]`
+- **[⭐ Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. `FOSS` `[M]` `[K]`
 - **[Play Version Spoofer](https://github.com/byemaxx/PlayVersionSpoofer)** - Prevents the Google Play Store from automatically updating itself. `FOSS` `[LSP]`
 - **[Update Locker](https://github.com/Xposed-Modules-Repo/ru.mike.updatelocker/)** - Block updates (and auto-updates) selected apps via popular markets including Google Play Market, Huawei AppGallery and Samsung Galaxy Store. `Proprietary`
 - **[Updates Manager Extended](https://github.com/Senliast/xposed-modules/tree/main/Updates_Manager_Extended)** - Allows to bock app updates (including automatic updates) for specific apps, no matter from which app store they were installed. `FOSS` `[LSP]`
+
+> [!TIP]
+>
+> Check out our **[Zygisk Detach Guide ↗](./docs/general-guides/stop-android-app-auto-updates-play-store.md)**
 
 ### Freeze Apps
 - **[⭐ Hail](https://github.com/aistra0528/Hail)** - Disable / Hide / Suspend / Uninstall Android apps. `FOSS` | [🌱](https://f-droid.org/packages/com.aistra.hail/)
