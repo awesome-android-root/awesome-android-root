@@ -14,9 +14,6 @@ class ImageOptimizer {
   constructor() {
     this.observer = null
     this.processedImages = new WeakSet()
-    this.mutationTimeout = null
-    this.pendingMutations = []
-    this.rootElement = null
   }
 
   /**
@@ -26,28 +23,23 @@ class ImageOptimizer {
   processImages(element) {
     if (!element?.querySelectorAll) return
 
-    // Process all images within the element
     const images = element.querySelectorAll('img')
-    
+
     images.forEach(img => {
-      // Skip if already processed
       if (this.processedImages.has(img)) return
-      
-      // Mark as processed
       this.processedImages.add(img)
-      
-      // Skip if loading attribute already set
+
+      // Don't override explicit loading hints
       if (img.hasAttribute('loading')) return
-      
-      // Determine loading strategy based on image source
+
       const isShieldsBadge = img.src?.includes('img.shields.io')
       const isAboveFold = this.isAboveFold(img)
-      
-      // Set appropriate loading strategy
+
       img.setAttribute('loading', (isShieldsBadge || isAboveFold) ? 'eager' : 'lazy')
       img.setAttribute('decoding', 'async')
-      
-      // Add fetchpriority for critical images
+
+      // Only boost priority for images currently visible in the viewport,
+      // not those already scrolled past.
       if (isAboveFold && !isShieldsBadge) {
         img.setAttribute('fetchpriority', 'high')
       }
@@ -55,88 +47,72 @@ class ImageOptimizer {
   }
 
   /**
-   * Check if element is above the fold
-   * @param {Element} element - Element to check
-   * @returns {boolean}
+   * Check if element is currently visible in the viewport
+   * (not scrolled past, not scrolled below).
    */
   isAboveFold(element) {
     const rect = element.getBoundingClientRect()
-    return rect.top < window.innerHeight && rect.bottom > 0
+    return rect.top >= 0 && rect.top < window.innerHeight
   }
 
   /**
-   * Process pending mutations in batches
-   */
-  processPendingMutations() {
-    if (this.pendingMutations.length === 0) return
-    
-    // Batch process all pending mutations
-    requestAnimationFrame(() => {
-      const mutations = this.pendingMutations.splice(0)
-      mutations.forEach((mutation) => {
-        mutation.addedNodes.forEach((node) => {
-          if (node.nodeType === Node.ELEMENT_NODE) {
-            this.processImages(node)
-          }
-        })
-      })
-    })
-  }
-
-  /**
-   * Initialize the observer
+   * Initialize the MutationObserver.  When called again with a new root
+   * element (e.g. after a client-side route change), the existing observer
+   * is simply reconnected to the new root — no full destroy/recreate.
    */
   init(rootElement = document.querySelector('.VPContent') || document.body) {
-    if (typeof window === 'undefined' || this.observer) return
+    if (typeof window === 'undefined') return
 
-    this.rootElement = rootElement
+    // If we already have an observer, just reconnect it to the new root.
+    // VitePress replaces the entire .VPContent subtree on navigation, so
+    // the old root is detached and observing it is harmless but wasteful.
+    if (this.observer) {
+      this.observer.disconnect()
+      this.observer.observe(rootElement, { childList: true, subtree: true, attributes: false, characterData: false })
+      this.processImages(rootElement)
+      return
+    }
+
+    let pendingMutations = []
+    let mutationTimeout = null
 
     this.observer = new MutationObserver((mutations) => {
-      // Collect mutations and debounce processing
-      this.pendingMutations.push(...mutations)
-      
-      // Clear existing timeout
-      clearTimeout(this.mutationTimeout)
-      
-      // Debounce mutations to avoid excessive processing
-      this.mutationTimeout = setTimeout(() => {
-        this.processPendingMutations()
+      pendingMutations.push(...mutations)
+      clearTimeout(mutationTimeout)
+      mutationTimeout = setTimeout(() => {
+        if (pendingMutations.length === 0) return
+        requestAnimationFrame(() => {
+          const batch = pendingMutations.splice(0)
+          batch.forEach((mutation) => {
+            mutation.addedNodes.forEach((node) => {
+              if (node.nodeType === Node.ELEMENT_NODE) {
+                this.processImages(node)
+              }
+            })
+          })
+        })
       }, 100)
     })
 
-    // Observe with optimized options
-    this.observer.observe(this.rootElement, {
+    this.observer.observe(rootElement, {
       childList: true,
       subtree: true,
-      // Only observe element additions, not attributes or character data
       attributes: false,
       characterData: false
     })
 
-    // Process existing images on initialization
-    this.processImages(this.rootElement)
+    this.processImages(rootElement)
   }
 
   /**
-   * Cleanup observer
+   * Cleanup observer (page unload only — route changes use reconnect).
    */
   destroy() {
     if (this.observer) {
       this.observer.disconnect()
       this.observer = null
     }
-    
-    // Clear any pending timeouts
-    clearTimeout(this.mutationTimeout)
-    
-    // Clear pending mutations
-    this.pendingMutations = []
-    
-    // Reset processed images
     this.processedImages = new WeakSet()
-
-    // Reset observer root
-    this.rootElement = null
   }
 }
 
@@ -172,45 +148,41 @@ export default {
     // Client-side only enhancements
     if (typeof window !== 'undefined') {
       const imageOptimizer = new ImageOptimizer()
-      const onBeforeUnload = () => {
+      let ariaLabelsSet = false
+
+      const initializeClientEnhancements = () => {
+        const contentRoot = document.querySelector('.VPContent') || document.body
+        imageOptimizer.init(contentRoot)
+        if (!ariaLabelsSet) {
+          addAriaLabels()
+          ariaLabelsSet = true
+        }
+      }
+
+      // Cleanup observer before VitePress tears down the old content area
+      router.onBeforeRouteChange = () => {
         imageOptimizer.destroy()
       }
 
-      const initializeClientEnhancements = () => {
-        imageOptimizer.destroy()
-        const contentRoot = document.querySelector('.VPContent') || document.body
-        imageOptimizer.init(contentRoot)
-        addAriaLabels()
-      }
-      
-      // Properly handle route changes
-      router.onBeforeRouteChange = () => {
-        // Cleanup before route change
-        imageOptimizer.destroy()
-      }
-      
       router.onAfterRouteChanged = () => {
-        // Reinitialize after route change when DOM settles
         runAfterRender(initializeClientEnhancements)
       }
-      
-      // Cleanup on page unload
-      window.addEventListener('beforeunload', onBeforeUnload)
+
+      window.addEventListener('beforeunload', () => imageOptimizer.destroy())
 
       // Initialize on first load
       runAfterRender(initializeClientEnhancements)
-      
-      // Optional: Add performance monitoring
+
       if (import.meta.env.DEV) {
         window.__IMAGE_OPTIMIZER__ = imageOptimizer
         console.log('[Theme] Image optimizer initialized')
       }
     }
-    
-    // Optional: Add global error handler
+
+    // Global error handler — only verbose in development
     app.config.errorHandler = (err, instance, info) => {
-      console.error('Global error:', err)
       if (import.meta.env.DEV) {
+        console.error('Global error:', err)
         console.error('Error info:', info)
         console.error('Component instance:', instance)
       }
