@@ -1095,12 +1095,9 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 
 ### Flag Secure Patchers
 
-<details><summary><strong>What is FLAG_SECURE</strong></summary>
-
-- It is a window-level security flag in Android that **prevents the window's content from appearing in screenshots**, being viewed on non-secure displays like projectors or TVs, or being captured during screen recordings.
-
-<br>
-</details>
+> [!NOTE]
+> 
+> What is FLAG_SECURE is a window-level security flag in Android that **prevents the window's content from appearing in screenshots** or being captured during screen recordings.
 
 - **[⭐ Enable Screenshot](https://github.com/LSPosed/DisableFlagSecure)** - Enabling screenshots in apps that normally wouldn't allow it, and disabling screenshot(Android 14+) and screen record(Android 15+) detection. `FOSS` `[LSP]`
 - **[⭐ Flag Secure Patcher](https://github.com/j-hc/FlagSecurePatcher)** - Patch service.jar on device to disable secure lock and screenshot listeners. `FOSS` `[M]`
