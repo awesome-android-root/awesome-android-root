@@ -21,14 +21,6 @@
         <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm3.707 5.293L9 12l-2.707-2.707 1.414-1.414L9 9.172l3.293-3.293 1.414 1.414z" fill="currentColor"/>
       </svg>
       <span class="pwa-toast__message">{{ updateMessage }}</span>
-      <button 
-        v-if="!isAutoUpdate" 
-        @click="reload" 
-        class="pwa-toast__button"
-        aria-label="Reload page"
-      >
-        Reload
-      </button>
     </div>
   </div>
 </template>
@@ -40,7 +32,6 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const showReload = ref(false)
 const isOffline = ref(false)
 const updateMessage = ref('New content available!')
-const isAutoUpdate = ref(true) // Since you're using autoUpdate
 
 // Service worker registration
 let registration = null
@@ -83,22 +74,10 @@ const checkForUpdates = async () => {
 
 // Show update notification
 const showUpdateNotification = () => {
-  // With autoUpdate, just show a brief notification
   showReload.value = true
   updateMessage.value = 'App updated! Refreshing...'
-  
-  // Auto-hide after 3 seconds for autoUpdate
-  if (isAutoUpdate.value) {
-    scheduleReloadToastHide(3000)
-  }
-}
-
-// Reload the page
-const reload = () => {
-  if (registration?.waiting) {
-    registration.waiting.postMessage({ type: 'SKIP_WAITING' })
-  }
-  window.location.reload()
+  // Auto-hide after 3 seconds (autoUpdate reloads the page automatically)
+  scheduleReloadToastHide(3000)
 }
 
 // Handle online/offline status
@@ -217,12 +196,12 @@ onUnmounted(() => {
     swUpdateFoundHandler = null
   }
 
-  if (navigator.serviceWorker && swControllerChangeHandler) {
+  if (swControllerChangeHandler) {
     navigator.serviceWorker.removeEventListener('controllerchange', swControllerChangeHandler)
     swControllerChangeHandler = null
   }
 
-  if (navigator.serviceWorker && swMessageHandler) {
+  if (swMessageHandler) {
     navigator.serviceWorker.removeEventListener('message', swMessageHandler)
     swMessageHandler = null
   }
