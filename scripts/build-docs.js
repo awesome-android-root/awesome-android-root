@@ -10,9 +10,15 @@ const COLORS = {
     NC: '\x1b[0m' // No Color
 };
 
+// Track warnings so we can fail the build if any occur
+let warningCount = 0;
+
 // Logging functions
 const logInfo = (msg) => console.log(`${COLORS.GREEN}✓ ${msg}${COLORS.NC}`);
-const logWarn = (msg) => console.log(`${COLORS.YELLOW}⚠ ${msg}${COLORS.NC}`);
+const logWarn = (msg) => {
+    warningCount++;
+    console.log(`${COLORS.YELLOW}⚠ ${msg}${COLORS.NC}`);
+};
 const logError = (msg) => console.error(`${COLORS.RED}✗ ${msg}${COLORS.NC}`);
 const handleError = (msg) => {
     logError(msg);
@@ -127,12 +133,19 @@ try {
         const content = fs.readFileSync(INDEX_MD_PATH, 'utf8');
         const lines = content.split('\n');
         
-        // Find frontmatter boundaries
+        // Find frontmatter boundaries (YAML frontmatter MUST start on line 0;
+        // the closing --- is the second one in the file. We search only the
+        // first 500 lines to avoid false-matching horizontal rules deep in
+        // the content — the actual frontmatter is ~300 lines of SEO metadata.)
         const frontmatterIndices = [];
-        for (let i = 0; i < lines.length; i++) {
-            if (lines[i].trim() === '---') {
-                frontmatterIndices.push(i);
-                if (frontmatterIndices.length === 2) break;
+        if (lines[0]?.trim() === '---') {
+            frontmatterIndices.push(0);
+            const searchLimit = Math.min(lines.length, 500);
+            for (let i = 1; i < searchLimit; i++) {
+                if (lines[i].trim() === '---') {
+                    frontmatterIndices.push(i);
+                    break;
+                }
             }
         }
 
@@ -208,6 +221,11 @@ ${tailContent}
     };
 
     validateBuild();
+
+    if (warningCount > 0) {
+        console.log(`\n${COLORS.YELLOW}⚠ Build completed with ${warningCount} warning(s)${COLORS.NC}`);
+        process.exit(1);
+    }
 
     console.log(`\n${COLORS.BLUE}═══════════════════════════════════════════════════════════${COLORS.NC}`);
     console.log(`${COLORS.GREEN}✓ Documentation build completed successfully!${COLORS.NC}`);
