@@ -28,7 +28,13 @@ const ariaLabel = computed(() => {
 const icon = computed(() => {
   if (props.store === 'fdroid') {
     return `<svg fill="currentColor" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20.5 10H3.5A1.5 1.5 0 0 0 2 11.5V22a1.5 1.5 0 0 0 1.5 1.5h17A1.5 1.5 0 0 0 22 22V11.5A1.5 1.5 0 0 0 20.5 10zM12 22a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0-10a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 7.5a3 3 0 0 1-3-3h1.5c.3.6.9 1 1.5 1 .8 0 1.5-.7 1.5-1.5S12.8 15 12 15c-.6 0-1.1.3-1.4.8H9.1a3 3 0 0 1 5.8 1.2 3 3 0 0 1-3 3zM23.5.5l-.5.6-1.5 2a1.5 1.5 0 0 0-.5-.1h-17c-.2 0-.4 0-.5.1l-1.5-2L1 .5a.5.5 0 0 0 0 .7l1.9 2.5A1.5 1.5 0 0 0 2 4.5v3A1.5 1.5 0 0 0 3.5 9h17A1.5 1.5 0 0 0 22 7.5v-3c0-.3 0-.5-.1-.8L23.9 1.2a.5.5 0 0 0 0-.7zM7 8a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm10 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+      <!-- Rounded badge outline -->
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <!-- Download arrow -->
+      <path d="M8 11l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="12" y1="15" x2="12" y2="7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <!-- Base line -->
+      <line x1="6" y1="20" x2="18" y2="20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
     </svg>`
   } else if (props.store === 'playstore') {
     return `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5">
