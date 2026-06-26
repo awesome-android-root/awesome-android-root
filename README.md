@@ -460,7 +460,6 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 
 #### Reddit Mods
 - **[Patcheddit](https://github.com/wchill/patcheddit)** - Custom patches with features like view: deleted Reddit posts & comments,Banned subreddits etc. Requires [Morphe App ↗](https://morphe.software/). `FOSS`
-- **[Reddidn’t](https://modules.lsposed.org/module/com.wizpizz.reddidnt/)** - Dynamically finds methods within the Reddit app responsible for displaying ads and blocks them. [Warning](https://github.com/awesome-android-root/awesome-android-root/issues/71#issue-3327852351) `Proprietary` `[LSP]`
 
 #### TikTok Mods
 - **[TikTok AntiBurn](https://github.com/0mnr0/TikTokAntiBurn)** - Overlap the TikTok app elements to prevent the screen from burning out. `FOSS` `[LSP]`
