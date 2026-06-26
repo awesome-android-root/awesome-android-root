@@ -5,7 +5,7 @@
  */
 
 export function storeLinkPlugin(md) {
-  // Store the original link_open rule
+  // Store the original render rules
   const defaultLinkOpenRender = md.renderer.rules.link_open || function(tokens, idx, options, env, self) {
     return self.renderToken(tokens, idx, options);
   };
@@ -18,10 +18,14 @@ export function storeLinkPlugin(md) {
     return tokens[idx].content;
   };
 
-  // Track if we're inside a store link
+  // Minimal HTML attribute escape — only double-quotes matter here since
+  // the href is placed inside a double-quoted HTML attribute.
+  const escapeAttr = (s) => s.replace(/"/g, '&quot;');
+
+  // Track whether the current token is inside a store badge link.
+  // Module-scoped state is safe here because VitePress runs markdown-it
+  // synchronously in a single pass per page.
   let insideStoreLink = false;
-  let currentStoreType = null;
-  let currentHref = null;
 
   // Override link_open rule
   md.renderer.rules.link_open = function(tokens, idx, options, env, self) {
@@ -36,23 +40,19 @@ export function storeLinkPlugin(md) {
       if (nextToken && nextToken.type === 'text') {
         const linkText = nextToken.content;
         
-        // Check if this is an F-Droid badge link
+        // F-Droid badge: text is 🌱 or 🌱 F-Droid, href points to F-Droid/IzzySoft
         if (linkText === '🌱' || linkText === '🌱 F-Droid') {
-          if (href.includes('f-droid.org') || href.includes('fdroid') || href.includes('izzysoft.de')) {
+          if (/f-droid\.org|apt\.izzysoft\.de/.test(href)) {
             insideStoreLink = true;
-            currentStoreType = 'fdroid';
-            currentHref = href;
-            return `<StoreLink store="fdroid" href="${href}">`;
+            return `<StoreLink store="fdroid" href="${escapeAttr(href)}">`;
           }
         }
         
-        // Check if this is a Play Store badge link
+        // Play Store badge: text is ▶️ or ▶️ Play Store
         if (linkText === '▶️' || linkText === '▶️ Play Store') {
           if (href.includes('play.google.com')) {
             insideStoreLink = true;
-            currentStoreType = 'playstore';
-            currentHref = href;
-            return `<StoreLink store="playstore" href="${href}">`;
+            return `<StoreLink store="playstore" href="${escapeAttr(href)}">`;
           }
         }
       }
@@ -66,8 +66,6 @@ export function storeLinkPlugin(md) {
   md.renderer.rules.link_close = function(tokens, idx, options, env, self) {
     if (insideStoreLink) {
       insideStoreLink = false;
-      currentStoreType = null;
-      currentHref = null;
       return '</StoreLink>';
     }
     
