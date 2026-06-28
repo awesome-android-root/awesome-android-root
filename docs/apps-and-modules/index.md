@@ -58,7 +58,7 @@ head:
       content: en_US
   - - meta
     - property: og:updated_time
-      content: '2026-06-26T00:00:00Z'
+      content: '2026-06-28T00:00:00Z'
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -90,6 +90,9 @@ head:
     - name: theme-color
       content: '#0f172a'
   - - meta
+    - name: author
+      content: Awesome Android Root Project
+  - - meta
     - property: article:author
       content: https://github.com/fynks
   - - meta
@@ -97,13 +100,10 @@ head:
       content: https://awesome-android-root.pages.dev
   - - meta
     - property: article:published_time
-      content: '2026-06-05T00:00:00Z'
+      content: '2025-08-11T00:00:00Z'
   - - meta
     - property: article:modified_time
-      content: '2026-06-05T00:00:00Z'
-  - - meta
-    - property: article:modified_time
-      content: '2026-06-05T00:00:00Z'
+      content: '2026-06-28T00:00:00Z'
   - - meta
     - property: article:section
       content: Android Root Apps
@@ -167,7 +167,7 @@ head:
         "description": "Ultimate collection of 500+ best Android root apps, Magisk modules, and LSPosed frameworks. Download top-rated root applications for Android customization, system optimization, and power user features.",
         "inLanguage": "en-US",
         "datePublished": "2025-08-11T00:00:00Z",
-        "dateModified": "2026-06-05T00:00:00Z",
+        "dateModified": "2026-06-28T00:00:00Z",
         "image": {
           "@type": "ImageObject",
           "url": "https://awesome-android-root.pages.dev/images/og.png",
