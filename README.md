@@ -491,6 +491,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 #### WhatsApp Mods
 - **[⭐ WA Enhancer](https://github.com/Dev4Mod/WaEnhancer)** - Enhances your WhatsApp experience. `FOSS` `[LSP]`
 - **[WA Enhancer X](https://github.com/mubashardev/WaEnhancerX)** - Fork of WA Enhancer with additional features. `FOSS` `[LSP]`
+- **[WAPlus](https://github.com/RevealedSoulEven/WAPlusXposed)** - Unlock WhatsApp Plus Features. `FOSS` `[LSP]`
 
 #### X/Twitter Mods
 - **[⭐ Piko Patches](https://github.com/crimera/piko)** - Morphe patches for twitter with features like hide promoted tweets, hide promoted accounts, hide promoted trends, hide "who to follow" etc. `FOSS`
