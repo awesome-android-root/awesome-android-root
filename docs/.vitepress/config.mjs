@@ -8,7 +8,8 @@ export default withPwa(defineConfig({
   ignoreDeadLinks: true,
   cleanUrls: true,
   lastUpdated: true,
-  
+  metaChunk: true,
+
   vite: {
     build: {
       chunkSizeWarningLimit: 1000,
