@@ -557,6 +557,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 ## Audio and Media
 
 ### Audio Enhancement
+- **[⭐ ViPERFX_RE](https://github.com/likelikeslike/ViPERFX_RE)** - A fork of ViPER4Android FX with a redesigned UI and additional features. `FOSS` `[M]` `[K]`
 - **[Audio Modification Library Ryuki Mod](https://github.com/reiryuki/Audio-Modification-Library-Ryuki-Mod-Magisk-Module)** - Enables supported audio mods to share the same needed files, such as audio_effects. `FOSS` `[M]`
 - **[JamesDSP](https://github.com/james34602/JamesDSPManager)** - Audio DSP effects built on the Android system framework layer. This repository contains a pack of high-quality DSP algorithms specialized for audio processing. `FOSS` `[M]`
 - **[NLSound](https://github.com/Briclyaz/NLSound_module_QCom)** - Magisk module for improving audio and microphone quality in your Snapdragon SoC device. `FOSS` `[M]`
