@@ -9,19 +9,6 @@ requests (ThreadPoolExecutor) for drastically faster checking.
   GUI mode : python repo_freshness_checker.py
   CLI mode : python repo_freshness_checker.py README.md -o report.md -t ghp_xxxx
 
-What's new in v2.2:
-  - Interactive HTML export — sortable & filterable standalone HTML report
-  - Export HTML button in GUI; --format flag in CLI (md/html/both)
-  - Token validation on save, leak-proof sanitisation in logs
-  - Secure file permissions via umask for token storage
-  - Removed drag-and-drop; cleaner token section with text labels
-
-What's new in v2.1:
-  - Modern dark-themed GUI (Catppuccin-inspired palette)
-  - Clickable token link — opens GitHub token settings in browser
-  - Colour-coded log output (green success, red errors, yellow warnings)
-  - Improved Markdown report with health score, percentages & total stars
-  - Polished, minimal, cross-platform interface
 """
 
 import os, re, sys, time, json, threading, argparse
