@@ -825,6 +825,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 
 ### ZUI
 - **[Unfuck ZUI Tablet](https://github.com/Xposed-Modules-Repo/xyz.cirno.unfuckzui/)** - Adjust notification icon size, restore AOSP-style installers/permissions, enforce screen rotation persistence, and allow package querying etc. `Proprietary` `[LSP]`
+- **[ZTool](https://github.com/qwqawa64/ZUX-ZTool)** - Provides optimization and customization features for the ZUXOS system. `FOSS` `[LSP]`
 
 [↑ Back to top](#table-of-contents)
 
