@@ -79,7 +79,7 @@ head:
 
 # Complete LSPosed / Vector Framework Guide
 
-The modern Xposed implementation for Android 8.1–17 Beta. This guide covers both the original LSPosed project (now distributed as closed-source builds via Telegram) and the fully open-source **Vector** fork - helping you make an informed choice about which framework to trust on your device.
+The modern Xposed implementation for Android 8.1 and above. This guide covers both the original LSPosed project (now distributed as closed-source builds via Telegram) and the fully open-source **Vector** fork - helping you make an informed choice about which framework to trust on your device.
 
 > [!WARNING]
 > **Transparency Advisory:** The original LSPosed GitHub repository ([LSPosed/LSPosed](https://github.com/LSPosed/LSPosed)) has been **archived** since January 2024 with no public releases since October 2023. Current "official" builds are distributed exclusively as **closed-source** binaries via the LSPosed Telegram channel and **[lsposed.zip](https://lsposed.zip/)**. This violates the GPLv3 license under which the original code was released. Users should be aware of the [ongoing controversy](https://exposelsposed.pages.dev/) and make an informed decision.
@@ -110,7 +110,7 @@ There are currently two primary sources for the framework. Choosing the right on
 | **Stable API** | API 100 (v2.0) | API 101 |
 | **Canary/CI API** | API 101 (CI builds) | N/A |
 | **Active Development** | ✅ Active (commits, issues, PRs) | ⚠️ Telegram-only, no public tracker |
-| **Android Support** | 8.1 - 17 Beta | 8.1 - 16+ |
+| **Android Support** | 8.1+ | 8.1+ |
 | **Detection Hiding** | Standard | Enhanced (ACE, Banks, etc.) |
 | **Trust & Transparency** | ✅ Public code, community audit | ⚠️ [Controversy](https://exposelsposed.pages.dev/), [malware in beta](https://xdaforums.com/t/security-analysis-of-the-lsposed-beta-version.4750843/) |
 
@@ -142,7 +142,7 @@ Following the archival, the original team continued distributing closed-source b
 - **Fully Transparent:** All source code publicly available, auditable by anyone.
 - **Active Development:** Regular commits, community issue tracker, pull requests.
 - **API 101 via CI:** Canary builds already support libxposed API 101 (stable release expected).
-- **Broad Compatibility:** Supports Android 8.1 through 17 Beta.
+- **Broad Compatibility:** Supports Android 8.1 through the latest Android releases.
 - **Java-to-Kotlin Refactor:** Ongoing modernization for maintainability.
 
 **"Official" LSPosed (lsposed.zip - Closed-Source)**
@@ -179,7 +179,7 @@ Version 2.0 of the Vector fork finalized the API 100 implementation. If a module
 - KernelSU (and its forks) with Zygisk Next/NeoZygisk
 
 **Android Version**
-- Android 8.1 (Oreo) minimum through Android 16+ (Official) or 17 Beta (Vector).
+- Android 8.1 (Oreo) minimum through the latest Android releases
 
 ## Device Compatibility
 
