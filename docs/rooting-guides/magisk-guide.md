@@ -220,18 +220,9 @@ Magisk is a systemless root solution that provides superuser access without modi
 - File manager app
 - At least 500MB free storage
 
-### Compatibility Check
+### Compatibility
 
-**Android Version Support:**
-
-| Android Version | Magisk Support | Notes |
-|-----------------|----------------|-------|
-| Android 16 | Yes | Preview/Beta support |
-| Android 15 | Yes | Full support |
-| Android 14 | Yes | Full support |
-| Android 13 | Yes | May require init_boot patching |
-| Android 12 | Yes | Zygisk fully supported |
-| Android 6-11 | Yes | Mature support |
+Magisk supports Android 6.0 and above, including the latest Android releases. It works on most devices with an unlockable bootloader.
 
 **Check device compatibility:**
 1. Verify bootloader is unlockable
@@ -254,7 +245,7 @@ This is the official and safest method.
 
 **Magisk APK:**
 1. Visit [Magisk GitHub Releases](https://github.com/topjohnwu/Magisk/releases)
-2. Download the latest `Magisk-v30.X.apk` (or newer)
+2. Download the latest stable APK
 3. Transfer to device
 
 **Stock Boot Image:**
