@@ -488,18 +488,6 @@ export default withPwa(defineConfig({
               "url": "https://awesome-android-root.pages.dev/troubleshooting"
             }
           ]
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id": "https://awesome-android-root.pages.dev/#breadcrumb",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://awesome-android-root.pages.dev/"
-            }
-          ]
         }
       ]
     })],
