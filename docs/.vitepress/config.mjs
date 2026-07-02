@@ -369,9 +369,6 @@ export default withPwa(defineConfig({
     inlineRegister: false,
     minify: true,
     
-    // NOTE: injectManifest block only applies when strategies: 'injectManifest'.
-    // With generateSW (current strategy) workbox handles precache manifest generation
-    // automatically - no manual globPatterns needed here.
   },
 
 
@@ -409,8 +406,6 @@ export default withPwa(defineConfig({
     
   
     // --- SEO Meta Tags ---
-    ['meta', { name: 'keywords', content: 'android root 2026, how to root android, magisk installation guide, kernelsu tutorial, lsposed framework, best root apps, magisk modules 2026, systemless root, custom recovery twrp, bootloader unlock guide, android customization apps, rooting tutorial step by step, pixel root guide, samsung root knox, xiaomi unlock bootloader, oneplus root guide, android privacy tools, ad blocker root, android debloating, system-wide adblock, play integrity fix, root hide banking apps, custom rom installation, android performance optimization, root apps collection, xposed modules 2026, apatch android, android power user, superuser apps, root manager apps, android system tweaks, kernel management, titanium backup alternative, android automation root, tasker root plugins, firewall root android, network monitor root, android theming root, substratum android, android terminal emulator, adb commands root, fastboot guide, android modding, app cloning root, dual apps android, android backup root, nandroid backup, root detection bypass, safetynet fix, google pay root' }],
-    ['meta', { name: 'author', content: 'Awesome Android Root Project' }],
     ['meta', { name: 'publisher', content: 'Awesome Android Root Project' }],
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1' }],
     ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large' }],
@@ -418,85 +413,7 @@ export default withPwa(defineConfig({
     ['meta', { name: 'distribution', content: 'global' }],
     ['meta', { name: 'rating', content: 'general' }],
     ['meta', { name: 'referrer', content: 'no-referrer-when-downgrade' }],
-
-    // --- Twitter Card ---
-    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:site', content: '@awsm_and_root' }],
-    ['meta', { name: 'twitter:creator', content: '@awsm_and_root' }],
-
-    // --- JSON-LD Structured Data ---
-    ['script', { type: 'application/ld+json' }, JSON.stringify({
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": "https://awesome-android-root.pages.dev/#website",
-          "name": "Awesome Android Root",
-          "description": "Ultimate Android rooting hub with 500+ curated root apps, Magisk/KernelSU/APatch modules, LSPosed framework, and comprehensive rooting guides.",
-          "url": "https://awesome-android-root.pages.dev/",
-          "inLanguage": "en-US",
-          "publisher": {
-            "@type": "Organization",
-            "@id": "https://awesome-android-root.pages.dev/#organization",
-            "name": "Awesome Android Root Project",
-            "url": "https://awesome-android-root.pages.dev/",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://awesome-android-root.pages.dev/images/logo.png",
-              "width": 330,
-              "height": 330
-            },
-            "sameAs": [
-              "https://github.com/awesome-android-root/awesome-android-root",
-              "https://x.com/awsm_and_root"
-            ]
-          },
-        },
-        {
-          "@type": "ItemList",
-          "@id": "https://awesome-android-root.pages.dev/#mainnavigation",
-          "name": "Main Navigation",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Root Apps & Modules",
-              "url": "https://awesome-android-root.pages.dev/apps-and-modules/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Rooting Guides",
-              "url": "https://awesome-android-root.pages.dev/rooting-guides/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Tutorials",
-              "url": "https://awesome-android-root.pages.dev/general-guides/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 4,
-              "name": "FAQ",
-              "url": "https://awesome-android-root.pages.dev/faqs"
-            },
-            {
-              "@type": "ListItem",
-              "position": 5,
-              "name": "Troubleshooting",
-              "url": "https://awesome-android-root.pages.dev/troubleshooting"
-            }
-          ]
-        }
-      ]
-    })],
     
-    // Open Graph Enhanced
-    ['meta', { property: 'og:site_name', content: 'Awesome Android Root' }],
-    ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:locale', content: 'en_US' }],
-
     // --- Verification Tags ---
     ['meta', { name: 'ahrefs-site-verification', content: '5fd5ad82114006dedaabbb7cc47ee96924361ceedafe09795ce9abbb7d32d6ff' }],
     ['meta', { name: 'google-site-verification', content: 'yh6OZ9qZhOAVRs3tkFAwwBYIb3BKrveBy6C0QEVHpw0' }]
