@@ -97,80 +97,27 @@ Root Motorola devices via the official unlock code system. Covers Edge 60, Edge 
 
 ---
 
-## Supported Devices
+## Device Compatibility
 
-<details><summary>Click to expand supported Motorola devices</summary><br>
+Most Motorola devices with unlockable bootloaders can be rooted. Check [XDA Forums](https://forum.xda-developers.com/) for your specific model's status.
 
-### Motorola Edge Series
+### Incompatible / Restricted Devices
 
-**Edge 60 Series (2025):**
-- Edge 60, Edge 60 Fusion, Edge 60 Stylus, Edge 60 Pro
-- Runs Android 15; eligible for three OS upgrades
-- Uses init_boot.img
-- Ensure init_boot.img matches your current build number; do NOT use launch firmware if you've already updated
+::: danger CANNOT BE ROOTED
+- **Carrier-exclusive models** (Verizon, AT&T, Tracfone) — bootloader unlock codes not available
+- **Amazon Branded devices** — permanently locked
+- **ThinkShield / Enterprise devices** — locked down by policy
+- **Prepaid carrier-locked variants** — typically cannot unlock
+:::
 
-**Edge 50 Series (2024):**
-- Edge 50 Ultra, Edge 50 Pro, Edge 50 Fusion, Edge 50 Neo
-- Uses init_boot.img
+### Image Type Quick Reference
 
-**Edge 40 Series (2023):**
-- Edge 40 Pro, Edge 40 Neo, Edge 40
-- Uses init_boot.img
-- Good community support, active LineageOS development
+| Device Generation | Image to Patch |
+|---|---|
+| Modern Edge/Moto G (Android 13+) | `init_boot.img` |
+| Older Moto G/Edge (Android 12-) | `boot.img` |
 
-**Edge 30 Series (2022):**
-- Edge 30 Ultra, Edge 30 Fusion, Edge 30 Pro
-- Uses boot.img or init_boot.img (check Magisk Ramdisk field)
-- Excellent support, many custom ROMs
-
-**Older Edge:**
-- Edge+/Edge (2020-2021)
-- Edge 20 series
-- Mature support
-
-### Moto G Series
-
-**Moto G (2024-2025):**
-- G Power, G Stylus 5G, G85, G75, G55
-- Uses init_boot.img
-- Many recent Moto G devices on Android 13/14/15 encounter "Preflash validation failed" when flashing images patched with Magisk v27/28+
-
-**Moto G (2023):**
-- Moto G84/G73/G54/G64
-- Uses init_boot.img
-- Good XDA support
-
-**Moto G (2022 and older):**
-- Moto G82/G72/G62/G52
-- Moto G100/G60/G40
-- Moto G9 Plus/Power/Play, G8 series
-- Uses boot.img
-- Strong custom ROM scene
-
-### Moto X/Z Series (Legacy)
-
-**Moto X:**
-- X4, X Style, X Play
-
-**Moto Z:**
-- Z4/Z3/Z2/Z Play
-
-### Carrier Considerations
-
-**Unlockable:**
-- International/global models
-- Retail unlocked (US)
-
-**Not Unlockable:**
-- Carrier-exclusive models (e.g. Verizon, AT&T, Tracfone) are almost never unlockable
-- Bootloader unlock codes are not available for Amazon Branded devices
-- Prepaid carrier-locked variants
-
-**ThinkShield:**
-- Business/enterprise Motorola devices
-- Usually locked down, not rootable
-
-</details>
+**Check Magisk "Ramdisk" field if unsure.**
 
 ## Prerequisites
 
@@ -345,16 +292,12 @@ On boot you will see a "Bootloader unlocked" warning - this is normal.
 
 ### Determine Correct Image
 
-| Device | Android Version | Image to Patch |
-|--------|-----------------|----------------|
-| Edge 60 series | Android 15 | init_boot.img |
-| Edge 50 series | Android 14/15 | init_boot.img |
-| Edge 40 series | Android 13/14 | init_boot.img |
-| Edge 30 series | Android 12/13 | boot.img or init_boot.img |
-| Moto G (2023-2025) | Android 13-15 | init_boot.img |
-| Moto G (2022 and older) | Android 12 and below | boot.img |
+| Device Generation | Image to Patch |
+|---|---|
+| Modern Edge/Moto G (Android 13+) | `init_boot.img` |
+| Older devices (Android 12 and below) | `boot.img` |
 
-**Open the Magisk app and check the "Ramdisk" field if unsure. If Ramdisk = Yes, use boot.img. If your device has a separate init_boot partition, use init_boot.img.**
+**Open the Magisk app and check the "Ramdisk" field if unsure. If Ramdisk = Yes, use `boot.img`. If your device has a separate `init_boot` partition, use `init_boot.img`.**
 
 ### Method 1: Boot Image Patching (Standard)
 
