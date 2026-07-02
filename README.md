@@ -878,7 +878,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[Trixie.apk](https://github.com/DesktopECHO/trixie.apk)** - Debian 13 (Trixie) Server/Desktop container for rooted Android 5.0+ devices. `FOSS`
 
 ### Shizuku
-- **[⭐ Shizuku Fork](https://github.com/thedjchi/Shizuku)** - Shizuku for with automatic Shizuku startup, automation, and recovery features. `[FOSS]`
+- **[⭐ Shizuku Fork](https://github.com/thedjchi/Shizuku)** - Shizuku for with automatic Shizuku startup, automation, and recovery features. `FOSS`
 - **[Shizuku](https://github.com/RikkaApps/Shizuku)** - Use system APIs directly with ADB/root privileges. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/moe.shizuku.privileged.api) | [▶️](https://play.google.com/store/search?q=shizuku&c=apps)
 - **[Shevery](https://github.com/HmnDev-Tech/shevery)** - Based on shizuku with Jetpack Compose, Material 3, and compatibility enhancements. `FOSS`
 
