@@ -110,37 +110,16 @@ Xiaomi is among the strictest OEMs for unlocking/root.
 
 ## Device Compatibility
 
-### Supported Device Lines
+### Device Compatibility
 
-<details><summary>👉 Click to expand the list</summary>
+Most Xiaomi/Redmi/POCO devices with unlockable bootloaders can be rooted. Check [XDA Forums](https://forum.xda-developers.com/) for your specific model's status.
 
-- Mi/Xiaomi series (Flagship):
-  - Xiaomi 14/14 Pro/14 Ultra (HyperOS)
-  - Xiaomi 13/13 Pro/13 Ultra (MIUI 14 → HyperOS)
-  - Xiaomi 12/12 Pro/12S/12T series (good dev support)
-  - Mi 11/11 Pro/11 Ultra (excellent ROM/kernel ecosystem)
-  - Older Mi devices (generally well supported)
-- Redmi series:
-  - Redmi Note 13/13 Pro/13 Pro+ (very popular, lively community)
-  - Redmi 13 5G/4G
-  - Redmi Note 12 family
-  - Redmi K70/K70 Pro/K70 Ultra, K60 series
-  - Older Redmi devices (strong community support)
-- POCO:
-  - POCO X6/X6 Pro
-  - POCO F6/F6 Pro
-  - POCO M6/M6 Pro
-  - POCO C series (support varies)
+### Incompatible / Restricted Devices
 
-</details>
-
-### Restricted/Problematic Devices
-
-- Regional:
-  - CN (China) variants: strictest rules; many models are not unlockable via official means
-  - India: extra checks; sometimes longer timers
-  - EEA/Global: generally easier than CN, but still variable
-- Carrier/Enterprise/Education SKUs: often locked down or not supported
+- **CN (China) variants:** Strictest rules; many models are not unlockable via official means
+- **Carrier/Enterprise/Education SKUs:** Often locked down or not supported
+- **India variants:** Extra verification checks; sometimes longer waiting timers
+- **Newer HyperOS devices:** May require additional eligibility checks beyond the standard waiting period
 
 ## Prerequisites & Setup
 
