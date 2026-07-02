@@ -68,10 +68,6 @@ head:
     - rel: canonical
       href: "https://awesome-android-root.pages.dev"
   - - link
-    - rel: alternate
-      hreflang: "en"
-      href: "https://awesome-android-root.pages.dev"
-  - - link
     - rel: prefetch
       href: "/apps-and-modules/"
   - - meta
