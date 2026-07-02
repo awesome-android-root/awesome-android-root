@@ -7,6 +7,7 @@ export default withPwa(defineConfig({
   title: 'Awesome Android Root',
   ignoreDeadLinks: true,
   cleanUrls: true,
+  lastUpdated: true,
   
   vite: {
     build: {
@@ -1086,13 +1087,7 @@ export default withPwa(defineConfig({
       level: [2, 3],
       label: 'On this page'
     },
-    lastUpdated: {
-      text: 'Updated at',
-      formatOptions: {
-        dateStyle: 'medium',
-        timeStyle: 'short'
-      }
-    },
+  lastUpdatedText: 'Last updated',
     appearance: 'auto',
     socialLinks: [
       { icon: 'x', link: 'https://x.com/awsm_and_root' },
