@@ -1,8 +1,13 @@
 {
   "name": "awesome-android-root",
-  "version": "3.1.0",
-  "description": "A curated list of best Android root applications and best magisk modules. Features over 500+ apps across categories like system mods, privacy, customization, and development tools.",
+  "version": "3.2.0",
+  "description": "The ultimate Android rooting hub — a curated list of 500+ top root apps, Magisk modules, KernelSU modules, LSPosed modules, and comprehensive step-by-step rooting guides.",
   "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "awesome-android-root",
+    "url": "https://github.com/awesome-android-root"
+  },
   "homepage": "https://awesome-android-root.pages.dev",
   "repository": {
     "type": "git",
@@ -14,33 +19,33 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "node scripts/build-docs.js && vitepress build docs",
-    "docs:preview": "vitepress preview docs",
-    "docs:build:pwa": "vitepress build docs"
-  },
-  "devDependencies": {
-    "vitepress": "^1.6.4",
-    "@vite-pwa/vitepress": "^1.1.0"
-  },
-  "optionalDependencies": {
-    "workbox-window": "^7.3.0"
+    "docs:preview": "vitepress preview docs"
   },
   "keywords": [
     "android",
     "root",
     "magisk",
-    "rooting",
-    "android-apps",
-    "awesome-list",
-    "lsposed",
-    "xposed",
+    "magisk-modules",
     "kernelsu",
+    "kernelsu-modules",
+    "lsposed",
+    "lsposed-modules",
+    "xposed",
+    "xposed-modules",
+    "rooting",
+    "root-guide",
+    "android-apps",
     "android-tools",
+    "awesome-list",
+    "awesome",
     "pwa",
     "vitepress"
   ],
-  "author": {
-    "name": "awesome-android-root",
-    "url": "https://github.com/awesome-android-root"
+  "devDependencies": {
+    "@vite-pwa/vitepress": "^1.1.0",
+    "vitepress": "^1.6.4"
   },
-  "license": "MIT"
+  "optionalDependencies": {
+    "workbox-window": "^7.3.0"
+  }
 }
