@@ -1251,6 +1251,7 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 - **[Hide My Applist](https://github.com/Dr-TSNG/Hide-My-Applist)** - Intercepts app-list detection. `Proprietary` `[LSP]`
 - **[Komodo Build Props](https://github.com/Elcapitanoe/Komodo-Build-Prop#komodo-build-props)** - Spoofs your device as a Pixel 9 Pro XL (komodo). `FOSS` `[M]`
 - **[NoHello](https://github.com/MhmRdd/NoHello)** - Lightweight Zygisk module to hide root. `FOSS` `[M]`
+- **[Oh My Keymint](https://github.com/qwq233/OhMyKeymint)** - Custom keystore implementation for Android Keystore Spoofer. `FOSS` `[M]` `[K]`
 - **[Play Integrity Fork (PIF)](https://github.com/osm0sis/PlayIntegrityFork)** - The most actively maintained PIF. Fixes `DEVICE_INTEGRITY` verdicts with custom fields/props. Recommended starting point after chiteroman's original was discontinued. `FOSS` `[M]`
 - **[Play Integrity Fix (inject)](https://github.com/KOWX712/PlayIntegrityFix)** - Actively maintained fork using injected GMS/Play Store spoofing with a WebUI. `FOSS` `[M]`
 - **[PlaycurlNEXT](https://github.com/daboynb/playcurlNEXT)** - Fixes Play Integrity (and SafetyNet) verdicts with custom fields and props. `FOSS` `[M]` `[K]`
