@@ -96,24 +96,16 @@ Root Nothing Phone devices with straightforward process.
 ---
 
 
-## Supported Devices
+## Device Compatibility
 
-**All Nothing Phone models supported:**
-- **Nothing Phone (1)** - Codename: `Spacewar` - Released July 2022
-- **Nothing Phone (2)** - Codename: `Pong` - Released July 2023
-- **Nothing Phone (2a)** - Codename: `Pacman` - Released March 2024
-- **Nothing Phone (2a) Plus** - Codename: `PacmanPro` - Released August 2024
-- **Nothing Phone (3)** - Codename: `Metroid` - Released July 2025
-- **Nothing Phone (3a)** - Codename: `Asteroids` - Released March 2025
-- **Nothing Phone (3a) Pro** - Codename: `Asteroids` - Released March 2025
-- **Nothing Phone (3a) Lite** - Codename: `Asteroids` - Released October 2025
+All Nothing and CMF by Nothing Phone models support bootloader unlocking and rooting. No regional restrictions — all devices are unlockable globally.
 
-**All CMF by Nothing Phone models supported:**
-- **CMF Phone (1)** - Codename: `Tetris` - Released July 2024
-- **CMF Phone (2) Pro** - Codename: `Galaga` - Released April 2025
+**Codenames for firmware identification:**
+- Phone (1): `Spacewar` · Phone (2): `Pong` · Phone (2a): `Pacman`/`PacmanPro` · Phone (3): `Metroid` · Phone (3a): `Asteroids`
+- CMF Phone (1): `Tetris` · CMF Phone (2): `Galaga`
 
 > [!NOTE]
-> **Note:** All Nothing Phones are unlockable globally. No regional restrictions.
+> All Nothing Phones are unlockable globally. No known incompatible models.
 
 ---
 
@@ -230,14 +222,10 @@ After automatic factory reset:
 
 ### Determine Correct Image
 
-| Device | Android Version | Image to Patch |
-|--------|-----------------|----------------|
-| Nothing Phone (3) Series | Android 15/16 | init_boot.img |
-| Nothing Phone (2a) Series | Android 14/15 | init_boot.img |
-| Nothing Phone (2) | Android 13/14/15 | init_boot.img |
-| Nothing Phone (1) | Android 13/14/15 | init_boot.img |
-| Nothing Phone (1) | Android 12 | boot.img |
-| CMF Phone Series | Android 14/15 | init_boot.img |
+| Device Generation | Image to Patch |
+|---|---|
+| All Nothing Phones (Android 13+) | `init_boot.img` |
+| Phone (1) on Android 12 | `boot.img` |
 
 **Check in Magisk app "Ramdisk" field if unsure.**
 
