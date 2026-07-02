@@ -18,7 +18,7 @@ export function storeLinkPlugin(md) {
     return tokens[idx].content;
   };
 
-  // Minimal HTML attribute escape — only double-quotes matter here since
+  // Minimal HTML attribute escape - only double-quotes matter here since
   // the href is placed inside a double-quoted HTML attribute.
   const escapeAttr = (s) => s.replace(/"/g, '&quot;');
 

@@ -104,7 +104,7 @@ Root Samsung Galaxy devices while navigating Knox security, Odin flashing, and O
 - **OEM Unlocking toggle removed** from Developer Options; unlock logic stripped from firmware
 - **Affects newer flagship devices** (S25 series and later) and any device updated to One UI 8+
 - **Blocks rooting, custom ROMs, and custom kernels** through official methods
-- **Applies globally** — both previously unlockable and restricted models
+- **Applies globally** - both previously unlockable and restricted models
 
 **Do NOT update to the latest One UI if you plan to root** until verified unlock methods emerge.
 :::
@@ -130,13 +130,13 @@ Samsung rooting is complex and model-dependent. Rooting is primarily possible on
 ### Incompatible / Restricted Devices
 
 ::: danger CANNOT BE ROOTED
-- **US carrier models** (Verizon, AT&T, T-Mobile branded) — bootloader permanently locked
-- **One UI 8+ (Android 16+) devices** — OEM Unlocking toggle removed globally; bootloader unlock logic stripped from firmware. Affects all S25 series, Z Fold 7, Z Flip 7, and any device updated to One UI 8
-- **Most US/Canadian Snapdragon variants** — no OEM unlock available
+- **US carrier models** (Verizon, AT&T, T-Mobile branded) - bootloader permanently locked
+- **One UI 8+ (Android 16+) devices** - OEM Unlocking toggle removed globally; bootloader unlock logic stripped from firmware. Affects all S25 series, Z Fold 7, Z Flip 7, and any device updated to One UI 8
+- **Most US/Canadian Snapdragon variants** - no OEM unlock available
 :::
 
 ::: warning KNOX CONSEQUENCES (Permanent)
-- Knox EFUSE physically burned — **cannot be reversed**
+- Knox EFUSE physically burned - **cannot be reversed**
 - Samsung Pay/Wallet, Secure Folder, Samsung Pass permanently disabled
 - Warranty permanently void
 - Some banking apps may refuse to run even with root hiding

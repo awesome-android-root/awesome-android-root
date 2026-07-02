@@ -432,7 +432,7 @@ fastboot flashing unlock
 
 ### Samsung Galaxy
 
-**Critical:** US and Canadian Snapdragon models generally CANNOT unlock bootloader. International Exynos models can unlock but Knox permanently trips. Recent One UI versions (Android 16+) have removed the OEM Unlocking toggle entirely on newer devices — verify unlockability before purchasing.
+**Critical:** US and Canadian Snapdragon models generally CANNOT unlock bootloader. International Exynos models can unlock but Knox permanently trips. Recent One UI versions (Android 16+) have removed the OEM Unlocking toggle entirely on newer devices - verify unlockability before purchasing.
 
 **Compatibility Check:**
 
