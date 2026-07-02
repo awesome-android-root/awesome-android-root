@@ -84,7 +84,7 @@ Root Samsung Galaxy devices while navigating Knox security, Odin flashing, and O
 ## Quick Navigation
 
 - [Samsung Challenges](#samsung-rooting-challenges)
-- [Supported Devices](#supported-devices)
+- [Device Compatibility](#device-compatibility)
 - [Prerequisites](#prerequisites)
 - [Bootloader Unlock](#unlock-bootloader)
 - [Root Installation](#root-installation)
@@ -96,18 +96,17 @@ Root Samsung Galaxy devices while navigating Knox security, Odin flashing, and O
 - [Magisk Guide](./magisk-guide.md) - Complete Magisk documentation
 
 ---
-## Samsung Rooting Challenges
-### Critical Warnings
+### Samsung Rooting Challenges
 
-::: danger 🚨 One UI 8 Bootloader Lock
-**One UI 8 (Android 16) eliminates bootloader unlocking support on Samsung Galaxy devices.**
+::: danger BOOTLOADER LOCK ON RECENT DEVICES
+**Recent One UI versions (Android 16+) have eliminated bootloader unlocking support on newer Samsung Galaxy devices.**
 
-- **OEM Unlocking toggle removed** from Developer Options; unlock logic stripped from firmware (`androidboot.other.locked=1`)
-- **Affected globally**: S25 series, Z Fold 7, Z Flip 7, and any device updated to One UI 8
-- **Blocks rooting, custom ROMs, and custom kernels** entirely through official methods
-- **Applies to all regions**: International and US devices (both previously unlockable and restricted models)
+- **OEM Unlocking toggle removed** from Developer Options; unlock logic stripped from firmware
+- **Affects newer flagship devices** (S25 series and later) and any device updated to One UI 8+
+- **Blocks rooting, custom ROMs, and custom kernels** through official methods
+- **Applies globally** — both previously unlockable and restricted models
 
-**⚠️ Do NOT update to One UI 8 if you plan to root or unlock your bootloader** until verified unlock methods emerge.
+**Do NOT update to the latest One UI if you plan to root** until verified unlock methods emerge.
 :::
 
 
