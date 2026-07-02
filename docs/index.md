@@ -335,7 +335,7 @@ features:
   <a href="https://github.com/awesome-android-root/awesome-android-root" class="community-card github">
     <span class="icon">⭐</span>
     <strong>GitHub</strong>
-    <span>3.5k stars</span>
+    <span>3.7k stars</span>
   </a>
   <a href="https://x.com/awsm_and_root" class="community-card twitter">
     <span class="icon">𝕏</span>
