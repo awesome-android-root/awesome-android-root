@@ -144,30 +144,30 @@ adb devices
 
 ---
 
-## Supported Devices
+## Device Compatibility
 
-<details><summary>📱 All Supported Pixel Models</summary>
+Google Pixel devices are the most root-friendly Android phones. All Pixel models (1 through current generation) support bootloader unlocking and rooting.
 
-### Modern Pixels (Use init_boot.img)
-- **Pixel 10 Series** (2026) - Pro XL, Pro, Standard
-- **Pixel 9 Series** (2024) - Pro XL, Pro, Standard, Pro Fold
-- **Pixel 8 Series** (2023) - Pro, Standard, 8a
-- **Pixel 7 Series** (2022) - Pro, Standard, 7a
-- **Pixel 6 Series** (2021) - Pro, Standard, 6a (Android 13+)
-
-### Legacy Pixels (Use boot.img)
-- **Pixel 6 Series** (Android 12 only)
-- **Pixel 5 Series** - 5a 5G, 5
-- **Pixel 4 Series** - XL, Standard, 4a 5G, 4a
-- **Pixel 3 Series** - XL, Standard, 3a XL, 3a
-- **Pixel 2 Series** - XL, Standard
-- **Pixel 1 Series** - XL, Standard
+### Incompatible Devices
 
 ::: warning CARRIER LOCKS
-Verizon and some carrier models may have OEM unlock disabled. Verify before purchase.
+**Verizon and some carrier-locked models** may have OEM unlocking permanently disabled. Always verify "OEM unlocking" is available in Developer Options before purchasing a device for rooting.
 :::
 
-</details>
+### Image Type Quick Reference
+
+| Device Generation | Image to Patch |
+|-------------------|----------------|
+| Pixel 7 and newer | `init_boot.img` |
+| Pixel 6 (Android 13+) | `init_boot.img` |
+| Pixel 6 (Android 12) | `boot.img` |
+| Pixel 5 and older | `boot.img` |
+
+::: tip QUICK CHECK
+Open Magisk app → Check "Ramdisk" field:
+- **Yes** = Use `boot.img`
+- **No** = Use `init_boot.img`
+:::
 
 ---
 
