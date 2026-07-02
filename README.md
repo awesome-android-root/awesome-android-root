@@ -438,6 +438,9 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 
 ### Social Media Mods
 
+#### Bilibili Mods
+- **[BBZQ](https://github.com/HSSkyBoy/BBZQ)** - Removes unnecessary content, optimizes the core experience, and provide various practical functions. `FOSS` `[LSP]`
+
 #### Discord Mods
 - **[Kettu](https://github.com/C0C0B01/KettuXposed)** - A Discord mobile app client modification continuing Bunny's mission. `FOSS` `[LSP]`
 - **[Revenge](https://github.com/revenge-mod/revenge-bundle-next)** - Revenge is a client modification for Discord Android. `FOSS`
