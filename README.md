@@ -491,6 +491,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 #### WhatsApp Mods
 - **[⭐ WA Enhancer](https://github.com/Dev4Mod/WaEnhancer)** - Enhances your WhatsApp experience. `FOSS` `[LSP]`
 - **[WA Enhancer X](https://github.com/mubashardev/WaEnhancerX)** - Fork of WA Enhancer with additional features. `FOSS` `[LSP]`
+- **[WAPlus](https://github.com/RevealedSoulEven/WAPlusXposed)** - Unlock WhatsApp Plus Features. `FOSS` `[LSP]`
 
 #### X/Twitter Mods
 - **[⭐ Piko Patches](https://github.com/crimera/piko)** - Morphe patches for twitter with features like hide promoted tweets, hide promoted accounts, hide promoted trends, hide "who to follow" etc. `FOSS`
@@ -1216,6 +1217,7 @@ A feature that lets modules inject code into Android's Zygote process for system
 
 ### Root Detection Tools
 - **[⭐ Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector)** - A tool for detecting root on android. `FOSS`
+- **[⭐ Duck Detector](https://github.com/eltavine/Duck-Detector-Refactoring)** - Android environment integrity inspection tool for root, hook, bootloader, SELinux, virtualization, and attestation signals. `FOSS`
 - **[MagiskDetection](https://github.com/apkunpacker/MagiskDetection)** - Collection of Some publicly Available POC Apps to Detect Root/Magisk presence. `FOSS` `Proprietary`
 - **[PIF Detector](https://github.com/IR0NBYTE/playIntegrityFixDetector)** - Native app designed to detect modifications, bypasses, or "fixes" applied to the Google Play Integrity API. `FOSS` `[M]` `[K]`
 - **[Play Integrity API Checker](https://github.com/1nikolas/play-integrity-checker-app)** - This app shows info about your device integrity as reported by Google Play Services. If any of this fails could mean your device is rooted or tampered in a way. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck)
@@ -1257,6 +1259,7 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 - **[TrickyStore OSS](https://github.com/beakthoven/TrickyStoreOSS)** - Open-source alternative to TrickyStore. `FOSS` `[M]` `[K]`
 - **[Tricky Addon – Update Target List](https://github.com/KOWX712/Tricky-Addon-Update-Target-List)** - KSU WebUI to configure TrickyStore's `target.txt`. `FOSS` `[K]`
 - **[YuriKey](https://github.com/dpejoh/yurikey)** - Systemless module to obtain strong integrity easily. `FOSS` `[M]` `[K]`
+- **[Specter](https://github.com/dpejoh/specter)** - Unified Play Integrity and root hiding stack for Android. Successor of Yurikey. `FOSS` `[M]` `[K]`
 - **[Zygisk Assistant](https://github.com/snake-4/Zygisk-Assistant)** - Zygisk module to hide root on KernelSU, Magisk, and APatch. `FOSS` `[M]`
 
 > [!TIP]
