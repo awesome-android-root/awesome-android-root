@@ -334,10 +334,8 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[systemless-adblocker](https://github.com/Magisk-Modules-Alt-Repo/systemless-adblocker)** - Ultimate adblocker module derived from gloeyisk/systemless-hosts. `FOSS` `[M]`
 - **[Systemless hosts KernelSU module](https://github.com/symbuzzer/systemless-hosts-KernelSU-module)** - Required module to use applications such as AdAway on KernelSU and APatch. `FOSS` `[K]`
 
-> [!NOTE]
-> **Related Guide**: [Complete Android Ad Blocking Tutorial](./docs/general-guides/android-adblocking.md)
-
 > [!TIP]
+> **Related Guide**: [Complete Android Ad Blocking Tutorial ↗](./docs/general-guides/android-adblocking.md)  
 > For network-level blocking, also check [DNS Tools](#dns-tools) and [Firewall Tools](#firewall-tools)
 
 [↑ Back to top](#table-of-contents)
