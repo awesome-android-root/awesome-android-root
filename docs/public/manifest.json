@@ -53,35 +53,5 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ],
-
-  "screenshots": [
-    {
-      "src": "/screenshots/home.webp",
-      "sizes": "1440x900",
-      "type": "image/webp",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/screenshots/mobile.webp",
-      "sizes": "1080x2400",
-      "type": "image/webp",
-      "form_factor": "narrow"
-    }
-  ],
-
-  "shortcuts": [
-    {
-      "name": "Browse Apps",
-      "url": "/apps/"
-    },
-    {
-      "name": "Browse Modules",
-      "url": "/modules/"
-    },
-    {
-      "name": "Recovery Guides",
-      "url": "/recoveries/"
-    }
   ]
 }
