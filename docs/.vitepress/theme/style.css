@@ -32,7 +32,7 @@
   .pwa-toast { left: 12px; right: 12px; }
 }
 
-/* Box-model reset — consistent sizing across all elements */
+/* Box-model reset - consistent sizing across all elements */
 *,
 *::before,
 *::after {

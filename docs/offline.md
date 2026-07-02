@@ -35,7 +35,7 @@ head:
       content: You're Offline - Awesome Android Root
   - - meta
     - name: twitter:description
-      content: Offline mode — cached Android rooting guides still available.
+      content: Offline mode - cached Android rooting guides still available.
 ---
 
 <div style="text-align: center; padding: 2rem 0;">

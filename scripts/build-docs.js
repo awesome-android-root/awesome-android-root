@@ -96,7 +96,7 @@ try {
             logInfo("Updated README content in docs/apps-and-modules/index.md");
         } else {
             // Legacy fallback: no sentinel found, append (one-time)
-            logWarn("Sentinel '<!-- AUTO-GENERATED-CONTENT -->' not found in index.md — appending.");
+            logWarn("Sentinel '<!-- AUTO-GENERATED-CONTENT -->' not found in index.md - appending.");
             logWarn("Add the sentinel comment after the hand-written header to make builds idempotent.");
             finalContent = existingContent + '\n\n' + filteredReadme;
         }
@@ -141,7 +141,7 @@ try {
     fs.writeFileSync(INDEX_MD_PATH, finalContent);
     logInfo("Links and image paths adjusted in docs/apps-and-modules/index.md");
 
-    // 7. Add AppSearch component (idempotent — skips if already present)
+    // 7. Add AppSearch component (idempotent - skips if already present)
     const addSearchComponent = () => {
         const content = fs.readFileSync(INDEX_MD_PATH, 'utf8');
 
@@ -156,7 +156,7 @@ try {
         // Find frontmatter boundaries (YAML frontmatter MUST start on line 0;
         // the closing --- is the second one in the file. We search only the
         // first 500 lines to avoid false-matching horizontal rules deep in
-        // the content — the actual frontmatter is ~300 lines of SEO metadata.)
+        // the content - the actual frontmatter is ~300 lines of SEO metadata.)
         const frontmatterIndices = [];
         if (lines[0]?.trim() === '---') {
             frontmatterIndices.push(0);

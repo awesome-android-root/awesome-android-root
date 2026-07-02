@@ -21,7 +21,7 @@ assignees: ''
 ## Rationale
 
 **Why should this change happen?**
-(Explain the reasoning — e.g., better discoverability, logical grouping, consistency with other sections)
+(Explain the reasoning - e.g., better discoverability, logical grouping, consistency with other sections)
 
 ## Impact
 

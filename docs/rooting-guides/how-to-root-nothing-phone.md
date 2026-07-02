@@ -98,7 +98,7 @@ Root Nothing Phone devices with straightforward process.
 
 ## Device Compatibility
 
-All Nothing and CMF by Nothing Phone models support bootloader unlocking and rooting. No regional restrictions — all devices are unlockable globally.
+All Nothing and CMF by Nothing Phone models support bootloader unlocking and rooting. No regional restrictions - all devices are unlockable globally.
 
 **Codenames for firmware identification:**
 - Phone (1): `Spacewar` · Phone (2): `Pong` · Phone (2a): `Pacman`/`PacmanPro` · Phone (3): `Metroid` · Phone (3a): `Asteroids`

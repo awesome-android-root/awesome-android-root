@@ -1,7 +1,7 @@
 {
   "name": "awesome-android-root",
   "version": "3.2.0",
-  "description": "The ultimate Android rooting hub — a curated list of 500+ top root apps, Magisk modules, KernelSU modules, LSPosed modules, and comprehensive step-by-step rooting guides.",
+  "description": "The ultimate Android rooting hub - a curated list of 500+ top root apps, Magisk modules, KernelSU modules, LSPosed modules, and comprehensive step-by-step rooting guides.",
   "private": true,
   "license": "MIT",
   "author": {

@@ -58,7 +58,7 @@ class ImageOptimizer {
   /**
    * Initialize the MutationObserver.  When called again with a new root
    * element (e.g. after a client-side route change), the existing observer
-   * is simply reconnected to the new root — no full destroy/recreate.
+   * is simply reconnected to the new root - no full destroy/recreate.
    */
   init(rootElement = document.querySelector('.VPContent') || document.body) {
     if (typeof window === 'undefined') return
@@ -105,7 +105,7 @@ class ImageOptimizer {
   }
 
   /**
-   * Cleanup observer (page unload only — route changes use reconnect).
+   * Cleanup observer (page unload only - route changes use reconnect).
    */
   destroy() {
     if (this.observer) {
@@ -179,7 +179,7 @@ export default {
       }
     }
 
-    // Global error handler — only verbose in development
+    // Global error handler - only verbose in development
     app.config.errorHandler = (err, instance, info) => {
       if (import.meta.env.DEV) {
         console.error('Global error:', err)

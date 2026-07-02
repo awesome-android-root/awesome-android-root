@@ -386,7 +386,7 @@ fastboot flash boot kernelsu_patched_*.img
 fastboot reboot
 ```
 
-**Step 4:** Open Manager to verify — should show "Installed" with LKM mode.
+**Step 4:** Open Manager to verify - should show "Installed" with LKM mode.
 
 ---
 
@@ -414,7 +414,7 @@ fastboot reboot
 
 1. **Verify root access** - Open Manager, confirm "Installed" status. Test: `adb shell su -c "id"`
 2. **Configure Manager** - Enable hiding (rename for banking apps), require authentication, enable safe mode
-3. **Install a metamodule** (required for module support — see next section)
+3. **Install a metamodule** (required for module support - see next section)
 4. **Set up App Profiles** for granular root control
 5. **Backup your patched boot image** for recovery
 
@@ -422,7 +422,7 @@ fastboot reboot
 
 ## App Profile System
 
-App Profiles are KernelSU's unique feature — granular permission control per app, beyond simple root grant/deny.
+App Profiles are KernelSU's unique feature - granular permission control per app, beyond simple root grant/deny.
 
 **What you can control per app:**
 - Root access on/off
@@ -461,7 +461,7 @@ ksud profile import com.target.app < profile.json
 
 ### What is a Metamodule?
 
-Current KernelSU releases no longer include built-in module mounting. A **metamodule** provides the mounting infrastructure — without one, modules that modify `/system` will install but **not mount**. (Modules using only scripts, `sepolicy`, or `system.prop` still work without one.)
+Current KernelSU releases no longer include built-in module mounting. A **metamodule** provides the mounting infrastructure - without one, modules that modify `/system` will install but **not mount**. (Modules using only scripts, `sepolicy`, or `system.prop` still work without one.)
 
 This applies to all variants: Official KernelSU, KernelSU-Next, Wild KSU, SukiSU-Ultra, and ReSukiSU.
 
@@ -528,7 +528,7 @@ ksud module remove module_id
 
 ## Root Hiding and Play Integrity
 
-Modern banking apps use Play Integrity API with hardware-backed attestation — increasingly difficult but not impossible to manage on rooted devices. KernelSU's kernel-level approach offers better evasion than userspace methods.
+Modern banking apps use Play Integrity API with hardware-backed attestation - increasingly difficult but not impossible to manage on rooted devices. KernelSU's kernel-level approach offers better evasion than userspace methods.
 
 ### Recommended Setup
 
@@ -536,20 +536,20 @@ Modern banking apps use Play Integrity API with hardware-backed attestation — 
 |------|--------|---------|
 | 1 | **Hide Manager** | KernelSU Manager → Settings → "Hide the KernelSU Manager" → rename (e.g., "Settings") |
 | 2 | **Banking Profile** | Create App Profile denying root, filesystem, and hardware access for banking apps |
-| 3 | **Install SUSFS** | For SUSFS-patched kernels — advanced root hiding with filesystem manipulation |
+| 3 | **Install SUSFS** | For SUSFS-patched kernels - advanced root hiding with filesystem manipulation |
 | 4 | **Install Play Integrity Fix** | Use [Play Integrity Fork](https://github.com/osm0sis/PlayIntegrityFork) or [Play Integrity Fix (inject)](https://github.com/KOWX712/PlayIntegrityFix) for MEETS_DEVICE_INTEGRITY |
 | 5 | **Clear app data** | Clear data for Google Play Services, Play Store, and banking apps → Reboot |
 
 ### What's Realistic
 
-- **Basic Integrity:** PASS — achievable with proper setup
-- **Device Integrity:** PASS — possible with PIF + TrickyStore (keybox required for locked-bootloader-equivalent verification)
-- **Strong Integrity:** FAIL for most — requires an unrevoked hardware keybox (increasingly scarce)
+- **Basic Integrity:** PASS - achievable with proper setup
+- **Device Integrity:** PASS - possible with PIF + TrickyStore (keybox required for locked-bootloader-equivalent verification)
+- **Strong Integrity:** FAIL for most - requires an unrevoked hardware keybox (increasingly scarce)
 
 ### Testing Tools
 
-- [Play Integrity API Checker](https://github.com/1nikolas/play-integrity-checker-app) — Official checker
-- [TB Checker](https://play.google.com/store/apps/details?id=com.tbchecker) — Comprehensive tests
+- [Play Integrity API Checker](https://github.com/1nikolas/play-integrity-checker-app) - Official checker
+- [TB Checker](https://play.google.com/store/apps/details?id=com.tbchecker) - Comprehensive tests
 
 > [!WARNING]
 > No guarantees. Some apps may still detect root despite all measures. Always test your specific apps.
@@ -574,7 +574,7 @@ Modern banking apps use Play Integrity API with hardware-backed attestation — 
 
 **Bootloop:**
 1. Force reboot (hold power 10s)
-2. Boot to safe mode (Volume Down at boot) — disables all modules
+2. Boot to safe mode (Volume Down at boot) - disables all modules
 3. If still looping, flash stock boot.img:
 ```bash
 fastboot flash boot stock_boot.img

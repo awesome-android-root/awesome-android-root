@@ -483,5 +483,5 @@ After rooting your Pixel:
 ---
 
 ::: tip SUCCESS
-Your Pixel is now rooted! Remember to keep Magisk updated and always backup before major changes — except on Pixel 1 / 1st gen Pixel devices, where you should stay on Magisk v30.6 until the upstream issue is resolved.
+Your Pixel is now rooted! Remember to keep Magisk updated and always backup before major changes - except on Pixel 1 / 1st gen Pixel devices, where you should stay on Magisk v30.6 until the upstream issue is resolved.
 :::

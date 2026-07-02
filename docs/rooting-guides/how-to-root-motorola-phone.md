@@ -104,10 +104,10 @@ Most Motorola devices with unlockable bootloaders can be rooted. Check [XDA Foru
 ### Incompatible / Restricted Devices
 
 ::: danger CANNOT BE ROOTED
-- **Carrier-exclusive models** (Verizon, AT&T, Tracfone) — bootloader unlock codes not available
-- **Amazon Branded devices** — permanently locked
-- **ThinkShield / Enterprise devices** — locked down by policy
-- **Prepaid carrier-locked variants** — typically cannot unlock
+- **Carrier-exclusive models** (Verizon, AT&T, Tracfone) - bootloader unlock codes not available
+- **Amazon Branded devices** - permanently locked
+- **ThinkShield / Enterprise devices** - locked down by policy
+- **Prepaid carrier-locked variants** - typically cannot unlock
 :::
 
 ### Image Type Quick Reference

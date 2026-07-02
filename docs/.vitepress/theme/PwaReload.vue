@@ -143,7 +143,7 @@ onMounted(async () => {
   }
 })
 
-// Setup service worker event listeners (idempotent — skips if already set up)
+// Setup service worker event listeners (idempotent - skips if already set up)
 const setupServiceWorkerListeners = () => {
   if (!registration || swUpdateFoundHandler) return
 
