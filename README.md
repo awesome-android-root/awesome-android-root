@@ -526,11 +526,17 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 #### Google News Mods
 - **[G-News Control](https://github.com/mango0oo/G-News-Control)** - Magisk / KernelSU module for control the Google News on the home screen. `Proprietary` `[M]` `[K]`
 
+#### Google Photos Mods
+- **[⭐ GPhotosUnlimited](https://github.com/Rev4N1/GPhotosUnlimited)** - A Zygisk module which gives unlimited Google Photos storage. `FOSS` `[M]` `[K]`
+- **[XposedPhotosFix](https://github.com/RevealedSoulEven/XposedPhotosFIX)** - Prevents Google Photos app from merging all folders into Camera and creates separate albums for each folder, useful for backups. `FOSS` `[LSP]`
+
 #### Solid Explorer
 - **[F**k Solid Explorer](https://github.com/fzer0x/dev.fzer0x.fucksolidexplorer)** - Unlock premium features and remove advertisements from Solid Explorer. `FOSS` `[LSP]`
 
 #### Spotify
+- **[Spicy EX](https://github.com/amarinne/spicy-ex)** - Adds Spicy lyrics in Spotify along with translation and much more UI features. `FOSS` `[LSP]`
 - **[Spotify Plus](https://github.com/LeNerd46/SpotifyPlus)** - Adds beautiful lyrics to Spotify. `FOSS` `[LSP]`
+- **[LSpot](https://codeberg.org/dapsvi/LSpot)** - Blocks ads in Spotify by intercepting OkHttp requests to ad endpoints. `FOSS` `[LSP]`
 
 #### Yandex Mods
 - **[Yandex Maps Patcher](https://github.com/Xposed-Modules-Repo/ru.bluecat.yandexmapspatcher)** - Hides ads and intrusive services in the Yandex Maps app. `Proprietary` `[LSP]`
@@ -1010,13 +1016,13 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 - **[Surfing](https://github.com/GitMetaio/Surfing)** - Magisk and KernelSU modules for Clash/mihomo, sing-box, v2ray, xray, hysteria services. `FOSS` `[M]` `[K]`
 
 ### SSL and certificates
+- **[⭐ Move Certificate](https://github.com/ys1231/MoveCertificate)** - Move user certificates to system certificates. Supports Android 7-16. `FOSS` `[M]` `[K]`
+- **[⭐ SSL Killer](https://github.com/Xposed-Modules-Repo/com.simo.ssl.killer)** - Bypass multiple ssl pinning implementations. `Proprietary` `[LSP]`
 - **[Always Trust User Certs](https://github.com/NVISOsecurity/AlwaysTrustUserCerts)** - A Magisk/KernelSU module that automatically adds user certificates to the system root CA store. `FOSS` `[M]` `[K]`
 - **[Cert-Fixer](https://github.com/pwnlogs/cert-fixer)** - Installs custom CA certificates to Android's system certificate store. `FOSS` `[M]`
 - **[Custom Certificates](https://github.com/YujiaCheng1996/custom-certificates)** - A Magisk/KernelSU module which adds custom certificates to the system trust store. `FOSS` `[M]` `[K]`
 - **[Custom Certificate Authorities](https://github.com/Magisk-Modules-Alt-Repo/custom-certificate-authorities)** - Moves user-installed certificate authorities into the system trust store, making them trusted by all apps. `FOSS` `[M]`
 - **[Just Trust Me Pro](https://github.com/hang666/JustTrustMePro)** - Disables SSL certificate checking for the purposes of auditing an app with cert pinning. `FOSS` `[M]`
-- **[Move Certificate](https://github.com/ys1231/MoveCertificate)** - Move user certificates to system certificates. Supports Android 7-16. `FOSS` `[M]` `[K]`
-- **[SSL Killer](https://github.com/Xposed-Modules-Repo/com.simo.ssl.killer)** - Bypass multiple ssl pinning implementations. `Proprietary` `[LSP]`
 
 ### Wi‑Fi Tools
 - **[DriFiCrack](https://github.com/ZeltNamizake/DriFiCrack)** - Brute Force Tool to Crack Wi-Fi Passwords. `FOSS` `[M]`
