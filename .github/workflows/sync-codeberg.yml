@@ -1,0 +1,31 @@
+name: Sync to Codeberg
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    # Every Monday at 03:00 UTC
+    - cron: "0 3 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Push mirror to Codeberg
+        env:
+          USERNAME: ${{ secrets.CODEBERG_USERNAME }}
+          TOKEN: ${{ secrets.CODEBERG_TOKEN }}
+        run: |
+          git remote add codeberg https://${USERNAME}:${TOKEN}@codeberg.org/awesome-android-root/awesome-android-root.git
+
+          git push codeberg --all --force
+          git push codeberg --tags --force
