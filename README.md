@@ -834,7 +834,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 
 ## Debloating and Cleaning
 
-> [!NOTE]
+> [!TIP]
 > **Related Guide**: [Complete Debloating Tutorial](../general-guides/android-apps-debloating.md)
 
 ### Cleaning Apps
