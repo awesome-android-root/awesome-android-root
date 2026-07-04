@@ -277,10 +277,9 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 | ▶️ | Available on Google Play Store |
 
 ### Ordering of Entries
-| order | Description |
-|:---|:---|
-| 1 | ⭐ (Community-recommended) entries |
-| 2 | Alphabetical order within each (sub-)category |
+
+1. ⭐ (Community-recommended) entries first
+2. Alphabetical order within each (sub-)category
 
 
 <details>
@@ -300,8 +299,6 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 ---
 
 ## Starter Kit: Must have Apps
-
-**Just rooted your device?** Start with these must-have applications that form the foundation of a great root experience.
 
 | App  | Why it's essential |
 | :---: | :--- |
@@ -1402,15 +1399,16 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 - Common questions? Check the FAQs: [faqs.md](./docs/faqs.md)
 
 ### Resource Hub
-Extended references & external reading: [resources.md](./docs/resources.md)
+> Extended references & external reading: [resources.md](./docs/resources.md)
 
 ### Contribute and Participate
 - ⭐ Star the repo (boosts discovery)
-- 🐛 Report or triage [issues](https://github.com/awesome-android-root/awesome-android-root/issues)
-- 💡 Suggest new apps/modules (1 per issue for clarity)
+- 🐛 Report [issues](https://github.com/awesome-android-root/awesome-android-root/issues)
+- 💡 Suggest new apps/modules
 - 🧹 Improve formatting / dead link cleanup
-- 📝 Read [contributing guide](docs/contributing.md) before major PRs
-- 🗂️ Large edits? Organize commits per category
+
+> 📝 Read [contributing guide](docs/contributing.md) before major PRs
+
 ---
 
 ## Legal and Safety
@@ -1443,29 +1441,7 @@ Extended references & external reading: [resources.md](./docs/resources.md)
 ---
 
 <div align="center">
-<br><br>
-
-
-# Support the Project
-
-[![Star the Repo](https://img.shields.io/badge/%20⭐-Star%20this%20Repo-yellow?style=for-the-badge)](https://github.com/awesome-android-root/awesome-android-root)
-[![Share Project](https://img.shields.io/badge/%20📢-Share%20Project-blue?style=for-the-badge)](https://twitter.com/intent/tweet?text=Check%20out%20this%20amazing%20Android%20rooting%20resource!&url=https://awesome-android-root.pages.dev)
-
-</div>
-
-- Replace dead or redirected links with active sources/forks
-- Remove unmaintained / archived projects
-- Suggest safer open‑source alternatives for proprietary tools
-- Improve clarity for beginners (simplify phrasing / add warnings)
-
----
-
-<div align="center">
 
 **⚡ Built with ❤️ by [Awesome Android Root](https://github.com/awesome-android-root/awesome-android-root)**
-
-[![X Follow](https://img.shields.io/badge/%20%20-Follow%20US-blue?logo=X&logoColor=white&style=for-the-badge&label=&#8203;)](https://x.com/awsm_and_root)
-[![Website](https://img.shields.io/badge/%20-Website-green?logo=google-chrome&logoColor=white&style=for-the-badge&label=&#8203;)](https://awesome-android-root.pages.dev)
-[![Back to Top](https://img.shields.io/badge/%20↑-Back%20to%20Top-blue?style=for-the-badge&color=blue)](#table-of-contents)
 
 </div>
