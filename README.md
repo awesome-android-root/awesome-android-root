@@ -276,10 +276,12 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 | 🌱 | Available on F-Droid / IzzyOnDroid |
 | ▶️ | Available on Google Play Store |
 
-> [!NOTE]
-> Some Apps/Modules may have mislabelled licenses. We try our best to verify them, but please double-check before use.
->
-> **How entries are ordered:** ⭐ (Community-recommended) first, then alphabetically within each (sub-)category.
+### Ordering of Entries
+| order | Description |
+|:---|:---|
+| 1 | ⭐ (Community-recommended) entries |
+| 2 | Alphabetical order within each (sub-)category |
+
 
 <details>
 <summary><b>📚 Common Rooting Terms</b></summary>
@@ -343,14 +345,11 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 ---
 
 ## AI and Smart Tools
-
+- **[Breeno Source Changer](https://github.com/Xposed-Modules-Repo/com.niki.breeno.openai/tree/main)** - Allows ColorOS's Breeno Assistant to change its AI model source and customize large language model (LLM) APIs. `FOSS` `[LSP]`
 - **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
 - **[Nexus](https://github.com/niki914/agentic-nexus)** - Plug your own model into your phone's voice assistant. `Proprietary` `[LSP]`
 - **[SwitchAI - Switch AI Digital Assistant](https://github.com/WSTxda/SwitchAI)** - Easily select, start, and manage your preferred AI digital assistants. `FOSS`
 - **[Xposed Translate Text](https://github.com/tianci-sh/XPTranslateText)** - Translate text by MLKit / gemini2.0 / google api. `FOSS` `[LSP]`
-
-> [!NOTE]
-> Also see [Breeno Source Changer](#coloros-oppo) in ROM & OEM Customization > ColorOS for AI assistant customization on ColorOS devices.
 
 [↑ Back to top](#table-of-contents)
 
@@ -754,7 +753,6 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[PixelUpdater](https://github.com/PixelUpdater/PixelUpdater)** - Pixel Updater is an app for installing Android A/B OTA updates from Google's OTA server. `FOSS` `[M]`
 
 ### ColorOS (Oppo)
-- **[Breeno Source Changer](https://github.com/Xposed-Modules-Repo/com.niki.breeno.openai/tree/main)** - Allows ColorOS's Breeno Assistant to change its AI model source and customize large language model (LLM) APIs. `FOSS` `[LSP]`
 - **[OPCameraPro](https://github.com/Xposed-Modules-Repo/com.tlsu.opluscamerapro)** - ColorOS and realmeUI module providing various AI functions, enhancing cameras and other photo related tweaks. `Proprietary` `[LSP]`
 - **[ColorOS Feature Enhance](https://github.com/ItosEO/ColorFeatureEnhance)** - Visually edit and managing ColorOS feature switches. `FOSS` `[LSP]`
 - **[LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool/blob/main/README_EN.md)** - Extended functionality and optimization module for ColorOS. `Proprietary` `[LSP]`
@@ -1175,10 +1173,6 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 - **[Meta-hybrid_mount](https://github.com/YuzakiKokuban/meta-hybrid_mount)** - Three-engine mount orchestration (OverlayFS + Magic Mount + Kasumi LKM) with conflict monitor, SolidJS WebUI, auto-fallback, and EROFS storage backend support. `FOSS` `[K]` `[A]`
 - **[meta-mm](https://github.com/KernelSU-Modules-Repo/meta-mm)** - The official KernelSU Modules Repo's Magic Mount metamodule. Lighter alternative to meta-magic_mount for users who just want Magisk-compatible mounting without extra tooling. `FOSS` `[K]`
 - **[ZeroMount](https://github.com/Enginex0/zeromount)** - Mountless module loading with Kernel-level VFS path redirection & SUSFS integration, WebUI, bootloop guard, and strategy fallback. `FOSS` `[M]` `[K]` `[A]`
-
-> [!TIP]
-> **Only one metamodule can be active at a time.**
-> For most users, **meta-overlayfs** (official) or **Mountify** are recommended starting points.
 
 ### Bootloop Protection
 - **[AshReXcue - Bootloop Protector](https://github.com/RipperHybrid/AshLooper)** - Prevent boot loops caused by problematic modules installed via KernelSU or Magisk. `FOSS` `[M]` `[K]`
