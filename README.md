@@ -238,15 +238,11 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 </div><br />
 
 > [!TIP]
-> **Start with our [Complete Rooting Guide](../rooting-guides/) before exploring apps below.**
-
-> [!TIP]
-> For privacy-friendly and convenient installs, we **recommend using the F-Droid** ecosystem, for example, install the Droid-ify client **and enable the IzzyOnDroid repo**:
-> - Droid-ify: https://github.com/Droid-ify/client/releases (modern F-Droid client)
-> - IzzyOnDroid: https://apt.izzysoft.de/fdroid/ (additional F-Droid repo with many packages)
+> **Start with our [Complete Rooting Guide](../rooting-guides/)** before exploring apps below. 
+> For privacy-friendly installs, use the F-Droid ecosystem: install [Droid-ify](https://github.com/Droid-ify/client/releases) (modern F-Droid client) and enable the [IzzyOnDroid](https://apt.izzysoft.de/fdroid/) repo for many additional packages.
 
 > [!NOTE]
-> Clicking on App/Module entry point to **Source Code page** (Github/Gitlab etc) *in case of `FOSS` apps* otherwise link points to **Google Play Store**.
+> Clicking an app/module entry opens its **Source Code** page (GitHub/GitLab etc.) for `FOSS` apps, otherwise the **Google Play Store** listing.
 
 ---
 
@@ -819,7 +815,6 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 ### Universal
 - **[SystemUI Tuner](https://github.com/zacharee/Tweaker?tab=readme-ov-file)** - View and modify hidden settings on Android devices. `FOSS` `[M]`
 
-[↑ Back to top](#table-of-contents)
 
 ### ZUI
 - **[Unfuck ZUI Tablet](https://github.com/Xposed-Modules-Repo/xyz.cirno.unfuckzui/)** - Adjust notification icon size, restore AOSP-style installers/permissions, enforce screen rotation persistence, and allow package querying etc. `Proprietary` `[LSP]`
@@ -1219,7 +1214,7 @@ A feature that lets modules inject code into Android's Zygote process for system
 ### Root Detection Tools
 - **[⭐ Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector)** - A tool for detecting root on android. `FOSS`
 - **[⭐ Duck Detector](https://github.com/eltavine/Duck-Detector-Refactoring)** - Android environment integrity inspection tool for root, hook, bootloader, SELinux, virtualization, and attestation signals. `FOSS`
-- **[MagiskDetection](https://github.com/apkunpacker/MagiskDetection)** - Collection of Some publicly Available POC Apps to Detect Root/Magisk presence. `FOSS` `Proprietary`
+- **[MagiskDetection](https://github.com/apkunpacker/MagiskDetection)** - Collection of Some publicly Available POC Apps to Detect Root/Magisk presence. `Proprietary`
 - **[PIF Detector](https://github.com/IR0NBYTE/playIntegrityFixDetector)** - Native app designed to detect modifications, bypasses, or "fixes" applied to the Google Play Integrity API. `FOSS` `[M]` `[K]`
 - **[Play Integrity API Checker](https://github.com/1nikolas/play-integrity-checker-app)** - This app shows info about your device integrity as reported by Google Play Services. If any of this fails could mean your device is rooted or tampered in a way. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck)
 - **[Securify](https://github.com/RabehX/Securify)** - Yet Another Root Checker and Play Integrity API Application. `FOSS`
