@@ -505,6 +505,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 #### YouTube, YT Music Mods
 - **[NexAlloy](https://github.com/NexAlloy/NexAlloy)** - YouTube, YT Music block ads, background playback, sponsorblock and much more. Also unlocks premium features of Strava and Photomath. Unlimited Google Photos backup. `FOSS` `[LSP]`
 
+> [!TIP]
 > Also check out [App Patchers section](#app-patchers)
 
 [↑ Back to top](#table-of-contents)
