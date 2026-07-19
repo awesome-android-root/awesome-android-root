@@ -453,7 +453,6 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[Knot](https://github.com/2b-zipper/Knot)** - Message privacy, notification tweaks & Screen display & UI mods for Line. `FOSS` `[LSP]`
 
 #### QQ Mods
-- **[Elaris](https://github.com/Xposed-Modules-Repo/com.mr.elaris)** - A lightweight module for QQ with various features. `Proprietary` `[LSP]`
 - **[NewQStory](https://github.com/Xposed-Modules-Repo/lin.xposed/)** - Xposed QQ module. `Proprietary` `[LSP]`
 - **[QAuxiliary](https://github.com/cinit/QAuxiliary)** - Xposed module based on QNotified. `FOSS` `[LSP]`
 - **[QFun](https://github.com/oneQAQone/QFun)** - Functionality enhancement module developed based on the Xposed framework. `FOSS` `[LSP]`
