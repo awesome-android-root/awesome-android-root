@@ -475,6 +475,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[Douyin Enhancer](https://github.com/twyora/DouyinEnhancer)** - Adds minor quality-of-life features to Douyin (Chinese TikTok). `FOSS` `[LSP]`
 
 #### Telegram Mods
+- **[GramSieve](https://github.com/Xposed-Modules-Repo/com.tianqianguai.gramsieve)** - Message filtering, host-settings integration, anti-recall, anti-edit/edit interception etc. `Proprietary` `[LSP]`
 - **[Telegami](https://github.com/aoya111/Telegami)** - Various tweaks for Telegram. `FOSS` `[LSP]`
 - **[Telegram Speed Hook](https://github.com/araafroyall/Telegram-Speed-Hook)** - Increase Telegram files/media downloading speed. `FOSS` `[LSP]`
 - **[Telegram Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.sidestories)** - Remove action bar stories in the Telegram messenger (+block unmute button). `Proprietary` `[LSP]`
