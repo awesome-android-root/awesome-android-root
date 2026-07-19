@@ -1006,6 +1006,7 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 - **[Fyrypt](https://github.com/mirfatif/Fyrypt)** - Android firewall with UID + PID rules, dnscrypt-proxy management, and per-app live network monitoring. `Proprietary`
 - **[NetGuard](https://github.com/M66B/NetGuard)** - Block access to the internet. Apps and addresses can individually be allowed or denied access to your Wi-Fi and/or mobile connection. `FOSS`
 - **[Net Switch](https://github.com/Rem01Gaming/net-switch)** - Isolate any app from Internet access. `FOSS` `[M]`
+- **[ShizuWall](https://github.com/AhmetCanArslan/ShizuWall)** - Android firewall without VPN powered by Shizuku / local ADB daemon / Root. `FOSS` | [🌱](https://f-droid.org/packages/com.arslan.shizuwall/) | [▶️](https://play.google.com/store/apps/details?id=com.arslan.shizuwall)
 
 ### Hide VPN/Proxy Usage
 - **[NoVPNDetect](https://github.com/RuslanUC/NoVPNDetect)** - Prevents some apps from detecting your phone is connected to a VPN. `FOSS` `[LSP]`
