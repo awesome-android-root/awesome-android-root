@@ -396,7 +396,7 @@ After successful root installation, complete these essential steps:
 1. **Verify Root Access** - Use a root checker app to confirm superuser access works
 2. **Install Essential Apps** - Visit [Starter Kit: Must-Have Apps](../apps-and-modules/#starter-kit-must-have-apps)
 3. **Configure Root Hiding** (critical for banking apps):
-   - **Magisk:** Enable Zygisk + DenyList, install [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix) + [Tricky Store](https://github.com/5ec1cff/TrickyStore) + [Shamiko](https://github.com/LSPosed/LSPosed.github.io) (or open-source [Zygisk Assistant](https://github.com/snake-4/Zygisk-Assistant))
+   - **Magisk:** Enable Zygisk + DenyList, install any Play Integrity Fix module + [Tricky Store](https://github.com/5ec1cff/TrickyStore) + [Shamiko](https://github.com/LSPosed/LSPosed.github.io) (or open-source [Zygisk Assistant](https://github.com/snake-4/Zygisk-Assistant))
    - **KernelSU:** Use App Profiles, install Zygisk Next + PIF + Tricky Store
    - **APatch:** Use SuperKey credential system + PIF modules
 4. **Create Full Backup** - Use Swift Backup, Neo Backup, or recovery nandroid
@@ -469,7 +469,7 @@ Symptoms: Apps detect root and refuse to run, Play Integrity check fails
 
 Solutions (2026 best practices):
 1. **Magisk:** Enable Zygisk → Configure DenyList (add banking app) → Enforce DenyList
-2. Install **[Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix)** module (provides working device fingerprint)
+2. Install Play Integrity Fix module (provides working device fingerprint)
 3. Install **[Tricky Store](https://github.com/5ec1cff/TrickyStore)** for advanced key attestation spoofing
 4. Install **[Shamiko](https://github.com/LSPosed/LSPosed.github.io)** (closed-source) or **[Zygisk Assistant](https://github.com/snake-4/Zygisk-Assistant)** (open-source) for better root hiding
 5. Hide the Magisk app (Settings → Hide the Magisk app → repackage with random name)
@@ -589,7 +589,6 @@ Play Integrity bypass is essential for banking apps in 2026. Key tools:
 
 | Tool | Purpose | Status |
 |------|---------|--------|
-| **[Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix)** | Spoofs device fingerprint for DEVICE_INTEGRITY | Active |
 | **[Tricky Store](https://github.com/5ec1cff/TrickyStore)** | Advanced key attestation spoofing | Active |
 | **[Shamiko](https://github.com/LSPosed/LSPosed.github.io)** | Systemlessly hides Zygisk/modules from detection | Closed-source |
 | **[Zygisk Assistant](https://github.com/snake-4/Zygisk-Assistant)** | Open-source alternative to Shamiko | Active (FOSS) |
