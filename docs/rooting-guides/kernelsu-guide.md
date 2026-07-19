@@ -549,8 +549,6 @@ Modern banking apps use Play Integrity API with hardware-backed attestation - in
 ### Testing Tools
 
 - [Play Integrity API Checker](https://github.com/1nikolas/play-integrity-checker-app) - Official checker
-- [TB Checker](https://play.google.com/store/apps/details?id=com.tbchecker) - Comprehensive tests
-
 > [!WARNING]
 > No guarantees. Some apps may still detect root despite all measures. Always test your specific apps.
 
