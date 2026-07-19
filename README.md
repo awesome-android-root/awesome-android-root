@@ -324,6 +324,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[F*ck AD](https://github.com/hujiayucc/Fuck-AD)** - Ad-blocking Xposed module. `FOSS` `[LSP]`
 - **[Magical Protection](https://github.com/programminghoch10/MagicalProtection)** - Magisk-only completely systemless adblocking. `FOSS` `[M]`
 - **[Magisk Ad Blocking Module](https://github.com/pantsufan/Magisk-Ad-Blocking-Module)** - Block ads on android. `FOSS` `[M]`
+- **[Marketing Notification Blocker](https://github.com/lm060719/io.mo.mnblocker)** - Intercepts and blocks annoying marketing ads and spam push notifications. `FOSS` `[LSP]`
 - **[Pi-hole-for-Android](https://github.com/DesktopECHO/Pi-hole-for-Android)** - Pi-hole/Unbound Raspbian APK installer for Android 5.0+ devices. `FOSS`
 - **[Re-Malwack](https://github.com/ZG089/Re-Malwack)** - A fully-fledged ad-block module. Contains all your needs. `FOSS` `[M]`
 - **[StevenBlock](https://github.com/mikropsoft/StevenBlock)** - Ad Blocking Module for Android supporting Magisk, KernelSU and APatch. `FOSS` `[M]`
