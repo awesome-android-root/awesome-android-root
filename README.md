@@ -471,6 +471,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 
 #### TikTok Mods
 - **[TikTok AntiBurn](https://github.com/0mnr0/TikTokAntiBurn)** - Overlap the TikTok app elements to prevent the screen from burning out. `FOSS` `[LSP]`
+- **[Douyin Enhancer](https://github.com/twyora/DouyinEnhancer)** - Adds minor quality-of-life features to Douyin (Chinese TikTok). `FOSS` `[LSP]`
 
 #### Telegram Mods
 - **[Telegami](https://github.com/aoya111/Telegami)** - Various tweaks for Telegram. `FOSS` `[LSP]`
