@@ -696,6 +696,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[⭐ Lawnchair](https://github.com/Goooler/LawnchairRelease/)** - A customizable launcher offering a Pixel-like experience. `FOSS`
 - **[Activity Manager](https://github.com/sdex/ActivityManager)** - Discover the activities of installed applications, run them, and create shortcuts. `FOSS` | [🌱](https://f-droid.org/packages/com.activitymanager/)
 - **[Google Shortcuts Launcher](https://github.com/WSTxda/Google-Shortcuts-Launcher)** - Easily access essential Google apps features directly from your launcher app drawer. `FOSS`
+- **[Launcher3 QuickLaunch](https://github.com/hddq/launcher3-quicklaunch)** - Lets you press Enter in Launcher3's app drawer search to instantly launch the first search result. `FOSS` `[LSP]`
 - **[Pixel Launcher Enhanced](https://github.com/Mahmud0808/PixelLauncherEnhanced)** - Unlock a variety of exciting features including customizing the look to adding more functionality and many more. `FOSS` `[LSP]`
 - **[Pixel Launcher Mods](https://github.com/KieronQuinn/PixelLauncherMods/)** - Mods for enhancing the Pixel Launcher experience. `FOSS`
 - **[Root Activity Launcher](https://play.google.com/store/apps/details?id=tk.zwander.rootactivitylauncher)** - Launch activities directly from your home screen with root access. `Proprietary`
