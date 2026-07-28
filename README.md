@@ -445,6 +445,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 
 #### Facebook Mods
 - **[Chat Head Enabler](https://github.com/NeonOrbit/ChatHeadEnabler)** - Lets you choose between chat head and bubble in Facebook Messenger. `FOSS` `[LSP]`
+- **[Facebook App Ads Remover](https://github.com/Xposed-Modules-Repo/tn.loukious.facebookappadsremover)** - Removes ads from Facebook app. `FOSS` `[LSP]`
 
 #### Instagram Mods
 - **[InstaEclipse](https://github.com/ReSo7200/InstaEclipse/)** - Adds Features like Developer Options, Ghost Mode, Ad-Free browsing, and Distraction-Free Mode to Instagram. `FOSS` `[LSP]`
