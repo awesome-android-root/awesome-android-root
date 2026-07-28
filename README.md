@@ -1363,6 +1363,7 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 - **[onHit](https://github.com/0penPublic/onHit)** - Trigger Android NFC events without a physical tag by Xposed. `FOSS` `[LSP]`
 
 ### Power and Reboot Tools
+- **[Advanced Power Menu](https://github.com/Xposed-Modules-Repo/com.sui.advancedpowermenu)** - Provides a highly compatible extended advanced power menu. `Proprietary` `[LSP]`
 - **[RebootNya](https://github.com/daisukiKaffuChino/RebootNya)** - A simple yet advanced reboot utility for Android devices. `FOSS`
 
 ### Remote Access, Sync and Storage
