@@ -1263,6 +1263,8 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 - **[⭐ SUSFS for KernelSU](https://github.com/sidex15/susfs4ksu-module)** - Add-on root-hiding service for SUSFS-patched kernels (KernelSU/Next). The core of modern KSU hiding setups. `FOSS` `[M]` `[K]`
 - **[⭐ Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)** - Hides Magisk root from detection. `Proprietary` `[M]`
 - **[⭐ HMA-OSS](https://github.com/frknkrc44/HMA-OSS)** - FOSS rewrite of Hide My Applist; hides your app list, settings, and package installers. `FOSS` `[LSP]`
+- **[⭐ OhMyKeymint](https://github.com/qwq233/OhMyKeymint)** - Make it harder for detectors to identify behavior inconsistent with AOSP, thus achieving greater stealth than the FOSS branch of TrickyStore or other TrickyStore-based module like TEESimulator. `[FOSS]` `[M]` `[K]`
+- **[⭐ Tricky Addon – Update Target List](https://github.com/KOWX712/Tricky-Addon-Update-Target-List)** - KSU WebUI to configure `target.txt` for TrickyStore, TEESimulator and OhMyKeymint. `FOSS` `[K]`
 - **[BRENE](https://github.com/rrr333nnn333/BRENE)** - SUSFS/KernelSU module for patched kernels with enhanced root hiding & spoofing. `FOSS` `[M]` `[K]`
 - **[DirtySepolicy Bypass](https://github.com/flipphoneguy/DirtySepolicy_Bypass)** - Bypasses new DirtySepolicy on rooted Android devices to keep apps working. `FOSS` `[M]` `[K]` `[A]`
 - **[Hide My Applist](https://github.com/Dr-TSNG/Hide-My-Applist)** - Intercepts app-list detection. `Proprietary` `[LSP]`
@@ -1278,7 +1280,6 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 - **[ReZygisk's Treat Wheel](https://github.com/PerformanC/Treat-Wheel-Zygisk)** - Hides Magisk/root traces exclusively for ReZygisk, acting as the best userspace root hiding tool. `FOSS` `[M]` `[K]`
 - **[TrickyStore](https://github.com/5ec1cff/TrickyStore)** - Modifies the certificate chain for Android key attestation (keybox-based). The original/reference module. `Proprietary` `[M]` `[K]`
 - **[TrickyStore OSS](https://github.com/beakthoven/TrickyStoreOSS)** - Open-source alternative to TrickyStore. `FOSS` `[M]` `[K]`
-- **[Tricky Addon – Update Target List](https://github.com/KOWX712/Tricky-Addon-Update-Target-List)** - KSU WebUI to configure TrickyStore's `target.txt`. `FOSS` `[K]`
 - **[YuriKey](https://github.com/dpejoh/yurikey)** - Systemless module to obtain strong integrity easily. `FOSS` `[M]` `[K]`
 - **[Specter](https://github.com/dpejoh/specter)** - Unified Play Integrity and root hiding stack for Android. Successor of Yurikey. `FOSS` `[M]` `[K]`
 - **[Zygisk Assistant](https://github.com/snake-4/Zygisk-Assistant)** - Zygisk module to hide root on KernelSU, Magisk, and APatch. `FOSS` `[M]`
