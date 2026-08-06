@@ -84,7 +84,7 @@ The modern Xposed implementation for Android 8.1 and above. This guide covers bo
 > [!WARNING]
 > **Transparency Advisory:** The original LSPosed GitHub repository ([LSPosed/LSPosed](https://github.com/LSPosed/LSPosed)) has been **archived** since January 2024 with no public releases since October 2023. Current "official" builds are distributed exclusively as **closed-source** binaries via the LSPosed Telegram channel and **[lsposed.zip](https://lsposed.zip/)**. This violates the GPLv3 license under which the original code was released. Users should be aware of the [ongoing controversy](https://exposelsposed.pages.dev/) and make an informed decision.
 >
-> The fully open-source **[Vector](https://github.com/JingMatrix/Vector)** fork (GPLv3) is actively maintained, has a transparent development process, and now supports libxposed API 101 in CI/canary builds.
+> The fully open-source **[Vector](https://github.com/JingMatrix/Vector)** fork (GPLv3) is actively maintained, has a transparent development process, and supports libxposed API 101 and 102 in its stable release.
 
 ---
 
@@ -107,8 +107,8 @@ There are currently two primary sources for the framework. Choosing the right on
 | **Primary URL** | [JingMatrix/Vector](https://github.com/JingMatrix/Vector) | **[lsposed.zip](https://lsposed.zip/)** |
 | **Open Source** | ✅ Fully open-source (GPLv3) | ❌ Closed-source (GPL violation) |
 | **Source Available** | [Yes - public repo](https://github.com/JingMatrix/Vector) | No - distributed via Telegram only |
-| **Stable API** | API 100 (v2.0) | API 101 |
-| **Canary/CI API** | API 101 (CI builds) | N/A |
+| **Stable API** | API 102 (v2.2) | API 101 |
+| **Canary/CI API** | Tracks master, ahead of latest stable | N/A |
 | **Active Development** | ✅ Active (commits, issues, PRs) | ⚠️ Telegram-only, no public tracker |
 | **Android Support** | 8.1+ | 8.1+ |
 | **Detection Hiding** | Standard | Enhanced (ACE, Banks, etc.) |
@@ -118,9 +118,8 @@ There are currently two primary sources for the framework. Choosing the right on
 > **About lsposed.zip:** This domain is operated by the original LSPosed team. Builds are distributed through their [official Telegram channel](https://t.me/LSPosed) and are **closed-source** - meaning the code cannot be independently audited. The original LSPosed GitHub repository at [LSPosed/LSPosed](https://github.com/LSPosed/LSPosed) is archived and no longer reflects these builds.
 
 ### Which one should I use?
-- **Use Vector** if you value open-source transparency, want publicly auditable code, and prefer a project with an active public development process. Vector's stable v2.0 supports API 100, and its CI (canary) builds already support API 101 for testing.
-- **Use Official LSPosed (lsposed.zip)** if you specifically need stable API 101 support right now and are comfortable with closed-source binaries. Be aware that new modules are increasingly targeting API 101 and the upcoming API 102, so this version may offer better compatibility with the latest modules.
-- **The ecosystem is moving toward API 101/102.** Vector's CI builds already support API 101, and a stable release is expected. If you can wait for Vector's stable API 101 release, it will likely be the best option combining open-source trust with modern API support.
+- **Use Vector** if you value open-source transparency, want publicly auditable code, and prefer a project with an active public development process. Vector's stable releases support API 100, 101, and 102.
+- **Use Official LSPosed (lsposed.zip)** if you are comfortable with closed-source binaries. LSPosed stable releases support API 100 and 101.
 
 ---
 
@@ -134,14 +133,14 @@ Following the archival, the original team continued distributing closed-source b
 
 ### What is Vector?
 
-[Vector](https://github.com/JingMatrix/Vector) is a fully open-source (GPLv3) fork of LSPosed maintained by [JingMatrix](https://github.com/JingMatrix) and [84+ contributors](https://github.com/JingMatrix/Vector/graphs/contributors). It provides the same ART hooking framework with active public development, issue tracking, and community contributions. Vector v2.0 (stable) implements API 100, while CI/canary builds already support API 101.
+[Vector](https://github.com/JingMatrix/Vector) is a fully open-source (GPLv3) fork of LSPosed maintained by [JingMatrix](https://github.com/JingMatrix) and [84+ contributors](https://github.com/JingMatrix/Vector/graphs/contributors). It provides the same ART hooking framework with active public development, issue tracking, and community contributions. Vector v2.2 (stable) implements API 102, while v2.1 introduced API 101.
 
 ### Key Features
 
 **Vector (Open-Source - Recommended)**
 - **Fully Transparent:** All source code publicly available, auditable by anyone.
 - **Active Development:** Regular commits, community issue tracker, pull requests.
-- **API 101 via CI:** Canary builds already support libxposed API 101 (stable release expected).
+- **API 102:** Stable releases already support API 101 and 102.
 - **Broad Compatibility:** Supports Android 8.1 through the latest Android releases.
 - **Java-to-Kotlin Refactor:** Ongoing modernization for maintainability.
 
@@ -154,11 +153,11 @@ Following the archival, the original team continued distributing closed-source b
 <br>
 <details><summary>Technical Details: API 100 vs 101 vs 102</summary>
 
-### API 101 (The Current Standard)
-The libxposed API 101 includes significant changes compared to API 82/100. It is designed for better performance and compatibility with modern Android internals. Both lsposed.zip (stable) and Vector (CI/canary) now support this API.
+### API 102 (The Current Standard)
+The ecosystem is moving toward API 102. New modules are increasingly being developed for API 102, making it the recommended target for future compatibility. Users stuck on API 100 may find themselves unable to use newer modules. Vector v2.2 (stable) now support this API.
 
-### API 102 (Upcoming)
-The ecosystem is moving toward API 102. New modules are increasingly being developed for API 101+, making it the recommended target for future compatibility. Users stuck on API 100 may find themselves unable to use newer modules.
+### API 101 (The Previous Standard)
+The libxposed API 101 includes significant changes compared to API 82/100. It is designed for better performance and compatibility with modern Android internals. Both lsposed.zip (stable) and Vector v2.1 (stable) now support this API.
 
 ### API 100 (Legacy)
 Version 2.0 of the Vector fork finalized the API 100 implementation. If a module specifically requires API 100 and fails on API 101, Vector v2.0 is the recommended stable option.
@@ -225,7 +224,7 @@ Version 2.0 of the Vector fork finalized the API 100 implementation. If a module
 
 **Option A: Vector (Open-Source - Recommended)**
 1. Visit [Vector Releases](https://github.com/JingMatrix/Vector/releases) on GitHub.
-2. Download the latest **stable release ZIP** (v2.0 for API 100) or a **CI build** (for API 101).
+2. Download the latest **stable release ZIP** (v2.2, API 102) or a **CI build** (distributed as pre-releases).
 
 **Option B: Official LSPosed (Closed-Source)**
 1. Visit **[lsposed.zip](https://lsposed.zip/)** or the [Official Telegram](https://t.me/LSPosed).
@@ -267,7 +266,8 @@ After reboot, look for the LSPosed notification or app icon.
 ### API Compatibility Check
 
 > [!IMPORTANT]
-> - **API 101 Modules:** Require lsposed.zip (stable) or Vector CI builds (canary).
+> - **API 102 Modules:** Require Vector v2.2+ (stable).
+> - **API 101 Modules:** Compatible with Vector v2.1+ or lsposed.zip.
 > - **API 100 Modules:** Compatible with Vector v2.0 (stable) and some may work on lsposed.zip via legacy support. For strict API 100 compatibility, Vector v2.0 is the baseline.
 
 ### How to Enable a Module
@@ -285,8 +285,9 @@ After reboot, look for the LSPosed notification or app icon.
 ## Troubleshooting
 
 ### "API Version Too New/Old"
-- If a module says it requires API 101, use either `lsposed.zip` (stable) or a Vector CI build (canary).
-- If a module is very old and only supports API 82/100, and fails on API 101, try the Vector v2.0 stable release.
+- If a module says it requires API 102, use Vector v2.2 (stable).
+- If a module says it requires API 101, use either `lsposed.zip` or Vector v2.1 (both stable)
+- If a module is very old and only supports API 82/100, and fails on API 101/102, try the Vector v2.0 stable release.
 
 ### Detection Issues (Banking Apps)
 The closed-source lsposed.zip builds have better success in hiding their presence. If you still face issues:
@@ -411,7 +412,7 @@ adb reboot
 
 | Version | Status | Best For |
 |---------|--------|----------|
-| **Vector (Open-Source)** | **Recommended** | Transparency, auditable code, active development. CI builds support API 101. |
+| **Vector (Open-Source)** | **Recommended** | Transparency, auditable code, active development. Stable release supports API 101 and 102. |
 | **lsposed.zip (Closed-Source)** | Use with caution | Stable API 101, better detection hiding. Be aware of closed-source risks. |
 | **LSPatch** | Non-Root | Modifying apps on non-rooted devices. |
 
