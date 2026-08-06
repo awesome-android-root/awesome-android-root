@@ -654,6 +654,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 
 ### SMS and Messaging
 - **[XposedForwardSms](https://github.com/XiaoMiHongZhaJi/XposedForwardSms)** - Forward text messages. `FOSS` `[LSP]`
+- **[XposedSmsCode](https://gitlab.com/magisk3171/XposedSmsCode)** - Recognize SMS verification codes and copy them to the clipboard, or automatically input verification codes. `FOSS` `[LSP]`
 
 [↑ Back to top](#table-of-contents)
 
