@@ -1147,6 +1147,7 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 
 ### Security and Pentesting Tools
 - **[AlternativeUnlockXposed](https://github.com/leohearts/AlternativeUnlockXposed)** - Unlock your Android phone with an alternative PIN. `FOSS` `[LSP]`
+- **[Biometric App Lock](github.com/hxreborn/biometric-app-lock)** - Locks apps you choose behind fingerprint or face unlock. `FOSS` `[LSP]`
 - **[Biometric Bypass Module](https://github.com/hxreborn/biometric-bypass)** - Fast-forwards face unlock by skipping the biometric confirmation step in System UI on Android 10+. `FOSS` `[LSP]` | [🌱](https://f-droid.org/packages/eu.rafareborn.biometricbypass)
 - **[OneShot Extended](https://github.com/chickendrop89/OneShot-Extended)** - Performs various WPS attacks without the requirement of monitor mode. `FOSS` `[M]` `[K]`
 - **[PinGuard](https://github.com/khiqwq/PinGuard/blob/main/README_EN.md)** - LSPosed module that requires fingerprint / password to unpin screen-pinned apps. `FOSS` `[LSP]`
