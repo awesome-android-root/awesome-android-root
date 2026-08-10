@@ -748,6 +748,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[DPIS](https://github.com/Kwensiu/DPIS)** - LSPosed module for per-app interface scale, smallest width, and font size tuning. `FOSS` `[LSP]`
 - **[Pointer Replacer](https://github.com/thesandipv/pointer_replacer)** - Replaces a dot appears when user touch the screen [Require Show Touches to be enabled in Developer Options]. `FOSS` `[LSP]`
 - **[Pseudo DC Dimming](https://github.com/dantmnf/PseudoDCDimming)** - Enable alternative dimming mode (likely DC-like) on low brightness for some OLED displays by using software brightness gain. `FOSS` `[LSP]`
+- **[PureShot](https://github.com/kazutoiris/PureShot)** - Hide status bar, navigation bar, popups, PiP, toast & more. `FOSS` `[LSP]`
 - **[Rotation Suggestions Closed](https://github.com/Astoritin/RotationSuggestionsClosed)** - Stop showing rotation suggestion button as rotating screen. `FOSS` `[M]`
 
 [↑ Back to top](#table-of-contents)
