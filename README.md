@@ -996,6 +996,7 @@ Mount disk images as real USB storage devices. `FOSS` `[M]` `[K]` `[A]`
 - **[LocationMax](https://github.com/Xposed-Modules-Repo/com.huaMax)** - Location simulation module for rooted Android devices using LSPosed/Xposed. `Proprietary` `[LSP]`
 - **[Location Joystick](https://github.com/fzer0x/LocationJoystick)** - Realtime Location Spoofer by using a Overlay Joystick to control the mock location. `Proprietary` `[LSP]`
 - **[Hide Mock Location](https://github.com/auag0/HideMockLocation)** - Hide Mock Location Settings. `FOSS` `[LSP]`
+- **[HLocation](https://github.com/sparr-sherrya/hlocation-release)** - Location spoofing framework that synchronizes fake GPS and related environment signals across system and app processes for more consistent location virtualization. `FOSS` `[LSP]`
 - **[XposedFakeLocation](https://github.com/noobexon1/XposedFakeLocation)** - Allows you to spoof your device's location globally or for specific apps without using "mock location" from the developer options. `FOSS` `[LSP]`
 
 [↑ Back to top](#table-of-contents)
