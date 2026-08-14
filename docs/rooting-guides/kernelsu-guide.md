@@ -232,7 +232,7 @@ KernelSU is a kernel-based root solution operating at the Linux kernel level, pr
 - You have Android 11+ device
 - You want best root hiding
 - You need fine-grained app control
-- You use banking/payment apps (see [root hiding apps](../apps-and-modules/#root-hiding-and-play-integrity))
+- You use banking/payment apps (see [root hiding apps](../apps-and-modules/#root-hiding-play-integrity))
 - You prefer kernel-level security
 
 > [!TIP]

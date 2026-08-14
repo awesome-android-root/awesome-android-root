@@ -317,7 +317,7 @@ head:
 
 <div class="quick-nav">
 
-[Glossary](#glossary) &nbsp;•&nbsp; [Featured Apps](#starter-kit-must-have-apps) &nbsp;•&nbsp; [Browse Apps/Modules](#ads-and-tracking-blockers)
+[Glossary](#glossary) &nbsp;•&nbsp; [Featured Apps](#starter-kit-must-have-apps) &nbsp;•&nbsp; [Browse Apps/Modules](#browse-by-category)
 
 </div>
 </div>
@@ -325,4 +325,3 @@ head:
 ---
 
 <!-- AUTO-GENERATED-CONTENT -->
-

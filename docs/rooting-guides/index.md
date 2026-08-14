@@ -180,7 +180,7 @@ Root access grants **superuser (administrator) privileges** on Android, providin
 |----------|-------|
 | Complete device control | Warranty void (usually permanent) |
 | [System-wide ad blocking](../general-guides/android-adblocking.md) | Reduced security if misconfigured |
-| [Performance tuning](../apps-and-modules/#performance-and-optimization) | Banking apps require active hiding ([solutions](../troubleshooting.md#play-integrity-and-banking-apps)) |
+| [Performance tuning](../apps-and-modules/#performance-optimization) | Banking apps require active hiding ([solutions](../troubleshooting.md#play-integrity-and-banking-apps)) |
 | Privacy enhancements (firewall, permission control) | OTA updates require manual re-patching |
 | [Bloatware removal](../general-guides/android-apps-debloating.md) | Potential for device bricking |
 | Full app + data backups (Swift Backup, Neo Backup) | Play Integrity may break unpredictably |
@@ -245,7 +245,7 @@ Root access grants **superuser (administrator) privileges** on Android, providin
 
 ### Pre-Rooting Checklist
 
-1. ✅ **Backup all data** - Photos, contacts, messages, app data (see [Backup Apps](../apps-and-modules/#backup-and-restore))
+1. ✅ **Backup all data** - Photos, contacts, messages, app data (see [Backup Apps](../apps-and-modules/#backup-restore))
 2. ✅ **Charge device** - Minimum 50% battery
 3. ✅ **Verify bootloader unlockability** - Check OEM Unlocking toggle in Developer Options (greyed out = likely carrier-locked)
 4. ✅ **Download necessary files** - Stock firmware, root solution (APK+ZIP), recovery image
@@ -597,7 +597,7 @@ Play Integrity bypass is essential for banking apps in 2026. Key tools:
 
 
 > [!TIP]
-> For complete and up-to-date list, check our [Root Hiding section ↗](../../README.md#root-hiding-and-play-integrity)
+> For complete and up-to-date list, check our [Root Hiding section ↗](../../README.md#root-hiding-play-integrity)
 
 ---
 

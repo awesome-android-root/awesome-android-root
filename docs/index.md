@@ -175,62 +175,62 @@ features:
   - icon: 🛡️
     title: System-Wide Ad Blocking
     details: "Block ads, trackers & malware across your entire system."
-    link: /apps-and-modules/#ads-and-tracking-blockers
-    
-  - icon: 📱
-    title: Complete App Management
-    details: "Take full control of every installed application."
-    link: /apps-and-modules/#app-management
-    
+    link: /apps-and-modules/#ad-tracker-blocking
+
+  - icon: 🛠️
+    title: Root & Module Management
+    details: "Root solutions, module managers, LSPosed & Xposed, Zygisk, and root hiding."
+    link: /apps-and-modules/#root-module-management
+
   - icon: 🔧
     title: App Modifications
     details: "Remove restrictions, unlock features, enhance functionality."
-    link: /apps-and-modules/#app-patches-and-mods
+    link: /apps-and-modules/#apps-app-modifications
 
   - icon: ⚡
-    title: Performance & Gaming
-    details: "Performance optimization, gaming enhancements, CPU/GPU tuning."
-    link: /apps-and-modules/#performance-and-optimization
+    title: Performance & Battery
+    details: "Performance optimization, kernel management, memory, and battery tools."
+    link: /apps-and-modules/#performance-battery
 
   - icon: 🎨
     title: Complete UI Customization
     details: "Custom themes, boot animations, fonts, launchers, & visual customization."
-    link: /apps-and-modules/#customization-and-theming
-    
-  - icon: 🔋
-    title: Advanced Battery Management
-    details: "Power management, charging optimization, & system-level battery control."
-    link: /apps-and-modules/#battery-and-power-management
-    
-  - icon: 💾
-    title: Backup Solutions
-    details: "Never lose data with comprehensive backup systems."
-    link: /apps-and-modules/#backup-and-restore
-    
+    link: /apps-and-modules/#ui-customization
+
+  - icon: 📦
+    title: App & Package Management
+    details: "Inspect, freeze, uninstall, and control every installed application."
+    link: /apps-and-modules/#app-package-management
+
+  - icon: 🗃️
+    title: Storage & Backup
+    details: "File managers, backup & restore, cleaning, and partition tools."
+    link: /apps-and-modules/#storage-data
+
   - icon: 🧹
     title: System Debloating & Cleaning
     details: "Remove bloatware & optimize system performance."
-    link: /apps-and-modules/#debloating-and-cleaning
-    
+    link: /apps-and-modules/#debloating
+
   - icon: 🔐
     title: Privacy & Security Arsenal
-    details: "Advanced permission managers, security tools, & data protection systems."
-    link: /apps-and-modules/#privacy-and-security
-    
-  - icon: ⚙️
-    title: System & Kernel Management
-    details: "Kernel managers, system modifications, and hardware-level optimizations."
-    link: /apps-and-modules/#kernel-management
-    
+    details: "Firewalls, privacy tools, device spoofing, & data protection systems."
+    link: /apps-and-modules/#privacy-security
+
   - icon: 🌐
     title: Network & Connectivity Control
-    details: "Firewall tools, DNS control, Wi-Fi optimization."
-    link: /apps-and-modules/#network-and-connectivity
-    
-  - icon: 🛠️
-    title: Root Management & Hiding
-    details: "Manage & hide root, integrity checks pass, and maintain system security."
-    link: /apps-and-modules/#root-management
+    details: "DNS filtering, VPN & proxy, Wi-Fi tools, and location control."
+    link: /apps-and-modules/#network-connectivity
+
+  - icon: 🎮
+    title: Gaming Optimization
+    details: "FPS unlockers, gaming tweaks, and game modification tools."
+    link: /apps-and-modules/#gaming
+
+  - icon: 📥
+    title: Developer & Power User Tools
+    details: "Terminal, ADB, Linux environments, automation, and hardware tools."
+    link: /apps-and-modules/#developer-power-user
 
 ---
 
