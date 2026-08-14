@@ -309,41 +309,6 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 
 ---
 
-
-
-## Browse by Category
-
-Apps and modules are organized by **purpose** across 12 categories. Framework compatibility is shown with badges: `[M]` Magisk · `[K]` KernelSU · `[A]` APatch · `[LSP]` LSPosed/Xposed.
-
-- 🛠️ [**Root & Module Management**](#root-module-management) – Root solutions, module managers, LSPosed/Xposed, Zygisk, root hiding & Play Integrity, bootloop protection, and root detection
-  - [Root Managers](#root-managers) · [Module Managers](#module-managers) · [Metamodules](#metamodules) · [LSPosed & Xposed](#lsposed-xposed) · [Zygisk](#zygisk) · [Root Hiding & Play Integrity](#root-hiding-play-integrity) · [Bootloop Protection](#bootloop-protection) · [Root Detection & Testing](#root-detection-testing)
-- ⚙️ [**System Management**](#system-management) – System tweaks, framework & OEM customization, boot and startup, debloating, app and package management, permissions, and diagnostics
-  - [System Tweaks](#system-tweaks) · [System UI & Framework](#system-ui-framework) · [Boot & Startup](#boot-startup) · [Debloating](#debloating) · [App & Package Management](#app-package-management) · [Permissions & AppOps](#permissions-appops) · [System Information & Diagnostics](#system-information-diagnostics)
-- ⚡ [**Performance & Battery**](#performance-battery) – Performance optimization, kernel management, memory, battery optimization, charging, and task/process management
-  - [Performance Optimization](#performance-optimization) · [Kernel Management](#kernel-management) · [Memory & RAM](#memory-ram) · [Battery Optimization](#battery-optimization) · [Charging & Power](#charging-power) · [Task & Process Management](#task-process-management)
-- 🛡️ [**Privacy & Security**](#privacy-security) – Ad & tracker blocking, firewalls, privacy and security tools, device spoofing, and app isolation
-  - [Ad & Tracker Blocking](#ad-tracker-blocking) · [Firewalls & Filtering](#firewalls-filtering) · [Privacy Tools](#privacy-tools) · [Security Tools](#security-tools) · [Device ID & Spoofing](#device-id-spoofing) · [App Isolation](#app-isolation)
-- 🔧 [**Apps & App Modifications**](#apps-app-modifications) – App patchers, mods for individual apps, social media and browser mods, YouTube & media mods, and signature patches
-  - [App Patchers](#app-patchers) · [App Mods](#app-mods) · [Social Media Mods](#social-media-mods) · [Browser Mods](#browser-mods) · [YouTube & Media Mods](#youtube-media-mods) · [Signature & Verification](#signature-verification)
-- 🗃️ [**Storage & Data**](#storage-data) – File managers, backup & restore, cleaning, and file/partition tools
-  - [File Managers](#file-managers) · [Backup & Restore](#backup-restore) · [Cleaning](#cleaning) · [File & Partition Tools](#file-partition-tools)
-- 🎨 [**UI & Customization**](#ui-customization) – Themes and visuals, launchers, status bar & navigation, gestures, fonts & emojis, notifications, lockscreen & AOD, screen & display
-  - [Themes & Visual Mods](#themes-visual-mods) · [Launchers & Home Screen](#launchers-home-screen) · [Status Bar & Navigation](#status-bar-navigation) · [Gestures & Controls](#gestures-controls) · [Fonts & Emojis](#fonts-emojis) · [Notifications](#notifications) · [Lockscreen & AOD](#lockscreen-aod) · [Screen & Display](#screen-display)
-- 🎵 [**Audio & Media**](#audio-media) – Audio enhancement, audio control, and audio effects
-  - [Audio Enhancement](#audio-enhancement) · [Audio Control](#audio-control) · [Audio Effects](#audio-effects)
-- 🌐 [**Network & Connectivity**](#network-connectivity) – DNS & network filtering, VPN & proxy, network tools, Wi-Fi & mobile data, Bluetooth & NFC, and location & GPS
-  - [DNS & Network Filtering](#dns-network-filtering) · [VPN & Proxy](#vpn-proxy) · [Network Tools](#network-tools) · [Wi-Fi & Mobile Data](#wi-fi-mobile-data) · [Bluetooth & NFC](#bluetooth-nfc) · [Location & GPS](#location-gps)
-- 🎮 [**Gaming**](#gaming) – Gaming optimization and game modifications & tools
-  - [Gaming Optimization](#gaming-optimization) · [Game Modifications & Tools](#game-modifications-tools)
-- 📥 [**Developer & Power User**](#developer-power-user) – Terminal & shell, ADB & debugging, developer tools, Linux environments, automation, and hardware & sensors
-  - [Terminal & Shell](#terminal-shell) · [ADB & Debugging](#adb-debugging) · [Developer Tools](#developer-tools) · [Linux Environments](#linux-environments) · [Automation](#automation) · [Hardware & Sensors](#hardware-sensors)
-- 🧰 [**General Utilities**](#general-utilities) – Sync & file transfer, reboot & power, sharing & intent tools, communication & messaging, and general toolboxes
-  - [Sync & File Transfer](#sync-file-transfer) · [Reboot & Power](#reboot-power) · [Sharing & Intent Tools](#sharing-intent-tools) · [Communication & Messaging](#communication-messaging) · [General Toolboxes](#general-toolboxes)
-
-[↑ Back to top](#table-of-contents)
-
----
-
 ## Root & Module Management
 
 ### Root Managers

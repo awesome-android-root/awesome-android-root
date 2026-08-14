@@ -599,7 +599,6 @@ export default withPwa(defineConfig({
           collapsed: false,
           items: [
             { text: '⭐ Must-Have Apps', link: '/apps-and-modules/#starter-kit-must-have-apps' },
-            { text: '🗂️ Browse by Category', link: '/apps-and-modules/#browse-by-category' },
             { text: '📘 Glossary', link: '/apps-and-modules/#glossary' },
             { text: '🔍 Browse All Apps', link: '/apps-and-modules/' }
           ]
