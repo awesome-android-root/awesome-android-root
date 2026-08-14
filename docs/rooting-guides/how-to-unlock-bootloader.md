@@ -276,7 +276,7 @@ If device not listed:
 - Photos and videos (Google Photos, cloud storage)
 - Contacts (Google Contacts sync)
 - Messages (SMS Backup & Restore)
-- App data (Google Backup, Helium, or see [backup apps](../apps-and-modules/#backup-and-restore))
+- App data (Google Backup, Helium, or see [backup apps](../apps-and-modules/#backup-restore))
 - Important documents
 - Two-factor authentication recovery codes
 
@@ -674,7 +674,7 @@ Look for "Device unlocked: true"
 ### Step 4: Security Considerations
 
 **Important reminders:**
-- Banking apps may detect unlocked bootloader (see [root hiding solutions](../apps-and-modules/#root-hiding-and-play-integrity))
+- Banking apps may detect unlocked bootloader (see [root hiding solutions](../apps-and-modules/#root-hiding-play-integrity))
 - Set up strong screen lock
 - Only install trusted software
 - Be cautious with root permissions

@@ -95,7 +95,7 @@ Our mission is to democratize advanced Android customization by providing free, 
 
 **Comprehensive Rooting & Customization Resources**
 *   **[Expert Guides](./rooting-guides/index.md)**: Detailed, step-by-step tutorials for various devices and methods.
-*   **[500+ Curated Root Apps & Modules](/apps-and-modules/#root-apps)**: A meticulously selected collection spanning ad-blocking, privacy, performance, automation, and more.
+*   **[500+ Curated Root Apps & Modules](/apps-and-modules/#root-apps-modules)**: A meticulously selected collection spanning ad-blocking, privacy, performance, automation, and more.
 *   **[Extensive Device Support](./rooting-guides/#device-specific-guides)**: Targeted guides for major brands including Xiaomi, Samsung, Pixel, OnePlus, and Motorola.
 *   **[FAQ & Troubleshooting](./faqs.md)**: A dedicated resource for resolving common issues and finding support.
 
@@ -109,7 +109,7 @@ Our mission is to democratize advanced Android customization by providing free, 
 
 **Tailored Navigation:**
 *   **Beginners:** [Complete Rooting Guide](./rooting-guides/) → [Essential Apps](./apps-and-modules/#starter-kit-must-have-apps)
-*   **Intermediate:** [Device-Specific Guides](./rooting-guides/#device-specific-guides) → [Root Management](../apps-and-modules/#root-management)
+*   **Intermediate:** [Device-Specific Guides](./rooting-guides/#device-specific-guides) → [Root Management](../apps-and-modules/#root-module-management)
 *   **Experts:** [Troubleshooting](./faqs) → [Community Contributions](./contributing)
 
 ## Community & Support

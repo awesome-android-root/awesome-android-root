@@ -82,7 +82,7 @@ Bloatware refers to pre-installed applications that:
 
 ## Method 1: App Manager Debloater
 
-App Manager includes a built-in debloater that uses the comprehensive [Android Debloat List](https://github.com/MuntashirAkon/android-debloat-list) project for intelligent recommendations. Find it in our [app management collection](../apps-and-modules/#app-managers).
+App Manager includes a built-in debloater that uses the comprehensive [Android Debloat List](https://github.com/MuntashirAkon/android-debloat-list) project for intelligent recommendations. Find it in our [app management collection](../apps-and-modules/#app-package-management).
 
 ### Requirements
 
@@ -292,7 +292,7 @@ When removing OEM apps, consider these open-source alternatives (explore more in
 ### Core Apps
 - **Launcher**: [Lawnchair](https://lawnchair.app/), [Nova Launcher](https://novalauncher.com/) (see [more launchers](../apps-and-modules/#launchers-and-home-screen))
 - **Gallery**: [Fossify Gallery](https://github.com/FossifyOrg/Gallery)
-- **File Manager**: [Material Files](https://github.com/zhanghai/MaterialFiles) (see [file managers](../apps-and-modules/#file-management))
+- **File Manager**: [Material Files](https://github.com/zhanghai/MaterialFiles) (see [file managers](../apps-and-modules/#file-managers))
 - **Camera**: [Open Camera](https://opencamera.sourceforge.io/)
 
 ### Communication
@@ -318,12 +318,12 @@ When removing OEM apps, consider these open-source alternatives (explore more in
 
 After successful debloating, you should notice:
 - **Faster boot times**
-- **Improved battery life** (also see [battery optimization apps](../apps-and-modules/#battery-and-power-management))
+- **Improved battery life** (also see [battery optimization apps](../apps-and-modules/#performance-battery))
 - **More available storage**
 - **Reduced background data usage**
 - **Fewer unwanted notifications**
 
-For additional performance improvements, check out [performance optimization apps](../apps-and-modules/#performance-and-optimization).
+For additional performance improvements, check out [performance optimization apps](../apps-and-modules/#performance-optimization).
 
 ## Advanced Techniques
 
@@ -375,6 +375,6 @@ With proper care and the right tools, you can significantly improve your Android
 - [How to Root Android Devices](../rooting-guides/) - Get root access for advanced debloating
 - [ADB Setup Guide](../rooting-guides/how-to-unlock-bootloader.md#step-5-test-adb-connection) - Enable USB debugging
 - [System-Wide Ad Blocking](./android-adblocking.md) - Block ads after debloating
-- [App Management Tools](../apps-and-modules/#app-management-and-control) - More app control solutions
-- [Performance Optimization Apps](../apps-and-modules/#performance-and-optimization) - Further speed improvements
-- [Backup Solutions](../apps-and-modules/#backup-and-restore) - Protect your data before debloating
+- [App Management Tools](../apps-and-modules/#app-package-management) - More app control solutions
+- [Performance Optimization Apps](../apps-and-modules/#performance-optimization) - Further speed improvements
+- [Backup Solutions](../apps-and-modules/#backup-restore) - Protect your data before debloating
