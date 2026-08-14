@@ -135,6 +135,6 @@ See the [Root Hiding & Play Integrity](../rooting-guides/index.md#root-hiding-pl
 - [Root Framework Comparison](../rooting-guides/root-framework-comparison.md)
 - [Complete Bootloader Unlocking Guide](../rooting-guides/how-to-unlock-bootloader.md)
 - [Troubleshooting: Play Integrity & Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps)
-- [README: Root Hiding and Play Integrity](../../README.md#root-hiding-and-play-integrity)
+- [README: Root Hiding and Play Integrity](../../README.md#root-hiding-play-integrity)
 
 [↑ Back to top](#bootloader-modification--temporary-root-solutions)

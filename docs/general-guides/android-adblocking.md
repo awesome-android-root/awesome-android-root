@@ -178,7 +178,7 @@ Root ad blocking operates by modifying the **hosts file** (`/system/etc/hosts`),
 
 ## Method 1: AdAway (Recommended)
 
-**AdAway** is the most user-friendly and widely-adopted root ad blocker for Android. Also available in our [ad blocker collection](../apps-and-modules/#ads-and-tracking-blockers).
+**AdAway** is the most user-friendly and widely-adopted root ad blocker for Android. Also available in our [ad blocker collection](../apps-and-modules/#ad-tracker-blocking).
 
 ### 📥 **Installation**
 
@@ -247,7 +247,7 @@ su -c "ndc resolver clearnetdns"
 
 ## Method 2: Bindhosts (Advanced)
 
-**Bindhosts** offers advanced systemless ad blocking with superior root hiding and auto-updating capabilities. Find it in our [ad blocking modules](../apps-and-modules/#ads-and-tracking-blockers).
+**Bindhosts** offers advanced systemless ad blocking with superior root hiding and auto-updating capabilities. Find it in our [ad blocking modules](../apps-and-modules/#ad-tracker-blocking).
 
 ### 🎯 **Why Choose Bindhosts?**
 - **Fully systemless** - No permanent system modifications
@@ -433,7 +433,7 @@ am start -a android.intent.action.VIEW -d "market://details?id=com.google.androi
    - Bindhosts: Add to whitelist file
 
 2. **Configure root hiding** for banking apps:
-   - See [root hiding solutions](../apps-and-modules/#root-hiding-and-play-integrity)
+   - See [root hiding solutions](../apps-and-modules/#root-hiding-play-integrity)
    - Check [Play Integrity troubleshooting](../troubleshooting.md#play-integrity-and-banking-apps)
 
 #### **Issue: Slow Internet or Connection Problems**
@@ -495,7 +495,7 @@ sync; echo 3 > /proc/sys/vm/drop_caches
 ### 🔐 **Security Enhancements**
 
 #### **Malware Protection**
-Add malware-blocking hosts sources (also check our [privacy & security apps](../apps-and-modules/#privacy-and-security)):
+Add malware-blocking hosts sources (also check our [privacy & security apps](../apps-and-modules/#privacy-security)):
 ```
 • Malware Domain List: https://www.malwaredomainlist.com/hostslist/hosts.txt
 • URLVoid: https://www.urlvoid.com/downloads/hostformat.php
@@ -568,8 +568,8 @@ A: Systemless methods (Magisk modules) survive OTA updates. Traditional modifica
 - ⚡ [KernelSU Setup Guide](../rooting-guides/kernelsu-guide.md) - Kernel-based root with advanced hiding
 - 🛠️ [LSPosed Configuration](../rooting-guides/lsposed-guide.md) - Advanced app modifications
 - 🧹 [Android Debloating Guide](./android-apps-debloating.md) - Remove bloatware for better performance
-- 🛡️ [Privacy & Security Apps](../apps-and-modules/#privacy-and-security) - Additional privacy tools
-- 🔍 [More Ad Blocking Solutions](../apps-and-modules/#ads-and-tracking-blockers) - Alternative blockers
+- 🛡️ [Privacy & Security Apps](../apps-and-modules/#privacy-security) - Additional privacy tools
+- 🔍 [More Ad Blocking Solutions](../apps-and-modules/#ad-tracker-blocking) - Alternative blockers
 
 ---
 
