@@ -344,7 +344,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 > 
 > LSPosed allows you to use Xposed modules, that can modify or extend the functionality of your Android system and apps.
 
-- **[⭐ Vector](https://github.com/JingMatrix/Vector)** - **Fork** of original LSPosed with Android 15 & 16 support, dynamic module loading, and other improvements. `FOSS` `[M]`
+- **[⭐ Vector](https://github.com/JingMatrix/Vector)** - Open Source *Fork* of original LSPosed with dynamic module loading, and other improvements. `FOSS` `[M]`
 - **[LSPosed](https://lsposed.zip)** - A Riru / Zygisk module that provides an ART hooking framework delivering consistent APIs with the OG Xposed, leveraging the LSPlant hooking framework. `Proprietary`
 
 > [!TIP]
