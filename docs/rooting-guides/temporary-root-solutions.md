@@ -96,6 +96,7 @@ Kaeru and Fenrir both build on a small ecosystem of MediaTek bootloader tooling 
 
 In mid-2026, a use-after-free bug in the Linux kernel's rtmutex proxy-lock rollback path (CVE-2026-43499, nicknamed **GhostLock**) turned out to be reachable from an unprivileged app process on several shipping Android kernels. Unlike the bootloader tools above, this is a pure kernel exploit: no unlocked bootloader, no flashing, no Knox e-fuse trip. It stages a native payload over ADB/Shizuku, runs it to get a root shell in memory, and uses that to load a KernelSU (or ReSukiSU) manager for the current boot only. Rebooting clears it, and the steps have to be repeated.
 
+-**[GhostLock App](https://github.com/YuKongA/ghostlock-app)** - GhostLock One-Tap Execution App. `FOSS` (Apache-2.0)
 - **[Root My Galaxy](https://github.com/BuSung-dev/Root-My-Galaxy)** - The original one-click implementation, for Snapdragon Galaxy flagships (S24/S25 series, S24 FE, A56, and others). Bootloader stays locked, Knox isn't tripped, so Secure Folder, Samsung Wallet, and Play Integrity keep working. `FOSS` (Apache-2.0)
   - **[Root-My-Galaxy-Payloads](https://github.com/BuSung-dev/Root-My-Galaxy-Payloads)** - Companion repo with the per-device exploit offsets, kernel profiles, and KernelSU artifacts the app fetches at runtime. Adding a new device means porting a profile here.
 - **[Root My Device](https://github.com/Witaqua-tools/Root-My-Device)** - Community fork of Root My Galaxy generalized beyond Samsung, with its own payload feed for additional firmware builds. `FOSS` (Apache-2.0)
