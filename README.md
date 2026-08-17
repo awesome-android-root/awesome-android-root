@@ -947,6 +947,7 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 #### X/Twitter
 
 - **[⭐ Piko Patches](https://github.com/crimera/piko)** - Morphe patches for twitter with features like hide promoted tweets, hide promoted accounts, hide promoted trends, hide "who to follow" etc. `FOSS`
+- **[Re:X](https://github.com/Xposed-Modules-Repo/one.dot.rex)** -  Tweaks for the new X / Twitter app. `Proprietary` `[LSP]`
 
 
 > [!TIP]
