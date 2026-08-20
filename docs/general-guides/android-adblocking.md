@@ -5,7 +5,7 @@ description: "Complete guide to system-wide ad blocking on rooted Android using 
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.pages.dev/general-guides/android-adblocking
+      href: https://hawesome-android-root.zhoe.org/general-guides/android-adblocking
   - - meta
     - name: author
       content: Awesome Android Root
@@ -26,10 +26,10 @@ head:
       content: "Complete guide to system-wide ad blocking on rooted Android using AdAway and Bindhosts. Block ads in all apps, improve performance, and enhance privacy with root access."
   - - meta
     - property: og:url
-      content: https://awesome-android-root.pages.dev/general-guides/android-adblocking
+      content: https://hawesome-android-root.zhoe.org/general-guides/android-adblocking
   - - meta
     - property: og:image
-      content: https://awesome-android-root.pages.dev/images/og/android-adblocking.png
+      content: https://hawesome-android-root.zhoe.org/images/og/android-adblocking.png
   - - meta
     - property: og:locale
       content: en_US
@@ -53,7 +53,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.pages.dev/images/og/android-adblocking.png
+      content: https://hawesome-android-root.zhoe.org/images/og/android-adblocking.png
   - - meta
     - name: twitter:image:alt
       content: Android Ad Blocking Guide - System-Wide Ad Blocking for Rooted Devices

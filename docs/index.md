@@ -12,10 +12,10 @@ head:
       content: "website"
   - - meta
     - property: og:url
-      content: "https://awesome-android-root.pages.dev"
+      content: "https://hawesome-android-root.zhoe.org"
   - - meta
     - property: og:image
-      content: "https://awesome-android-root.pages.dev/images/og.png"
+      content: "https://hawesome-android-root.zhoe.org/images/og.png"
   - - meta
     - property: og:title
       content: "Best Root Apps & Modules | Awesome Android Root"
@@ -24,7 +24,7 @@ head:
       content: "Discover 500+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026."
   - - meta
     - property: og:image:secure_url
-      content: "https://awesome-android-root.pages.dev/images/og.png"
+      content: "https://hawesome-android-root.zhoe.org/images/og.png"
   - - meta
     - property: og:image:alt
       content: "Best Root Apps & Modules | Awesome Android Root"
@@ -54,7 +54,7 @@ head:
       content: "Discover 500+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026."
   - - meta
     - name: twitter:image
-      content: "https://awesome-android-root.pages.dev/images/og.png"
+      content: "https://hawesome-android-root.zhoe.org/images/og.png"
   - - meta
     - name: twitter:image:alt
       content: "Best Root Apps & Modules | Awesome Android Root"
@@ -66,7 +66,7 @@ head:
       content: "2026-06-26T00:00:00Z"
   - - link
     - rel: canonical
-      href: "https://awesome-android-root.pages.dev"
+      href: "https://hawesome-android-root.zhoe.org"
   - - link
     - rel: prefetch
       href: "/apps-and-modules/"
@@ -81,20 +81,20 @@ head:
         "@graph": [
           {
             "@type": "WebSite",
-            "@id": "https://awesome-android-root.pages.dev/#website",
+            "@id": "https://hawesome-android-root.zhoe.org/#website",
             "name": "Awesome Android Root",
             "alternateName": "Ultimate Android Rooting Hub",
             "description": "Discover 500+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026.",
-            "url": "https://awesome-android-root.pages.dev/",
+            "url": "https://hawesome-android-root.zhoe.org/",
             "inLanguage": "en-US",
             "publisher": {
-              "@id": "https://awesome-android-root.pages.dev/#organization"
+              "@id": "https://hawesome-android-root.zhoe.org/#organization"
             },
             "potentialAction": {
               "@type": "SearchAction",
               "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": "https://awesome-android-root.pages.dev/search?q={search_term_string}"
+                "urlTemplate": "https://hawesome-android-root.zhoe.org/search?q={search_term_string}"
               },
               "query-input": "required name=search_term_string"
             },
@@ -105,31 +105,31 @@ head:
           },
           {
             "@type": ["WebPage", "CollectionPage"],
-            "@id": "https://awesome-android-root.pages.dev/#webpage",
+            "@id": "https://hawesome-android-root.zhoe.org/#webpage",
             "name": "Best Android Root Apps & Modules (2026) | Awesome Android Root",
             "description": "Discover 500+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026.",
-            "url": "https://awesome-android-root.pages.dev/",
+            "url": "https://hawesome-android-root.zhoe.org/",
             "datePublished": "2025-05-25T00:00:00Z",
             "dateModified": "2026-06-26T00:00:00Z",
             "inLanguage": "en-US",
             "isPartOf": {
-              "@id": "https://awesome-android-root.pages.dev/#website"
+              "@id": "https://hawesome-android-root.zhoe.org/#website"
             },
             "image": {
               "@type": "ImageObject",
-              "url": "https://awesome-android-root.pages.dev/images/og.png",
+              "url": "https://hawesome-android-root.zhoe.org/images/og.png",
               "width": 1200,
               "height": 630
             }
           },
           {
             "@type": "Organization",
-            "@id": "https://awesome-android-root.pages.dev/#organization",
+            "@id": "https://hawesome-android-root.zhoe.org/#organization",
             "name": "Awesome Android Root",
-            "url": "https://awesome-android-root.pages.dev/",
+            "url": "https://hawesome-android-root.zhoe.org/",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://awesome-android-root.pages.dev/images/logo.png",
+              "url": "https://hawesome-android-root.zhoe.org/images/logo.png",
               "width": 330,
               "height": 330
             },
@@ -142,12 +142,12 @@ head:
             "@type": "SiteNavigationElement",
             "name": "Primary Navigation",
             "about": "Top-level sections of Awesome Android Root",
-            "url": "https://awesome-android-root.pages.dev/",
+            "url": "https://hawesome-android-root.zhoe.org/",
             "hasPart": [
-              { "@type": "WebPage", "name": "Root Apps", "url": "https://awesome-android-root.pages.dev/apps-and-modules/" },
-              { "@type": "WebPage", "name": "Root Guides", "url": "https://awesome-android-root.pages.dev/rooting-guides/" },
-              { "@type": "WebPage", "name": "Resources", "url": "https://awesome-android-root.pages.dev/resources" },
-              { "@type": "WebPage", "name": "FAQs", "url": "https://awesome-android-root.pages.dev/faqs" }
+              { "@type": "WebPage", "name": "Root Apps", "url": "https://hawesome-android-root.zhoe.org/apps-and-modules/" },
+              { "@type": "WebPage", "name": "Root Guides", "url": "https://hawesome-android-root.zhoe.org/rooting-guides/" },
+              { "@type": "WebPage", "name": "Resources", "url": "https://hawesome-android-root.zhoe.org/resources" },
+              { "@type": "WebPage", "name": "FAQs", "url": "https://hawesome-android-root.zhoe.org/faqs" }
             ]
           }
         ]

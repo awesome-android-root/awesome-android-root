@@ -5,7 +5,7 @@ description: "Master Magisk rooting with our comprehensive guide. Install system
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.pages.dev/rooting-guides/magisk-guide
+      href: https://hawesome-android-root.zhoe.org/rooting-guides/magisk-guide
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: Install Magisk root with our comprehensive guide. Master systemless rooting with advanced module system, root hiding, and complete device management.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.pages.dev/rooting-guides/magisk-guide
+      content: https://hawesome-android-root.zhoe.org/rooting-guides/magisk-guide
   - - meta
     - property: og:image
-      content: https://awesome-android-root.pages.dev/images/og/magisk-guide.png
+      content: https://hawesome-android-root.zhoe.org/images/og/magisk-guide.png
   - - meta
     - property: og:locale
       content: en_US
@@ -44,7 +44,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.pages.dev/images/og/magisk-guide.png
+      content: https://hawesome-android-root.zhoe.org/images/og/magisk-guide.png
   - - meta
     - name: twitter:image:alt
       content: Magisk Root Guide - Universal Systemless Rooting

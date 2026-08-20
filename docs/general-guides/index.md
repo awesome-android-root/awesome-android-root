@@ -5,7 +5,7 @@ description: "Comprehensive collection of Android guides, tips, and tutorials fo
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.pages.dev/general-guides/  
+      href: https://hawesome-android-root.zhoe.org/general-guides/  
   - - meta
     - property: og:type
       content: website
@@ -17,10 +17,10 @@ head:
       content: Master Android with comprehensive tutorials covering ad blocking, app debloating, privacy enhancement, performance tuning, and customization. Expert guides for all skill levels.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.pages.dev/general-guides/  
+      content: https://hawesome-android-root.zhoe.org/general-guides/  
   - - meta
     - property: og:image
-      content: https://awesome-android-root.pages.dev/images/og.png  
+      content: https://hawesome-android-root.zhoe.org/images/og.png  
   - - meta
     - property: og:locale
       content: en_US
@@ -68,7 +68,7 @@ head:
         "@type": "CollectionPage",
         "name": "Android Tutorials & Guides Collection",
         "description": "Comprehensive collection of Android tutorials covering rooting, customization, privacy, and optimization.",
-        "url": "https://awesome-android-root.pages.dev/general-guides/",
+        "url": "https://hawesome-android-root.zhoe.org/general-guides/",
         "mainEntity": {
           "@type": "ItemList",
           "name": "Android Tutorial Categories",
@@ -79,7 +79,7 @@ head:
               "item": {
                 "@type": "HowTo",
                 "name": "System-Wide Ad Blocking",
-                "url": "https://awesome-android-root.pages.dev/general-guides/android-adblocking"
+                "url": "https://hawesome-android-root.zhoe.org/general-guides/android-adblocking"
               }
             },
             {
@@ -88,7 +88,7 @@ head:
               "item": {
                 "@type": "HowTo",
                 "name": "Android Debloating",
-                "url": "https://awesome-android-root.pages.dev/general-guides/android-apps-debloating"
+                "url": "https://hawesome-android-root.zhoe.org/general-guides/android-apps-debloating"
               }
             },
             {
@@ -97,7 +97,7 @@ head:
               "item": {
                 "@type": "HowTo",
                 "name": "Stop Auto Updates",
-                "url": "https://awesome-android-root.pages.dev/general-guides/stop-android-app-auto-updates-play-store"
+                "url": "https://hawesome-android-root.zhoe.org/general-guides/stop-android-app-auto-updates-play-store"
               }
             }
           ]
