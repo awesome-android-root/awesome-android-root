@@ -317,7 +317,7 @@ head:
 
 <div class="quick-nav">
 
-[Glossary](#glossary) &nbsp;•&nbsp; [Featured Apps](#starter-kit-must-have-apps) &nbsp;•&nbsp; [Browse Apps/Modules](#browse-by-category)
+[Glossary](#glossary) &nbsp;•&nbsp; [Featured Apps](#starter-kit-must-have-apps) &nbsp;•&nbsp; [Browse Apps/Modules](#root-module-management)
 
 </div>
 </div>
