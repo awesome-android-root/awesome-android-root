@@ -5,7 +5,7 @@ description: "Master guide to root Samsung Galaxy devices - S24, S23, A series w
 head:
   - - link
     - rel: canonical
-      href: https://hawesome-android-root.zhoe.org/rooting-guides/how-to-root-samsung-phone
+      href: https://awesome-android-root.zhoe.org/rooting-guides/how-to-root-samsung-phone
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: Root any Samsung Galaxy device with our comprehensive guide covering bootloader unlock, Knox bypass and Magisk installation for One UI.
   - - meta
     - property: og:url
-      content: https://hawesome-android-root.zhoe.org/rooting-guides/how-to-root-samsung-phone
+      content: https://awesome-android-root.zhoe.org/rooting-guides/how-to-root-samsung-phone
   - - meta
     - property: og:image
-      content: https://hawesome-android-root.zhoe.org/images/og/samsung.png
+      content: https://awesome-android-root.zhoe.org/images/og/samsung.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -38,7 +38,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:image
-      content: https://hawesome-android-root.zhoe.org/images/og/samsung.png
+      content: https://awesome-android-root.zhoe.org/images/og/samsung.png
   - - meta
     - name: twitter:image:alt
       content: Samsung Galaxy Root Guide - All Models

@@ -5,7 +5,7 @@ description: "The ultimate Android rooting guide. Learn Magisk, KernelSU & APatc
 head:
   - - link
     - rel: canonical
-      href: https://hawesome-android-root.zhoe.org/rooting-guides/  
+      href: https://awesome-android-root.zhoe.org/rooting-guides/  
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: The ultimate Android rooting guide covering Magisk, KernelSU, APatch installation with device-specific tutorials for Pixel, Samsung, Xiaomi, OnePlus & more.
   - - meta
     - property: og:url
-      content: https://hawesome-android-root.zhoe.org/rooting-guides/  
+      content: https://awesome-android-root.zhoe.org/rooting-guides/  
   - - meta
     - property: og:image
-      content: https://hawesome-android-root.zhoe.org/images/og.png  
+      content: https://awesome-android-root.zhoe.org/images/og.png  
   - - meta
     - name: twitter:card
       content: summary_large_image

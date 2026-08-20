@@ -5,7 +5,7 @@ description: "You're currently offline but cached pages and guides from Awesome 
 head:
   - - link
     - rel: canonical
-      href: https://hawesome-android-root.zhoe.org/offline
+      href: https://awesome-android-root.zhoe.org/offline
   - - meta
     - name: robots
       content: noindex, follow
@@ -23,7 +23,7 @@ head:
       content: You're currently offline but cached Android rooting guides and resources from Awesome Android Root are still available.
   - - meta
     - property: og:url
-      content: https://hawesome-android-root.zhoe.org/offline
+      content: https://awesome-android-root.zhoe.org/offline
   - - meta
     - name: twitter:card
       content: summary

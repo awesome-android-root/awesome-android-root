@@ -5,7 +5,7 @@ description: "Master APatch rooting with a practical 2026 guide: compatibility c
 head:
   - - link
     - rel: canonical
-      href: https://hawesome-android-root.zhoe.org/rooting-guides/apatch-guide
+      href: https://awesome-android-root.zhoe.org/rooting-guides/apatch-guide
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: Install APatch safely with updated boot/init_boot guidance, OTA handling, module basics, and troubleshooting.
   - - meta
     - property: og:url
-      content: https://hawesome-android-root.zhoe.org/rooting-guides/apatch-guide
+      content: https://awesome-android-root.zhoe.org/rooting-guides/apatch-guide
   - - meta
     - property: og:image
-      content: https://hawesome-android-root.zhoe.org/images/og/apatch-guide.png
+      content: https://awesome-android-root.zhoe.org/images/og/apatch-guide.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -38,7 +38,7 @@ head:
       content: "Updated APatch setup for modern Android devices: compatibility, install, OTA, and recovery."
   - - meta
     - name: twitter:image
-      content: https://hawesome-android-root.zhoe.org/images/og/apatch-guide.png
+      content: https://awesome-android-root.zhoe.org/images/og/apatch-guide.png
   - - meta
     - name: twitter:image:alt
       content: APatch Installation Guide - Modern Kernel-Based Android Rooting

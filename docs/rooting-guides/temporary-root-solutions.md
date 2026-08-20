@@ -5,7 +5,7 @@ description: "Guide to bootloader-level modification tools (Kaeru, Fenrir) and k
 head:
   - - link
     - rel: canonical
-      href: https://hawesome-android-root.zhoe.org/general-guides/bootloader-mods-and-temp-root
+      href: https://awesome-android-root.zhoe.org/general-guides/bootloader-mods-and-temp-root
   - - meta
     - name: author
       content: Awesome Android Root
@@ -26,7 +26,7 @@ head:
       content: "Guide to bootloader-level modification tools and kernel-exploit temporary root solutions, and how they differ from standard Magisk/KernelSU/APatch rooting."
   - - meta
     - property: og:url
-      content: https://hawesome-android-root.zhoe.org/general-guides/bootloader-mods-and-temp-root
+      content: https://awesome-android-root.zhoe.org/general-guides/bootloader-mods-and-temp-root
   - - meta
     - property: og:locale
       content: en_US

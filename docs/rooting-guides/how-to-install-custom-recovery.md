@@ -5,7 +5,7 @@ description: "Master guide to install custom recovery - TWRP, OrangeFox, SKYHAWK
 head:
   - - link
     - rel: canonical
-      href: https://hawesome-android-root.zhoe.org/rooting-guides/how-to-install-custom-recovery
+      href: https://awesome-android-root.zhoe.org/rooting-guides/how-to-install-custom-recovery
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: Install custom recovery with our comprehensive guide covering TWRP, OrangeFox, and SKYHAWK for Android rooting and ROM installation.
   - - meta
     - property: og:url
-      content: https://hawesome-android-root.zhoe.org/rooting-guides/how-to-install-custom-recovery
+      content: https://awesome-android-root.zhoe.org/rooting-guides/how-to-install-custom-recovery
   - - meta
     - property: og:image
-      content: https://hawesome-android-root.zhoe.org/images/og/custom-recovery.png
+      content: https://awesome-android-root.zhoe.org/images/og/custom-recovery.png
   - - meta
     - property: og:locale
       content: en_US
@@ -44,7 +44,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:image
-      content: https://hawesome-android-root.zhoe.org/images/og/custom-recovery.png
+      content: https://awesome-android-root.zhoe.org/images/og/custom-recovery.png
   - - meta
     - name: twitter:image:alt
       content: Custom Recovery Installation Guide - TWRP, OrangeFox, SKYHAWK

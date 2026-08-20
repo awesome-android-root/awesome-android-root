@@ -5,7 +5,7 @@ description: "Complete guide for contributing root apps, Magisk/KernelSU modules
 head:
   - - link
     - rel: canonical
-      href: https://hawesome-android-root.zhoe.org/contributing
+      href: https://awesome-android-root.zhoe.org/contributing
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: Help grow the ultimate Android root resource collection. Learn how to contribute apps, Magisk modules, rooting guides, and more with our comprehensive guidelines.
   - - meta
     - property: og:url
-      content: https://hawesome-android-root.zhoe.org/contributing
+      content: https://awesome-android-root.zhoe.org/contributing
   - - meta
     - property: og:image
-      content: https://hawesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.zhoe.org/images/og.png
   - - meta
     - property: og:locale
       content: en_US
@@ -38,7 +38,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:image
-      content: https://hawesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.zhoe.org/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Contribution Guidelines - Awesome Android Root
