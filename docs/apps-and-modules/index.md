@@ -5,15 +5,15 @@ description: Download & explore 500+ best Android root apps, Magisk, KernelSU & 
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.pages.dev/apps-and-modules/
+      href: https://hawesome-android-root.zhoe.org/apps-and-modules/
   - - link
     - rel: alternate
       hreflang: en
-      href: https://awesome-android-root.pages.dev/apps-and-modules/
+      href: https://hawesome-android-root.zhoe.org/apps-and-modules/
   - - link
     - rel: alternate
       hreflang: x-default
-      href: https://awesome-android-root.pages.dev/apps-and-modules/
+      href: https://hawesome-android-root.zhoe.org/apps-and-modules/
   - - link
     - rel: dns-prefetch
       href: https://api.github.com
@@ -34,13 +34,13 @@ head:
       content: Download the best Android root apps, Magisk, KernelSU & LSPosed (Xposed) modules. Ultimate collection of 500+ curated root applications for Android customization, system optimization, and power user features.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.pages.dev/apps-and-modules/
+      content: https://hawesome-android-root.zhoe.org/apps-and-modules/
   - - meta
     - property: og:image
-      content: https://awesome-android-root.pages.dev/images/og.png
+      content: https://hawesome-android-root.zhoe.org/images/og.png
   - - meta
     - property: og:image:secure_url
-      content: https://awesome-android-root.pages.dev/images/og.png
+      content: https://hawesome-android-root.zhoe.org/images/og.png
   - - meta
     - property: og:image:alt
       content: Best Android Root Apps - 500+ Apps & Modules Collection
@@ -70,7 +70,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:domain
-      content: awesome-android-root.pages.dev
+      content: hawesome-android-root.zhoe.org
   - - meta
     - name: twitter:title
       content: Best Android Root Apps and Modules | Awesome Android Root
@@ -79,7 +79,7 @@ head:
       content: Download top Android root apps, Magisk, KernelSU & LSPosed (Xposed) modules. Ultimate collection of 500+ curated root applications for system optimization & customization.
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.pages.dev/images/og.png
+      content: https://hawesome-android-root.zhoe.org/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Android Root Apps Collection - 500+ curated applications and modules
@@ -97,7 +97,7 @@ head:
       content: https://github.com/fynks
   - - meta
     - property: article:publisher
-      content: https://awesome-android-root.pages.dev
+      content: https://hawesome-android-root.zhoe.org
   - - meta
     - property: article:published_time
       content: '2025-08-11T00:00:00Z'
@@ -163,14 +163,14 @@ head:
         "@type": ["WebPage", "CollectionPage", "SoftwareSourceCode"],
         "name": "Best Android Root Apps and Modules | Awesome Android Root",
         "alternateName": ["Android Root Apps", "Root Apps Collection", "Magisk Modules Collection"],
-        "url": "https://awesome-android-root.pages.dev/apps-and-modules/",
+        "url": "https://hawesome-android-root.zhoe.org/apps-and-modules/",
         "description": "Ultimate collection of 500+ best Android root apps, Magisk modules, and LSPosed frameworks. Download top-rated root applications for Android customization, system optimization, and power user features.",
         "inLanguage": "en-US",
         "datePublished": "2025-08-11T00:00:00Z",
         "dateModified": "2026-06-28T00:00:00Z",
         "image": {
           "@type": "ImageObject",
-          "url": "https://awesome-android-root.pages.dev/images/og.png",
+          "url": "https://hawesome-android-root.zhoe.org/images/og.png",
           "width": 1200,
           "height": 630,
           "caption": "Best Android Root Apps - 500+ Apps & Modules Collection"
@@ -186,10 +186,10 @@ head:
         "publisher": {
           "@type": "Organization",
           "name": "Awesome Android Root Project",
-          "url": "https://awesome-android-root.pages.dev",
+          "url": "https://hawesome-android-root.zhoe.org",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://awesome-android-root.pages.dev/images/logo.png",
+            "url": "https://hawesome-android-root.zhoe.org/images/logo.png",
             "caption": "Awesome Android Root Logo"
           },
           "sameAs": [
@@ -288,13 +288,13 @@ head:
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://awesome-android-root.pages.dev/"
+              "item": "https://hawesome-android-root.zhoe.org/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Android Root Apps",
-              "item": "https://awesome-android-root.pages.dev/apps-and-modules/"
+              "item": "https://hawesome-android-root.zhoe.org/apps-and-modules/"
             }
           ]
         }

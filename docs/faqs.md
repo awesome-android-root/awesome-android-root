@@ -5,7 +5,7 @@ description: "Complete Android rooting FAQ with step-by-step solutions and emerg
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.pages.dev/faqs
+      href: https://hawesome-android-root.zhoe.org/faqs
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: Complete Android rooting FAQ with emergency fixes, app compatibility tips, and troubleshooting guide for beginners and experts. Updated for 2026 with latest methods.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.pages.dev/faqs
+      content: https://hawesome-android-root.zhoe.org/faqs
   - - meta
     - property: og:image
-      content: https://awesome-android-root.pages.dev/images/og.png
+      content: https://hawesome-android-root.zhoe.org/images/og.png
   - - meta
     - property: og:locale
       content: en_US
@@ -44,7 +44,7 @@ head:
       content: Complete FAQ and troubleshooting solutions for Android rooting with emergency fixes and app compatibility tips.
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.pages.dev/images/og.png
+      content: https://hawesome-android-root.zhoe.org/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Android Rooting FAQ & Troubleshooting Guide 2026

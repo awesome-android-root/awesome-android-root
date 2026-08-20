@@ -5,7 +5,7 @@ description: "Master guide to root all Motorola phones - Edge series, Moto G ser
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.pages.dev/rooting-guides/how-to-root-motorola-phone
+      href: https://hawesome-android-root.zhoe.org/rooting-guides/how-to-root-motorola-phone
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: Root any Motorola device with our comprehensive guide covering bootloader unlock codes, Magisk installation, and special A/B partition procedures.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.pages.dev/rooting-guides/how-to-root-motorola-phone
+      content: https://hawesome-android-root.zhoe.org/rooting-guides/how-to-root-motorola-phone
   - - meta
     - property: og:image
-      content: https://awesome-android-root.pages.dev/images/og/motorola.png
+      content: https://hawesome-android-root.zhoe.org/images/og/motorola.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -38,7 +38,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.pages.dev/images/og/motorola.png
+      content: https://hawesome-android-root.zhoe.org/images/og/motorola.png
   - - meta
     - name: twitter:image:alt
       content: Motorola Root Guide - All Models
