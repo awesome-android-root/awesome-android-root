@@ -22,7 +22,7 @@
 </div><br>
 <div class="mob-tip">
 
-> 💡 **TIP:** Use &nbsp; [![Web App](https://img.shields.io/badge/Web-App%E2%86%97-yellow?style=flat-square&logo=googlechrome&logoColor=white&labelColor=blue)](https://hawesome-android-root.zhoe.org) &nbsp; for better navigation and search.
+> 💡 **TIP:** Use &nbsp; [![Web App](https://img.shields.io/badge/Web-App%E2%86%97-yellow?style=flat-square&logo=googlechrome&logoColor=white&labelColor=blue)](https://awesome-android-root.zhoe.org) &nbsp; for better navigation and search.
 
 </div><br>
 
@@ -1390,7 +1390,7 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 ### Official Channels
 | Platform | Purpose | Link |
 |:---|:---|:---|
-|🌐 **Website** | Browse apps, modules & guides | [hawesome-android-root.zhoe.org](https://hawesome-android-root.zhoe.org) |
+|🌐 **Website** | Browse apps, modules & guides | [awesome-android-root.zhoe.org](https://awesome-android-root.zhoe.org) |
 |📂 **GitHub** | Source, discussions & issues | [GitHub Repo](https://github.com/awesome-android-root/awesome-android-root) |
 |𝕏 **X/Twitter** | Updates & news | [@awsm_and_root](https://x.com/awsm_and_root) |
 

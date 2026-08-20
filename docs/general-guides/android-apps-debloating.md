@@ -19,10 +19,10 @@ head:
       content: "Safely remove Android bloatware using App Manager and Canta. Step-by-step tutorial with safety tips."
   - - meta
     - property: og:image
-      content: https://hawesome-android-root.zhoe.org/images/og/android-debloating.png
+      content: https://awesome-android-root.zhoe.org/images/og/android-debloating.png
   - - meta
     - property: og:url
-      content: https://hawesome-android-root.zhoe.org/general-guides/android-apps-debloating
+      content: https://awesome-android-root.zhoe.org/general-guides/android-apps-debloating
   - - meta
     - property: og:site_name
       content: Awesome Android Root
@@ -43,7 +43,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:image
-      content: https://hawesome-android-root.zhoe.org/images/og/android-debloating.png
+      content: https://awesome-android-root.zhoe.org/images/og/android-debloating.png
   - - meta
     - name: twitter:image:alt
       content: Android Debloating Guide - Remove Bloatware Safely
@@ -55,7 +55,7 @@ head:
       content: 2026-06-05T00:00:00Z
   - - link
     - rel: canonical
-      href: https://hawesome-android-root.zhoe.org/general-guides/android-apps-debloating
+      href: https://awesome-android-root.zhoe.org/general-guides/android-apps-debloating
 ---
 
 # How to Remove Bloatware Safely Using App Manager or Canta

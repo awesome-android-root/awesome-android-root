@@ -5,7 +5,7 @@ description: "Master LSPosed framework - the modern Xposed implementation. Compr
 head:
   - - link
     - rel: canonical
-      href: https://hawesome-android-root.zhoe.org/rooting-guides/lsposed-guide
+      href: https://awesome-android-root.zhoe.org/rooting-guides/lsposed-guide
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: Install LSPosed framework with our comprehensive guide. Modern Xposed implementation with Zygisk integration and advanced module management.
   - - meta
     - property: og:url
-      content: https://hawesome-android-root.zhoe.org/rooting-guides/lsposed-guide
+      content: https://awesome-android-root.zhoe.org/rooting-guides/lsposed-guide
   - - meta
     - property: og:image
-      content: https://hawesome-android-root.zhoe.org/images/og/lsposed-guide.png
+      content: https://awesome-android-root.zhoe.org/images/og/lsposed-guide.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -38,7 +38,7 @@ head:
       content: Modern Xposed framework implementation with LSPosed. Advanced Android customization and module management.
   - - meta
     - name: twitter:image
-      content: https://hawesome-android-root.zhoe.org/images/og/lsposed-guide.png
+      content: https://awesome-android-root.zhoe.org/images/og/lsposed-guide.png
   - - meta
     - name: twitter:image:alt
       content: LSPosed Framework Installation Guide

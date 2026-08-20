@@ -5,7 +5,7 @@ description: Detailed comparison of Magisk, KernelSU, and APatch root frameworks
 head:
   - - link
     - rel: canonical
-      href: https://hawesome-android-root.zhoe.org/rooting-guides/root-framework-comparison
+      href: https://awesome-android-root.zhoe.org/rooting-guides/root-framework-comparison
   - - meta
     - property: og:type
       content: article
@@ -20,13 +20,13 @@ head:
       content: Practical comparison of Android root frameworks with recommendations, risks, and migration notes.
   - - meta
     - property: og:url
-      content: https://hawesome-android-root.zhoe.org/rooting-guides/root-framework-comparison
+      content: https://awesome-android-root.zhoe.org/rooting-guides/root-framework-comparison
   - - meta
     - property: og:image
-      content: https://hawesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.zhoe.org/images/og.png
   - - meta
     - property: og:image:secure_url
-      content: https://hawesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.zhoe.org/images/og.png
   - - meta
     - property: og:image:alt
       content: Magisk vs KernelSU vs APatch - Root Framework Comparison
@@ -59,7 +59,7 @@ head:
       content: Practical comparison of Android root frameworks with recommendations, risks, and migration notes.
   - - meta
     - name: twitter:image
-      content: https://hawesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.zhoe.org/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Root Framework Comparison - Magisk vs KernelSU vs APatch

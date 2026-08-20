@@ -5,7 +5,7 @@ description: Complete guide to root Xiaomi, Redmi, and POCO devices. Navigate Hy
 head:
   - - link
     - rel: canonical
-      href: https://hawesome-android-root.zhoe.org/rooting-guides/how-to-root-xiaomi-phone
+      href: https://awesome-android-root.zhoe.org/rooting-guides/how-to-root-xiaomi-phone
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: Root any Xiaomi device with our comprehensive guide covering Mi Unlock Tool, bootloader unlock and Magisk installation for MIUI/HyperOS.
   - - meta
     - property: og:url
-      content: https://hawesome-android-root.zhoe.org/rooting-guides/how-to-root-xiaomi-phone
+      content: https://awesome-android-root.zhoe.org/rooting-guides/how-to-root-xiaomi-phone
   - - meta
     - property: og:image
-      content: https://hawesome-android-root.zhoe.org/images/og/xiaomi.png
+      content: https://awesome-android-root.zhoe.org/images/og/xiaomi.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -38,7 +38,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:image
-      content: https://hawesome-android-root.zhoe.org/images/og/xiaomi.png
+      content: https://awesome-android-root.zhoe.org/images/og/xiaomi.png
   - - meta
     - name: twitter:image:alt
       content: Xiaomi Root Guide - All Models
