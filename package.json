@@ -43,7 +43,8 @@
   ],
   "devDependencies": {
     "@vite-pwa/vitepress": "^1.1.0",
-    "vitepress": "^1.6.4"
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-llms": "^1.13.5"
   },
   "optionalDependencies": {
     "workbox-window": "^7.3.0"

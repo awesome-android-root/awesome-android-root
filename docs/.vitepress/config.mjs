@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
+import llmstxt, { copyOrDownloadAsMarkdownButtons } from 'vitepress-plugin-llms'
 import { storeLinkPlugin } from './markdown/storeLinkPlugin.mjs'
 
 export default withPwa(defineConfig({
@@ -11,6 +12,9 @@ export default withPwa(defineConfig({
   metaChunk: true,
 
   vite: {
+    plugins: [
+      llmstxt()
+    ],
     build: {
       chunkSizeWarningLimit: 1000,
     },
@@ -278,6 +282,7 @@ export default withPwa(defineConfig({
     anchor: { level: [2, 3, 4] },
     config: (md) => {
       md.use(storeLinkPlugin)
+      md.use(copyOrDownloadAsMarkdownButtons)
     }
   },
 
