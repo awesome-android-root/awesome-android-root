@@ -426,7 +426,19 @@ Generally no, or not recommended:
 - Some ROMs support locking (GrapheneOS, CalyxOS)
 - Always flash stock firmware before locking
 
+**Q: Can I root without unlocking the bootloader?**
+
+Normally no — but there is one narrow exception. The **GhostLock** bug (CVE-2026-43499), disclosed in 2026, lets specially built apps gain **temporary root in memory** on certain devices with a locked bootloader:
+- **No bootloader unlock, no data wipe, no Knox trip** — Secure Folder, Samsung Wallet, and Play Integrity keep working
+- **Root lasts only until the next reboot** — you re-run the tool each time you want root back
+- **Nothing can be flashed** — no custom ROMs, recoveries, or kernels
+- **Short-lived window** — only works on specific devices running firmware up to ~the June 2026 security patch
+
+Tools include Root My Galaxy, Root My Pixel, GhostLock App, and ghostlock-oneplus.
+
 **Learn More:**
+- [Root Without Unlocking the Bootloader: GhostLock Temporary Root](./rooting-guides/root-without-unlocking-bootloader.md)
+- [Bootloader Modification & Temporary Root Solutions](./rooting-guides/temporary-root-solutions.md)
 - [Complete Bootloader Unlock Guide](./rooting-guides/how-to-unlock-bootloader.md)
 - [OEM Unlock Policies by Manufacturer](./rooting-guides/how-to-unlock-bootloader.md#oem-unlock-policies)
 

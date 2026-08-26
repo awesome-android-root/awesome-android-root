@@ -119,6 +119,10 @@ Most OnePlus devices with unlockable bootloaders can be rooted. Check [XDA Forum
 - **Chinese-market models** running ColorOS may have additional restrictions
 :::
 
+::: tip 💡 Locked bootloader? Temporary root exists
+On several OnePlus/OPPO/realme devices (OnePlus 13/15, Ace 6T, OPPO Pad 4 Pro and more), the **ghostlock-oneplus** exploit uses the GhostLock kernel bug (CVE-2026-43499) to grant **session-only root without unlocking the bootloader** — nothing flashed, nothing survives a reboot. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md).
+:::
+
 ### Hardware Requirements
 
 - OnePlus device (any supported model)
