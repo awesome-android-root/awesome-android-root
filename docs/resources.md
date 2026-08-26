@@ -157,7 +157,7 @@ head:
 | **[GhostLock Temp Root](./rooting-guides/root-without-unlocking-bootloader.md)** | Temporary root, locked bootloader (CVE-2026-43499) | Select devices, ≤ ~Jun 2026 patch | Via KSU | Bootloader reads stock | Closing window | [Guide](./rooting-guides/root-without-unlocking-bootloader.md) |
 
 > [!NOTE]
-> **Magisk** remains the most universally compatible solution. **KernelSU** and **APatch** offer superior stealth on GKI devices but require kernel-level integration. **KernelSU Next** is an advanced kernel-based root solution supporting kernels from 4.4 up to 6.6, extending compatibility to non-GKI and older devices. **GhostLock temp root** is a different animal entirely: a kernel exploit that grants session-only root on a *locked* bootloader — see the [dedicated guide](./rooting-guides/root-without-unlocking-bootloader.md) before considering it.
+> **Magisk** remains the most universally compatible solution. **KernelSU** and **APatch** offer superior stealth on GKI devices but require kernel-level integration. **KernelSU Next** is an advanced kernel-based root solution supporting kernels from 4.4 up to 6.6, extending compatibility to non-GKI and older devices. **GhostLock temp root** is a different animal entirely: a kernel exploit that grants session-only root on a *locked* bootloader - see the [dedicated guide](./rooting-guides/root-without-unlocking-bootloader.md) before considering it.
  
 > [!TIP]
 > For the best root hiding currently, **KernelSU Next + SUSFS** is recommended by the community. For Xposed modules, **LSPosed** (JingMatrix fork) is the actively maintained option.

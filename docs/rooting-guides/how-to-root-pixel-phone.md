@@ -155,7 +155,7 @@ Google Pixel devices are the most root-friendly Android phones. All Pixel models
 :::
 
 ::: tip 💡 Rather not unlock at all?
-**Root My Pixel** uses the GhostLock kernel bug (CVE-2026-43499) to give supported Pixel devices **temporary, session-only root without unlocking the bootloader** — staged on-device via Shizuku, cleared by rebooting. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md).
+**Root My Pixel** uses the GhostLock kernel bug (CVE-2026-43499) to give supported Pixel devices **temporary, session-only root without unlocking the bootloader** - staged on-device via Shizuku, cleared by rebooting. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md).
 :::
 
 ### Image Type Quick Reference

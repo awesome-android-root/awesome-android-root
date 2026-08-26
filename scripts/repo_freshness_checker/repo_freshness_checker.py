@@ -185,7 +185,7 @@ def process_repos(
     auth = verify_auth(session)
     if auth and log_cb:
         tag = "Authenticated" if auth["authed"] else "Unauthenticated"
-        log_cb(f"🔑 {tag} — rate limit {auth['remaining']}/{auth['limit']}")
+        log_cb(f"🔑 {tag} - rate limit {auth['remaining']}/{auth['limit']}")
 
     results: list[dict] = []
     errors: list[dict] = []
@@ -216,7 +216,7 @@ def process_repos(
                 wait = max(0, rl_reset_ts - time.time()) + 5
                 if wait > 0:
                     if log_cb:
-                        log_cb(f"⏳ Rate-limit low — waiting {wait:.0f}s …")
+                        log_cb(f"⏳ Rate-limit low - waiting {wait:.0f}s …")
                     _interruptible_sleep(wait, cancel)
                     if cancel and cancel.is_set():
                         return None
@@ -241,7 +241,7 @@ def process_repos(
             if info.get("rate_limited"):
                 wait = max(0, info.get("reset_ts", time.time() + 60)) - time.time() + 5
                 if log_cb:
-                    log_cb(f"⏳ Rate-limited — waiting {wait:.0f}s …")
+                    log_cb(f"⏳ Rate-limited - waiting {wait:.0f}s …")
                 _interruptible_sleep(wait, cancel)
                 if cancel and cancel.is_set():
                     return None
@@ -304,7 +304,7 @@ def process_repos(
                         "stars": info["stars"],
                     })
                 if log_cb:
-                    log_cb(f"[{cur}/{total}] ✅ {owner}/{repo}  —  {ds}{arc}")
+                    log_cb(f"[{cur}/{total}] ✅ {owner}/{repo}  -  {ds}{arc}")
             else:
                 with results_lock:
                     errors.append({
@@ -313,7 +313,7 @@ def process_repos(
                         "error": info["error"],
                     })
                 if log_cb:
-                    log_cb(f"[{cur}/{total}] ❌ {owner}/{repo}  —  {info['error']}")
+                    log_cb(f"[{cur}/{total}] ❌ {owner}/{repo}  -  {info['error']}")
 
     return results, errors
 
@@ -405,7 +405,7 @@ def generate_report(results: list[dict], errors: list[dict], path: str):
     L.append("|----------|------:|-----:|")
     ok_total = sum(counts.values())
     for k, v in counts.items():
-        share = f"{v/ok_total*100:.1f}%" if ok_total else "—"
+        share = f"{v/ok_total*100:.1f}%" if ok_total else "-"
         L.append(f"| {k} | {v} | {share} |")
     L.append(f"| **Total OK** | **{total_ok}** | |")
     if errors:
@@ -434,7 +434,7 @@ def generate_report(results: list[dict], errors: list[dict], path: str):
             age = _age_str(d)
             st  = _status(d, r["archived"])
         else:
-            ds, age, st = "N/A", "—", "❓"
+            ds, age, st = "N/A", "-", "❓"
         L.append(f"| {i} | [{r['name']}]({r['url']}) | {ds} | {age} | "
                  f"{r['stars']} | {st} |")
 
@@ -538,7 +538,7 @@ def generate_html_report(results: list[dict], errors: list[dict], path: str):
                 "aging" if d > 365 else "active"
             )
         else:
-            ds, age, st_html, st_sort = "N/A", "—", "❓", "unknown"
+            ds, age, st_html, st_sort = "N/A", "-", "❓", "unknown"
         rows_data.append({
             "num": i,
             "name": r["name"],
@@ -562,7 +562,7 @@ def generate_html_report(results: list[dict], errors: list[dict], path: str):
     summary_rows = "".join(
         f"<tr><td>{name}</td><td>{count}</td>"
         f"<td>{count/ok_total*100:.1f}%</td></tr>"
-        if ok_total else f"<tr><td>{name}</td><td>{count}</td><td>—</td></tr>"
+        if ok_total else f"<tr><td>{name}</td><td>{count}</td><td>-</td></tr>"
         for name, count in cats
     )
 
@@ -641,8 +641,8 @@ function render() {{
             else if (sortCol === 'name') {{ va = a.name.toLowerCase(); vb = b.name.toLowerCase(); }}
             else if (sortCol === 'status') {{ va = a.status_sort; vb = b.status_sort; }}
             else if (sortCol === 'age') {{
-                va = a.age === '—' ? -1 : parseInt(a.age);
-                vb = b.age === '—' ? -1 : parseInt(b.age);
+                va = a.age === '-' ? -1 : parseInt(a.age);
+                vb = b.age === '-' ? -1 : parseInt(b.age);
             }}
             else {{ va = a.num; vb = b.num; }}
             if (va < vb) return sortAsc ? -1 : 1;
@@ -796,7 +796,7 @@ def run_gui():
     # ── ttk theme builder ──────────────────────────────────────
     def _build_theme(style: ttk.Style) -> str:
         theme = "freshness"
-        # Try to use an existing theme as base — "alt" works cross-platform
+        # Try to use an existing theme as base - "alt" works cross-platform
         available = style.theme_names()
         base = "alt" if "alt" in available else "default"
         style.theme_use(base)
@@ -1328,7 +1328,7 @@ def run_gui():
                     self._safe_log(f"🌐 HTML report → {html_path}")
                     self._safe_log(
                         f"   ✅ {len(results)} repos  |  ❌ {len(errors)} errors")
-                    self._safe_status(f"Done — report saved to {out}")
+                    self._safe_status(f"Done - report saved to {out}")
                     self.after(0, lambda: self.open_btn.config(state="normal"))
                     self.after(0, lambda: self.html_btn.config(state="normal"))
                 else:
@@ -1390,7 +1390,7 @@ def run_cli():
         print(f"✓ Token saved to {TOKEN_FILE}")
 
     if not token:
-        print("⚠  No token — rate limit is 60 req/hr.  "
+        print("⚠  No token - rate limit is 60 req/hr.  "
               "Pass --token or set GITHUB_TOKEN.")
 
     repos = extract_repos(args.input_file)

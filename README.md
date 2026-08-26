@@ -330,7 +330,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 
 <summary><strong>What is temporary root (GhostLock)?</strong></summary>
 
-Exploits like **GhostLock (CVE-2026-43499)** — a 15-year-old Linux kernel bug — grant root **in memory only**, for the current boot. No bootloader unlock, no flashing, no Knox trip, no data wipe: reboot and the device is bone-stock again. The trade-offs: root doesn't survive reboots, you can't flash ROMs/recoveries, and it only works on specific devices running firmware up to ~the June 2026 patch level.
+Exploits like **GhostLock (CVE-2026-43499)** - a 15-year-old Linux kernel bug - grant root **in memory only**, for the current boot. No bootloader unlock, no flashing, no Knox trip, no data wipe: reboot and the device is bone-stock again. The trade-offs: root doesn't survive reboots, you can't flash ROMs/recoveries, and it only works on specific devices running firmware up to ~the June 2026 patch level.
 
 <br>
 </details>
