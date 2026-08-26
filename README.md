@@ -813,6 +813,7 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 - **[MACsposed](https://github.com/DavidBerdik/MACsposed)** - Adds support for MAC Address spoofing to Android 12 through 15. `Proprietary` `[LSP]`
 - **[Privacy Kit](https://github.com/Xposed-Modules-Repo/com.sal.privacykit)** - Per-app Android identifier spoofing for LSPosed. `Proprietary` `[LSP]`
 - **[SpoofMyDevice](https://github.com/BuSung-dev/SpoofMyDevice)** - Xposed module and companion app for building, saving, and applying spoofed Android device profiles to selected apps. `FOSS` `[LSP]`
+- **[SSAID (Android ID Modifier)](https://github.com/HSSkyBoy/AndroidIDChange)** - A modern Android SSAID (Android ID) inspector, modifier, backup, and management utility. `FOSS` `[LSP]`
 - **[Telephony Spoofer](https://github.com/BrianWalczak/TelephonySpoofer)** - Spoof cellular information, including eSIM compatibility. `FOSS` `[LSP]`
 
 ### App Isolation
