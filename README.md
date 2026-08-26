@@ -926,6 +926,7 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 
 - **[Douyin Enhancer](https://github.com/twyora/DouyinEnhancer)** - Adds minor quality-of-life features to Douyin (Chinese TikTok). `FOSS` `[LSP]`
 - **[TikTok AntiBurn](https://github.com/0mnr0/TikTokAntiBurn)** - Overlap the TikTok app elements to prevent the screen from burning out. `FOSS` `[LSP]`
+- **[Toki](https://github.com/MeiYongAI/Toki)** - Adds various tweaks to TikTok app. `FOSS` `[LSP]`
 
 
 #### WeChat
