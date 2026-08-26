@@ -119,6 +119,7 @@ Unlocking the bootloader usually wipes data, weakens device security, and can br
 | The safest default for most devices | **Magisk** | Broad compatibility, largest module ecosystem, easiest troubleshooting |
 | Kernel-level root with strong per-app control | **KernelSU** | Root runs in kernel space; App Profiles can restrict UID, groups, capabilities, and SELinux rules |
 | A KernelPatch-based alternative | **APatch** | Useful on compatible ARM64 devices, especially when you want APModule/KPModule support |
+| Root without unlocking the bootloader (temporarily) | **[GhostLock temp root](./root-without-unlocking-bootloader.md)** | Session-only root via CVE-2026-43499 on select devices; no Knox trip, but nothing survives a reboot |
 | Maximum reliability for banking, wallet, enterprise, or anti-cheat apps | **No root** | No framework can guarantee Play Integrity or app-specific checks |
 
 ## Quick comparison

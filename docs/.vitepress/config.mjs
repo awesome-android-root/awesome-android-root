@@ -22,7 +22,7 @@ export default withPwa(defineConfig({
       exclude: ['@vite-pwa/vitepress']
     },
     server: {
-      warmup: { clientFiles: ['.vitepress/theme/**/*.{js,ts,vue}'] }
+      warmup: { clientFiles: ['.vitepress/theme/**/*.{js,ts,vue}'] },
     },
     css: { devSourcemap: false },
     esbuild: {
@@ -408,7 +408,8 @@ export default withPwa(defineConfig({
               { text: 'Magisk (Recommended)', link: '/rooting-guides/magisk-guide' },
               { text: 'KernelSU', link: '/rooting-guides/kernelsu-guide' },
               { text: 'APatch', link: '/rooting-guides/apatch-guide' },
-              { text: 'LSPosed Framework', link: '/rooting-guides/lsposed-guide' }
+              { text: 'LSPosed Framework', link: '/rooting-guides/lsposed-guide' },
+              { text: 'Temporary Root (GhostLock)', link: '/rooting-guides/root-without-unlocking-bootloader' }
             ]
           },
           {
@@ -440,7 +441,8 @@ export default withPwa(defineConfig({
             items: [
               { text: 'Custom Recovery', link: '/rooting-guides/how-to-install-custom-recovery' },
               { text: 'Unlock Bootloader', link: '/rooting-guides/how-to-unlock-bootloader' },
-              { text: 'Custom ROM Installation', link: '/rooting-guides/custom-rom-installation' }
+              { text: 'Custom ROM Installation', link: '/rooting-guides/custom-rom-installation' },
+              { text: 'Bootloader Mods & Temp Root', link: '/rooting-guides/temporary-root-solutions' }
             ]
           }
         ]
@@ -498,7 +500,8 @@ export default withPwa(defineConfig({
             { text: '🏅 Magisk (Recommended)', link: '/rooting-guides/magisk-guide' },
             { text: '⚡ KernelSU', link: '/rooting-guides/kernelsu-guide' },
             { text: '🤖 APatch', link: '/rooting-guides/apatch-guide' },
-            { text: '⚙️ LSPosed Framework', link: '/rooting-guides/lsposed-guide' }
+            { text: '⚙️ LSPosed Framework', link: '/rooting-guides/lsposed-guide' },
+            { text: '👻 Root Without Unlocking (GhostLock)', link: '/rooting-guides/root-without-unlocking-bootloader' }
           ]
         },
         {
@@ -544,7 +547,16 @@ export default withPwa(defineConfig({
             { text: 'Compare Methods', link: '/rooting-guides/root-framework-comparison' },
             { text: 'Magisk (Recommended)', link: '/rooting-guides/magisk-guide' },
             { text: 'KernelSU', link: '/rooting-guides/kernelsu-guide' },
-            { text: 'APatch', link: '/rooting-guides/apatch-guide' }
+            { text: 'APatch', link: '/rooting-guides/apatch-guide' },
+            { text: 'Temporary Root, No Unlock (GhostLock)', link: '/rooting-guides/root-without-unlocking-bootloader' }
+          ]
+        },
+        {
+          text: '🔒 Locked-Bootloader Options',
+          collapsed: true,
+          items: [
+            { text: 'GhostLock Temporary Root', link: '/rooting-guides/root-without-unlocking-bootloader' },
+            { text: 'Bootloader Mods & Temp Root', link: '/rooting-guides/temporary-root-solutions' }
           ]
         },
         {
@@ -604,6 +616,7 @@ export default withPwa(defineConfig({
           collapsed: true,
           items: [
             { text: 'Root Managers', link: '/apps-and-modules/#root-managers' },
+            { text: 'Temporary Root (Locked Bootloader)', link: '/apps-and-modules/#temporary-root-locked-bootloader' },
             { text: 'Module Managers', link: '/apps-and-modules/#module-managers' },
             { text: 'Metamodules', link: '/apps-and-modules/#metamodules' },
             { text: 'LSPosed & Xposed', link: '/apps-and-modules/#lsposed-xposed' },

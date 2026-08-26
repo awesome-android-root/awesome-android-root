@@ -50,6 +50,7 @@
 
 #### 🛠️ **Root & Module Management**
 - [Root Managers](#root-managers)
+- [Temporary Root (Locked Bootloader)](#temporary-root-locked-bootloader)
 - [Module Managers](#module-managers)
 - [Metamodules](#metamodules)
 - [LSPosed & Xposed](#lsposed-xposed)
@@ -220,6 +221,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 ## Additional Resources
 - [LSPosed Framework Guide](./docs/rooting-guides/lsposed-guide.md)
 - [Custom ROMs Installation](./docs/rooting-guides/custom-rom-installation.md)
+- [Root Without Unlocking the Bootloader (GhostLock Temporary Root)](./docs/rooting-guides/root-without-unlocking-bootloader.md)
 - **[📚 View All Rooting Tutorials ➞](./docs/rooting-guides/index.md)**
 
 [↑ Back to top](#table-of-contents)
@@ -283,6 +285,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 <summary><b>📚 Common Rooting Terms</b></summary>
 
 - **Bootloader** - Low-level software that starts your OS (must be unlocked for root)
+- **Temporary Root** - Root that exists in memory for the current boot only (e.g. GhostLock/CVE-2026-43499 tools); lost on reboot, no bootloader unlock needed
 - **Recovery** - Special mode for system modifications (TWRP, CWM)
 - **Systemless Root** - Root method that doesn't modify system partition
 - **Zygisk** - Feature for advanced app hooking and hiding
@@ -320,6 +323,34 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 - **[KernelSU-next](https://github.com/KernelSU-Next/KernelSU-Next)** - An advanced Kernel based root solution for Android. `FOSS`
 - **[ReSukiSU](https://github.com/ReSukiSU/ReSukiSU)** - Fork of SukiSU-Ultra with additional features. `FOSS`
 - **[SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra)** - A kernel-based root solution for Android devices, forked from `KernelSU` with some useful changes. `FOSS`
+
+### Temporary Root (Locked Bootloader)
+
+<details>
+
+<summary><strong>What is temporary root (GhostLock)?</strong></summary>
+
+Exploits like **GhostLock (CVE-2026-43499)** — a 15-year-old Linux kernel bug — grant root **in memory only**, for the current boot. No bootloader unlock, no flashing, no Knox trip, no data wipe: reboot and the device is bone-stock again. The trade-offs: root doesn't survive reboots, you can't flash ROMs/recoveries, and it only works on specific devices running firmware up to ~the June 2026 patch level.
+
+<br>
+</details>
+
+- **[⭐ Root My Galaxy](https://github.com/BuSung-dev/Root-My-Galaxy)** - One-tap temporary root for Snapdragon Galaxy flagships (S24/S25 series, S24 FE, A56...) via GhostLock; bootloader stays locked, Knox isn't tripped. `FOSS`
+- **[GhostLock App](https://github.com/YuKongA/ghostlock-app)** - One-tap execution app for the GhostLock (CVE-2026-43499) exploit. `FOSS`
+- **[GhostLock-5.10](https://github.com/R0rt1z2/GhostLock-5.10)** - GhostLock kernel root exploit for some 5.X-kernel devices, mostly Amazon (from the Kaeru/Fenrir developer). `FOSS`
+- **[GhostLock-Galaxy](https://github.com/wxxsfxyzm/GhostLock-Galaxy)** - GhostLock app for the Samsung Galaxy Z Fold6 (kernel 6.1); stages via Shizuku or `adb shell` with per-kernel offset matching. `FOSS`
+- **[ghostlock-oneplus](https://github.com/JoinChang/ghostlock-oneplus)** - GhostLock kernel exploit for OnePlus/OPPO/realme (and some Xiaomi) devices with locked bootloader; installs KernelSU with runtime kernel auto-detection. `FOSS`
+- **[IonStack-S22U](https://github.com/sarabpal-dev/IonStack-S22U)** - Full CVE-2026-43499 exploit chain for the Samsung Galaxy S22 Ultra (5.10 kernel). `FOSS`
+- **[iQOO Z9 5G / vivo T3 5G Root](https://github.com/ankitrawatgit/iQOO-Z9_5G-vivo-T3_5G-Root-GhostLock)** - One-tap root app and payloads for the iQOO Z9 5G and vivo T3 5G (Dimensity 7200, kernel 5.15). `FOSS`
+- **[oppo-ghostlock](https://github.com/pubglite55/oppo-ghostlock)** - GhostLock exploit adaptation for the OPPO Find N2. `FOSS`
+- **[pixel-ksu-root](https://github.com/JingMatrix/pixel-ksu-root)** - ADB-driven KernelSU loader for stock Pixels; temporary kernel R/W via GhostLock, then late-loads a signature-matched `kernelsu.ko`. Manager-agnostic. `FOSS`
+- **[QuestStack](https://github.com/starseed12345/QuestStack)** - Unlocks the Meta Quest 1 bootloader and gains root using GhostLock + CVE-2021-1931. `FOSS`
+- **[Root My Device](https://github.com/Witaqua-tools/Root-My-Device)** - Community fork of Root My Galaxy generalized beyond Samsung, with its own payload feed. `FOSS`
+- **[Root-My-Galaxy-Payloads](https://github.com/BuSung-dev/Root-My-Galaxy-Payloads)** - Signed device profiles, exploit payloads, and KernelSU artifacts that Root My Galaxy fetches at runtime. `FOSS`
+- **[Root My Pixel](https://github.com/alex193a/Root-My-Pixel)** - Jailbreak supported Google Pixel phones with GhostLock; stages the payload via Shizuku, no PC needed. `FOSS`
+
+> [!TIP]
+> See the dedicated guide **[Root Without Unlocking the Bootloader](./docs/rooting-guides/root-without-unlocking-bootloader.md)** for what GhostLock can and can't do, device support, and every app, exploit port, and research project. Also see [Bootloader Mods & Temporary Root Solutions](./docs/rooting-guides/temporary-root-solutions.md) for related locked-bootloader approaches (Kaeru, Fenrir).
 
 ### Module Managers
 
@@ -451,6 +482,7 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 - **[Play Integrity Alert](https://github.com/Xiddoc/PlayIntegrityAlert)** - Get notified when an app calls the Play Integrity API. `FOSS` `[LSP]`
 - **[Play Integrity API Checker](https://github.com/1nikolas/play-integrity-checker-app)** - This app shows info about your device integrity as reported by Google Play Services. If any of this fails could mean your device is rooted or tampered in a way. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck)
 - **[Securify](https://github.com/RabehX/Securify)** - Yet Another Root Checker and Play Integrity API Application. `FOSS`
+- **[ZygoteNextProbe](https://github.com/XiaoTong6666/ZygoteNextProbe)** - Research probe that checks whether Android 17's `zygote_next` native isolated services leak a global mount view - potentially exposing Magisk/Zygisk/LSPosed mounts to apps. `FOSS`
 
 
 [↑ Back to top](#table-of-contents)
@@ -762,6 +794,8 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 
 - **[⭐ Amarok](https://github.com/deltazefiro/Amarok-Hider)** - Android application which enables you to hide your private files and apps with a single click. `FOSS` | [🌱](https://f-droid.org/zh_Hans/packages/deltazero.amarok.foss/)
 - **[Do Not Try Accessibility](https://github.com/Nitsuya/DoNotTryAccessibility)** - Hook System Framework makes the app think that accessibility services are not enabled. `FOSS` `[LSP]`
+- **[FuseFixer](https://github.com/5ec1cff/FuseFixer)** - Hooks the MediaProvider Fuse Daemon to stop apps probing package existence through `Android/data` directory quirks (Unicode casefold tricks). `FOSS` `[LSP]`
+- **[FuseHide](https://github.com/XiaoTong6666/FuseHide)** - Hides chosen storage paths from MediaProvider on Android 12+ at runtime, and debugs/fixes `Android/data` Unicode casefold scenarios. `FOSS` `[LSP]`
 - **[GreenDotHide](https://github.com/Dorian399/GreenDotHide)** - Hides the green dot indicating sensitive permission use. Works only on MIUI/HyperOS. `FOSS` `[LSP]`
 - **[IAmNotADeveloper](https://github.com/xfqwdsj/IAmNotADeveloper)** - Hide Android developer-related switches status. `FOSS` `[LSP]`
 - **[Image Copy Hide](https://github.com/cookieof/ImageCopyHide)** - Automatically copy and hide files from /sdcard/DCIM/Camera to /sdcard/wot/cptp. `FOSS` `[M]` 
