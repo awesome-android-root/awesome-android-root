@@ -135,6 +135,18 @@
   <changefreq>monthly</changefreq>
   <priority>0.88</priority>
 </url>
+<url>
+  <loc>https://awesome-android-root.zhoe.org/rooting-guides/root-without-unlocking-bootloader</loc>
+  <lastmod>2026-08-26T00:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://awesome-android-root.zhoe.org/rooting-guides/temporary-root-solutions</loc>
+  <lastmod>2026-08-26T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.75</priority>
+</url>
 
 <!-- Device-specific guides -->
 <url>

@@ -154,9 +154,10 @@ head:
 | **[KernelSU Next](./rooting-guides/kernelsu-guide.md)** | Advanced kernel root, broader kernel support | 4.4–6.6 kernels | Via module | Built-in + SUSFS | Active | [GitHub](https://github.com/KernelSU-Next/KernelSU-Next) |
 | **[APatch](./rooting-guides/apatch-guide.md)** | Modern GKI devices | 12+ (GKI) | Via module | KPM-based | Active | [GitHub](https://github.com/bmax121/APatch) |
 | **[LSPosed (Fork)](./rooting-guides/lsposed-guide.md)** | Xposed framework modules | 8.1–16 | Required | N/A | Active | [GitHub](https://github.com/JingMatrix/LSPosed) |
+| **[GhostLock Temp Root](./rooting-guides/root-without-unlocking-bootloader.md)** | Temporary root, locked bootloader (CVE-2026-43499) | Select devices, ≤ ~Jun 2026 patch | Via KSU | Bootloader reads stock | Closing window | [Guide](./rooting-guides/root-without-unlocking-bootloader.md) |
 
 > [!NOTE]
-> **Magisk** remains the most universally compatible solution. **KernelSU** and **APatch** offer superior stealth on GKI devices but require kernel-level integration. **KernelSU Next** is an advanced kernel-based root solution supporting kernels from 4.4 up to 6.6, extending compatibility to non-GKI and older devices.
+> **Magisk** remains the most universally compatible solution. **KernelSU** and **APatch** offer superior stealth on GKI devices but require kernel-level integration. **KernelSU Next** is an advanced kernel-based root solution supporting kernels from 4.4 up to 6.6, extending compatibility to non-GKI and older devices. **GhostLock temp root** is a different animal entirely: a kernel exploit that grants session-only root on a *locked* bootloader — see the [dedicated guide](./rooting-guides/root-without-unlocking-bootloader.md) before considering it.
  
 > [!TIP]
 > For the best root hiding currently, **KernelSU Next + SUSFS** is recommended by the community. For Xposed modules, **LSPosed** (JingMatrix fork) is the actively maintained option.
@@ -268,6 +269,8 @@ head:
 | **Debloating** | Remove unwanted apps safely | [Debloat Guide](./general-guides/android-apps-debloating.md) |
 | **Ad Blocking** | System-wide ad removal | [AdBlock Guide](./general-guides/android-adblocking.md) |
 | **Custom Recovery Basics** | Flashing and backup workflow | [How to Install Custom Recovery](./rooting-guides/how-to-install-custom-recovery.md) |
+| **Temporary Root (No Unlock)** | GhostLock (CVE-2026-43499) temporary root with a locked bootloader | [Root Without Unlocking the Bootloader](./rooting-guides/root-without-unlocking-bootloader.md) |
+| **Bootloader Mods & Temp Root** | Kaeru, Fenrir, and locked-bootloader approaches | [Temporary Root Solutions](./rooting-guides/temporary-root-solutions.md) |
 
 ---
 

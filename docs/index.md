@@ -297,6 +297,11 @@ features:
     <strong>Root with KernelSU</strong>
     <span>15-35 min</span>
   </a>
+  <a href="/rooting-guides/root-without-unlocking-bootloader" class="community-card">
+    <span class="icon">👻</span>
+    <strong>Temp Root, No Unlock</strong>
+    <span>GhostLock (CVE-2026-43499)</span>
+  </a>
 </div>
 
 

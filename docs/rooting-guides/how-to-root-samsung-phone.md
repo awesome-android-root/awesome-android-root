@@ -119,6 +119,10 @@ Root Samsung Galaxy devices while navigating Knox security, Odin flashing, and O
 - **Samsung Cloud & Find My Mobile** – May flag device as compromised
 :::
 
+::: tip 💡 Want root WITHOUT tripping Knox?
+On supported Snapdragon Galaxy models (S24/S25 series, S24 FE, A56, A17 and others) running firmware up to ~the June 2026 patch, the **GhostLock** bug (CVE-2026-43499) grants **temporary root with the bootloader still locked** — Knox stays intact, Secure Folder and Samsung Wallet keep working. Root is lost on reboot and nothing can be flashed, but it's a real option when unlocking isn't. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md).
+:::
+
 
 
 ---

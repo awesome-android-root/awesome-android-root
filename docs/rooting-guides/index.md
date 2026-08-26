@@ -151,6 +151,7 @@ Master Android rooting with comprehensive tutorials covering bootloader unlockin
 - [Universal Rooting Process](#universal-rooting-process) - Four-step guide for all devices
 - [Device-Specific Guides](#device-specific-guides) - Tailored instructions for your device
 - [Root Method Comparison](#choosing-a-root-method) - Magisk vs KernelSU vs APatch
+- [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) - GhostLock temporary root
 :::
 
 
@@ -298,6 +299,9 @@ Three primary rooting solutions exist, each with distinct advantages and trade-o
 
 > [!IMPORTANT]
 > For detailed comparison including migration guides, see [Root Framework Comparison](./root-framework-comparison.md)
+
+> [!TIP]
+> **Can't (or don't want to) unlock your bootloader?** All three frameworks above assume an unlocked bootloader. On a narrow set of 2024-2026 devices, the **GhostLock** bug (CVE-2026-43499) instead grants **temporary, session-only root** with the bootloader locked - no Knox trip, no data wipe. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) for what it can and can't do, plus the broader [Bootloader Modification & Temporary Root Solutions](./temporary-root-solutions.md) page.
 
 ---
 
