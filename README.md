@@ -970,6 +970,7 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 - **[GlassMic](https://github.com/lm060719/io.mo.glassmic)** - Lets you route an imported audio file into target recording apps through AudioRecord/AAudio hooks. `FOSS` `[LSP]`
 - **[NexAlloy](https://github.com/NexAlloy/NexAlloy)** - YouTube, YT Music block ads, background playback, sponsorblock and much more. Also unlocks premium features of Strava and Photomath. Unlimited Google Photos backup. `FOSS` `[LSP]`
 - **[OnePlus 8 Series and 9R Camera Unlocker](https://github.com/Magisk-Modules-Alt-Repo/oneplus-8series-9r-camera-unlocker)** - Enables 48MP RAW10 capture support, both on the main (8/8T/9R) and ultra wide (8 Pro) lenses and much more. `FOSS` `[M]`
+- **[PolyglotYT](https://github.com/Dr-TSNG/PolyglotYT)** - Immersive translation Xposed module for YouTube app. `FOSS` `[LSP]`
 - **[VideoSpeed](https://github.com/MarsGao/io.github.MarsGao.speed)** - An Xposed module for adjusting the playback speed of videos across multiple applications. `FOSS` `[LSP]`
 - **[XAudioCapture](https://github.com/Xposed-Modules-Repo/io.github.wzhy.xaudiocapture)** - Lets you capture any audio stream you desire, bypassing these restrictions. `Proprietary` `[LSP]`
 - **[xCam](https://github.com/hazbu/xCam)** - Replace live camera feeds and actual photo captures with virtual media sources. `FOSS` `[LSP]`
