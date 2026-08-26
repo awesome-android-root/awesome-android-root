@@ -108,7 +108,7 @@ All Nothing and CMF by Nothing Phone models support bootloader unlocking and roo
 > All Nothing Phones are unlockable globally. No known incompatible models.
 
 > [!TIP]
-> **Don't want to unlock?** On the Nothing Phone (1), the community tool **root-my-nothing** grants **temporary root via the GhostLock bug (CVE-2026-43499)** — KernelSU installs with the bootloader still locked, and everything resets on reboot. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md).
+> **Don't want to unlock?** On the Nothing Phone (1), the community tool **root-my-nothing** grants **temporary root via the GhostLock bug (CVE-2026-43499)** - KernelSU installs with the bootloader still locked, and everything resets on reboot. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md).
 
 ---
 
