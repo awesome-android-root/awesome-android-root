@@ -5,7 +5,7 @@ description: "Guide to bootloader-level modification tools (Kaeru, Fenrir) and k
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.zhoe.org/general-guides/bootloader-mods-and-temp-root
+      href: https://awesome-android-root.zhoe.org/rooting-guides/temporary-root-solutions
   - - meta
     - name: author
       content: Awesome Android Root
@@ -26,7 +26,7 @@ head:
       content: "Guide to bootloader-level modification tools and kernel-exploit temporary root solutions, and how they differ from standard Magisk/KernelSU/APatch rooting."
   - - meta
     - property: og:url
-      content: https://awesome-android-root.zhoe.org/general-guides/bootloader-mods-and-temp-root
+      content: https://awesome-android-root.zhoe.org/rooting-guides/temporary-root-solutions
   - - meta
     - property: og:locale
       content: en_US
@@ -96,12 +96,17 @@ Kaeru and Fenrir both build on a small ecosystem of MediaTek bootloader tooling 
 
 In mid-2026, a use-after-free bug in the Linux kernel's rtmutex proxy-lock rollback path (CVE-2026-43499, nicknamed **GhostLock**) turned out to be reachable from an unprivileged app process on several shipping Android kernels. Unlike the bootloader tools above, this is a pure kernel exploit: no unlocked bootloader, no flashing, no Knox e-fuse trip. It stages a native payload over ADB/Shizuku, runs it to get a root shell in memory, and uses that to load a KernelSU (or ReSukiSU) manager for the current boot only. Rebooting clears it, and the steps have to be repeated.
 
--**[GhostLock App](https://github.com/YuKongA/ghostlock-app)** - GhostLock One-Tap Execution App. `FOSS` (Apache-2.0)
-- **[Root My Galaxy](https://github.com/BuSung-dev/Root-My-Galaxy)** - The original one-click implementation, for Snapdragon Galaxy flagships (S24/S25 series, S24 FE, A56, and others). Bootloader stays locked, Knox isn't tripped, so Secure Folder, Samsung Wallet, and Play Integrity keep working. `FOSS` (Apache-2.0)
-  - **[Root-My-Galaxy-Payloads](https://github.com/BuSung-dev/Root-My-Galaxy-Payloads)** - Companion repo with the per-device exploit offsets, kernel profiles, and KernelSU artifacts the app fetches at runtime. Adding a new device means porting a profile here.
-- **[Root My Device](https://github.com/Witaqua-tools/Root-My-Device)** - Community fork of Root My Galaxy generalized beyond Samsung, with its own payload feed for additional firmware builds. `FOSS` (Apache-2.0)
-- **[Root My Pixel](https://github.com/alex193a/Root-My-Pixel)** - Port for Google Pixel devices. Uses Shizuku to stage the payload without needing prior root, then runs the exploit to install ReSukiSU/KernelSU for the session. `FOSS`
+> [!TIP]
+> GhostLock now has its own dedicated, plain-English page: **[Root Without Unlocking the Bootloader: the GhostLock Temporary Root Guide](./root-without-unlocking-bootloader.md)**. It covers what the bug is, what it can and can't do, and the full list of apps and projects (Root My Galaxy, Root My Pixel, Root My Device, GhostLock App, ghostlock-oneplus, and device ports) with a supported-devices table.
+
+The headline tools:
+
+- **[Root My Galaxy](https://github.com/BuSung-dev/Root-My-Galaxy)** - The original one-click app for Snapdragon Galaxy flagships (S24/S25 series, S24 FE, A56, and others). `FOSS` (Apache-2.0)
+- **[Root My Pixel](https://github.com/alex193a/Root-My-Pixel)** - Port for Google Pixel devices, staging the payload via Shizuku. `FOSS`
+- **[ghostlock-oneplus](https://github.com/JoinChang/ghostlock-oneplus)** - Standalone exploit for OnePlus/OPPO/realme (and some Xiaomi) devices with a locked bootloader. `FOSS`
 - **[CyberMeowfia (IonStack research)](https://github.com/NebuSec/CyberMeowfia)** - NebuSec's original writeup and exploit source for CVE-2026-43499 that the tools above are built on.
+
+Community ports keep spreading - Galaxy S22 Ultra / Z Fold6 / A17, OPPO Find N2, iQOO Z9 5G / vivo T3 5G, POCO M6 Pro, Amazon 5.X-kernel devices, Nothing Phone (1), Galaxy Tab S7+, and even the Meta Quest 1 - all listed with details on the [dedicated GhostLock page](./root-without-unlocking-bootloader.md).
 
 > [!IMPORTANT]
 > This is a narrow, closing window, not a general-purpose root method:
@@ -133,6 +138,7 @@ See the [Root Hiding & Play Integrity](../rooting-guides/index.md#root-hiding-pl
 
 ## Related resources
 
+- [Root Without Unlocking the Bootloader: the GhostLock Temporary Root Guide](./root-without-unlocking-bootloader.md)
 - [Root Framework Comparison](../rooting-guides/root-framework-comparison.md)
 - [Complete Bootloader Unlocking Guide](../rooting-guides/how-to-unlock-bootloader.md)
 - [Troubleshooting: Play Integrity & Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps)
