@@ -296,14 +296,14 @@ When removing OEM apps, consider these open-source alternatives (explore more in
 - **Camera**: [Open Camera](https://opencamera.sourceforge.io/)
 
 ### Communication
-- **SMS**: [QKSMS](https://github.com/moezbhatti/qksms)
+- **SMS**: [QUIK SMS](https://github.com/quik-sms/quik)
 - **Email**: [FairEmail](https://email.faircode.eu/), [K-9 Mail](https://k9mail.app/)
 - **Browser**: [Firefox](https://www.mozilla.org/en-US/firefox/mobile/), [Brave](https://play.google.com/store/apps/details?id=com.brave.browser)
 
 ### Productivity
 - **Notes**: [Standard Notes](https://standardnotes.com/), [Joplin](https://joplinapp.org/)
 - **Calendar**: [Simple Calendar](https://github.com/SimpleMobileTools/Simple-Calendar)
-- **Keyboard**: [OpenBoard](https://github.com/openboard-team/openboard)
+- **Keyboard**: [HeliBoard](https://github.com/HeliBorg/HeliBoard)
 
 ## Monitoring and Maintenance
 
