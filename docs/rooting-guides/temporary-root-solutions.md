@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "Bootloader Modification & Temporary Root Solutions"
-description: "Guide to bootloader-level modification tools (Kaeru, Fenrir) and kernel-exploit temporary root (GhostLock / CVE-2026-43499 family: Root My Galaxy, Root My Pixel, Root My Device)."
+description: "Bootloader-level modification tools and kernel-exploit temporary root solutions."
 head:
   - - link
     - rel: canonical

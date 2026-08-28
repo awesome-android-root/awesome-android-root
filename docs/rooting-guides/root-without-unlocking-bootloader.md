@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "Root Without Unlocking the Bootloader: GhostLock Temporary Root Explained"
-description: "GhostLock (CVE-2026-43499) lets you temporarily root Android without unlocking the bootloader or tripping Knox. Plain-English guide: what it is, what it can and can't do, and every app and tool that uses it."
+description: "Temporarily root Android without unlocking the bootloader using GhostLock (CVE-2026-43499)."
 head:
   - - link
     - rel: canonical
