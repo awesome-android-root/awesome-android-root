@@ -88,7 +88,7 @@ Root any Google Pixel device with the easiest rooting process in Android. Clean 
 ## Quick Navigation
 
 - [Prerequisites](#prerequisites)
-- [Supported Devices](#supported-devices)
+- [Device Compatibility](#device-compatibility)
 - [Bootloader Unlock](#unlock-bootloader)
 - [Root Methods](#root-installation-methods)
   - [Pixel Flasher (Easiest)](#method-0-pixel-flasher-gui-tool-easiest)
@@ -377,10 +377,10 @@ fastboot flash boot stock_boot.img  # Or init_boot
 fastboot reboot
 ```
 
-### SafetyNet/Play Integrity Fails
+### Play Integrity Fails
 1. Enable Zygisk
 2. Configure DenyList
-3. Install Universal SafetyNet Fix
+3. Install Play Integrity Fix (PIF)
 4. Hide Magisk app
 5. Clear Google Play Services data
 

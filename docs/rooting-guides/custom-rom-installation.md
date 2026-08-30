@@ -106,9 +106,9 @@ head:
 - [ROM Selection Guide](#rom-selection-guide)
 - [Installation Process](#installation-process)
 - [Post-Installation Setup](#post-installation-setup)
-- [Troubleshooting Guide](#troubleshooting)
-- [Staying Updated](#staying-updated)    
-- [What’s Next?](#whats-next)
+- [Troubleshooting Guide](#troubleshooting-guide)
+- [Staying Updated](#staying-updated)
+- [What’s Next?](#what-s-next)
 
 
 ## Understanding Custom ROMs
@@ -439,7 +439,7 @@ Notes:
 - [r/LineageOS](https://reddit.com/r/LineageOS) - user discussions
 - [GitHub Issues](https://github.com/LineageOS) - bugs and development
 - [FAQ & Troubleshooting](../faqs.md)
-- [Join Community](../about.md#community)
+- [Join Community](../about.md#community-support)
 
 Official Resources:
 - [CustomROMBay.org](https://customrombay.org/)
@@ -462,7 +462,7 @@ Official Resources:
 ::: tip **Congratulations! You’ve installed a custom ROM.**
 
 #### What’s Next?
-- [Add Root Access](./index.md#root-solutions-comparison) - Magisk (Zygisk), KernelSU (kernel-based), APatch
-- [Custom Kernels](./index.md#advanced-framework-solutions) - performance/battery tuning
-- [LSPosed Modules](../apps-and-modules/#lsposed-xposed) - modern Xposed-compatible modules (Zygisk/LSPosed)
+- [Add Root Access](./root-framework-comparison.md) - Magisk (Zygisk), KernelSU (kernel-based), APatch
+- [Custom Kernels](../apps-and-modules/#kernel-management) - performance/battery tuning
+- [LSPosed Modules](./lsposed-guide.md) - modern Xposed-compatible modules (Zygisk/LSPosed)
 :::

@@ -1,25 +1,9 @@
 # Awesome Android Root - Robots.txt
-# Updated: December 2025
 
 User-agent: *
 Allow: /
+Disallow: /assets/
 Sitemap: https://awesome-android-root.zhoe.org/sitemap.xml
-
-# Priority paths - high-value content
-Crawl-delay: 0
-
-# High priority pages
-Allow: /apps-and-modules/
-Allow: /rooting-guides/
-Allow: /general-guides/
-Allow: /faqs
-Allow: /troubleshooting
-
-# Block common bot paths
-Disallow: /.vitepress/
-Disallow: /node_modules/
-Disallow: /.git/
-
 
 # Search engines
 User-agent: Googlebot
@@ -51,14 +35,14 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
-# Block aggressive crawlers
+# Slow down aggressive SEO crawlers
 User-agent: AhrefsBot
 Crawl-delay: 10
 
 User-agent: SemrushBot
 Crawl-delay: 10
 
-# Block scrapers
+# Block offline download tools
 User-agent: HTTrack
 Disallow: /
 

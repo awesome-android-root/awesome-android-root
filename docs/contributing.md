@@ -148,10 +148,10 @@ Thank you for contributing to **Awesome Android Root**! This guide helps you add
 ## Categories & Tags
 
 ### Framework Tags
-- **`[M]`** = Magisk Module (requires [Magisk](../rooting-guides/magisk-guide.md))
-- **`[K]`** = KernelSU Module (requires [KernelSU](../rooting-guides/kernelsu-guide.md))
-- **`[A]`** = APatch Module (requires [APatch](../rooting-guides/apatch-guide.md))
-- **`[LSP]`** = LSPosed / Xposed Module (requires [LSPosed](../rooting-guides/lsposed-guide.md))
+- **`[M]`** = Magisk Module (requires [Magisk](./rooting-guides/magisk-guide.md))
+- **`[K]`** = KernelSU Module (requires [KernelSU](./rooting-guides/kernelsu-guide.md))
+- **`[A]`** = APatch Module (requires [APatch](./rooting-guides/apatch-guide.md))
+- **`[LSP]`** = LSPosed / Xposed Module (requires [LSPosed](./rooting-guides/lsposed-guide.md))
 
 ### License Tags
 - **`FOSS`** = Free and Open Source Software (source code available)

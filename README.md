@@ -12,12 +12,12 @@
 
 <sub>Discover 500+ top root apps, Magisk/ KernelSU/ LSPosed(xposed) modules & step-by-step guides for every device.</sub>
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=blue&cacheSeconds=3600)](https://github.com/awesome-android-root/awesome-android-root) [![Total Entries](https://img.shields.io/badge/Apps%20%26%20Modules-500+-blue?style=for-the-badge&logo=android&cacheSeconds=3600)](#root-apps-and-modules) [![Codeberg Mirror](https://img.shields.io/badge/Codeberg-Mirror-2185D0?style=for-the-badge&logo=codeberg&logoColor=white)](https://codeberg.org/awesome-android-root/awesome-android-root/)
+[![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=blue&cacheSeconds=3600)](https://github.com/awesome-android-root/awesome-android-root) [![Total Entries](https://img.shields.io/badge/Apps%20%26%20Modules-500+-blue?style=for-the-badge&logo=android&cacheSeconds=3600)](./docs/apps-and-modules/) [![Codeberg Mirror](https://img.shields.io/badge/Codeberg-Mirror-2185D0?style=for-the-badge&logo=codeberg&logoColor=white)](https://codeberg.org/awesome-android-root/awesome-android-root/)
 
 </div>
 <div align="center" class="quick-nav">
 
-[Introduction](#introduction) | [Rooting Guides](#rooting-guides) | [Apps & Modules](#root-apps-and-modules) | [Support](#resources-and-help)
+[Introduction](./docs/rooting-guides/index.md#understanding-root-access) | [Rooting Guides](./docs/rooting-guides/) | [Apps & Modules](./docs/apps-and-modules/) | [Support](./docs/resources.md)
 
 </div><br>
 <div class="mob-tip">
@@ -150,7 +150,7 @@
 - [General Toolboxes](#general-toolboxes)
 
 ### 📚 Support and Safety
-- [Resources and Help](#resources-and-help)
+- [Resources and Help](./docs/resources.md)
 - [Legal and Safety](#legal-and-safety)
 - [Support us](#contribute-and-participate)
 </details>
@@ -241,7 +241,7 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 </div><br />
 
 > [!TIP]
-> **Start with our [Complete Rooting Guide](../rooting-guides/)** before exploring apps below. 
+> **Start with our [Complete Rooting Guide](./docs/rooting-guides/)** before exploring apps below.
 > For privacy-friendly installs, use the F-Droid ecosystem: install [Droid-ify](https://github.com/Droid-ify/client/releases) (modern F-Droid client) and enable the [IzzyOnDroid](https://apt.izzysoft.de/fdroid/) repo for many additional packages.
 
 > [!NOTE]
@@ -263,10 +263,10 @@ Rooting grants **superuser access** to Android, enabling deep customization, blo
 
 | Badge | Framework | Requires |
 |:---|:---|:---|
-| `[M]` | Magisk Module | [Magisk](../rooting-guides/magisk-guide.md) |
-| `[K]` | KernelSU Module | [KernelSU](../rooting-guides/kernelsu-guide.md) |
-| `[A]` | APatch Module | [APatch](../rooting-guides/apatch-guide.md) |
-| `[LSP]` | LSPosed / Xposed Module | [LSPosed](../rooting-guides/lsposed-guide.md) |
+| `[M]` | Magisk Module | [Magisk](./docs/rooting-guides/magisk-guide.md) |
+| `[K]` | KernelSU Module | [KernelSU](./docs/rooting-guides/kernelsu-guide.md) |
+| `[A]` | APatch Module | [APatch](./docs/rooting-guides/apatch-guide.md) |
+| `[LSP]` | LSPosed / Xposed Module | [LSPosed](./docs/rooting-guides/lsposed-guide.md) |
 
 ### Store & Source Icons
 
@@ -600,9 +600,9 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 ### Debloating
 
 > [!TIP]
-> **Related Guide**: [Complete Debloating Tutorial](../general-guides/android-apps-debloating.md)
+> **Related Guide**: [Complete Debloating Tutorial](./docs/general-guides/android-apps-debloating.md)
 
-- **[⭐ Canta](https://github.com/samolego/Canta)** - Uninstall any app without root using [Shizuku](#developer-tools). `FOSS` | [🌱](https://f-droid.org/en/packages/io.github.samolego.canta/) | [▶️](https://play.google.com/store/apps/details?id=io.github.samolego.canta)
+- **[⭐ Canta](https://github.com/samolego/Canta)** - Uninstall any app without root using [Shizuku](#adb-debugging). `FOSS` | [🌱](https://f-droid.org/en/packages/io.github.samolego.canta/) | [▶️](https://play.google.com/store/apps/details?id=io.github.samolego.canta)
 - **[De-Bloater](https://github.com/sunilpaulmathew/De-Bloater)** - An application using the power of Magisk to debloat unwanted system apps!. `FOSS` | [🌱](https://f-droid.org/packages/com.sunilpaulmathew.debloater) | [▶️](https://play.google.com/store/apps/details?id=com.sunilpaulmathew.debloater)
 - **[EXA System App Remover](https://play.google.com/store/apps/details?id=exa.free.saux)** - Remove Bloatware, clear memory and speed up your phone now by uninstalling unused system apps. `Proprietary`
 - **[Scalpel](https://github.com/Enginex0/Scalpel)** - Precision Debloat & Systemize for Rooted Android. `FOSS` `[M]` `[K]`
@@ -1441,9 +1441,9 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 |𝕏 **X/Twitter** | Updates & news | [@awsm_and_root](https://x.com/awsm_and_root) |
 
 ### Quick Help Paths
-- First time here? Start at the [Introduction](#introduction) & [The 4-Step Rooting Process](#the-4-step-rooting-roadmap)
+- First time here? Start at the [Introduction](./docs/rooting-guides/index.md#understanding-root-access) & [The 4-Step Rooting Process](./docs/rooting-guides/index.md#universal-rooting-process)
 - Unsure about a term? Open the [Glossary](#glossary)
-- Want tools? Jump to [Root Apps and Modules](#root-apps-and-modules)
+- Want tools? Jump to [Root Apps and Modules](./docs/apps-and-modules/index.md#root-module-management)
 - Need a walkthrough? Browse the [Rooting Guides Index](./docs/rooting-guides/index.md)
 - Common questions? Check the FAQs: [faqs.md](./docs/faqs.md)
 
