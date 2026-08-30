@@ -103,10 +103,10 @@ head:
 
 ## Quick Navigation
 
-- [Getting Started](#getting-started)
+- [Getting Started](#🚀-getting-started)
 - [Core Tooling](#core-tooling)
 - [Firmware and Device Data](#firmware-and-device-data)
-- [Modules and App Distribution](#modules-and-app-distribution)
+- [Module & App Repositories](#module-app-repositories)
 - [Learning and Reference](#learning-and-reference)
 - [Communities and Support](#communities-and-support)
 - [Emergency and Recovery](#emergency-and-recovery)
@@ -172,7 +172,7 @@ head:
 | **ReZygisk** | Transparent, open-source Zygisk fork | Magisk, KernelSU, APatch | [GitHub](https://github.com/PerformanC/ReZygisk) |
 
 > [!TIP]
-> View the [Zygisk Implementations Comparison](#comparison-of-zygisk-implementations) for detailed strengths and trade-offs of each option.
+> Compare the strengths and trade-offs of each Zygisk implementation in the table above.
 
 ### Non-root privilege tools
 
@@ -265,7 +265,7 @@ head:
 |:---------------|:------------|:-----|
 | **Master Rooting Guide** | Complete rooting workflow | [Index](./rooting-guides/index.md) |
 | **Device-Specific Guides** | Brand-specific procedures | [Device Guides](./rooting-guides/index.md#device-specific-guides) |
-| **Method Comparisons** | Choose the right root method | [Comparison](./rooting-guides/index.md#root-solutions-comparison) |
+| **Method Comparisons** | Choose the right root method | [Comparison](./rooting-guides/root-framework-comparison.md) |
 | **Debloating** | Remove unwanted apps safely | [Debloat Guide](./general-guides/android-apps-debloating.md) |
 | **Ad Blocking** | System-wide ad removal | [AdBlock Guide](./general-guides/android-adblocking.md) |
 | **Custom Recovery Basics** | Flashing and backup workflow | [How to Install Custom Recovery](./rooting-guides/how-to-install-custom-recovery.md) |
@@ -343,11 +343,11 @@ head:
 
 | Issue | Symptoms | Solution | Guide |
 |:------|:---------|:---------|:------|
-| **Bootloop** | Stuck at logo | Flash stock firmware | [Fix Guide](./faqs.md#device-wont-boot) |
-| **Soft Brick** | System errors | Custom recovery restore | [Recovery Guide](./faqs.md#bricked-device-recovery) |
+| **Bootloop** | Stuck at logo | Flash stock firmware | [Fix Guide](./troubleshooting.md#device-won-t-boot-bootloop) |
+| **Soft Brick** | System errors | Custom recovery restore | [Recovery Guide](./troubleshooting.md#bricked-device-recovery) |
 | **Hard Brick** | No response | EDL/Download mode | Device forums |
-| **IMEI Loss** | No network | Backup restoration | [IMEI Guide](./faqs.md#imei-backup) |
-| **SafetyNet Fail** | App detection | Hide root methods | [Hiding Guide](./faqs.md#play-integrity-and-banking-apps) |
+| **IMEI Loss** | No network | Backup restoration | See device forums |
+| **SafetyNet Fail** | App detection | Hide root methods | [Hiding Guide](./troubleshooting.md#play-integrity-and-banking-apps) |
 
 ### Emergency tools by chipset
 
@@ -427,7 +427,7 @@ head:
 
 | Need | Primary Resource | Backup Resource |
 |:-----|:----------------|:----------------|
-| **Emergency Help** | [FAQ Emergency](./faqs.md#emergency-help) | [XDA Device Forums](https://forum.xda-developers.com/) |
+| **Emergency Help** | [Troubleshooting](./troubleshooting.md#emergency-recovery) | [XDA Device Forums](https://forum.xda-developers.com/) |
 | **Root Apps** | [App Collection](./apps-and-modules/index.md) | [F-Droid](https://f-droid.org/) |
 | **Module Discovery** | [MMRL](https://github.com/MMRLApp/MMRL) | [Telegram Channels](https://t.me/magiskmod_update) |
 | **Firmware** | Manufacturer site | [Firmware databases](#firmware-sources) |

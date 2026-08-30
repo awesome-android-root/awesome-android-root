@@ -142,7 +142,7 @@ This is equally important, and overselling it is how people brick phones:
 - **It cannot rescue a bricked device.** A locked bootloader gives you "practically zero" recovery options if something goes catastrophically wrong elsewhere. Ironically, this method is safest *because* you can't flash - but don't mistake it for a recovery tool.
 - **It cannot take OTA updates and keep working.** Each monthly security patch can (and eventually will) close the hole. Tools generally require firmware on or before the **June 2026** patch level; some July 2026 builds still work, but that shrinks with every bulletin. Staying on old firmware means accumulating other unpatched vulnerabilities - a real security trade-off.
 - **It cannot run on just any device.** Exploitation needs per-device, per-kernel-build offsets. Newer devices (e.g. the Galaxy S26 series) shipped with a memory layout this specific exploit family can't hit. If nobody ported offsets for your exact firmware, it won't work.
-- **It cannot hide forever.** Even with the bootloader reading "locked," some security-focused apps can still detect the *artifacts* of rooting (manager apps, su binaries, module files) on disk. The bug hides the bootloader state, not the apps you install afterward - see [Root Hiding & Play Integrity](../rooting-guides/index.md#root-hiding-play-integrity-resources) for that half of the problem.
+- **It cannot hide forever.** Even with the bootloader reading "locked," some security-focused apps can still detect the *artifacts* of rooting (manager apps, su binaries, module files) on disk. The bug hides the bootloader state, not the apps you install afterward - see [Root Hiding & Play Integrity apps](/apps-and-modules/#root-hiding-play-integrity) for that half of the problem.
 - **It cannot outlive the patch cycle.** OEMs are actively shipping the fix. Treat every GhostLock tool as a **short-lived, closing window**, not a permanent root method. Check the linked repos for current status before relying on one.
 
 ## All apps and projects for GhostLock
@@ -259,7 +259,7 @@ Possibly. The exploits need per-device offsets; ghostlock-oneplus documents how 
 - [Complete Bootloader Unlocking Guide](./how-to-unlock-bootloader.md)
 - [Samsung Rooting Guide](./how-to-root-samsung-phone.md) - Knox trade-offs in detail
 - [OnePlus Rooting Guide](./how-to-root-oneplus-phone.md) • [Pixel Rooting Guide](./how-to-root-pixel-phone.md)
-- [Root Hiding & Play Integrity](../../README.md#root-hiding-play-integrity) - keeping apps happy once you *are* rooted
+- [Root Hiding & Play Integrity](/apps-and-modules/#root-hiding-play-integrity) - keeping apps happy once you *are* rooted
 - [Troubleshooting](../troubleshooting.md)
 
-[↑ Back to top](#root-without-unlocking-the-bootloader-the-ghostlock-temporary-root-guide)
+[↑ Back to top](#table-of-contents)

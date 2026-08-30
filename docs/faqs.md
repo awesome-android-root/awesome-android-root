@@ -440,7 +440,7 @@ Tools include Root My Galaxy, Root My Pixel, GhostLock App, and ghostlock-oneplu
 - [Root Without Unlocking the Bootloader: GhostLock Temporary Root](./rooting-guides/root-without-unlocking-bootloader.md)
 - [Bootloader Modification & Temporary Root Solutions](./rooting-guides/temporary-root-solutions.md)
 - [Complete Bootloader Unlock Guide](./rooting-guides/how-to-unlock-bootloader.md)
-- [OEM Unlock Policies by Manufacturer](./rooting-guides/how-to-unlock-bootloader.md#oem-unlock-policies)
+- [OEM Unlock Policies by Manufacturer](./rooting-guides/how-to-unlock-bootloader.md#manufacturer-policy-overview)
 
 ---
 
@@ -505,7 +505,7 @@ Modern devices use A/B (seamless) update system:
 
 ## Compatibility
 
-### Will My Apps Still Work?**
+### Will My Apps Still Work?
 
 **Most apps work fine,** but some categories check for root or unlocked bootloader:
 
@@ -732,7 +732,7 @@ Modern devices use A/B (seamless) update system:
    - Safe mode: Hold Volume Up during boot
    - ADB: `adb shell magisk --remove-modules`
    - Recovery: Delete `/data/adb/modules/[module-name]`
-   - [Emergency Recovery Guide](./troubleshooting.md#device-wont-boot-bootloop)
+   - [Emergency Recovery Guide](./troubleshooting.md#device-won-t-boot-bootloop)
 
 **Red Flags (Avoid These Modules):**
 - No source code available (closed source)
@@ -749,7 +749,7 @@ Modern devices use A/B (seamless) update system:
 
 **Troubleshooting Modules:**
 - [Module Conflicts](./troubleshooting.md#magisk-troubleshooting)
-- [Bootloop from Modules](./troubleshooting.md#device-wont-boot-bootloop)
+- [Bootloop from Modules](./troubleshooting.md#device-won-t-boot-bootloop)
 
 ---
 
@@ -930,5 +930,5 @@ su -c "magisk --version"      # Check Magisk version
 
 ---
 
-**Have more questions?** Check our [Troubleshooting Guide](./troubleshooting.md) or [join the community](./resources.md#community)!
+**Have more questions?** Check our [Troubleshooting Guide](./troubleshooting.md) or [join the community](./resources.md#communities-and-support)!
  
