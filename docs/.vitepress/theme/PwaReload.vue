@@ -44,6 +44,14 @@ let installingWorker = null
 let installingWorkerStateHandler = null
 let isInitialized = false // Guard against duplicate init on SPA remounts
 
+// Whether a service worker was already controlling this page before setup.
+// On the very first visit a SW installs and claims clients without an
+// actual update; that controllerchange must not trigger a reload.
+let hadController = typeof navigator !== 'undefined' && 'serviceWorker' in navigator
+  ? Boolean(navigator.serviceWorker.controller)
+  : false
+let isReloading = false
+
 const clearUpdateTimer = () => {
   if (updateHideTimer) {
     clearTimeout(updateHideTimer)
@@ -164,13 +172,24 @@ const setupServiceWorkerListeners = () => {
 
   registration.addEventListener('updatefound', swUpdateFoundHandler)
 
-  // Listen for controller change (autoUpdate)
+  // Listen for controller change: an updated SW (skipWaiting) took over.
+  // Reload once so fresh precached assets and pages replace the old ones;
+  // without this reload tabs stay on stale content until a manual refresh.
   swControllerChangeHandler = () => {
-    // With autoUpdate, the page will reload automatically
-    // Show a brief notification
-    updateMessage.value = 'App updated successfully!'
-    showReload.value = true
-    scheduleReloadToastHide(2000)
+    if (isReloading) return
+
+    if (hadController) {
+      isReloading = true
+      updateMessage.value = 'App updated! Reloading...'
+      showReload.value = true
+      window.setTimeout(() => {
+        window.location.reload()
+      }, 300)
+      return
+    }
+
+    // First install on this browser: nothing to reload.
+    hadController = true
   }
 
   navigator.serviceWorker.addEventListener('controllerchange', swControllerChangeHandler)
