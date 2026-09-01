@@ -42,7 +42,12 @@ let swControllerChangeHandler = null
 let swMessageHandler = null
 let installingWorker = null
 let installingWorkerStateHandler = null
-let isInitialized = false // Guard against duplicate init on SPA remounts
+let isInitialized = false 
+
+let hadController = typeof navigator !== 'undefined' && 'serviceWorker' in navigator
+  ? Boolean(navigator.serviceWorker.controller)
+  : false
+let isReloading = false
 
 const clearUpdateTimer = () => {
   if (updateHideTimer) {
@@ -59,7 +64,6 @@ const scheduleReloadToastHide = (delayMs) => {
   }, delayMs)
 }
 
-// Check for updates
 const checkForUpdates = async () => {
   if (registration?.waiting) {
     showUpdateNotification()
@@ -72,44 +76,38 @@ const checkForUpdates = async () => {
   }
 }
 
-// Show update notification
+
 const showUpdateNotification = () => {
   showReload.value = true
   updateMessage.value = 'App updated! Refreshing...'
-  // Auto-hide after 3 seconds (autoUpdate reloads the page automatically)
   scheduleReloadToastHide(3000)
 }
 
-// Handle online/offline status
+
 const updateOnlineStatus = () => {
   isOffline.value = !navigator.onLine
 
-  // Prioritize offline status and avoid stale update prompts while disconnected.
   if (isOffline.value) {
     showReload.value = false
     clearUpdateTimer()
   }
 }
 
-// Handle visibility change
+
 const handleVisibilityChange = () => {
   if (!document.hidden && navigator.onLine) {
-    // Check for updates when page becomes visible
     checkForUpdates()
   }
 }
 
 onMounted(async () => {
-  // Guard: prevent duplicate initialization during SPA route changes
   if (isInitialized) return
 
-  // Check if service worker is supported
   if (!('serviceWorker' in navigator)) {
     return
   }
 
   try {
-    // Get service worker registration
     registration = await navigator.serviceWorker.getRegistration()
     
     if (!registration) {
@@ -122,18 +120,14 @@ onMounted(async () => {
       setupServiceWorkerListeners()
     }
 
-    // Setup network status listeners
     window.addEventListener('online', updateOnlineStatus)
     window.addEventListener('offline', updateOnlineStatus)
     document.addEventListener('visibilitychange', handleVisibilityChange)
     
-    // Initial status check
     updateOnlineStatus()
     
-    // Check for updates every 60 minutes (less aggressive than 30 minutes)
     updateCheckInterval = setInterval(checkForUpdates, 60 * 60 * 1000)
     
-    // Check for updates on mount
     await checkForUpdates()
 
     isInitialized = true
@@ -143,11 +137,9 @@ onMounted(async () => {
   }
 })
 
-// Setup service worker event listeners (idempotent - skips if already set up)
 const setupServiceWorkerListeners = () => {
   if (!registration || swUpdateFoundHandler) return
 
-  // Listen for waiting service worker
   swUpdateFoundHandler = () => {
     installingWorker = registration.installing
 
@@ -164,18 +156,26 @@ const setupServiceWorkerListeners = () => {
 
   registration.addEventListener('updatefound', swUpdateFoundHandler)
 
-  // Listen for controller change (autoUpdate)
+ 
   swControllerChangeHandler = () => {
-    // With autoUpdate, the page will reload automatically
-    // Show a brief notification
-    updateMessage.value = 'App updated successfully!'
-    showReload.value = true
-    scheduleReloadToastHide(2000)
+    if (isReloading) return
+
+    if (hadController) {
+      isReloading = true
+      updateMessage.value = 'App updated! Reloading...'
+      showReload.value = true
+      window.setTimeout(() => {
+        window.location.reload()
+      }, 300)
+      return
+    }
+
+ 
+    hadController = true
   }
 
   navigator.serviceWorker.addEventListener('controllerchange', swControllerChangeHandler)
 
-  // Listen for messages from service worker
   swMessageHandler = (event) => {
     if (event.data?.type === 'CACHE_UPDATED') {
       console.log('Cache updated:', event.data.updatedCache)
@@ -186,7 +186,6 @@ const setupServiceWorkerListeners = () => {
 }
 
 onUnmounted(() => {
-  // Clean up listeners
   window.removeEventListener('online', updateOnlineStatus)
   window.removeEventListener('offline', updateOnlineStatus)
   document.removeEventListener('visibilitychange', handleVisibilityChange)
@@ -213,8 +212,7 @@ onUnmounted(() => {
 
   installingWorker = null
   clearUpdateTimer()
-  
-  // Clear interval
+
   if (updateCheckInterval) {
     clearInterval(updateCheckInterval)
   }

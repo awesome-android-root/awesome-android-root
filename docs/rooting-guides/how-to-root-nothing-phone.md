@@ -82,7 +82,7 @@ head:
 Root Nothing Phone devices with straightforward process. 
 
 ## Quick Navigation
-- [Supported Devices](#supported-devices)
+- [Device Compatibility](#device-compatibility)
 - [Prerequisites](#prerequisites)
 - [Bootloader Unlock](#unlock-bootloader)
 - [Root Installation](#root-installation)
@@ -338,7 +338,7 @@ id
 
 ### Recommended Modules
 
-- **Universal SafetyNet Fix**
+- **Play Integrity Fix** - Banking app compatibility
 - **Shamiko** - Root hiding
 - **LSPosed** - Framework
 - **Systemless Hosts** - Ad blocking

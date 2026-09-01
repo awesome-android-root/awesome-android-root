@@ -94,7 +94,7 @@ head:
       content: Awesome Android Root Project
   - - meta
     - property: article:author
-      content: https://github.com/fynks
+      content: https://github.com/awesome-android-root/awesome-android-root
   - - meta
     - property: article:publisher
       content: https://awesome-android-root.zhoe.org
@@ -176,11 +176,11 @@ head:
           "caption": "Best Android Root Apps - 500+ Apps & Modules Collection"
         },
         "author": {
-          "@type": "Person",
-          "name": "Fynks",
-          "url": "https://github.com/fynks",
+          "@type": "Organization",
+          "name": "Awesome Android Root Project",
+          "url": "https://github.com/awesome-android-root/awesome-android-root",
           "sameAs": [
-            "https://github.com/fynks"
+            "https://github.com/awesome-android-root"
           ]
         },
         "publisher": {
