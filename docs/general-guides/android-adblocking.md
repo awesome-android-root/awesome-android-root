@@ -95,8 +95,8 @@ head:
 *The complete guide to eliminating ads across your entire Android system using powerful root-based solutions*
 
 [![Root Required](https://img.shields.io/badge/Root-Required-red?style=for-the-badge)](#requirements)
-[![AdAway Compatible](https://img.shields.io/badge/AdAway-Compatible-green?style=for-the-badge)](#adaway-setup)
-[![Systemless](https://img.shields.io/badge/Systemless-Supported-blue?style=for-the-badge)](#systemless-benefits)
+[![AdAway Compatible](https://img.shields.io/badge/AdAway-Compatible-green?style=for-the-badge)](#method-1-adaway-recommended)
+[![Systemless](https://img.shields.io/badge/Systemless-Supported-blue?style=for-the-badge)](#method-2-bindhosts-advanced)
 
 </div>
 
@@ -109,7 +109,7 @@ head:
 - [Ad Blocking Methods Comparison](#ad-blocking-methods-comparison)
 - [Method 1: AdAway (Recommended)](#method-1-adaway-recommended)
 - [Method 2: Bindhosts (Advanced)](#method-2-bindhosts-advanced)
-- [Configuration & Optimization](#configuration--optimization)
+- [Configuration & Optimization](#configuration-optimization)
 - [Troubleshooting](#troubleshooting)
 - [Advanced Tips](#advanced-tips)
 - [FAQ](#faq)

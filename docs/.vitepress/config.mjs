@@ -356,7 +356,6 @@ export default withPwa(defineConfig({
               if (documentId.includes('rooting-guides')) {
                 return 2
               }
-              // Default boost for other pages
               return 1
             }
           }
@@ -537,7 +536,7 @@ export default withPwa(defineConfig({
           items: [
             { text: 'Table of Contents', link: '/rooting-guides/' },
             { text: 'Understanding Root', link: '/rooting-guides/#understanding-root-access' },
-            { text: 'Why Root?', link: '/rooting-guides/#why-root-your-device' },
+            { text: 'Benefits vs Risks', link: '/rooting-guides/#benefits-vs-risks' },
             { text: 'Safety First', link: '/rooting-guides/#prerequisites-and-safety' }
           ]
         },
@@ -594,7 +593,7 @@ export default withPwa(defineConfig({
           items: [
             { text: 'Troubleshooting Guide', link: '/troubleshooting' },
             { text: 'Frequently Asked Questions', link: '/faqs' },
-            { text: 'Community Help & Resources', link: '/rooting-guides/#community-resources' },
+            { text: 'Community Help & Resources', link: '/rooting-guides/#community-and-support' },
             { text: 'Rooting Glossary', link: '/apps-and-modules/#glossary' }
           ]
         }
@@ -787,7 +786,7 @@ export default withPwa(defineConfig({
           text: '🛡️ Privacy & Security',
           collapsed: false,
           items: [
-            { text: 'Security Guides', link: '/general-guides/#privacy--security-guides' },
+            { text: 'Security Guides', link: '/general-guides/#privacy-security-guides' },
             { text: 'Ad Blocking', link: '/general-guides/android-adblocking' }
           ]
         },
@@ -795,7 +794,7 @@ export default withPwa(defineConfig({
           text: '📦 App Management',
           collapsed: false,
           items: [
-            { text: 'App Optimization', link: '/general-guides/#app-management-and-optimization' },
+            { text: 'App Optimization', link: '/general-guides/#app-management-optimization' },
             { text: 'Debloating Guide', link: '/general-guides/android-apps-debloating' },
             { text: 'Stop Auto Updates', link: '/general-guides/stop-android-app-auto-updates-play-store' }
           ]
@@ -804,23 +803,23 @@ export default withPwa(defineConfig({
           text: '⚡ System Optimization',
           collapsed: true,
           items: [
-            { text: 'Performance Guides', link: '/general-guides/#performance--system-optimization' },
-            { text: 'Battery Optimization', link: '/general-guides/#battery-optimization' }
+            { text: 'Performance Guides', link: '/general-guides/#performance-system-optimization' },
+            { text: 'Battery Optimization', link: '/general-guides/#battery-power-management' }
           ]
         },
         {
           text: 'Customization',
           collapsed: true,
           items: [
-            { text: 'Theming Guides', link: '/general-guides/#customization--theming' },
-            { text: 'UI Modifications', link: '/general-guides/#ui-modifications' }
+            { text: 'Theming Guides', link: '/general-guides/#customization-theming' },
+            { text: 'UI Modifications', link: '/general-guides/#system-ui-changes' }
           ]
         },
         {
           text: 'Advanced Topics',
           collapsed: true,
           items: [
-            { text: 'Technical Guides', link: '/general-guides/#development--technical-guides' },
+            { text: 'Technical Guides', link: '/general-guides/#development-technical-guides' },
             { text: 'Android Knowledge', link: '/general-guides/#essential-android-knowledge' }
           ]
         },
@@ -828,7 +827,7 @@ export default withPwa(defineConfig({
           text: 'Community',
           collapsed: true,
           items: [
-            { text: 'Resources', link: '/general-guides/#community--resources' },
+            { text: 'Resources', link: '/general-guides/#community-resources' },
             { text: 'Contributing', link: '/general-guides/#contributing-to-our-guides' }
           ]
         }
@@ -839,10 +838,12 @@ export default withPwa(defineConfig({
         {
           text: 'Troubleshooting',
           items: [
-            { text: 'Common Issues', link: '/troubleshooting#common-issues' },
-            { text: 'Boot Problems', link: '/troubleshooting#boot-problems' },
-            { text: 'Root Issues', link: '/troubleshooting#root-issues' },
-            { text: 'Recovery Guide', link: '/troubleshooting#recovery' }
+            { text: 'Emergency Recovery', link: '/troubleshooting#emergency-recovery' },
+            { text: 'Magisk Troubleshooting', link: '/troubleshooting#magisk-troubleshooting' },
+            { text: 'KernelSU Troubleshooting', link: '/troubleshooting#kernelsu-troubleshooting' },
+            { text: 'APatch Troubleshooting', link: '/troubleshooting#apatch-troubleshooting' },
+            { text: 'Bootloader & Fastboot', link: '/troubleshooting#bootloader-and-fastboot-issues' },
+            { text: 'Play Integrity', link: '/troubleshooting#play-integrity-and-banking-apps' }
           ]
         },
         {
@@ -859,10 +860,11 @@ export default withPwa(defineConfig({
         {
           text: 'FAQ',
           items: [
-            { text: 'General Questions', link: '/faqs#general' },
-            { text: 'Rooting Questions', link: '/faqs#rooting' },
-            { text: 'Safety Concerns', link: '/faqs#safety' },
-            { text: 'Troubleshooting', link: '/faqs#troubleshooting' }
+            { text: 'Getting Started', link: '/faqs#getting-started' },
+            { text: 'Technical Questions', link: '/faqs#technical-questions' },
+            { text: 'Compatibility', link: '/faqs#compatibility' },
+            { text: 'After Rooting', link: '/faqs#after-rooting' },
+            { text: 'Community and Support', link: '/faqs#community-and-support' }
           ]
         },
         {
@@ -879,10 +881,12 @@ export default withPwa(defineConfig({
         {
           text: 'Resources',
           items: [
-            { text: 'Communities', link: '/resources#communities' },
-            { text: 'Tools', link: '/resources#tools' },
-            { text: 'Learning', link: '/resources#learning' },
-            { text: 'Downloads', link: '/resources#downloads' }
+            { text: 'Core Tooling', link: '/resources#core-tooling' },
+            { text: 'Learning and Reference', link: '/resources#learning-and-reference' },
+            { text: 'Communities and Support', link: '/resources#communities-and-support' },
+            { text: 'Firmware and Device Data', link: '/resources#firmware-and-device-data' },
+            { text: 'Emergency and Recovery', link: '/resources#emergency-and-recovery' },
+            { text: 'Advanced Engineering', link: '/resources#advanced-engineering' }
           ]
         },
         {
@@ -899,10 +903,12 @@ export default withPwa(defineConfig({
         {
           text: 'About',
           items: [
-            { text: 'Project Overview', link: '/about' },
-            { text: 'Mission', link: '/about#mission' },
-            { text: 'Team', link: '/about#team' },
-            { text: 'History', link: '/about#history' }
+            { text: 'Our Mission', link: '/about#our-mission' },
+            { text: 'What We Offer', link: '/about#what-we-offer' },
+            { text: 'Getting Started', link: '/about#getting-started' },
+            { text: 'Community & Support', link: '/about#community-support' },
+            { text: 'Core Values', link: '/about#core-values' },
+            { text: 'Support the Project', link: '/about#support-the-project' }
           ]
         },
         {
@@ -918,10 +924,11 @@ export default withPwa(defineConfig({
         {
           text: 'Contributing',
           items: [
-            { text: 'How to Contribute', link: '/contributing' },
-            { text: 'Guidelines', link: '/contributing#guidelines' },
-            { text: 'Code of Conduct', link: '/contributing#code-of-conduct' },
-            { text: 'Submit Apps', link: '/contributing#submit-apps' }
+            { text: 'Quick Start', link: '/contributing#quick-start' },
+            { text: 'Entry Format', link: '/contributing#entry-format' },
+            { text: 'Categories & Tags', link: '/contributing#categories-tags' },
+            { text: 'Quality Requirements', link: '/contributing#quality-requirements' },
+            { text: 'Pull Request Template', link: '/contributing#pull-request-template' }
           ]
         },
         {
@@ -939,15 +946,16 @@ export default withPwa(defineConfig({
           text: 'Non-Root Alternatives',
           items: [
             { text: 'Overview', link: '/non-root-alternatives' },
-            { text: 'ADB Solutions', link: '/non-root-alternatives#adb-solutions' },
-            { text: 'Shizuku Apps', link: '/non-root-alternatives#shizuku-apps' },
-            { text: 'No-Root Apps', link: '/non-root-alternatives#no-root-apps' }
+            { text: 'Quick Assessment', link: '/non-root-alternatives#quick-assessment' },
+            { text: 'Foundation Technologies', link: '/non-root-alternatives#foundation-technologies' },
+            { text: 'Core Solutions by Need', link: '/non-root-alternatives#core-solutions-by-need' },
+            { text: 'Effectiveness Comparison', link: '/non-root-alternatives#effectiveness-comparison' }
           ]
         },
         {
           text: 'Related',
           items: [
-            { text: 'Why Root?', link: '/rooting-guides/#why-root-your-device' },
+            { text: 'Benefits vs Risks', link: '/rooting-guides/#benefits-vs-risks' },
             { text: 'Root Apps', link: '/apps-and-modules/' },
             { text: 'Home', link: '/' }
           ]

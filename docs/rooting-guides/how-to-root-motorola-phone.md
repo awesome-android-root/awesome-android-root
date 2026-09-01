@@ -80,8 +80,7 @@ Root Motorola devices via the official unlock code system. Covers Edge 60, Edge 
 
 ## Quick Navigation
 
-- [Motorola Overview](#motorola-rooting-overview)
-- [Supported Devices](#supported-devices)
+- [Device Compatibility](#device-compatibility)
 - [Prerequisites](#prerequisites)
 - [Get Unlock Code](#get-unlock-code)
 - [Unlock Bootloader](#unlock-bootloader)

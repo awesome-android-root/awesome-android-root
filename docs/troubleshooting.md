@@ -83,7 +83,7 @@ If your device won't boot, jump to [Emergency Recovery](#emergency-recovery) imm
 ## Quick Navigation
 
 ### Emergency Issues
-- [Device Won't Boot (Bootloop)](#device-wont-boot-bootloop)
+- [Device Won't Boot (Bootloop)](#device-won-t-boot-bootloop)
 - [Root Not Working](#root-not-working)
 - [Bricked Device Recovery](#bricked-device-recovery)
 
@@ -333,7 +333,7 @@ fastboot reboot
 **Soft Brick Recovery:**
 
 1. **Enter Recovery/Bootloader**
-   - Try all key combinations (see [Device Won't Boot](#device-wont-boot-bootloop))
+   - Try all key combinations (see [Device Won't Boot](#device-won-t-boot-bootloop))
 
 2. **Flash Stock Firmware**
    - **Pixel:** Factory images/Android Flash Tool
@@ -1460,4 +1460,4 @@ Error: Stuck on OnePlus logo, no response
 
 ---
 
-**Need more help?** Visit our [FAQ page](./faqs.md) for conceptual questions or join our [community discussions](./resources.md#community).
+**Need more help?** Visit our [FAQ page](./faqs.md) for conceptual questions or join our [community discussions](./resources.md#communities-and-support).

@@ -4,7 +4,7 @@ This directory contains utility scripts used in the awesome-android-root project
 
 ## build-docs.js
 
-Builds the documentation site. Reads the project `README.md`, filters out specific HTML sections, adjusts link and image paths for the docs structure, and writes the result to `docs/apps-and-modules/index.md`. Called automatically by `pnpm run docs:build`.
+Builds the documentation site. Reads the project `README.md`, filters out specific HTML sections, adjusts link and image paths for the docs structure, and writes the result to `docs/apps-and-modules/index.md`. Called automatically by `npm run docs:build`.
 
 ### Usage
 

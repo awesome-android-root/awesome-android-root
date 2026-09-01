@@ -465,9 +465,8 @@ Add to DenyList:
 **Step 3: Install Essential Modules**
 
 Recommended for Samsung:
-- **Universal SafetyNet Fix** - Better compatibility
-- **Shamiko** - Enhanced root hiding
 - **Play Integrity Fix** - For banking apps
+- **Shamiko** - Enhanced root hiding
 - **Systemless Hosts** - Ad blocking
 
 ### Samsung-Specific Root Hiding
@@ -614,13 +613,13 @@ Solutions:
 2. Perform factory reset again
 3. Re-patch and reflash AP
 
-**SafetyNet/Play Integrity Fails**
+**Play Integrity Fails**
 
 Solutions:
 1. Enable Zygisk
 2. Configure DenyList properly
 3. Hide Magisk app
-4. Install Universal SafetyNet Fix
+4. Install Play Integrity Fix
 5. Install Shamiko module
 6. Clear Google Play Services
 7. Reboot
