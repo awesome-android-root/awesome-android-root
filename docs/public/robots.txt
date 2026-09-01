@@ -35,12 +35,6 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
-# Slow down aggressive SEO crawlers
-User-agent: AhrefsBot
-Crawl-delay: 10
-
-User-agent: SemrushBot
-Crawl-delay: 10
 
 # Block offline download tools
 User-agent: HTTrack
