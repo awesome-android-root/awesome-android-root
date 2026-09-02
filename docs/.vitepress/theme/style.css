@@ -189,16 +189,13 @@ div:has(img[src*="img.shields.io"]) {
   }
   
 
-/* Font loading optimization - prevent FOIT/FOUT layout shifts */
-@font-face {
-  font-family: 'Inter';
-  font-display: swap;
-  src: url('/assets/inter-roman-latin.Di8DUHzh.woff2') format('woff2');
-}
-
-/* Provide explicit font-family fallback chain */
+/*
+ * VitePress self-hosts the Inter font (subset .woff2 files with
+ * font-display: swap), so no custom @font-face is needed here.
+ * We only provide an explicit system-font fallback chain.
+ */
 body, html {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--vp-font-family-base), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
 
