@@ -296,6 +296,10 @@ export default withPwa(defineConfig({
   markdown: {
     cache: true,
     anchor: { level: [2, 3, 4] },
+    // Native lazy-loading for markdown images (replaces the removed custom
+    // client-side image optimizer). VitePress 2 also injects intrinsic
+    // width/height on local images to reduce layout shift.
+    image: { lazyLoad: true },
     config: (md) => {
       md.use(storeLinkPlugin)
       md.use(copyOrDownloadAsMarkdownButtons)
