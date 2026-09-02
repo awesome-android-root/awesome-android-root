@@ -23,12 +23,28 @@ export default withPwa(defineConfig({
     },
     server: {
       warmup: { clientFiles: ['.vitepress/theme/**/*.{js,ts,vue}'] },
+      // Allow preview/container hosts (Vite 8 enforces host checks);
+      // true permits all hosts, which is safe for this static docs site.
+      allowedHosts: true,
     },
     css: { devSourcemap: false },
-    esbuild: {
-      drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
-      legalComments: 'none',
+    // VitePress 2 / Vite 8 use Oxc (Rolldown) instead of esbuild.
+    // - drop console/debugger in production via rolldown minify options
+    // - legal comments are stripped during codegen
+    // - target is handled by the oxc transform
+    oxc: {
       target: 'es2022'
+    },
+    rolldownOptions: {
+      output: {
+        minify: process.env.NODE_ENV === 'production'
+          ? {
+              compress: { dropConsole: true, dropDebugger: true },
+              mangle: true,
+              codegen: { legalComments: 'none' }
+            }
+          : false
+      }
     }
   },
 
@@ -360,8 +376,9 @@ export default withPwa(defineConfig({
             }
           }
         },
-        _render(src, env, md) {
-          const html = md.render(src, env)
+        async _render(src, env, md) {
+          // VitePress 2 uses markdown-it-async: render is now renderAsync
+          const html = await md.renderAsync(src, env)
           if (env.frontmatter?.search === false) return ''
           return html
         },
@@ -983,7 +1000,9 @@ export default withPwa(defineConfig({
       level: [2, 3],
       label: 'On this page'
     },
-    lastUpdatedText: 'Last updated',
+    lastUpdated: {
+      text: 'Last updated'
+    },
     appearance: 'auto',
     socialLinks: [
       { icon: 'x', link: 'https://x.com/awsm_and_root' },
