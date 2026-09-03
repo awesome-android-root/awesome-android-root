@@ -226,6 +226,7 @@ Devices shipping **after** mid-2026 (e.g. Galaxy S26 series) or running kernels 
 ## Is it safe? Risks and common sense
 
 - **For your hardware:** comparatively low risk. Nothing is flashed or written to partitions, so the classic brick scenarios mostly don't apply. A failed exploit run typically ends in a kernel panic and reboot.
+  Some modules though, can cause boot loop which isn't restorable on a device without unlocked bootloader. A list of known working/non working modules can be found [here](https://xdaforums.com/t/list-of-modules-working-on-temporal-root.4796105/#post-90672839)
 - **For your software:** it is still privilege-escalation code running as root on your kernel. Only use the linked, source-available projects; avoid random APKs claiming "GhostLock root".
 - **For your security posture:** staying on pre-June/July-2026 firmware to keep temp root means skipping real security fixes - including fixes for other exploitable bugs. Weigh that honestly. (This is the same trade-off as delaying any update for root.)
 - **For the ecosystem:** these are research tools from small teams. Expect per-device rough edges, and check each repo's issue tracker for current firmware support before updating anything.
