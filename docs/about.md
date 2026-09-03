@@ -95,7 +95,7 @@ Our mission is to democratize advanced Android customization by providing free, 
 
 **Comprehensive Rooting & Customization Resources**
 *   **[Expert Guides](./rooting-guides/index.md)**: Detailed, step-by-step tutorials for various devices and methods.
-*   **[500+ Curated Root Apps & Modules](/apps-and-modules/#root-apps-modules)**: A meticulously selected collection spanning ad-blocking, privacy, performance, automation, and more.
+*   **[500+ Curated Root Apps & Modules](/apps-and-modules/#root-module-management)**: A meticulously selected collection spanning ad-blocking, privacy, performance, automation, and more.
 *   **[Extensive Device Support](./rooting-guides/#device-specific-guides)**: Targeted guides for major brands including Xiaomi, Samsung, Pixel, OnePlus, and Motorola.
 *   **[FAQ & Troubleshooting](./faqs.md)**: A dedicated resource for resolving common issues and finding support.
 
@@ -104,12 +104,12 @@ Our mission is to democratize advanced Android customization by providing free, 
 **Essential Pathway for New Users:**
 1.  **[Unlock Bootloader](./rooting-guides/how-to-unlock-bootloader.md)**: The foundational step for device modification.
 2.  **[Install Custom Recovery](./rooting-guides/how-to-install-custom-recovery.md)**: Gain the ability to flash custom software.
-3.  **[Choose Root Method](./rooting-guides/index.md#root-solutions-comparison)**: Select the optimal solution (e.g., Magisk, KernelSU) for your device.
+3.  **[Choose Root Method](./rooting-guides/root-framework-comparison.md)**: Select the optimal solution (e.g., Magisk, KernelSU) for your device.
 4.  **[Install Custom ROM](./rooting-guides/custom-rom-installation.md)**: (Optional) Experience a completely transformed Android operating system.
 
 **Tailored Navigation:**
 *   **Beginners:** [Complete Rooting Guide](./rooting-guides/) → [Essential Apps](./apps-and-modules/#starter-kit-must-have-apps)
-*   **Intermediate:** [Device-Specific Guides](./rooting-guides/#device-specific-guides) → [Root Management](../apps-and-modules/#root-module-management)
+*   **Intermediate:** [Device-Specific Guides](./rooting-guides/#device-specific-guides) → [Root Management](/apps-and-modules/#root-module-management)
 *   **Experts:** [Troubleshooting](./faqs) → [Community Contributions](./contributing)
 
 ## Community & Support

@@ -415,12 +415,12 @@ Add to DenyList:
 - Google Play Store
 - Banking apps
 - Payment apps (Google Pay, etc.)
-- SafetyNet-sensitive apps
+- Play Integrity-sensitive apps
 
 **Step 3: Install Essential Modules**
 
 Recommended for OnePlus:
-- **Universal SafetyNet Fix** - Banking compatibility
+- **Play Integrity Fix** - Banking compatibility
 - **Shamiko** - Enhanced root hiding
 - **LSPosed (Zygisk)** - Framework
 - **Systemless Hosts** - Ad blocking
@@ -535,13 +535,13 @@ Solutions:
 3. Reinstall via Direct Install
 4. Clear Magisk app data
 
-**SafetyNet Fails**
+**Play Integrity Fails**
 
 Solutions:
 1. Enable Zygisk
 2. Configure DenyList
 3. Hide Magisk app
-4. Install SafetyNet Fix module
+4. Install Play Integrity Fix module
 5. Clear Google Play Services
 6. Reboot
 

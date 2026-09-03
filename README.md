@@ -1336,7 +1336,7 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 
 ### Developer Tools
 
-- **[⭐ Shizuku Fork](https://github.com/thedjchi/Shizuku)** - Shizuku for with automatic Shizuku startup, automation, and recovery features. `FOSS`
+- **[⭐ Shizuku Fork](https://github.com/thedjchi/Shizuku)** - Shizuku fork with automatic Shizuku startup, automation, and recovery features. `FOSS`
 - **[AndroidSpect](https://github.com/thecybersandeep/androidspect)** - Live runtime audit for installed Android apps, serves a browser dashboard. `FOSS` `[LSP]`
 - **[Bluetooth Hook](https://github.com/jingyu233/bluetoothhook#english)** - Inject virtual BLE devices into Android system Bluetooth scan results, facilitating Bluetooth application debugging for developers. `FOSS` `[LSP]`
 - **[Dhizuku API for Xposed](https://github.com/iamr0s/Dhizuku-API-Xposed)** - Force applications to support Dhizuku. `FOSS` `[LSP]`
