@@ -433,7 +433,7 @@ Detailed rooting instructions tailored for specific manufacturers and models.
 > **Can't find your device?** Check [XDA Developers Forums](https://forum.xda-developers.com/) or search device-specific Telegram groups. Most devices with unlockable bootloaders follow the universal process above.
 
 > [!NOTE]
-> **ASUS (ROG/Zenfone), Realme/OPPO, ASUS:** Check the [Root Framework Comparison](./root-framework-comparison.md#device-recommendations) for device-specific root method recommendations.
+> **ASUS (ROG/Zenfone), Realme/OPPO:** Check the [Root Framework Comparison](./root-framework-comparison.md#device-guidance) for device-specific root method recommendations.
 
 ---
 
@@ -539,26 +539,6 @@ If device won't power on or enter any mode:
 - 🧪 Test one module at a time, reboot between installations
 - 📋 Join device-specific Telegram/Discord communities for real-time help
 
-If locked out after factory reset:
-1. Use previously synced Google account
-2. Follow manufacturer FRP bypass methods
-3. Flash stock firmware with all partitions
-4. Contact manufacturer support if purchased legitimately
-
-**Complete Brick Recovery**
-
-If device won't power on or enter any mode:
-1. Try emergency download mode (EDL/9008)
-2. Use manufacturer-specific unbrick tools
-3. Search XDA for device-specific unbrick guides
-4. Professional repair may be necessary
-
-**Prevention Tips:**
-- Always keep stock firmware downloaded
-- Create regular backups
-- Understand your device's emergency modes
-- Join device-specific communities for support
-
 ---
 
 ## Additional Resources
@@ -601,7 +581,7 @@ Play Integrity bypass is essential for banking apps in 2026. Key tools:
 
 
 > [!TIP]
-> For complete and up-to-date list, check our [Root Hiding section ↗](../../README.md#root-hiding-play-integrity)
+> For the complete and up-to-date list, see our [Root Hiding & Play Integrity apps](../apps-and-modules/#root-hiding-play-integrity)
 
 ---
 
@@ -645,7 +625,7 @@ Include this information for faster troubleshooting:
 6. **[Install Vector/LSPosed](./lsposed-guide.md)** - Unlock app customization
 
 > [!IMPORTANT]
-> - Join our [community discussions](../about.md#community-resources)
+> - Join our [community discussions](../about.md#community-support)
 > - Contribute to the [project](../contributing.md)
 > - Stay updated via [X (Twitter)](https://x.com/awsm_and_root)
 

@@ -290,7 +290,7 @@ Canta shows detailed info for each app:
 When removing OEM apps, consider these open-source alternatives (explore more in our [apps collection](../apps-and-modules/)):
 
 ### Core Apps
-- **Launcher**: [Lawnchair](https://lawnchair.app/), [Nova Launcher](https://novalauncher.com/) (see [more launchers](../apps-and-modules/#launchers-and-home-screen))
+- **Launcher**: [Lawnchair](https://lawnchair.app/), [Nova Launcher](https://novalauncher.com/) (see [more launchers](../apps-and-modules/#launchers-home-screen))
 - **Gallery**: [Fossify Gallery](https://github.com/FossifyOrg/Gallery)
 - **File Manager**: [Material Files](https://github.com/zhanghai/MaterialFiles) (see [file managers](../apps-and-modules/#file-managers))
 - **Camera**: [Open Camera](https://opencamera.sourceforge.io/)

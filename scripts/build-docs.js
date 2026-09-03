@@ -113,9 +113,24 @@ try {
     // -e 's|\(\[.*\](\)\./docs/|\1/|g'
     // -e 's|\(\[.*\](\)docs/|\1/|g'
     
+    // Anchors copied from the README whose target sections are stripped
+    // from the generated page (intro/TOC blocks are filtered out above).
+    // Point them at the real destinations. Full link strings are matched,
+    // so valid links are never rewritten.
+    const ANCHOR_REMAPS = {
+        '(#resources-and-help)': '(#contribute-and-participate)',
+        '(#introduction)': '(/rooting-guides/#understanding-root-access)',
+        '(#the-4-step-rooting-roadmap)': '(/rooting-guides/#universal-rooting-process)',
+        '(#root-apps-and-modules)': '(#root-module-management)',
+    };
+
     let adjustedLines = finalContent.split('\n').map(line => {
         let newLine = line;
         const hasHttp = /http[s]*:\/\//.test(line);
+
+        for (const [from, to] of Object.entries(ANCHOR_REMAPS)) {
+            newLine = newLine.split(from).join(to);
+        }
 
         if (!hasHttp) {
             newLine = newLine.replace(/\.\/docs\/rooting-guides\//g, '../rooting-guides/');

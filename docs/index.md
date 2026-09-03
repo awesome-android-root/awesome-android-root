@@ -310,8 +310,8 @@ features:
 <div class="community-cards">
   <a href="/rooting-guides/lsposed-guide" class="community-card github">
     <span class="icon">📖</span>
-    <strong>LSposed Guide</strong>
-    <span>Understanding and using LSposed</span>
+    <strong>LSPosed Guide</strong>
+    <span>Understanding and using LSPosed</span>
   </a>
   <a href="/rooting-guides/root-framework-comparison" class="community-card twitter">
     <span class="icon">⚖️</span>

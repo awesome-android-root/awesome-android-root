@@ -76,7 +76,7 @@ head:
   # Stop App Updates specific social tags
   - - meta
     - property: article:author
-      content: https://github.com/awesome-android-root
+      content: https://github.com/awesome-android-root/awesome-android-root
   - - meta
     - property: article:publisher
       content: https://awesome-android-root.zhoe.org
