@@ -28,59 +28,29 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
-// State
 const showReload = ref(false)
 const isOffline = ref(false)
 const updateMessage = ref('New content available!')
 
-// Service worker registration
 let registration = null
 let updateCheckInterval = null
-let updateHideTimer = null
-let swUpdateFoundHandler = null
-let swControllerChangeHandler = null
-let swMessageHandler = null
-let installingWorker = null
-let installingWorkerStateHandler = null
-let isInitialized = false 
-
-let hadController = typeof navigator !== 'undefined' && 'serviceWorker' in navigator
-  ? Boolean(navigator.serviceWorker.controller)
-  : false
-let isReloading = false
-
-const clearUpdateTimer = () => {
-  if (updateHideTimer) {
-    clearTimeout(updateHideTimer)
-    updateHideTimer = null
-  }
-}
-
-const scheduleReloadToastHide = (delayMs) => {
-  clearUpdateTimer()
-  updateHideTimer = setTimeout(() => {
-    showReload.value = false
-    updateHideTimer = null
-  }, delayMs)
-}
 
 const checkForUpdates = async () => {
-  if (registration?.waiting) {
-    showUpdateNotification()
-  } else if (registration?.active) {
-    try {
-      await registration.update()
-    } catch (error) {
-      console.error('SW update check failed:', error)
-    }
+  if (!registration?.update) return
+
+  try {
+    await registration.update()
+  } catch (error) {
+    console.error('SW update check failed:', error)
   }
 }
 
-
-const showUpdateNotification = () => {
+const handleServiceWorkerReload = () => {
   showReload.value = true
   updateMessage.value = 'App updated! Refreshing...'
-  scheduleReloadToastHide(3000)
+  window.setTimeout(() => {
+    window.location.reload()
+  }, 300)
 }
 
 
@@ -89,7 +59,6 @@ const updateOnlineStatus = () => {
 
   if (isOffline.value) {
     showReload.value = false
-    clearUpdateTimer()
   }
 }
 
@@ -101,24 +70,23 @@ const handleVisibilityChange = () => {
 }
 
 onMounted(async () => {
-  if (isInitialized) return
-
   if (!('serviceWorker' in navigator)) {
     return
   }
 
   try {
-    registration = await navigator.serviceWorker.getRegistration()
-    
-    if (!registration) {
-      // Wait for registration
-      navigator.serviceWorker.ready.then(reg => {
-        registration = reg
-        setupServiceWorkerListeners()
-      })
-    } else {
-      setupServiceWorkerListeners()
-    }
+    const { registerSW } = await import('virtual:pwa-register')
+
+    registerSW({
+      immediate: true,
+      onNeedReload: handleServiceWorkerReload,
+      onRegistered: (registered) => {
+        registration = registered
+      },
+      onRegisterError: (error) => {
+        console.error('PWA registration error:', error)
+      }
+    })
 
     window.addEventListener('online', updateOnlineStatus)
     window.addEventListener('offline', updateOnlineStatus)
@@ -128,90 +96,18 @@ onMounted(async () => {
     
     updateCheckInterval = setInterval(checkForUpdates, 60 * 60 * 1000)
     
+    await navigator.serviceWorker.ready
+    registration = await navigator.serviceWorker.getRegistration()
     await checkForUpdates()
-
-    isInitialized = true
-    
   } catch (error) {
     console.error('PWA initialization error:', error)
   }
 })
 
-const setupServiceWorkerListeners = () => {
-  if (!registration || swUpdateFoundHandler) return
-
-  swUpdateFoundHandler = () => {
-    installingWorker = registration.installing
-
-    if (!installingWorker) return
-
-    installingWorkerStateHandler = () => {
-      if (installingWorker?.state === 'installed' && navigator.serviceWorker.controller) {
-        showUpdateNotification()
-      }
-    }
-
-    installingWorker.addEventListener('statechange', installingWorkerStateHandler)
-  }
-
-  registration.addEventListener('updatefound', swUpdateFoundHandler)
-
- 
-  swControllerChangeHandler = () => {
-    if (isReloading) return
-
-    if (hadController) {
-      isReloading = true
-      updateMessage.value = 'App updated! Reloading...'
-      showReload.value = true
-      window.setTimeout(() => {
-        window.location.reload()
-      }, 300)
-      return
-    }
-
- 
-    hadController = true
-  }
-
-  navigator.serviceWorker.addEventListener('controllerchange', swControllerChangeHandler)
-
-  swMessageHandler = (event) => {
-    if (event.data?.type === 'CACHE_UPDATED') {
-      console.log('Cache updated:', event.data.updatedCache)
-    }
-  }
-
-  navigator.serviceWorker.addEventListener('message', swMessageHandler)
-}
-
 onUnmounted(() => {
   window.removeEventListener('online', updateOnlineStatus)
   window.removeEventListener('offline', updateOnlineStatus)
   document.removeEventListener('visibilitychange', handleVisibilityChange)
-
-  if (registration && swUpdateFoundHandler) {
-    registration.removeEventListener('updatefound', swUpdateFoundHandler)
-    swUpdateFoundHandler = null
-  }
-
-  if (swControllerChangeHandler) {
-    navigator.serviceWorker.removeEventListener('controllerchange', swControllerChangeHandler)
-    swControllerChangeHandler = null
-  }
-
-  if (swMessageHandler) {
-    navigator.serviceWorker.removeEventListener('message', swMessageHandler)
-    swMessageHandler = null
-  }
-
-  if (installingWorker && installingWorkerStateHandler) {
-    installingWorker.removeEventListener('statechange', installingWorkerStateHandler)
-    installingWorkerStateHandler = null
-  }
-
-  installingWorker = null
-  clearUpdateTimer()
 
   if (updateCheckInterval) {
     clearInterval(updateCheckInterval)

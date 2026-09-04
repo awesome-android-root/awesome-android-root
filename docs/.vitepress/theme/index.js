@@ -29,12 +29,6 @@ export default {
   },
 
   enhanceApp({ app, router }) {
-    if (!import.meta.env.SSR) {
-      import('virtual:pwa-register').then(({ registerSW }) => {
-        registerSW({ immediate: true })
-      })
-    }
-
     // Register global components
     try {
       app.component('StoreLink', StoreLink)
