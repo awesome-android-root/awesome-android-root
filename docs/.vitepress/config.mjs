@@ -62,9 +62,7 @@ export default withPwa(defineConfig({
 
     workbox: {
       globPatterns: [
-        '**/*.{js,css}',
-        '**/index.html',
-        '**/offline.html',
+        '**/*.{js,css,html}',
         '**/images/logo*.{svg,png}',
         '**/images/*-icon*.{png,svg}',
         '**/images/web-app-manifest-*.png',
