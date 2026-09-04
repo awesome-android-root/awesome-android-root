@@ -145,6 +145,7 @@ On several OnePlus/OPPO/realme devices (OnePlus 13/15, Ace 6T, OPPO Pad 4 Pro an
 3. **Stock Firmware** (for recovery)
    - Download via [Oxygen Updater](https://github.com/oxygen-updater/os-updater/releases/latest) (Recommended)
    - Or [XDA Forums](https://xdaforums.com/) (Alternative)
+   - or https://roms.danielspringer.at/
 
 **On Device:**
 
