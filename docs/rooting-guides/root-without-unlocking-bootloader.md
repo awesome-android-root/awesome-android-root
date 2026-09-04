@@ -159,7 +159,7 @@ Everything public that implements or enables CVE-2026-43499 temporary root, grou
 - **[Root My Pixel](https://github.com/alex193a/Root-My-Pixel)** - Port for Google Pixel devices. Uses Shizuku to stage the payload without needing prior root or a PC, then runs the exploit to install ReSukiSU/KernelSU for the session. `FOSS`
 - **[Root My Device](https://github.com/Witaqua-tools/Root-My-Device)** - Community fork of Root My Galaxy, generalized beyond Samsung with its own payload feed for additional firmware builds. `FOSS` (Apache-2.0)
 - **[root-my-nothing](https://github.com/ang3lo-azevedo/root-my-nothing)** - One-click temporary root for the Nothing Phone (1); installs KernelSU without unlocking the bootloader. `FOSS`
-
+- **[root my device (nothing phone 3a)](https://github.com/techtornados/Root-My-Device)** - OneClick root application for the Nothing Phone (3a). Forked of a different repo that was limited to the Japanese version of the nothing phone 3a. `FOSS` (Apache-2.0)
 ### Command-line exploits & device ports (for tinkerers)
 
 - **[ghostlock-oneplus](https://github.com/JoinChang/ghostlock-oneplus)** - The most developed standalone exploit: root + KernelSU on OnePlus/OPPO/realme devices with a locked bootloader (OnePlus 13/15, Ace 6T, OPPO Pad 4 Pro, and even Xiaomi 17). Runtime kernel auto-detection with a multi-device offset table, a phone-standalone "bootstrap" mode, and optional auto-re-trigger at boot via ReSukiSU. Run it within ~30 seconds of boot for best reliability. `FOSS`
