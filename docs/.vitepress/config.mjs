@@ -19,7 +19,7 @@ export default VitePWA(defineConfig({
       chunkSizeWarningLimit: 1000,
     },
     optimizeDeps: {
-      exclude: ['@vite-plugin-pwa/vitepress']
+      exclude: ['@vite-plugin-pwa', 'vitepress-plugin-llms']
     },
     server: {
       warmup: { clientFiles: ['.vitepress/theme/**/*.{js,ts,vue}'] },
