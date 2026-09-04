@@ -1,9 +1,9 @@
 import { defineConfig } from 'vitepress'
-import { withPwa } from '@vite-pwa/vitepress'
+import { VitePWA } from '@vite-plugin-pwa'
 import llmstxt, { copyOrDownloadAsMarkdownButtons } from 'vitepress-plugin-llms'
 import { storeLinkPlugin } from './markdown/storeLinkPlugin.mjs'
 
-export default withPwa(defineConfig({
+export default VitePWA(defineConfig({
   lang: 'en-US',
   title: 'Awesome Android Root',
   ignoreDeadLinks: true,
@@ -19,7 +19,7 @@ export default withPwa(defineConfig({
       chunkSizeWarningLimit: 1000,
     },
     optimizeDeps: {
-      exclude: ['@vite-pwa/vitepress']
+      exclude: ['@vite-plugin-pwa/vitepress']
     },
     server: {
       warmup: { clientFiles: ['.vitepress/theme/**/*.{js,ts,vue}'] },
