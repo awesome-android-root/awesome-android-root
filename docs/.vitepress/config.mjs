@@ -1,9 +1,9 @@
 import { defineConfig } from 'vitepress'
-import { VitePWA } from 'vite-plugin-pwa'
+import { withPwa } from '@vite-pwa/vitepress'
 import llmstxt, { copyOrDownloadAsMarkdownButtons } from 'vitepress-plugin-llms'
 import { storeLinkPlugin } from './markdown/storeLinkPlugin.mjs'
 
-const config = defineConfig({
+export default withPwa(defineConfig({
   lang: 'en-US',
   title: 'Awesome Android Root',
   ignoreDeadLinks: true,
@@ -255,7 +255,7 @@ const config = defineConfig({
       type: 'module'
     },
 
-    inlineRegister: false,
+    injectRegister: null,
     minify: true,
 
   },
@@ -978,9 +978,4 @@ const config = defineConfig({
       { icon: 'github', link: 'https://github.com/awesome-android-root/awesome-android-root' }
     ],
   },
-})
-
-config.vite.plugins.push(...VitePWA(config.pwa))
-delete config.pwa
-
-export default config
+}))
