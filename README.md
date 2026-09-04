@@ -1010,7 +1010,7 @@ SUSFS (Systemless User Space File System) is a kernel-level module that allows r
 #### WhatsApp
 
 - **[⭐ WA Enhancer](https://github.com/Dev4Mod/WaEnhancer)** - Enhances your WhatsApp experience. `FOSS` `[LSP]`
-- **[WA Enhancer X](https://github.com/mubashardev/WaEnhancerX)** - Fork of WA Enhancer with additional features. `FOSS` `[LSP]`
+- **[WA Enhancer X](https://github.com/Xposed-Modules-Repo/com.waenhancer)** - Fork of WA Enhancer with additional features. `Proprietary` `[LSP]`
 - **[WAPlus](https://github.com/RevealedSoulEven/WAPlusXposed)** - Unlock WhatsApp Plus Features. `FOSS` `[LSP]`
 - **[WaThemer](https://github.com/ayane-04/wathemer)** - Themes WhatsApp with custom colors, chat bubble shapes, wallpapers, fonts, icons, system bars and a Liquid Glass mode. Requires Android 12+. `FOSS` `[LSP]`
 
