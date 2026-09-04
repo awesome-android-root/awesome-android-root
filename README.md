@@ -567,8 +567,6 @@ SUSFS (Systemless User Space File System) is a kernel-level module that allows r
 - **[OPCameraPro](https://github.com/Xposed-Modules-Repo/com.tlsu.opluscamerapro)** - ColorOS and realmeUI module providing various AI functions, enhancing cameras and other photo related tweaks. `Proprietary` `[LSP]`
 - **[Oplus Launcher Radius Optimization](https://github.com/Qjj7679/Oplus-Luncher-RadiusOptimization)** - Optimize the rounded corners of the recent tasks card on the ColorOS system desktop. `FOSS` `[LSP]`
 - **[OShin](https://github.com/suqi8/OShin/blob/master/README_EN.md)** - Auxiliary module deeply integrated with ColorOS, designed to enhance and optimize your operating system experience. `FOSS` `[LSP]`
-- **[XposedFluidCloud](https://github.com/servant1228/XposedFluidCloud)** - ColorOS 16 Fluid Cloud UI Adjustments to Xposed Modules. `FOSS` `[LSP]`
-
 
 #### HyperOS (Xiaomi)
 
