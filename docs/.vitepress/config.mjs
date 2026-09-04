@@ -1,9 +1,9 @@
 import { defineConfig } from 'vitepress'
-import { VitePWA } from '@vite-plugin-pwa'
+import { VitePWA } from 'vite-plugin-pwa'
 import llmstxt, { copyOrDownloadAsMarkdownButtons } from 'vitepress-plugin-llms'
 import { storeLinkPlugin } from './markdown/storeLinkPlugin.mjs'
 
-export default VitePWA(defineConfig({
+const config = defineConfig({
   lang: 'en-US',
   title: 'Awesome Android Root',
   ignoreDeadLinks: true,
@@ -19,7 +19,7 @@ export default VitePWA(defineConfig({
       chunkSizeWarningLimit: 1000,
     },
     optimizeDeps: {
-      exclude: ['@vite-plugin-pwa', 'vitepress-plugin-llms']
+      exclude: ['vite-plugin-pwa', 'vitepress-plugin-llms']
     },
     server: {
       warmup: { clientFiles: ['.vitepress/theme/**/*.{js,ts,vue}'] },
@@ -108,15 +108,7 @@ export default VitePWA(defineConfig({
             },
             cacheableResponse: {
               statuses: [0, 200],
-            },
-            plugins: [
-              {
-
-                handlerDidError: async () => {
-                  return caches.match('/offline.html') || Response.error()
-                },
-              }
-            ]
+            }
           }
         },
 
@@ -165,24 +157,6 @@ export default VitePWA(defineConfig({
             cacheableResponse: {
               statuses: [0, 200],
             },
-            plugins: [
-              {
-                handlerDidError: async () => {
-                  return new Response(
-                    '<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">' +
-                    '<rect width="200" height="200" fill="#f0f0f0"/>' +
-                    '<text x="50%" y="50%" font-family="sans-serif" font-size="14" fill="#999" text-anchor="middle" dy=".3em">Image unavailable</text>' +
-                    '</svg>',
-                    {
-                      headers: {
-                        'Content-Type': 'image/svg+xml',
-                        'Cache-Control': 'no-cache'
-                      }
-                    }
-                  )
-                }
-              }
-            ]
           }
         },
 
@@ -1004,4 +978,9 @@ export default VitePWA(defineConfig({
       { icon: 'github', link: 'https://github.com/awesome-android-root/awesome-android-root' }
     ],
   },
-}))
+})
+
+config.vite.plugins.push(...VitePWA(config.pwa))
+delete config.pwa
+
+export default config
