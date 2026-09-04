@@ -53,7 +53,7 @@
   X-XSS-Protection: 0
 
   # Restrict browser feature access
-  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=(), browsing-topics=()
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
 
   # HSTS - 2-year max-age satisfies the HSTS preload list minimum requirement
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
