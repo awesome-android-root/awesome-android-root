@@ -444,9 +444,8 @@ SUSFS (Systemless User Space File System) is a kernel-level module that allows r
 
 </details><br>
 
+- **[⭐ ReSuSFS](https://github.com/ahmed-alnassif/ReSuSFS)** - The easiest way to use SuSFS on KernelSU. Strong hiding by default with built-in spoofing and hiding scripts, config files and toggle switches for everyday use, a built-in script manager for power users. `FOSS` `[M]` `[K]`
 - **[⭐ SUSFS for KernelSU](https://github.com/sidex15/susfs4ksu-module)** - Add-on root-hiding service for SUSFS-patched kernels (KernelSU/Next). The core of modern KSU hiding setups. `FOSS` `[M]` `[K]`
-- **[RENE](https://github.com/rrr333nnn333/BRENE)** - SUSFS/KernelSU module for patched kernels with enhanced root hiding & spoofing. `FOSS` `[M]` `[K]`
-- **[ReSuSFS](https://github.com/ahmed-alnassif/ReSuSFS)** - SUSFS/KernelSU module for patched kernels with modern ui and configuration options. `FOSS` `[M]` `[K]`
 
 <details><summary><strong>Click for detailed comparison</strong></summary>
 
@@ -1346,6 +1345,7 @@ SUSFS (Systemless User Space File System) is a kernel-level module that allows r
 - **[⭐ Termux](https://github.com/termux/termux-app)** - A terminal emulator application for Android OS extendible by variety of packages. `FOSS` | [🌱](https://f-droid.org/en/packages/com.termux)
 - **[Android 16 Linux Terminal VM Persistence](https://github.com/DigijEth/VM_Magisk_Module)** - Keeps Androids Linux terminal running in the background. `FOSS` `[M]` 
 - **[aShell You](https://github.com/DP-Hridayan/aShellYou)** - Android shell utility app with Material Design 3 UI, letting you run ADB, root and shell commands. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/in.hridayan.ashell)
+- **[ReSuSFS](https://github.com/ahmed-alnassif/ReSuSFS)** - Full CLI (`ReSuSFS <flag>`) for scripting and debugging every feature, including running individual UserHub scripts or whole boot-stage batches on demand. `FOSS` `[M]` `[K]`
 - **[Termux-Root-Recovery-Tool](https://github.com/Ishu43642/Termux-Root-Recovery-Tool)** - Install GSi Rom , Flashing Fastboot Rom, install Twrp Recovery, Boot.img & vbmeta.img files. `FOSS` 
 - **[TermuxRootMods](https://github.com/rompelhd/TermuxRootMods)** - A Magisk module that enhances the Termux experience for rooted devices. `FOSS` `[M]`
 
@@ -1392,6 +1392,7 @@ SUSFS (Systemless User Space File System) is a kernel-level module that allows r
 - **[⭐ Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)** - An advanced and powerful automation app. `Proprietary`
 - **[Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate)** - Lets you create custom automation workflows using flowcharts, enabling seamless management of tasks, files, and device settings. `Proprietary`
 - **[crond4Android](https://github.com/powerAn2020/crond4android)** - Cron daemon for scheduled jobs on KernelSU, APatch, and Magisk. `FOSS` `[M]` `[K]`
+- **[ReSuSFS](https://github.com/ahmed-alnassif/ReSuSFS)** - UserHub lets you create, edit, run, and auto-trigger your own shell scripts at post-fs-data/boot-completed, no terminal needed, backed by a full CLI for scripting and debugging. SuSFS hiding included, optional. `FOSS` `[M]` `[K]`
 
 ### Hardware & Sensors
 
