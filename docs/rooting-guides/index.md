@@ -181,7 +181,7 @@ Root access grants **superuser (administrator) privileges** on Android, providin
 |----------|-------|
 | Complete device control | Warranty void (usually permanent) |
 | [System-wide ad blocking](../general-guides/android-adblocking.md) | Reduced security if misconfigured |
-| [Performance tuning](../apps-and-modules/#performance-optimization) | Banking apps require active hiding ([solutions](../troubleshooting.md#play-integrity-and-banking-apps)) |
+| [Performance tuning](../apps-and-modules/performance#performance-optimization) | Banking apps require active hiding ([solutions](../troubleshooting.md#play-integrity-and-banking-apps)) |
 | Privacy enhancements (firewall, permission control) | OTA updates require manual re-patching |
 | [Bloatware removal](../general-guides/android-apps-debloating.md) | Potential for device bricking |
 | Full app + data backups (Swift Backup, Neo Backup) | Play Integrity may break unpredictably |
@@ -246,7 +246,7 @@ Root access grants **superuser (administrator) privileges** on Android, providin
 
 ### Pre-Rooting Checklist
 
-1. ✅ **Backup all data** - Photos, contacts, messages, app data (see [Backup Apps](../apps-and-modules/#backup-restore))
+1. ✅ **Backup all data** - Photos, contacts, messages, app data (see [Backup Apps](../apps-and-modules/backup#backup-restore))
 2. ✅ **Charge device** - Minimum 50% battery
 3. ✅ **Verify bootloader unlockability** - Check OEM Unlocking toggle in Developer Options (greyed out = likely carrier-locked)
 4. ✅ **Download necessary files** - Stock firmware, root solution (APK+ZIP), recovery image
@@ -409,7 +409,7 @@ After successful root installation, complete these essential steps:
 - [Block Ads System-Wide](../general-guides/android-adblocking.md) - Eliminate ads across all apps
 - [Debloat Your Device](../general-guides/android-apps-debloating.md) - Remove bloatware safely
 - [Install LSPosed / Vector Framework](./lsposed-guide.md) - Advanced app customization with Xposed modules
-- [Browse 500+ Root Apps](../apps-and-modules/) - Discover essential tools
+- [Browse 600+ Root Apps](../apps-and-modules/) - Discover essential tools
 
 ---
 
@@ -581,7 +581,7 @@ Play Integrity bypass is essential for banking apps in 2026. Key tools:
 
 
 > [!TIP]
-> For the complete and up-to-date list, see our [Root Hiding & Play Integrity apps](../apps-and-modules/#root-hiding-play-integrity)
+> For the complete and up-to-date list, see our [Root Hiding & Play Integrity apps](../apps-and-modules/root-management#root-hiding-play-integrity)
 
 ---
 

@@ -178,7 +178,7 @@ Magisk is a systemless root solution that provides superuser access without modi
 
 **Choose Magisk if:**
 - You want easiest installation
-- You need extensive modules (explore [500+ apps](../apps-and-modules/))
+- You need extensive modules (explore [600+ apps](../apps-and-modules/))
 - You want maximum compatibility
 - You're new to rooting
 
@@ -572,7 +572,7 @@ Shamiko hides root more effectively than the built-in DenyList.
 **Note:** When using Shamiko, you must **configure** the DenyList but **do NOT enforce** it in Magisk settings. Shamiko reads the list and handles the hiding automatically.
 
 > [!TIP]
-> Check our [Root hiding section](./../apps-and-modules/index.md#root-hiding-play-integrity)
+> Check our [Root hiding section](../apps-and-modules/root-management.md#root-hiding-play-integrity)
 
 ### Testing Play Integrity
 
@@ -643,7 +643,7 @@ Shamiko hides root more effectively than the built-in DenyList.
 - Magisk installation files
 - Module ZIPs
 - DenyList configuration (screenshot)
-- Full device backup using [backup tools](../apps-and-modules/#backup-restore)
+- Full device backup using [backup tools](../apps-and-modules/backup#backup-restore)
 
 **Restore to Stock:**
 
@@ -796,7 +796,7 @@ Solutions:
 1. Hide Magisk app with a different name
 2. Clear app data completely
 3. Install Shamiko module
-4. Try [Play Integrity Fix modules](../apps-and-modules/#root-hiding-play-integrity)
+4. Try [Play Integrity Fix modules](../apps-and-modules/root-management#root-hiding-play-integrity)
 5. Check if app requires Device/Strong integrity (may be impossible)
 6. See [comprehensive banking app solutions](../troubleshooting.md#play-integrity-and-banking-apps)
 
@@ -822,7 +822,7 @@ Solutions:
 **Basic or Device Integrity Fails**
 
 Solutions:
-1. Try the latest [Play Integrity Fix modules](../apps-and-modules/#root-hiding-play-integrity)
+1. Try the latest [Play Integrity Fix modules](../apps-and-modules/root-management#root-hiding-play-integrity)
 2. Clear Google Play Store data.
 3. Reboot device.
 4. If it still fails, the current fingerprint might be banned. Wait for a PIF update or use a custom `pif.json`.
@@ -864,11 +864,11 @@ Reality: Impossible to pass with:
 
 1. **Install essential modules:**
    - [LSPosed Framework](./lsposed-guide.md) - Advanced app modifications and Xposed modules
-   - [Ad blocking modules](../apps-and-modules/#ad-tracker-blocking) - System-wide ad blocking
-   - [Performance modules](../apps-and-modules/#performance-optimization) - Device optimization and battery management
+   - [Ad blocking modules](../apps-and-modules/ad-blocking#ad-tracker-blocking) - System-wide ad blocking
+   - [Performance modules](../apps-and-modules/performance#performance-optimization) - Device optimization and battery management
 
 2. **Explore root apps:**
-   - [Browse 500+ Root Apps](../apps-and-modules/) - Curated collection by category
+   - [Browse 600+ Root Apps](../apps-and-modules/) - Curated collection by category
    - [Starter Kit](../apps-and-modules/#starter-kit-must-have-apps) - Essential apps for new root users
 
 3. **Learn advanced features:**

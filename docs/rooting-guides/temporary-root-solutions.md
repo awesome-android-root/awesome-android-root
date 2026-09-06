@@ -127,7 +127,7 @@ Community ports keep spreading - Galaxy S22 Ultra / Z Fold6 / A17, OPPO Find N2,
 | Scope | Boot/init_boot partition | Bootloader (LK) itself | Kernel, in memory only |
 | Device support | Broad | MediaTek only, per-device porting | Per-device, patch-level dependent |
 
-See the [Root Hiding & Play Integrity apps](/apps-and-modules/#root-hiding-play-integrity) section for the DenyList/Shamiko/Tricky Store side of this problem on a normally-rooted device.
+See the [Root Hiding & Play Integrity apps](/apps-and-modules/root-management#root-hiding-play-integrity) section for the DenyList/Shamiko/Tricky Store side of this problem on a normally-rooted device.
 
 ## Safety & legal notes
 
@@ -142,6 +142,6 @@ See the [Root Hiding & Play Integrity apps](/apps-and-modules/#root-hiding-play-
 - [Root Framework Comparison](../rooting-guides/root-framework-comparison.md)
 - [Complete Bootloader Unlocking Guide](../rooting-guides/how-to-unlock-bootloader.md)
 - [Troubleshooting: Play Integrity & Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps)
-- [Root Hiding & Play Integrity apps](/apps-and-modules/#root-hiding-play-integrity)
+- [Root Hiding & Play Integrity apps](/apps-and-modules/root-management#root-hiding-play-integrity)
 
 [↑ Back to top](#mediatek-bootloader-modification-spoofing-tools)
