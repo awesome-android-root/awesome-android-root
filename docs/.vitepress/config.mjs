@@ -589,172 +589,214 @@ export default withPwa(defineConfig({
           text: '⭐ Quick Access',
           collapsed: false,
           items: [
+            { text: 'Category Overview', link: '/apps-and-modules/' },
             { text: '⭐ Must-Have Apps', link: '/apps-and-modules/#starter-kit-must-have-apps' },
-            { text: '📘 Glossary', link: '/apps-and-modules/#glossary' },
-            { text: '🔍 Browse All Apps', link: '/apps-and-modules/' }
+            { text: '📘 Glossary & Badges', link: '/apps-and-modules/#glossary' },
+            { text: '🛡️ Safety Checklist', link: '/apps-and-modules/#safety-legal' }
           ]
         },
         {
-          text: '🛠️ Root & Module Management',
+          text: '🛠️ Root Management',
+          link: '/apps-and-modules/root-management',
           collapsed: true,
           items: [
-            { text: 'Root Managers', link: '/apps-and-modules/#root-managers' },
-            { text: 'Temporary Root (Locked Bootloader)', link: '/apps-and-modules/#temporary-root-locked-bootloader' },
-            { text: 'Module Managers', link: '/apps-and-modules/#module-managers' },
-            { text: 'Metamodules', link: '/apps-and-modules/#metamodules' },
-            { text: 'LSPosed & Xposed', link: '/apps-and-modules/#lsposed-xposed' },
-            { text: 'Zygisk', link: '/apps-and-modules/#zygisk' },
-            { text: 'Root Hiding & Play Integrity', link: '/apps-and-modules/#root-hiding-play-integrity' },
-            { text: 'Bootloop Protection', link: '/apps-and-modules/#bootloop-protection' },
-            { text: 'Root Detection & Testing', link: '/apps-and-modules/#root-detection-testing' }
+            { text: 'Root Managers', link: '/apps-and-modules/root-management#root-managers' },
+            { text: 'Temporary Root (Locked Bootloader)', link: '/apps-and-modules/root-management#temporary-root-locked-bootloader' },
+            { text: 'Module Managers', link: '/apps-and-modules/root-management#module-managers' },
+            { text: 'Metamodules', link: '/apps-and-modules/root-management#metamodules' },
+            { text: 'LSPosed & Xposed', link: '/apps-and-modules/root-management#lsposed-xposed' },
+            { text: 'Zygisk', link: '/apps-and-modules/root-management#zygisk' },
+            { text: 'Root Hiding & Play Integrity', link: '/apps-and-modules/root-management#root-hiding-play-integrity' },
+            { text: 'Susfs', link: '/apps-and-modules/root-management#susfs' },
+            { text: 'Bootloop Protection', link: '/apps-and-modules/root-management#bootloop-protection' },
+            { text: 'Root Detection & Testing', link: '/apps-and-modules/root-management#root-detection-testing' },
           ]
         },
         {
-          text: '⚙️ System Management',
+          text: '⚙️ System',
+          link: '/apps-and-modules/system',
           collapsed: true,
           items: [
-            { text: 'System Tweaks', link: '/apps-and-modules/#system-tweaks' },
-            { text: 'VBMeta Mods', link: '/apps-and-modules/#vbmeta-mods' },
-            { text: 'System UI & Framework', link: '/apps-and-modules/#system-ui-framework' },
-            { text: 'AOSP', link: '/apps-and-modules/#aosp-android-open-source-project' },
-            { text: 'ColorOS', link: '/apps-and-modules/#coloros-oppo' },
-            { text: 'HyperOS', link: '/apps-and-modules/#hyperos-xiaomi' },
-            { text: 'NothingOS', link: '/apps-and-modules/#nothingos' },
-            { text: 'One UI', link: '/apps-and-modules/#one-ui-samsung' },
-            { text: 'Onyx', link: '/apps-and-modules/#onyx' },
-            { text: 'OxygenOS', link: '/apps-and-modules/#oxygen-os-oneplus' },
-            { text: 'ZUI', link: '/apps-and-modules/#zui' },
-            { text: 'Boot & Startup', link: '/apps-and-modules/#boot-startup' },
-            { text: 'Debloating', link: '/apps-and-modules/#debloating' },
-            { text: 'App & Package Management', link: '/apps-and-modules/#app-package-management' },
-            { text: 'Permissions & AppOps', link: '/apps-and-modules/#permissions-appops' },
-            { text: 'System Information & Diagnostics', link: '/apps-and-modules/#system-information-diagnostics' }
+            { text: 'System Tweaks', link: '/apps-and-modules/system#system-tweaks' },
+            { text: 'VBMeta Mods', link: '/apps-and-modules/system#vbmeta-mods' },
+            { text: 'System UI & Framework', link: '/apps-and-modules/system#system-ui-framework' },
+            { text: 'AOSP (Android Open Source Project)', link: '/apps-and-modules/system#aosp-android-open-source-project' },
+            { text: 'ColorOS (Oppo)', link: '/apps-and-modules/system#coloros-oppo' },
+            { text: 'HyperOS (Xiaomi)', link: '/apps-and-modules/system#hyperos-xiaomi' },
+            { text: 'NothingOS', link: '/apps-and-modules/system#nothingos' },
+            { text: 'One UI (Samsung)', link: '/apps-and-modules/system#one-ui-samsung' },
+            { text: 'Onyx', link: '/apps-and-modules/system#onyx' },
+            { text: 'Oxygen OS (OnePlus)', link: '/apps-and-modules/system#oxygen-os-oneplus' },
+            { text: 'ZUI', link: '/apps-and-modules/system#zui' },
+            { text: 'Boot & Startup', link: '/apps-and-modules/system#boot-startup' },
+            { text: 'App & Package Management', link: '/apps-and-modules/system#app-package-management' },
+            { text: 'Permissions & AppOps', link: '/apps-and-modules/system#permissions-appops' },
+            { text: 'System Information & Diagnostics', link: '/apps-and-modules/system#system-information-diagnostics' },
           ]
         },
         {
           text: '⚡ Performance & Battery',
+          link: '/apps-and-modules/performance',
           collapsed: true,
           items: [
-            { text: 'Performance Optimization', link: '/apps-and-modules/#performance-optimization' },
-            { text: 'Kernel Management', link: '/apps-and-modules/#kernel-management' },
-            { text: 'Memory & RAM', link: '/apps-and-modules/#memory-ram' },
-            { text: 'Battery Optimization', link: '/apps-and-modules/#battery-optimization' },
-            { text: 'Charging & Power', link: '/apps-and-modules/#charging-power' },
-            { text: 'Task & Process Management', link: '/apps-and-modules/#task-process-management' }
+            { text: 'Performance Optimization', link: '/apps-and-modules/performance#performance-optimization' },
+            { text: 'Kernel Management', link: '/apps-and-modules/performance#kernel-management' },
+            { text: 'Memory & RAM', link: '/apps-and-modules/performance#memory-ram' },
+            { text: 'Battery Optimization', link: '/apps-and-modules/performance#battery-optimization' },
+            { text: 'Charging & Power', link: '/apps-and-modules/performance#charging-power' },
+            { text: 'Task & Process Management', link: '/apps-and-modules/performance#task-process-management' },
           ]
         },
         {
-          text: '🛡️ Privacy & Security',
+          text: '🕵️ Privacy',
+          link: '/apps-and-modules/privacy',
           collapsed: true,
           items: [
-            { text: 'Ad & Tracker Blocking', link: '/apps-and-modules/#ad-tracker-blocking' },
-            { text: 'Firewalls & Filtering', link: '/apps-and-modules/#firewalls-filtering' },
-            { text: 'Privacy Tools', link: '/apps-and-modules/#privacy-tools' },
-            { text: 'Security Tools', link: '/apps-and-modules/#security-tools' },
-            { text: 'Device ID & Spoofing', link: '/apps-and-modules/#device-id-spoofing' },
-            { text: 'App Isolation', link: '/apps-and-modules/#app-isolation' }
+            { text: 'Privacy Tools', link: '/apps-and-modules/privacy#privacy-tools' },
+            { text: 'Device ID & Spoofing', link: '/apps-and-modules/privacy#device-id-spoofing' },
+            { text: 'App Isolation', link: '/apps-and-modules/privacy#app-isolation' },
+            { text: 'Location & GPS', link: '/apps-and-modules/privacy#location-gps' },
           ]
         },
         {
-          text: '🔧 Apps & App Modifications',
+          text: '🔐 Security',
+          link: '/apps-and-modules/security',
           collapsed: true,
           items: [
-            { text: 'App Patchers', link: '/apps-and-modules/#app-patchers' },
-            { text: 'App Mods', link: '/apps-and-modules/#app-mods' },
-            { text: 'Social Media Mods', link: '/apps-and-modules/#social-media-mods' },
-            { text: 'Browser Mods', link: '/apps-and-modules/#browser-mods' },
-            { text: 'YouTube & Media Mods', link: '/apps-and-modules/#youtube-media-mods' },
-            { text: 'Signature & Verification', link: '/apps-and-modules/#signature-verification' }
+            { text: 'Security Tools', link: '/apps-and-modules/security#security-tools' },
+            { text: 'Firewalls & Filtering', link: '/apps-and-modules/security#firewalls-filtering' },
           ]
         },
         {
-          text: '🗃️ Storage & Data',
+          text: '🚫 Ad Blocking',
+          link: '/apps-and-modules/ad-blocking',
           collapsed: true,
           items: [
-            { text: 'File Managers', link: '/apps-and-modules/#file-managers' },
-            { text: 'Backup & Restore', link: '/apps-and-modules/#backup-restore' },
-            { text: 'Cleaning', link: '/apps-and-modules/#cleaning' },
-            { text: 'File & Partition Tools', link: '/apps-and-modules/#file-partition-tools' }
+            { text: 'Ad & Tracker Blocking', link: '/apps-and-modules/ad-blocking#ad-tracker-blocking' },
+            { text: 'DNS & Network Filtering', link: '/apps-and-modules/ad-blocking#dns-network-filtering' },
           ]
         },
         {
-          text: '🎨 UI & Customization',
+          text: '🧩 App Modifications',
+          link: '/apps-and-modules/app-modifications',
           collapsed: true,
           items: [
-            { text: 'Themes & Visual Mods', link: '/apps-and-modules/#themes-visual-mods' },
-            { text: 'Launchers & Home Screen', link: '/apps-and-modules/#launchers-home-screen' },
-            { text: 'Status Bar & Navigation', link: '/apps-and-modules/#status-bar-navigation' },
-            { text: 'Gestures & Controls', link: '/apps-and-modules/#gestures-controls' },
-            { text: 'Fonts & Emojis', link: '/apps-and-modules/#fonts-emojis' },
-            { text: 'Notifications', link: '/apps-and-modules/#notifications' },
-            { text: 'Lockscreen & AOD', link: '/apps-and-modules/#lockscreen-aod' },
-            { text: 'Screen & Display', link: '/apps-and-modules/#screen-display' }
+            { text: 'App Patchers', link: '/apps-and-modules/app-modifications#app-patchers' },
+            { text: 'App Mods', link: '/apps-and-modules/app-modifications#app-mods' },
+            { text: 'Social Media Mods', link: '/apps-and-modules/app-modifications#social-media-mods' },
+            { text: 'Browser Mods', link: '/apps-and-modules/app-modifications#browser-mods' },
+            { text: 'YouTube & Media Mods', link: '/apps-and-modules/app-modifications#youtube-media-mods' },
+            { text: 'Signature & Verification', link: '/apps-and-modules/app-modifications#signature-verification' },
           ]
         },
         {
-          text: '🎵 Audio & Media',
+          text: '🧹 Debloating',
+          link: '/apps-and-modules/debloating',
           collapsed: true,
           items: [
-            { text: 'Audio Enhancement', link: '/apps-and-modules/#audio-enhancement' },
-            { text: 'Audio Control', link: '/apps-and-modules/#audio-control' },
-            { text: 'Audio Effects', link: '/apps-and-modules/#audio-effects' }
+            { text: 'Debloating Tools & Modules', link: '/apps-and-modules/debloating#debloating' },
           ]
         },
         {
-          text: '🌐 Network & Connectivity',
+          text: '🗂️ File Management',
+          link: '/apps-and-modules/file-management',
           collapsed: true,
           items: [
-            { text: 'DNS & Network Filtering', link: '/apps-and-modules/#dns-network-filtering' },
-            { text: 'VPN & Proxy', link: '/apps-and-modules/#vpn-proxy' },
-            { text: 'Network Tools', link: '/apps-and-modules/#network-tools' },
-            { text: 'Wi-Fi & Mobile Data', link: '/apps-and-modules/#wi-fi-mobile-data' },
-            { text: 'Bluetooth & NFC', link: '/apps-and-modules/#bluetooth-nfc' },
-            { text: 'Location & GPS', link: '/apps-and-modules/#location-gps' }
+            { text: 'File Managers', link: '/apps-and-modules/file-management#file-managers' },
+            { text: 'Cleaning', link: '/apps-and-modules/file-management#cleaning' },
+            { text: 'File & Partition Tools', link: '/apps-and-modules/file-management#file-partition-tools' },
+          ]
+        },
+        {
+          text: '💾 Backup & Restore',
+          link: '/apps-and-modules/backup',
+          collapsed: true,
+          items: [
+            { text: 'Backup & Restore', link: '/apps-and-modules/backup#backup-restore' },
+          ]
+        },
+        {
+          text: '🎨 Customization',
+          link: '/apps-and-modules/customization',
+          collapsed: true,
+          items: [
+            { text: 'Themes & Visual Mods', link: '/apps-and-modules/customization#themes-visual-mods' },
+            { text: 'Launchers & Home Screen', link: '/apps-and-modules/customization#launchers-home-screen' },
+            { text: 'Status Bar & Navigation', link: '/apps-and-modules/customization#status-bar-navigation' },
+            { text: 'Gestures & Controls', link: '/apps-and-modules/customization#gestures-controls' },
+            { text: 'Fonts & Emojis', link: '/apps-and-modules/customization#fonts-emojis' },
+            { text: 'Notifications', link: '/apps-and-modules/customization#notifications' },
+            { text: 'Lockscreen & AOD', link: '/apps-and-modules/customization#lockscreen-aod' },
+            { text: 'Screen & Display', link: '/apps-and-modules/customization#screen-display' },
+          ]
+        },
+        {
+          text: '🎵 Audio',
+          link: '/apps-and-modules/audio',
+          collapsed: true,
+          items: [
+            { text: 'Audio Enhancement', link: '/apps-and-modules/audio#audio-enhancement' },
+            { text: 'Audio Control', link: '/apps-and-modules/audio#audio-control' },
+            { text: 'Audio Effects', link: '/apps-and-modules/audio#audio-effects' },
+          ]
+        },
+        {
+          text: '🌐 Networking',
+          link: '/apps-and-modules/networking',
+          collapsed: true,
+          items: [
+            { text: 'VPN & Proxy', link: '/apps-and-modules/networking#vpn-proxy' },
+            { text: 'Network Tools', link: '/apps-and-modules/networking#network-tools' },
+            { text: 'Wi-Fi & Mobile Data', link: '/apps-and-modules/networking#wi-fi-mobile-data' },
+            { text: 'Bluetooth & NFC', link: '/apps-and-modules/networking#bluetooth-nfc' },
           ]
         },
         {
           text: '🎮 Gaming',
+          link: '/apps-and-modules/gaming',
           collapsed: true,
           items: [
-            { text: 'Gaming Optimization', link: '/apps-and-modules/#gaming-optimization' },
-            { text: 'Game Modifications & Tools', link: '/apps-and-modules/#game-modifications-tools' }
+            { text: 'Gaming Optimization', link: '/apps-and-modules/gaming#gaming-optimization' },
+            { text: 'Game Modifications & Tools', link: '/apps-and-modules/gaming#game-modifications-tools' },
           ]
         },
         {
-          text: '📥 Developer & Power User',
+          text: '🧑‍💻 Development & Automation',
+          link: '/apps-and-modules/development',
           collapsed: true,
           items: [
-            { text: 'Terminal & Shell', link: '/apps-and-modules/#terminal-shell' },
-            { text: 'ADB & Debugging', link: '/apps-and-modules/#adb-debugging' },
-            { text: 'Developer Tools', link: '/apps-and-modules/#developer-tools' },
-            { text: 'Linux Environments', link: '/apps-and-modules/#linux-environments' },
-            { text: 'Automation', link: '/apps-and-modules/#automation' },
-            { text: 'Hardware & Sensors', link: '/apps-and-modules/#hardware-sensors' }
+            { text: 'Terminal & Shell', link: '/apps-and-modules/development#terminal-shell' },
+            { text: 'ADB & Debugging', link: '/apps-and-modules/development#adb-debugging' },
+            { text: 'Developer Tools', link: '/apps-and-modules/development#developer-tools' },
+            { text: 'Linux Environments', link: '/apps-and-modules/development#linux-environments' },
+            { text: 'Automation', link: '/apps-and-modules/development#automation' },
+            { text: 'Hardware & Sensors', link: '/apps-and-modules/development#hardware-sensors' },
           ]
         },
         {
           text: '🧰 General Utilities',
+          link: '/apps-and-modules/utilities',
           collapsed: true,
           items: [
-            { text: 'Sync & File Transfer', link: '/apps-and-modules/#sync-file-transfer' },
-            { text: 'Reboot & Power', link: '/apps-and-modules/#reboot-power' },
-            { text: 'Sharing & Intent Tools', link: '/apps-and-modules/#sharing-intent-tools' },
-            { text: 'Communication & Messaging', link: '/apps-and-modules/#communication-messaging' },
-            { text: 'General Toolboxes', link: '/apps-and-modules/#general-toolboxes' }
+            { text: 'Sync & File Transfer', link: '/apps-and-modules/utilities#sync-file-transfer' },
+            { text: 'Reboot & Power', link: '/apps-and-modules/utilities#reboot-power' },
+            { text: 'Sharing & Intent Tools', link: '/apps-and-modules/utilities#sharing-intent-tools' },
+            { text: 'Communication & Messaging', link: '/apps-and-modules/utilities#communication-messaging' },
+            { text: 'General Toolboxes', link: '/apps-and-modules/utilities#general-toolboxes' },
           ]
         },
         {
-          text: '📚 Support and Safety',
+          text: '📚 More Resources',
           collapsed: true,
           items: [
-            { text: 'Legal and Safety', link: '/apps-and-modules/#legal-and-safety' },
-            { text: 'Pre-Flash Checklist', link: '/apps-and-modules/#🛠️-pre-flash-checklist' },
-            { text: 'Risk Mitigation', link: '/apps-and-modules/#🛡️-risk-mitigation' }
+            { text: 'Rooting Guides', link: '/rooting-guides/' },
+            { text: 'General Guides', link: '/general-guides/' },
+            { text: 'Troubleshooting', link: '/troubleshooting' },
+            { text: 'FAQs', link: '/faqs' },
+            { text: 'Community Resources', link: '/resources' }
           ]
         }
       ],
-
-
 
       // General Guides Sidebar
       '/general-guides/': [

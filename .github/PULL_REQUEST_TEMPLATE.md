@@ -74,4 +74,4 @@ Fixes #(issue number)
 **By submitting this PR, I confirm:**
 - [ ] My contribution is my own work or properly attributed
 - [ ] I agree to license my contribution under the project's MIT license
-- [ ] I've read and followed the [Contributing Guidelines](../CONTRIBUTING.md)
+- [ ] I've read and followed the [Contributing Guidelines](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/contributing.md)

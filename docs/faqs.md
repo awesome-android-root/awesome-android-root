@@ -188,11 +188,11 @@ Looking for troubleshooting? Visit our [Troubleshooting Guide](./troubleshooting
 
 **Popular Uses:**
 - System-wide ad blocking ([AdAway guide](./general-guides/android-adblocking.md))
-- Complete device backups ([backup apps](./apps-and-modules/#backup-restore))
+- Complete device backups ([backup apps](./apps-and-modules/backup#backup-restore))
 - Custom recovery and ROM installation ([guide](./rooting-guides/custom-rom-installation.md))
 - Removing carrier bloatware ([debloating guide](./general-guides/android-apps-debloating.md))
-- Advanced theming and customization ([customization apps](./apps-and-modules/#ui-customization))
-- Enhanced privacy controls ([privacy apps](./apps-and-modules/#privacy-security))
+- Advanced theming and customization ([customization apps](./apps-and-modules/customization))
+- Enhanced privacy controls ([privacy apps](./apps-and-modules/privacy))
 
 **Related Resources:**
 - [Essential Root Apps](./apps-and-modules/index.md#starter-kit-must-have-apps)
@@ -549,7 +549,7 @@ Modern devices use A/B (seamless) update system:
    - Enable Zygisk in Magisk
    - Add banking apps to DenyList
    - Hide Magisk app (rename it)
-   - Install [Play Integrity Fix modules](./apps-and-modules/#root-hiding-play-integrity)
+   - Install [Play Integrity Fix modules](./apps-and-modules/root-management#root-hiding-play-integrity)
 
 2. **Clear app data:**
    ```
@@ -671,11 +671,11 @@ Modern devices use A/B (seamless) update system:
 
 4. **Essential apps to install:**
    - See our [complete starter kit](./apps-and-modules/#starter-kit-must-have-apps) for must-have apps
-   - [AdAway](./apps-and-modules/#ad-tracker-blocking) - System-wide ad blocking
-   - [Backup apps](./apps-and-modules/#backup-restore) - Complete backups
-   - [File managers](./apps-and-modules/#file-managers) - Root-enabled file access
-   - [Firewall tools](./apps-and-modules/#firewalls-filtering) - Network control
-   - [Browse 500+ root apps](./apps-and-modules/) for more
+   - [AdAway](./apps-and-modules/ad-blocking#ad-tracker-blocking) - System-wide ad blocking
+   - [Backup apps](./apps-and-modules/backup#backup-restore) - Complete backups
+   - [File managers](./apps-and-modules/file-management#file-managers) - Root-enabled file access
+   - [Firewall tools](./apps-and-modules/security#firewalls-filtering) - Network control
+   - [Browse 600+ root apps](./apps-and-modules/) for more
 
 **Next Steps:**
 

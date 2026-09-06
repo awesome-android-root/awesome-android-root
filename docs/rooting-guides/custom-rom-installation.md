@@ -463,6 +463,6 @@ Official Resources:
 
 #### What’s Next?
 - [Add Root Access](./root-framework-comparison.md) - Magisk (Zygisk), KernelSU (kernel-based), APatch
-- [Custom Kernels](../apps-and-modules/#kernel-management) - performance/battery tuning
+- [Custom Kernels](../apps-and-modules/performance#kernel-management) - performance/battery tuning
 - [LSPosed Modules](./lsposed-guide.md) - modern Xposed-compatible modules (Zygisk/LSPosed)
 :::

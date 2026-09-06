@@ -279,7 +279,7 @@ If device not listed:
 - Photos and videos (Google Photos, cloud storage)
 - Contacts (Google Contacts sync)
 - Messages (SMS Backup & Restore)
-- App data (Google Backup, Helium, or see [backup apps](../apps-and-modules/#backup-restore))
+- App data (Google Backup, Helium, or see [backup apps](../apps-and-modules/backup#backup-restore))
 - Important documents
 - Two-factor authentication recovery codes
 
@@ -672,12 +672,12 @@ Look for "Device unlocked: true"
    - Install [essential starter apps](../apps-and-modules/#starter-kit-must-have-apps)
    - Configure [system-wide ad blocking](../general-guides/android-adblocking.md)
    - [Safely remove bloatware](../general-guides/android-apps-debloating.md)
-   - Browse [500+ root apps and modules](../apps-and-modules/)
+   - Browse [600+ root apps and modules](../apps-and-modules/)
 
 ### Step 4: Security Considerations
 
 **Important reminders:**
-- Banking apps may detect unlocked bootloader (see [root hiding solutions](../apps-and-modules/#root-hiding-play-integrity))
+- Banking apps may detect unlocked bootloader (see [root hiding solutions](../apps-and-modules/root-management#root-hiding-play-integrity))
 - Set up strong screen lock
 - Only install trusted software
 - Be cautious with root permissions

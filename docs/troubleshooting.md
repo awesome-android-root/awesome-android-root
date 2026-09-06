@@ -1192,8 +1192,8 @@ If you want to root a Samsung device, **do NOT update to One UI 8** until the co
    - Use gaming profiles only during actual gaming
 
 **Apps for Performance:**
-- [Performance & Gaming Apps](./apps-and-modules/index.md#performance-battery)
-- [Battery Management Tools](./apps-and-modules/index.md#performance-battery)
+- [Performance & Gaming Apps](./apps-and-modules/performance.md)
+- [Battery Management Tools](./apps-and-modules/performance.md)
 
 **Storage Optimization:**
 
@@ -1449,9 +1449,9 @@ Error: Stuck on OnePlus logo, no response
 - [Motorola](./rooting-guides/how-to-root-motorola-phone.md)
 
 **Root Apps:**
-- [Essential Root Apps](./apps-and-modules/index.md#starter-kit-must-have-apps)
-- [Ad Blockers](./apps-and-modules/index.md#ad-tracker-blocking)
-- [Backup Tools](./apps-and-modules/index.md#backup-restore)
+- [Essential Root Apps](./apps-and-modules/#starter-kit-must-have-apps)
+- [Ad Blockers](./apps-and-modules/ad-blocking.md)
+- [Backup Tools](./apps-and-modules/backup.md)
 
 **General Resources:**
 - [FAQ](./faqs.md)
