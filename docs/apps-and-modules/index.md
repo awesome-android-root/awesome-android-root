@@ -238,24 +238,23 @@ head:
 Apps and modules are grouped by **what you want to accomplish**, not by whether they are apps or modules -
 each page combines root apps, Magisk modules, KernelSU modules, APatch and LSPosed modules for that topic.
 
-|  | Category | What you'll find |  |
-| :---: | :--- | :--- | :---: |
-| 🛠️ | [Root Management](root-management.md) | Root managers (Magisk, KernelSU, APatch), temporary root, module managers, metamodules, LSPosed & Zygisk, root hiding & Play Integrity | 72 |
-| ⚙️ | [System](system.md) | System tweaks, VBMeta, System UI & OEM frameworks, boot & startup, app & package management, permissions | 77 |
-| ⚡ | [Performance & Battery](performance.md) | Performance optimization, kernels, memory & RAM, battery, charging, task management | 58 |
-| 🕵️ | [Privacy](privacy.md) | Privacy tools, device ID & location spoofing, app isolation | 36 |
-| 🔐 | [Security](security.md) | Security tools & firewalls | 30 |
-| 🚫 | [Ad Blocking](ad-blocking.md) | Hosts-based ad blockers & DNS filtering (Magisk/KernelSU/LSPosed) | 23 |
-| 🧩 | [App Modifications](app-modifications.md) | App patchers, social media & browser mods, YouTube clients, signature tools | 82 |
-| 🧹 | [Debloating](debloating.md) | Remove bloatware & system apps | 6 |
-| 🗂️ | [File Management](file-management.md) | Root file managers, cleaners, partition tools | 25 |
-| 💾 | [Backup & Restore](backup.md) | Full app & data backups, recovery | 6 |
-| 🎨 | [Customization](customization.md) | Themes, launchers, status bar, fonts, notifications, display | 68 |
-| 🎵 | [Audio](audio.md) | Audio enhancement, control & effects | 16 |
-| 🌐 | [Networking](networking.md) | VPN/proxy modules, network tools, Wi-Fi, Bluetooth & NFC | 32 |
-| 🎮 | [Gaming](gaming.md) | Gaming optimization, FPS unlockers, game tools | 11 |
-| 🧑‍💻 | [Development & Automation](development.md) | Terminal, ADB, developer tools, Linux environments, automation | 41 |
-| 🧰 | [General Utilities](utilities.md) | Sync, power, sharing, communication, toolboxes | 20 |
+
+- **🛠️ [Root Management](root-management.md)**
+- **⚙️ [System](system.md)**
+- **⚡ [Performance &amp; Battery](performance.md)**
+- **🕵️ [Privacy](privacy.md)**
+- **🔐 [Security](security.md)**
+- **🚫 [Ad Blocking](ad-blocking.md)**
+- **🧩 [App Modifications](app-modifications.md)**
+- **🧹 [Debloating](debloating.md)**
+- **🗂️ [File Management](file-management.md)**
+- **💾 [Backup &amp; Restore](backup.md)**
+- **🎨 [Customization](customization.md)**
+- **🎵 [Audio](audio.md)**
+- **🌐 [Networking](networking.md)**
+- **🎮 [Gaming](gaming.md)**
+- **🧑‍💻 [Development &amp; Automation](development.md)**
+- **🧰 [General Utilities](utilities.md)**
 
 > [!TIP]
 > Looking for tutorials instead of tools? Browse the [Rooting Guides](../rooting-guides/index.md) or the
