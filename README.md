@@ -47,6 +47,7 @@ Browse them in [`docs/apps-and-modules/`](docs/apps-and-modules/):
 
 | Category | Description | Website |
 | :--- | :--- | :--- |
+| **[📜 Category index](docs/apps-and-modules/index.md)** | Index of all categories | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/index) |
 | **🛠️ [Root Management](docs/apps-and-modules/root-management.md)** | Root managers, temporary root, module managers, metamodules, LSPosed &amp; Zygisk, root hiding &amp; Play Integrity | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/root-management) |
 | **⚙️ [System](docs/apps-and-modules/system.md)** | System tweaks, VBMeta, System UI &amp; OEM frameworks, boot &amp; startup, app &amp; package management | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/system) |
 | **⚡ [Performance &amp; Battery](docs/apps-and-modules/performance.md)** | Performance optimization, kernels, memory, battery &amp; charging | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/performance) |
@@ -64,8 +65,6 @@ Browse them in [`docs/apps-and-modules/`](docs/apps-and-modules/):
 | **🧑‍💻 [Development &amp; Automation](docs/apps-and-modules/development.md)** | Terminal, ADB, developer tools, Linux environments, automation | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/development) |
 | **🧰 [General Utilities](docs/apps-and-modules/utilities.md)** | Sync, power, sharing, communication, toolboxes | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/utilities) |
 
-**Not sure where something belongs?** The [category index](docs/apps-and-modules/index.md) also includes the
-Starter Kit, the entry-format Glossary and the safety checklist.
 
 ## Guides & Documentation
 
@@ -83,26 +82,30 @@ Starter Kit, the entry-format Glossary and the safety checklist.
 
 ## Contributing
 
-Contributions are welcome - see the [Contributing Guide](docs/contributing.md) and the
-[PR template](.github/PULL_REQUEST_TEMPLATE.md) for entry format, badges and category placement.
+> 📝 Read the the [`Contributing Guide ↗`](docs/contributing.md) and the
+[`PR template ↗`](.github/PULL_REQUEST_TEMPLATE.md) for entry format, badges and category placement.
 
-- 🐛 Report issues: [app suggestion](https://github.com/awesome-android-root/awesome-android-root/issues/new/choose),
-  [dead link](https://github.com/awesome-android-root/awesome-android-root/issues/new/choose),
-  [taxonomy change](https://github.com/awesome-android-root/awesome-android-root/issues/new/choose)
-- 💬 Join [GitHub Discussions](https://github.com/awesome-android-root/awesome-android-root/discussions)
-- 𝕏 Follow [@awsm_and_root](https://x.com/awsm_and_root) for updates
+| Platform | Purpose | Link |
+|:---|:---|:---|
+| 🌐 **Website** | Browse apps, modules & guides | [awesome-android-root.zhoe.org](https://awesome-android-root.zhoe.org) |
+| 💬 **GitHub** | Source & discussions | [GitHub Repo](https://github.com/awesome-android-root/awesome-android-root) |
+| 🐛 Report issues | Issues reporting | [GitHub Issues](https://github.com/awesome-android-root/awesome-android-root/issues) |
+| 𝕏 **X/Twitter** | Updates & news | [@awsm_and_root](https://x.com/awsm_and_root) |
 
 ## License & Disclaimer
 
-Licensed under [MIT](LICENSE). **Educational reference only - proceed at your own risk.** Rooting can void
-warranty, break security features (Knox/Play Integrity) and lock out banking/DRM apps.
+- Licensed under [MIT](LICENSE). 
+- Read the [Legal Disclaimer](docs/legal-disclaimer.md) for details.
 
-Read the [Legal Disclaimer](docs/legal-disclaimer.md) for details.
+> [!IMPORTANT]
+> **Educational reference only. Proceed at your own risk.**
+> Rooting can void warranty, break security (Knox/Integrity), and lock out banking/DRM apps. **Avoid
+> proceeding** if this is a mission-critical device or if you lack a verified backup.
 
 ---
 
 <div align="center">
 
-**⚡ Built with ❤️ by [Awesome Android Root](https://github.com/awesome-android-root/awesome-android-root)** · ⭐ Star the repo to support the project
+**Built with ❤️ by [Awesome Android Root](https://github.com/awesome-android-root/awesome-android-root)**
 
 </div>
