@@ -10,7 +10,7 @@ assignees: ''
 
 **Name:** 
 **Type:** (Select one: Root App / Magisk Module / KernelSU Module / LSPosed Module)
-**Category:** (e.g., Privacy & Security, App Management, App Modifications, Performance & Battery, Gaming, Audio & Media, Network & Connectivity, Location & GPS, Root & System Management, Customization & Interface, System Utilities, Developer & Advanced, Device OEM Customization, Data & Storage)
+**Category:** (choose the topic page in `docs/apps-and-modules/`: Root Management / System / Debloating / Performance & Battery / Privacy / Security / Ad Blocking / App Modifications / File Management / Backup & Restore / Customization / Audio / Networking / Gaming / Development & Automation / General Utilities)
 
 ## Links
 

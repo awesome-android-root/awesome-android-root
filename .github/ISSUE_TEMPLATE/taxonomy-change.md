@@ -1,6 +1,6 @@
 ---
 name: Taxonomy Change
-about: Propose a reorganization of the README's category structure
+about: Propose a reorganization of the Apps & Modules category structure (docs/apps-and-modules)
 title: '[TAXONOMY] '
 labels: 'taxonomy, discussion'
 assignees: ''
@@ -26,8 +26,9 @@ assignees: ''
 ## Impact
 
 **Affected entries:** (Approximate count)
-**Affected sub-sections:** (List them)
-**TOC changes needed:** [Yes/No]
+**Affected category pages / sub-sections:** (List them)
+**Navigation/sidebar changes needed:** [Yes/No]
+**URL/anchor changes needed:** [Yes/No]
 
 ## Alternatives Considered
 
