@@ -2,7 +2,7 @@
 layout: home
 title: Best Root Apps & Modules
 titleTemplate: Awesome Android Root
-description: "Discover 500+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026."
+description: "Discover 600+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026."
 head:
   - - meta
     - name: robots
@@ -21,7 +21,7 @@ head:
       content: "Best Root Apps & Modules | Awesome Android Root"
   - - meta
     - property: og:description
-      content: "Discover 500+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026."
+      content: "Discover 600+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026."
   - - meta
     - property: og:image:secure_url
       content: "https://awesome-android-root.zhoe.org/images/og.png"
@@ -51,7 +51,7 @@ head:
       content: "Best Root Apps & Modules | Awesome Android Root"
   - - meta
     - name: twitter:description
-      content: "Discover 500+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026."
+      content: "Discover 600+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026."
   - - meta
     - name: twitter:image
       content: "https://awesome-android-root.zhoe.org/images/og.png"
@@ -84,7 +84,7 @@ head:
             "@id": "https://awesome-android-root.zhoe.org/#website",
             "name": "Awesome Android Root",
             "alternateName": "Ultimate Android Rooting Hub",
-            "description": "Discover 500+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026.",
+            "description": "Discover 600+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026.",
             "url": "https://awesome-android-root.zhoe.org/",
             "inLanguage": "en-US",
             "publisher": {
@@ -107,7 +107,7 @@ head:
             "@type": ["WebPage", "CollectionPage"],
             "@id": "https://awesome-android-root.zhoe.org/#webpage",
             "name": "Best Android Root Apps & Modules (2026) | Awesome Android Root",
-            "description": "Discover 500+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026.",
+            "description": "Discover 600+ Android root apps and Magisk/KernelSU/APatch & LSPosed modules with step-by-step guides. Safe, up-to-date rooting resources for 2026.",
             "url": "https://awesome-android-root.zhoe.org/",
             "datePublished": "2025-05-25T00:00:00Z",
             "dateModified": "2026-06-26T00:00:00Z",
@@ -156,7 +156,7 @@ head:
 hero:
   name: "Awesome Android Root"
   text: "Master Android Rooting in 2026"
-  tagline: "Explore 500+ top root apps, best Magisk / KernelSU / APatch & LSPosed modules, and step-by-step rooting guides."
+  tagline: "Explore 600+ top root apps, best Magisk / KernelSU / APatch & LSPosed modules, and step-by-step rooting guides."
   image:
     src: /images/logo_dark.svg
     alt: Awesome Android Root - Ultimate Rooting Hub Logo
@@ -174,64 +174,73 @@ hero:
 features:
   - icon: 🛡️
     title: System-Wide Ad Blocking
-    details: "Block ads, trackers & malware across your entire system."
-    link: /apps-and-modules/#ad-tracker-blocking
+    details: "Block ads, trackers & malware across your entire system with hosts & DNS tools."
+    link: /apps-and-modules/ad-blocking
 
   - icon: 🛠️
-    title: Root & Module Management
-    details: "Root solutions, module managers, LSPosed & Xposed, Zygisk, and root hiding."
-    link: /apps-and-modules/#root-module-management
+    title: Root Management
+    details: "Root managers, module managers, LSPosed & Zygisk, and root hiding & Play Integrity."
+    link: /apps-and-modules/root-management
 
-  - icon: 🔧
+  - icon: 🧩
     title: App Modifications
-    details: "Remove restrictions, unlock features, enhance functionality."
-    link: /apps-and-modules/#apps-app-modifications
+    details: "App patchers, social media mods, browser & YouTube clients, signature tools."
+    link: /apps-and-modules/app-modifications
 
   - icon: ⚡
     title: Performance & Battery
-    details: "Performance optimization, kernel management, memory, and battery tools."
-    link: /apps-and-modules/#performance-battery
+    details: "Performance optimization, kernel management, memory, battery & charging tools."
+    link: /apps-and-modules/performance
 
   - icon: 🎨
-    title: Complete UI Customization
-    details: "Custom themes, boot animations, fonts, launchers, & visual customization."
-    link: /apps-and-modules/#ui-customization
+    title: Customization
+    details: "Custom themes, fonts, launchers, status bar, notifications & display tweaks."
+    link: /apps-and-modules/customization
 
-  - icon: 📦
-    title: App & Package Management
-    details: "Inspect, freeze, uninstall, and control every installed application."
-    link: /apps-and-modules/#app-package-management
+  - icon: ⚙️
+    title: System & App Management
+    details: "System tweaks, OEM frameworks, app & package management, permissions & AppOps."
+    link: /apps-and-modules/system
 
-  - icon: 🗃️
-    title: Storage & Backup
-    details: "File managers, backup & restore, cleaning, and partition tools."
-    link: /apps-and-modules/#storage-data
+  - icon: 🗂️
+    title: File Management
+    details: "Root file managers, storage cleaners, and file & partition tools."
+    link: /apps-and-modules/file-management
+
+  - icon: 💾
+    title: Backup & Restore
+    details: "Full app & data backups, cloud sync and data recovery for rooted devices."
+    link: /apps-and-modules/backup
 
   - icon: 🧹
-    title: System Debloating & Cleaning
-    details: "Remove bloatware & optimize system performance."
-    link: /apps-and-modules/#debloating
+    title: Debloating
+    details: "Remove bloatware and unwanted system apps safely."
+    link: /apps-and-modules/debloating
+
+  - icon: 🕵️
+    title: Privacy Tools
+    details: "Privacy apps & modules, device ID & location spoofing, app isolation."
+    link: /apps-and-modules/privacy
 
   - icon: 🔐
-    title: Privacy & Security Arsenal
-    details: "Firewalls, privacy tools, device spoofing, & data protection systems."
-    link: /apps-and-modules/#privacy-security
+    title: Security & Firewalls
+    details: "Security tools and per-app firewalls that control network access."
+    link: /apps-and-modules/security
 
   - icon: 🌐
-    title: Network & Connectivity Control
-    details: "DNS filtering, VPN & proxy, Wi-Fi tools, and location control."
-    link: /apps-and-modules/#network-connectivity
+    title: Networking
+    details: "VPN & proxy modules, network tools, Wi-Fi, Bluetooth & NFC."
+    link: /apps-and-modules/networking
 
   - icon: 🎮
     title: Gaming Optimization
     details: "FPS unlockers, gaming tweaks, and game modification tools."
-    link: /apps-and-modules/#gaming
+    link: /apps-and-modules/gaming
 
-  - icon: 📥
-    title: Developer & Power User Tools
+  - icon: 🧑‍💻
+    title: Development & Automation
     details: "Terminal, ADB, Linux environments, automation, and hardware tools."
-    link: /apps-and-modules/#developer-power-user
-
+    link: /apps-and-modules/development
 ---
 
 <div class="vp-doc">
@@ -265,7 +274,7 @@ features:
     <h3>Already Rooted</h3>
     <p>Maximize your rooted device's potential</p>
     <ul>
-      <li>500+ curated apps</li>
+      <li>600+ curated apps</li>
       <li>Advanced modules</li>
       <li>Custom ROMs</li>
     </ul>

@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
 
-# Set the README file
-readme_file="../README.md"
+# Counts entries in the Apps & Modules category pages (docs/apps-and-modules/*.md).
+# The docs pages are the canonical home of the database (see README).
 
-# Check if the file exists
-if [[ ! -f "$readme_file" ]]; then
-  echo "Error: $readme_file not found!"
+# Resolve repo root (scripts/..)
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+# All category pages, excluding the hub index
+mapfile -t pages < <(find "$ROOT_DIR/docs/apps-and-modules" -maxdepth 1 -name '*.md' ! -name 'index.md' | sort)
+
+if [[ ${#pages[@]} -eq 0 ]]; then
+  echo "Error: no category pages found under docs/apps-and-modules/!" >&2
   exit 1
 fi
 
@@ -20,49 +25,24 @@ CYAN='\033[38;5;80m'
 WHITE='\033[97m'
 GRAY='\033[38;5;240m'
 
-# Function to count entries matching a pattern
-count_entries() {
-  local pattern=$1
-  grep -cE "$pattern" "$readme_file"
-}
+# Patterns (same entry format as always: "- **[[Name]](url)** ...")
+entry_pattern='^- \*\*\[[^]]+\]\([^)]*\)\*\*'
 
-# Function to exclude certain lines and count the rest
-count_filtered_entries() {
-  local include_pattern=$1
-  local exclude_pattern=$2
-  if [[ -n "$exclude_pattern" ]]; then
-    grep -E "$include_pattern" "$readme_file" | grep -vcE "$exclude_pattern"
-  else
-    grep -cE "$include_pattern" "$readme_file"
-  fi
-}
-
-# Patterns
-total_pattern='^- \*\*\[[^]]+\]\([^)]*\)\*\*'
-exclude_pattern='(docs/|README\.md|index\.md|↑ Back to top|table-of-contents)'
-table_entries_pattern='^\| \*\*\[[^]]+\]\([^)]*\)\*\*'
-magisk_pattern='^- \*\*\[[^]]+\]\([^)]*\)\*\*.*`\[M\]`'
-kernelsu_pattern='^- \*\*\[[^]]+\]\([^)]*\)\*\*.*`\[K\]`'
-lsposed_pattern='^- \*\*\[[^]]+\]\([^)]*\)\*\*.*`\[LSP\]`'
-
-# Count
-all_entries=$(count_filtered_entries "$total_pattern" "$exclude_pattern")
-table_entries=$(count_entries "$table_entries_pattern")
-total_entries=$((all_entries - table_entries))
-magisk_modules=$(count_entries "$magisk_pattern")
-kernelsu_modules=$(count_entries "$kernelsu_pattern")
-lsposed_modules=$(count_entries "$lsposed_pattern")
-all_module_entries=$(grep -E "$total_pattern" "$readme_file" | grep -vE "$exclude_pattern" | grep -cE '`\[(M|K|LSP)\]`')
-root_apps=$((total_entries - all_module_entries))
+all_entries=$(grep -hE "$entry_pattern" "${pages[@]}" | wc -l)
+magisk_modules=$(grep -hE "$entry_pattern" "${pages[@]}" | grep -cE '`\[M\]`' || true)
+kernelsu_modules=$(grep -hE "$entry_pattern" "${pages[@]}" | grep -cE '`\[K\]`' || true)
+lsposed_modules=$(grep -hE "$entry_pattern" "${pages[@]}" | grep -cE '`\[LSP\]`' || true)
+all_module_entries=$(grep -hE "$entry_pattern" "${pages[@]}" | grep -cE '`\[(M|K|LSP|A)\]`' || true)
+root_apps=$((all_entries - all_module_entries))
 
 # Display
 echo ""
-echo -e "  ${GRAY}${RESET}  ${BOLD}${WHITE}📃 README Stats${RESET}                    ${GRAY}${RESET}"
-echo -e "  ${GRAY}---------------------------------+${RESET}"
-echo -e "  ${GRAY}${RESET}  ${CYAN}Total Entries${RESET}         ${BOLD}${WHITE}${total_entries}${RESET}        ${GRAY}${RESET}"
-echo -e "  ${GRAY}---------------------------------+${RESET}"
-echo -e "  ${GRAY}${RESET}  ${BLUE}Root Apps${RESET}              ${BOLD}${WHITE}${root_apps}${RESET}        ${GRAY}${RESET}"
-echo -e "  ${GRAY}${RESET}  ${ORANGE}Magisk Modules${RESET}        ${BOLD}${WHITE}${magisk_modules}${RESET}        ${GRAY}${RESET}"
-echo -e "  ${GRAY}${RESET}  ${GREEN}KernelSU Modules${RESET}      ${BOLD}${WHITE}${kernelsu_modules}${RESET}        ${GRAY}${RESET}"
-echo -e "  ${GRAY}${RESET}  ${PURPLE}LSPosed Modules${RESET}       ${BOLD}${WHITE}${lsposed_modules}${RESET}        ${GRAY}${RESET}"
+echo -e "  ${GRAY}${RESET}  ${BOLD}${WHITE}📃 Apps & Modules Stats (docs)${RESET}              ${GRAY}${RESET}"
+echo -e "  ${GRAY}------------------------------------+${RESET}"
+echo -e "  ${GRAY}${RESET}  ${CYAN}Total Entries${RESET}         ${BOLD}${WHITE}${all_entries}${RESET}      ${GRAY}${RESET}"
+echo -e "  ${GRAY}------------------------------------+${RESET}"
+echo -e "  ${GRAY}${RESET}  ${BLUE}Root Apps${RESET}              ${BOLD}${WHITE}${root_apps}${RESET}      ${GRAY}${RESET}"
+echo -e "  ${GRAY}${RESET}  ${ORANGE}Magisk Modules${RESET}        ${BOLD}${WHITE}${magisk_modules}${RESET}      ${GRAY}${RESET}"
+echo -e "  ${GRAY}${RESET}  ${GREEN}KernelSU Modules${RESET}      ${BOLD}${WHITE}${kernelsu_modules}${RESET}      ${GRAY}${RESET}"
+echo -e "  ${GRAY}${RESET}  ${PURPLE}LSPosed Modules${RESET}       ${BOLD}${WHITE}${lsposed_modules}${RESET}      ${GRAY}${RESET}"
 echo ""
