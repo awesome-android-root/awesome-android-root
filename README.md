@@ -73,7 +73,7 @@ Browse them in [`docs/apps-and-modules/`](docs/apps-and-modules/):
 | **[📖 Rooting Guides](docs/rooting-guides/index.md)** | Introduction, root framework comparison, Magisk/KernelSU/APatch/LSPosed setup, bootloader unlocking, custom recovery, device-specific guides |
 | **[🛡️ General Guides / Tutorials](docs/general-guides/index.md)** | Ad blocking, debloating, stopping Play Store auto-updates |
 | **[❓ FAQ](docs/faqs.md)** | Common questions before &amp; after rooting |
-| 🔧 **Troubleshooting** | Bootloops, Magisk/KernelSU/APatch issues, Play Integrity &amp; banking apps |
+| **[🔧 Troubleshooting](docs/troubleshooting.md)** | Bootloops, Magisk/KernelSU/APatch issues, Play Integrity &amp; banking apps |
 | **[🔀 Non-Root Alternatives](docs/non-root-alternatives.md)** | Get many root-like features without root (Shizuku, ADB...) |
 | **[🌐 Community Resources](docs/resources.md)** | Firmware, tooling, communities &amp; emergency help |
 | **[📝 Contributing](docs/contributing.md)** | How to add apps, modules &amp; guides |
