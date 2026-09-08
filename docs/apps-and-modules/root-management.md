@@ -129,7 +129,6 @@ Exploits like **GhostLock (CVE-2026-43499)** - a 15-year-old Linux kernel bug - 
 ## LSPosed & Xposed
 
 > [!NOTE]
-> 
 > LSPosed allows you to use Xposed modules, that can modify or extend the functionality of your Android system and apps.
 
 - **[⭐ Vector](https://github.com/JingMatrix/Vector)** - Open Source *Fork* of original LSPosed with dynamic module loading, and other improvements. `FOSS` `[M]`
@@ -244,4 +243,3 @@ SUSFS (Systemless User Space File System) is a kernel-level module that allows r
 - **[Securify](https://github.com/RabehX/Securify)** - Yet Another Root Checker and Play Integrity API Application. `FOSS`
 - **[ZygoteNextProbe](https://github.com/XiaoTong6666/ZygoteNextProbe)** - Research probe that checks whether Android 17's `zygote_next` native isolated services leak a global mount view - potentially exposing Magisk/Zygisk/LSPosed mounts to apps. `FOSS`
 
-</div>
