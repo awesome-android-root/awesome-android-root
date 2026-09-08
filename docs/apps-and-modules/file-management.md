@@ -59,8 +59,7 @@ head:
 Magisk/KernelSU modules, and file & partition tools for power users.
 
 > [!TIP]
-> Related: [Backup & Restore](/apps-and-modules/backup.md) protects your files and app data before you clean or
-> flash anything.
+> Related: [Backup & Restore](/apps-and-modules/backup.md) protects your files and app data before you clean or flash anything.
 
 <ClientOnly>
   <AppSearch />
@@ -84,6 +83,7 @@ Magisk/KernelSU modules, and file & partition tools for power users.
 - **[Solid Explorer](https://play.google.com/store/apps/details?id=pl.solidexplorer2)** - Powerful file manager with root support. `Proprietary`
 - **[Sortify](https://github.com/xCaptaiN09/Sortify)** - Automatically organizes files in your Download folder. `FOSS` `[M]` `[K]`
 - **[Total Commander](https://play.google.com/store/apps/details?id=com.ghisler.android.TotalCommander)** - A feature rich file manager for Android. For  a better experience, please read [this](https://www.ghisler.ch/board/viewforum.php?f=22). `Proprietary`
+- **[Ultimate File Manager Pro](https://github.com/Kilowatch/ultimate-file-manager-pro)** - Dual-Pane File Manager for Android Mobile, Android TV, and Windows PC. `FOSS`
 - **[ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)** - A program for archive management (including managing of application backups in archives). `Proprietary`
 
 ## Cleaning
