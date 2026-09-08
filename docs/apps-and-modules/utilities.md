@@ -85,7 +85,7 @@ tools, sharing & intent tweaks, communication helpers and all-in-one power-user 
 - **[Basic Call Recorder](https://github.com/chenxiaolong/BCR)** - A Basic Call Recorder for rooted Android devices. Also check out [GUI for BCR ↗](https://github.com/nicorac/bcr-gui). `FOSS` `[M]` `[K]`
 - **[Contacts Sync](https://play.google.com/store/apps/details?id=com.lb.contacts_sync)** - Uses root to sync your address book with high-quality contacts photos from WhatsApp. `Proprietary`
 - **[XposedForwardSms](https://github.com/XiaoMiHongZhaJi/XposedForwardSms)** - Forward text messages. `FOSS` `[LSP]`
-- **[XposedSmsCode](https://gitlab.com/magisk3171/XposedSmsCode)** - Recognize SMS verification codes and copy them to the clipboard, or automatically input verification codes. `FOSS` `[LSP]`
+- **[XposedSmsCode](https://gitlab.com/magisk3171/XposedSmsCode)** - Recognize SMS verification codes and copy them to the clipboard, or automatically input verification codes. `FOSS` `[LSP]` | [▶️](https://play.google.com/store/apps/details?id=com.github.tianma8023.xposed.smscode)
 - **[XposedSmsCode by Rove24](https://github.com/Rove24/XposedSmsCode)** - Automatically recognizes and parses SMS verification codes, copies them to the clipboard, and auto-fills them into active text fields. `FOSS` `[LSP]`
 
 ## General Toolboxes
