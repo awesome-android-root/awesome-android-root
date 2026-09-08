@@ -95,6 +95,7 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 - **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
 - **[KeyFlux](https://github.com/NawafCode/KeyFlux)** - Customize Google Gboard, exposing selected hidden features, and adding clipboard-related enhancements. `FOSS` `[LSP]`
 - **[LSpot](https://codeberg.org/dapsvi/LSpot)** - Blocks ads in Spotify by intercepting OkHttp requests to ad endpoints. `FOSS` `[LSP]`
+- **[MiFitnessAdAway](https://github.com/hao1196561270/MiFitnessAdAway)** - Remove ads from Xiaomi Mi Fitness (Xiaomi Sports & Health, com.mi.health 3.0+). `FOSS` `[LSP]`
 - **[Nexus](https://github.com/niki914/agentic-nexus)** - Plug your own model into your phone's voice assistant. `Proprietary` `[LSP]`
 - **[NSG Tweaks](https://github.com/h3nnes/nsg-tweaks)** - Extends [NSG (QuickTest) ↗](https://play.google.com/store/apps/details?id=com.qtrun.QuickTest) with additional columns, rows, signaling tools, and log-replay improvements. `Proprietary` `[LSP]`
 - **[Pixelify Infinity](https://github.com/samson910022/pixelify-google-photos-modern)** - Xposed module to enable Pixel-exclusive features in Google Photos. `FOSS` `[LSP]`
