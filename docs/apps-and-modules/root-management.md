@@ -151,6 +151,7 @@ A feature that lets modules inject code into Android's Zygote process for system
 - **[⭐ Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)** The "Gold Standard" for detection evasion. It is a standalone Zygisk implementation that offers the most advanced stealth features, including a dedicated **Zygote Monitor** and dashboard. `Proprietary` `[M]` `[K]` `[A]`
 - **[NeoZygisk](https://github.com/JingMatrix/NeoZygisk)** A minimalist, high-stealth implementation using **ptrace injection**. It focuses on "trace cleaning," aiming to remove all injection artifacts from memory once modules are loaded. `FOSS` `[M]` `[K]` `[A]`
 - **[ReZygisk](https://github.com/PerformanC/ReZygisk)** A high-performance implementation **entirely rewritten in C**. It introduces **custom linkers** to bypass modern linker-based detections, offering a WebUI for status monitoring and compatibility with Android 15 and 16. `FOSS` `[M]` `[K]` `[A]`
+- **[VexZygisk](https://github.com/Lxiaoyao077/VexZygisk/)** - Standalone implementation of Zygisk for KernelSU and APatch. `FOSS` `[M]` `[K]` `[A]`
 
 <details><summary><strong>Comparison table</strong></summary><br>
 
