@@ -174,6 +174,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[Auto Uninstaller](https://github.com/MeRaazi/auto-uninstaller)** - Automatically uninstall blacklisted apps. `FOSS` `[K]`
 - **[BanUninstall](https://github.com/TinyHai/BanUninstall/)** - Prevents apps from being uninstalled or apps' data from being cleared. `FOSS` `[LSP]`
 - **[BetterKnownInstalled](https://github.com/Pixel-Props/BetterKnownInstalled)** - Patches packages to fix DroidGuard UNKNOWN_INSTALLED issues. `FOSS` `[LSP]`
+- **[Buge App Manager](https://github.com/BugeStudioTeam/Buge-App-Manager)** - Built with Material Design 3 Expressive designed for advanced app and permission management. `FOSS`
 - **[F-Droid Privileged Extension](https://gitlab.com/fdroid/privileged-extension)** - Enables F-Droid to install and delete apps without needing "Unknown Sources" & install updates in the background. `FOSS` | [🌱](https://f-droid.org/en/packages/org.fdroid.fdroid.privileged/)
 - **[Ice Box](https://play.google.com/store/apps/details?id=com.catchingnow.icebox)** - Freeze and hide apps rarely used. `Proprietary`
 - **[InstallerX-Revived](https://github.com/wxxsfxyzm/InstallerX-Revived)** - A modern and functional Android app installer. `FOSS` `[LSP]`
