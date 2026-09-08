@@ -100,6 +100,8 @@ Magisk/KernelSU modules, and file & partition tools for power users.
 
 - **[Partition Backup](https://github.com/rhythmcache/partition-backup)** - This Utility Allows You To Save Android Device Partition. `FOSS` `[M]`
 - **[SD Flasher](https://github.com/theblazehen/sd_flasher)** - Flash disk images (.img, .img.gz, .img.xz, .zip) directly to SD cards from your Android device. `FOSS`
+- **[StorageFixer](https://github.com/omersusin/StorageFixer)** - Root app, with an optional Xposed module, that repairs the broken `Android/data`, `Android/obb` and `Android/media` directories and appops left by Android 16 QPR1+ on AOSP-based ROMs. `FOSS` `[LSP]`
+- **[StorageRedirect](https://github.com/AcE77505/storage-redirect-module)** - Redirects an app's external storage directories to its own private data directory, bypassing the Android 11+ FUSE forwarding layer. `FOSS` `[LSP]`
 - **[USB Mass Storage](https://github.com/Enginex0/UsbMassStorage)** - Turn Your Phone into a USB Drive.
 
 </div>
