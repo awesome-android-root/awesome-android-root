@@ -196,25 +196,8 @@ SUSFS (Systemless User Space File System) is a kernel-level module that allows r
 
 - **[⭐ SUSFS for KernelSU](https://github.com/sidex15/susfs4ksu-module)** - Add-on root-hiding service for SUSFS-patched kernels (KernelSU/Next). The core of modern KSU hiding setups. `FOSS` `[M]` `[K]`
 - **[RENE](https://github.com/rrr333nnn333/BRENE)** - SUSFS/KernelSU module for patched kernels with enhanced root hiding & spoofing. `FOSS` `[M]` `[K]`
-- **[ReSuSFS](https://github.com/ahmed-alnassif/ReSuSFS)** - SUSFS/KernelSU module for patched kernels with modern ui and configuration options. `FOSS` `[M]` `[K]`
+- ~~ReSuSFS`~~: Removed on author's request
 
-<details><summary><strong>Click for detailed comparison</strong></summary>
-
-|                             | **BRENE**                                                 | **ReSuSFS**                       |
-| --------------------------- | --------------------------------------------------------- | --------------------------------- |
-| Root hiding                 | **Excellent**                                             | Excellent                         |
-| SuSFS utilization           | **Excellent**                                             | **Excellent**                     |
-| Mount/path hiding           | **Excellent**                                             | Excellent                         |
-| Property/boot spoofing      | **Excellent**                                             | Very good                         |
-| Memory-map hiding           | Very good                                                 | **Excellent**                     |
-| Configuration/extensibility | Good                                                      | **Excellent**                     |
-| Code architecture           | Complex/opinionated                                       | **Cleaner/modular**               |
-| Competing-module behavior   | **Aggressive; automatically removes ReSuSFS/PIF variant** | No equivalent behavior identified |
-| Security/trust assessment   | **⚠️ Requires caution/audit**                             | **Better**                        |
-| **Overall recommendation**  | Powerful but questionable design choice                   | **🏆 Preferred**                  |
-
-<br>
-</details><br>
 
 - **[⭐ HMA-OSS](https://github.com/frknkrc44/HMA-OSS)** - FOSS rewrite of Hide My Applist; hides your app list, settings, and package installers. `FOSS` `[LSP]`
 - **[⭐ TEESimulator](https://github.com/JingMatrix/TEESimulator)** - Create a complete, software-based simulation of a hardware-backed Trusted Execution Environment (TEE) for Key Attestation. `FOSS` `[M]` `[K]`
