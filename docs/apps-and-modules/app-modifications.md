@@ -189,6 +189,10 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 - **[⭐ Piko Patches](https://github.com/crimera/piko)** - Morphe patches for twitter with features like hide promoted tweets, hide promoted accounts, hide promoted trends, hide "who to follow" etc. `FOSS`
 - **[Re:X](https://github.com/Xposed-Modules-Repo/one.dot.rex)** -  Tweaks for the new X / Twitter app. `Proprietary` `[LSP]`
 
+### Zalo
+- **[Zalo Patch](https://github.com/amarinne/zalo-patch)** - Zalo customization module for LSPosed. `FOSS` `[LSP]`
+
+
 > [!TIP]
 > Also check out [App Patchers section](app-modifications.md#app-patchers)
 
