@@ -14,6 +14,7 @@ requests (ThreadPoolExecutor) for drastically faster checking.
 import os, re, sys, time, json, threading, argparse
 from datetime import datetime, timezone
 from pathlib import Path
+from collections.abc import Iterable
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 try:
@@ -23,7 +24,7 @@ except ImportError:
     sys.exit(1)
 
 # ──────────────────────────── config ────────────────────────────
-VERSION           = "2.2.0"
+VERSION           = "2.3.0"
 CONFIG_DIR        = Path.home() / ".repo-freshness-checker"
 TOKEN_FILE        = CONFIG_DIR / "token"
 API_BASE          = "https://api.github.com"
@@ -87,21 +88,47 @@ _SKIP_SEGMENTS = frozenset(
     "new edit delete raw suites check-runs deployments".split()
 )
 
-def extract_repos(filepath: str) -> list[tuple[str, str]]:
-    """Return de-duplicated [(owner, repo), …] from *filepath*."""
-    text = Path(filepath).read_text(encoding="utf-8", errors="ignore")
+def extract_repos(filepaths: str | Path | Iterable[str | Path]) -> list[tuple[str, str]]:
+    """Return de-duplicated [(owner, repo), …] from one or more files."""
+    if isinstance(filepaths, (str, Path)):
+        filepaths = [filepaths]
+
     seen: set[str] = set()
     out: list[tuple[str, str]] = []
-    for m in _GH_URL_RE.finditer(text):
-        owner, repo = m.group(1), m.group(2)
-        repo = re.sub(r"\.git$", "", repo.rstrip("/"))
-        if repo.lower() in _SKIP_SEGMENTS:
-            continue
-        key = f"{owner}/{repo}".lower()
-        if key not in seen:
-            seen.add(key)
-            out.append((owner, repo))
+    for filepath in filepaths:
+        text = Path(filepath).read_text(encoding="utf-8", errors="ignore")
+        for m in _GH_URL_RE.finditer(text):
+            owner, repo = m.group(1), m.group(2)
+            repo = re.sub(r"\.git$", "", repo.rstrip("/"))
+            if repo.lower() in _SKIP_SEGMENTS:
+                continue
+            key = f"{owner}/{repo}".lower()
+            if key not in seen:
+                seen.add(key)
+                out.append((owner, repo))
     return out
+
+
+def find_markdown_files(folder: str | Path) -> list[str]:
+    """Return sorted Markdown files under *folder* with hidden directories ignored."""
+    root = Path(folder)
+    return sorted(
+        str(path)
+        for path in root.rglob("*.md")
+        if not any(part.startswith(".") for part in path.relative_to(root).parts)
+    )
+
+
+def expand_input_paths(paths: list[str]) -> list[str]:
+    """Expand directories to Markdown files; otherwise return the original paths."""
+    expanded: list[str] = []
+    for p in paths:
+        path = Path(p)
+        if path.is_dir():
+            expanded.extend(find_markdown_files(path))
+        elif path.is_file():
+            expanded.append(str(path))
+    return expanded
 
 # ──────────────────── GitHub API layer ──────────────────────────
 def _session(token: str) -> _requests.Session:
@@ -862,6 +889,7 @@ def run_gui():
             self.running = False
             self.last_results = None
             self.last_errors = None
+            self.input_files: list[str] = []
 
             # Apply dark theme
             style = ttk.Style(self)
@@ -956,7 +984,7 @@ def run_gui():
             # Input
             fi0 = ttk.Frame(ff)
             fi0.pack(fill="x")
-            ttk.Label(fi0, text="Input file:").pack(side="left")
+            ttk.Label(fi0, text="Input folder:").pack(side="left")
             self.in_var = tk.StringVar()
             self.in_entry = tk.Entry(fi0, textvariable=self.in_var,
                                      bg=Palette.SURF_ALT, fg=Palette.TEXT,
@@ -965,7 +993,7 @@ def run_gui():
                                      highlightbackground=Palette.BORDER,
                                      highlightcolor=Palette.ACCENT)
             self.in_entry.pack(side="left", fill="x", expand=True, padx=6)
-            ttk.Button(fi0, text="Browse…",
+            ttk.Button(fi0, text="Choose folder…",
                        command=self._browse_in).pack(side="left")
 
 
@@ -1080,8 +1108,12 @@ def run_gui():
                 path = path[5:]
             from urllib.parse import unquote
             path = unquote(path)
-            if Path(path).is_file():
-                self.in_var.set(str(Path(path).resolve()))
+            if Path(path).is_dir():
+                self.input_files = find_markdown_files(path)
+                self._update_input_display()
+            elif Path(path).is_file():
+                self.input_files = [str(Path(path).resolve())]
+                self._update_input_display()
 
         def _on_paste(self, event=None):
             self.after(10, self._check_clipboard_for_path)
@@ -1101,8 +1133,12 @@ def run_gui():
                 path = raw.strip("'\"").strip()
                 if path.startswith("file://"):
                     path = path[7:]
-                if Path(path).is_file():
-                    self.in_var.set(str(Path(path).resolve()))
+                if Path(path).is_dir():
+                    self.input_files = find_markdown_files(path)
+                    self._update_input_display()
+                elif Path(path).is_file():
+                    self.input_files = [str(Path(path).resolve())]
+                    self._update_input_display()
             except (tk.TclError, OSError):
                 pass
 
@@ -1114,9 +1150,16 @@ def run_gui():
                 if self.CONFIG_FILE.exists():
                     data = json.loads(self.CONFIG_FILE.read_text())
                     if "last_input" in data:
-                        p = data["last_input"]
-                        if Path(p).exists():
-                            self.in_var.set(p)
+                        saved = data["last_input"]
+                        if isinstance(saved, str):
+                            saved = [saved]
+                        self.input_files = []
+                        for p in saved:
+                            if Path(p).is_dir():
+                                self.input_files.extend(find_markdown_files(p))
+                            elif Path(p).is_file():
+                                self.input_files.append(str(Path(p)))
+                        self._update_input_display()
                     if "last_output" in data:
                         self.out_var.set(data["last_output"])
                     if "last_workers" in data:
@@ -1128,7 +1171,7 @@ def run_gui():
             try:
                 CONFIG_DIR.mkdir(parents=True, exist_ok=True)
                 data = {
-                    "last_input": self.in_var.get(),
+                    "last_input": self.input_files,
                     "last_output": self.out_var.get(),
                     "last_workers": self.workers_var.get(),
                 }
@@ -1166,13 +1209,23 @@ def run_gui():
             clear_saved_token()
 
         def _browse_in(self):
-            p = filedialog.askopenfilename(
-                title="Select input file",
-                filetypes=[("All files", "*.*"),
-                           ("Markdown", "*.md"),
-                           ("Text", "*.txt")])
-            if p:
-                self.in_var.set(p)
+            folder = filedialog.askdirectory(title="Select folder containing Markdown files")
+            if folder:
+                self.input_files = find_markdown_files(folder)
+                if not self.input_files:
+                    messagebox.showwarning(
+                        "No Markdown files",
+                        "The selected folder contains no Markdown files.",
+                    )
+                self._update_input_display()
+
+        def _update_input_display(self):
+            if len(self.input_files) == 1:
+                self.in_var.set(self.input_files[0])
+            elif self.input_files:
+                self.in_var.set(f"{len(self.input_files)} Markdown files found")
+            else:
+                self.in_var.set("")
 
         def _browse_out(self):
             p = filedialog.asksaveasfilename(
@@ -1257,11 +1310,15 @@ def run_gui():
 
         # ── threaded work ─────────────────────────────────────
         def _start(self):
-            inp = self.in_var.get().strip()
+            inp = list(self.input_files)
+            if not inp:
+                typed_input = self.in_var.get().strip()
+                if typed_input:
+                    inp = [typed_input]
             out = self.out_var.get().strip()
             tok = self.tok_var.get().strip()
-            if not inp or not Path(inp).is_file():
-                messagebox.showerror("Error", "Select a valid input file.")
+            if not inp or any(not Path(path).is_file() for path in inp):
+                messagebox.showerror("Error", "Select valid input files or a folder containing Markdown files.")
                 return
             if not out:
                 messagebox.showerror("Error", "Specify an output file.")
@@ -1296,8 +1353,8 @@ def run_gui():
 
         def _worker(self, inp, out, tok):
             try:
-                self._safe_log("📂 Reading input file …")
-                repos = extract_repos(inp)
+                self._safe_log(f"📂 Reading {len(inp)} input file(s) …")
+                repos = extract_repos(expand_input_paths(inp))
                 self._safe_log(f"🔍 Found {len(repos)} unique GitHub repos")
                 if not repos:
                     self._safe_status("No repos found.")
@@ -1370,7 +1427,7 @@ def run_cli():
     ap = argparse.ArgumentParser(
         description="Check GitHub repo freshness and generate a Markdown report."
     )
-    ap.add_argument("input_file", help="File containing GitHub URLs")
+    ap.add_argument("input_file", nargs="+", help="One or more files or folders containing GitHub URLs")
     ap.add_argument("-o", "--output", default="freshness_report.md",
                     help="Output path  (default: freshness_report.md)")
     ap.add_argument("-f", "--format", choices=["md", "html", "both"],
@@ -1393,8 +1450,9 @@ def run_cli():
         print("⚠  No token - rate limit is 60 req/hr.  "
               "Pass --token or set GITHUB_TOKEN.")
 
-    repos = extract_repos(args.input_file)
-    print(f"🔍  Found {len(repos)} unique GitHub repos in {args.input_file}")
+    expanded = expand_input_paths(args.input_file)
+    repos = extract_repos(expanded)
+    print(f"🔍  Found {len(repos)} unique GitHub repos in {len(expanded)} input file(s)")
     if not repos:
         sys.exit(0)
 
