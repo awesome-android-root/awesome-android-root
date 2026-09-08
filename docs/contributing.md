@@ -117,28 +117,7 @@ Thank you for contributing to **Awesome Android Root**! This guide helps you add
 
 ## Category Pages
 
-Every entry belongs to exactly **one topic page** in `docs/apps-and-modules/`. Apps and modules are **not**
-separated: each page combines root apps, Magisk/KernelSU/APatch and LSPosed modules for that topic. Place your
-entry in the page that matches what the tool *does* for the user:
-
-| Category page | Best for |
-| :--- | :--- |
-| [root-management.md](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/apps-and-modules/root-management.md) | Root managers (Magisk/KernelSU/APatch), temporary root, module managers, metamodules, LSPosed/Xposed & Zygisk, root hiding & Play Integrity, bootloop protection, root detection |
-| [system.md](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/apps-and-modules/system.md) | System tweaks, VBMeta, System UI & OEM frameworks (AOSP, HyperOS, One UI...), boot & startup, app & package management, permissions & AppOps, diagnostics |
-| [debloating.md](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/apps-and-modules/debloating.md) | Removing bloatware / system apps |
-| [performance.md](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/apps-and-modules/performance.md) | Performance, kernels, memory, battery, charging, task management |
-| [privacy.md](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/apps-and-modules/privacy.md) | Privacy tools, device ID & location spoofing, app isolation |
-| [security.md](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/apps-and-modules/security.md) | Security tools, firewalls & filtering |
-| [ad-blocking.md](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/apps-and-modules/ad-blocking.md) | Hosts-based ad blockers, DNS filtering |
-| [app-modifications.md](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/apps-and-modules/app-modifications.md) | App patchers, app mods, social media / browser / YouTube mods, signature tools |
-| [file-management.md](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/apps-and-modules/file-management.md) | File managers, cleaners, file & partition tools |
-| [backup.md](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/apps-and-modules/backup.md) | Backup & restore, data recovery |
-| [customization.md](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/apps-and-modules/customization.md) | Themes, launchers, status bar, fonts, notifications, display |
-| [audio.md](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/apps-and-modules/audio.md) | Audio enhancement, control, effects |
-| [networking.md](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/apps-and-modules/networking.md) | VPN/proxy modules, network tools, Wi-Fi, Bluetooth & NFC |
-| [gaming.md](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/apps-and-modules/gaming.md) | Gaming tweaks & game tools |
-| [development.md](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/apps-and-modules/development.md) | Terminal, ADB, developer tools, Linux environments, automation, hardware |
-| [utilities.md](https://github.com/awesome-android-root/awesome-android-root/blob/main/docs/apps-and-modules/utilities.md) | Sync, power, sharing, communication, general toolboxes |
+Every entry belongs to exactly **one topic page** in `docs/apps-and-modules/`. Place your entry in the page that matches what the tool *does* for the user.
 
 **Unsure?** Look for similar apps inside the category page, or open a
 [Taxonomy Change](https://github.com/awesome-android-root/awesome-android-root/issues/new?template=taxonomy-change.md)
@@ -215,28 +194,7 @@ issue if you believe a whole category should move, merge or split.
 
 ## Pull Request Template
 
-When submitting, use this format:
-
-```
-### What I'm Adding
-- [App Name] - Brief description
-- Category: [Category Name]
-- Framework: [Magisk/KernelSU/APatch/LSPosed/Root App]
-
-### Checklist
-- [ ] Tested all links
-- [ ] App requires root access
-- [ ] No duplicates found
-- [ ] Correct format used
-- [ ] Placed in right category alphabetically
-- [ ] Added proper tags (license, framework, store icons)
-
-### Links
-- Primary: [Best available link]
-- Source: [GitHub/GitLab if available]
-- F-Droid: [F-Droid link if available]
-- Play Store: [Play Store link if available]
-```
+Visit [Pull Request Template ↗](https://github.com/awesome-android-root/awesome-android-root/blob/main/.github/PULL_REQUEST_TEMPLATE.md)
 
 ## Need Help?
 
