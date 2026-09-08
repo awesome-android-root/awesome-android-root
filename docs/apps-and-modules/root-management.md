@@ -243,3 +243,4 @@ SUSFS (Systemless User Space File System) is a kernel-level module that allows r
 - **[Securify](https://github.com/RabehX/Securify)** - Yet Another Root Checker and Play Integrity API Application. `FOSS`
 - **[ZygoteNextProbe](https://github.com/XiaoTong6666/ZygoteNextProbe)** - Research probe that checks whether Android 17's `zygote_next` native isolated services leak a global mount view - potentially exposing Magisk/Zygisk/LSPosed mounts to apps. `FOSS`
 
+</div>
