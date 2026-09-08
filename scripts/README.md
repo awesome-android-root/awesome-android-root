@@ -43,6 +43,8 @@ pip install -r scripts/repo_freshness_checker/requirements.txt
 
 ```bash
 python scripts/repo_freshness_checker/repo_freshness_checker.py docs/apps-and-modules/privacy.md -o report.md -t <github_token>
+# Check several category pages; duplicate repositories are checked only once
+python scripts/repo_freshness_checker/repo_freshness_checker.py docs/apps-and-modules/*.md -o report.md -t <github_token>
 ```
 
 ### GUI Usage
@@ -50,6 +52,8 @@ python scripts/repo_freshness_checker/repo_freshness_checker.py docs/apps-and-mo
 ```bash
 python scripts/repo_freshness_checker/repo_freshness_checker.py
 ```
+
+The GUI input picker lets you choose a folder and automatically reads all `.md` files in it and its subfolders. Repositories are de-duplicated across all discovered files.
 
 > **Note:** The project content lives in `docs/` (built with VitePress). There is no content auto-generation
 > step anymore: category pages under `docs/apps-and-modules/` are the canonical source and are edited directly.
