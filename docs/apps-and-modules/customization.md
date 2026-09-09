@@ -101,6 +101,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[MiNavBarImmerse](https://github.com/Ianzb/MiNavBarImmerse)** - Optimizes the Xiaomi NavBar immersion by replacing the NavBar configuration file of third-party applications built into Xiaomi HyperOS 2.2. `FOSS` `[LSP]`
 - **[NavTweaks](https://github.com/Magisk-Modules-Alt-Repo/HideNavBar)** - Fullscreen/Immersive Gesture Tweaks for Android 10-14. `FOSS` `[M]`
 - **[QS Boundless Tiles](https://github.com/hxreborn/qs-boundless-tiles)** - Keeps third-party Quick Settings tiles responsive on Android 13+. `FOSS` `[LSP]`
+- **[Smart Dock](https://github.com/axel358/smartdock)** - A user-friendly desktop mode launcher that offers a modern and customizable user interface. `FOSS`
 
 ## Gestures & Controls
 
