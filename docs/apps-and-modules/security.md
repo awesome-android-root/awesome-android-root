@@ -81,6 +81,7 @@ firewalls for hardening your device, controlling which apps can reach the networ
 - **[AlternativeUnlockXposed](https://github.com/leohearts/AlternativeUnlockXposed)** - Unlock your Android phone with an alternative PIN. `FOSS` `[LSP]`
 - **[Always Trust User Certs](https://github.com/NVISOsecurity/AlwaysTrustUserCerts)** - A Magisk/KernelSU module that automatically adds user certificates to the system root CA store. `FOSS` `[M]` `[K]`
 - **[Android-FlagSecure-Disabler](https://github.com/BlassGO/Android-FlagSecure-Disabler)** - FlagSecure Disabler, Screenshot Observer Disabler & DRM Disabler. `FOSS` `[M]` `[K]`
+- **[Anti SafetyCore](https://github.com/Astoritin/AntiSafetyCore)** - Blocks Google from quietly installing Android System SafetyCore and Android System Key Verifier by holding the package names with differently signed placeholder apps. `FOSS` `[M]` `[K]` `[A]`
 - **[Biometric App Lock](https://github.com/hxreborn/biometric-app-lock)** - Locks apps you choose behind fingerprint or face unlock. `FOSS` `[LSP]`
 - **[Biometric Bypass Module](https://github.com/hxreborn/biometric-bypass)** - Fast-forwards face unlock by skipping the biometric confirmation step in System UI on Android 10+. `FOSS` `[LSP]` | [🌱](https://f-droid.org/packages/eu.rafareborn.biometricbypass)
 - **[CaptureSposed](https://github.com/99keshav99/CaptureSposed)** - Disables the newly introduced screenshot detection API in Android 14. `FOSS` `[LSP]`
@@ -93,9 +94,11 @@ firewalls for hardening your device, controlling which apps can reach the networ
 - **[Just Trust Me Pro](https://github.com/hang666/JustTrustMePro)** - Disables SSL certificate checking for the purposes of auditing an app with cert pinning. `FOSS` `[M]`
 - **[OneShot Extended](https://github.com/chickendrop89/OneShot-Extended)** - Performs various WPS attacks without the requirement of monitor mode. `FOSS` `[M]` `[K]`
 - **[PinGuard](https://github.com/khiqwq/PinGuard/blob/main/README_EN.md)** - LSPosed module that requires fingerprint / password to unpin screen-pinned apps. `FOSS` `[LSP]`
+- **[SafetyCore Placeholder](https://github.com/daboynb/Safetycore-placeholder)** - Placeholder APK that keeps Google SafetyCore from being installed or updated again, thanks to a signature mismatch. `FOSS`
 - **[Simple Flag Secure](https://github.com/ShivamXD6/Simple-Flag-Secure)** - Disable Secure Flag and allow taking screenshots/screen recording in apps supports KSU/APatch . `FOSS` `[M]` `[K]`
 - **[StrykerOSS](https://github.com/zalexdev/strykerapp)** - Bundles a curated set of network, wireless and web security tools into a single rooted-Android application for penetration testing. `FOSS`
 - **[TapDucky](https://github.com/iodn/tap-ducky)** - Open-source DuckyScript runner for rooted Android with USB Gadget (ConfigFS) support. `FOSS`  | [🌱](https://f-droid.org/en/packages/org.kaijinlab.tap_ducky/)
+- **[Zygisk Cacerts](https://github.com/vvb2060/zygisk_cacerts)** - Zygisk module that replaces the local root certificate store with the AOSP CA certificate list. `Proprietary` `[M]` `[K]`
 
 ## Firewalls & Filtering
 

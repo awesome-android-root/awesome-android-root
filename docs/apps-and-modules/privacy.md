@@ -95,6 +95,8 @@ tracking, spoofing your device identity or location, and isolating apps from you
 - **[HideMyAndroid](https://github.com/Xposed-Modules-Repo/com.wowsoftware.hidemyandroid/)** - Android anti-detect module with profile isolation and spoofing. `Proprietary` `[LSP]`
 - **[MAC Editor for Android](https://github.com/jqssun/android-mac-editor)** - Securely edit Wi-Fi MAC address on Android. `FOSS` `[LSP]`
 - **[MACsposed](https://github.com/DavidBerdik/MACsposed)** - Adds support for MAC Address spoofing to Android 12 through 15. `Proprietary` `[LSP]`
+- **[Mantle](https://github.com/get-mantle/Mantle)** - Xposed module that masks hardware IDs, advertising IDs, build properties, carrier and SIM data, Wi-Fi/Bluetooth MACs and location per app. `Proprietary` `[LSP]`
+- **[Mantle Verify](https://github.com/get-mantle/Mantle-Verify)** - Companion diagnostics app that shows the device, network and account identifiers regular apps can read, and confirms which spoofed values are active. `Proprietary`
 - **[Privacy Kit](https://github.com/Xposed-Modules-Repo/com.sal.privacykit)** - Per-app Android identifier spoofing for LSPosed. `Proprietary` `[LSP]`
 - **[SpoofMyDevice](https://github.com/BuSung-dev/SpoofMyDevice)** - Xposed module and companion app for building, saving, and applying spoofed Android device profiles to selected apps. `FOSS` `[LSP]`
 - **[SSAID (Android ID Modifier)](https://github.com/HSSkyBoy/AndroidIDChange)** - A modern Android SSAID (Android ID) inspector, modifier, backup, and management utility. `FOSS` `[LSP]`

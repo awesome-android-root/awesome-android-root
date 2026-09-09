@@ -68,6 +68,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 
 ## System Tweaks
 
+- **[AnyWebView](https://github.com/neoblackxt/AnyWebView)** - Detects every installed WebView and adds it to the Developer options WebView implementation list. `FOSS` `[LSP]` | [🌱](https://apt.izzysoft.de/packages/com.thinkdifferent.anywebview)
 - **[Cromite SystemWebView](https://github.com/hddq/magisk-cromite-webview)** - Replaces the Android System WebView with Cromite WebView. `FOSS` `[M]`
 - **[Disable Low Ram Flag](https://github.com/Magisk-Modules-Alt-Repo/disable-low-ram)** - Disable Low‑RAM flag on Android Go devices. `FOSS` `[M]`
 - **[HyperOS Accessibility Fix](https://github.com/chickendrop89/hyperos-accessibility-fix)** - Stop HyperOS from randomly disabling accessibility services. `FOSS` `[M]` `[K]`
@@ -76,6 +77,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[Noogle Magisk](https://github.com/SelfRef/noogle-magisk)** - Magisk modules for removing/replacing Google applications on stock Android 11-15. `FOSS` `[M]`
 - **[Secure Element Access](https://github.com/jqssun/android-se-access)** - Enable access to secure element for trusted apps. `FOSS`
 - **[TWRP A/B Retention Script](https://github.com/Magisk-Modules-Repo/twrp-keep)** - Keep TWRP installed after an A/B OTA. `FOSS` `[M]`
+- **[Vanadium WebView & Browser](https://github.com/NoneBaiano/Vanadium-WebViewBrowser)** - Replaces the system WebView with Vanadium WebView and installs the Vanadium browser. `FOSS` `[M]` `[K]`
 
 ### VBMeta Mods
 
@@ -88,6 +90,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 
 - **[Android VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer)** - A Magisk/KernelSU/Apatch module to fix VBMeta detections on Android. `FOSS` `[M]` `[K]`
 - **[VBMeta Disguiser](https://github.com/Astoritin/VBMetaDisguiser)** - Disguises the properties of vbmeta. `FOSS` `[M]` `[K]`
+- **[VBMeta Tool](https://github.com/KOWX712/vbmeta_tool)** - Command-line tool that reads the device's vbmeta digest (`verifiedBootHash`) with root. `FOSS`
 
 ## System UI & Framework
 
@@ -169,6 +172,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[⭐ InstallerX-Revived](https://github.com/wxxsfxyzm/InstallerX-Revived)** - A modern and functional Android app installer. `FOSS` `[LSP]`
 - **[⭐ Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. `FOSS` `[M]` `[K]`
 - **[AlterInstaller](https://github.com/chenxiaolong/AlterInstaller)** - Spoof Android package manager installer fields to bypass installation restrictions. `FOSS` `[M]` `[K]`
+- **[AppControl-X](https://github.com/risunCode/AppControl-X)** - Freeze, force stop, clear data and uninstall apps, plus CPU, RAM, storage and battery monitoring, using root or Shizuku. `FOSS`
 - **[App Manager](https://play.google.com/store/apps/details?id=com.lb.app_manager)** - A feature rich app manager with batch operation support. `Proprietary`
 - **[AppDash: App Manager & Backup](https://play.google.com/store/apps/details?id=flar2.appdashboard&hl=en)** - Makes it easy to manage APKs and apps installed on your device. `Proprietary`
 - **[Aurora Store](https://github.com/whyorean/AuroraStore)** - A Google Play Store client to search, view app details, and download APKs directly to your device. `FOSS` | [🌱](https://f-droid.org/packages/com.aurora.store/)
@@ -183,6 +187,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[Let Me Downgrade](https://github.com/DavidBerdik/Let-Me-Downgrade)** - Add support for downgrading apps on Android 12 through 15 QPR1. `FOSS` `[LSP]` | [🌱](https://f-droid.org/packages/com.berdik.letmedowngrade/) | [▶️](https://play.google.com/store/apps/details?id=com.berdik.letmedowngrade)
 - **[Neo Store](https://github.com/NeoApplications/Neo-Store)** - An F-Droid client with modern UI and an arsenal of extra features. `FOSS` | [🌱](https://f-droid.org/packages/com.machiav3lli.fdroid)
 - **[Package Manager](https://github.com/SmartPack/PackageManager)** - A highly powerful app to manage both system and user apps installed on an Android device. `FOSS` | [🌱](https://f-droid.org/packages/com.smartpack.packagemanager) | [▶️](https://play.google.com/store/apps/details?id=com.smartpack.packagemanager)
+- **[PI (PackageInstaller)](https://github.com/SanmerApps/PI)** - Package installer that installs and updates APKs through a root or Shizuku installation service. `FOSS`
 - **[Play Store Self Update Blocker](https://github.com/himanshujjp/PlayStoreSelfUpdateBlocker)** - Prevents the Google Play Store from auto-updating itself. Useful for users trying to maintain valid device attestation under the newer Play Integrity API rules. `FOSS` `[M]` `[K]`
 - **[Play Version Spoofer](https://github.com/byemaxx/PlayVersionSpoofer)** - Prevents the Google Play Store from automatically updating itself. `FOSS` `[LSP]`
 - **[Thor](https://github.com/trinadhthatakula/Thor)** - Android App Manager and App Installer utility. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.valhalla.thor) | [▶️](https://play.google.com/store/apps/details?id=com.valhalla.thor)

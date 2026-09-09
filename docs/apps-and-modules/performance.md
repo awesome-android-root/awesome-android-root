@@ -109,6 +109,7 @@ optimization**, charging control and task & process management.
 
 - **[⭐ FROSTY](https://github.com/Drsexo/Frosty)** - Optimizes battery life by selectively freezing Google Mobile Services (GMS) components and applying system-wide doze enhancements. `FOSS` `[M]` `[K]`
 - **[AntiWakeLock](https://github.com/binarynoise/XposedModulets/releases?q=AntiWakeLock)** - Disable WAKE_LOCK and FLAG_KEEP_SCREEN_ON to save battery. `FOSS` `[LSP]`
+- **[Auto Sleep](https://github.com/The-First-King/Auto-Sleep)** - Scheduled sleep mode that enables airplane mode, turns off Wi-Fi/Bluetooth and forces Doze using root, then restores the previous states. `FOSS`
 - **[BatStats](https://github.com/mlm-games/BatStats)** - Battery monitor with stats via Shizuku/root. `FOSS`
 - **[Battery Info Enabler](https://github.com/klab7/BatteryInfoEnabler)** - Enlocks and enhances the native battery information for Pixel 6+ devices. `FOSS` `[LSP]`
 - **[Battery Guru](https://play.google.com/store/apps/details?id=com.paget96.batteryguru)** - Battery optimization and monitoring. `Proprietary`
@@ -143,6 +144,7 @@ optimization**, charging control and task & process management.
 - **[Background App Slayer (BAS)](https://github.com/UNKNUW/Background-App-Slayer)** - Automatic Killing Background apps. `FOSS` `[M]`
 - **[DeepSuppressor](https://github.com/Aurora-Nasa-1/DeepSuppressor)** - Background process management tool to monitor and control application processes. `FOSS` `[M]`
 - **[Greenify4Magisk/KSU Reborn](https://github.com/Drsexo/Greenify4Magisk-KSU-Reborn)** - Integrates Greenify as a privileged system app to enable Boost Mode, enhancing hibernation performance without modifying the ROM. `FOSS` `[M]` `[K]`
+- **[KillMyApps](https://github.com/dedeadend/KillMyApps)** - Terminates background processes through root or Shizuku to free RAM and save battery, with scheduled auto-kill and a Quick Settings tile. `FOSS`
 - **[No More Background](https://github.com/adil192/no_more_background)** - A fire-and-forget program to stop Android apps from running in the background. `FOSS` | [🌱](https://f-droid.org/en/packages/com.adilhanney.no_more_background/)
 - **[Operator](https://github.com/by-architect/Operator)** - Matrix-inspired Android Task Manager that lets you monitor, manage, and terminate processes directly from your device. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.byarchitect.operator)
 - **[Shappky](https://github.com/YasserNull/shappky)** - A simple app to boost performance by stopping background apps, relying on Root/Shizuku permissions. `FOSS` `[M]`
