@@ -155,6 +155,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[Anti Brightness Change](https://github.com/binarynoise/XposedModulets)** - Prevents every app from changing the screen brightness. `FOSS` `[LSP]` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.programminghoch10.AntiBrightnessChange)
 - **[DarQ Fork](https://github.com/Arora-Sir/DarQ)** - Provides a per-app selectable force dark option for Android 10 and above. `FOSS`
 - **[DPIS](https://github.com/Kwensiu/DPIS)** - LSPosed module for per-app interface scale, smallest width, and font size tuning. `FOSS` `[LSP]`
+- **[Keep Screen Off](https://github.com/Xposed-Modules-Repo/com.ncyxie.keepscreenoff)** - Stops selected apps from holding the screen awake by ignoring `FLAG_KEEP_SCREEN_ON` and screen wakelocks. `FOSS` `[LSP]`
 - **[Pointer Replacer](https://github.com/thesandipv/pointer_replacer)** - Replaces a dot appears when user touch the screen [Require Show Touches to be enabled in Developer Options]. `FOSS` `[LSP]`
 - **[Pseudo DC Dimming](https://github.com/dantmnf/PseudoDCDimming)** - Enable alternative dimming mode (likely DC-like) on low brightness for some OLED displays by using software brightness gain. `FOSS` `[LSP]`
 - **[PureShot](https://github.com/kazutoiris/PureShot)** - Hide status bar, navigation bar, popups, PiP, toast & more. `FOSS` `[LSP]`
