@@ -85,6 +85,8 @@ Browse them in [`docs/apps-and-modules/`](docs/apps-and-modules/):
 > 📝 Read the the [`Contributing Guide ↗`](docs/contributing.md) and the
 [`PR template ↗`](.github/PULL_REQUEST_TEMPLATE.md) for entry format, badges and category placement.
 
+<br>
+
 | Platform | Purpose | Link |
 |:---|:---|:---|
 | 🌐 **Website** | Browse apps, modules & guides | [awesome-android-root.zhoe.org](https://awesome-android-root.zhoe.org) |
@@ -96,6 +98,9 @@ Browse them in [`docs/apps-and-modules/`](docs/apps-and-modules/):
 
 - Licensed under [MIT](LICENSE). 
 - Read the [Legal Disclaimer](docs/legal-disclaimer.md) for details.
+
+> [!NOTE]
+> This project is maintained by `HUMANS` , AI is used for coding, formatting and proofreading and not for content creation or curation. 
 
 > [!IMPORTANT]
 > **Educational reference only. Proceed at your own risk.**
