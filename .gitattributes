@@ -1,0 +1,21 @@
+# GitHub Linguist configuration
+
+# Count Markdown files in language statistics
+*.md linguist-detectable=true
+
+# Exclude VitePress implementation from language statistics
+docs/.vitepress/** linguist-detectable=false
+
+# Exclude package/configuration files
+package.json linguist-detectable=false
+*.json linguist-detectable=false
+*.yml linguist-detectable=false
+*.yaml linguist-detectable=false
+
+# Exclude editor/project configuration
+.vscode/** linguist-detectable=false
+.github/** linguist-detectable=false
+
+# Exclude miscellaneous non-source files
+.gitignore linguist-detectable=false
+LICENSE linguist-detectable=false
