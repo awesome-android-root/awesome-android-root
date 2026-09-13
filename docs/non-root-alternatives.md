@@ -64,9 +64,6 @@ head:
     - name: twitter:image:alt
       content: Non-Root Alternatives - ADB, Shizuku & More
   - - meta
-    - name: keywords
-      content: android without root, non-root customization, adb alternatives, shizuku android, no root required apps
-  - - meta
     - name: robots
       content: index, follow
 ---

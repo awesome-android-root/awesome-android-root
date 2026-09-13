@@ -13,9 +13,6 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - name: keywords
-      content: "android performance optimization, root performance modules, kernel manager android, cpu governor, memory management, ram optimization, battery optimization root, battery saver magisk, charging control, thermal tweaks, task manager android, fstrim, uperf"
-  - - meta
     - property: og:type
       content: article
   - - meta

@@ -13,9 +13,6 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - name: keywords
-      content: "android gaming modules, fps unlocker magisk, game performance tweaks, uperf, gpu tweaks root, game resolution changer, kernelsu gaming, gaming tools android"
-  - - meta
     - property: og:type
       content: article
   - - meta

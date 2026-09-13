@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: "Root Without Unlocking the Bootloader: GhostLock Temporary Root Explained"
-description: "Temporarily root Android without unlocking the bootloader using GhostLock (CVE-2026-43499)."
+title: "GhostLock: Root Android Without Unlocking the Bootloader"
+description: "Can Android be rooted without unlocking the bootloader? Learn how GhostLock provides temporary root, its device limits, reboot behavior and security risks."
 head:
   - - link
     - rel: canonical
@@ -13,17 +13,14 @@ head:
     - name: robots
       content: index, follow
   - - meta
-    - name: keywords
-      content: "root without unlocking bootloader, ghostlock, cve-2026-43499, temporary root android, temp root, root without tripping knox, root my galaxy, root my pixel, root my device, ghostlock oneplus, kernelsu without bootloader unlock, one click root, session root, android kernel exploit root"
-  - - meta
     - property: og:type
       content: article
   - - meta
     - property: og:title
-      content: "Root Without Unlocking the Bootloader: GhostLock Temporary Root Explained"
+      content: "GhostLock: Root Android Without Unlocking the Bootloader"
   - - meta
     - property: og:description
-      content: "How the GhostLock kernel bug (CVE-2026-43499) gives you temporary root on a locked bootloader - no Knox trip, no flashing - and its real limits."
+      content: "Can Android be rooted without unlocking the bootloader? GhostLock can provide temporary root on some vulnerable builds, with clear limits and no persistence after reboot."
   - - meta
     - property: og:url
       content: https://awesome-android-root.zhoe.org/rooting-guides/root-without-unlocking-bootloader
@@ -38,10 +35,10 @@ head:
       content: summary_large_image
   - - meta
     - name: twitter:title
-      content: "Root Without Unlocking the Bootloader: GhostLock Temporary Root Explained"
+      content: "GhostLock: Root Android Without Unlocking the Bootloader"
   - - meta
     - name: twitter:description
-      content: "GhostLock (CVE-2026-43499): temporary root with a locked bootloader. What it does, what it can't do, and every app and project for it."
+      content: "GhostLock temporary root with a locked bootloader: supported builds, limitations, security considerations and related projects."
   - - meta
     - name: article:author
       content: Awesome Android Root
@@ -50,7 +47,7 @@ head:
       content: 2026-08-26
   - - meta
     - name: article:modified_time
-      content: 2026-08-26
+      content: 2026-09-13
   - - meta
     - name: article:section
       content: Guides
@@ -66,9 +63,37 @@ head:
   - - meta
     - name: article:tag
       content: KernelSU
+  - - script
+    - type: application/ld+json
+    - |
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "@id": "https://awesome-android-root.zhoe.org/rooting-guides/root-without-unlocking-bootloader#article",
+        "headline": "GhostLock: Root Android Without Unlocking the Bootloader",
+        "description": "How GhostLock provides temporary Android root on supported vulnerable builds, and what it cannot do.",
+        "image": "https://awesome-android-root.zhoe.org/images/og.png",
+        "author": { "@id": "https://awesome-android-root.zhoe.org/#organization" },
+        "publisher": { "@id": "https://awesome-android-root.zhoe.org/#organization" },
+        "datePublished": "2026-08-26",
+        "dateModified": "2026-09-13",
+        "mainEntityOfPage": {
+          "@id": "https://awesome-android-root.zhoe.org/rooting-guides/root-without-unlocking-bootloader#webpage"
+        },
+        "articleSection": "Android Rooting Guides",
+        "inLanguage": "en-US",
+        "isAccessibleForFree": true
+      }
+
 ---
 
-# Root Without Unlocking the Bootloader: the GhostLock Temporary Root Guide
+# GhostLock: Root Android Without Unlocking the Bootloader
+
+**Can Android be rooted without unlocking the bootloader?** Sometimes, but only temporarily and only on a narrow set of vulnerable device builds. GhostLock (CVE-2026-43499) can grant an in-memory root session while the bootloader remains locked; it is not a permanent replacement for bootloader unlocking.
+
+- **What it is:** a device- and security-patch-dependent temporary root technique.
+- **What it is not:** persistent root, a bootloader unlock, a way to flash a custom ROM or recovery, or a guarantee that every listed model still works.
+- **After reboot:** the session root is gone and the tool must be run again, if the device firmware is still vulnerable.
 
 *The GhostLock bug (CVE-2026-43499), explained in plain English.*
 
@@ -180,7 +205,7 @@ Everything public that implements or enables CVE-2026-43499 temporary root, grou
 - **[KernelSU](https://github.com/tiann/KernelSU)** - The kernel-based root framework every GhostLock tool installs for the session (loaded as a module via `ksud`).
 - **[ReSukiSU](https://github.com/ReSukiSU/ReSukiSU)** - KernelSU fork favored by several GhostLock tools; its `ksud` provides the late-load (LKM) install path and its app bundles the needed module binaries. Also powers the auto-re-trigger-at-boot integrations.
 - **[Shizuku](https://github.com/RikkaApps/Shizuku)** - Not root-related by itself, but Root My Pixel (and similar apps) use it to stage the exploit payload with ADB-level privileges - no prior root needed.
-- **[Kaeru / Fenrir & other MediaTek bootloader tools](./temporary-root-solutions.md)** - A *different* route to "root-like" results on a locked device (bootloader patching rather than kernel exploitation). Covered on the [Bootloader Modification & Temporary Root Solutions](./temporary-root-solutions.md) page.
+- **[Kaeru / Fenrir & other MediaTek bootloader tools](./temporary-root-solutions.md)** - A *different* route to "root-like" results on a locked device (bootloader patching rather than kernel exploitation). Covered on the [Temporary Root for Android: Methods & Solutions](./temporary-root-solutions.md) page.
 
 > [!CAUTION]
 > Only download these tools from the GitHub repositories linked above. Fake "one-click root" apps shipping malware ride every exploit hype cycle, and a malicious "GhostLock" APK would be a perfect vehicle. Verify the repo, prefer building from source, and read the code if you're able.
@@ -249,16 +274,16 @@ Not really. Rebooting clears it by design - that's the trade for keeping the boo
 Usually not. Apps like Root My Galaxy and the GhostLock App handle everything on-device (some use Shizuku or wireless ADB, which the app walks you through). The CLI ports like ghostlock-oneplus are more comfortable with ADB.
 
 **Q: Is this the same as the MediaTek bootloader tools (Kaeru/Fenrir)?**
-No - different technique, same "avoid the unlocked bootloader" goal. Kaeru/Fenrir patch the bootloader itself and require flashing; GhostLock exploits the kernel in memory. See the [Bootloader Modification & Temporary Root Solutions](./temporary-root-solutions.md) page for that side.
+No - different technique, same "avoid the unlocked bootloader" goal. Kaeru/Fenrir patch the bootloader itself and require flashing; GhostLock exploits the kernel in memory. See the [Temporary Root for Android: Methods & Solutions](./temporary-root-solutions.md) page for that side.
 
 **Q: My device isn't listed anywhere - can I add it?**
 Possibly. The exploits need per-device offsets; ghostlock-oneplus documents how to extract them from just a `boot.img`, GhostLock-Galaxy ships a `tools/extract_target.py` that parses them from `boot.img` + `xbl_config.img`, and Root-My-Galaxy-Payloads explains the profile format. Check each repo's contributing notes.
 
 ## Related pages
 
-- [Bootloader Modification & Temporary Root Solutions](./temporary-root-solutions.md) - the broader family: Kaeru, Fenrir, and other locked-bootloader approaches
+- [Temporary Root for Android: Methods & Solutions](./temporary-root-solutions.md) - the broader family: Kaeru, Fenrir, and other locked-bootloader approaches
 - [Root Framework Comparison](./root-framework-comparison.md) - choosing between Magisk, KernelSU, and APatch for permanent root
-- [Complete Bootloader Unlocking Guide](./how-to-unlock-bootloader.md)
+- [How to unlock an Android bootloader](./how-to-unlock-bootloader.md)
 - [Samsung Rooting Guide](./how-to-root-samsung-phone.md) - Knox trade-offs in detail
 - [OnePlus Rooting Guide](./how-to-root-oneplus-phone.md) • [Pixel Rooting Guide](./how-to-root-pixel-phone.md)
 - [Root Hiding & Play Integrity](/apps-and-modules/root-management#root-hiding-play-integrity) - keeping apps happy once you *are* rooted

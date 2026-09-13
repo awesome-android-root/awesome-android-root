@@ -43,9 +43,6 @@ head:
     - name: twitter:image:alt
       content: LSPosed Framework Installation Guide
   - - meta
-    - name: keywords
-      content: lsposed guide, xposed framework, zygisk modules, lsposed installation, android customization, xposed modules
-  - - meta
     - name: author
       content: Awesome Android Root Project
   - - meta

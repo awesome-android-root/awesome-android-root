@@ -13,9 +13,6 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - name: keywords
-      content: "android debloating, remove bloatware, debloat magisk, system app remover, uninstall system apps, debloat kernelsu, adb debloat root, samsung debloat, xiaomi debloat, canta, debloater"
-  - - meta
     - property: og:type
       content: article
   - - meta

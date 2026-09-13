@@ -13,9 +13,6 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - name: keywords
-      content: "android vpn module, clash magisk, sing-box, transparent proxy root, network tools android, wifi tools root, 5g switch, hotspot module, bluetooth mods, nfc emulator, nfc modules"
-  - - meta
     - property: og:type
       content: article
   - - meta

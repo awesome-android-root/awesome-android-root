@@ -13,9 +13,6 @@ head:
     - name: robots
       content: index, follow
   - - meta
-    - name: keywords
-      content: "android ad blocking, root ad blocker, AdAway, Bindhosts, hosts file, system-wide ad blocking, magisk ad blocking, kernelsu ad blocking, apatch ad blocking"
-  - - meta
     - property: og:type
       content: article
   - - meta

@@ -13,9 +13,6 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - name: keywords
-      content: "android privacy apps, privacy magisk modules, privacy kernelsu modules, lsposed privacy modules, hide apps, microg, hide mock location, fake gps root, device id spoof, app isolation, permission privacy, data access control"
-  - - meta
     - property: og:type
       content: article
   - - meta

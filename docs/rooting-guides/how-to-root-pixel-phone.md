@@ -43,9 +43,6 @@ head:
     - name: twitter:image:alt
       content: Google Pixel Root Guide - Bootloader Unlock & Magisk Installation
   - - meta
-    - name: keywords
-      content: pixel root guide, pixel 9 root, pixel 8 root, google pixel magisk, pixel bootloader unlock
-  - - meta
     - name: author
       content: Awesome Android Root Project
   - - meta

@@ -131,9 +131,6 @@ head:
     - name: bingbot
       content: index, follow
   # Stop App Updates specific keywords
-  - - meta
-    - name: keywords
-      content: stop app updates, disable auto update android, detach apps play store, zygisk detach, magisk modules, kernelsu, prevent app updates, play store auto update
 
 ---
 

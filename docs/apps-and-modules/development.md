@@ -13,9 +13,6 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - name: keywords
-      content: "android development tools, termux, adb tools root, wireless debugging, logcat magisk, linux on android, chroot, docker android, tasker, macrodroid, automate, automation root, shizuku, selinux permissive, android scripting"
-  - - meta
     - property: og:type
       content: article
   - - meta

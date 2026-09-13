@@ -43,9 +43,6 @@ head:
     - name: twitter:image:alt
       content: Nothing Phone Root Guide - All Models
   - - meta
-    - name: keywords
-      content: nothing phone root, nothing os root, nothing phone bootloader unlock, nothing phone magisk, twrp nothing phone, nothing phone 1 root, nothing phone 2 root, nothing phone 2a root, nothing phone 3 root
-  - - meta
     - name: author
       content: Awesome Android Root Project
   - - meta

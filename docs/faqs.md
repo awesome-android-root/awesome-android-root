@@ -49,9 +49,6 @@ head:
     - name: twitter:image:alt
       content: Android Rooting FAQ & Troubleshooting Guide 2026
   - - meta
-    - name: keywords
-      content: android rooting faq 2026, android 15 root, rooting troubleshooting guide, bootloop fix, magisk troubleshooting, kernelsu, apatch, play integrity, root detection, adb fastboot, bootloader unlock, emergency android recovery
-  - - meta
     - name: author
       content: Awesome Android Root Project
   - - meta
