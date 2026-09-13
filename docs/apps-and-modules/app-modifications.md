@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "App Modifications"
-description: "App modification tools for rooted Android: patchers (ReVanced-style), app mods, social media clients (Telegram, WhatsApp, Reddit, X/Twitter and more), browser and YouTube mods and signature verification tools."
+description: "App patchers, social media mods, YouTube tweaks, and signature tools for customizing Android apps on rooted devices."
 head:
   - - link
     - rel: canonical
@@ -26,7 +26,7 @@ head:
       content: "App Modifications | Awesome Android Root"
   - - meta
     - property: og:description
-      content: "App modification tools for rooted Android: patchers (ReVanced-style), app mods, social media clients (Telegram, WhatsApp, Reddit, X/Twitter and more), browser and YouTube mods and signature verification tools."
+      content: "App patchers, social media mods, YouTube tweaks, and signature tools for customizing Android apps on rooted devices."
   - - meta
     - property: og:url
       content: https://awesome-android-root.zhoe.org/apps-and-modules/app-modifications
