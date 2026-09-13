@@ -13,9 +13,6 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - name: keywords
-      content: "android root utilities, sync android root, rclone magisk, reboot menu module, clipboard manager, call recorder root, sms forward xposed, android toolbox, utility modules"
-  - - meta
     - property: og:type
       content: article
   - - meta

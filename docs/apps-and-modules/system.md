@@ -13,9 +13,6 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - name: keywords
-      content: "android system tweaks, vbmeta, system ui tuner, aosp modules, hyperos modules, one ui modules, oxygenos, coloros, nothingos, boot animation, app management, package manager android, appops, permissions manager, system info, android diagnostics, magisk modules, kernelsu modules"
-  - - meta
     - property: og:type
       content: article
   - - meta

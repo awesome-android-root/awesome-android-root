@@ -43,9 +43,6 @@ head:
     - name: twitter:image:alt
       content: Motorola Root Guide - All Models
   - - meta
-    - name: keywords
-      content: motorola root guide, motorola edge root, moto g root, motorola bootloader unlock, motorola unlock code, motorola magisk, motorola a/b partition, motorola rooting tutorial
-  - - meta
     - name: author
       content: Awesome Android Root Project
   - - meta

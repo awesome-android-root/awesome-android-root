@@ -11,6 +11,88 @@ export default withPwa(defineConfig({
   lastUpdated: true,
   metaChunk: true,
 
+  // Keep the entity graph consistent across pages. Page-specific frontmatter
+  // can add Article, HowTo or ItemList data, while this supplies the shared
+  // publisher, website, webpage and breadcrumb context once per document.
+  transformHead({ pageData }) {
+    const site = 'https://awesome-android-root.zhoe.org'
+    const relativePath = pageData.relativePath || 'index.md'
+    const route = relativePath === 'index.md'
+      ? '/'
+      : `/${relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')}`
+    const pageUrl = `${site}${route}`
+
+    // The homepage already owns the complete site graph, including navigation.
+    // Avoid emitting a second Organization/WebSite graph there.
+    if (route === '/') return []
+
+    const title = pageData.title || pageData.frontmatter?.title || 'Awesome Android Root'
+    const description = pageData.description || pageData.frontmatter?.description || ''
+    const labels = route.split('/').filter(Boolean).map((part) =>
+      part.split('-').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+    )
+    const breadcrumbItems = [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${site}/` }
+    ]
+    labels.forEach((label, index) => {
+      const itemRoute = `/${route.split('/').filter(Boolean).slice(0, index + 1).join('/')}`
+      breadcrumbItems.push({
+        '@type': 'ListItem',
+        position: index + 2,
+        name: label,
+        item: `${site}${itemRoute}`
+      })
+    })
+
+    const graph = [
+      {
+        '@type': 'Organization',
+        '@id': `${site}/#organization`,
+        name: 'Awesome Android Root',
+        url: `${site}/`,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${site}/images/logo.png`,
+          width: 330,
+          height: 330
+        },
+        sameAs: [
+          'https://github.com/awesome-android-root',
+          'https://x.com/awsm_and_root'
+        ]
+      },
+      {
+        '@type': 'WebSite',
+        '@id': `${site}/#website`,
+        name: 'Awesome Android Root',
+        url: `${site}/`,
+        inLanguage: 'en-US',
+        publisher: { '@id': `${site}/#organization` }
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${pageUrl}#webpage`,
+        name: title,
+        description,
+        url: pageUrl,
+        inLanguage: 'en-US',
+        isPartOf: { '@id': `${site}/#website` },
+        publisher: { '@id': `${site}/#organization` }
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${pageUrl}#breadcrumb`,
+        itemListElement: breadcrumbItems
+      }
+    ]
+
+    return [[
+      'script',
+      { type: 'application/ld+json' },
+      JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })
+    ]]
+  },
+
   vite: {
     plugins: [
       llmstxt()

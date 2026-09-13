@@ -13,9 +13,6 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - name: keywords
-      content: "android customization root, substratum, magisk themes, status bar mods, navigation bar root, android launchers, custom fonts android, emoji magisk, notifications mods, lockscreen mods, aod mods, screen display tweaks, hyperos customization, one ui mods"
-  - - meta
     - property: og:type
       content: article
   - - meta

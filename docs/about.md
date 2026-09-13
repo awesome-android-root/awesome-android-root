@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: About Awesome Android Root
-description: "Learn about the Awesome Android Root project - the most comprehensive collection of Android root apps, guides, and resources."
+description: "Learn about the Awesome Android Root project, its editorial approach, and the Android rooting resources it maintains."
 head:
   - - link
     - rel: canonical
@@ -11,10 +11,10 @@ head:
       content: website
   - - meta
     - property: og:title
-      content: About Awesome Android Root - Ultimate Android Rooting Resource 2026
+      content: About Awesome Android Root - Project and editorial approach
   - - meta
     - property: og:description
-      content: Discover the story behind Awesome Android Root - the most comprehensive collection of 600+ Android root apps, Magisk, KernelSU & LSPosed (Xposed) modules & rooting guides.
+      content: Learn how the Awesome Android Root project curates Android root apps, modules, guides and troubleshooting resources.
   - - meta
     - property: og:url
       content: https://awesome-android-root.zhoe.org/about
@@ -44,13 +44,10 @@ head:
       content: About Awesome Android Root - Ultimate Rooting Resource
   - - meta
     - name: twitter:title
-      content: About Awesome Android Root - Ultimate Resource 2026
+      content: About Awesome Android Root - Project and editorial approach
   - - meta
     - name: twitter:description
-      content: The story behind the most comprehensive Android rooting resource. 600+ apps, expert guides, and community-driven excellence.
-  - - meta
-    - name: keywords
-      content: about awesome android root, android rooting project, android root community, magisk modules collection, android customization resource, open source android, android freedom project, rooting guides 2026
+      content: How the project organizes Android root apps, modules, rooting guides and community resources.
   - - meta
     - name: author
       content: Awesome Android Root Project

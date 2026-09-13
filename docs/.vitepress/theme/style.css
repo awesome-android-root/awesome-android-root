@@ -147,13 +147,21 @@ body {
 
 
 
-.apps-intro p {
+.apps-intro p:not(.apps-lede) {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 8px;
+}
+
+.apps-intro .apps-lede {
+  display: block;
+  max-width: 760px;
+  margin: 0.75rem auto 0;
+  color: var(--vp-c-text-2);
+  line-height: 1.6;
 }
 
 /* Shield.io badges - consistent sizing and aspect ratio */

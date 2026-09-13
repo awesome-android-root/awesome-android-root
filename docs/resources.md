@@ -64,9 +64,6 @@ head:
     - name: twitter:image:alt
       content: Android Rooting Resources 2026 - Tools, Communities & Guides
   - - meta
-    - name: keywords
-      content: android rooting resources, rooting tools 2026, android root communities, magisk resources, kernelsu tools, android development resources, custom rom resources, bootloader unlock tools, recovery tools, android debugging resources, root learning materials, android modding resources, xda developers, android root forums, rooting guides collection
-  - - meta
     - name: author
       content: Awesome Android Root Project
   - - meta
