@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "Networking"
-description: "Networking tools for rooted Android: VPN & proxy modules (Clash, sing-box, v2ray), network tools, Wi-Fi & mobile data utilities and Bluetooth & NFC apps & modules."
+description: "VPN, proxy, Wi‑Fi, Bluetooth, and mobile-data tools for traffic control and networking on rooted Android."
 head:
   - - link
     - rel: canonical
@@ -26,7 +26,7 @@ head:
       content: "Networking | Awesome Android Root"
   - - meta
     - property: og:description
-      content: "Networking tools for rooted Android: VPN & proxy modules (Clash, sing-box, v2ray), network tools, Wi-Fi & mobile data utilities and Bluetooth & NFC apps & modules."
+      content: "VPN, proxy, Wi‑Fi, Bluetooth, and mobile-data tools for traffic control and networking on rooted Android."
   - - meta
     - property: og:url
       content: https://awesome-android-root.zhoe.org/apps-and-modules/networking

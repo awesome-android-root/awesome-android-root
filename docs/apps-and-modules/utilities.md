@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "General Utilities"
-description: "General utilities for rooted Android that do not fit a single category: file sync & transfer, reboot & power tools, sharing & intent tweaks, communication helpers and all-in-one toolboxes."
+description: "General rooted Android utilities for sync, reboot, sharing, communication, and all-in-one control tools."
 head:
   - - link
     - rel: canonical
@@ -26,7 +26,7 @@ head:
       content: "General Utilities | Awesome Android Root"
   - - meta
     - property: og:description
-      content: "General utilities for rooted Android that do not fit a single category: file sync & transfer, reboot & power tools, sharing & intent tweaks, communication helpers and all-in-one toolboxes."
+      content: "General rooted Android utilities for sync, reboot, sharing, communication, and all-in-one control tools."
   - - meta
     - property: og:url
       content: https://awesome-android-root.zhoe.org/apps-and-modules/utilities

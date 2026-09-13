@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "Root Management"
-description: "Root management apps, Magisk/KernelSU/APatch managers, metamodules, LSPosed & Zygisk frameworks, and root hiding & Play Integrity tools for rooted Android devices."
+description: "Root managers, metamodules, LSPosed, Zygisk, and Play Integrity tools for Magisk, KernelSU, and APatch on rooted Android."
 head:
   - - link
     - rel: canonical
@@ -26,7 +26,7 @@ head:
       content: "Root Management | Awesome Android Root"
   - - meta
     - property: og:description
-      content: "Root management apps, Magisk/KernelSU/APatch managers, metamodules, LSPosed & Zygisk frameworks, and root hiding & Play Integrity tools for rooted Android devices."
+      content: "Root managers, metamodules, LSPosed, Zygisk, and Play Integrity tools for Magisk, KernelSU, and APatch on rooted Android."
   - - meta
     - property: og:url
       content: https://awesome-android-root.zhoe.org/apps-and-modules/root-management

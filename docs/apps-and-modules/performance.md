@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "Performance & Battery"
-description: "Performance and battery tools for rooted Android: performance optimization, kernel management, memory & RAM tuning, battery optimization, charging control and task/process management apps & modules."
+description: "Kernel managers, RAM tuning, battery optimization, charging controls, and task tools to improve speed and battery life on rooted Android."
 head:
   - - link
     - rel: canonical
@@ -26,7 +26,7 @@ head:
       content: "Performance & Battery | Awesome Android Root"
   - - meta
     - property: og:description
-      content: "Performance and battery tools for rooted Android: performance optimization, kernel management, memory & RAM tuning, battery optimization, charging control and task/process management apps & modules."
+      content: "Kernel managers, RAM tuning, battery optimization, charging controls, and task tools to improve speed and battery life on rooted Android."
   - - meta
     - property: og:url
       content: https://awesome-android-root.zhoe.org/apps-and-modules/performance

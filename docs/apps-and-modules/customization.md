@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "Customization"
-description: "Customization for rooted Android: themes and visual mods, launchers, status bar & navigation tweaks, gestures, fonts & emojis, notifications, lockscreen/AOD and screen & display modules and apps."
+description: "Themes, launchers, gesture tweaks, fonts, lockscreen mods, and UI tools for turning rooted Android into your own setup."
 head:
   - - link
     - rel: canonical
@@ -26,7 +26,7 @@ head:
       content: "Customization | Awesome Android Root"
   - - meta
     - property: og:description
-      content: "Customization for rooted Android: themes and visual mods, launchers, status bar & navigation tweaks, gestures, fonts & emojis, notifications, lockscreen/AOD and screen & display modules and apps."
+      content: "Themes, launchers, gesture tweaks, fonts, lockscreen mods, and UI tools for turning rooted Android into your own setup."
   - - meta
     - property: og:url
       content: https://awesome-android-root.zhoe.org/apps-and-modules/customization

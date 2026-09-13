@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "Security"
-description: "Security tools for rooted Android: security apps, firewalls and filtering apps and modules (Magisk, KernelSU, LSPosed) that control app network access and harden your device."
+description: "Root firewalls, network filters, and security modules that control app access and harden rooted Android devices."
 head:
   - - link
     - rel: canonical
@@ -26,7 +26,7 @@ head:
       content: "Security | Awesome Android Root"
   - - meta
     - property: og:description
-      content: "Security tools for rooted Android: security apps, firewalls and filtering apps and modules (Magisk, KernelSU, LSPosed) that control app network access and harden your device."
+      content: "Root firewalls, network filters, and security modules that control app access and harden rooted Android devices."
   - - meta
     - property: og:url
       content: https://awesome-android-root.zhoe.org/apps-and-modules/security

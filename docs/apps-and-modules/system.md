@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "System"
-description: "System-level tools for rooted Android: system tweaks and VBMeta modules, System UI & OEM framework customization (AOSP, HyperOS, One UI, OxygenOS and more), boot & startup, app & package management, permissions and system diagnostics."
+description: "System tweaks, OEM UI mods, boot tools, app management, permissions, and diagnostics for rooted Android devices."
 head:
   - - link
     - rel: canonical
@@ -26,7 +26,7 @@ head:
       content: "System | Awesome Android Root"
   - - meta
     - property: og:description
-      content: "System-level tools for rooted Android: system tweaks and VBMeta modules, System UI & OEM framework customization (AOSP, HyperOS, One UI, OxygenOS and more), boot & startup, app & package management, permissions and system diagnostics."
+      content: "System tweaks, OEM UI mods, boot tools, app management, permissions, and diagnostics for rooted Android devices."
   - - meta
     - property: og:url
       content: https://awesome-android-root.zhoe.org/apps-and-modules/system

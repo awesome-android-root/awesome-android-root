@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "File Management"
-description: "File management for rooted Android: file managers with root access, storage cleaning apps and Magisk/KernelSU modules, and file & partition tools for power users."
+description: "Root file managers, storage cleaners, partition tools, and file utilities for rooted Android power users."
 head:
   - - link
     - rel: canonical
@@ -26,7 +26,7 @@ head:
       content: "File Management | Awesome Android Root"
   - - meta
     - property: og:description
-      content: "File management for rooted Android: file managers with root access, storage cleaning apps and Magisk/KernelSU modules, and file & partition tools for power users."
+      content: "Root file managers, storage cleaners, partition tools, and file utilities for rooted Android power users."
   - - meta
     - property: og:url
       content: https://awesome-android-root.zhoe.org/apps-and-modules/file-management

@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "Development & Automation"
-description: "Development, automation and power-user tools for rooted Android: terminal & shell, ADB and debugging tools, developer utilities, Linux environments (chroot/containers), automation apps and hardware/sensor tools."
+description: "ADB, shells, automation, Linux environments, and hardware tools for developers and advanced rooted Android users."
 head:
   - - link
     - rel: canonical
@@ -26,7 +26,7 @@ head:
       content: "Development & Automation | Awesome Android Root"
   - - meta
     - property: og:description
-      content: "Development, automation and power-user tools for rooted Android: terminal & shell, ADB and debugging tools, developer utilities, Linux environments (chroot/containers), automation apps and hardware/sensor tools."
+      content: "ADB, shells, automation, Linux environments, and hardware tools for developers and advanced rooted Android users."
   - - meta
     - property: og:url
       content: https://awesome-android-root.zhoe.org/apps-and-modules/development

@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "Ad Blocking"
-description: "Ad blocking for rooted Android: hosts-file ad blockers, ad-blocking Magisk & KernelSU modules, LSPosed ad-blockers and DNS-level filtering tools that block ads and trackers system-wide."
+description: "Hosts-based ad blockers, Magisk/KernelSU modules, and DNS tools to block ads, trackers, and malware across Android apps."
 head:
   - - link
     - rel: canonical
@@ -26,7 +26,7 @@ head:
       content: "Ad Blocking | Awesome Android Root"
   - - meta
     - property: og:description
-      content: "Ad blocking for rooted Android: hosts-file ad blockers, ad-blocking Magisk & KernelSU modules, LSPosed ad-blockers and DNS-level filtering tools that block ads and trackers system-wide."
+      content: "Hosts-based ad blockers, Magisk/KernelSU modules, and DNS tools to block ads, trackers, and malware across Android apps."
   - - meta
     - property: og:url
       content: https://awesome-android-root.zhoe.org/apps-and-modules/ad-blocking
