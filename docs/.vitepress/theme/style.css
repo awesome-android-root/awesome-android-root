@@ -197,11 +197,6 @@ div:has(img[src*="img.shields.io"]) {
   }
   
 
-/*
- * VitePress self-hosts the Inter font (subset .woff2 files with
- * font-display: swap), so no custom @font-face is needed here.
- * We only provide an explicit system-font fallback chain.
- */
 body, html {
   font-family: var(--vp-font-family-base), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -213,18 +208,14 @@ img {
   max-width: 100%;
 }
 
-/* Lazy loading hint for performance.
-   content-visibility: auto is powerful but can cause scroll-position
-   jumps and CLS when applied indiscriminately. Only enable it on images
-   inside the main content area where the browser can reasonably estimate
-   the containing block size. */
+
 .VPDoc img[loading="lazy"] {
   content-visibility: auto;
   /* Reserve approximate space to minimize layout shift */
   contain-intrinsic-size: auto 300px;
 }
 
-/* Logo images - fixed aspect ratio */
+
 .VPHero img,
 .community-card img {
   aspect-ratio: 1;
@@ -784,11 +775,7 @@ margin-bottom: 0.5rem;
   border-bottom: 1px solid var(--vp-c-divider);
 }
 
-/*
- * The plugin renders its controls as buttons/links. Keep the selector
- * intentionally scoped so these styles cannot leak into normal VitePress
- * buttons.
- */
+
 .vp-doc .llms-markdown-buttons button,
 .vp-doc .llms-markdown-buttons a {
   display: inline-flex;
@@ -934,11 +921,7 @@ margin-bottom: 0.5rem;
   color: var(--vp-c-brand-1);
 }
 
-/*
- * If the plugin uses a generic wrapper rather than the documented class,
- * these selectors catch the common generated button container without
- * affecting ordinary VitePress controls.
- */
+
 .vp-doc .llms-buttons,
 .vp-doc .copy-or-download-as-markdown-buttons {
   display: flex;
