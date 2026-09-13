@@ -38,7 +38,6 @@ The website adds what a single README cannot:
 
 - **Instant local search** across every app, module and guide (with fuzzy matching)
 - **Clean category navigation** and a sidebar for every topic
-- **Filter bars** - narrow any category by Magisk `[M]`, KernelSU `[K]`, APatch `[A]`, LSPosed `[LSP]`, FOSS or ⭐
 - **A PWA** - installable, works offline, updates automatically
 - **Shareable pages and anchors** for every category and section
 

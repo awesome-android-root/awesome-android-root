@@ -56,11 +56,6 @@ head:
 processing, Dolby and more), audio control tools and audio effects. All entries below are listed together
 regardless of whether they are apps, Magisk modules, KernelSU modules or LSPosed modules.
 
-<ClientOnly>
-  <AppSearch />
-</ClientOnly>
-
-<div class="app-search-content">
 
 ## Audio Enhancement
 
@@ -87,5 +82,3 @@ regardless of whether they are apps, Magisk modules, KernelSU modules or LSPosed
 - **[Hi-Res Audio Enabler](https://github.com/reiryuki/Hi-Res-Audio-Enabler-Magisk-Module)** - Enables high resolution 24 or 32-bit width audio output if device is supported. `FOSS` `[M]`
 - **[Hifi-maximizer-mod](https://github.com/yzyhk904/hifi-maximizer-mod)** - Maximize the digital audio fidelity by reducing jitters on audio outputs (USB DACs, Bluetooth a2dp, DLNA, etc.) `FOSS` `[M]`
 - **[High Performance DAC](https://github.com/ahkehra/high_perf_dac)** - Kernel-level audio tuning module for Qualcomm devices, providing enhanced audio quality and performance. `FOSS` `[K]`
-
-</div>

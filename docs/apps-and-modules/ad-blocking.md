@@ -59,11 +59,6 @@ hosts/DNS-based tools that block ads, trackers and malware system-wide, in every
 > Start with our [Complete Android Ad Blocking Tutorial](/general-guides/android-adblocking.md), then pick the
 > tools below. Apps and modules are combined here because they all solve the same problem - blocking ads.
 
-<ClientOnly>
-  <AppSearch />
-</ClientOnly>
-
-<div class="app-search-content">
 
 ## Ad & Tracker Blocking
 
@@ -100,5 +95,3 @@ hosts/DNS-based tools that block ads, trackers and malware system-wide, in every
 
 > [!TIP]
 > For ad blocking at network level, combine these tools with our [ad blockers](#ad-tracker-blocking). See the [ad blocking guide](../general-guides/android-adblocking.md).
-
-</div>

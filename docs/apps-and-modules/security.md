@@ -59,11 +59,6 @@ firewalls for hardening your device, controlling which apps can reach the networ
 > Related: [Privacy](/apps-and-modules/privacy.md) covers data-access control and spoofing;
 > [Networking](/apps-and-modules/networking.md) covers VPNs, proxies and connection tools.
 
-<ClientOnly>
-  <AppSearch />
-</ClientOnly>
-
-<div class="app-search-content">
 
 ## Security Tools
 
@@ -107,5 +102,3 @@ firewalls for hardening your device, controlling which apps can reach the networ
 - **[NetGuard](https://github.com/M66B/NetGuard)** - Block access to the internet. Apps and addresses can individually be allowed or denied access to your Wi-Fi and/or mobile connection. `FOSS`
 - **[PCAPdroid](https://github.com/emanuele-f/PCAPdroid#pcapdroid)** - Lets you track, analyze and block the connections made by the other apps in your device. `FOSS` | [🌱](https://f-droid.org/packages/com.emanuelef.remote_capture) | [▶️](https://play.google.com/store/apps/details?id=com.emanuelef.remote_capture)
 - **[ShizuWall](https://github.com/AhmetCanArslan/ShizuWall)** - Android firewall without VPN powered by Shizuku / local ADB daemon / Root. `FOSS` | [🌱](https://f-droid.org/packages/com.arslan.shizuwall/) | [▶️](https://play.google.com/store/apps/details?id=com.arslan.shizuwall)
-
-</div>

@@ -55,11 +55,6 @@ head:
 **General utilities** for rooted Android that don't fit one narrow job: file sync & transfer, reboot & power
 tools, sharing & intent tweaks, communication helpers and all-in-one power-user toolboxes.
 
-<ClientOnly>
-  <AppSearch />
-</ClientOnly>
-
-<div class="app-search-content">
 
 ## Sync & File Transfer
 
@@ -100,5 +95,3 @@ tools, sharing & intent tweaks, communication helpers and all-in-one power-user 
 
 > [!TIP]
 > If you are looking for classic root managers and module managers, start with [Root Management](root-management.md). If you need shell commands or Linux tooling, see [Terminal and Shell Tools](development.md#terminal-shell).
-
-</div>

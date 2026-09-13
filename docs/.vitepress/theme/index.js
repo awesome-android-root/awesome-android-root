@@ -5,7 +5,6 @@ import './style.css'
 import PwaReload from './PwaReload.vue'
 import BackToTop from './BackToTop.vue'
 import StoreLink from './components/StoreLink.vue'
-import AppSearch from './components/AppSearch.vue'
 import CopyOrDownloadAsMarkdownButtons from 'vitepress-plugin-llms/vitepress-components/CopyOrDownloadAsMarkdownButtons.vue'
 
 function runAfterRender(callback) {
@@ -32,7 +31,6 @@ export default {
     // Register global components
     try {
       app.component('StoreLink', StoreLink)
-      app.component('AppSearch', AppSearch)
       app.component('CopyOrDownloadAsMarkdownButtons', CopyOrDownloadAsMarkdownButtons)
     } catch (error) {
       console.error('Failed to register components:', error)

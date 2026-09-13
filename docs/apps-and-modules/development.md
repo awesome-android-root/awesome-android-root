@@ -56,11 +56,6 @@ head:
 **ADB & debugging** helpers, developer tools (**Shizuku** and friends), full **Linux environments**,
 automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities.
 
-<ClientOnly>
-  <AppSearch />
-</ClientOnly>
-
-<div class="app-search-content">
 
 ## Terminal & Shell
 
@@ -130,5 +125,3 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 - **[HID Gadget Module](https://github.com/kelexine/hid-gadget-module)** - Enables Human Interface Device (HID) emulation/support on Android Devices. `FOSS` `[M]`
 - **[OnePlus Flash Control](https://github.com/Bartixxx32/Opflashcontrol-app)** - Precise control over the brightness of the dual-tone and quad-tone LED flashes for OnePlus devices. `FOSS`
 - **[USB HID Client](https://github.com/Arian04/android-hid-client)** - Use your phone as a keyboard and mouse without any software on the other end. `FOSS` | [🌱](https://apt.izzysoft.de/packages/me.arianb.usb_hid_client)
-
-</div>

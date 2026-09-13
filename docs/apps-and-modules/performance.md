@@ -56,11 +56,6 @@ head:
 CPU/GPU and general **performance optimization**, **kernel management**, **memory & RAM** tuning, **battery
 optimization**, charging control and task & process management.
 
-<ClientOnly>
-  <AppSearch />
-</ClientOnly>
-
-<div class="app-search-content">
 
 > [!TIP]
 > For gaming-specific tweaks, see [Gaming](gaming.md). For CPU/GPU management, see [Kernel Management](performance.md#kernel-management). For memory optimization, check [Memory Management](performance.md#memory-ram).
@@ -146,5 +141,3 @@ optimization**, charging control and task & process management.
 - **[Operator](https://github.com/by-architect/Operator)** - Matrix-inspired Android Task Manager that lets you monitor, manage, and terminate processes directly from your device. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.byarchitect.operator)
 - **[Shappky](https://github.com/YasserNull/shappky)** - A simple app to boost performance by stopping background apps, relying on Root/Shizuku permissions. `FOSS` `[M]`
 - **[TaskManager](https://github.com/RohitKushvaha01/TaskManager)** - Task Manager inspired from gnome system monitor for android.Must read [F-Droid inclusion](https://github.com/RohitKushvaha01/TaskManager/issues/24) `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.rk.taskmanager)
-
-</div>

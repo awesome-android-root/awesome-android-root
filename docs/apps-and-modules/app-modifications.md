@@ -60,11 +60,6 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 > Clicking an entry opens its **Source Code** page (GitHub/GitLab etc.) for `FOSS` apps, otherwise the
 > **Google Play Store** listing.
 
-<ClientOnly>
-  <AppSearch />
-</ClientOnly>
-
-<div class="app-search-content">
 
 ## App Patchers
 
@@ -219,5 +214,3 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 - **[Apk Protection Patch](https://github.com/Mods-Center/Apk-Protection-Patch)** - Removes signature verification restrictions on AOSP and OEM ROMs (HyperOS, ColorOS, etc.), allowing installation of modified APKs. `Proprietary` `[M]` `[K]`
 - **[F**k Google License](https://github.com/JiGuroLGC/FuckGoogleLicense)** - Bypass Google Service License Verification. `FOSS` `[LSP]`
 - **[XSpoofSignatures](https://github.com/rushiiMachine/XSpoofSignatures)** - Spoof package signatures. `FOSS` `[LSP]`
-
-</div>

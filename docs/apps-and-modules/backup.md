@@ -60,11 +60,6 @@ unlocking - always.
 > See [Backup before you start](/rooting-guides/) in the rooting guides, and
 > [File Management](/apps-and-modules/file-management.md) for everyday file tools.
 
-<ClientOnly>
-  <AppSearch />
-</ClientOnly>
-
-<div class="app-search-content">
 
 ## Backup Apps & Tools
 
@@ -74,5 +69,3 @@ unlocking - always.
 - **[Dumpster: Photo/Video Recovery](https://play.google.com/store/apps/details?id=com.baloota.dumpster)** - You can recover deleted videos, restore photos, undelete recently deleted apps, and other files. `Proprietary`
 - **[Neo Backup](https://github.com/NeoApplications/Neo-Backup)** - Powerful open-source backup solution. `FOSS` | [🌱](https://f-droid.org/packages/com.machiav3lli.backup/)
 - **[Restoid](https://github.com/hddq/restoid)** - modern, root-based Android app backup tool powered by restic. `FOSS`
-
-</div>
