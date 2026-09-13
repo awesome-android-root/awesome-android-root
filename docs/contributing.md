@@ -49,9 +49,6 @@ head:
     - name: twitter:description
       content: Help build the ultimate Android root resource collection. Learn contribution guidelines and standards.
   - - meta
-    - name: keywords
-      content: contribute android root, open source contribution, magisk modules submission, android root apps contribution, awesome android root github, root community contribution, xda developers contribution, android modding community
-  - - meta
     - name: author
       content: Awesome Android Root Project
   - - meta

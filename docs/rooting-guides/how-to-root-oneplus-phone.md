@@ -43,9 +43,6 @@ head:
     - name: twitter:image:alt
       content: OnePlus Root Guide - All Models
   - - meta
-    - name: keywords
-      content: oneplus root guide, oneplus rooting, oneplus bootloader unlock, oneplus magisk guide, oneplus custom recovery, oneplus 12 root, oneplus 11 root, oneplus 10 root, oxygenos root, oneplus msm tool, oneplus nord root
-  - - meta
     - name: author
       content: Awesome Android Root Project
   - - meta

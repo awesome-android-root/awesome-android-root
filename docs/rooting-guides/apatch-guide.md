@@ -43,9 +43,6 @@ head:
     - name: twitter:image:alt
       content: APatch Installation Guide - Modern Kernel-Based Android Rooting
   - - meta
-    - name: keywords
-      content: apatch guide 2026, android root apatch, kernel root, init_boot patch, boot image patch, a/b ota root
-  - - meta
     - name: author
       content: Awesome Android Root Project
   - - meta

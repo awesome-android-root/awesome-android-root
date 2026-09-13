@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: Troubleshooting Guide
-description: "Step-by-step diagnostic procedures for Android rooting problems including bootloops, detection issues, and installation failures organized by root method."
+title: "Android Root Troubleshooting: Bootloops, Modules & Root Problems"
+description: "Fix common Android root problems: bootloops, missing root, incompatible modules, Play Integrity detection, recovery and flashing errors."
 head:
   - - link
     - rel: canonical
@@ -14,10 +14,10 @@ head:
       content: Awesome Android Root
   - - meta
     - property: og:title
-      content: Android Root Troubleshooting Guide - Fix Bootloops, Detection & Installation Errors
+      content: "Android Root Troubleshooting: Bootloops, Modules & Root Problems"
   - - meta
     - property: og:description
-      content: Step-by-step diagnostic procedures for Android rooting problems including bootloops, detection issues, and installation failures organized by root method.
+      content: Diagnose Android root bootloops, missing root, module failures, Play Integrity detection, recovery and flashing errors.
   - - meta
     - property: og:url
       content: https://awesome-android-root.zhoe.org/troubleshooting
@@ -56,7 +56,7 @@ head:
       content: Android Root Troubleshooting Guide - Fix Bootloops & Errors
   - - meta
     - name: twitter:description
-      content: Comprehensive solutions for Android rooting problems - bootloops, detection issues, installation failures organized by root method.
+      content: Practical fixes for bootloops, missing root, incompatible modules, integrity checks and recovery problems.
   - - meta
     - name: twitter:image
       content: https://awesome-android-root.zhoe.org/images/og.png
@@ -64,17 +64,14 @@ head:
     - name: twitter:image:alt
       content: Root Troubleshooting Guide - Fix Bootloops and Installation Errors
   - - meta
-    - name: keywords
-      content: android bootloop fix, magisk troubleshooting, root detection fix, installation errors, kernelsu problems, recovery mode android
-  - - meta
     - name: robots
       content: index, follow
 ---
 
 
-# Root Troubleshooting Guide
+# Android Root Troubleshooting
 
-**Comprehensive solutions** for common rooting problems organized by root method and failure type with step-by-step diagnostic procedures.
+Use this guide to diagnose a rooted Android device by symptom first: bootloop, missing root, module failure, integrity or detection problem, or a recovery/flash issue. Start with the least destructive check and keep the exact device model, build number and root framework in mind before restoring images or wiping data.
 
 :::danger Emergency First
 If your device won't boot, jump to [Emergency Recovery](#emergency-recovery) immediately.
@@ -99,6 +96,16 @@ If your device won't boot, jump to [Emergency Recovery](#emergency-recovery) imm
 - [App Detection and Compatibility](#app-detection-and-compatibility)
 - [Device-Specific Issues](#device-specific-issues)
 - [Performance and Optimization](#performance-and-optimization)
+
+### Problem directory
+
+| Problem | Start here |
+| :--- | :--- |
+| Bootloop | [Emergency recovery](#emergency-recovery), then [Magisk bootloop recovery](#device-won-t-boot-bootloop). |
+| Root disappeared or is not detected | [Root not working](#root-not-working), then the guide for [Magisk](./rooting-guides/magisk-guide.md) or [KernelSU](./rooting-guides/kernelsu-guide.md). |
+| A module will not install or causes a bootloop | [Magisk module troubleshooting](#magisk-modules-not-working) or [KernelSU module troubleshooting](#modules-don-t-install-don-t-work). |
+| Play Integrity, banking apps or root detection | [Play Integrity and banking apps](#play-integrity-and-banking-apps) and the [root-management tools](./apps-and-modules/root-management.md#root-hiding-play-integrity). |
+| Cannot boot recovery or flash an image | [Bootloader and Fastboot Issues](#bootloader-and-fastboot-issues), [bricked-device recovery](#bricked-device-recovery) and the [custom recovery guide](./rooting-guides/how-to-install-custom-recovery.md). |
 
 ---
 
@@ -551,7 +558,7 @@ resetprop --delete ro.secure
 
 ---
 
-#### Modules Don't Install / Don't Work
+### Modules Don't Install / Don't Work
 
 **Diagnosis:**
 

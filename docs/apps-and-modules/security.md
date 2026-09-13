@@ -13,9 +13,6 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - name: keywords
-      content: "android security apps, root security tools, firewall android root, afwall, app firewall, block app internet, network filtering, security magisk modules, hardened android"
-  - - meta
     - property: og:type
       content: article
   - - meta

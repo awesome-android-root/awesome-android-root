@@ -49,9 +49,6 @@ head:
     - name: twitter:image:alt
       content: Custom Recovery Installation Guide - TWRP, OrangeFox, SKYHAWK
   - - meta
-    - name: keywords
-      content: custom recovery installation, twrp installation, orangefox recovery, skyhawk recovery, android recovery mode, custom recovery guide
-  - - meta
     - name: author
       content: Awesome Android Root Project
   - - meta

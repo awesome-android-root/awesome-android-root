@@ -43,9 +43,6 @@ head:
     - name: twitter:image:alt
       content: Xiaomi Root Guide - All Models
   - - meta
-    - name: keywords
-      content: xiaomi root guide, xiaomi rooting, miui root, hyperos root, mi unlock tool, xiaomi bootloader unlock, xiaomi magisk, redmi root guide, poco root guide
-  - - meta
     - name: author
       content: Awesome Android Root Project
   - - meta

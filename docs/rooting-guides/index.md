@@ -31,9 +31,6 @@ head:
     - name: twitter:description
       content: Complete Android rooting tutorial with Magisk, KernelSU, APatch guides and device-specific instructions for safe rooting. Includes Vector/LSPosed framework & Play Integrity bypass.
   - - meta
-    - name: keywords
-      content: android root guide, magisk installation guide, kernelsu tutorial, apatch rooting, android rooting methods, systemless root, bootloader unlock tutorial, custom recovery guide, twrp installation, android root safety, pixel root guide, samsung root guide, xiaomi root guide, oneplus root guide, android customization, lsposed framework, vector framework, play integrity fix, tricky store, zygisk next, android debloating
-  - - meta
     - name: author
       content: Awesome Android Root Project
   - - meta
@@ -301,7 +298,7 @@ Three primary rooting solutions exist, each with distinct advantages and trade-o
 > For detailed comparison including migration guides, see [Root Framework Comparison](./root-framework-comparison.md)
 
 > [!TIP]
-> **Can't (or don't want to) unlock your bootloader?** All three frameworks above assume an unlocked bootloader. On a narrow set of 2024-2026 devices, the **GhostLock** bug (CVE-2026-43499) instead grants **temporary, session-only root** with the bootloader locked - no Knox trip, no data wipe. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) for what it can and can't do, plus the broader [Bootloader Modification & Temporary Root Solutions](./temporary-root-solutions.md) page.
+> **Can't (or don't want to) unlock your bootloader?** All three frameworks above assume an unlocked bootloader. On a narrow set of 2024-2026 devices, the **GhostLock** bug (CVE-2026-43499) instead grants **temporary, session-only root** with the bootloader locked - no Knox trip, no data wipe. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) for what it can and can't do, plus the broader [Temporary Root for Android: Methods & Solutions](./temporary-root-solutions.md) page.
 
 ---
 
@@ -323,7 +320,7 @@ Unlocking the bootloader is the essential first step that enables all subsequent
 > [!CAUTION]
 > ⚠️ This step **erases ALL data**. Backup everything first. On Samsung devices, this also **permanently trips Knox** (Samsung Pay, Secure Folder, Samsung Pass lost forever).
 
-**[📖 Complete Bootloader Unlocking Guide](./how-to-unlock-bootloader.md)**
+**[📖 How to unlock an Android bootloader](./how-to-unlock-bootloader.md)**
 
 ### Step 2: Install Custom Recovery (Optional but Recommended)
 
