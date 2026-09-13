@@ -61,11 +61,6 @@ problem - controlling root access.
 > [!TIP]
 > New to rooting? Read the [Complete Rooting Guide](/rooting-guides/) first, then come back for the tools.
 
-<ClientOnly>
-  <AppSearch />
-</ClientOnly>
-
-<div class="app-search-content">
 
 ## Root Managers
 
@@ -244,5 +239,3 @@ SUSFS (Systemless User Space File System) is a kernel-level module that allows r
 - **[Play Integrity API Checker](https://github.com/1nikolas/play-integrity-checker-app)** - This app shows info about your device integrity as reported by Google Play Services. If any of this fails could mean your device is rooted or tampered in a way. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck)
 - **[Securify](https://github.com/RabehX/Securify)** - Yet Another Root Checker and Play Integrity API Application. `FOSS`
 - **[ZygoteNextProbe](https://github.com/XiaoTong6666/ZygoteNextProbe)** - Research probe that checks whether Android 17's `zygote_next` native isolated services leak a global mount view - potentially exposing Magisk/Zygisk/LSPosed mounts to apps. `FOSS`
-
-</div>

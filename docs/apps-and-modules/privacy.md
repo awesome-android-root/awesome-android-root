@@ -60,11 +60,6 @@ tracking, spoofing your device identity or location, and isolating apps from you
 > Related: [Security](/apps-and-modules/security.md) tools and [Ad Blocking](/apps-and-modules/ad-blocking.md)
 > stop trackers at the network level. See the [Glossary](/apps-and-modules/#glossary) for badge meanings.
 
-<ClientOnly>
-  <AppSearch />
-</ClientOnly>
-
-<div class="app-search-content">
 
 ## Privacy Tools
 
@@ -115,5 +110,3 @@ tracking, spoofing your device identity or location, and isolating apps from you
 - **[Location Joystick](https://github.com/fzer0x/LocationJoystick)** - Realtime Location Spoofer by using a Overlay Joystick to control the mock location. `Proprietary` `[LSP]`
 - **[LocationMax](https://github.com/Xposed-Modules-Repo/com.huaMax)** - Location simulation module for rooted Android devices using LSPosed/Xposed. `Proprietary` `[LSP]`
 - **[XposedFakeLocation](https://github.com/noobexon1/XposedFakeLocation)** - Allows you to spoof your device's location globally or for specific apps without using "mock location" from the developer options. `FOSS` `[LSP]`
-
-</div>

@@ -56,11 +56,6 @@ head:
 navigation tweaks, gestures, fonts & emojis, notifications, lockscreen/AOD and screen & display apps and
 Magisk/KernelSU/LSPosed modules.
 
-<ClientOnly>
-  <AppSearch />
-</ClientOnly>
-
-<div class="app-search-content">
 
 > [!TIP]
 > Must check [ROM & OEM customization](system.md#system-ui-framework) section for more theming and customization options.
@@ -158,5 +153,3 @@ Magisk/KernelSU/LSPosed modules.
 - **[Pseudo DC Dimming](https://github.com/dantmnf/PseudoDCDimming)** - Enable alternative dimming mode (likely DC-like) on low brightness for some OLED displays by using software brightness gain. `FOSS` `[LSP]`
 - **[PureShot](https://github.com/kazutoiris/PureShot)** - Hide status bar, navigation bar, popups, PiP, toast & more. `FOSS` `[LSP]`
 - **[Rotation Suggestions Closed](https://github.com/Astoritin/RotationSuggestionsClosed)** - Stop showing rotation suggestion button as rotating screen. `FOSS` `[M]`
-
-</div>

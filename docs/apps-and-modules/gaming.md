@@ -55,11 +55,6 @@ head:
 **Gaming** apps and modules for rooted Android - performance tweaks, FPS unlockers, resolution changers and
 game-specific tools, mixing root apps, Magisk/KernelSU modules and LSPosed modules.
 
-<ClientOnly>
-  <AppSearch />
-</ClientOnly>
-
-<div class="app-search-content">
 
 > [!TIP]
 > For overall device performance tuning, see [Performance and Optimization](performance.md#performance-optimization). For CPU/GPU management, see [Kernel Management](performance.md#kernel-management).
@@ -80,5 +75,3 @@ game-specific tools, mixing root apps, Magisk/KernelSU modules and LSPosed modul
 
 - **[Boosteroid+](https://github.com/nitanmarcel/BoosteroidPlus)** - Customize advanced settings for the Boosteroid app, including frame rate, bitrate, and resolution options. `FOSS` `[LSP]`
 - **[JoyCon Droid](https://joycondroid.gitbook.io/joycondroid)** - Allows you to turn your Android device into a controller for your Nintendo Switch. `FOSS`
-
-</div>

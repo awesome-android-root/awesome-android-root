@@ -56,11 +56,6 @@ head:
 Magisk/KernelSU modules work on rooted devices to uninstall, freeze or hide unwanted packages - improving
 privacy, battery life and performance.
 
-<ClientOnly>
-  <AppSearch />
-</ClientOnly>
-
-<div class="app-search-content">
 
 ## Debloating Apps & Modules
 
@@ -73,5 +68,3 @@ privacy, battery life and performance.
 - **[Scalpel](https://github.com/Enginex0/Scalpel)** - Precision Debloat & Systemize for Rooted Android. `FOSS` `[M]` `[K]`
 - **[System App Nuker](https://github.com/ChiseWaguri/systemapp_nuker)** - A module to debloat system apps with WebUI Interface. `FOSS` `[M]`
 - **[System app remover](https://play.google.com/store/apps/details?id=com.jumobile.manager.systemapp)** - A system app remover and user app uninstaller, move app to sdcard, move app to phone, apk on sdcard scan/install/delete. `Proprietary`
-
-</div>

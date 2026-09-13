@@ -225,8 +225,8 @@ head:
 
 > [!NOTE]
 > Every entry links to its **Source Code** page (GitHub/GitLab etc.) for `FOSS` apps, otherwise to its
-> **Google Play Store** listing. Use the local **Search** box or a page's **Filter** bar to narrow lists by
-> badge (`[M]` Magisk, `[K]` KernelSU, `[A]` APatch, `[LSP]` LSPosed, `FOSS`, ⭐).
+> **Google Play Store** listing. The inline badges identify framework and licensing metadata: `[M]` Magisk,
+> `[K]` KernelSU, `[A]` APatch, `[LSP]` LSPosed, `FOSS`, and ⭐ featured entries.
 
 ---
 

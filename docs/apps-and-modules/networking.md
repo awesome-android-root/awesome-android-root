@@ -59,11 +59,6 @@ more), network diagnostics, Wi-Fi & mobile data utilities and Bluetooth & NFC ap
 > Related: [Ad Blocking](/apps-and-modules/ad-blocking.md) covers DNS-level filtering;
 > [Security](/apps-and-modules/security.md) covers per-app firewalls.
 
-<ClientOnly>
-  <AppSearch />
-</ClientOnly>
-
-<div class="app-search-content">
 
 ## VPN & Proxy
 
@@ -109,5 +104,3 @@ more), network diagnostics, Wi-Fi & mobile data utilities and Bluetooth & NFC ap
 - **[NFC Card Emulator Pro (Root)](https://play.google.com/store/apps/details?id=com.yuanwofei.cardemulator.pro)** - NFC card emulator for access cards, elevator cards, meal cards, school cards, library cards, and other IC cards. `Proprietary`
 - **[NFCGate](https://github.com/nfcgate/nfcgate)** - Android application meant to capture, analyze, or modify NFC traffic. `FOSS` `[LSP]` | [🌱](https://f-droid.org/packages/de.tu_darmstadt.seemoo.nfcgate/)
 - **[onHit](https://github.com/0penPublic/onHit)** - Trigger Android NFC events without a physical tag by Xposed. `FOSS` `[LSP]`
-
-</div>
