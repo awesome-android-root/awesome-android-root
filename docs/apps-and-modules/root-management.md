@@ -84,21 +84,12 @@ Exploits like **GhostLock (CVE-2026-43499)** - a 15-year-old Linux kernel bug - 
 </details>
 
 - **[⭐ Root My Galaxy](https://github.com/BuSung-dev/Root-My-Galaxy)** - One-tap temporary root for Snapdragon Galaxy flagships (S24/S25 series, S24 FE, A56...) via GhostLock; bootloader stays locked, Knox isn't tripped. `FOSS`
-- **[GhostLock App](https://github.com/YuKongA/ghostlock-app)** - One-tap execution app for the GhostLock (CVE-2026-43499) exploit. `FOSS`
-- **[GhostLock-5.10](https://github.com/R0rt1z2/GhostLock-5.10)** - GhostLock kernel root exploit for some 5.X-kernel devices, mostly Amazon (from the Kaeru/Fenrir developer). `FOSS`
-- **[GhostLock-Galaxy](https://github.com/wxxsfxyzm/GhostLock-Galaxy)** - GhostLock app for the Samsung Galaxy Z Fold6 (kernel 6.1); stages via Shizuku or `adb shell` with per-kernel offset matching. `FOSS`
-- **[ghostlock-oneplus](https://github.com/JoinChang/ghostlock-oneplus)** - GhostLock kernel exploit for OnePlus/OPPO/realme (and some Xiaomi) devices with locked bootloader; installs KernelSU with runtime kernel auto-detection. `FOSS`
-- **[IonStack-S22U](https://github.com/sarabpal-dev/IonStack-S22U)** - Full CVE-2026-43499 exploit chain for the Samsung Galaxy S22 Ultra (5.10 kernel). `FOSS`
-- **[iQOO Z9 5G / vivo T3 5G Root](https://github.com/ankitrawatgit/iQOO-Z9_5G-vivo-T3_5G-Root-GhostLock)** - One-tap root app and payloads for the iQOO Z9 5G and vivo T3 5G (Dimensity 7200, kernel 5.15). `FOSS`
-- **[oppo-ghostlock](https://github.com/pubglite55/oppo-ghostlock)** - GhostLock exploit adaptation for the OPPO Find N2. `FOSS`
-- **[pixel-ksu-root](https://github.com/JingMatrix/pixel-ksu-root)** - ADB-driven KernelSU loader for stock Pixels; temporary kernel R/W via GhostLock, then late-loads a signature-matched `kernelsu.ko`. Manager-agnostic. `FOSS`
-- **[QuestStack](https://github.com/starseed12345/QuestStack)** - Unlocks the Meta Quest 1 bootloader and gains root using GhostLock + CVE-2021-1931. `FOSS`
-- **[Root My Device](https://github.com/Witaqua-tools/Root-My-Device)** - Community fork of Root My Galaxy generalized beyond Samsung, with its own payload feed. `FOSS`
-- **[Root-My-Galaxy-Payloads](https://github.com/BuSung-dev/Root-My-Galaxy-Payloads)** - Signed device profiles, exploit payloads, and KernelSU artifacts that Root My Galaxy fetches at runtime. `FOSS`
-- **[Root My Pixel](https://github.com/alex193a/Root-My-Pixel)** - Jailbreak supported Google Pixel phones with GhostLock; stages the payload via Shizuku, no PC needed. `FOSS`
 
 > [!TIP]
-> See the dedicated guide **[Root Without Unlocking the Bootloader](../rooting-guides/root-without-unlocking-bootloader.md)** for what GhostLock can and can't do, device support, and every app, exploit port, and research project. Also see [Bootloader Mods & Temporary Root Solutions](../rooting-guides/temporary-root-solutions.md) for related locked-bootloader approaches (Kaeru, Fenrir).
+> Check out **[Root Without Unlocking the Bootloader ↗](../rooting-guides/root-without-unlocking-bootloader.md)** for device support, and every app, exploit port etc.
+
+> [!TIP]
+> Also see [Bootloader Mods & Temporary Root Solutions](../rooting-guides/temporary-root-solutions.md) for related locked-bootloader approaches (Kaeru, Fenrir).
 
 ## Module Managers
 
@@ -180,18 +171,6 @@ Banking, payment, and some streaming/game apps detect root and refuse to run. Hi
 Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootloader on Android 13+**, and `STRONG_INTEGRITY` needs an **unrevoked hardware keybox** (increasingly scarce). For most rooted users, passing `BASIC` + `DEVICE` integrity (via PIF + TrickyStore) is the practical ceiling - chasing `STRONG` is a deep, often futile rabbit hole.
 </details>
 
-## Susfs
-
-<details><summary><strong>What is SUSFS?</strong></summary>
-SUSFS (Systemless User Space File System) is a kernel-level module that allows root-hiding and system modifications without altering the system partition. It provides a stealthy environment for modules to operate, making it harder for apps to detect root or modifications.
-
-</details><br>
-
-- **[⭐ SUSFS for KernelSU](https://github.com/sidex15/susfs4ksu-module)** - Add-on root-hiding service for SUSFS-patched kernels (KernelSU/Next). The core of modern KSU hiding setups. `FOSS` `[M]` `[K]`
-- **[RENE](https://github.com/rrr333nnn333/BRENE)** - SUSFS/KernelSU module for patched kernels with enhanced root hiding & spoofing. `FOSS` `[M]` `[K]`
-- ~~ReSuSFS`~~: Removed on author's request
-
-
 - **[⭐ HMA-OSS](https://github.com/frknkrc44/HMA-OSS)** - FOSS rewrite of Hide My Applist; hides your app list, settings, and package installers. `FOSS` `[LSP]`
 - **[⭐ TEESimulator](https://github.com/JingMatrix/TEESimulator)** - Create a complete, software-based simulation of a hardware-backed Trusted Execution Environment (TEE) for Key Attestation. `FOSS` `[M]` `[K]`
 - **[⭐ Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)** - Hides Magisk root from detection. `Proprietary` `[M]`
@@ -217,6 +196,22 @@ SUSFS (Systemless User Space File System) is a kernel-level module that allows r
 
 > [!TIP]
 > Combine these with a proper [Zygisk implementation](#zygisk) for best results.
+
+---
+
+
+## Susfs
+
+<details><summary><strong>What is SUSFS?</strong></summary>
+SUSFS (Systemless User Space File System) is a kernel-level module that allows root-hiding and system modifications without altering the system partition. It provides a stealthy environment for modules to operate, making it harder for apps to detect root or modifications.
+
+</details><br>
+
+- **[⭐ SUSFS for KernelSU](https://github.com/sidex15/susfs4ksu-module)** - Add-on root-hiding service for SUSFS-patched kernels (KernelSU/Next). The core of modern KSU hiding setups. `FOSS` `[M]` `[K]`
+- **[RENE](https://github.com/rrr333nnn333/BRENE)** - SUSFS/KernelSU module for patched kernels with enhanced root hiding & spoofing. `FOSS` `[M]` `[K]`
+- ~~ReSuSFS`~~: Removed on author's request
+
+---
 
 ## Bootloop Protection
 
