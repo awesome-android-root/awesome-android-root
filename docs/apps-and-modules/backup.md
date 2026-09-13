@@ -13,9 +13,6 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - name: keywords
-      content: "android root backup, titanium backup alternative, swift backup, neo backup, app data backup root, magisk backup, nandroid backup, partition backup, data recovery android, restic android"
-  - - meta
     - property: og:type
       content: article
   - - meta

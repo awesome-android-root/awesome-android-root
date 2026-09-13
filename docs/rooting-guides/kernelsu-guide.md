@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: KernelSU Root Guide
-description: "Kernel-based Android root solution. Guide covering installation, variants, metamodules, app profiles, and root hiding."
+title: "KernelSU Root Guide: Installation, Modules & Troubleshooting"
+description: "Learn KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles and troubleshooting for supported Android devices."
 head:
   - - link
     - rel: canonical
@@ -11,10 +11,10 @@ head:
       content: article
   - - meta
     - property: og:title
-      content: Complete KernelSU Root Guide - Kernel-Based Android Rooting
+      content: "KernelSU Root Guide: Installation, Modules & Troubleshooting"
   - - meta
     - property: og:description
-      content: Install KernelSU root with our comprehensive guide. Kernel-based rooting solution with advanced module system and app profiles.
+      content: Learn KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles and troubleshooting.
   - - meta
     - property: og:url
       content: https://awesome-android-root.zhoe.org/rooting-guides/kernelsu-guide
@@ -26,13 +26,10 @@ head:
       content: summary_large_image
   - - meta
     - name: twitter:title
-      content: Complete KernelSU Root Guide
+      content: "KernelSU Root Guide: Installation, Modules & Troubleshooting"
   - - meta
     - name: twitter:description
-      content: Kernel-based Android rooting with KernelSU. Advanced module support and app profile management.
-  - - meta
-    - name: keywords
-      content: kernelsu root guide, kernel-based root, kernelsu installation, gki kernel, lkm mode, android rooting, app profiles
+      content: KernelSU root installation, GKI/LKM modes, modules, WebUI and app profile management.
   - - meta
     - name: author
       content: Awesome Android Root Project
@@ -59,7 +56,7 @@ head:
       content: 2025-01-12T00:00:00Z
   - - meta
     - property: article:modified_time
-      content: 2026-06-25T00:00:00Z
+      content: 2026-09-13T00:00:00Z
   - - meta
     - property: article:tag
       content: KernelSU
@@ -98,7 +95,7 @@ head:
       content: "KernelSU Root Guide | Awesome Android Root"
   - - meta
     - name: twitter:description
-      content: "Complete KernelSU guide covering KernelSU and KernelSU Next installation, modules."
+      content: "Learn KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles and troubleshooting."
   - - meta
     - name: twitter:image
       content: https://awesome-android-root.zhoe.org/images/og/kernelsu-guide.png
@@ -117,79 +114,35 @@ head:
   - - script
     - type: application/ld+json
     - |
-        {
-          "@context": "https://schema.org",
-          "@type": "TechArticle",
-          "headline": "KernelSU Root Guide | Awesome Android Root",
-          "description": "Complete KernelSU guide covering KernelSU and KernelSU Next installation, modules, and app profile management.",
-          "image": "https://awesome-android-root.zhoe.org/images/og/kernelsu-guide.png",
-          "author": {
-            "@type": "Organization",
-            "name": "Awesome Android Root Project",
-            "url": "https://awesome-android-root.zhoe.org"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Awesome Android Root",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://awesome-android-root.zhoe.org/images/logo.png"
-            }
-          },
-          "datePublished": "2025-01-12",
-          "dateModified": "2026-06-25",
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://awesome-android-root.zhoe.org/rooting-guides/kernelsu-guide"
-          },
-          "about": [
-            {
-              "@type": "Thing",
-              "name": "KernelSU",
-              "description": "Kernel-based root solution for Android devices"
-            },
-            {
-              "@type": "Thing",
-              "name": "KernelSU Next",
-              "description": "Community fork of KernelSU with enhanced features"
-            },
-            {
-              "@type": "Thing",
-              "name": "Android Rooting",
-              "description": "Process of gaining root access on Android devices"
-            }
-          ],
-          "keywords": [
-            "kernelsu root guide",
-            "kernelsu installation",
-            "kernelsu next",
-            "kernel root android",
-            "kernelsu modules",
-            "app profiles",
-            "gki kernel",
-            "android root solution",
-            "kernelsu vs magisk",
-            "kernelsu tutorial"
-          ],
-          "articleSection": "Android Rooting Guides",
-          "inLanguage": "en-US",
-          "isAccessibleForFree": true,
-          "copyrightYear": 2026,
-          "copyrightHolder": {
-            "@type": "Organization",
-            "name": "Awesome Android Root Project"
-          }
-        }
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "@id": "https://awesome-android-root.zhoe.org/rooting-guides/kernelsu-guide#article",
+        "headline": "KernelSU Root Guide: Installation, Modules & Troubleshooting",
+        "description": "KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles and troubleshooting.",
+        "image": "https://awesome-android-root.zhoe.org/images/og/kernelsu-guide.png",
+        "author": { "@id": "https://awesome-android-root.zhoe.org/#organization" },
+        "publisher": { "@id": "https://awesome-android-root.zhoe.org/#organization" },
+        "datePublished": "2025-01-12",
+        "dateModified": "2026-09-13",
+        "mainEntityOfPage": {
+          "@id": "https://awesome-android-root.zhoe.org/rooting-guides/kernelsu-guide#webpage"
+        },
+        "articleSection": "Android Rooting Guides",
+        "inLanguage": "en-US",
+        "isAccessibleForFree": true
+      }
 ---
 
 # KernelSU Root Installation Guide
 
-Kernel-based root solution for Android offering advanced security, granular app control, and superior root hiding at the kernel level.
+KernelSU is a kernel-based Android root solution. This guide covers how to check compatibility, choose GKI or LKM mode, install KernelSU or KernelSU Next, use modules and app profiles, and diagnose common failures. Kernel support and the correct image are device-specific; do not flash a build just because the Android version matches.
 
 ## Quick Navigation
 
 - [What is KernelSU](#understanding-kernelsu)
 - [KernelSU Variants](#kernelsu-variants)
+- [KernelSU WebUI](#kernelsu-webui-ksuwebui)
 - [Installation Modes](#installation-modes)
 - [Prerequisites](#prerequisites)
 - [Installation Methods](#installation-methods)
@@ -203,6 +156,8 @@ Kernel-based root solution for Android offering advanced security, granular app 
 - [Bootloader Unlocking](./how-to-unlock-bootloader.md) - Required first step
 - [Root Comparison](./root-framework-comparison.md) - Compare with Magisk and APatch
 - [FAQ](../faqs.md) - Common questions
+
+**KernelSU topic links:** [installation](#installation-methods) · [modules](#metamodules-and-modules) · [WebUI](#kernelsu-webui-ksuwebui) · [KernelSU Next](#kernelsu-variants) · [KernelSU vs Magisk](#kernelsu-vs-alternatives) · [troubleshooting](#troubleshooting)
 
 ---
 
@@ -260,6 +215,14 @@ The KernelSU ecosystem has expanded beyond the original project. Different varia
 > All variants now delegate module mounting to a metamodule. See [Metamodules & Modules](#metamodules-and-modules).
 
 ---
+
+## KernelSU WebUI (ksuwebui)
+
+KernelSU modules can expose a small web interface that the KernelSU Manager opens in its embedded WebView. This is a module interface, not a separate root method: a module places its page at `webroot/index.html` and can use KernelSU's JavaScript APIs for module-specific actions. The module author must document whether WebUI is supported and which manager version is required.
+
+- Read the [official KernelSU Module WebUI documentation](https://kernelsu.org/guide/module-webui.html) before installing a WebUI module.
+- Open the module from a compatible root manager rather than trusting an arbitrary browser URL; WebUI pages can execute privileged module actions.
+- For installable examples, use the [KernelSU module repository](https://modules.kernelsu.org/) and review the module's source and permissions.
 
 ## Installation Modes
 

@@ -64,9 +64,6 @@ head:
     - name: twitter:image:alt
       content: Root Framework Comparison - Magisk vs KernelSU vs APatch
   - - meta
-    - name: keywords
-      content: magisk vs kernelsu, apatch vs magisk, android root framework comparison, kernel root android, best android root method
-  - - meta
     - name: author
       content: Awesome Android Root Project
   - - meta

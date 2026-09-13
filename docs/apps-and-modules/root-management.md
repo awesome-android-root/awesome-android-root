@@ -13,9 +13,6 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - name: keywords
-      content: "android root management, magisk manager, kernelsu manager, apatch, module managers, metamodules, lsposed, xposed, zygisk, root hiding, play integrity fix, susfs, bootloop protection, root detection, temporary root, ghostlock"
-  - - meta
     - property: og:type
       content: article
   - - meta

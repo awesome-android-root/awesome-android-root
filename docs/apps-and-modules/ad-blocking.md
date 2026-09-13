@@ -13,9 +13,6 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - name: keywords
-      content: "android ad blocking, root ad blocker, adaway, bindhosts, magisk ad blocking module, kernelsu adblock, lsposed ad blocker, hosts file, dns filtering, adguard, pi-hole android, block trackers"
-  - - meta
     - property: og:type
       content: article
   - - meta

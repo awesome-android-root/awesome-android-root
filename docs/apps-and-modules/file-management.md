@@ -13,9 +13,6 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - name: keywords
-      content: "android root file manager, mixplorer, solid explorer root, file explorer root, sd maid, cache cleaner root, storage cleaner, partition backup android, file tools magisk"
-  - - meta
     - property: og:type
       content: article
   - - meta

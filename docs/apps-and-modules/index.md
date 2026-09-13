@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: Best Android Root Apps and Modules
-description: Browse 600+ curated root apps, Magisk, KernelSU, APatch & LSPosed (Xposed) modules, organized by category. Fast search, clean navigation & regular updates.
+title: Best Android Root Apps & Modules
+description: Browse a curated directory of 600+ Android root apps, Magisk, KernelSU, APatch and LSPosed modules, organized by use case with source and compatibility labels.
 head:
   - - link
     - rel: canonical
@@ -28,10 +28,10 @@ head:
       content: Awesome Android Root
   - - meta
     - property: og:title
-      content: Best Android Root Apps and Modules | Awesome Android Root
+      content: Best Android Root Apps & Modules | Awesome Android Root
   - - meta
     - property: og:description
-      content: Browse 600+ best Android root apps, Magisk, KernelSU, APatch & LSPosed (Xposed) modules organized by category. Curated, searchable & updated regularly.
+      content: Browse 600+ curated Android root apps, Magisk, KernelSU, APatch and LSPosed modules organized by use case, framework and source.
   - - meta
     - property: og:url
       content: https://awesome-android-root.zhoe.org/apps-and-modules/
@@ -43,7 +43,7 @@ head:
       content: https://awesome-android-root.zhoe.org/images/og.png
   - - meta
     - property: og:image:alt
-      content: Best Android Root Apps - 600+ Apps & Modules Collection
+      content: Best Android Root Apps & Modules - 600+ curated tools
   - - meta
     - property: og:image:width
       content: '1200'
@@ -64,19 +64,16 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:title
-      content: Best Android Root Apps and Modules | Awesome Android Root
+      content: Best Android Root Apps & Modules | Awesome Android Root
   - - meta
     - name: twitter:description
-      content: Browse 600+ best Android root apps, Magisk, KernelSU, APatch & LSPosed (Xposed) modules organized by category.
+      content: Browse 600+ curated Android root apps and modules organized by use case and root framework.
   - - meta
     - name: twitter:image
       content: https://awesome-android-root.zhoe.org/images/og.png
   - - meta
     - name: robots
       content: index, follow, max-image-preview:large
-  - - meta
-    - name: keywords
-      content: android root apps, best root apps 2026, magisk modules, kernelsu modules, lsposed modules, xposed modules, apatch modules, root management, android privacy, android debloating, ad blocking root, root firewall, android customization, root backup, android performance, root networking, app mods android, root file manager, android gaming modules, android automation, awesome android root
   - - script
     - type: application/ld+json
     - |
@@ -84,9 +81,9 @@ head:
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": ["WebPage", "CollectionPage"],
-            "@id": "https://awesome-android-root.zhoe.org/apps-and-modules/#webpage",
-            "name": "Best Android Root Apps and Modules",
+            "@type": "CollectionPage",
+            "@id": "https://awesome-android-root.zhoe.org/apps-and-modules/#collection",
+            "name": "Best Android Root Apps & Modules",
             "description": "600+ curated root apps, Magisk, KernelSU, APatch and LSPosed modules organized by category.",
             "url": "https://awesome-android-root.zhoe.org/apps-and-modules/",
             "inLanguage": "en-US",
@@ -204,14 +201,14 @@ head:
 <div align="center" class="apps-intro">
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="../public/images/logo.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="../public/images/logo_dark.svg">
-  <img src="../public/images/logo.svg" alt="Awesome Android Root Logo" width="120" height="120" />
+  <source media="(prefers-color-scheme: light)" srcset="/images/logo.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="/images/logo_dark.svg">
+  <img src="/images/logo.svg" alt="Awesome Android Root Logo" width="120" height="120" />
 </picture>
 
-# Root Apps & Modules
+# Best Android Root Apps & Modules
 
-<sub>Discover 600+ top root apps, Magisk / KernelSU / APatch & LSPosed modules - organized by what you want to do</sub>
+<p class="apps-lede">Explore a curated directory of 600+ Android root apps and modules. Find Magisk, KernelSU, APatch and LSPosed tools by what they help you do, then check the framework, FOSS status and official source before installing.</p>
 
 <div class="quick-nav">
 
@@ -235,26 +232,26 @@ head:
 
 ## Browse by Category
 
-Apps and modules are grouped by **what you want to accomplish**, not by whether they are apps or modules -
-each page combines root apps, Magisk modules, KernelSU modules, APatch and LSPosed modules for that topic.
+Apps and modules are grouped by **what you want to accomplish**, not by whether they are apps or modules. Each category combines root apps, Magisk modules, KernelSU modules, APatch modules and LSPosed modules for that topic.
 
-
-- **🛠️ [Root Management](root-management.md)**
-- **⚙️ [System](system.md)**
-- **⚡ [Performance &amp; Battery](performance.md)**
-- **🕵️ [Privacy](privacy.md)**
-- **🔐 [Security](security.md)**
-- **🚫 [Ad Blocking](ad-blocking.md)**
-- **🧩 [App Modifications](app-modifications.md)**
-- **🧹 [Debloating](debloating.md)**
-- **🗂️ [File Management](file-management.md)**
-- **💾 [Backup &amp; Restore](backup.md)**
-- **🎨 [Customization](customization.md)**
-- **🎵 [Audio](audio.md)**
-- **🌐 [Networking](networking.md)**
-- **🎮 [Gaming](gaming.md)**
-- **🧑‍💻 [Development &amp; Automation](development.md)**
-- **🧰 [General Utilities](utilities.md)**
+| Category | What you will find |
+| :--- | :--- |
+| 🛠️ [Root Management](root-management.md) | Root managers, module managers, temporary root, LSPosed, Zygisk and root-hiding tools. |
+| ⚙️ [System](system.md) | Systemless tweaks, boot and startup tools, permissions, AppOps and package management. |
+| ⚡ [Performance &amp; Battery](performance.md) | Kernel, CPU, memory, battery, charging and process-management tools. |
+| 🕵️ [Privacy](privacy.md) | Privacy controls, app isolation, location tools and device-ID management. |
+| 🔐 [Security](security.md) | Firewalls, security utilities and tools for inspecting rooted devices. |
+| 🚫 [Ad Blocking](ad-blocking.md) | Hosts-based blockers, DNS filtering and anti-tracking modules. |
+| 🧩 [App Modifications](app-modifications.md) | App patchers, media, browser, social and LSPosed modifications. |
+| 🧹 [Debloating](debloating.md) | Tools for safely reviewing, freezing and removing unwanted system apps. |
+| 🗂️ [File Management](file-management.md) | Root file managers, cleaners, partition and storage tools. |
+| 💾 [Backup &amp; Restore](backup.md) | App/data backup, migration and recovery utilities. |
+| 🎨 [Customization](customization.md) | Themes, fonts, launchers, display, navigation and status-bar changes. |
+| 🎵 [Audio](audio.md) | Audio effects, enhancement, routing and device-specific audio tools. |
+| 🌐 [Networking](networking.md) | VPN, proxy, DNS, Wi-Fi, Bluetooth and NFC utilities. |
+| 🎮 [Gaming](gaming.md) | Gaming performance, FPS, input and device-tuning tools. |
+| 🧑‍💻 [Development &amp; Automation](development.md) | Terminals, ADB, scripting, automation and Android development tools. |
+| 🧰 [General Utilities](utilities.md) | Sync, power, sharing and practical root utilities. |
 
 > [!TIP]
 > Looking for tutorials instead of tools? Browse the [Rooting Guides](../rooting-guides/index.md) or the

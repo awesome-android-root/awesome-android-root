@@ -49,9 +49,6 @@ head:
     - name: twitter:image:alt
       content: Custom ROM Installation Guide - LineageOS, GrapheneOS & More
   - - meta
-    - name: keywords
-      content: custom rom installation, lineageos installation, grapheneos guide, pixel experience rom, android alternatives, aosp distribution, degoogled android, custom android firmware
-  - - meta
     - name: author
       content: Awesome Android Root Project
   - - meta

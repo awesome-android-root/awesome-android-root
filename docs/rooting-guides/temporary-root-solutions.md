@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: "Bootloader Modification & Temporary Root Solutions"
-description: "Bootloader-level modification tools and kernel-exploit temporary root solutions."
+title: "Temporary Root for Android: Methods & Solutions"
+description: "Compare temporary root methods for Android, including locked-bootloader options, bootloader modifications, reboot behavior, device limits and safety risks."
 head:
   - - link
     - rel: canonical
@@ -13,17 +13,14 @@ head:
     - name: robots
       content: index, follow
   - - meta
-    - name: keywords
-      content: "kaeru, fenrir, mediatek bootloader spoof, bldr_spoof, ghostlock, cve-2026-43499, root my galaxy, root my pixel, root my device, temporary root, kernelsu temp root"
-  - - meta
     - property: og:type
       content: article
   - - meta
     - property: og:title
-      content: "Bootloader Modification & Temporary Root Solutions"
+      content: "Temporary Root for Android: Methods & Solutions"
   - - meta
     - property: og:description
-      content: "Guide to bootloader-level modification tools and kernel-exploit temporary root solutions, and how they differ from standard Magisk/KernelSU/APatch rooting."
+      content: "Compare Android temporary root, bootloader modification tools and standard Magisk, KernelSU and APatch rooting, with device limits and safety notes."
   - - meta
     - property: og:url
       content: https://awesome-android-root.zhoe.org/rooting-guides/temporary-root-solutions
@@ -38,10 +35,10 @@ head:
       content: summary_large_image
   - - meta
     - name: twitter:title
-      content: "Bootloader Modification & Temporary Root Solutions"
+      content: "Temporary Root for Android: Methods & Solutions"
   - - meta
     - name: twitter:description
-      content: "Kaeru, Fenrir, and the GhostLock (CVE-2026-43499) family: Root My Galaxy, Root My Pixel, Root My Device."
+      content: "Temporary root for Android: Kaeru, Fenrir and GhostLock family tools, supported-device cautions and differences from permanent root."
   - - meta
     - name: article:author
       content: Awesome Android Root
@@ -50,7 +47,7 @@ head:
       content: 2026-08-07
   - - meta
     - name: article:modified_time
-      content: 2026-08-07
+      content: 2026-09-13
   - - meta
     - name: article:section
       content: Guides
@@ -63,9 +60,31 @@ head:
   - - meta
     - name: article:tag
       content: Play Integrity
+  - - script
+    - type: application/ld+json
+    - |
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "@id": "https://awesome-android-root.zhoe.org/rooting-guides/temporary-root-solutions#article",
+        "headline": "Temporary Root for Android: Methods & Solutions",
+        "description": "A practical comparison of Android temporary root, bootloader modification tools and their limitations.",
+        "image": "https://awesome-android-root.zhoe.org/images/og.png",
+        "author": { "@id": "https://awesome-android-root.zhoe.org/#organization" },
+        "publisher": { "@id": "https://awesome-android-root.zhoe.org/#organization" },
+        "datePublished": "2026-08-07",
+        "dateModified": "2026-09-13",
+        "mainEntityOfPage": {
+          "@id": "https://awesome-android-root.zhoe.org/rooting-guides/temporary-root-solutions#webpage"
+        },
+        "articleSection": "Android Rooting Guides",
+        "inLanguage": "en-US",
+        "isAccessibleForFree": true
+      }
+
 ---
 
-# Bootloader Modification & Temporary Root Solutions
+# Temporary Root for Android: Methods & Solutions
 
 Most of this site covers root frameworks that patch the **boot image** (Magisk, KernelSU, APatch) after the bootloader is unlocked. This page covers two related but distinct categories that don't fit that model:
 
@@ -75,6 +94,16 @@ Most of this site covers root frameworks that patch the **boot image** (Magisk, 
 
 > [!CAUTION]
 > Everything on this page operates below the OS, either in the bootloader or in the kernel. A bad flash or a failed exploit run can **brick your device**. These are research-grade, device-specific tools maintained by small teams, not polished consumer apps. Read each project's documentation in full before using it, and keep a copy of your stock firmware.
+
+## Temporary Root Method Comparison
+
+The word **temporary root** is used for a session-only root that is lost when the device reboots. Bootloader patching is different: it can persist after a reboot, but it normally requires an unlock and a device-specific flash. Use the table to choose the right branch before opening a project link.
+
+| Method | Permanent? | Bootloader unlock required? | Survives reboot? | Main limitation |
+| :--- | :--- | :--- | :--- | :--- |
+| Standard Magisk, KernelSU or APatch | Usually yes, until it is removed or an update replaces the image | Yes | Usually yes | Requires an unlockable device, an exact image or kernel, and careful updates. |
+| MediaTek Kaeru or Fenrir bootloader modification | Yes, until the patched bootloader is restored | Yes, to flash the modification | Yes | MediaTek and device-specific; a bad LK/preloader change can brick the phone. |
+| GhostLock family temporary root | No | No | No; rerun after each reboot | Only supported on particular vulnerable kernel builds and patch levels. |
 
 ## MediaTek Bootloader Modification & Spoofing Tools
 
@@ -129,6 +158,36 @@ Community ports keep spreading - Galaxy S22 Ultra / Z Fold6 / A17, OPPO Find N2,
 
 See the [Root Hiding & Play Integrity apps](/apps-and-modules/root-management#root-hiding-play-integrity) section for the DenyList/Shamiko/Tricky Store side of this problem on a normally-rooted device.
 
+## Temporary Root FAQ
+
+### What is temporary root?
+
+Temporary root is root access held in memory for the current Android boot. It does not install a persistent patched boot image, so the root session ends when the device restarts.
+
+### Does temporary root survive reboot?
+
+No. The GhostLock family described here must be triggered again after a reboot, and it may stop working after an OTA patches the vulnerable kernel.
+
+### Can temporary root install root modules?
+
+Some tools load a session root manager such as KernelSU and may support compatible modules during that boot. Do not assume every Magisk or KernelSU module works, and do not assume a module or its changes will persist after reboot.
+
+### Does temporary root unlock the bootloader?
+
+No. GhostLock-style temporary root leaves the bootloader locked. It cannot be used as a general substitute for unlocking when you need to flash a recovery, custom ROM or permanent root image.
+
+### Is temporary root safe?
+
+It avoids the data wipe and fuse changes associated with some bootloader unlocks, but it still runs privilege-escalation code as root. Use the linked source or release, verify the exact target build, keep a backup and understand that an exploit can be patched or misused.
+
+### Which devices support temporary root?
+
+There is no universal device list. Support depends on the exact model, kernel build and security patch. Check the project's supported-targets documentation and the [GhostLock device support table](./root-without-unlocking-bootloader.md#device-support-at-a-glance) rather than inferring support from a phone family.
+
+### What happens after reboot?
+
+The temporary root session and any session-only manager state disappear. The phone returns to its normal locked-bootloader state, and the tool must be run again if the firmware is still vulnerable.
+
 ## Safety & legal notes
 
 - All of the tools on this page are research/proof-of-concept software maintained by individuals, not vendors. Expect rough edges, device-specific porting work, and breakage on the next OTA.
@@ -140,7 +199,7 @@ See the [Root Hiding & Play Integrity apps](/apps-and-modules/root-management#ro
 
 - [Root Without Unlocking the Bootloader: the GhostLock Temporary Root Guide](./root-without-unlocking-bootloader.md)
 - [Root Framework Comparison](../rooting-guides/root-framework-comparison.md)
-- [Complete Bootloader Unlocking Guide](../rooting-guides/how-to-unlock-bootloader.md)
+- [How to unlock an Android bootloader](../rooting-guides/how-to-unlock-bootloader.md)
 - [Troubleshooting: Play Integrity & Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps)
 - [Root Hiding & Play Integrity apps](/apps-and-modules/root-management#root-hiding-play-integrity)
 

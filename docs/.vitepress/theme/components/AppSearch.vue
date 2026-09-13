@@ -2,6 +2,37 @@
   <!-- ARIA live region for screen reader announcements -->
   <div id="filter-live-region" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
 
+  <!-- Search is the primary control; filters remain a compact secondary control. -->
+  <div class="app-search-control">
+    <label for="app-module-search">Search apps and modules</label>
+    <div class="app-search-input-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="7"></circle>
+        <path d="m20 20-4-4"></path>
+      </svg>
+      <input
+        id="app-module-search"
+        v-model="searchQuery"
+        @input="handleSearchInput"
+        type="search"
+        placeholder="Search apps and modules"
+        autocomplete="off"
+        spellcheck="false"
+        aria-describedby="app-search-help"
+      />
+      <button
+        v-if="searchQuery"
+        class="clear-search-btn"
+        type="button"
+        @click="clearSearch"
+        aria-label="Clear app and module search"
+      >
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    <p id="app-search-help">Search this category, then narrow the results by framework or license.</p>
+  </div>
+
   <!-- Mobile Floating Filter Button -->
   <transition name="filter-button-fade">
     <button
@@ -51,10 +82,10 @@
               v-for="filter in quickFilters" 
               :key="filter.value"
               class="filter-pill"
-              :class="{ active: activeFilters.includes(filter.value) }"
+              :class="{ active: filter.value === 'all' ? activeFilters.length === 0 && !searchQuery : activeFilters.includes(filter.value) }"
               @click="toggleFilter(filter.value)"
               :aria-label="filter.ariaLabel"
-              :aria-pressed="activeFilters.includes(filter.value)"
+              :aria-pressed="filter.value === 'all' ? activeFilters.length === 0 && !searchQuery : activeFilters.includes(filter.value)"
             >
               <span class="pill-icon" aria-hidden="true">{{ filter.icon }}</span>
               <span class="pill-label">{{ filter.label }}</span>
@@ -62,28 +93,28 @@
           </div>
 
           <!-- Filter Stats -->
-          <div v-if="activeFilters.length > 0 && visibleCount > 0" class="filter-stats">
+          <div v-if="(activeFilters.length > 0 || searchQuery) && visibleCount > 0" class="filter-stats">
             <span class="stats-text">
               Showing <strong>{{ visibleCount }}</strong> of <strong>{{ totalCount }}</strong> entries
             </span>
             <button 
               class="clear-filters-btn"
-              @click="clearFilters"
-              aria-label="Clear all active filters"
+              @click="clearAll"
+              aria-label="Clear search and filters"
             >
               Clear all
             </button>
           </div>
           
           <!-- Empty State -->
-          <div v-else-if="activeFilters.length > 0 && visibleCount === 0" class="empty-state">
+          <div v-else-if="(activeFilters.length > 0 || searchQuery) && visibleCount === 0" class="empty-state">
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <line x1="12" y1="8" x2="12" y2="12"></line>
               <line x1="12" y1="16" x2="12.01" y2="16"></line>
             </svg>
-            <h4>No apps match your filters</h4>
-            <p>Try selecting different filter options</p>
+            <h4>No apps or modules match this search</h4>
+            <p>Try another search term or filter</p>
             <button class="clear-filters-btn" @click="clearFilters">Clear all filters</button>
           </div>
           
@@ -103,7 +134,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
           </svg>
-          <span class="filter-title">Filter</span>
+          <span class="filter-title">Filter results</span>
           <span v-if="activeFilters.length > 0" class="filter-badge" :aria-label="`${activeFilters.length} filters active`">{{ activeFilters.length }}</span>
         </div>
         
@@ -121,10 +152,10 @@
             </svg>
           </label>
           <button 
-            v-if="activeFilters.length > 0"
+            v-if="activeFilters.length > 0 || searchQuery"
             class="clear-all-btn"
-            @click="clearFilters"
-            aria-label="Clear all active filters"
+            @click="clearAll"
+            aria-label="Clear search and filters"
             title="Clear all filters"
           >
             Clear
@@ -138,10 +169,10 @@
           v-for="filter in quickFilters" 
           :key="filter.value"
           class="filter-pill"
-          :class="{ active: activeFilters.includes(filter.value) }"
+          :class="{ active: filter.value === 'all' ? activeFilters.length === 0 && !searchQuery : activeFilters.includes(filter.value) }"
           @click="toggleFilter(filter.value)"
           :aria-label="filter.ariaLabel"
-          :aria-pressed="activeFilters.includes(filter.value)"
+          :aria-pressed="filter.value === 'all' ? activeFilters.length === 0 && !searchQuery : activeFilters.includes(filter.value)"
           :title="filter.ariaLabel"
         >
           <span class="pill-icon" aria-hidden="true">{{ filter.icon }}</span>
@@ -151,7 +182,7 @@
 
       <!-- Filter Stats -->
       <transition name="stats-fade">
-        <div v-if="activeFilters.length > 0" class="filter-stats">
+        <div v-if="activeFilters.length > 0 || searchQuery" class="filter-stats">
           <span class="stats-text">
             <strong>{{ visibleCount }}</strong> / {{ totalCount }} entries
           </span>
@@ -160,14 +191,14 @@
       
       <!-- Empty State for Desktop -->
       <transition name="stats-fade">
-        <div v-if="activeFilters.length > 0 && visibleCount === 0" class="empty-state">
+        <div v-if="(activeFilters.length > 0 || searchQuery) && visibleCount === 0" class="empty-state">
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="10"></circle>
             <line x1="12" y1="8" x2="12" y2="12"></line>
             <line x1="12" y1="16" x2="12.01" y2="16"></line>
           </svg>
-          <h4>No apps match your filters</h4>
-          <button class="clear-filters-btn" @click="clearFilters" aria-label="Clear all filters to show all apps">Clear filters</button>
+          <h4>No apps or modules match this search</h4>
+          <button class="clear-filters-btn" @click="clearAll" aria-label="Clear search and filters to show all apps">Clear filters</button>
         </div>
       </transition>
     </div>
@@ -178,6 +209,7 @@
 import { ref, onMounted, onUnmounted, onErrorCaptured, watch } from 'vue'
 
 const activeFilters = ref([])
+const searchQuery = ref('')
 const visibleCount = ref(0)
 const totalCount = ref(0)
 const isMobile = ref(false)
@@ -193,12 +225,13 @@ let resizeTimer = null
 let initializationFrameId = null
 
 const quickFilters = [
-  { label: 'Featured', value: '⭐', icon: '⭐', ariaLabel: 'Filter by featured apps' },
+  { label: 'All', value: 'all', icon: '•', ariaLabel: 'Show all apps and modules' },
+  { label: 'Magisk', value: '[M]', icon: 'Ⓜ️', ariaLabel: 'Filter by Magisk modules' },
+  { label: 'KernelSU', value: '[K]', icon: '🔧', ariaLabel: 'Filter by KernelSU modules' },
+  { label: 'APatch', value: '[A]', icon: '🩹', ariaLabel: 'Filter by APatch modules' },
+  { label: 'LSPosed', value: '[LSP]', icon: '⚡', ariaLabel: 'Filter by LSPosed modules' },
   { label: 'FOSS', value: 'FOSS', icon: '🕊️', ariaLabel: 'Filter by free and open source apps' },
-  { label: 'Proprietary', value: 'Proprietary', icon: '🔒', ariaLabel: 'Filter by proprietary apps' },
-  { label: 'Magisk [M]', value: '[M]', icon: 'Ⓜ️', ariaLabel: 'Filter by Magisk modules' },
-  { label: 'KernelSU [K]', value: '[K]', icon: '🔧', ariaLabel: 'Filter by KernelSU modules' },
-  { label: 'LSPosed [LSP]', value: '[LSP]', icon: '⚡', ariaLabel: 'Filter by LSPosed modules' },
+  { label: '⭐', value: '⭐', icon: '⭐', ariaLabel: 'Filter by featured apps' },
 ]
 
 // Error boundary
@@ -211,23 +244,36 @@ onErrorCaptured((err) => {
 })
 
 const toggleFilter = (filterValue) => {
-  const index = activeFilters.value.indexOf(filterValue)
-  if (index > -1) {
-    activeFilters.value.splice(index, 1)
+  if (filterValue === 'all') {
+    activeFilters.value = []
   } else {
-    activeFilters.value.push(filterValue)
+    const index = activeFilters.value.indexOf(filterValue)
+    if (index > -1) {
+      activeFilters.value.splice(index, 1)
+    } else {
+      activeFilters.value.push(filterValue)
+    }
   }
-  
-  // Update URL state
-  updateURLState()
   applyFilters()
 }
 
 const clearFilters = () => {
   activeFilters.value = []
-  
-  // Update URL state
-  updateURLState()
+  applyFilters()
+}
+
+const clearSearch = () => {
+  searchQuery.value = ''
+  applyFilters()
+}
+
+const handleSearchInput = () => {
+  applyFilters()
+}
+
+const clearAll = () => {
+  activeFilters.value = []
+  searchQuery.value = ''
   applyFilters()
 }
 
@@ -251,36 +297,6 @@ const checkMobile = () => {
   }, 150)
 }
 
-// URL state management
-const updateURLState = () => {
-  if (typeof window === 'undefined') return
-  
-  const url = new URL(window.location.href)
-  if (activeFilters.value.length > 0) {
-    url.searchParams.set('filters', activeFilters.value.join(','))
-  } else {
-    url.searchParams.delete('filters')
-  }
-  
-  // Update URL without reloading page
-  window.history.replaceState({}, '', url.toString())
-}
-
-const restoreURLState = () => {
-  if (typeof window === 'undefined') return
-  
-  const url = new URL(window.location.href)
-  const filtersParam = url.searchParams.get('filters')
-  
-  if (filtersParam) {
-    const filters = filtersParam.split(',')
-    // Only restore valid filters
-    activeFilters.value = filters.filter(f => 
-      quickFilters.some(qf => qf.value === f)
-    )
-  }
-}
-
 // Cache DOM selectors for performance
 const cacheDOMSelectors = () => {
   cachedSections = document.querySelectorAll('.app-search-content h2, .app-search-content h3, .app-search-content ul')
@@ -297,9 +313,7 @@ const initializeFiltersWhenReady = (attempt = 0) => {
     return
   }
 
-  restoreURLState()
-
-  if (activeFilters.value.length > 0) {
+  if (activeFilters.value.length > 0 || searchQuery.value) {
     applyFilters()
   }
 
@@ -315,109 +329,67 @@ const announceResults = (count) => {
 }
 
 const applyFilters = () => {
-  // Cancel any pending animation frame
   if (animationFrameId) {
     cancelAnimationFrame(animationFrameId)
   }
-  
-  // Use requestAnimationFrame for better performance
+
   animationFrameId = requestAnimationFrame(() => {
     isLoading.value = true
-    
     const filters = activeFilters.value
-    
-    // Use cached selectors
+    const query = searchQuery.value.trim().toLowerCase()
+
     if (!cachedSections || !cachedListItems) {
       cacheDOMSelectors()
     }
-    
+
     let visible = 0
-    
-    // If no filters, show all
-    if (filters.length === 0) {
-      cachedListItems.forEach(item => {
-        item.style.display = ''
-      })
-      cachedSections.forEach(section => {
-        section.style.display = ''
-      })
-      visibleCount.value = totalCount.value
-      announceResults(totalCount.value)
-      isLoading.value = false
-      return
-    }
-    
-    // Batch DOM reads and writes for better performance
     const itemsToShow = []
     const itemsToHide = []
-    
-    // Read phase - check all items
+
     cachedListItems.forEach(item => {
       const text = item.textContent.toLowerCase()
       const innerHTML = item.innerHTML
-      
-      // Check filters (OR logic - must match at least one filter)
-      const hasAnyFilter = filters.some(filter => {
-        // For badges like [M], [K], [LSP], check the exact format in code blocks
+      const matchesSearch = !query || text.includes(query)
+      const matchesFilter = filters.length === 0 || filters.some(filter => {
         if (filter.startsWith('[') && filter.endsWith(']')) {
           return innerHTML.includes(`<code>${filter}</code>`)
         }
-        // For FOSS, Proprietary, check in code blocks
-        if (filter === 'FOSS' || filter === 'Proprietary') {
-          return innerHTML.includes(`<code>${filter}</code>`)
+        if (filter === 'FOSS') {
+          return innerHTML.includes('<code>FOSS</code>')
         }
-        // For star, check directly in text
-        if (filter === '⭐') {
-          return text.includes('⭐')
-        }
-        return false
+        return filter === '⭐' && text.includes('⭐')
       })
-      
-      if (hasAnyFilter) {
+
+      if (matchesSearch && matchesFilter) {
         itemsToShow.push(item)
         visible++
       } else {
         itemsToHide.push(item)
       }
     })
-    
-    // Write phase - update DOM in batches
-    itemsToShow.forEach(item => item.style.display = '')
-    itemsToHide.forEach(item => item.style.display = 'none')
-    
-    // Show/hide section headers based on whether they have visible items
+
+    itemsToShow.forEach(item => { item.style.display = '' })
+    itemsToHide.forEach(item => { item.style.display = 'none' })
+
+    // Keep category headings only when one of their entries is visible.
     cachedSections.forEach(section => {
       if (section.tagName === 'UL') {
         const hasVisibleItems = Array.from(section.children).some(li => li.style.display !== 'none')
         section.style.display = hasVisibleItems ? '' : 'none'
       } else if (section.tagName === 'H2' || section.tagName === 'H3') {
-        // Check if the next sibling (or any following element until next heading) has visible items
         let nextElement = section.nextElementSibling
         let hasVisibleContent = false
-        
         while (nextElement && nextElement.tagName !== 'H2' && nextElement.tagName !== 'H3') {
           if (nextElement.tagName === 'UL' && nextElement.style.display !== 'none') {
             hasVisibleContent = true
             break
           }
-          if (nextElement.tagName === 'H4') {
-            // Check subsections
-            let subElement = nextElement.nextElementSibling
-            while (subElement && subElement.tagName !== 'H2' && subElement.tagName !== 'H3' && subElement.tagName !== 'H4') {
-              if (subElement.tagName === 'UL' && subElement.style.display !== 'none') {
-                hasVisibleContent = true
-                break
-              }
-              subElement = subElement.nextElementSibling
-            }
-          }
           nextElement = nextElement.nextElementSibling
         }
-        
         section.style.display = hasVisibleContent ? '' : 'none'
       }
     })
-    
+
     visibleCount.value = visible
     announceResults(visible)
     isLoading.value = false
@@ -457,8 +429,8 @@ const handleKeyboardShortcuts = (e) => {
   if (e.key === 'Escape') {
     if (showMobileFilter.value) {
       closeMobileFilter()
-    } else if (activeFilters.value.length > 0) {
-      clearFilters()
+    } else if (activeFilters.value.length > 0 || searchQuery.value) {
+      clearAll()
     }
   }
   
@@ -499,12 +471,82 @@ if (typeof localStorage !== 'undefined') {
   border: 0;
 }
 
-/* Desktop Filter Container */
+/* Primary search control */
+.app-search-control {
+  margin: 1.5rem 0 0.75rem;
+}
+
+.app-search-control > label {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--vp-c-text-1);
+  font-size: 0.95rem;
+  font-weight: 650;
+}
+
+.app-search-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 3rem;
+  padding: 0 0.85rem;
+  border: 2px solid var(--vp-c-brand-1);
+  border-radius: 9px;
+  background: var(--vp-c-bg);
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--vp-c-brand-1) 10%, transparent);
+}
+
+.app-search-input-wrap > svg {
+  flex: 0 0 auto;
+  color: var(--vp-c-brand-1);
+}
+
+.app-search-input-wrap input {
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--vp-c-text-1);
+  font: inherit;
+}
+
+.app-search-input-wrap input::placeholder {
+  color: var(--vp-c-text-3);
+}
+
+.clear-search-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 0;
+  border-radius: 50%;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-2);
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.clear-search-btn:hover {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+}
+
+.app-search-control > p {
+  margin: 0.4rem 0 0;
+  color: var(--vp-c-text-3);
+  font-size: 0.78rem;
+}
+
+/* Compact secondary filter controls */
 .app-filter-container {
   position: relative;
   background: linear-gradient(135deg, var(--vp-c-bg-soft) 0%, var(--vp-c-bg) 100%);
-  padding: 0.75rem 0;
-  margin: 1rem 0 1.25rem;
+  padding: 0.55rem 0;
+  margin: 0.75rem 0 1.25rem;
   border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
@@ -531,7 +573,7 @@ if (typeof localStorage !== 'undefined') {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.45rem;
   gap: 1rem;
 }
 
@@ -647,8 +689,8 @@ if (typeof localStorage !== 'undefined') {
   display: flex;
   align-items: center;
   gap: 0.375rem;
-  padding: 0.4375rem 0.75rem;
-  font-size: 0.8125rem;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.78rem;
   font-weight: 500;
   background: var(--vp-c-bg);
   border: 1px solid var(--vp-c-divider);

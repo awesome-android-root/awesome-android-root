@@ -13,9 +13,6 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - name: keywords
-      content: "android app patcher, revanced, morphe, app mods android, modded apps, social media mods, telegram mods, whatsapp mods, reddit patches, youtube mods, browser mods, signature verification disable, lsposed app mods"
-  - - meta
     - property: og:type
       content: article
   - - meta

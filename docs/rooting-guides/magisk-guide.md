@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: Complete Magisk Root Guide
-description: "Master Magisk rooting with our comprehensive guide. Install systemless root, modules, and advanced root management for all Android devices safely."
+title: "Magisk Root Guide: Installation, Modules & Troubleshooting"
+description: "Learn Magisk installation, boot image patching, modules, Zygisk, DenyList, Play Integrity and troubleshooting for supported Android devices."
 head:
   - - link
     - rel: canonical
@@ -11,10 +11,10 @@ head:
       content: article
   - - meta
     - property: og:title
-      content: Complete Magisk Root Guide - Universal Android Rooting Solution
+      content: "Magisk Root Guide: Installation, Modules & Troubleshooting"
   - - meta
     - property: og:description
-      content: Install Magisk root with our comprehensive guide. Master systemless rooting with advanced module system, root hiding, and complete device management.
+      content: Install Magisk with boot image patching, systemless modules, Zygisk, DenyList and practical troubleshooting guidance.
   - - meta
     - property: og:url
       content: https://awesome-android-root.zhoe.org/rooting-guides/magisk-guide
@@ -32,10 +32,10 @@ head:
       content: summary_large_image
   - - meta
     - name: twitter:title
-      content: Complete Magisk Root Guide - Universal Systemless Root
+      content: "Magisk Root Guide: Installation, Modules & Troubleshooting"
   - - meta
     - name: twitter:description
-      content: Master Magisk installation with systemless rooting, module support, and advanced root management for all Android devices.
+      content: Magisk installation, boot image patching, modules, Zygisk, root hiding and Play Integrity troubleshooting.
   - - meta
     - name: twitter:site
       content: "@awsm_and_root"
@@ -48,9 +48,6 @@ head:
   - - meta
     - name: twitter:image:alt
       content: Magisk Root Guide - Universal Systemless Rooting
-  - - meta
-    - name: keywords
-      content: magisk root guide, systemless root installation, magisk modules, android rooting, zygisk magisk, root hiding, play integrity fix, magisk boot image patching, magisk installation tutorial, magisk denylist, magisk shamiko
   - - meta
     - name: author
       content: Awesome Android Root Project
@@ -132,9 +129,9 @@ head:
       }
 ---
 
-# Magisk Root Installation Guide
+# Magisk Root Guide: Installation, Modules & Root Management
 
-Industry-standard systemless root solution for Android. Install Magisk to gain complete control over your device while maintaining system integrity.
+Magisk provides systemless root through a patched boot or init_boot image. This guide covers the installation decision, boot image patching, modules, Zygisk, DenyList, Play Integrity and recovery when an update or module goes wrong.
 
 ## Quick Navigation
 
@@ -152,6 +149,8 @@ Industry-standard systemless root solution for Android. Install Magisk to gain c
 - [Root Comparison](./root-framework-comparison.md) - Compare with KernelSU and APatch
 - [Troubleshooting Guide](../troubleshooting.md)
 - [FAQ](../faqs.md) - Common questions
+
+**Magisk topic map:** [installation](#installation-methods) · [boot image patching](#method-1-boot-image-patching-recommended) · [Magisk modules](#managing-modules) · [Zygisk and DenyList](#root-hiding-and-play-integrity) · [Play Integrity](#understanding-play-integrity) · [troubleshooting](#troubleshooting)
 
 ---
 

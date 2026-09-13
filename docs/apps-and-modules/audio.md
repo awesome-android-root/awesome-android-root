@@ -13,9 +13,6 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - name: keywords
-      content: "android audio mods, viper4android, magisk audio module, dolby atmos android, kernelsu audio, audio enhancement root, sound mods android, audio control, equalizer root"
-  - - meta
     - property: og:type
       content: article
   - - meta
