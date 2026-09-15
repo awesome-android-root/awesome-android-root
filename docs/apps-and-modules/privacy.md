@@ -99,6 +99,7 @@ tracking, spoofing your device identity or location, and isolating apps from you
 - **[Insular](https://gitlab.com/secure-system/Insular)** - Isolate your big brother app. A fork based on the excellent Island. `FOSS` | [🌱](https://f-droid.org/packages/com.oasisfeng.island.fdroid)
 - **[Island](https://github.com/oasisfeng/island/tree/dev)** - App isolation and cloning. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.oasisfeng.island)
 - **[Shelter](https://gitea.angry.im/PeterCxy/Shelter)** - Isolate and clone apps. `FOSS` | [🌱](https://f-droid.org/app/net.typeblog.shelter)
+- **[TargetedHide](https://github.com/VisionR1/TargetedHide)** - Ηide files, folders, and packages from specific target apps. `FOSS` `[LSP]`
 
 ## Location & GPS
 
