@@ -60,6 +60,17 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 > Clicking an entry opens its **Source Code** page (GitHub/GitLab etc.) for `FOSS` apps, otherwise the
 > **Google Play Store** listing.
 
+## App Patchers
+
+- **[⭐ Morphe](https://morphe.software/)** - A next-generation app patcher built by some of the original ReVanced developers. It offers a modern interface, enhanced stability, and a growing list of supported apps and features. `FOSS`
+- **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (use with caution). `Proprietary`
+- **[ReVanced](https://revanced.app/)** - A powerful app patcher that allows you to modify popular apps like YouTube, Spotify, and more with additional features and customizations. `FOSS`
+- **[ReVanced Extended](https://github.com/NoName-exe/revanced-extended)** - ReVanced eXtended (now Morphe) YT and YT-M for both root and non-root users. `FOSS` `[M]` `[K]`
+- **[ReVanced Magisk Module by j-hc](https://github.com/j-hc/revanced-magisk-module)** - Extensive ReVanced & morphe builder. `FOSS` `[M]` `[K]`
+
+> [!TIP]
+> Also check out [Morphe Patches list ↗](https://morphe-patches.software/)
+
 
 ## App Mods
 
@@ -95,17 +106,6 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 - **[Yandex Maps Patcher](https://github.com/Xposed-Modules-Repo/ru.bluecat.yandexmapspatcher)** - Hides ads and intrusive services in the Yandex Maps app. `Proprietary` `[LSP]`
 - **[Yandex Music Downloader](https://github.com/errorman-awful/YMDownloaderXposed)** - Download flac Music from Yandex Music app. `Proprietary` `[LSP]`
 
-## App Patchers
-
-- **[⭐ Morphe](https://morphe.software/)** - A next-generation app patcher built by some of the original ReVanced developers. It offers a modern interface, enhanced stability, and a growing list of supported apps and features. `FOSS`
-- **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (use with caution). `Proprietary`
-- **[ReVanced](https://revanced.app/)** - A powerful app patcher that allows you to modify popular apps like YouTube, Spotify, and more with additional features and customizations. `FOSS`
-- **[ReVanced Extended](https://github.com/NoName-exe/revanced-extended)** - ReVanced eXtended (now Morphe) YT and YT-M for both root and non-root users. `FOSS` `[M]` `[K]`
-- **[ReVanced Magisk Module by j-hc](https://github.com/j-hc/revanced-magisk-module)** - Extensive ReVanced & morphe builder. `FOSS` `[M]` `[K]`
-
-> [!TIP]
-> Also check out [Morphe Patches list ↗](https://morphe-patches.software/)
-
 ## Browser Mods
 
 - **[⭐ ChromeXt](https://github.com/JingMatrix/ChromeXt)** - UserScript and DevTools support for Chromium-based and WebView-based browsers. `FOSS` `[LSP]`
@@ -121,105 +121,3 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 - **[Apk Protection Patch](https://github.com/Mods-Center/Apk-Protection-Patch)** - Removes signature verification restrictions on AOSP and OEM ROMs (HyperOS, ColorOS, etc.), allowing installation of modified APKs. `Proprietary` `[M]` `[K]`
 - **[F**k Google License](https://github.com/JiGuroLGC/FuckGoogleLicense)** - Bypass Google Service License Verification. `FOSS` `[LSP]`
 - **[XSpoofSignatures](https://github.com/rushiiMachine/XSpoofSignatures)** - Spoof package signatures. `FOSS` `[LSP]`
-
-## Social Media Mods
-
-### Bilibili
-
-- **[BBZQ](https://github.com/HSSkyBoy/BBZQ)** - Removes unnecessary content, optimizes the core experience, and provide various practical functions. `FOSS` `[LSP]`
-
-### Discord
-
-- **[Kettu](https://github.com/C0C0B01/KettuXposed)** - A Discord mobile app client modification continuing Bunny's mission. `FOSS` `[LSP]`
-- **[Revenge](https://github.com/revenge-mod/revenge-bundle-next)** - Revenge is a client modification for Discord Android. `FOSS`
-
-### Facebook
-
-- **[Chat Head Enabler](https://github.com/NeonOrbit/ChatHeadEnabler)** - Lets you choose between chat head and bubble in Facebook Messenger. `FOSS` `[LSP]`
-- **[Facebook App Ads Remover](https://github.com/Xposed-Modules-Repo/tn.loukious.facebookappadsremover)** - Removes ads from Facebook app. `FOSS` `[LSP]`
-
-### Instagram
-
-- **[InstaEclipse](https://github.com/ReSo7200/InstaEclipse/)** - Adds Features like Developer Options, Ghost Mode, Ad-Free browsing, and Distraction-Free Mode to Instagram. `FOSS` `[LSP]`
-
-### Line
-
-- **[Knot](https://github.com/2b-zipper/Knot)** - Message privacy, notification tweaks & Screen display & UI mods for Line. `FOSS` `[LSP]`
-
-### QQ
-
-- **[NewQStory](https://github.com/Xposed-Modules-Repo/lin.xposed/)** - Xposed QQ module. `Proprietary` `[LSP]`
-- **[QAuxiliary](https://github.com/cinit/QAuxiliary)** - Xposed module based on QNotified. `FOSS` `[LSP]`
-- **[QFun](https://github.com/oneQAQone/QFun)** - Functionality enhancement module developed based on the Xposed framework. `FOSS` `[LSP]`
-- **[TCQT Module](https://github.com/callng/TCQT)** - An Xposed module designed for Android QQ/TIM clients, which is used to intercept and retain messages that would otherwise be "retracted". `FOSS` `[LSP]`
-- **[XAutoDaily](https://github.com/LuckyPray/XAutoDaily)** - Various tweaks for QQ. `FOSS` `[LSP]`
-
-### Reddit
-
-> [!IMPORTANT]
->
-> All Reddit patches require: [Morphe App ↗](https://morphe.software/)
-
-- **[Adobo Patches](https://github.com/jkennethcarino/adobo/)** - Various patches for reddit app. `FOSS`
-- **[Morphe Reddit Patches](https://github.com/MorpheApp/morphe-patches#-patches-list)** - Various patches for reddit. `FOSS`
-- **[Patcheddit](https://github.com/wchill/patcheddit)** - Custom patches with features like view: deleted Reddit posts & comments,Banned subreddits etc. `FOSS`
-
-### Telegram
-
-- **[GramSieve](https://github.com/Xposed-Modules-Repo/com.tianqianguai.gramsieve)** - Message filtering, host-settings integration, anti-recall, anti-edit/edit interception etc. `Proprietary` `[LSP]`
-- **[Killergram](https://github.com/shatyuka/Killergram)** - Remove sponsored messages of Telegram. `FOSS` `[LSP]`
-- **[Telegami](https://github.com/aoya111/Telegami)** - Various tweaks for Telegram. `FOSS` `[LSP]`
-- **[Telegram Speed Hook](https://github.com/araafroyall/Telegram-Speed-Hook)** - Increase Telegram files/media downloading speed. `FOSS` `[LSP]`
-- **[Telegram Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.sidestories)** - Remove action bar stories in the Telegram messenger (+block unmute button). `Proprietary` `[LSP]`
-- **[TeleVip](https://github.com/Xposed-Modules-Repo/com.my.televip/)** - A module for modifying Telegram with hide seen status, unlocking channel restrictions etc. `Proprietary` `[LSP]`
-- **[TMoe](https://github.com/cinit/TMoe)** - Adds various tweaks to various Telegram clients. `FOSS` `[LSP]`
-
-### Threads
-- **[Threads Hide Ads](https://github.com/MrxSiN/ThreadsHideAds)** - Removes ads from Threads app. `FOSS` `[LSP]`
-
-### TikTok
-
-- **[Douyin Enhancer](https://github.com/twyora/DouyinEnhancer)** - Adds minor quality-of-life features to Douyin (Chinese TikTok). `FOSS` `[LSP]`
-- **[TikTok AntiBurn](https://github.com/0mnr0/TikTokAntiBurn)** - Overlap the TikTok app elements to prevent the screen from burning out. `FOSS` `[LSP]`
-- **[Toki](https://github.com/MeiYongAI/Toki)** - Adds various tweaks to TikTok app. `FOSS` `[LSP]`
-
-### WeChat
-
-- **[MaskWechat](https://github.com/Mingyueyixi/MaskWechat)** - Hide the chat records of specific users to prevent private chats from being peeked by third parties. `FOSS` `[LSP]`
-- **[NewMiko](https://modules.lsposed.org/module/im.mingxi.miko/)** - Various tweaks related to  WeChat app. `Proprietary` `[LSP]`
-- **[WeChat Auxiliary](https://github.com/HdShare/WAuxiliary_Public)** - Various tweaks for WeChat. `Proprietary` `[LSP]`
-- **[WePadBridge](https://github.com/libingtong/WePadBridge)** - Enables tablet interface and features in WeChat Work mobile app. `FOSS` `[LSP]`
-
-### Weibo
-
-- **[WeiboHelper](https://github.com/Xposed-Modules-Repo/com.skyhand.sinahelper)** - Remove all available advertisements and recommendations from Weibo. `Proprietary` `[LSP]`
-
-### WhatsApp
-
-- **[⭐ WA Enhancer](https://github.com/Dev4Mod/WaEnhancer)** - Enhances your WhatsApp experience. `FOSS` `[LSP]`
-- **[WA Enhancer X](https://github.com/Xposed-Modules-Repo/com.waenhancer)** - Fork of WA Enhancer with additional features. `Proprietary` `[LSP]`
-- **[WAPlus](https://github.com/RevealedSoulEven/WAPlusXposed)** - Unlock WhatsApp Plus Features. `FOSS` `[LSP]`
-- **[WaThemer](https://github.com/ayane-04/wathemer)** - Themes WhatsApp with custom colors, chat bubble shapes, wallpapers, fonts, icons, system bars and a Liquid Glass mode. Requires Android 12+. `FOSS` `[LSP]`
-
-### X/Twitter
-
-- **[⭐ Piko Patches](https://github.com/crimera/piko)** - Morphe patches for twitter with features like hide promoted tweets, hide promoted accounts, hide promoted trends, hide "who to follow" etc. `FOSS`
-- **[Re:X](https://github.com/Xposed-Modules-Repo/one.dot.rex)** -  Tweaks for the new X / Twitter app. `Proprietary` `[LSP]`
-- **[XBlocker](https://github.com/bileizhen/xblocker)** - Hide spam replies, promoted content and selected categories on android x / twitter app. `FOSS` `[LSP]`
-
-### Zalo
-- **[Zalo Patch](https://github.com/amarinne/zalo-patch)** - Zalo customization module for LSPosed. `FOSS` `[LSP]`
-
-
-> [!TIP]
-> Also check out [App Patchers section](app-modifications.md#app-patchers)
-
-## YouTube & Media Mods
-
-- **[GlassMic](https://github.com/lm060719/io.mo.glassmic)** - Lets you route an imported audio file into target recording apps through AudioRecord/AAudio hooks. `FOSS` `[LSP]`
-- **[NexAlloy](https://github.com/NexAlloy/NexAlloy)** - YouTube, YT Music block ads, background playback, sponsorblock and much more. Also unlocks premium features of Strava and Photomath. Unlimited Google Photos backup. `FOSS` `[LSP]`
-- **[OnePlus 8 Series and 9R Camera Unlocker](https://github.com/Magisk-Modules-Alt-Repo/oneplus-8series-9r-camera-unlocker)** - Enables 48MP RAW10 capture support, both on the main (8/8T/9R) and ultra wide (8 Pro) lenses and much more. `FOSS` `[M]`
-- **[PolyglotYT](https://github.com/Dr-TSNG/PolyglotYT)** - Immersive translation Xposed module for YouTube app. `FOSS` `[LSP]`
-- **[VideoSpeed](https://github.com/MarsGao/io.github.MarsGao.speed)** - An Xposed module for adjusting the playback speed of videos across multiple applications. `FOSS` `[LSP]`
-- **[XAudioCapture](https://github.com/Xposed-Modules-Repo/io.github.wzhy.xaudiocapture)** - Lets you capture any audio stream you desire, bypassing these restrictions. `Proprietary` `[LSP]`
-- **[xCam](https://github.com/hazbu/xCam)** - Replace live camera feeds and actual photo captures with virtual media sources. `FOSS` `[LSP]`
