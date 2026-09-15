@@ -15,6 +15,9 @@ const SITE = 'https://awesome-android-root.zhoe.org';
 
 export default defineConfig({
 	site: SITE,
+	// Allow reverse-proxied preview hosts (CI / sandbox previews).
+	server: { host: true, allowedHosts: true },
+	preview: { host: true, allowedHosts: true },
 	// The old VitePress site used cleanUrls: leaf pages without trailing
 	// slashes (/about). Section indexes still resolve with or without the
 	// slash because they build to `<section>/index.html`.

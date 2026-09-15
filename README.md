@@ -1,9 +1,9 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="docs/public/images/logo.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="docs/public/images/logo_dark.svg">
-  <img src="docs/public/images/logo.svg" alt="Awesome Android Root Logo" width="120" height="120" />
+  <source media="(prefers-color-scheme: light)" srcset="public/images/logo.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="public/images/logo_dark.svg">
+  <img src="public/images/logo.svg" alt="Awesome Android Root Logo" width="120" height="120" />
 </picture>
 
 # Awesome Android Root
@@ -38,51 +38,51 @@ The website adds what a single README cannot:
 
 - **Instant local search** across every app, module and guide (with fuzzy matching)
 - **Clean category navigation** and a sidebar for every topic
-- **A PWA** - installable, works offline, updates automatically
+- **A PWA** - installable, with smart asset caching and automatic updates (documentation pages always load fresh from the network; a dedicated offline screen with retry appears when you are offline)
 - **Shareable pages and anchors** for every category and section
 
 ## Apps & Modules by Category
 
-Browse them in [`docs/apps-and-modules/`](docs/apps-and-modules/):
+Browse them in [`src/content/docs/apps-and-modules/`](src/content/docs/apps-and-modules/):
 
 | Category | Description | Website |
 | :--- | :--- | :--- |
-| **[📜 Category index](docs/apps-and-modules/index.md)** | Index of all categories | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/index) |
-| **🛠️ [Root Management](docs/apps-and-modules/root-management.md)** | Root managers, temporary root, module managers, metamodules, LSPosed &amp; Zygisk, root hiding &amp; Play Integrity | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/root-management) |
-| **⚙️ [System](docs/apps-and-modules/system.md)** | System tweaks, VBMeta, System UI &amp; OEM frameworks, boot &amp; startup, app &amp; package management | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/system) |
-| **⚡ [Performance &amp; Battery](docs/apps-and-modules/performance.md)** | Performance optimization, kernels, memory, battery &amp; charging | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/performance) |
-| **🕵️ [Privacy](docs/apps-and-modules/privacy.md)** | Privacy tools, device ID &amp; location spoofing, app isolation | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/privacy) |
-| **🔐 [Security](docs/apps-and-modules/security.md)** | Security tools &amp; firewalls | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/security) |
-| **🚫 [Ad Blocking](docs/apps-and-modules/ad-blocking.md)** | Hosts-based ad blockers &amp; DNS filtering | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/ad-blocking) |
-| **🧩 [App Modifications](docs/apps-and-modules/app-modifications.md)** | App patchers, social media &amp; browser mods, YouTube clients | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/app-modifications) |
-| **🧹 [Debloating](docs/apps-and-modules/debloating.md)** | Remove bloatware &amp; unwanted system apps | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/debloating) |
-| **🗂️ [File Management](docs/apps-and-modules/file-management.md)** | Root file managers, cleaners &amp; partition tools | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/file-management) |
-| **💾 [Backup &amp; Restore](docs/apps-and-modules/backup.md)** | Full app &amp; data backups and recovery | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/backup) |
-| **🎨 [Customization](docs/apps-and-modules/customization.md)** | Themes, launchers, status bar, fonts, display | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/customization) |
-| **🎵 [Audio](docs/apps-and-modules/audio.md)** | Audio enhancement, control &amp; effects | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/audio) |
-| **🌐 [Networking](docs/apps-and-modules/networking.md)** | VPN/proxy modules, network tools, Wi-Fi, Bluetooth &amp; NFC | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/networking) |
-| **🎮 [Gaming](docs/apps-and-modules/gaming.md)** | Gaming optimization, FPS unlockers &amp; game tools | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/gaming) |
-| **🧑‍💻 [Development &amp; Automation](docs/apps-and-modules/development.md)** | Terminal, ADB, developer tools, Linux environments, automation | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/development) |
-| **🧰 [General Utilities](docs/apps-and-modules/utilities.md)** | Sync, power, sharing, communication, toolboxes | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/utilities) |
+| **[📜 Category index](src/content/docs/apps-and-modules/index.md)** | Index of all categories | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/index) |
+| **🛠️ [Root Management](src/content/docs/apps-and-modules/root-management.md)** | Root managers, temporary root, module managers, metamodules, LSPosed &amp; Zygisk, root hiding &amp; Play Integrity | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/root-management) |
+| **⚙️ [System](src/content/docs/apps-and-modules/system.md)** | System tweaks, VBMeta, System UI &amp; OEM frameworks, boot &amp; startup, app &amp; package management | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/system) |
+| **⚡ [Performance &amp; Battery](src/content/docs/apps-and-modules/performance.md)** | Performance optimization, kernels, memory, battery &amp; charging | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/performance) |
+| **🕵️ [Privacy](src/content/docs/apps-and-modules/privacy.md)** | Privacy tools, device ID &amp; location spoofing, app isolation | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/privacy) |
+| **🔐 [Security](src/content/docs/apps-and-modules/security.md)** | Security tools &amp; firewalls | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/security) |
+| **🚫 [Ad Blocking](src/content/docs/apps-and-modules/ad-blocking.md)** | Hosts-based ad blockers &amp; DNS filtering | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/ad-blocking) |
+| **🧩 [App Modifications](src/content/docs/apps-and-modules/app-modifications.md)** | App patchers, social media &amp; browser mods, YouTube clients | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/app-modifications) |
+| **🧹 [Debloating](src/content/docs/apps-and-modules/debloating.md)** | Remove bloatware &amp; unwanted system apps | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/debloating) |
+| **🗂️ [File Management](src/content/docs/apps-and-modules/file-management.md)** | Root file managers, cleaners &amp; partition tools | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/file-management) |
+| **💾 [Backup &amp; Restore](src/content/docs/apps-and-modules/backup.md)** | Full app &amp; data backups and recovery | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/backup) |
+| **🎨 [Customization](src/content/docs/apps-and-modules/customization.md)** | Themes, launchers, status bar, fonts, display | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/customization) |
+| **🎵 [Audio](src/content/docs/apps-and-modules/audio.md)** | Audio enhancement, control &amp; effects | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/audio) |
+| **🌐 [Networking](src/content/docs/apps-and-modules/networking.md)** | VPN/proxy modules, network tools, Wi-Fi, Bluetooth &amp; NFC | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/networking) |
+| **🎮 [Gaming](src/content/docs/apps-and-modules/gaming.md)** | Gaming optimization, FPS unlockers &amp; game tools | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/gaming) |
+| **🧑‍💻 [Development &amp; Automation](src/content/docs/apps-and-modules/development.md)** | Terminal, ADB, developer tools, Linux environments, automation | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/development) |
+| **🧰 [General Utilities](src/content/docs/apps-and-modules/utilities.md)** | Sync, power, sharing, communication, toolboxes | [↗](https://awesome-android-root.zhoe.org/apps-and-modules/utilities) |
 
 
 ## Guides & Documentation
 
 | Section | Contents |
 | :--- | :--- |
-| **[Rooting Guides](docs/rooting-guides/index.md)** | Introduction, root framework comparison, Magisk/KernelSU/APatch/LSPosed setup, bootloader unlocking, custom recovery, device-specific guides |
-| **[General Guides / Tutorials](docs/general-guides/index.md)** | Ad blocking, debloating, stopping Play Store auto-updates |
-| **[FAQ](docs/faqs.md)** | Common questions before &amp; after rooting |
-| **[Troubleshooting](docs/troubleshooting.md)** | Bootloops, Magisk/KernelSU/APatch issues, Play Integrity &amp; banking apps |
-| **[Non-Root Alternatives](docs/non-root-alternatives.md)** | Get many root-like features without root (Shizuku, ADB...) |
-| **[Community Resources](docs/resources.md)** | Firmware, tooling, communities &amp; emergency help |
-| **[Contributing](docs/contributing.md)** | How to add apps, modules &amp; guides |
-| **[About and Legal](docs/about.md)** | Mission, legal disclaimer |
+| **[Rooting Guides](src/content/docs/rooting-guides/index.md)** | Introduction, root framework comparison, Magisk/KernelSU/APatch/LSPosed setup, bootloader unlocking, custom recovery, device-specific guides |
+| **[General Guides / Tutorials](src/content/docs/general-guides/index.md)** | Ad blocking, debloating, stopping Play Store auto-updates |
+| **[FAQ](src/content/docs/faqs.md)** | Common questions before &amp; after rooting |
+| **[Troubleshooting](src/content/docs/troubleshooting.md)** | Bootloops, Magisk/KernelSU/APatch issues, Play Integrity &amp; banking apps |
+| **[Non-Root Alternatives](src/content/docs/non-root-alternatives.md)** | Get many root-like features without root (Shizuku, ADB...) |
+| **[Community Resources](src/content/docs/resources.md)** | Firmware, tooling, communities &amp; emergency help |
+| **[Contributing](src/content/docs/contributing.md)** | How to add apps, modules &amp; guides |
+| **[About and Legal](src/content/docs/about.md)** | Mission, legal disclaimer |
 
 
 ## Contributing
 
-> 📝 Read the the [`Contributing Guide ↗`](docs/contributing.md) and the
+> 📝 Read the the [`Contributing Guide ↗`](src/content/docs/contributing.md) and the
 [`PR template ↗`](.github/PULL_REQUEST_TEMPLATE.md) for entry format, badges and category placement.
 
 <br>
@@ -97,7 +97,7 @@ Browse them in [`docs/apps-and-modules/`](docs/apps-and-modules/):
 ## License & Disclaimer
 
 - Licensed under [MIT](LICENSE). 
-- Read the [Legal Disclaimer](docs/legal-disclaimer.md) for details.
+- Read the [Legal Disclaimer](src/content/docs/legal-disclaimer.md) for details.
 
 > [!NOTE]
 > This project is maintained by `HUMANS` , AI is used for coding, formatting and proofreading and not for content creation or curation. 

@@ -16,6 +16,11 @@ const projectRoot = fileURLToPath(new URL('..', import.meta.url));
 const distDir = path.join(projectRoot, 'dist');
 const baselineIdx = process.argv.indexOf('--baseline');
 const baselineDir = baselineIdx === -1 ? '/home/user/baseline' : process.argv[baselineIdx + 1];
+// Baseline comparisons (old URLs, heading IDs, canonicals, titles) only run
+// where the archived VitePress build is available; self-contained checks
+// (routes, llms exports, service worker, search index, SEO) always run.
+const hasBaseline = fs.existsSync(path.join(baselineDir, 'dist', 'sitemap.xml'));
+if (!hasBaseline) console.warn('ℹ No baseline archive found — skipping VitePress parity checks');
 
 let failures = 0;
 let warnings = 0;
@@ -59,10 +64,13 @@ function newFileForOld(oldRel) {
 }
 
 // ---------------------------------------------------------------------------
-// 1. Route existence — every old URL must still resolve.
+// 1. Route existence — every sitemap URL must resolve in dist.
 // ---------------------------------------------------------------------------
 {
-	const oldSitemap = read(path.join(baselineDir, 'dist', 'sitemap.xml'));
+	const sitemapSource = hasBaseline
+		? path.join(baselineDir, 'dist', 'sitemap.xml')
+		: path.join(distDir, 'sitemap.xml');
+	const oldSitemap = read(sitemapSource);
 	const urls = extract(oldSitemap, /<loc>(.*?)<\/loc>/g, true);
 	const missing = [];
 	for (const url of urls) {
@@ -74,7 +82,7 @@ function newFileForOld(oldRel) {
 		if (!candidates.some((c) => fs.existsSync(c))) missing.push(url);
 	}
 	if (missing.length) fail(`Missing routes in new dist: ${missing.join(', ')}`);
-	else ok(`All ${urls.length} old sitemap URLs resolve in the new dist`);
+	else ok(`All ${urls.length} sitemap URLs resolve in the new dist`);
 
 	// Offline + 404 pages must exist.
 	for (const p of ['offline/index.html', '404.html']) {
@@ -86,7 +94,7 @@ function newFileForOld(oldRel) {
 // ---------------------------------------------------------------------------
 // 2. Heading IDs — every baseline heading ID must survive (fragment URLs).
 // ---------------------------------------------------------------------------
-{
+if (hasBaseline) {
 	const headings = JSON.parse(read(path.join(baselineDir, 'headings.json')));
 	let total = 0;
 	let missingIds = 0;
@@ -119,7 +127,7 @@ function newFileForOld(oldRel) {
 // ---------------------------------------------------------------------------
 // 3. Canonicals — old canonical URLs must appear on the matching page.
 // ---------------------------------------------------------------------------
-{
+if (hasBaseline) {
 	const canonicals = JSON.parse(read(path.join(baselineDir, 'canonicals.json')));
 	let checked = 0;
 	for (const [oldRel, canonical] of Object.entries(canonicals)) {
@@ -139,7 +147,7 @@ function newFileForOld(oldRel) {
 // ---------------------------------------------------------------------------
 // 4. Titles — baseline <title> text must match the new build.
 // ---------------------------------------------------------------------------
-{
+if (hasBaseline) {
 	const headings = JSON.parse(read(path.join(baselineDir, 'headings.json')));
 	let checked = 0;
 	for (const [oldRel, info] of Object.entries(headings)) {
@@ -155,19 +163,23 @@ function newFileForOld(oldRel) {
 }
 
 // ---------------------------------------------------------------------------
-// 5. Sitemap — URL set must match the old sitemap exactly.
+// 5. Sitemap — URL set must match the old sitemap exactly (when available).
 // ---------------------------------------------------------------------------
 {
-	const oldUrls = new Set(
-		extract(read(path.join(baselineDir, 'dist', 'sitemap.xml')), /<loc>(.*?)<\/loc>/g, true)
-	);
 	const newSitemap = read(path.join(distDir, 'sitemap.xml'));
 	const newUrls = new Set(extract(newSitemap, /<loc>(.*?)<\/loc>/g, true));
-	const gone = [...oldUrls].filter((u) => !newUrls.has(u));
-	const added = [...newUrls].filter((u) => !oldUrls.has(u));
-	if (gone.length) fail(`Sitemap lost URLs: ${gone.join(', ')}`);
-	if (added.length) fail(`Sitemap gained URLs: ${added.join(', ')}`);
-	if (!gone.length && !added.length) ok(`Sitemap URL set identical (${oldUrls.size} URLs)`);
+	if (hasBaseline) {
+		const oldUrls = new Set(
+			extract(read(path.join(baselineDir, 'dist', 'sitemap.xml')), /<loc>(.*?)<\/loc>/g, true)
+		);
+		const gone = [...oldUrls].filter((u) => !newUrls.has(u));
+		const added = [...newUrls].filter((u) => !oldUrls.has(u));
+		if (gone.length) fail(`Sitemap lost URLs: ${gone.join(', ')}`);
+		if (added.length) fail(`Sitemap gained URLs: ${added.join(', ')}`);
+		if (!gone.length && !added.length) ok(`Sitemap URL set identical (${oldUrls.size} URLs)`);
+	} else {
+		ok(`Sitemap lists ${newUrls.size} URLs`);
+	}
 	if (/<image:image>/.test(newSitemap)) ok('Sitemap image:image block present for home');
 	else warn('Sitemap image:image block missing');
 }
@@ -176,7 +188,10 @@ function newFileForOld(oldRel) {
 // 6. LLM / Markdown exports.
 // ---------------------------------------------------------------------------
 {
-	const oldSitemap = read(path.join(baselineDir, 'dist', 'sitemap.xml'));
+	const sitemapSource = hasBaseline
+		? path.join(baselineDir, 'dist', 'sitemap.xml')
+		: path.join(distDir, 'sitemap.xml');
+	const oldSitemap = read(sitemapSource);
 	const urls = extract(oldSitemap, /<loc>(.*?)<\/loc>/g, true);
 	let missingMd = 0;
 	for (const url of urls) {

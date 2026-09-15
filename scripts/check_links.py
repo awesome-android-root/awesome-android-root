@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Validate internal markdown links & anchors across docs/.
+"""Validate internal markdown links & anchors across src/content/docs/.
 
-Uses VitePress' exact slugify algorithm (from vitepress dist) so heading
-anchors are resolved the same way the site renders them.
+Uses VitePress' exact slugify algorithm — the Astro build uses the same
+algorithm (src/utils/slugify.mjs), so heading anchors resolve identically.
 """
 import glob
 import os
@@ -11,7 +11,8 @@ import sys
 import unicodedata
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DOCS = os.path.join(ROOT, 'docs')
+DOCS = os.path.join(ROOT, 'src', 'content', 'docs')
+PUBLIC = os.path.join(ROOT, 'public')
 
 R_COMBINING = re.compile(r'[\u0300-\u036F]')
 R_CONTROL = re.compile(r'[\u0000-\u001f]')
@@ -103,7 +104,7 @@ def main():
             target = find_target(path, dirn)
             if not target:
                 # allow public assets referenced through /images or plain paths
-                pub = os.path.join(DOCS, 'public', path.lstrip('/'))
+                pub = os.path.join(PUBLIC, path.lstrip('/'))
                 if os.path.isfile(pub) or path.startswith('/images/'):
                     continue
                 errors.append(f'{rel}: broken link "{dest}" ({label})')

@@ -71,7 +71,7 @@ Thank you for contributing to **Awesome Android Root**! This guide helps you add
 2. **Edit** the category page that best matches the app/module (see [Category Pages](#category-pages))
 3. **Submit** a pull request
 
-> The collection lives in [`docs/apps-and-modules/`](https://github.com/awesome-android-root/awesome-android-root/tree/main/docs/apps-and-modules) -
+> The collection lives in [`src/content/docs/apps-and-modules/`](https://github.com/awesome-android-root/awesome-android-root/tree/main/docs/apps-and-modules) -
 > one Markdown file per topic. The root `README.md` is only a lightweight index, not the database.
 
 ### 2. Use the Correct Format
@@ -87,7 +87,7 @@ Thank you for contributing to **Awesome Android Root**! This guide helps you add
 
 ## Category Pages
 
-Every entry belongs to exactly **one topic page** in `docs/apps-and-modules/`. Place your entry in the page that matches what the tool *does* for the user.
+Every entry belongs to exactly **one topic page** in `src/content/docs/apps-and-modules/`. Place your entry in the page that matches what the tool *does* for the user.
 
 **Unsure?** Look for similar apps inside the category page, or open a
 [Taxonomy Change](https://github.com/awesome-android-root/awesome-android-root/issues/new?template=taxonomy-change.md)

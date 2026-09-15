@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
-# Counts entries in the Apps & Modules category pages (docs/apps-and-modules/*.md).
+# Counts entries in the Apps & Modules category pages (src/content/docs/apps-and-modules/*.md).
 # The docs pages are the canonical home of the database (see README).
 
 # Resolve repo root (scripts/..)
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 # All category pages, excluding the hub index
-mapfile -t pages < <(find "$ROOT_DIR/docs/apps-and-modules" -maxdepth 1 -name '*.md' ! -name 'index.md' | sort)
+mapfile -t pages < <(find "$ROOT_DIR/src/content/docs/apps-and-modules" -maxdepth 1 -name '*.md' ! -name 'index.md' | sort)
 
 if [[ ${#pages[@]} -eq 0 ]]; then
-  echo "Error: no category pages found under docs/apps-and-modules/!" >&2
+  echo "Error: no category pages found under src/content/docs/apps-and-modules/!" >&2
   exit 1
 fi
 

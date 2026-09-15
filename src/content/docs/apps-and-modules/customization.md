@@ -42,7 +42,7 @@ Magisk/KernelSU/LSPosed modules.
 
 
 > [!TIP]
-> Must check [ROM & OEM customization](system.md#system-ui--framework) section for more theming and customization options.
+> Must check [ROM & OEM customization](system.md#system-ui-framework) section for more theming and customization options.
 
 ## Fonts & Emojis
 

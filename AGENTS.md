@@ -6,7 +6,7 @@ This file defines how coding agents and automated contributors must work in the 
 
 Read this file before making any change.
 
-`awesome-android-root` is primarily a **community-curated Android rooting knowledge base and documentation website**. It is not an Android application project. The central content lives in Markdown under `docs/`, and the website is generated with VitePress.
+`awesome-android-root` is primarily a **community-curated Android rooting knowledge base and documentation website**. It is not an Android application project. The central content lives in Markdown under `src/content/docs/`, and the website is generated with Astro + Starlight.
 
 The repository values:
 
@@ -35,50 +35,58 @@ Understand the repository as several related layers.
 ├── SECURITY.md
 ├── CODE_OF_CONDUCT.md
 ├── package.json
+├── astro.config.mjs
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
 │   ├── PULL_REQUEST_TEMPLATE.md
 │   └── workflows/
-├── docs/
-│   ├── .vitepress/
-│   │   ├── config.mjs
-│   │   ├── markdown/
-│   │   └── theme/
-│   ├── apps-and-modules/
-│   ├── rooting-guides/
-│   ├── general-guides/
-│   ├── public/
-│   ├── faqs.md
-│   ├── troubleshooting.md
-│   ├── resources.md
-│   ├── non-root-alternatives.md
-│   └── other documentation
+├── src/
+│   ├── content/docs/        <- Markdown content (source of truth)
+│   │   ├── apps-and-modules/
+│   │   ├── rooting-guides/
+│   │   ├── general-guides/
+│   │   ├── faqs.md
+│   │   ├── troubleshooting.md
+│   │   ├── resources.md
+│   │   ├── non-root-alternatives.md
+│   │   └── other documentation
+│   ├── config/              <- sidebar definition
+│   ├── integrations/        <- build integrations (llms export, sitemap, PWA)
+│   ├── plugins/             <- remark/rehype Markdown plugins
+│   ├── overrides/           <- Starlight component overrides
+│   ├── components/          <- site components (nav, footer, PWA status)
+│   ├── styles/              <- global theme CSS
+│   └── pages/               <- special pages (404)
+├── public/                  <- static assets (favicons, images, manifest, _headers)
 └── scripts/
     ├── check_links.py
     ├── counter.sh
-    └── README.md
+    ├── validate.mjs
+    └── migrate_frontmatter.py
 ```
 
 ## 1.1 Source of truth
 
 For app and module listings:
 
-- `docs/apps-and-modules/` is the source of truth.
+- `src/content/docs/apps-and-modules/` is the source of truth.
 - `README.md` is a lightweight index and project landing page.
 - Do not treat the root README as the canonical database of applications or modules.
 
 For website behavior:
 
-- `docs/.vitepress/config.mjs` is the main VitePress configuration.
-- `docs/.vitepress/theme/` contains custom theme behavior and UI.
-- `docs/.vitepress/markdown/` contains Markdown processing extensions.
+- `astro.config.mjs` is the main Astro/Starlight configuration.
+- `src/config/sidebar.mjs` defines the sidebar.
+- `src/overrides/` and `src/components/` contain theme behavior and UI.
+- `src/plugins/` contains Markdown processing extensions.
 
 For validation and maintenance:
 
 - `scripts/check_links.py` validates internal Markdown links and anchors.
-- `scripts/counter.sh` counts entries in `docs/apps-and-modules/`.
+- `scripts/counter.sh` counts entries in `src/content/docs/apps-and-modules/`.
+- `scripts/validate.mjs` validates the built site against the archived baseline.
 
-The contribution documentation explicitly establishes `docs/apps-and-modules/` as the collection source of truth.
+The contribution documentation explicitly establishes `src/content/docs/apps-and-modules/` as the collection source of truth.
 
 ---
 
@@ -87,12 +95,13 @@ The contribution documentation explicitly establishes `docs/apps-and-modules/` a
 The project currently uses:
 
 - Node.js `>=22`
-- VitePress
-- VitePress PWA integration
-- `vitepress-plugin-llms`
-- Workbox through the PWA integration
-- Markdown and YAML frontmatter
-- JavaScript/ECMAScript modules for VitePress configuration and plugins
+- Astro with the Starlight documentation theme
+- Pagefind for local search (built into Starlight)
+- A custom Astro integration wrapping `vite-plugin-pwa` + Workbox for PWA/service-worker behavior
+- A custom Astro integration for LLM/Markdown exports (`llms.txt`, `llms-full.txt`, per-page `.md`)
+- A custom Astro integration for `sitemap.xml` generation
+- Markdown and YAML frontmatter (content stays plain Markdown; MDX is avoided)
+- JavaScript/ECMAScript modules for Astro configuration, integrations, and remark/rehype plugins
 - Python for repository validation scripts
 - Bash for repository utility scripts
 
@@ -102,6 +111,8 @@ Relevant commands are defined in `package.json`:
 npm run docs:dev
 npm run docs:build
 npm run docs:preview
+npm run validate        # validate dist/ output (routes, headings, SEO, PWA, search)
+npm run check:links     # internal Markdown link & anchor check
 ```
 
 Do not invent alternative project commands unless the repository actually contains them.
@@ -147,7 +158,7 @@ Passing `scripts/check_links.py` does not prove that an external URL is alive or
 
 ---
 
-# 4. `docs/apps-and-modules/` Rules
+# 4. `src/content/docs/apps-and-modules/` Rules
 
 This directory is the most important content area in the repository.
 
@@ -348,7 +359,7 @@ Distinguish:
 
 # 6. Rooting Guides and Technical Documentation
 
-The `docs/rooting-guides/` section is instructional documentation, not a casual article collection.
+The `src/content/docs/rooting-guides/` section is instructional documentation, not a casual article collection.
 
 Changes here require more care than adding a simple app entry.
 
@@ -419,7 +430,6 @@ Common frontmatter includes:
 
 ```yaml
 ---
-layout: doc
 title: ...
 description: ...
 head:
@@ -478,36 +488,30 @@ The data must describe what the page actually contains.
 
 ---
 
-# 8. VitePress Configuration
+# 8. Astro & Starlight Configuration
 
-`docs/.vitepress/config.mjs` is not ordinary application code. It controls site-wide rendering behavior.
+`astro.config.mjs` is not ordinary application code. It controls site-wide rendering behavior.
 
 The current configuration includes:
 
-- clean URLs
-- Markdown customization
-- local search
-- fuzzy search behavior
-- custom search ranking
-- PWA generation
-- service worker caching
-- runtime caching
-- SEO metadata
-- JSON-LD generation
+- routing (`trailingSlash: 'never'`, per-page canonical URLs via frontmatter)
+- Markdown processing (remark/rehype plugins in `src/plugins/`)
+- Pagefind local search (via Starlight)
+- PWA generation and service-worker caching (`src/integrations/pwa.mjs`)
+- LLM/Markdown exports (`src/integrations/llms-export.mjs`)
+- sitemap generation (`src/integrations/sitemap.mjs`)
+- SEO metadata and JSON-LD (`src/overrides/Head.astro`)
 - asset handling
-- Vite build configuration
-- production minification
-- custom Markdown plugins
+- build configuration and production minification
+- Starlight component overrides (`src/overrides/`)
 
 Make configuration changes conservatively.
 
 ## 8.1 Search
 
-The local search configuration intentionally boosts app/module pages.
+Search is handled by Pagefind through Starlight. Individual pages can opt out with `pagefind: false` in frontmatter.
 
-Do not change search ranking merely because a single page needs better visibility.
-
-Investigate the indexing behavior and existing weighting first.
+Do not change search behavior merely because a single page needs better visibility. Investigate the indexing behavior first.
 
 ## 8.2 PWA
 
@@ -527,9 +531,11 @@ must be evaluated as site-wide behavior.
 
 Do not change caching behavior without considering stale content and offline behavior.
 
+By design, documentation HTML is never precached or runtime-cached: the docs are network-dependent, static assets are cached for performance, and offline navigation falls back to the dedicated offline page (`/offline`) with a retry action. Do not reintroduce an offline documentation mirror.
+
 ## 8.3 Markdown plugins
 
-The repository contains a custom Markdown plugin that recognizes F-Droid and Play Store badge links and transforms them into `StoreLink` components.
+The repository contains rehype plugins (`src/plugins/rehype-store-links.mjs`) that recognize F-Droid and Play Store badge links and transform them into store-badge elements with inline SVGs.
 
 Do not replace this behavior with ordinary Markdown just because the underlying link still works.
 
@@ -546,7 +552,7 @@ The recognized labels include:
 
 and the plugin validates the corresponding store hosts.
 
-The plugin is intentionally stateless because VitePress renders pages concurrently. Preserve that property when changing it.
+The plugins are intentionally stateless because Astro renders pages concurrently. Preserve that property when changing them.
 
 Do not introduce shared mutable state into Markdown rendering.
 
@@ -567,7 +573,7 @@ This script validates:
 - internal Markdown paths
 - local anchors
 - cross-file anchors
-- VitePress-compatible heading slugs
+- VitePress-compatible heading slugs (the Astro build uses the same slug algorithm)
 - supported asset references
 
 It intentionally ignores external URLs.
@@ -615,6 +621,7 @@ For documentation changes, the preferred validation sequence is:
 ```bash
 python3 scripts/check_links.py
 npm run docs:build
+node scripts/validate.mjs
 ```
 
 For app/module entry work, also consider:
@@ -647,7 +654,7 @@ Agents should use the same principle for future reorder-only work.
 
 ## 10.2 Build success is not enough
 
-A successful VitePress build does not prove:
+A successful Astro build does not prove:
 
 - external links work
 - app claims are true
@@ -668,7 +675,7 @@ It should not become a second copy of the full application/module database.
 
 When adding or changing entries:
 
-- prefer modifying the relevant `docs/apps-and-modules/*.md` page
+- prefer modifying the relevant `src/content/docs/apps-and-modules/*.md` page
 - update README navigation only when the project structure itself changes
 - keep README sections concise
 - preserve its role as an index
@@ -719,7 +726,7 @@ Do not treat taxonomy refactoring as a casual formatting task.
 
 # 13. Sidebar and Navigation
 
-The VitePress sidebar and the Markdown structure must remain aligned.
+The Starlight sidebar (defined in `src/config/sidebar.mjs`) and the Markdown structure must remain aligned.
 
 When changing:
 
@@ -729,7 +736,7 @@ When changing:
 - section anchors
 - documentation groups
 
-inspect `docs/.vitepress/config.mjs`.
+inspect `src/config/sidebar.mjs`.
 
 A page may build successfully while its sidebar points to obsolete anchors.
 
@@ -739,7 +746,7 @@ Never rename a section and assume the sidebar will update automatically.
 
 # 14. Images and Public Assets
 
-Assets in `docs/public/` are site assets.
+Assets in `public/` are site assets.
 
 Be careful with:
 
@@ -751,7 +758,7 @@ Be careful with:
 - icons used by PWA configuration
 - Open Graph images
 
-Do not remove an asset simply because no Markdown page appears to reference it. It may be consumed by VitePress configuration, PWA generation, HTML metadata, or theme code.
+Do not remove an asset simply because no Markdown page appears to reference it. It may be consumed by the Astro configuration, PWA generation, HTML metadata, or theme code.
 
 Before deleting assets, search the entire repository for references.
 
@@ -1008,7 +1015,7 @@ Before adding a dependency:
 1. Check whether the functionality can be implemented with existing dependencies.
 2. Check whether the requested behavior belongs in the project at all.
 3. Prefer the smallest dependency footprint.
-4. Understand how the dependency affects VitePress builds and deploys.
+4. Understand how the dependency affects Astro builds and deploys.
 5. Update lockfiles if the repository contains one.
 6. Verify the full documentation build.
 
@@ -1331,7 +1338,7 @@ Do not rely on visual inspection of one page.
 
 Unused-looking files may be consumed by:
 
-- VitePress
+- Astro / Starlight
 - PWA configuration
 - custom theme code
 - metadata
@@ -1395,7 +1402,7 @@ Do not manually edit derived output unless the repository explicitly tracks that
 Prefer changing the source:
 
 - Markdown source
-- VitePress configuration
+- Astro/Starlight configuration
 - theme/plugin source
 - asset source
 
@@ -1479,6 +1486,7 @@ For a normal documentation change:
 ```bash
 python3 scripts/check_links.py
 npm run docs:build
+node scripts/validate.mjs
 ```
 
 For app/module additions:

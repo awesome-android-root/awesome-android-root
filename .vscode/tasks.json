@@ -4,16 +4,50 @@
 		{
 			"label": "Build Documentation Site",
 			"type": "shell",
-			"command": "pnpm",
+			"command": "npm",
 			"args": [
 				"run",
 				"docs:build"
 			],
 			"group": "build",
 			"isBackground": false,
-			"problemMatcher": [
-				"$tsc"
-			]
+			"problemMatcher": []
+		},
+		{
+			"label": "Build & Validate",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"docs:build"
+			],
+			"group": "test",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Validate dist Output",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"validate"
+			],
+			"group": "test",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Check Internal Links",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"check:links"
+			],
+			"group": "test",
+			"isBackground": false,
+			"problemMatcher": []
 		}
 	]
 }

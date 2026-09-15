@@ -4,7 +4,7 @@ This directory contains utility scripts used in the awesome-android-root project
 
 ## counter.sh
 
-Counts entries in the Apps & Modules category pages (`docs/apps-and-modules/*.md`) and displays a categorized
+Counts entries in the Apps & Modules category pages (`src/content/docs/apps-and-modules/*.md`) and displays a categorized
 summary (root apps, Magisk modules, KernelSU modules, LSPosed modules).
 
 ### Usage
@@ -15,7 +15,7 @@ cd scripts && bash counter.sh
 
 ## check_links.py
 
-Validates all internal Markdown links and heading anchors across `docs/` against
+Validates all internal Markdown links and heading anchors across `src/content/docs/` against
 VitePress' exact slugify rules (so anchors resolve the same way the site renders them).
 Skips links inside code fences, ignores external URLs, and tolerates `/images/` assets.
 

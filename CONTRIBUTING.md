@@ -2,16 +2,16 @@
 
 Thanks for contributing.
 
-This file is the short version. The complete contribution guide, including entry format, tags, category rules, quality requirements, and examples, lives in [`docs/contributing.md`](docs/contributing.md).
+This file is the short version. The complete contribution guide, including entry format, tags, category rules, quality requirements, and examples, lives in [`docs/contributing.md`](src/content/docs/contributing.md).
 
 ## Quick start
 
 1. Fork the repository.
-2. Edit the relevant page under [`docs/apps-and-modules/`](docs/apps-and-modules/).
+2. Edit the relevant page under [`src/content/docs/apps-and-modules/`](src/content/docs/apps-and-modules/).
 3. Add or update the entry in alphabetical order.
 4. Open a pull request.
 
-The root `README.md` is an index. The collection itself is maintained under `docs/`.
+The root `README.md` is an index. The collection itself is maintained under `src/content/docs/`.
 
 ## Before opening a PR
 
@@ -19,7 +19,7 @@ The root `README.md` is an index. The collection itself is maintained under `doc
 - Check for duplicates.
 - Use an official, working link.
 - Keep the description factual and concise.
-- Follow the entry format and tags in the [full guide](docs/contributing.md).
+- Follow the entry format and tags in the [full guide](src/content/docs/contributing.md).
 - Check the quality requirements before submitting.
 
 ### Typical entry
@@ -28,11 +28,11 @@ The root `README.md` is an index. The collection itself is maintained under `doc
 - **[Name](link)** - Short description. `FOSS` `[M]`
 ````
 
-Use only the tags that apply. See the [full guide](docs/contributing.md) for the complete format and tag reference.
+Use only the tags that apply. See the [full guide](src/content/docs/contributing.md) for the complete format and tag reference.
 
 ## Need help?
 
-* [Full contribution guide](docs/contributing.md)
+* [Full contribution guide](src/content/docs/contributing.md)
 * [Issue templates](.github/ISSUE_TEMPLATE/)
 * [Pull request template](.github/PULL_REQUEST_TEMPLATE.md)
 
