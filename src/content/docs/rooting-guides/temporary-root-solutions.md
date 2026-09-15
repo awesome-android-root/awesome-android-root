@@ -1,49 +1,98 @@
 ---
 title: 'Temporary Root for Android: Methods & Solutions'
-description: Compare temporary root methods for Android, including locked-bootloader options, bootloader modifications, reboot behavior, device limits and safety risks.
+description: Compare temporary root methods for Android, including locked-bootloader options, bootloader
+  modifications, reboot behavior, device limits and safety risks.
 head:
-  - tag: link
-    attrs: {href: 'https://awesome-android-root.zhoe.org/rooting-guides/temporary-root-solutions', rel: canonical}
-  - tag: meta
-    attrs: {content: Awesome Android Root, name: author}
-  - tag: meta
-    attrs: {content: 'index, follow', name: robots}
-  - tag: meta
-    attrs: {content: article, property: 'og:type'}
-  - tag: meta
-    attrs: {content: 'Temporary Root for Android: Methods & Solutions', property: 'og:title'}
-  - tag: meta
-    attrs: {content: 'Compare Android temporary root, bootloader modification tools and standard Magisk, KernelSU and APatch rooting, with device limits and safety notes.', property: 'og:description'}
-  - tag: meta
-    attrs: {content: 'https://awesome-android-root.zhoe.org/rooting-guides/temporary-root-solutions', property: 'og:url'}
-  - tag: meta
-    attrs: {content: en_US, property: 'og:locale'}
-  - tag: meta
-    attrs: {content: Awesome Android Root, property: 'og:site_name'}
-  - tag: meta
-    attrs: {content: summary_large_image, name: 'twitter:card'}
-  - tag: meta
-    attrs: {content: 'Temporary Root for Android: Methods & Solutions', name: 'twitter:title'}
-  - tag: meta
-    attrs: {content: 'Temporary root for Android: Kaeru, Fenrir and GhostLock family tools, supported-device cautions and differences from permanent root.', name: 'twitter:description'}
-  - tag: meta
-    attrs: {content: Awesome Android Root, name: 'article:author'}
-  - tag: meta
-    attrs: {content: '2026-08-07', name: 'article:published_time'}
-  - tag: meta
-    attrs: {content: '2026-09-13', name: 'article:modified_time'}
-  - tag: meta
-    attrs: {content: Guides, name: 'article:section'}
-  - tag: meta
-    attrs: {content: Bootloader, name: 'article:tag'}
-  - tag: meta
-    attrs: {content: Temporary Root, name: 'article:tag'}
-  - tag: meta
-    attrs: {content: Play Integrity, name: 'article:tag'}
-  - tag: script
-    attrs: {type: application/ld+json}
-    content: |-
-      "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"TechArticle\",\n  \"@id\": \"https://awesome-android-root.zhoe.org/rooting-guides/temporary-root-solutions#article\",\n  \"headline\": \"Temporary Root for Android: Methods & Solutions\",\n  \"description\": \"A practical comparison of Android temporary root, bootloader modification tools and their limitations.\",\n  \"image\": \"https://awesome-android-root.zhoe.org/images/og.png\",\n  \"author\": { \"@id\": \"https://awesome-android-root.zhoe.org/#organization\" },\n  \"publisher\": { \"@id\": \"https://awesome-android-root.zhoe.org/#organization\" },\n  \"datePublished\": \"2026-08-07\",\n  \"dateModified\": \"2026-09-13\",\n  \"mainEntityOfPage\": {\n    \"@id\": \"https://awesome-android-root.zhoe.org/rooting-guides/temporary-root-solutions#webpage\"\n  },\n  \"articleSection\": \"Android Rooting Guides\",\n  \"inLanguage\": \"en-US\",\n  \"isAccessibleForFree\": true\n}\n"
+- tag: link
+  attrs:
+    href: https://awesome-android-root.zhoe.org/rooting-guides/temporary-root-solutions
+    rel: canonical
+- tag: meta
+  attrs:
+    content: Awesome Android Root
+    name: author
+- tag: meta
+  attrs:
+    content: index, follow
+    name: robots
+- tag: meta
+  attrs:
+    content: article
+    property: og:type
+- tag: meta
+  attrs:
+    content: 'Temporary Root for Android: Methods & Solutions'
+    property: og:title
+- tag: meta
+  attrs:
+    content: Compare Android temporary root, bootloader modification tools and standard Magisk, KernelSU
+      and APatch rooting, with device limits and safety notes.
+    property: og:description
+- tag: meta
+  attrs:
+    content: https://awesome-android-root.zhoe.org/rooting-guides/temporary-root-solutions
+    property: og:url
+- tag: meta
+  attrs:
+    content: en_US
+    property: og:locale
+- tag: meta
+  attrs:
+    content: Awesome Android Root
+    property: og:site_name
+- tag: meta
+  attrs:
+    content: summary_large_image
+    name: twitter:card
+- tag: meta
+  attrs:
+    content: 'Temporary Root for Android: Methods & Solutions'
+    name: twitter:title
+- tag: meta
+  attrs:
+    content: 'Temporary root for Android: Kaeru, Fenrir and GhostLock family tools, supported-device cautions
+      and differences from permanent root.'
+    name: twitter:description
+- tag: meta
+  attrs:
+    content: Awesome Android Root
+    name: article:author
+- tag: meta
+  attrs:
+    content: '2026-08-07'
+    name: article:published_time
+- tag: meta
+  attrs:
+    content: '2026-09-13'
+    name: article:modified_time
+- tag: meta
+  attrs:
+    content: Guides
+    name: article:section
+- tag: meta
+  attrs:
+    content: Bootloader
+    name: article:tag
+- tag: meta
+  attrs:
+    content: Temporary Root
+    name: article:tag
+- tag: meta
+  attrs:
+    content: Play Integrity
+    name: article:tag
+- tag: script
+  attrs:
+    type: application/ld+json
+  content: "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"TechArticle\",\n  \"@id\": \"https://awesome-android-root.zhoe.org/rooting-guides/temporary-root-solutions#article\"\
+    ,\n  \"headline\": \"Temporary Root for Android: Methods & Solutions\",\n  \"description\": \"A practical\
+    \ comparison of Android temporary root, bootloader modification tools and their limitations.\",\n\
+    \  \"image\": \"https://awesome-android-root.zhoe.org/images/og.png\",\n  \"author\": {\n    \"@id\"\
+    : \"https://awesome-android-root.zhoe.org/#organization\"\n  },\n  \"publisher\": {\n    \"@id\":\
+    \ \"https://awesome-android-root.zhoe.org/#organization\"\n  },\n  \"datePublished\": \"2026-08-07\"\
+    ,\n  \"dateModified\": \"2026-09-13\",\n  \"mainEntityOfPage\": {\n    \"@id\": \"https://awesome-android-root.zhoe.org/rooting-guides/temporary-root-solutions#webpage\"\
+    \n  },\n  \"articleSection\": \"Android Rooting Guides\",\n  \"inLanguage\": \"en-US\",\n  \"isAccessibleForFree\"\
+    : true\n}"
 ---
 
 # Temporary Root for Android: Methods & Solutions

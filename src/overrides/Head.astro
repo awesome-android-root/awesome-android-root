@@ -11,7 +11,7 @@ const SITE = 'https://awesome-android-root.zhoe.org';
 
 const route = Astro.locals.starlightRoute;
 const entry = route.entry;
-const isHome = entry.id === 'index';
+const isHome = entry.id === '' || entry.id === 'index';
 
 let head = route.head;
 

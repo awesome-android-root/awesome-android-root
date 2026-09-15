@@ -1,61 +1,123 @@
 ---
 title: How to Unlock an Android Bootloader | Complete Guide
-description: 'Learn how to unlock an Android bootloader safely: warnings, OEM unlocking, ADB and Fastboot, manufacturer-specific steps and common errors.'
+description: 'Learn how to unlock an Android bootloader safely: warnings, OEM unlocking, ADB and Fastboot,
+  manufacturer-specific steps and common errors.'
 head:
-  - tag: link
-    attrs: {href: 'https://awesome-android-root.zhoe.org/rooting-guides/how-to-unlock-bootloader', rel: canonical}
-  - tag: meta
-    attrs: {content: article, property: 'og:type'}
-  - tag: meta
-    attrs: {content: How to Unlock an Android Bootloader | Complete Guide, property: 'og:title'}
-  - tag: meta
-    attrs: {content: 'Step-by-step Android bootloader unlocking with data-wipe warnings, OEM unlocking, ADB/Fastboot and Pixel, Samsung, Xiaomi, OnePlus and Motorola guidance.', property: 'og:description'}
-  - tag: meta
-    attrs: {content: 'https://awesome-android-root.zhoe.org/rooting-guides/how-to-unlock-bootloader', property: 'og:url'}
-  - tag: meta
-    attrs: {content: 'https://awesome-android-root.zhoe.org/images/og/bootloader.png', property: 'og:image'}
-  - tag: meta
-    attrs: {content: en_US, property: 'og:locale'}
-  - tag: meta
-    attrs: {content: Awesome Android Root, property: 'og:site_name'}
-  - tag: meta
-    attrs: {content: summary_large_image, name: 'twitter:card'}
-  - tag: meta
-    attrs: {content: How to Unlock an Android Bootloader | Complete Guide, name: 'twitter:title'}
-  - tag: meta
-    attrs: {content: 'Unlock an Android bootloader with practical preparation, manufacturer-specific instructions and troubleshooting.', name: 'twitter:description'}
-  - tag: meta
-    attrs: {content: '@awsm_and_root', name: 'twitter:site'}
-  - tag: meta
-    attrs: {content: '@awsm_and_root', name: 'twitter:creator'}
-  - tag: meta
-    attrs: {content: 'https://awesome-android-root.zhoe.org/images/og/bootloader.png', name: 'twitter:image'}
-  - tag: meta
-    attrs: {content: Android Bootloader Unlocking Guide, name: 'twitter:image:alt'}
-  - tag: meta
-    attrs: {content: Awesome Android Root Project, name: author}
-  - tag: meta
-    attrs: {content: 'https://github.com/awesome-android-root/awesome-android-root', property: 'article:author'}
-  - tag: meta
-    attrs: {content: Bootloader Unlocking, property: 'article:section'}
-  - tag: meta
-    attrs: {content: Bootloader Unlock, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: Android Bootloader, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: Fastboot, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: OEM Unlocking, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: '2025-05-25 00:00:00+00:00', property: 'article:published_time'}
-  - tag: meta
-    attrs: {content: '2026-09-13 00:00:00+00:00', property: 'article:modified_time'}
-  - tag: meta
-    attrs: {content: 'index, follow', name: robots}
-  - tag: script
-    attrs: {type: application/ld+json}
-    content: |-
-      "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"TechArticle\",\n  \"@id\": \"https://awesome-android-root.zhoe.org/rooting-guides/how-to-unlock-bootloader#article\",\n  \"headline\": \"How to Unlock an Android Bootloader | Complete Guide\",\n  \"description\": \"Warnings, preparation, ADB and Fastboot, manufacturer-specific instructions and troubleshooting for Android bootloader unlocking.\",\n  \"image\": \"https://awesome-android-root.zhoe.org/images/og/bootloader.png\",\n  \"author\": { \"@id\": \"https://awesome-android-root.zhoe.org/#organization\" },\n  \"publisher\": { \"@id\": \"https://awesome-android-root.zhoe.org/#organization\" },\n  \"datePublished\": \"2025-05-25\",\n  \"dateModified\": \"2026-09-13\",\n  \"mainEntityOfPage\": {\n    \"@id\": \"https://awesome-android-root.zhoe.org/rooting-guides/how-to-unlock-bootloader#webpage\"\n  },\n  \"articleSection\": \"Bootloader Unlocking\",\n  \"inLanguage\": \"en-US\",\n  \"isAccessibleForFree\": true\n}\n"
+- tag: link
+  attrs:
+    href: https://awesome-android-root.zhoe.org/rooting-guides/how-to-unlock-bootloader
+    rel: canonical
+- tag: meta
+  attrs:
+    content: article
+    property: og:type
+- tag: meta
+  attrs:
+    content: How to Unlock an Android Bootloader | Complete Guide
+    property: og:title
+- tag: meta
+  attrs:
+    content: Step-by-step Android bootloader unlocking with data-wipe warnings, OEM unlocking, ADB/Fastboot
+      and Pixel, Samsung, Xiaomi, OnePlus and Motorola guidance.
+    property: og:description
+- tag: meta
+  attrs:
+    content: https://awesome-android-root.zhoe.org/rooting-guides/how-to-unlock-bootloader
+    property: og:url
+- tag: meta
+  attrs:
+    content: https://awesome-android-root.zhoe.org/images/og/bootloader.png
+    property: og:image
+- tag: meta
+  attrs:
+    content: en_US
+    property: og:locale
+- tag: meta
+  attrs:
+    content: Awesome Android Root
+    property: og:site_name
+- tag: meta
+  attrs:
+    content: summary_large_image
+    name: twitter:card
+- tag: meta
+  attrs:
+    content: How to Unlock an Android Bootloader | Complete Guide
+    name: twitter:title
+- tag: meta
+  attrs:
+    content: Unlock an Android bootloader with practical preparation, manufacturer-specific instructions
+      and troubleshooting.
+    name: twitter:description
+- tag: meta
+  attrs:
+    content: '@awsm_and_root'
+    name: twitter:site
+- tag: meta
+  attrs:
+    content: '@awsm_and_root'
+    name: twitter:creator
+- tag: meta
+  attrs:
+    content: https://awesome-android-root.zhoe.org/images/og/bootloader.png
+    name: twitter:image
+- tag: meta
+  attrs:
+    content: Android Bootloader Unlocking Guide
+    name: twitter:image:alt
+- tag: meta
+  attrs:
+    content: Awesome Android Root Project
+    name: author
+- tag: meta
+  attrs:
+    content: https://github.com/awesome-android-root/awesome-android-root
+    property: article:author
+- tag: meta
+  attrs:
+    content: Bootloader Unlocking
+    property: article:section
+- tag: meta
+  attrs:
+    content: Bootloader Unlock
+    property: article:tag
+- tag: meta
+  attrs:
+    content: Android Bootloader
+    property: article:tag
+- tag: meta
+  attrs:
+    content: Fastboot
+    property: article:tag
+- tag: meta
+  attrs:
+    content: OEM Unlocking
+    property: article:tag
+- tag: meta
+  attrs:
+    content: '2025-05-25 00:00:00+00:00'
+    property: article:published_time
+- tag: meta
+  attrs:
+    content: '2026-09-13 00:00:00+00:00'
+    property: article:modified_time
+- tag: meta
+  attrs:
+    content: index, follow
+    name: robots
+- tag: script
+  attrs:
+    type: application/ld+json
+  content: "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"TechArticle\",\n  \"@id\": \"https://awesome-android-root.zhoe.org/rooting-guides/how-to-unlock-bootloader#article\"\
+    ,\n  \"headline\": \"How to Unlock an Android Bootloader | Complete Guide\",\n  \"description\": \"\
+    Warnings, preparation, ADB and Fastboot, manufacturer-specific instructions and troubleshooting for\
+    \ Android bootloader unlocking.\",\n  \"image\": \"https://awesome-android-root.zhoe.org/images/og/bootloader.png\"\
+    ,\n  \"author\": {\n    \"@id\": \"https://awesome-android-root.zhoe.org/#organization\"\n  },\n \
+    \ \"publisher\": {\n    \"@id\": \"https://awesome-android-root.zhoe.org/#organization\"\n  },\n \
+    \ \"datePublished\": \"2025-05-25\",\n  \"dateModified\": \"2026-09-13\",\n  \"mainEntityOfPage\"\
+    : {\n    \"@id\": \"https://awesome-android-root.zhoe.org/rooting-guides/how-to-unlock-bootloader#webpage\"\
+    \n  },\n  \"articleSection\": \"Bootloader Unlocking\",\n  \"inLanguage\": \"en-US\",\n  \"isAccessibleForFree\"\
+    : true\n}"
 ---
 
 # How to Unlock an Android Bootloader

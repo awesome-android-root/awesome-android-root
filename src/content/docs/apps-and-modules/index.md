@@ -1,57 +1,146 @@
 ---
 title: Best Android Root Apps & Modules
-description: Browse a curated directory of 600+ Android root apps, Magisk, KernelSU, APatch and LSPosed modules, organized by use case with source and compatibility labels.
+description: Browse a curated directory of 600+ Android root apps, Magisk, KernelSU, APatch and LSPosed
+  modules, organized by use case with source and compatibility labels.
 head:
-  - tag: link
-    attrs: {href: 'https://awesome-android-root.zhoe.org/apps-and-modules/', rel: canonical}
-  - tag: link
-    attrs: {href: 'https://awesome-android-root.zhoe.org/apps-and-modules/', hreflang: en, rel: alternate}
-  - tag: link
-    attrs: {href: 'https://awesome-android-root.zhoe.org/apps-and-modules/', hreflang: x-default, rel: alternate}
-  - tag: link
-    attrs: {href: 'https://api.github.com', rel: dns-prefetch}
-  - tag: link
-    attrs: {href: 'https://raw.githubusercontent.com', rel: dns-prefetch}
-  - tag: meta
-    attrs: {content: website, property: 'og:type'}
-  - tag: meta
-    attrs: {content: Awesome Android Root, property: 'og:site_name'}
-  - tag: meta
-    attrs: {content: Best Android Root Apps & Modules | Awesome Android Root, property: 'og:title'}
-  - tag: meta
-    attrs: {content: 'Browse 600+ curated Android root apps, Magisk, KernelSU, APatch and LSPosed modules organized by use case, framework and source.', property: 'og:description'}
-  - tag: meta
-    attrs: {content: 'https://awesome-android-root.zhoe.org/apps-and-modules/', property: 'og:url'}
-  - tag: meta
-    attrs: {content: 'https://awesome-android-root.zhoe.org/images/og.png', property: 'og:image'}
-  - tag: meta
-    attrs: {content: 'https://awesome-android-root.zhoe.org/images/og.png', property: 'og:image:secure_url'}
-  - tag: meta
-    attrs: {content: Best Android Root Apps & Modules - 600+ curated tools, property: 'og:image:alt'}
-  - tag: meta
-    attrs: {content: '1200', property: 'og:image:width'}
-  - tag: meta
-    attrs: {content: '630', property: 'og:image:height'}
-  - tag: meta
-    attrs: {content: image/png, property: 'og:image:type'}
-  - tag: meta
-    attrs: {content: en_US, property: 'og:locale'}
-  - tag: meta
-    attrs: {content: summary_large_image, name: 'twitter:card'}
-  - tag: meta
-    attrs: {content: '@awsm_and_root', name: 'twitter:site'}
-  - tag: meta
-    attrs: {content: Best Android Root Apps & Modules | Awesome Android Root, name: 'twitter:title'}
-  - tag: meta
-    attrs: {content: Browse 600+ curated Android root apps and modules organized by use case and root framework., name: 'twitter:description'}
-  - tag: meta
-    attrs: {content: 'https://awesome-android-root.zhoe.org/images/og.png', name: 'twitter:image'}
-  - tag: meta
-    attrs: {content: 'index, follow, max-image-preview:large', name: robots}
-  - tag: script
-    attrs: {type: application/ld+json}
-    content: |-
-      "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"CollectionPage\",\n      \"@id\": \"https://awesome-android-root.zhoe.org/apps-and-modules/#collection\",\n      \"name\": \"Best Android Root Apps & Modules\",\n      \"description\": \"600+ curated root apps, Magisk, KernelSU, APatch and LSPosed modules organized by category.\",\n      \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/\",\n      \"inLanguage\": \"en-US\",\n      \"isPartOf\": {\n        \"@id\": \"https://awesome-android-root.zhoe.org/#website\"\n      },\n      \"about\": \"Android rooting software\"\n    },\n    {\n      \"@type\": \"ItemList\",\n      \"name\": \"Android Root Apps and Modules Categories\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Root Management\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/root-management\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"System\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/system\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 3,\n          \"name\": \"Performance & Battery\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/performance\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 4,\n          \"name\": \"Privacy\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/privacy\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 5,\n          \"name\": \"Security\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/security\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 6,\n          \"name\": \"Ad Blocking\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/ad-blocking\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 7,\n          \"name\": \"App Modifications\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/app-modifications\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 8,\n          \"name\": \"File Management\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/file-management\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 9,\n          \"name\": \"Backup & Restore\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/backup\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 10,\n          \"name\": \"Customization\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/customization\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 11,\n          \"name\": \"Audio\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/audio\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 12,\n          \"name\": \"Networking\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/networking\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 13,\n          \"name\": \"Gaming\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/gaming\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 14,\n          \"name\": \"Development & Automation\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/development\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 15,\n          \"name\": \"Debloating\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/debloating\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 16,\n          \"name\": \"General Utilities\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/utilities\"\n        }\n      ]\n    }\n  ]\n}"
+- tag: link
+  attrs:
+    href: https://awesome-android-root.zhoe.org/apps-and-modules/
+    rel: canonical
+- tag: link
+  attrs:
+    href: https://awesome-android-root.zhoe.org/apps-and-modules/
+    hreflang: en
+    rel: alternate
+- tag: link
+  attrs:
+    href: https://awesome-android-root.zhoe.org/apps-and-modules/
+    hreflang: x-default
+    rel: alternate
+- tag: link
+  attrs:
+    href: https://api.github.com
+    rel: dns-prefetch
+- tag: link
+  attrs:
+    href: https://raw.githubusercontent.com
+    rel: dns-prefetch
+- tag: meta
+  attrs:
+    content: website
+    property: og:type
+- tag: meta
+  attrs:
+    content: Awesome Android Root
+    property: og:site_name
+- tag: meta
+  attrs:
+    content: Best Android Root Apps & Modules | Awesome Android Root
+    property: og:title
+- tag: meta
+  attrs:
+    content: Browse 600+ curated Android root apps, Magisk, KernelSU, APatch and LSPosed modules organized
+      by use case, framework and source.
+    property: og:description
+- tag: meta
+  attrs:
+    content: https://awesome-android-root.zhoe.org/apps-and-modules/
+    property: og:url
+- tag: meta
+  attrs:
+    content: https://awesome-android-root.zhoe.org/images/og.png
+    property: og:image
+- tag: meta
+  attrs:
+    content: https://awesome-android-root.zhoe.org/images/og.png
+    property: og:image:secure_url
+- tag: meta
+  attrs:
+    content: Best Android Root Apps & Modules - 600+ curated tools
+    property: og:image:alt
+- tag: meta
+  attrs:
+    content: '1200'
+    property: og:image:width
+- tag: meta
+  attrs:
+    content: '630'
+    property: og:image:height
+- tag: meta
+  attrs:
+    content: image/png
+    property: og:image:type
+- tag: meta
+  attrs:
+    content: en_US
+    property: og:locale
+- tag: meta
+  attrs:
+    content: summary_large_image
+    name: twitter:card
+- tag: meta
+  attrs:
+    content: '@awsm_and_root'
+    name: twitter:site
+- tag: meta
+  attrs:
+    content: Best Android Root Apps & Modules | Awesome Android Root
+    name: twitter:title
+- tag: meta
+  attrs:
+    content: Browse 600+ curated Android root apps and modules organized by use case and root framework.
+    name: twitter:description
+- tag: meta
+  attrs:
+    content: https://awesome-android-root.zhoe.org/images/og.png
+    name: twitter:image
+- tag: meta
+  attrs:
+    content: index, follow, max-image-preview:large
+    name: robots
+- tag: script
+  attrs:
+    type: application/ld+json
+  content: "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"CollectionPage\"\
+    ,\n      \"@id\": \"https://awesome-android-root.zhoe.org/apps-and-modules/#collection\",\n      \"\
+    name\": \"Best Android Root Apps & Modules\",\n      \"description\": \"600+ curated root apps, Magisk,\
+    \ KernelSU, APatch and LSPosed modules organized by category.\",\n      \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/\"\
+    ,\n      \"inLanguage\": \"en-US\",\n      \"isPartOf\": {\n        \"@id\": \"https://awesome-android-root.zhoe.org/#website\"\
+    \n      },\n      \"about\": \"Android rooting software\"\n    },\n    {\n      \"@type\": \"ItemList\"\
+    ,\n      \"name\": \"Android Root Apps and Modules Categories\",\n      \"itemListElement\": [\n \
+    \       {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"\
+    Root Management\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/root-management\"\
+    \n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n        \
+    \  \"name\": \"System\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/system\"\
+    \n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 3,\n        \
+    \  \"name\": \"Performance & Battery\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/performance\"\
+    \n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 4,\n        \
+    \  \"name\": \"Privacy\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/privacy\"\
+    \n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 5,\n        \
+    \  \"name\": \"Security\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/security\"\
+    \n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 6,\n        \
+    \  \"name\": \"Ad Blocking\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/ad-blocking\"\
+    \n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 7,\n        \
+    \  \"name\": \"App Modifications\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/app-modifications\"\
+    \n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 8,\n        \
+    \  \"name\": \"File Management\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/file-management\"\
+    \n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 9,\n        \
+    \  \"name\": \"Backup & Restore\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/backup\"\
+    \n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 10,\n       \
+    \   \"name\": \"Customization\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/customization\"\
+    \n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 11,\n       \
+    \   \"name\": \"Audio\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/audio\"\
+    \n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 12,\n       \
+    \   \"name\": \"Networking\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/networking\"\
+    \n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 13,\n       \
+    \   \"name\": \"Gaming\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/gaming\"\
+    \n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 14,\n       \
+    \   \"name\": \"Development & Automation\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/development\"\
+    \n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 15,\n       \
+    \   \"name\": \"Debloating\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/debloating\"\
+    \n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 16,\n       \
+    \   \"name\": \"General Utilities\",\n          \"url\": \"https://awesome-android-root.zhoe.org/apps-and-modules/utilities\"\
+    \n        }\n      ]\n    }\n  ]\n}"
 ---
 
 <div align="center" class="apps-intro">

@@ -1,83 +1,166 @@
 ---
 title: 'KernelSU Root Guide: Installation, Modules & Troubleshooting'
-description: Learn KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles and troubleshooting for supported Android devices.
+description: Learn KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles
+  and troubleshooting for supported Android devices.
 head:
-  - tag: link
-    attrs: {href: 'https://awesome-android-root.zhoe.org/rooting-guides/kernelsu-guide', rel: canonical}
-  - tag: meta
-    attrs: {content: article, property: 'og:type'}
-  - tag: meta
-    attrs: {content: 'KernelSU Root Guide: Installation, Modules & Troubleshooting', property: 'og:title'}
-  - tag: meta
-    attrs: {content: 'Learn KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles and troubleshooting.', property: 'og:description'}
-  - tag: meta
-    attrs: {content: 'https://awesome-android-root.zhoe.org/rooting-guides/kernelsu-guide', property: 'og:url'}
-  - tag: meta
-    attrs: {content: 'https://awesome-android-root.zhoe.org/images/og/kernelsu-guide.png', property: 'og:image'}
-  - tag: meta
-    attrs: {content: summary_large_image, name: 'twitter:card'}
-  - tag: meta
-    attrs: {content: 'KernelSU Root Guide: Installation, Modules & Troubleshooting', name: 'twitter:title'}
-  - tag: meta
-    attrs: {content: 'KernelSU root installation, GKI/LKM modes, modules, WebUI and app profile management.', name: 'twitter:description'}
-  - tag: meta
-    attrs: {content: Awesome Android Root Project, name: author}
-  - tag: meta
-    attrs: {content: 'https://github.com/awesome-android-root/awesome-android-root', property: 'article:author'}
-  - tag: meta
-    attrs: {content: Android Rooting, property: 'article:section'}
-  - tag: meta
-    attrs: {content: KernelSU, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: Kernel Root, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: Android Rooting, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: 'index, follow', name: robots}
-  - tag: meta
-    attrs: {content: '2025-01-12 00:00:00+00:00', property: 'article:published_time'}
-  - tag: meta
-    attrs: {content: '2026-09-13 00:00:00+00:00', property: 'article:modified_time'}
-  - tag: meta
-    attrs: {content: KernelSU, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: KernelSU Next, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: Android Root, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: Kernel Root, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: GKI Kernel, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: Android Rooting, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: Root Management, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: Android Customization, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: summary_large_image, name: 'twitter:card'}
-  - tag: meta
-    attrs: {content: '@awsm_and_root', name: 'twitter:site'}
-  - tag: meta
-    attrs: {content: '@awsm_and_root', name: 'twitter:creator'}
-  - tag: meta
-    attrs: {content: KernelSU Root Guide | Awesome Android Root, name: 'twitter:title'}
-  - tag: meta
-    attrs: {content: 'Learn KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles and troubleshooting.', name: 'twitter:description'}
-  - tag: meta
-    attrs: {content: 'https://awesome-android-root.zhoe.org/images/og/kernelsu-guide.png', name: 'twitter:image'}
-  - tag: meta
-    attrs: {content: KernelSU Root Guide - Complete Installation Tutorial, name: 'twitter:image:alt'}
-  - tag: link
-    attrs: {href: 'https://github.com', rel: dns-prefetch}
-  - tag: link
-    attrs: {href: 'https://kernelsu.org', rel: dns-prefetch}
-  - tag: link
-    attrs: {href: 'https://kernelsu-next.github.io', rel: dns-prefetch}
-  - tag: script
-    attrs: {type: application/ld+json}
-    content: |-
-      "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"TechArticle\",\n  \"@id\": \"https://awesome-android-root.zhoe.org/rooting-guides/kernelsu-guide#article\",\n  \"headline\": \"KernelSU Root Guide: Installation, Modules & Troubleshooting\",\n  \"description\": \"KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles and troubleshooting.\",\n  \"image\": \"https://awesome-android-root.zhoe.org/images/og/kernelsu-guide.png\",\n  \"author\": { \"@id\": \"https://awesome-android-root.zhoe.org/#organization\" },\n  \"publisher\": { \"@id\": \"https://awesome-android-root.zhoe.org/#organization\" },\n  \"datePublished\": \"2025-01-12\",\n  \"dateModified\": \"2026-09-13\",\n  \"mainEntityOfPage\": {\n    \"@id\": \"https://awesome-android-root.zhoe.org/rooting-guides/kernelsu-guide#webpage\"\n  },\n  \"articleSection\": \"Android Rooting Guides\",\n  \"inLanguage\": \"en-US\",\n  \"isAccessibleForFree\": true\n}"
+- tag: link
+  attrs:
+    href: https://awesome-android-root.zhoe.org/rooting-guides/kernelsu-guide
+    rel: canonical
+- tag: meta
+  attrs:
+    content: article
+    property: og:type
+- tag: meta
+  attrs:
+    content: 'KernelSU Root Guide: Installation, Modules & Troubleshooting'
+    property: og:title
+- tag: meta
+  attrs:
+    content: Learn KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles
+      and troubleshooting.
+    property: og:description
+- tag: meta
+  attrs:
+    content: https://awesome-android-root.zhoe.org/rooting-guides/kernelsu-guide
+    property: og:url
+- tag: meta
+  attrs:
+    content: https://awesome-android-root.zhoe.org/images/og/kernelsu-guide.png
+    property: og:image
+- tag: meta
+  attrs:
+    content: summary_large_image
+    name: twitter:card
+- tag: meta
+  attrs:
+    content: 'KernelSU Root Guide: Installation, Modules & Troubleshooting'
+    name: twitter:title
+- tag: meta
+  attrs:
+    content: KernelSU root installation, GKI/LKM modes, modules, WebUI and app profile management.
+    name: twitter:description
+- tag: meta
+  attrs:
+    content: Awesome Android Root Project
+    name: author
+- tag: meta
+  attrs:
+    content: https://github.com/awesome-android-root/awesome-android-root
+    property: article:author
+- tag: meta
+  attrs:
+    content: Android Rooting
+    property: article:section
+- tag: meta
+  attrs:
+    content: KernelSU
+    property: article:tag
+- tag: meta
+  attrs:
+    content: Kernel Root
+    property: article:tag
+- tag: meta
+  attrs:
+    content: Android Rooting
+    property: article:tag
+- tag: meta
+  attrs:
+    content: index, follow
+    name: robots
+- tag: meta
+  attrs:
+    content: '2025-01-12 00:00:00+00:00'
+    property: article:published_time
+- tag: meta
+  attrs:
+    content: '2026-09-13 00:00:00+00:00'
+    property: article:modified_time
+- tag: meta
+  attrs:
+    content: KernelSU
+    property: article:tag
+- tag: meta
+  attrs:
+    content: KernelSU Next
+    property: article:tag
+- tag: meta
+  attrs:
+    content: Android Root
+    property: article:tag
+- tag: meta
+  attrs:
+    content: Kernel Root
+    property: article:tag
+- tag: meta
+  attrs:
+    content: GKI Kernel
+    property: article:tag
+- tag: meta
+  attrs:
+    content: Android Rooting
+    property: article:tag
+- tag: meta
+  attrs:
+    content: Root Management
+    property: article:tag
+- tag: meta
+  attrs:
+    content: Android Customization
+    property: article:tag
+- tag: meta
+  attrs:
+    content: summary_large_image
+    name: twitter:card
+- tag: meta
+  attrs:
+    content: '@awsm_and_root'
+    name: twitter:site
+- tag: meta
+  attrs:
+    content: '@awsm_and_root'
+    name: twitter:creator
+- tag: meta
+  attrs:
+    content: KernelSU Root Guide | Awesome Android Root
+    name: twitter:title
+- tag: meta
+  attrs:
+    content: Learn KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles
+      and troubleshooting.
+    name: twitter:description
+- tag: meta
+  attrs:
+    content: https://awesome-android-root.zhoe.org/images/og/kernelsu-guide.png
+    name: twitter:image
+- tag: meta
+  attrs:
+    content: KernelSU Root Guide - Complete Installation Tutorial
+    name: twitter:image:alt
+- tag: link
+  attrs:
+    href: https://github.com
+    rel: dns-prefetch
+- tag: link
+  attrs:
+    href: https://kernelsu.org
+    rel: dns-prefetch
+- tag: link
+  attrs:
+    href: https://kernelsu-next.github.io
+    rel: dns-prefetch
+- tag: script
+  attrs:
+    type: application/ld+json
+  content: "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"TechArticle\",\n  \"@id\": \"https://awesome-android-root.zhoe.org/rooting-guides/kernelsu-guide#article\"\
+    ,\n  \"headline\": \"KernelSU Root Guide: Installation, Modules & Troubleshooting\",\n  \"description\"\
+    : \"KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles and troubleshooting.\"\
+    ,\n  \"image\": \"https://awesome-android-root.zhoe.org/images/og/kernelsu-guide.png\",\n  \"author\"\
+    : {\n    \"@id\": \"https://awesome-android-root.zhoe.org/#organization\"\n  },\n  \"publisher\":\
+    \ {\n    \"@id\": \"https://awesome-android-root.zhoe.org/#organization\"\n  },\n  \"datePublished\"\
+    : \"2025-01-12\",\n  \"dateModified\": \"2026-09-13\",\n  \"mainEntityOfPage\": {\n    \"@id\": \"\
+    https://awesome-android-root.zhoe.org/rooting-guides/kernelsu-guide#webpage\"\n  },\n  \"articleSection\"\
+    : \"Android Rooting Guides\",\n  \"inLanguage\": \"en-US\",\n  \"isAccessibleForFree\": true\n}"
 ---
 
 # KernelSU Root Installation Guide

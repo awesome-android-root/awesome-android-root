@@ -58,8 +58,8 @@ export default defineConfig({
 				},
 			],
 			editLink: {
-				baseUrl:
-					'https://github.com/awesome-android-root/awesome-android-root/edit/main/src/content/docs',
+				// Starlight appends the entry file path (src/content/docs/…) itself.
+				baseUrl: 'https://github.com/awesome-android-root/awesome-android-root/edit/main',
 			},
 			lastUpdated: true,
 			// Our own src/pages/404.astro replaces Starlight's built-in page.

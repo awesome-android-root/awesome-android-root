@@ -1,61 +1,134 @@
 ---
 title: Android Rooting Guide
-description: The ultimate Android rooting guide. Learn Magisk, KernelSU & APatch with step-by-step instructions, device-specific guides, and root-hiding techniques.
+description: The ultimate Android rooting guide. Learn Magisk, KernelSU & APatch with step-by-step instructions,
+  device-specific guides, and root-hiding techniques.
 head:
-  - tag: link
-    attrs: {href: 'https://awesome-android-root.zhoe.org/rooting-guides/', rel: canonical}
-  - tag: meta
-    attrs: {content: article, property: 'og:type'}
-  - tag: meta
-    attrs: {content: Android Rooting Guide | Awesome Android Root, property: 'og:title'}
-  - tag: meta
-    attrs: {content: 'The ultimate Android rooting guide covering Magisk, KernelSU, APatch installation with device-specific tutorials for Pixel, Samsung, Xiaomi, OnePlus & more.', property: 'og:description'}
-  - tag: meta
-    attrs: {content: 'https://awesome-android-root.zhoe.org/rooting-guides/', property: 'og:url'}
-  - tag: meta
-    attrs: {content: 'https://awesome-android-root.zhoe.org/images/og.png', property: 'og:image'}
-  - tag: meta
-    attrs: {content: summary_large_image, name: 'twitter:card'}
-  - tag: meta
-    attrs: {content: Android Rooting Guide | Awesome Android Root, name: 'twitter:title'}
-  - tag: meta
-    attrs: {content: 'Complete Android rooting tutorial with Magisk, KernelSU, APatch guides and device-specific instructions for safe rooting. Includes Vector/LSPosed framework & Play Integrity bypass.', name: 'twitter:description'}
-  - tag: meta
-    attrs: {content: Awesome Android Root Project, name: author}
-  - tag: meta
-    attrs: {content: 'https://github.com/awesome-android-root/awesome-android-root', property: 'article:author'}
-  - tag: meta
-    attrs: {content: Android Rooting Tutorials, property: 'article:section'}
-  - tag: meta
-    attrs: {content: Android Root, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: Magisk, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: KernelSU Tutorial, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: APatch Rooting, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: Bootloader Unlock, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: Custom Recovery, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: Vector Framework, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: LSPosed Framework, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: Play Integrity Fix, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: Android Customization, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: '2024-01-15 10:00:00+00:00', property: 'article:published_time'}
-  - tag: meta
-    attrs: {content: '2026-07-02 00:00:00+00:00', property: 'article:modified_time'}
-  - tag: meta
-    attrs: {content: 'index, follow, max-image-preview:large', name: robots}
-  - tag: script
-    attrs: {type: application/ld+json}
-    content: |-
-      "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"HowTo\",\n  \"name\": \"Android Rooting Guide\",\n  \"description\": \"Complete tutorial for rooting Android devices using Magisk, KernelSU, or APatch with safety practices and Play Integrity bypass\",\n  \"totalTime\": \"PT2H\",\n  \"estimatedCost\": {\n    \"@type\": \"MonetaryAmount\",\n    \"currency\": \"USD\",\n    \"value\": \"0\"\n  },\n  \"tool\": [\n    {\"@type\": \"HowToTool\", \"name\": \"Android Device\"},\n    {\"@type\": \"HowToTool\", \"name\": \"Computer with ADB/Fastboot\"},\n    {\"@type\": \"HowToTool\", \"name\": \"USB Cable (data-capable)\"}\n  ],\n  \"supply\": [\n    {\"@type\": \"HowToSupply\", \"name\": \"Magisk APK\"},\n    {\"@type\": \"HowToSupply\", \"name\": \"Custom Recovery (TWRP/OrangeFox)\"},\n    {\"@type\": \"HowToSupply\", \"name\": \"Stock Boot/Init_Boot Image\"}\n  ],\n  \"step\": [\n    {\n      \"@type\": \"HowToStep\",\n      \"name\": \"Prepare Device and Backup Data\",\n      \"text\": \"Enable Developer Options, backup all important data, and charge device to 50%+\"\n    },\n    {\n      \"@type\": \"HowToStep\", \n      \"name\": \"Unlock Bootloader\",\n      \"text\": \"Enable OEM unlocking and unlock bootloader using fastboot commands\"\n    },\n    {\n      \"@type\": \"HowToStep\",\n      \"name\": \"Install Custom Recovery (Optional)\",\n      \"text\": \"Flash TWRP or OrangeFox for advanced recovery features\"\n    },\n    {\n      \"@type\": \"HowToStep\",\n      \"name\": \"Patch & Flash Boot Image\",\n      \"text\": \"Patch stock boot.img or init_boot.img with Magisk/KernelSU/APatch, then flash via fastboot\"\n    },\n    {\n      \"@type\": \"HowToStep\",\n      \"name\": \"Post-Root Setup & Hide Root\",\n      \"text\": \"Install root manager, configure DenyList, set up Play Integrity Fix modules for banking apps\"\n    }\n  ]\n}"
+- tag: link
+  attrs:
+    href: https://awesome-android-root.zhoe.org/rooting-guides/
+    rel: canonical
+- tag: meta
+  attrs:
+    content: article
+    property: og:type
+- tag: meta
+  attrs:
+    content: Android Rooting Guide | Awesome Android Root
+    property: og:title
+- tag: meta
+  attrs:
+    content: The ultimate Android rooting guide covering Magisk, KernelSU, APatch installation with device-specific
+      tutorials for Pixel, Samsung, Xiaomi, OnePlus & more.
+    property: og:description
+- tag: meta
+  attrs:
+    content: https://awesome-android-root.zhoe.org/rooting-guides/
+    property: og:url
+- tag: meta
+  attrs:
+    content: https://awesome-android-root.zhoe.org/images/og.png
+    property: og:image
+- tag: meta
+  attrs:
+    content: summary_large_image
+    name: twitter:card
+- tag: meta
+  attrs:
+    content: Android Rooting Guide | Awesome Android Root
+    name: twitter:title
+- tag: meta
+  attrs:
+    content: Complete Android rooting tutorial with Magisk, KernelSU, APatch guides and device-specific
+      instructions for safe rooting. Includes Vector/LSPosed framework & Play Integrity bypass.
+    name: twitter:description
+- tag: meta
+  attrs:
+    content: Awesome Android Root Project
+    name: author
+- tag: meta
+  attrs:
+    content: https://github.com/awesome-android-root/awesome-android-root
+    property: article:author
+- tag: meta
+  attrs:
+    content: Android Rooting Tutorials
+    property: article:section
+- tag: meta
+  attrs:
+    content: Android Root
+    property: article:tag
+- tag: meta
+  attrs:
+    content: Magisk
+    property: article:tag
+- tag: meta
+  attrs:
+    content: KernelSU Tutorial
+    property: article:tag
+- tag: meta
+  attrs:
+    content: APatch Rooting
+    property: article:tag
+- tag: meta
+  attrs:
+    content: Bootloader Unlock
+    property: article:tag
+- tag: meta
+  attrs:
+    content: Custom Recovery
+    property: article:tag
+- tag: meta
+  attrs:
+    content: Vector Framework
+    property: article:tag
+- tag: meta
+  attrs:
+    content: LSPosed Framework
+    property: article:tag
+- tag: meta
+  attrs:
+    content: Play Integrity Fix
+    property: article:tag
+- tag: meta
+  attrs:
+    content: Android Customization
+    property: article:tag
+- tag: meta
+  attrs:
+    content: '2024-01-15 10:00:00+00:00'
+    property: article:published_time
+- tag: meta
+  attrs:
+    content: '2026-07-02 00:00:00+00:00'
+    property: article:modified_time
+- tag: meta
+  attrs:
+    content: index, follow, max-image-preview:large
+    name: robots
+- tag: script
+  attrs:
+    type: application/ld+json
+  content: "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"HowTo\",\n  \"name\": \"Android\
+    \ Rooting Guide\",\n  \"description\": \"Complete tutorial for rooting Android devices using Magisk,\
+    \ KernelSU, or APatch with safety practices and Play Integrity bypass\",\n  \"totalTime\": \"PT2H\"\
+    ,\n  \"estimatedCost\": {\n    \"@type\": \"MonetaryAmount\",\n    \"currency\": \"USD\",\n    \"\
+    value\": \"0\"\n  },\n  \"tool\": [\n    {\n      \"@type\": \"HowToTool\",\n      \"name\": \"Android\
+    \ Device\"\n    },\n    {\n      \"@type\": \"HowToTool\",\n      \"name\": \"Computer with ADB/Fastboot\"\
+    \n    },\n    {\n      \"@type\": \"HowToTool\",\n      \"name\": \"USB Cable (data-capable)\"\n \
+    \   }\n  ],\n  \"supply\": [\n    {\n      \"@type\": \"HowToSupply\",\n      \"name\": \"Magisk APK\"\
+    \n    },\n    {\n      \"@type\": \"HowToSupply\",\n      \"name\": \"Custom Recovery (TWRP/OrangeFox)\"\
+    \n    },\n    {\n      \"@type\": \"HowToSupply\",\n      \"name\": \"Stock Boot/Init_Boot Image\"\
+    \n    }\n  ],\n  \"step\": [\n    {\n      \"@type\": \"HowToStep\",\n      \"name\": \"Prepare Device\
+    \ and Backup Data\",\n      \"text\": \"Enable Developer Options, backup all important data, and charge\
+    \ device to 50%+\"\n    },\n    {\n      \"@type\": \"HowToStep\",\n      \"name\": \"Unlock Bootloader\"\
+    ,\n      \"text\": \"Enable OEM unlocking and unlock bootloader using fastboot commands\"\n    },\n\
+    \    {\n      \"@type\": \"HowToStep\",\n      \"name\": \"Install Custom Recovery (Optional)\",\n\
+    \      \"text\": \"Flash TWRP or OrangeFox for advanced recovery features\"\n    },\n    {\n     \
+    \ \"@type\": \"HowToStep\",\n      \"name\": \"Patch & Flash Boot Image\",\n      \"text\": \"Patch\
+    \ stock boot.img or init_boot.img with Magisk/KernelSU/APatch, then flash via fastboot\"\n    },\n\
+    \    {\n      \"@type\": \"HowToStep\",\n      \"name\": \"Post-Root Setup & Hide Root\",\n      \"\
+    text\": \"Install root manager, configure DenyList, set up Play Integrity Fix modules for banking\
+    \ apps\"\n    }\n  ]\n}"
 ---
 
 # Android Rooting Guide

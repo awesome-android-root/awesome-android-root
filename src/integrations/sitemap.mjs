@@ -75,10 +75,17 @@ function gitLastMod(root, relFile) {
 	try {
 		const out = execFileSync(
 			'git',
-			['log', '-1', '--follow', '--format=%cI', '--', relFile],
+			['log', '--follow', '--format=%cI\t%s', '--', relFile],
 			{ cwd: root, encoding: 'utf-8', stdio: ['ignore', 'pipe', 'ignore'] }
 		).trim();
-		return out || null;
+		if (!out) return null;
+		// Prefer the newest commit that is not the framework migration itself,
+		// so lastmod keeps reflecting real content edits (same as before).
+		for (const line of out.split('\n')) {
+			const [date, subject] = line.split('\t');
+			if (!/starlight migration/i.test(subject)) return date;
+		}
+		return out.split('\n')[0].split('\t')[0] || null;
 	} catch {
 		return null;
 	}

@@ -1,65 +1,137 @@
 ---
 title: 'Magisk Root Guide: Installation, Modules & Troubleshooting'
-description: Learn Magisk installation, boot image patching, modules, Zygisk, DenyList, Play Integrity and troubleshooting for supported Android devices.
+description: Learn Magisk installation, boot image patching, modules, Zygisk, DenyList, Play Integrity
+  and troubleshooting for supported Android devices.
 head:
-  - tag: link
-    attrs: {href: 'https://awesome-android-root.zhoe.org/rooting-guides/magisk-guide', rel: canonical}
-  - tag: meta
-    attrs: {content: article, property: 'og:type'}
-  - tag: meta
-    attrs: {content: 'Magisk Root Guide: Installation, Modules & Troubleshooting', property: 'og:title'}
-  - tag: meta
-    attrs: {content: 'Install Magisk with boot image patching, systemless modules, Zygisk, DenyList and practical troubleshooting guidance.', property: 'og:description'}
-  - tag: meta
-    attrs: {content: 'https://awesome-android-root.zhoe.org/rooting-guides/magisk-guide', property: 'og:url'}
-  - tag: meta
-    attrs: {content: 'https://awesome-android-root.zhoe.org/images/og/magisk-guide.png', property: 'og:image'}
-  - tag: meta
-    attrs: {content: en_US, property: 'og:locale'}
-  - tag: meta
-    attrs: {content: Awesome Android Root, property: 'og:site_name'}
-  - tag: meta
-    attrs: {content: summary_large_image, name: 'twitter:card'}
-  - tag: meta
-    attrs: {content: 'Magisk Root Guide: Installation, Modules & Troubleshooting', name: 'twitter:title'}
-  - tag: meta
-    attrs: {content: 'Magisk installation, boot image patching, modules, Zygisk, root hiding and Play Integrity troubleshooting.', name: 'twitter:description'}
-  - tag: meta
-    attrs: {content: '@awsm_and_root', name: 'twitter:site'}
-  - tag: meta
-    attrs: {content: '@awsm_and_root', name: 'twitter:creator'}
-  - tag: meta
-    attrs: {content: 'https://awesome-android-root.zhoe.org/images/og/magisk-guide.png', name: 'twitter:image'}
-  - tag: meta
-    attrs: {content: Magisk Root Guide - Universal Systemless Rooting, name: 'twitter:image:alt'}
-  - tag: meta
-    attrs: {content: Awesome Android Root Project, name: author}
-  - tag: meta
-    attrs: {content: 'https://github.com/awesome-android-root/awesome-android-root', property: 'article:author'}
-  - tag: meta
-    attrs: {content: Android Rooting Solutions, property: 'article:section'}
-  - tag: meta
-    attrs: {content: Magisk Root, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: Systemless Root, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: Android Rooting, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: Magisk Modules, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: Root Management, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: Play Integrity Fix, property: 'article:tag'}
-  - tag: meta
-    attrs: {content: '2025-10-07 09:00:00+00:00', property: 'article:published_time'}
-  - tag: meta
-    attrs: {content: '2025-12-26 00:00:00+00:00', property: 'article:modified_time'}
-  - tag: meta
-    attrs: {content: 'index, follow, max-image-preview:large', name: robots}
-  - tag: script
-    attrs: {type: application/ld+json}
-    content: |-
-      "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"HowTo\",\n  \"name\": \"Complete Magisk Root Installation Guide\",\n  \"description\": \"Step-by-step guide to install Magisk systemless root on Android devices\",\n  \"totalTime\": \"PT45M\",\n  \"estimatedCost\": {\n    \"@type\": \"MonetaryAmount\",\n    \"currency\": \"USD\", \n    \"value\": \"0\"\n  },\n  \"tool\": [\n    {\"@type\": \"HowToTool\", \"name\": \"Android Device with Unlocked Bootloader\"},\n    {\"@type\": \"HowToTool\", \"name\": \"Computer with ADB/Fastboot\"},\n    {\"@type\": \"HowToTool\", \"name\": \"Magisk APK\"},\n    {\"@type\": \"HowToTool\", \"name\": \"Stock Boot Image\"}\n  ],\n  \"step\": [\n    {\n      \"@type\": \"HowToStep\",\n      \"name\": \"Download Required Files\",\n      \"text\": \"Download latest Magisk APK and extract boot.img from device firmware\"\n    },\n    {\n      \"@type\": \"HowToStep\",\n      \"name\": \"Patch Boot Image\",\n      \"text\": \"Use Magisk app to patch the stock boot image creating magisk_patched.img\"\n    },\n    {\n      \"@type\": \"HowToStep\",\n      \"name\": \"Flash Patched Boot\",\n      \"text\": \"Use fastboot to flash the patched boot image to device\"\n    },\n    {\n      \"@type\": \"HowToStep\",\n      \"name\": \"Install Magisk Manager\",\n      \"text\": \"Install Magisk app for root management and module installation\"\n    }\n  ]\n}"
+- tag: link
+  attrs:
+    href: https://awesome-android-root.zhoe.org/rooting-guides/magisk-guide
+    rel: canonical
+- tag: meta
+  attrs:
+    content: article
+    property: og:type
+- tag: meta
+  attrs:
+    content: 'Magisk Root Guide: Installation, Modules & Troubleshooting'
+    property: og:title
+- tag: meta
+  attrs:
+    content: Install Magisk with boot image patching, systemless modules, Zygisk, DenyList and practical
+      troubleshooting guidance.
+    property: og:description
+- tag: meta
+  attrs:
+    content: https://awesome-android-root.zhoe.org/rooting-guides/magisk-guide
+    property: og:url
+- tag: meta
+  attrs:
+    content: https://awesome-android-root.zhoe.org/images/og/magisk-guide.png
+    property: og:image
+- tag: meta
+  attrs:
+    content: en_US
+    property: og:locale
+- tag: meta
+  attrs:
+    content: Awesome Android Root
+    property: og:site_name
+- tag: meta
+  attrs:
+    content: summary_large_image
+    name: twitter:card
+- tag: meta
+  attrs:
+    content: 'Magisk Root Guide: Installation, Modules & Troubleshooting'
+    name: twitter:title
+- tag: meta
+  attrs:
+    content: Magisk installation, boot image patching, modules, Zygisk, root hiding and Play Integrity
+      troubleshooting.
+    name: twitter:description
+- tag: meta
+  attrs:
+    content: '@awsm_and_root'
+    name: twitter:site
+- tag: meta
+  attrs:
+    content: '@awsm_and_root'
+    name: twitter:creator
+- tag: meta
+  attrs:
+    content: https://awesome-android-root.zhoe.org/images/og/magisk-guide.png
+    name: twitter:image
+- tag: meta
+  attrs:
+    content: Magisk Root Guide - Universal Systemless Rooting
+    name: twitter:image:alt
+- tag: meta
+  attrs:
+    content: Awesome Android Root Project
+    name: author
+- tag: meta
+  attrs:
+    content: https://github.com/awesome-android-root/awesome-android-root
+    property: article:author
+- tag: meta
+  attrs:
+    content: Android Rooting Solutions
+    property: article:section
+- tag: meta
+  attrs:
+    content: Magisk Root
+    property: article:tag
+- tag: meta
+  attrs:
+    content: Systemless Root
+    property: article:tag
+- tag: meta
+  attrs:
+    content: Android Rooting
+    property: article:tag
+- tag: meta
+  attrs:
+    content: Magisk Modules
+    property: article:tag
+- tag: meta
+  attrs:
+    content: Root Management
+    property: article:tag
+- tag: meta
+  attrs:
+    content: Play Integrity Fix
+    property: article:tag
+- tag: meta
+  attrs:
+    content: '2025-10-07 09:00:00+00:00'
+    property: article:published_time
+- tag: meta
+  attrs:
+    content: '2025-12-26 00:00:00+00:00'
+    property: article:modified_time
+- tag: meta
+  attrs:
+    content: index, follow, max-image-preview:large
+    name: robots
+- tag: script
+  attrs:
+    type: application/ld+json
+  content: "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"HowTo\",\n  \"name\": \"Complete\
+    \ Magisk Root Installation Guide\",\n  \"description\": \"Step-by-step guide to install Magisk systemless\
+    \ root on Android devices\",\n  \"totalTime\": \"PT45M\",\n  \"estimatedCost\": {\n    \"@type\":\
+    \ \"MonetaryAmount\",\n    \"currency\": \"USD\",\n    \"value\": \"0\"\n  },\n  \"tool\": [\n   \
+    \ {\n      \"@type\": \"HowToTool\",\n      \"name\": \"Android Device with Unlocked Bootloader\"\n\
+    \    },\n    {\n      \"@type\": \"HowToTool\",\n      \"name\": \"Computer with ADB/Fastboot\"\n\
+    \    },\n    {\n      \"@type\": \"HowToTool\",\n      \"name\": \"Magisk APK\"\n    },\n    {\n \
+    \     \"@type\": \"HowToTool\",\n      \"name\": \"Stock Boot Image\"\n    }\n  ],\n  \"step\": [\n\
+    \    {\n      \"@type\": \"HowToStep\",\n      \"name\": \"Download Required Files\",\n      \"text\"\
+    : \"Download latest Magisk APK and extract boot.img from device firmware\"\n    },\n    {\n      \"\
+    @type\": \"HowToStep\",\n      \"name\": \"Patch Boot Image\",\n      \"text\": \"Use Magisk app to\
+    \ patch the stock boot image creating magisk_patched.img\"\n    },\n    {\n      \"@type\": \"HowToStep\"\
+    ,\n      \"name\": \"Flash Patched Boot\",\n      \"text\": \"Use fastboot to flash the patched boot\
+    \ image to device\"\n    },\n    {\n      \"@type\": \"HowToStep\",\n      \"name\": \"Install Magisk\
+    \ Manager\",\n      \"text\": \"Install Magisk app for root management and module installation\"\n\
+    \    }\n  ]\n}"
 ---
 
 # Magisk Root Guide: Installation, Modules & Root Management
