@@ -56,10 +56,6 @@ head:
 local backup solutions, partition images and data recovery tools. Back up before flashing, debloating or
 unlocking - always.
 
-> [!TIP]
-> See [Backup before you start](/rooting-guides/) in the rooting guides, and
-> [File Management](/apps-and-modules/file-management.md) for everyday file tools.
-
 
 ## Backup Apps & Tools
 
