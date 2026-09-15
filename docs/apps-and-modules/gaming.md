@@ -59,6 +59,11 @@ game-specific tools, mixing root apps, Magisk/KernelSU modules and LSPosed modul
 > [!TIP]
 > For overall device performance tuning, see [Performance and Optimization](performance.md#performance-optimization). For CPU/GPU management, see [Kernel Management](performance.md#kernel-management).
 
+## Game Modifications & Tools
+
+- **[Boosteroid+](https://github.com/nitanmarcel/BoosteroidPlus)** - Customize advanced settings for the Boosteroid app, including frame rate, bitrate, and resolution options. `FOSS` `[LSP]`
+- **[JoyCon Droid](https://joycondroid.gitbook.io/joycondroid)** - Allows you to turn your Android device into a controller for your Nintendo Switch. `FOSS`
+
 ## Gaming Optimization
 
 - **[AsoulOpt](https://github.com/nakixii/Magisk_AsoulOpt)** - Game threads tweaker for Android, suitable for mainstream games and some niche games. `FOSS` `[M]`
@@ -70,8 +75,3 @@ game-specific tools, mixing root apps, Magisk/KernelSU modules and LSPosed modul
 - **[MIUIPerfSaver](https://github.com/rdtoy/MIUIPerfSaver)** - Remove MIUI's performance limit, run app at maximum FPS. `FOSS` `[LSP]`
 - **[PerfGame](https://github.com/adivenxnataly/PerfGame)** - Enable custom resolution and frame-rate mechanism for your games. `FOSS` `[M]`
 - **[Uperf-Game-Turbo](https://github.com/yinwanxi/Uperf-Game-Turbo)** - Userspace performance controller for Android. `FOSS` `[M]`
-
-## Game Modifications & Tools
-
-- **[Boosteroid+](https://github.com/nitanmarcel/BoosteroidPlus)** - Customize advanced settings for the Boosteroid app, including frame rate, bitrate, and resolution options. `FOSS` `[LSP]`
-- **[JoyCon Droid](https://joycondroid.gitbook.io/joycondroid)** - Allows you to turn your Android device into a controller for your Nintendo Switch. `FOSS`
