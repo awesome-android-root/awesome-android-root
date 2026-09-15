@@ -60,11 +60,28 @@ more), network diagnostics, Wi-Fi & mobile data utilities and Bluetooth & NFC ap
 > [Security](/apps-and-modules/security.md) covers per-app firewalls.
 
 
+## Bluetooth & NFC
+
+- **[KonamikU](https://github.com/C-F0x/KonamikU)** - Extend NFC Capabilities of your device. `FOSS` `[LSP]`
+- **[NFC Card Emulator Pro (Root)](https://play.google.com/store/apps/details?id=com.yuanwofei.cardemulator.pro)** - NFC card emulator for access cards, elevator cards, meal cards, school cards, library cards, and other IC cards. `Proprietary`
+- **[NFCGate](https://github.com/nfcgate/nfcgate)** - Android application meant to capture, analyze, or modify NFC traffic. `FOSS` `[LSP]` | [🌱](https://f-droid.org/packages/de.tu_darmstadt.seemoo.nfcgate/)
+- **[onHit](https://github.com/0penPublic/onHit)** - Trigger Android NFC events without a physical tag by Xposed. `FOSS` `[LSP]`
+
+## Network Tools
+
+- **[Hosts Manager Lite](https://play.google.com/store/apps/details?id=awais.hostsmanager.lite)** - Advanced /etc/hosts editor. `Proprietary`
+- **[MagicNet](https://github.com/LIghtJUNction/MagicNet#english-summary)** - Module for device-side traffic governance that enforce network rules below the app layer instead of relying on every app to respect a proxy setting. `FOSS` `[M]` `[K]`
+- **[Magisk LAN Auto Switch](https://github.com/NewFuture/magisk-modules/tree/main/magisk-lan-auto-switch)** - Automatically switch LAN and WiFi based on eth0 connection status. `FOSS` `[M]`
+- **[Network Utilities](https://play.google.com/store/apps/details?id=com.myprog.netutils)** - Application contains a set of tools for networks diagnostics. `Proprietary`
+- **[SimbaDroid](https://github.com/buttercookie42/SimbaDroid)** - A simple SMB file server for Android. `FOSS` | [🌱](https://f-droid.org/packages/de.buttercookie.simbadroid)
+- **[TCP Optimiser Module](https://github.com/fatalcoder524/TCP_Optimiser_Module)** - Change tcp congestion algorithm based on current active internet type and some network enhancements. `FOSS` `[M]` `[K]`
+- **[Unlock AI & EN Services for Russia](https://github.com/AvenCores/Unlock_AI_and_EN_Services_for_Russia)** - Unlock AI and EN services for Russia. `Proprietary` `[M]` `[K]`
+
 ## VPN & Proxy
 
 - **[AsteriskBOX](https://github.com/Asterisk4Magisk/AsteriskBOX)** - A sing-box GUI client for Android, support VPN Service, TPROXY(ROOT), TUN(ROOT), eBPF(ROOT), TUN2SOCKS(ROOT) and BPF2SOCKS(ROOT). `FOSS` `[M]` `[K]`
-- **[AsteriskNG](https://github.com/Asterisk4Magisk/AsteriskNG)** - An Xray GUI client for Android, support VPN Service, TPROXY(ROOT), TUN2SOCKS(ROOT) and BPF2SOCKS(ROOT). `FOSS` `[M]` `[K]`
 - **[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)** - A Mihomo GUI client for Android, support VPN Service, TPROXY(ROOT), TUN(ROOT), TUN2SOCKS(ROOT) and BPF2SOCKS(ROOT). `FOSS` `[M]` `[K]`
+- **[AsteriskNG](https://github.com/Asterisk4Magisk/AsteriskNG)** - An Xray GUI client for Android, support VPN Service, TPROXY(ROOT), TUN2SOCKS(ROOT) and BPF2SOCKS(ROOT). `FOSS` `[M]` `[K]`
 - **[Aurora](https://github.com/Tkocean/Aurora)** - This project deploys sing-box, mihome proxies via Magisk, KernelSU, or APatch. `FOSS` `[M]` `[K]`
 - **[Box for Root](https://github.com/taamarin/box_for_magisk)** - Box for Root (BFR) is a Magisk, KernelSU, APatch, module that provides a suite of proxy tools, including clash, sing-box, v2ray, hysteria and xray. It allows you to configure a transparent proxy on Android devices with root access. `FOSS` `[M]` `[K]`
 - **[Box4Magisk / KernelSU / APatch](https://github.com/CHIZI-0618/box4magisk)** - Deploy multiple proxy cores on Android devices, including clash, mihomo, sing-box, v2ray, xray, and hysteria. `FOSS` `[M]` `[K]`
@@ -81,16 +98,6 @@ more), network diagnostics, Wi-Fi & mobile data utilities and Bluetooth & NFC ap
 - **[ZDT-D Root Module](https://github.com/GAME-OVER-op/ZDT-D)** - Module for traffic routing, DPI bypass, proxy chaining, DNS control, and per-app network management. `FOSS` `[M]` `[K]`
 - **[ZeroTier for Magisk](https://github.com/eventlOwOp/zerotier-magisk)** - Run zerotier in the background after booting with no conflicts with other Android VPN services. Use Android App to control ZeroTier. `FOSS` `[M]`
 
-## Network Tools
-
-- **[Hosts Manager Lite](https://play.google.com/store/apps/details?id=awais.hostsmanager.lite)** - Advanced /etc/hosts editor. `Proprietary`
-- **[MagicNet](https://github.com/LIghtJUNction/MagicNet#english-summary)** - Module for device-side traffic governance that enforce network rules below the app layer instead of relying on every app to respect a proxy setting. `FOSS` `[M]` `[K]`
-- **[Magisk LAN Auto Switch](https://github.com/NewFuture/magisk-modules/tree/main/magisk-lan-auto-switch)** - Automatically switch LAN and WiFi based on eth0 connection status. `FOSS` `[M]`
-- **[Network Utilities](https://play.google.com/store/apps/details?id=com.myprog.netutils)** - Application contains a set of tools for networks diagnostics. `Proprietary`
-- **[SimbaDroid](https://github.com/buttercookie42/SimbaDroid)** - A simple SMB file server for Android. `FOSS` | [🌱](https://f-droid.org/packages/de.buttercookie.simbadroid)
-- **[TCP Optimiser Module](https://github.com/fatalcoder524/TCP_Optimiser_Module)** - Change tcp congestion algorithm based on current active internet type and some network enhancements. `FOSS` `[M]` `[K]`
-- **[Unlock AI & EN Services for Russia](https://github.com/AvenCores/Unlock_AI_and_EN_Services_for_Russia)** - Unlock AI and EN services for Russia. `Proprietary` `[M]` `[K]`
-
 ## Wi-Fi & Mobile Data
 
 - **[Hyper 5G Switch](https://github.com/buffcow/Hyper5GSwitch)** - Add a 5G switch to the mobile network panel, only for devices that support 5G net and equipped with HyperOS. `FOSS` `[LSP]`
@@ -101,10 +108,3 @@ more), network diagnostics, Wi-Fi & mobile data utilities and Bluetooth & NFC ap
 - **[WiFi Password Manager](https://github.com/Khh-vu/wifi-password-manager)** - Simple app to manage WiFi passwords. `FOSS` | [🌱](https://apt.izzysoft.de/packages/io.github.wifi_password_manager)
 - **[WiFi Password Viewer for MMRL](https://github.com/Googlers-Repo/wpd)** - WiFi Password Viewer for MMRL. `FOSS`
 - **[Wi‑Fi Passwords Exporter](https://github.com/mlm-games/wifi-exporter)** - Android app that exports wifi passwords. `FOSS`
-
-## Bluetooth & NFC
-
-- **[KonamikU](https://github.com/C-F0x/KonamikU)** - Extend NFC Capabilities of your device. `FOSS` `[LSP]`
-- **[NFC Card Emulator Pro (Root)](https://play.google.com/store/apps/details?id=com.yuanwofei.cardemulator.pro)** - NFC card emulator for access cards, elevator cards, meal cards, school cards, library cards, and other IC cards. `Proprietary`
-- **[NFCGate](https://github.com/nfcgate/nfcgate)** - Android application meant to capture, analyze, or modify NFC traffic. `FOSS` `[LSP]` | [🌱](https://f-droid.org/packages/de.tu_darmstadt.seemoo.nfcgate/)
-- **[onHit](https://github.com/0penPublic/onHit)** - Trigger Android NFC events without a physical tag by Xposed. `FOSS` `[LSP]`

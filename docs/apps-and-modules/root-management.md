@@ -62,40 +62,22 @@ problem - controlling root access.
 > New to rooting? Read the [Complete Rooting Guide](/rooting-guides/) first, then come back for the tools.
 
 
-## Root Managers
+## Bootloop Protection
 
-- **[⭐ KernelSU](https://github.com/tiann/KernelSU)** - A Kernel based root solution for Android. `FOSS`
-- **[⭐ Magisk](https://github.com/topjohnwu/Magisk)** - Manage Magisk modules and root permissions. `FOSS`
-- **[APatch](https://github.com/bmax121/APatch)** - The patching of Android kernel and Android system. `FOSS` | [🌱](https://f-droid.org/packages/me.bmax.apatch/)
-- **[FolkPatch](https://github.com/LyraVoid/FolkPatch)** - A Root management tool focused on interface optimization and feature extension, based on APatch. `FOSS`
-- **[KernelSU-next](https://github.com/KernelSU-Next/KernelSU-Next)** - An advanced Kernel based root solution for Android. `FOSS`
-- **[ReSukiSU](https://github.com/ReSukiSU/ReSukiSU)** - Fork of SukiSU-Ultra with additional features. `FOSS`
-- **[SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra)** - A kernel-based root solution for Android devices, forked from `KernelSU` with some useful changes. `FOSS`
+- **[Anti bootloop](https://github.com/Magisk-Modules-Alt-Repo/abootloop)** - Protect from bootloops. `FOSS` `[M]`
+- **[AshReXcue - Bootloop Protector](https://github.com/RipperHybrid/AshLooper)** - Prevent boot loops caused by problematic modules installed via KernelSU or Magisk. `FOSS` `[M]` `[K]`
+- **[YetAnotherBootloopProtector](https://github.com/Magisk-Modules-Alt-Repo/YetAnotherBootloopProtector)** - Monitor and fix potential Bootloops and SystemUI failures. `FOSS` `[M]`
 
-## Temporary Root (Locked Bootloader)
+## LSPosed & Xposed
 
-<details>
+> [!NOTE]
+> LSPosed allows you to use Xposed modules, that can modify or extend the functionality of your Android system and apps.
 
-<summary><strong>What is temporary root (GhostLock)?</strong></summary>
-
-Exploits like **GhostLock (CVE-2026-43499)** - a 15-year-old Linux kernel bug - grant root **in memory only**, for the current boot. No bootloader unlock, no flashing, no Knox trip, no data wipe: reboot and the device is bone-stock again. The trade-offs: root doesn't survive reboots, you can't flash ROMs/recoveries, and it only works on specific devices running firmware up to ~the June 2026 patch level.
-
-<br>
-</details>
-
-- **[⭐ Root My Galaxy](https://github.com/BuSung-dev/Root-My-Galaxy)** - One-tap temporary root for Snapdragon Galaxy flagships (S24/S25 series, S24 FE, A56...) via GhostLock; bootloader stays locked, Knox isn't tripped. `FOSS`
+- **[⭐ Vector](https://github.com/JingMatrix/Vector)** - Open Source *Fork* of original LSPosed with dynamic module loading, and other improvements. `FOSS` `[M]`
+- **[LSPosed](https://lsposed.zip)** - A Riru / Zygisk module that provides an ART hooking framework delivering consistent APIs with the OG Xposed, leveraging the LSPlant hooking framework. `Proprietary`
 
 > [!TIP]
-> Check out **[Root Without Unlocking the Bootloader ↗](../rooting-guides/root-without-unlocking-bootloader.md)** for device support, and every app, exploit port etc.
-
-> [!TIP]
-> Also see [Bootloader Mods & Temporary Root Solutions](../rooting-guides/temporary-root-solutions.md) for related locked-bootloader approaches (Kaeru, Fenrir).
-
-## Module Managers
-
-- **[⭐ MMRL](https://github.com/DerGoogler/MMRL)** - An Android app that helps manage your own modules repository. `FOSS` `[M]` `[K]` `[A]` | [🌱](https://f-droid.org/en/packages/com.dergoogler.mmrl/) | [▶️](https://play.google.com/store/apps/details?id=com.dergoogler.mmrl)
-- **[KPatch Next Module](https://github.com/KernelSU-Next/KPatch-Next-Module)** - Standalone implementation of KPM (KernelSU Patch Module) support for Magisk/KernelSU with WebUI. `FOSS` `[M]` `[K]`
-- **[Magisk Manager for Recovery Mode](https://github.com/Rikj000/Magisk-Manager-for-Recovery-Mode)** - Easily manage your Magisk Modules from a terminal session in your custom recovery. `FOSS` `[M]`
+> See our [LSPosed installation guide](../rooting-guides/lsposed-guide.md) for setup instructions.
 
 ## Metamodules
 
@@ -109,50 +91,27 @@ Exploits like **GhostLock (CVE-2026-43499)** - a 15-year-old Linux kernel bug - 
 - **[meta-mm](https://github.com/KernelSU-Modules-Repo/meta-mm)** - The official KernelSU Modules Repo's Magic Mount metamodule. Lighter alternative to meta-magic_mount for users who just want Magisk-compatible mounting without extra tooling. `FOSS` `[K]`
 - **[ZeroMount](https://github.com/Enginex0/zeromount)** - Mountless module loading with Kernel-level VFS path redirection & SUSFS integration, WebUI, bootloop guard, and strategy fallback. `FOSS` `[M]` `[K]` `[A]`
 
-## LSPosed & Xposed
+## Module Managers
 
-> [!NOTE]
-> LSPosed allows you to use Xposed modules, that can modify or extend the functionality of your Android system and apps.
+- **[⭐ MMRL](https://github.com/DerGoogler/MMRL)** - An Android app that helps manage your own modules repository. `FOSS` `[M]` `[K]` `[A]` | [🌱](https://f-droid.org/en/packages/com.dergoogler.mmrl/) | [▶️](https://play.google.com/store/apps/details?id=com.dergoogler.mmrl)
+- **[KPatch Next Module](https://github.com/KernelSU-Next/KPatch-Next-Module)** - Standalone implementation of KPM (KernelSU Patch Module) support for Magisk/KernelSU with WebUI. `FOSS` `[M]` `[K]`
+- **[Magisk Manager for Recovery Mode](https://github.com/Rikj000/Magisk-Manager-for-Recovery-Mode)** - Easily manage your Magisk Modules from a terminal session in your custom recovery. `FOSS` `[M]`
 
-- **[⭐ Vector](https://github.com/JingMatrix/Vector)** - Open Source *Fork* of original LSPosed with dynamic module loading, and other improvements. `FOSS` `[M]`
-- **[LSPosed](https://lsposed.zip)** - A Riru / Zygisk module that provides an ART hooking framework delivering consistent APIs with the OG Xposed, leveraging the LSPlant hooking framework. `Proprietary`
+## Root Detection & Testing
 
-> [!TIP]
-> See our [LSPosed installation guide](../rooting-guides/lsposed-guide.md) for setup instructions.
-
-## Zygisk
-
-<details>
-
-<summary><strong>What is Zygisk?</strong></summary>
-
-A feature that lets modules inject code into Android's Zygote process for system-level modifications like root hiding and app patching.
-
-<br>
-</details>
-
-- **[⭐ Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)** The "Gold Standard" for detection evasion. It is a standalone Zygisk implementation that offers the most advanced stealth features, including a dedicated **Zygote Monitor** and dashboard. `Proprietary` `[M]` `[K]` `[A]`
-- **[OnyxZygisk](https://github.com/OnyxZygisk/OnyxZygisk/)** - A ptrace-powered Zygisk implementation with a built-in WebUI, hot-swappable FN modules, and an advanced DenyList. `FOSS` `[M]` `[K]` `[A]`
-- **[NeoZygisk](https://github.com/JingMatrix/NeoZygisk)** A minimalist, high-stealth implementation using **ptrace injection**. It focuses on "trace cleaning," aiming to remove all injection artifacts from memory once modules are loaded. `FOSS` `[M]` `[K]` `[A]`
-- **[ReZygisk](https://github.com/PerformanC/ReZygisk)** A high-performance implementation **entirely rewritten in C**. It introduces **custom linkers** to bypass modern linker-based detections, offering a WebUI for status monitoring and compatibility with Android 15 and 16. `FOSS` `[M]` `[K]` `[A]`
-- **[VexZygisk](https://github.com/Lxiaoyao077/VexZygisk/)** - Standalone implementation of Zygisk for KernelSU and APatch. `FOSS` `[M]` `[K]` `[A]`
-
-<details><summary><strong>Comparison table</strong></summary><br>
-
-| | **Magisk Built-in** | **Zygisk Next** | **NeoZygisk** | **ReZygisk** |
-| :--- | :--- | :--- | :--- | :--- |
-| **Key Advantage** | Official &amp; simple | Detection evasion | Stealth / cleaning | Speed / open source |
-| **License** | GPL-3.0 | Proprietary | GPL-3.0 | GPL-3.0 / AGPL-3.0 |
-| **Root Support** | Magisk only | Magisk, KSU, APatch | Magisk, KSU, KSU Next, APatch | Magisk, KSU, APatch |
-| **Hiding Approach** | Basic DenyList | ZN Linker + anon memory + Shamiko | Ptrace injection + unmounting | Custom linker + maps hiding |
-| **Strengths** | ✅ Stable, well-documented<br>✅ Widest arch (incl. x86) | ✅ Most feature-rich<br>✅ Largest community | ✅ Hard to trace in memory<br>✅ Minimal &amp; open | ✅ **Fastest (native C)**<br>✅ Fully open &amp; auditable |
-| **Trade-offs** | ❌ Magisk-only<br>❌ Easily detected | ❌ Closed source<br>❌ ZN Linker experimental | ❌ 64-bit only<br>❌ Smaller community | ❌ RC phase<br>❌ Some compat issues |
-
-<br>
-</details><br>
-
-> [!TIP]
-> Use these for Zygisk features on KernelSU/APatch, or for more control than Magisk's built-in provides.
+- **[⭐ Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector)** - A tool for detecting root on android. `FOSS`
+- **[⭐ Duck Detector Fork](https://github.com/rrr333nnn333/Duck-Detector-Refactoring)** - Duck Detector fork with additional features and improvements. `FOSS`
+- **[Android-Device-Trust](https://github.com/reveny/Android-Device-Trust)** - Android device attestation and fingerprinting tool. `FOSS`
+- **[Chunqiu Detector](https://github.com/mingzun09/Chunqiu-Detector-Problem-solution)** - Solutions, scripts, and modules for bypassing and troubleshooting Chunqiu Detector checks on rooted Android devices. `FOSS`
+- **[Duck Detector](https://github.com/eltavine/Duck-Detector-Refactoring)** - Android environment integrity inspection tool for root, hook, bootloader, SELinux, virtualization, and attestation signals. `FOSS`
+- **[Key Attestation](https://github.com/VisionR1/KeyAttestation)** - Generates, saves, parses and verifies Android key and ID attestation certificate chains for self-testing and diagnostics. `FOSS`
+- **[Kknd Root Detector](https://github.com/juanma0511/Kknd_Root_Detector)** - Deep root, hook framework, SELinux and system integrity detection combining native C++ and Kotlin checks. `FOSS`
+- **[MagiskDetection](https://github.com/apkunpacker/MagiskDetection)** - Collection of Some publicly Available POC Apps to Detect Root/Magisk presence. `Proprietary`
+- **[PIF Detector](https://github.com/IR0NBYTE/playIntegrityFixDetector)** - Native app designed to detect modifications, bypasses, or "fixes" applied to the Google Play Integrity API. `FOSS` `[M]` `[K]`
+- **[Play Integrity Alert](https://github.com/Xiddoc/PlayIntegrityAlert)** - Get notified when an app calls the Play Integrity API. `FOSS` `[LSP]`
+- **[Play Integrity API Checker](https://github.com/1nikolas/play-integrity-checker-app)** - This app shows info about your device integrity as reported by Google Play Services. If any of this fails could mean your device is rooted or tampered in a way. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck)
+- **[Securify](https://github.com/RabehX/Securify)** - Yet Another Root Checker and Play Integrity API Application. `FOSS`
+- **[ZygoteNextProbe](https://github.com/XiaoTong6666/ZygoteNextProbe)** - Research probe that checks whether Android 17's `zygote_next` native isolated services leak a global mount view - potentially exposing Magisk/Zygisk/LSPosed mounts to apps. `FOSS`
 
 ## Root Hiding & Play Integrity
 
@@ -172,8 +131,8 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 </details>
 
 - **[⭐ HMA-OSS](https://github.com/frknkrc44/HMA-OSS)** - FOSS rewrite of Hide My Applist; hides your app list, settings, and package installers. `FOSS` `[LSP]`
-- **[⭐ TEESimulator](https://github.com/JingMatrix/TEESimulator)** - Create a complete, software-based simulation of a hardware-backed Trusted Execution Environment (TEE) for Key Attestation. `FOSS` `[M]` `[K]`
 - **[⭐ Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)** - Hides Magisk root from detection. `Proprietary` `[M]`
+- **[⭐ TEESimulator](https://github.com/JingMatrix/TEESimulator)** - Create a complete, software-based simulation of a hardware-backed Trusted Execution Environment (TEE) for Key Attestation. `FOSS` `[M]` `[K]`
 - **[Always Strong](https://github.com/evoker0/AlwaysStrong)** - Bundles TEESimulator-RS and PlayIntegrityFork into a single module for strong integrity on rooted devices. `FOSS` `[M]` `[K]`
 - **[AuditPatch](https://github.com/silvzr/AuditPatch)** - Hooks `logd` to replace sensitive SELinux contexts in the audit log, fixing AVC log leak detection without SUSFS or ZygiskNext. `Proprietary` `[M]` `[K]`
 - **[DirtySepolicy Bypass](https://github.com/flipphoneguy/DirtySepolicy_Bypass)** - Bypasses new DirtySepolicy on rooted Android devices to keep apps working. `FOSS` `[M]` `[K]` `[A]`
@@ -199,6 +158,15 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 
 ---
 
+## Root Managers
+
+- **[⭐ KernelSU](https://github.com/tiann/KernelSU)** - A Kernel based root solution for Android. `FOSS`
+- **[⭐ Magisk](https://github.com/topjohnwu/Magisk)** - Manage Magisk modules and root permissions. `FOSS`
+- **[APatch](https://github.com/bmax121/APatch)** - The patching of Android kernel and Android system. `FOSS` | [🌱](https://f-droid.org/packages/me.bmax.apatch/)
+- **[FolkPatch](https://github.com/LyraVoid/FolkPatch)** - A Root management tool focused on interface optimization and feature extension, based on APatch. `FOSS`
+- **[KernelSU-next](https://github.com/KernelSU-Next/KernelSU-Next)** - An advanced Kernel based root solution for Android. `FOSS`
+- **[ReSukiSU](https://github.com/ReSukiSU/ReSukiSU)** - Fork of SukiSU-Ultra with additional features. `FOSS`
+- **[SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra)** - A kernel-based root solution for Android devices, forked from `KernelSU` with some useful changes. `FOSS`
 
 ## Susfs
 
@@ -209,28 +177,59 @@ SUSFS (Systemless User Space File System) is a kernel-level module that allows r
 
 - **[⭐ SUSFS for KernelSU](https://github.com/sidex15/susfs4ksu-module)** - Add-on root-hiding service for SUSFS-patched kernels (KernelSU/Next). The core of modern KSU hiding setups. `FOSS` `[M]` `[K]`
 - **[RENE](https://github.com/rrr333nnn333/BRENE)** - SUSFS/KernelSU module for patched kernels with enhanced root hiding & spoofing. `FOSS` `[M]` `[K]`
-- ~~ReSuSFS`~~: Removed on author's request
+- ~~ReSuSFS~~: Removed on author's request
 
 ---
 
-## Bootloop Protection
+## Temporary Root (Locked Bootloader)
 
-- **[Anti bootloop](https://github.com/Magisk-Modules-Alt-Repo/abootloop)** - Protect from bootloops. `FOSS` `[M]`
-- **[AshReXcue - Bootloop Protector](https://github.com/RipperHybrid/AshLooper)** - Prevent boot loops caused by problematic modules installed via KernelSU or Magisk. `FOSS` `[M]` `[K]`
-- **[YetAnotherBootloopProtector](https://github.com/Magisk-Modules-Alt-Repo/YetAnotherBootloopProtector)** - Monitor and fix potential Bootloops and SystemUI failures. `FOSS` `[M]`
+<details>
 
-## Root Detection & Testing
+<summary><strong>What is temporary root (GhostLock)?</strong></summary>
 
-- **[⭐ Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector)** - A tool for detecting root on android. `FOSS`
-- **[⭐ Duck Detector Fork](https://github.com/rrr333nnn333/Duck-Detector-Refactoring)** - Duck Detector fork with additional features and improvements. `FOSS`
-- **[Android-Device-Trust](https://github.com/reveny/Android-Device-Trust)** - Android device attestation and fingerprinting tool. `FOSS`
-- **[Chunqiu Detector](https://github.com/mingzun09/Chunqiu-Detector-Problem-solution)** - Solutions, scripts, and modules for bypassing and troubleshooting Chunqiu Detector checks on rooted Android devices. `FOSS`
-- **[Duck Detector](https://github.com/eltavine/Duck-Detector-Refactoring)** - Android environment integrity inspection tool for root, hook, bootloader, SELinux, virtualization, and attestation signals. `FOSS`
-- **[Key Attestation](https://github.com/VisionR1/KeyAttestation)** - Generates, saves, parses and verifies Android key and ID attestation certificate chains for self-testing and diagnostics. `FOSS`
-- **[Kknd Root Detector](https://github.com/juanma0511/Kknd_Root_Detector)** - Deep root, hook framework, SELinux and system integrity detection combining native C++ and Kotlin checks. `FOSS`
-- **[MagiskDetection](https://github.com/apkunpacker/MagiskDetection)** - Collection of Some publicly Available POC Apps to Detect Root/Magisk presence. `Proprietary`
-- **[PIF Detector](https://github.com/IR0NBYTE/playIntegrityFixDetector)** - Native app designed to detect modifications, bypasses, or "fixes" applied to the Google Play Integrity API. `FOSS` `[M]` `[K]`
-- **[Play Integrity Alert](https://github.com/Xiddoc/PlayIntegrityAlert)** - Get notified when an app calls the Play Integrity API. `FOSS` `[LSP]`
-- **[Play Integrity API Checker](https://github.com/1nikolas/play-integrity-checker-app)** - This app shows info about your device integrity as reported by Google Play Services. If any of this fails could mean your device is rooted or tampered in a way. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck)
-- **[Securify](https://github.com/RabehX/Securify)** - Yet Another Root Checker and Play Integrity API Application. `FOSS`
-- **[ZygoteNextProbe](https://github.com/XiaoTong6666/ZygoteNextProbe)** - Research probe that checks whether Android 17's `zygote_next` native isolated services leak a global mount view - potentially exposing Magisk/Zygisk/LSPosed mounts to apps. `FOSS`
+Exploits like **GhostLock (CVE-2026-43499)** - a 15-year-old Linux kernel bug - grant root **in memory only**, for the current boot. No bootloader unlock, no flashing, no Knox trip, no data wipe: reboot and the device is bone-stock again. The trade-offs: root doesn't survive reboots, you can't flash ROMs/recoveries, and it only works on specific devices running firmware up to ~the June 2026 patch level.
+
+<br>
+</details>
+
+- **[⭐ Root My Galaxy](https://github.com/BuSung-dev/Root-My-Galaxy)** - One-tap temporary root for Snapdragon Galaxy flagships (S24/S25 series, S24 FE, A56...) via GhostLock; bootloader stays locked, Knox isn't tripped. `FOSS`
+
+> [!TIP]
+> Check out **[Root Without Unlocking the Bootloader ↗](../rooting-guides/root-without-unlocking-bootloader.md)** for device support, and every app, exploit port etc.
+
+> [!TIP]
+> Also see [Bootloader Mods & Temporary Root Solutions](../rooting-guides/temporary-root-solutions.md) for related locked-bootloader approaches (Kaeru, Fenrir).
+
+## Zygisk
+
+<details>
+
+<summary><strong>What is Zygisk?</strong></summary>
+
+A feature that lets modules inject code into Android's Zygote process for system-level modifications like root hiding and app patching.
+
+<br>
+</details>
+
+- **[⭐ Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)** The "Gold Standard" for detection evasion. It is a standalone Zygisk implementation that offers the most advanced stealth features, including a dedicated **Zygote Monitor** and dashboard. `Proprietary` `[M]` `[K]` `[A]`
+- **[NeoZygisk](https://github.com/JingMatrix/NeoZygisk)** A minimalist, high-stealth implementation using **ptrace injection**. It focuses on "trace cleaning," aiming to remove all injection artifacts from memory once modules are loaded. `FOSS` `[M]` `[K]` `[A]`
+- **[OnyxZygisk](https://github.com/OnyxZygisk/OnyxZygisk/)** - A ptrace-powered Zygisk implementation with a built-in WebUI, hot-swappable FN modules, and an advanced DenyList. `FOSS` `[M]` `[K]` `[A]`
+- **[ReZygisk](https://github.com/PerformanC/ReZygisk)** A high-performance implementation **entirely rewritten in C**. It introduces **custom linkers** to bypass modern linker-based detections, offering a WebUI for status monitoring and compatibility with Android 15 and 16. `FOSS` `[M]` `[K]` `[A]`
+- **[VexZygisk](https://github.com/Lxiaoyao077/VexZygisk/)** - Standalone implementation of Zygisk for KernelSU and APatch. `FOSS` `[M]` `[K]` `[A]`
+
+<details><summary><strong>Comparison table</strong></summary><br>
+
+| | **Magisk Built-in** | **Zygisk Next** | **NeoZygisk** | **ReZygisk** |
+| :--- | :--- | :--- | :--- | :--- |
+| **Key Advantage** | Official &amp; simple | Detection evasion | Stealth / cleaning | Speed / open source |
+| **License** | GPL-3.0 | Proprietary | GPL-3.0 | GPL-3.0 / AGPL-3.0 |
+| **Root Support** | Magisk only | Magisk, KSU, APatch | Magisk, KSU, KSU Next, APatch | Magisk, KSU, APatch |
+| **Hiding Approach** | Basic DenyList | ZN Linker + anon memory + Shamiko | Ptrace injection + unmounting | Custom linker + maps hiding |
+| **Strengths** | ✅ Stable, well-documented<br>✅ Widest arch (incl. x86) | ✅ Most feature-rich<br>✅ Largest community | ✅ Hard to trace in memory<br>✅ Minimal &amp; open | ✅ **Fastest (native C)**<br>✅ Fully open &amp; auditable |
+| **Trade-offs** | ❌ Magisk-only<br>❌ Easily detected | ❌ Closed source<br>❌ ZN Linker experimental | ❌ 64-bit only<br>❌ Smaller community | ❌ RC phase<br>❌ Some compat issues |
+
+<br>
+</details><br>
+
+> [!TIP]
+> Use these for Zygisk features on KernelSU/APatch, or for more control than Magisk's built-in provides.
