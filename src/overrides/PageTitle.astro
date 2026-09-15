@@ -1,0 +1,13 @@
+---
+/**
+ * Override: the old VitePress site rendered each page's visible H1 from the
+ * Markdown body (16 pages intentionally use a different H1 than their
+ * <title>/frontmatter title). Starlight's default PageTitle would add a
+ * second H1 from the frontmatter, so we suppress it and keep the Markdown
+ * H1 as the single source. The `_top` anchor target used by Starlight's
+ * skip link is preserved.
+ */
+// `_top` is Starlight's PAGE_TITLE_ID, targeted by the skip link.
+---
+
+<span id="_top"></span>

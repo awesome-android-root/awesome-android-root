@@ -1,7 +1,20 @@
+# Build output
+dist/
+.astro/
+
+# Development
+node_modules/
+dev-dist/
+
+# Legacy VitePress artifacts (kept out of history during migration cleanup)
 docs/.vitepress/dist
 docs/.vitepress/cache
-docs/dev-dist
-node_modules
+
+# Editor/tooling
+.vscode/*
+!.vscode/tasks.json
+
+# Working files
 docs/README.md
 docs/rooting-guides/*_NEW.md
 improvements.md

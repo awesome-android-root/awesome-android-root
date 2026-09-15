@@ -1,0 +1,552 @@
+/* =========================================================================
+   Awesome Android Root — custom styles for Starlight.
+   Ported from the VitePress theme (docs/.vitepress/theme/style.css and
+   StoreLink.vue scoped styles) onto Starlight CSS variables.
+   ========================================================================= */
+
+/* --------------------------------------------------------------------------
+   Store badges (F-Droid / Play Store) — rendered by rehype-store-links
+   -------------------------------------------------------------------------- */
+.sl-markdown-content .store-badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	padding: 3px;
+	cursor: pointer;
+	border-radius: 4px;
+	text-decoration: none;
+	transition: all 0.2s ease;
+	vertical-align: middle;
+	margin: 0 2px;
+	border: none;
+	background: transparent;
+	box-sizing: border-box;
+	color: var(--sl-color-accent-high);
+}
+.sl-markdown-content .store-badge:hover {
+	transform: translateY(-1px) scale(1.1);
+	text-decoration: none;
+	color: var(--sl-color-accent);
+}
+.sl-markdown-content .store-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 0;
+	width: 100%;
+	height: 100%;
+}
+.sl-markdown-content .store-icon svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+	flex-shrink: 0;
+	filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+	transition: filter 0.2s ease;
+}
+.sl-markdown-content .store-badge:hover .store-icon svg {
+	filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+:root[data-theme='dark'] .sl-markdown-content .store-badge {
+	color: #64b5f6;
+}
+:root[data-theme='dark'] .sl-markdown-content .store-badge:hover {
+	color: #90caf9;
+}
+:root[data-theme='dark'] .sl-markdown-content .store-icon svg {
+	filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
+}
+.sl-markdown-content .store-separator {
+	opacity: 0.3;
+	margin: 0 6px;
+	color: var(--sl-color-gray-2);
+}
+:root[data-theme='dark'] .sl-markdown-content .store-separator {
+	opacity: 0.25;
+}
+@media (max-width: 768px) {
+	.sl-markdown-content .store-badge {
+		width: 22px;
+		height: 22px;
+		padding: 2px;
+	}
+}
+
+/* Badges from shields.io — consistent sizing (as in the old theme). */
+.sl-markdown-content img[src*='img.shields.io'] {
+	width: auto;
+	height: 28px;
+	min-height: 28px;
+	max-height: 28px;
+	vertical-align: middle;
+	margin: 4px;
+	display: inline-block;
+	background-color: transparent;
+	aspect-ratio: auto;
+	object-fit: contain;
+}
+
+/* Store-link anchors keep comfortable touch targets even before transform. */
+.sl-markdown-content a[href*='f-droid.org'],
+.sl-markdown-content a[href*='play.google.com'],
+.sl-markdown-content a[href*='apt.izzysoft.de'] {
+	display: inline-flex;
+	align-items: center;
+	min-height: 28px;
+	min-width: 28px;
+	text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   Markdown action bar (Copy page / View / Download as Markdown)
+   -------------------------------------------------------------------------- */
+.sl-markdown-content .markdown-copy-buttons {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: 100%;
+	margin: 0.5rem 0 1.75rem;
+	padding: 0 0 12px;
+	border-bottom: 1px solid var(--sl-color-hairline);
+}
+.sl-markdown-content .markdown-copy-buttons-inner {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+.sl-markdown-content .markdown-copy-buttons button,
+.sl-markdown-content .markdown-copy-buttons a {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 7px;
+	min-height: 38px;
+	padding: 0 13px;
+	border: 1px solid var(--sl-color-hairline);
+	border-radius: 9px;
+	background: var(--sl-color-gray-6);
+	color: var(--sl-color-gray-2);
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 1;
+	text-decoration: none;
+	white-space: nowrap;
+	cursor: pointer;
+	transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease,
+		box-shadow 0.2s ease, transform 0.2s ease;
+}
+.sl-markdown-content .markdown-copy-buttons .icon {
+	display: inline-flex;
+}
+.sl-markdown-content .markdown-copy-buttons svg {
+	width: 16px;
+	height: 16px;
+	flex: 0 0 16px;
+}
+.sl-markdown-content .markdown-copy-buttons .copy-page {
+	border-color: var(--sl-color-accent);
+	background: var(--sl-color-accent);
+	color: var(--sl-color-bg);
+}
+.sl-markdown-content .markdown-copy-buttons button:hover,
+.sl-markdown-content .markdown-copy-buttons a:hover {
+	border-color: var(--sl-color-accent);
+	background: var(--sl-color-accent-low);
+	color: var(--sl-color-text-accent);
+	box-shadow: 0 4px 12px -6px var(--sl-color-accent);
+	transform: translateY(-1px);
+	text-decoration: none;
+}
+.sl-markdown-content .markdown-copy-buttons .copy-page:hover {
+	background: var(--sl-color-accent-high);
+	color: var(--sl-color-bg);
+}
+.sl-markdown-content .markdown-copy-buttons .download-btn {
+	padding: 0 10px;
+}
+.sl-markdown-content .markdown-copy-buttons button:focus-visible,
+.sl-markdown-content .markdown-copy-buttons a:focus-visible {
+	outline: 2px solid var(--sl-color-text-accent);
+	outline-offset: 2px;
+}
+.sl-markdown-content .markdown-copy-buttons button:active,
+.sl-markdown-content .markdown-copy-buttons a:active {
+	transform: translateY(0);
+	box-shadow: none;
+}
+@media (max-width: 640px) {
+	.sl-markdown-content .markdown-copy-buttons {
+		margin-bottom: 1.5rem;
+		padding-bottom: 10px;
+	}
+	.sl-markdown-content .markdown-copy-buttons-inner {
+		width: 100%;
+		gap: 7px;
+	}
+	.sl-markdown-content .markdown-copy-buttons button,
+	.sl-markdown-content .markdown-copy-buttons a {
+		flex: 1 1 0;
+		min-width: 0;
+		padding-inline: 10px;
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	.sl-markdown-content .markdown-copy-buttons button,
+	.sl-markdown-content .markdown-copy-buttons a {
+		transition: none;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Home page cards (journey selector, major guides, resources, community,
+   feature grid). Class names carried over from the VitePress theme so the
+   homepage HTML keeps working unchanged.
+   -------------------------------------------------------------------------- */
+.sl-markdown-content .custom-journey-selector {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 1.5rem;
+	margin: 2rem 0;
+}
+.sl-markdown-content .journey-card {
+	background: var(--sl-color-gray-6);
+	border: 1px solid var(--sl-color-hairline);
+	border-radius: 12px;
+	padding: 2rem 1.5rem;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	position: relative;
+	overflow: hidden;
+}
+.sl-markdown-content .journey-card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 3px;
+	background: var(--sl-color-accent);
+	transition: transform 0.3s ease;
+	transform: scaleX(0);
+	transform-origin: left;
+}
+.sl-markdown-content .journey-card:hover::before {
+	transform: scaleX(1);
+}
+.sl-markdown-content .journey-card:hover {
+	border-color: var(--sl-color-accent);
+	transform: translateY(-4px);
+	box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15);
+}
+.sl-markdown-content .journey-card h3 {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+	font-size: 1.35rem;
+	font-weight: 600;
+	border: none;
+	padding: 0;
+}
+.sl-markdown-content .journey-card p {
+	color: var(--sl-color-gray-2);
+	margin: 0.5rem 0 1rem;
+	font-size: 0.95rem;
+	line-height: 1.5;
+}
+.sl-markdown-content .journey-card ul {
+	list-style: none;
+	padding: 0;
+	margin: 1rem 0 1.5rem;
+}
+.sl-markdown-content .journey-card li {
+	padding: 0.4rem 0;
+	font-size: 0.9rem;
+	color: var(--sl-color-gray-2);
+	display: flex;
+	align-items: center;
+}
+.sl-markdown-content .journey-card li::before {
+	content: '';
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 0.5rem;
+	background: currentColor;
+	mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd'/%3E%3C/svg%3E");
+	mask-size: contain;
+	flex-shrink: 0;
+}
+.sl-markdown-content .journey-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.625rem 1.25rem;
+	background: var(--sl-color-accent);
+	color: var(--sl-color-bg) !important;
+	border-radius: 8px;
+	text-decoration: none !important;
+	font-weight: 500;
+	font-size: 0.95rem;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	border: none;
+}
+.sl-markdown-content .journey-btn:hover {
+	background: var(--sl-color-accent-high);
+	transform: translateX(2px);
+	box-shadow: 0 4px 12px -2px var(--sl-color-accent);
+}
+.sl-markdown-content .journey-btn::after {
+	content: '';
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: currentColor;
+	mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E");
+	mask-size: contain;
+	transition: transform 0.3s ease;
+}
+.sl-markdown-content .journey-btn:hover::after {
+	transform: translateX(4px);
+}
+
+.sl-markdown-content .community-cards,
+.sl-markdown-content .guide-time-grid,
+.sl-markdown-content .feature-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 1.25rem;
+	margin: 2rem 0;
+}
+.sl-markdown-content .community-card,
+.sl-markdown-content .feature-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 2rem 1.5rem;
+	background: var(--sl-color-gray-6);
+	border: 1px solid var(--sl-color-hairline);
+	border-radius: 12px;
+	text-decoration: none !important;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	position: relative;
+}
+.sl-markdown-content .community-card:hover,
+.sl-markdown-content .feature-card:hover {
+	transform: translateY(-4px);
+	border-color: var(--sl-color-accent);
+	box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.15);
+}
+.sl-markdown-content .community-card strong,
+.sl-markdown-content .feature-card strong {
+	display: block;
+	color: var(--sl-color-white);
+	font-size: 1.05rem;
+	font-weight: 600;
+	margin-bottom: 0.375rem;
+}
+.sl-markdown-content .community-card span:last-child,
+.sl-markdown-content .feature-card span:last-child {
+	font-size: 0.875rem;
+	color: var(--sl-color-gray-2);
+	line-height: 1.5;
+}
+.sl-markdown-content .community-card .icon,
+.sl-markdown-content .feature-card .icon {
+	font-size: x-large;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+.sl-markdown-content .guide-time-grid .community-card .icon {
+	font-size: 1.75rem;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+	.sl-markdown-content .custom-journey-selector {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+		margin: 1.5rem 0;
+	}
+	.sl-markdown-content .journey-card {
+		padding: 1.25rem 1rem;
+	}
+	.sl-markdown-content .community-cards,
+	.sl-markdown-content .feature-grid {
+		grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+		gap: 0.75rem;
+	}
+	.sl-markdown-content .guide-time-grid {
+		grid-template-columns: 1fr;
+	}
+	.sl-markdown-content .community-card,
+	.sl-markdown-content .feature-card {
+		padding: 1.5rem 1rem;
+	}
+}
+@media (max-width: 480px) {
+	.sl-markdown-content .community-cards,
+	.sl-markdown-content .feature-grid {
+		grid-template-columns: 1fr;
+	}
+	.sl-markdown-content .journey-card h3 {
+		font-size: 1.2rem;
+	}
+}
+@media (min-width: 1280px) {
+	.sl-markdown-content .custom-journey-selector,
+	.sl-markdown-content .community-cards,
+	.sl-markdown-content .guide-time-grid,
+	.sl-markdown-content .feature-grid {
+		max-width: 1160px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.sl-markdown-content .community-cards,
+	.sl-markdown-content .feature-grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+	.sl-markdown-content .guide-time-grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+}
+
+/* Accessibility & polish for cards */
+.sl-markdown-content .journey-btn:focus-visible,
+.sl-markdown-content .community-card:focus-visible,
+.sl-markdown-content .feature-card:focus-visible {
+	outline: 2px solid var(--sl-color-text-accent);
+	outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+	.sl-markdown-content .journey-card,
+	.sl-markdown-content .community-card,
+	.sl-markdown-content .feature-card,
+	.sl-markdown-content .journey-btn {
+		transition: none;
+	}
+}
+@media (prefers-contrast: high) {
+	.sl-markdown-content .journey-card,
+	.sl-markdown-content .community-card,
+	.sl-markdown-content .feature-card {
+		border-width: 2px;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Content tweaks carried over from the old theme
+   -------------------------------------------------------------------------- */
+
+/* Back-to-top links ("↑ Table of Contents") alignment */
+.sl-markdown-content p:has(a[href*='#table-of-contents']) {
+	text-align: right;
+	margin: 1.5rem 0;
+}
+.sl-markdown-content p a[href*='#table-of-contents'] {
+	display: inline-block;
+	font-size: 0.9em;
+	font-weight: 500;
+	text-decoration: none;
+	padding: 4px 8px;
+	border-radius: 4px;
+	transition: all 0.2s ease;
+}
+.sl-markdown-content p a[href*='#table-of-contents']:hover {
+	background: var(--sl-color-accent-low);
+	transform: translateY(-1px);
+}
+
+/* Lazy images: reserve approximate space to reduce layout shift. */
+.sl-markdown-content img[loading='lazy'] {
+	content-visibility: auto;
+	contain-intrinsic-size: auto 300px;
+}
+
+/* Hero typography scale from the old home page. */
+:root[data-has-hero] .hero .title {
+	font-size: clamp(32px, 8vw, 50px);
+}
+:root[data-has-hero] .hero .tagline {
+	font-size: clamp(14px, 3vw, 18px);
+	line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Offline page state
+   -------------------------------------------------------------------------- */
+.aar-offline {
+	max-width: 40rem;
+	margin: 2rem auto;
+	text-align: center;
+	padding: 2rem 1.5rem;
+	border: 1px solid var(--sl-color-hairline);
+	border-radius: 12px;
+	background: var(--sl-color-gray-6);
+}
+.aar-offline .aar-offline-icon {
+	font-size: 4rem;
+	line-height: 1;
+	margin-bottom: 1rem;
+}
+.aar-offline h1 {
+	margin-top: 0.5rem;
+	border: none;
+}
+.aar-offline p {
+	color: var(--sl-color-gray-2);
+}
+.aar-offline .aar-offline-actions {
+	display: flex;
+	gap: 0.75rem;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 1.5rem 0;
+}
+.aar-offline .aar-retry-button {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.625rem 1.5rem;
+	border: none;
+	border-radius: 8px;
+	background: var(--sl-color-accent);
+	color: var(--sl-color-bg);
+	font-weight: 600;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background 0.2s ease, transform 0.2s ease;
+}
+.aar-offline .aar-retry-button:hover {
+	background: var(--sl-color-accent-high);
+	transform: translateY(-1px);
+}
+.aar-offline .aar-retry-button:focus-visible {
+	outline: 3px solid var(--sl-color-text-accent);
+	outline-offset: 2px;
+}
+.aar-offline .aar-home-link {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.625rem 1.5rem;
+	border: 1px solid var(--sl-color-hairline);
+	border-radius: 8px;
+	color: var(--sl-color-white);
+	text-decoration: none;
+	font-weight: 500;
+}
+.aar-offline .aar-home-link:hover {
+	border-color: var(--sl-color-accent);
+	color: var(--sl-color-text-accent);
+}
+.aar-offline .aar-offline-tip {
+	font-size: 0.9rem;
+	color: var(--sl-color-gray-3);
+	margin-bottom: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+	.aar-offline .aar-retry-button {
+		transition: none;
+	}
+}

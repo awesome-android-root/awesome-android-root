@@ -1,0 +1,104 @@
+---
+/**
+ * Head override: renders Starlight's computed (de-duplicated) head and adds
+ * the JSON-LD entity graph previously injected by VitePress' `transformHead`
+ * hook, preserving the exact schema.org structure of the old site.
+ *
+ * The homepage owns its complete graph (WebSite + SearchAction +
+ * SiteNavigationElement) via its frontmatter `head`, so it is skipped here.
+ */
+const SITE = 'https://awesome-android-root.zhoe.org';
+
+const route = Astro.locals.starlightRoute;
+const entry = route.entry;
+const isHome = entry.id === 'index';
+
+let head = route.head;
+
+// The old home page rendered just its title (VitePress static titleTemplate).
+if (isHome) {
+	head = head.map((item) =>
+		item.tag === 'title' ? { ...item, content: entry.data.title } : item
+	);
+}
+
+function capitalize(word: string) {
+	return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
+let jsonLd: Record<string, unknown> | null = null;
+if (!isHome) {
+	const canonical = head.find((item) => item.tag === 'link' && item.attrs?.rel === 'canonical');
+	const routePath =
+		entry.id.replace(/\/index$/, '/').replace(/^index$/, '') || '';
+	const pageUrl =
+		typeof canonical?.attrs?.href === 'string' && canonical.attrs.href
+			? canonical.attrs.href
+			: `${SITE}/${routePath}`;
+
+	const labels = pageUrl
+		.replace(SITE, '')
+		.split('/')
+		.filter(Boolean)
+		.map((part) => part.split('-').map(capitalize).join(' '));
+
+	const breadcrumbItems: Record<string, unknown>[] = [
+		{ '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+	];
+	labels.forEach((label, index) => {
+		const segments = pageUrl.replace(SITE, '').split('/').filter(Boolean);
+		const itemRoute = '/' + segments.slice(0, index + 1).join('/');
+		breadcrumbItems.push({
+			'@type': 'ListItem',
+			position: index + 2,
+			name: label,
+			item: `${SITE}${itemRoute}`,
+		});
+	});
+
+	jsonLd = {
+		'@context': 'https://schema.org',
+		'@graph': [
+			{
+				'@type': 'Organization',
+				'@id': `${SITE}/#organization`,
+				name: 'Awesome Android Root',
+				url: `${SITE}/`,
+				logo: {
+					'@type': 'ImageObject',
+					url: `${SITE}/images/logo.png`,
+					width: 330,
+					height: 330,
+				},
+				sameAs: ['https://github.com/awesome-android-root', 'https://x.com/awsm_and_root'],
+			},
+			{
+				'@type': 'WebSite',
+				'@id': `${SITE}/#website`,
+				name: 'Awesome Android Root',
+				url: `${SITE}/`,
+				inLanguage: 'en-US',
+				publisher: { '@id': `${SITE}/#organization` },
+			},
+			{
+				'@type': 'WebPage',
+				'@id': `${pageUrl}#webpage`,
+				name: entry.data.title ?? 'Awesome Android Root',
+				description: entry.data.description ?? '',
+				url: pageUrl,
+				inLanguage: 'en-US',
+				isPartOf: { '@id': `${SITE}/#website` },
+				publisher: { '@id': `${SITE}/#organization` },
+			},
+			{
+				'@type': 'BreadcrumbList',
+				'@id': `${pageUrl}#breadcrumb`,
+				itemListElement: breadcrumbItems,
+			},
+		],
+	};
+}
+---
+
+{head.map(({ tag: Tag, attrs, content }) => <Tag {...attrs} set:html={content} />)}
+{jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}

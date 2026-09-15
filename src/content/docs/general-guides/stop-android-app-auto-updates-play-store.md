@@ -1,0 +1,202 @@
+---
+title: Stop Android App Auto Updates from Play Store
+description: Complete step-by-step guide to disable automatic app updates from Google Play Store.
+head:
+  - tag: link
+    attrs: {href: 'https://awesome-android-root.zhoe.org/general-guides/stop-android-app-auto-updates-play-store', rel: canonical}
+  - tag: meta
+    attrs: {content: article, property: 'og:type'}
+  - tag: meta
+    attrs: {content: Awesome Android Root, property: 'og:site_name'}
+  - tag: meta
+    attrs: {content: How to Stop Android App Auto Updates from Play Store | Complete Zygisk Detach Guide, property: 'og:title'}
+  - tag: meta
+    attrs: {content: Learn how to permanently disable automatic app updates from Google Play Store using Zygisk Detach module. Complete step-by-step guide for rooted Android devices with Magisk/KernelSU. Prevent unwanted app updates today!, property: 'og:description'}
+  - tag: meta
+    attrs: {content: 'https://awesome-android-root.zhoe.org/general-guides/stop-android-app-auto-updates-play-store', property: 'og:url'}
+  - tag: meta
+    attrs: {content: 'https://awesome-android-root.zhoe.org/images/og/zygisk-detach.png', property: 'og:image'}
+  - tag: meta
+    attrs: {content: 'https://awesome-android-root.zhoe.org/images/og/zygisk-detach.png', property: 'og:image:secure_url'}
+  - tag: meta
+    attrs: {content: How to Stop Android App Auto Updates from Play Store - Zygisk Detach Guide, property: 'og:image:alt'}
+  - tag: meta
+    attrs: {content: '1200', property: 'og:image:width'}
+  - tag: meta
+    attrs: {content: '630', property: 'og:image:height'}
+  - tag: meta
+    attrs: {content: image/png, property: 'og:image:type'}
+  - tag: meta
+    attrs: {content: en_US, property: 'og:locale'}
+  - tag: meta
+    attrs: {content: '2025-07-03T00:00:00Z', property: 'og:updated_time'}
+  - tag: meta
+    attrs: {content: summary_large_image, name: 'twitter:card'}
+  - tag: meta
+    attrs: {content: '@awsm_and_root', name: 'twitter:site'}
+  - tag: meta
+    attrs: {content: '@awsm_and_root', name: 'twitter:creator'}
+  - tag: meta
+    attrs: {content: Stop Android App Auto Updates from Play Store | Zygisk Detach Tutorial, name: 'twitter:title'}
+  - tag: meta
+    attrs: {content: Permanently disable automatic app updates from Google Play Store using Zygisk Detach module. Complete guide for rooted Android devices with Magisk/KernelSU. Step-by-step tutorial included!, name: 'twitter:description'}
+  - tag: meta
+    attrs: {content: 'https://awesome-android-root.zhoe.org/images/og/zygisk-detach.png', name: 'twitter:image'}
+  - tag: meta
+    attrs: {content: Android app auto updates disable guide - Zygisk Detach method for rooted devices, name: 'twitter:image:alt'}
+  - tag: meta
+    attrs: {content: 'https://github.com/awesome-android-root/awesome-android-root', property: 'article:author'}
+  - tag: meta
+    attrs: {content: 'https://awesome-android-root.zhoe.org', property: 'article:publisher'}
+  - tag: meta
+    attrs: {content: '2025-07-03T00:00:00Z', property: 'article:published_time'}
+  - tag: meta
+    attrs: {content: '2025-12-26T00:00:00Z', property: 'article:modified_time'}
+  - tag: meta
+    attrs: {content: Android Root Guides, property: 'article:section'}
+  - tag: meta
+    attrs: {content: Stop App Updates, property: 'article:tag'}
+  - tag: meta
+    attrs: {content: Disable Auto Update Android, property: 'article:tag'}
+  - tag: meta
+    attrs: {content: Zygisk Detach, property: 'article:tag'}
+  - tag: meta
+    attrs: {content: Magisk Modules, property: 'article:tag'}
+  - tag: meta
+    attrs: {content: KernelSU, property: 'article:tag'}
+  - tag: meta
+    attrs: {content: Play Store Auto Update, property: 'article:tag'}
+  - tag: meta
+    attrs: {content: Android App Management, property: 'article:tag'}
+  - tag: meta
+    attrs: {content: Root Android Apps, property: 'article:tag'}
+  - tag: meta
+    attrs: {content: Prevent App Updates, property: 'article:tag'}
+  - tag: meta
+    attrs: {content: Detach Apps Play Store, property: 'article:tag'}
+  - tag: meta
+    attrs: {content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1', name: robots}
+  - tag: meta
+    attrs: {content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1', name: googlebot}
+  - tag: meta
+    attrs: {content: 'index, follow', name: bingbot}
+---
+
+# How to Stop App Updates from Play Store (Detach Apps)
+
+Tired of Google Play Store forcefully updating your apps? This guide shows you how to **detach apps from the Play Store** using Zygisk Detach, preventing unwanted automatic updates permanently.
+
+## What is App Detaching?
+
+App detaching removes the connection between installed apps and Google Play Store. Once detached, apps won't receive automatic updates or be recognized by the Play Store.
+
+## Prerequisites
+
+**Need to root your device first?** Check our device-specific guides:
+- 📱 [Samsung Phone Rooting Guide](../rooting-guides/how-to-root-samsung-phone.md)
+- 📱 [Pixel Phone Rooting Guide](../rooting-guides/how-to-root-pixel-phone.md)
+- 📱 [OnePlus Phone Rooting Guide](../rooting-guides/how-to-root-oneplus-phone.md)
+- 📱 [Xiaomi Phone Rooting Guide](../rooting-guides/how-to-root-xiaomi-phone.md)
+- 📱 [Nothing Phone Rooting Guide](../rooting-guides/how-to-root-nothing-phone.md)
+- 📱 [Motorola Phone Rooting Guide](../rooting-guides/how-to-root-motorola-phone.md)
+- 🔓 [Bootloader Unlocking Guide](../rooting-guides/how-to-unlock-bootloader.md)
+
+**Required:**
+- ✅ **Rooted Android device** (Magisk or KernelSU)
+- ✅ **Zygisk enabled** in your root manager
+
+## Method 1: Using GUI App (Easiest)
+
+### Step 1: Install Zygisk Detach Module
+
+1. **Download** [Zygisk Detach Module](https://github.com/j-hc/zygisk-detach/releases) (latest `.zip` file)
+2. **Flash in Magisk/KernelSU:**
+   - Open your root manager → Modules → Install from storage
+   - Select the downloaded zip file
+3. **Reboot** your device
+
+### Step 2: Install Detach App
+
+1. **Download** [Zygisk Detach App](https://github.com/j-hc/zygisk-detach-app/releases) (latest `.apk` file)
+2. **Install** the APK on your device
+3. **Open** the app and grant root permissions
+4. **Select apps** you want to detach
+5. **Apply changes** - done!
+
+## Method 2: Using Terminal (Advanced)
+
+### Step 1: Install Module (Same as above)
+
+Follow Step 1 from Method 1.
+
+### Step 2: Use Terminal Commands
+
+1. **Open terminal** (Termux or similar)
+2. **Run detach command:**
+   ```bash
+   su
+   detach
+   ```
+3. **Select apps** from the list to detach
+4. Changes apply immediately
+
+*If command fails, try:*
+```bash
+su -c /data/adb/modules/zygisk-detach/detach
+```
+
+## Enable Zygisk (If Not Enabled)
+
+**Magisk users:**
+1. Open Magisk → Settings → Enable "Zygisk" → Reboot
+
+**KernelSU users:**
+1. Install a compatible Zygisk implementation if your setup does not include one → Reboot
+
+## Verify Detachment
+
+1. Open Google Play Store
+2. Search for the detached app
+3. Should show "Install" instead of "Update/Open"
+4. ✅ App successfully detached!
+
+## How to Re-attach Apps
+
+**Using GUI App:** Open the detach app → Select detached apps → Re-attach
+
+**Using Terminal:** Run `su` then `detach` → Select apps to re-attach
+
+## Troubleshooting
+
+**Module not working?**
+- Ensure device is properly rooted
+- Check Zygisk is enabled in your root manager
+- Reboot after installing module
+
+**Command not found?**
+- Try full path: `su -c /data/adb/modules/zygisk-detach/detach`
+- Verify module is installed and active
+
+**Apps still updating?**
+- Clear Play Store data: Settings → Apps → Google Play Store → Storage → Clear Data
+- Re-detach the apps
+
+## Important Notes
+
+⚠️ **Security Warning:** Detached apps won't receive security updates. Only detach apps you specifically don't want updated.
+
+✅ **Best Practices:**
+- Keep banking/security apps attached
+- Manually check for important updates
+- Backup data before detaching critical apps
+
+## Related Guides
+
+- 📋 [Android Root Apps Collection](../apps-and-modules/)
+- 🔧 [Custom Recovery Installation](../rooting-guides/how-to-install-custom-recovery.md)
+- 🏠 [Custom ROM Installation](../rooting-guides/custom-rom-installation.md)
+- 📚 [All Root Guides](../rooting-guides/)
+
+---
+
+**Need help rooting your device first?** Check our [comprehensive rooting guides](../rooting-guides/) for step-by-step instructions tailored to your specific device.

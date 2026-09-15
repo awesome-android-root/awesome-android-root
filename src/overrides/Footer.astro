@@ -1,0 +1,19 @@
+---
+/**
+ * Footer override: keeps Starlight's edit link / last-updated / pagination,
+ * adds the site footer links + copyright from the old VitePress footer, and
+ * mounts the site-wide utility components (back-to-top, PWA/offline status,
+ * Markdown action handlers).
+ */
+import Default from '@astrojs/starlight/components/Footer.astro';
+import SiteFooterNav from '../components/SiteFooterNav.astro';
+import BackToTop from '../components/BackToTop.astro';
+import PwaStatus from '../components/PwaStatus.astro';
+
+const year = new Date().getFullYear();
+---
+
+<Default {...Astro.props}><slot /></Default>
+<SiteFooterNav year={year} />
+<BackToTop />
+<PwaStatus />

@@ -1,0 +1,45 @@
+# Awesome Android Root - Robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /_astro/
+Sitemap: https://awesome-android-root.zhoe.org/sitemap.xml
+
+# Search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Bingbot
+Allow: /
+
+# Social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# AI crawlers - allow for better assistance
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+
+# Block offline download tools
+User-agent: HTTrack
+Disallow: /
+
+User-agent: wget
+Disallow: /

@@ -1,0 +1,216 @@
+---
+/**
+ * Top-level section navigation, ported from the old VitePress `nav` config.
+ * Desktop-only; on small screens the (full) sidebar is available via
+ * Starlight's mobile menu. Implemented with disclosure widgets so it
+ * works with keyboard and screen readers without client JavaScript.
+ */
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+const isActive = (href: string) => {
+	const h = href.replace(/\/$/, '') || '/';
+	return currentPath === h || currentPath.startsWith(h + '/');
+};
+---
+
+<nav class="aar-nav print:hidden" aria-label="Main navigation">
+	<ul class="aar-nav-list">
+		<li><a href="/" aria-current={isActive('/') ? 'page' : undefined}>Home</a></li>
+		<li>
+			<a href="/apps-and-modules" aria-current={isActive('/apps-and-modules') ? 'page' : undefined}>Apps &amp; Modules</a>
+		</li>
+		<li class="has-dropdown">
+			<details>
+				<summary>Rooting Guides</summary>
+				<div class="dropdown">
+					<div class="dropdown-group">
+						<h3>Getting Started</h3>
+						<a href="/rooting-guides">Introduction to Rooting</a>
+						<a href="/rooting-guides/root-framework-comparison">Choose Root Method</a>
+					</div>
+					<div class="dropdown-group">
+						<h3>Root Methods</h3>
+						<a href="/rooting-guides/magisk-guide">Magisk (Recommended)</a>
+						<a href="/rooting-guides/kernelsu-guide">KernelSU</a>
+						<a href="/rooting-guides/apatch-guide">APatch</a>
+						<a href="/rooting-guides/lsposed-guide">LSPosed Framework</a>
+						<a href="/rooting-guides/root-without-unlocking-bootloader">Temporary Root (GhostLock)</a>
+					</div>
+					<div class="dropdown-group">
+						<h3>Device-Specific</h3>
+						<a href="/rooting-guides/how-to-root-pixel-phone">Google Pixel</a>
+						<a href="/rooting-guides/how-to-root-samsung-phone">Samsung Galaxy</a>
+						<a href="/rooting-guides/how-to-root-xiaomi-phone">Xiaomi/Redmi</a>
+						<a href="/rooting-guides/how-to-root-oneplus-phone">OnePlus</a>
+						<a href="/rooting-guides#device-specific-guides">View All Devices</a>
+					</div>
+				</div>
+			</details>
+		</li>
+		<li class="has-dropdown">
+			<details>
+				<summary>Tutorials</summary>
+				<div class="dropdown">
+					<div class="dropdown-group">
+						<h3>Essential Guides</h3>
+						<a href="/general-guides">All Tutorials</a>
+						<a href="/general-guides/android-adblocking">System-Wide Ad Blocking</a>
+						<a href="/general-guides/android-apps-debloating">Debloat Your Device</a>
+						<a href="/general-guides/stop-android-app-auto-updates-play-store">Stop Auto Updates</a>
+					</div>
+					<div class="dropdown-group">
+						<h3>Advanced</h3>
+						<a href="/rooting-guides/how-to-install-custom-recovery">Custom Recovery</a>
+						<a href="/rooting-guides/how-to-unlock-bootloader">Unlock Bootloader</a>
+						<a href="/rooting-guides/custom-rom-installation">Custom ROM Installation</a>
+						<a href="/rooting-guides/temporary-root-solutions">Bootloader Mods &amp; Temp Root</a>
+					</div>
+				</div>
+			</details>
+		</li>
+		<li class="has-dropdown">
+			<details>
+				<summary>Help</summary>
+				<div class="dropdown">
+					<div class="dropdown-group">
+						<h3>Resources</h3>
+						<a href="/apps-and-modules#glossary">Glossary</a>
+						<a href="/faqs">FAQ</a>
+						<a href="/troubleshooting">Troubleshooting</a>
+						<a href="/resources">Community Resources</a>
+						<a href="/non-root-alternatives">Non-Root Alternatives</a>
+					</div>
+					<div class="dropdown-group">
+						<h3>Project</h3>
+						<a href="/about">About</a>
+						<a href="/contributing">Contributing</a>
+						<a href="/legal-disclaimer">Legal Disclaimer</a>
+						<a href="https://github.com/awesome-android-root/awesome-android-root" target="_blank" rel="noopener noreferrer">⭐ GitHub</a>
+					</div>
+				</div>
+			</details>
+		</li>
+	</ul>
+</nav>
+
+<style>
+	@layer starlight.core {
+		.aar-nav {
+			display: none;
+		}
+
+		@media (min-width: 64rem) {
+			.aar-nav {
+				display: block;
+			}
+		}
+
+		.aar-nav-list {
+			display: flex;
+			align-items: center;
+			gap: 0.25rem;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.aar-nav-list > li > a,
+		.aar-nav-list summary {
+			display: inline-flex;
+			align-items: center;
+			padding: 0.375rem 0.625rem;
+			border-radius: 0.375rem;
+			font-size: var(--sl-text-sm);
+			font-weight: 500;
+			color: var(--sl-color-gray-2);
+			text-decoration: none;
+			white-space: nowrap;
+			cursor: pointer;
+			list-style: none;
+		}
+		.aar-nav-list summary::-webkit-details-marker {
+			display: none;
+		}
+		.aar-nav-list summary::after {
+			content: '';
+			width: 0.5rem;
+			height: 0.5rem;
+			margin-inline-start: 0.3rem;
+			background: currentColor;
+			mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z' clip-rule='evenodd'/%3E%3C/svg%3E") center / contain no-repeat;
+			transition: transform 0.15s ease;
+		}
+		.aar-nav-list details[open] summary::after {
+			transform: rotate(180deg);
+		}
+
+		.aar-nav-list > li > a:hover,
+		.aar-nav-list summary:hover,
+		.aar-nav-list details[open] summary {
+			color: var(--sl-color-white);
+			background: var(--sl-color-gray-6);
+		}
+		.aar-nav-list > li > a[aria-current='page'] {
+			color: var(--sl-color-text-accent);
+		}
+		.aar-nav-list > li > a:focus-visible,
+		.aar-nav-list summary:focus-visible {
+			outline: 2px solid var(--sl-color-text-accent);
+			outline-offset: 2px;
+		}
+
+		.has-dropdown {
+			position: relative;
+		}
+		.dropdown {
+			position: absolute;
+			top: calc(100% + 0.5rem);
+			left: 0;
+			z-index: 60;
+			display: flex;
+			gap: 1.5rem;
+			min-width: 20rem;
+			padding: 1rem;
+			border: 1px solid var(--sl-color-hairline);
+			border-radius: 0.625rem;
+			background: var(--sl-color-bg-nav);
+			box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.35);
+		}
+		.dropdown-group {
+			display: flex;
+			flex-direction: column;
+			gap: 0.3rem;
+			min-width: 9rem;
+		}
+		.dropdown-group h3 {
+			margin: 0 0 0.35rem;
+			font-size: var(--sl-text-xs);
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			color: var(--sl-color-gray-3);
+		}
+		.dropdown-group a {
+			padding: 0.3rem 0.4rem;
+			margin-inline: -0.4rem;
+			border-radius: 0.3rem;
+			font-size: var(--sl-text-sm);
+			color: var(--sl-color-gray-2);
+			text-decoration: none;
+			white-space: nowrap;
+		}
+		.dropdown-group a:hover {
+			background: var(--sl-color-gray-6);
+			color: var(--sl-color-white);
+		}
+		.dropdown-group a:focus-visible {
+			outline: 2px solid var(--sl-color-text-accent);
+			outline-offset: 1px;
+		}
+
+		/* Keep hover-open dropdowns from snapping shut between summary and panel */
+		.has-dropdown details:not([open]):hover .dropdown {
+			display: none;
+		}
+	}
+</style>

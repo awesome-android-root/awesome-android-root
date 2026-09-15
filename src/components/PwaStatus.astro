@@ -1,0 +1,196 @@
+---
+/**
+ * PWA / network status component (vanilla-JS port of the old PwaReload.vue,
+ * extended with the Markdown-action click handling and the offline-page
+ * retry flow).
+ *
+ * Behavior:
+ *  - Registers the service worker (virtual:pwa-register, autoUpdate).
+ *  - Periodic SW update checks (hourly + on tab focus), as before.
+ *  - Shows a toast when the user goes offline, and when a new version is
+ *    applied.
+ *  - Handles the "Copy page" buttons injected after each H1 (they point at
+ *    the page's generated plain-Markdown export).
+ *  - On the offline page: wires the retry button and auto-retries the last
+ *    requested page once the network appears to be back.
+ *
+ * The site is network-dependent by design: caching is for static assets and
+ * performance only, never an offline mirror of the documentation.
+ */
+const isOfflinePage = Astro.url.pathname.replace(/\/+$/, '') === '/offline';
+---
+
+<div class="aar-toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+	<span class="aar-toast-message"></span>
+</div>
+
+<script define:vars={{ isOfflinePage }}>
+	window.__AAR_OFFLINE_PAGE__ = Boolean(isOfflinePage);
+</script>
+
+<script>
+	const LAST_PAGE_KEY = 'aar:last-page';
+	const win = window as Window & { __AAR_OFFLINE_PAGE__?: boolean };
+
+	function showToast(message: string, offline: boolean, timeout = 0) {
+		const toast = document.querySelector<HTMLElement>('.aar-toast');
+		if (!toast) return;
+		toast.classList.toggle('aar-toast--offline', offline);
+		toast.querySelector('.aar-toast-message')!.textContent = message;
+		toast.hidden = false;
+		if (timeout > 0) window.setTimeout(() => (toast.hidden = true), timeout);
+	}
+
+	function updateOnlineStatus() {
+		const offline = !navigator.onLine;
+		if (offline) showToast("You're offline — some features may be limited", true);
+		else if (!document.querySelector('.aar-toast')?.hidden) {
+			document.querySelector<HTMLElement>('.aar-toast')!.hidden = true;
+		}
+		return offline;
+	}
+
+	async function registerServiceWorker() {
+		if (!('serviceWorker' in navigator)) return null;
+		try {
+			const { registerSW } = await import('virtual:pwa-register');
+			let registration: ServiceWorkerRegistration | undefined;
+			registerSW({
+				immediate: true,
+				onRegisteredSW(_swUrl, reg) {
+					registration = reg;
+				},
+				onRegisterError(error) {
+					console.error('PWA registration error:', error);
+				},
+			});
+			return () => registration;
+		} catch (error) {
+			console.error('PWA initialization error:', error);
+			return null;
+		}
+	}
+
+	// --- Markdown action buttons (Copy page) -------------------------------
+	function initMarkdownActions() {
+		document.addEventListener('click', async (event) => {
+			const button = (event.target as HTMLElement | null)?.closest?.(
+				'button.copy-page'
+			) as HTMLButtonElement | null;
+			if (!button) return;
+			const url = button.dataset.mdUrl;
+			if (!url) return;
+			const label = button.querySelector('.label');
+			const original = label?.textContent ?? 'Copy page';
+			try {
+				const res = await fetch(url, { headers: { Accept: 'text/markdown' } });
+				if (!res.ok) throw new Error(`HTTP ${res.status}`);
+				const markdown = await res.text();
+				await navigator.clipboard.writeText(markdown);
+				if (label) label.textContent = 'Copied';
+			} catch {
+				if (label) label.textContent = 'Copy failed';
+			}
+			window.setTimeout(() => {
+				if (label) label.textContent = original;
+			}, 2000);
+		});
+	}
+
+	// --- Offline page retry flow -------------------------------------------
+	function initOfflinePage() {
+		// Remember where the user was trying to go (set on every normal page).
+		if (!win.__AAR_OFFLINE_PAGE__) {
+			try {
+				sessionStorage.setItem(LAST_PAGE_KEY, location.pathname + location.search + location.hash);
+			} catch { /* private mode */ }
+			return;
+		}
+
+		const retryButton = document.querySelector<HTMLButtonElement>('[data-aar-retry]');
+		let target = '/';
+		try {
+			const last = sessionStorage.getItem(LAST_PAGE_KEY);
+			if (last && last !== '/offline' && !last.startsWith('/offline')) target = last;
+		} catch { /* private mode */ }
+
+		const navigate = () => {
+			location.replace(target);
+		};
+
+		const probeAndRetry = async () => {
+			if (!navigator.onLine) return;
+			// navigator.onLine is coarse — verify with an actual request.
+			try {
+				const res = await fetch(target, { method: 'HEAD', cache: 'no-store' });
+				if (res.ok || res.status === 304) navigate();
+			} catch {
+				/* still offline; wait for the next event or manual retry */
+			}
+		};
+
+		retryButton?.addEventListener('click', () => {
+			if (navigator.onLine) probeAndRetry();
+			else showToast('Still offline — check your connection and try again', true, 4000);
+		});
+		window.addEventListener('online', () => probeAndRetry());
+	}
+
+	// --- Boot ---------------------------------------------------------------
+	const getRegistration = await registerServiceWorker();
+	initMarkdownActions();
+	initOfflinePage();
+	updateOnlineStatus();
+	window.addEventListener('online', updateOnlineStatus);
+	window.addEventListener('offline', updateOnlineStatus);
+
+	// Check for service worker updates hourly and when the tab regains focus.
+	const checkForUpdates = async () => {
+		const registration = getRegistration?.();
+		if (registration?.update) {
+			try {
+				await registration.update();
+			} catch (error) {
+				console.error('SW update check failed:', error);
+			}
+		}
+	};
+	document.addEventListener('visibilitychange', () => {
+		if (!document.hidden && navigator.onLine) checkForUpdates();
+	});
+	window.setInterval(checkForUpdates, 60 * 60 * 1000);
+	await checkForUpdates();
+</script>
+
+<style>
+	.aar-toast {
+		position: fixed;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 40;
+		padding: 12px 20px;
+		background: var(--sl-color-bg-nav);
+		border: 1px solid var(--sl-color-hairline);
+		border-radius: 8px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+		max-width: 90vw;
+		min-width: min(300px, 80vw);
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-white);
+	}
+	.aar-toast--offline {
+		background: #c53030;
+		border-color: #9b2c2c;
+		color: #fff;
+	}
+	@media (max-width: 640px) {
+		.aar-toast {
+			bottom: 10px;
+			left: 12px;
+			right: 12px;
+			transform: none;
+			min-width: 0;
+		}
+	}
+</style>
