@@ -86,11 +86,7 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 - **[Bluetooth Hook](https://github.com/jingyu233/bluetoothhook#english)** - Inject virtual BLE devices into Android system Bluetooth scan results, facilitating Bluetooth application debugging for developers. `FOSS` `[LSP]`
 - **[Dhizuku API for Xposed](https://github.com/iamr0s/Dhizuku-API-Xposed)** - Force applications to support Dhizuku. `FOSS` `[LSP]`
 - **[DuckPolicy](https://github.com/Xposed-Modules-Repo/com.strawing.duckdevicepolicy)** - Makes apps see no device-policy restrictions on your own device. `Proprietary` `[LSP]`
-- **[Florida](https://github.com/Ylarod/Florida)** - Anti-detection build of frida-server for Android, patched and built automatically from Frida upstream. `FOSS`
-- **[Jezail](https://github.com/zahidaz/jezail)** - On-device pentesting toolkit that exposes a REST API and web interface for device control, app management, Frida, ADB and logcat on a rooted phone. `FOSS`
 - **[KSU Toolkit](https://github.com/backslashxx/ksu_toolkit)** - Small extensions on top of KernelSU for testing and debugging purposes. `FOSS` `[K]`
-- **[MagiskFrida](https://github.com/ViRb3/magisk-frida)** - Lets you run frida-server on boot with multiple root solutions. `FOSS` `[M]` `[K]`
-- **[MagiskHluda](https://github.com/Exo1i/MagiskHluda)** - Starts a Florida-based, less detectable frida-server on boot, with a web UI to start, stop and configure it. `Proprietary` `[M]` `[K]` `[A]`
 - **[Nano for Android NDK](https://github.com/Magisk-Modules-Repo/nano-ndk)** - Allows temporary recovery use, so you can trigger it from adb shell or TWRP Terminal. `FOSS` `[M]`
 - **[Py2Droid](https://github.com/Mrakorez/py2droid)** - Install Python 3 on Android, including the standard library (STDLIB). `FOSS` `[M]`
 - **[SELinux Permissive](https://github.com/evdenis/selinux_permissive)** - Magisk Module that switches SELinux to permissive mode. `FOSS` `[M]`
@@ -98,9 +94,23 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 - **[Shizuku](https://github.com/RikkaApps/Shizuku)** - Use system APIs directly with ADB/root privileges. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/moe.shizuku.privileged.api) | [▶️](https://play.google.com/store/search?q=shizuku&c=apps)
 - **[SideWire](https://github.com/mzggr0914/SideWire-KernelSU)** - Native bridge for controlling rooted Android devices from Windows, macOS, or Linux. `FOSS` `[K]`
 - **[SQLite3 for Android](https://github.com/rojenzaman/sqlite3-magisk-module)** - Provides a statically linked `sqlite3` binary for arm64-v8a, armeabi-v7a, x86 and x86_64. `Proprietary` `[M]`
-- **[Undetected Frida](https://github.com/zer0def/undetected-frida)** - Frida builds with community anti-detection patches applied, also shipped as Magisk/KernelSU modules. `FOSS` `[M]` `[K]`
 - **[Zygisk-Loader](https://github.com/HanSoBored/Zygisk-Loader)** - Module for hot-swapping native libraries into Android applications without rebooting. `FOSS` `[K]`
+
+### Frida & Reverse Engineering
+
+<details><summary>What is Frida?</summary>
+
+Frida allows you to inject your own scripts into black box processes, enabling you to hook function calls, modify arguments and return values, and perform other runtime manipulations on applications.
+
+</details><br>
+
+- **[Florida](https://github.com/Ylarod/Florida)** - Anti-detection build of frida-server for Android, patched and built automatically from Frida upstream. `FOSS`
+- **[Jezail](https://github.com/zahidaz/jezail)** - On-device pentesting toolkit that exposes a REST API and web interface for device control, app management, Frida, ADB and logcat on a rooted phone. `FOSS`
+- **[MagiskFrida](https://github.com/ViRb3/magisk-frida)** - Lets you run frida-server on boot with multiple root solutions. `FOSS` `[M]` `[K]`
+- **[MagiskHluda](https://github.com/Exo1i/MagiskHluda)** - Starts a Florida-based, less detectable frida-server on boot, with a web UI to start, stop and configure it. `Proprietary` `[M]` `[K]` `[A]`
+- **[Undetected Frida](https://github.com/zer0def/undetected-frida)** - Frida builds with community anti-detection patches applied, also shipped as Magisk/KernelSU modules. `FOSS` `[M]` `[K]`
 - **[ZygiskFrida](https://github.com/lico-n/ZygiskFrida)** - Injects the Frida gadget into apps through Zygisk, avoiding the ptrace and APK integrity checks that detect frida-server. `FOSS` `[M]` `[K]`
+
 
 ## Hardware & Sensors
 
