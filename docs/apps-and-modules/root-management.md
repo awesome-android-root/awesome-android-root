@@ -232,7 +232,4 @@ A feature that lets modules inject code into Android's Zygote process for system
 | **Trade-offs** | ❌ Magisk-only<br>❌ Easily detected | ❌ Closed source<br>❌ ZN Linker experimental | ❌ 64-bit only<br>❌ Smaller community | ❌ RC phase<br>❌ Some compat issues |
 
 <br>
-</details><br>
-
-> [!TIP]
-> Use these for Zygisk features on KernelSU/APatch, or for more control than Magisk's built-in provides.
+</details>
