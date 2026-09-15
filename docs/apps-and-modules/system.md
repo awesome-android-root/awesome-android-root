@@ -86,9 +86,9 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 
 ## System UI & Framework
 
-|  | | | | | | | |
-| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| [AOSP (Android Open Source Project)](#aosp-android-open-source-project) | [ColorOS (Oppo)](#coloros-oppo) | [HyperOS (Xiaomi)](#hyperos-xiaomi) | [NothingOS](#nothingos) | [One UI (Samsung)](#one-ui-samsung) | [Onyx](#onyx) | [Oxygen OS (OnePlus)](#oxygen-os-oneplus) | [ZUI](#zui) |
+|  | | | | | | | | |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| [AOSP (Android Open Source Project)](#aosp-android-open-source-project) | [ColorOS (Oppo)](#coloros-oppo) | [HyperOS (Xiaomi)](#hyperos-xiaomi) | [Pixel](#pixel) | [NothingOS](#nothingos) | [One UI (Samsung)](#one-ui-samsung) | [Onyx](#onyx) | [Oxygen OS (OnePlus)](#oxygen-os-oneplus) | [ZUI](#zui) |
 |  | | | | | | | |
 
 ### AOSP (Android Open Source Project)
@@ -121,6 +121,9 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 
 > [!TIP]
 > Check this resource for more [HyperOS Mods ↗](https://github.com/ImKKingshuk/Awesome-HyperOS)
+
+### Pixel
+- **[PixelInjector](https://github.com/hxreborn/pixelinjector)** - Opinionated Xposed module of some tweaks, specially for Pixel phones. `FOSS` `[LSP]`
 
 ### NothingOS
 
