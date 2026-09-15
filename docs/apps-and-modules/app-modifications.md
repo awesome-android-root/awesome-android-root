@@ -155,6 +155,9 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 - **[TeleVip](https://github.com/Xposed-Modules-Repo/com.my.televip/)** - A module for modifying Telegram with hide seen status, unlocking channel restrictions etc. `Proprietary` `[LSP]`
 - **[TMoe](https://github.com/cinit/TMoe)** - Adds various tweaks to various Telegram clients. `FOSS` `[LSP]`
 
+### Threads
+- **[Threads Hide Ads](https://github.com/MrxSiN/ThreadsHideAds)** - Removes ads from Threads app. `FOSS` `[LSP]`
+
 ### TikTok
 
 - **[Douyin Enhancer](https://github.com/twyora/DouyinEnhancer)** - Adds minor quality-of-life features to Douyin (Chinese TikTok). `FOSS` `[LSP]`
