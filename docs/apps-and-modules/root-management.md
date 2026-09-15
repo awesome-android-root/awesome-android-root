@@ -86,12 +86,7 @@ Exploits like **GhostLock (CVE-2026-43499)** - a 15-year-old Linux kernel bug - 
 - **[⭐ Root My Galaxy](https://github.com/BuSung-dev/Root-My-Galaxy)** - One-tap temporary root for Snapdragon Galaxy flagships (S24/S25 series, S24 FE, A56...) via GhostLock; bootloader stays locked, Knox isn't tripped. `FOSS`
 
 > [!TIP]
-> Check out **[Root Without Unlocking the Bootloader ↗](../rooting-guides/root-without-unlocking-bootloader.md)** for device support, and every app, exploit port etc.
-
-> [!TIP]
-> Also see [Bootloader Mods & Temporary Root Solutions](../rooting-guides/temporary-root-solutions.md) for related locked-bootloader approaches (Kaeru, Fenrir).
-
-
+> Also check out **[Root Without Unlocking the Bootloader ↗](../rooting-guides/root-without-unlocking-bootloader.md)** and [Bootloader Mods & Temporary Root Solutions ↗](../rooting-guides/temporary-root-solutions.md) 
 
 
 ## Bootloop Protection
@@ -109,7 +104,7 @@ Exploits like **GhostLock (CVE-2026-43499)** - a 15-year-old Linux kernel bug - 
 - **[LSPosed](https://lsposed.zip)** - A Riru / Zygisk module that provides an ART hooking framework delivering consistent APIs with the OG Xposed, leveraging the LSPlant hooking framework. `Proprietary`
 
 > [!TIP]
-> See our [LSPosed installation guide](../rooting-guides/lsposed-guide.md) for setup instructions.
+> See our [LSPosed installation guide ↗](../rooting-guides/lsposed-guide.md) for setup instructions.
 
 ## Metamodules
 
