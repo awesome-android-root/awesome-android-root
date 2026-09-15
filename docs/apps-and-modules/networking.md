@@ -86,6 +86,7 @@ more), network diagnostics, Wi-Fi & mobile data utilities and Bluetooth & NFC ap
 - **[Network Utilities](https://play.google.com/store/apps/details?id=com.myprog.netutils)** - Application contains a set of tools for networks diagnostics. `Proprietary`
 - **[SimbaDroid](https://github.com/buttercookie42/SimbaDroid)** - A simple SMB file server for Android. `FOSS` | [🌱](https://f-droid.org/packages/de.buttercookie.simbadroid)
 - **[TCP Optimiser Module](https://github.com/fatalcoder524/TCP_Optimiser_Module)** - Change tcp congestion algorithm based on current active internet type and some network enhancements. `FOSS` `[M]` `[K]`
+- **[Unlock AI & EN Services for Russia](https://github.com/AvenCores/Unlock_AI_and_EN_Services_for_Russia)** - Unlock AI and EN services for Russia. `Proprietary` `[M]` `[K]`
 
 ## Wi-Fi & Mobile Data
 
