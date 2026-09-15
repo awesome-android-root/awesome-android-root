@@ -74,6 +74,7 @@ tools, sharing & intent tweaks, communication helpers and all-in-one power-user 
 
 ## Communication & Messaging
 
+- **[ACR Phone](https://play.google.com/store/apps/details?id=com.nll.cb)** - ACR Phone is a call recording app that uses root to record calls on Android 10 and above. `Proprietary`
 - **[Basic Call Recorder](https://github.com/chenxiaolong/BCR)** - A Basic Call Recorder for rooted Android devices. Also check out [GUI for BCR ↗](https://github.com/nicorac/bcr-gui). `FOSS` `[M]` `[K]`
 - **[Contacts Sync](https://play.google.com/store/apps/details?id=com.lb.contacts_sync)** - Uses root to sync your address book with high-quality contacts photos from WhatsApp. `Proprietary`
 - **[XposedForwardSms](https://github.com/XiaoMiHongZhaJi/XposedForwardSms)** - Forward text messages. `FOSS` `[LSP]`
