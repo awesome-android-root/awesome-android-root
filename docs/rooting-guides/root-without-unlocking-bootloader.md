@@ -176,9 +176,9 @@ Everything public that implements or enables CVE-2026-43499 temporary root, grou
 
 ### One-tap apps (easiest)
 
+- **[⭐ GhostLock App](https://github.com/YuKongA/ghostlock-app)** - One-tap execution app for the GhostLock exploit - install, open, tap, rooted for the session. `FOSS` (Apache-2.0)
 - **[⭐ Root My Galaxy](https://github.com/BuSung-dev/Root-My-Galaxy)** - The original one-click implementation, for Snapdragon Galaxy flagships (S24/S25 series, S24 FE, A56, and others). Bootloader stays locked, Knox isn't tripped, so Secure Folder, Samsung Wallet, and Play Integrity keep working. Functions as a KernelSU installer with per-device exploit profiles. `FOSS` (Apache-2.0)
   - **[Root-My-Galaxy-Payloads](https://github.com/BuSung-dev/Root-My-Galaxy-Payloads)** - Companion repo with the signed per-device exploit offsets, kernel profiles, and KernelSU artifacts the app fetches at runtime. Adding support for a new device means porting a profile here. `FOSS` (Apache-2.0)
-- **[GhostLock App](https://github.com/YuKongA/ghostlock-app)** - One-tap execution app for the GhostLock exploit - install, open, tap, rooted for the session. `FOSS` (Apache-2.0)
 - **[GhostLock-Galaxy](https://github.com/wxxsfxyzm/GhostLock-Galaxy)** - App + CLI for the Samsung Galaxy Z Fold6 (SM-F9560, kernel 6.1). Takes the shell-permission route: start Shizuku via wireless debugging (or use `adb shell`), grant the app, tap **Run**. The kernel is matched against the offset table via `uname -r` at startup, and unsupported kernels are rejected immediately; the repo also documents offset extraction from `boot.img`/`xbl_config.img`. `FOSS` (Apache-2.0)
 - **[iQOO Z9 5G / vivo T3 5G Root](https://github.com/ankitrawatgit/iQOO-Z9_5G-vivo-T3_5G-Root-GhostLock)** - One-tap root app plus payloads for the iQOO Z9 5G and vivo T3 5G (MediaTek Dimensity 7200 / MT6886, kernel 5.15) - a rare GhostLock port for vivo-family devices. `FOSS`
 - **[Root My Pixel](https://github.com/alex193a/Root-My-Pixel)** - Port for Google Pixel devices. Uses Shizuku to stage the payload without needing prior root or a PC, then runs the exploit to install ReSukiSU/KernelSU for the session. `FOSS`
