@@ -61,17 +61,6 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 > **Google Play Store** listing.
 
 
-## App Patchers
-
-- **[⭐ Morphe](https://morphe.software/)** - A next-generation app patcher built by some of the original ReVanced developers. It offers a modern interface, enhanced stability, and a growing list of supported apps and features. `FOSS`
-- **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (use with caution). `Proprietary`
-- **[ReVanced](https://revanced.app/)** - A powerful app patcher that allows you to modify popular apps like YouTube, Spotify, and more with additional features and customizations. `FOSS`
-- **[ReVanced Extended](https://github.com/NoName-exe/revanced-extended)** - ReVanced eXtended (now Morphe) YT and YT-M for both root and non-root users. `FOSS` `[M]` `[K]`
-- **[ReVanced Magisk Module by j-hc](https://github.com/j-hc/revanced-magisk-module)** - Extensive ReVanced & morphe builder. `FOSS` `[M]` `[K]`
-
-> [!TIP]
-> Also check out [Morphe Patches list ↗](https://morphe-patches.software/)
-
 ## App Mods
 
 - **[⭐ GPhotosUnlimited](https://github.com/Rev4N1/GPhotosUnlimited)** - A Zygisk module which gives unlimited Google Photos storage. `FOSS` `[M]` `[K]`
@@ -87,15 +76,15 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 - **[Gboard Material Expressive Black](https://github.com/hxreborn/gboard-material-expressive-black)** - Enables pitch black Gboard background on Android 16 dynamic theme. `FOSS` `[LSP]`
 - **[GboardHook](https://github.com/chenyue404/GboardHook)** - Modifies the number of clipboard items displayed and their expiration time. `FOSS` `[LSP]`
 - **[GH FastPass](https://github.com/hxreborn/gh-fast-pass)** - Coses the verification screen once the request is approved on Github android app. `FOSS` `[LSP]`
-- **[KGPT](https://github.com/eluea/KGPT)** - LSPosed Module to integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
 - **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
 - **[KeyFlux](https://github.com/NawafCode/KeyFlux)** - Customize Google Gboard, exposing selected hidden features, and adding clipboard-related enhancements. `FOSS` `[LSP]`
+- **[KGPT](https://github.com/eluea/KGPT)** - LSPosed Module to integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
 - **[LSpot](https://codeberg.org/dapsvi/LSpot)** - Blocks ads in Spotify by intercepting OkHttp requests to ad endpoints. `FOSS` `[LSP]`
 - **[MiFitnessAdAway](https://github.com/hao1196561270/MiFitnessAdAway)** - Remove ads from Xiaomi Mi Fitness (Xiaomi Sports & Health, com.mi.health 3.0+). `FOSS` `[LSP]`
 - **[Nexus](https://github.com/niki914/agentic-nexus)** - Plug your own model into your phone's voice assistant. `Proprietary` `[LSP]`
 - **[NSG Tweaks](https://github.com/h3nnes/nsg-tweaks)** - Extends [NSG (QuickTest) ↗](https://play.google.com/store/apps/details?id=com.qtrun.QuickTest) with additional columns, rows, signaling tools, and log-replay improvements. `Proprietary` `[LSP]`
-- **[Pixelify Infinity](https://github.com/samson910022/pixelify-google-photos-modern)** - Xposed module to enable Pixel-exclusive features in Google Photos. `FOSS` `[LSP]`
 - **[Pixel Mask](https://github.com/kinginu/PixelMask)** - Spoofs a Pixel device profile inside Google Photos to unlock Pixel-only perks on any rooted Android phone. `FOSS` `[LSP]`
+- **[Pixelify Infinity](https://github.com/samson910022/pixelify-google-photos-modern)** - Xposed module to enable Pixel-exclusive features in Google Photos. `FOSS` `[LSP]`
 - **[Play Store Adblock](https://github.com/hxreborn/playstore-adblock)** - Xposed module to remove sponsored listings and ads from the Google Play Store. `FOSS` `[LSP]`
 - **[Rboard Theme Manager](https://github.com/DerTyp7214/RboardThemeManagerV3)** - A customizable manager app for Google Gboard that allows users to download, apply, and manage various themes and sound settings. `FOSS` `[LSP]`
 - **[Spicy EX](https://github.com/amarinne/spicy-ex)** - Adds Spicy lyrics in Spotify along with translation and much more UI features. `FOSS` `[LSP]`
@@ -105,6 +94,33 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 - **[XposedPhotosFix](https://github.com/RevealedSoulEven/XposedPhotosFIX)** - Prevents Google Photos app from merging all folders into Camera and creates separate albums for each folder, useful for backups. `FOSS` `[LSP]`
 - **[Yandex Maps Patcher](https://github.com/Xposed-Modules-Repo/ru.bluecat.yandexmapspatcher)** - Hides ads and intrusive services in the Yandex Maps app. `Proprietary` `[LSP]`
 - **[Yandex Music Downloader](https://github.com/errorman-awful/YMDownloaderXposed)** - Download flac Music from Yandex Music app. `Proprietary` `[LSP]`
+
+## App Patchers
+
+- **[⭐ Morphe](https://morphe.software/)** - A next-generation app patcher built by some of the original ReVanced developers. It offers a modern interface, enhanced stability, and a growing list of supported apps and features. `FOSS`
+- **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (use with caution). `Proprietary`
+- **[ReVanced](https://revanced.app/)** - A powerful app patcher that allows you to modify popular apps like YouTube, Spotify, and more with additional features and customizations. `FOSS`
+- **[ReVanced Extended](https://github.com/NoName-exe/revanced-extended)** - ReVanced eXtended (now Morphe) YT and YT-M for both root and non-root users. `FOSS` `[M]` `[K]`
+- **[ReVanced Magisk Module by j-hc](https://github.com/j-hc/revanced-magisk-module)** - Extensive ReVanced & morphe builder. `FOSS` `[M]` `[K]`
+
+> [!TIP]
+> Also check out [Morphe Patches list ↗](https://morphe-patches.software/)
+
+## Browser Mods
+
+- **[⭐ ChromeXt](https://github.com/JingMatrix/ChromeXt)** - UserScript and DevTools support for Chromium-based and WebView-based browsers. `FOSS` `[LSP]`
+- **[BetterVia](https://github.com/JiGuroLGC/BetterVia)** - Bypass whitelist restrictions, Screenshot protection, Block components, One-tap theme switching etc. `FOSS` `[LSP]`
+- **[EdgeX](https://github.com/SoClear/EdgeX)** - An Xposed module for Microsoft Edge on Android, designed to enhance your browsing experience with UI tweaks and functional improvements. `FOSS` `[LSP]`
+- **[FoldDevtools](https://github.com/achyuki/FoldDevtools)** - Using chrome devtools to debug webview on Android. `FOSS` `[LSP]`
+- **[Fxxk-MiBrowser](https://github.com/DuhMatt/Fxxk-MiBrowser)** - Redirects forced Xiaomi Browser links to the system default browser. `FOSS` `[LSP]`
+
+## Signature & Verification
+
+- **[⭐ Core Patch N](https://github.com/LSPosed/CorePatch)** - Disable signature verification For Android. `FOSS` `[LSP]`
+- **[⭐ Pairipfix](https://github.com/ahmedmani/pairipfix)** - Bypasses the "Get this app from Play" screen that appears when installing Android apps as an APK instead of from the Google Play Store. `FOSS` `[LSP]`
+- **[Apk Protection Patch](https://github.com/Mods-Center/Apk-Protection-Patch)** - Removes signature verification restrictions on AOSP and OEM ROMs (HyperOS, ColorOS, etc.), allowing installation of modified APKs. `Proprietary` `[M]` `[K]`
+- **[F**k Google License](https://github.com/JiGuroLGC/FuckGoogleLicense)** - Bypass Google Service License Verification. `FOSS` `[LSP]`
+- **[XSpoofSignatures](https://github.com/rushiiMachine/XSpoofSignatures)** - Spoof package signatures. `FOSS` `[LSP]`
 
 ## Social Media Mods
 
@@ -198,14 +214,6 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 > [!TIP]
 > Also check out [App Patchers section](app-modifications.md#app-patchers)
 
-## Browser Mods
-
-- **[⭐ ChromeXt](https://github.com/JingMatrix/ChromeXt)** - UserScript and DevTools support for Chromium-based and WebView-based browsers. `FOSS` `[LSP]`
-- **[BetterVia](https://github.com/JiGuroLGC/BetterVia)** - Bypass whitelist restrictions, Screenshot protection, Block components, One-tap theme switching etc. `FOSS` `[LSP]`
-- **[EdgeX](https://github.com/SoClear/EdgeX)** - An Xposed module for Microsoft Edge on Android, designed to enhance your browsing experience with UI tweaks and functional improvements. `FOSS` `[LSP]`
-- **[FoldDevtools](https://github.com/achyuki/FoldDevtools)** - Using chrome devtools to debug webview on Android. `FOSS` `[LSP]`
-- **[Fxxk-MiBrowser](https://github.com/DuhMatt/Fxxk-MiBrowser)** - Redirects forced Xiaomi Browser links to the system default browser. `FOSS` `[LSP]`
-
 ## YouTube & Media Mods
 
 - **[GlassMic](https://github.com/lm060719/io.mo.glassmic)** - Lets you route an imported audio file into target recording apps through AudioRecord/AAudio hooks. `FOSS` `[LSP]`
@@ -215,11 +223,3 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 - **[VideoSpeed](https://github.com/MarsGao/io.github.MarsGao.speed)** - An Xposed module for adjusting the playback speed of videos across multiple applications. `FOSS` `[LSP]`
 - **[XAudioCapture](https://github.com/Xposed-Modules-Repo/io.github.wzhy.xaudiocapture)** - Lets you capture any audio stream you desire, bypassing these restrictions. `Proprietary` `[LSP]`
 - **[xCam](https://github.com/hazbu/xCam)** - Replace live camera feeds and actual photo captures with virtual media sources. `FOSS` `[LSP]`
-
-## Signature & Verification
-
-- **[⭐ Core Patch N](https://github.com/LSPosed/CorePatch)** - Disable signature verification For Android. `FOSS` `[LSP]`
-- **[⭐ Pairipfix](https://github.com/ahmedmani/pairipfix)** - Bypasses the "Get this app from Play" screen that appears when installing Android apps as an APK instead of from the Google Play Store. `FOSS` `[LSP]`
-- **[Apk Protection Patch](https://github.com/Mods-Center/Apk-Protection-Patch)** - Removes signature verification restrictions on AOSP and OEM ROMs (HyperOS, ColorOS, etc.), allowing installation of modified APKs. `Proprietary` `[M]` `[K]`
-- **[F**k Google License](https://github.com/JiGuroLGC/FuckGoogleLicense)** - Bypass Google Service License Verification. `FOSS` `[LSP]`
-- **[XSpoofSignatures](https://github.com/rushiiMachine/XSpoofSignatures)** - Spoof package signatures. `FOSS` `[LSP]`

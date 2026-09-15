@@ -61,6 +61,39 @@ tracking, spoofing your device identity or location, and isolating apps from you
 > stop trackers at the network level. See the [Glossary](/apps-and-modules/#glossary) for badge meanings.
 
 
+## App Isolation
+
+- **[Insular](https://gitlab.com/secure-system/Insular)** - Isolate your big brother app. A fork based on the excellent Island. `FOSS` | [🌱](https://f-droid.org/packages/com.oasisfeng.island.fdroid)
+- **[Island](https://github.com/oasisfeng/island/tree/dev)** - App isolation and cloning. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.oasisfeng.island)
+- **[Shelter](https://gitea.angry.im/PeterCxy/Shelter)** - Isolate and clone apps. `FOSS` | [🌱](https://f-droid.org/app/net.typeblog.shelter)
+- **[TargetedHide](https://github.com/VisionR1/TargetedHide)** - Ηide files, folders, and packages from specific target apps. `FOSS` `[LSP]`
+
+## Device ID & Spoofing
+
+- **[Device Faker](https://github.com/Seyud/device_faker/)** - A device model spoofing module based on Zygisk that can configure different device models for different applications. `FOSS` `[M]` `[K]`
+- **[DeviceID/SSAID Changer](https://github.com/sidex15/deviceidchanger)** - A simple WebUI Module to change SSAID/DeviceID on Rooted Android Devices with Apatch, KSU (And its forks), or Magisk. `FOSS` `[M]` `[K]`
+- **[Geergit](https://github.com/pyshivam/geergit-discussion)** - Change (MASKE) the various IDs in the Phone. `Proprietary` `[LSP]`
+- **[HideMyAndroid](https://github.com/Xposed-Modules-Repo/com.wowsoftware.hidemyandroid/)** - Android anti-detect module with profile isolation and spoofing. `Proprietary` `[LSP]`
+- **[MAC Editor for Android](https://github.com/jqssun/android-mac-editor)** - Securely edit Wi-Fi MAC address on Android. `FOSS` `[LSP]`
+- **[MACsposed](https://github.com/DavidBerdik/MACsposed)** - Adds support for MAC Address spoofing to Android 12 through 15. `Proprietary` `[LSP]`
+- **[Mantle](https://github.com/get-mantle/Mantle)** - Xposed module that masks hardware IDs, advertising IDs, build properties, carrier and SIM data, Wi-Fi/Bluetooth MACs and location per app. `Proprietary` `[LSP]`
+- **[Mantle Verify](https://github.com/get-mantle/Mantle-Verify)** - Companion diagnostics app that shows the device, network and account identifiers regular apps can read, and confirms which spoofed values are active. `Proprietary`
+- **[Privacy Kit](https://github.com/Xposed-Modules-Repo/com.sal.privacykit)** - Per-app Android identifier spoofing for LSPosed. `Proprietary` `[LSP]`
+- **[SpoofMyDevice](https://github.com/BuSung-dev/SpoofMyDevice)** - Xposed module and companion app for building, saving, and applying spoofed Android device profiles to selected apps. `FOSS` `[LSP]`
+- **[SSAID (Android ID Modifier)](https://github.com/HSSkyBoy/AndroidIDChange)** - A modern Android SSAID (Android ID) inspector, modifier, backup, and management utility. `FOSS` `[LSP]`
+- **[Telephony Spoofer](https://github.com/BrianWalczak/TelephonySpoofer)** - Spoof cellular information, including eSIM compatibility. `FOSS` `[LSP]`
+
+## Location & GPS
+
+- **[AnyWhere](https://github.com/cxOrz/AnyWhere)** - Location simulation tool for debugging LBS applications and for users to test geolocation functionality. `FOSS` `[LSP]`
+- **[GPS Setter](https://github.com/jqssun/android-gps-setter)** - Allows to mock locations for any specific app or entire system. `FOSS` `[LSP]` | [🌱](https://f-droid.org/packages/io.github.jqssun.gpssetter)
+- **[Hide Mock Location](https://github.com/auag0/HideMockLocation)** - Hide Mock Location Settings. `FOSS` `[LSP]`
+- **[HLocation](https://github.com/sparr-sherrya/hlocation-release)** - Location spoofing framework that synchronizes fake GPS and related environment signals across system and app processes for more consistent location virtualization. `FOSS` `[LSP]`
+- **[Location Indicator Whitelist](https://github.com/gilbsgilbs/LocationIndicatorWhitelist)** - Prevents applications from spamming the annoying location notification dot on Android 12 +. `FOSS` `[LSP]`
+- **[Location Joystick](https://github.com/fzer0x/LocationJoystick)** - Realtime Location Spoofer by using a Overlay Joystick to control the mock location. `Proprietary` `[LSP]`
+- **[LocationMax](https://github.com/Xposed-Modules-Repo/com.huaMax)** - Location simulation module for rooted Android devices using LSPosed/Xposed. `Proprietary` `[LSP]`
+- **[XposedFakeLocation](https://github.com/noobexon1/XposedFakeLocation)** - Allows you to spoof your device's location globally or for specific apps without using "mock location" from the developer options. `FOSS` `[LSP]`
+
 ## Privacy Tools
 
 - **[⭐ Amarok](https://github.com/deltazefiro/Amarok-Hider)** - Android application which enables you to hide your private files and apps with a single click. `FOSS` | [🌱](https://f-droid.org/zh_Hans/packages/deltazero.amarok.foss/)
@@ -78,36 +111,3 @@ tracking, spoofing your device identity or location, and isolating apps from you
 - **[Tarnhelm](https://github.com/lz233/Tarnhelm)** - The magic to clean sharing links up. `FOSS` `[LSP]`
 - **[Transparent Screenshot](https://github.com/Dszsu/Transparent_screenshot)** - Hide the application window during screenshots, screen recording, and screen casting. `FOSS` `[LSP]`
 - **[Turn Off Sensors](https://github.com/KatelynTheStargazer/TurnOffSensors-Magisk)** - Disables device sensors on startup via the sensor_privacy service on Android. `FOSS` `[M]`
-
-## Device ID & Spoofing
-
-- **[Device Faker](https://github.com/Seyud/device_faker/)** - A device model spoofing module based on Zygisk that can configure different device models for different applications. `FOSS` `[M]` `[K]`
-- **[DeviceID/SSAID Changer](https://github.com/sidex15/deviceidchanger)** - A simple WebUI Module to change SSAID/DeviceID on Rooted Android Devices with Apatch, KSU (And its forks), or Magisk. `FOSS` `[M]` `[K]`
-- **[Geergit](https://github.com/pyshivam/geergit-discussion)** - Change (MASKE) the various IDs in the Phone. `Proprietary` `[LSP]`
-- **[HideMyAndroid](https://github.com/Xposed-Modules-Repo/com.wowsoftware.hidemyandroid/)** - Android anti-detect module with profile isolation and spoofing. `Proprietary` `[LSP]`
-- **[MAC Editor for Android](https://github.com/jqssun/android-mac-editor)** - Securely edit Wi-Fi MAC address on Android. `FOSS` `[LSP]`
-- **[MACsposed](https://github.com/DavidBerdik/MACsposed)** - Adds support for MAC Address spoofing to Android 12 through 15. `Proprietary` `[LSP]`
-- **[Mantle](https://github.com/get-mantle/Mantle)** - Xposed module that masks hardware IDs, advertising IDs, build properties, carrier and SIM data, Wi-Fi/Bluetooth MACs and location per app. `Proprietary` `[LSP]`
-- **[Mantle Verify](https://github.com/get-mantle/Mantle-Verify)** - Companion diagnostics app that shows the device, network and account identifiers regular apps can read, and confirms which spoofed values are active. `Proprietary`
-- **[Privacy Kit](https://github.com/Xposed-Modules-Repo/com.sal.privacykit)** - Per-app Android identifier spoofing for LSPosed. `Proprietary` `[LSP]`
-- **[SpoofMyDevice](https://github.com/BuSung-dev/SpoofMyDevice)** - Xposed module and companion app for building, saving, and applying spoofed Android device profiles to selected apps. `FOSS` `[LSP]`
-- **[SSAID (Android ID Modifier)](https://github.com/HSSkyBoy/AndroidIDChange)** - A modern Android SSAID (Android ID) inspector, modifier, backup, and management utility. `FOSS` `[LSP]`
-- **[Telephony Spoofer](https://github.com/BrianWalczak/TelephonySpoofer)** - Spoof cellular information, including eSIM compatibility. `FOSS` `[LSP]`
-
-## App Isolation
-
-- **[Insular](https://gitlab.com/secure-system/Insular)** - Isolate your big brother app. A fork based on the excellent Island. `FOSS` | [🌱](https://f-droid.org/packages/com.oasisfeng.island.fdroid)
-- **[Island](https://github.com/oasisfeng/island/tree/dev)** - App isolation and cloning. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.oasisfeng.island)
-- **[Shelter](https://gitea.angry.im/PeterCxy/Shelter)** - Isolate and clone apps. `FOSS` | [🌱](https://f-droid.org/app/net.typeblog.shelter)
-- **[TargetedHide](https://github.com/VisionR1/TargetedHide)** - Ηide files, folders, and packages from specific target apps. `FOSS` `[LSP]`
-
-## Location & GPS
-
-- **[AnyWhere](https://github.com/cxOrz/AnyWhere)** - Location simulation tool for debugging LBS applications and for users to test geolocation functionality. `FOSS` `[LSP]`
-- **[GPS Setter](https://github.com/jqssun/android-gps-setter)** - Allows to mock locations for any specific app or entire system. `FOSS` `[LSP]` | [🌱](https://f-droid.org/packages/io.github.jqssun.gpssetter)
-- **[Hide Mock Location](https://github.com/auag0/HideMockLocation)** - Hide Mock Location Settings. `FOSS` `[LSP]`
-- **[HLocation](https://github.com/sparr-sherrya/hlocation-release)** - Location spoofing framework that synchronizes fake GPS and related environment signals across system and app processes for more consistent location virtualization. `FOSS` `[LSP]`
-- **[Location Indicator Whitelist](https://github.com/gilbsgilbs/LocationIndicatorWhitelist)** - Prevents applications from spamming the annoying location notification dot on Android 12 +. `FOSS` `[LSP]`
-- **[Location Joystick](https://github.com/fzer0x/LocationJoystick)** - Realtime Location Spoofer by using a Overlay Joystick to control the mock location. `Proprietary` `[LSP]`
-- **[LocationMax](https://github.com/Xposed-Modules-Repo/com.huaMax)** - Location simulation module for rooted Android devices using LSPosed/Xposed. `Proprietary` `[LSP]`
-- **[XposedFakeLocation](https://github.com/noobexon1/XposedFakeLocation)** - Allows you to spoof your device's location globally or for specific apps without using "mock location" from the developer options. `FOSS` `[LSP]`

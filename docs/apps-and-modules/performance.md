@@ -60,53 +60,16 @@ optimization**, charging control and task & process management.
 > [!TIP]
 > For gaming-specific tweaks, see [Gaming](gaming.md). For CPU/GPU management, see [Kernel Management](performance.md#kernel-management). For memory optimization, check [Memory Management](performance.md#memory-ram).
 
-## Performance Optimization
-
-- **[⭐ 3C All-in-One Toolbox](https://play.google.com/store/apps/details?id=ccc71.at.free)** - A comprehensive utility that offers a wide range of tools for monitoring, controlling, and optimizing device performance in a user-friendly interface. `Proprietary`
-- **[Androoster](https://github.com/cioccarellia/androoster)** - Android root tweak toolbox. It is built to help you tweak your device, keeping it cool, fast and responsive. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.andreacioccarelli.androoster)
-- **[AZenith](https://github.com/Liliya2727/AZenith)** - All-In-One (AIO) system optimization module designed to enhance Android performance. `FOSS` `[M]` `[K]`
-- **[COPG](https://github.com/AlirezaParsi/COPG)** - Spoof your device to enjoy premium features, max performance, and exclusive benefits. `FOSS` `[M]`
-- **[COPG-VD](https://github.com/VD171/COPG-VD)** - Fork of COPG with additional features and optimizations. `FOSS` `[M]` `[K]`
-- **[Dynamic System Tweaks Magisk Module](https://github.com/PS2ClassicsVault/Dynamic-System-Tweaks-Magisk-Module)** - Improves overall System performance without overheating and losing battery power for armeabi-v7a devices. `FOSS` `[M]`
-- **[FDE.AI](https://github.com/feravolt/FDE.AI-docs)** - All-in-One ultimate optimizer for all devices running Android OS. `Proprietary` `[LSP]`
-- **[Hydrostellaire](https://github.com/AestasBritannia/Hydro-Br-leur)** - A magisk module for devices running on Dimensity flagship platforms and OnePlus, Realme devices. `FOSS` `[M]`
-- **[MAGNETAR](https://github.com/Kyliekyler/MAGNETAR)** - Device Performance Optimizer - Aims To Provide An Optimal Experience At Every Usage Scenario. `FOSS` `[M]`
-- **[SpeedCool](https://github.com/Llucs/SpeedCool-Magisk-Module)** - Boost, cool down, and optimize your Android with SpeedCool: less lag, more performance, and a cooler system. `FOSS` `[M]`
-- **[Stellar Tweaks](https://github.com/kanaodnd/Stellar-Tweaks)** - Sophisticated scheduler designed to harmonize device performance and efficiency. `Proprietary` `[M]` `[K]` `[A]`
-- **[TNF Tweaker](https://github.com/topnotchfreaks/tnf_tweaker)** - Optimization tool designed exclusively for devices running the TopNotchFreaks and Zephyr kernels. `FOSS` `[K]`
-
-## Kernel Management
-
-- **[EX Kernel Manager](https://play.google.com/store/apps/details?id=flar2.exkernelmanager)** - Root tool for backup and flashing kernels, tweaking color, sound, gestures and other kernel settings. `Proprietary`
-- **[Franco Kernel Manager](https://play.google.com/store/apps/details?id=com.franco.kernel)** - A complete toolbox for all devices with a rich interface that combines everything you need to manage, tweak and empower your device. `Proprietary`
-- **[iUnlocker GLTool](https://github.com/i-Taylo/iUnlockerGL)** - Designed to spoof GPU information, allowing users to modify GPU information for unlocking graphics in games and testing. `FOSS` `[M]`
-- **[Kernel Enhancer](https://github.com/RAAJK20Pro/KernelEnhancer)** - A Simple Kernel Parameters Optimization for all devices. `Proprietary` `[M]`
-- **[Kernel Flasher](https://github.com/fatalcoder524/KernelFlasher)** - An Android app to flash (AK3 files), backup, and restore kernels. `FOSS`
-- **[KonaBess](https://github.com/libxzr/KonaBess)** - A straightforward application designed to customize GPU frequency and voltage tables without the need for kernel recompilation. `FOSS` 
-- **[KonaBess Next](https://github.com/KonaBess-Next/KonaBess-Next)** - Fork of KonaBess, Custom GPU overclocking and undervolting tool with granulated voltage for rooted Snapdragon Android devices. `FOSS`
-- **[Minimal Kernel Manager](https://github.com/abhay-byte/mkm)** - Android kernel management and system monitoring application. `FOSS` | [🌱](https://f-droid.org/packages/com.ivarna.fluxlinux/)
-- **[PerfMTK](https://github.com/JUANIMAN/PerfMTK)** - Designed to optimize performance and power efficiency on MediaTek devices with Mali GPUs. `FOSS` `[M]`
-- **[Rv Kernel Manager](https://github.com/Rve27/RvKernel-Manager)** - A modern Kernel Manager with Material 3 Expressive Design. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.rve.rvkernelmanager)
-- **[Zuan Kernel Manager](https://github.com/ZUANVFX01/ZKM/)** - Advanced Android kernel management tool, rebuilt from the Rve Kernel Manager project base with Material 3 Expressive Modern Style. `FOSS`
-
-## Memory & RAM
-
-- **[Magisk Swapspace](https://github.com/chickendrop89/magisk-swapspace)** - This module allows for creating a persistent swap space on android. `FOSS` `[M]`
-- **[SkyScene Add-on](https://github.com/WeirdMidas/SkySceneAddon)** - Optimizations for most memory management subsystems, as well as integrated intelligent memory expansion, a way to expand memory that mimics OEMs like Ram Plus. `FOSS` `[M]` `[K]`
-- **[Swap Disabler](https://github.com/rompelhd/Swap-Disabler)** - Disable swap at system startup. `FOSS` `[M]`
-- **[SwapBoost Pro](https://github.com/yadavnikhil03/SwapBoost-Pro)** - Optimizes your device's memory performance through persistent zRAM + Swapfile optimization with VM tweaks. `FOSS` `[M]`
-- **[ZRAM Module](https://github.com/FurLC/ZRAM-Module)** - A Magisk/KernelSU module that provides ZRAM compression algorithm support for Android devices. `FOSS` `[M]` `[K]`
-
 ## Battery Optimization
 
 - **[⭐ FROSTY](https://github.com/Drsexo/Frosty)** - Optimizes battery life by selectively freezing Google Mobile Services (GMS) components and applying system-wide doze enhancements. `FOSS` `[M]` `[K]`
 - **[AntiWakeLock](https://github.com/binarynoise/XposedModulets/releases?q=AntiWakeLock)** - Disable WAKE_LOCK and FLAG_KEEP_SCREEN_ON to save battery. `FOSS` `[LSP]`
 - **[Auto Sleep](https://github.com/The-First-King/Auto-Sleep)** - Scheduled sleep mode that enables airplane mode, turns off Wi-Fi/Bluetooth and forces Doze using root, then restores the previous states. `FOSS`
 - **[BatStats](https://github.com/mlm-games/BatStats)** - Battery monitor with stats via Shizuku/root. `FOSS`
-- **[Battery Info Enabler](https://github.com/klab7/BatteryInfoEnabler)** - Enlocks and enhances the native battery information for Pixel 6+ devices. `FOSS` `[LSP]`
 - **[Battery Guru](https://play.google.com/store/apps/details?id=com.paget96.batteryguru)** - Battery optimization and monitoring. `Proprietary`
-- **[Battery Monitor](https://github.com/tswistak/Battery-Monitor)** - See battery status at a glance, get meaningful notifications, and track battery behavior over time. `FOSS` | [🌱](https://f-droid.org/packages/codes.swistak.batterymonitor/)
 - **[Battery Honey](https://github.com/kaminarich/BatteryHoney)** - Optimize Battery Saving when screen OFF. `FOSS` `[M]`
+- **[Battery Info Enabler](https://github.com/klab7/BatteryInfoEnabler)** - Enlocks and enhances the native battery information for Pixel 6+ devices. `FOSS` `[LSP]`
+- **[Battery Monitor](https://github.com/tswistak/Battery-Monitor)** - See battery status at a glance, get meaningful notifications, and track battery behavior over time. `FOSS` | [🌱](https://f-droid.org/packages/codes.swistak.batterymonitor/)
 - **[Doze Disabler](https://github.com/draumaz/dozedisabler)** - A Magisk module that disables Doze battery optimizations at boot time. `FOSS` `[M]`
 - **[Drowser](https://gitlab.com/juanitobananas/drowser)** - Drowser is a simple app that kills the apps you select when the screen turns off. `FOSS` | [🌱](https://f-droid.org/app/com.jarsilio.android.drowser)
 - **[EnforceDoze](https://github.com/farfromrefug/EnforceDoze)** - Enable Doze mode immediately after screen off and turn off motion sensing to get best battery life. `FOSS` | [🌱](https://f-droid.org/packages/com.akylas.enforcedoze/)
@@ -130,6 +93,43 @@ optimization**, charging control and task & process management.
 - **[AccA](https://github.com/VR-25/acc)** - Advanced Charging Controller app. `FOSS`
 - **[Charging Bypass](https://github.com/AbhishekTor55/charging-bypass-magisk)** - Disables charging when screen is ON and re-enables when OFF. Useful for gaming/dev use. `FOSS` `[M]`
 - **[FastCharge Next](https://github.com/Dev97633/Fastcharge-next)** - Boost charging speed with smart tweaks. `FOSS` `[M]`
+
+## Kernel Management
+
+- **[EX Kernel Manager](https://play.google.com/store/apps/details?id=flar2.exkernelmanager)** - Root tool for backup and flashing kernels, tweaking color, sound, gestures and other kernel settings. `Proprietary`
+- **[Franco Kernel Manager](https://play.google.com/store/apps/details?id=com.franco.kernel)** - A complete toolbox for all devices with a rich interface that combines everything you need to manage, tweak and empower your device. `Proprietary`
+- **[iUnlocker GLTool](https://github.com/i-Taylo/iUnlockerGL)** - Designed to spoof GPU information, allowing users to modify GPU information for unlocking graphics in games and testing. `FOSS` `[M]`
+- **[Kernel Enhancer](https://github.com/RAAJK20Pro/KernelEnhancer)** - A Simple Kernel Parameters Optimization for all devices. `Proprietary` `[M]`
+- **[Kernel Flasher](https://github.com/fatalcoder524/KernelFlasher)** - An Android app to flash (AK3 files), backup, and restore kernels. `FOSS`
+- **[KonaBess](https://github.com/libxzr/KonaBess)** - A straightforward application designed to customize GPU frequency and voltage tables without the need for kernel recompilation. `FOSS` 
+- **[KonaBess Next](https://github.com/KonaBess-Next/KonaBess-Next)** - Fork of KonaBess, Custom GPU overclocking and undervolting tool with granulated voltage for rooted Snapdragon Android devices. `FOSS`
+- **[Minimal Kernel Manager](https://github.com/abhay-byte/mkm)** - Android kernel management and system monitoring application. `FOSS` | [🌱](https://f-droid.org/packages/com.ivarna.fluxlinux/)
+- **[PerfMTK](https://github.com/JUANIMAN/PerfMTK)** - Designed to optimize performance and power efficiency on MediaTek devices with Mali GPUs. `FOSS` `[M]`
+- **[Rv Kernel Manager](https://github.com/Rve27/RvKernel-Manager)** - A modern Kernel Manager with Material 3 Expressive Design. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.rve.rvkernelmanager)
+- **[Zuan Kernel Manager](https://github.com/ZUANVFX01/ZKM/)** - Advanced Android kernel management tool, rebuilt from the Rve Kernel Manager project base with Material 3 Expressive Modern Style. `FOSS`
+
+## Memory & RAM
+
+- **[Magisk Swapspace](https://github.com/chickendrop89/magisk-swapspace)** - This module allows for creating a persistent swap space on android. `FOSS` `[M]`
+- **[SkyScene Add-on](https://github.com/WeirdMidas/SkySceneAddon)** - Optimizations for most memory management subsystems, as well as integrated intelligent memory expansion, a way to expand memory that mimics OEMs like Ram Plus. `FOSS` `[M]` `[K]`
+- **[Swap Disabler](https://github.com/rompelhd/Swap-Disabler)** - Disable swap at system startup. `FOSS` `[M]`
+- **[SwapBoost Pro](https://github.com/yadavnikhil03/SwapBoost-Pro)** - Optimizes your device's memory performance through persistent zRAM + Swapfile optimization with VM tweaks. `FOSS` `[M]`
+- **[ZRAM Module](https://github.com/FurLC/ZRAM-Module)** - A Magisk/KernelSU module that provides ZRAM compression algorithm support for Android devices. `FOSS` `[M]` `[K]`
+
+## Performance Optimization
+
+- **[⭐ 3C All-in-One Toolbox](https://play.google.com/store/apps/details?id=ccc71.at.free)** - A comprehensive utility that offers a wide range of tools for monitoring, controlling, and optimizing device performance in a user-friendly interface. `Proprietary`
+- **[Androoster](https://github.com/cioccarellia/androoster)** - Android root tweak toolbox. It is built to help you tweak your device, keeping it cool, fast and responsive. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.andreacioccarelli.androoster)
+- **[AZenith](https://github.com/Liliya2727/AZenith)** - All-In-One (AIO) system optimization module designed to enhance Android performance. `FOSS` `[M]` `[K]`
+- **[COPG](https://github.com/AlirezaParsi/COPG)** - Spoof your device to enjoy premium features, max performance, and exclusive benefits. `FOSS` `[M]`
+- **[COPG-VD](https://github.com/VD171/COPG-VD)** - Fork of COPG with additional features and optimizations. `FOSS` `[M]` `[K]`
+- **[Dynamic System Tweaks Magisk Module](https://github.com/PS2ClassicsVault/Dynamic-System-Tweaks-Magisk-Module)** - Improves overall System performance without overheating and losing battery power for armeabi-v7a devices. `FOSS` `[M]`
+- **[FDE.AI](https://github.com/feravolt/FDE.AI-docs)** - All-in-One ultimate optimizer for all devices running Android OS. `Proprietary` `[LSP]`
+- **[Hydrostellaire](https://github.com/AestasBritannia/Hydro-Br-leur)** - A magisk module for devices running on Dimensity flagship platforms and OnePlus, Realme devices. `FOSS` `[M]`
+- **[MAGNETAR](https://github.com/Kyliekyler/MAGNETAR)** - Device Performance Optimizer - Aims To Provide An Optimal Experience At Every Usage Scenario. `FOSS` `[M]`
+- **[SpeedCool](https://github.com/Llucs/SpeedCool-Magisk-Module)** - Boost, cool down, and optimize your Android with SpeedCool: less lag, more performance, and a cooler system. `FOSS` `[M]`
+- **[Stellar Tweaks](https://github.com/kanaodnd/Stellar-Tweaks)** - Sophisticated scheduler designed to harmonize device performance and efficiency. `Proprietary` `[M]` `[K]` `[A]`
+- **[TNF Tweaker](https://github.com/topnotchfreaks/tnf_tweaker)** - Optimization tool designed exclusively for devices running the TopNotchFreaks and Zephyr kernels. `FOSS` `[K]`
 
 ## Task & Process Management
 

@@ -56,22 +56,6 @@ head:
 tools, sharing & intent tweaks, communication helpers and all-in-one power-user toolboxes.
 
 
-## Sync & File Transfer
-
-- **[Rclone Magisk Module](https://github.com/NewFuture/rclone-fuse3-magisk)** - Integrates Rclone with FUSE support into Android, allowing you to manage remote storage mounts seamlessly. `FOSS` `[M]`
-- **[Rsync Magisk](https://github.com/KatelynTheStargazer/rsync-magisk)** - Static rsync binary for Magisk-based file sync and backup workflows. `FOSS` `[M]`
-
-## Reboot & Power
-
-- **[Advanced Power Menu](https://github.com/Xposed-Modules-Repo/com.sui.advancedpowermenu)** - Provides a highly compatible extended advanced power menu. `Proprietary` `[LSP]`
-- **[RebootNya](https://github.com/daisukiKaffuChino/RebootNya)** - A simple yet advanced reboot utility for Android devices. `FOSS`
-
-## Sharing & Intent Tools
-
-- **[⭐ CleanShare](https://github.com/hxreborn/cleanshare)** - Removes Direct Share's suggested contact/conversation shortcuts from Android's Share Sheet. `FOSS` `[LSP]`
-- **[ClipVault](https://github.com/kaduvert/AClipBoardManager)** - Android ClipBoard Manager using LSPosed / Magisk. `FOSS` `[M]` `[K]` `[LSP]`
-- **[No Photo Picker API](https://github.com/yureitzk/NoPhotoPickerAPI)** - Bypasses the Android Photo Picker API and lets apps use the classic document/file picker. `FOSS` `[LSP]`
-
 ## Communication & Messaging
 
 - **[ACR Phone](https://play.google.com/store/apps/details?id=com.nll.cb)** - ACR Phone is a call recording app that uses root to record calls on Android 10 and above. `Proprietary`
@@ -96,3 +80,19 @@ tools, sharing & intent tweaks, communication helpers and all-in-one power-user 
 
 > [!TIP]
 > If you are looking for classic root managers and module managers, start with [Root Management](root-management.md). If you need shell commands or Linux tooling, see [Terminal and Shell Tools](development.md#terminal-shell).
+
+## Reboot & Power
+
+- **[Advanced Power Menu](https://github.com/Xposed-Modules-Repo/com.sui.advancedpowermenu)** - Provides a highly compatible extended advanced power menu. `Proprietary` `[LSP]`
+- **[RebootNya](https://github.com/daisukiKaffuChino/RebootNya)** - A simple yet advanced reboot utility for Android devices. `FOSS`
+
+## Sharing & Intent Tools
+
+- **[⭐ CleanShare](https://github.com/hxreborn/cleanshare)** - Removes Direct Share's suggested contact/conversation shortcuts from Android's Share Sheet. `FOSS` `[LSP]`
+- **[ClipVault](https://github.com/kaduvert/AClipBoardManager)** - Android ClipBoard Manager using LSPosed / Magisk. `FOSS` `[M]` `[K]` `[LSP]`
+- **[No Photo Picker API](https://github.com/yureitzk/NoPhotoPickerAPI)** - Bypasses the Android Photo Picker API and lets apps use the classic document/file picker. `FOSS` `[LSP]`
+
+## Sync & File Transfer
+
+- **[Rclone Magisk Module](https://github.com/NewFuture/rclone-fuse3-magisk)** - Integrates Rclone with FUSE support into Android, allowing you to manage remote storage mounts seamlessly. `FOSS` `[M]`
+- **[Rsync Magisk](https://github.com/KatelynTheStargazer/rsync-magisk)** - Static rsync binary for Magisk-based file sync and backup workflows. `FOSS` `[M]`

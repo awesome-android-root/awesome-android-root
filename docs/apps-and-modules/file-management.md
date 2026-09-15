@@ -59,6 +59,24 @@ Magisk/KernelSU modules, and file & partition tools for power users.
 > Related: [Backup & Restore](/apps-and-modules/backup.md) protects your files and app data before you clean or flash anything.
 
 
+## Cleaning
+
+- **[⭐ SD Maid 2/SE](https://github.com/d4rken-org/sdmaid-se)** - A file management tool for Android that specializes in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS` | [🌱](https://f-droid.org/en/packages/eu.darken.sdmse/) | [▶️](https://play.google.com/store/apps/details?id=eu.darken.sdmse)
+- **[AutoPurge Pro](https://github.com/S123123sd/SmartClear)** - Junk cleaning automation tool that provides deep cleaning and resource management capabilities for Android devices. `FOSS` `[M]` `[K]`
+- **[Basic Cleaner](https://github.com/WeirdMidas/BasicCleaner)** - A magisk/KSU module that applies a set of cleanups and fixups every 7-15-30 days. `FOSS` `[M]` `[K]`
+- **[Cache Cleaner Widget](https://gitlab.com/Zinaro/CacheCleanerWidget)** - A root-based widget with no UI that clears all app caches in one tap. `FOSS` | [🌱](https://f-droid.org/packages/com.zinaro.cachecleanerwidget/)
+- **[Cleaner Royall](https://github.com/araafroyall/Cleaner-Royall)** - A lightweight but ultra-fast and powerful cleaner for Android. `Proprietary` `[LSP]`
+- **[ClearBox](https://github.com/FLYCOM-E/ClearBox)** - Can delete all software caches, installation packages, compressed packages, garbage, empty folders etc. `Proprietary` `[M]` `[K]`
+- **[CZero](https://github.com/Xocio/CZero)** - Cleans the cache of frequently used apps, and adds background suppression, empty-folder cleanup, and F2FS garbage collection. `FOSS` `[M]` `[K]`
+
+## File & Partition Tools
+
+- **[Partition Backup](https://github.com/rhythmcache/partition-backup)** - This Utility Allows You To Save Android Device Partition. `FOSS` `[M]`
+- **[SD Flasher](https://github.com/theblazehen/sd_flasher)** - Flash disk images (.img, .img.gz, .img.xz, .zip) directly to SD cards from your Android device. `FOSS`
+- **[StorageFixer](https://github.com/omersusin/StorageFixer)** - Root app, with an optional Xposed module, that repairs the broken `Android/data`, `Android/obb` and `Android/media` directories and appops left by Android 16 QPR1+ on AOSP-based ROMs. `FOSS` `[LSP]`
+- **[StorageRedirect](https://github.com/AcE77505/storage-redirect-module)** - Redirects an app's external storage directories to its own private data directory, bypassing the Android 11+ FUSE forwarding layer. `FOSS` `[LSP]`
+- **[USB Mass Storage](https://github.com/Enginex0/UsbMassStorage)** - Turn Your Phone into a USB Drive.
+
 ## File Managers
 
 - **[⭐ MiXplorer](https://mixplorer.com/)** - Feature-rich file manager. `Proprietary`
@@ -77,21 +95,3 @@ Magisk/KernelSU modules, and file & partition tools for power users.
 - **[Total Commander](https://play.google.com/store/apps/details?id=com.ghisler.android.TotalCommander)** - A feature rich file manager for Android. For  a better experience, please read [this](https://www.ghisler.ch/board/viewforum.php?f=22). `Proprietary`
 - **[Ultimate File Manager Pro](https://github.com/Kilowatch/ultimate-file-manager-pro)** - Dual-Pane File Manager for Android Mobile, Android TV, and Windows PC. `FOSS`
 - **[ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)** - A program for archive management (including managing of application backups in archives). `Proprietary`
-
-## Cleaning
-
-- **[⭐ SD Maid 2/SE](https://github.com/d4rken-org/sdmaid-se)** - A file management tool for Android that specializes in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS` | [🌱](https://f-droid.org/en/packages/eu.darken.sdmse/) | [▶️](https://play.google.com/store/apps/details?id=eu.darken.sdmse)
-- **[AutoPurge Pro](https://github.com/S123123sd/SmartClear)** - Junk cleaning automation tool that provides deep cleaning and resource management capabilities for Android devices. `FOSS` `[M]` `[K]`
-- **[Basic Cleaner](https://github.com/WeirdMidas/BasicCleaner)** - A magisk/KSU module that applies a set of cleanups and fixups every 7-15-30 days. `FOSS` `[M]` `[K]`
-- **[Cache Cleaner Widget](https://gitlab.com/Zinaro/CacheCleanerWidget)** - A root-based widget with no UI that clears all app caches in one tap. `FOSS` | [🌱](https://f-droid.org/packages/com.zinaro.cachecleanerwidget/)
-- **[Cleaner Royall](https://github.com/araafroyall/Cleaner-Royall)** - A lightweight but ultra-fast and powerful cleaner for Android. `Proprietary` `[LSP]`
-- **[ClearBox](https://github.com/FLYCOM-E/ClearBox)** - Can delete all software caches, installation packages, compressed packages, garbage, empty folders etc. `Proprietary` `[M]` `[K]`
-- **[CZero](https://github.com/Xocio/CZero)** - Cleans the cache of frequently used apps, and adds background suppression, empty-folder cleanup, and F2FS garbage collection. `FOSS` `[M]` `[K]`
-
-## File & Partition Tools
-
-- **[Partition Backup](https://github.com/rhythmcache/partition-backup)** - This Utility Allows You To Save Android Device Partition. `FOSS` `[M]`
-- **[SD Flasher](https://github.com/theblazehen/sd_flasher)** - Flash disk images (.img, .img.gz, .img.xz, .zip) directly to SD cards from your Android device. `FOSS`
-- **[StorageFixer](https://github.com/omersusin/StorageFixer)** - Root app, with an optional Xposed module, that repairs the broken `Android/data`, `Android/obb` and `Android/media` directories and appops left by Android 16 QPR1+ on AOSP-based ROMs. `FOSS` `[LSP]`
-- **[StorageRedirect](https://github.com/AcE77505/storage-redirect-module)** - Redirects an app's external storage directories to its own private data directory, bypassing the Android 11+ FUSE forwarding layer. `FOSS` `[LSP]`
-- **[USB Mass Storage](https://github.com/Enginex0/UsbMassStorage)** - Turn Your Phone into a USB Drive.
