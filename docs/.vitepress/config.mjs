@@ -129,7 +129,8 @@ export default withPwa(defineConfig({
     strategies: 'generateSW',
     registerType: 'autoUpdate',
 
-    // Include critical assets for immediate caching
+    // Cache only image assets. Pages and application code should always come
+    // from the network so published updates are visible immediately.
     includeAssets: [
       'favicon.ico',
       'favicon.svg',
@@ -143,11 +144,7 @@ export default withPwa(defineConfig({
 
     workbox: {
       globPatterns: [
-        '**/*.{js,css,html}',
-        '**/images/logo*.{svg,png}',
-        '**/images/*-icon*.{png,svg}',
-        '**/images/web-app-manifest-*.png',
-        '**/{favicon,favicon-*}.{ico,svg,png}',
+        '**/*.{png,jpg,jpeg,svg,gif,webp,avif,ico}',
       ],
 
       globIgnores: [
@@ -160,59 +157,10 @@ export default withPwa(defineConfig({
       skipWaiting: true,
       clientsClaim: true,
       cleanupOutdatedCaches: true,
-      navigationPreload: true,
-
-
-      directoryIndex: 'index.html',
 
       maximumFileSizeToCacheInBytes: 10 * 1024 * 1024,
 
       runtimeCaching: [
-
-        {
-          urlPattern: ({ request, url, sameOrigin }) =>
-            sameOrigin && (
-              request.mode === 'navigate' ||
-              request.destination === 'document' ||
-              request.headers.get('accept')?.includes('text/html')
-            ),
-          handler: 'NetworkFirst',
-          options: {
-            cacheName: 'aar-pages-v1',
-            networkTimeoutSeconds: 5,
-            expiration: {
-              maxEntries: 150,
-              maxAgeSeconds: 60 * 60 * 24 * 1,
-              purgeOnQuotaError: true,
-            },
-            cacheableResponse: {
-              statuses: [0, 200],
-            }
-          }
-        },
-
-        {
-          urlPattern: ({ request, url, sameOrigin }) =>
-            sameOrigin && (
-              request.destination === 'script' ||
-              request.destination === 'style' ||
-              /\.(js|mjs|css)$/i.test(url.pathname)
-            ),
-          handler: 'StaleWhileRevalidate',
-          options: {
-            cacheName: 'aar-assets-v1',
-            expiration: {
-              maxEntries: 250,
-              maxAgeSeconds: 60 * 60 * 24 * 7,  // 7 days
-              purgeOnQuotaError: true,
-            },
-            cacheableResponse: {
-              statuses: [0, 200],
-            },
-          }
-        },
-
-
         {
           urlPattern: ({ request, url, sameOrigin }) => {
             const isImage = request.destination === 'image' ||
@@ -238,90 +186,6 @@ export default withPwa(defineConfig({
             },
           }
         },
-
-        {
-          urlPattern: ({ request, url }) => {
-            const isFontFile = /\.(woff2?|ttf|otf|eot)$/i.test(url.pathname)
-            const isFontRequest = request.destination === 'font'
-            const isFontHost = url.origin === location.origin ||
-              url.hostname.includes('fonts.googleapis.com') ||
-              url.hostname.includes('fonts.gstatic.com')
-
-            return (isFontFile || isFontRequest) && isFontHost
-          },
-          handler: 'CacheFirst',
-          options: {
-            cacheName: 'aar-fonts-v1',
-            expiration: {
-              maxEntries: 40,
-              maxAgeSeconds: 60 * 60 * 24 * 30,  // 30 days
-              purgeOnQuotaError: true,
-            },
-            cacheableResponse: {
-              statuses: [0, 200],
-            },
-          }
-        },
-
-        {
-          urlPattern: ({ url }) =>
-            url.origin === 'https://img.shields.io',
-          handler: 'StaleWhileRevalidate',
-          options: {
-            cacheName: 'aar-badges-v1',
-            expiration: {
-              maxEntries: 300,
-              maxAgeSeconds: 60 * 60 * 12,  // 12 hours
-              purgeOnQuotaError: true,
-            },
-            cacheableResponse: {
-              statuses: [0, 200],
-            },
-
-            matchOptions: {
-              ignoreSearch: false,
-            }
-          }
-        },
-
-        {
-          urlPattern: ({ url }) =>
-            url.pathname.includes('search') ||
-            url.pathname.includes('@localSearchIndex') ||
-            url.pathname.includes('searchIndex'),
-          handler: 'NetworkFirst',
-          options: {
-            cacheName: 'aar-search-v1',
-            networkTimeoutSeconds: 3,
-            expiration: {
-              maxEntries: 10,
-              maxAgeSeconds: 60 * 60 * 24,  // 24 hours
-              purgeOnQuotaError: true,
-            },
-            cacheableResponse: {
-              statuses: [0, 200],
-            },
-          }
-        },
-
-        {
-          urlPattern: ({ url, request }) =>
-            request.headers.get('accept')?.includes('application/json') ||
-            url.pathname.endsWith('.json'),
-          handler: 'NetworkFirst',
-          options: {
-            cacheName: 'aar-data-v1',
-            networkTimeoutSeconds: 3,
-            expiration: {
-              maxEntries: 50,
-              maxAgeSeconds: 60 * 60 * 6,  // 6 hours
-              purgeOnQuotaError: true,
-            },
-            cacheableResponse: {
-              statuses: [0, 200],
-            },
-          }
-        },
       ]
     },
 
@@ -330,11 +194,10 @@ export default withPwa(defineConfig({
     devOptions: {
       enabled: process.env.NODE_ENV === 'development',
       suppressWarnings: true,
-      navigateFallback: 'index.html',
       type: 'module'
     },
 
-    injectRegister: null,
+    injectRegister: 'script',
     minify: true,
 
   },

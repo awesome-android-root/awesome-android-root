@@ -38,7 +38,7 @@ The website adds what a single README cannot:
 
 - **Instant local search** across every app, module and guide (with fuzzy matching)
 - **Clean category navigation** and a sidebar for every topic
-- **A PWA** - installable, works offline, updates automatically
+- **A PWA** - installable, caches images, and fetches current pages online
 - **Shareable pages and anchors** for every category and section
 
 ## Apps & Modules by Category
