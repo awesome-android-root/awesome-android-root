@@ -152,21 +152,21 @@ head:
 
 hero:
   name: "Awesome Android Root"
-  text: "Master Android Rooting in 2026"
+  text: "Master Android Rooting"
   tagline: "Explore 600+ root apps and modules, step-by-step rooting guides, and practical troubleshooting for Android power users."
   image:
     src: /images/logo_dark.svg
     alt: Awesome Android Root - Ultimate Rooting Hub Logo
   actions:
     - theme: brand
-      text: 🚀 Browse Root Apps
+      text: Browse Root Apps
       link: /apps-and-modules/
       size: large
     - theme: alt
-      text: 📚 Complete Rooting Guides
+      text: Complete Rooting Guides
       link: /rooting-guides/
     - theme: alt
-      text: "🔧 Fix Issues Now"
+      text: "Fix Issues Now"
       link: /troubleshooting
 features:
   - icon: 🛡️
@@ -242,7 +242,7 @@ features:
 
 <div class="vp-doc">
 
-## 🚀 Start Your Rooting Journey
+## Start Your Rooting Journey
 
 <div class="custom-journey-selector">
   <div class="journey-card beginner">
@@ -280,7 +280,7 @@ features:
 </div>
 
 
-## 📚 Major Guides
+## Major Guides
 
 <div class="guide-time-grid">
   <a href="/rooting-guides/how-to-unlock-bootloader" class="community-card">
@@ -311,7 +311,7 @@ features:
 </div>
 
 
-## 🧰 Resources
+## Resources
 
 <div class="community-cards">
   <a href="/rooting-guides/lsposed-guide" class="community-card github">
@@ -336,7 +336,7 @@ features:
   </a>
 </div>
 
-## 🌐 Community
+## Community
 
 <div class="community-cards">
   <a href="https://github.com/awesome-android-root/awesome-android-root" class="community-card github">
