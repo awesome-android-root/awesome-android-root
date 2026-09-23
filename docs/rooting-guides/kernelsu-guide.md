@@ -474,7 +474,7 @@ ksud module remove module_id
 ### Module Compatibility
 
 - Most Magisk modules work with compatible metamodules
-- Zygisk modules require [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) or [ReZygisk](https://github.com/PerformanC/ReZygisk)
+- Zygisk modules require [ZygiskNext](https://github.com/LSPosed/ZygiskNext) or [ReZygisk](https://github.com/PerformanC/ReZygisk)
 - KPM modules require SukiSU-Ultra or [KPatch Next Module](https://github.com/KernelSU-Next/KPatch-Next-Module)
 - Browse modules: [Official Module Repository](https://modules.kernelsu.org/)
 

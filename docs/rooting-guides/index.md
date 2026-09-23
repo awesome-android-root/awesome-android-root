@@ -474,7 +474,7 @@ Solutions (2026 best practices):
 3. Install **[Tricky Store](https://github.com/5ec1cff/TrickyStore)** for advanced key attestation spoofing
 4. Install **[Shamiko](https://github.com/LSPosed/LSPosed.github.io)** (closed-source) or **[Zygisk Assistant](https://github.com/snake-4/Zygisk-Assistant)** (open-source) for better root hiding
 5. Hide the Magisk app (Settings → Hide the Magisk app → repackage with random name)
-6. Use **[Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)** (alternative Zygisk implementation, works on KernelSU too)
+6. Use **[Zygisk Next](https://github.com/LSPosed/ZygiskNext)** (alternative Zygisk implementation, works on KernelSU too)
 7. Clear banking app data after setting up hiding
 8. See [detailed Play Integrity troubleshooting](../troubleshooting.md#play-integrity-and-banking-apps)
 
@@ -573,7 +573,7 @@ Play Integrity bypass is essential for banking apps in 2026. Key tools:
 | **[Tricky Store](https://github.com/5ec1cff/TrickyStore)** | Advanced key attestation spoofing | Active |
 | **[Shamiko](https://github.com/LSPosed/LSPosed.github.io)** | Systemlessly hides Zygisk/modules from detection | Closed-source |
 | **[Zygisk Assistant](https://github.com/snake-4/Zygisk-Assistant)** | Open-source alternative to Shamiko | Active (FOSS) |
-| **[Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)** | Standalone Zygisk implementation for Magisk/KernelSU | Active |
+| **[Zygisk Next](https://github.com/LSPosed/ZygiskNext)** | Standalone Zygisk implementation for Magisk/KernelSU | Active |
 | **[Play Integrity Fork](https://github.com/osm0sis/PlayIntegrityFork)** | Community-maintained PIF script | Active |
 
 
