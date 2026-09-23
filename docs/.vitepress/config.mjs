@@ -11,9 +11,6 @@ export default withPwa(defineConfig({
   lastUpdated: true,
   metaChunk: true,
 
-  // Keep the entity graph consistent across pages. Page-specific frontmatter
-  // can add Article, HowTo or ItemList data, while this supplies the shared
-  // publisher, website, webpage and breadcrumb context once per document.
   transformHead({ pageData }) {
     const site = 'https://awesome-android-root.zhoe.org'
     const relativePath = pageData.relativePath || 'index.md'
@@ -22,8 +19,6 @@ export default withPwa(defineConfig({
       : `/${relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')}`
     const pageUrl = `${site}${route}`
 
-    // The homepage already owns the complete site graph, including navigation.
-    // Avoid emitting a second Organization/WebSite graph there.
     if (route === '/') return []
 
     const title = pageData.title || pageData.frontmatter?.title || 'Awesome Android Root'
@@ -129,20 +124,8 @@ export default withPwa(defineConfig({
     strategies: 'generateSW',
     registerType: 'autoUpdate',
 
-    // Cache only image assets. Pages and application code should always come
-    // from the network so published updates are visible immediately.
-    includeAssets: [
-      'favicon.ico',
-      'favicon.svg',
-      'favicon-96x96.png',
-      'images/logo.svg',
-      'images/logo_dark.svg',
-      'images/web-app-manifest-192x192.png',
-      'images/web-app-manifest-512x512.png',
-      'images/apple-touch-icon.png'
-    ],
-
     workbox: {
+      
       globPatterns: [
         '**/*.{png,jpg,jpeg,svg,gif,webp,avif,ico}',
       ],
@@ -231,10 +214,6 @@ export default withPwa(defineConfig({
     ['meta', { name: 'mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }],
 
-    // Resource Hints
-    ['link', { rel: 'preconnect', href: 'https://github.com', crossorigin: '' }],
-    ['link', { rel: 'dns-prefetch', href: 'https://github.com' }],
-
     // Sitemap
     ['link', { rel: 'sitemap', type: 'application/xml', href: '/sitemap.xml' }],
 
@@ -251,7 +230,6 @@ export default withPwa(defineConfig({
     ['meta', { name: 'referrer', content: 'no-referrer-when-downgrade' }],
 
     // --- Verification Tags ---
-    ['meta', { name: 'ahrefs-site-verification', content: '5fd5ad82114006dedaabbb7cc47ee96924361ceedafe09795ce9abbb7d32d6ff' }],
     ['meta', { name: 'google-site-verification', content: 'LZTsUH49HHfaPFDezfkN4dE0JmLUbOrY3NJKLr1ZPrE' }]
   ],
 
@@ -275,13 +253,10 @@ export default withPwa(defineConfig({
               titles: 3
             },
             boostDocument: (documentId, term, storedFields) => {
-              // Boost app and module pages significantly
+              
+              // Boost app and module pages in seach results
               if (documentId.includes('apps-and-modules')) {
                 return 10
-              }
-              // Moderate boost for guide pages
-              if (documentId.includes('rooting-guides')) {
-                return 2
               }
               return 1
             }
