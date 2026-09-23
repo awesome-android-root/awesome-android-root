@@ -3,6 +3,31 @@ import { withPwa } from '@vite-pwa/vitepress'
 import llmstxt, { copyOrDownloadAsMarkdownButtons } from 'vitepress-plugin-llms'
 import { storeLinkPlugin } from './markdown/storeLinkPlugin.mjs'
 
+const isLlmPageLink = (link) =>
+  typeof link === 'string' && link.startsWith('/') && link !== '/' && !link.includes('#')
+
+function llmsSidebar(sidebar) {
+  const sanitizeItems = (items = []) => items.flatMap((item) => {
+    const nestedItems = item.items ? sanitizeItems(item.items) : undefined
+    const link = isLlmPageLink(item.link) ? item.link : undefined
+
+    if (!link && (!nestedItems || nestedItems.length === 0)) return []
+
+    const sanitized = { ...item }
+    if (link) sanitized.link = link
+    else delete sanitized.link
+    if (nestedItems) sanitized.items = nestedItems
+    else delete sanitized.items
+    return [sanitized]
+  })
+
+  if (Array.isArray(sidebar)) return sanitizeItems(sidebar)
+
+  return Object.fromEntries(
+    Object.entries(sidebar ?? {}).map(([route, items]) => [route, sanitizeItems(items)])
+  )
+}
+
 export default withPwa(defineConfig({
   lang: 'en-US',
   title: 'Awesome Android Root',
@@ -90,7 +115,7 @@ export default withPwa(defineConfig({
 
   vite: {
     plugins: [
-      llmstxt()
+      llmstxt({ sidebar: llmsSidebar })
     ],
     build: {
       chunkSizeWarningLimit: 1000,
@@ -253,7 +278,7 @@ export default withPwa(defineConfig({
               titles: 3
             },
             boostDocument: (documentId, term, storedFields) => {
-              
+
               // Boost app and module pages in seach results
               if (documentId.includes('apps-and-modules')) {
                 return 10
