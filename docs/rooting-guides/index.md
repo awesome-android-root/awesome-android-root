@@ -139,8 +139,8 @@ Master Android rooting with comprehensive tutorials covering bootloader unlockin
 ## Quick Navigation
 
 > [!TIP]
-> **New to rooting?**
-> Start with [Understanding Root Access](#understanding-root-access)
+> **Want guide for a specific device?**
+> Select your manufacturer in the [**Device-Specific Guides section ↗**](#device-specific-guides)
 
 ::: info Steps
 **Ready to begin?** Choose your path:
@@ -150,7 +150,6 @@ Master Android rooting with comprehensive tutorials covering bootloader unlockin
 - [Root Method Comparison](#choosing-a-root-method) - Magisk vs KernelSU vs APatch
 - [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) - GhostLock temporary root
 :::
-
 
 > [!NOTE]
 > **Need help?**
