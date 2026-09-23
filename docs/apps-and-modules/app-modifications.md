@@ -63,6 +63,7 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 ## App Patchers
 
 - **[⭐ Morphe](https://morphe.software/)** - A next-generation app patcher built by some of the original ReVanced developers. It offers a modern interface, enhanced stability, and a growing list of supported apps and features. `FOSS`
+- **[NexAlloy](https://github.com/NexAlloy/NexAlloy)** - ChsBuffer's LSPosed module, powered by Morphe, ReVanced supporting multiple apps. `FOSS` `[LSP]`
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (use with caution). `Proprietary`
 - **[ReVanced](https://revanced.app/)** - A powerful app patcher that allows you to modify popular apps like YouTube, Spotify, and more with additional features and customizations. `FOSS`
 - **[ReVanced Extended](https://github.com/NoName-exe/revanced-extended)** - ReVanced eXtended (now Morphe) YT and YT-M for both root and non-root users. `FOSS` `[M]` `[K]`
