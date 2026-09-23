@@ -672,7 +672,7 @@ Modern devices use A/B (seamless) update system:
    - [Backup apps](./apps-and-modules/backup#backup-restore) - Complete backups
    - [File managers](./apps-and-modules/file-management#file-managers) - Root-enabled file access
    - [Firewall tools](./apps-and-modules/security#firewalls-filtering) - Network control
-   - [Browse 600+ root apps](./apps-and-modules/) for more
+   - [Browse 650+ root apps](./apps-and-modules/) for more
 
 **Next Steps:**
 
