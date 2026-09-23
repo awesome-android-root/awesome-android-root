@@ -4,6 +4,7 @@
   "description": "The ultimate Android rooting hub - a curated list of 600+ top root apps, Magisk modules, KernelSU modules, LSPosed modules, and comprehensive step-by-step rooting guides.",
   "private": true,
   "license": "MIT",
+  "packageManager": "bun@1.4.2",
   "author": {
     "name": "awesome-android-root",
     "url": "https://github.com/awesome-android-root"
