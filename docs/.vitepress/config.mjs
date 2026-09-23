@@ -138,8 +138,7 @@ export default withPwa(defineConfig({
       'images/logo_dark.svg',
       'images/web-app-manifest-192x192.png',
       'images/web-app-manifest-512x512.png',
-      'images/apple-touch-icon.png',
-      'offline.html'
+      'images/apple-touch-icon.png'
     ],
 
     workbox: {
