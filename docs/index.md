@@ -166,7 +166,7 @@ hero:
       text: Complete Rooting Guides
       link: /rooting-guides/
     - theme: alt
-      text: "Fix Issues Now"
+      text: "Troubleshooting"
       link: /troubleshooting
 features:
   - icon: 🛡️
