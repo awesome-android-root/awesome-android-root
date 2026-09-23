@@ -2,7 +2,7 @@
 layout: home
 title: Android Root Apps, Modules & Rooting Guides
 titleTemplate: Awesome Android Root
-description: "Browse 600+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices."
+description: "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices."
 head:
   - - meta
     - name: robots
@@ -21,7 +21,7 @@ head:
       content: "Android Root Apps, Modules & Rooting Guides | Awesome Android Root"
   - - meta
     - property: og:description
-      content: "Browse 600+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices."
+      content: "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices."
   - - meta
     - property: og:image:secure_url
       content: "https://awesome-android-root.zhoe.org/images/og.png"
@@ -51,7 +51,7 @@ head:
       content: "Android Root Apps, Modules & Rooting Guides | Awesome Android Root"
   - - meta
     - name: twitter:description
-      content: "Browse 600+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices."
+      content: "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices."
   - - meta
     - name: twitter:image
       content: "https://awesome-android-root.zhoe.org/images/og.png"
@@ -81,7 +81,7 @@ head:
             "@id": "https://awesome-android-root.zhoe.org/#website",
             "name": "Awesome Android Root",
             "alternateName": "Ultimate Android Rooting Hub",
-            "description": "Browse 600+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices.",
+            "description": "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices.",
             "url": "https://awesome-android-root.zhoe.org/",
             "inLanguage": "en-US",
             "publisher": {
@@ -104,7 +104,7 @@ head:
             "@type": ["WebPage", "CollectionPage"],
             "@id": "https://awesome-android-root.zhoe.org/#webpage",
             "name": "Android Root Apps, Modules & Rooting Guides | Awesome Android Root",
-            "description": "Browse 600+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices.",
+            "description": "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices.",
             "url": "https://awesome-android-root.zhoe.org/",
             "datePublished": "2025-05-25T00:00:00Z",
             "dateModified": "2026-06-26T00:00:00Z",
@@ -153,7 +153,7 @@ head:
 hero:
   name: "Awesome Android Root"
   text: "Master Android Rooting"
-  tagline: "Explore 600+ root apps and modules, step-by-step rooting guides, and practical troubleshooting for Android power users."
+  tagline: "Explore 650+ root apps and modules, step-by-step rooting guides, and practical troubleshooting for Android power users."
   image:
     src: /images/logo_dark.svg
     alt: Awesome Android Root - Ultimate Rooting Hub Logo
@@ -271,7 +271,7 @@ features:
     <h3>Already Rooted</h3>
     <p>Maximize your rooted device's potential</p>
     <ul>
-      <li>600+ curated apps</li>
+      <li>650+ curated apps</li>
       <li>Advanced modules</li>
       <li>Custom ROMs</li>
     </ul>

@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Best Android Root Apps & Modules
-description: Browse a curated directory of 600+ Android root apps, Magisk, KernelSU, APatch and LSPosed modules, organized by use case with source and compatibility labels.
+description: Browse a curated directory of 650+ Android root apps, Magisk, KernelSU, APatch and LSPosed modules, organized by use case with source and compatibility labels.
 head:
   - - link
     - rel: canonical
@@ -31,7 +31,7 @@ head:
       content: Best Android Root Apps & Modules | Awesome Android Root
   - - meta
     - property: og:description
-      content: Browse 600+ curated Android root apps, Magisk, KernelSU, APatch and LSPosed modules organized by use case, framework and source.
+      content: Browse 650+ curated Android root apps, Magisk, KernelSU, APatch and LSPosed modules organized by use case, framework and source.
   - - meta
     - property: og:url
       content: https://awesome-android-root.zhoe.org/apps-and-modules/
@@ -43,7 +43,7 @@ head:
       content: https://awesome-android-root.zhoe.org/images/og.png
   - - meta
     - property: og:image:alt
-      content: Best Android Root Apps & Modules - 600+ curated tools
+      content: Best Android Root Apps & Modules - 650+ curated tools
   - - meta
     - property: og:image:width
       content: '1200'
@@ -67,7 +67,7 @@ head:
       content: Best Android Root Apps & Modules | Awesome Android Root
   - - meta
     - name: twitter:description
-      content: Browse 600+ curated Android root apps and modules organized by use case and root framework.
+      content: Browse 650+ curated Android root apps and modules organized by use case and root framework.
   - - meta
     - name: twitter:image
       content: https://awesome-android-root.zhoe.org/images/og.png
@@ -84,7 +84,7 @@ head:
             "@type": "CollectionPage",
             "@id": "https://awesome-android-root.zhoe.org/apps-and-modules/#collection",
             "name": "Best Android Root Apps & Modules",
-            "description": "600+ curated root apps, Magisk, KernelSU, APatch and LSPosed modules organized by category.",
+            "description": "650+ curated root apps, Magisk, KernelSU, APatch and LSPosed modules organized by category.",
             "url": "https://awesome-android-root.zhoe.org/apps-and-modules/",
             "inLanguage": "en-US",
             "isPartOf": {
@@ -208,7 +208,7 @@ head:
 
 # Best Android Root Apps & Modules
 
-<p class="apps-lede">Explore a curated directory of 600+ Android root apps and modules. Find Magisk, KernelSU, APatch and LSPosed tools by what they help you do, then check the framework, FOSS status and official source before installing.</p>
+<p class="apps-lede">Explore a curated directory of 650+ Android root apps and modules. Find Magisk, KernelSU, APatch and LSPosed tools by what they help you do, then check the framework, FOSS status and official source before installing.</p>
 
 <div class="quick-nav">
 
