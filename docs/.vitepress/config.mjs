@@ -459,87 +459,25 @@ export default withPwa(defineConfig({
       },
       {
         text: 'Rooting Guides',
-        items: [
-          {
-            text: 'Getting Started',
-            items: [
-              { text: 'Introduction to Rooting', link: '/rooting-guides/' },
-              { text: 'Choose Root Method', link: '/rooting-guides/root-framework-comparison' }
-            ]
-          },
-          {
-            text: 'Root Methods',
-            items: [
-              { text: 'Magisk (Recommended)', link: '/rooting-guides/magisk-guide' },
-              { text: 'KernelSU', link: '/rooting-guides/kernelsu-guide' },
-              { text: 'APatch', link: '/rooting-guides/apatch-guide' },
-              { text: 'LSPosed Framework', link: '/rooting-guides/lsposed-guide' },
-              { text: 'Temporary Root (GhostLock)', link: '/rooting-guides/root-without-unlocking-bootloader' }
-            ]
-          },
-          {
-            text: 'Device-Specific',
-            items: [
-              { text: 'Google Pixel', link: '/rooting-guides/how-to-root-pixel-phone' },
-              { text: 'Samsung Galaxy', link: '/rooting-guides/how-to-root-samsung-phone' },
-              { text: 'Xiaomi/Redmi', link: '/rooting-guides/how-to-root-xiaomi-phone' },
-              { text: 'OnePlus', link: '/rooting-guides/how-to-root-oneplus-phone' },
-              { text: 'View All Devices', link: '/rooting-guides/#device-specific-guides' }
-            ]
-          }
-        ]
+        link: '/rooting-guides/',
+        activeMatch: '^/rooting-guides/'
       },
       {
         text: 'Tutorials',
-        items: [
-          {
-            text: 'Essential Guides',
-            items: [
-              { text: 'All Tutorials', link: '/general-guides/' },
-              { text: 'System-Wide Ad Blocking', link: '/general-guides/android-adblocking' },
-              { text: 'Debloat Your Device', link: '/general-guides/android-apps-debloating' },
-              { text: 'Stop Auto Updates', link: '/general-guides/stop-android-app-auto-updates-play-store' }
-            ]
-          },
-          {
-            text: 'Advanced',
-            items: [
-              { text: 'Custom Recovery', link: '/rooting-guides/how-to-install-custom-recovery' },
-              { text: 'Unlock Bootloader', link: '/rooting-guides/how-to-unlock-bootloader' },
-              { text: 'Custom ROM Installation', link: '/rooting-guides/custom-rom-installation' },
-              { text: 'Bootloader Mods & Temp Root', link: '/rooting-guides/temporary-root-solutions' }
-            ]
-          }
-        ]
+        link: '/general-guides/',
+        activeMatch: '^/general-guides/'
       },
       {
         text: 'Help',
         items: [
-          {
-            text: 'Resources',
-            items: [
-              { text: 'Glossary', link: '/apps-and-modules/#glossary' },
-              { text: 'FAQ', link: '/faqs' },
-              { text: 'Troubleshooting', link: '/troubleshooting' },
-              { text: 'Community Resources', link: '/resources' },
-              {
-                text: 'Non-Root Alternatives',
-                link: '/non-root-alternatives',
-              },
-            ],
-          },
-          {
-            text: 'Project',
-            items: [
-              { text: 'About', link: '/about' },
-              { text: 'Contributing', link: '/contributing' },
-              { text: 'Legal Disclaimer', link: '/legal-disclaimer' },
-              {
-                text: '⭐ GitHub',
-                link: 'https://github.com/awesome-android-root/awesome-android-root',
-              },
-            ],
-          },
+          { text: 'FAQ', link: '/faqs' },
+          { text: 'Troubleshooting', link: '/troubleshooting' },
+          { text: 'Resources', link: '/resources' },
+          { text: 'Non-Root Alternatives', link: '/non-root-alternatives' },
+          { text: 'About', link: '/about' },
+          { text: 'Contributing', link: '/contributing' },
+          { text: 'Legal Disclaimer', link: '/legal-disclaimer' },
+          { text: '⭐ GitHub', link: 'https://github.com/awesome-android-root/awesome-android-root' }
         ],
       },
     ],
