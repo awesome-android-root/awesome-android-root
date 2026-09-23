@@ -165,7 +165,7 @@ head:
 | Tool | Purpose | Compatibility | Source |
 |:-----|:--------|:--------------|:-------|
 | **Magisk Built-in Zygisk** | Default Zygisk in Magisk | Magisk 24+ | Built into [Magisk](https://github.com/topjohnwu/Magisk) |
-| **ZygiskNext** | Standalone Zygisk for KSU/Magisk/APatch | Magisk, KernelSU, APatch | [GitHub](https://github.com/Dr-TSNG/ZygiskNext) |
+| **ZygiskNext** | Standalone Zygisk for KSU/Magisk/APatch | Magisk, KernelSU, APatch | [GitHub](https://github.com/LSPosed/ZygiskNext) |
 | **ReZygisk** | Transparent, open-source Zygisk fork | Magisk, KernelSU, APatch | [GitHub](https://github.com/PerformanC/ReZygisk) |
 
 > [!TIP]
