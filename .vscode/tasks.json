@@ -4,7 +4,7 @@
 		{
 			"label": "Build Documentation Site",
 			"type": "shell",
-			"command": "pnpm",
+			"command": "bun",
 			"args": [
 				"run",
 				"docs:build"

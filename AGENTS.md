@@ -101,9 +101,9 @@ The project uses Node.js, VitePress, Markdown/YAML, JavaScript, Python, and Bash
 Use the existing commands from `package.json`:
 
 ```bash
-npm run docs:dev
-npm run docs:build
-npm run docs:preview
+bun run docs:dev
+bun run docs:build
+bun run docs:preview
 ```
 
 When changing JavaScript:
@@ -122,8 +122,12 @@ For documentation changes:
 
 ```bash
 python3 scripts/check_links.py
-npm run docs:build
+bun run docs:build
 ```
+
+For Cloudflare Pages, use `bun run docs:build` as the build command and
+`docs/.vitepress/dist` as the output directory. Pin the build environment to
+Bun 1.4.2 and Node.js 22 or newer.
 
 For app/module additions or reordering, also run when relevant:
 
