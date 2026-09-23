@@ -1,26 +1,17 @@
 <template>
   <div
-    v-if="showReload || isOffline"
+    v-if="isOffline"
     class="pwa-toast"
     :class="{ 'pwa-toast--offline': isOffline }"
     role="status"
     aria-live="polite"
     aria-atomic="true"
   >
-    <!-- Offline notification -->
     <div v-if="isOffline" class="pwa-toast__content">
       <svg class="pwa-toast__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9 9V5h2v4H9zm0 4v-2h2v2H9z" fill="currentColor"/>
       </svg>
       <span class="pwa-toast__message">You're offline - Some features may be limited</span>
-    </div>
-    
-    <!-- Update notification -->
-    <div v-else-if="showReload" class="pwa-toast__content">
-      <svg class="pwa-toast__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm3.707 5.293L9 12l-2.707-2.707 1.414-1.414L9 9.172l3.293-3.293 1.414 1.414z" fill="currentColor"/>
-      </svg>
-      <span class="pwa-toast__message">{{ updateMessage }}</span>
     </div>
   </div>
 </template>
@@ -28,90 +19,21 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
-const showReload = ref(false)
 const isOffline = ref(false)
-const updateMessage = ref('New content available!')
 
-let registration = null
-let updateCheckInterval = null
-
-const checkForUpdates = async () => {
-  if (!registration?.update) return
-
-  try {
-    await registration.update()
-  } catch (error) {
-    console.error('SW update check failed:', error)
-  }
-}
-
-const handleServiceWorkerReload = () => {
-  showReload.value = true
-  updateMessage.value = 'App updated! Refreshing...'
-  window.setTimeout(() => {
-    window.location.reload()
-  }, 300)
-}
-
-
-const updateOnlineStatus = () => {
+function updateOnlineStatus() {
   isOffline.value = !navigator.onLine
-
-  if (isOffline.value) {
-    showReload.value = false
-  }
 }
 
-
-const handleVisibilityChange = () => {
-  if (!document.hidden && navigator.onLine) {
-    checkForUpdates()
-  }
-}
-
-onMounted(async () => {
-  if (!('serviceWorker' in navigator)) {
-    return
-  }
-
-  try {
-    const { registerSW } = await import('virtual:pwa-register')
-
-    registerSW({
-      immediate: true,
-      onNeedReload: handleServiceWorkerReload,
-      onRegistered: (registered) => {
-        registration = registered
-      },
-      onRegisterError: (error) => {
-        console.error('PWA registration error:', error)
-      }
-    })
-
+onMounted(() => {
+  updateOnlineStatus()
     window.addEventListener('online', updateOnlineStatus)
     window.addEventListener('offline', updateOnlineStatus)
-    document.addEventListener('visibilitychange', handleVisibilityChange)
-    
-    updateOnlineStatus()
-    
-    updateCheckInterval = setInterval(checkForUpdates, 60 * 60 * 1000)
-    
-    await navigator.serviceWorker.ready
-    registration = await navigator.serviceWorker.getRegistration()
-    await checkForUpdates()
-  } catch (error) {
-    console.error('PWA initialization error:', error)
-  }
 })
 
 onUnmounted(() => {
   window.removeEventListener('online', updateOnlineStatus)
   window.removeEventListener('offline', updateOnlineStatus)
-  document.removeEventListener('visibilitychange', handleVisibilityChange)
-
-  if (updateCheckInterval) {
-    clearInterval(updateCheckInterval)
-  }
 })
 </script>
 
