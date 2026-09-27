@@ -82,7 +82,7 @@ head:
 
 # About Awesome Android Root
 
-Awesome Android Root serves as a premier, community-curated resource dedicated to Android rooting, deep customization, and user empowerment. It provides a comprehensive, up-to-date directory of over 400 vetted tools, applications, modules, and expert guides designed for power users and developers seeking to unlock the full potential of their devices.
+Awesome Android Root serves as a premier, community-curated resource dedicated to Android rooting, deep customization, and user empowerment. It provides a comprehensive, up-to-date directory of over 600 vetted tools, applications, modules, and expert guides designed for power users and developers seeking to unlock the full potential of their devices.
 
 ## Our Mission
 
