@@ -336,9 +336,9 @@ export default withPwa(defineConfig({
           { text: 'Troubleshooting', link: '/troubleshooting' },
           { text: 'Resources', link: '/resources' },
           { text: 'Non-Root Alternatives', link: '/non-root-alternatives' },
-          { text: 'About', link: '/about' },
           { text: 'Contributing', link: '/contributing' },
           { text: 'Legal Disclaimer', link: '/legal-disclaimer' },
+          { text: 'About', link: '/about' },
           { text: '⭐ GitHub', link: 'https://github.com/awesome-android-root/awesome-android-root' }
         ],
       },
