@@ -86,10 +86,10 @@ head:
       content: Root Framework Comparison
   - - meta
     - property: article:published_time
-      content: 2025-06-01T00:00:00Z
+      content: 2026-09-27T00:00:00Z
   - - meta
     - property: article:modified_time
-      content: 2026-06-05T00:00:00Z
+      content: 2026-09-27T00:00:00Z
   - - meta
     - name: robots
       content: index, follow

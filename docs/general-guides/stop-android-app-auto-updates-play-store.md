@@ -47,7 +47,7 @@ head:
       content: en_US
   - - meta
     - property: og:updated_time
-      content: '2025-07-03T00:00:00Z'
+      content: 2026-09-27T00:00:00Z
 
   # Stop App Updates specific Twitter Card
   - - meta
@@ -82,10 +82,10 @@ head:
       content: https://awesome-android-root.zhoe.org
   - - meta
     - property: article:published_time
-      content: '2025-07-03T00:00:00Z'
+      content: 2026-09-27T00:00:00Z
   - - meta
     - property: article:modified_time
-      content: '2025-12-26T00:00:00Z'
+      content: 2026-09-27T00:00:00Z
   - - meta
     - property: article:section
       content: Android Root Guides

@@ -50,10 +50,10 @@ head:
       content: Android Guides & Tutorials
   - - meta
     - property: article:published_time
-      content: 2025-07-28
+      content: 2026-09-27T00:00:00Z
   - - meta
     - property: article:modified_time
-      content: 2025-12-26
+      content: 2026-09-27T00:00:00Z
   - - meta
     - name: robots
       content: index, follow, max-image-preview:large, max-snippet:-1
