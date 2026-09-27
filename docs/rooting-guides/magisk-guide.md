@@ -77,10 +77,10 @@ head:
       content: Play Integrity Fix
   - - meta
     - property: article:published_time
-      content: 2025-10-07T09:00:00Z
+      content: 2026-09-27T00:00:00Z
   - - meta
     - property: article:modified_time
-      content: 2025-12-26T00:00:00Z
+      content: 2026-09-27T00:00:00Z
   - - meta
     - name: robots
       content: index, follow, max-image-preview:large

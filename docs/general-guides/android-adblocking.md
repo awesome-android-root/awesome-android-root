@@ -59,10 +59,10 @@ head:
       content: Awesome Android Root
   - - meta
     - name: article:published_time
-      content: 2025-01-30
+      content: 2026-09-27T00:00:00Z
   - - meta
     - name: article:modified_time
-      content: 2025-12-26
+      content: 2026-09-27T00:00:00Z
   - - meta
     - name: article:section
       content: Guides

@@ -62,10 +62,10 @@ head:
       content: Android Rooting
   - - meta
     - property: article:published_time
-      content: 2025-07-15T00:00:00Z
+      content: 2026-09-27T00:00:00Z
   - - meta
     - property: article:modified_time
-      content: 2026-02-21T00:00:00Z
+      content: 2026-09-27T00:00:00Z
   - - meta
     - name: robots
       content: index, follow

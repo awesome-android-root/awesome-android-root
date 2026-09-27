@@ -71,10 +71,10 @@ head:
       content: Android Customization
   - - meta
     - property: article:published_time
-      content: 2024-01-15T10:00:00Z
+      content: 2026-09-27T00:00:00Z
   - - meta
     - property: article:modified_time
-      content: 2026-07-02T00:00:00Z
+      content: 2026-09-27T00:00:00Z
   - - meta
     - name: robots
       content: index, follow, max-image-preview:large

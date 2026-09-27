@@ -53,10 +53,10 @@ head:
       content: Legal Disclaimer & Safety Notice for Android Rooting
   - - meta
     - property: article:published_time
-      content: 2025-05-25T00:00:00Z
+      content: 2026-09-27T00:00:00Z
   - - meta
     - property: article:modified_time
-      content: 2026-06-05T00:00:00Z
+      content: 2026-09-27T00:00:00Z
 ---
 
 # Legal Disclaimer & Safety Notice
