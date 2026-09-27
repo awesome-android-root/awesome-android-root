@@ -7,12 +7,6 @@ import BackToTop from './BackToTop.vue'
 import StoreLink from './components/StoreLink.vue'
 import CopyOrDownloadAsMarkdownButtons from 'vitepress-plugin-llms/vitepress-components/CopyOrDownloadAsMarkdownButtons.vue'
 
-function runAfterRender(callback) {
-  requestAnimationFrame(() => {
-    requestAnimationFrame(callback)
-  })
-}
-
 /** @type {import('vitepress').Theme} */
 export default {
   extends: DefaultTheme,
@@ -26,21 +20,12 @@ export default {
     })
   },
 
-  enhanceApp({ app, router }) {
+  enhanceApp({ app }) {
     try {
       app.component('StoreLink', StoreLink)
       app.component('CopyOrDownloadAsMarkdownButtons', CopyOrDownloadAsMarkdownButtons)
     } catch (error) {
       console.error('Failed to register components:', error)
-    }
-
-    if (typeof window !== 'undefined') {
-      router.onAfterRouteChanged = () => {
-        runAfterRender(addAriaLabels)
-      }
-
-      // Initialize on first load
-      runAfterRender(addAriaLabels)
     }
 
     // Global error handler - only verbose in development
