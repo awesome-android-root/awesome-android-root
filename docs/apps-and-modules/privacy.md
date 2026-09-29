@@ -79,6 +79,7 @@ tracking, spoofing your device identity or location, and isolating apps from you
 - **[Mantle](https://github.com/get-mantle/Mantle)** - Xposed module that masks hardware IDs, advertising IDs, build properties, carrier and SIM data, Wi-Fi/Bluetooth MACs and location per app. `Proprietary` `[LSP]`
 - **[Mantle Verify](https://github.com/get-mantle/Mantle-Verify)** - Companion diagnostics app that shows the device, network and account identifiers regular apps can read, and confirms which spoofed values are active. `Proprietary`
 - **[Privacy Kit](https://github.com/Xposed-Modules-Repo/com.sal.privacykit)** - Per-app Android identifier spoofing for LSPosed. `Proprietary` `[LSP]`
+- **[Privacy Kit Lite](https://github.com/Mohithash/privacy-kit-lite)** - Local-only per-app Android identifier spoofing with configurable LSPosed runtime hooks. `FOSS` `[LSP]` | [🌱](https://f-droid.org/en/packages/com.sal.privacykit.lite/)
 - **[SpoofMyDevice](https://github.com/BuSung-dev/SpoofMyDevice)** - Xposed module and companion app for building, saving, and applying spoofed Android device profiles to selected apps. `FOSS` `[LSP]`
 - **[SSAID (Android ID Modifier)](https://github.com/HSSkyBoy/AndroidIDChange)** - A modern Android SSAID (Android ID) inspector, modifier, backup, and management utility. `FOSS` `[LSP]`
 - **[Telephony Spoofer](https://github.com/BrianWalczak/TelephonySpoofer)** - Spoof cellular information, including eSIM compatibility. `FOSS` `[LSP]`
