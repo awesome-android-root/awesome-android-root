@@ -180,9 +180,10 @@ A missing or permanently greyed-out OEM Unlocking option is a stop sign, not a p
    - Install before connecting device
 
 2. **Odin Flash Tool**
-   - Download: [Odin Download](https://odindownload.com/)
-   - Latest version (Odin 3.14.4 or newer)
-   - Extract to easy location
+  - Download the stock Odin package from the [XDA Odin thread](https://xdaforums.com/t/patched-odin-3-13-1.3762572/); this guide's AP-patching steps do not require patched Odin.
+  - The thread warns that packages labeled Odin 3.14.4 are fake. Follow the exact-device instructions for the required version, and do not trust a filename alone.
+  - Compare the archive's SHA-256 with a hash from an independently trusted source, if available. Scan the archive with up-to-date security software, but do not treat a clean scan as proof of authenticity.
+  - Patched Odin builds modify behavior and can bypass checks; use one only when device-specific instructions explicitly require it. Extract the archive before running Odin.
 
 3. **Stock Firmware**
    - Download from [SamFrew](https://samfrew.com/) or [Bifrost](https://github.com/zacharee/Bifrost) or [Frija](https://github.com/SlackingVeteran/frija/releases)
@@ -668,11 +669,11 @@ Once Knox trips to 0x1, it is permanent. Flashing stock firmware does NOT reset 
 **Official Samsung Resources:**
 - [Samsung Firmware](https://samfrew.com/) - Stock firmware downloads
 - [Frija Tool](https://github.com/SlackingVeteran/frija) - Firmware downloader
-- [Odin Download](https://odindownload.com/) - Flash tool
 - [Samsung Developers](https://developer.samsung.com/) - Drivers and tools
 
 **Community Forums:**
 - **[Samsung XDA Forums](https://xdaforums.com/c/samsung.11975/)** – Device-specific development
+- **[Odin stock and patched downloads](https://xdaforums.com/t/patched-odin-3-13-1.3762572/)** – Community thread with package-specific warnings; choose the build required for your device
 - **[One UI Mods Community](https://t.me/oneuimods)** – Samsung customization
 - **[r/Samsung](https://www.reddit.com/r/samsung/)** – Latest device discussions
 - **[Samsung Firmware Database](https://samfrew.com/)** – Firmware downloads
@@ -680,7 +681,6 @@ Once Knox trips to 0x1, it is permanent. Flashing stock firmware does NOT reset 
 **Essential Samsung Resources:**
 - **[Samsung Smart Switch](https://www.samsung.com/us/support/owners/app/smart-switch)** – Backup tool
 - **[SamFrew](https://samfrew.com/)** – Firmware downloads
-- **[ODIN Download](https://odindownload.com/)** – Latest Odin (v3.14.4)
 - **[Heimdall](https://glassechidna.com.au/heimdall/)** – Open-source alternative
 
 **Custom ROM Resources:**
