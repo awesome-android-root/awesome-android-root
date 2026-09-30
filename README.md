@@ -111,7 +111,7 @@ Browse them in [`docs/apps-and-modules/`](docs/apps-and-modules/):
 
 <div align="center">
 
-![Views](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/YOUR_USERNAME/GIST_ID/raw/views.json)
+![Views](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/fynks/83a908bf10243ac78d86addf810cac71/raw/views.json)
 
 **Built with ❤️ by [Awesome Android Root](https://github.com/awesome-android-root/awesome-android-root)**
 
