@@ -178,6 +178,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[HyperStar](https://github.com/YunZiA/HyperStar/blob/master/README_EN-US.md)** - An LSPosed module mainly designed to customize the Xiaomi HyperOS Control Center, along with some features. `FOSS` `[LSP]`
 - **[Janus](https://modules.lsposed.org/module/org.pysh.janus/)** - Enhances Xiaomi rear screens with multitasking, app shortcuts, gestures, notification mirroring, and power-saving features. `Proprietary` `[LSP]`
 - **[Pengeek](https://github.com/monwf/customiuizer)** - Customize your HyperOS to your liking. For HyperOS based on Android 14. `FOSS` `[LSP]`
+- **[XiaoAi Plug](https://github.com/lm060719/XiaoAi-plug)** - Hooks `com.miui.voiceassist` to allow changing the AI model. `FOSS` `[LSP]`
 
 > [!TIP]
 > Check this resource for more [HyperOS Mods ↗](https://github.com/ImKKingshuk/Awesome-HyperOS)
