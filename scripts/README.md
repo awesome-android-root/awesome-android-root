@@ -4,8 +4,9 @@ This directory contains utility scripts used in the awesome-android-root project
 
 ## counter.sh
 
-Counts entries in the Apps & Modules category pages (`docs/apps-and-modules/*.md`) and displays a categorized
-summary (root apps, Magisk modules, KernelSU modules, LSPosed modules).
+Counts entries in the Apps & Modules category pages (`docs/apps-and-modules/*.md`), displays a categorized
+summary, and writes a copyable Markdown table to `docs/count.md`. The documentation build runs this script
+before VitePress, publishing the table at `/count`.
 
 ### Usage
 

@@ -19,7 +19,7 @@
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "docs:build": "bash scripts/counter.sh && vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
   "keywords": [
