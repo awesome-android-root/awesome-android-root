@@ -1,31 +1,45 @@
 #!/usr/bin/env python3
-"""Fetch GitHub repo views, merge into a running history, and write to ./traffic/:
-  data.json        full daily history + total
-  views-badge.svg  flat badge, same look as shields.io
+"""Fetch GitHub repo views, merge into a running history stored in a Gist,
+and publish a shields.io endpoint JSON (views.json) for a dynamic badge.
+Nothing is committed to the repo.
 
 GitHub only keeps 14 days of traffic, so we merge by date and keep it forever.
-Env: TRAFFIC_TOKEN (PAT with repo access), REPO (owner/name).
+Env: TRAFFIC_TOKEN (classic PAT: repo + gist), REPO (owner/name), GIST_ID.
 """
 import json
 import os
 import urllib.request
 from datetime import datetime, timezone
-from pathlib import Path
 
-OUT = Path("traffic")
+API = "https://api.github.com"
+TOKEN = os.environ.get("TRAFFIC_TOKEN", "")
+
+EYE_SVG = (
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="#fff" d="'
+    "M8 2c1.981 0 3.671.992 4.933 2.078 1.27 1.091 2.187 2.345 2.637 3.023a1.62 1.62 0 0 1 0 1.798"
+    "c-.45.678-1.367 1.932-2.637 3.023C11.67 13.008 9.981 14 8 14c-1.981 0-3.671-.992-4.933-2.078"
+    "C1.797 10.83.88 9.576.43 8.898a1.62 1.62 0 0 1 0-1.798c.45-.677 1.367-1.931 2.637-3.022"
+    "C4.33 2.992 6.019 2 8 2ZM1.679 7.932a.12.12 0 0 0 0 .136c.411.622 1.241 1.75 2.366 2.717"
+    "C5.176 11.758 6.527 12.5 8 12.5c1.473 0 2.825-.742 3.955-1.715 1.124-.967 1.954-2.096 "
+    "2.366-2.717a.12.12 0 0 0 0-.136c-.412-.621-1.242-1.75-2.366-2.717C10.824 4.242 9.473 3.5 8 3.5"
+    "c-1.473 0-2.825.742-3.955 1.715-1.124.967-1.954 2.096-2.366 2.717ZM8 10a2 2 0 1 1-.001-3.999"
+    'A2 2 0 0 1 8 10Z"/></svg>'
+)
 
 
-def fetch(repo, token):
+def call(method, url, body=None):
     req = urllib.request.Request(
-        f"https://api.github.com/repos/{repo}/traffic/views",
+        url,
+        method=method,
+        data=json.dumps(body).encode() if body is not None else None,
         headers={
-            "Authorization": f"Bearer {token}",
+            "Authorization": f"Bearer {TOKEN}",
             "Accept": "application/vnd.github+json",
             "X-GitHub-Api-Version": "2022-11-28",
         },
     )
     with urllib.request.urlopen(req) as r:
-        return json.load(r)["views"]
+        return json.load(r)
 
 
 def human(n):
@@ -36,62 +50,48 @@ def human(n):
     return str(n)
 
 
-EYE = (
-    "M8 2c1.981 0 3.671.992 4.933 2.078 1.27 1.091 2.187 2.345 2.637 3.023a1.62 1.62 0 0 1 0 1.798"
-    "c-.45.678-1.367 1.932-2.637 3.023C11.67 13.008 9.981 14 8 14c-1.981 0-3.671-.992-4.933-2.078"
-    "C1.797 10.83.88 9.576.43 8.898a1.62 1.62 0 0 1 0-1.798c.45-.677 1.367-1.931 2.637-3.022"
-    "C4.33 2.992 6.019 2 8 2ZM1.679 7.932a.12.12 0 0 0 0 .136c.411.622 1.241 1.75 2.366 2.717"
-    "C5.176 11.758 6.527 12.5 8 12.5c1.473 0 2.825-.742 3.955-1.715 1.124-.967 1.954-2.096 "
-    "2.366-2.717a.12.12 0 0 0 0-.136c-.412-.621-1.242-1.75-2.366-2.717C10.824 4.242 9.473 3.5 8 3.5"
-    "c-1.473 0-2.825.742-3.955 1.715-1.124.967-1.954 2.096-2.366 2.717ZM8 10a2 2 0 1 1-.001-3.999"
-    "A2 2 0 0 1 8 10Z"
-)
+def endpoint(total):
+    """shields.io endpoint schema."""
+    return {
+        "schemaVersion": 1,
+        "label": "views",
+        "message": human(total),
+        "color": "0969da",
+        "labelColor": "2d333b",
+        "logoSvg": EYE_SVG,
+        "cacheSeconds": 3600,
+    }
 
 
-def badge(label, message, color="#0969da", icon=EYE):
-    """Flat 20px badge with a left icon, same proportions as shields.io."""
-    tl = round(len(label) * 6.4, 1)  # label text width
-    tm = round(len(message) * 7.6, 1)  # message text width
-    x0 = 25  # label text start (icon sits at 7..20)
-    lw = round(x0 + tl + 8)
-    mw = round(tm + 14)
-    w = lw + mw
-    return (
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="20" '
-        f'role="img" aria-label="{label}: {message}"><title>{label}: {message}</title>'
-        '<linearGradient id="s" x2="0" y2="100%"><stop offset="0" stop-color="#fff" '
-        'stop-opacity=".12"/><stop offset="1" stop-opacity=".12"/></linearGradient>'
-        f'<clipPath id="r"><rect width="{w}" height="20" rx="4" fill="#fff"/></clipPath>'
-        f'<g clip-path="url(#r)"><rect width="{lw}" height="20" fill="#2d333b"/>'
-        f'<rect x="{lw}" width="{mw}" height="20" fill="{color}"/>'
-        f'<rect width="{w}" height="20" fill="url(#s)"/></g>'
-        f'<path d="{icon}" fill="#fff" transform="translate(7 3.5) scale(.8125)"/>'
-        '<g fill="#fff" text-anchor="middle" '
-        'font-family="Verdana,Geneva,DejaVu Sans,sans-serif" '
-        'font-size="11">'
-        f'<text x="{x0 + tl / 2}" y="14">{label}</text>'
-        f'<text x="{lw + mw / 2}" y="14" font-weight="bold">{message}</text></g></svg>'
-    )
+def merge(old, fresh):
+    days = dict(old.get("views", {}).get("days", {}))
+    for item in fresh:
+        days[item["timestamp"][:10]] = {"count": item["count"], "uniques": item["uniques"]}
+    days = dict(sorted(days.items()))
+    return {
+        "updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "views": {"total": sum(v["count"] for v in days.values()), "days": days},
+    }
 
 
 def main():
-    repo = os.environ["REPO"]
-    token = os.environ["TRAFFIC_TOKEN"]
-    OUT.mkdir(exist_ok=True)
-    path = OUT / "data.json"
-    data = json.loads(path.read_text()) if path.exists() else {}
-    days = data.get("views", {}).get("days", {})
-    for item in fetch(repo, token):
-        days[item["timestamp"][:10]] = {
-            "count": item["count"],
-            "uniques": item["uniques"],
-        }
-    days = dict(sorted(days.items()))
-    total = sum(v["count"] for v in days.values())
-    data["views"] = {"total": total, "days": days}
-    data["updated"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    path.write_text(json.dumps(data, indent=2))
-    (OUT / "views-badge.svg").write_text(badge("views", human(total)))
+    repo, gist_id = os.environ["REPO"], os.environ["GIST_ID"]
+    gist = call("GET", f"{API}/gists/{gist_id}")
+    f = gist["files"].get("data.json")
+    old = json.loads(f["content"]) if f and not f.get("truncated") else {}
+    fresh = call("GET", f"{API}/repos/{repo}/traffic/views")["views"]
+    data = merge(old, fresh)
+    call(
+        "PATCH",
+        f"{API}/gists/{gist_id}",
+        {
+            "files": {
+                "data.json": {"content": json.dumps(data, indent=2)},
+                "views.json": {"content": json.dumps(endpoint(data["views"]["total"]))},
+            }
+        },
+    )
+    print("total views:", data["views"]["total"])
 
 
 if __name__ == "__main__":

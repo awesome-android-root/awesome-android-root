@@ -5,25 +5,18 @@ on:
     - cron: "0 0 * * 1" # end of Sunday, 00:00 UTC Monday
   workflow_dispatch:
 
-permissions:
-  contents: write
+permissions: {}
 
 jobs:
   stats:
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2404
     steps:
       - uses: actions/checkout@v4
-
-      - name: Fetch traffic
+        with:
+          sparse-checkout: scripts
+      - name: Update gist
         run: python scripts/traffic.py
         env:
           TRAFFIC_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
+          GIST_ID: ${{ secrets.GIST_ID }}
           REPO: ${{ github.repository }}
-
-      - name: Commit
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add traffic
-          git diff --cached --quiet || git commit -m "chore: update traffic stats [skip ci]"
-          git push
