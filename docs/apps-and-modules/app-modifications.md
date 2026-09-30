@@ -187,6 +187,7 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 
 ### WeChat
 
+- **[Inkhide](https://github.com/Xposed-Modules-Repo/com.lu.wxmask272)** -  Protect privacy, setting specific contacts as “close friends”, and hiding their presence throughout WeChat. `Proprietary` `[LSP]`
 - **[MaskWechat](https://github.com/Mingyueyixi/MaskWechat)** - Hide the chat records of specific users to prevent private chats from being peeked by third parties. `FOSS` `[LSP]`
 - **[NewMiko](https://modules.lsposed.org/module/im.mingxi.miko/)** - Various tweaks related to  WeChat app. `Proprietary` `[LSP]`
 - **[WeChat Auxiliary](https://github.com/HdShare/WAuxiliary_Public)** - Various tweaks for WeChat. `Proprietary` `[LSP]`
