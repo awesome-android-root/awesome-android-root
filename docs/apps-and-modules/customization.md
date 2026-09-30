@@ -135,6 +135,7 @@ Magisk/KernelSU/LSPosed modules.
 
 ## Status Bar & Navigation
 
+- **[Duo Status Bar](https://github.com/Xposed-Modules-Repo/io.github.kvmy666.duostatusbar)** - Turns the battery, Wi-Fi and signal icons into one smooth, Apple-style element. `Proprietary` `[LSP]`
 - **[Hide Navbar Keyboard](https://github.com/UNKNUW/Hide-Navbar-Keyboard)** - Hide navbar when keyboard appears. Supports Android 10 -15+. `FOSS` `[M]`
 - **[Lyricon](https://github.com/tomakino/lyricon)** - An Android status bar lyric enhancement tool based on the Xposed framework. `FOSS` `[LSP]`
 - **[LyricProvider](https://github.com/tomakino/LyricProvider/tree/master)** - A lyric provider for Lyricon. `FOSS` `[LSP]`
