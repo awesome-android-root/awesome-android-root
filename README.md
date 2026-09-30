@@ -111,6 +111,10 @@ Browse them in [`docs/apps-and-modules/`](docs/apps-and-modules/):
 
 <div align="center">
 
+![Views](https://raw.githubusercontent.com/awesome-android-root/awesome-android-root/main/traffic/views-badge.svg)
+
+<br>
+
 **Built with ❤️ by [Awesome Android Root](https://github.com/awesome-android-root/awesome-android-root)**
 
 </div>

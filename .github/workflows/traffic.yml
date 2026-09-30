@@ -1,0 +1,29 @@
+name: Traffic stats
+
+on:
+  schedule:
+    - cron: "0 0 * * 1" # end of Sunday, 00:00 UTC Monday
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch traffic
+        run: python scripts/traffic.py
+        env:
+          TRAFFIC_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
+          REPO: ${{ github.repository }}
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add traffic
+          git diff --cached --quiet || git commit -m "chore: update traffic stats [skip ci]"
+          git push
