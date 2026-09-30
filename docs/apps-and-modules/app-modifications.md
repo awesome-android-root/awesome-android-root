@@ -127,6 +127,7 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 
 ### Bilibili
 
+- **[Bilibili Innocent Lab](https://github.com/jichuo1/Bilibili_Innocent_Lab)** - Interface purification and interaction enhancement module for Android Bilibili client. `FOSS` `[LSP]`
 - **[BBZQ](https://github.com/HSSkyBoy/BBZQ)** - Removes unnecessary content, optimizes the core experience, and provide various practical functions. `FOSS` `[LSP]`
 
 ### Discord
