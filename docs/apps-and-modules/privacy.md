@@ -70,6 +70,7 @@ tracking, spoofing your device identity or location, and isolating apps from you
 
 ## Device ID & Spoofing
 
+- **[Device Changer](https://deviceschanger.org)** - Configures device identifiers, build fingerprint, and OS properties per app via Zygisk for QA and compatibility testing. `Proprietary` `[M]`
 - **[Device Faker](https://github.com/Seyud/device_faker/)** - A device model spoofing module based on Zygisk that can configure different device models for different applications. `FOSS` `[M]` `[K]`
 - **[DeviceID/SSAID Changer](https://github.com/sidex15/deviceidchanger)** - A simple WebUI Module to change SSAID/DeviceID on Rooted Android Devices with Apatch, KSU (And its forks), or Magisk. `FOSS` `[M]` `[K]`
 - **[Geergit](https://github.com/pyshivam/geergit-discussion)** - Change (MASKE) the various IDs in the Phone. `Proprietary` `[LSP]`
