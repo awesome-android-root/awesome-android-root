@@ -152,7 +152,6 @@ head:
 
 hero:
   name: "Awesome Android Root"
-  text: "Master Android Rooting"
   tagline: "Explore 650+ root apps and modules, step-by-step rooting guides, and practical troubleshooting for Android power users."
   image:
     src: /images/logo_dark.svg
@@ -342,7 +341,7 @@ features:
   <a href="https://github.com/awesome-android-root/awesome-android-root" class="community-card github">
     <span class="icon">⭐</span>
     <strong>GitHub</strong>
-    <span>4.7k stars</span>
+    <span>5.1k stars</span>
   </a>
   <a href="https://x.com/awsm_and_root" class="community-card twitter">
     <span class="icon">𝕏</span>
