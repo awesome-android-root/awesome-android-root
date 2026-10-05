@@ -87,7 +87,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[Multi Finger Gesture X](https://github.com/EliLei/MultiFingerGestureX)** - An LSPosed/Xposed module that adds 3+ finger gesture support to Android 15+. `FOSS` `[LSP]`
 - **[Ogesture](https://github.com/tanujnotes/ogesture)** - Use gesture navigation with third-party launchers on any Android phone. `FOSS` `[LSP]`
 - **[OPPO/OnePlus side button enhancement](https://github.com/ItosEO/OplusKey)** - Customize the side button behavior on Oppo and OnePlus devices. `Proprietary` `[M]`
-- **[Recents](https://github.com/tymwitko/Recents)** - Launcher-agnostic "Recents" menu for Android. `FOSS` `[LSP]`
+- **[Recents](https://github.com/tymwitko/Recents)** - Launcher-agnostic "Recents" menu for Android. `FOSS`
 - **[Three-Finger-Screenshot](https://github.com/hxreborn/three-finger-swipe)**- Standalone LSPosed implementation of three-finger swipe. `FOSS` `[LSP]`
 - **[Volume Key Track Control Module](https://github.com/Hepolise/VolumeKeyTrackControlModule)** - Allows to skip and play/pause track with volume keys. `FOSS` `[LSP]`
 - **[Volume Scroll](https://github.com/farfromrefug/VolumeScroll)** - Android app to scroll using volume keys. `FOSS` `[M]`
