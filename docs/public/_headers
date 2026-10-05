@@ -64,3 +64,25 @@
   # Protects against cross-origin window access while allowing outbound
   # popups needed for GitHub / Play Store / F-Droid links
   Cross-Origin-Opener-Policy: same-origin-allow-popups
+
+  # ---------------------------------------------------------------------------
+  # Content Security Policy - REPORT ONLY for now.
+  #
+  # Derived from what the site actually loads:
+  #   script-src   self-hosted hashed bundles + the inline bootstrap snippets
+  #                VitePress emits (dark-mode check, platform check) and the
+  #                JSON-LD blocks, so 'unsafe-inline' is required; static
+  #                hosting cannot issue per-request nonces.
+  #   style-src    the single hashed stylesheet plus inline styles from Vue
+  #                components and the footer markup.
+  #   img-src      local images, data:/blob: (inline icons, SVG masks),
+  #                shields.io badges used in the content, and GitHub-hosted
+  #                images/avatars that the service worker also caches.
+  #   connect-src  same-origin page chunks and the Algolia DocSearch endpoints.
+  #   worker-src   the Workbox service worker.
+  #
+  # Switch the header name to `Content-Security-Policy` to enforce it, once
+  # browser reports confirm no legitimate resource is blocked. Keep both the
+  # report-only and enforced versions identical when flipping.
+  # ---------------------------------------------------------------------------
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://img.shields.io https://raw.githubusercontent.com https://avatars.githubusercontent.com https://user-images.githubusercontent.com; font-src 'self' data:; connect-src 'self' https://*.algolia.net https://*.algolianet.com https://*.algolia.io; worker-src 'self'; manifest-src 'self'; media-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'

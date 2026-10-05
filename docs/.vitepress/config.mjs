@@ -1,10 +1,36 @@
+import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
 import llmstxt, { copyOrDownloadAsMarkdownButtons } from 'vitepress-plugin-llms'
 import { storeLinkPlugin } from './markdown/storeLinkPlugin.mjs'
+import { resolveSearchConfig } from './search.mjs'
 
 const isLlmPageLink = (link) =>
   typeof link === 'string' && link.startsWith('/') && link !== '/' && !link.includes('#')
+
+/**
+ * Serve a system font stack instead of the default theme's bundled Inter.
+ *
+ * `vitepress/dist/client/theme-default/index.js` imports `./styles/fonts.css`,
+ * which self-hosts 16 Inter woff2 subsets (~880 kB in dist) and makes VitePress
+ * preload the latin subset on every page. This site is a mobile-heavy docs and
+ * catalog site that does not depend on Inter-specific metrics, so the import is
+ * redirected to `theme/fonts.css`, which defines the same CSS variable
+ * (`--vp-font-family-base`) using platform fonts.
+ *
+ * If a future VitePress release moves that file the hook simply stops matching
+ * and the bundled font comes back - no build failure.
+ */
+const systemFontsPlugin = {
+  name: 'aar-system-fonts',
+  enforce: 'pre',
+  resolveId(source, importer) {
+    if (importer?.includes('theme-default') && /(^|\/)styles\/fonts\.css$/.test(source)) {
+      return fileURLToPath(new URL('./theme/fonts.css', import.meta.url))
+    }
+    return null
+  }
+}
 
 function llmsSidebar(sidebar) {
   const sanitizeItems = (items = []) => items.flatMap((item) => {
@@ -115,15 +141,18 @@ export default withPwa(defineConfig({
 
   vite: {
     plugins: [
-      llmstxt({ sidebar: llmsSidebar })
+      llmstxt({ sidebar: llmsSidebar }),
+      systemFontsPlugin
     ],
     build: {
-      chunkSizeWarningLimit: 1000,
-    },
-    optimizeDeps: {
-      exclude: ['vite-plugin-pwa', 'vitepress-plugin-llms']
+      // Largest page chunk is ~110 kB; the only bigger chunks are the lazily
+      // loaded DocSearch vendor bundles (~490 kB raw / ~124 kB gzip, fetched
+      // when search is opened). 500 kB stays below them while still flagging a
+      // real regression - the previous 1000 kB limit could never fire.
+      chunkSizeWarningLimit: 500,
     },
     server: {
+      // Dev-server only: `server.*` is ignored by `vitepress build`.
       warmup: { clientFiles: ['.vitepress/theme/**/*.{js,ts,vue}'] },
       allowedHosts: true,
     },
@@ -166,17 +195,39 @@ export default withPwa(defineConfig({
       clientsClaim: true,
       cleanupOutdatedCaches: true,
 
-      maximumFileSizeToCacheInBytes: 10 * 1024 * 1024,
+      // Only images are precached (see globPatterns) and the largest shipped
+      // image is ~215 kB, so a 2 MB ceiling is plenty and guards against an
+      // oversized asset silently entering the precache manifest.
+      maximumFileSizeToCacheInBytes: 2 * 1024 * 1024,
 
       runtimeCaching: [
         {
+          // Hashed, immutable build output (JS/CSS). Not precached, so without
+          // this rule every repeat visit re-validates them over the network.
+          urlPattern: ({ url, sameOrigin }) =>
+            sameOrigin && url.pathname.startsWith('/assets/'),
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'aar-static-assets',
+            expiration: {
+              maxEntries: 150,
+              maxAgeSeconds: 60 * 60 * 24 * 365,  // filenames are content-hashed
+              purgeOnQuotaError: true,
+            },
+            cacheableResponse: {
+              statuses: [0, 200],
+            },
+          }
+        },
+        {
+          // Site images and GitHub-hosted content images: stable URLs, safe to
+          // serve from cache first.
           urlPattern: ({ request, url, sameOrigin }) => {
             const isImage = request.destination === 'image' ||
               /\.(png|jpg|jpeg|svg|gif|webp|avif|ico|bmp)$/i.test(url.pathname)
 
             const isAllowedOrigin = sameOrigin ||
               url.origin === 'https://raw.githubusercontent.com' ||
-              url.origin === 'https://avatars.githubusercontent.com' ||
               url.origin === 'https://user-images.githubusercontent.com'
 
             return isImage && isAllowedOrigin
@@ -185,8 +236,43 @@ export default withPwa(defineConfig({
           options: {
             cacheName: 'aar-images-v1',
             expiration: {
-              maxEntries: 400,
+              // The site ships ~10 images; the rest are external GitHub images.
+              maxEntries: 120,
               maxAgeSeconds: 60 * 60 * 24 * 60,  // 60 days (images rarely change)
+              purgeOnQuotaError: true,
+            },
+            cacheableResponse: {
+              statuses: [0, 200],
+            },
+          }
+        },
+        {
+          // Avatars change when a user updates their profile picture: serve the
+          // cached copy immediately, refresh it in the background.
+          urlPattern: ({ url }) => url.origin === 'https://avatars.githubusercontent.com',
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'aar-github-avatars',
+            expiration: {
+              maxEntries: 50,
+              maxAgeSeconds: 60 * 60 * 24 * 7,  // 7 days
+              purgeOnQuotaError: true,
+            },
+            cacheableResponse: {
+              statuses: [0, 200],
+            },
+          }
+        },
+        {
+          // shields.io release/version badges are the only external images used
+          // in the content and their value changes on every upstream release.
+          urlPattern: ({ url }) => url.origin === 'https://img.shields.io',
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'aar-badges',
+            expiration: {
+              maxEntries: 40,
+              maxAgeSeconds: 60 * 60 * 24,  // 1 day
               purgeOnQuotaError: true,
             },
             cacheableResponse: {
@@ -230,8 +316,11 @@ export default withPwa(defineConfig({
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/images/apple-touch-icon.png' }],
 
     // Browser Meta
-    ['meta', { name: 'theme-color', content: '#ffffff', media: '(prefers-color-scheme: light)' }],
-    ['meta', { name: 'theme-color', content: '#0b0b0c', media: '(prefers-color-scheme: dark)' }],
+    // `media` is listed first on purpose: VitePress de-duplicates head tags by the
+    // first non-content attribute, so two `name: 'theme-color'` entries collapse into
+    // one and only the dark variant survives. Keying on `media` keeps both.
+    ['meta', { media: '(prefers-color-scheme: light)', name: 'theme-color', content: '#ffffff' }],
+    ['meta', { media: '(prefers-color-scheme: dark)', name: 'theme-color', content: '#0b0b0c' }],
     ['meta', { name: 'color-scheme', content: 'light dark' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, viewport-fit=cover' }],
     ['meta', { name: 'apple-mobile-web-app-title', content: 'AAR' }],
@@ -264,54 +353,8 @@ export default withPwa(defineConfig({
       dark: '/images/logo_dark.svg',
       alt: 'Awesome Android Root Logo'
     },
-    search: {
-      provider: 'local',
-      options: {
-        detailedView: true,
-        miniSearch: {
-          searchOptions: {
-            fuzzy: 0.2,
-            prefix: true,
-            boost: {
-              title: 4,
-              text: 2,
-              titles: 3
-            },
-            boostDocument: (documentId, term, storedFields) => {
+    search: resolveSearchConfig(),
 
-              // Boost app and module pages in seach results
-              if (documentId.includes('apps-and-modules')) {
-                return 10
-              }
-              return 1
-            }
-          }
-        },
-        async _render(src, env, md) {
-          
-          const html = await md.renderAsync(src, env)
-          if (env.frontmatter?.search === false) return ''
-          return html
-        },
-        translations: {
-          button: {
-            buttonText: 'Search',
-            buttonAriaLabel: 'Search'
-          },
-          modal: {
-            displayDetails: 'Display detailed list',
-            resetButtonTitle: 'Reset search',
-            backButtonTitle: 'Close search',
-            noResultsText: 'No results for',
-            footer: {
-              selectText: 'to select',
-              navigateText: 'to navigate',
-              closeText: 'to close'
-            }
-          }
-        }
-      }
-    },
     nav: [
       { text: 'Home', link: '/' },
       {

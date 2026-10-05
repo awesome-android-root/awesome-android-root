@@ -14,6 +14,23 @@ before VitePress, publishing the table at `/count`.
 cd scripts && bash counter.sh
 ```
 
+## optimize-assets.sh
+
+Optimizes the static assets in `docs/public`: SVGs through SVGO (using
+`scripts/svgo.config.mjs`), the Open Graph cards in `docs/public/images/og/`
+through a 64-colour requantization plus lossless `oxipng`, and the remaining
+PNGs through `oxipng` only. File names, formats and dimensions never change, so
+Open Graph and favicon consumers keep working. Run it after adding or replacing
+an image, then commit the result; it is idempotent.
+
+Requires ImageMagick (`convert`) and Node.js (`npx`).
+
+### Usage
+
+```bash
+bash scripts/optimize-assets.sh
+```
+
 ## check_links.py
 
 Validates all internal Markdown links and heading anchors across `docs/` against
