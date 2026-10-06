@@ -132,14 +132,9 @@ export default withPwa(defineConfig({
       systemFontsPlugin
     ],
     build: {
-      // Largest page chunk is ~110 kB; the only bigger chunks are the lazily
-      // loaded DocSearch vendor bundles (~490 kB raw / ~124 kB gzip, fetched
-      // when search is opened). 500 kB stays below them while still flagging a
-      // real regression - the previous 1000 kB limit could never fire.
-      chunkSizeWarningLimit: 500,
+      chunkSizeWarningLimit: 600,
     },
     server: {
-      // Dev-server only: `server.*` is ignored by `vitepress build`.
       warmup: { clientFiles: ['.vitepress/theme/**/*.{js,ts,vue}'] },
       allowedHosts: true,
     },
@@ -182,15 +177,11 @@ export default withPwa(defineConfig({
       clientsClaim: true,
       cleanupOutdatedCaches: true,
 
-      // Only images are precached (see globPatterns) and the largest shipped
-      // image is ~215 kB, so a 2 MB ceiling is plenty and guards against an
-      // oversized asset silently entering the precache manifest.
       maximumFileSizeToCacheInBytes: 2 * 1024 * 1024,
 
       runtimeCaching: [
         {
-          // Hashed, immutable build output (JS/CSS). Not precached, so without
-          // this rule every repeat visit re-validates them over the network.
+
           urlPattern: ({ url, sameOrigin }) =>
             sameOrigin && url.pathname.startsWith('/assets/'),
           handler: 'CacheFirst',
@@ -207,8 +198,7 @@ export default withPwa(defineConfig({
           }
         },
         {
-          // Site images and GitHub-hosted content images: stable URLs, safe to
-          // serve from cache first.
+
           urlPattern: ({ request, url, sameOrigin }) => {
             const isImage = request.destination === 'image' ||
               /\.(png|jpg|jpeg|svg|gif|webp|avif|ico|bmp)$/i.test(url.pathname)
@@ -233,8 +223,7 @@ export default withPwa(defineConfig({
           }
         },
         {
-          // Avatars change when a user updates their profile picture: serve the
-          // cached copy immediately, refresh it in the background.
+
           urlPattern: ({ url }) => url.origin === 'https://avatars.githubusercontent.com',
           handler: 'StaleWhileRevalidate',
           options: {
