@@ -1,16 +1,3 @@
-/**
- * Replacement for `vitepress/dist/client/theme-default/styles/fonts.css`
- * (aliased in `.vitepress/config.mjs`).
- *
- * The default theme self-hosts the Inter variable font and preloads its latin
- * subset on every page. This project is a mobile-heavy documentation and
- * catalog site, so it uses the platform UI font instead: no font download, no
- * font preload in the critical path, no FOUT.
- *
- * Only `--vp-font-family-base` is defined here, exactly like the file it
- * replaces; `--vp-font-family-mono` keeps the default theme value.
- */
-
 :root {
   --vp-font-family-base:
     system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial,
