@@ -1,18 +1,3 @@
-/**
- * Algolia for Open Source attribution.
- *
- * DocSearch already renders a "Search by Algolia" logo in the modal footer,
- * but it links to its own `www.algolia.com/ref/docsearch/...` referral URL.
- * The Algolia for Open Source agreement for this project requires the
- * attribution to point at:
- *
- *   https://www.algolia.com/?utm_medium=AOS-referral
- *
- * The DocSearch modal is portalled into <body> each time it opens, so a single
- * body-level (non-subtree) MutationObserver is enough to patch the link. The
- * attribution is never hidden or removed - only its href is corrected.
- */
-
 const AOS_URL = 'https://www.algolia.com/?utm_medium=AOS-referral'
 const LOGO_SELECTOR = '.DocSearch-Logo a, .DocSearch-Footer a[href*="algolia.com"]'
 
