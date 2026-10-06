@@ -1,31 +1,5 @@
-/**
- * Search configuration for Awesome Android Root.
- *
- * Primary provider: Algolia DocSearch (Algolia for Open Source plan), using
- * VitePress' built-in `provider: 'algolia'` integration.
- *
- * Credentials are read from the build environment so that no key is committed
- * to the repository and so that only a *Search-Only* key can ever reach the
- * browser:
- *
- *   ALGOLIA_APP_ID          Algolia Application ID            (public)
- *   ALGOLIA_SEARCH_API_KEY  Algolia Search-Only API key       (public)
- *   ALGOLIA_INDEX_NAME      Index name, defaults to `awesome-android-root`
- *
- * Never set the Admin API key here: VitePress inlines these values into the
- * client bundle. See `docs/.vitepress/algolia/README.md` for the full setup
- * (crawler configuration, index settings, re-indexing).
- *
- * Fallback: when the credentials are absent (local `docs:dev`, forks, preview
- * builds without secrets) the site falls back to the previous MiniSearch-based
- * local provider so that search keeps working everywhere. The fallback keeps
- * the original ranking behaviour; its Algolia equivalent lives in the crawler
- * configuration (`customRanking` + `pageRank`).
- */
+const DEFAULT_INDEX_NAME = 'AAR'
 
-const DEFAULT_INDEX_NAME = 'awesome-android-root'
-
-/** Shared wording so both providers present the same UI copy. */
 const BUTTON_TEXT = 'Search'
 const PLACEHOLDER = 'Search apps, modules and guides'
 
@@ -37,7 +11,6 @@ function algoliaSearch({ appId, apiKey, indexName }) {
       apiKey,
       indexName,
       placeholder: PLACEHOLDER,
-      // Conventional keyword search only - Ask AI is deliberately not enabled.
       translations: {
         button: {
           buttonText: BUTTON_TEXT,
@@ -53,9 +26,6 @@ function algoliaSearch({ appId, apiKey, indexName }) {
             noResultsText: 'No results for'
           },
           footer: {
-            // Algolia for Open Source attribution. The logo itself is rendered
-            // by DocSearch; `theme/algoliaAttribution.js` points it at the
-            // required AOS referral URL.
             poweredByText: 'Search by',
             selectText: 'to select',
             navigateText: 'to navigate',
@@ -82,7 +52,6 @@ function localSearch() {
             titles: 3
           },
           boostDocument: (documentId) => {
-            // Boost app and module pages in search results.
             if (documentId.includes('apps-and-modules')) return 10
             return 1
           }
