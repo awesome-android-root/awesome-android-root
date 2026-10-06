@@ -3,7 +3,6 @@ import { defineConfig } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
 import llmstxt, { copyOrDownloadAsMarkdownButtons } from 'vitepress-plugin-llms'
 import { storeLinkPlugin } from './markdown/storeLinkPlugin.mjs'
-import { resolveSearchConfig } from './search.mjs'
 
 const isLlmPageLink = (link) =>
   typeof link === 'string' && link.startsWith('/') && link !== '/' && !link.includes('#')
@@ -323,7 +322,49 @@ export default withPwa(defineConfig({
       dark: '/images/logo_dark.svg',
       alt: 'Awesome Android Root Logo'
     },
-    search: resolveSearchConfig(),
+    search: {
+      provider: 'local',
+      options: {
+        detailedView: true,
+        miniSearch: {
+          searchOptions: {
+            fuzzy: 0.2,
+            prefix: true,
+            boost: {
+              title: 4,
+              text: 2,
+              titles: 3
+            },
+            boostDocument: (documentId) => {
+              if (documentId.includes('apps-and-modules')) return 10
+              return 1
+            }
+          }
+        },
+        async _render(src, env, md) {
+          const html = await md.renderAsync(src, env)
+          if (env.frontmatter?.search === false) return ''
+          return html
+        },
+        translations: {
+          button: {
+            buttonText: 'Search',
+            buttonAriaLabel: 'Search'
+          },
+          modal: {
+            displayDetails: 'Display detailed list',
+            resetButtonTitle: 'Reset search',
+            backButtonTitle: 'Close search',
+            noResultsText: 'No results for',
+            footer: {
+              selectText: 'to select',
+              navigateText: 'to navigate',
+              closeText: 'to close'
+            }
+          }
+        }
+      }
+    },
 
     nav: [
       { text: 'Home', link: '/' },
