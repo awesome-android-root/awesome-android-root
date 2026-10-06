@@ -39,14 +39,6 @@
   box-sizing: border-box;
 }
 
-/* Better text rendering */
-body {
-  font-feature-settings: "liga" 1, "calt" 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
 /**
  * Component: Button
  * -------------------------------------------------------------------------- */
@@ -80,7 +72,8 @@ body {
     #bd34fe 50%,
     #47caff 50%
   );
-  --vp-home-hero-image-filter: blur(44px);
+
+  --vp-home-hero-image-filter: blur(32px);
 }
 
 @media (min-width: 640px) {
@@ -196,11 +189,6 @@ div:has(img[src*="img.shields.io"]) {
     text-decoration: none;
   }
   
-
-body, html {
-  font-family: var(--vp-font-family-base), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
-}
-
 
 /* Image loading states and optimization */
 img {
@@ -748,15 +736,6 @@ margin-bottom: 0.5rem;
 }
 
 
-/**
- * Markdown Actions
- * --------------------------------------------------------------------------
- * Styling for vitepress-plugin-llms:
- * Copy as Markdown / Download as Markdown
- *
- * Designed to feel native to the AAR VitePress theme rather than looking
- * like an external plugin widget.
- */
 
 .vp-doc .llms-markdown-buttons {
   --llms-action-height: 38px;

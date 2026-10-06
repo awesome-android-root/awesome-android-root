@@ -64,3 +64,8 @@
   # Protects against cross-origin window access while allowing outbound
   # popups needed for GitHub / Play Store / F-Droid links
   Cross-Origin-Opener-Policy: same-origin-allow-popups
+
+  # ---------------------------------------------------------------------------
+  # Content Security Policy - REPORT ONLY for now.
+  # ---------------------------------------------------------------------------
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://img.shields.io https://raw.githubusercontent.com https://avatars.githubusercontent.com https://user-images.githubusercontent.com; font-src 'self' data:; connect-src 'self' https://*.algolia.net https://*.algolianet.com https://*.algolia.io; worker-src 'self'; manifest-src 'self'; media-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
