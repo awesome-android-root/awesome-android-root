@@ -39,14 +39,6 @@
   box-sizing: border-box;
 }
 
-/*
- * Typography note: VitePress' own base.css already sets text-rendering,
- * -webkit-font-smoothing and -moz-osx-font-smoothing on <body>, and the
- * "liga"/"calt" features are on by default, so the former override block here
- * was a no-op and has been removed. The font stack itself is defined in
- * theme/fonts.css (system fonts, no web font download).
- */
-
 /**
  * Component: Button
  * -------------------------------------------------------------------------- */
@@ -80,12 +72,7 @@
     #bd34fe 50%,
     #47caff 50%
   );
-  /*
-   * The hero glow is a 12rem gradient circle painted above the fold. A large
-   * blur radius is expensive to rasterize on mid-range phones, so the mobile
-   * value is tightened; the >=640px / >=960px values are unchanged, where the
-   * element is bigger and the device is usually faster.
-   */
+
   --vp-home-hero-image-filter: blur(32px);
 }
 
@@ -202,14 +189,6 @@ div:has(img[src*="img.shields.io"]) {
     text-decoration: none;
   }
   
-
-/*
- * Removed: the previous `body, html { font-family: var(--vp-font-family-base),
- * <long fallback list> }` rule. `--vp-font-family-base` already ends in a
- * generic `sans-serif`, so every family appended after it was unreachable.
- * The effective stack now lives in theme/fonts.css.
- */
-
 
 /* Image loading states and optimization */
 img {
@@ -757,15 +736,6 @@ margin-bottom: 0.5rem;
 }
 
 
-/**
- * Markdown Actions
- * --------------------------------------------------------------------------
- * Styling for vitepress-plugin-llms:
- * Copy as Markdown / Download as Markdown
- *
- * Designed to feel native to the AAR VitePress theme rather than looking
- * like an external plugin widget.
- */
 
 .vp-doc .llms-markdown-buttons {
   --llms-action-height: 38px;
