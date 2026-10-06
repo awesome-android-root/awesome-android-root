@@ -1,10 +1,23 @@
+import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
 import llmstxt, { copyOrDownloadAsMarkdownButtons } from 'vitepress-plugin-llms'
 import { storeLinkPlugin } from './markdown/storeLinkPlugin.mjs'
+import { resolveSearchConfig } from './search.mjs'
 
 const isLlmPageLink = (link) =>
   typeof link === 'string' && link.startsWith('/') && link !== '/' && !link.includes('#')
+
+const systemFontsPlugin = {
+  name: 'aar-system-fonts',
+  enforce: 'pre',
+  resolveId(source, importer) {
+    if (importer?.includes('theme-default') && /(^|\/)styles\/fonts\.css$/.test(source)) {
+      return fileURLToPath(new URL('./theme/fonts.css', import.meta.url))
+    }
+    return null
+  }
+}
 
 function llmsSidebar(sidebar) {
   const sanitizeItems = (items = []) => items.flatMap((item) => {
@@ -115,13 +128,11 @@ export default withPwa(defineConfig({
 
   vite: {
     plugins: [
-      llmstxt({ sidebar: llmsSidebar })
+      llmstxt({ sidebar: llmsSidebar }),
+      systemFontsPlugin
     ],
     build: {
-      chunkSizeWarningLimit: 1000,
-    },
-    optimizeDeps: {
-      exclude: ['vite-plugin-pwa', 'vitepress-plugin-llms']
+      chunkSizeWarningLimit: 600,
     },
     server: {
       warmup: { clientFiles: ['.vitepress/theme/**/*.{js,ts,vue}'] },
@@ -166,17 +177,34 @@ export default withPwa(defineConfig({
       clientsClaim: true,
       cleanupOutdatedCaches: true,
 
-      maximumFileSizeToCacheInBytes: 10 * 1024 * 1024,
+      maximumFileSizeToCacheInBytes: 2 * 1024 * 1024,
 
       runtimeCaching: [
         {
+
+          urlPattern: ({ url, sameOrigin }) =>
+            sameOrigin && url.pathname.startsWith('/assets/'),
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'aar-static-assets',
+            expiration: {
+              maxEntries: 150,
+              maxAgeSeconds: 60 * 60 * 24 * 365,  // filenames are content-hashed
+              purgeOnQuotaError: true,
+            },
+            cacheableResponse: {
+              statuses: [0, 200],
+            },
+          }
+        },
+        {
+
           urlPattern: ({ request, url, sameOrigin }) => {
             const isImage = request.destination === 'image' ||
               /\.(png|jpg|jpeg|svg|gif|webp|avif|ico|bmp)$/i.test(url.pathname)
 
             const isAllowedOrigin = sameOrigin ||
               url.origin === 'https://raw.githubusercontent.com' ||
-              url.origin === 'https://avatars.githubusercontent.com' ||
               url.origin === 'https://user-images.githubusercontent.com'
 
             return isImage && isAllowedOrigin
@@ -185,8 +213,39 @@ export default withPwa(defineConfig({
           options: {
             cacheName: 'aar-images-v1',
             expiration: {
-              maxEntries: 400,
+              maxEntries: 120,
               maxAgeSeconds: 60 * 60 * 24 * 60,  // 60 days (images rarely change)
+              purgeOnQuotaError: true,
+            },
+            cacheableResponse: {
+              statuses: [0, 200],
+            },
+          }
+        },
+        {
+
+          urlPattern: ({ url }) => url.origin === 'https://avatars.githubusercontent.com',
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'aar-github-avatars',
+            expiration: {
+              maxEntries: 50,
+              maxAgeSeconds: 60 * 60 * 24 * 7,  // 7 days
+              purgeOnQuotaError: true,
+            },
+            cacheableResponse: {
+              statuses: [0, 200],
+            },
+          }
+        },
+        {
+          urlPattern: ({ url }) => url.origin === 'https://img.shields.io',
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'aar-badges',
+            expiration: {
+              maxEntries: 40,
+              maxAgeSeconds: 60 * 60 * 24,  // 1 day
               purgeOnQuotaError: true,
             },
             cacheableResponse: {
@@ -229,9 +288,9 @@ export default withPwa(defineConfig({
     ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/images/apple-touch-icon.png' }],
 
-    // Browser Meta
-    ['meta', { name: 'theme-color', content: '#ffffff', media: '(prefers-color-scheme: light)' }],
-    ['meta', { name: 'theme-color', content: '#0b0b0c', media: '(prefers-color-scheme: dark)' }],
+
+    ['meta', { media: '(prefers-color-scheme: light)', name: 'theme-color', content: '#ffffff' }],
+    ['meta', { media: '(prefers-color-scheme: dark)', name: 'theme-color', content: '#0b0b0c' }],
     ['meta', { name: 'color-scheme', content: 'light dark' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, viewport-fit=cover' }],
     ['meta', { name: 'apple-mobile-web-app-title', content: 'AAR' }],
@@ -264,54 +323,8 @@ export default withPwa(defineConfig({
       dark: '/images/logo_dark.svg',
       alt: 'Awesome Android Root Logo'
     },
-    search: {
-      provider: 'local',
-      options: {
-        detailedView: true,
-        miniSearch: {
-          searchOptions: {
-            fuzzy: 0.2,
-            prefix: true,
-            boost: {
-              title: 4,
-              text: 2,
-              titles: 3
-            },
-            boostDocument: (documentId, term, storedFields) => {
+    search: resolveSearchConfig(),
 
-              // Boost app and module pages in seach results
-              if (documentId.includes('apps-and-modules')) {
-                return 10
-              }
-              return 1
-            }
-          }
-        },
-        async _render(src, env, md) {
-          
-          const html = await md.renderAsync(src, env)
-          if (env.frontmatter?.search === false) return ''
-          return html
-        },
-        translations: {
-          button: {
-            buttonText: 'Search',
-            buttonAriaLabel: 'Search'
-          },
-          modal: {
-            displayDetails: 'Display detailed list',
-            resetButtonTitle: 'Reset search',
-            backButtonTitle: 'Close search',
-            noResultsText: 'No results for',
-            footer: {
-              selectText: 'to select',
-              navigateText: 'to navigate',
-              closeText: 'to close'
-            }
-          }
-        }
-      }
-    },
     nav: [
       { text: 'Home', link: '/' },
       {
