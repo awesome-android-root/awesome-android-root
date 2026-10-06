@@ -6,7 +6,6 @@ import PwaReload from './PwaReload.vue'
 import BackToTop from './BackToTop.vue'
 import StoreLink from './components/StoreLink.vue'
 import CopyOrDownloadAsMarkdownButtons from 'vitepress-plugin-llms/vitepress-components/CopyOrDownloadAsMarkdownButtons.vue'
-import { setupAlgoliaAttribution } from './algoliaAttribution'
 
 /** @type {import('vitepress').Theme} */
 export default {
@@ -22,10 +21,6 @@ export default {
   },
 
   enhanceApp({ app }) {
-    // Keeps the required "Search by Algolia" attribution pointing at the
-    // Algolia for Open Source referral URL. No-op when search is local.
-    setupAlgoliaAttribution()
-
     try {
       app.component('StoreLink', StoreLink)
       app.component('CopyOrDownloadAsMarkdownButtons', CopyOrDownloadAsMarkdownButtons)
