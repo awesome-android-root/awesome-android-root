@@ -8,19 +8,6 @@ import { resolveSearchConfig } from './search.mjs'
 const isLlmPageLink = (link) =>
   typeof link === 'string' && link.startsWith('/') && link !== '/' && !link.includes('#')
 
-/**
- * Serve a system font stack instead of the default theme's bundled Inter.
- *
- * `vitepress/dist/client/theme-default/index.js` imports `./styles/fonts.css`,
- * which self-hosts 16 Inter woff2 subsets (~880 kB in dist) and makes VitePress
- * preload the latin subset on every page. This site is a mobile-heavy docs and
- * catalog site that does not depend on Inter-specific metrics, so the import is
- * redirected to `theme/fonts.css`, which defines the same CSS variable
- * (`--vp-font-family-base`) using platform fonts.
- *
- * If a future VitePress release moves that file the hook simply stops matching
- * and the bundled font comes back - no build failure.
- */
 const systemFontsPlugin = {
   name: 'aar-system-fonts',
   enforce: 'pre',
@@ -236,7 +223,6 @@ export default withPwa(defineConfig({
           options: {
             cacheName: 'aar-images-v1',
             expiration: {
-              // The site ships ~10 images; the rest are external GitHub images.
               maxEntries: 120,
               maxAgeSeconds: 60 * 60 * 24 * 60,  // 60 days (images rarely change)
               purgeOnQuotaError: true,
@@ -264,8 +250,6 @@ export default withPwa(defineConfig({
           }
         },
         {
-          // shields.io release/version badges are the only external images used
-          // in the content and their value changes on every upstream release.
           urlPattern: ({ url }) => url.origin === 'https://img.shields.io',
           handler: 'StaleWhileRevalidate',
           options: {
@@ -315,10 +299,7 @@ export default withPwa(defineConfig({
     ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/images/apple-touch-icon.png' }],
 
-    // Browser Meta
-    // `media` is listed first on purpose: VitePress de-duplicates head tags by the
-    // first non-content attribute, so two `name: 'theme-color'` entries collapse into
-    // one and only the dark variant survives. Keying on `media` keeps both.
+
     ['meta', { media: '(prefers-color-scheme: light)', name: 'theme-color', content: '#ffffff' }],
     ['meta', { media: '(prefers-color-scheme: dark)', name: 'theme-color', content: '#0b0b0c' }],
     ['meta', { name: 'color-scheme', content: 'light dark' }],
