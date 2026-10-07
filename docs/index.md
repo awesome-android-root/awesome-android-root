@@ -154,8 +154,7 @@ hero:
   name: "Awesome Android Root"
   tagline: "Explore 650+ root apps and modules, step-by-step rooting guides, and practical troubleshooting for Android power users."
   image:
-    light: /images/logo.svg
-    dark: /images/logo_dark.svg
+    src: /images/logo_dark.svg
     alt: Awesome Android Root - Ultimate Rooting Hub Logo
   actions:
     - theme: brand
