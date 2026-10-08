@@ -151,7 +151,7 @@ Based on APatch upstream docs and repository notes:
 - Image extraction tools (for payload/Firmware archives)
 
 **Device:**
-- Latest APatch manager from [GitHub Releases](https://github.com/bmax121/APatch/releases/latest) or [F-Droid](https://f-droid.org/packages/me.bmax.apatch/)
+- Latest APatch manager from [GitHub Releases](https://github.com/bmax121/APatch/releases/latest)
 - File manager
 - 500MB+ free storage
 
