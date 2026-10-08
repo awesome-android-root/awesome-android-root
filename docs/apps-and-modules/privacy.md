@@ -115,3 +115,4 @@ tracking, spoofing your device identity or location, and isolating apps from you
 - **[Tarnhelm](https://github.com/lz233/Tarnhelm)** - The magic to clean sharing links up. `FOSS` `[LSP]`
 - **[Transparent Screenshot](https://github.com/Dszsu/Transparent_screenshot)** - Hide the application window during screenshots, screen recording, and screen casting. `FOSS` `[LSP]`
 - **[Turn Off Sensors](https://github.com/KatelynTheStargazer/TurnOffSensors-Magisk)** - Disables device sensors on startup via the sensor_privacy service on Android. `FOSS` `[M]`
+- **[VirtualNet](https://github.com/saadnahid7/VirtualNet)** - Open-source Xposed module for choosing per app whether it sees Wi-Fi, mobile data, or both. `FOSS` `[LSP]`
