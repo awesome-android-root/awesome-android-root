@@ -92,7 +92,6 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 - **[SELinux Permissive](https://github.com/evdenis/selinux_permissive)** - Magisk Module that switches SELinux to permissive mode. `FOSS` `[M]`
 - **[Shevery](https://github.com/HmnDev-Tech/shevery)** - Based on shizuku with Jetpack Compose, Material 3, and compatibility enhancements. `FOSS`
 - **[Shizuku](https://github.com/RikkaApps/Shizuku)** - Use system APIs directly with ADB/root privileges. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/moe.shizuku.privileged.api) | [▶️](https://play.google.com/store/search?q=shizuku&c=apps)
-- **[SideWire](https://github.com/mzggr0914/SideWire-KernelSU)** - Native bridge for controlling rooted Android devices from Windows, macOS, or Linux. `FOSS` `[K]`
 - **[SQLite3 for Android](https://github.com/rojenzaman/sqlite3-magisk-module)** - Provides a statically linked `sqlite3` binary for arm64-v8a, armeabi-v7a, x86 and x86_64. `Proprietary` `[M]`
 - **[Zygisk-Loader](https://github.com/HanSoBored/Zygisk-Loader)** - Module for hot-swapping native libraries into Android applications without rebooting. `FOSS` `[K]`
 
