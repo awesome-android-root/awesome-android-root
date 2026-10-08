@@ -103,6 +103,7 @@ tracking, spoofing your device identity or location, and isolating apps from you
 - **[Do Not Try Accessibility](https://github.com/Nitsuya/DoNotTryAccessibility)** - Hook System Framework makes the app think that accessibility services are not enabled. `FOSS` `[LSP]`
 - **[FuseFixer](https://github.com/5ec1cff/FuseFixer)** - Hooks the MediaProvider Fuse Daemon to stop apps probing package existence through `Android/data` directory quirks (Unicode casefold tricks). `FOSS` `[LSP]`
 - **[FuseHide](https://github.com/XiaoTong6666/FuseHide)** - Hides chosen storage paths from MediaProvider on Android 12+ at runtime, and debugs/fixes `Android/data` Unicode casefold scenarios. `FOSS` `[LSP]`
+- **[Ghost Mode](https://github.com/Foxlape/GhostMode)** - Turn your Android device 'unavailable' for incoming calls while keeping LTE/5G mobile data fully working. `FOSS` `[LSP]`
 - **[GreenDotHide](https://github.com/Dorian399/GreenDotHide)** - Hides the green dot indicating sensitive permission use. Works only on MIUI/HyperOS. `FOSS` `[LSP]`
 - **[IAmNotADeveloper](https://github.com/xfqwdsj/IAmNotADeveloper)** - Hide Android developer-related switches status. `FOSS` `[LSP]`
 - **[Image Copy Hide](https://github.com/cookieof/ImageCopyHide)** - Automatically copy and hide files from /sdcard/DCIM/Camera to /sdcard/wot/cptp. `FOSS` `[M]` 
