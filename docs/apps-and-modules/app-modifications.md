@@ -183,6 +183,7 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 
 - **[Douyin Enhancer](https://github.com/twyora/DouyinEnhancer)** - Adds minor quality-of-life features to Douyin (Chinese TikTok). `FOSS` `[LSP]`
 - **[TikTok AntiBurn](https://github.com/0mnr0/TikTokAntiBurn)** - Overlap the TikTok app elements to prevent the screen from burning out. `FOSS` `[LSP]`
+- **[TiktokPatchXposed](https://github.com/hik0w/TiktokPatchXposed)** - Xposed module for TikTok app adding various patches. `FOSS` `[LSP]`
 - **[Toki](https://github.com/MeiYongAI/Toki)** - Adds various tweaks to TikTok app. `FOSS` `[LSP]`
 
 ### WeChat
