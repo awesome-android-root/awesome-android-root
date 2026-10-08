@@ -192,6 +192,7 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 - **[NewMiko](https://modules.lsposed.org/module/im.mingxi.miko/)** - Various tweaks related to  WeChat app. `Proprietary` `[LSP]`
 - **[WeChat Auxiliary](https://github.com/HdShare/WAuxiliary_Public)** - Various tweaks for WeChat. `Proprietary` `[LSP]`
 - **[WePadBridge](https://github.com/libingtong/WePadBridge)** - Enables tablet interface and features in WeChat Work mobile app. `FOSS` `[LSP]`
+- **[WeChatTablet](https://github.com/Xposed-Modules-Repo/top.hookvip.wxtablet)** - Enables tablet interface and features in WeChat mobile app. `Proprietary` `[LSP]`
 
 ### Weibo
 
