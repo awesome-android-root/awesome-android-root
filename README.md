@@ -111,7 +111,7 @@ Browse them in [`docs/apps-and-modules/`](docs/apps-and-modules/):
 
 <div align="center">
 
-![Views](https://img.shields.io/endpoint?style=for-the-badge&url=https://gist.githubusercontent.com/fynks/83a908bf10243ac78d86addf810cac71/raw/views.json)
+[![Views](https://img.shields.io/endpoint?style=for-the-badge&url=https://gist.githubusercontent.com/fynks/83a908bf10243ac78d86addf810cac71/raw/views.json)](https://github.com/awesome-android-root/awesome-android-root/graphs/traffic)
 
 **Built with ❤️ by [Awesome Android Root](https://github.com/awesome-android-root/awesome-android-root)**
 
