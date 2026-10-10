@@ -5,7 +5,7 @@ description: "Learn how to root a Samsung Galaxy with model- and region-specific
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.zhoe.org/rooting-guides/how-to-root-samsung-phone
+      href: https://awesome-android-root.xyz/rooting-guides/how-to-root-samsung-phone
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: Samsung Galaxy rooting guide covering bootloader eligibility, OEM unlocking, Download Mode, Odin AP patching, Magisk, Knox and One UI differences.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.zhoe.org/rooting-guides/how-to-root-samsung-phone
+      content: https://awesome-android-root.xyz/rooting-guides/how-to-root-samsung-phone
   - - meta
     - property: og:image
-      content: https://awesome-android-root.zhoe.org/images/og/samsung.png
+      content: https://awesome-android-root.xyz/images/og/samsung.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -38,7 +38,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.zhoe.org/images/og/samsung.png
+      content: https://awesome-android-root.xyz/images/og/samsung.png
   - - meta
     - name: twitter:image:alt
       content: Samsung Galaxy rooting guide with Odin, AP patching and Magisk

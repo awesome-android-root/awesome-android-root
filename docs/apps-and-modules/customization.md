@@ -5,7 +5,7 @@ description: "Themes, launchers, gesture tweaks, fonts, lockscreen mods, and UI 
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.zhoe.org/apps-and-modules/customization
+      href: https://awesome-android-root.xyz/apps-and-modules/customization
   - - meta
     - name: robots
       content: index, follow
@@ -26,10 +26,10 @@ head:
       content: "Themes, launchers, gesture tweaks, fonts, lockscreen mods, and UI tools for turning rooted Android into your own setup."
   - - meta
     - property: og:url
-      content: https://awesome-android-root.zhoe.org/apps-and-modules/customization
+      content: https://awesome-android-root.xyz/apps-and-modules/customization
   - - meta
     - property: og:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:locale
       content: en_US
@@ -47,7 +47,7 @@ head:
       content: "Customization for rooted Android: themes and visual mods, launchers, status bar & navigation tweaks, gestures, fonts & emojis, notifications, lockscreen/AOD and screen & display modules and apps."
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
 ---
 
 # Customization

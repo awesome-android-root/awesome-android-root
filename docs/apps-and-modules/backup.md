@@ -5,7 +5,7 @@ description: "Backup and restore apps for rooted Android: full app+data backups,
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.zhoe.org/apps-and-modules/backup
+      href: https://awesome-android-root.xyz/apps-and-modules/backup
   - - meta
     - name: robots
       content: index, follow
@@ -26,10 +26,10 @@ head:
       content: "Backup and restore apps for rooted Android: full app+data backups, cloud backup, nandroid and partition images and data recovery tools."
   - - meta
     - property: og:url
-      content: https://awesome-android-root.zhoe.org/apps-and-modules/backup
+      content: https://awesome-android-root.xyz/apps-and-modules/backup
   - - meta
     - property: og:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:locale
       content: en_US
@@ -47,7 +47,7 @@ head:
       content: "Backup and restore apps for rooted Android: full app+data backups, cloud backup, nandroid and partition images and data recovery tools."
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
 ---
 
 # Backup & Restore

@@ -5,7 +5,7 @@ description: "Root firewalls, network filters, and security modules that control
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.zhoe.org/apps-and-modules/security
+      href: https://awesome-android-root.xyz/apps-and-modules/security
   - - meta
     - name: robots
       content: index, follow
@@ -26,10 +26,10 @@ head:
       content: "Root firewalls, network filters, and security modules that control app access and harden rooted Android devices."
   - - meta
     - property: og:url
-      content: https://awesome-android-root.zhoe.org/apps-and-modules/security
+      content: https://awesome-android-root.xyz/apps-and-modules/security
   - - meta
     - property: og:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:locale
       content: en_US
@@ -47,7 +47,7 @@ head:
       content: "Security tools for rooted Android: security apps, firewalls and filtering apps and modules (Magisk, KernelSU, LSPosed) that control app network access and harden your device."
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
 ---
 
 # Security

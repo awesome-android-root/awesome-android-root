@@ -5,7 +5,7 @@ description: "Audio apps and modules for rooted Android: system-wide audio enhan
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.zhoe.org/apps-and-modules/audio
+      href: https://awesome-android-root.xyz/apps-and-modules/audio
   - - meta
     - name: robots
       content: index, follow
@@ -26,10 +26,10 @@ head:
       content: "Audio apps and modules for rooted Android: system-wide audio enhancement (Viper-style processing, Dolby and more), audio control and audio effect tools."
   - - meta
     - property: og:url
-      content: https://awesome-android-root.zhoe.org/apps-and-modules/audio
+      content: https://awesome-android-root.xyz/apps-and-modules/audio
   - - meta
     - property: og:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:locale
       content: en_US
@@ -47,7 +47,7 @@ head:
       content: "Audio apps and modules for rooted Android: system-wide audio enhancement (Viper-style processing, Dolby and more), audio control and audio effect tools."
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
 ---
 
 # Audio

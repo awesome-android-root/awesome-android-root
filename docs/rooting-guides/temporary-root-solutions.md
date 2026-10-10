@@ -5,7 +5,7 @@ description: "Compare temporary root methods for Android, including locked-bootl
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.zhoe.org/rooting-guides/temporary-root-solutions
+      href: https://awesome-android-root.xyz/rooting-guides/temporary-root-solutions
   - - meta
     - name: author
       content: Awesome Android Root
@@ -23,7 +23,7 @@ head:
       content: "Compare Android temporary root, bootloader modification tools and standard Magisk, KernelSU and APatch rooting, with device limits and safety notes."
   - - meta
     - property: og:url
-      content: https://awesome-android-root.zhoe.org/rooting-guides/temporary-root-solutions
+      content: https://awesome-android-root.xyz/rooting-guides/temporary-root-solutions
   - - meta
     - property: og:locale
       content: en_US
@@ -66,16 +66,16 @@ head:
       {
         "@context": "https://schema.org",
         "@type": "TechArticle",
-        "@id": "https://awesome-android-root.zhoe.org/rooting-guides/temporary-root-solutions#article",
+        "@id": "https://awesome-android-root.xyz/rooting-guides/temporary-root-solutions#article",
         "headline": "Temporary Root for Android: Methods & Solutions",
         "description": "A practical comparison of Android temporary root, bootloader modification tools and their limitations.",
-        "image": "https://awesome-android-root.zhoe.org/images/og.png",
-        "author": { "@id": "https://awesome-android-root.zhoe.org/#organization" },
-        "publisher": { "@id": "https://awesome-android-root.zhoe.org/#organization" },
+        "image": "https://awesome-android-root.xyz/images/og.png",
+        "author": { "@id": "https://awesome-android-root.xyz/#organization" },
+        "publisher": { "@id": "https://awesome-android-root.xyz/#organization" },
         "datePublished": "2026-08-07",
         "dateModified": "2026-09-13",
         "mainEntityOfPage": {
-          "@id": "https://awesome-android-root.zhoe.org/rooting-guides/temporary-root-solutions#webpage"
+          "@id": "https://awesome-android-root.xyz/rooting-guides/temporary-root-solutions#webpage"
         },
         "articleSection": "Android Rooting Guides",
         "inLanguage": "en-US",

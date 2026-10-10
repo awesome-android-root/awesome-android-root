@@ -5,7 +5,7 @@ description: "Learn Magisk installation, boot image patching, modules, Zygisk, D
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.zhoe.org/rooting-guides/magisk-guide
+      href: https://awesome-android-root.xyz/rooting-guides/magisk-guide
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: Install Magisk with boot image patching, systemless modules, Zygisk, DenyList and practical troubleshooting guidance.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.zhoe.org/rooting-guides/magisk-guide
+      content: https://awesome-android-root.xyz/rooting-guides/magisk-guide
   - - meta
     - property: og:image
-      content: https://awesome-android-root.zhoe.org/images/og/magisk-guide.png
+      content: https://awesome-android-root.xyz/images/og/magisk-guide.png
   - - meta
     - property: og:locale
       content: en_US
@@ -44,7 +44,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.zhoe.org/images/og/magisk-guide.png
+      content: https://awesome-android-root.xyz/images/og/magisk-guide.png
   - - meta
     - name: twitter:image:alt
       content: Magisk Root Guide - Universal Systemless Rooting

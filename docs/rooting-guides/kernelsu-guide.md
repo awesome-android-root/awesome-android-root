@@ -5,7 +5,7 @@ description: "Learn KernelSU installation, GKI and LKM modes, KernelSU Next, mod
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.zhoe.org/rooting-guides/kernelsu-guide
+      href: https://awesome-android-root.xyz/rooting-guides/kernelsu-guide
   - - meta
     - property: og:type
       content: article
@@ -17,10 +17,10 @@ head:
       content: Learn KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles and troubleshooting.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.zhoe.org/rooting-guides/kernelsu-guide
+      content: https://awesome-android-root.xyz/rooting-guides/kernelsu-guide
   - - meta
     - property: og:image
-      content: https://awesome-android-root.zhoe.org/images/og/kernelsu-guide.png
+      content: https://awesome-android-root.xyz/images/og/kernelsu-guide.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -98,7 +98,7 @@ head:
       content: "Learn KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles and troubleshooting."
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.zhoe.org/images/og/kernelsu-guide.png
+      content: https://awesome-android-root.xyz/images/og/kernelsu-guide.png
   - - meta
     - name: twitter:image:alt
       content: KernelSU Root Guide - Complete Installation Tutorial
@@ -117,16 +117,16 @@ head:
       {
         "@context": "https://schema.org",
         "@type": "TechArticle",
-        "@id": "https://awesome-android-root.zhoe.org/rooting-guides/kernelsu-guide#article",
+        "@id": "https://awesome-android-root.xyz/rooting-guides/kernelsu-guide#article",
         "headline": "KernelSU Root Guide: Installation, Modules & Troubleshooting",
         "description": "KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles and troubleshooting.",
-        "image": "https://awesome-android-root.zhoe.org/images/og/kernelsu-guide.png",
-        "author": { "@id": "https://awesome-android-root.zhoe.org/#organization" },
-        "publisher": { "@id": "https://awesome-android-root.zhoe.org/#organization" },
+        "image": "https://awesome-android-root.xyz/images/og/kernelsu-guide.png",
+        "author": { "@id": "https://awesome-android-root.xyz/#organization" },
+        "publisher": { "@id": "https://awesome-android-root.xyz/#organization" },
         "datePublished": "2025-01-12",
         "dateModified": "2026-09-13",
         "mainEntityOfPage": {
-          "@id": "https://awesome-android-root.zhoe.org/rooting-guides/kernelsu-guide#webpage"
+          "@id": "https://awesome-android-root.xyz/rooting-guides/kernelsu-guide#webpage"
         },
         "articleSection": "Android Rooting Guides",
         "inLanguage": "en-US",

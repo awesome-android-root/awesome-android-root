@@ -5,7 +5,7 @@ description: "Debloating apps and Magisk/KernelSU modules for rooted Android: re
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.zhoe.org/apps-and-modules/debloating
+      href: https://awesome-android-root.xyz/apps-and-modules/debloating
   - - meta
     - name: robots
       content: index, follow
@@ -26,10 +26,10 @@ head:
       content: "Debloating apps and Magisk/KernelSU modules for rooted Android: remove preinstalled bloatware, uninstall system apps safely, and keep only what you use."
   - - meta
     - property: og:url
-      content: https://awesome-android-root.zhoe.org/apps-and-modules/debloating
+      content: https://awesome-android-root.xyz/apps-and-modules/debloating
   - - meta
     - property: og:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:locale
       content: en_US
@@ -47,7 +47,7 @@ head:
       content: "Debloating apps and Magisk/KernelSU modules for rooted Android: remove preinstalled bloatware, uninstall system apps safely, and keep only what you use."
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
 ---
 
 # Debloating

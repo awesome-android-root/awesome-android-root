@@ -3,7 +3,7 @@
 User-agent: *
 Allow: /
 Disallow: /assets/
-Sitemap: https://awesome-android-root.zhoe.org/sitemap.xml
+Sitemap: https://awesome-android-root.xyz/sitemap.xml
 
 # Search engines
 User-agent: Googlebot

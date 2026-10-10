@@ -5,7 +5,7 @@ description: "Learn about the Awesome Android Root project, its editorial approa
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.zhoe.org/about
+      href: https://awesome-android-root.xyz/about
   - - meta
     - property: og:type
       content: website
@@ -17,10 +17,10 @@ head:
       content: Learn how the Awesome Android Root project curates Android root apps, modules, guides and troubleshooting resources.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.zhoe.org/about
+      content: https://awesome-android-root.xyz/about
   - - meta
     - property: og:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:locale
       content: en_US
@@ -38,7 +38,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
       content: About Awesome Android Root - Ultimate Rooting Resource

@@ -5,7 +5,7 @@ description: "Root managers, metamodules, LSPosed, Zygisk, and Play Integrity to
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.zhoe.org/apps-and-modules/root-management
+      href: https://awesome-android-root.xyz/apps-and-modules/root-management
   - - meta
     - name: robots
       content: index, follow
@@ -26,10 +26,10 @@ head:
       content: "Root managers, metamodules, LSPosed, Zygisk, and Play Integrity tools for Magisk, KernelSU, and APatch on rooted Android."
   - - meta
     - property: og:url
-      content: https://awesome-android-root.zhoe.org/apps-and-modules/root-management
+      content: https://awesome-android-root.xyz/apps-and-modules/root-management
   - - meta
     - property: og:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:locale
       content: en_US
@@ -47,7 +47,7 @@ head:
       content: "Root management apps, Magisk/KernelSU/APatch managers, metamodules, LSPosed & Zygisk frameworks, and root hiding & Play Integrity tools for rooted Android devices."
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
 ---
 
 # Root Management

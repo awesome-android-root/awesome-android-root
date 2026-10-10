@@ -5,15 +5,15 @@ description: Browse a curated directory of 650+ Android root apps, Magisk, Kerne
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.zhoe.org/apps-and-modules/
+      href: https://awesome-android-root.xyz/apps-and-modules/
   - - link
     - rel: alternate
       hreflang: en
-      href: https://awesome-android-root.zhoe.org/apps-and-modules/
+      href: https://awesome-android-root.xyz/apps-and-modules/
   - - link
     - rel: alternate
       hreflang: x-default
-      href: https://awesome-android-root.zhoe.org/apps-and-modules/
+      href: https://awesome-android-root.xyz/apps-and-modules/
   - - link
     - rel: dns-prefetch
       href: https://api.github.com
@@ -34,13 +34,13 @@ head:
       content: Browse 650+ curated Android root apps, Magisk, KernelSU, APatch and LSPosed modules organized by use case, framework and source.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.zhoe.org/apps-and-modules/
+      content: https://awesome-android-root.xyz/apps-and-modules/
   - - meta
     - property: og:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:image:secure_url
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:image:alt
       content: Best Android Root Apps & Modules - 650+ curated tools
@@ -70,7 +70,7 @@ head:
       content: Browse 650+ curated Android root apps and modules organized by use case and root framework.
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: robots
       content: index, follow, max-image-preview:large
@@ -82,13 +82,13 @@ head:
         "@graph": [
           {
             "@type": "CollectionPage",
-            "@id": "https://awesome-android-root.zhoe.org/apps-and-modules/#collection",
+            "@id": "https://awesome-android-root.xyz/apps-and-modules/#collection",
             "name": "Best Android Root Apps & Modules",
             "description": "650+ curated root apps, Magisk, KernelSU, APatch and LSPosed modules organized by category.",
-            "url": "https://awesome-android-root.zhoe.org/apps-and-modules/",
+            "url": "https://awesome-android-root.xyz/apps-and-modules/",
             "inLanguage": "en-US",
             "isPartOf": {
-              "@id": "https://awesome-android-root.zhoe.org/#website"
+              "@id": "https://awesome-android-root.xyz/#website"
             },
             "about": "Android rooting software"
           },
@@ -100,97 +100,97 @@ head:
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Root Management",
-                "url": "https://awesome-android-root.zhoe.org/apps-and-modules/root-management"
+                "url": "https://awesome-android-root.xyz/apps-and-modules/root-management"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "System",
-                "url": "https://awesome-android-root.zhoe.org/apps-and-modules/system"
+                "url": "https://awesome-android-root.xyz/apps-and-modules/system"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Performance & Battery",
-                "url": "https://awesome-android-root.zhoe.org/apps-and-modules/performance"
+                "url": "https://awesome-android-root.xyz/apps-and-modules/performance"
               },
               {
                 "@type": "ListItem",
                 "position": 4,
                 "name": "Privacy",
-                "url": "https://awesome-android-root.zhoe.org/apps-and-modules/privacy"
+                "url": "https://awesome-android-root.xyz/apps-and-modules/privacy"
               },
               {
                 "@type": "ListItem",
                 "position": 5,
                 "name": "Security",
-                "url": "https://awesome-android-root.zhoe.org/apps-and-modules/security"
+                "url": "https://awesome-android-root.xyz/apps-and-modules/security"
               },
               {
                 "@type": "ListItem",
                 "position": 6,
                 "name": "Ad Blocking",
-                "url": "https://awesome-android-root.zhoe.org/apps-and-modules/ad-blocking"
+                "url": "https://awesome-android-root.xyz/apps-and-modules/ad-blocking"
               },
               {
                 "@type": "ListItem",
                 "position": 7,
                 "name": "App Modifications",
-                "url": "https://awesome-android-root.zhoe.org/apps-and-modules/app-modifications"
+                "url": "https://awesome-android-root.xyz/apps-and-modules/app-modifications"
               },
               {
                 "@type": "ListItem",
                 "position": 8,
                 "name": "File Management",
-                "url": "https://awesome-android-root.zhoe.org/apps-and-modules/file-management"
+                "url": "https://awesome-android-root.xyz/apps-and-modules/file-management"
               },
               {
                 "@type": "ListItem",
                 "position": 9,
                 "name": "Backup & Restore",
-                "url": "https://awesome-android-root.zhoe.org/apps-and-modules/backup"
+                "url": "https://awesome-android-root.xyz/apps-and-modules/backup"
               },
               {
                 "@type": "ListItem",
                 "position": 10,
                 "name": "Customization",
-                "url": "https://awesome-android-root.zhoe.org/apps-and-modules/customization"
+                "url": "https://awesome-android-root.xyz/apps-and-modules/customization"
               },
               {
                 "@type": "ListItem",
                 "position": 11,
                 "name": "Audio",
-                "url": "https://awesome-android-root.zhoe.org/apps-and-modules/audio"
+                "url": "https://awesome-android-root.xyz/apps-and-modules/audio"
               },
               {
                 "@type": "ListItem",
                 "position": 12,
                 "name": "Networking",
-                "url": "https://awesome-android-root.zhoe.org/apps-and-modules/networking"
+                "url": "https://awesome-android-root.xyz/apps-and-modules/networking"
               },
               {
                 "@type": "ListItem",
                 "position": 13,
                 "name": "Gaming",
-                "url": "https://awesome-android-root.zhoe.org/apps-and-modules/gaming"
+                "url": "https://awesome-android-root.xyz/apps-and-modules/gaming"
               },
               {
                 "@type": "ListItem",
                 "position": 14,
                 "name": "Development & Automation",
-                "url": "https://awesome-android-root.zhoe.org/apps-and-modules/development"
+                "url": "https://awesome-android-root.xyz/apps-and-modules/development"
               },
               {
                 "@type": "ListItem",
                 "position": 15,
                 "name": "Debloating",
-                "url": "https://awesome-android-root.zhoe.org/apps-and-modules/debloating"
+                "url": "https://awesome-android-root.xyz/apps-and-modules/debloating"
               },
               {
                 "@type": "ListItem",
                 "position": 16,
                 "name": "General Utilities",
-                "url": "https://awesome-android-root.zhoe.org/apps-and-modules/utilities"
+                "url": "https://awesome-android-root.xyz/apps-and-modules/utilities"
               }
             ]
           }
@@ -324,7 +324,7 @@ Apps and modules are grouped by **what you want to accomplish**, not by whether 
 
 | Platform | Purpose | Link |
 |:---|:---|:---|
-| 🌐 **Website** | Browse apps, modules & guides | [awesome-android-root.zhoe.org](https://awesome-android-root.zhoe.org) |
+| 🌐 **Website** | Browse apps, modules & guides | [awesome-android-root.xyz](https://awesome-android-root.xyz) |
 | 📂 **GitHub** | Source, discussions & issues | [GitHub Repo](https://github.com/awesome-android-root/awesome-android-root) |
 | 𝕏 **X/Twitter** | Updates & news | [@awsm_and_root](https://x.com/awsm_and_root) |
 

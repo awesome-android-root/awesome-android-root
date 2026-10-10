@@ -5,7 +5,7 @@ description: "Fix common Android root problems: bootloops, missing root, incompa
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.zhoe.org/troubleshooting
+      href: https://awesome-android-root.xyz/troubleshooting
   - - meta
     - property: og:type
       content: article
@@ -20,13 +20,13 @@ head:
       content: Diagnose Android root bootloops, missing root, module failures, Play Integrity detection, recovery and flashing errors.
   - - meta
     - property: og:url
-      content: https://awesome-android-root.zhoe.org/troubleshooting
+      content: https://awesome-android-root.xyz/troubleshooting
   - - meta
     - property: og:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:image:secure_url
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:image:alt
       content: Android Root Troubleshooting Guide - Fix Common Rooting Issues
@@ -59,7 +59,7 @@ head:
       content: Practical fixes for bootloops, missing root, incompatible modules, integrity checks and recovery problems.
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Root Troubleshooting Guide - Fix Bootloops and Installation Errors
