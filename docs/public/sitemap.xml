@@ -7,55 +7,55 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://awesome-android-root.zhoe.org/</loc>
+  <loc>https://awesome-android-root.xyz/</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
   <image:image>
-    <image:loc>https://awesome-android-root.zhoe.org/images/og.png</image:loc>
+    <image:loc>https://awesome-android-root.xyz/images/og.png</image:loc>
     <image:title>Awesome Android Root - Ultimate Rooting Hub</image:title>
   </image:image>
 </url>
 
 <!-- Top-level pages -->
 <url>
-  <loc>https://awesome-android-root.zhoe.org/about</loc>
+  <loc>https://awesome-android-root.xyz/about</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.70</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/contributing</loc>
+  <loc>https://awesome-android-root.xyz/contributing</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>yearly</changefreq>
   <priority>0.70</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/faqs</loc>
+  <loc>https://awesome-android-root.xyz/faqs</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/troubleshooting</loc>
+  <loc>https://awesome-android-root.xyz/troubleshooting</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/resources</loc>
+  <loc>https://awesome-android-root.xyz/resources</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/legal-disclaimer</loc>
+  <loc>https://awesome-android-root.xyz/legal-disclaimer</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>yearly</changefreq>
   <priority>0.60</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/non-root-alternatives</loc>
+  <loc>https://awesome-android-root.xyz/non-root-alternatives</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
@@ -64,7 +64,7 @@
 
 <!-- Apps and Modules section - HIGH VALUE -->
 <url>
-  <loc>https://awesome-android-root.zhoe.org/apps-and-modules/</loc>
+  <loc>https://awesome-android-root.xyz/apps-and-modules/</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.98</priority>
@@ -72,97 +72,97 @@
 
 <!-- Apps & Modules category pages -->
 <url>
-  <loc>https://awesome-android-root.zhoe.org/apps-and-modules/root-management</loc>
+  <loc>https://awesome-android-root.xyz/apps-and-modules/root-management</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/apps-and-modules/system</loc>
+  <loc>https://awesome-android-root.xyz/apps-and-modules/system</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/apps-and-modules/performance</loc>
+  <loc>https://awesome-android-root.xyz/apps-and-modules/performance</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/apps-and-modules/privacy</loc>
+  <loc>https://awesome-android-root.xyz/apps-and-modules/privacy</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/apps-and-modules/security</loc>
+  <loc>https://awesome-android-root.xyz/apps-and-modules/security</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/apps-and-modules/ad-blocking</loc>
+  <loc>https://awesome-android-root.xyz/apps-and-modules/ad-blocking</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/apps-and-modules/app-modifications</loc>
+  <loc>https://awesome-android-root.xyz/apps-and-modules/app-modifications</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/apps-and-modules/debloating</loc>
+  <loc>https://awesome-android-root.xyz/apps-and-modules/debloating</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/apps-and-modules/file-management</loc>
+  <loc>https://awesome-android-root.xyz/apps-and-modules/file-management</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/apps-and-modules/backup</loc>
+  <loc>https://awesome-android-root.xyz/apps-and-modules/backup</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/apps-and-modules/customization</loc>
+  <loc>https://awesome-android-root.xyz/apps-and-modules/customization</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/apps-and-modules/audio</loc>
+  <loc>https://awesome-android-root.xyz/apps-and-modules/audio</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/apps-and-modules/networking</loc>
+  <loc>https://awesome-android-root.xyz/apps-and-modules/networking</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/apps-and-modules/gaming</loc>
+  <loc>https://awesome-android-root.xyz/apps-and-modules/gaming</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/apps-and-modules/development</loc>
+  <loc>https://awesome-android-root.xyz/apps-and-modules/development</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/apps-and-modules/utilities</loc>
+  <loc>https://awesome-android-root.xyz/apps-and-modules/utilities</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
@@ -170,7 +170,7 @@
 
 <!-- Rooting Guides section - HIGH VALUE -->
 <url>
-  <loc>https://awesome-android-root.zhoe.org/rooting-guides/</loc>
+  <loc>https://awesome-android-root.xyz/rooting-guides/</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.98</priority>
@@ -178,7 +178,7 @@
 
 <!-- General Guides section -->
 <url>
-  <loc>https://awesome-android-root.zhoe.org/general-guides/</loc>
+  <loc>https://awesome-android-root.xyz/general-guides/</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.85</priority>
@@ -186,61 +186,61 @@
 
 <!-- Primary guide pages -->
 <url>
-  <loc>https://awesome-android-root.zhoe.org/rooting-guides/how-to-unlock-bootloader</loc>
+  <loc>https://awesome-android-root.xyz/rooting-guides/how-to-unlock-bootloader</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/rooting-guides/how-to-install-custom-recovery</loc>
+  <loc>https://awesome-android-root.xyz/rooting-guides/how-to-install-custom-recovery</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/rooting-guides/custom-rom-installation</loc>
+  <loc>https://awesome-android-root.xyz/rooting-guides/custom-rom-installation</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/rooting-guides/magisk-guide</loc>
+  <loc>https://awesome-android-root.xyz/rooting-guides/magisk-guide</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.92</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/rooting-guides/kernelsu-guide</loc>
+  <loc>https://awesome-android-root.xyz/rooting-guides/kernelsu-guide</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/rooting-guides/apatch-guide</loc>
+  <loc>https://awesome-android-root.xyz/rooting-guides/apatch-guide</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/rooting-guides/lsposed-guide</loc>
+  <loc>https://awesome-android-root.xyz/rooting-guides/lsposed-guide</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.85</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/rooting-guides/root-framework-comparison</loc>
+  <loc>https://awesome-android-root.xyz/rooting-guides/root-framework-comparison</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.88</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/rooting-guides/root-without-unlocking-bootloader</loc>
+  <loc>https://awesome-android-root.xyz/rooting-guides/root-without-unlocking-bootloader</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/rooting-guides/temporary-root-solutions</loc>
+  <loc>https://awesome-android-root.xyz/rooting-guides/temporary-root-solutions</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.75</priority>
@@ -248,37 +248,37 @@
 
 <!-- Device-specific guides -->
 <url>
-  <loc>https://awesome-android-root.zhoe.org/rooting-guides/how-to-root-xiaomi-phone</loc>
+  <loc>https://awesome-android-root.xyz/rooting-guides/how-to-root-xiaomi-phone</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.82</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/rooting-guides/how-to-root-samsung-phone</loc>
+  <loc>https://awesome-android-root.xyz/rooting-guides/how-to-root-samsung-phone</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.82</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/rooting-guides/how-to-root-pixel-phone</loc>
+  <loc>https://awesome-android-root.xyz/rooting-guides/how-to-root-pixel-phone</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/rooting-guides/how-to-root-oneplus-phone</loc>
+  <loc>https://awesome-android-root.xyz/rooting-guides/how-to-root-oneplus-phone</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.78</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/rooting-guides/how-to-root-nothing-phone</loc>
+  <loc>https://awesome-android-root.xyz/rooting-guides/how-to-root-nothing-phone</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.76</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/rooting-guides/how-to-root-motorola-phone</loc>
+  <loc>https://awesome-android-root.xyz/rooting-guides/how-to-root-motorola-phone</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.76</priority>
@@ -286,19 +286,19 @@
 
 <!-- General Guides pages -->
 <url>
-  <loc>https://awesome-android-root.zhoe.org/general-guides/android-adblocking</loc>
+  <loc>https://awesome-android-root.xyz/general-guides/android-adblocking</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.82</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/general-guides/android-apps-debloating</loc>
+  <loc>https://awesome-android-root.xyz/general-guides/android-apps-debloating</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://awesome-android-root.zhoe.org/general-guides/stop-android-app-auto-updates-play-store</loc>
+  <loc>https://awesome-android-root.xyz/general-guides/stop-android-app-auto-updates-play-store</loc>
   <lastmod>2026-09-27T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.78</priority>

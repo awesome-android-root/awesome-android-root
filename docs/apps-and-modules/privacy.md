@@ -5,7 +5,7 @@ description: "Privacy apps and modules for hiding files, spoofing IDs, controlli
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.zhoe.org/apps-and-modules/privacy
+      href: https://awesome-android-root.xyz/apps-and-modules/privacy
   - - meta
     - name: robots
       content: index, follow
@@ -26,10 +26,10 @@ head:
       content: "Privacy apps and modules for hiding files, spoofing IDs, controlling app data access, and reducing tracking on rooted Android."
   - - meta
     - property: og:url
-      content: https://awesome-android-root.zhoe.org/apps-and-modules/privacy
+      content: https://awesome-android-root.xyz/apps-and-modules/privacy
   - - meta
     - property: og:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:locale
       content: en_US
@@ -47,7 +47,7 @@ head:
       content: "Privacy tools for rooted Android devices: privacy apps, Magisk modules, KernelSU modules and LSPosed modules for controlling data access, hiding private files, spoofing device ID and location, and isolating apps."
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
 ---
 
 # Privacy

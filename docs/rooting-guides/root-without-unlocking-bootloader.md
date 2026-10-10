@@ -5,7 +5,7 @@ description: "Can Android be rooted without unlocking the bootloader? Learn how 
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.zhoe.org/rooting-guides/root-without-unlocking-bootloader
+      href: https://awesome-android-root.xyz/rooting-guides/root-without-unlocking-bootloader
   - - meta
     - name: author
       content: Awesome Android Root
@@ -23,7 +23,7 @@ head:
       content: "Can Android be rooted without unlocking the bootloader? GhostLock can provide temporary root on some vulnerable builds, with clear limits and no persistence after reboot."
   - - meta
     - property: og:url
-      content: https://awesome-android-root.zhoe.org/rooting-guides/root-without-unlocking-bootloader
+      content: https://awesome-android-root.xyz/rooting-guides/root-without-unlocking-bootloader
   - - meta
     - property: og:locale
       content: en_US
@@ -69,16 +69,16 @@ head:
       {
         "@context": "https://schema.org",
         "@type": "TechArticle",
-        "@id": "https://awesome-android-root.zhoe.org/rooting-guides/root-without-unlocking-bootloader#article",
+        "@id": "https://awesome-android-root.xyz/rooting-guides/root-without-unlocking-bootloader#article",
         "headline": "GhostLock: Root Android Without Unlocking the Bootloader",
         "description": "How GhostLock provides temporary Android root on supported vulnerable builds, and what it cannot do.",
-        "image": "https://awesome-android-root.zhoe.org/images/og.png",
-        "author": { "@id": "https://awesome-android-root.zhoe.org/#organization" },
-        "publisher": { "@id": "https://awesome-android-root.zhoe.org/#organization" },
+        "image": "https://awesome-android-root.xyz/images/og.png",
+        "author": { "@id": "https://awesome-android-root.xyz/#organization" },
+        "publisher": { "@id": "https://awesome-android-root.xyz/#organization" },
         "datePublished": "2026-08-26",
         "dateModified": "2026-09-13",
         "mainEntityOfPage": {
-          "@id": "https://awesome-android-root.zhoe.org/rooting-guides/root-without-unlocking-bootloader#webpage"
+          "@id": "https://awesome-android-root.xyz/rooting-guides/root-without-unlocking-bootloader#webpage"
         },
         "articleSection": "Android Rooting Guides",
         "inLanguage": "en-US",

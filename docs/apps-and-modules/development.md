@@ -5,7 +5,7 @@ description: "ADB, shells, automation, Linux environments, and hardware tools fo
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.zhoe.org/apps-and-modules/development
+      href: https://awesome-android-root.xyz/apps-and-modules/development
   - - meta
     - name: robots
       content: index, follow
@@ -26,10 +26,10 @@ head:
       content: "ADB, shells, automation, Linux environments, and hardware tools for developers and advanced rooted Android users."
   - - meta
     - property: og:url
-      content: https://awesome-android-root.zhoe.org/apps-and-modules/development
+      content: https://awesome-android-root.xyz/apps-and-modules/development
   - - meta
     - property: og:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:locale
       content: en_US
@@ -47,7 +47,7 @@ head:
       content: "Development, automation and power-user tools for rooted Android: terminal & shell, ADB and debugging tools, developer utilities, Linux environments (chroot/containers), automation apps and hardware/sensor tools."
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
 ---
 
 # Development & Automation

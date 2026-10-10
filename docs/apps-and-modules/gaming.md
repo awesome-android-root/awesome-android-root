@@ -5,7 +5,7 @@ description: "Gaming apps and modules for rooted Android: performance tweaks, FP
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.zhoe.org/apps-and-modules/gaming
+      href: https://awesome-android-root.xyz/apps-and-modules/gaming
   - - meta
     - name: robots
       content: index, follow
@@ -26,10 +26,10 @@ head:
       content: "Gaming apps and modules for rooted Android: performance tweaks, FPS unlockers and resolution changers, plus game modification tools."
   - - meta
     - property: og:url
-      content: https://awesome-android-root.zhoe.org/apps-and-modules/gaming
+      content: https://awesome-android-root.xyz/apps-and-modules/gaming
   - - meta
     - property: og:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:locale
       content: en_US
@@ -47,7 +47,7 @@ head:
       content: "Gaming apps and modules for rooted Android: performance tweaks, FPS unlockers and resolution changers, plus game modification tools."
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
 ---
 
 # Gaming

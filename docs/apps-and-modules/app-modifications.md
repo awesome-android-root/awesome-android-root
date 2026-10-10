@@ -5,7 +5,7 @@ description: "App patchers, social media mods, YouTube tweaks, and signature too
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.zhoe.org/apps-and-modules/app-modifications
+      href: https://awesome-android-root.xyz/apps-and-modules/app-modifications
   - - meta
     - name: robots
       content: index, follow
@@ -26,10 +26,10 @@ head:
       content: "App patchers, social media mods, YouTube tweaks, and signature tools for customizing Android apps on rooted devices."
   - - meta
     - property: og:url
-      content: https://awesome-android-root.zhoe.org/apps-and-modules/app-modifications
+      content: https://awesome-android-root.xyz/apps-and-modules/app-modifications
   - - meta
     - property: og:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:locale
       content: en_US
@@ -47,7 +47,7 @@ head:
       content: "App modification tools for rooted Android: patchers (ReVanced-style), app mods, social media clients (Telegram, WhatsApp, Reddit, X/Twitter and more), browser and YouTube mods and signature verification tools."
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
 ---
 
 # App Modifications

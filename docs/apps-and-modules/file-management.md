@@ -5,7 +5,7 @@ description: "Root file managers, storage cleaners, partition tools, and file ut
 head:
   - - link
     - rel: canonical
-      href: https://awesome-android-root.zhoe.org/apps-and-modules/file-management
+      href: https://awesome-android-root.xyz/apps-and-modules/file-management
   - - meta
     - name: robots
       content: index, follow
@@ -26,10 +26,10 @@ head:
       content: "Root file managers, storage cleaners, partition tools, and file utilities for rooted Android power users."
   - - meta
     - property: og:url
-      content: https://awesome-android-root.zhoe.org/apps-and-modules/file-management
+      content: https://awesome-android-root.xyz/apps-and-modules/file-management
   - - meta
     - property: og:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:locale
       content: en_US
@@ -47,7 +47,7 @@ head:
       content: "File management for rooted Android: file managers with root access, storage cleaning apps and Magisk/KernelSU modules, and file & partition tools for power users."
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.zhoe.org/images/og.png
+      content: https://awesome-android-root.xyz/images/og.png
 ---
 
 # File Management

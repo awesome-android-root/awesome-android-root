@@ -49,7 +49,7 @@ export default withPwa(defineConfig({
   metaChunk: true,
 
   transformHead({ pageData }) {
-    const site = 'https://awesome-android-root.zhoe.org'
+    const site = 'https://awesome-android-root.xyz'
     const relativePath = pageData.relativePath || 'index.md'
     const route = relativePath === 'index.md'
       ? '/'

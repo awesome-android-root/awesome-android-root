@@ -12,10 +12,10 @@ head:
       content: "website"
   - - meta
     - property: og:url
-      content: "https://awesome-android-root.zhoe.org"
+      content: "https://awesome-android-root.xyz"
   - - meta
     - property: og:image
-      content: "https://awesome-android-root.zhoe.org/images/og.png"
+      content: "https://awesome-android-root.xyz/images/og.png"
   - - meta
     - property: og:title
       content: "Android Root Apps, Modules & Rooting Guides | Awesome Android Root"
@@ -24,7 +24,7 @@ head:
       content: "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices."
   - - meta
     - property: og:image:secure_url
-      content: "https://awesome-android-root.zhoe.org/images/og.png"
+      content: "https://awesome-android-root.xyz/images/og.png"
   - - meta
     - property: og:image:alt
       content: "Android Root Apps, Modules & Rooting Guides | Awesome Android Root"
@@ -54,7 +54,7 @@ head:
       content: "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices."
   - - meta
     - name: twitter:image
-      content: "https://awesome-android-root.zhoe.org/images/og.png"
+      content: "https://awesome-android-root.xyz/images/og.png"
   - - meta
     - name: twitter:image:alt
       content: "Android Root Apps, Modules & Rooting Guides | Awesome Android Root"
@@ -66,7 +66,7 @@ head:
       content: "2026-09-13T00:00:00Z"
   - - link
     - rel: canonical
-      href: "https://awesome-android-root.zhoe.org"
+      href: "https://awesome-android-root.xyz"
   - - link
     - rel: prefetch
       href: "/apps-and-modules/"
@@ -78,20 +78,20 @@ head:
         "@graph": [
           {
             "@type": "WebSite",
-            "@id": "https://awesome-android-root.zhoe.org/#website",
+            "@id": "https://awesome-android-root.xyz/#website",
             "name": "Awesome Android Root",
             "alternateName": "Ultimate Android Rooting Hub",
             "description": "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices.",
-            "url": "https://awesome-android-root.zhoe.org/",
+            "url": "https://awesome-android-root.xyz/",
             "inLanguage": "en-US",
             "publisher": {
-              "@id": "https://awesome-android-root.zhoe.org/#organization"
+              "@id": "https://awesome-android-root.xyz/#organization"
             },
             "potentialAction": {
               "@type": "SearchAction",
               "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": "https://awesome-android-root.zhoe.org/search?q={search_term_string}"
+                "urlTemplate": "https://awesome-android-root.xyz/search?q={search_term_string}"
               },
               "query-input": "required name=search_term_string"
             },
@@ -102,31 +102,31 @@ head:
           },
           {
             "@type": ["WebPage", "CollectionPage"],
-            "@id": "https://awesome-android-root.zhoe.org/#webpage",
+            "@id": "https://awesome-android-root.xyz/#webpage",
             "name": "Android Root Apps, Modules & Rooting Guides | Awesome Android Root",
             "description": "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices.",
-            "url": "https://awesome-android-root.zhoe.org/",
+            "url": "https://awesome-android-root.xyz/",
             "datePublished": "2025-05-25T00:00:00Z",
             "dateModified": "2026-06-26T00:00:00Z",
             "inLanguage": "en-US",
             "isPartOf": {
-              "@id": "https://awesome-android-root.zhoe.org/#website"
+              "@id": "https://awesome-android-root.xyz/#website"
             },
             "image": {
               "@type": "ImageObject",
-              "url": "https://awesome-android-root.zhoe.org/images/og.png",
+              "url": "https://awesome-android-root.xyz/images/og.png",
               "width": 1200,
               "height": 630
             }
           },
           {
             "@type": "Organization",
-            "@id": "https://awesome-android-root.zhoe.org/#organization",
+            "@id": "https://awesome-android-root.xyz/#organization",
             "name": "Awesome Android Root",
-            "url": "https://awesome-android-root.zhoe.org/",
+            "url": "https://awesome-android-root.xyz/",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://awesome-android-root.zhoe.org/images/logo.png",
+              "url": "https://awesome-android-root.xyz/images/logo.png",
               "width": 330,
               "height": 330
             },
@@ -139,12 +139,12 @@ head:
             "@type": "SiteNavigationElement",
             "name": "Primary Navigation",
             "about": "Top-level sections of Awesome Android Root",
-            "url": "https://awesome-android-root.zhoe.org/",
+            "url": "https://awesome-android-root.xyz/",
             "hasPart": [
-              { "@type": "WebPage", "name": "Root Apps", "url": "https://awesome-android-root.zhoe.org/apps-and-modules/" },
-              { "@type": "WebPage", "name": "Root Guides", "url": "https://awesome-android-root.zhoe.org/rooting-guides/" },
-              { "@type": "WebPage", "name": "Resources", "url": "https://awesome-android-root.zhoe.org/resources" },
-              { "@type": "WebPage", "name": "FAQs", "url": "https://awesome-android-root.zhoe.org/faqs" }
+              { "@type": "WebPage", "name": "Root Apps", "url": "https://awesome-android-root.xyz/apps-and-modules/" },
+              { "@type": "WebPage", "name": "Root Guides", "url": "https://awesome-android-root.xyz/rooting-guides/" },
+              { "@type": "WebPage", "name": "Resources", "url": "https://awesome-android-root.xyz/resources" },
+              { "@type": "WebPage", "name": "FAQs", "url": "https://awesome-android-root.xyz/faqs" }
             ]
           }
         ]
