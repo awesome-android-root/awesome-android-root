@@ -12,7 +12,7 @@
 
 <sub>Discover 650+ root apps, Magisk / KernelSU / APatch / LSPosed (Xposed) modules and step-by-step rooting guides.</sub>
 
-[![Website](https://img.shields.io/badge/Website-awesome--android--root.zhoe.org%E2%86%97-blue?style=for-the-badge&logo=googlechrome&logoColor=white)](https://awesome-android-root.xyz/)
+[![Website](https://img.shields.io/badge/Website-awesome--android--root.xyz%E2%86%97-blue?style=for-the-badge&logo=googlechrome&logoColor=white)](https://awesome-android-root.xyz/)
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?logo=github&style=for-the-badge&color=blue&cacheSeconds=3600)](https://github.com/awesome-android-root/awesome-android-root)
 [![Total Entries](https://img.shields.io/badge/Apps%20%26%20Modules-650+-blue?style=for-the-badge&logo=android&cacheSeconds=3600)](https://awesome-android-root.xyz/apps-and-modules/)
