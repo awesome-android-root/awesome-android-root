@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: Contribution Guidelines
-description: "Complete guide for contributing root apps, Magisk/KernelSU modules, and guides to the Awesome Android Root collection with detailed formatting standards."
+title: Contribution guidelines
+description: "Entry format, description standards, category rules and review requirements for contributing apps, modules and guides."
 head:
   - - link
     - rel: canonical
@@ -11,10 +11,10 @@ head:
       content: article
   - - meta
     - property: og:title
-      content: Contributing to Awesome Android Root - Contribution Guidelines
+      content: Contribution guidelines · Awesome Android Root
   - - meta
     - property: og:description
-      content: Help grow the ultimate Android root resource collection. Learn how to contribute apps, Magisk modules, rooting guides, and more with our comprehensive guidelines.
+      content: Entry format, description standards, category rules and review requirements for contributing apps, modules and guides.
   - - meta
     - property: og:url
       content: https://awesome-android-root.xyz/contributing
@@ -41,13 +41,13 @@ head:
       content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
-      content: Contribution Guidelines - Awesome Android Root
+      content: Contribution guidelines for Awesome Android Root
   - - meta
     - name: twitter:title
-      content: Contributing to Awesome Android Root - Guidelines
+      content: Contribution guidelines · Awesome Android Root
   - - meta
     - name: twitter:description
-      content: Help build the ultimate Android root resource collection. Learn contribution guidelines and standards.
+      content: Entry format, description standards, category rules and review requirements.
   - - meta
     - name: author
       content: Awesome Android Root Project
@@ -85,15 +85,15 @@ head:
     - name: robots
       content: index, follow
 ---
-# Contribution Guidelines
+# Contribution guidelines
 
-Thank you for contributing to **Awesome Android Root**! This guide helps you add quality entries to our collection of **650+ root apps and modules**.
+Thanks for contributing to **Awesome Android Root**. This guide explains how to add and update apps, modules and guides in the collection.
 
-## Quick Start
+## Quick start
 
 **Want to add an app or module?** Follow these 3 simple steps:
 
-### 1. Fork & Edit
+### 1. Fork & edit
 1. **Fork** this repository
 2. **Edit** the category page that best matches the app/module (see [Category Pages](#category-pages))
 3. **Submit** a pull request
@@ -101,18 +101,18 @@ Thank you for contributing to **Awesome Android Root**! This guide helps you add
 > The collection lives in [`docs/apps-and-modules/`](https://github.com/awesome-android-root/awesome-android-root/tree/main/docs/apps-and-modules) -
 > one Markdown file per topic. The root `README.md` is only a lightweight index, not the database.
 
-### 2. Use the Correct Format
+### 2. Use the correct format
 ```markdown
 - **[App Name](link)** - Brief description of what it does. `FOSS` `[M]`
 ```
 
-### 3. Follow the Rules
-- ✅ App requires root access
-- ✅ Working links only
-- ✅ No duplicates
-- ✅ Place in correct category (alphabetical order)
+### 3. Follow the rules
+- App requires root access
+- Working links only
+- No duplicates
+- Place in correct category (alphabetical order)
 
-## Category Pages
+## Category pages
 
 Every entry belongs to exactly **one topic page** in `docs/apps-and-modules/`. Place your entry in the page that matches what the tool *does* for the user.
 
@@ -120,7 +120,7 @@ Every entry belongs to exactly **one topic page** in `docs/apps-and-modules/`. P
 [Taxonomy Change](https://github.com/awesome-android-root/awesome-android-root/issues/new?template=taxonomy-change.md)
 issue if you believe a whole category should move, merge or split.
 
-## Entry Format
+## Entry format
 
 **Template:**
 ```markdown
@@ -130,7 +130,7 @@ issue if you believe a whole category should move, merge or split.
 **Required Elements:**
 - **App Name** in bold with link
 - **Primary Link** (best available source, see priority below)
-- **Description** (1-2 sentences, focus on what it does)
+- **Description** (one sentence, 140 characters or fewer, focused on what the entry does; start with a verb or noun phrase and avoid promotional language)
 - **License** (`FOSS` or `Proprietary`)
 - **Framework Tags** (if applicable): `[M]` `[K]` `[A]` `[LSP]`
 - **Store Icons** (optional): Add `| [🌱](link)` for F-Droid and/or `| [▶️](link)` for Play Store alongside the main entry
@@ -153,47 +153,47 @@ issue if you believe a whole category should move, merge or split.
 - **[bindhosts](https://github.com/bindhosts/bindhosts)** - Systemless hosts for APatch, KernelSU and Magisk. `FOSS` `[M]` `[K]`
 ```
 
-## Categories & Tags
+## Categories & tags
 
-### Framework Tags
+### Framework tags
 - **`[M]`** = Magisk Module (requires [Magisk](./rooting-guides/magisk-guide.md))
 - **`[K]`** = KernelSU Module (requires [KernelSU](./rooting-guides/kernelsu-guide.md))
 - **`[A]`** = APatch Module (requires [APatch](./rooting-guides/apatch-guide.md))
 - **`[LSP]`** = LSPosed / Xposed Module (requires [LSPosed](./rooting-guides/lsposed-guide.md))
 
-### License Tags
+### License tags
 - **`FOSS`** = Free and Open Source Software (source code available)
 - **`Proprietary`** = Closed-source software or unclear licensing
 
-### Special Badges
+### Special badges
 - **⭐** = Community recommended (widely trusted apps)
 
-### Store & Source Icons
+### Store & source icons
 - **`🌱`** = Available on F-Droid / IzzyOnDroid
 - **`▶️`** = Available on Google Play Store
 
 
-## Quality Requirements
+## Quality requirements
 
 **Must Have:**
-- ✅ App requires root access for main features
-- ✅ Working links to official sources
-- ✅ Updated within last 18 months
-- ✅ No duplicates
-- ✅ Proper category placement (alphabetical order)
-- ✅ Correct format and tags
+- App requires root access for main features
+- Working links to official sources
+- Updated within last 18 months
+- No duplicates
+- Proper category placement (alphabetical order)
+- Correct format and tags
 
 **Don't Include:**
-- ❌ Broken/dead apps
-- ❌ Malware or suspicious apps
-- ❌ Non-root apps (unless in specific categories)
-- ❌ Promotional language
+- Broken/dead apps
+- Malware or suspicious apps
+- Non-root apps (unless in specific categories)
+- Promotional language
 
-## Pull Request Template
+## Pull request template
 
 Visit [Pull Request Template ↗](https://github.com/awesome-android-root/awesome-android-root/blob/main/.github/PULL_REQUEST_TEMPLATE.md)
 
-## Need Help?
+## Need help?
 
 **Common Questions:**
 - **Where to place my app?** Look for similar apps inside the [category pages](#category-pages)
@@ -204,9 +204,9 @@ Visit [Pull Request Template ↗](https://github.com/awesome-android-root/awesom
 - **What if an app supports multiple frameworks?** List all applicable tags: `[M]` `[K]` `[A]`
 
 **Get Support:**
-- 🐛 **[Issues](https://github.com/awesome-android-root/awesome-android-root/issues):** For bugs or questions
-- 💬 **[Discussions](https://github.com/awesome-android-root/awesome-android-root/discussions):** For general help
-- 📝 **PR Comments:** For specific feedback
+- **[Issues](https://github.com/awesome-android-root/awesome-android-root/issues):** For bugs or questions
+- **[Discussions](https://github.com/awesome-android-root/awesome-android-root/discussions):** For general help
+- **PR Comments:** For specific feedback
 
 ---
 

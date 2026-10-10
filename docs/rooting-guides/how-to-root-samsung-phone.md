@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: "How to Root a Samsung Galaxy: Odin, AP & Magisk"
+title: "How to root a Samsung Galaxy: Odin, AP & Magisk"
 description: "Learn how to root a Samsung Galaxy with model- and region-specific bootloader checks, Download Mode, Odin AP patching, Magisk, Knox and One UI warnings."
 head:
   - - link
@@ -20,7 +20,7 @@ head:
       content: https://awesome-android-root.xyz/rooting-guides/how-to-root-samsung-phone
   - - meta
     - property: og:image
-      content: https://awesome-android-root.xyz/images/og/samsung.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -38,7 +38,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og/samsung.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Samsung Galaxy rooting guide with Odin, AP patching and Magisk
@@ -74,11 +74,11 @@ head:
       content: index, follow
 ---
 
-# How to Root a Samsung Galaxy: Odin, AP & Magisk
+# How to root a Samsung Galaxy: Odin, AP & Magisk
 
 There is no single Samsung rooting procedure. Bootloader availability, chipset, CSC/region, Android version and One UI release determine whether a Galaxy device can be rooted. This guide explains the checks first, then covers Download Mode, Odin AP-file patching and Magisk for models that are actually eligible.
 
-## Quick Navigation
+## Quick navigation
 
 - [Samsung-specific risks](#samsung-rooting-challenges)
 - [Model and region compatibility](#device-compatibility)
@@ -94,7 +94,7 @@ There is no single Samsung rooting procedure. Bootloader availability, chipset, 
 - [Samsung troubleshooting](#troubleshooting) - Odin, Download Mode and root failures
 
 ---
-## Samsung Rooting Challenges
+## Samsung rooting challenges
 
 ::: warning BOOTLOADER ELIGIBILITY CHANGES BY MODEL
 Samsung does not offer one unlock policy for every Galaxy device. Some international models expose OEM unlocking, while many carrier-branded US/Canadian variants do not. Newer Galaxy generations and One UI releases can change what is available, so verify the exact model number, CSC/region and firmware before updating or attempting to root.
@@ -103,7 +103,7 @@ Do not treat a guide for one Galaxy model as proof that another model or region 
 :::
 
 
-::: danger ⚠️ Samsung-Specific Risks
+::: danger Samsung-Specific Risks
 - **Knox permanently tripped (0x1)** – **Cannot be reversed**, affects Samsung Pay, Health, Secure Folder
 - **Warranty completely void** – Samsung will refuse all service once Knox is tripped
 - **Carrier restrictions** – US carrier models (Verizon, AT&T) often **cannot unlock bootloader**
@@ -112,7 +112,7 @@ Do not treat a guide for one Galaxy model as proof that another model or region 
 - **Samsung Cloud & Find My Mobile** – May flag device as compromised
 :::
 
-::: tip 💡 Want root WITHOUT tripping Knox?
+::: info Want root WITHOUT tripping Knox?
 On a subset of specifically verified Galaxy builds, the **GhostLock** bug (CVE-2026-43499) may provide **temporary root with the bootloader still locked**. That is not a general Samsung rooting method: root is lost on reboot and support depends on the exact firmware. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) for the current limitations.
 :::
 
@@ -120,7 +120,7 @@ On a subset of specifically verified Galaxy builds, the **GhostLock** bug (CVE-2
 
 ---
 
-## Device Compatibility
+## Device compatibility
 
 Samsung rooting is complex and model-dependent. International Exynos devices and some international Snapdragon devices are more likely to expose an unlock path, but the model number and region are decisive.
 
@@ -131,7 +131,7 @@ Samsung rooting is complex and model-dependent. International Exynos devices and
 | New Galaxy generation or current One UI firmware | The exact model, CSC/region and firmware build; do not infer support from an older S or A series guide. |
 | Snapdragon versus Exynos variant | The chipset and regional firmware, because rooting instructions and unlock availability can differ. |
 
-### Incompatible / Restricted Devices
+### Incompatible / restricted devices
 
 ::: warning VERIFY, DO NOT ASSUME
 A missing or permanently greyed-out OEM Unlocking option is a stop sign, not a problem to work around with a random Odin file. If the exact model and region cannot be verified as unlockable, do not flash a patched AP file.
@@ -150,7 +150,7 @@ A missing or permanently greyed-out OEM Unlocking option is a stop sign, not a p
 
 ## Prerequisites
 
-### Critical Requirements
+### Critical requirements
 
 ::: danger BEFORE YOU START
 **Knox Will Trip:** Permanently and irreversibly. Think carefully.
@@ -164,14 +164,14 @@ A missing or permanently greyed-out OEM Unlocking option is a stop sign, not a p
 **US Carrier Models:** Most cannot unlock bootloader at all.
 :::
 
-### Hardware Requirements
+### Hardware requirements
 
 - Samsung Galaxy device (international or unlocked US)
 - Windows computer (Odin requires Windows)
 - Quality USB cable (Samsung original recommended)
 - 50%+ battery charge
 
-### Software Requirements
+### Software requirements
 
 **On Computer:**
 
@@ -200,7 +200,7 @@ A missing or permanently greyed-out OEM Unlocking option is a stop sign, not a p
    - Samsung My Files (pre-installed)
    - Or any from Play Store
 
-### Device Preparation
+### Device preparation
 
 **Step 1: Verify Model and Build**
 
@@ -235,9 +235,9 @@ Settings > Developer options:
 
 ---
 
-## Unlock Bootloader
+## Unlock bootloader
 
-### Step 1: Verify OEM Unlock Available
+### Step 1: verify OEM unlock available
 
 Settings > Developer options > OEM unlocking
 
@@ -247,7 +247,7 @@ If greyed out:
 - Remove all Google accounts
 - Connect to internet
 
-### Step 2: Enter Download Mode
+### Step 2: enter download mode
 
 **Method 1: ADB**
 ```bash
@@ -261,7 +261,7 @@ adb reboot download
 4. Press Volume Up to continue
 5. Download mode screen appears
 
-### Step 3: Unlock Bootloader
+### Step 3: unlock bootloader
 
 **On Device:**
 1. Long press Volume Up
@@ -275,9 +275,9 @@ adb reboot download
 
 ---
 
-## Root Installation
+## Root installation
 
-### Method 1: AP File Patching (Primary Method)
+### Method 1: ap file patching (primary method)
 
 **Step 1: Download Firmware**
 
@@ -342,9 +342,9 @@ Click each button and select files:
 5. **Configure Odin Options:**
 
 Options tab:
-- ✅ Auto Reboot
-- ✅ F. Reset Time
-- ❌ Re-Partition (uncheck!)
+- Auto Reboot
+- F. Reset Time
+- Re-Partition (uncheck!)
 
 ::: warning CRITICAL SETTING
 **Auto Reboot MUST be checked** for newer Samsung devices. If unchecked, manual boot to recovery required.
@@ -396,12 +396,12 @@ id
 # Should show: uid=0(root)
 ```
 
-::: tip SUCCESS!
+::: info SUCCESS!
 If Magisk shows both installed and su works, you're rooted!
 :::
 
 
-### Step 6: Verify Knox Trip
+### Step 6: verify knox trip
 
 After setup:
 1. Dial `*#0*#` for service mode
@@ -411,7 +411,7 @@ After setup:
 
 ---
 
-### Method 2: TWRP Recovery (Legacy Devices)
+### Method 2: TWRP recovery (legacy devices)
 
 For older Samsung devices with TWRP support:
 
@@ -424,7 +424,7 @@ For older Samsung devices with TWRP support:
 **Note:** Most modern Samsung devices lack TWRP support due to A/B partitions and encryption changes.
 
 
-### Verify Knox Trip
+### Verify knox trip
 
 After setup:
 1. Dial `*#0*#` for service mode
@@ -434,7 +434,7 @@ After setup:
 
 ---
 
-## Post-Root Setup
+## Post-root setup
 
 ### Configure Magisk
 
@@ -468,7 +468,7 @@ Recommended for Samsung:
 - **Shamiko** - Enhanced root hiding
 - **Systemless Hosts** - Ad blocking
 
-### Samsung-Specific Root Hiding
+### Samsung-specific root hiding
 
 **Additional Steps:**
 
@@ -495,7 +495,7 @@ pm clear com.sec.android.app.shealth
 
 ---
 
-## OTA Handling
+## OTA handling
 
 Samsung OTA updates are blocked when rooted.
 
@@ -521,7 +521,7 @@ Samsung OTA updates are blocked when rooted.
 3. Flash with Odin
 4. Root restored
 
-### Alternative: Manual Firmware Flash
+### Alternative: manual firmware flash
 
 1. Download latest firmware
 2. Patch AP file
@@ -533,7 +533,7 @@ Samsung OTA updates are blocked when rooted.
 
 ## Troubleshooting
 
-### Bootloader Issues
+### Bootloader issues
 
 **OEM Unlocking Greyed Out**
 
@@ -562,7 +562,7 @@ Hold Volume Down + Power for 10 seconds
 Hold Power + Volume Down + Bixby for 10 seconds
 ```
 
-### Odin Issues
+### Odin issues
 
 **Odin Doesn't Detect Device**
 
@@ -598,7 +598,7 @@ Solutions:
 3. Wipe cache partition
 4. If persists, reflash stock firmware
 
-### Root Issues
+### Root issues
 
 **Magisk Shows N/A**
 
@@ -637,16 +637,16 @@ No workaround for Knox-dependent features.
 
 ---
 
-## Unroot and Restore
+## Unroot and restore
 
-### Remove Root Only
+### Remove root only
 
 ```bash
 # Magisk > Uninstall > Restore Images
 # Root removed, Knox still tripped (0x1)
 ```
 
-### Flash Stock Firmware
+### Flash stock firmware
 
 **Complete restoration:**
 
@@ -656,7 +656,7 @@ No workaround for Knox-dependent features.
 3. Perform factory reset
 4. Device stock but Knox still 0x1
 
-### Knox Status
+### Knox status
 
 ::: danger KNOX CANNOT BE RESET
 Once Knox trips to 0x1, it is permanent. Flashing stock firmware does NOT reset Knox counter. The efuse is physically blown.
@@ -664,7 +664,7 @@ Once Knox trips to 0x1, it is permanent. Flashing stock firmware does NOT reset 
 
 ---
 
-## Community Resources
+## Community resources
 
 **Official Samsung Resources:**
 - [Samsung Firmware](https://samfrew.com/) - Stock firmware downloads
@@ -688,7 +688,7 @@ Once Knox trips to 0x1, it is permanent. Flashing stock firmware does NOT reset 
 - [XDA ROM Development](https://forum.xda-developers.com/) - Custom ROMs
 
 
-### Getting Help
+### Getting help
 
 **When asking for help, provide:**
 - Exact model number (SM-XXXXX)
@@ -701,7 +701,7 @@ Once Knox trips to 0x1, it is permanent. Flashing stock firmware does NOT reset 
 
 ---
 
-## Next Steps
+## Next steps
 
 **After Rooting Your Samsung:**
 

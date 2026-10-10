@@ -13,12 +13,12 @@ This file is the short version. The complete contribution guide, including entry
 
 The root `README.md` is an index. The collection itself is maintained under `docs/`.
 
-## Before opening a PR
+## Before opening a pr
 
 - Use the correct topic page.
 - Check for duplicates.
 - Use an official, working link.
-- Keep the description factual and concise.
+- Keep descriptions factual and one sentence (140 characters or fewer); start with a verb or noun phrase and avoid promotional language.
 - Follow the entry format and tags in the [full guide](docs/contributing.md).
 - Check the quality requirements before submitting.
 

@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Android Rooting FAQ & Troubleshooting
+title: Android rooting FAQ & troubleshooting
 description: "Complete Android rooting FAQ with step-by-step solutions and emergency fixes for beginners and experts. Updated for Android 14/15 in 2026."
 head:
   - - link
@@ -134,7 +134,7 @@ head:
       }
 ---
 
-# Android Rooting FAQ 2026
+# Android rooting FAQ 2026
 
 **Common questions answered** about Android rooting, root methods, device compatibility, and best practices. Updated for Android 14/15 in 2026.
 
@@ -142,15 +142,15 @@ head:
 Looking for troubleshooting? Visit our [Troubleshooting Guide](./troubleshooting.md) for step-by-step fixes.
 :::
 
-## Table of Contents
+## Table of contents
 
-### Getting Started
+### Getting started
 - [What is Rooting?](#what-is-rooting)
 - [Is Rooting Safe?](#is-rooting-safe)
 - [Should I Root My Device?](#should-i-root-my-device)
 - [Which Root Method Should I Use?](#which-root-method-should-i-use)
 
-### Technical Questions
+### Technical questions
 - [Root Methods Comparison](#root-methods-comparison)
 - [Bootloader and Security](#bootloader-and-security)
 - [Understanding Android Partitions](#understanding-android-partitions)
@@ -162,16 +162,16 @@ Looking for troubleshooting? Visit our [Troubleshooting Guide](./troubleshooting
 - [What About Warranty?](#what-about-warranty)
 - [Device-Specific Considerations](#device-specific-considerations)
 
-### After Rooting
+### After rooting
 - [What Should I Do After Rooting?](#what-should-i-do-after-rooting)
 - [How to Manage Modules Safely?](#how-to-manage-modules-safely)
 - [How to Unroot?](#how-to-unroot)
 
 ---
 
-## Getting Started
+## Getting started
 
-### What is Rooting?
+### What is rooting?
 
 **Rooting grants superuser (su) access** to your Android device, similar to administrator privileges on a PC. It allows apps and scripts to perform system-level operations that are normally restricted.
 
@@ -185,27 +185,27 @@ Looking for troubleshooting? Visit our [Troubleshooting Guide](./troubleshooting
 
 **Popular Uses:**
 - System-wide ad blocking ([AdAway guide](./general-guides/android-adblocking.md))
-- Complete device backups ([backup apps](./apps-and-modules/backup#backup-restore))
+- Complete device backups ([backup apps](./apps-and-modules/backup#backup-apps-tools))
 - Custom recovery and ROM installation ([guide](./rooting-guides/custom-rom-installation.md))
 - Removing carrier bloatware ([debloating guide](./general-guides/android-apps-debloating.md))
 - Advanced theming and customization ([customization apps](./apps-and-modules/customization))
 - Enhanced privacy controls ([privacy apps](./apps-and-modules/privacy))
 
 **Related Resources:**
-- [Essential Root Apps](./apps-and-modules/index.md#starter-kit-must-have-apps)
+- [Essential Root Apps](./apps-and-modules/root-management)
 - [Root Framework Comparison](./rooting-guides/root-framework-comparison.md)
 - [Complete Rooting Guide](./rooting-guides/index.md)
 
 ---
 
-### Is Rooting Safe?
+### Is rooting safe?
 
 **Yes, when done correctly**, but it comes with responsibilities and trade-offs.
 
 **Benefits:**
 - Full control over your device
 - Remove manufacturer restrictions
-- Install powerful customization
+- Install root customization tools
 - Enhanced privacy and security options (if configured properly)
 
 **Risks:**
@@ -248,7 +248,7 @@ Avoid rooting if:
 
 ---
 
-### Should I Root My Device?
+### Should I root my device?
 
 **Ask yourself these questions:**
 
@@ -297,7 +297,7 @@ Research more and ask community
 
 ---
 
-### Which Root Method Should I Use?
+### Which root method should I use?
 
 **Three Main Options in 2026:**
 
@@ -305,7 +305,7 @@ Research more and ask community
 |:---|:---|:---|:---|
 | **Magisk** | Most users, general use | Widest compatibility, mature, large module ecosystem, Zygisk, active development | Requires boot/init_boot patching |
 | **KernelSU** | Custom ROM users, kernel enthusiasts | Kernel-integrated, excellent performance, strong isolation | Requires KSU-enabled kernel, smaller module ecosystem |
-| **APatch** | Advanced users, developers | Kernel patching approach, powerful for specific use cases | Limited device support, requires technical knowledge |
+| **APatch** | Advanced users, developers | Kernel patching approach, useful for specific tasks | Limited device support, requires technical knowledge |
 
 **Detailed Comparison:**
 
@@ -368,9 +368,9 @@ Advanced user, specific needs? → Research all three
 
 ---
 
-## Technical Questions
+## Technical questions
 
-### Root Methods Comparison
+### Root methods comparison
 
 **See the detailed comparison:** [Root Framework Comparison Guide](./rooting-guides/root-framework-comparison.md)
 
@@ -379,7 +379,7 @@ Advanced user, specific needs? → Research all three
 | Feature | Magisk | KernelSU | APatch |
 |:---|:---|:---|:---|
 | **Installation Method** | Patch boot/init_boot image | Custom kernel required | Kernel patching |
-| **Module Ecosystem** | Largest (1000+ modules) | Growing (100+ modules) | Limited |
+| **Module ecosystem** | Broad selection | Growing selection | Limited selection |
 | **Root Hiding** | DenyList + Zygisk | Profile-based | Built-in |
 | **OTA Support** | Excellent (A/B devices) | Manual re-flash | Manual re-flash |
 | **Performance Impact** | Minimal | Minimal | Minimal |
@@ -394,7 +394,7 @@ Advanced user, specific needs? → Research all three
 
 ---
 
-### Bootloader and Security
+### Bootloader and security
 
 **Q: What is a bootloader?**
 
@@ -441,7 +441,7 @@ Tools include Root My Galaxy, Root My Pixel, GhostLock App, and ghostlock-oneplu
 
 ---
 
-### Understanding Android Partitions
+### Understanding Android partitions
 
 **Q: What's the difference between boot.img and init_boot.img?**
 
@@ -454,7 +454,7 @@ Tools include Root My Galaxy, Root My Pixel, GhostLock App, and ghostlock-oneplu
 
 **Q: What are A/B partitions?**
 
-Modern devices use A/B (seamless) update system:
+Modern devices use the A/B update system:
 - Two sets of partitions (slot A and slot B)
 - System updates install to inactive slot
 - If update fails, device boots from working slot
@@ -470,7 +470,7 @@ Modern devices use A/B (seamless) update system:
 
 ---
 
-### OTA Updates and Root
+### OTA updates and root
 
 **Q: Can I receive OTA updates after rooting?**
 
@@ -502,7 +502,7 @@ Modern devices use A/B (seamless) update system:
 
 ## Compatibility
 
-### Will My Apps Still Work?
+### Will my apps still work?
 
 **Most apps work fine,** but some categories check for root or unlocked bootloader:
 
@@ -531,7 +531,7 @@ Modern devices use A/B (seamless) update system:
 
 ---
 
-### Can I Use Banking Apps?
+### Can I use banking apps?
 
 **It depends on the app and your configuration.**
 
@@ -574,7 +574,7 @@ Modern devices use A/B (seamless) update system:
 
 ---
 
-### What About Warranty?
+### What about warranty?
 
 **Warranty status varies by manufacturer:**
 
@@ -605,7 +605,7 @@ Modern devices use A/B (seamless) update system:
 
 ---
 
-### Device-Specific Considerations
+### Device-specific considerations
 
 **Google Pixel:**
 - Easy to root, excellent community support
@@ -645,9 +645,9 @@ Modern devices use A/B (seamless) update system:
 
 ---
 
-## After Rooting
+## After rooting
 
-### What Should I Do After Rooting?
+### What should I do after rooting?
 
 **Immediate Steps:**
 
@@ -667,12 +667,12 @@ Modern devices use A/B (seamless) update system:
    - Copy to external storage/cloud
 
 4. **Essential apps to install:**
-   - See our [complete starter kit](./apps-and-modules/#starter-kit-must-have-apps) for must-have apps
+   - See our [complete starter kit](./apps-and-modules/root-management) for must-have apps
    - [AdAway](./apps-and-modules/ad-blocking#ad-tracker-blocking) - System-wide ad blocking
-   - [Backup apps](./apps-and-modules/backup#backup-restore) - Complete backups
+   - [Backup apps](./apps-and-modules/backup#backup-apps-tools) - Complete backups
    - [File managers](./apps-and-modules/file-management#file-managers) - Root-enabled file access
    - [Firewall tools](./apps-and-modules/security#firewalls-filtering) - Network control
-   - [Browse 650+ root apps](./apps-and-modules/) for more
+   - [Browse <EntryCount /> root apps](./apps-and-modules/) for more
 
 **Next Steps:**
 
@@ -684,7 +684,7 @@ Modern devices use A/B (seamless) update system:
 2. **Install useful modules (Magisk):**
    - Start with essential modules only
    - Test one at a time
-   - [Essential Root Apps](./apps-and-modules/index.md#starter-kit-must-have-apps)
+   - [Essential Root Apps](./apps-and-modules/root-management)
 
 3. **Configure ad blocking:**
    - System-wide with AdAway or hosts file
@@ -704,7 +704,7 @@ Modern devices use A/B (seamless) update system:
 
 ---
 
-### How to Manage Modules Safely?
+### How to manage modules safely?
 
 **Best Practices:**
 
@@ -750,7 +750,7 @@ Modern devices use A/B (seamless) update system:
 
 ---
 
-### How to Unroot?
+### How to unroot?
 
 **Complete Unroot Process:**
 
@@ -824,9 +824,9 @@ fastboot oem lock
 
 ---
 
-## Community and Support
+## Community and support
 
-### Where Can I Get Help?
+### Where can I get help?
 
 **Having issues?** Visit our [Troubleshooting Guide](./troubleshooting.md) for step-by-step solutions.
 
@@ -871,9 +871,9 @@ Logs: Unable to capture due to bootloop
 
 ---
 
-## Quick Reference
+## Quick reference
 
-### Essential Commands
+### Essential commands
 
 **ADB Commands:**
 ```bash
@@ -904,7 +904,7 @@ su -c "magisk --version"      # Check Magisk version
 
 ---
 
-### Useful Resources
+### Useful resources
 
 **Guides:**
 - [Complete Rooting Guide](./rooting-guides/index.md)
@@ -913,7 +913,7 @@ su -c "magisk --version"      # Check Magisk version
 - [Non-Root Alternatives](./non-root-alternatives.md)
 
 **Apps:**
-- [Featured Root Apps](./apps-and-modules/index.md#starter-kit-must-have-apps)
+- [Featured Root Apps](./apps-and-modules/root-management)
 - [All Root Apps](./apps-and-modules/index.md)
 
 **General Android:**
@@ -928,4 +928,3 @@ su -c "magisk --version"      # Check Magisk version
 ---
 
 **Have more questions?** Check our [Troubleshooting Guide](./troubleshooting.md) or [join the community](./resources.md#communities-and-support)!
- 

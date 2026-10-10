@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Complete Motorola Rooting Guide
+title: Complete Motorola rooting guide
 description: "Master guide to root all Motorola phones - Edge series, Moto G series with bootloader unlock codes, Magisk installation, and A/B partition handling."
 head:
   - - link
@@ -20,7 +20,7 @@ head:
       content: https://awesome-android-root.xyz/rooting-guides/how-to-root-motorola-phone
   - - meta
     - property: og:image
-      content: https://awesome-android-root.xyz/images/og/motorola.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -38,7 +38,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og/motorola.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Motorola Root Guide - All Models
@@ -71,11 +71,11 @@ head:
       content: index, follow
 ---
 
-# Motorola Root Guide
+# Motorola root guide
 
 Root Motorola devices via the official unlock code system. Covers Edge 60, Edge 50, Edge 40, Edge 30, Moto G series, and legacy Moto devices.
 
-## Quick Navigation
+## Quick navigation
 
 - [Device Compatibility](#device-compatibility)
 - [Prerequisites](#prerequisites)
@@ -93,11 +93,11 @@ Root Motorola devices via the official unlock code system. Covers Edge 60, Edge 
 
 ---
 
-## Device Compatibility
+## Device compatibility
 
 Most Motorola devices with unlockable bootloaders can be rooted. Check [XDA Forums](https://forum.xda-developers.com/) for your specific model's status.
 
-### Incompatible / Restricted Devices
+### Incompatible / restricted devices
 
 ::: danger CANNOT BE ROOTED
 - **Carrier-exclusive models** (Verizon, AT&T, Tracfone) - bootloader unlock codes not available
@@ -106,7 +106,7 @@ Most Motorola devices with unlockable bootloaders can be rooted. Check [XDA Foru
 - **Prepaid carrier-locked variants** - typically cannot unlock
 :::
 
-### Image Type Quick Reference
+### Image type quick reference
 
 | Device Generation | Image to Patch |
 |---|---|
@@ -117,9 +117,9 @@ Most Motorola devices with unlockable bootloaders can be rooted. Check [XDA Foru
 
 ## Prerequisites
 
-### Critical Requirements
+### Critical requirements
 
-::: danger ⚠️ BEFORE YOU START
+::: danger BEFORE YOU START
 
 **Warranty Void:** Once you get the unlock code, your device is no longer covered by the Motorola warranty.
 
@@ -130,14 +130,14 @@ Most Motorola devices with unlockable bootloaders can be rooted. Check [XDA Foru
 **Carrier Check:** There are certain restrictions such as carrier-exclusive models. To find out if your phone supports bootloader unlock you will need to visit Motorola's page and proceed to follow the process.
 :::
 
-### Hardware Requirements
+### Hardware requirements
 
 - Motorola device (unlockable model)
 - Quality USB cable (try multiple cables if you encounter issues)
 - Computer (Windows, macOS, Linux)
 - 50%+ battery charge
 
-### Software Requirements
+### Software requirements
 
 **On Computer:**
 
@@ -160,7 +160,7 @@ Most Motorola devices with unlockable bootloaders can be rooted. Check [XDA Foru
 2. **Motorola Account**
    - For unlock code request
 
-### Device Preparation
+### Device preparation
 
 **Step 1: Enable Developer Options**
 
@@ -183,11 +183,11 @@ adb devices
 
 ---
 
-## Get Unlock Code
+## Get unlock code
 
 Motorola requires an official unlock code from their website.
 
-### Step 1: Gather Device Information
+### Step 1: gather device information
 
 **Get Device ID String:**
 
@@ -217,11 +217,11 @@ Copy the code part off of each line (exclude the `(bootloader)` part and remove 
 0A40040192024205#4C4D355631323030373731363031303332323239#BD008A672BA4746C2CE02328A2AC0C39F951A3E5#1F532800020000000000000000000000
 ```
 
-::: tip DATA SCRUB TOOL
+::: info DATA SCRUB TOOL
 Be careful not to remove part of the unlock key when removing the junk, spaces and extra lines. You can paste it into the online Motorola dataScrubTool to clean it up automatically.
 :::
 
-### Step 2: Request Unlock Code
+### Step 2: request unlock code
 
 1. Visit [Motorola Bootloader Unlock](https://en-us.support.motorola.com/app/standalone/bootloader/unlock-your-device-a)
 
@@ -234,7 +234,7 @@ Be careful not to remove part of the unlock key when removing the junk, spaces a
 5. **Check email:**
    - Try to use Gmail as your account email for Motorola. If you don't receive the unlock code (which should come in about a minute or so), try changing your account email address and requesting the code again.
 
-### Step 3: Save Unlock Code
+### Step 3: save unlock code
 
 - Copy unlock code exactly
 - Save to text file
@@ -242,9 +242,9 @@ Be careful not to remove part of the unlock key when removing the junk, spaces a
 
 ---
 
-## Unlock Bootloader
+## Unlock bootloader
 
-### Step 1: Enter Fastboot Mode
+### Step 1: enter fastboot mode
 
 ```bash
 adb reboot bootloader
@@ -255,7 +255,7 @@ Or hardware keys:
 2. Hold Volume Down + Power
 3. Release at fastboot screen
 
-### Step 2: Unlock with Code
+### Step 2: unlock with code
 
 ```bash
 # Verify fastboot connection
@@ -271,7 +271,7 @@ fastboot oem unlock UNIQUE_KEY_FROM_EMAIL
 - Bootloader unlocks
 - Device reboots
 
-### Step 3: Verify Unlock
+### Step 3: verify unlock
 
 After reboot:
 ```bash
@@ -284,9 +284,9 @@ On boot you will see a "Bootloader unlocked" warning - this is normal.
 
 ---
 
-## Root Installation
+## Root installation
 
-### Determine Correct Image
+### Determine correct image
 
 | Device Generation | Image to Patch |
 |---|---|
@@ -295,7 +295,7 @@ On boot you will see a "Bootloader unlocked" warning - this is normal.
 
 **Open the Magisk app and check the "Ramdisk" field if unsure. If Ramdisk = Yes, use `boot.img`. If your device has a separate `init_boot` partition, use `init_boot.img`.**
 
-### Method 1: Boot Image Patching (Standard)
+### Method 1: boot image patching (standard)
 
 **Step 1: Get Stock Firmware**
 
@@ -356,7 +356,7 @@ fastboot reboot
 2. Should show "Installed" with version number
 3. Test: `adb shell su`
 
-### Method 2: Fastboot Boot + Direct Install (Edge 50 Fusion and similar)
+### Method 2: fastboot boot + direct install (edge 50 fusion and similar)
 
 Some Motorola devices (especially MediaTek-based ones like the Edge 50 Fusion) don't work with the standard flash method. Use this alternative:
 
@@ -370,7 +370,7 @@ Some Motorola devices (especially MediaTek-based ones like the Edge 50 Fusion) d
 
 ---
 
-## Post-Root Setup
+## Post-root setup
 
 ### Configure Magisk
 
@@ -384,7 +384,7 @@ Some Motorola devices (especially MediaTek-based ones like the Edge 50 Fusion) d
 - Banking apps
 - Payment apps
 
-### Motorola Optimization
+### Motorola optimization
 
 **Battery:**
 1. Settings > Battery
@@ -394,7 +394,7 @@ Some Motorola devices (especially MediaTek-based ones like the Edge 50 Fusion) d
 - Allow background activity for root apps
 - Disable battery optimization for Magisk
 
-### Recommended Modules
+### Recommended modules
 
 - **Play Integrity Fix** (replaces Universal SafetyNet Fix)
 - **Shamiko** (hide root from detection)
@@ -403,9 +403,9 @@ Some Motorola devices (especially MediaTek-based ones like the Edge 50 Fusion) d
 
 ---
 
-## OTA Handling
+## OTA handling
 
-### For A/B Devices (All Modern Motorola)
+### For A/B devices (all modern Motorola)
 
 **Process:**
 1. Download OTA
@@ -423,7 +423,7 @@ After rooting, OTA updates may fail with "package verification failed." The only
 
 <details><summary>Click to expand troubleshooting</summary><br>
 
-### Unlock Code Issues
+### Unlock code issues
 
 **Code Not Received**
 
@@ -440,7 +440,7 @@ Solutions:
 - Verify copied correctly - no extra spaces
 - Be careful not to remove part of the unlock key when removing the junk, spaces and extra lines
 
-### Bootloader Issues
+### Bootloader issues
 
 **OEM Unlocking Greyed Out**
 
@@ -458,7 +458,7 @@ If greyed out: device likely cannot be unlocked.
 - Check your CID with: `fastboot getvar cid`
 - Try submitting again or use a different browser
 
-### "Preflash Validation Failed"
+### "Preflash validation failed"
 
 This is a common Motorola-specific error when flashing patched images.
 
@@ -475,7 +475,7 @@ fastboot flash --disable-verity --disable-verification vbmeta vbmeta.img
 **Solution 3: Use the fastboot boot method**
 Instead of flashing directly, use `fastboot boot patched_boot.img`, then do a Direct Install from within the Magisk app.
 
-### Installation Issues
+### Installation issues
 
 **Magisk Not Working After Flash**
 
@@ -499,15 +499,15 @@ fastboot reboot
 
 ---
 
-## Unroot and Restore
+## Unroot and restore
 
-### Remove Root
+### Remove root
 
 ```bash
 # Magisk > Uninstall > Restore Images
 ```
 
-### Flash Stock
+### Flash stock
 
 ```bash
 # Flash stock firmware images
@@ -517,7 +517,7 @@ fastboot flash init_boot stock_init_boot.img
 fastboot reboot
 ```
 
-### Relock Bootloader
+### Relock bootloader
 
 ::: danger RELOCK WARNING
 Don't relock the bootloader if it was unlocked by any other method than official. Reflash stock firmware, factory reset, reboot, and make sure everything is working correctly before relocking. Warranty remains void after relocking.
@@ -551,7 +551,7 @@ fastboot oem lock
 
 ---
 
-## Best Practices
+## Best practices
 
 ### Security
 
@@ -562,7 +562,7 @@ fastboot oem lock
 
 ---
 
-## Community Resources
+## Community resources
 
 **Official Motorola:**
 - [Bootloader Unlock](https://en-us.support.motorola.com/app/standalone/bootloader/unlock-your-device-a) - Official unlock portal
@@ -580,7 +580,7 @@ fastboot oem lock
 - [FAQs](../faqs)
 - [Troubleshooting Guide](../troubleshooting)
 
-### Getting Help
+### Getting help
 
 **Provide:**
 - Exact Motorola model and codename
@@ -592,7 +592,7 @@ fastboot oem lock
 
 ---
 
-## Next Steps
+## Next steps
 
 **After Rooting:**
 

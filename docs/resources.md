@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Android Rooting Resources 2026
+title: Android rooting resources 2026
 description: "Complete collection of Android rooting resources, tools, communities, guides, and expert materials for safe rooting, custom ROMs, and device customization."
 head:
   - - link
@@ -14,7 +14,7 @@ head:
       content: Android Rooting Resources 2026 - Complete Guide & Tools Collection
   - - meta
     - property: og:description
-      content: Ultimate collection of Android rooting resources including tools, communities, guides, and expert materials for safe device customization and root access.
+      content: Reference links for Android rooting tools, device firmware, communities, guides and recovery resources.
   - - meta
     - property: og:url
       content: https://awesome-android-root.xyz/resources
@@ -56,7 +56,7 @@ head:
       content: Android Rooting Resources 2026 - Complete Collection
   - - meta
     - name: twitter:description
-      content: Everything you need for Android rooting - tools, communities, guides, and expert resources in one comprehensive collection.
+      content: Links to tools, communities, guides and recovery information for Android rooting.
   - - meta
     - name: twitter:image
       content: https://awesome-android-root.xyz/images/og.png
@@ -92,15 +92,15 @@ head:
       content: index, follow, max-image-preview:large
 ---
 
-# Android Rooting Resources Hub 2026
+# Android rooting resources hub 2026
 
-> Comprehensive reference for Android rooting, customization, and recovery.
+> Reference links for Android rooting, customization and recovery.
 
 ---
 
-## Quick Navigation
+## Quick navigation
 
-- [Getting Started](#🚀-getting-started)
+- [Getting Started](#getting-started)
 - [Core Tooling](#core-tooling)
 - [Firmware and Device Data](#firmware-and-device-data)
 - [Module & App Repositories](#module-app-repositories)
@@ -113,7 +113,7 @@ head:
 
 ---
 
-## 🚀 Getting Started
+## Getting started
 
 ### Core checklist
 
@@ -135,12 +135,12 @@ head:
 | **Android 12–12L** | Magisk | GKI / Legacy | Most compatible |
 | **Android 11 & below** | Magisk | Legacy | Long-term support |
 
-> [!TIP]
+> [!NOTE]
 > **GKI (Generic Kernel Image)** devices - typically Android 12+ with kernel 5.10+ - have the widest method compatibility. Check your kernel version in **Settings → About Phone → Kernel Version**.
 
 ---
 
-## Core Tooling
+## Core tooling
 
 ### Root solutions
 
@@ -156,7 +156,7 @@ head:
 > [!NOTE]
 > **Magisk** remains the most universally compatible solution. **KernelSU** and **APatch** offer superior stealth on GKI devices but require kernel-level integration. **KernelSU Next** is an advanced kernel-based root solution supporting kernels from 4.4 up to 6.6, extending compatibility to non-GKI and older devices. **GhostLock temp root** is a different animal entirely: a kernel exploit that grants session-only root on a *locked* bootloader - see the [dedicated guide](./rooting-guides/root-without-unlocking-bootloader.md) before considering it.
  
-> [!TIP]
+> [!NOTE]
 > For the best root hiding currently, **KernelSU Next + SUSFS** is recommended by the community. For Xposed modules, **LSPosed** (JingMatrix fork) is the actively maintained option.
 
 
@@ -168,7 +168,7 @@ head:
 | **ZygiskNext** | Standalone Zygisk for KSU/Magisk/APatch | Magisk, KernelSU, APatch | [GitHub](https://github.com/LSPosed/ZygiskNext) |
 | **ReZygisk** | Transparent, open-source Zygisk fork | Magisk, KernelSU, APatch | [GitHub](https://github.com/PerformanC/ReZygisk) |
 
-> [!TIP]
+> [!NOTE]
 > Compare the strengths and trade-offs of each Zygisk implementation in the table above.
 
 ### Non-root privilege tools
@@ -219,14 +219,14 @@ head:
 | **ASUS** | [ASUS Support](https://www.asus.com/support/) | Direct downloads | ROG & Zenfone |
 | **Realme** | [Realme Support](https://www.realme.com/support/software-update) | realme-updater | OZIP format |
 
-### Module & App Repositories
+### Module & app repositories
 
 | Repository | Type | Content | Link |
 |:-----------|:-----|:--------|:-----|
 | **MMRL** | Magisk modules | Community modules | [GitHub](https://github.com/MMRLApp/MMRL) |
 | **Fox MMRL** | Module manager | Alternative client | [GitHub](https://github.com/Fox2Code/FoxMagiskModuleManager) |
 | **LSPosed Modules** | Xposed modules | App modifications | [Repository](https://github.com/Xposed-Modules-Repo) |
-| **Root Apps Index** | Curated collection | 650+ root apps | [Collection](./apps-and-modules/index.md) |
+| **Root Apps Index** | Curated directory | Apps and modules by category | [Collection](./apps-and-modules/index.md) |
 | **IzzyOnDroid** | F-Droid repo | FOSS apps | [IzzyOnDroid](https://apt.izzysoft.de/fdroid/) |
 | **KernelSU Module Repo** | KernelSU modules | Official module repository | [modules.kernelsu.org](https://modules.kernelsu.org/) |
 
@@ -254,7 +254,7 @@ head:
 
 ---
 
-## Learning and Reference
+## Learning and reference
 
 ### Comprehensive guides
 
@@ -271,7 +271,7 @@ head:
 
 ---
 
-## Communities and Support
+## Communities and support
 
 ### Primary communities
 
@@ -296,7 +296,7 @@ head:
 
 ---
 
-## Firmware and Device Data
+## Firmware and device data
 
 ### Manufacturer unlock policies
 
@@ -334,7 +334,7 @@ head:
 
 ---
 
-## Emergency and Recovery
+## Emergency and recovery
 
 ### Common issues and solutions
 
@@ -366,7 +366,7 @@ head:
 
 ---
 
-## Advanced Engineering
+## Advanced engineering
 
 ### Development and debugging
 
@@ -386,13 +386,13 @@ head:
 | Topic | Coverage | Link |
 |:------|:---------|:-----|
 | **Play Integrity API** | Official guidance on root detection | [Developer Docs](https://developer.android.com/google/play/integrity) |
-| **A/B System Updates** | Seamless update flow | [A/B System](https://source.android.com/docs/core/ota/ab) |
+| **A/B System Updates** | A/B update flow | [A/B System](https://source.android.com/docs/core/ota/ab) |
 | **Project Treble** | HAL abstraction layers | [Treble Docs](https://source.android.com/docs/core/architecture) |
 | **Mainline Modules** | Modular update delivery | [Mainline](https://source.android.com/docs/core/architecture/modular-system) |
 
 ---
 
-## Video Tutorials
+## Video tutorials
 
 ### Recommended channels
 
@@ -407,7 +407,7 @@ head:
 
 ---
 
-## Official Project Links
+## Official project links
 
 ### Project resources
 
@@ -431,7 +431,7 @@ head:
 
 ---
 
-## ⚠️ Legal & Safety Notice
+## Legal & safety notice
 
 > **Important:** Rooting your device:
 > - May void your warranty
@@ -447,7 +447,7 @@ head:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 This is a community-driven project. Contributions are welcome!
 

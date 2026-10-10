@@ -1,251 +1,78 @@
 ---
 layout: doc
-title: Android General Guides & Tutorials
-description: "Practical Android general guides and tutorials for ad blocking, debloating, privacy, customization and app management."
-head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/general-guides/  
-  - - meta
-    - property: og:type
-      content: website
-  - - meta
-    - property: og:title
-      content: Android General Guides & Tutorials | Awesome Android Root
-  - - meta
-    - property: og:description
-      content: Master Android with comprehensive tutorials covering ad blocking, app debloating, privacy enhancement, performance tuning, and customization. Expert guides for all skill levels.
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/general-guides/  
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png  
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
-    - name: twitter:creator
-      content: "@awsm_and_root"
-  - - meta
-    - name: twitter:title
-      content: Android General Guides & Tutorials | Awesome Android Root
-  - - meta
-    - name: twitter:description
-      content: Master Android with expert tutorials covering ad blocking, debloating, privacy, optimization, and customization for rooted and stock devices.
-  - - meta
-    - name: author
-      content: Awesome Android Root Project
-  - - meta
-    - property: article:section
-      content: Android Guides & Tutorials
-  - - meta
-    - property: article:published_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
-    - property: article:modified_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
-    - name: robots
-      content: index, follow, max-image-preview:large, max-snippet:-1
-  - - script
-    - type: application/ld+json
-    - |
-      {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "Android Tutorials & Guides Collection",
-        "description": "Comprehensive collection of Android tutorials covering rooting, customization, privacy, and optimization.",
-        "url": "https://awesome-android-root.xyz/general-guides/",
-        "mainEntity": {
-          "@type": "ItemList",
-          "name": "Android Tutorial Categories",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "item": {
-                "@type": "HowTo",
-                "name": "System-Wide Ad Blocking",
-                "url": "https://awesome-android-root.xyz/general-guides/android-adblocking"
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "item": {
-                "@type": "HowTo",
-                "name": "Android Debloating",
-                "url": "https://awesome-android-root.xyz/general-guides/android-apps-debloating"
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "item": {
-                "@type": "HowTo",
-                "name": "Stop Auto Updates",
-                "url": "https://awesome-android-root.xyz/general-guides/stop-android-app-auto-updates-play-store"
-              }
-            }
-          ]
-        }
-      }
+title: Tutorials
+description: Practical Android tutorials for ad blocking, app management and debloating, with links to related root tools and device guides.
 ---
 
-# Android General Guides & Tutorials
+# Tutorials
 
-Master your Android experience with our comprehensive collection of expert tutorials and step-by-step guides. Designed for users of all skill levels-from beginners to advanced power users-covering privacy enhancement, performance optimization, system customization, and efficient app management for both rooted and stock Android devices.
+Step-by-step instructions for common Android tasks. Some guides require root; check the prerequisites before changing system settings.
 
----
+## Quick navigation
 
-## Privacy & Security Guides
+- [Privacy and security guides](#privacy-security-guides)
+- [App management and optimization](#app-management-optimization)
+- [Performance and system optimization](#performance-system-optimization)
+- [Customization and theming](#customization-theming)
+- [Development and technical guides](#development-technical-guides)
+- [Community resources](#community-resources)
 
-### Ad Blocking & Privacy Protection
-- **[Ultimate Android Ad Blocking Guide](./android-adblocking.md)** - Achieve complete system-wide ad blocking on rooted devices using AdAway, Bindhosts, and advanced DNS solutions. Block ads, trackers, and malware across all apps.
-- **[Android Apps Debloating Guide](./android-apps-debloating.md)** - Safely remove bloatware and unwanted pre-installed apps using App Manager & Canta. Free up storage, improve performance, and enhance privacy.
+<span id="privacy-security-guides" class="legacy-anchor" aria-hidden="true"></span>
 
-### Coming Soon
-- **Complete Android Privacy Setup** - Comprehensive guide to configuring device for maximum privacy with firewall, VPN, and permission management.
-- **Network Security for Android** - Secure internet connections, protect data with encryption, DNS configuration, and network monitoring.
-- **Root Permission Management** - Advanced methods for controlling app permissions, root access, and security policies with Magisk/KernelSU.
+## Privacy and security guides
 
----
+- [Android ad blocking](./android-adblocking.md) — Configure AdAway or Bindhosts and review hosts-based filtering limitations.
+- [Rooted Android privacy tools](../apps-and-modules/privacy.md) — Browse privacy controls, app isolation and identity tools.
+- [Network security tools](../apps-and-modules/security.md) — Review firewalls and security utilities.
 
-## App Management & Optimization
+<span id="app-management-optimization" class="legacy-anchor" aria-hidden="true"></span>
 
-### Data & App Management
-- **[Stop Android App Auto Updates from Play Store](./stop-android-app-auto-updates-play-store.md)** - Take complete control over app updates by disabling automatic updates with Zygisk Detach module. Prevent unwanted changes and save data.
+## App management and optimization
 
-### Coming Soon
-- **Batch Install/Uninstall Apps** - Efficiently manage multiple applications simultaneously with ADB and root tools.
-- **Export Installed Apps List** - Create comprehensive backup list of installed applications with version info.
-- **App Cloning & Isolation** - Run multiple instances of apps for better account management.
-- **App Usage Analytics** - Monitor and control app behavior to enhance privacy and performance.
+- [Android app debloating](./android-apps-debloating.md) — Review, disable or remove pre-installed apps.
+- [Stop Play Store app auto-updates](./stop-android-app-auto-updates-play-store.md) — Configure app update behavior with Zygisk Detach.
+- [App and package management tools](../apps-and-modules/system.md#app-package-management) — Compare root app managers and package tools.
 
----
+<span id="performance-system-optimization" class="legacy-anchor" aria-hidden="true"></span>
 
-## Performance & System Optimization
+## Performance and system optimization
 
-### Battery & Power Management
-- **Advanced Battery Optimization** *(Coming Soon)* - Maximize battery life using root-level power management techniques.
-- **Background App Management** *(Coming Soon)* - Control background activity and wake locks to reduce battery drain.
-- **Aggressive Doze Configuration** *(Coming Soon)* - Implement enhanced battery-saving strategies.
+- [Performance and battery tools](../apps-and-modules/performance.md) — Browse kernel, memory, charging and process-management tools.
+- [Rooting guides](../rooting-guides/) — Compare root methods and review device-specific requirements.
 
-### Performance Tuning
-- **Android Performance Optimization** *(Coming Soon)* - Improve system responsiveness and speed through system-level tweaks.
-- **RAM Management** *(Coming Soon)* - Optimize memory usage for smoother multitasking.
-- **Custom Kernel Configuration** *(Coming Soon)* - Explore kernel modifications for improved performance and efficiency.
+<span id="battery-power-management" class="legacy-anchor" aria-hidden="true"></span>
 
----
+### Battery and power management
 
-## Customization & Theming
+- [Battery and power tools](../apps-and-modules/performance.md#battery-optimization) — Review battery, charging and power-management entries.
 
-### Visual Customization
-- **System Theme Modification** *(Coming Soon)* - Customize your device's look and feel with advanced theming options.
-- **Custom Fonts Installation** *(Coming Soon)* - Replace system fonts for a personalized experience.
-- **Status Bar Customization** *(Coming Soon)* - Modify the status bar to display the information you value most.
+<span id="customization-theming" class="legacy-anchor" aria-hidden="true"></span>
 
-### System UI Changes
-- **Boot Animation Replacement** *(Coming Soon)* - Personalize your device with custom boot animations.
-- **System Sounds Modification** *(Coming Soon)* - Replace default system sounds with your own.
+## Customization and theming
 
----
+- [Customization tools](../apps-and-modules/customization.md) — Browse themes, fonts, launchers and display modifications.
 
-## Essential Android Knowledge
+### System UI changes
 
-### For Beginners
-- **Enable Developer Options** - Unlock hidden settings and debugging features on your device.
-- **Understanding Android Versions** - Learn about the features and capabilities of different Android versions.
-- **Basic Security Setup** - Implement essential security configurations for everyday use.
-- **Monitor Data Usage** - Effectively control and manage your mobile data consumption.
-- **Battery Health Basics** - Understand how to maintain your battery's longevity and performance.
+- [System and OEM tools](../apps-and-modules/system.md#system-ui-framework) — Review framework, System UI and OEM-specific modifications.
 
-### Advanced Users
-- **ADB Commands Mastery** - Learn essential ADB commands for powerful device control and troubleshooting.
-- **Android System Architecture** - Gain a deeper understanding of how the Android operating system functions.
-- **Magisk Module Development** - Create your own custom Magisk modules to extend device functionality.
-- **Custom Recovery Usage** - Master the use of TWRP and other custom recovery systems for flashing and maintenance.
+<span id="development-technical-guides" class="legacy-anchor" aria-hidden="true"></span>
 
----
+## Development and technical guides
 
-## Development & Technical Guides
+- [Development and automation tools](../apps-and-modules/development.md) — Browse terminal, ADB, scripting and automation tools.
+- [Core Android resources](../resources.md#core-tooling) — Find platform tools and technical references.
 
-### Root Development
-- **Creating Magisk Modules** *(Coming Soon)* - Build custom modules tailored to your specific needs.
-- **LSPosed Module Development** *(Coming Soon)* - Develop Xposed framework modules for deep system customization.
-- **Testing Root Apps Safely** *(Coming Soon)* - Set up a secure environment for testing root applications.
+### Essential Android knowledge
 
-### System Modification
-- **System Partition Editing** *(Coming Soon)* - Perform advanced modifications to system partitions.
-- **Build.prop Modifications** *(Coming Soon)* - Tweak system properties to alter device behavior.
-- **Logcat Analysis** *(Coming Soon)* - Use logcat to debug and diagnose system issues.
+- [Rooting glossary and framework badges](../apps-and-modules/#glossary-and-badges) — Review terms and compatibility labels.
+- [Rooting guides](../rooting-guides/) — Learn how bootloaders, root methods and recovery fit together.
 
----
+## Community resources
 
-## Community & Resources
+- [Project resources](../resources.md) — Find communities, device references and recovery links.
+- [Frequently asked questions](../faqs.md) — Review common root and device questions.
 
-### Official Project Links
-- **[GitHub Repository](https://github.com/awesome-android-root/awesome-android-root)** - Access source code, report issues, and contribute to the project.
-- **[Twitter/X](https://x.com/awsm_and_root)** - Stay informed with the latest project updates and community highlights.
+## Contributing to our guides
 
-### Essential External Resources
-- **[XDA Developers](https://forum.xda-developers.com/)** - The largest community for Android development and discussion.
-- **[Android Developer Docs](https://developer.android.com/)** - Official documentation and APIs from Google.
-- **[ADB Tutorial](https://www.xda-developers.com/install-adb-windows-macos-linux/)** - A complete guide to setting up and using ADB on any operating system.
-- **[Magisk Official](https://github.com/topjohnwu/Magisk)** - The official repository and documentation for Magisk.
-- **[KernelSU Project](https://kernelsu.org/)** - Official documentation for the KernelSU root solution.
-
-### Getting Help & Support
-When requesting assistance, please provide the following details to help us resolve your issue efficiently:
-- **Device Model**: The exact model number and manufacturer.
-- **Android Version**: Your current Android version and security patch level.
-- **Root Method**: The root solution you are using (e.g., Magisk, KernelSU, APatch) and its version.
-- **Error Details**: Specific error messages or symptoms you are encountering.
-- **Screenshots**: Visual evidence of any issues, if applicable.
-- **Steps Taken**: A summary of the actions you've already attempted to fix the problem.
-
----
-
----
-
-## Contributing to Our Guides
-
-Help us build the most comprehensive collection of Android guides available. Your expertise and contributions are vital to the project's success.
-
-### Ways to Contribute
-- **[Report Issues](https://github.com/awesome-android-root/awesome-android-root/issues)** - Notify us of any errors or outdated information.
-- **[Suggest New Guides](https://github.com/awesome-android-root/awesome-android-root/discussions)** - Request tutorials on topics you'd like to see covered.
-- **[Write Guides](https://github.com/awesome-android-root/awesome-android-root?tab=contributing-ov-file)** - Share your knowledge by authoring new guides.
-- **[Submit Screenshots](https://github.com/awesome-android-root/awesome-android-root/discussions)** - Enhance existing guides with clear, helpful images.
-- **[Star Repository](https://github.com/awesome-android-root/awesome-android-root)** - Show your support and help increase the project's visibility.
-
-### Guide Writing Guidelines
-To maintain quality and consistency, please adhere to the following when contributing:
-- **Device Compatibility**: Test procedures on multiple devices where possible.
-- **Clear Screenshots**: Include visual aids to clarify complex steps.
-- **Safety Warnings**: Clearly highlight potential risks and necessary precautions.
-- **Update Frequency**: Ensure content remains current with the latest software versions.
-- **Target Audience**: Specify the intended skill level (beginner or advanced).
-
----
-
-## Quick Navigation
-
-**New to Android Root?** Start with these foundational guides:
-1. **[Complete Android Rooting Guide](../rooting-guides/)** - Master the fundamentals of rooting.
-2. **[Android Ad Blocking](./android-adblocking.md)** - Enhance your privacy from the start.
-3. **[Remove Bloatware](./android-apps-debloating.md)** - Clean up your device and improve performance.
-
-**Advanced Users:** Explore our **[300+ Root Apps Collection](../apps-and-modules/index.md)** for the ultimate customization toolkit. Additionally, find detailed, device-specific rooting guides for **[Pixel](../rooting-guides/how-to-root-pixel-phone.md)**, **[Samsung](../rooting-guides/how-to-root-samsung-phone.md)**, **[Xiaomi](../rooting-guides/how-to-root-xiaomi-phone.md)**, and other major brands.
-
----
+Use the [contribution guide](../contributing.md) to propose a correction or add a tutorial. Include affected device models, software versions and recovery steps where relevant.

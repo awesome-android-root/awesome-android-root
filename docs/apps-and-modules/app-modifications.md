@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: "App Modifications"
+title: "App modifications"
 description: "App patchers, social media mods, YouTube tweaks, and signature tools for customizing Android apps on rooted devices."
 head:
   - - link
@@ -50,7 +50,7 @@ head:
       content: https://awesome-android-root.xyz/images/og.png
 ---
 
-# App Modifications
+# App modifications
 
 **App modifications** let you patch, mod and extend Android apps: app patchers (**ReVanced/Morphe-style**),
 modded app clients (social media, browsers, YouTube), signature & verification bypasses and LSPosed modules
@@ -60,20 +60,18 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 > Clicking an entry opens its **Source Code** page (GitHub/GitLab etc.) for `FOSS` apps, otherwise the
 > **Google Play Store** listing.
 
-## App Patchers
+**Related guide:** [Morphe patches list](https://morphe-patches.software/) · [App patchers](#app-patchers)
 
-- **[⭐ Morphe](https://morphe.software/)** - A next-generation app patcher built by some of the original ReVanced developers. It offers a modern interface, enhanced stability, and a growing list of supported apps and features. `FOSS`
+## App patchers
+
+- **[⭐ Morphe](https://morphe.software/)** - App patcher from former ReVanced developers with a modern interface, stability updates and support for more apps. `FOSS`
 - **[NexAlloy](https://github.com/NexAlloy/NexAlloy)** - ChsBuffer's LSPosed module, powered by Morphe, ReVanced supporting multiple apps. `FOSS` `[LSP]`
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (use with caution). `Proprietary`
-- **[ReVanced](https://revanced.app/)** - A powerful app patcher that allows you to modify popular apps like YouTube, Spotify, and more with additional features and customizations. `FOSS`
+- **[ReVanced](https://revanced.app/)** - Patches supported apps such as YouTube and Spotify to add features and customization options. `FOSS`
 - **[ReVanced Extended](https://github.com/NoName-exe/revanced-extended)** - ReVanced eXtended (now Morphe) YT and YT-M for both root and non-root users. `FOSS` `[M]` `[K]`
 - **[ReVanced Magisk Module by j-hc](https://github.com/j-hc/revanced-magisk-module)** - Extensive ReVanced & morphe builder. `FOSS` `[M]` `[K]`
 
-> [!TIP]
-> Also check out [Morphe Patches list ↗](https://morphe-patches.software/)
-
-
-## App Mods
+## App mods
 
 - **[⭐ GPhotosUnlimited](https://github.com/Rev4N1/GPhotosUnlimited)** - A Zygisk module which gives unlimited Google Photos storage. `FOSS` `[M]` `[K]`
 - **[AmznKiller](https://github.com/hxreborn/amznkiller)** - Hides sponsored content and ads in the Amazon Shopping app. `FOSS` `[LSP]`
@@ -107,7 +105,7 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 - **[Yandex Maps Patcher](https://github.com/Xposed-Modules-Repo/ru.bluecat.yandexmapspatcher)** - Hides ads and intrusive services in the Yandex Maps app. `Proprietary` `[LSP]`
 - **[Yandex Music Downloader](https://github.com/errorman-awful/YMDownloaderXposed)** - Download flac Music from Yandex Music app. `Proprietary` `[LSP]`
 
-## Browser Mods
+## Browser mods
 
 - **[⭐ ChromeXt](https://github.com/JingMatrix/ChromeXt)** - UserScript and DevTools support for Chromium-based and WebView-based browsers. `FOSS` `[LSP]`
 - **[BetterVia](https://github.com/JiGuroLGC/BetterVia)** - Bypass whitelist restrictions, Screenshot protection, Block components, One-tap theme switching etc. `FOSS` `[LSP]`
@@ -115,7 +113,7 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 - **[FoldDevtools](https://github.com/achyuki/FoldDevtools)** - Using chrome devtools to debug webview on Android. `FOSS` `[LSP]`
 - **[Fxxk-MiBrowser](https://github.com/DuhMatt/Fxxk-MiBrowser)** - Redirects forced Xiaomi Browser links to the system default browser. `FOSS` `[LSP]`
 
-## Signature & Verification
+## Signature & verification
 
 - **[⭐ Core Patch N](https://github.com/LSPosed/CorePatch)** - Disable signature verification For Android. `FOSS` `[LSP]`
 - **[⭐ Pairipfix](https://github.com/ahmedmani/pairipfix)** - Bypasses the "Get this app from Play" screen that appears when installing Android apps as an APK instead of from the Google Play Store. `FOSS` `[LSP]`
@@ -123,7 +121,7 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 - **[F**k Google License](https://github.com/JiGuroLGC/FuckGoogleLicense)** - Bypass Google Service License Verification. `FOSS` `[LSP]`
 - **[XSpoofSignatures](https://github.com/rushiiMachine/XSpoofSignatures)** - Spoof package signatures. `FOSS` `[LSP]`
 
-## Social Media Mods
+## Social media mods
 
 ### Bilibili
 
@@ -158,9 +156,9 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 
 ### Reddit
 
-> [!IMPORTANT]
+> [!NOTE]
 >
-> All Reddit patches require: [Morphe App ↗](https://morphe.software/)
+> Reddit patches require the [Morphe app](https://morphe.software/).
 
 - **[Adobo Patches](https://github.com/jkennethcarino/adobo/)** - Various patches for reddit app. `FOSS`
 - **[Morphe Reddit Patches](https://github.com/MorpheApp/morphe-patches#-patches-list)** - Various patches for reddit. `FOSS`
@@ -215,11 +213,7 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 ### Zalo
 - **[Zalo Patch](https://github.com/amarinne/zalo-patch)** - Zalo customization module for LSPosed. `FOSS` `[LSP]`
 
-
-> [!TIP]
-> Also check out [App Patchers section](app-modifications.md#app-patchers)
-
-## YouTube & Media Mods
+## YouTube & media mods
 
 - **[GlassMic](https://github.com/lm060719/io.mo.glassmic)** - Lets you route an imported audio file into target recording apps through AudioRecord/AAudio hooks. `FOSS` `[LSP]`
 - **[OnePlus 8 Series and 9R Camera Unlocker](https://github.com/Magisk-Modules-Alt-Repo/oneplus-8series-9r-camera-unlocker)** - Enables 48MP RAW10 capture support, both on the main (8/8T/9R) and ultra wide (8 Pro) lenses and much more. `FOSS` `[M]`

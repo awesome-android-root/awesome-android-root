@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Stop Android App Auto Updates from Play Store
+title: Stop Android app auto updates from Play Store
 description: Complete step-by-step guide to disable automatic app updates from Google Play Store.
 head:
   # Canonical and preconnect links
@@ -26,10 +26,10 @@ head:
       content: https://awesome-android-root.xyz/general-guides/stop-android-app-auto-updates-play-store
   - - meta
     - property: og:image
-      content: https://awesome-android-root.xyz/images/og/zygisk-detach.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:image:secure_url
-      content: https://awesome-android-root.xyz/images/og/zygisk-detach.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:image:alt
       content: How to Stop Android App Auto Updates from Play Store - Zygisk Detach Guide
@@ -67,7 +67,7 @@ head:
       content: Permanently disable automatic app updates from Google Play Store using Zygisk Detach module. Complete guide for rooted Android devices with Magisk/KernelSU. Step-by-step tutorial included!
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og/zygisk-detach.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Android app auto updates disable guide - Zygisk Detach method for rooted devices
@@ -134,32 +134,32 @@ head:
 
 ---
 
-# How to Stop App Updates from Play Store (Detach Apps)
+# How to stop app updates from Play Store (detach apps)
 
 Tired of Google Play Store forcefully updating your apps? This guide shows you how to **detach apps from the Play Store** using Zygisk Detach, preventing unwanted automatic updates permanently.
 
-## What is App Detaching?
+## What is app detaching?
 
 App detaching removes the connection between installed apps and Google Play Store. Once detached, apps won't receive automatic updates or be recognized by the Play Store.
 
 ## Prerequisites
 
 **Need to root your device first?** Check our device-specific guides:
-- 📱 [Samsung Phone Rooting Guide](../rooting-guides/how-to-root-samsung-phone.md)
-- 📱 [Pixel Phone Rooting Guide](../rooting-guides/how-to-root-pixel-phone.md)
-- 📱 [OnePlus Phone Rooting Guide](../rooting-guides/how-to-root-oneplus-phone.md)
-- 📱 [Xiaomi Phone Rooting Guide](../rooting-guides/how-to-root-xiaomi-phone.md)
-- 📱 [Nothing Phone Rooting Guide](../rooting-guides/how-to-root-nothing-phone.md)
-- 📱 [Motorola Phone Rooting Guide](../rooting-guides/how-to-root-motorola-phone.md)
-- 🔓 [Bootloader Unlocking Guide](../rooting-guides/how-to-unlock-bootloader.md)
+- [Samsung Phone Rooting Guide](../rooting-guides/how-to-root-samsung-phone.md)
+- [Pixel Phone Rooting Guide](../rooting-guides/how-to-root-pixel-phone.md)
+- [OnePlus Phone Rooting Guide](../rooting-guides/how-to-root-oneplus-phone.md)
+- [Xiaomi Phone Rooting Guide](../rooting-guides/how-to-root-xiaomi-phone.md)
+- [Nothing Phone Rooting Guide](../rooting-guides/how-to-root-nothing-phone.md)
+- [Motorola Phone Rooting Guide](../rooting-guides/how-to-root-motorola-phone.md)
+- [Bootloader Unlocking Guide](../rooting-guides/how-to-unlock-bootloader.md)
 
 **Required:**
-- ✅ **Rooted Android device** (Magisk or KernelSU)
-- ✅ **Zygisk enabled** in your root manager
+- **Rooted Android device** (Magisk or KernelSU)
+- **Zygisk enabled** in your root manager
 
-## Method 1: Using GUI App (Easiest)
+## Method 1: using GUI app (easiest)
 
-### Step 1: Install Zygisk Detach Module
+### Step 1: install Zygisk detach module
 
 1. **Download** [Zygisk Detach Module](https://github.com/j-hc/zygisk-detach/releases) (latest `.zip` file)
 2. **Flash in Magisk/KernelSU:**
@@ -167,7 +167,7 @@ App detaching removes the connection between installed apps and Google Play Stor
    - Select the downloaded zip file
 3. **Reboot** your device
 
-### Step 2: Install Detach App
+### Step 2: install detach app
 
 1. **Download** [Zygisk Detach App](https://github.com/j-hc/zygisk-detach-app/releases) (latest `.apk` file)
 2. **Install** the APK on your device
@@ -175,13 +175,13 @@ App detaching removes the connection between installed apps and Google Play Stor
 4. **Select apps** you want to detach
 5. **Apply changes** - done!
 
-## Method 2: Using Terminal (Advanced)
+## Method 2: using terminal (advanced)
 
-### Step 1: Install Module (Same as above)
+### Step 1: install module (same as above)
 
 Follow Step 1 from Method 1.
 
-### Step 2: Use Terminal Commands
+### Step 2: use terminal commands
 
 1. **Open terminal** (Termux or similar)
 2. **Run detach command:**
@@ -197,7 +197,7 @@ Follow Step 1 from Method 1.
 su -c /data/adb/modules/zygisk-detach/detach
 ```
 
-## Enable Zygisk (If Not Enabled)
+## Enable Zygisk (if not enabled)
 
 **Magisk users:**
 1. Open Magisk → Settings → Enable "Zygisk" → Reboot
@@ -205,14 +205,14 @@ su -c /data/adb/modules/zygisk-detach/detach
 **KernelSU users:**
 1. Install a compatible Zygisk implementation if your setup does not include one → Reboot
 
-## Verify Detachment
+## Verify detachment
 
 1. Open Google Play Store
 2. Search for the detached app
 3. Should show "Install" instead of "Update/Open"
-4. ✅ App successfully detached!
+4. App successfully detached!
 
-## How to Re-attach Apps
+## How to re-attach apps
 
 **Using GUI App:** Open the detach app → Select detached apps → Re-attach
 
@@ -233,7 +233,7 @@ su -c /data/adb/modules/zygisk-detach/detach
 - Clear Play Store data: Settings → Apps → Google Play Store → Storage → Clear Data
 - Re-detach the apps
 
-## Important Notes
+## Important notes
 
 ⚠️ **Security Warning:** Detached apps won't receive security updates. Only detach apps you specifically don't want updated.
 
@@ -242,12 +242,12 @@ su -c /data/adb/modules/zygisk-detach/detach
 - Manually check for important updates
 - Backup data before detaching critical apps
 
-## Related Guides
+## Related guides
 
-- 📋 [Android Root Apps Collection](../apps-and-modules/)
-- 🔧 [Custom Recovery Installation](../rooting-guides/how-to-install-custom-recovery.md)
-- 🏠 [Custom ROM Installation](../rooting-guides/custom-rom-installation.md)
-- 📚 [All Root Guides](../rooting-guides/)
+- [Android Root Apps Collection](../apps-and-modules/)
+- [Custom Recovery Installation](../rooting-guides/how-to-install-custom-recovery.md)
+- [Custom ROM Installation](../rooting-guides/custom-rom-installation.md)
+- [All Root Guides](../rooting-guides/)
 
 ---
 

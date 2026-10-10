@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: "GhostLock: Root Android Without Unlocking the Bootloader"
+title: "GhostLock: root Android without unlocking the bootloader"
 description: "Can Android be rooted without unlocking the bootloader? Learn how GhostLock provides temporary root, its device limits, reboot behavior and security risks."
 head:
   - - link
@@ -87,7 +87,7 @@ head:
 
 ---
 
-# GhostLock: Root Android Without Unlocking the Bootloader
+# GhostLock: root Android without unlocking the bootloader
 
 **Can Android be rooted without unlocking the bootloader?** Sometimes, but only temporarily and only on a narrow set of vulnerable device builds. GhostLock (CVE-2026-43499) can grant an in-memory root session while the bootloader remains locked; it is not a permanent replacement for bootloader unlocking.
 
@@ -101,10 +101,10 @@ Almost every root method on this site follows the same recipe: **unlock the boot
 
 This page is the plain-English, complete guide to GhostLock temporary root: what the bug actually is, what it lets you do, what it can *never* do, and every app and project built on it.
 
-> [!TIP]
+> [!NOTE]
 > **The 30-second version:** GhostLock is a 15-year-old bug in the Linux kernel that Android uses. The right app can trigger it to give itself root *for the current boot only* - no unlocked bootloader, no flashing, no Knox trip, no data wipe. Reboot and root is gone; run the tool again to get it back. It only works on specific devices running firmware up to about the **June 2026** security patch, and it is already being patched out of existence.
 
-## Table of Contents
+## Table of contents
 
 - [What is GhostLock? (in plain English)](#what-is-ghostlock-in-plain-english)
 - [How the temporary root tools actually work](#how-the-temporary-root-tools-actually-work)
@@ -117,7 +117,7 @@ This page is the plain-English, complete guide to GhostLock temporary root: what
 - [FAQ](#faq)
 - [Related pages](#related-pages)
 
-## What is GhostLock? (in plain English)
+## What is GhostLock? (in plain english)
 
 **GhostLock** is the nickname for **CVE-2026-43499**, a high-severity (CVSS 7.8) security bug in the **Linux kernel** - the core that every Android phone runs on. It was publicly disclosed in 2026 by researchers at Nebula Security, whose AI agent VEGA found it; Google paid a **$92,337 bounty** for it through the kernelCTF program, and the researchers' exploit succeeded about **97% of the time** in testing.
 
@@ -148,7 +148,7 @@ Every GhostLock tool follows roughly the same chain, usually wrapped in a one-ta
 > [!NOTE]
 > Because the exploit manipulates kernel timing, several tools ask you to run them **within ~30 seconds of booting** for the best reliability. A failed run usually just panics or reboots the kernel - you try again.
 
-## What GhostLock root CAN do
+## What GhostLock root can do
 
 Think of it as "full root, rented by the boot":
 
@@ -158,7 +158,7 @@ Think of it as "full root, rented by the boot":
 - **Be re-triggered on demand.** Want root for ten minutes to restore a backup or freeze an app, then be effectively stock? Run the app, do the thing, reboot. Some projects (via ReSukiSU integration) can even auto-re-trigger at boot.
 - **Run on devices that *can't* unlock.** Flagships sold with no bootloader-unlock path (recent Snapdragon Galaxies are the headline example) are reachable this way - as long as their kernel build is vulnerable. Ports now cover older flagships (Galaxy S22 Ultra), foldables (Z Fold6, OPPO Find N2), mid-rangers (iQOO Z9 5G, POCO M6 Pro), Amazon hardware on 5.X kernels, and even the Meta Quest 1 VR headset.
 
-## What GhostLock root CANNOT do
+## What GhostLock root cannot do
 
 This is equally important, and overselling it is how people brick phones:
 
@@ -188,7 +188,7 @@ Everything public that implements or enables CVE-2026-43499 temporary root, grou
 - **[root my device (nothing phone 3a)](https://github.com/techtornados/Root-My-Device)** - OneClick root application for the Nothing Phone (3a). Forked of a different repo that was limited to the Japanese version of the nothing phone 3a. `FOSS` (Apache-2.0)
 - **[UniRoot](https://github.com/kuuky29/UniRoot)** - One-click root for Samsung Galaxy devices, powered by CVE-2026-43499 / dirty-pipe payloads with a KernelSU late-load.
 
-### Command-line exploits & device ports (for tinkerers)
+### Command-Line exploits & device ports (for tinkerers)
 
 - **[ghostlock-oneplus](https://github.com/JoinChang/ghostlock-oneplus)** - The most developed standalone exploit: root + KernelSU on OnePlus/OPPO/realme devices with a locked bootloader (OnePlus 13/15, Ace 6T, OPPO Pad 4 Pro, and even Xiaomi 17). Runtime kernel auto-detection with a multi-device offset table, a phone-standalone "bootstrap" mode, and optional auto-re-trigger at boot via ReSukiSU. Run it within ~30 seconds of boot for best reliability. `FOSS`
 - **[GhostLock-5.10](https://github.com/R0rt1z2/GhostLock-5.10)** - Kernel root exploit for some 5.X-kernel devices - mostly Amazon hardware - from the developer behind Kaeru and Fenrir. Proof that the bug reaches older kernels, not just GKI 6.12 flagships. `FOSS`
@@ -251,7 +251,7 @@ Devices shipping **after** mid-2026 (e.g. Galaxy S26 series) or running kernels 
 
 **Rule of thumb:** if your device *can* unlock its bootloader and you want permanent root, use the normal method - start with the [Root Framework Comparison](./root-framework-comparison.md). GhostLock is for devices that can't unlock, users who absolutely cannot lose Knox/Wallet/Secure Folder, or anyone who only needs root occasionally and wants to stay stock otherwise.
 
-## Is it safe? Risks and common sense
+## Is it safe? risks and common sense
 
 - **For your hardware:** comparatively low risk. Nothing is flashed or written to partitions, so the classic brick scenarios mostly don't apply. A failed exploit run typically ends in a kernel panic and reboot.
   Some modules though, can cause boot loop which isn't restorable on a device without unlocked bootloader. A list of known working/non working modules can be found [here](https://xdaforums.com/t/list-of-modules-working-on-temporal-root.4796105/)

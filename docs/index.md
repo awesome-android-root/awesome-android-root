@@ -1,363 +1,57 @@
 ---
 layout: home
-title: Android Root Apps, Modules & Rooting Guides
-titleTemplate: Awesome Android Root
-description: "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices."
-head:
-  - - meta
-    - name: robots
-      content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-  - - meta
-    - property: og:type
-      content: "website"
-  - - meta
-    - property: og:url
-      content: "https://awesome-android-root.xyz"
-  - - meta
-    - property: og:image
-      content: "https://awesome-android-root.xyz/images/og.png"
-  - - meta
-    - property: og:title
-      content: "Android Root Apps, Modules & Rooting Guides | Awesome Android Root"
-  - - meta
-    - property: og:description
-      content: "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices."
-  - - meta
-    - property: og:image:secure_url
-      content: "https://awesome-android-root.xyz/images/og.png"
-  - - meta
-    - property: og:image:alt
-      content: "Android Root Apps, Modules & Rooting Guides | Awesome Android Root"
-  - - meta
-    - property: og:image:width
-      content: "1200"
-  - - meta
-    - property: og:image:height
-      content: "630"
-  - - meta
-    - property: og:image:type
-      content: "image/png"
-  - - meta
-    - property: og:site_name
-      content: "Awesome Android Root"
-  - - meta
-    - name: twitter:card
-      content: "summary_large_image"
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
-    - name: twitter:title
-      content: "Android Root Apps, Modules & Rooting Guides | Awesome Android Root"
-  - - meta
-    - name: twitter:description
-      content: "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices."
-  - - meta
-    - name: twitter:image
-      content: "https://awesome-android-root.xyz/images/og.png"
-  - - meta
-    - name: twitter:image:alt
-      content: "Android Root Apps, Modules & Rooting Guides | Awesome Android Root"
-  - - meta
-    - property: og:locale
-      content: "en_US"
-  - - meta
-    - property: og:updated_time
-      content: "2026-09-13T00:00:00Z"
-  - - link
-    - rel: canonical
-      href: "https://awesome-android-root.xyz"
-  - - link
-    - rel: prefetch
-      href: "/apps-and-modules/"
-  - - script
-    - type: application/ld+json
-    - |
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebSite",
-            "@id": "https://awesome-android-root.xyz/#website",
-            "name": "Awesome Android Root",
-            "alternateName": "Ultimate Android Rooting Hub",
-            "description": "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices.",
-            "url": "https://awesome-android-root.xyz/",
-            "inLanguage": "en-US",
-            "publisher": {
-              "@id": "https://awesome-android-root.xyz/#organization"
-            },
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": {
-                "@type": "EntryPoint",
-                "urlTemplate": "https://awesome-android-root.xyz/search?q={search_term_string}"
-              },
-              "query-input": "required name=search_term_string"
-            },
-            "sameAs": [
-              "https://github.com/awesome-android-root",
-              "https://x.com/awsm_and_root"
-            ]
-          },
-          {
-            "@type": ["WebPage", "CollectionPage"],
-            "@id": "https://awesome-android-root.xyz/#webpage",
-            "name": "Android Root Apps, Modules & Rooting Guides | Awesome Android Root",
-            "description": "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices.",
-            "url": "https://awesome-android-root.xyz/",
-            "datePublished": "2025-05-25T00:00:00Z",
-            "dateModified": "2026-06-26T00:00:00Z",
-            "inLanguage": "en-US",
-            "isPartOf": {
-              "@id": "https://awesome-android-root.xyz/#website"
-            },
-            "image": {
-              "@type": "ImageObject",
-              "url": "https://awesome-android-root.xyz/images/og.png",
-              "width": 1200,
-              "height": 630
-            }
-          },
-          {
-            "@type": "Organization",
-            "@id": "https://awesome-android-root.xyz/#organization",
-            "name": "Awesome Android Root",
-            "url": "https://awesome-android-root.xyz/",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://awesome-android-root.xyz/images/logo.png",
-              "width": 330,
-              "height": 330
-            },
-            "sameAs": [
-              "https://github.com/awesome-android-root",
-              "https://x.com/awsm_and_root"
-            ]
-          },
-          {
-            "@type": "SiteNavigationElement",
-            "name": "Primary Navigation",
-            "about": "Top-level sections of Awesome Android Root",
-            "url": "https://awesome-android-root.xyz/",
-            "hasPart": [
-              { "@type": "WebPage", "name": "Root Apps", "url": "https://awesome-android-root.xyz/apps-and-modules/" },
-              { "@type": "WebPage", "name": "Root Guides", "url": "https://awesome-android-root.xyz/rooting-guides/" },
-              { "@type": "WebPage", "name": "Resources", "url": "https://awesome-android-root.xyz/resources" },
-              { "@type": "WebPage", "name": "FAQs", "url": "https://awesome-android-root.xyz/faqs" }
-            ]
-          }
-        ]
-      }
-
-hero:
-  name: "Awesome Android Root"
-  tagline: "Explore 650+ root apps and modules, step-by-step rooting guides, and practical troubleshooting for Android power users."
-  image:
-    src: /images/logo_dark.svg
-    alt: Awesome Android Root - Ultimate Rooting Hub Logo
-  actions:
-    - theme: brand
-      text: Browse Root Apps
-      link: /apps-and-modules/
-      size: large
-    - theme: alt
-      text: Complete Rooting Guides
-      link: /rooting-guides/
-    - theme: alt
-      text: "Troubleshooting"
-      link: /troubleshooting
-features:
-  - icon: 🛡️
-    title: System-Wide Ad Blocking
-    details: "Block ads, trackers & malware across your entire system with hosts & DNS tools."
-    link: /apps-and-modules/ad-blocking
-
-  - icon: 🛠️
-    title: Root Management
-    details: "Root managers, module managers, LSPosed & Zygisk, and root hiding & Play Integrity."
-    link: /apps-and-modules/root-management
-
-  - icon: 🧩
-    title: App Modifications
-    details: "App patchers, social media mods, browser & YouTube clients, signature tools."
-    link: /apps-and-modules/app-modifications
-
-  - icon: ⚡
-    title: Performance & Battery
-    details: "Performance optimization, kernel management, memory, battery & charging tools."
-    link: /apps-and-modules/performance
-
-  - icon: 🎨
-    title: Customization
-    details: "Custom themes, fonts, launchers, status bar, notifications & display tweaks."
-    link: /apps-and-modules/customization
-
-  - icon: ⚙️
-    title: System & App Management
-    details: "System tweaks, OEM frameworks, app & package management, permissions & AppOps."
-    link: /apps-and-modules/system
-
-  - icon: 🗂️
-    title: File Management
-    details: "Root file managers, storage cleaners, and file & partition tools."
-    link: /apps-and-modules/file-management
-
-  - icon: 💾
-    title: Backup & Restore
-    details: "Full app & data backups, cloud sync and data recovery for rooted devices."
-    link: /apps-and-modules/backup
-
-  - icon: 🧹
-    title: Debloating
-    details: "Remove bloatware and unwanted system apps safely."
-    link: /apps-and-modules/debloating
-
-  - icon: 🕵️
-    title: Privacy Tools
-    details: "Privacy apps & modules, device ID & location spoofing, app isolation."
-    link: /apps-and-modules/privacy
-
-  - icon: 🔐
-    title: Security & Firewalls
-    details: "Security tools and per-app firewalls that control network access."
-    link: /apps-and-modules/security
-
-  - icon: 🌐
-    title: Networking
-    details: "VPN & proxy modules, network tools, Wi-Fi, Bluetooth & NFC."
-    link: /apps-and-modules/networking
-
-  - icon: 🎮
-    title: Gaming Optimization
-    details: "FPS unlockers, gaming tweaks, and game modification tools."
-    link: /apps-and-modules/gaming
-
-  - icon: 🧑‍💻
-    title: Development & Automation
-    details: "Terminal, ADB, Linux environments, automation, and hardware tools."
-    link: /apps-and-modules/development
+title: Android root apps and guides
+description: A curated index of Android root apps and modules, with practical guides for Magisk, KernelSU, APatch and LSPosed.
 ---
 
-<div class="vp-doc">
+<div class="aar-home">
 
-## Start Your Rooting Journey
+<section class="home-intro">
 
-<div class="custom-journey-selector">
-  <div class="journey-card beginner">
-    <h3>Complete Beginner</h3>
-    <p>Never rooted before? We'll guide you step-by-step</p>
-    <ul>
-      <li>Safety first approach</li>
-      <li>Backup strategies</li>
-      <li>Risk assessment</li>
-    </ul>
-    <a href="/rooting-guides/" class="journey-btn">Start Learning</a>
-  </div>
-  
-  <div class="journey-card intermediate">
-    <h3>Ready to Root</h3>
-    <p>Know the basics? Let's root your device</p>
-    <ul>
-      <li>Device-specific guides</li>
-      <li>Tool selection</li>
-      <li>Troubleshooting</li>
-    </ul>
-    <a href="/rooting-guides/#device-specific-guides" class="journey-btn">Find Your Device</a>
-  </div>
-  
-  <div class="journey-card advanced">
-    <h3>Already Rooted</h3>
-    <p>Maximize your rooted device's potential</p>
-    <ul>
-      <li>650+ curated apps</li>
-      <li>Advanced modules</li>
-      <li>Custom ROMs</li>
-    </ul>
-    <a href="/apps-and-modules/" class="journey-btn">Explore Apps</a>
-  </div>
+<h1 id="home-title">Awesome Android Root</h1>
+
+<p class="home-lede">A curated index of <EntryCount /> root apps and modules, with practical guides for Magisk, KernelSU, APatch and LSPosed.</p>
+
+<div class="home-actions">
+  <HomeSearch />
+  <a class="home-guides-link" href="/rooting-guides/">Rooting guides <span aria-hidden="true">→</span></a>
 </div>
 
+</section>
 
-## Major Guides
+<section class="home-section" aria-labelledby="where-to-start">
 
-<div class="guide-time-grid">
-  <a href="/rooting-guides/how-to-unlock-bootloader" class="community-card">
-    <span class="icon">🔓</span>
-    <strong>Unlock Bootloader</strong>
-    <span>10-30 min</span>
-  </a>
-  <a href="/rooting-guides/how-to-install-custom-recovery" class="community-card">
-    <span class="icon">💾</span>
-    <strong>Install Recovery</strong>
-    <span>10-25 min</span>
-  </a>
-  <a href="/rooting-guides/magisk-guide" class="community-card">
-    <span class="icon">🪄</span>
-    <strong>Root With Magisk</strong>
-    <span>15-40 min</span>
-  </a>
-  <a href="/rooting-guides/kernelsu-guide" class="community-card">
-    <span class="icon">⚙️</span>
-    <strong>Root with KernelSU</strong>
-    <span>15-35 min</span>
-  </a>
-  <a href="/rooting-guides/root-without-unlocking-bootloader" class="community-card">
-    <span class="icon">👻</span>
-    <strong>Temp Root, No Unlock</strong>
-    <span>GhostLock (CVE-2026-43499)</span>
-  </a>
-</div>
+## Where to start
 
+<ul class="start-list">
+  <li><a class="start-link" href="/rooting-guides/"><strong>New to rooting</strong><span class="start-description">Understand the risks and follow a step-by-step guide.</span><span class="start-arrow" aria-hidden="true">→</span></a></li>
+  <li><a class="start-link" href="/rooting-guides/#device-specific-guides"><strong>Ready to root</strong><span class="start-description">Choose a guide for your device and root method.</span><span class="start-arrow" aria-hidden="true">→</span></a></li>
+  <li><a class="start-link" href="/apps-and-modules/"><strong>Already rooted</strong><span class="start-description">Browse apps and modules by what you want to do.</span><span class="start-arrow" aria-hidden="true">→</span></a></li>
+</ul>
 
-## Resources
+</section>
 
-<div class="community-cards">
-  <a href="/rooting-guides/lsposed-guide" class="community-card github">
-    <span class="icon">📖</span>
-    <strong>LSPosed Guide</strong>
-    <span>Understanding and using LSPosed</span>
-  </a>
-  <a href="/rooting-guides/root-framework-comparison" class="community-card twitter">
-    <span class="icon">⚖️</span>
-    <strong>Framework Comparison</strong>
-    <span>Magisk vs KernelSU vs APatch</span>
-  </a>
-  <a href="/non-root-alternatives" class="community-card reddit">
-    <span class="icon">🛡️</span>
-    <strong>Non-Root Alternatives</strong>
-    <span>Customize without rooting</span>
-  </a>
-    <a href="/troubleshooting" class="community-card telegram">
-    <span class="icon">🔧</span>
-    <strong>Troubleshooting Guide</strong>
-    <span>Fix common rooting issues</span>
-  </a>
-</div>
+<section class="home-section" aria-labelledby="browse-by-category">
 
-## Community
+## Browse by category
 
-<div class="community-cards">
-  <a href="https://github.com/awesome-android-root/awesome-android-root" class="community-card github">
-    <span class="icon">⭐</span>
-    <strong>GitHub</strong>
-    <span>5.1k stars</span>
-  </a>
-  <a href="https://x.com/awsm_and_root" class="community-card twitter">
-    <span class="icon">𝕏</span>
-    <strong>Twitter/X</strong>
-    <span>Daily updates</span>
-  </a>
-  <a href="/faqs" class="community-card reddit">
-    <span class="icon">❓</span>
-    <strong>FAQs</strong>
-    <span>Solve common problems</span>
-  </a>
-  
-  <a href="/resources" class="community-card telegram">
-    <span class="icon">📚</span>
-    <strong>Resources</strong>
-    <span>Big collection of resources</span>
-  </a>
-</div>
+<CategoryGrid />
+
+</section>
+
+<section class="home-section" aria-labelledby="popular-guides">
+
+## Popular guides
+
+<ul class="guide-list">
+  <li><a class="guide-link" href="/rooting-guides/"><span class="guide-title">Rooting guides</span><span class="guide-meta">15–40 min</span></a></li>
+  <li><a class="guide-link" href="/rooting-guides/magisk-guide"><span class="guide-title">Root with Magisk</span><span class="guide-meta">15–40 min</span></a></li>
+  <li><a class="guide-link" href="/rooting-guides/kernelsu-guide"><span class="guide-title">Root with KernelSU</span><span class="guide-meta">15–35 min</span></a></li>
+  <li><a class="guide-link" href="/rooting-guides/how-to-install-custom-recovery"><span class="guide-title">Install a custom recovery</span><span class="guide-meta">10–25 min</span></a></li>
+  <li><a class="guide-link" href="/rooting-guides/root-without-unlocking-bootloader"><span class="guide-title">Locked bootloader: temporary root (CVE-2026-43499)</span><span class="guide-meta">Read the device requirements</span></a></li>
+  <li><a class="guide-link" href="/rooting-guides/how-to-unlock-bootloader"><span class="guide-title">Unlock the bootloader</span><span class="guide-meta">10–30 min</span></a></li>
+</ul>
+
+</section>
+
 </div>

@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Complete OnePlus Rooting Guide
+title: Complete OnePlus rooting guide
 description: "Master guide to root all OnePlus devices - OnePlus 15, 13, 12, 11, 10, Nord series with bootloader unlock and Magisk installation for OxygenOS."
 head:
   - - link
@@ -20,7 +20,7 @@ head:
       content: https://awesome-android-root.xyz/rooting-guides/how-to-root-oneplus-phone
   - - meta
     - property: og:image
-      content: https://awesome-android-root.xyz/images/og/oneplus.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -38,7 +38,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og/oneplus.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
       content: OnePlus Root Guide - All Models
@@ -74,11 +74,11 @@ head:
       content: index, follow
 ---
 
-# OnePlus Root Guide
+# OnePlus root guide
 
 Root OnePlus devices with straightforward bootloader unlock. Covers OxygenOS and ColorOS, OnePlus 15, 13, 12, 11, 10, 9, Nord series, and legacy devices.
 
-## Quick Navigation
+## Quick navigation
 
 - [Device Compatibility](#device-compatibility)
 - [Prerequisites](#prerequisites)
@@ -95,7 +95,7 @@ Root OnePlus devices with straightforward bootloader unlock. Covers OxygenOS and
 
 ## Prerequisites
 
-### Critical Requirements
+### Critical requirements
 
 ::: danger BEFORE YOU START
 **Data Wipe:** Unlocking bootloader erases everything including internal storage.
@@ -107,7 +107,7 @@ Root OnePlus devices with straightforward bootloader unlock. Covers OxygenOS and
 **OEM Unlocking:** Must be available in Developer Options. Some T-Mobile models cannot unlock.
 :::
 
-### Device Compatibility
+### Device compatibility
 
 Most OnePlus devices with unlockable bootloaders can be rooted. Check [XDA Forums](https://forum.xda-developers.com/c/oneplus.11993/) for your specific model.
 
@@ -116,18 +116,18 @@ Most OnePlus devices with unlockable bootloaders can be rooted. Check [XDA Forum
 - **Chinese-market models** running ColorOS may have additional restrictions
 :::
 
-::: tip 💡 Locked bootloader? Temporary root exists
+::: info Locked bootloader? Temporary root exists
 On several OnePlus/OPPO/realme devices (OnePlus 13/15, Ace 6T, OPPO Pad 4 Pro and more), the **ghostlock-oneplus** exploit uses the GhostLock kernel bug (CVE-2026-43499) to grant **session-only root without unlocking the bootloader** - nothing flashed, nothing survives a reboot. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md).
 :::
 
-### Hardware Requirements
+### Hardware requirements
 
 - OnePlus device (any supported model)
 - Quality USB-C cable
 - Computer (Windows, macOS, or Linux)
 - 50%+ battery charge
 
-### Software Requirements
+### Software requirements
 
 **On Computer:**
 
@@ -150,7 +150,7 @@ On several OnePlus/OPPO/realme devices (OnePlus 13/15, Ace 6T, OPPO Pad 4 Pro an
    - Download: [Magisk GitHub](https://github.com/topjohnwu/Magisk/releases)
    - Latest stable version
 
-::: tip Alternative Root Methods
+::: info Alternative Root Methods
 For the OnePlus 15 and 13 series, **KernelSU** is recommended instead of Magisk. KernelSU patches the kernel directly and is often more successful at bypassing the latest Play Integrity (Strong Integrity) checks.
 :::
 
@@ -158,7 +158,7 @@ For the OnePlus 15 and 13 series, **KernelSU** is recommended instead of Magisk.
    - OxygenOS Files app
    - Or any from Play Store
 
-### Device Preparation
+### Device preparation
 
 **Step 1: Enable Developer Options**
 
@@ -184,11 +184,11 @@ adb devices
 
 ---
 
-## Unlock Bootloader
+## Unlock bootloader
 
 OnePlus has one of simplest unlock processes.
 
-### Step 1: Enter Fastboot Mode
+### Step 1: enter fastboot mode
 
 **Method 1: ADB Command**
 ```bash
@@ -200,14 +200,14 @@ adb reboot bootloader
 2. Hold Volume Up + Volume Down + Power
 3. Release when fastboot screen appears
 
-### Step 2: Verify Fastboot Connection
+### Step 2: verify fastboot connection
 
 ```bash
 fastboot devices
 # Should show device serial number
 ```
 
-### Step 3: Unlock Bootloader
+### Step 3: unlock bootloader
 
 ```bash
 fastboot oem unlock
@@ -220,11 +220,11 @@ fastboot oem unlock
 4. Press Power to confirm
 5. Device automatically wipes and reboots
 
-::: tip INSTANT UNLOCK
+::: info INSTANT UNLOCK
 Unlike Xiaomi, OnePlus unlock is immediate. No waiting period!
 :::
 
-### Step 4: Verify Unlock Status
+### Step 4: verify unlock status
 
 After automatic factory reset:
 
@@ -239,9 +239,9 @@ Or check on device boot:
 
 ---
 
-## Root Installation
+## Root installation
 
-### Determine Correct Image
+### Determine correct image
 
 | Device Generation | Image to Patch |
 |---|---|
@@ -253,14 +253,14 @@ Or check on device boot:
 - Check "Ramdisk" field
 - "Yes" = `boot.img`, "No" = `init_boot.img`
 
-::: tip Verified Boot
+::: info Verified Boot
 Always ensure you have a copy of the stock `vbmeta.img`. When flashing a patched image on newer OxygenOS versions, you may need to disable verity using:
 `fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img`
 :::
 
 ---
 
-### Method 1: Boot Image Patching (Recommended)
+### Method 1: boot image patching (recommended)
 
 **Step 1: Download Stock Firmware**
 
@@ -280,7 +280,7 @@ Always ensure you have a copy of the stock `vbmeta.img`. When flashing a patched
 3. Download matching firmware
 4. Extract payload.bin
 
-::: tip WHY OXYGEN UPDATER?
+::: info WHY OXYGEN UPDATER?
 OnePlus no longer provides direct firmware downloads. Oxygen Updater is the most reliable method to get official firmware files.
 :::
 
@@ -364,7 +364,7 @@ id
 
 ---
 
-### Method 2: TWRP Recovery (Older Devices)
+### Method 2: TWRP recovery (older devices)
 
 For OnePlus 8 series and older with TWRP:
 
@@ -395,7 +395,7 @@ adb push Magisk-v27.0.zip /sdcard/
 
 ---
 
-## Post-Root Setup
+## Post-root setup
 
 ### Configure Magisk
 
@@ -423,7 +423,7 @@ Recommended for OnePlus:
 - **LSPosed (Zygisk)** - Framework
 - **Systemless Hosts** - Ad blocking
 
-### OxygenOS/ColorOS Optimization
+### OxygenOS/ColorOS optimization
 
 **Battery Optimization:**
 1. Settings > Battery > Battery optimization
@@ -442,9 +442,9 @@ Recommended for OnePlus:
 
 ---
 
-## OTA Handling
+## OTA handling
 
-### For A/B Devices (All Modern OnePlus)
+### For A/B devices (all modern OnePlus)
 
 **Step 1: Download OTA**
 
@@ -472,7 +472,7 @@ Download update but **DO NOT reboot**
 
 <details><summary>Click to expand troubleshooting tips</summary>
 
-### Bootloader Issues
+### Bootloader issues
 
 **"OEM Unlocking" Greyed Out**
 
@@ -498,7 +498,7 @@ Solutions:
 - Reinstall drivers (Windows)
 - Try different computer
 
-### Installation Issues
+### Installation issues
 
 **Magisk Shows "N/A"**
 
@@ -523,7 +523,7 @@ fastboot flash init_boot stock_init_boot.img
 fastboot reboot
 ```
 
-### Root Access Issues
+### Root access issues
 
 **Apps Not Getting Root**
 
@@ -547,16 +547,16 @@ Solutions:
 
 </details>
 
-## Unroot and Restore
+## Unroot and restore
 
-### Remove Root Only
+### Remove root only
 
 ```bash
 # Magisk > Uninstall > Restore Images
 # Root removed, bootloader still unlocked
 ```
 
-### Flash Stock Firmware
+### Flash stock firmware
 
 **Method 1: Fastboot ROM**
 
@@ -578,7 +578,7 @@ For complete restore and unbrick:
 3. Run MSM tool
 4. Complete stock restoration
 
-### Relock Bootloader (Optional)
+### Relock bootloader (optional)
 
 ::: danger RELOCK WARNING
 Only relock when completely stock. Relocking with modified system will brick!
@@ -591,7 +591,7 @@ fastboot oem lock
 ---
 
 
-## Best Practices
+## Best practices
 
 ### Security
 
@@ -604,7 +604,7 @@ fastboot oem lock
 
 ---
 
-## Community Resources
+## Community resources
 
 **Official OnePlus:**
 - [OnePlus Forums](https://forums.oneplus.com/) - Official community
@@ -618,7 +618,7 @@ fastboot oem lock
 - [XDA OnePlus Forums](https://xdaforums.com/c/oneplus.11993/) - Device discussions
 - [Reddit r/OnePlus](https://www.reddit.com/r/oneplus/) - Community help
 
-### Getting Help
+### Getting help
 
 **When asking for help, provide:**
 - Exact OnePlus model
@@ -630,7 +630,7 @@ fastboot oem lock
 
 ---
 
-## Next Steps
+## Next steps
 
 **After Rooting Your OnePlus:**
 
@@ -646,4 +646,3 @@ fastboot oem lock
    - [Custom ROM Guide](./custom-rom-installation.md) - Installation guide
    - LineageOS for stability
    - Pixel Experience for clean look
-

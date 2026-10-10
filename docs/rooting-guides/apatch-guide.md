@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Complete APatch Root Guide
+title: Complete APatch root guide
 description: "Master APatch rooting with a practical 2026 guide: compatibility checks, safe install flow, OTA survival, and recovery steps."
 head:
   - - link
@@ -20,7 +20,7 @@ head:
       content: https://awesome-android-root.xyz/rooting-guides/apatch-guide
   - - meta
     - property: og:image
-      content: https://awesome-android-root.xyz/images/og/apatch-guide.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -38,7 +38,7 @@ head:
       content: "Updated APatch setup for modern Android devices: compatibility, install, OTA, and recovery."
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og/apatch-guide.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
       content: APatch Installation Guide - Modern Kernel-Based Android Rooting
@@ -71,11 +71,11 @@ head:
       content: index, follow
 ---
 
-# APatch Root Installation Guide
+# APatch root installation guide
 
 APatch is a kernel-based root solution for modern Android devices. This guide focuses on a safe, repeatable workflow: verify compatibility first, patch the correct image, test boot if possible, then flash permanently.
 
-## Quick Navigation
+## Quick navigation
 
 - [What is APatch](#understanding-apatch)
 - [Compatibility and Requirements](#compatibility-and-requirements)
@@ -99,14 +99,14 @@ APatch is a kernel-based root solution for modern Android devices. This guide fo
 
 APatch patches your boot chain image (`boot.img` or `init_boot.img`) and provides kernel-level root access with systemless-style behavior.
 
-### Core Characteristics
+### Core characteristics
 
 - **Kernel-space root model** - root control comes from kernel-side components
 - **System partition remains untouched** - no `/system` remount required
 - **Modern Android friendly** - especially useful on recent devices using `init_boot`
 - **Module support** - APModule ecosystem plus partial cross-compatibility with some other module styles
 
-### APatch vs Other Root Solutions
+### APatch vs other root solutions
 
 | Feature | APatch | Magisk | KernelSU |
 |---------|--------|--------|----------|
@@ -121,9 +121,9 @@ APatch patches your boot chain image (`boot.img` or `init_boot.img`) and provide
 
 ---
 
-## Compatibility and Requirements
+## Compatibility and requirements
 
-### Officially Relevant Compatibility Signals
+### Officially relevant compatibility signals
 
 Based on APatch upstream docs and repository notes:
 
@@ -131,7 +131,7 @@ Based on APatch upstream docs and repository notes:
 - **Kernel range:** Linux kernel 3.18 to 6.12 (upstream stated range)
 - **Practical Android target:** modern Android builds (Android 10+ is the common baseline in community usage)
 
-### Must-Have Prerequisites
+### Must-have prerequisites
 
 ::: danger ESSENTIAL REQUIREMENTS
 **Unlocked bootloader** - mandatory before any APatch install.
@@ -143,7 +143,7 @@ Based on APatch upstream docs and repository notes:
 **Battery 50%+** - avoid interruptions during patch/flash.
 :::
 
-### Tools You Need
+### Tools you need
 
 **Computer:**
 - [Android Platform Tools](https://developer.android.com/tools/releases/platform-tools) (latest `adb`/`fastboot`)
@@ -157,7 +157,7 @@ Based on APatch upstream docs and repository notes:
 
 ---
 
-## Boot vs Init Boot: What to Patch
+## Boot vs init boot: what to patch
 
 Flashing the wrong target is a top cause of bootloops.
 
@@ -171,7 +171,7 @@ Flashing the wrong target is a top cause of bootloops.
 - Newer boot chain layout used by many Android 13+ devices
 - Common on Pixel 7/8/9 generation and many newer OEM builds
 
-### How to Identify Correct Target
+### How to identify correct target
 
 **Method 1 (recommended):** APatch app detection
 1. Install/open APatch
@@ -186,15 +186,15 @@ adb shell ls -l /dev/block/by-name/ | grep -E "boot|init_boot"
 
 Presence of `init_boot` often indicates modern split-ramdisk layout.
 
-::: tip SAFETY RULE
+::: info SAFETY RULE
 Always patch the image extracted from the **same build currently running on your phone**.
 :::
 
 ---
 
-## Installation Steps
+## Installation steps
 
-## Step 1: Extract the Correct Stock Image
+## Step 1: extract the correct stock image
 
 You need `boot.img` or `init_boot.img` from your exact current firmware build.
 
@@ -205,7 +205,7 @@ You need `boot.img` or `init_boot.img` from your exact current firmware build.
 3. Extract inner `image-*.zip`
 4. Grab `boot.img` or `init_boot.img`
 
-### OnePlus/OPPO/Realme (payload OTA)
+### OnePlus/OPPO/realme (payload OTA)
 
 1. Download full OTA package
 2. Extract `payload.bin`
@@ -221,7 +221,7 @@ You need `boot.img` or `init_boot.img` from your exact current firmware build.
 
 Samsung often uses Odin pipelines and compressed images (`*.lz4`). APatch workflows are less straightforward and device-specific. Proceed only with a tested model-specific method.
 
-## Step 2: Patch the Image in APatch
+## Step 2: patch the image in APatch
 
 ```bash
 adb push boot.img /sdcard/Download/
@@ -237,7 +237,7 @@ In APatch manager:
 
 Patched output is saved to storage (usually Download folder).
 
-## Step 3: Test Boot First (When Supported)
+## Step 3: test boot first (when supported)
 
 ```bash
 adb pull /sdcard/Download/apatch_patched*.img ./
@@ -251,7 +251,7 @@ If temporary boot succeeds and root works, continue to permanent flash.
 > [!WARNING]
 > Some devices/bootloaders do not support `fastboot boot`. If unsupported, skip test boot and keep a stock image ready for immediate recovery.
 
-## Step 4: Flash Permanently
+## Step 4: flash permanently
 
 ```bash
 adb reboot bootloader
@@ -265,7 +265,7 @@ fastboot flash init_boot apatch_patched_xxxxx.img
 fastboot reboot
 ```
 
-### A/B Slot Awareness
+### A/B slot awareness
 
 ```bash
 fastboot getvar current-slot
@@ -283,7 +283,7 @@ fastboot flash init_boot_b apatch_patched_xxxxx.img
 Do not disable AVB as a default APatch setup step. APatch workflows are designed to operate without broadly disabling verification.
 :::
 
-## Step 5: Verify Root
+## Step 5: verify root
 
 1. Boot may take longer on first startup
 2. Open APatch manager and confirm installed status
@@ -299,9 +299,9 @@ Expected output includes `uid=0(root)`.
 
 ---
 
-## Post-Installation Setup
+## Post-installation setup
 
-### Recommended Security Baseline
+### Recommended security baseline
 
 In APatch settings:
 - Default SU action: prompt
@@ -309,34 +309,34 @@ In APatch settings:
 - Biometric or device authentication for approvals
 - Enable root access logs
 
-### Root Permission Hygiene
+### Root permission hygiene
 
 - Grant only to trusted apps
 - Revoke old/unused grants regularly
 - Check logs after new module installs
 
-### Manager Hiding and Sensitive Apps
+### Manager hiding and sensitive apps
 
 If your build supports manager hiding/repackaging, use it carefully and test critical apps one-by-one after changes.
 
 ---
 
-## Managing Modules
+## Managing modules
 
-### Module Reality Check
+### Module reality check
 
 - APatch module support changes quickly
 - Not every Magisk or KernelSU module is compatible
 - Start with well-maintained modules with recent updates
 
-### Safe Module Workflow
+### Safe module workflow
 
 1. Install one module at a time
 2. Reboot and test system stability
 3. Keep a known-good boot image for rollback
 4. Avoid stacking many behavior-changing modules at once
 
-### If a Module Causes Boot Problems
+### If a module causes boot problems
 
 1. Boot to bootloader
 2. Flash stock `boot`/`init_boot` to recover
@@ -345,11 +345,11 @@ If your build supports manager hiding/repackaging, use it carefully and test cri
 
 ---
 
-## OTA Handling
+## OTA handling
 
 Root survival with APatch is image-based, so OTAs usually require repatching the updated boot chain image.
 
-### A/B Devices
+### A/B devices
 
 1. Download OTA
 2. Extract updated `boot.img` or `init_boot.img` from that OTA
@@ -357,29 +357,29 @@ Root survival with APatch is image-based, so OTAs usually require repatching the
 4. Flash patched image to the correct target slot/partition
 5. Reboot and verify root
 
-### Non-A/B Devices
+### Non-A/B devices
 
 1. Install update
 2. Extract updated boot chain image for current build
 3. Patch and flash again
 
-::: tip OTA RULE
+::: info OTA RULE
 Always patch image from the **newly installed build**, not from an older firmware package.
 :::
 
 ---
 
-## Root Hiding and Play Integrity
+## Root hiding and Play Integrity
 
 Play Integrity behavior changes frequently server-side. There is no permanent bypass guarantee.
 
-### Practical Expectations
+### Practical expectations
 
 - **Basic integrity:** sometimes passable with careful setup
 - **Device/strong integrity:** commonly fails on unlocked/rooted devices
 - Banking/payment app behavior varies by region, app version, and backend policy
 
-### Safer Strategy
+### Safer strategy
 
 - Keep root access denied for sensitive apps
 - Use minimum module set required for your use case
@@ -405,14 +405,14 @@ If you need fully clean state, flash full stock firmware for your device.
 
 ---
 
-## Device-Specific Notes
+## Device-specific notes
 
 ### Pixel
 
 - Pixel 7/8/9: commonly patch `init_boot`
 - Pixel 6 and older: commonly patch `boot`
 
-### OnePlus/OPPO/Realme
+### OnePlus/OPPO/realme
 
 - Newer Android builds frequently use `init_boot`
 - OTA extraction usually revolves around `payload.bin`
@@ -434,7 +434,7 @@ If you need fully clean state, flash full stock firmware for your device.
 
 <details><summary>👉 Click to expand details</summary><br>
 
-### Bootloop After Flash
+### Bootloop after flash
 
 Common causes:
 - Wrong partition target (`boot` vs `init_boot`)
@@ -450,21 +450,21 @@ fastboot flash init_boot stock_init_boot.img
 fastboot reboot
 ```
 
-### APatch Fails to Patch Image
+### APatch fails to patch image
 
 - Update APatch manager to latest stable release
 - Re-extract image from original firmware package
 - Verify image is not corrupted/renamed incorrectly
 - Ensure enough free storage on device
 
-### `fastboot` Cannot Detect Device
+### `fastboot` Cannot detect device
 
 - Update platform-tools
 - Change cable/USB port
 - Verify OEM unlock and bootloader mode
 - Reinstall drivers on Windows
 
-### Root Lost After OTA
+### Root lost after OTA
 
 - Extract updated image from installed OTA build
 - Repatch and flash correct partition/slot
@@ -473,7 +473,7 @@ fastboot reboot
 
 ---
 
-## Next Steps
+## Next steps
 
 1. Install only essential modules first
 2. Keep stock images and notes for your exact build/slot
@@ -484,7 +484,7 @@ fastboot reboot
 
 ---
 
-## Community Resources
+## Community resources
 
 **Official:**
 - [APatch Docs](https://apatch.dev/)

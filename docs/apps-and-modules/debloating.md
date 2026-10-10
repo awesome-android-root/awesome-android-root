@@ -56,11 +56,9 @@ head:
 Magisk/KernelSU modules work on rooted devices to uninstall, freeze or hide unwanted packages - improving
 privacy, battery life and performance.
 
+**Related guide:** [Complete Android debloating tutorial](../general-guides/android-apps-debloating.md)
 
-## Debloating Apps & Modules
-
-> [!TIP]
-> **Related Guide**: [Complete Debloating Tutorial](../general-guides/android-apps-debloating.md)
+## Debloating apps & modules
 
 - **[⭐ Canta](https://github.com/samolego/Canta)** - Uninstall any app without root using [Shizuku](development.md#developer-tools). `FOSS` | [🌱](https://f-droid.org/en/packages/io.github.samolego.canta/) | [▶️](https://play.google.com/store/apps/details?id=io.github.samolego.canta)
 - **[De-Bloater](https://github.com/sunilpaulmathew/De-Bloater)** - An application using the power of Magisk to debloat unwanted system apps!. `FOSS` | [🌱](https://f-droid.org/packages/com.sunilpaulmathew.debloater) | [▶️](https://play.google.com/store/apps/details?id=com.sunilpaulmathew.debloater)

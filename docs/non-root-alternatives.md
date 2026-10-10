@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Non-Root Alternatives
+title: Non-root alternatives
 description: "Achieve similar functionality without root access using ADB, Shizuku, wireless debugging, and alternative apps for devices where rooting isn't possible."
 head:
   - - link
@@ -56,7 +56,7 @@ head:
       content: Non-Root Alternatives - Customize Android Without Root 2026
   - - meta
     - name: twitter:description
-      content: Achieve powerful Android customization without root using ADB, Shizuku, wireless debugging, and alternative apps.
+      content: Use ADB, Shizuku, wireless debugging and alternative apps to customize Android without root.
   - - meta
     - name: twitter:image
       content: https://awesome-android-root.xyz/images/og.png
@@ -68,11 +68,11 @@ head:
       content: index, follow
 ---
 
-# Non-Root Alternatives
+# Non-root alternatives
 
-**Can't or won't root?** Modern Android provides powerful alternatives that cover 70-90% of root use cases.
+**Can't or won't root?** Modern Android has non-root tools for many tasks that otherwise require root.
 
-## Quick Assessment
+## Quick assessment
 
 **Common blockers:**
 - Locked bootloader (US Samsung, carrier devices)
@@ -81,9 +81,9 @@ head:
 - Work devices with MDM
 - Security concerns
 
-## Foundation Technologies
+## Foundation technologies
 
-### 1. ADB (Android Debug Bridge)
+### 1. ADB (Android debug bridge)
 
 **What:** Direct device control via command line
 
@@ -103,7 +103,7 @@ head:
 - Command line knowledge needed
 - Limited to user space
 
-### 2. Shizuku (Game Changer)
+### 2. Shizuku (game changer)
 
 **What:** Persistent ADB privileges for apps
 
@@ -123,7 +123,7 @@ adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.s
 - Not all apps support it
 - Still user-level access
 
-### 3. Wireless Debugging (Android 11+)
+### 3. Wireless debugging (Android 11+)
 
 **What:** Cable-free ADB access
 
@@ -141,7 +141,7 @@ adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.s
 - Android 11+ only
 - Same network required
 
-## Core Solutions by Need
+## Core solutions by need
 
 ### Debloating
 
@@ -167,9 +167,9 @@ adb shell pm disable-user --user 0 com.package.name
 adb shell pm enable com.package.name
 ```
 
-### Ad Blocking
+### Ad blocking
 
-#### Method 1: DNS (Simplest)
+#### Method 1: DNS (simplest)
 **Setup:** Settings → Network → Private DNS → `dns.adguard.com`
 
 **Pros:**
@@ -194,7 +194,7 @@ adb shell pm enable com.package.name
 - Battery impact
 - Can't use with real VPN
 
-#### Method 3: Browser-based
+#### Method 3: browser-based
 
 **Best option:** Firefox + uBlock Origin
 
@@ -207,9 +207,9 @@ adb shell pm enable com.package.name
 - Browser only
 - Not system-wide
 
-### App Management
+### App management
 
-#### App Manager with Shizuku
+#### App manager with Shizuku
 [GitHub](https://github.com/MuntashirAkon/AppManager)
 
 **Capabilities:**
@@ -230,7 +230,7 @@ adb shell pm enable com.package.name
 
 ### Automation
 
-#### MacroDroid (Best for beginners)
+#### MacroDroid (best for beginners)
 
 **Non-root capabilities:**
 - Location triggers
@@ -248,10 +248,10 @@ adb shell pm enable com.package.name
 - Can't access root features
 - Some triggers unreliable
 
-#### Tasker (Power users)
+#### Tasker (power users)
 
 **Pros:**
-- Most powerful automation
+- Flexible automation
 - Plugin ecosystem
 - Intent handling
 
@@ -260,7 +260,7 @@ adb shell pm enable com.package.name
 - Expensive
 - Many features need root
 
-### Backup Solutions
+### Backup solutions
 
 #### Swift Backup with ADB
 
@@ -279,9 +279,9 @@ adb shell pm enable com.package.name
 - Slower than root methods
 - Android version dependent
 
-### Network Control
+### Network control
 
-#### NetGuard (No-root firewall)
+#### NetGuard (no-root firewall)
 [GitHub](https://github.com/M66B/NetGuard)
 
 **Pros:**
@@ -294,7 +294,7 @@ adb shell pm enable com.package.name
 - Can't block system apps fully
 - May impact battery
 
-## Effectiveness Comparison
+## Effectiveness comparison
 
 | Goal | Root Method | Non-Root Alternative | Effectiveness |
 |------|------------|---------------------|---------------|
@@ -306,16 +306,16 @@ adb shell pm enable com.package.name
 | System UI Changes | Substratum/Xposed | Launcher + ADB | 40% |
 | Privacy Control | XPrivacyLua | App Ops + Shizuku | 70% |
 
-## Essential Non-Root Toolkit
+## Essential non-root toolkit
 
-### Must-Have Apps
+### Must-have apps
 1. **Shizuku** - Foundation for everything
 2. **App Manager** - Complete app control
 3. **Universal Android Debloater** - Remove bloat
 4. **Blokada/AdGuard** - Ad blocking
 5. **MacroDroid** - Automation
 
-### Key ADB Commands
+### Key ADB commands
 ```bash
 # Disable app
 adb shell pm disable-user --user 0 [package]
@@ -333,16 +333,16 @@ adb shell am force-stop [package]
 adb shell cmd appops set [package] RUN_IN_BACKGROUND deny
 ```
 
-## Decision Matrix
+## Decision matrix
 
-### Stay Non-Root If:
+### Stay non-root if:
 - Banking apps are essential
 - Work device/MDM present
 - Warranty matters
 - 70% effectiveness is enough
 - Not comfortable with risk
 
-### Consider Root If:
+### Consider root if:
 - Need systemless mods
 - Want Xposed/LSPosed
 - Require kernel control
@@ -350,7 +350,7 @@ adb shell cmd appops set [package] RUN_IN_BACKGROUND deny
 - Full backup essential
 - Custom ROM features on stock
 
-## Limitations to Accept
+## Limitations to accept
 
 **Cannot do without root:**
 - Install Magisk/KernelSU modules
@@ -361,7 +361,7 @@ adb shell cmd appops set [package] RUN_IN_BACKGROUND deny
 - Full system backup
 - Deep battery optimization
 
-## Quick Start Guide
+## Quick start guide
 
 1. **Enable Developer Options**
 2. **Install Shizuku** via Play Store
@@ -371,7 +371,7 @@ adb shell cmd appops set [package] RUN_IN_BACKGROUND deny
 6. **Configure DNS** ad blocking
 7. **Debloat** carefully with UAD
 
-## Pro Tips
+## Pro tips
 
 - Combine methods for best results (DNS + browser blocking)
 - Always disable apps before uninstalling (safer)

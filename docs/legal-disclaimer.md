@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Legal Disclaimer & Safety Notice
+title: Legal disclaimer & safety notice
 description: "Important legal information, warranty implications, and safety guidelines for Android rooting and customization."
 head:
   - - link
@@ -23,7 +23,7 @@ head:
       content: https://awesome-android-root.xyz/legal-disclaimer
   - - meta
     - property: og:image
-      content: https://awesome-android-root.xyz/images/og/bootloader.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:locale
       content: en_US
@@ -47,7 +47,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og/bootloader.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Legal Disclaimer & Safety Notice for Android Rooting
@@ -59,7 +59,7 @@ head:
       content: 2026-09-27T00:00:00Z
 ---
 
-# Legal Disclaimer & Safety Notice
+# Legal disclaimer & safety notice
 
 ## Important
 
@@ -88,7 +88,7 @@ Some manufacturers use hardware-backed security mechanisms that may permanently 
 
 Consumer-protection laws may provide additional rights depending on your jurisdiction. This site does not provide legal advice.
 
-## Security & App Compatibility
+## Security & app compatibility
 
 Root access changes Android's security model and can affect applications that rely on device integrity checks.
 
@@ -113,7 +113,7 @@ Enterprise or work-managed devices may also be subject to organizational policie
 * Maintain current backups.
 * Review permissions before granting root access.
 
-## Data Loss & Device Recovery
+## Data loss & device recovery
 
 Bootloader unlocking **commonly performs a factory reset**, but the exact behavior depends on the device and implementation.
 
@@ -129,7 +129,7 @@ Potential failure modes include:
 
 Do not begin a modification without knowing how to restore the device to a working state.
 
-## Apps & Modules
+## Apps & modules
 
 Third-party apps, modules, kernels, and system modifications can introduce security or stability risks.
 
@@ -145,7 +145,7 @@ FOSS software can provide greater transparency through publicly available source
 
 Avoid abandoned, suspicious, modified, or unofficial packages when possible.
 
-## OTA Updates
+## OTA updates
 
 Rooting and system modifications can interfere with Android's normal update process.
 
@@ -160,7 +160,7 @@ Depending on the device and modification method, an OTA update may:
 
 Follow the documentation for your specific device, Android version, and root solution before installing an update.
 
-## Resale & Device Return
+## Resale & device return
 
 Before selling, trading in, or returning a modified device:
 
@@ -172,7 +172,7 @@ Before selling, trading in, or returning a modified device:
 
 Trade-in and resale policies vary between manufacturers, carriers, retailers, and regions.
 
-## Legal Considerations
+## Legal considerations
 
 The legality of rooting, bootloader unlocking, software modification, and related activities varies by jurisdiction.
 
@@ -190,7 +190,7 @@ Even where device modification is permitted, other laws may still apply to activ
 
 This site is not a substitute for legal advice.
 
-## Third-Party Software & Links
+## Third-party software & links
 
 Awesome Android Root does not develop, maintain, or endorse every application, module, kernel, or project listed on the site.
 
@@ -206,7 +206,7 @@ Always verify:
 
 We do not control third-party websites or their content.
 
-## Accuracy & Updates
+## Accuracy & updates
 
 Android, device firmware, security mechanisms, applications, and manufacturer policies change frequently.
 
@@ -214,7 +214,7 @@ Information on this site may become outdated or may not apply to every device, A
 
 If you find outdated, incorrect, or unsafe information, please [report an issue on GitHub](https://github.com/awesome-android-root/awesome-android-root/issues).
 
-## Limitation of Liability
+## Limitation of liability
 
 To the extent permitted by applicable law, the maintainers and contributors of Awesome Android Root are not responsible for losses or damage resulting from the use of information published on this site, including:
 
@@ -230,7 +230,7 @@ This does not exclude or limit any rights or liabilities that cannot legally be 
 
 Awesome Android Root is not affiliated with Google, Android device manufacturers, or the developers of third-party applications and modules unless explicitly stated.
 
-## Before You Modify Your Device
+## Before you modify your device
 
 Use this checklist before proceeding:
 
@@ -245,7 +245,7 @@ Use this checklist before proceeding:
 
 Only proceed when you understand the risks and have a recovery plan.
 
-## Related Resources
+## Related resources
 
 * [Rooting Guides](/rooting-guides/)
 * [Root Apps & Modules](/apps-and-modules/)

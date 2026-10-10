@@ -41,7 +41,7 @@ head:
       content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
-      content: About Awesome Android Root - Ultimate Rooting Resource
+      content: About Awesome Android Root
   - - meta
     - name: twitter:title
       content: About Awesome Android Root - Project and editorial approach
@@ -82,21 +82,21 @@ head:
 
 # About Awesome Android Root
 
-Awesome Android Root serves as a premier, community-curated resource dedicated to Android rooting, deep customization, and user empowerment. It provides a comprehensive, up-to-date directory of over 600 vetted tools, applications, modules, and expert guides designed for power users and developers seeking to unlock the full potential of their devices.
+Awesome Android Root is a community-maintained reference for Android rooting. It organizes apps, modules, setup guides and troubleshooting by task and root method. Listings link to project sources or stores and include framework information where available.
 
-## Our Mission
+## Our mission
 
-Our mission is to democratize advanced Android customization by providing free, reliable, and comprehensive resources. We empower users worldwide to gain control over their devices through rooting, custom ROMs, and system-level modifications, fostering a community built on knowledge sharing and technical freedom.
+The project brings together device-specific instructions, compatibility notes and safety information so readers can compare rooting methods and understand the consequences of system changes.
 
-## What We Offer
+## What we offer
 
-**Comprehensive Rooting & Customization Resources**
-*   **[Expert Guides](./rooting-guides/index.md)**: Detailed, step-by-step tutorials for various devices and methods.
-*   **[650+ Curated Root Apps & Modules](/apps-and-modules/root-management)**: A meticulously selected collection spanning ad-blocking, privacy, performance, automation, and more.
-*   **[Extensive Device Support](./rooting-guides/#device-specific-guides)**: Targeted guides for major brands including Xiaomi, Samsung, Pixel, OnePlus, and Motorola.
-*   **[FAQ & Troubleshooting](./faqs.md)**: A dedicated resource for resolving common issues and finding support.
+**Project content**
+*   **[Rooting guides](./rooting-guides/index.md)**: Setup instructions and device-specific walkthroughs.
+*   **[Apps and modules](/apps-and-modules/)**: Listings grouped by task, with source, licensing and framework information where available.
+*   **[Device guides](./rooting-guides/#device-specific-guides)**: Instructions for supported Pixel, Samsung, Xiaomi, OnePlus, Nothing and Motorola devices.
+*   **[FAQ and troubleshooting](./faqs.md)**: Answers to common questions and recovery guidance.
 
-## Getting Started
+## Getting started
 
 **Essential Pathway for New Users:**
 1.  **[Unlock Bootloader](./rooting-guides/how-to-unlock-bootloader.md)**: The foundational step for device modification.
@@ -105,13 +105,13 @@ Our mission is to democratize advanced Android customization by providing free, 
 4.  **[Install Custom ROM](./rooting-guides/custom-rom-installation.md)**: (Optional) Experience a completely transformed Android operating system.
 
 **Tailored Navigation:**
-*   **Beginners:** [Complete Rooting Guide](./rooting-guides/) → [Essential Apps](./apps-and-modules/#starter-kit-must-have-apps)
+*   **Beginners:** [Complete Rooting Guide](./rooting-guides/) → [Essential Apps](./apps-and-modules/root-management)
 *   **Intermediate:** [Device-Specific Guides](./rooting-guides/#device-specific-guides) → [Root Management](/apps-and-modules/root-management)
 *   **Experts:** [Troubleshooting](./faqs) → [Community Contributions](./contributing)
 
-## Community & Support
+## Community & support
 
-We are part of a vibrant ecosystem of Android developers and enthusiasts, similar to communities like XDA Developers, which is a large international forum for sharing ideas on mobile development.
+The project draws on the wider Android development community. XDA Developers is one forum where device-specific discussions and troubleshooting are available.
 
 **Official Channels:**
 *   [🌐 GitHub](https://github.com/awesome-android-root/awesome-android-root): Contribute to the project's source and development.
@@ -122,14 +122,14 @@ We are part of a vibrant ecosystem of Android developers and enthusiasts, simila
 *   Search the extensive archives of [XDA Forums](https://forum.xda-developers.com/) for device-specific solutions.
 *   When seeking assistance, please provide your device model, Android version, and any relevant error messages.
 
-## Core Values
+## Core values
 
 *   **Security First:** We prioritize verified sources and promote safe, responsible practices to mitigate risks like bootloops.
 *   **Community-Driven:** As an open-source project, we rely on collaboration and contributions from the global Android community.
 *   **Education Focused:** We are committed to providing in-depth, educational resources to foster learning and mastery.
 *   **Continuously Updated:** Our content is regularly maintained to reflect the latest tools, methods, and developments in the Android rooting landscape.
 
-## Support the Project
+## Support the project
 
 You can help ensure the long-term availability and growth of this resource:
 *   [⭐ Star our GitHub Repository](https://github.com/awesome-android-root/awesome-android-root)
@@ -138,4 +138,4 @@ You can help ensure the long-term availability and growth of this resource:
 
 ---
 
-Ready to unlock your device's full potential? Begin your journey with our [Complete Rooting Guide](./rooting-guides/index.md).
+If you plan to root your device, start with the [rooting guides](./rooting-guides/index.md) and review the device-specific requirements before making changes.

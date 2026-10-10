@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: "Backup & Restore"
+title: "Backup & restore"
 description: "Backup and restore apps for rooted Android: full app+data backups, cloud backup, nandroid and partition images and data recovery tools."
 head:
   - - link
@@ -50,18 +50,17 @@ head:
       content: https://awesome-android-root.xyz/images/og.png
 ---
 
-# Backup & Restore
+# Backup & restore
 
 **Backup & Restore** apps for rooted Android - full app + data backups (the kind only root can do), cloud and
 local backup solutions, partition images and data recovery tools. Back up before flashing, debloating or
 unlocking - always.
 
-
-## Backup Apps & Tools
+## Backup apps & tools
 
 - **[⭐ Swift Backup](https://play.google.com/store/apps/details?id=org.swiftapps.swiftbackup)** - Modern backup solution with cloud support. `Proprietary`
 - **[DataBackup](https://github.com/XayahSuSuSu/Android-DataBackup)** - DataBackup for Android 7.0+. `FOSS` | [🌱](https://f-droid.org/zh_Hans/packages/com.xayah.databackup.foss/)
-- **[DiskDigger](https://play.google.com/store/apps/details?id=com.defianttech.diskdigger)** - A powerful data recovery tool for Android devices. `Proprietary`
+- **[DiskDigger](https://play.google.com/store/apps/details?id=com.defianttech.diskdigger)** - Recovers deleted files from Android devices. `Proprietary`
 - **[Dumpster: Photo/Video Recovery](https://play.google.com/store/apps/details?id=com.baloota.dumpster)** - You can recover deleted videos, restore photos, undelete recently deleted apps, and other files. `Proprietary`
-- **[Neo Backup](https://github.com/NeoApplications/Neo-Backup)** - Powerful open-source backup solution. `FOSS` | [🌱](https://f-droid.org/packages/com.machiav3lli.backup/)
+- **[Neo Backup](https://github.com/NeoApplications/Neo-Backup)** - Open-source tool for backing up apps and their data. `FOSS` | [🌱](https://f-droid.org/packages/com.machiav3lli.backup/)
 - **[Restoid](https://github.com/hddq/restoid)** - modern, root-based Android app backup tool powered by restic. `FOSS`

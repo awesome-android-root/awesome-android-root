@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Complete Custom ROM Installation Guide
+title: Complete custom ROM installation guide
 description: "Master guide to install custom Android ROMs - LineageOS, GrapheneOS, Pixel Experience, CalyxOS. Transform your device with privacy-focused alternatives."
 head:
   - - link
@@ -20,7 +20,7 @@ head:
       content: https://awesome-android-root.xyz/rooting-guides/custom-rom-installation
   - - meta
     - property: og:image
-      content: https://awesome-android-root.xyz/images/og/custom-rom.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:locale
       content: en_US
@@ -44,7 +44,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og/custom-rom.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Custom ROM Installation Guide - LineageOS, GrapheneOS & More
@@ -80,11 +80,11 @@ head:
       content: index, follow
 ---
 
-# Complete Custom ROM Installation Guide
+# Complete custom ROM installation guide
 
 **Transform your Android experience** - Install privacy-focused, security-enhanced custom ROMs to revive and enhance your device.
 
-## 🔗 Essential Resources
+## Essential resources
 - **[📖 Main Rooting Guide](./index.md)** - Universal rooting principles and safety
 - **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - Required first step
 - **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - Installation prerequisite
@@ -92,7 +92,7 @@ head:
 
 ---
 
-## Table of Contents
+## Table of contents
 - [Understanding Custom ROMs](#understanding-custom-roms)
   - [Why Choose Custom ROMs?](#why-choose-custom-roms)
   - [ROM Categories](#rom-categories)
@@ -108,11 +108,11 @@ head:
 - [What’s Next?](#what-s-next)
 
 
-## Understanding Custom ROMs
+## Understanding custom ROMs
 
 Custom ROMs are alternative Android distributions that replace your device’s stock firmware, offering enhanced privacy, performance, and customization.
 
-### Why Choose Custom ROMs?
+### Why choose custom ROMs?
 
 - **Extended device lifespan** - updates beyond OEM EOL
 - **Enhanced privacy** - reduced tracking/telemetry
@@ -122,20 +122,20 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 - **Faster security patches** - community-maintained
 - **Optional Google services** - choose microG/sandboxed Play/none
 
-### ROM Categories
+### ROM categories
 
-#### Privacy & Security Focused:
+#### Privacy & security focused:
 - **GrapheneOS** - Maximum security for Pixel devices (relockable bootloader)
 - **CalyxOS** - Privacy-first with optional Sandboxed Google Play
 
-#### General Use & Features:
+#### General use & features:
 - **LineageOS** - Most popular, widest device support
 - **Pixel Experience** - Pixel-like UX for non-Pixel devices
 - **crDroid** - Feature-rich with heavy customization
 - **PixelOS** / ArrowOS - Lightweight, clean, frequent updates
 - **iodéOS** - Privacy-focused with built-in ad/tracker blocking
 
-#### Gaming & Performance:
+#### Gaming & performance:
 - **Evolution X** - Balanced features and performance
 - **Project Sakura** - Performance-focused builds
 
@@ -144,9 +144,9 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 :::
 ---
 
-## Critical Warnings
+## Critical warnings
 
-::: danger ⚠️ **Custom ROM Risks**
+::: danger **Custom ROM Risks**
 - **Warranty implications** - may void warranty depending on region (statutory warranty rights may still apply in some jurisdictions)
 - **Brick risk** - wrong images or wrong partition can hard-brick
 - **App compatibility** - Banking/government apps rely on Play Integrity and may refuse to run
@@ -156,23 +156,23 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 
 ---
 
-## Prerequisites and Requirements
+## Prerequisites and requirements
 
-### Essential Prerequisites
+### Essential prerequisites
 1. **[Unlocked bootloader](./how-to-unlock-bootloader.md)**
 2. **[Custom recovery](./how-to-install-custom-recovery.md)** (TWRP/OrangeFox) or ROM’s own recovery
 3. **Compatible ROM** - for your exact device codename/variant
 4. **Backup everything** - consider both a NANDroid (if supported) and app/data backups
 5. **Stock firmware on hand** - for emergency restore (EDL/Odin/Mi Flash/fastboot images)
 
-### Required Tools
+### Required tools
 - **Latest Android Platform Tools (ADB/Fastboot**) from Google
 - **USB drivers (Windows)**: OEM or Google USB Driver
 - **Custom recovery image/installer ZIP** (device-specific)
 - **ROM ZIP/Images** + optional GApps (see notes below)
 - **A computer** (Windows/macOS/Linux) and reliable USB cable
 
-### Device Preparation
+### Device preparation
 - **Charge to 70%+**
 - **Use a quality USB cable/port**
 - **Back up user data** (Photos, 2FA/keys, eSIM details where applicable)
@@ -182,9 +182,9 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 
 ---
 
-## ROM Selection Guide
+## ROM selection guide
 
-### Decision Matrix
+### Decision matrix
 
 | Need | Recommended ROM | Why |
 |------|------------------|-----|
@@ -201,7 +201,7 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 - Many ROMs ship in “vanilla” (no GApps) and “with GApps” variants. Match to your preference.
 :::
 
-### Device Compatibility Check
+### Device compatibility check
 
 #### Find your device:
 1. [CustomROMBay.org](https://customrombay.org/)
@@ -217,13 +217,13 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 
 ---
 
-## Installation Process
+## Installation process
 
 There are two primary install flows:
 - **Recovery-based** (TWRP/OrangeFox/Lineage Recovery) via Install or ADB Sideload
 - **Fastboot-based** (images/graphical web installers) - common for Pixels/GrapheneOS
 
-### Step 1: Create Complete Backup
+### Step 1: create complete backup
 
 #### Backups on modern devices:
 - TWRP/OrangeFox NANDroid may not fully support dynamic partitions on every device; verify your recovery’s backup/restore capability.
@@ -235,7 +235,7 @@ There are two primary install flows:
 2. If supported: Recovery → Backup → Select boot/system/data/vendor (avoid super unless advised)
 3. Copy backups to PC or external storage
 
-### Step 2: Download ROM Files
+### Step 2: download ROM files
 
 - ROM ZIP/images for your exact device/codename
 - GApps (if needed; e.g., MindTheGapps for LineageOS or NikGapps)
@@ -247,16 +247,16 @@ There are two primary install flows:
 - Check release signatures/digests when provided
 - Ensure Android version/firmware requirements match your device
 
-### Step 3: Prepare Device
+### Step 3: prepare device
 
 - Transfer ROM and add-ons to device/SD card or prepare to ADB sideload from PC
 - Boot to recovery
 - On dynamic partition devices, some operations require fastbootd:
   - From bootloader: fastboot reboot fastboot (enters fastbootd)
 
-### Step 4: Wipe / Format
+### Step 4: wipe / format
 
-::: warning ⚠️ Data Loss Warning
+::: warning Data Loss Warning
 Switching ROM families or coming from stock usually requires a full “Format Data” (not just factory reset), which erases internal storage. Back up first.
 :::
 
@@ -268,7 +268,7 @@ Switching ROM families or coming from stock usually requires a full “Format Da
 
 **Note:** Recovery decryption varies by device. If your recovery can’t decrypt /data, use ADB sideload or external SD/OTG.
 
-### Step 5: Flash Custom ROM
+### Step 5: flash custom ROM
 
 Recovery install (typical):
 1. Install → Select ROM ZIP → Swipe/confirm
@@ -281,12 +281,12 @@ Recovery install (typical):
 3. Then: adb sideload gapps.zip (if needed)
 4. Then: adb sideload addons (e.g., Magisk ZIP if supported by your recovery)
 
-#### Fastboot images (Pixel/GrapheneOS/Some ROMs):
+#### Fastboot images (Pixel/GrapheneOS/some ROMs):
 - Use the vendor’s install script or web installer (see ROM-specific section)
 - For dynamic partitions, the script may reboot to fastbootd automatically
 - Never mix init_boot/boot images incorrectly; follow device-specific docs
 
-#### AVB/vbmeta (advanced):
+#### AVB/VBMeta (advanced):
 - Only disable verity/verification if your device/ROM instructions explicitly say so.
 - Incorrect vbmeta steps can cause boot failure or brick.
 
@@ -296,7 +296,7 @@ Recovery install (typical):
   - fastboot set_active a or b
   - Some images support _ab targets (e.g., fastboot flash boot_ab boot.img)
 
-### Step 6: First Boot & Setup
+### Step 6: first boot & setup
 
 - First boot can take 5–20 minutes; don’t interrupt
 - Complete setup wizard
@@ -305,9 +305,9 @@ Recovery install (typical):
 
 ---
 
-## ROM-Specific Installation
+## ROM-specific installation
 
-### GrapheneOS (Pixel Only)
+### GrapheneOS (Pixel only)
 
 Web Installer method:
 1. Visit https://grapheneos.org/install/web
@@ -319,7 +319,7 @@ Benefits: Maximum security posture, verified boot, hardened toolchain, Sandboxed
 
 Bootloader: Can safely relock on GrapheneOS. Do not relock on ROMs that don’t explicitly support it.
 
-### LineageOS (Most Devices)
+### LineageOS (most devices)
 
 Standard method:
 1. Download official builds: https://download.lineageos.org/
@@ -330,7 +330,7 @@ Standard method:
 
 Benefits: Broad support, stable updates, trustable infrastructure
 
-### Pixel Experience / PixelOS
+### Pixel experience / PixelOS
 
 - Pixel Experience: https://download.pixelexperience.org/
 - PixelOS: search official site or XDA thread for your device
@@ -342,38 +342,38 @@ Notes:
 
 ---
 
-## Post-Installation Setup
+## Post-installation setup
 
-### Essential Configuration
+### Essential configuration
 - Run updates (Settings → System → Updater)
 - Restore data (Seedvault, Swift Backup, app-native backups)
 - Review permissions and privacy settings
 - Configure IMS (VoLTE/VoWiFi/5G) if your carrier/ROM supports it
 
-### Privacy Optimization
+### Privacy optimization
 - Disable telemetry/analytics in ROM and apps
 - Private DNS (e.g., dns.adguard.com, 1.1.1.1, NextDNS)
 - Consider F-Droid, Obtainium, Aurora Store for privacy-friendly app sourcing
 - Use a reputable firewall (e.g., NetGuard) and limit background activity
 - Be mindful: aggressive adblocking/VPNs may break push notifications; exclude FCM if needed
 
-### App Installation
+### App installation
 - F-Droid - open-source apps
 - Aurora Store - access Play Store without Google account
 - APKMirror - verify signatures; prefer official dev sources where possible
 
-### Banking/Government Apps
+### Banking/government apps
 - Many now enforce Play Integrity API (hardware-backed attestation).
 - Magisk DenyList helps hide root from selected apps; Shamiko and “Play Integrity Fix” modules exist but may violate app ToS and are not guaranteed to work.
 - Respect local laws and app ToS. If mission-critical, consider a non-rooted, stock or relockable-secure ROM profile/device.
 
 ---
 
-## Troubleshooting Guide
+## Troubleshooting guide
 
-### Common Installation Issues
+### Common installation issues
 
-#### Bootloop / Stuck on logo:
+#### Bootloop / stuck on logo:
 - Confirm correct ROM for exact codename/variant
 - Format Data (not just wipe) if switching ROM families
 - Reflash ROM + correct GApps
@@ -401,24 +401,24 @@ Notes:
 - Many custom setups won’t pass strong integrity. Basic/weak may be achievable.
 - Passing strong integrity on unlocked devices is typically not possible by design.
 
-### Recovery Solutions
+### Recovery solutions
 
-#### Emergency Recovery:
+#### Emergency recovery:
 1. Boot to bootloader/fastboot
 2. For dynamic partitions: fastboot reboot fastboot (fastbootd) if needed
 3. Flash stock images (Pixel: flash-all; Xiaomi: Mi Flash; Samsung: Odin)
 4. Qualcomm EDL (9008) is last resort; research carefully or seek professional help
 
-#### Backup Restoration:
+#### Backup restoration:
 1. Boot to recovery
 2. Restore NANDroid (if supported/consistent with current partition layout)
 3. Or reflash ROM and restore app data from Seedvault/Swift Backup
 
 ---
 
-## Staying Updated
+## Staying updated
 
-### Update Strategies
+### Update strategies
 
 - **Manual updates:**
   - Track official releases/Telegram/XDA/GitHub
@@ -426,11 +426,11 @@ Notes:
   - Clean flash for major Android version jumps or when advised
 
 - **OTA updates:**
-  - Many ROMs support seamless A/B OTAs
+  - Some ROMs support A/B OTA updates
   - LineageOS/Pixel Experience often include an Updater app
   - If using custom recovery, ensure OTA compatibility (virtual A/B may sidestep recovery entirely)
 
-### Community Resources
+### Community resources
 
 - [XDA Developers](https://forum.xda-developers.com/) - device forums, guides, kernels
 - [r/LineageOS](https://reddit.com/r/LineageOS) - user discussions
@@ -444,7 +444,7 @@ Official Resources:
 
 ---
 
-::: tip 💡 **Custom ROM Success Tips**
+::: info **Custom ROM Success Tips**
 - Always keep a known-good backup and stock firmware handy
 - Read your device’s XDA/official thread end-to-end before flashing
 - Use the ROM-recommended recovery and GApps
@@ -456,9 +456,9 @@ Official Resources:
 
 ---
 
-::: tip **Congratulations! You’ve installed a custom ROM.**
+::: info **Congratulations! You’ve installed a custom ROM.**
 
-#### What’s Next?
+#### What’s next?
 - [Add Root Access](./root-framework-comparison.md) - Magisk (Zygisk), KernelSU (kernel-based), APatch
 - [Custom Kernels](../apps-and-modules/performance#kernel-management) - performance/battery tuning
 - [LSPosed Modules](./lsposed-guide.md) - modern Xposed-compatible modules (Zygisk/LSPosed)
