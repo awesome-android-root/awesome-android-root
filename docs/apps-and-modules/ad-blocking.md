@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: "Ad Blocking"
+title: "Ad blocking"
 description: "Hosts-based ad blockers, Magisk/KernelSU modules, and DNS tools to block ads, trackers, and malware across Android apps."
 head:
   - - link
@@ -50,23 +50,20 @@ head:
       content: https://awesome-android-root.xyz/images/og.png
 ---
 
-# Ad Blocking
+# Ad blocking
 
 **Ad blocking** for rooted Android devices - root apps, Magisk modules, KernelSU modules, LSPosed modules and
 hosts/DNS-based tools that block ads, trackers and malware system-wide, in every app and browser.
 
-> [!TIP]
-> Start with our [Complete Android Ad Blocking Tutorial](/general-guides/android-adblocking.md), then pick the
-> tools below. Apps and modules are combined here because they all solve the same problem - blocking ads.
+**Related guide:** [Complete Android ad-blocking tutorial](../general-guides/android-adblocking.md) · [DNS and network filtering](#dns-network-filtering) · [Firewall tools](security.md#firewalls-filtering)
 
-
-## Ad & Tracker Blocking
+## Ad & tracker blocking
 
 - **[⭐ AdAway](https://github.com/AdAway/AdAway)** - Open-source ad blocker using the hosts file. Blocks ads without permissions. `FOSS` | [🌱](https://f-droid.org/packages/org.adaway)
 - **[⭐ Bindhosts](https://github.com/bindhosts/bindhosts)** - Systemless hosts for APatch, KernelSU and Magisk that is fully standalone and self-updating. `FOSS` `[M]` `[K]`
 - **[AdAway Helper](https://github.com/DEMONNICA/AdAway-Helper)** - Enables AdAway to work on KernelSU, its variants by managing /system/etc/hosts via bind mount and overlay. `FOSS` `[M]` `[K]`
 - **[AdClose](https://github.com/Xposed-Modules-Repo/com.close.hook.ads/)** - Prevents the initial loading of the advertising SDK within the application and intercepts application advertising requests to block ads. `Proprietary` `[LSP]`
-- **[AdGuard](https://adguard.com/en/adguard-android/overview.html)** - Comprehensive ad blocking solution. `Proprietary` 
+- **[AdGuard](https://adguard.com/en/adguard-android/overview.html)** - Comprehensive ad blocking solution. `Proprietary`
 - **[BlockAds](https://github.com/pass-with-high-score/blockads-android)** - System‑wide ad, tracker, & malware filtering, custom blocklists, per‑app controls etc. `FOSS` | [🌱](https://f-droid.org/packages/app.pwhs.blockads)
 - **[BlockAds Module](https://github.com/pantsufan/BlockAds)** - BlockAds is an advertisement blocking Magisk module. `FOSS` `[M]` `[K]`
 - **[Blokada](https://blokada.org/)** - Advanced ad blocker with VPN functionality. `Proprietary`
@@ -79,19 +76,12 @@ hosts/DNS-based tools that block ads, trackers and malware system-wide, in every
 - **[Re-Malwack](https://github.com/ZG089/Re-Malwack)** - A fully-fledged ad-block module. Contains all your needs. `FOSS` `[M]`
 - **[StevenBlock](https://github.com/mikropsoft/StevenBlock)** - Ad Blocking Module for Android supporting Magisk, KernelSU and APatch. `FOSS` `[M]`
 - **[Systemless hosts KernelSU module](https://github.com/symbuzzer/systemless-hosts-KernelSU-module)** - Required module to use applications such as AdAway on KernelSU and APatch. `FOSS` `[K]`
-- **[systemless-adblocker](https://github.com/Magisk-Modules-Alt-Repo/systemless-adblocker)** - Ultimate adblocker module derived from gloeyisk/systemless-hosts. `FOSS` `[M]`
+- **[systemless-adblocker](https://github.com/Magisk-Modules-Alt-Repo/systemless-adblocker)** - Systemless ad-blocking module derived from gloeyisk/systemless-hosts. `FOSS` `[M]`
 
-> [!TIP]
-> **Related Guide**: [Complete Android Ad Blocking Tutorial ↗](../general-guides/android-adblocking.md)  
-> For network-level blocking, also check [DNS Tools](#dns-network-filtering) and [Firewall Tools](security.md#firewalls-filtering)
-
-## DNS & Network Filtering
+## DNS & network filtering
 
 - **[AdGuardHome for Root](https://github.com/twoone-3/AdGuardHomeForRoot/blob/main/README_en.md#adguardhome-for-root)** - A module to easily execute AdGuardHome on Android. `FOSS` `[M]`
 - **[DNS Toggle](https://github.com/ELowry/DNSToggle)** - A tiny Android app that allows you to easily toggle your phone's Private DNS through the Quick Settings panel. `FOSS`
 - **[ForceDNS Cloudflare](https://github.com/LuferOS/forcedns_Magisk-kernelsu)** - Forces all standard DNS traffic (port 53) to use 1.1.1.1 via iptables. Overrides network DNS. `FOSS` `[M]` `[K]`
-- **[personalDNSfilter](https://github.com/IngoZenz/personaldnsfilter)** - A DNS filter proxy that provides local filtering of ads, malware, and tracking servers, supporting secure DNS protocols like DOH and DOT for enhanced privacy. `FOSS` | [🌱](https://f-droid.org/packages/dnsfilter.android/)
+- **[personalDNSfilter](https://github.com/IngoZenz/personaldnsfilter)** - DNS proxy that filters ads, malware and tracking domains and supports secure DNS protocols such as DoH and DoT. `FOSS` | [🌱](https://f-droid.org/packages/dnsfilter.android/)
 - **[Pi-hole-for-Android](https://github.com/DesktopECHO/Pi-hole-for-Android)** - Pi-hole/Unbound Raspbian APK installer for Android 5.0+ devices. `FOSS`
-
-> [!TIP]
-> For ad blocking at network level, combine these tools with our [ad blockers](#ad-tracker-blocking). See the [ad blocking guide](../general-guides/android-adblocking.md).

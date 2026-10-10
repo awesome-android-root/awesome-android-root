@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Complete Custom Recovery Installation Guide
+title: Complete custom recovery installation guide
 description: "Master guide to install custom recovery - TWRP, OrangeFox, SKYHAWK. Gateway to rooting, custom ROMs, and advanced Android modifications."
 head:
   - - link
@@ -20,7 +20,7 @@ head:
       content: https://awesome-android-root.xyz/rooting-guides/how-to-install-custom-recovery
   - - meta
     - property: og:image
-      content: https://awesome-android-root.xyz/images/og/custom-recovery.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:locale
       content: en_US
@@ -44,7 +44,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og/custom-recovery.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Custom Recovery Installation Guide - TWRP, OrangeFox, SKYHAWK
@@ -78,11 +78,11 @@ head:
 ---
 
 
-# Custom Recovery Installation Guide
+# Custom recovery installation guide
 
 Install custom recovery to unlock advanced Android modifications including rooting, custom ROMs, and comprehensive system backups.
 
-## Quick Navigation
+## Quick navigation
 
 - [Understanding Custom Recovery](#understanding-custom-recovery)
 - [Recovery Options](#choosing-recovery-software)
@@ -99,19 +99,19 @@ Install custom recovery to unlock advanced Android modifications including rooti
 
 ---
 
-## Understanding Custom Recovery
+## Understanding custom recovery
 
 Custom recovery replaces Android's stock recovery with enhanced software providing advanced system management capabilities.
 
-### What Recovery Enables
-- ⚡ Complete device backups (NANDroid)
-- ⚡ Root installation (Magisk, KernelSU, APatch)
-- ⚡ Custom ROM installation
-- ⚡ System-level modifications
-- ⚡ Module and mod installation
-- ⚡ File system access
-- ⚡ ADB sideload support
-- ⚡ System repair tools
+### What recovery enables
+- Complete device backups (NANDroid)
+- Root installation (Magisk, KernelSU, APatch)
+- Custom ROM installation
+- System-level modifications
+- Module and mod installation
+- File system access
+- ADB sideload support
+- System repair tools
 
 ### Requirements
 
@@ -120,7 +120,7 @@ Custom recovery requires:
 2. **Correct recovery image** - Device-specific
 3. **ADB/Fastboot tools** - [Platform Tools](https://developer.android.com/studio/releases/platform-tools)
 
-### Modern vs Legacy Devices
+### Modern vs legacy devices
 
 **Legacy Devices (Android 9 and older):**
 - Dedicated recovery partition exists
@@ -135,57 +135,57 @@ Custom recovery requires:
 
 ---
 
-## Choosing Recovery Software
+## Choosing recovery software
 
 Three primary custom recovery options exist, each with distinct features.
 
-### TWRP (Team Win Recovery Project)
+### TWRP (team win recovery project)
 
 **Most popular and widely supported**
 
-- ✅ Broadest device support
-- ✅ Extensive documentation
-- ✅ Large community
-- ✅ Mature, stable codebase
-- ❌ Basic interface design
-- ❌ Decryption issues on some newer devices
+- Broadest device support
+- Extensive documentation
+- Large community
+- Mature, stable codebase
+- Basic interface design
+- Decryption issues on some newer devices
 
 **Best for:** Most users, maximum compatibility
 
 **Download:** [twrp.me/Devices](https://twrp.me/Devices/)
 
-### OrangeFox Recovery
+### OrangeFox recovery
 
 **Modern TWRP-based alternative**
 
-- ✅ Material Design interface
-- ✅ Additional features over TWRP
-- ✅ Good device support
-- ✅ Active development
-- ❌ Smaller device list than TWRP
-- ❌ Some unofficial builds
+- Material Design interface
+- Additional features over TWRP
+- Good device support
+- Active development
+- Smaller device list than TWRP
+- Some unofficial builds
 
 **Best for:** Users wanting modern interface on supported devices
 
 **Download:** [orangefox.download](https://orangefox.download/)
 
-### SKYHAWK Recovery (SHRP)
+### SKYHAWK recovery (SHRP)
 
 **Feature-rich recovery with advanced capabilities**
 
-- ✅ Dashboard-style interface
-- ✅ Built-in security features
-- ✅ Theme support
-- ✅ Additional tools
-- ❌ Limited device support
-- ❌ Smaller community
+- Dashboard-style interface
+- Built-in security features
+- Theme support
+- Additional tools
+- Limited device support
+- Smaller community
 
 **Best for:** Enthusiasts on supported devices
 
 **Download:** [skyhawkrecovery.github.io](https://skyhawkrecovery.github.io/)
 
 
-> [!TIP]
+> [!NOTE]
 >  **💡 Quick Decision Guide**
 > - New to custom recovery? → Choose TWRP
 > - Want modern interface? → Choose OrangeFox
@@ -196,9 +196,9 @@ Three primary custom recovery options exist, each with distinct features.
 
 ## Prerequisites
 
-### Critical Warnings
+### Critical warnings
 
-::: danger ⚠️ ESSENTIAL REQUIREMENTS
+::: danger ESSENTIAL REQUIREMENTS
 **Unlocked Bootloader** - Custom recovery requires unlocked bootloader. Complete [bootloader unlocking](./how-to-unlock-bootloader.md) first.
 
 **Device Match** - Installing wrong recovery image can brick your device. Verify exact model and codename.
@@ -208,7 +208,7 @@ Three primary custom recovery options exist, each with distinct features.
 **Warranty** - Installing custom recovery typically voids manufacturer warranty.
 :::
 
-### Essential Requirements
+### Essential requirements
 
 **Hardware**
 - Android device with unlocked bootloader
@@ -227,7 +227,7 @@ Three primary custom recovery options exist, each with distinct features.
 - Partition scheme (A/B or A-only)
 - Basic command line usage
 
-### Identify Your Device
+### Identify your device
 
 **Find device codename:**
 
@@ -244,7 +244,7 @@ Method 3: CPU-Z app
 - Install CPU-Z from Play Store
 - Check "Device" tab for codename
 
-### Determine Partition Scheme
+### Determine partition scheme
 
 **Check if A/B device:**
 ```bash
@@ -263,7 +263,7 @@ fastboot getvar has-slot:recovery
 Returns "yes": Dedicated recovery partition
 Returns "no": Recovery in boot/vendor_boot/init_boot
 
-### Download Correct Recovery
+### Download correct recovery
 
 1. Visit recovery website (TWRP, OrangeFox, or SKYHAWK)
 2. Search for your device codename
@@ -284,11 +284,11 @@ shasum -a 256 recovery.img
 
 ---
 
-## Installation Guide
+## Installation guide
 
 Installation method depends on your device's partition scheme. Follow the appropriate path.
 
-### Step 1: Preparation
+### Step 1: preparation
 
 1. Place recovery.img in platform-tools folder
 
@@ -304,7 +304,7 @@ adb devices
 
 Device should appear in list
 
-### Step 2: Boot to Fastboot
+### Step 2: boot to fastboot
 
 **Method 1: ADB command (recommended)**
 ```bash
@@ -322,11 +322,11 @@ fastboot devices
 
 Device serial should appear
 
-### Step 3: Installation Methods
+### Step 3: installation methods
 
 Choose method based on your device type:
 
-#### Method A: Legacy Devices (Dedicated Recovery Partition)
+#### Method A: legacy devices (dedicated recovery partition)
 
 For devices with separate recovery partition (typically Android 9 and older).
 
@@ -342,7 +342,7 @@ fastboot reboot recovery
 
 Or use hardware keys after flashing to prevent stock recovery restoration.
 
-#### Method B: Modern A/B Devices (No Dedicated Recovery)
+#### Method B: modern A/B devices (no dedicated recovery)
 
 For devices with A/B partitions and no dedicated recovery (Android 10+).
 
@@ -376,7 +376,7 @@ fastboot reboot recovery
 
 Device should boot to custom recovery.
 
-#### Method C: Samsung Devices (Odin Method)
+#### Method C: Samsung devices (Odin method)
 
 Samsung devices require Odin tool instead of fastboot.
 
@@ -409,7 +409,7 @@ Samsung devices require Odin tool instead of fastboot.
 
 **Note:** Samsung Knox will permanently trip. Cannot be reversed.
 
-### Step 4: First Boot to Recovery
+### Step 4: first boot to recovery
 
 **Critical:** Boot to custom recovery immediately after installation to prevent stock recovery restoration on some devices.
 
@@ -429,9 +429,9 @@ Verify recovery loaded correctly with touch interface working.
 
 ---
 
-## Post-Installation
+## Post-installation
 
-### Verify Installation
+### Verify installation
 
 **Check recovery features:**
 - Touch interface responds
@@ -448,9 +448,9 @@ adb devices
 
 Should show device in recovery mode.
 
-### Create Backup
+### Create backup
 
-::: tip CRITICAL FIRST STEP
+::: info CRITICAL FIRST STEP
 Create complete backup before making any modifications. This allows safe recovery if something goes wrong.
 :::
 
@@ -489,7 +489,7 @@ Or connect USB and copy via file manager.
 - Cloud storage
 - Multiple locations recommended
 
-### Test Essential Features
+### Test essential features
 
 **File access:**
 - Check if internal storage visible
@@ -503,7 +503,7 @@ Or connect USB and copy via file manager.
 - Verify system, data, cache mount correctly
 - Check if USB OTG works for external storage
 
-### Handle Encryption
+### Handle encryption
 
 Modern devices use File-Based Encryption (FBE) which recovery may not decrypt.
 
@@ -526,9 +526,9 @@ Option 3: Format data (last resort)
 
 ---
 
-## Essential Operations
+## Essential operations
 
-### Installing ZIP Files
+### Installing ZIP files
 
 **Method 1: From internal storage**
 
@@ -556,7 +556,7 @@ adb sideload file.zip
 4. Navigate to ZIP
 5. Swipe to confirm
 
-### Managing Backups
+### Managing backups
 
 **Create backup:**
 - Backup > Select partitions > Swipe to confirm
@@ -570,7 +570,7 @@ adb sideload file.zip
 - Use recovery file manager or ADB
 - Free up storage space regularly
 
-### Wiping Operations
+### Wiping operations
 
 **Factory reset:**
 - Wipe > Factory Reset
@@ -594,13 +594,13 @@ adb sideload file.zip
 
 ---
 
-## Modern Device Considerations
+## Modern device considerations
 
-### A/B Partition Scheme
+### A/B partition scheme
 
 **Characteristics:**
 - Two system slots (A and B)
-- Seamless updates
+- A/B OTA updates
 - No dedicated recovery partition
 - Recovery in boot/vendor_boot/init_boot
 
@@ -621,7 +621,7 @@ fastboot set_active a
 fastboot set_active b
 ```
 
-### Dynamic Partitions
+### Dynamic partitions
 
 **Characteristics:**
 - Flexible partition sizing
@@ -633,7 +633,7 @@ fastboot set_active b
 - Different flashing procedures
 - Some recoveries may not fully support
 
-### Android Verified Boot (AVB)
+### Android verified boot (AVB)
 
 **With unlocked bootloader:**
 - AVB verification disabled
@@ -644,7 +644,7 @@ fastboot set_active b
 - Check device-specific instructions
 - Some devices may need vbmeta modifications
 
-### Fastbootd Mode
+### Fastbootd mode
 
 **Userspace fastboot for dynamic partitions:**
 
@@ -658,7 +658,7 @@ Used for:
 - Some ROM installations
 - Not typically needed for recovery
 
-### GKI Devices (Generic Kernel Image)
+### GKI devices (generic kernel image)
 
 **Android 12+ devices with GKI:**
 - Recovery may be in init_boot partition
@@ -669,7 +669,7 @@ Used for:
 
 ## Troubleshooting
 
-### Recovery Won't Boot
+### Recovery won't boot
 
 **Symptoms:** Device stuck on logo or bootloops after recovery flash
 
@@ -696,7 +696,7 @@ fastboot flash init_boot recovery.img
 fastboot flash boot stock_boot.img
 ```
 
-### Recovery Disappears After Reboot
+### Recovery disappears after reboot
 
 **Cause:** Device restored stock recovery on first normal boot
 
@@ -709,7 +709,7 @@ fastboot reboot recovery
 
 Or install root solution (Magisk) which prevents restoration.
 
-### Touch Not Working
+### Touch not working
 
 **Solutions:**
 
@@ -718,7 +718,7 @@ Or install root solution (Magisk) which prevents restoration.
 3. Check device page for known touch issues
 4. Try alternative recovery (OrangeFox if using TWRP)
 
-### Cannot See Internal Storage
+### Cannot see internal storage
 
 **Cause:** Recovery cannot decrypt device encryption
 
@@ -738,7 +738,7 @@ Option 3: Format Data (data loss)
 - Type "yes" to confirm
 - Removes encryption and all data
 
-### Fastboot Not Detecting Device
+### Fastboot not detecting device
 
 **Solutions:**
 
@@ -748,7 +748,7 @@ Option 3: Format Data (data loss)
 4. Run as administrator (Windows)
 5. Check device appears: `fastboot devices`
 
-### "No OS Installed" Warning
+### "No os installed" warning
 
 **Cause:** Recovery detects no operating system
 
@@ -761,7 +761,7 @@ Option 3: Format Data (data loss)
 - Or restore from backup
 - Device won't boot without OS
 
-### Slot Issues (A/B Devices)
+### Slot issues (A/B devices)
 
 **Boot fails after recovery installation:**
 
@@ -782,7 +782,7 @@ fastboot set_active b
 fastboot reboot
 ```
 
-### Installation Errors
+### Installation errors
 
 **"Remote: Flashing not allowed"**
 - Bootloader not fully unlocked
@@ -799,9 +799,9 @@ fastboot reboot
 
 ---
 
-## Emergency Recovery
+## Emergency recovery
 
-### Device Won't Boot to Any Mode
+### Device won't boot to any mode
 
 1. Try emergency download mode (varies by manufacturer):
    - Qualcomm: EDL mode (test point or special key combo)
@@ -816,7 +816,7 @@ fastboot reboot
 
 3. Seek device-specific help on XDA Forums
 
-### Backup Bootloader Access
+### Backup bootloader access
 
 **Always maintain ability to:**
 - Boot to fastboot/bootloader
@@ -830,11 +830,11 @@ fastboot reboot
 
 ---
 
-## Next Steps
+## Next steps
 
 Custom recovery successfully installed. Choose your path forward:
 
-### For Rooting
+### For rooting
 
 **Install root solution:**
 - [Magisk Guide](./magisk-guide.md) - Most popular, extensive modules
@@ -844,13 +844,13 @@ Custom recovery successfully installed. Choose your path forward:
 **Essential root apps:**
 - [Root Apps Collection](../apps-and-modules/) - Curated list of root apps
 
-### For Custom ROMs
+### For custom ROMs
 
 **Install custom ROM:**
 - [Custom ROM Installation Guide](./custom-rom-installation.md) - Complete process
 - LineageOS, Pixel Experience, Paranoid Android, etc.
 
-### For Learning
+### For learning
 
 **Practice operations:**
 - Create and restore backups
@@ -858,7 +858,7 @@ Custom recovery successfully installed. Choose your path forward:
 - Learn ADB sideload
 - Experiment safely with backups
 
-### For Support
+### For support
 
 **Get help:**
 - [FAQ](../faqs.md) - Common questions
@@ -868,7 +868,7 @@ Custom recovery successfully installed. Choose your path forward:
 
 ---
 
-## Additional Resources
+## Additional resources
 
 **Official Recovery Sites:**
 - [TWRP](https://twrp.me/) - Official TWRP site
@@ -886,7 +886,7 @@ Custom recovery successfully installed. Choose your path forward:
 
 ---
 
-## Safety Reminders
+## Safety reminders
 
 **Before making changes:**
 - Create complete backup
@@ -908,6 +908,6 @@ Custom recovery successfully installed. Choose your path forward:
 
 ---
 
-::: tip 🎉 Congratulations!
+::: info Congratulations!
 You’ve installed custom recovery or set up a safe temporary-boot flow. Always back up before major changes, and follow device-specific instructions for best results.
 :::

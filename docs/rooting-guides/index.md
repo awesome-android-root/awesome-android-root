@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: Android Rooting Guide
-description: "The ultimate Android rooting guide. Learn Magisk, KernelSU & APatch with step-by-step instructions, device-specific guides, and root-hiding techniques."
+title: Android rooting guide
+description: "Rooting instructions for Magisk, KernelSU and APatch, plus device-specific guides and safety information."
 head:
   - - link
     - rel: canonical
@@ -14,7 +14,7 @@ head:
       content: Android Rooting Guide | Awesome Android Root
   - - meta
     - property: og:description
-      content: The ultimate Android rooting guide covering Magisk, KernelSU, APatch installation with device-specific tutorials for Pixel, Samsung, Xiaomi, OnePlus & more.
+      content: Rooting methods, device requirements and step-by-step setup instructions for Android.
   - - meta
     - property: og:url
       content: https://awesome-android-root.xyz/rooting-guides/  
@@ -132,13 +132,13 @@ head:
       }
 ---
 
-# Android Rooting Guide
+# Android rooting guide
 
-Master Android rooting with comprehensive tutorials covering bootloader unlocking, root installation, and advanced customization techniques.
+Compare root methods, review device requirements and follow setup instructions for bootloader unlocking and root installation.
 
-## Quick Navigation
+## Quick navigation
 
-> [!TIP]
+> [!NOTE]
 > **Want guide for a specific device?**
 > Select your manufacturer in the [**Device-Specific Guides section ↗**](#device-specific-guides)
 
@@ -157,21 +157,21 @@ Master Android rooting with comprehensive tutorials covering bootloader unlockin
 
 ---
 
-## Understanding Root Access
+## Understanding root access
 
 Root access grants **superuser (administrator) privileges** on Android, providing complete control over your device's operating system and hardware.
 
-### What Root Enables
+### What root enables
 
 - **System-level control** over files, processes, and hardware
 - **Bypass manufacturer restrictions** on any Android version
-- **Install powerful apps** requiring deep system integration (see [Root Apps](../apps-and-modules/))
+- **Install apps that require root access** (see [Root Apps](../apps-and-modules/))
 - **Modify core system files** and customize every aspect via Magic Mount, OverlayFS, or KPM
 - **Access hidden hardware features** and advanced kernel-level configurations
 - **Kernel-level code injection** via APatch KPM (inline-hook, syscall-table-hook)
 - **Fine-grained root access control** via KernelSU App Profiles (uid, gid, capabilities, SELinux)
 
-### Benefits vs Risks
+### Benefits vs risks
 
 | Benefits | Risks |
 |----------|-------|
@@ -184,24 +184,24 @@ Root access grants **superuser (administrator) privileges** on Android, providin
 | Kernel-level tweaks (CPU, GPU, scheduler) | Strong Integrity generally unachievable on unlocked devices |
 | Custom ROM installation freedom | Bootloader unlock wipes ALL data |
 
-### Is Rooting Right for You?
+### Is rooting right for you?
 
 | **✅ Root If:** | **❌ Don't Root If:** |
 |---------------------------|---------------------|
 | Want complete control over your device | Rely solely on banking/finance apps |
 | System-wide ad blocking is priority | Uncomfortable with terminal/command-line |
 | Enjoy deep customization & theming | Need 100% warranty coverage |
-| Privacy & anti-tracking matters | Want seamless automatic OTA updates |
+| Privacy & anti-tracking matters | Want automatic OTA updates |
 | Willing to learn & troubleshoot | New to Android and risk-averse |
 | Use device as daily driver with backups | Prefer stock, zero-maintenance experience |
 
 ---
 
-## Prerequisites and Safety
+## Prerequisites and safety
 
-### Critical Warnings
+### Critical warnings
 
-::: danger ⚠️ PERMANENT CONSEQUENCES
+::: danger PERMANENT CONSEQUENCES
 **Data Loss** - Unlocking bootloader completely erases all device data. Backup everything before proceeding.
 
 **Warranty Void** - Bootloader unlocking permanently voids manufacturer warranty on most devices.
@@ -215,7 +215,7 @@ Root access grants **superuser (administrator) privileges** on Android, providin
 **Bricking Risk** - Incorrect procedures can permanently damage your device. Follow instructions exactly and have a [recovery plan ready](../troubleshooting.md#emergency-recovery).
 :::
 
-### Essential Requirements
+### Essential requirements
 
 **Hardware:**
 - Android device with **unlockable bootloader** (verify before starting - some carrier-locked variants cannot be unlocked)
@@ -240,23 +240,23 @@ Root access grants **superuser (administrator) privileges** on Android, providin
 - Ability to research and follow instructions carefully
 - Emergency recovery plan (know how to flash stock firmware)
 
-### Pre-Rooting Checklist
+### Pre-rooting checklist
 
-1. ✅ **Backup all data** - Photos, contacts, messages, app data (see [Backup Apps](../apps-and-modules/backup#backup-restore))
-2. ✅ **Charge device** - Minimum 50% battery
-3. ✅ **Verify bootloader unlockability** - Check OEM Unlocking toggle in Developer Options (greyed out = likely carrier-locked)
-4. ✅ **Download necessary files** - Stock firmware, root solution (APK+ZIP), recovery image
-5. ✅ **Research your device** - Read XDA forums and device-specific guides thoroughly
-6. ✅ **Prepare recovery plan** - Know how to restore stock firmware via fastboot/recovery
-7. ✅ **Identify correct partition** - Determine if your device uses `boot.img` or `init_boot.img` (Android 13+ typically = `init_boot.img`)
+1. **Backup all data** - Photos, contacts, messages, app data (see [Backup Apps](../apps-and-modules/backup#backup-apps-tools))
+2. **Charge device** - Minimum 50% battery
+3. **Verify bootloader unlockability** - Check OEM Unlocking toggle in Developer Options (greyed out = likely carrier-locked)
+4. **Download necessary files** - Stock firmware, root solution (APK+ZIP), recovery image
+5. **Research your device** - Read XDA forums and device-specific guides thoroughly
+6. **Prepare recovery plan** - Know how to restore stock firmware via fastboot/recovery
+7. **Identify correct partition** - Determine if your device uses `boot.img` or `init_boot.img` (Android 13+ typically = `init_boot.img`)
 
 ---
 
-## Choosing a Root Method
+## Choosing a root method
 
 Three primary rooting solutions exist, each with distinct advantages and trade-offs. **Magisk** offers the broadest compatibility and largest ecosystem, **KernelSU** provides kernel-level root with granular app control, and **APatch** combines kernel patching with module support.
 
-### Quick Comparison
+### Quick comparison
 
 | Feature | Magisk | KernelSU | APatch |
 |---------|---------|----------|---------|
@@ -273,7 +273,7 @@ Three primary rooting solutions exist, each with distinct advantages and trade-o
 | **Unique Strength** | Ecosystem & broad compatibility | Kernel space, only permitted apps see su | KPM kernel code injection without source |
 | **OTA Handling** | Re-patch after OTA | Some OTA flows survive via LKM | Initial A/B OTA support |
 
-### Decision Guide
+### Decision guide
 
 **Choose Magisk if:**
 - You are new to rooting and want the easiest path
@@ -293,19 +293,19 @@ Three primary rooting solutions exist, each with distinct advantages and trade-o
 - Your device is ARM64 with a compatible kernel
 - You want both Magisk-like modules AND kernel patching
 
-> [!IMPORTANT]
+> [!NOTE]
 > For detailed comparison including migration guides, see [Root Framework Comparison](./root-framework-comparison.md)
 
-> [!TIP]
+> [!NOTE]
 > **Can't (or don't want to) unlock your bootloader?** All three frameworks above assume an unlocked bootloader. On a narrow set of 2024-2026 devices, the **GhostLock** bug (CVE-2026-43499) instead grants **temporary, session-only root** with the bootloader locked - no Knox trip, no data wipe. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) for what it can and can't do, plus the broader [Temporary Root for Android: Methods & Solutions](./temporary-root-solutions.md) page.
 
 ---
 
-## Universal Rooting Process
+## Universal rooting process
 
 All Android devices follow this four-step rooting process, regardless of manufacturer or root method. Modern devices (Android 13+) often use `init_boot.img` instead of `boot.img` for root patching - check your device specifics.
 
-### Step 1: Unlock Bootloader
+### Step 1: unlock bootloader
 
 Unlocking the bootloader is the essential first step that enables all subsequent modifications.
 
@@ -321,7 +321,7 @@ Unlocking the bootloader is the essential first step that enables all subsequent
 
 **[📖 How to unlock an Android bootloader](./how-to-unlock-bootloader.md)**
 
-### Step 2: Install Custom Recovery (Optional but Recommended)
+### Step 2: install custom recovery (optional but recommended)
 
 Custom recovery provides advanced features and safer modification workflows. While not strictly required for all modern root methods, it's invaluable for backups and emergency recovery.
 
@@ -342,11 +342,11 @@ Custom recovery provides advanced features and safer modification workflows. Whi
 
 **[📖 Custom Recovery Installation Guide](./how-to-install-custom-recovery.md)**
 
-### Step 3: Install Root Solution
+### Step 3: install root solution
 
 Choose and install your preferred root method. The modern approach uses boot image patching.
 
-#### Option A: Magisk (Recommended for Most Users)
+#### Option A: Magisk (recommended for most users)
 
 1. Download latest **Magisk APK** from [official GitHub](https://github.com/topjohnwu/Magisk/releases)
 2. Extract the correct image from your device's stock firmware:
@@ -357,7 +357,7 @@ Choose and install your preferred root method. The modern approach uses boot ima
 4. Flash patched image via fastboot (`fastboot flash init_boot magisk_patched...img`)
 5. Reboot and complete Magisk app setup
 
-> [!TIP]
+> [!NOTE]
 > Magisk now supports XZ-compressed modules and 16k page size devices. Use the latest stable release from [GitHub](https://github.com/topjohnwu/Magisk/releases).
 
 **[📖 Complete Magisk Guide](./magisk-guide.md)**
@@ -389,12 +389,12 @@ Choose and install your preferred root method. The modern approach uses boot ima
 
 **[📖 Complete APatch Guide](./apatch-guide.md)**
 
-### Step 4: Post-Root Configuration
+### Step 4: post-root configuration
 
 After successful root installation, complete these essential steps:
 
 1. **Verify Root Access** - Use a root checker app to confirm superuser access works
-2. **Install Essential Apps** - Visit [Starter Kit: Must-Have Apps](../apps-and-modules/#starter-kit-must-have-apps)
+2. **Install Essential Apps** - Visit [Starter Kit: Must-Have Apps](../apps-and-modules/root-management)
 3. **Configure Root Hiding** (critical for banking apps):
    - **Magisk:** Enable Zygisk + DenyList, install any Play Integrity Fix module + [Tricky Store](https://github.com/5ec1cff/TrickyStore) + [Shamiko](https://github.com/LSPosed/LSPosed.github.io) (or open-source [Zygisk Assistant](https://github.com/snake-4/Zygisk-Assistant))
    - **KernelSU:** Use App Profiles, install Zygisk Next + PIF + Tricky Store
@@ -405,27 +405,27 @@ After successful root installation, complete these essential steps:
 - [Block Ads System-Wide](../general-guides/android-adblocking.md) - Eliminate ads across all apps
 - [Debloat Your Device](../general-guides/android-apps-debloating.md) - Remove bloatware safely
 - [Install LSPosed / Vector Framework](./lsposed-guide.md) - Advanced app customization with Xposed modules
-- [Browse 650+ Root Apps](../apps-and-modules/) - Discover essential tools
+- [Browse <EntryCount /> root apps](../apps-and-modules/) - Discover essential tools
 
 ---
 
-## Device-Specific Guides
+## Device-specific guides
 
 Detailed rooting instructions tailored for specific manufacturers and models.
 
-### 📱 [Google Pixel Series](./how-to-root-pixel-phone.md)
+### [Google Pixel series](./how-to-root-pixel-phone.md)
 
-### 📱 [Samsung Galaxy Series](./how-to-root-samsung-phone.md)
+### [Samsung Galaxy series](./how-to-root-samsung-phone.md)
 
-### 📱 [Xiaomi Devices](./how-to-root-xiaomi-phone.md)
+### [Xiaomi devices](./how-to-root-xiaomi-phone.md)
 
-### 📱 [OnePlus Devices](./how-to-root-oneplus-phone.md)
+### [OnePlus devices](./how-to-root-oneplus-phone.md)
 
-### 📱 [Motorola Devices](./how-to-root-motorola-phone.md)
+### [Motorola devices](./how-to-root-motorola-phone.md)
 
-### 📱 [Nothing Phone Series](./how-to-root-nothing-phone.md)
+### [Nothing Phone series](./how-to-root-nothing-phone.md)
 
-> [!TIP]
+> [!NOTE]
 > **Can't find your device?** Check [XDA Developers Forums](https://forum.xda-developers.com/) or search device-specific Telegram groups. Most devices with unlockable bootloaders follow the universal process above.
 
 > [!NOTE]
@@ -435,7 +435,7 @@ Detailed rooting instructions tailored for specific manufacturers and models.
 
 ## Troubleshooting
 
-### Common Issues and Solutions
+### Common issues and solutions
 
 **Device Won't Boot (Bootloop)**
 
@@ -502,7 +502,7 @@ Solutions:
 4. On Linux: add udev rules, run `fastboot` as root or configure permissions
 5. Try `fastboot devices` on a different computer
 
-### Emergency Recovery
+### Emergency recovery
 
 **Safe Mode (Disable All Modules)**
 
@@ -528,18 +528,18 @@ If device won't power on or enter any mode:
 4. Professional repair may be necessary for hardware-level bricks
 
 **Prevention Tips:**
-- 📥 Always keep stock firmware downloaded before starting
-- 💾 Create regular backups (Swift Backup, Neo Backup, recovery nandroid)
-- 📖 Read your device's XDA forum thoroughly before attempting anything
-- 🔑 Keep a copy of your stock `boot.img` and `init_boot.img`
-- 🧪 Test one module at a time, reboot between installations
-- 📋 Join device-specific Telegram/Discord communities for real-time help
+- Always keep stock firmware downloaded before starting
+- Create regular backups (Swift Backup, Neo Backup, recovery nandroid)
+- Read your device's XDA forum thoroughly before attempting anything
+- Keep a copy of your stock `boot.img` and `init_boot.img`
+- Test one module at a time, reboot between installations
+- Join device-specific Telegram/Discord communities for real-time help
 
 ---
 
-## Additional Resources
+## Additional resources
 
-### Framework and Advanced Guides
+### Framework and advanced guides
 
 **Vector / LSPosed Framework**
 
@@ -551,7 +551,7 @@ Advanced app modification framework for rooted devices. The ecosystem has evolve
 - Enables Xposed modules for per-app customization, privacy, and UI tweaks
 - API 101 is the current standard; Vector CI builds already support it
 
-> [!IMPORTANT]
+> [!NOTE]
 > See our [Complete Vector/LSPosed Guide](./lsposed-guide.md) for the full breakdown on choosing between Vector (open-source) and lsposed.zip (closed-source), installation, and module management.
 
 **Custom ROM Installation**
@@ -563,7 +563,7 @@ Replace stock Android with privacy-focused custom ROMs:
 
 **[📖 Custom ROM Installation Guide](./custom-rom-installation.md)**
 
-### Root Hiding & Play Integrity Resources
+### Root hiding & Play Integrity resources
 
 Play Integrity bypass is essential for banking apps in 2026. Key tools:
 
@@ -576,28 +576,28 @@ Play Integrity bypass is essential for banking apps in 2026. Key tools:
 | **[Play Integrity Fork](https://github.com/osm0sis/PlayIntegrityFork)** | Community-maintained PIF script | Active |
 
 
-> [!TIP]
+> [!NOTE]
 > For the complete and up-to-date list, see our [Root Hiding & Play Integrity apps](../apps-and-modules/root-management#root-hiding-play-integrity)
 
 ---
 
-## Community and Support
+## Community and support
 
-### **Official Resources**
+### **Official resources**
 - [GitHub Repository](https://github.com/awesome-android-root/awesome-android-root) - Source code and issues
 - [Troubleshooting Guide](../troubleshooting.md) - Common problems and fixes
 - [FAQ](../faqs.md) - Common questions
 - [Root Apps Collection](../apps-and-modules/) - Curated apps and modules
 - [X (Twitter) Updates](https://x.com/awsm_and_root) - Project news & updates
 
-### **External Communities**
+### **External communities**
 - [XDA Developers](https://forum.xda-developers.com/) - Device-specific forums (largest Android modding community)
 - [r/AndroidRoot](https://www.reddit.com/r/androidroot/) - Rooting help and discussion
 - [r/Magisk](https://www.reddit.com/r/Magisk/) - Magisk-specific support
 - [r/KernelSU](https://www.reddit.com/r/KernelSU/) - KernelSU community
 - **Telegram Groups** - Device-specific and framework-specific groups (search for your device)
 
-### When Asking for Help
+### When asking for help
 
 Include this information for faster troubleshooting:
 - **Device model** and exact variant (e.g., Pixel 8 Pro `husky`, not just "Pixel 8")
@@ -610,9 +610,9 @@ Include this information for faster troubleshooting:
 
 ---
 
-## Next Steps
+## Next steps
 
-### Your Path Forward
+### Your path forward
 1. **[Unlock Bootloader](./how-to-unlock-bootloader.md)** - The essential first step
 2. **[Install Recovery](./how-to-install-custom-recovery.md)** - Optional but recommended
 3. **[Choose Your Root Method](#choosing-a-root-method)** - Magisk, KernelSU, or APatch
@@ -620,7 +620,7 @@ Include this information for faster troubleshooting:
 5. **[Set Up Root Hiding](#step-4-post-root-configuration)** - Essential for banking apps
 6. **[Install Vector/LSPosed](./lsposed-guide.md)** - Unlock app customization
 
-> [!IMPORTANT]
+> [!NOTE]
 > - Join our [community discussions](../about.md#community-support)
 > - Contribute to the [project](../contributing.md)
 > - Stay updated via [X (Twitter)](https://x.com/awsm_and_root)
@@ -629,4 +629,4 @@ Include this information for faster troubleshooting:
 
 🎉 **Welcome to the World of Android Freedom!**
 
-Your journey to unlimited Android possibilities begins now! The rooting community is stronger than ever in 2026
+Review the device-specific instructions and risks before choosing a root method.

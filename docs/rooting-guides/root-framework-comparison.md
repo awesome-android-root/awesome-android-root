@@ -131,7 +131,7 @@ Unlocking the bootloader usually wipes data, weakens device security, and can br
 | **Hiding / integrity** | Community tooling only; no guarantees | Often less visible to apps, but no guarantee | Often less visible to apps, but no guarantee |
 | **OTA behavior** | Usually needs restore/re-patch or inactive-slot flow | LKM setups can be more OTA-friendly, but not guaranteed | OTA support depends on device and install path |
 | **Troubleshooting** | Easiest; largest community | Medium; kernel knowledge helps | Hardest; smaller ecosystem |
-| **Latest Version** | ![GitHub Release](https://img.shields.io/github/v/release/topjohnwu/Magisk) | ![GitHub Release](https://img.shields.io/github/v/release/tiann/KernelSU) | ![GitHub Release](https://img.shields.io/github/v/release/bmax121/APatch) |
+| **Release notes** | [Magisk releases](https://github.com/topjohnwu/Magisk/releases) | [KernelSU releases](https://github.com/tiann/KernelSU/releases) | [APatch releases](https://github.com/bmax121/APatch/releases) |
 
 ## Framework notes
 
@@ -295,6 +295,6 @@ Usually no. Relocking with modified partitions can brick or wipe the device. Ret
 - **APatch:** [GitHub](https://github.com/bmax121/APatch) · [Docs](https://apatch.dev/) · [Installation](https://apatch.dev/install.html)
 - **Google:** [Play Integrity verdicts](https://developer.android.com/google/play/integrity/verdicts)
 
-::: tip Final rule
+::: info Final rule
 When in doubt, start with Magisk - unless your device community specifically recommends KernelSU or APatch for your exact model, ROM, and kernel.
 :::

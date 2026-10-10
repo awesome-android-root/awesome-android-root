@@ -33,7 +33,8 @@ Fixes #(issue number)
 - [ ] Included proper badges (FOSS, M, K, LSP, etc.)
 - [ ] Link points to source code (for FOSS) or official page
 - [ ] Added F-Droid/Play Store links where applicable
-- [ ] Description is clear and concise
+- [ ] Description is one factual sentence of 140 characters or fewer
+- [ ] Description starts with a verb or noun phrase and avoids promotional language
 - [ ] Follows existing format and style
 
 ### For Documentation Changes:

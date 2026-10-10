@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: "Temporary Root for Android: Methods & Solutions"
+title: "Temporary root for Android: methods & solutions"
 description: "Compare temporary root methods for Android, including locked-bootloader options, bootloader modifications, reboot behavior, device limits and safety risks."
 head:
   - - link
@@ -84,7 +84,7 @@ head:
 
 ---
 
-# Temporary Root for Android: Methods & Solutions
+# Temporary root for Android: methods & solutions
 
 Most of this site covers root frameworks that patch the **boot image** (Magisk, KernelSU, APatch) after the bootloader is unlocked. This page covers two related but distinct categories that don't fit that model:
 
@@ -95,7 +95,7 @@ Most of this site covers root frameworks that patch the **boot image** (Magisk, 
 > [!CAUTION]
 > Everything on this page operates below the OS, either in the bootloader or in the kernel. A bad flash or a failed exploit run can **brick your device**. These are research-grade, device-specific tools maintained by small teams, not polished consumer apps. Read each project's documentation in full before using it, and keep a copy of your stock firmware.
 
-## Temporary Root Method Comparison
+## Temporary root method comparison
 
 The word **temporary root** is used for a session-only root that is lost when the device reboots. Bootloader patching is different: it can persist after a reboot, but it normally requires an unlock and a device-specific flash. Use the table to choose the right branch before opening a project link.
 
@@ -105,7 +105,7 @@ The word **temporary root** is used for a session-only root that is lost when th
 | MediaTek Kaeru or Fenrir bootloader modification | Yes, until the patched bootloader is restored | Yes, to flash the modification | Yes | MediaTek and device-specific; a bad LK/preloader change can brick the phone. |
 | GhostLock family temporary root | No | No | No; rerun after each reboot | Only supported on particular vulnerable kernel builds and patch levels. |
 
-## MediaTek Bootloader Modification & Spoofing Tools
+## MediaTek bootloader modification & spoofing tools
 
 These tools patch the LK (Little Kernel) bootloader image on MediaTek devices directly, rather than the boot/init_boot partition. That lets them do things a normal root framework can't: add fastboot commands, remove the unlocked-bootloader warning, or spoof the reported lock state so Play Integrity sees "locked" while the device is actually unlocked.
 
@@ -121,11 +121,11 @@ Kaeru and Fenrir both build on a small ecosystem of MediaTek bootloader tooling 
 - **[liblk](https://github.com/R0rt1z2/liblk)** - Python library for parsing and rebuilding MediaTek LK images; the base that `lkpatcher` and the Kaeru/Fenrir injectors are built on. `FOSS`
 - **[amonet](https://github.com/R0rt1z2/amonet)** - Older BootROM + LK exploit chain, mainly for Amazon-branded MediaTek devices with locked-down BROM stages that `mtkclient` alone can't reach. `FOSS`
 
-## Temporary (Session-Only) Root: the GhostLock / CVE-2026-43499 family
+## Temporary (session-only) root: the GhostLock / CVE-2026-43499 family
 
 In mid-2026, a use-after-free bug in the Linux kernel's rtmutex proxy-lock rollback path (CVE-2026-43499, nicknamed **GhostLock**) turned out to be reachable from an unprivileged app process on several shipping Android kernels. Unlike the bootloader tools above, this is a pure kernel exploit: no unlocked bootloader, no flashing, no Knox e-fuse trip. It stages a native payload over ADB/Shizuku, runs it to get a root shell in memory, and uses that to load a KernelSU (or ReSukiSU) manager for the current boot only. Rebooting clears it, and the steps have to be repeated.
 
-> [!TIP]
+> [!NOTE]
 > GhostLock now has its own dedicated, plain-English page: **[Root Without Unlocking the Bootloader: the GhostLock Temporary Root Guide](./root-without-unlocking-bootloader.md)**. It covers what the bug is, what it can and can't do, and the full list of apps and projects (Root My Galaxy, Root My Pixel, Root My Device, GhostLock App, ghostlock-oneplus, and device ports) with a supported-devices table.
 
 The headline tools:
@@ -137,7 +137,7 @@ The headline tools:
 
 Community ports keep spreading - Galaxy S22 Ultra / Z Fold6 / A17, OPPO Find N2, iQOO Z9 5G / vivo T3 5G, POCO M6 Pro, Amazon 5.X-kernel devices, Nothing Phone (1), Galaxy Tab S7+, and even the Meta Quest 1 - all listed with details on the [dedicated GhostLock page](./root-without-unlocking-bootloader.md).
 
-> [!IMPORTANT]
+> [!WARNING]
 > This is a narrow, closing window, not a general-purpose root method:
 > - Only works on firmware up to roughly the **June 2026** security patch (some report luck on July 2026 builds; this isn't guaranteed and shrinks with every OTA).
 > - Coverage is a per-device, per-kernel-build list. Check each project's supported-targets file before assuming your phone works.
@@ -158,7 +158,7 @@ Community ports keep spreading - Galaxy S22 Ultra / Z Fold6 / A17, OPPO Find N2,
 
 See the [Root Hiding & Play Integrity apps](/apps-and-modules/root-management#root-hiding-play-integrity) section for the DenyList/Shamiko/Tricky Store side of this problem on a normally-rooted device.
 
-## Temporary Root FAQ
+## Temporary root FAQ
 
 ### What is temporary root?
 

@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Xiaomi/Redmi/POCO Root Guide
+title: Xiaomi/Redmi/POCO root guide
 description: Complete guide to root Xiaomi, Redmi, and POCO devices. Navigate HyperOS/MIUI, Mi Unlock Tool, anti-rollback protection, and Magisk installation.
 head:
   - - link
@@ -20,7 +20,7 @@ head:
       content: https://awesome-android-root.xyz/rooting-guides/how-to-root-xiaomi-phone
   - - meta
     - property: og:image
-      content: https://awesome-android-root.xyz/images/og/xiaomi.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -38,7 +38,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og/xiaomi.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Xiaomi Root Guide - All Models
@@ -74,17 +74,17 @@ head:
       content: index, follow
 ---
 
-# Complete Xiaomi Rooting Guide
+# Complete Xiaomi rooting guide
 
 This page focuses on Xiaomi/Redmi/POCO specifics (Mi Unlock, ARB, HyperOS, payload extraction). For universal prep and Magisk steps, see: [Main Rooting Guide](./index.md), [Bootloader Unlocking](./how-to-unlock-bootloader.md), and [Magisk Guide](./magisk-guide.md).
 
-## 🔗 Essential Resources
+## Essential resources
 - [📖 Main Rooting Guide](./index.md) - Universal rooting principles and safety
 - [🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md) - General bootloader concepts
 - [🛠️ Custom Recovery](./how-to-install-custom-recovery.md) - TWRP installation guide
 - [❓ FAQ & Troubleshooting](../faqs.md) - Solutions for common issues
 
-## Xiaomi Rooting Complexity
+## Xiaomi rooting complexity
 
 Xiaomi is among the strictest OEMs for unlocking/root.
 
@@ -94,9 +94,9 @@ Xiaomi is among the strictest OEMs for unlocking/root.
 - MIUI/HyperOS employ strong AVB 2.0, dynamic partitions, and anti-rollback
 - Play Integrity replaces SafetyNet; root-hiding needs extra steps
 
-## Critical Warnings
+## Critical warnings
 
-::: danger ⚠️ Xiaomi-Specific Risks
+::: danger Xiaomi-Specific Risks
 - Mi Account/device restrictions are possible (account/device can be flagged)
 - Warranty may be void in many regions after unlocking
 - Xiaomi Wallet/Mi Pay and some regional services may be disabled
@@ -105,22 +105,22 @@ Xiaomi is among the strictest OEMs for unlocking/root.
 - Widevine may drop from L1 to L3 on some models after unlocking (affects HD streaming)
 :::
 
-## Device Compatibility
+## Device compatibility
 
-### Device Compatibility
+### Device compatibility
 
 Most Xiaomi/Redmi/POCO devices with unlockable bootloaders can be rooted. Check [XDA Forums](https://forum.xda-developers.com/) for your specific model's status.
 
-### Incompatible / Restricted Devices
+### Incompatible / restricted devices
 
 - **CN (China) variants:** Strictest rules; many models are not unlockable via official means
 - **Carrier/Enterprise/Education SKUs:** Often locked down or not supported
 - **India variants:** Extra verification checks; sometimes longer waiting timers
 - **Newer HyperOS devices:** May require additional eligibility checks beyond the standard waiting period
 
-## Prerequisites & Setup
+## Prerequisites & setup
 
-### Mi Account Preparation
+### Mi account preparation
 1. [Create](https://global.account.xiaomi.com/fe/service/register?_locale=en&_uRegion=ZA)/prepare a dedicated Mi Account (avoid changing password mid-process).
 2. Insert an active SIM (keep it inserted until unlocked).
 3. Bind Mi Account on the phone and wait for the timer.
@@ -129,7 +129,7 @@ Most Xiaomi/Redmi/POCO devices with unlockable bootloaders can be rooted. Check 
 
 Note on waiting time: Xiaomi’s timer is variable now. Users report 72h, 168h (7 days), and up to 360–720h on some regions/devices. The exact value is server-assigned.
 
-### Required Tools
+### Required tools
 1. Mi Unlock Tool (Windows-only): https://www.miui.com/unlock/index_en.html
 2. Platform Tools (ADB/Fastboot): https://developer.android.com/studio/releases/platform-tools
 3. Magisk APK (latest stable): https://github.com/topjohnwu/Magisk/releases
@@ -144,7 +144,7 @@ Optional but recommended:
   - payload-dumper-go: https://github.com/ssut/payload-dumper-go
   - payload-dumper-ng: https://github.com/vm03/payload_dumper
 
-### Device Preparation
+### Device preparation
 1. **Enable Developer Options:**
    - Settings → About phone → tap MIUI/HyperOS version 7 times
    - Developer Options: enable USB debugging; enable OEM unlocking (if available)
@@ -157,7 +157,7 @@ Optional but recommended:
    - Note IMEI/serial; consider EFS/persist backup once unlocked and rooted
 4. **Charge to 70%+** and use a high-quality USB cable on a USB 2.0/3.0 port
 
-### Connection Verification
+### Connection verification
 ```bash
 adb devices
 adb reboot bootloader
@@ -166,23 +166,23 @@ fastboot getvar product
 fastboot getvar current-slot
 ```
 
-## Bootloader Unlocking Process
+## Bootloader unlocking process
 
-### Step 1: Account Bind + Waiting Period
+### Step 1: account bind + waiting period
 - Bind Mi Account under Developer options → Mi Unlock Status.
 - Wait the server-assigned duration (commonly 72–168h; sometimes longer).
 - Keep SIM and the same Mi Account signed in. Avoid resets/logouts/password changes.
 
-### Step 2: Mi Unlock Tool Setup
+### Step 2: mi unlock tool setup
 - Use Windows, run the tool as Administrator.
 - Sign in with the same Mi Account bound on device.
 - Ensure the PC has stable internet (some users succeed more reliably without VPN/proxy).
 
-### Step 3: Enter Fastboot Mode
+### Step 3: enter fastboot mode
 - adb reboot bootloader
 - Or: power off → hold Volume Down + Power
 
-### Step 4: Unlock with Mi Unlock Tool
+### Step 4: unlock with mi unlock tool
 1. Connect device in fastboot mode.
 2. Click “Unlock” → confirm prompts.
 3. If timer not finished, you’ll see the remaining time; otherwise it proceeds.
@@ -194,11 +194,11 @@ fastboot oem device-info
 # Expect: (bootloader) Device unlocked: true
 ```
 
-:::tip 💡 **MUST SEE**
+:::tip **MUST SEE**
 See [Alternate Bypass sections](#alternative-bypass-methods-community-use-at-your-own-risk) for bypassing the bootloader unlocking restriction
 :::
 
-### Troubleshooting Unlock Issues
+### Troubleshooting unlock issues
 
 Common errors and tips:
 - “Couldn’t verify device” / 10008 / 86006 / 86012:
@@ -216,7 +216,7 @@ Common errors and tips:
 - Waiting time stuck:
   - Re-bind after a few days (not too often), ensure mobile data, and try again
 
-## Root Installation Methods
+## Root installation methods
 
 Important: On Android 13+ (GKI), many Xiaomi devices use an init_boot partition for the ramdisk. Magisk must patch init_boot if it exists; otherwise it patches boot. You can check your ROM contents or run:
 ```bash
@@ -224,9 +224,9 @@ fastboot getvar all 2>&1 | findstr /i "init_boot"
 ```
 If your firmware contains init_boot.img, patch that. If not, patch boot.img.
 
-### Method A: Patch-and-Flash (Recommended)
+### Method A: patch-and-flash (recommended)
 
-#### Step 1: Get the correct image(s)
+#### Step 1: get the correct image(s)
 1. Download the exact same build you’re running.
    - Use Fastboot ROM if available (images are already extracted)
    - For Recovery/OTA packages (payload.bin), extract with payload-dumper-go
@@ -236,7 +236,7 @@ If your firmware contains init_boot.img, patch that. If not, patch boot.img.
 
 Never patch or flash an image from a different build or ARB index.
 
-#### Step 2: Patch with Magisk (see [Magisk Guide](./magisk-guide.md#method-1-boot-image-patching-recommended))
+#### Step 2: patch with Magisk (see [Magisk guide](./magisk-guide.md#method-1-boot-image-patching-recommended))
 1. Transfer the image to the phone:
    ```bash
    adb push init_boot.img /sdcard/Download/   # if exists
@@ -252,7 +252,7 @@ Pull the patched image to PC:
 adb pull /sdcard/Download/magisk_patched-*.img ./
 ```
 
-#### Step 3: Safer first boot, then permanent install
+#### Step 3: safer first boot, then permanent install
 1. Reboot to fastboot:
    ```bash
    adb reboot bootloader
@@ -284,11 +284,11 @@ fastboot reboot
 - Do NOT disable AVB/verity for Magisk. Magisk works with AVB intact.
 - If you bootloop, fastboot flash the stock image (init_boot/boot) from the same build.
 
-### Method B: Custom Recovery + Magisk
+### Method B: custom recovery + Magisk
 
 Custom recoveries on Android 12+/HyperOS often live in vendor_boot (no standalone recovery partition). Decryption of /data is hit-or-miss on A14+, so don’t rely on recovery for backups.
 
-#### Step 1: Boot a recovery image (don’t flash yet)
+#### Step 1: boot a recovery image (don’t flash yet)
 - TWRP/OrangeFox/SkyHawk builds differ by device/Android version.
 - Prefer fastboot boot first:
   ```bash
@@ -302,7 +302,7 @@ fastboot flash recovery recovery.img
 fastboot reboot recovery
 ```
 
-#### Step 2: Install Magisk from recovery
+#### Step 2: install Magisk from recovery
 - Magisk is no longer distributed as a classic ZIP. Rename the APK to .zip for recovery flashing, or use recovery’s “Install APK/Install Magisk” feature if available.
   - Example: rename Magisk-vXX.X.apk → Magisk-vXX.X.zip and flash it.
 - Alternatively, sideload the APK/ZIP if the recovery supports it.
@@ -311,14 +311,14 @@ fastboot reboot recovery
 Notes:
 - On recent HyperOS, using Method A (patch init_boot/boot) is more reliable than recovery flashing.
 
-### Current Bootloader Restrictions
+### Current bootloader restrictions
 - Newer HyperOS devices (late-2023/2024+) can require additional “eligibility” checks. CN models are the most restricted.
 - Waiting times vary; some users see 72h, others 168h, and some much longer.
 - Community “bypass” scripts/apps may work temporarily and may be patched by Xiaomi later. Use at your own risk.
 
-## Xiaomi-Specific Optimizations
+## Xiaomi-specific optimizations
 
-### MIUI/HyperOS Debloating (Caution)
+### MIUI/HyperOS debloating (caution)
 - Prefer disabling via ADB/app ops instead of uninstalling system apps:
   - Use adb shell pm disable-user --user 0 PACKAGE
 - Commonly disabled (verify on your build): Mi Browser, Mi Video, Mi Music, Feedback, Analytics, Scanner (if unused), Mi Roaming, Mi Mover, Facebook stubs, Partner apps.
@@ -329,9 +329,9 @@ Notes:
   - com.miui.securitycenter
   - Anything containing “telephony”, “ims”, “provision”, “overlay”, “updater” unless you know the impact.
 
-## Troubleshooting Guide
+## Troubleshooting guide
 
-### Mi Unlock Tool Issues
+### Mi unlock tool issues
 
 Check device state:
 ```bash
@@ -359,7 +359,7 @@ adb start-server
 adb devices
 ```
 
-### MIUI/HyperOS Specific Issues
+### MIUI/HyperOS specific issues
 
 **Accidental system app removal:**
 - Boot custom recovery (if installed) and dirty-flash your exact ROM build
@@ -378,16 +378,16 @@ adb devices
   - Proper DenyList configuration (Google Play services, GMS, wallet/banking)
   - Clear Play Store/Services data after configuration, then wait a few minutes
 
-## Success Verification
+## Success verification
 
-### Root Access Confirmation
+### Root access confirmation
 - Open Magisk → should show “Installed” with current version
 - adb shell su -c "id" → expect uid=0(root) gid=0(root)
 - Optional: install a root checker app
 
-## Staying Updated
+## Staying updated
 
-### OTA Update Management (HyperOS/MIUI on unlocked and rooted)
+### OTA update management (HyperOS/MIUI on unlocked and rooted)
 - Unlocked bootloader usually does NOT block OTA on Xiaomi. Root might.
 - To take OTA safely with Magisk:
   1. In Magisk: Restore Images (if available)
@@ -400,7 +400,7 @@ adb devices
 - Bootloader does not re-lock after OTA unless you explicitly choose a “clean all and lock” flash.
 - If OTA fails, dirty-flash the same build via recovery/fastboot and re-root.
 
-### Custom ROM Alternatives
+### Custom ROM alternatives
 - **Xiaomi.eu** LineageOS, EvolutionX, Pixel Experience, AOSP Extended builds
 - Read your device’s XDA thread for firmware prerequisites (modem/vendor), dynamic/super partition flash instructions, and AVB/vbmeta notes
 - Most ROMs require unlocked bootloader; many expect flashing via fastbootd (userspace fastboot):
@@ -410,7 +410,7 @@ adb devices
 
 ---
 
-::: tip 💡 Xiaomi Root Success Tips
+::: info Xiaomi Root Success Tips
 - Be patient with the unlock timer; don’t constantly rebind or reset
 - Use mobile data for account binding; keep SIM inserted
 - Always patch and flash images that match your exact build and ARB index
@@ -421,13 +421,13 @@ adb devices
 
 ---
 
-## Advanced Tips & Methods
+## Advanced tips & methods
 
-### Alternative Bypass Methods (Community, use at your own risk)
+### Alternative bypass methods (community, use at your own risk)
 
 Bypasses may work temporarily and then stop after Xiaomi patches server-side. They may violate ToS and can risk account/device flags.
 
-#### Method 1: HyperOS-BootLoader-Bypass-V2
+#### Method 1: HyperOS-bootloader-bypass-v2
 - Repo: https://github.com/mrzzoxo/HyperOS-BootLoader-Bypass/releases/tag/V2
 - Modified Settings APK (community): https://t.me/RedmiNote134G/72
 - Steps (summary, as reported by users):
@@ -442,12 +442,12 @@ Bypasses may work temporarily and then stop after Xiaomi patches server-side. Th
   - Don’t log out/reset or update firmware during the process
   - Success varies by device/region/firmware; CN devices are the least likely to work
 
-#### Method 2: AQLR Bypass (XDA)
+#### Method 2: AQLR bypass (XDA)
 - Thread: https://xdaforums.com/t/how-to-unlock-bootloader-on-xiaomi-hyperos-all-devices-except-cn.4654009/
 - Requires Python, per-thread instructions, often paired with modified Settings APK
 - CLI-driven; suited to advanced users
 
-### Troubleshooting Specific Devices
+### Troubleshooting specific devices
 
 “Unsupported” devices in databases may still be unlockable:
 - Try earlier MIUI versions (only if ARB allows; check first)
@@ -462,15 +462,15 @@ CN ROM devices (⚠️):
 ---
 
 
-## 🔗 Additional Resources
+## Additional resources
 
-### Official Links
+### Official links
 - Mi Unlock Tool: https://en.miui.com/unlock/download_en.html
 - Xiaomi Community: https://new.c.mi.com/global/
 - MIUI Downloads: https://c.mi.com/global/miuidownload/index
 - Xiaomi Global Support: https://www.mi.com/global/support/
 
-### Community Resources
+### Community resources
 - XDA Xiaomi Forums: https://xdaforums.com/c/xiaomi.12005/
 - xiaomi.eu: https://xiaomi.eu/
 - Xiaomi Firmware Updater: https://xiaomifirmwareupdater.com/
@@ -479,7 +479,7 @@ CN ROM devices (⚠️):
 
 ---
 
-## ⚠️ Final Disclaimer
+## Final disclaimer
 
 By following this guide, you acknowledge:
 - Warranty may be void in your region after unlocking

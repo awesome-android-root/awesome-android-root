@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: "KernelSU Root Guide: Installation, Modules & Troubleshooting"
+title: "KernelSU root guide: installation, modules & troubleshooting"
 description: "Learn KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles and troubleshooting for supported Android devices."
 head:
   - - link
@@ -20,7 +20,7 @@ head:
       content: https://awesome-android-root.xyz/rooting-guides/kernelsu-guide
   - - meta
     - property: og:image
-      content: https://awesome-android-root.xyz/images/og/kernelsu-guide.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -98,7 +98,7 @@ head:
       content: "Learn KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles and troubleshooting."
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og/kernelsu-guide.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
       content: KernelSU Root Guide - Complete Installation Tutorial
@@ -120,7 +120,7 @@ head:
         "@id": "https://awesome-android-root.xyz/rooting-guides/kernelsu-guide#article",
         "headline": "KernelSU Root Guide: Installation, Modules & Troubleshooting",
         "description": "KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles and troubleshooting.",
-        "image": "https://awesome-android-root.xyz/images/og/kernelsu-guide.png",
+        "image": "https://awesome-android-root.xyz/images/og.png",
         "author": { "@id": "https://awesome-android-root.xyz/#organization" },
         "publisher": { "@id": "https://awesome-android-root.xyz/#organization" },
         "datePublished": "2025-01-12",
@@ -134,11 +134,11 @@ head:
       }
 ---
 
-# KernelSU Root Installation Guide
+# KernelSU root installation guide
 
 KernelSU is a kernel-based Android root solution. This guide covers how to check compatibility, choose GKI or LKM mode, install KernelSU or KernelSU Next, use modules and app profiles, and diagnose common failures. Kernel support and the correct image are device-specific; do not flash a build just because the Android version matches.
 
-## Quick Navigation
+## Quick navigation
 
 - [What is KernelSU](#understanding-kernelsu)
 - [KernelSU Variants](#kernelsu-variants)
@@ -165,7 +165,7 @@ KernelSU is a kernel-based Android root solution. This guide covers how to check
 
 KernelSU is a kernel-based root solution operating at the Linux kernel level, providing enhanced security, advanced app permission control, and superior detection evasion compared to userspace root methods.
 
-### Core Features
+### Core features
 
 - **Kernel-Level Integration** - Direct kernel modification for enhanced security
 - **Advanced App Profiles** - Granular root permission control per application
@@ -173,7 +173,7 @@ KernelSU is a kernel-based root solution operating at the Linux kernel level, pr
 - **Superior Hiding** - Better detection evasion than traditional methods
 - **LKM Support** - Loadable Kernel Module architecture
 
-### KernelSU vs Alternatives
+### KernelSU vs alternatives
 
 | Feature | KernelSU | Magisk | APatch |
 |---------|----------|---------|--------|
@@ -190,12 +190,12 @@ KernelSU is a kernel-based root solution operating at the Linux kernel level, pr
 - You use banking/payment apps (see [root hiding apps](../apps-and-modules/root-management#root-hiding-play-integrity))
 - You prefer kernel-level security
 
-> [!TIP]
+> [!NOTE]
 > Detailed comparison: [Root Comparison](./root-framework-comparison.md)
 
 ---
 
-## KernelSU Variants
+## KernelSU variants
 
 The KernelSU ecosystem has expanded beyond the original project. Different variants serve different needs:
 
@@ -211,7 +211,7 @@ The KernelSU ecosystem has expanded beyond the original project. Different varia
 - **KernelSU-Next** - If you want auto-updates, broader kernel range, and extra features
 - **Wild KSU / SukiSU-Ultra / ReSukiSU** - When built-in SUSFS root hiding or KPM kernel patching is needed
 
-> [!TIP]
+> [!NOTE]
 > All variants now delegate module mounting to a metamodule. See [Metamodules & Modules](#metamodules-and-modules).
 
 ---
@@ -224,11 +224,11 @@ KernelSU modules can expose a small web interface that the KernelSU Manager open
 - Open the module from a compatible root manager rather than trusting an arbitrary browser URL; WebUI pages can execute privileged module actions.
 - For installable examples, use the [KernelSU module repository](https://modules.kernelsu.org/) and review the module's source and permissions.
 
-## Installation Modes
+## Installation modes
 
 KernelSU supports two installation modes. **Note:** Official KernelSU now recommends LKM mode. Community forks (Next, SukiSU) continue shipping GKI builds.
 
-### GKI Mode
+### GKI mode
 
 **How it works:** Replaces device's original kernel with a KernelSU-patched Generic Kernel Image.
 
@@ -240,7 +240,7 @@ KernelSU supports two installation modes. **Note:** Official KernelSU now recomm
 
 **Best for:** Samsung devices, emulators, WSA, custom ROMs
 
-### LKM Mode (Loadable Kernel Module)
+### LKM mode (loadable kernel module)
 
 **How it works:** Loads KernelSU as a kernel module without replacing the original kernel.
 
@@ -252,7 +252,7 @@ KernelSU supports two installation modes. **Note:** Official KernelSU now recomm
 
 **Best for:** Most modern phones with stock/near-stock firmware
 
-### Which Mode to Choose?
+### Which mode to choose?
 
 | Device Type | Recommended | Reason |
 |-------------|-------------|--------|
@@ -283,7 +283,7 @@ If both modes are available, GKI takes priority and LKM is ignored.
 | Computer (Windows, macOS, Linux) | KernelSU Manager APK from variant's GitHub releases |
 | 500MB+ free storage on device | Stock firmware for your device (optional but recommended) |
 
-### Compatibility Check
+### Compatibility check
 
 ```bash
 # Check kernel version
@@ -298,11 +298,11 @@ adb shell uname -r
 
 ---
 
-## Installation Methods
+## Installation methods
 
 Three main methods. Choose based on your device and variant.
 
-### Method 1: GKI Kernel Flash
+### Method 1: GKI kernel flash
 
 **Best for:** GKI 2.0 compatible devices using GKI mode
 
@@ -323,7 +323,7 @@ fastboot reboot
 
 ---
 
-### Method 2: Boot Image Patching (LKM Mode)
+### Method 2: boot image patching (LKM mode)
 
 **Best for:** Preserving stock kernel, LKM mode preference
 
@@ -353,7 +353,7 @@ fastboot reboot
 
 ---
 
-### Method 3: Custom Kernel
+### Method 3: custom kernel
 
 **Best for:** Devices with community kernel support
 
@@ -371,9 +371,9 @@ fastboot reboot
 
 ---
 
-## Post-Installation Setup
+## Post-installation setup
 
-### Initial Steps
+### Initial steps
 
 1. **Verify root access** - Open Manager, confirm "Installed" status. Test: `adb shell su -c "id"`
 2. **Configure Manager** - Enable hiding (rename for banking apps), require authentication, enable safe mode
@@ -383,7 +383,7 @@ fastboot reboot
 
 ---
 
-## App Profile System
+## App profile system
 
 App Profiles are KernelSU's unique feature - granular permission control per app, beyond simple root grant/deny.
 
@@ -395,7 +395,7 @@ App Profiles are KernelSU's unique feature - granular permission control per app
 - Resource limits and SELinux context
 - Mount namespace isolation
 
-### Quick Examples
+### Quick examples
 
 | Profile Type | Root | Filesystem | Hardware | Use Case |
 |-------------|------|-----------|----------|----------|
@@ -403,7 +403,7 @@ App Profiles are KernelSU's unique feature - granular permission control per app
 | **Developer Access** | FULL | Full access | All allowed | Dev tools, ADB |
 | **Gaming Optimized** | DENIED | App data only | GPU high priority | Games, anti-cheat |
 
-### Apply a Profile
+### Apply a profile
 
 1. KernelSU Manager → App Profiles → "+" → select app
 2. Configure permissions (root, filesystem, hardware, network, resources)
@@ -415,14 +415,14 @@ ksud profile export com.example.app > profile.json
 ksud profile import com.target.app < profile.json
 ```
 
-> [!TIP]
+> [!NOTE]
 > See [official App Profile docs](https://kernelsu.org/guide/app-profile.html) for complete configuration options.
 
 ---
 
-## Metamodules and Modules
+## Metamodules and modules
 
-### What is a Metamodule?
+### What is a metamodule?
 
 Current KernelSU releases no longer include built-in module mounting. A **metamodule** provides the mounting infrastructure - without one, modules that modify `/system` will install but **not mount**. (Modules using only scripts, `sepolicy`, or `system.prop` still work without one.)
 
@@ -436,7 +436,7 @@ This applies to all variants: Official KernelSU, KernelSU-Next, Wild KSU, SukiSU
 > [!WARNING]
 > Only **one** metamodule can be active at a time. To switch, uninstall all regular modules → uninstall metamodule → reboot → install new metamodule → reinstall modules.
 
-### Available Metamodules
+### Available metamodules
 
 | Metamodule | Description | Best For |
 |------------|-------------|----------|
@@ -448,7 +448,7 @@ This applies to all variants: Official KernelSU, KernelSU-Next, Wild KSU, SukiSU
 
 > **Recommendation:** Start with **meta-overlayfs** or **mountify**.
 
-### Installing a Metamodule
+### Installing a metamodule
 
 1. Download metamodule ZIP from GitHub releases
 2. KernelSU Manager → Modules → "Install from storage" (➕)
@@ -456,7 +456,7 @@ This applies to all variants: Official KernelSU, KernelSU-Next, Wild KSU, SukiSU
 
 The active metamodule shows in your module list with a special designation.
 
-### Installing Regular Modules
+### Installing regular modules
 
 **Prerequisite:** A metamodule must be active.
 
@@ -471,14 +471,14 @@ ksud module enable/disable module_id
 ksud module remove module_id
 ```
 
-### Module Compatibility
+### Module compatibility
 
 - Most Magisk modules work with compatible metamodules
 - Zygisk modules require [ZygiskNext](https://github.com/LSPosed/ZygiskNext) or [ReZygisk](https://github.com/PerformanC/ReZygisk)
 - KPM modules require SukiSU-Ultra or [KPatch Next Module](https://github.com/KernelSU-Next/KPatch-Next-Module)
 - Browse modules: [Official Module Repository](https://modules.kernelsu.org/)
 
-### Module Troubleshooting
+### Module troubleshooting
 
 | Issue | Likely Cause | Fix |
 |-------|-------------|-----|
@@ -489,11 +489,11 @@ ksud module remove module_id
 
 ---
 
-## Root Hiding and Play Integrity
+## Root hiding and Play Integrity
 
 Modern banking apps use Play Integrity API with hardware-backed attestation - increasingly difficult but not impossible to manage on rooted devices. KernelSU's kernel-level approach offers better evasion than userspace methods.
 
-### Recommended Setup
+### Recommended setup
 
 | Step | Action | Details |
 |------|--------|---------|
@@ -503,13 +503,13 @@ Modern banking apps use Play Integrity API with hardware-backed attestation - in
 | 4 | **Install Play Integrity Fix** | Use [Play Integrity Fork](https://github.com/osm0sis/PlayIntegrityFork) or [Play Integrity Fix (inject)](https://github.com/KOWX712/PlayIntegrityFix) for MEETS_DEVICE_INTEGRITY |
 | 5 | **Clear app data** | Clear data for Google Play Services, Play Store, and banking apps → Reboot |
 
-### What's Realistic
+### What's realistic
 
 - **Basic Integrity:** PASS - achievable with proper setup
 - **Device Integrity:** PASS - possible with PIF + TrickyStore (keybox required for locked-bootloader-equivalent verification)
 - **Strong Integrity:** FAIL for most - requires an unrevoked hardware keybox (increasingly scarce)
 
-### Testing Tools
+### Testing tools
 
 - [Play Integrity API Checker](https://github.com/1nikolas/play-integrity-checker-app) - Official checker
 > [!WARNING]
@@ -519,7 +519,7 @@ Modern banking apps use Play Integrity API with hardware-backed attestation - in
 
 ## Troubleshooting
 
-### Common Issues & Fixes
+### Common issues & fixes
 
 | Issue | Likely Cause | Solution |
 |-------|-------------|----------|
@@ -531,7 +531,7 @@ Modern banking apps use Play Integrity API with hardware-backed attestation - in
 | **Banking app detects root** | Insufficient hiding | Hide Manager, create restrictive profile, install SUSFS + Play Integrity Fix |
 | **Play Integrity fails** | Detection not fully bypassed | Install PIF/TrickyStore, clear Google Play Services data |
 
-### Emergency Recovery
+### Emergency recovery
 
 **Bootloop:**
 1. Force reboot (hold power 10s)
@@ -549,7 +549,7 @@ fastboot reboot
 
 ---
 
-## Next Steps
+## Next steps
 
 1. **Configure App Profiles** for sensitive apps (banking, finance)
 2. **Install essential modules:** ZygiskNext (Zygisk support), SUSFS (root hiding), Play Integrity Fix
@@ -558,7 +558,7 @@ fastboot reboot
 
 ---
 
-## Community Resources
+## Community resources
 
 | Resource | Link |
 |----------|------|

@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: How to Unlock an Android Bootloader | Complete Guide
+title: How to unlock an Android bootloader | complete guide
 description: "Learn how to unlock an Android bootloader safely: warnings, OEM unlocking, ADB and Fastboot, manufacturer-specific steps and common errors."
 head:
   - - link
@@ -20,7 +20,7 @@ head:
       content: https://awesome-android-root.xyz/rooting-guides/how-to-unlock-bootloader
   - - meta
     - property: og:image
-      content: https://awesome-android-root.xyz/images/og/bootloader.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:locale
       content: en_US
@@ -44,7 +44,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og/bootloader.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Android Bootloader Unlocking Guide
@@ -87,7 +87,7 @@ head:
         "@id": "https://awesome-android-root.xyz/rooting-guides/how-to-unlock-bootloader#article",
         "headline": "How to Unlock an Android Bootloader | Complete Guide",
         "description": "Warnings, preparation, ADB and Fastboot, manufacturer-specific instructions and troubleshooting for Android bootloader unlocking.",
-        "image": "https://awesome-android-root.xyz/images/og/bootloader.png",
+        "image": "https://awesome-android-root.xyz/images/og.png",
         "author": { "@id": "https://awesome-android-root.xyz/#organization" },
         "publisher": { "@id": "https://awesome-android-root.xyz/#organization" },
         "datePublished": "2025-05-25",
@@ -102,11 +102,11 @@ head:
 
 ---
 
-# How to Unlock an Android Bootloader
+# How to unlock an Android bootloader
 
 **Bootloader unlocking is the usual first step before permanent Android root, custom recovery or a custom ROM.** The process varies by manufacturer and model, but it normally enables OEM unlocking, uses ADB/Fastboot or a vendor tool, and factory-resets the phone. Check the exact model and region before you follow any command.
 
-## Quick Navigation
+## Quick navigation
 
 - [What is a bootloader?](#what-is-an-android-bootloader)
 - [Should you unlock it?](#should-you-unlock-your-bootloader)
@@ -127,7 +127,7 @@ head:
 
 The bootloader is your device's startup manager - the first program that runs when powering on, responsible for loading the operating system and enforcing security policies.
 
-## Should You Unlock Your Bootloader?
+## Should you unlock your bootloader?
 
 **Unlocking enables:**
 - **Custom recovery installation** (TWRP, OrangeFox)
@@ -136,24 +136,24 @@ The bootloader is your device's startup manager - the first program that runs wh
 - **Kernel modifications** for performance tuning
 - **Advanced system modifications** and tweaks
 
-### Locked vs Unlocked
+### Locked vs unlocked
 
 | Locked Bootloader | Unlocked Bootloader |
 |-------------------|---------------------|
 | Maximum security | Full customization freedom |
-| OTA updates work seamlessly | Can install custom ROMs |
+| OTA updates run in the background | Can install custom ROMs |
 | Banking apps work normally | Can install custom recovery |
 | Cannot install custom software | Root access possible |
 | Limited modification | Warranty void (usually) |
 
-> [!TIP]
+> [!NOTE]
 > **Can't unlock, or unlocking isn't worth the trade-offs?** On a narrow set of devices, the **GhostLock** bug (CVE-2026-43499) provides **temporary, reboot-to-clear root on a locked bootloader** - no wipe, no Knox trip. It can't flash ROMs or recoveries, but it may cover occasional root needs. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) and the broader [Temporary Root Solutions](./temporary-root-solutions.md) page.
 
 ---
 
 ## Prerequisites
 
-### ⚠️ Critical Warnings
+### Critical warnings
 
 ::: danger IRREVERSIBLE CONSEQUENCES
 **Data Erasure** - Unlocking bootloader completely wipes all data. Backup everything before proceeding.
@@ -165,7 +165,7 @@ The bootloader is your device's startup manager - the first program that runs wh
 **Device Security** - Unlocked bootloaders reduce device security. Physical access can compromise data.
 :::
 
-### Essential Requirements
+### Essential requirements
 
 **Hardware**
 - Android device with unlockable bootloader
@@ -183,7 +183,7 @@ The bootloader is your device's startup manager - the first program that runs wh
 - Device model and variant identification
 - Ability to follow instructions precisely
 
-### Manufacturer Policy Overview
+### Manufacturer policy overview
 
 | Manufacturer | Typical method | Waiting period | Important limitation |
 |--------------|----------------|-----------------|---------------------|
@@ -199,7 +199,7 @@ The bootloader is your device's startup manager - the first program that runs wh
 - US carrier-locked models (Verizon, AT&T) often cannot unlock bootloader
 - Always verify your specific model's unlockability
 
-> [!IMPORTANT]
+> [!NOTE]
 > ### Bootloader Unlock: Wall of Shame
 > This community-maintained [repository](https://github.com/melontini/bootloader-unlock-wall-of-shame) tracks companies that make bootloader unlocking difficult or impossible. Check it before buying a new device.
 
@@ -208,11 +208,11 @@ For another policy reference, see the [Android bootloader unlocking overview on 
 
 ---
 
-## Universal Preparation (All Devices)
+## Universal preparation (all devices)
 
 Complete these steps regardless of manufacturer before attempting bootloader unlock.
 
-### Step 1: Enable Developer Options
+### Step 1: enable developer options
 
 1. Open **Settings**
 2. Navigate to **About Phone** (or **About Device**)
@@ -221,7 +221,7 @@ Complete these steps regardless of manufacturer before attempting bootloader unl
 5. Enter your PIN/password when prompted
 6. "Developer options now enabled" message appears
 
-### Step 2: Enable Critical Developer Settings
+### Step 2: enable critical developer settings
 
 1. Go to **Settings** > **System** > **Developer Options**
 2. Enable **OEM Unlocking** (critical - required for unlock)
@@ -234,7 +234,7 @@ Complete these steps regardless of manufacturer before attempting bootloader unl
 - Some carrier devices permanently block this option
 - Device may not support unlocking
 
-### Step 3: Install Platform Tools
+### Step 3: install platform tools
 
 **Windows:**
 1. Download [Platform Tools](https://developer.android.com/studio/releases/platform-tools)
@@ -256,7 +256,7 @@ sudo apt install android-tools-adb android-tools-fastboot
 sudo pacman -S android-tools
 ```
 
-### Step 4: Install USB Drivers (Windows Only)
+### Step 4: install USB drivers (Windows only)
 
 Download and install manufacturer-specific drivers:
 - [Google USB Driver](https://developer.android.com/studio/run/win-usb) (Pixel)
@@ -265,7 +265,7 @@ Download and install manufacturer-specific drivers:
 - For other OEMs, check this list: [OEM USB Drivers](https://developer.android.com/studio/run/oem-usb#Drivers)
 
 
-### Step 5: Test ADB Connection
+### Step 5: test ADB connection
 
 1. Connect device to computer via USB
 2. Select **File Transfer** mode on device
@@ -289,13 +289,13 @@ If device not listed:
 - Reinstall drivers (Windows)
 - Verify USB debugging is enabled
 
-### Step 6: Backup Your Data
+### Step 6: backup your data
 
 **Essential backups:**
 - Photos and videos (Google Photos, cloud storage)
 - Contacts (Google Contacts sync)
 - Messages (SMS Backup & Restore)
-- App data (Google Backup, Helium, or see [backup apps](../apps-and-modules/backup#backup-restore))
+- App data (Google Backup, Helium, or see [backup apps](../apps-and-modules/backup#backup-apps-tools))
 - Important documents
 - Two-factor authentication recovery codes
 
@@ -303,7 +303,7 @@ If device not listed:
 
 ---
 
-## Manufacturer-Specific Guides
+## Manufacturer-specific guides
 
 Select your device manufacturer for detailed instructions.
 
@@ -401,7 +401,7 @@ adb reboot bootloader
 
 **Next:** See [Xiaomi rooting guide](./how-to-root-xiaomi-phone.md) for device-specific instructions
 
-> [!TIP]
+> [!NOTE]
 > #### Bypass Mi Unlock Waiting Period
 > Some users report success using older Mi Unlock Tool versions or modified tools. check this [XDA Guide](https://xdaforums.com/t/how-to-unlock-bootloader-on-xiaomi-hyperos-all-devices-except-cn.4654009/). Proceed with caution.
 
@@ -577,7 +577,7 @@ fastboot flashing unlock
 
 ---
 
-### Sony Xperia
+### Sony xperia
 
 **Steps:**
 
@@ -619,7 +619,7 @@ Replace `UNLOCK_CODE` with provided code
 
 ---
 
-### Other Manufacturers
+### Other manufacturers
 
 **ASUS ROG Phone:**
 - Official unlock tool available from ASUS
@@ -642,12 +642,12 @@ Replace `UNLOCK_CODE` with provided code
 
 ---
 
-## Post-Unlock Steps
+## Post-unlock steps
 
 After the phone reboots and you complete initial setup, choose a root method rather than flashing files at random. Continue with the [Magisk root guide](./magisk-guide.md), [KernelSU guide](./kernelsu-guide.md) or [APatch guide](./apatch-guide.md). If you need a recovery first, follow the [custom recovery installation guide](./how-to-install-custom-recovery.md).
 After successfully unlocking bootloader:
 
-### Step 1: Initial Setup
+### Step 1: initial setup
 
 Device boots to setup wizard (all data erased).
 
@@ -656,7 +656,7 @@ Device boots to setup wizard (all data erased).
 3. Enable USB Debugging again
 4. Optionally re-enable OEM Unlocking (for future modifications)
 
-### Step 2: Verify Unlock
+### Step 2: verify unlock
 
 ```bash
 adb reboot bootloader
@@ -672,7 +672,7 @@ fastboot oem device-info
 
 Look for "Device unlocked: true"
 
-### Step 3: Next Steps
+### Step 3: next steps
 
 **Typical progression:**
 
@@ -686,12 +686,12 @@ Look for "Device unlocked: true"
    - [Compare all methods](./root-framework-comparison.md)
 
 3. **Post-Root Configuration**
-   - Install [essential starter apps](../apps-and-modules/#starter-kit-must-have-apps)
+   - Install [essential starter apps](../apps-and-modules/root-management)
    - Configure [system-wide ad blocking](../general-guides/android-adblocking.md)
    - [Safely remove bloatware](../general-guides/android-apps-debloating.md)
-   - Browse [650+ root apps and modules](../apps-and-modules/)
+   - Browse <EntryCount /> [root apps and modules](../apps-and-modules/)
 
-### Step 4: Security Considerations
+### Step 4: security considerations
 
 **Important reminders:**
 - Banking apps may detect unlocked bootloader (see [root hiding solutions](../apps-and-modules/root-management#root-hiding-play-integrity))
@@ -705,7 +705,7 @@ Look for "Device unlocked: true"
 
 ## Troubleshooting
 
-### OEM Unlocking Missing or Greyed Out
+### OEM unlocking missing or greyed out
 
 **Causes:**
 - Carrier restriction (permanent)
@@ -719,7 +719,7 @@ Look for "Device unlocked: true"
 - Remove Google account, factory reset, wait 48 hours
 - If carrier device, may be permanently locked
 
-### Fastboot Not Recognized
+### Fastboot not recognized
 
 **Symptoms:** Computer doesn't detect device in fastboot mode
 
@@ -731,7 +731,7 @@ Look for "Device unlocked: true"
 - Try different computer
 - Disable USB Selective Suspend (Windows Power Options)
 
-### "Remote: Not Allowed" Error
+### "Remote: not allowed" error
 
 **Causes:**
 - OEM Unlocking not enabled
@@ -743,7 +743,7 @@ Look for "Device unlocked: true"
 - Check device compatibility
 - Verify not carrier-locked model
 
-### Device Won't Boot After Unlock
+### Device won't boot after unlock
 
 **Symptoms:** Stuck on boot logo or bootloop
 
@@ -756,7 +756,7 @@ Look for "Device unlocked: true"
 
 **Prevention:** Always download stock firmware before unlocking for emergency recovery.
 
-### "Waiting for Device" Message
+### "Waiting for device" message
 
 **Causes:** Fastboot/ADB connection issues
 
@@ -768,7 +768,7 @@ Look for "Device unlocked: true"
 - Disable antivirus temporarily
 - Run command prompt as administrator (Windows)
 
-### Unlock Process Interrupted
+### Unlock process interrupted
 
 If power loss or disconnect during unlock:
 
@@ -783,7 +783,7 @@ fastboot reboot
 
 ---
 
-## Additional Resources
+## Additional resources
 
 **Official Documentation:**
 - [Android Developer Bootloader Guide](https://source.android.com/docs/core/architecture/bootloader)
@@ -807,7 +807,7 @@ fastboot reboot
 
 ---
 
-## Safety Reminder
+## Safety reminder
 
 Bootloader unlocking is the essential first step for Android customization, but it comes with permanent consequences:
 
@@ -826,4 +826,4 @@ Bootloader unlocking is the essential first step for Android customization, but 
 
 ----
 
-:sparkles: Good luck with your Android customization journey.
+See the [rooting guides](./index.md) for the next steps after unlocking.

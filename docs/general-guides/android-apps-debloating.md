@@ -1,5 +1,5 @@
 ---
-title: "Android Debloating"
+title: "Android debloating"
 description: "Safely remove Android bloatware using App Manager and Canta. Step-by-step tutorial with safety tips."
 head:
   - - meta
@@ -19,7 +19,7 @@ head:
       content: "Safely remove Android bloatware using App Manager and Canta. Step-by-step tutorial with safety tips."
   - - meta
     - property: og:image
-      content: https://awesome-android-root.xyz/images/og/android-debloating.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:url
       content: https://awesome-android-root.xyz/general-guides/android-apps-debloating
@@ -43,7 +43,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og/android-debloating.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Android Debloating Guide - Remove Bloatware Safely
@@ -58,11 +58,11 @@ head:
       href: https://awesome-android-root.xyz/general-guides/android-apps-debloating
 ---
 
-# How to Remove Bloatware Safely Using App Manager or Canta
+# How to remove bloatware safely using app manager or Canta
 
-Android devices often come loaded with unnecessary pre-installed apps (bloatware) that consume storage, drain battery, and may track your privacy. This guide covers two powerful tools for safely removing bloatware: **App Manager** and **Canta**.
+Android devices often come loaded with unnecessary pre-installed apps (bloatware) that consume storage, drain battery, and may track your privacy. This guide covers **App Manager** and **Canta** for reviewing and removing unwanted apps.
 
-## What is Bloatware?
+## What is bloatware?
 
 Bloatware refers to pre-installed applications that:
 - Come bundled with your device by the manufacturer
@@ -71,7 +71,7 @@ Bloatware refers to pre-installed applications that:
 - Consume system resources even when not actively used
 - May include Google apps, social media apps, carrier apps, and OEM utilities
 
-## Important Safety Information
+## Important safety information
 
 ⚠️ **WARNING**: Always create a backup before debloating and understand the risks:
 
@@ -80,7 +80,7 @@ Bloatware refers to pre-installed applications that:
 - **Dependency risks**: Some system functions may depend on these apps
 - **Recovery possible**: Most changes can be reversed using the same tools
 
-## Method 1: App Manager Debloater
+## Method 1: app manager debloater
 
 App Manager includes a built-in debloater that uses the comprehensive [Android Debloat List](https://github.com/MuntashirAkon/android-debloat-list) project for intelligent recommendations. Find it in our [app management collection](../apps-and-modules/system#app-package-management).
 
@@ -90,14 +90,14 @@ App Manager includes a built-in debloater that uses the comprehensive [Android D
 - **Root access** ([rooting guide](../rooting-guides/)) OR **ADB debugging** enabled ([setup guide](../rooting-guides/how-to-unlock-bootloader.md#step-5-test-adb-connection))
 - Android 5.0+ (recommended Android 7.0+)
 
-### Setup Instructions
+### Setup instructions
 
-#### For Root Users
+#### For root users
 1. Install App Manager from [F-Droid](https://f-droid.org/packages/io.github.muntashirakon.AppManager) or [GitHub](https://github.com/MuntashirAkon/AppManager/releases)
 2. Grant root permission when prompted
 3. Open App Manager - it will automatically detect root access
 
-#### For ADB Users
+#### For ADB users
 1. Enable **Developer Options** and **USB Debugging**
 2. Connect device to PC and run:
    ```bash
@@ -106,14 +106,14 @@ App Manager includes a built-in debloater that uses the comprehensive [Android D
    ```
 3. Set App Manager's operation mode to **ADB over TCP**
 
-### Using App Manager Debloater
+### Using app manager debloater
 
-#### Step 1: Access Debloater
+#### Step 1: access debloater
 1. Open App Manager
 2. Tap the **three-dots menu** in top-right corner
 3. Select **Debloater**
 
-#### Step 2: Review Bloatware Categories
+#### Step 2: review bloatware categories
 App Manager categorizes apps based on safety levels:
 
 - **🟢 Safe (Recommended)**: Can be removed without issues
@@ -121,39 +121,39 @@ App Manager categorizes apps based on safety levels:
 - **🟠 Expert**: May break important features
 - **🔴 Unsafe**: High risk of system instability
 
-#### Step 3: Select Apps for Removal
+#### Step 3: select apps for removal
 1. **Review descriptions**: Tap any app to see detailed information
 2. **Check alternatives**: Many entries suggest replacement apps
 3. **Start conservative**: Begin with "Safe" category only
 4. **Use filters**: Sort by OEM, Google, or carrier apps
 
-#### Step 4: Remove Bloatware
+#### Step 4: remove bloatware
 1. Select apps using checkboxes
 2. Tap **Uninstall** button at bottom
 3. Choose removal method:
    - **Uninstall**: Removes for all users (recommended)
    - **Disable**: Keeps app but prevents execution
 
-#### Step 5: Create Backup Profile (Optional)
+#### Step 5: create backup profile (optional)
 1. Go to **Profiles** page
 2. Create new profile with selected debloat apps
 3. Save for easy restoration if needed
 
-### Advanced Features
+### Advanced features
 
-#### Batch Operations
+#### Batch operations
 - Remove multiple apps simultaneously
 - Export/import debloating configurations
 - Apply profiles across multiple devices
 
-#### Component Blocking
+#### Component blocking
 For apps you can't fully remove:
 1. Open app in **App Details**
 2. Go to **Components** tabs
 3. Block specific **trackers** or **services**
 4. Apply rules to prevent background activity
 
-## Method 2: Canta (Shizuku-Based)
+## Method 2: Canta (Shizuku-based)
 
 Canta is a modern, user-friendly debloating tool that works without root using the Shizuku framework.
 
@@ -163,15 +163,15 @@ Canta is a modern, user-friendly debloating tool that works without root using t
 - **Shizuku** app installed and activated
 - **Canta** app installed
 
-### Setup Instructions
+### Setup instructions
 
-#### Step 1: Install Shizuku
+#### Step 1: install Shizuku
 1. Download [Shizuku](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api) from Play Store
 2. Enable **Developer Options** and **USB Debugging**
 3. Connect to PC and run: `adb shell sh /sdcard/Android/data/moe.shizuku.privileged.api/start.sh`
 4. Or use **Wireless ADB** in Android 11+
 
-#### Step 2: Install Canta  
+#### Step 2: install Canta
 Download from:
 - [F-Droid](https://f-droid.org/en/packages/io.github.samolego.canta/)
 - [GitHub Releases](https://github.com/samolego/Canta/releases)
@@ -179,49 +179,49 @@ Download from:
 
 ### Using Canta
 
-#### Step 1: Verify Shizuku Connection
+#### Step 1: verify Shizuku connection
 1. Open Canta
 2. Ensure Shizuku permission is granted
 3. Check for green "Connected" status
 
-#### Step 2: Browse and Filter Apps
+#### Step 2: browse and filter apps
 1. **Search**: Use search bar for specific apps
 2. **Filter**: Switch between All/System/User apps
 3. **Categories**: View by app type or OEM
 
-#### Step 3: Review App Information
+#### Step 3: review app information
 Canta shows detailed info for each app:
 - **Package name** and **description**
 - **Safety rating** from Universal Debloat List
 - **Alternative suggestions** when available
 - **Dependencies** and **warnings**
 
-#### Step 4: Remove Bloatware
+#### Step 4: remove bloatware
 1. **Long-press** app or use **checkbox selection**
 2. Tap **trash/delete icon**
 3. Confirm removal in dialog
 4. Apps are uninstalled for current user
 
-#### Step 5: Monitor Removed Apps
+#### Step 5: monitor removed apps
 - **"See uninstalled"** tab shows removed apps
 - **Restore** any app if issues occur
 - **Auto-detection** finds previously removed apps
 
-### Advanced Canta Features
+### Advanced Canta features
 
-#### Batch Selection
+#### Batch selection
 - **Select All** button for bulk operations
 - **Filter then select** for targeted removal
 - **Multi-select** with checkboxes
 
-#### Safety Features
+#### Safety features
 - **No bootloop risk** - system partition unchanged
 - **Restore capability** - easily undo changes
 - **Dependency warnings** - alerts about app relationships
 
-## Best Practices for Safe Debloating
+## Best practices for safe debloating
 
-### Pre-Debloating Checklist
+### Pre-debloating checklist
 
 1. **✅ Research thoroughly**: Understand what each app does
 2. **✅ Start small**: Remove only obvious bloatware initially
@@ -229,25 +229,25 @@ Canta shows detailed info for each app:
 4. **✅ Test functionality**: Verify core features work after removal
 5. **✅ Keep tools available**: Maintain ADB/root access for fixes
 
-### Recommended Removal Order
+### Recommended removal order
 
-#### Phase 1: Obviously Safe Apps
+#### Phase 1: obviously safe apps
 - **Social media** (Facebook, Instagram, Twitter)
 - **Games** and **entertainment** apps
 - **Carrier bloatware** (carrier-specific apps)
 - **OEM duplicates** (when Google equivalent exists)
 
-#### Phase 2: Advanced Removals
+#### Phase 2: advanced removals
 - **Google apps** you don't use (Google Books, Movies, etc.)
 - **Assistant/AI features** (Google Assistant, Bixby)
 - **Cloud services** you don't need (Google Drive if using alternatives)
 
-#### Phase 3: Expert Level
+#### Phase 3: expert level
 - **System UI elements** (certain themes, wallpapers)
 - **Backup/sync services** (if using alternatives)
 - **Accessibility services** (if unused)
 
-### Apps to NEVER Remove
+### Apps to never remove
 
 ❌ **Critical System Components**:
 - Android System/System UI
@@ -256,40 +256,40 @@ Canta shows detailed info for each app:
 - Package installer
 - Core Google Play Services (if using Play Store)
 
-## Troubleshooting Common Issues
+## Troubleshooting common issues
 
-### App Still Appears After Removal
-**Cause**: App disabled but not fully removed  
-**Solution**: 
+### App still appears after removal
+**Cause**: App disabled but not fully removed
+**Solution**:
 - Try "Uninstall for all users" in App Manager
 - Use ADB command: `adb shell pm uninstall --user 0 package.name`
 
-### Feature Stopped Working
-**Cause**: Removed dependency app  
+### Feature stopped working
+**Cause**: Removed dependency app
 **Solution**:
 1. Check recently removed apps
 2. Restore most recent removals one by one
 3. Test functionality after each restoration
 
-### Boot Loop (Rare)
-**Cause**: Critical system app removed  
+### Boot loop (rare)
+**Cause**: Critical system app removed
 **Solution**:
 1. Boot into recovery mode (Power + Volume buttons)
 2. Perform factory reset
 3. All removed apps will be restored
 
-### ADB Connection Issues
-**Cause**: Network or permission problems  
+### ADB connection issues
+**Cause**: Network or permission problems
 **Solution**:
 - Restart ADB daemon: `adb kill-server && adb start-server`
 - Re-enable USB debugging
 - Use different USB port/cable
 
-## Alternative Apps and Replacements
+## Alternative apps and replacements
 
 When removing OEM apps, consider these open-source alternatives (explore more in our [apps collection](../apps-and-modules/)):
 
-### Core Apps
+### Core apps
 - **Launcher**: [Lawnchair](https://lawnchair.app/), [Nova Launcher](https://novalauncher.com/) (see [more launchers](../apps-and-modules/customization#launchers-home-screen))
 - **Gallery**: [Fossify Gallery](https://github.com/FossifyOrg/Gallery)
 - **File Manager**: [Material Files](https://github.com/zhanghai/MaterialFiles) (see [file managers](../apps-and-modules/file-management#file-managers))
@@ -305,16 +305,16 @@ When removing OEM apps, consider these open-source alternatives (explore more in
 - **Calendar**: [Simple Calendar](https://github.com/SimpleMobileTools/Simple-Calendar)
 - **Keyboard**: [HeliBoard](https://github.com/HeliBorg/HeliBoard)
 
-## Monitoring and Maintenance
+## Monitoring and maintenance
 
-### Regular Maintenance Tasks
+### Regular maintenance tasks
 
 1. **Review new bloatware**: Check after system updates
 2. **Monitor battery usage**: Ensure removed apps aren't running
 3. **Update debloat lists**: Keep App Manager updated for latest recommendations
 4. **Test core functions**: Periodically verify all essential features work
 
-### Performance Benefits
+### Performance benefits
 
 After successful debloating, you should notice:
 - **Faster boot times**
@@ -325,9 +325,9 @@ After successful debloating, you should notice:
 
 For additional performance improvements, check out [performance optimization apps](../apps-and-modules/performance#performance-optimization).
 
-## Advanced Techniques
+## Advanced techniques
 
-### Using Profiles in App Manager
+### Using profiles in app manager
 
 Create reusable debloating profiles:
 
@@ -337,7 +337,7 @@ Create reusable debloating profiles:
 4. **Save and Apply**: Store profile for future use
 5. **Export Profile**: Share configurations across devices
 
-### Command Line Debloating
+### Command Line debloating
 
 For advanced users, direct ADB commands:
 
@@ -370,11 +370,11 @@ Remember to:
 
 With proper care and the right tools, you can significantly improve your Android device's performance and privacy by removing unnecessary bloatware while maintaining system stability.
 
-## Related Guides
+## Related guides
 
 - [How to Root Android Devices](../rooting-guides/) - Get root access for advanced debloating
 - [ADB Setup Guide](../rooting-guides/how-to-unlock-bootloader.md#step-5-test-adb-connection) - Enable USB debugging
 - [System-Wide Ad Blocking](./android-adblocking.md) - Block ads after debloating
 - [App Management Tools](../apps-and-modules/system#app-package-management) - More app control solutions
 - [Performance Optimization Apps](../apps-and-modules/performance#performance-optimization) - Further speed improvements
-- [Backup Solutions](../apps-and-modules/backup#backup-restore) - Protect your data before debloating
+- [Backup Solutions](../apps-and-modules/backup#backup-apps-tools) - Protect your data before debloating

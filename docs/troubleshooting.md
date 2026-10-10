@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: "Android Root Troubleshooting: Bootloops, Modules & Root Problems"
+title: "Android root troubleshooting: bootloops, modules & root problems"
 description: "Fix common Android root problems: bootloops, missing root, incompatible modules, Play Integrity detection, recovery and flashing errors."
 head:
   - - link
@@ -69,7 +69,7 @@ head:
 ---
 
 
-# Android Root Troubleshooting
+# Android root troubleshooting
 
 Use this guide to diagnose a rooted Android device by symptom first: bootloop, missing root, module failure, integrity or detection problem, or a recovery/flash issue. Start with the least destructive check and keep the exact device model, build number and root framework in mind before restoring images or wiping data.
 
@@ -77,19 +77,19 @@ Use this guide to diagnose a rooted Android device by symptom first: bootloop, m
 If your device won't boot, jump to [Emergency Recovery](#emergency-recovery) immediately.
 :::
 
-## Quick Navigation
+## Quick navigation
 
-### Emergency Issues
+### Emergency issues
 - [Device Won't Boot (Bootloop)](#device-won-t-boot-bootloop)
 - [Root Not Working](#root-not-working)
 - [Bricked Device Recovery](#bricked-device-recovery)
 
-### Root Method Issues
+### Root method issues
 - [Magisk Troubleshooting](#magisk-troubleshooting)
 - [KernelSU Troubleshooting](#kernelsu-troubleshooting)
 - [APatch Troubleshooting](#apatch-troubleshooting)
 
-### Specific Problems
+### Specific problems
 - [Bootloader and Fastboot Issues](#bootloader-and-fastboot-issues)
 - [OTA Update Problems](#ota-update-problems)
 - [Play Integrity and Banking Apps](#play-integrity-and-banking-apps)
@@ -109,9 +109,9 @@ If your device won't boot, jump to [Emergency Recovery](#emergency-recovery) imm
 
 ---
 
-## Emergency Recovery
+## Emergency recovery
 
-### Device Won't Boot (Bootloop)
+### Device won't boot (bootloop)
 
 **Symptoms:** Device stuck on boot logo, loops endlessly, or only boots to recovery/fastboot.
 
@@ -252,7 +252,7 @@ fastboot -w
 
 ---
 
-### Root Not Working
+### Root not working
 
 **Symptoms:** Apps report "no root," superuser prompts don't appear, or manager shows N/A.
 
@@ -330,7 +330,7 @@ fastboot reboot
 
 ---
 
-### Bricked Device Recovery
+### Bricked device recovery
 
 **Determine Brick Type:**
 
@@ -369,11 +369,11 @@ Recovery options vary by SoC/manufacturer:
 
 ---
 
-## Magisk Troubleshooting
+## Magisk troubleshooting
 
-### Installation Fails
+### Installation fails
 
-#### Error: "Cannot patch boot image"
+#### Error: "cannot patch boot image"
 
 **Causes:**
 - Corrupted boot image
@@ -406,7 +406,7 @@ Recovery options vary by SoC/manufacturer:
 
 ---
 
-#### Error: "Installation failed! This device is not supported"
+#### Error: "installation failed! this device is not supported"
 
 **Solutions:**
 
@@ -424,7 +424,7 @@ Recovery options vary by SoC/manufacturer:
 
 ---
 
-### Magisk Modules Not Working
+### Magisk modules not working
 
 **Diagnostic steps:**
 
@@ -455,7 +455,7 @@ Recovery options vary by SoC/manufacturer:
 
 ---
 
-### DenyList / Root Hiding Not Working
+### DenyList / root hiding not working
 
 **For Magisk v24+ (current):**
 
@@ -495,7 +495,7 @@ resetprop --delete ro.secure
 
 ---
 
-### Magisk Broke OTA Updates
+### Magisk broke OTA updates
 
 **Symptoms:** OTA fails to install or bootloop after OTA
 
@@ -519,15 +519,15 @@ resetprop --delete ro.secure
 **Prevention:**
 - Always uninstall Magisk before OTA, or use "Install to Inactive Slot"
 - Use OTA preservation modules with caution
-- Consider custom ROM for seamless updates
+- Consider a custom ROM for background A/B updates
 
 ---
 
-## KernelSU Troubleshooting
+## KernelSU troubleshooting
 
-### Installation Issues
+### Installation issues
 
-#### Error: "No KernelSU detected" / App shows "Unsupported"
+#### Error: "no KernelSU detected" / app shows "unsupported"
 
 **Causes:**
 - Wrong kernel flashed
@@ -558,7 +558,7 @@ resetprop --delete ro.secure
 
 ---
 
-### Modules Don't Install / Don't Work
+### Modules don't install / don't work
 
 **Diagnosis:**
 
@@ -589,7 +589,7 @@ resetprop --delete ro.secure
 
 ---
 
-### KernelSU Not Surviving Reboots
+### KernelSU not surviving reboots
 
 **Causes:**
 - Kernel reverted
@@ -616,7 +616,7 @@ resetprop --delete ro.secure
 
 ---
 
-### KernelSU-Next (Fork)
+### KernelSU-next (fork)
 
 KernelSU-Next is a fork that provides Non-GKI kernel support from 4.x – 5.4 with LTS mode (3.x is experimental), GKI kernels support from 5.10 – 6.6 with GKI mode (6.6+ is experimental), includes both Magic Mount and OverlayFS which can be switched from settings with a single toggle, and features a redesigned manager app.
 
@@ -625,7 +625,7 @@ KernelSU-Next is a fork that provides Non-GKI kernel support from 4.x – 5.4 wi
 
 ---
 
-### App Profile Issues
+### App profile issues
 
 **KernelSU uses a profile system instead of per-app permissions**
 
@@ -645,9 +645,9 @@ KernelSU-Next is a fork that provides Non-GKI kernel support from 4.x – 5.4 wi
 
 ---
 
-## APatch Troubleshooting
+## APatch troubleshooting
 
-### Patching Fails
+### Patching fails
 
 **Common errors and solutions:**
 
@@ -677,7 +677,7 @@ KernelSU-Next is a fork that provides Non-GKI kernel support from 4.x – 5.4 wi
 
 ---
 
-### APatch Module System
+### APatch module system
 
 APatch features two main modules: APM for modules similar to Magisk; and KPM to modify and inject code directly into the kernel.
 
@@ -687,7 +687,7 @@ APatch features two main modules: APM for modules similar to Magisk; and KPM to 
 
 ---
 
-### APatch Not Persistent
+### APatch not persistent
 
 **If APatch disappears after reboot:**
 
@@ -706,15 +706,15 @@ APatch features two main modules: APM for modules similar to Magisk; and KPM to 
    fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img
    ```
 
-### APatch OTA Updates
+### APatch OTA updates
 
 Root survival with APatch is image-based, so OTAs usually require repatching the updated boot chain image. Always patch image from the newly installed build, not from an older firmware package.
 
 ---
 
-## Bootloader and Fastboot Issues
+## Bootloader and fastboot issues
 
-### Bootloader Won't Unlock
+### Bootloader won't unlock
 
 **Solutions by Manufacturer:**
 
@@ -767,7 +767,7 @@ fastboot flashing unlock
 
 ---
 
-### fastboot/ADB Not Recognized
+### Fastboot/ADB not recognized
 
 **Windows:**
 
@@ -805,7 +805,7 @@ fastboot flashing unlock
 
 ---
 
-### AVB and Verified Boot Errors
+### AVB and verified boot errors
 
 **What is it:**
 - Android Verified Boot (AVB) prevents modified system from booting
@@ -838,9 +838,9 @@ fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
 
 ---
 
-## OTA Update Problems
+## OTA update problems
 
-### OTA Survival with Magisk (A/B Devices)
+### OTA survival with Magisk (A/B devices)
 
 **Recommended Method:**
 
@@ -872,7 +872,7 @@ fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
    - Patch with Magisk
    - Flash patched image
 
-### Non-A/B Devices
+### Non-A/B devices
 
 **Process:**
 1. Uninstall Magisk (Restore Images)
@@ -880,13 +880,13 @@ fastboot --disable-verity --disable-verification flash vbmeta_b vbmeta.img
 3. Re-patch new boot image
 4. Flash via fastboot or custom recovery
 
-### OTA Survival with APatch
+### OTA survival with APatch
 
 Root survival with APatch is image-based, so OTAs usually require repatching the updated boot chain image. Always patch image from the newly installed build, not from an older firmware package.
 
 ---
 
-## Play Integrity and Banking Apps
+## Play Integrity and banking apps
 
 ### Understanding Play Integrity
 
@@ -902,7 +902,7 @@ Root survival with APatch is image-based, so OTAs usually require repatching the
 - Play Integrity behavior changes frequently server-side. There is no permanent bypass guarantee.
 - MEETS_STRONG_INTEGRITY is only available with a valid keybox.
 
-### Current Module Stack (2026)
+### Current module stack (2026)
 
 The Play Integrity ecosystem has evolved significantly. The current typical stack includes:
 
@@ -962,9 +962,9 @@ The Play Integrity ecosystem has evolved significantly. The current typical stac
 
 ---
 
-## Device-Specific Issues
+## Device-specific issues
 
-### Google Pixel (6/7/8/9/10 Series)
+### Google Pixel (6/7/8/9/10 series)
 
 **Common Issues:**
 
@@ -1000,7 +1000,7 @@ The Play Integrity ecosystem has evolved significantly. The current typical stac
 
 ---
 
-### Samsung Galaxy (S21-S25, Fold/Flip)
+### Samsung Galaxy (s21-s25, fold/flip)
 
 :::danger One UI 8 (Android 16) Bootloader Lock
 One UI 8 (Android 16) eliminates bootloader unlocking support on Samsung Galaxy devices. OEM Unlocking toggle removed from Developer Options. Affected globally: S25 series, Z Fold 7, Z Flip 7, and any device updated to One UI 8.
@@ -1135,9 +1135,9 @@ If you want to root a Samsung device, **do NOT update to One UI 8** until the co
 
 ---
 
-## Performance and Optimization
+## Performance and optimization
 
-### Battery Drain After Rooting
+### Battery drain after rooting
 
 **Common Causes:**
 - Wakelocks from modules or root apps
@@ -1172,7 +1172,7 @@ If you want to root a Samsung device, **do NOT update to One UI 8** until the co
 
 ---
 
-### Performance Tuning
+### Performance tuning
 
 **CPU/GPU Optimization:**
 
@@ -1216,9 +1216,9 @@ If you want to root a Samsung device, **do NOT update to One UI 8** until the co
 
 ---
 
-## App Detection and Compatibility
+## App detection and compatibility
 
-### Banking Apps Detecting Root
+### Banking apps detecting root
 
 **Strategies:**
 
@@ -1241,7 +1241,7 @@ If you want to root a Samsung device, **do NOT update to One UI 8** until the co
 
 ---
 
-### Apps Crashing After Root
+### Apps crashing after root
 
 **Common causes:**
 
@@ -1264,7 +1264,7 @@ su -c "cat /cache/magisk.log | grep [app-package-name]"
 
 ---
 
-### Netflix/Streaming Apps Issues
+### Netflix/streaming apps issues
 
 **Problems:**
 - Won't install
@@ -1285,9 +1285,9 @@ su -c "cat /cache/magisk.log | grep [app-package-name]"
 
 ---
 
-## Logs and Diagnostics
+## Logs and diagnostics
 
-### Collecting Logs for Help
+### Collecting logs for help
 
 **Magisk logs:**
 ```bash
@@ -1325,7 +1325,7 @@ cat /data/tombstones/tombstone_XX
 
 ---
 
-## When to Give Up and Restore
+## When to give up and restore
 
 **Consider unrooting if:**
 - Critical apps won't work despite all efforts
@@ -1357,9 +1357,9 @@ cat /data/tombstones/tombstone_XX
 
 ---
 
-## Getting Help
+## Getting help
 
-### How to Ask for Help
+### How to ask for help
 
 When asking for help in forums or communities, provide complete information:
 
@@ -1390,7 +1390,7 @@ Steps Taken: Tried booting to recovery, can't access ADB
 Error: Stuck on OnePlus logo, no response
 ```
 
-### Where to Get Help
+### Where to get help
 
 **XDA Developers**
 - Device-specific forums
@@ -1413,7 +1413,7 @@ Error: Stuck on OnePlus logo, no response
 - KernelSU: [tiann/KernelSU](https://github.com/tiann/KernelSU)
 - APatch: [bmax121/APatch](https://github.com/bmax121/APatch)
 
-### Best Practices
+### Best practices
 
 **Before Posting:**
 1. Search existing threads for your issue
@@ -1436,9 +1436,9 @@ Error: Stuck on OnePlus logo, no response
 
 ---
 
-## Additional Resources
+## Additional resources
 
-### Quick Links
+### Quick links
 
 **Essential Guides:**
 - [Complete Rooting Guide](./rooting-guides/index.md)
@@ -1456,7 +1456,7 @@ Error: Stuck on OnePlus logo, no response
 - [Motorola](./rooting-guides/how-to-root-motorola-phone.md)
 
 **Root Apps:**
-- [Essential Root Apps](./apps-and-modules/#starter-kit-must-have-apps)
+- [Essential Root Apps](./apps-and-modules/root-management)
 - [Ad Blockers](./apps-and-modules/ad-blocking.md)
 - [Backup Tools](./apps-and-modules/backup.md)
 

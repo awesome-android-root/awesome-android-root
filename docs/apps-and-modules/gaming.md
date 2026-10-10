@@ -55,16 +55,14 @@ head:
 **Gaming** apps and modules for rooted Android - performance tweaks, FPS unlockers, resolution changers and
 game-specific tools, mixing root apps, Magisk/KernelSU modules and LSPosed modules.
 
+**Related guide:** [Performance optimization](performance.md#performance-optimization) · [Kernel management](performance.md#kernel-management)
 
-> [!TIP]
-> For overall device performance tuning, see [Performance and Optimization](performance.md#performance-optimization). For CPU/GPU management, see [Kernel Management](performance.md#kernel-management).
-
-## Game Modifications & Tools
+## Game modifications & tools
 
 - **[Boosteroid+](https://github.com/nitanmarcel/BoosteroidPlus)** - Customize advanced settings for the Boosteroid app, including frame rate, bitrate, and resolution options. `FOSS` `[LSP]`
 - **[JoyCon Droid](https://joycondroid.gitbook.io/joycondroid)** - Allows you to turn your Android device into a controller for your Nintendo Switch. `FOSS`
 
-## Gaming Optimization
+## Gaming optimization
 
 - **[AsoulOpt](https://github.com/nakixii/Magisk_AsoulOpt)** - Game threads tweaker for Android, suitable for mainstream games and some niche games. `FOSS` `[M]`
 - **[Encore Tweaks](https://github.com/Rem01Gaming/encore)** - Enhance device performance during gaming sessions, while keeping battery life optimized for normal use. `Proprietary` `[M]`

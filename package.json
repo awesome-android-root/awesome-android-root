@@ -1,7 +1,7 @@
 {
   "name": "awesome-android-root",
   "version": "5.1.0",
-  "description": "The ultimate Android rooting hub - a curated list of 650+ top root apps, Magisk modules, KernelSU modules, LSPosed modules, and comprehensive step-by-step rooting guides.",
+  "description": "A curated index of Android root apps and modules, with practical rooting guides, tutorials, and troubleshooting references.",
   "private": true,
   "license": "MIT",
   "packageManager": "bun@1.4.2",
@@ -19,8 +19,10 @@
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
-    "docs:build": "bash scripts/counter.sh && vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "test": "node --test scripts/*.test.mjs",
+    "docs:build": "bash scripts/counter.sh && vitepress build docs && node scripts/verify-site-build.mjs && python3 scripts/check-asset-budgets.py && python3 scripts/check-built-links.py",
+    "docs:preview": "vitepress preview docs",
+    "docs:verify": "node scripts/verify-site-build.mjs && python3 scripts/check-asset-budgets.py && python3 scripts/check-built-links.py"
   },
   "keywords": [
     "android",

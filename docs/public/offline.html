@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fafafa">
+    <meta name="color-scheme" content="light dark">
+    <title>Offline · Awesome Android Root</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #fafafa;
+        --surface: #fff;
+        --border: #e4e4e7;
+        --text: #18181b;
+        --muted: #52525b;
+        --accent: #0a7d3e;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0b0b0c;
+          --surface: #111113;
+          --border: #26262b;
+          --text: #ececee;
+          --muted: #a1a1aa;
+          --accent: #3ddc84;
+        }
+      }
+      * { box-sizing: border-box; }
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        padding: 1.5rem;
+        background: var(--bg);
+        color: var(--text);
+        font: 1rem/1.65 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      }
+      main {
+        width: min(100%, 38rem);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: clamp(1.25rem, 5vw, 2rem);
+        background: var(--surface);
+      }
+      h1 { margin: 0 0 .75rem; font-size: clamp(1.75rem, 5vw, 2.25rem); line-height: 1.15; }
+      p { margin: .5rem 0 1.25rem; color: var(--muted); }
+      a { display: inline-flex; min-height: 44px; align-items: center; color: var(--accent); font-weight: 600; text-underline-offset: 3px; }
+      a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>You are offline</h1>
+      <p>This page is shown when a page is not available in the offline cache. Previously visited pages may still be available.</p>
+      <a href="/">Return to Awesome Android Root</a>
+    </main>
+  </body>
+</html>

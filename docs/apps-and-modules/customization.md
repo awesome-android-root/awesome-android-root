@@ -56,11 +56,9 @@ head:
 navigation tweaks, gestures, fonts & emojis, notifications, lockscreen/AOD and screen & display apps and
 Magisk/KernelSU/LSPosed modules.
 
+**Related guide:** [System UI and OEM customization](system.md#system-ui-framework)
 
-> [!TIP]
-> Must check [ROM & OEM customization](system.md#system-ui-framework) section for more theming and customization options.
-
-## Fonts & Emojis
+## Fonts & emojis
 
 - **[Emoji Replacer](https://play.google.com/work/apps/details?id=com.htetz.emojireplacer)** - Swap system emojis with styles from iOS 16.4, Samsung, Google, JoyPixels, Facebook, Twemoji etc. `Proprietary`
 - **[EvilFont](https://github.com/dedeadend/EvilFont)** - Cange your Arabic/Persian font to Teshrin + IOS emojis. `FOSS` `[M]` `[K]`
@@ -82,18 +80,18 @@ Magisk/KernelSU/LSPosed modules.
 - **[Unicode Font Set](https://github.com/Losketch/UnicodeFontSet-magisk-module/blob/main/README.en.md)** - Installs a comprehensive Unicode font set and configuration files via the Magisk framework. `FOSS` `[M]`
 - **[zFont 3](https://play.google.com/store/apps/details?id=com.htetznaing.zfont2&hl=en)** - Change custom font styles on Samsung, Vivo, iQOO, LG, Huawei, Honor, OnePlus, ASUS, OPPO, Realme, Xiaomi, Tecno, and Infinix devices. `Proprietary`
 
-## Gestures & Controls
+## Gestures & controls
 
 - **[Hide App from Recent](https://github.com/Young-Lord/hideRecent)** - Hide any app from recent task list. `FOSS` `[LSP]`
 - **[Multi Finger Gesture X](https://github.com/EliLei/MultiFingerGestureX)** - An LSPosed/Xposed module that adds 3+ finger gesture support to Android 15+. `FOSS` `[LSP]`
 - **[Ogesture](https://github.com/tanujnotes/ogesture)** - Use gesture navigation with third-party launchers on any Android phone. `FOSS` `[LSP]`
 - **[OPPO/OnePlus side button enhancement](https://github.com/ItosEO/OplusKey)** - Customize the side button behavior on Oppo and OnePlus devices. `Proprietary` `[M]`
 - **[Recents](https://github.com/tymwitko/Recents)** - Launcher-agnostic "Recents" menu for Android. `FOSS`
-- **[Three-Finger-Screenshot](https://github.com/hxreborn/three-finger-swipe)**- Standalone LSPosed implementation of three-finger swipe. `FOSS` `[LSP]`
+- **[Three-Finger-Screenshot](https://github.com/hxreborn/three-finger-swipe)** - Standalone LSPosed implementation of three-finger swipe. `FOSS` `[LSP]`
 - **[Volume Key Track Control Module](https://github.com/Hepolise/VolumeKeyTrackControlModule)** - Allows to skip and play/pause track with volume keys. `FOSS` `[LSP]`
 - **[Volume Scroll](https://github.com/farfromrefug/VolumeScroll)** - Android app to scroll using volume keys. `FOSS` `[M]`
 
-## Launchers & Home Screen
+## Launchers & home screen
 
 - **[⭐ Lawnchair](https://github.com/Goooler/LawnchairRelease/)** - A customizable launcher offering a Pixel-like experience. `FOSS`
 - **[Activity Manager](https://github.com/sdex/ActivityManager)** - Discover the activities of installed applications, run them, and create shortcuts. `FOSS` | [🌱](https://f-droid.org/packages/com.activitymanager/)
@@ -122,7 +120,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[Notification Icon Fix](https://github.com/Xposed-Modules-Repo/io.github.howard20181.notificationiconfix/)** - A module for AOSP, MIUI and HyperOS. Using an algorithm to convert white notification icons into recognizable icons. `FOSS` `[LSP]`
 - **[Punch-hole Download Progress](https://github.com/hxreborn/punch-hole-download-progress)** - Displays download progress as an animated ring around the camera cutout. `FOSS` `[LSP]` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/eu.hxreborn.phdp)
 
-## Screen & Display
+## Screen & display
 
 - **[Adaptive Theme: Auto Dark Mode by Ambient Light](https://github.com/xLexip/Adaptive-Theme)** - Automatically switches between Light and Dark mode using the ambient light sensor. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=dev.lexip.hecate)
 - **[Anti Brightness Change](https://github.com/binarynoise/XposedModulets)** - Prevents every app from changing the screen brightness. `FOSS` `[LSP]` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.programminghoch10.AntiBrightnessChange)
@@ -134,7 +132,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[PureShot](https://github.com/kazutoiris/PureShot)** - Hide status bar, navigation bar, popups, PiP, toast & more. `FOSS` `[LSP]`
 - **[Rotation Suggestions Closed](https://github.com/Astoritin/RotationSuggestionsClosed)** - Stop showing rotation suggestion button as rotating screen. `FOSS` `[M]`
 
-## Status Bar & Navigation
+## Status bar & navigation
 
 - **[Duo Status Bar](https://github.com/Xposed-Modules-Repo/io.github.kvmy666.duostatusbar)** - Turns the battery, Wi-Fi and signal icons into one smooth, Apple-style element. `Proprietary` `[LSP]`
 - **[Hide Navbar Keyboard](https://github.com/UNKNUW/Hide-Navbar-Keyboard)** - Hide navbar when keyboard appears. Supports Android 10 -15+. `FOSS` `[M]`
@@ -143,16 +141,16 @@ Magisk/KernelSU/LSPosed modules.
 - **[MiNavBarImmerse](https://github.com/Ianzb/MiNavBarImmerse)** - Optimizes the Xiaomi NavBar immersion by replacing the NavBar configuration file of third-party applications built into Xiaomi HyperOS 2.2. `FOSS` `[LSP]`
 - **[NavTweaks](https://github.com/Magisk-Modules-Alt-Repo/HideNavBar)** - Fullscreen/Immersive Gesture Tweaks for Android 10-14. `FOSS` `[M]`
 - **[QS Boundless Tiles](https://github.com/hxreborn/qs-boundless-tiles)** - Keeps third-party Quick Settings tiles responsive on Android 13+. `FOSS` `[LSP]`
-- **[Quick-Tile Settings](https://github.com/RBN-Apps/Quick-Tile-Settings)** - Provides customizable Quick Settings tiles for managing Private DNS and USB Debugging. `FOSS` | [🌱](https://f-droid.org/packages/com.rbn.qtsettings) 
+- **[Quick-Tile Settings](https://github.com/RBN-Apps/Quick-Tile-Settings)** - Provides customizable Quick Settings tiles for managing Private DNS and USB Debugging. `FOSS` | [🌱](https://f-droid.org/packages/com.rbn.qtsettings)
 - **[Smart Dock](https://github.com/axel358/smartdock)** - A user-friendly desktop mode launcher that offers a modern and customizable user interface. `FOSS`
 
-## Themes & Visual Mods
+## Themes & visual mods
 
 - **[ColorBlendr](https://github.com/Mahmud0808/ColorBlendr)** - Customize Material You colors of your device. `FOSS` | [🌱](https://f-droid.org/en/packages/com.drdisagree.colorblendr/)
 - **[Global Icon Pack](https://github.com/RichardLuo0/global-icon-pack-android)** - Apply icon packs globally. `FOSS` `[LSP]`
-- **[HyperLight](https://github.com/KiminonawaResa/HyperLight#english)** - Completes the highlight blur effects for HyperOS 3, bringing a unified visual experience to the desktop, notification shade, and control center. `FOSS` `[LSP]`
+- **[HyperLight](https://github.com/KiminonawaResa/HyperLight#english)** - Adds highlight blur effects to HyperOS 3's desktop, notification shade and control center. `FOSS` `[LSP]`
 - **[HyperOS Theme Manager](https://github.com/Mods-Center/HyperOS-Theme-Manager)** - Multi-theme servers, premium themes, AI wallpapers, third-party imports, super icons/widgets etc. `Proprietary` `[M]` `[K]`
 - **[Iconify](https://github.com/Mahmud0808/Iconify)** - Customize your Android 12+ device easily. `FOSS` `[M]`
 - **[Lite Blur Control Center For HyperOS2](https://github.com/fakerieh/Lite-Blur-Control-Center-For-HyperOS2)** - Control Center Blur for HyperOS2 but LIGHTER. `FOSS` `[M]`
-- **[Monetify](https://github.com/KaeruShi/Monetify)** - Customize third-party apps seamlessly to match your device style. `FOSS` `[LSP]`
+- **[Monetify](https://github.com/KaeruShi/Monetify)** - Applies themes to third-party apps to match your device style. `FOSS` `[LSP]`
 - **[Project Themer](https://play.google.com/store/apps/details?id=com.drsants.eggproject)** - Provides tools and features for rooted devices. `Proprietary` `[M]`

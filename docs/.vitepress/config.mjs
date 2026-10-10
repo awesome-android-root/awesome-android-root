@@ -1,7 +1,11 @@
+import { readFileSync } from 'node:fs'
+import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
 import llmstxt, { copyOrDownloadAsMarkdownButtons } from 'vitepress-plugin-llms'
+import { APP_CATEGORIES } from './categoryData.mjs'
+import { entryRowsPlugin, countCategoryEntries } from './markdown/entryRows.mjs'
 import { storeLinkPlugin } from './markdown/storeLinkPlugin.mjs'
 
 const isLlmPageLink = (link) =>
@@ -17,6 +21,10 @@ const systemFontsPlugin = {
     return null
   }
 }
+
+const docsDirectory = fileURLToPath(new URL('../', import.meta.url))
+const appsDirectory = path.join(docsDirectory, 'apps-and-modules')
+const entryStats = countCategoryEntries(appsDirectory, APP_CATEGORIES, (path) => readFileSync(path, 'utf8'))
 
 function llmsSidebar(sidebar) {
   const sanitizeItems = (items = []) => items.flatMap((item) => {
@@ -40,26 +48,54 @@ function llmsSidebar(sidebar) {
   )
 }
 
-export default withPwa(defineConfig({
+const siteConfig = defineConfig({
   lang: 'en-US',
   title: 'Awesome Android Root',
+  titleTemplate: ':title · Awesome Android Root',
   ignoreDeadLinks: true,
   cleanUrls: true,
   lastUpdated: true,
   metaChunk: true,
 
-  transformHead({ pageData }) {
+  transformHead({ pageData, title: fullTitle, description: pageDescription }) {
     const site = 'https://awesome-android-root.xyz'
     const relativePath = pageData.relativePath || 'index.md'
     const route = relativePath === 'index.md'
       ? '/'
       : `/${relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')}`
     const pageUrl = `${site}${route}`
+    const title = fullTitle || pageData.title || 'Awesome Android Root'
+    const description = pageDescription || pageData.description || 'A curated index of Android root apps, modules and practical guides.'
+    const frontmatterHead = Array.isArray(pageData.frontmatter?.head) ? pageData.frontmatter.head : []
+    const themeColorHead = [
+      ['meta', { media: '(prefers-color-scheme: light)', name: 'theme-color', content: '#fafafa' }],
+      ['meta', { media: '(prefers-color-scheme: dark)', name: 'theme-color', content: '#0b0b0c' }]
+    ]
+    const seoHead = [
+      ['link', { rel: 'canonical', href: pageUrl }],
+      ['meta', { property: 'og:type', content: route.startsWith('/rooting-guides/') || route.startsWith('/general-guides/') ? 'article' : 'website' }],
+      ['meta', { property: 'og:title', content: title }],
+      ['meta', { property: 'og:description', content: description }],
+      ['meta', { property: 'og:url', content: pageUrl }],
+      ['meta', { property: 'og:image', content: `${site}/images/og.png` }],
+      ['meta', { property: 'og:image:alt', content: 'Awesome Android Root: apps, modules and guides' }],
+      ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+      ['meta', { name: 'twitter:site', content: '@awsm_and_root' }],
+      ['meta', { name: 'twitter:title', content: title }],
+      ['meta', { name: 'twitter:description', content: description }],
+      ['meta', { name: 'twitter:image', content: `${site}/images/og.png` }]
+    ]
+    const hasSocialTag = (tagName, attributes) => frontmatterHead.some((entry) => {
+      if (!Array.isArray(entry) || entry[0] !== tagName || !entry[1]) return false
+      return Object.entries(attributes).every(([key, value]) => entry[1][key] === value)
+    })
 
-    if (route === '/') return []
+    const head = [...themeColorHead]
+    for (const [tagName, attributes] of seoHead) {
+      const key = attributes.rel ? 'rel' : attributes.property ? 'property' : 'name'
+      if (!hasSocialTag(tagName, { [key]: attributes[key] })) head.push([tagName, attributes])
+    }
 
-    const title = pageData.title || pageData.frontmatter?.title || 'Awesome Android Root'
-    const description = pageData.description || pageData.frontmatter?.description || ''
     const labels = route.split('/').filter(Boolean).map((part) =>
       part.split('-').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
     )
@@ -109,7 +145,8 @@ export default withPwa(defineConfig({
         url: pageUrl,
         inLanguage: 'en-US',
         isPartOf: { '@id': `${site}/#website` },
-        publisher: { '@id': `${site}/#organization` }
+        publisher: { '@id': `${site}/#organization` },
+        ...(pageData.lastUpdated ? { dateModified: new Date(pageData.lastUpdated).toISOString() } : {})
       },
       {
         '@type': 'BreadcrumbList',
@@ -118,11 +155,74 @@ export default withPwa(defineConfig({
       }
     ]
 
-    return [[
-      'script',
-      { type: 'application/ld+json' },
-      JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })
-    ]]
+    if (route === '/apps-and-modules/') {
+      graph.push({
+        '@type': 'ItemList',
+        '@id': `${pageUrl}#categories`,
+        name: 'Android root app and module categories',
+        numberOfItems: entryStats.categories.length,
+        itemListElement: entryStats.categories.map((category, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          name: category.title,
+          url: `${site}/apps-and-modules/${category.slug}`,
+          numberOfItems: category.count
+        }))
+      })
+    }
+
+    const hasJsonLd = frontmatterHead.some((entry) =>
+      Array.isArray(entry) && entry[0] === 'script' && entry[1]?.type === 'application/ld+json'
+    )
+    if (!hasJsonLd) {
+      head.push([
+        'script',
+        { type: 'application/ld+json' },
+        JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })
+      ])
+    }
+
+    return head
+  },
+
+  transformHtml(html, _id, { pageData }) {
+    // VitePress adds DNS-prefetch hints for external Markdown links; omit them to keep page loads same-origin.
+    html = html.replace(/<link\s+rel="dns-prefetch"\s+href="https?:\/\/[^\"]+"\s*\/?\s*>/gi, '')
+    const relativePath = pageData.relativePath || ''
+    const isGuide = /^(rooting-guides|general-guides)\//.test(relativePath) ||
+      ['faqs.md', 'troubleshooting.md'].includes(relativePath)
+    if (!isGuide || /class="guide-meta"/.test(html)) return html
+
+    const sourcePath = path.join(docsDirectory, pageData.filePath || relativePath)
+    let source = ''
+    try {
+      source = readFileSync(sourcePath, 'utf8')
+    } catch {
+      return html
+    }
+
+    const body = source.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '')
+      .replace(/```[\s\S]*?```/g, ' ')
+      .replace(/<!--[\s\S]*?-->/g, ' ')
+      .replace(/<[^>]*>/g, ' ')
+      .replace(/!?\[([^\]]+)\]\([^)]*\)/g, '$1')
+      .replace(/[`*_~>#|]/g, ' ')
+    const wordCount = (body.match(/[\p{L}\p{N}]+/gu) || []).length
+    const readingTime = Math.max(1, Math.ceil(wordCount / 220))
+    const updatedDate = pageData.lastUpdated
+      ? new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(pageData.lastUpdated))
+      : ''
+    const slug = relativePath.split('/').at(-1)?.replace(/\.md$/, '')
+    const framework = pageData.frontmatter?.framework || ({
+      'magisk-guide': 'Magisk',
+      'kernelsu-guide': 'KernelSU',
+      'apatch-guide': 'APatch',
+      'lsposed-guide': 'LSPosed'
+    })[slug]
+    const metaText = [`${readingTime} min read`, updatedDate && `Updated ${updatedDate}`, framework].filter(Boolean).join(' · ')
+    const meta = `<p class="guide-meta" aria-label="Guide details">${metaText}</p>`
+
+    return html.replace(/(<h1\b[^>]*>[\s\S]*?<\/h1>)/i, `$1${meta}`)
   },
 
   vite: {
@@ -160,98 +260,62 @@ export default withPwa(defineConfig({
     registerType: 'autoUpdate',
 
     workbox: {
-      
       globPatterns: [
-        '**/*.{png,jpg,jpeg,svg,gif,webp,avif,ico}',
+        '**/*.{css,js,woff2,ico,svg,png}',
+        '**/offline.html'
       ],
-
       globIgnores: [
         '**/node_modules/**',
         '**/dev-dist/**',
         '**/.vitepress/cache/**',
-        '**/images/og/**',
+        '**/images/og/**'
       ],
-
+      navigateFallback: '/offline.html',
+      navigateFallbackDenylist: [/^\/(?:assets|images|fonts)\//],
       skipWaiting: true,
       clientsClaim: true,
       cleanupOutdatedCaches: true,
-
       maximumFileSizeToCacheInBytes: 2 * 1024 * 1024,
-
       runtimeCaching: [
         {
-
-          urlPattern: ({ url, sameOrigin }) =>
-            sameOrigin && url.pathname.startsWith('/assets/'),
-          handler: 'CacheFirst',
+          urlPattern: ({ request, sameOrigin }) => sameOrigin && request.mode === 'navigate',
+          handler: 'StaleWhileRevalidate',
           options: {
-            cacheName: 'aar-static-assets',
+            cacheName: 'aar-pages-v1',
             expiration: {
-              maxEntries: 150,
-              maxAgeSeconds: 60 * 60 * 24 * 365,  // filenames are content-hashed
-              purgeOnQuotaError: true,
+              maxEntries: 60,
+              maxAgeSeconds: 60 * 60 * 24 * 30,
+              purgeOnQuotaError: true
             },
-            cacheableResponse: {
-              statuses: [0, 200],
-            },
+            cacheableResponse: { statuses: [200] }
           }
         },
         {
-
-          urlPattern: ({ request, url, sameOrigin }) => {
-            const isImage = request.destination === 'image' ||
-              /\.(png|jpg|jpeg|svg|gif|webp|avif|ico|bmp)$/i.test(url.pathname)
-
-            const isAllowedOrigin = sameOrigin ||
-              url.origin === 'https://raw.githubusercontent.com' ||
-              url.origin === 'https://user-images.githubusercontent.com'
-
-            return isImage && isAllowedOrigin
-          },
+          urlPattern: ({ url, sameOrigin }) => sameOrigin && url.pathname.startsWith('/assets/'),
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'aar-static-assets-v1',
+            expiration: {
+              maxEntries: 150,
+              maxAgeSeconds: 60 * 60 * 24 * 365,
+              purgeOnQuotaError: true
+            },
+            cacheableResponse: { statuses: [200] }
+          }
+        },
+        {
+          urlPattern: ({ request, sameOrigin }) => sameOrigin && request.destination === 'image',
           handler: 'CacheFirst',
           options: {
             cacheName: 'aar-images-v1',
             expiration: {
-              maxEntries: 120,
-              maxAgeSeconds: 60 * 60 * 24 * 60,  // 60 days (images rarely change)
-              purgeOnQuotaError: true,
+              maxEntries: 60,
+              maxAgeSeconds: 60 * 60 * 24 * 60,
+              purgeOnQuotaError: true
             },
-            cacheableResponse: {
-              statuses: [0, 200],
-            },
+            cacheableResponse: { statuses: [200] }
           }
-        },
-        {
-
-          urlPattern: ({ url }) => url.origin === 'https://avatars.githubusercontent.com',
-          handler: 'StaleWhileRevalidate',
-          options: {
-            cacheName: 'aar-github-avatars',
-            expiration: {
-              maxEntries: 50,
-              maxAgeSeconds: 60 * 60 * 24 * 7,  // 7 days
-              purgeOnQuotaError: true,
-            },
-            cacheableResponse: {
-              statuses: [0, 200],
-            },
-          }
-        },
-        {
-          urlPattern: ({ url }) => url.origin === 'https://img.shields.io',
-          handler: 'StaleWhileRevalidate',
-          options: {
-            cacheName: 'aar-badges',
-            expiration: {
-              maxEntries: 40,
-              maxAgeSeconds: 60 * 60 * 24,  // 1 day
-              purgeOnQuotaError: true,
-            },
-            cacheableResponse: {
-              statuses: [0, 200],
-            },
-          }
-        },
+        }
       ]
     },
 
@@ -271,10 +335,12 @@ export default withPwa(defineConfig({
 
   markdown: {
     cache: true,
+    theme: { light: 'github-light', dark: 'github-dark-default' },
     anchor: { level: [2, 3, 4] },
     image: { lazyLoad: true },
     config: (md) => {
       md.use(storeLinkPlugin)
+      md.use(entryRowsPlugin)
       md.use(copyOrDownloadAsMarkdownButtons)
     }
   },
@@ -288,8 +354,6 @@ export default withPwa(defineConfig({
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/images/apple-touch-icon.png' }],
 
 
-    ['meta', { media: '(prefers-color-scheme: light)', name: 'theme-color', content: '#ffffff' }],
-    ['meta', { media: '(prefers-color-scheme: dark)', name: 'theme-color', content: '#0b0b0c' }],
     ['meta', { name: 'color-scheme', content: 'light dark' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, viewport-fit=cover' }],
     ['meta', { name: 'apple-mobile-web-app-title', content: 'AAR' }],
@@ -317,6 +381,8 @@ export default withPwa(defineConfig({
   ],
 
   themeConfig: {
+    entryCount: entryStats.total,
+    categories: entryStats.categories,
     logo: {
       light: '/images/logo.svg',
       dark: '/images/logo_dark.svg',
@@ -367,14 +433,13 @@ export default withPwa(defineConfig({
     },
 
     nav: [
-      { text: 'Home', link: '/' },
       {
-        text: 'Apps & Modules',
+        text: 'Apps & modules',
         link: '/apps-and-modules/',
         activeMatch: '^/apps-and-modules/'
       },
       {
-        text: 'Rooting Guides',
+        text: 'Rooting guides',
         link: '/rooting-guides/',
         activeMatch: '^/rooting-guides/'
       },
@@ -389,11 +454,10 @@ export default withPwa(defineConfig({
           { text: 'FAQ', link: '/faqs' },
           { text: 'Troubleshooting', link: '/troubleshooting' },
           { text: 'Resources', link: '/resources' },
-          { text: 'Non-Root Alternatives', link: '/non-root-alternatives' },
+          { text: 'Non-root alternatives', link: '/non-root-alternatives' },
           { text: 'Contributing', link: '/contributing' },
-          { text: 'Legal Disclaimer', link: '/legal-disclaimer' },
-          { text: 'About', link: '/about' },
-          { text: '⭐ GitHub', link: 'https://github.com/awesome-android-root/awesome-android-root' }
+          { text: 'Legal disclaimer', link: '/legal-disclaimer' },
+          { text: 'About', link: '/about' }
         ],
       },
     ],
@@ -402,119 +466,119 @@ export default withPwa(defineConfig({
       // Main/Home Sidebar
       '/': [
         {
-          text: '🚀 Quick Start',
+          text: 'Quick start',
           collapsed: false,
           items: [
-            { text: 'What is Android Root?', link: '/rooting-guides/#understanding-root-access' },
-            { text: 'Complete Rooting Guide', link: '/rooting-guides/' },
-            { text: 'Browse All Apps & Modules', link: '/apps-and-modules/' },
-            { text: 'Essential Must-Have Apps', link: '/apps-and-modules/#starter-kit-must-have-apps' }
+            { text: 'What is Android root?', link: '/rooting-guides/#understanding-root-access' },
+            { text: 'Complete rooting guide', link: '/rooting-guides/' },
+            { text: 'Browse all apps & modules', link: '/apps-and-modules/' },
+            { text: 'Root management apps', link: '/apps-and-modules/root-management' }
           ]
         },
         {
-          text: '🏆 Root Methods',
+          text: 'Root methods',
           collapsed: false,
           items: [
-            { text: '⚖️ Compare Root Methods', link: '/rooting-guides/root-framework-comparison' },
-            { text: '🏅 Magisk (Recommended)', link: '/rooting-guides/magisk-guide' },
-            { text: '⚡ KernelSU', link: '/rooting-guides/kernelsu-guide' },
-            { text: '🤖 APatch', link: '/rooting-guides/apatch-guide' },
-            { text: '⚙️ LSPosed Framework', link: '/rooting-guides/lsposed-guide' },
-            { text: '👻 Root Without Unlocking (GhostLock)', link: '/rooting-guides/root-without-unlocking-bootloader' }
+            { text: 'Compare root methods', link: '/rooting-guides/root-framework-comparison' },
+            { text: 'Magisk (recommended)', link: '/rooting-guides/magisk-guide' },
+            { text: 'KernelSU', link: '/rooting-guides/kernelsu-guide' },
+            { text: 'APatch', link: '/rooting-guides/apatch-guide' },
+            { text: 'LSPosed framework', link: '/rooting-guides/lsposed-guide' },
+            { text: 'Root without unlocking (GhostLock)', link: '/rooting-guides/root-without-unlocking-bootloader' }
           ]
         },
         {
-          text: '📱 Device Guides',
+          text: 'Device guides',
           collapsed: true,
           items: [
-            { text: '🔷 Google Pixel', link: '/rooting-guides/how-to-root-pixel-phone' },
-            { text: '🔷 Samsung Galaxy', link: '/rooting-guides/how-to-root-samsung-phone' },
-            { text: '🔷 Xiaomi/Redmi/POCO', link: '/rooting-guides/how-to-root-xiaomi-phone' },
-            { text: '🔷 OnePlus', link: '/rooting-guides/how-to-root-oneplus-phone' },
-            { text: '🔷 Nothing Phone', link: '/rooting-guides/how-to-root-nothing-phone' },
-            { text: '🔷 Motorola', link: '/rooting-guides/how-to-root-motorola-phone' },
-            { text: '📋 View All Devices', link: '/rooting-guides/#device-specific-guides' }
+            { text: 'Google Pixel', link: '/rooting-guides/how-to-root-pixel-phone' },
+            { text: 'Samsung Galaxy', link: '/rooting-guides/how-to-root-samsung-phone' },
+            { text: 'Xiaomi/Redmi/POCO', link: '/rooting-guides/how-to-root-xiaomi-phone' },
+            { text: 'OnePlus', link: '/rooting-guides/how-to-root-oneplus-phone' },
+            { text: 'Nothing Phone', link: '/rooting-guides/how-to-root-nothing-phone' },
+            { text: 'Motorola', link: '/rooting-guides/how-to-root-motorola-phone' },
+            { text: 'View all devices', link: '/rooting-guides/#device-specific-guides' }
           ]
         },
         {
-          text: '📚 Help & Resources',
+          text: 'Help & resources',
           collapsed: true,
           items: [
-            { text: '❓ Frequently Asked Questions', link: '/faqs' },
-            { text: '🔧 Troubleshooting Guide', link: '/troubleshooting' },
-            { text: '📖 Rooting Glossary', link: '/apps-and-modules/#glossary' },
-            { text: '🌐 Community Resources', link: '/resources' },
-            { text: '🔀 Non-Root Alternatives', link: '/non-root-alternatives' }
+            { text: 'Frequently asked questions', link: '/faqs' },
+            { text: 'Troubleshooting guide', link: '/troubleshooting' },
+            { text: 'Rooting glossary', link: '/apps-and-modules/#glossary-and-badges' },
+            { text: 'Community resources', link: '/resources' },
+            { text: 'Non-root alternatives', link: '/non-root-alternatives' }
           ]
         }
       ],
       // Rooting Guides Sidebar
       '/rooting-guides/': [
         {
-          text: '📖 Guide Overview',
+          text: 'Guide overview',
           collapsed: false,
           items: [
-            { text: 'Table of Contents', link: '/rooting-guides/' },
-            { text: 'Understanding Root', link: '/rooting-guides/#understanding-root-access' },
-            { text: 'Benefits vs Risks', link: '/rooting-guides/#benefits-vs-risks' },
-            { text: 'Safety First', link: '/rooting-guides/#prerequisites-and-safety' }
+            { text: 'Table of contents', link: '/rooting-guides/' },
+            { text: 'Understanding root', link: '/rooting-guides/#understanding-root-access' },
+            { text: 'Benefits vs risks', link: '/rooting-guides/#benefits-vs-risks' },
+            { text: 'Safety first', link: '/rooting-guides/#prerequisites-and-safety' }
           ]
         },
         {
-          text: 'Root Methods',
+          text: 'Root methods',
           items: [
-            { text: 'Compare Methods', link: '/rooting-guides/root-framework-comparison' },
-            { text: 'Magisk (Recommended)', link: '/rooting-guides/magisk-guide' },
+            { text: 'Compare methods', link: '/rooting-guides/root-framework-comparison' },
+            { text: 'Magisk (recommended)', link: '/rooting-guides/magisk-guide' },
             { text: 'KernelSU', link: '/rooting-guides/kernelsu-guide' },
             { text: 'APatch', link: '/rooting-guides/apatch-guide' },
-            { text: 'Temporary Root, No Unlock (GhostLock)', link: '/rooting-guides/root-without-unlocking-bootloader' }
+            { text: 'Temporary root, no unlock (GhostLock)', link: '/rooting-guides/root-without-unlocking-bootloader' }
           ]
         },
         {
-          text: '🔒 Locked-Bootloader Options',
+          text: 'Locked-bootloader options',
           collapsed: true,
           items: [
-            { text: 'GhostLock Temporary Root', link: '/rooting-guides/root-without-unlocking-bootloader' },
-            { text: 'Bootloader Mods & Temp Root', link: '/rooting-guides/temporary-root-solutions' }
+            { text: 'GhostLock temporary root', link: '/rooting-guides/root-without-unlocking-bootloader' },
+            { text: 'Bootloader mods & temp root', link: '/rooting-guides/temporary-root-solutions' }
           ]
         },
         {
-          text: '🔧 Step-by-Step Process',
+          text: 'Step-by-step process',
           collapsed: false,
           items: [
-            { text: '1️⃣ Unlock Bootloader', link: '/rooting-guides/how-to-unlock-bootloader' },
-            { text: '2️⃣ Install Custom Recovery', link: '/rooting-guides/how-to-install-custom-recovery' },
-            { text: '3️⃣ Root Your Device', link: '/rooting-guides/#universal-rooting-process' },
-            { text: '4️⃣ Install LSPosed Framework', link: '/rooting-guides/lsposed-guide' },
-            { text: '5️⃣ Install Custom ROM (Optional)', link: '/rooting-guides/custom-rom-installation' }
+            { text: '1. Unlock bootloader', link: '/rooting-guides/how-to-unlock-bootloader' },
+            { text: '2. Install custom recovery', link: '/rooting-guides/how-to-install-custom-recovery' },
+            { text: '3. Root your device', link: '/rooting-guides/#universal-rooting-process' },
+            { text: '4. Install LSPosed framework', link: '/rooting-guides/lsposed-guide' },
+            { text: '5. Install custom ROM (optional)', link: '/rooting-guides/custom-rom-installation' }
           ]
         },
         {
-          text: '📱 Device-Specific Guides',
+          text: 'Device-specific guides',
           collapsed: true,
           items: [
-            { text: '📋 All Supported Devices', link: '/rooting-guides/#device-specific-guides' },
+            { text: 'All supported devices', link: '/rooting-guides/#device-specific-guides' },
             {
-              text: '🏆 Popular Brands',
+              text: 'Popular brands',
               items: [
-                { text: 'Google Pixel Phones', link: '/rooting-guides/how-to-root-pixel-phone' },
-                { text: 'Samsung Galaxy Devices', link: '/rooting-guides/how-to-root-samsung-phone' },
+                { text: 'Google Pixel phones', link: '/rooting-guides/how-to-root-pixel-phone' },
+                { text: 'Samsung Galaxy devices', link: '/rooting-guides/how-to-root-samsung-phone' },
                 { text: 'Xiaomi/Redmi/POCO', link: '/rooting-guides/how-to-root-xiaomi-phone' },
-                { text: 'OnePlus Smartphones', link: '/rooting-guides/how-to-root-oneplus-phone' },
-                { text: 'Motorola Phones', link: '/rooting-guides/how-to-root-motorola-phone' },
-                { text: 'Nothing Phone Series', link: '/rooting-guides/how-to-root-nothing-phone' }
+                { text: 'OnePlus smartphones', link: '/rooting-guides/how-to-root-oneplus-phone' },
+                { text: 'Motorola phones', link: '/rooting-guides/how-to-root-motorola-phone' },
+                { text: 'Nothing Phone series', link: '/rooting-guides/how-to-root-nothing-phone' }
               ]
             }
           ]
         },
         {
-          text: 'Help & Support',
+          text: 'Help & support',
           collapsed: true,
           items: [
-            { text: 'Troubleshooting Guide', link: '/troubleshooting' },
-            { text: 'Frequently Asked Questions', link: '/faqs' },
-            { text: 'Community Help & Resources', link: '/rooting-guides/#community-and-support' },
-            { text: 'Rooting Glossary', link: '/apps-and-modules/#glossary' }
+            { text: 'Troubleshooting guide', link: '/troubleshooting' },
+            { text: 'Frequently asked questions', link: '/faqs' },
+            { text: 'Community help & resources', link: '/rooting-guides/#community-and-support' },
+            { text: 'Rooting glossary', link: '/apps-and-modules/#glossary-and-badges' }
           ]
         }
       ],
@@ -522,214 +586,214 @@ export default withPwa(defineConfig({
       // Apps and Modules Sidebar
       '/apps-and-modules/': [
         {
-          text: '⭐ Quick Access',
-          collapsed: false,
+          text: 'Quick access',
+          collapsed: true,
           items: [
-            { text: 'Category Overview', link: '/apps-and-modules/' },
-            { text: '⭐ Must-Have Apps', link: '/apps-and-modules/#starter-kit-must-have-apps' },
-            { text: '📘 Glossary & Badges', link: '/apps-and-modules/#glossary' },
-            { text: '🛡️ Safety Checklist', link: '/apps-and-modules/#safety-legal' }
+            { text: 'Category overview', link: '/apps-and-modules/' },
+            { text: 'Root management apps', link: '/apps-and-modules/root-management' },
+            { text: 'Glossary & badges', link: '/apps-and-modules/#glossary-and-badges' },
+            { text: 'Safety checklist', link: '/apps-and-modules/#safety-checklist' }
           ]
         },
         {
-          text: '🛠️ Root Management',
+          text: 'Root management',
           link: '/apps-and-modules/root-management',
           collapsed: true,
           items: [
-            { text: 'Root Managers', link: '/apps-and-modules/root-management#root-managers' },
-            { text: 'Temporary Root (Locked Bootloader)', link: '/apps-and-modules/root-management#temporary-root-locked-bootloader' },
-            { text: 'Module Managers', link: '/apps-and-modules/root-management#module-managers' },
+            { text: 'Root managers', link: '/apps-and-modules/root-management#root-managers' },
+            { text: 'Temporary root (locked bootloader)', link: '/apps-and-modules/root-management#temporary-root-locked-bootloader' },
+            { text: 'Module managers', link: '/apps-and-modules/root-management#module-managers' },
             { text: 'Metamodules', link: '/apps-and-modules/root-management#metamodules' },
             { text: 'LSPosed & Xposed', link: '/apps-and-modules/root-management#lsposed-xposed' },
             { text: 'Zygisk', link: '/apps-and-modules/root-management#zygisk' },
-            { text: 'Root Hiding & Play Integrity', link: '/apps-and-modules/root-management#root-hiding-play-integrity' },
+            { text: 'Root hiding & Play Integrity', link: '/apps-and-modules/root-management#root-hiding-play-integrity' },
             { text: 'Susfs', link: '/apps-and-modules/root-management#susfs' },
-            { text: 'Bootloop Protection', link: '/apps-and-modules/root-management#bootloop-protection' },
-            { text: 'Root Detection & Testing', link: '/apps-and-modules/root-management#root-detection-testing' },
+            { text: 'Bootloop protection', link: '/apps-and-modules/root-management#bootloop-protection' },
+            { text: 'Root detection & testing', link: '/apps-and-modules/root-management#root-detection-testing' },
           ]
         },
         {
-          text: '⚙️ System',
+          text: 'System',
           link: '/apps-and-modules/system',
           collapsed: true,
           items: [
-            { text: 'System Tweaks', link: '/apps-and-modules/system#system-tweaks' },
-            { text: 'VBMeta Mods', link: '/apps-and-modules/system#vbmeta-mods' },
-            { text: 'System UI & Framework', link: '/apps-and-modules/system#system-ui-framework' },
+            { text: 'System tweaks', link: '/apps-and-modules/system#system-tweaks' },
+            { text: 'VBMeta mods', link: '/apps-and-modules/system#vbmeta-mods' },
+            { text: 'System UI & framework', link: '/apps-and-modules/system#system-ui-framework' },
             { text: 'AOSP (Android Open Source Project)', link: '/apps-and-modules/system#aosp-android-open-source-project' },
-            { text: 'ColorOS (Oppo)', link: '/apps-and-modules/system#coloros-oppo' },
+            { text: 'ColorOS (OPPO)', link: '/apps-and-modules/system#coloros-oppo' },
             { text: 'HyperOS (Xiaomi)', link: '/apps-and-modules/system#hyperos-xiaomi' },
             { text: 'NothingOS', link: '/apps-and-modules/system#nothingos' },
             { text: 'One UI (Samsung)', link: '/apps-and-modules/system#one-ui-samsung' },
             { text: 'Onyx', link: '/apps-and-modules/system#onyx' },
             { text: 'Oxygen OS (OnePlus)', link: '/apps-and-modules/system#oxygen-os-oneplus' },
             { text: 'ZUI', link: '/apps-and-modules/system#zui' },
-            { text: 'Boot & Startup', link: '/apps-and-modules/system#boot-startup' },
-            { text: 'App & Package Management', link: '/apps-and-modules/system#app-package-management' },
+            { text: 'Boot & startup', link: '/apps-and-modules/system#boot-startup' },
+            { text: 'App & package management', link: '/apps-and-modules/system#app-package-management' },
             { text: 'Permissions & AppOps', link: '/apps-and-modules/system#permissions-appops' },
-            { text: 'System Information & Diagnostics', link: '/apps-and-modules/system#system-information-diagnostics' },
+            { text: 'System information & diagnostics', link: '/apps-and-modules/system#system-information-diagnostics' },
           ]
         },
         {
-          text: '⚡ Performance & Battery',
+          text: 'Performance & battery',
           link: '/apps-and-modules/performance',
           collapsed: true,
           items: [
-            { text: 'Performance Optimization', link: '/apps-and-modules/performance#performance-optimization' },
-            { text: 'Kernel Management', link: '/apps-and-modules/performance#kernel-management' },
+            { text: 'Performance optimization', link: '/apps-and-modules/performance#performance-optimization' },
+            { text: 'Kernel management', link: '/apps-and-modules/performance#kernel-management' },
             { text: 'Memory & RAM', link: '/apps-and-modules/performance#memory-ram' },
-            { text: 'Battery Optimization', link: '/apps-and-modules/performance#battery-optimization' },
-            { text: 'Charging & Power', link: '/apps-and-modules/performance#charging-power' },
-            { text: 'Task & Process Management', link: '/apps-and-modules/performance#task-process-management' },
+            { text: 'Battery optimization', link: '/apps-and-modules/performance#battery-optimization' },
+            { text: 'Charging & power', link: '/apps-and-modules/performance#charging-power' },
+            { text: 'Task & process management', link: '/apps-and-modules/performance#task-process-management' },
           ]
         },
         {
-          text: '🕵️ Privacy',
+          text: 'Privacy',
           link: '/apps-and-modules/privacy',
           collapsed: true,
           items: [
-            { text: 'Privacy Tools', link: '/apps-and-modules/privacy#privacy-tools' },
-            { text: 'Device ID & Spoofing', link: '/apps-and-modules/privacy#device-id-spoofing' },
-            { text: 'App Isolation', link: '/apps-and-modules/privacy#app-isolation' },
+            { text: 'Privacy tools', link: '/apps-and-modules/privacy#privacy-tools' },
+            { text: 'Device ID & spoofing', link: '/apps-and-modules/privacy#device-id-spoofing' },
+            { text: 'App isolation', link: '/apps-and-modules/privacy#app-isolation' },
             { text: 'Location & GPS', link: '/apps-and-modules/privacy#location-gps' },
           ]
         },
         {
-          text: '🔐 Security',
+          text: 'Security',
           link: '/apps-and-modules/security',
           collapsed: true,
           items: [
-            { text: 'Security Tools', link: '/apps-and-modules/security#security-tools' },
-            { text: 'Firewalls & Filtering', link: '/apps-and-modules/security#firewalls-filtering' },
+            { text: 'Security tools', link: '/apps-and-modules/security#security-tools' },
+            { text: 'Firewalls & filtering', link: '/apps-and-modules/security#firewalls-filtering' },
           ]
         },
         {
-          text: '🚫 Ad Blocking',
+          text: 'Ad blocking',
           link: '/apps-and-modules/ad-blocking',
           collapsed: true,
           items: [
-            { text: 'Ad & Tracker Blocking', link: '/apps-and-modules/ad-blocking#ad-tracker-blocking' },
-            { text: 'DNS & Network Filtering', link: '/apps-and-modules/ad-blocking#dns-network-filtering' },
+            { text: 'Ad & tracker blocking', link: '/apps-and-modules/ad-blocking#ad-tracker-blocking' },
+            { text: 'DNS & network filtering', link: '/apps-and-modules/ad-blocking#dns-network-filtering' },
           ]
         },
         {
-          text: '🧩 App Modifications',
+          text: 'App modifications',
           link: '/apps-and-modules/app-modifications',
           collapsed: true,
           items: [
-            { text: 'App Patchers', link: '/apps-and-modules/app-modifications#app-patchers' },
-            { text: 'App Mods', link: '/apps-and-modules/app-modifications#app-mods' },
-            { text: 'Social Media Mods', link: '/apps-and-modules/app-modifications#social-media-mods' },
-            { text: 'Browser Mods', link: '/apps-and-modules/app-modifications#browser-mods' },
-            { text: 'YouTube & Media Mods', link: '/apps-and-modules/app-modifications#youtube-media-mods' },
-            { text: 'Signature & Verification', link: '/apps-and-modules/app-modifications#signature-verification' },
+            { text: 'App patchers', link: '/apps-and-modules/app-modifications#app-patchers' },
+            { text: 'App mods', link: '/apps-and-modules/app-modifications#app-mods' },
+            { text: 'Social media mods', link: '/apps-and-modules/app-modifications#social-media-mods' },
+            { text: 'Browser mods', link: '/apps-and-modules/app-modifications#browser-mods' },
+            { text: 'YouTube & media mods', link: '/apps-and-modules/app-modifications#youtube-media-mods' },
+            { text: 'Signature & verification', link: '/apps-and-modules/app-modifications#signature-verification' },
           ]
         },
         {
-          text: '🧹 Debloating',
+          text: 'Debloating',
           link: '/apps-and-modules/debloating',
           collapsed: true,
           items: [
-            { text: 'Debloating Tools & Modules', link: '/apps-and-modules/debloating#debloating' },
+            { text: 'Debloating tools & modules', link: '/apps-and-modules/debloating#debloating-apps-modules' },
           ]
         },
         {
-          text: '🗂️ File Management',
+          text: 'File management',
           link: '/apps-and-modules/file-management',
           collapsed: true,
           items: [
-            { text: 'File Managers', link: '/apps-and-modules/file-management#file-managers' },
+            { text: 'File managers', link: '/apps-and-modules/file-management#file-managers' },
             { text: 'Cleaning', link: '/apps-and-modules/file-management#cleaning' },
-            { text: 'File & Partition Tools', link: '/apps-and-modules/file-management#file-partition-tools' },
+            { text: 'File & partition tools', link: '/apps-and-modules/file-management#file-partition-tools' },
           ]
         },
         {
-          text: '💾 Backup & Restore',
+          text: 'Backup & restore',
           link: '/apps-and-modules/backup',
           collapsed: true,
           items: [
-            { text: 'Backup & Restore', link: '/apps-and-modules/backup#backup-restore' },
+            { text: 'Backup & restore', link: '/apps-and-modules/backup#backup-apps-tools' },
           ]
         },
         {
-          text: '🎨 Customization',
+          text: 'Customization',
           link: '/apps-and-modules/customization',
           collapsed: true,
           items: [
-            { text: 'Themes & Visual Mods', link: '/apps-and-modules/customization#themes-visual-mods' },
-            { text: 'Launchers & Home Screen', link: '/apps-and-modules/customization#launchers-home-screen' },
-            { text: 'Status Bar & Navigation', link: '/apps-and-modules/customization#status-bar-navigation' },
-            { text: 'Gestures & Controls', link: '/apps-and-modules/customization#gestures-controls' },
-            { text: 'Fonts & Emojis', link: '/apps-and-modules/customization#fonts-emojis' },
+            { text: 'Themes & visual mods', link: '/apps-and-modules/customization#themes-visual-mods' },
+            { text: 'Launchers & home screen', link: '/apps-and-modules/customization#launchers-home-screen' },
+            { text: 'Status bar & navigation', link: '/apps-and-modules/customization#status-bar-navigation' },
+            { text: 'Gestures & controls', link: '/apps-and-modules/customization#gestures-controls' },
+            { text: 'Fonts & emojis', link: '/apps-and-modules/customization#fonts-emojis' },
             { text: 'Notifications', link: '/apps-and-modules/customization#notifications' },
             { text: 'Lockscreen & AOD', link: '/apps-and-modules/customization#lockscreen-aod' },
-            { text: 'Screen & Display', link: '/apps-and-modules/customization#screen-display' },
+            { text: 'Screen & display', link: '/apps-and-modules/customization#screen-display' },
           ]
         },
         {
-          text: '🎵 Audio',
+          text: 'Audio',
           link: '/apps-and-modules/audio',
           collapsed: true,
           items: [
-            { text: 'Audio Enhancement', link: '/apps-and-modules/audio#audio-enhancement' },
-            { text: 'Audio Control', link: '/apps-and-modules/audio#audio-control' },
-            { text: 'Audio Effects', link: '/apps-and-modules/audio#audio-effects' },
+            { text: 'Audio enhancement', link: '/apps-and-modules/audio#audio-enhancement' },
+            { text: 'Audio control', link: '/apps-and-modules/audio#audio-control' },
+            { text: 'Audio effects', link: '/apps-and-modules/audio#audio-effects' },
           ]
         },
         {
-          text: '🌐 Networking',
+          text: 'Networking',
           link: '/apps-and-modules/networking',
           collapsed: true,
           items: [
-            { text: 'VPN & Proxy', link: '/apps-and-modules/networking#vpn-proxy' },
-            { text: 'Network Tools', link: '/apps-and-modules/networking#network-tools' },
-            { text: 'Wi-Fi & Mobile Data', link: '/apps-and-modules/networking#wi-fi-mobile-data' },
+            { text: 'VPN & proxy', link: '/apps-and-modules/networking#vpn-proxy' },
+            { text: 'Network tools', link: '/apps-and-modules/networking#network-tools' },
+            { text: 'Wi-Fi & mobile data', link: '/apps-and-modules/networking#wi-fi-mobile-data' },
             { text: 'Bluetooth & NFC', link: '/apps-and-modules/networking#bluetooth-nfc' },
           ]
         },
         {
-          text: '🎮 Gaming',
+          text: 'Gaming',
           link: '/apps-and-modules/gaming',
           collapsed: true,
           items: [
-            { text: 'Gaming Optimization', link: '/apps-and-modules/gaming#gaming-optimization' },
-            { text: 'Game Modifications & Tools', link: '/apps-and-modules/gaming#game-modifications-tools' },
+            { text: 'Gaming optimization', link: '/apps-and-modules/gaming#gaming-optimization' },
+            { text: 'Game modifications & tools', link: '/apps-and-modules/gaming#game-modifications-tools' },
           ]
         },
         {
-          text: '🧑‍💻 Development & Automation',
+          text: 'Development & automation',
           link: '/apps-and-modules/development',
           collapsed: true,
           items: [
-            { text: 'Terminal & Shell', link: '/apps-and-modules/development#terminal-shell' },
-            { text: 'ADB & Debugging', link: '/apps-and-modules/development#adb-debugging' },
-            { text: 'Developer Tools', link: '/apps-and-modules/development#developer-tools' },
-            { text: 'Linux Environments', link: '/apps-and-modules/development#linux-environments' },
+            { text: 'Terminal & shell', link: '/apps-and-modules/development#terminal-shell' },
+            { text: 'ADB & debugging', link: '/apps-and-modules/development#adb-debugging' },
+            { text: 'Developer tools', link: '/apps-and-modules/development#developer-tools' },
+            { text: 'Linux environments', link: '/apps-and-modules/development#linux-environments' },
             { text: 'Automation', link: '/apps-and-modules/development#automation' },
-            { text: 'Hardware & Sensors', link: '/apps-and-modules/development#hardware-sensors' },
+            { text: 'Hardware & sensors', link: '/apps-and-modules/development#hardware-sensors' },
           ]
         },
         {
-          text: '🧰 General Utilities',
+          text: 'General utilities',
           link: '/apps-and-modules/utilities',
           collapsed: true,
           items: [
-            { text: 'Sync & File Transfer', link: '/apps-and-modules/utilities#sync-file-transfer' },
-            { text: 'Reboot & Power', link: '/apps-and-modules/utilities#reboot-power' },
-            { text: 'Sharing & Intent Tools', link: '/apps-and-modules/utilities#sharing-intent-tools' },
-            { text: 'Communication & Messaging', link: '/apps-and-modules/utilities#communication-messaging' },
-            { text: 'General Toolboxes', link: '/apps-and-modules/utilities#general-toolboxes' },
+            { text: 'Sync & file transfer', link: '/apps-and-modules/utilities#sync-file-transfer' },
+            { text: 'Reboot & power', link: '/apps-and-modules/utilities#reboot-power' },
+            { text: 'Sharing & intent tools', link: '/apps-and-modules/utilities#sharing-intent-tools' },
+            { text: 'Communication & messaging', link: '/apps-and-modules/utilities#communication-messaging' },
+            { text: 'General toolboxes', link: '/apps-and-modules/utilities#general-toolboxes' },
           ]
         },
         {
-          text: '📚 More Resources',
+          text: 'More resources',
           collapsed: true,
           items: [
-            { text: 'Rooting Guides', link: '/rooting-guides/' },
-            { text: 'General Guides', link: '/general-guides/' },
+            { text: 'Rooting guides', link: '/rooting-guides/' },
+            { text: 'General guides', link: '/general-guides/' },
             { text: 'Troubleshooting', link: '/troubleshooting' },
             { text: 'FAQs', link: '/faqs' },
-            { text: 'Community Resources', link: '/resources' }
+            { text: 'Community resources', link: '/resources' }
           ]
         }
       ],
@@ -737,52 +801,52 @@ export default withPwa(defineConfig({
       // General Guides Sidebar
       '/general-guides/': [
         {
-          text: '📚 All Tutorials',
+          text: 'All tutorials',
           collapsed: false,
           items: [
             { text: 'Overview', link: '/general-guides/' },
-            { text: 'Quick Navigation', link: '/general-guides/#quick-navigation' }
+            { text: 'Quick navigation', link: '/general-guides/#quick-navigation' }
           ]
         },
         {
-          text: '🛡️ Privacy & Security',
+          text: 'Privacy & security',
           collapsed: false,
           items: [
-            { text: 'Security Guides', link: '/general-guides/#privacy-security-guides' },
-            { text: 'Ad Blocking', link: '/general-guides/android-adblocking' }
+            { text: 'Security guides', link: '/general-guides/#privacy-security-guides' },
+            { text: 'Ad blocking', link: '/general-guides/android-adblocking' }
           ]
         },
         {
-          text: '📦 App Management',
+          text: 'App management',
           collapsed: false,
           items: [
-            { text: 'App Optimization', link: '/general-guides/#app-management-optimization' },
-            { text: 'Debloating Guide', link: '/general-guides/android-apps-debloating' },
-            { text: 'Stop Auto Updates', link: '/general-guides/stop-android-app-auto-updates-play-store' }
+            { text: 'App optimization', link: '/general-guides/#app-management-optimization' },
+            { text: 'Debloating guide', link: '/general-guides/android-apps-debloating' },
+            { text: 'Stop auto updates', link: '/general-guides/stop-android-app-auto-updates-play-store' }
           ]
         },
         {
-          text: '⚡ System Optimization',
+          text: 'System optimization',
           collapsed: true,
           items: [
-            { text: 'Performance Guides', link: '/general-guides/#performance-system-optimization' },
-            { text: 'Battery Optimization', link: '/general-guides/#battery-power-management' }
+            { text: 'Performance guides', link: '/general-guides/#performance-system-optimization' },
+            { text: 'Battery optimization', link: '/general-guides/#battery-power-management' }
           ]
         },
         {
           text: 'Customization',
           collapsed: true,
           items: [
-            { text: 'Theming Guides', link: '/general-guides/#customization-theming' },
-            { text: 'UI Modifications', link: '/general-guides/#system-ui-changes' }
+            { text: 'Theming guides', link: '/general-guides/#customization-theming' },
+            { text: 'UI modifications', link: '/general-guides/#system-ui-changes' }
           ]
         },
         {
-          text: 'Advanced Topics',
+          text: 'Advanced topics',
           collapsed: true,
           items: [
-            { text: 'Technical Guides', link: '/general-guides/#development-technical-guides' },
-            { text: 'Android Knowledge', link: '/general-guides/#essential-android-knowledge' }
+            { text: 'Technical guides', link: '/general-guides/#development-technical-guides' },
+            { text: 'Android knowledge', link: '/general-guides/#essential-android-knowledge' }
           ]
         },
         {
@@ -800,20 +864,20 @@ export default withPwa(defineConfig({
         {
           text: 'Troubleshooting',
           items: [
-            { text: 'Emergency Recovery', link: '/troubleshooting#emergency-recovery' },
-            { text: 'Magisk Troubleshooting', link: '/troubleshooting#magisk-troubleshooting' },
-            { text: 'KernelSU Troubleshooting', link: '/troubleshooting#kernelsu-troubleshooting' },
-            { text: 'APatch Troubleshooting', link: '/troubleshooting#apatch-troubleshooting' },
-            { text: 'Bootloader & Fastboot', link: '/troubleshooting#bootloader-and-fastboot-issues' },
+            { text: 'Emergency recovery', link: '/troubleshooting#emergency-recovery' },
+            { text: 'Magisk troubleshooting', link: '/troubleshooting#magisk-troubleshooting' },
+            { text: 'KernelSU troubleshooting', link: '/troubleshooting#kernelsu-troubleshooting' },
+            { text: 'APatch troubleshooting', link: '/troubleshooting#apatch-troubleshooting' },
+            { text: 'Bootloader & fastboot', link: '/troubleshooting#bootloader-and-fastboot-issues' },
             { text: 'Play Integrity', link: '/troubleshooting#play-integrity-and-banking-apps' }
           ]
         },
         {
           text: 'Related',
           items: [
-            { text: 'Back to Guides', link: '/rooting-guides/' },
+            { text: 'Back to guides', link: '/rooting-guides/' },
             { text: 'FAQ', link: '/faqs' },
-            { text: 'Community Help', link: '/resources' }
+            { text: 'Community help', link: '/resources' }
           ]
         }
       ],
@@ -822,17 +886,17 @@ export default withPwa(defineConfig({
         {
           text: 'FAQ',
           items: [
-            { text: 'Getting Started', link: '/faqs#getting-started' },
-            { text: 'Technical Questions', link: '/faqs#technical-questions' },
+            { text: 'Getting started', link: '/faqs#getting-started' },
+            { text: 'Technical questions', link: '/faqs#technical-questions' },
             { text: 'Compatibility', link: '/faqs#compatibility' },
-            { text: 'After Rooting', link: '/faqs#after-rooting' },
-            { text: 'Community and Support', link: '/faqs#community-and-support' }
+            { text: 'After rooting', link: '/faqs#after-rooting' },
+            { text: 'Community and support', link: '/faqs#community-and-support' }
           ]
         },
         {
           text: 'Related',
           items: [
-            { text: 'Back to Guides', link: '/rooting-guides/' },
+            { text: 'Back to guides', link: '/rooting-guides/' },
             { text: 'Troubleshooting', link: '/troubleshooting' },
             { text: 'Resources', link: '/resources' }
           ]
@@ -843,19 +907,19 @@ export default withPwa(defineConfig({
         {
           text: 'Resources',
           items: [
-            { text: 'Core Tooling', link: '/resources#core-tooling' },
-            { text: 'Learning and Reference', link: '/resources#learning-and-reference' },
-            { text: 'Communities and Support', link: '/resources#communities-and-support' },
-            { text: 'Firmware and Device Data', link: '/resources#firmware-and-device-data' },
-            { text: 'Emergency and Recovery', link: '/resources#emergency-and-recovery' },
-            { text: 'Advanced Engineering', link: '/resources#advanced-engineering' }
+            { text: 'Core tooling', link: '/resources#core-tooling' },
+            { text: 'Learning and reference', link: '/resources#learning-and-reference' },
+            { text: 'Communities and support', link: '/resources#communities-and-support' },
+            { text: 'Firmware and device data', link: '/resources#firmware-and-device-data' },
+            { text: 'Emergency and recovery', link: '/resources#emergency-and-recovery' },
+            { text: 'Advanced engineering', link: '/resources#advanced-engineering' }
           ]
         },
         {
-          text: 'Quick Links',
+          text: 'Quick links',
           items: [
-            { text: 'Rooting Guides', link: '/rooting-guides/' },
-            { text: 'Browse Apps', link: '/apps-and-modules/' },
+            { text: 'Rooting guides', link: '/rooting-guides/' },
+            { text: 'Browse apps', link: '/apps-and-modules/' },
             { text: 'FAQ', link: '/faqs' }
           ]
         }
@@ -865,19 +929,19 @@ export default withPwa(defineConfig({
         {
           text: 'About',
           items: [
-            { text: 'Our Mission', link: '/about#our-mission' },
-            { text: 'What We Offer', link: '/about#what-we-offer' },
-            { text: 'Getting Started', link: '/about#getting-started' },
-            { text: 'Community & Support', link: '/about#community-support' },
-            { text: 'Core Values', link: '/about#core-values' },
-            { text: 'Support the Project', link: '/about#support-the-project' }
+            { text: 'Our mission', link: '/about#our-mission' },
+            { text: 'What we offer', link: '/about#what-we-offer' },
+            { text: 'Getting started', link: '/about#getting-started' },
+            { text: 'Community & support', link: '/about#community-support' },
+            { text: 'Core values', link: '/about#core-values' },
+            { text: 'Support the project', link: '/about#support-the-project' }
           ]
         },
         {
-          text: 'Get Involved',
+          text: 'Get involved',
           items: [
             { text: 'Contribute', link: '/contributing' },
-            { text: 'GitHub', link: 'https://github.com/awesome-android-root/awesome-android-root' }
+            { text: 'Github', link: 'https://github.com/awesome-android-root/awesome-android-root' }
           ]
         }
       ],
@@ -886,39 +950,39 @@ export default withPwa(defineConfig({
         {
           text: 'Contributing',
           items: [
-            { text: 'Quick Start', link: '/contributing#quick-start' },
-            { text: 'Entry Format', link: '/contributing#entry-format' },
-            { text: 'Categories & Tags', link: '/contributing#categories-tags' },
-            { text: 'Quality Requirements', link: '/contributing#quality-requirements' },
-            { text: 'Pull Request Template', link: '/contributing#pull-request-template' }
+            { text: 'Quick start', link: '/contributing#quick-start' },
+            { text: 'Entry format', link: '/contributing#entry-format' },
+            { text: 'Categories & tags', link: '/contributing#categories-tags' },
+            { text: 'Quality requirements', link: '/contributing#quality-requirements' },
+            { text: 'Pull request template', link: '/contributing#pull-request-template' }
           ]
         },
         {
           text: 'Resources',
           items: [
-            { text: 'GitHub Issues', link: 'https://github.com/awesome-android-root/awesome-android-root/issues' },
+            { text: 'Github issues', link: 'https://github.com/awesome-android-root/awesome-android-root/issues' },
             { text: 'Discussions', link: 'https://github.com/awesome-android-root/awesome-android-root/discussions' },
-            { text: 'Project Home', link: '/' }
+            { text: 'Project home', link: '/' }
           ]
         }
       ],
 
       '/non-root-alternatives': [
         {
-          text: 'Non-Root Alternatives',
+          text: 'Non-root alternatives',
           items: [
             { text: 'Overview', link: '/non-root-alternatives' },
-            { text: 'Quick Assessment', link: '/non-root-alternatives#quick-assessment' },
-            { text: 'Foundation Technologies', link: '/non-root-alternatives#foundation-technologies' },
-            { text: 'Core Solutions by Need', link: '/non-root-alternatives#core-solutions-by-need' },
-            { text: 'Effectiveness Comparison', link: '/non-root-alternatives#effectiveness-comparison' }
+            { text: 'Quick assessment', link: '/non-root-alternatives#quick-assessment' },
+            { text: 'Foundation technologies', link: '/non-root-alternatives#foundation-technologies' },
+            { text: 'Core solutions by need', link: '/non-root-alternatives#core-solutions-by-need' },
+            { text: 'Effectiveness comparison', link: '/non-root-alternatives#effectiveness-comparison' }
           ]
         },
         {
           text: 'Related',
           items: [
-            { text: 'Benefits vs Risks', link: '/rooting-guides/#benefits-vs-risks' },
-            { text: 'Root Apps', link: '/apps-and-modules/' },
+            { text: 'Benefits vs risks', link: '/rooting-guides/#benefits-vs-risks' },
+            { text: 'Root apps', link: '/apps-and-modules/' },
             { text: 'Home', link: '/' }
           ]
         }
@@ -928,19 +992,25 @@ export default withPwa(defineConfig({
 
     footer: {
       message: `
-        <div style="display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; align-items: center; margin-bottom: 8px; font-size: 14px;">
-          <a href="/contributing" style="color: var(--vp-c-text-2); transition: color 0.2s; text-decoration: none; font-weight: 500;">Contribute</a>
-          <span style="color: var(--vp-c-divider);">•</span>
-          <a href="/legal-disclaimer" style="color: var(--vp-c-text-2); transition: color 0.2s; text-decoration: none; font-weight: 500;">Legal</a>
-          <span style="color: var(--vp-c-divider);">•</span>
-          <a href="https://github.com/awesome-android-root/awesome-android-root" style="color: var(--vp-c-text-2); transition: color 0.2s; text-decoration: none; font-weight: 500;">GitHub</a>
-          <span style="color: var(--vp-c-divider);">•</span>
-          <a href="https://x.com/awsm_and_root" style="color: var(--vp-c-text-2); transition: color 0.2s; text-decoration: none; font-weight: 500;">Twitter/X</a>
+        <div class="aar-footer-row">
+          <a href="/contributing">Contribute</a>
+          <span aria-hidden="true">·</span>
+          <a href="/legal-disclaimer">Legal</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://github.com/awesome-android-root/awesome-android-root">GitHub</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://x.com/awsm_and_root">X</a>
+          <span class="aar-footer-copyright">© ${new Date().getFullYear()} Awesome Android Root Project</span>
         </div>
       `,
-      copyright: `Copyright © ${new Date().getFullYear()} Awesome Android Root Project`
+      copyright: ''
     },
 
+    sidebarMenuLabel: 'Menu',
+    docFooter: {
+      prev: 'Previous page',
+      next: 'Next page'
+    },
     outline: {
       level: [2, 3],
       label: 'On this page'
@@ -950,8 +1020,23 @@ export default withPwa(defineConfig({
     },
     appearance: 'auto',
     socialLinks: [
-      { icon: 'x', link: 'https://x.com/awsm_and_root' },
       { icon: 'github', link: 'https://github.com/awesome-android-root/awesome-android-root' }
     ],
   },
-}))
+})
+
+function collapseSidebarGroups(items) {
+  for (const item of items ?? []) {
+    if (!Array.isArray(item.items) || item.items.length === 0) continue
+    item.collapsed = true
+    collapseSidebarGroups(item.items)
+  }
+  return items
+}
+
+for (const [route, groups] of Object.entries(siteConfig.themeConfig.sidebar)) {
+  if (Array.isArray(groups)) collapseSidebarGroups(groups)
+  else collapseSidebarGroups([groups])
+}
+
+export default withPwa(siteConfig)

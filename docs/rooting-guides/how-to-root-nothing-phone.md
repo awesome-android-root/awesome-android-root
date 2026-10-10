@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Nothing & CMF Phone Rooting Guide
+title: Nothing & CMF phone rooting guide
 description: "Master guide to root all Nothing & CMF by Nothing Phone models with bootloader unlock and Magisk installation for Nothing OS."
 head:
   - - link
@@ -20,7 +20,7 @@ head:
       content: https://awesome-android-root.xyz/rooting-guides/how-to-root-nothing-phone
   - - meta
     - property: og:image
-      content: https://awesome-android-root.xyz/images/og/nothing.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -38,7 +38,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og/nothing.png
+      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Nothing Phone Root Guide - All Models
@@ -74,11 +74,11 @@ head:
       content: index, follow
 ---
 
-# Nothing & CMF Phone Root Guide
+# Nothing & CMF phone root guide
 
 Root Nothing Phone devices with straightforward process. 
 
-## Quick Navigation
+## Quick navigation
 - [Device Compatibility](#device-compatibility)
 - [Prerequisites](#prerequisites)
 - [Bootloader Unlock](#unlock-bootloader)
@@ -93,7 +93,7 @@ Root Nothing Phone devices with straightforward process.
 ---
 
 
-## Device Compatibility
+## Device compatibility
 
 All Nothing and CMF by Nothing Phone models support bootloader unlocking and rooting. No regional restrictions - all devices are unlockable globally.
 
@@ -104,14 +104,14 @@ All Nothing and CMF by Nothing Phone models support bootloader unlocking and roo
 > [!NOTE]
 > All Nothing Phones are unlockable globally. No known incompatible models.
 
-> [!TIP]
+> [!NOTE]
 > **Don't want to unlock?** On the Nothing Phone (1), the community tool **root-my-nothing** grants **temporary root via the GhostLock bug (CVE-2026-43499)** - KernelSU installs with the bootloader still locked, and everything resets on reboot. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md).
 
 ---
 
 ## Prerequisites
 
-### Critical Requirements
+### Critical requirements
 
 ::: danger BEFORE YOU START
 **Data Wipe:** Unlocking bootloader erases everything including internal storage.
@@ -123,14 +123,14 @@ All Nothing and CMF by Nothing Phone models support bootloader unlocking and roo
 **Glyph Interface:** May not work on some custom ROMs. Test before full switch.
 :::
 
-### Hardware Requirements
+### Hardware requirements
 
 - Nothing Phone device (any model)
 - Quality USB-C cable
 - Computer (Windows, macOS, or Linux)
 - 50%+ battery charge
 
-### Software Requirements
+### Software requirements
 
 **On Computer:**
 
@@ -151,7 +151,7 @@ All Nothing and CMF by Nothing Phone models support bootloader unlocking and roo
 1. **Magisk APK**
    - Download: [Magisk GitHub](https://github.com/topjohnwu/Magisk/releases)
 
-### Device Preparation
+### Device preparation
 
 **Step 1: Enable Developer Options**
 
@@ -175,9 +175,9 @@ adb devices
 
 ---
 
-## Unlock Bootloader
+## Unlock bootloader
 
-### Step 1: Enter Fastboot Mode
+### Step 1: enter fastboot mode
 
 **Method 1: ADB**
 ```bash
@@ -189,7 +189,7 @@ adb reboot bootloader
 2. Hold Volume Down + Power
 3. Release at fastboot screen
 
-### Step 2: Unlock Bootloader
+### Step 2: unlock bootloader
 
 ```bash
 # Verify connection
@@ -209,7 +209,7 @@ fastboot oem unlock
 4. Press Power to confirm
 5. Device wipes and reboots
 
-### Step 3: Complete Setup
+### Step 3: complete setup
 
 After automatic factory reset:
 1. Complete Android setup
@@ -218,9 +218,9 @@ After automatic factory reset:
 
 ---
 
-## Root Installation
+## Root installation
 
-### Determine Correct Image
+### Determine correct image
 
 | Device Generation | Image to Patch |
 |---|---|
@@ -229,7 +229,7 @@ After automatic factory reset:
 
 **Check in Magisk app "Ramdisk" field if unsure.**
 
-### Method 1: Boot Image Patching
+### Method 1: boot image patching
 
 **Step 1: Extract Boot Image**
 
@@ -306,7 +306,7 @@ id
 
 ---
 
-## Post-Root Setup
+## Post-root setup
 
 ### Configure Magisk
 
@@ -321,7 +321,7 @@ id
 - Banking apps
 - Payment apps
 
-### Nothing OS Optimization
+### Nothing os optimization
 
 **Battery Optimization:**
 1. Settings > Battery
@@ -333,7 +333,7 @@ id
 2. Magisk and root apps
 3. Allow background activity
 
-### Recommended Modules
+### Recommended modules
 
 - **Play Integrity Fix** - Banking app compatibility
 - **Shamiko** - Root hiding
@@ -342,9 +342,9 @@ id
 
 ---
 
-## OTA Handling
+## OTA handling
 
-### For A/B Devices (All Nothing Phones)
+### For A/B devices (all Nothing phones)
 
 **Step 1: Download OTA**
 
@@ -367,7 +367,7 @@ Root preserved after update!
 
 <details><summary> Tap to expand common issues and fixes</summary>
 
-### Bootloader Issues
+### Bootloader issues
 
 **OEM Unlocking Greyed Out**
 
@@ -385,7 +385,7 @@ Solutions:
 - Different cable
 - Reinstall drivers
 
-### Installation Issues
+### Installation issues
 
 **Magisk Shows N/A**
 
@@ -404,7 +404,7 @@ fastboot flash boot stock_boot.img
 fastboot reboot
 ```
 
-### Glyph Interface Issues
+### Glyph interface issues
 
 **Glyph Not Working After Root**
 
@@ -417,15 +417,15 @@ Usually continues working with Magisk. If issues:
 
 ---
 
-## Unroot and Restore
+## Unroot and restore
 
-### Remove Root
+### Remove root
 
 ```bash
 # Magisk > Uninstall > Restore Images
 ```
 
-### Flash Stock Firmware
+### Flash stock firmware
 
 Via fastboot:
 ```bash
@@ -435,7 +435,7 @@ fastboot flash init_boot stock_init_boot.img
 fastboot reboot
 ```
 
-### Relock Bootloader
+### Relock bootloader
 
 ::: danger RELOCK WARNING
 Only when completely stock!
@@ -471,9 +471,9 @@ fastboot flashing lock
 
 ---
 
-## Device-Specific Notes
+## Device-specific notes
 
-### Nothing Phone (3) Series
+### Nothing Phone (3) series
 
 **Nothing Phone (3):**
 - Released July 2025
@@ -491,14 +491,14 @@ fastboot flashing lock
 - IP64 water resistance
 - Shared codename: `Asteroids`
 
-### CMF Phone (2) Pro
+### CMF phone (2) pro
 - Released April 2025
 - Dimensity 7300 Pro chipset
 - No Glyph Interface (CMF brand)
 
 ---
 
-## Best Practices
+## Best practices
 
 ### Security
 
@@ -509,7 +509,7 @@ fastboot flashing lock
 
 ---
 
-## Community Resources
+## Community resources
 
 **Official Nothing:**
 - [Nothing Support](https://nothing.tech/support) - Official site
@@ -523,7 +523,7 @@ fastboot flashing lock
 - [FAQs](../faqs)
 - [Troubleshooting Guide](../troubleshooting) 
 
-### Getting Help
+### Getting help
 
 **Provide:**
 - Exact Nothing Phone model
@@ -534,7 +534,7 @@ fastboot flashing lock
 
 ---
 
-## Next Steps
+## Next steps
 
 **After Rooting:**
 
@@ -549,4 +549,3 @@ fastboot flashing lock
 3. **Explore ROMs:**
    - [Custom ROM Guide](./custom-rom-installation.md)
    - Test Glyph support before switching
-
