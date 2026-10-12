@@ -302,7 +302,7 @@ export default withPwa(defineConfig({
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/images/apple-touch-icon.png' }],
 
 
-    ['meta', { media: '(prefers-color-scheme: light)', name: 'theme-color', content: '#ffffff' }],
+    ['meta', { media: '(prefers-color-scheme: light)', name: 'theme-color', content: '#fafafa' }],
     ['meta', { media: '(prefers-color-scheme: dark)', name: 'theme-color', content: '#0b0b0c' }],
     ['meta', { name: 'color-scheme', content: 'light dark' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, viewport-fit=cover' }],

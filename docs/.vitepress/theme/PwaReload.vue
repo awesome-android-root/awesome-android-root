@@ -56,13 +56,13 @@ onUnmounted(() => {
 }
 
 .pwa-toast--offline {
-  background: #ff6b6b;
-  color: white;
-  border-color: #ff5252;
+  background: var(--warn-soft);
+  color: var(--warn);
+  border-color: var(--warn);
 }
 
 .pwa-toast--offline .pwa-toast__icon {
-  color: white;
+  color: var(--warn);
 }
 
 .pwa-toast__content {
@@ -84,15 +84,15 @@ onUnmounted(() => {
 }
 
 .pwa-toast--offline .pwa-toast__message {
-  color: white;
+  color: var(--warn);
 }
 
 .pwa-toast__button {
   flex-shrink: 0;
   padding: 4px 12px;
   margin-left: 8px;
-  background: var(--vp-c-brand);
-  color: white;
+  background: var(--vp-c-brand-1);
+  color: var(--brand-contrast);
   border: none;
   border-radius: 4px;
   font-size: 14px;
@@ -147,10 +147,6 @@ onUnmounted(() => {
 .dark .pwa-toast {
   background: var(--vp-c-bg-elv);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-.dark .pwa-toast--offline {
-  background: #c53030;
 }
 
 /* Reduce motion */
