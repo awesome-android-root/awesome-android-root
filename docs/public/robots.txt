@@ -2,8 +2,10 @@
 
 User-agent: *
 Allow: /
-Disallow: /assets/
 Sitemap: https://awesome-android-root.xyz/sitemap.xml
+
+User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 # Search engines
 User-agent: Googlebot
