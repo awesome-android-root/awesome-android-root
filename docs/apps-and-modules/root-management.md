@@ -214,6 +214,7 @@ A feature that lets modules inject code into Android's Zygote process for system
 - **[OnyxZygisk](https://github.com/OnyxZygisk/OnyxZygisk/)** - A ptrace-powered Zygisk implementation with a built-in WebUI, hot-swappable FN modules, and an advanced DenyList. `FOSS` `[M]` `[K]` `[A]`
 - **[ReZygisk](https://github.com/PerformanC/ReZygisk)** A high-performance implementation **entirely rewritten in C**. It introduces **custom linkers** to bypass modern linker-based detections, offering a WebUI for status monitoring and compatibility with Android 15 and 16. `FOSS` `[M]` `[K]` `[A]`
 - **[VexZygisk](https://github.com/Lxiaoyao077/VexZygisk/)** - Standalone implementation of Zygisk for KernelSU and APatch. `FOSS` `[M]` `[K]` `[A]`
+- **[YukiZygisk](https://github.com/Rouyashiki/YukiZygisk)** - A new kernel-level Zygisk implementation designed to explore better, cleaner, and more flexible ways of injecting. `FOSS` `[M]` `[K]` `[A]`
 
 <details><summary><strong>Comparison table</strong></summary><br>
 
