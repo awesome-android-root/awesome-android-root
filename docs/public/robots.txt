@@ -36,9 +36,3 @@ User-agent: Claude-Web
 Allow: /
 
 
-# Block offline download tools
-User-agent: HTTrack
-Disallow: /
-
-User-agent: wget
-Disallow: /
