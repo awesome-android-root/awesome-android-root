@@ -58,6 +58,18 @@ export async function onRequest(context) {
         headers
       })
     }
+
+    const headers = new Headers(markdownResponse.headers)
+    headers.set('Content-Type', 'text/markdown; charset=utf-8')
+    addAcceptVary(headers)
+    for (const header of ['Content-Encoding', 'Content-Length', 'Content-Range', 'ETag', 'Last-Modified', 'Transfer-Encoding']) {
+      headers.delete(header)
+    }
+
+    const body = request.method === 'HEAD'
+      ? null
+      : '# Page not found\n\nThe requested page could not be found. Browse the [rooting guides](/rooting-guides/), [sitemap](/sitemap.xml), or [home page](/).\n'
+    return new Response(body, { status: 404, statusText: 'Not Found', headers })
   }
 
   return responseWithAcceptVary(await context.next())
