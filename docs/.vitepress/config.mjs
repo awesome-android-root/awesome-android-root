@@ -297,7 +297,8 @@ export default withPwa(defineConfig({
     ['meta', { name: 'mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }],
 
-    // Sitemap
+    // Sitemap & robots.txt
+    ['link', { rel: 'robots', type: 'text/plain', href: '/robots.txt' }],
     ['link', { rel: 'sitemap', type: 'application/xml', href: '/sitemap.xml' }],
 
     // web manifest 
