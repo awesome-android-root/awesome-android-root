@@ -127,7 +127,7 @@ export default withPwa(defineConfig({
 
   vite: {
     plugins: [
-      llmstxt({ sidebar: llmsSidebar }),
+      llmstxt({ sidebar: llmsSidebar, excludeIndexPage: false }),
       systemFontsPlugin
     ],
     build: {
