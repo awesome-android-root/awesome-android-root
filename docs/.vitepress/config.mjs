@@ -81,7 +81,21 @@ export default withPwa(defineConfig({
         '@type': 'Organization',
         '@id': `${site}/#organization`,
         name: 'Awesome Android Root',
+        description: 'A community-curated resource for Android rooting guides, troubleshooting, and root apps and modules.',
         url: `${site}/`,
+        contactPoint: [
+          {
+            '@type': 'ContactPoint',
+            contactType: 'general support',
+            url: 'https://github.com/awesome-android-root/awesome-android-root/issues/new'
+          },
+          {
+            '@type': 'ContactPoint',
+            contactType: 'security reports',
+            email: 'security@awesome-android-root.xyz',
+            url: 'https://github.com/awesome-android-root/awesome-android-root/security/advisories/new'
+          }
+        ],
         logo: {
           '@type': 'ImageObject',
           url: `${site}/images/logo.png`,
@@ -394,6 +408,8 @@ export default withPwa(defineConfig({
           { text: 'Contributing', link: '/contributing' },
           { text: 'Legal Disclaimer', link: '/legal-disclaimer' },
           { text: 'About', link: '/about' },
+          { text: 'Contact', link: '/contact' },
+          { text: 'Privacy', link: '/privacy' },
           { text: '⭐ GitHub', link: 'https://github.com/awesome-android-root/awesome-android-root' }
         ],
       },

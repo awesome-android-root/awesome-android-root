@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Android Root Apps, Modules & Rooting Guides
+title: Awesome Android Root | Root Apps, Modules & Guides
 titleTemplate: Awesome Android Root
 description: "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices."
 head:
@@ -123,7 +123,21 @@ head:
             "@type": "Organization",
             "@id": "https://awesome-android-root.xyz/#organization",
             "name": "Awesome Android Root",
+            "description": "A community-curated resource for Android rooting guides, troubleshooting, and root apps and modules.",
             "url": "https://awesome-android-root.xyz/",
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "contactType": "general support",
+                "url": "https://github.com/awesome-android-root/awesome-android-root/issues/new"
+              },
+              {
+                "@type": "ContactPoint",
+                "contactType": "security reports",
+                "email": "security@awesome-android-root.xyz",
+                "url": "https://github.com/awesome-android-root/awesome-android-root/security/advisories/new"
+              }
+            ],
             "logo": {
               "@type": "ImageObject",
               "url": "https://awesome-android-root.xyz/images/logo.png",
