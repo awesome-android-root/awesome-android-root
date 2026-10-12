@@ -1,30 +1,105 @@
 
 :root {
-  --vp-c-default-1: var(--vp-c-gray-1);
-  --vp-c-default-2: var(--vp-c-gray-2);
-  --vp-c-default-3: var(--vp-c-gray-3);
+  color-scheme: light;
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --surface-2: #f4f4f5;
+  --border: #e4e4e7;
+  --text: #18181b;
+  --text-2: #52525b;
+  --text-3: #71717a;
+  --accent: #0a7d3e;
+  --accent-soft: #e7f5ec;
+  --warn: #92400e;
+  --warn-soft: #fef3c7;
+  --brand-contrast: #ffffff;
 
-  --vp-c-default-soft: var(--vp-c-gray-soft);
+  --vp-c-bg: var(--bg);
+  --vp-c-bg-alt: var(--surface);
+  --vp-c-bg-soft: var(--surface-2);
+  --vp-c-bg-mute: var(--surface-2);
+  --vp-c-bg-elv: var(--surface);
+  --vp-c-border: var(--border);
+  --vp-c-divider: var(--border);
+  --vp-c-gutter: var(--border);
+  --vp-c-text-1: var(--text);
+  --vp-c-text-2: var(--text-2);
+  --vp-c-text-3: var(--text-3);
+  --vp-c-default-1: var(--text-2);
+  --vp-c-default-2: var(--surface-2);
+  --vp-c-default-3: var(--border);
+  --vp-c-default-soft: var(--surface-2);
+  --vp-c-brand-1: var(--accent);
+  --vp-c-brand-2: #086b36;
+  --vp-c-brand-3: #075b2f;
+  --vp-c-brand-soft: var(--accent-soft);
 
-  --vp-c-brand-1: var(--vp-c-indigo-1);
-  --vp-c-brand-2: var(--vp-c-indigo-2);
-  --vp-c-brand-3: var(--vp-c-indigo-3);
-  --vp-c-brand-soft: var(--vp-c-indigo-soft);
+  --vp-c-tip-1: var(--accent);
+  --vp-c-tip-2: #086b36;
+  --vp-c-tip-3: #075b2f;
+  --vp-c-tip-soft: var(--accent-soft);
 
-  --vp-c-tip-1: var(--vp-c-brand-1);
-  --vp-c-tip-2: var(--vp-c-brand-2);
-  --vp-c-tip-3: var(--vp-c-brand-3);
-  --vp-c-tip-soft: var(--vp-c-brand-soft);
+  --vp-c-warning-1: var(--warn);
+  --vp-c-warning-2: #78350f;
+  --vp-c-warning-3: #78350f;
+  --vp-c-warning-soft: var(--warn-soft);
 
-  --vp-c-warning-1: var(--vp-c-yellow-1);
-  --vp-c-warning-2: var(--vp-c-yellow-2);
-  --vp-c-warning-3: var(--vp-c-yellow-3);
-  --vp-c-warning-soft: var(--vp-c-yellow-soft);
+  --vp-c-danger-1: var(--warn);
+  --vp-c-danger-2: #78350f;
+  --vp-c-danger-3: #78350f;
+  --vp-c-danger-soft: var(--warn-soft);
+  --vp-nav-bg-color: var(--surface);
+  --vp-nav-home-bg-color: var(--surface);
+  --vp-local-nav-bg-color: var(--surface);
+  --vp-local-nav-divider-color: var(--border);
+  --vp-sidebar-bg-color: var(--surface);
+  --vp-home-hero-name-color: var(--text);
+  --vp-home-hero-name-background: none;
+  --vp-home-hero-image-background-image: none;
+  --vp-code-color: var(--accent);
+  --vp-code-link-color: var(--accent);
+  --vp-code-link-hover-color: var(--vp-c-brand-2);
+  --vp-code-bg: var(--surface-2);
+  --vp-code-block-bg: var(--surface);
+  --vp-code-block-color: var(--text-2);
+  --vp-code-lang-color: var(--text-3);
+  --vp-code-copy-code-bg: var(--surface-2);
+  --vp-code-copy-code-hover-bg: var(--surface);
+  --vp-code-tab-active-bar-color: var(--accent);
+  --vp-local-search-bg: var(--surface);
+  --vp-local-search-result-bg: var(--surface);
+  --vp-local-search-result-border: var(--border);
+  --vp-local-search-result-selected-bg: var(--accent-soft);
+  --vp-local-search-result-selected-border: var(--accent);
+  --vp-local-search-highlight-bg: var(--accent-soft);
+  --vp-local-search-highlight-text: var(--text);
+}
 
-  --vp-c-danger-1: var(--vp-c-red-1);
-  --vp-c-danger-2: var(--vp-c-red-2);
-  --vp-c-danger-3: var(--vp-c-red-3);
-  --vp-c-danger-soft: var(--vp-c-red-soft);
+html.dark {
+  color-scheme: dark;
+  --bg: #0b0b0c;
+  --surface: #111113;
+  --surface-2: #18181b;
+  --border: #26262b;
+  --text: #ececee;
+  --text-2: #a1a1aa;
+  --text-3: #85858e;
+  --accent: #3ddc84;
+  --accent-soft: #0f2a1a;
+  --warn: #fbbf24;
+  --warn-soft: #2a2008;
+  --brand-contrast: #0b0b0c;
+
+  --vp-c-brand-2: #56e594;
+  --vp-c-brand-3: #3ddc84;
+  --vp-c-tip-2: #56e594;
+  --vp-c-tip-3: #3ddc84;
+  --vp-c-warning-2: #fcd34d;
+  --vp-c-warning-3: #fcd34d;
+  --vp-c-danger-1: var(--warn);
+  --vp-c-danger-2: #fcd34d;
+  --vp-c-danger-3: #fcd34d;
+  --vp-c-danger-soft: var(--warn-soft);
 }
 
 /* PWA prompt spacing on small screens */
@@ -45,14 +120,20 @@
 
 :root {
   --vp-button-brand-border: transparent;
-  --vp-button-brand-text: var(--vp-c-white);
+  --vp-button-brand-text: var(--brand-contrast);
   --vp-button-brand-bg: var(--vp-c-brand-3);
   --vp-button-brand-hover-border: transparent;
-  --vp-button-brand-hover-text: var(--vp-c-white);
+  --vp-button-brand-hover-text: var(--brand-contrast);
   --vp-button-brand-hover-bg: var(--vp-c-brand-2);
   --vp-button-brand-active-border: transparent;
-  --vp-button-brand-active-text: var(--vp-c-white);
+  --vp-button-brand-active-text: var(--brand-contrast);
   --vp-button-brand-active-bg: var(--vp-c-brand-1);
+}
+
+html.dark {
+  --vp-button-brand-text: var(--brand-contrast);
+  --vp-button-brand-hover-text: var(--brand-contrast);
+  --vp-button-brand-active-text: var(--brand-contrast);
 }
 
 /**
@@ -60,20 +141,9 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
-    #bd34fe 30%,
-    #41d1ff
-  );
-
-  --vp-home-hero-image-background-image: linear-gradient(
-    -45deg,
-    #bd34fe 50%,
-    #47caff 50%
-  );
-
-  --vp-home-hero-image-filter: blur(32px);
+  --vp-home-hero-name-color: var(--text);
+  --vp-home-hero-name-background: none;
+  --vp-home-hero-image-background-image: none;
 }
 
 @media (min-width: 640px) {
@@ -93,10 +163,14 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-border: var(--accent);
   --vp-custom-block-tip-text: var(--vp-c-text-1);
-  --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
-  --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
+  --vp-custom-block-tip-bg: var(--surface);
+  --vp-custom-block-tip-code-bg: var(--surface-2);
+}
+
+html.dark {
+  --vp-custom-block-tip-border: var(--accent);
 }
 
 
@@ -313,7 +387,6 @@ img {
 .journey-btn:hover {
   background: var(--vp-c-brand-2);
   transform: translateX(2px);
-  box-shadow: 0 4px 12px -2px var(--vp-c-brand-3);
 }
 
 .journey-btn::after {
@@ -624,7 +697,7 @@ margin-bottom: 0.5rem;
   height: 44px;
   border-radius: 50%;
   background: var(--vp-c-brand-3);
-  color: #fff;
+  color: var(--brand-contrast);
   display: flex;
   align-items: center;
   justify-content: center;
