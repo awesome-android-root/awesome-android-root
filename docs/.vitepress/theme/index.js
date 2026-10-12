@@ -4,6 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import PwaReload from './PwaReload.vue'
 import BackToTop from './BackToTop.vue'
+import WebMcp from './WebMcp.vue'
 import StoreLink from './components/StoreLink.vue'
 import CopyOrDownloadAsMarkdownButtons from 'vitepress-plugin-llms/vitepress-components/CopyOrDownloadAsMarkdownButtons.vue'
 
@@ -15,7 +16,8 @@ export default {
     return h(DefaultTheme.Layout, null, {
       'layout-bottom': () => [
         h(PwaReload),
-        h(BackToTop)
+        h(BackToTop),
+        h(WebMcp)
       ]
     })
   },

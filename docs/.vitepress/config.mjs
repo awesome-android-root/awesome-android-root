@@ -131,7 +131,7 @@ export default withPwa(defineConfig({
       systemFontsPlugin
     ],
     build: {
-      chunkSizeWarningLimit: 600,
+      chunkSizeWarningLimit: 1000,
     },
     server: {
       warmup: { clientFiles: ['.vitepress/theme/**/*.{js,ts,vue}'] },
