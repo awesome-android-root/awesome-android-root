@@ -423,7 +423,7 @@ adb reboot
 1. [Custom ROM Installation](./custom-rom-installation.md) - Full system replacement
 2. [Magisk Modules Guide](./magisk-guide.md) - System-level modifications
 3. [KernelSU Guide](./kernelsu-guide.md) - Kernel-based root alternative
-4. [Root Apps Collection](../apps-and-modules/index.md) - 300+ tested apps and modules
+4. [Root Apps Collection](../apps-and-modules/index.md) - 650+ tested apps and modules
 
 ### Stay Updated
 

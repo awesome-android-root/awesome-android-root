@@ -246,6 +246,6 @@ To maintain quality and consistency, please adhere to the following when contrib
 2. **[Android Ad Blocking](./android-adblocking.md)** - Enhance your privacy from the start.
 3. **[Remove Bloatware](./android-apps-debloating.md)** - Clean up your device and improve performance.
 
-**Advanced Users:** Explore our **[300+ Root Apps Collection](../apps-and-modules/index.md)** for the ultimate customization toolkit. Additionally, find detailed, device-specific rooting guides for **[Pixel](../rooting-guides/how-to-root-pixel-phone.md)**, **[Samsung](../rooting-guides/how-to-root-samsung-phone.md)**, **[Xiaomi](../rooting-guides/how-to-root-xiaomi-phone.md)**, and other major brands.
+**Advanced Users:** Explore our **[650+ Root Apps Collection](../apps-and-modules/index.md)** for the ultimate customization toolkit. Additionally, find detailed, device-specific rooting guides for **[Pixel](../rooting-guides/how-to-root-pixel-phone.md)**, **[Samsung](../rooting-guides/how-to-root-samsung-phone.md)**, **[Xiaomi](../rooting-guides/how-to-root-xiaomi-phone.md)**, and other major brands.
 
 ---
