@@ -1,5 +1,12 @@
 
 # -----------------------------------------------------------------------------
+# Homepage discovery links for agents (RFC 8288, RFC 9727 section 3).
+# Comma-separated in one header to avoid duplicate-header handling differences.
+# -----------------------------------------------------------------------------
+/
+  Link: </llms.txt>; rel="api-catalog", </llms.txt>; rel="service-desc", </llms-full.txt>; rel="service-doc", </llms.txt>; rel="describedby"
+
+# -----------------------------------------------------------------------------
 # Service Worker - MUST never be cached by browser or CDN.
 # Without this Cloudflare's default caching breaks SW updates entirely.
 # -----------------------------------------------------------------------------
