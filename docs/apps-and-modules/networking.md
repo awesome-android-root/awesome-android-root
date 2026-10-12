@@ -72,6 +72,7 @@ more), network diagnostics, Wi-Fi & mobile data utilities and Bluetooth & NFC ap
 - **[Hosts Manager Lite](https://play.google.com/store/apps/details?id=awais.hostsmanager.lite)** - Advanced /etc/hosts editor. `Proprietary`
 - **[MagicNet](https://github.com/LIghtJUNction/MagicNet#english-summary)** - Module for device-side traffic governance that enforce network rules below the app layer instead of relying on every app to respect a proxy setting. `FOSS` `[M]` `[K]`
 - **[Magisk LAN Auto Switch](https://github.com/NewFuture/magisk-modules/tree/main/magisk-lan-auto-switch)** - Automatically switch LAN and WiFi based on eth0 connection status. `FOSS` `[M]`
+- **[MultiRoute](https://github.com/Linoleic/MultiRoute)** - An LSPosed module that gives every app its own network channel. `FOSS` `[LSP]`
 - **[Network Utilities](https://play.google.com/store/apps/details?id=com.myprog.netutils)** - Application contains a set of tools for networks diagnostics. `Proprietary`
 - **[SimbaDroid](https://github.com/buttercookie42/SimbaDroid)** - A simple SMB file server for Android. `FOSS` | [🌱](https://f-droid.org/packages/de.buttercookie.simbadroid)
 - **[TCP Optimiser Module](https://github.com/fatalcoder524/TCP_Optimiser_Module)** - Change tcp congestion algorithm based on current active internet type and some network enhancements. `FOSS` `[M]` `[K]`
