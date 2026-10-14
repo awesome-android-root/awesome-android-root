@@ -1,40 +1,13 @@
 # Awesome Android Root - Robots.txt
+# Search engines and AI crawlers are welcome across the whole site.
 
 User-agent: *
 Allow: /
-Sitemap: https://awesome-android-root.xyz/sitemap.xml
-
-User-agent: *
-Content-Signal: search=yes, ai-input=yes, ai-train=no
-
-# Search engines
-User-agent: Googlebot
-Allow: /
+# This repository is MIT licensed, so its content may be used for AI training.
+# The site owner may change ai-train to "no" if that policy changes.
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: Googlebot-Image
 Allow: /images/
 
-User-agent: Bingbot
-Allow: /
-
-# Social media crawlers
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-# AI crawlers - allow for better assistance
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-
+Sitemap: https://awesome-android-root.xyz/sitemap.xml

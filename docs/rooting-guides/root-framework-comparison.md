@@ -3,27 +3,12 @@ layout: doc
 title: Magisk vs KernelSU vs APatch
 description: Detailed comparison of Magisk, KernelSU, and APatch root frameworks with practical recommendations and migration notes.
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/rooting-guides/root-framework-comparison
-  - - meta
-    - property: og:type
-      content: article
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
   - - meta
     - property: og:title
       content: Magisk vs KernelSU vs APatch - Which Root Method is Best in 2026?
   - - meta
     - property: og:description
       content: Practical comparison of Android root frameworks with recommendations, risks, and migration notes.
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/rooting-guides/root-framework-comparison
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:image:secure_url
       content: https://awesome-android-root.xyz/images/og.png
@@ -40,15 +25,6 @@ head:
     - property: og:image:type
       content: image/png
   - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
   - - meta
@@ -57,9 +33,6 @@ head:
   - - meta
     - name: twitter:description
       content: Practical comparison of Android root frameworks with recommendations, risks, and migration notes.
-  - - meta
-    - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Root Framework Comparison - Magisk vs KernelSU vs APatch
@@ -84,12 +57,6 @@ head:
   - - meta
     - property: article:tag
       content: Root Framework Comparison
-  - - meta
-    - property: article:published_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
-    - property: article:modified_time
-      content: 2026-09-27T00:00:00Z
   - - meta
     - name: robots
       content: index, follow

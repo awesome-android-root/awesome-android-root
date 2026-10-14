@@ -1,33 +1,21 @@
 ---
 layout: home
-title: Awesome Android Root | Root Apps, Modules & Guides
+title: Android Root Apps, Modules & Guides | Awesome Android Root
 titleTemplate: Awesome Android Root
-description: "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices."
+description: "Browse 650+ curated Magisk, KernelSU, APatch and LSPosed modules and root apps, plus step-by-step rooting guides, and fixes for Play Integrity and bootloops."
 head:
   - - meta
     - name: robots
       content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
   - - meta
-    - property: og:type
-      content: "website"
-  - - meta
-    - property: og:url
-      content: "https://awesome-android-root.xyz"
-  - - meta
-    - property: og:image
-      content: "https://awesome-android-root.xyz/images/og.png"
-  - - meta
     - property: og:title
-      content: "Android Root Apps, Modules & Rooting Guides | Awesome Android Root"
-  - - meta
-    - property: og:description
-      content: "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices."
+      content: "Android Root Apps, Modules & Guides | Awesome Android Root"
   - - meta
     - property: og:image:secure_url
       content: "https://awesome-android-root.xyz/images/og.png"
   - - meta
     - property: og:image:alt
-      content: "Android Root Apps, Modules & Rooting Guides | Awesome Android Root"
+      content: "Android Root Apps, Modules & Guides | Awesome Android Root"
   - - meta
     - property: og:image:width
       content: "1200"
@@ -38,134 +26,18 @@ head:
     - property: og:image:type
       content: "image/png"
   - - meta
-    - property: og:site_name
-      content: "Awesome Android Root"
-  - - meta
-    - name: twitter:card
-      content: "summary_large_image"
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
     - name: twitter:title
-      content: "Android Root Apps, Modules & Rooting Guides | Awesome Android Root"
-  - - meta
-    - name: twitter:description
-      content: "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices."
-  - - meta
-    - name: twitter:image
-      content: "https://awesome-android-root.xyz/images/og.png"
+      content: "Android Root Apps, Modules & Guides | Awesome Android Root"
   - - meta
     - name: twitter:image:alt
-      content: "Android Root Apps, Modules & Rooting Guides | Awesome Android Root"
-  - - meta
-    - property: og:locale
-      content: "en_US"
-  - - meta
-    - property: og:updated_time
-      content: "2026-09-13T00:00:00Z"
-  - - link
-    - rel: canonical
-      href: "https://awesome-android-root.xyz"
+      content: "Android Root Apps, Modules & Guides | Awesome Android Root"
   - - link
     - rel: prefetch
       href: "/apps-and-modules/"
-  - - script
-    - type: application/ld+json
-    - |
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebSite",
-            "@id": "https://awesome-android-root.xyz/#website",
-            "name": "Awesome Android Root",
-            "alternateName": "Ultimate Android Rooting Hub",
-            "description": "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices.",
-            "url": "https://awesome-android-root.xyz/",
-            "inLanguage": "en-US",
-            "publisher": {
-              "@id": "https://awesome-android-root.xyz/#organization"
-            },
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": {
-                "@type": "EntryPoint",
-                "urlTemplate": "https://awesome-android-root.xyz/search?q={search_term_string}"
-              },
-              "query-input": "required name=search_term_string"
-            },
-            "sameAs": [
-              "https://github.com/awesome-android-root",
-              "https://x.com/awsm_and_root"
-            ]
-          },
-          {
-            "@type": ["WebPage", "CollectionPage"],
-            "@id": "https://awesome-android-root.xyz/#webpage",
-            "name": "Android Root Apps, Modules & Rooting Guides | Awesome Android Root",
-            "description": "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices.",
-            "url": "https://awesome-android-root.xyz/",
-            "datePublished": "2025-05-25T00:00:00Z",
-            "dateModified": "2026-06-26T00:00:00Z",
-            "inLanguage": "en-US",
-            "isPartOf": {
-              "@id": "https://awesome-android-root.xyz/#website"
-            },
-            "image": {
-              "@type": "ImageObject",
-              "url": "https://awesome-android-root.xyz/images/og.png",
-              "width": 1200,
-              "height": 630
-            }
-          },
-          {
-            "@type": "Organization",
-            "@id": "https://awesome-android-root.xyz/#organization",
-            "name": "Awesome Android Root",
-            "description": "A community-curated resource for Android rooting guides, troubleshooting, and root apps and modules.",
-            "url": "https://awesome-android-root.xyz/",
-            "contactPoint": [
-              {
-                "@type": "ContactPoint",
-                "contactType": "general support",
-                "url": "https://github.com/awesome-android-root/awesome-android-root/issues/new"
-              },
-              {
-                "@type": "ContactPoint",
-                "contactType": "security reports",
-                "email": "security@awesome-android-root.xyz",
-                "url": "https://github.com/awesome-android-root/awesome-android-root/security/advisories/new"
-              }
-            ],
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://awesome-android-root.xyz/images/logo.png",
-              "width": 330,
-              "height": 330
-            },
-            "sameAs": [
-              "https://github.com/awesome-android-root",
-              "https://x.com/awsm_and_root"
-            ]
-          },
-          {
-            "@type": "SiteNavigationElement",
-            "name": "Primary Navigation",
-            "about": "Top-level sections of Awesome Android Root",
-            "url": "https://awesome-android-root.xyz/",
-            "hasPart": [
-              { "@type": "WebPage", "name": "Root Apps", "url": "https://awesome-android-root.xyz/apps-and-modules/" },
-              { "@type": "WebPage", "name": "Root Guides", "url": "https://awesome-android-root.xyz/rooting-guides/" },
-              { "@type": "WebPage", "name": "Resources", "url": "https://awesome-android-root.xyz/resources" },
-              { "@type": "WebPage", "name": "FAQs", "url": "https://awesome-android-root.xyz/faqs" }
-            ]
-          }
-        ]
-      }
 
 hero:
   name: "Awesome Android Root"
+  text: "Android Root Apps, Modules & Rooting Guides"
   tagline: "Explore 650+ root apps and modules, step-by-step rooting guides, and practical troubleshooting for Android power users."
   image:
     light: /images/logo.svg
@@ -252,6 +124,16 @@ features:
     title: Development & Automation
     details: "Terminal, ADB, Linux environments, automation, and hardware tools."
     link: /apps-and-modules/development
+
+  - icon: 🎵
+    title: Audio
+    details: "Audio effects, enhancement, routing and device-specific audio tools."
+    link: /apps-and-modules/audio
+
+  - icon: 🧰
+    title: General Utilities
+    details: "Sync, power, sharing and practical root utilities."
+    link: /apps-and-modules/utilities
 ---
 
 <div class="vp-doc">

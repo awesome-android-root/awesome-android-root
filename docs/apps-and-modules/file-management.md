@@ -1,11 +1,8 @@
 ---
 layout: doc
-title: "File Management"
-description: "Root file managers, storage cleaners, partition tools, and file utilities for rooted Android power users."
+title: Root File Managers for Android
+description: Browse root file managers, storage cleaners and partition tools for rooted Android, with apps and modules for managing files, SD cards and storage.
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/apps-and-modules/file-management
   - - meta
     - name: robots
       content: index, follow
@@ -13,44 +10,11 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - property: og:type
-      content: article
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - property: og:title
-      content: "File Management | Awesome Android Root"
-  - - meta
-    - property: og:description
-      content: "Root file managers, storage cleaners, partition tools, and file utilities for rooted Android power users."
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/apps-and-modules/file-management
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
-    - name: twitter:title
-      content: "File Management | Awesome Android Root"
-  - - meta
     - name: twitter:description
-      content: "File management for rooted Android: file managers with root access, storage cleaning apps and Magisk/KernelSU modules, and file & partition tools for power users."
-  - - meta
-    - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og.png
+      content: Browse root file managers, storage cleaners and partition tools for rooted Android, with apps and modules for managing files, SD cards and storage.
 ---
 
-# File Management
+# Root File Managers for Android
 
 **File management** for rooted Android devices - file managers with full root access, storage cleaning apps and
 Magisk/KernelSU modules, and file & partition tools for power users.

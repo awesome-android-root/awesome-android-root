@@ -3,12 +3,6 @@ layout: doc
 title: Complete Custom ROM Installation Guide
 description: "Master guide to install custom Android ROMs - LineageOS, GrapheneOS, Pixel Experience, CalyxOS. Transform your device with privacy-focused alternatives."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/rooting-guides/custom-rom-installation
-  - - meta
-    - property: og:type
-      content: article
   - - meta
     - property: og:title
       content: Complete Custom ROM Installation Guide - All Android Alternatives
@@ -16,29 +10,14 @@ head:
     - property: og:description
       content: Install custom Android ROMs with our comprehensive guide covering LineageOS, GrapheneOS, Pixel Experience and privacy-focused alternatives.
   - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/rooting-guides/custom-rom-installation
-  - - meta
     - property: og:image
       content: https://awesome-android-root.xyz/images/og/custom-rom.png
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
   - - meta
     - name: twitter:title
       content: Complete Custom ROM Installation Guide - Android Alternatives
   - - meta
     - name: twitter:description
       content: Install custom Android ROMs like LineageOS, GrapheneOS, Pixel Experience with step-by-step guide.
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
   - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
@@ -69,12 +48,6 @@ head:
   - - meta
     - property: article:tag
       content: Android Privacy
-  - - meta
-    - property: article:published_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
-    - property: article:modified_time
-      content: 2026-09-27T00:00:00Z
   - - meta
     - name: robots
       content: index, follow

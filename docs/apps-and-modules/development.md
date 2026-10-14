@@ -1,11 +1,8 @@
 ---
 layout: doc
-title: "Development & Automation"
-description: "ADB, shells, automation, Linux environments, and hardware tools for developers and advanced rooted Android users."
+title: "Terminal & ADB Tools for Root"
+description: Browse terminals, ADB and debugging tools, developer utilities, Linux environments, automation apps, scripting modules and hardware sensor tools for root.
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/apps-and-modules/development
   - - meta
     - name: robots
       content: index, follow
@@ -13,44 +10,11 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - property: og:type
-      content: article
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - property: og:title
-      content: "Development & Automation | Awesome Android Root"
-  - - meta
-    - property: og:description
-      content: "ADB, shells, automation, Linux environments, and hardware tools for developers and advanced rooted Android users."
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/apps-and-modules/development
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
-    - name: twitter:title
-      content: "Development & Automation | Awesome Android Root"
-  - - meta
     - name: twitter:description
-      content: "Development, automation and power-user tools for rooted Android: terminal & shell, ADB and debugging tools, developer utilities, Linux environments (chroot/containers), automation apps and hardware/sensor tools."
-  - - meta
-    - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og.png
+      content: Browse terminals, ADB and debugging tools, developer utilities, Linux environments, automation apps, scripting modules and hardware sensor tools for root.
 ---
 
-# Development & Automation
+# Terminal & ADB Tools for Root
 
 **Development & Automation** tools for rooted Android devices - terminal & shell environments (**Termux**),
 **ADB & debugging** helpers, developer tools (**Shizuku** and friends), full **Linux environments**,

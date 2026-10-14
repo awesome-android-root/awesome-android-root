@@ -3,12 +3,6 @@ layout: doc
 title: Google Pixel Root Guide
 description: Complete guide to root Google Pixel devices. All models from Pixel 1 to Pixel 10 Pro. Bootloader unlock, Magisk installation, and OTA handling.
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/rooting-guides/how-to-root-pixel-phone
-  - - meta
-    - property: og:type
-      content: article
   - - meta
     - property: og:title
       content: Google Pixel Root Guide
@@ -16,17 +10,8 @@ head:
     - property: og:description
       content: Root any Google Pixel device with comprehensive guide covering bootloader unlock, factory images, and Magisk installation.
   - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/rooting-guides/how-to-root-pixel-phone
-  - - meta
     - property: og:image
       content: https://awesome-android-root.xyz/images/og/google-pixel.png
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
   - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
@@ -63,12 +48,6 @@ head:
   - - meta
     - property: article:tag
       content: Android Rooting
-  - - meta
-    - property: article:published_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
-    - property: article:modified_time
-      content: 2026-09-27T00:00:00Z
   - - meta
     - name: robots
       content: index, follow
@@ -375,11 +354,8 @@ fastboot reboot
 ```
 
 ### Play Integrity Fails
-1. Enable Zygisk
-2. Configure DenyList
-3. Install Play Integrity Fix (PIF)
-4. Hide Magisk app
-5. Clear Google Play Services data
+Follow the module stack and configuration order in
+[Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps).
 
 ### Lost Root After OTA
 - Extract new boot image

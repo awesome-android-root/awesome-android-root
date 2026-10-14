@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: blacksmith-4vcpu-ubuntu-2404
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          # lastUpdated needs the full history
+          fetch-depth: 0
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version-file: .bun-version
+
+      - name: Cache dependencies
+        uses: actions/cache@v6
+        with:
+          path: |
+            ~/.bun/install/cache
+            node_modules
+          key: bun-${{ runner.os }}-${{ hashFiles('package.json') }}
+          restore-keys: bun-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Check internal links
+        run: bun run check:links
+
+      - name: Build documentation
+        run: bun run docs:build
+
+      # Reports entry problems but does not block the PR. The 7 outstanding
+      # issues are pre-existing curation debt tracked in the SEO PR. Flip this
+      # to blocking once they are cleaned up.
+      - name: Lint entries
+        continue-on-error: true
+        run: bun run lint:entries
+
+      - name: Check entry counts
+        run: bun run check:counts
