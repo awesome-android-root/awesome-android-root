@@ -137,7 +137,7 @@ features:
 ---
 
 <script setup>
-import { data as githubStats } from './.vitepress/github-stats.data.js'
+import { data as githubStats } from './.vitepress/github-stats.data.mjs'
 
 const { starsLabel } = githubStats
 </script>
