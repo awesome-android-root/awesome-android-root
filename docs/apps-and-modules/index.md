@@ -4,9 +4,6 @@ title: Best Android Root Apps & Modules
 description: Browse a curated directory of 650+ Android root apps, Magisk, KernelSU, APatch and LSPosed modules, organized by use case with source and compatibility labels.
 head:
   - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/apps-and-modules/
-  - - link
     - rel: alternate
       hreflang: en
       href: https://awesome-android-root.xyz/apps-and-modules/
@@ -26,9 +23,6 @@ head:
   - - meta
     - property: og:description
       content: Browse 650+ curated Android root apps, Magisk, KernelSU, APatch and LSPosed modules organized by use case, framework and source.
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/apps-and-modules/
   - - meta
     - property: og:image:secure_url
       content: https://awesome-android-root.xyz/images/og.png

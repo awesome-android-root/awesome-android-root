@@ -102,9 +102,10 @@ def main():
             path, _, anchor = dest.partition('#')
             target = find_target(path, dirn)
             if not target:
-                # allow public assets referenced through /images or plain paths
+                # allow public assets referenced through /images or plain paths,
+                # plus build-generated files such as the VitePress sitemap
                 pub = os.path.join(DOCS, 'public', path.lstrip('/'))
-                if os.path.isfile(pub) or path.startswith('/images/'):
+                if os.path.isfile(pub) or path.startswith('/images/') or path == '/sitemap.xml':
                     continue
                 errors.append(f'{rel}: broken link "{dest}" ({label})')
                 continue
