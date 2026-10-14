@@ -738,7 +738,6 @@ Look for "Device unlocked: true"
 - Reinstall USB drivers (Windows)
 - Try different USB port
 - Use USB 2.0 port instead of USB 3.0
-- Disable antivirus temporarily
 - Run command prompt as administrator (Windows)
 
 ### Unlock Process Interrupted

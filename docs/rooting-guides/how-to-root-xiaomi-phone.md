@@ -86,8 +86,6 @@ Xiaomi is among the strictest OEMs for unlocking/root.
 
 ## Device Compatibility
 
-### Device Compatibility
-
 Most Xiaomi/Redmi/POCO devices with unlockable bootloaders can be rooted. Check [XDA Forums](https://forum.xda-developers.com/) for your specific model's status.
 
 ### Incompatible / Restricted Devices
