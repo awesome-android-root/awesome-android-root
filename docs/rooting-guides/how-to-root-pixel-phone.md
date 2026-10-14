@@ -354,11 +354,8 @@ fastboot reboot
 ```
 
 ### Play Integrity Fails
-1. Enable Zygisk
-2. Configure DenyList
-3. Install Play Integrity Fix (PIF)
-4. Hide Magisk app
-5. Clear Google Play Services data
+Follow the module stack and configuration order in
+[Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps).
 
 ### Lost Root After OTA
 - Extract new boot image

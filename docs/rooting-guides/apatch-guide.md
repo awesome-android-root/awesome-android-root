@@ -363,6 +363,8 @@ Play Integrity behavior changes frequently server-side. There is no permanent by
 - Keep root access denied for sensitive apps
 - Use minimum module set required for your use case
 - Re-test after every OTA or major app update
+- Follow the module stack in
+  [Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps)
 
 ---
 
