@@ -3,9 +3,6 @@ layout: doc
 title: "GhostLock: Root Android Without Unlocking the Bootloader"
 description: "Can Android be rooted without unlocking the bootloader? Learn how GhostLock provides temporary root, its device limits, reboot behavior and security risks."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/rooting-guides/root-without-unlocking-bootloader
   - - meta
     - name: author
       content: Awesome Android Root
@@ -13,26 +10,11 @@ head:
     - name: robots
       content: index, follow
   - - meta
-    - property: og:type
-      content: article
-  - - meta
     - property: og:title
       content: "GhostLock: Root Android Without Unlocking the Bootloader"
   - - meta
     - property: og:description
       content: "Can Android be rooted without unlocking the bootloader? GhostLock can provide temporary root on some vulnerable builds, with clear limits and no persistence after reboot."
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/rooting-guides/root-without-unlocking-bootloader
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
   - - meta
     - name: twitter:title
       content: "GhostLock: Root Android Without Unlocking the Bootloader"

@@ -3,12 +3,6 @@ layout: doc
 title: "KernelSU Root Guide: Installation, Modules & Troubleshooting"
 description: "Learn KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles and troubleshooting for supported Android devices."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/rooting-guides/kernelsu-guide
-  - - meta
-    - property: og:type
-      content: article
   - - meta
     - property: og:title
       content: "KernelSU Root Guide: Installation, Modules & Troubleshooting"
@@ -16,14 +10,8 @@ head:
     - property: og:description
       content: Learn KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles and troubleshooting.
   - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/rooting-guides/kernelsu-guide
-  - - meta
     - property: og:image
       content: https://awesome-android-root.xyz/images/og/kernelsu-guide.png
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
   - - meta
     - name: twitter:title
       content: "KernelSU Root Guide: Installation, Modules & Troubleshooting"
@@ -75,12 +63,6 @@ head:
   - - meta
     - property: article:tag
       content: Android Customization
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
   - - meta
     - name: twitter:creator
       content: "@awsm_and_root"

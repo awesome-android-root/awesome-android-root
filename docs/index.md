@@ -8,20 +8,8 @@ head:
     - name: robots
       content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
   - - meta
-    - property: og:type
-      content: "website"
-  - - meta
-    - property: og:url
-      content: "https://awesome-android-root.xyz"
-  - - meta
-    - property: og:image
-      content: "https://awesome-android-root.xyz/images/og.png"
-  - - meta
     - property: og:title
       content: "Android Root Apps, Modules & Rooting Guides | Awesome Android Root"
-  - - meta
-    - property: og:description
-      content: "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices."
   - - meta
     - property: og:image:secure_url
       content: "https://awesome-android-root.xyz/images/og.png"
@@ -38,35 +26,14 @@ head:
     - property: og:image:type
       content: "image/png"
   - - meta
-    - property: og:site_name
-      content: "Awesome Android Root"
-  - - meta
-    - name: twitter:card
-      content: "summary_large_image"
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
     - name: twitter:title
       content: "Android Root Apps, Modules & Rooting Guides | Awesome Android Root"
-  - - meta
-    - name: twitter:description
-      content: "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices."
-  - - meta
-    - name: twitter:image
-      content: "https://awesome-android-root.xyz/images/og.png"
   - - meta
     - name: twitter:image:alt
       content: "Android Root Apps, Modules & Rooting Guides | Awesome Android Root"
   - - meta
-    - property: og:locale
-      content: "en_US"
-  - - meta
     - property: og:updated_time
       content: "2026-09-13T00:00:00Z"
-  - - link
-    - rel: canonical
-      href: "https://awesome-android-root.xyz"
   - - link
     - rel: prefetch
       href: "/apps-and-modules/"

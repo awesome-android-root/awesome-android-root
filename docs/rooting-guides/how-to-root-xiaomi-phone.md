@@ -3,12 +3,6 @@ layout: doc
 title: Xiaomi/Redmi/POCO Root Guide
 description: Complete guide to root Xiaomi, Redmi, and POCO devices. Navigate HyperOS/MIUI, Mi Unlock Tool, anti-rollback protection, and Magisk installation.
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/rooting-guides/how-to-root-xiaomi-phone
-  - - meta
-    - property: og:type
-      content: article
   - - meta
     - property: og:title
       content: Complete Xiaomi Rooting Guide - All Models Supported
@@ -16,23 +10,14 @@ head:
     - property: og:description
       content: Root any Xiaomi device with our comprehensive guide covering Mi Unlock Tool, bootloader unlock and Magisk installation for MIUI/HyperOS.
   - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/rooting-guides/how-to-root-xiaomi-phone
-  - - meta
     - property: og:image
       content: https://awesome-android-root.xyz/images/og/xiaomi.png
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
   - - meta
     - name: twitter:title
       content: Complete Xiaomi Rooting Guide - All Models
   - - meta
     - name: twitter:description
       content: Root any Xiaomi device with Mi Unlock Tool and Magisk installation guide.
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
   - - meta
     - name: twitter:creator
       content: "@awsm_and_root"

@@ -7,26 +7,11 @@ head:
     - rel: canonical
       href: https://awesome-android-root.xyz/rooting-guides/  
   - - meta
-    - property: og:type
-      content: article
-  - - meta
-    - property: og:title
-      content: Android Rooting Guide | Awesome Android Root
-  - - meta
     - property: og:description
       content: The ultimate Android rooting guide covering Magisk, KernelSU, APatch installation with device-specific tutorials for Pixel, Samsung, Xiaomi, OnePlus & more.
   - - meta
     - property: og:url
       content: https://awesome-android-root.xyz/rooting-guides/  
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png  
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:title
-      content: Android Rooting Guide | Awesome Android Root
   - - meta
     - name: twitter:description
       content: Complete Android rooting tutorial with Magisk, KernelSU, APatch guides and device-specific instructions for safe rooting. Includes Vector/LSPosed framework & Play Integrity bypass.

@@ -3,9 +3,6 @@ layout: doc
 title: "System"
 description: "System tweaks, OEM UI mods, boot tools, app management, permissions, and diagnostics for rooted Android devices."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/apps-and-modules/system
   - - meta
     - name: robots
       content: index, follow
@@ -13,41 +10,8 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - property: og:type
-      content: article
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - property: og:title
-      content: "System | Awesome Android Root"
-  - - meta
-    - property: og:description
-      content: "System tweaks, OEM UI mods, boot tools, app management, permissions, and diagnostics for rooted Android devices."
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/apps-and-modules/system
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
-    - name: twitter:title
-      content: "System | Awesome Android Root"
-  - - meta
     - name: twitter:description
       content: "System-level tools for rooted Android: system tweaks and VBMeta modules, System UI & OEM framework customization (AOSP, HyperOS, One UI, OxygenOS and more), boot & startup, app & package management, permissions and system diagnostics."
-  - - meta
-    - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og.png
 ---
 
 # System

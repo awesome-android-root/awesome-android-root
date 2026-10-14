@@ -3,9 +3,6 @@ layout: doc
 title: About Awesome Android Root
 description: "Learn about the Awesome Android Root project, its editorial approach, and the Android rooting resources it maintains."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/about
   - - meta
     - property: og:type
       content: website
@@ -16,29 +13,8 @@ head:
     - property: og:description
       content: Learn how the Awesome Android Root project curates Android root apps, modules, guides and troubleshooting resources.
   - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/about
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
-  - - meta
-    - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
       content: About Awesome Android Root - Ultimate Rooting Resource

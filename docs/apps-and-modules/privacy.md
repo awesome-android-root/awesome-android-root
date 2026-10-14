@@ -3,9 +3,6 @@ layout: doc
 title: "Privacy"
 description: "Privacy apps and modules for hiding files, spoofing IDs, controlling app data access, and reducing tracking on rooted Android."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/apps-and-modules/privacy
   - - meta
     - name: robots
       content: index, follow
@@ -13,41 +10,8 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - property: og:type
-      content: article
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - property: og:title
-      content: "Privacy | Awesome Android Root"
-  - - meta
-    - property: og:description
-      content: "Privacy apps and modules for hiding files, spoofing IDs, controlling app data access, and reducing tracking on rooted Android."
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/apps-and-modules/privacy
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
-    - name: twitter:title
-      content: "Privacy | Awesome Android Root"
-  - - meta
     - name: twitter:description
       content: "Privacy tools for rooted Android devices: privacy apps, Magisk modules, KernelSU modules and LSPosed modules for controlling data access, hiding private files, spoofing device ID and location, and isolating apps."
-  - - meta
-    - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og.png
 ---
 
 # Privacy

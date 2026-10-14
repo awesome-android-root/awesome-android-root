@@ -10,35 +10,14 @@ head:
     - property: og:type
       content: website
   - - meta
-    - property: og:title
-      content: Android General Guides & Tutorials | Awesome Android Root
-  - - meta
     - property: og:description
       content: Master Android with comprehensive tutorials covering ad blocking, app debloating, privacy enhancement, performance tuning, and customization. Expert guides for all skill levels.
   - - meta
     - property: og:url
       content: https://awesome-android-root.xyz/general-guides/  
   - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png  
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
-  - - meta
-    - name: twitter:title
-      content: Android General Guides & Tutorials | Awesome Android Root
   - - meta
     - name: twitter:description
       content: Master Android with expert tutorials covering ad blocking, debloating, privacy, optimization, and customization for rooted and stock devices.

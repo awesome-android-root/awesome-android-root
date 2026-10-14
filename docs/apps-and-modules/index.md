@@ -24,20 +24,11 @@ head:
     - property: og:type
       content: website
   - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - property: og:title
-      content: Best Android Root Apps & Modules | Awesome Android Root
-  - - meta
     - property: og:description
       content: Browse 650+ curated Android root apps, Magisk, KernelSU, APatch and LSPosed modules organized by use case, framework and source.
   - - meta
     - property: og:url
       content: https://awesome-android-root.xyz/apps-and-modules/
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:image:secure_url
       content: https://awesome-android-root.xyz/images/og.png
@@ -54,23 +45,8 @@ head:
     - property: og:image:type
       content: image/png
   - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
-    - name: twitter:title
-      content: Best Android Root Apps & Modules | Awesome Android Root
-  - - meta
     - name: twitter:description
       content: Browse 650+ curated Android root apps and modules organized by use case and root framework.
-  - - meta
-    - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: robots
       content: index, follow, max-image-preview:large

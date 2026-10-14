@@ -3,12 +3,6 @@ layout: doc
 title: Complete OnePlus Rooting Guide
 description: "Master guide to root all OnePlus devices - OnePlus 15, 13, 12, 11, 10, Nord series with bootloader unlock and Magisk installation for OxygenOS."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/rooting-guides/how-to-root-oneplus-phone
-  - - meta
-    - property: og:type
-      content: article
   - - meta
     - property: og:title
       content: Complete OnePlus Rooting Guide - All Models Supported
@@ -16,23 +10,14 @@ head:
     - property: og:description
       content: Root any OnePlus device with our comprehensive guide covering bootloader unlock, MSM tool, custom recovery and Magisk installation for OxygenOS.
   - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/rooting-guides/how-to-root-oneplus-phone
-  - - meta
     - property: og:image
       content: https://awesome-android-root.xyz/images/og/oneplus.png
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
   - - meta
     - name: twitter:title
       content: Complete OnePlus Rooting Guide - All Models
   - - meta
     - name: twitter:description
       content: Root any OnePlus phone with bootloader unlock and Magisk installation guide.
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
   - - meta
     - name: twitter:creator
       content: "@awsm_and_root"

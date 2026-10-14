@@ -3,51 +3,12 @@ layout: doc
 title: "Backup & Restore"
 description: "Backup and restore apps for rooted Android: full app+data backups, cloud backup, nandroid and partition images and data recovery tools."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/apps-and-modules/backup
   - - meta
     - name: robots
       content: index, follow
   - - meta
     - name: author
       content: Awesome Android Root
-  - - meta
-    - property: og:type
-      content: article
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - property: og:title
-      content: "Backup & Restore | Awesome Android Root"
-  - - meta
-    - property: og:description
-      content: "Backup and restore apps for rooted Android: full app+data backups, cloud backup, nandroid and partition images and data recovery tools."
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/apps-and-modules/backup
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
-    - name: twitter:title
-      content: "Backup & Restore | Awesome Android Root"
-  - - meta
-    - name: twitter:description
-      content: "Backup and restore apps for rooted Android: full app+data backups, cloud backup, nandroid and partition images and data recovery tools."
-  - - meta
-    - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og.png
 ---
 
 # Backup & Restore

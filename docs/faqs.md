@@ -3,36 +3,12 @@ layout: doc
 title: Android Rooting FAQ & Troubleshooting
 description: "Complete Android rooting FAQ with step-by-step solutions and emergency fixes for beginners and experts. Updated for Android 14/15 in 2026."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/faqs
-  - - meta
-    - property: og:type
-      content: article
   - - meta
     - property: og:title
       content: Android Rooting FAQ & Troubleshooting Guide 2026 - Complete Solutions
   - - meta
     - property: og:description
       content: Complete Android rooting FAQ with emergency fixes, app compatibility tips, and troubleshooting guide for beginners and experts. Updated for 2026 with latest methods.
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/faqs
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
   - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
@@ -42,9 +18,6 @@ head:
   - - meta
     - name: twitter:description
       content: Complete FAQ and troubleshooting solutions for Android rooting with emergency fixes and app compatibility tips.
-  - - meta
-    - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Android Rooting FAQ & Troubleshooting Guide 2026

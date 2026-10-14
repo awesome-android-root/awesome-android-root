@@ -3,12 +3,6 @@ layout: doc
 title: Google Pixel Root Guide
 description: Complete guide to root Google Pixel devices. All models from Pixel 1 to Pixel 10 Pro. Bootloader unlock, Magisk installation, and OTA handling.
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/rooting-guides/how-to-root-pixel-phone
-  - - meta
-    - property: og:type
-      content: article
   - - meta
     - property: og:title
       content: Google Pixel Root Guide
@@ -16,17 +10,8 @@ head:
     - property: og:description
       content: Root any Google Pixel device with comprehensive guide covering bootloader unlock, factory images, and Magisk installation.
   - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/rooting-guides/how-to-root-pixel-phone
-  - - meta
     - property: og:image
       content: https://awesome-android-root.xyz/images/og/google-pixel.png
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
   - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
