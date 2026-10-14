@@ -132,11 +132,32 @@ export default withPwa(defineConfig({
       }
     ]
 
-    return [[
-      'script',
-      { type: 'application/ld+json' },
-      JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })
-    ]]
+    const dateTags = []
+    if (pageData.lastUpdated) {
+      dateTags.push([
+        'meta',
+        { property: 'article:modified_time', content: new Date(pageData.lastUpdated).toISOString() }
+      ])
+    }
+    const publishedDate = pageData.frontmatter?.date
+    if (publishedDate) {
+      const published = new Date(publishedDate)
+      if (!Number.isNaN(published.getTime())) {
+        dateTags.push([
+          'meta',
+          { property: 'article:published_time', content: published.toISOString() }
+        ])
+      }
+    }
+
+    return [
+      [
+        'script',
+        { type: 'application/ld+json' },
+        JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })
+      ],
+      ...dateTags
+    ]
   },
 
   vite: {
