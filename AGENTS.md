@@ -127,7 +127,7 @@ bun run docs:build
 
 For Cloudflare Pages, use `bun run docs:build` as the build command and
 `docs/.vitepress/dist` as the output directory. Pin the build environment to
-Bun 1.4.2 and Node.js 22 or newer.
+Bun 1.4.3 and Node.js 24 or newer.
 
 For app/module additions or reordering, also run when relevant:
 
