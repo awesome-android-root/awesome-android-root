@@ -1,14 +1,23 @@
 #!/usr/bin/env python3
-"""Validate internal markdown links & anchors across docs/.
+"""Validate markdown links & anchors across docs/.
 
-Uses VitePress' exact slugify algorithm (from vitepress dist) so heading
-anchors are resolved the same way the site renders them.
+By default only internal links and anchors are checked, using VitePress' exact
+slugify algorithm (from vitepress dist) so heading anchors are resolved the same
+way the site renders them.
+
+With --external every external http(s) URL in the docs is also requested. The
+exit code is 1 when any problem was found, so the weekly workflow can turn the
+output into an issue instead of failing a pull request.
 """
+import argparse
 import glob
 import os
 import re
 import sys
 import unicodedata
+from concurrent.futures import ThreadPoolExecutor
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(ROOT, 'docs')
@@ -79,7 +88,52 @@ def find_target(path, dirn):
     return None
 
 
+def collect_external_urls():
+    """Map each external http(s) URL to the places it is referenced from."""
+    urls = {}
+    for f in sorted(glob.glob(os.path.join(DOCS, '**', '*.md'), recursive=True)):
+        rel = os.path.relpath(f, DOCS).replace(os.sep, '/')
+        text = strip_code(open(f, encoding='utf-8').read())
+        for m in re.finditer(r'https?://[^\s<>()\[\]"\'`]+', text):
+            url = m.group(0).rstrip('.,;:')
+            urls.setdefault(url, set()).add(rel)
+    return urls
+
+
+def check_external(url, timeout=20):
+    """Return None when reachable, else a short reason."""
+    req = Request(url, method='HEAD', headers={
+        'User-Agent': 'awesome-android-root-link-check (link checker)',
+        'Accept': '*/*',
+    })
+    try:
+        with urlopen(req, timeout=timeout) as response:
+            if response.status >= 400:
+                return f'HTTP {response.status}'
+    except HTTPError as e:
+        # Many sites reject HEAD but serve GET fine, so retry before failing.
+        if e.code in (403, 405, 501):
+            try:
+                with urlopen(Request(url, headers={'User-Agent': req.headers['User-Agent']}), timeout=timeout):
+                    return None
+            except HTTPError as e2:
+                return f'HTTP {e2.code}'
+            except URLError as e2:
+                return f'{e2.reason}'
+        return f'HTTP {e.code}'
+    except URLError as e:
+        return f'{e.reason}'
+    except Exception as e:  # noqa: BLE001 - report anything unexpected as a failure
+        return f'{type(e).__name__}: {e}'
+    return None
+
+
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--external', action='store_true',
+                        help='also request every external http(s) link')
+    args = parser.parse_args()
+
     files = sorted(glob.glob(os.path.join(DOCS, '**', '*.md'), recursive=True))
     errors = []
     checked = 0
@@ -120,6 +174,19 @@ def main():
             print(' -', e)
         sys.exit(1)
     print('all internal links OK')
+
+    if not args.external:
+        return
+
+    urls = collect_external_urls()
+    print(f'checking {len(urls)} external URLs')
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        results = list(pool.map(check_external, urls))
+    broken = [(url, reason, sorted(urls[url])) for url, reason in zip(urls, results) if reason]
+    print(f'{len(broken)} external URL(s) unreachable')
+    for url, reason, where in broken:
+        print(f' - {reason} {url} (referenced in {", ".join(where[:3])})')
+    sys.exit(1 if broken else 0)
 
 
 if __name__ == '__main__':

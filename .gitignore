@@ -6,3 +6,10 @@ docs/README.md
 docs/rooting-guides/*_NEW.md
 improvements.md
 docs/count.md
+# Python
+__pycache__/
+*.pyc
+
+# Local build artifacts
+dist-before/
+bun.lock

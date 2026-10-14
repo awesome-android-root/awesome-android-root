@@ -1,0 +1,89 @@
+name: Link check
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Every Monday at 04:00 UTC
+    - cron: "0 4 * * 1"
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: link-check
+  cancel-in-progress: false
+
+jobs:
+  external-links:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # The job never fails on link problems: they are reported in an issue so a
+      # broken upstream link cannot block unrelated pull requests.
+      - name: Check external links
+        id: check
+        continue-on-error: true
+        run: |
+          python3 scripts/check_links.py --external | tee external-links.txt
+          status=${PIPESTATUS[0]}
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+
+      - name: Report results
+        uses: actions/github-script@v7
+        env:
+          REPORT: external-links.txt
+        with:
+          script: |
+            const fs = require('fs')
+            const report = fs.readFileSync(process.env.REPORT, 'utf8').trim()
+            const status = '${{ steps.check.outputs.status }}'
+            const title = 'Weekly link check report'
+            const ok = status === '0'
+
+            const body = [
+              `Automated \`scripts/check_links.py --external\` run on every push to main.`,
+              '',
+              '```',
+              report || '(no output)',
+              '```',
+              ok ? '' : 'See the output above for the failing URLs.',
+            ].join('\n')
+
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100,
+            })
+
+            const previous = existing.data.find((issue) => issue.title === title)
+
+            if (previous) {
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: previous.number,
+                title,
+                body,
+              })
+              if (ok) core.info(`Updated issue #${previous.number} with a passing result.`)
+              return
+            }
+
+            if (ok) return
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body,
+            })

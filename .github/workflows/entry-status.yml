@@ -1,0 +1,70 @@
+name: Entry status report
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Every other Tuesday at 05:00 UTC
+    - cron: "0 5 1,15 * *"
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: entry-status
+  cancel-in-progress: false
+
+jobs:
+  entry-status:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+
+      # Rate limits and 404s are handled inside the script, so a failure here
+      # means the script itself broke rather than a bad entry.
+      - name: Run entry status report
+        run: node scripts/entry-status.mjs --format=markdown > report.md
+
+      - name: Open or update issue
+        uses: actions/github-script@v7
+        env:
+          REPORT: report.md
+        with:
+          script: |
+            const fs = require('fs')
+            const body = fs.readFileSync(process.env.REPORT, 'utf8').trim()
+            const title = 'Entry status report'
+
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100,
+            })
+
+            const previous = existing.data.find((issue) => issue.title === title)
+
+            if (previous) {
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: previous.number,
+                title,
+                body,
+              })
+              return
+            }
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body,
+            })
