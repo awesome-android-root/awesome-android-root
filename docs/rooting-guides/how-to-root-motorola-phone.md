@@ -363,6 +363,9 @@ Some Motorola devices (especially MediaTek-based ones like the Edge 50 Fusion) d
 - Banking apps
 - Payment apps
 
+The full root-hiding and Play Integrity setup is covered in
+[Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps).
+
 ### Motorola Optimization
 
 **Battery:**

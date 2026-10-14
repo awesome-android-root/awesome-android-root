@@ -351,11 +351,10 @@ adb devices
 - Consider modules/apps that tame background killing (varies per build)
 
 **Play Integrity (SafetyNet replacement):**
-- Passing device integrity often needs:
-  - Latest Magisk + Zygisk enabled
-  - Play Integrity Fix module (latest maintained fork)
-  - Proper DenyList configuration (Google Play services, GMS, wallet/banking)
-  - Clear Play Store/Services data after configuration, then wait a few minutes
+- Passing device integrity needs a Zygisk implementation, a Play Integrity Fix module and a correct
+  DenyList, then clearing Play Store/Services data and waiting a few minutes
+- Full module choices and configuration order:
+  [Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps)
 
 ## Success Verification
 

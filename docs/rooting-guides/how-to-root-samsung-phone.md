@@ -426,19 +426,9 @@ Magisk > Settings:
 
 **Step 2: Configure DenyList**
 
-Critical for Samsung due to Knox detection:
-
-Add to DenyList:
-- Google Play Services (all)
-- Google Play Store (all)
-- Samsung apps:
-  - Samsung Health
-  - Samsung Members
-  - Samsung Galaxy Store
-  - Samsung Pay (won't work anyway)
-- Banking apps
-- Payment apps
-- Any Knox-dependent apps
+Critical for Samsung due to Knox detection. Add Google Play Services, Google Play Store, your
+banking and payment apps, and the Knox-dependent Samsung apps you use (Samsung Health, Samsung
+Members, Samsung Galaxy Store, Samsung Pay). For each entry, expand it and cover all sub-processes.
 
 **Step 3: Install Essential Modules**
 
@@ -449,16 +439,9 @@ Recommended for Samsung:
 
 ### Samsung-Specific Root Hiding
 
-**Additional Steps:**
+Samsung Health, Samsung Members and the other Knox-dependent Samsung apps cache their integrity
+state, so clear their data after the DenyList is configured and before you judge the result:
 
-1. **Hide Magisk App:**
-   - Magisk > Settings
-   - "Hide the Magisk app"
-   - Enter custom name (e.g., "Settings")
-
-2. **Clear App Data:**
-
-After DenyList configuration:
 ```bash
 # Clear Google Play Services
 pm clear com.google.android.gms
@@ -470,7 +453,9 @@ pm clear com.android.vending
 pm clear com.sec.android.app.shealth
 ```
 
-3. **Reboot device**
+Then reboot. The general root-hiding and Play Integrity setup, including module choice and the
+STRONG integrity limits, is covered in
+[Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps).
 
 ---
 
@@ -593,14 +578,8 @@ Solutions:
 
 **Play Integrity Fails**
 
-Solutions:
-1. Enable Zygisk
-2. Configure DenyList properly
-3. Hide Magisk app
-4. Install Play Integrity Fix
-5. Install Shamiko module
-6. Clear Google Play Services
-7. Reboot
+Follow the module stack and configuration order in
+[Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps).
 
 Note: Due to Knox trip, some apps may always fail.
 

@@ -387,12 +387,8 @@ Magisk > Settings:
 
 **Step 2: Configure DenyList**
 
-Add to DenyList:
-- Google Play Services (all)
-- Google Play Store
-- Banking apps
-- Payment apps (Google Pay, etc.)
-- Play Integrity-sensitive apps
+Add Google Play Services, Google Play Store, your banking apps, payment apps and any other
+Play Integrity-sensitive app. Expand each entry and cover all sub-processes.
 
 **Step 3: Install Essential Modules**
 
@@ -514,13 +510,8 @@ Solutions:
 
 **Play Integrity Fails**
 
-Solutions:
-1. Enable Zygisk
-2. Configure DenyList
-3. Hide Magisk app
-4. Install Play Integrity Fix module
-5. Clear Google Play Services
-6. Reboot
+Follow the module stack and configuration order in
+[Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps).
 
 ---
 

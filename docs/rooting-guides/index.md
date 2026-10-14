@@ -538,19 +538,13 @@ Replace stock Android with privacy-focused custom ROMs:
 
 ### Root Hiding & Play Integrity Resources
 
-Play Integrity bypass is essential for banking apps in 2026. Key tools:
-
-| Tool | Purpose | Status |
-|------|---------|--------|
-| **[Tricky Store](https://github.com/5ec1cff/TrickyStore)** | Advanced key attestation spoofing | Active |
-| **[Shamiko](https://github.com/LSPosed/LSPosed.github.io)** | Systemlessly hides Zygisk/modules from detection | Closed-source |
-| **[Zygisk Assistant](https://github.com/snake-4/Zygisk-Assistant)** | Open-source alternative to Shamiko | Active (FOSS) |
-| **[Zygisk Next](https://github.com/LSPosed/ZygiskNext)** | Standalone Zygisk implementation for Magisk/KernelSU | Active |
-| **[Play Integrity Fork](https://github.com/osm0sis/PlayIntegrityFork)** | Community-maintained PIF script | Active |
-
+Play Integrity is what most banking and DRM apps check, so root hiding matters after rooting. The
+curated tools live in the [Root Hiding & Play Integrity category](../apps-and-modules/root-management#root-hiding-play-integrity),
+and the current module stack and configuration steps are documented in
+[Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps).
 
 > [!TIP]
-> For the complete and up-to-date list, see our [Root Hiding & Play Integrity apps](../apps-and-modules/root-management#root-hiding-play-integrity)
+> Check the tool list first, then follow the troubleshooting page for your root framework.
 
 ---
 

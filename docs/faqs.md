@@ -437,11 +437,8 @@ Modern devices use A/B (seamless) update system:
 - Games with anti-cheat (Pokemon GO, Call of Duty Mobile)
 
 **Mitigation:**
-- Use Magisk DenyList to hide root from specific apps
-- Configure Zygisk for advanced hiding
-- Install modules like Shamiko, Play Integrity Fix
-- Keep apps updated
-- Clear app data after configuring hiding
+- Configure root hiding with the DenyList, Zygisk and a hiding module
+- Keep apps updated and clear app data after configuring hiding
 
 **Reality Check:** Some apps with hardware-backed attestation (STRONG Play Integrity) cannot be fooled on unlocked bootloaders.
 
@@ -458,25 +455,15 @@ Modern devices use A/B (seamless) update system:
 
 **To Improve Compatibility:**
 
-1. **Configure root hiding properly:**
-   - Enable Zygisk in Magisk
-   - Add banking apps to DenyList
-   - Hide Magisk app (rename it)
-   - Install [Play Integrity Fix modules](./apps-and-modules/root-management#root-hiding-play-integrity)
+Play Integrity DEVICE passes need a Zygisk implementation, a Play Integrity Fix module and a
+correctly configured DenyList, then clearing app and Google Play Services data and rebooting. The
+module choices, configuration order and the STRONG integrity limits are documented in
+[Play Integrity and Banking Apps](./troubleshooting.md#play-integrity-and-banking-apps), and the
+tools are listed under
+[Root Hiding & Play Integrity](./apps-and-modules/root-management#root-hiding-play-integrity).
 
-2. **Clear app data:**
-   ```
-   Settings → Apps → [Banking App] → Storage → Clear Data
-   Settings → Apps → Google Play Services → Clear Cache
-   Reboot device
-   ```
-
-3. **Check device certification:**
-   - Play Store → Settings → About
-   - Should show "Device is certified"
-
-4. **Test before relying on it:**
-   - Don't root if banking app is critical and you haven't verified it works
+Before depending on it, check that Play Store still shows "Device is certified" and test your
+actual banking app. If it is mission critical, do not root until you have verified it.
 
 **Alternative Solutions:**
 - Use browser-based banking (usually works)
@@ -484,9 +471,6 @@ Modern devices use A/B (seamless) update system:
 - Use work profile with non-rooted user profile
 
 **We don't provide methods to bypass app security.** These are legitimate compatibility steps only.
-
-**Learn More:**
-- [Play Integrity Troubleshooting](./troubleshooting.md#play-integrity-and-banking-apps)
 
 ---
 

@@ -504,55 +504,35 @@ Google Play Integrity replaced SafetyNet. Three levels exist:
 
 **Step 3: Configure DenyList**
 
-Add these to DenyList:
-- All banking/financial apps
-- Payment apps (Google Wallet, etc.)
-- Apps that detect root
-- Games with anti-cheat
+Add your banking and financial apps, payment apps such as Google Wallet, apps that detect root,
+and games with anti-cheat. For each app, expand the entry, check every sub-process and enable it for
+all of them.
 
 ::: warning IMPORTANT
 **Do NOT** add Google Play Services (GMS) or Google Play Store to the DenyList if you are using the Play Integrity Fix (PIF) module. Doing so will break the module's ability to spoof device integrity.
 :::
 
-For each app:
-- Expand app entry
-- Check all sub-processes
-- Enable for all
-
 **Step 4: Clear App Data**
 
-After DenyList configuration:
-1. Settings > Apps
-2. Clear data for:
-   - Google Play Store
-   - Google Wallet / Pay
-   - Banking apps
-3. Reboot device
-4. Reopen apps
+After DenyList configuration, clear data for Google Play Store, Google Wallet / Pay and your
+banking apps, then reboot and reopen them.
 
 ### Advanced Root Hiding
 
-**Install Shamiko Module:**
-
-Shamiko hides root more effectively than the built-in DenyList.
-
-1. Download Shamiko from [GitHub](https://github.com/LSPosed/LSPosed.github.io/releases)
-2. Install via Magisk
-3. Reboot
-4. DenyList items are now hidden more effectively
-
-**Note:** When using Shamiko, you must **configure** the DenyList but **do NOT enforce** it in Magisk settings. Shamiko reads the list and handles the hiding automatically.
+Shamiko hides root more effectively than the built-in DenyList: install it, reboot, and leave
+"Enforce DenyList" off in Magisk settings. Shamiko reads the DenyList but applies its own hiding.
 
 > [!TIP]
-> Check our [Root hiding section](../apps-and-modules/root-management.md#root-hiding-play-integrity)
+> The full root hiding and Play Integrity setup, including module choices and testing tools, is in
+> [Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps) and
+> [Root Hiding & Play Integrity](../apps-and-modules/root-management#root-hiding-play-integrity).
 
 ### Testing Play Integrity
 
-**Apps to Test:**
-
-1. **Play Integrity API Checker** - Standard checker
-2. **SPIC (Simple Play Integrity Checker)** - Open-source and fast
-3. **TB Checker** - Comprehensive checker
+Use a Play Integrity checker app such as
+[Play Integrity API Checker](https://github.com/1nikolas/play-integrity-checker-app) or
+[SPIC](https://github.com/Dr-TSNG/SPIC). YASNAC is legacy (SafetyNet) and is no longer
+authoritative.
 
 ---
 
@@ -793,11 +773,9 @@ Solutions:
 
 **Basic or Device Integrity Fails**
 
-Solutions:
-1. Try the latest [Play Integrity Fix modules](../apps-and-modules/root-management#root-hiding-play-integrity)
-2. Clear Google Play Store data.
-3. Reboot device.
-4. If it still fails, the current fingerprint might be banned. Wait for a PIF update or use a custom `pif.json`.
+Follow the module stack and configuration order in
+[Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps). If the
+current fingerprint has been banned, wait for a PIF update.
 
 **Strong Integrity Fails**
 
