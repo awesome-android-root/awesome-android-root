@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: "File Management"
-description: "Root file managers, storage cleaners, partition tools, and file utilities for rooted Android power users."
+title: Root File Managers for Android
+description: Browse root file managers, storage cleaners and partition tools for rooted Android, with apps and modules for managing files, SD cards and storage.
 head:
   - - meta
     - name: robots
@@ -11,10 +11,10 @@ head:
       content: Awesome Android Root
   - - meta
     - name: twitter:description
-      content: "File management for rooted Android: file managers with root access, storage cleaning apps and Magisk/KernelSU modules, and file & partition tools for power users."
+      content: Browse root file managers, storage cleaners and partition tools for rooted Android, with apps and modules for managing files, SD cards and storage.
 ---
 
-# File Management
+# Root File Managers for Android
 
 **File management** for rooted Android devices - file managers with full root access, storage cleaning apps and
 Magisk/KernelSU modules, and file & partition tools for power users.

@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: "Customization"
-description: "Themes, launchers, gesture tweaks, fonts, lockscreen mods, and UI tools for turning rooted Android into your own setup."
+title: Customization Mods for Root
+description: "Browse customization modules and apps for rooted Android: themes, fonts, launchers, status bar, notifications, lockscreen, gestures and display tweaks."
 head:
   - - meta
     - name: robots
@@ -11,10 +11,10 @@ head:
       content: Awesome Android Root
   - - meta
     - name: twitter:description
-      content: "Customization for rooted Android: themes and visual mods, launchers, status bar & navigation tweaks, gestures, fonts & emojis, notifications, lockscreen/AOD and screen & display modules and apps."
+      content: "Browse customization modules and apps for rooted Android: themes, fonts, launchers, status bar, notifications, lockscreen, gestures and display tweaks."
 ---
 
-# Customization
+# Customization Mods for Root
 
 **Customization** tools for rooted Android devices - themes and visual mods, launchers, status bar &
 navigation tweaks, gestures, fonts & emojis, notifications, lockscreen/AOD and screen & display apps and

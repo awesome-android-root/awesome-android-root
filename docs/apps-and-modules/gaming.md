@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: "Gaming"
-description: "Gaming apps and modules for rooted Android: performance tweaks, FPS unlockers and resolution changers, plus game modification tools."
+title: Gaming Mods for Rooted Android
+description: "Browse gaming modules and apps for rooted Android: performance tweaks, FPS unlockers, resolution and graphics changers, plus game modification tools."
 head:
   - - meta
     - name: robots
@@ -11,7 +11,7 @@ head:
       content: Awesome Android Root
 ---
 
-# Gaming
+# Gaming Mods for Rooted Android
 
 **Gaming** apps and modules for rooted Android - performance tweaks, FPS unlockers, resolution changers and
 game-specific tools, mixing root apps, Magisk/KernelSU modules and LSPosed modules.

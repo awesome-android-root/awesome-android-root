@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: "Development & Automation"
-description: "ADB, shells, automation, Linux environments, and hardware tools for developers and advanced rooted Android users."
+title: "Terminal & ADB Tools for Root"
+description: Browse terminals, ADB and debugging tools, developer utilities, Linux environments, automation apps, scripting modules and hardware sensor tools for root.
 head:
   - - meta
     - name: robots
@@ -11,10 +11,10 @@ head:
       content: Awesome Android Root
   - - meta
     - name: twitter:description
-      content: "Development, automation and power-user tools for rooted Android: terminal & shell, ADB and debugging tools, developer utilities, Linux environments (chroot/containers), automation apps and hardware/sensor tools."
+      content: Browse terminals, ADB and debugging tools, developer utilities, Linux environments, automation apps, scripting modules and hardware sensor tools for root.
 ---
 
-# Development & Automation
+# Terminal & ADB Tools for Root
 
 **Development & Automation** tools for rooted Android devices - terminal & shell environments (**Termux**),
 **ADB & debugging** helpers, developer tools (**Shizuku** and friends), full **Linux environments**,

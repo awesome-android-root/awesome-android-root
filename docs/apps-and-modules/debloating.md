@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: "Debloating"
-description: "Debloating apps and Magisk/KernelSU modules for rooted Android: remove preinstalled bloatware, uninstall system apps safely, and keep only what you use."
+title: "Best Android Debloat Tools & Modules"
+description: "Browse debloating tools for rooted Android: bloatware removal apps, Magisk, KernelSU and APatch modules for freezing, disabling and uninstalling system apps."
 head:
   - - meta
     - name: robots
@@ -11,7 +11,7 @@ head:
       content: Awesome Android Root
 ---
 
-# Debloating
+# Best Android Debloat Tools & Modules
 
 **Debloating** removes preinstalled bloatware and system apps you never asked for. These debloating apps and
 Magisk/KernelSU modules work on rooted devices to uninstall, freeze or hide unwanted packages - improving

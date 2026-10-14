@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: "Networking"
-description: "VPN, proxy, Wi‑Fi, Bluetooth, and mobile-data tools for traffic control and networking on rooted Android."
+title: "VPN, Proxy & Network Mods for Root"
+description: Browse VPN, proxy and DNS modules, network tools, Wi-Fi and Bluetooth utilities, NFC and mobile data tweaks for rooted Android network control.
 head:
   - - meta
     - name: robots
@@ -11,10 +11,10 @@ head:
       content: Awesome Android Root
   - - meta
     - name: twitter:description
-      content: "Networking tools for rooted Android: VPN & proxy modules (Clash, sing-box, v2ray), network tools, Wi-Fi & mobile data utilities and Bluetooth & NFC apps & modules."
+      content: Browse VPN, proxy and DNS modules, network tools, Wi-Fi and Bluetooth utilities, NFC and mobile data tweaks for rooted Android network control.
 ---
 
-# Networking
+# VPN, Proxy & Network Mods for Root
 
 **Networking** tools for rooted Android devices - VPN & transparent proxy modules (Clash, sing-box, v2ray and
 more), network diagnostics, Wi-Fi & mobile data utilities and Bluetooth & NFC apps and modules.

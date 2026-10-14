@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: "Root Management"
-description: "Root managers, metamodules, LSPosed, Zygisk, and Play Integrity tools for Magisk, KernelSU, and APatch on rooted Android."
+title: "Root Managers, Zygisk & Root Hiding"
+description: Browse root managers, module managers and metamodules for Magisk, KernelSU and APatch, plus LSPosed, Zygisk, root hiding, Susfs and Play Integrity tools.
 head:
   - - meta
     - name: robots
@@ -11,10 +11,10 @@ head:
       content: Awesome Android Root
   - - meta
     - name: twitter:description
-      content: "Root management apps, Magisk/KernelSU/APatch managers, metamodules, LSPosed & Zygisk frameworks, and root hiding & Play Integrity tools for rooted Android devices."
+      content: Browse root managers, module managers and metamodules for Magisk, KernelSU and APatch, plus LSPosed, Zygisk, root hiding, Susfs and Play Integrity tools.
 ---
 
-# Root Management
+# Root Managers, Zygisk & Root Hiding
 
 **Root management** covers everything you need to install, run and maintain root on your Android device:
 root managers for **Magisk, KernelSU and APatch**, temporary root solutions for locked-bootloader devices,

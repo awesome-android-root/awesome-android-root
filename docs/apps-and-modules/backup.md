@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: "Backup & Restore"
-description: "Backup and restore apps for rooted Android: full app+data backups, cloud backup, nandroid and partition images and data recovery tools."
+title: Backup Apps for Rooted Android
+description: Browse backup and restore apps for rooted Android, including full app and data backups, cloud sync, nandroid and partition images and recovery tools.
 head:
   - - meta
     - name: robots
@@ -11,14 +11,14 @@ head:
       content: Awesome Android Root
 ---
 
-# Backup & Restore
+# Backup Apps for Rooted Android
 
 **Backup & Restore** apps for rooted Android - full app + data backups (the kind only root can do), cloud and
 local backup solutions, partition images and data recovery tools. Back up before flashing, debloating or
 unlocking - always.
 
 
-## Backup Apps & Tools
+## Backup Apps & Tools {#backup-restore}
 
 - **[⭐ Swift Backup](https://play.google.com/store/apps/details?id=org.swiftapps.swiftbackup)** - Modern backup solution with cloud support. `Proprietary`
 - **[AppSnapshoter](https://github.com/TIIEHenry/AppSnapshoter/blob/main/README_EN.md)** - Packages an app's APK, data directories, OBB, media files, etc. into compressed snapshots for backup and restore. `FOSS`

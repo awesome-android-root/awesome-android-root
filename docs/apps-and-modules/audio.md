@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: "Audio"
-description: "Audio apps and modules for rooted Android: system-wide audio enhancement (Viper-style processing, Dolby and more), audio control and audio effect tools."
+title: Audio Mods for Rooted Android
+description: "Browse audio modules and apps for rooted Android: system-wide audio enhancement, Dolby and Viper-style processing, audio control tools and effects."
 head:
   - - meta
     - name: robots
@@ -11,7 +11,7 @@ head:
       content: Awesome Android Root
 ---
 
-# Audio
+# Audio Mods for Rooted Android
 
 **Audio** apps and modules for rooted Android devices - system-wide **audio enhancement** (Viper-style
 processing, Dolby and more), audio control tools and audio effects. All entries below are listed together
