@@ -78,6 +78,7 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 - **[crond4Android](https://github.com/powerAn2020/crond4android)** - Cron daemon for scheduled jobs on KernelSU, APatch, and Magisk. `FOSS` `[M]` `[K]`
 - **[FIRERPA (lamda)](https://github.com/firerpa/lamda)** - On-device control platform driven by a Python client: remote desktop streaming, UI/OCR automation, traffic capture, built-in Frida and proxy/VPN networking. Runs with or without root. `FOSS`
 - **[Geto](https://github.com/T31n/Geto)** - Applies device settings automatically when selected apps are launched, using `WRITE_SECURE_SETTINGS` granted through Shizuku or root. `FOSS` | [🌱](https://f-droid.org/en/packages/com.android.geto/)
+- **[Verdroid](https://github.com/chr243/Verdroid)** - AI agent app that automates the phone with tool calls (Shizuku/rish shell, Accessibility, Termux, files, Git, MCP) using cloud LLMs via OpenRouter/Kilo with your own key. Works without root. `FOSS`
 
 ## Developer Tools
 
