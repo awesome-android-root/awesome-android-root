@@ -25,10 +25,10 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 
 - **[ADB Root](https://github.com/evdenis/adb_root)** - A Magisk module that runs the adbd daemon as root and skips USB authentication. `FOSS` `[M]`
 - **[Android-ADB-over-WiFi](https://github.com/warren-bank/Android-ADB-over-WiFi)** - Toggles a rooted device's Android Debug Bridge daemon (adbd) between USB and WiFi mode. `FOSS` `[LSP]`
-- **[Debug Assistant](https://github.com/ThePedroo/DebugAssistant)** - The simplest yet powerful logcat capture system as Magisk module. `FOSS` `[M]`
+- **[Debug Assistant](https://github.com/ThePedroo/DebugAssistant)** - The simplest yet powerful logcat capture system as Magisk module. `FOSS` `[M]` `[A]`
 - **[Hotspot Wireless Debugging](https://github.com/droserasprout/io.drsr.hotspotadb)** - Xposed module to allow Wireless Debugging over Wi-Fi Hotspot. `FOSS` `[LSP]`
 - **[LADB](https://github.com/tytydraco/LADB)** - Local ADB shell with a built-in terminal interface. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.draco.ladb)
-- **[Log Catcher](https://github.com/hxreborn/Log-Catcher)** - Captures logcat and kernel messages during startup and archives them as timestamped tarballs after unlock. `FOSS` `[M]` `[K]`
+- **[Log Catcher](https://github.com/hxreborn/Log-Catcher)** - Captures logcat and kernel messages during startup and archives them as timestamped tarballs after unlock. `FOSS` `[M]` `[K]` `[A]`
 - **[Logcat Extreme](https://play.google.com/store/apps/details?id=scd.lcex)** - Logcat reader and capture tool for rooted Android devices. `Proprietary`
 - **[Loki](https://github.com/trinadhthatakula/Loki)** - Logcat reader that captures, saves and shares another app's logs using root or Shizuku. `FOSS`
 - **[Magisk-WiFiADB](https://github.com/mrh929/magisk-wifiadb)** - Enable WiFi ADB automatically. `FOSS` `[M]`
@@ -39,7 +39,7 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 - **[⭐ MacroDroid](https://play.google.com/store/search?q=macrodroid&c=apps)** - Easy to use automation app. `Proprietary`
 - **[⭐ Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)** - An advanced and powerful automation app. `Proprietary`
 - **[Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate)** - Lets you create custom automation workflows using flowcharts, enabling seamless management of tasks, files, and device settings. `Proprietary`
-- **[crond4Android](https://github.com/powerAn2020/crond4android)** - Cron daemon for scheduled jobs on KernelSU, APatch, and Magisk. `FOSS` `[M]` `[K]`
+- **[crond4Android](https://github.com/powerAn2020/crond4android)** - Cron daemon for scheduled jobs on KernelSU, APatch, and Magisk. `FOSS` `[M]` `[K]` `[A]`
 - **[FIRERPA (lamda)](https://github.com/firerpa/lamda)** - On-device control platform driven by a Python client: remote desktop streaming, UI/OCR automation, traffic capture, built-in Frida and proxy/VPN networking. Runs with or without root. `FOSS`
 - **[Geto](https://github.com/T31n/Geto)** - Applies device settings automatically when selected apps are launched, using `WRITE_SECURE_SETTINGS` granted through Shizuku or root. `FOSS` | [🌱](https://f-droid.org/en/packages/com.android.geto/)
 
@@ -52,12 +52,12 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 - **[DuckPolicy](https://github.com/Xposed-Modules-Repo/com.strawing.duckdevicepolicy)** - Makes apps see no device-policy restrictions on your own device. `Proprietary` `[LSP]`
 - **[KSU Toolkit](https://github.com/backslashxx/ksu_toolkit)** - Small extensions on top of KernelSU for testing and debugging purposes. `FOSS` `[K]`
 - **[Nano for Android NDK](https://github.com/Magisk-Modules-Repo/nano-ndk)** - Allows temporary recovery use, so you can trigger it from adb shell or TWRP Terminal. `FOSS` `[M]`
-- **[Py2Droid](https://github.com/Mrakorez/py2droid)** - Install Python 3 on Android, including the standard library (STDLIB). `FOSS` `[M]`
+- **[Py2Droid](https://github.com/Mrakorez/py2droid)** - Install Python 3 on Android, including the standard library (STDLIB). `FOSS` `[M]` `[A]`
 - **[SELinux Permissive](https://github.com/evdenis/selinux_permissive)** - Magisk Module that switches SELinux to permissive mode. `FOSS` `[M]`
 - **[Shevery](https://github.com/HmnDev-Tech/shevery)** - Based on shizuku with Jetpack Compose, Material 3, and compatibility enhancements. `FOSS`
 - **[Shizuku](https://github.com/RikkaApps/Shizuku)** - Use system APIs directly with ADB/root privileges. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/moe.shizuku.privileged.api) | [▶️](https://play.google.com/store/search?q=shizuku&c=apps)
 - **[SQLite3 for Android](https://github.com/rojenzaman/sqlite3-magisk-module)** - Provides a statically linked `sqlite3` binary for arm64-v8a, armeabi-v7a, x86 and x86_64. `Proprietary` `[M]`
-- **[Zygisk-Loader](https://github.com/HanSoBored/Zygisk-Loader)** - Module for hot-swapping native libraries into Android applications without rebooting. `FOSS` `[K]`
+- **[Zygisk-Loader](https://github.com/HanSoBored/Zygisk-Loader)** - Module for hot-swapping native libraries into Android applications without rebooting. `FOSS` `[K]` `[A]`
 
 ### Frida & Reverse Engineering
 
@@ -69,7 +69,7 @@ Frida allows you to inject your own scripts into black box processes, enabling y
 
 - **[Florida](https://github.com/Ylarod/Florida)** - Anti-detection build of frida-server for Android, patched and built automatically from Frida upstream. `FOSS`
 - **[Jezail](https://github.com/zahidaz/jezail)** - On-device pentesting toolkit that exposes a REST API and web interface for device control, app management, Frida, ADB and logcat on a rooted phone. `FOSS`
-- **[MagiskFrida](https://github.com/ViRb3/magisk-frida)** - Lets you run frida-server on boot with multiple root solutions. `FOSS` `[M]` `[K]`
+- **[MagiskFrida](https://github.com/ViRb3/magisk-frida)** - Lets you run frida-server on boot with multiple root solutions. `FOSS` `[M]` `[K]` `[A]`
 - **[MagiskHluda](https://github.com/Exo1i/MagiskHluda)** - Starts a Florida-based, less detectable frida-server on boot, with a web UI to start, stop and configure it. `Proprietary` `[M]` `[K]` `[A]`
 - **[Undetected Frida](https://github.com/zer0def/undetected-frida)** - Frida builds with community anti-detection patches applied, also shipped as Magisk/KernelSU modules. `FOSS` `[M]` `[K]`
 - **[ZygiskFrida](https://github.com/lico-n/ZygiskFrida)** - Injects the Frida gadget into apps through Zygisk, avoiding the ptrace and APK integrity checks that detect frida-server. `FOSS` `[M]` `[K]`
@@ -87,11 +87,11 @@ Frida allows you to inject your own scripts into black box processes, enabling y
 - **[⭐ Droidspaces](https://github.com/ravindu644/Droidspaces-OSS)** - Run full Linux environments on top of Android, with complete init system support. `FOSS`
 - **[Auto-Linux](https://github.com/HanSoBored/Auto-Linux)** - A TUI application to install and manage Linux (chroot) environments on rooted Android devices. `FOSS`
 - **[Boot Nethunter](https://github.com/cipherswami/boot-nethunter)** - Boots Kali-Chroot (one Installed with Nethunter apk) in Termux. `FOSS` 
-- **[Chroot Distro](https://github.com/Magisk-Modules-Alt-Repo/chroot-distro)** - Install Gnu/Linux distributions on Android. `FOSS` `[M]`
+- **[Chroot Distro](https://github.com/Magisk-Modules-Alt-Repo/chroot-distro)** - Install Gnu/Linux distributions on Android. `FOSS` `[M]` `[A]`
 - **[DebDroid](https://github.com/NICUP14/DebDroid)** - Debian Container Runtime for Android. `FOSS` 
 - **[Magisk Docker](https://github.com/mgksu/dockerd)** - Magisk and KernelSU module for running Docker on rooted Android devices. `FOSS` `[M]` `[K]`
 - **[Trixie.apk](https://github.com/DesktopECHO/trixie.apk)** - Debian 13 (Trixie) Server/Desktop container for rooted Android 5.0+ devices. `FOSS`
-- **[Ubuntu Chroot](https://github.com/ravindu644/Ubuntu-Chroot)** - Run Ubuntu 24.04 on Android With full Hardware Access and pure namespace isolation. `FOSS` `[M]` `[K]`
+- **[Ubuntu Chroot](https://github.com/ravindu644/Ubuntu-Chroot)** - Run Ubuntu 24.04 on Android With full Hardware Access and pure namespace isolation. `FOSS` `[M]` `[K]` `[A]`
 
 ## Terminal & Shell
 

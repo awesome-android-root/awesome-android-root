@@ -34,33 +34,33 @@ more), network diagnostics, Wi-Fi & mobile data utilities and Bluetooth & NFC ap
 ## Network Tools
 
 - **[Hosts Manager Lite](https://play.google.com/store/apps/details?id=awais.hostsmanager.lite)** - Advanced /etc/hosts editor. `Proprietary`
-- **[MagicNet](https://github.com/LIghtJUNction/MagicNet#english-summary)** - Module for device-side traffic governance that enforce network rules below the app layer instead of relying on every app to respect a proxy setting. `FOSS` `[M]` `[K]`
+- **[MagicNet](https://github.com/LIghtJUNction/MagicNet#english-summary)** - Module for device-side traffic governance that enforce network rules below the app layer instead of relying on every app to respect a proxy setting. `FOSS` `[M]` `[K]` `[A]`
 - **[Magisk LAN Auto Switch](https://github.com/NewFuture/magisk-modules/tree/main/magisk-lan-auto-switch)** - Automatically switch LAN and WiFi based on eth0 connection status. `FOSS` `[M]`
 - **[MultiRoute](https://github.com/Linoleic/MultiRoute)** - An LSPosed module that gives every app its own network channel. `FOSS` `[LSP]`
 - **[Network Utilities](https://play.google.com/store/apps/details?id=com.myprog.netutils)** - Application contains a set of tools for networks diagnostics. `Proprietary`
 - **[SimbaDroid](https://github.com/buttercookie42/SimbaDroid)** - A simple SMB file server for Android. `FOSS` | [🌱](https://f-droid.org/packages/de.buttercookie.simbadroid)
-- **[TCP Optimiser Module](https://github.com/fatalcoder524/TCP_Optimiser_Module)** - Change tcp congestion algorithm based on current active internet type and some network enhancements. `FOSS` `[M]` `[K]`
+- **[TCP Optimiser Module](https://github.com/fatalcoder524/TCP_Optimiser_Module)** - Change tcp congestion algorithm based on current active internet type and some network enhancements. `FOSS` `[M]` `[K]` `[A]`
 
 ## VPN & Proxy
 
 - **[AsteriskBOX](https://github.com/Asterisk4Magisk/AsteriskBOX)** - A sing-box GUI client for Android, support VPN Service, TPROXY(ROOT), TUN(ROOT), eBPF(ROOT), TUN2SOCKS(ROOT) and BPF2SOCKS(ROOT). `FOSS` `[M]` `[K]`
 - **[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)** - A Mihomo GUI client for Android, support VPN Service, TPROXY(ROOT), TUN(ROOT), TUN2SOCKS(ROOT) and BPF2SOCKS(ROOT). `FOSS` `[M]` `[K]`
 - **[AsteriskNG](https://github.com/Asterisk4Magisk/AsteriskNG)** - An Xray GUI client for Android, support VPN Service, TPROXY(ROOT), TUN2SOCKS(ROOT) and BPF2SOCKS(ROOT). `FOSS` `[M]` `[K]`
-- **[Aurora](https://github.com/Tkocean/Aurora)** - This project deploys sing-box, mihome proxies via Magisk, KernelSU, or APatch. `FOSS` `[M]` `[K]`
-- **[Box for Root](https://github.com/taamarin/box_for_magisk)** - Box for Root (BFR) is a Magisk, KernelSU, APatch, module that provides a suite of proxy tools, including clash, sing-box, v2ray, hysteria and xray. It allows you to configure a transparent proxy on Android devices with root access. `FOSS` `[M]` `[K]`
-- **[Box4Magisk / KernelSU / APatch](https://github.com/CHIZI-0618/box4magisk)** - Deploy multiple proxy cores on Android devices, including clash, mihomo, sing-box, v2ray, xray, and hysteria. `FOSS` `[M]` `[K]`
+- **[Aurora](https://github.com/Tkocean/Aurora)** - This project deploys sing-box, mihome proxies via Magisk, KernelSU, or APatch. `FOSS` `[M]` `[K]` `[A]`
+- **[Box for Root](https://github.com/taamarin/box_for_magisk)** - Box for Root (BFR) is a Magisk, KernelSU, APatch, module that provides a suite of proxy tools, including clash, sing-box, v2ray, hysteria and xray. It allows you to configure a transparent proxy on Android devices with root access. `FOSS` `[M]` `[K]` `[A]`
+- **[Box4Magisk / KernelSU / APatch](https://github.com/CHIZI-0618/box4magisk)** - Deploy multiple proxy cores on Android devices, including clash, mihomo, sing-box, v2ray, xray, and hysteria. `FOSS` `[M]` `[K]` `[A]`
 - **[FlClash](https://github.com/chen08209/FlClash)** - A multi-platform proxy client based on ClashMeta, simple and easy to use, open-source and ad-free. `FOSS`
 - **[Happwner](https://github.com/Omegaplexx/Happwner)** - Exporte Happ subscriptions to other VPN clients. `FOSS` `[LSP]`
-- **[NetProxy-Magisk](https://github.com/Fanju6/NetProxy-Magisk)** - Magisk proxy module based on Xray kernel, supports one-click start/stop transparent proxy. `FOSS` `[M]`
+- **[NetProxy-Magisk](https://github.com/Fanju6/NetProxy-Magisk)** - Magisk proxy module based on Xray kernel, supports one-click start/stop transparent proxy. `FOSS` `[M]` `[A]`
 - **[NoVPNDetect](https://github.com/RuslanUC/NoVPNDetect)** - Prevents some apps from detecting your phone is connected to a VPN. `FOSS` `[LSP]`
 - **[NoVPNDetect Enhanced](https://github.com/BlueCat300/NoVPNDetectEnhanced/)** - An enhanced version of NoVPNDetect that prevents apps from detecting VPN usage by modifying system properties and network configurations. `FOSS` `[LSP]`
 - **[SAM](https://github.com/5MayRain/SAM)** - A module combining SmartDNS, AdGuardHome, and mihomo, suitable for Magisk and KernelSU. `FOSS` `[M]` `[K]`
-- **[Surfing](https://github.com/GitMetaio/Surfing)** - Magisk and KernelSU modules for Clash/mihomo, sing-box, v2ray, xray, hysteria services. `FOSS` `[M]` `[K]`
+- **[Surfing](https://github.com/GitMetaio/Surfing)** - Magisk and KernelSU modules for Clash/mihomo, sing-box, v2ray, xray, hysteria services. `FOSS` `[M]` `[K]` `[A]`
 - **[Tailscale-android-cli](https://github.com/anasfanani/tailscale-android-cli)** - A command-line interface for Tailscale on Android. `FOSS` 
-- **[VPN Hide](https://github.com/okhsunrog/vpnhide)** - Hide active VPN from selected Android apps (kernel module + LSPosed + Zygisk) `FOSS` `[M]` `[K]`
+- **[VPN Hide](https://github.com/okhsunrog/vpnhide)** - Hide active VPN from selected Android apps (kernel module + LSPosed + Zygisk) `FOSS` `[M]` `[K]` `[A]`
 - **[VPN Hotspot](https://github.com/Mygod/VPNHotspot)** - Share your VPN connection over hotspot or repeater. `FOSS`
 - **[zapret for Magisk](https://github.com/sevcator/zapret-magisk)** - DPI bypass on Android with additional features. `FOSS` `[M]`
-- **[ZDT-D Root Module](https://github.com/GAME-OVER-op/ZDT-D)** - Module for traffic routing, DPI bypass, proxy chaining, DNS control, and per-app network management. `FOSS` `[M]` `[K]`
+- **[ZDT-D Root Module](https://github.com/GAME-OVER-op/ZDT-D)** - Module for traffic routing, DPI bypass, proxy chaining, DNS control, and per-app network management. `FOSS` `[M]` `[K]` `[A]`
 - **[ZeroTier for Magisk](https://github.com/eventlOwOp/zerotier-magisk)** - Run zerotier in the background after booting with no conflicts with other Android VPN services. Use Android App to control ZeroTier. `FOSS` `[M]`
 
 ## Wi-Fi & Mobile Data

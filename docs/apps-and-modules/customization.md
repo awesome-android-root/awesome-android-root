@@ -27,9 +27,9 @@ Magisk/KernelSU/LSPosed modules.
 ## Fonts & Emojis
 
 - **[Emoji Replacer](https://play.google.com/work/apps/details?id=com.htetz.emojireplacer)** - Swap system emojis with styles from iOS 16.4, Samsung, Google, JoyPixels, Facebook, Twemoji etc. `Proprietary`
-- **[EvilFont](https://github.com/dedeadend/EvilFont)** - Cange your Arabic/Persian font to Teshrin + IOS emojis. `FOSS` `[M]` `[K]`
+- **[EvilFont](https://github.com/dedeadend/EvilFont)** - Cange your Arabic/Persian font to Teshrin + IOS emojis. `FOSS` `[M]` `[K]` `[A]`
 - **[Font Manager](https://play.google.com/store/apps/details?id=com.androidacy.fontmanager)** - A great font and emoji changer by Androidacy. `Proprietary`
-- **[FontCraft Pro](https://github.com/RipperHybrid/FontCraft)** - Stylish fonts & emojis for a personalized experience. `FOSS` `[M]` `[K]`
+- **[FontCraft Pro](https://github.com/RipperHybrid/FontCraft)** - Stylish fonts & emojis for a personalized experience. `FOSS` `[M]` `[K]` `[A]`
 - **[FontLoader](https://github.com/JingMatrix/FontLoader)** - Modifying fonts is a common scenario using the Magisk module. `FOSS` `[M]`
 - **[G-Font Installer](https://xdaforums.com/t/development-magisk-module-g-font-installer.4617743/)** - Install Official Google font that is used in most Google apps like Google play and Google Pixel phones right to your phone. `Proprietary` `[M]`
 - **[JetBrains Font](https://github.com/Mars-Wave/jetbrains-font-magisk-module)** - Make your phone prettier with jetbrains mono and magisk. `FOSS` `[M]`
@@ -41,9 +41,9 @@ Magisk/KernelSU/LSPosed modules.
 - **[MiSans](https://github.com/adivenxnataly/MiSans)** - Enhance your font devices with MiSans. `FOSS` `[M]`
 - **[Nastaliq Urdu Font](https://xdaforums.com/t/module-font-nastaliq-urdu-font.4645787/)** - Nastaleeq Font Module for Urdu Users. `FOSS` `[M]`
 - **[Oh My Font](https://gitlab.com/nongthaihoang/oh_my_font)** - A collection of typefaces for Android. `FOSS` `[M]`
-- **[OneUI Emoji Pack](https://github.com/aloozchips/OneUIEmojiPack)** - Systemlessly replaces the AOSP emoji pack with the OneUI emoji pack. `FOSS` `[M]` `[K]`
+- **[OneUI Emoji Pack](https://github.com/aloozchips/OneUIEmojiPack)** - Systemlessly replaces the AOSP emoji pack with the OneUI emoji pack. `FOSS` `[M]` `[K]` `[A]`
 - **[Twemoji-Remastered](https://codeberg.org/Snowy/Twemoji-Remastered)** - Systemlessly replaces your phone emojis with Twemoji (Twitter Emoji). `FOSS` `[M]`
-- **[Unicode Font Set](https://github.com/Losketch/UnicodeFontSet-magisk-module/blob/main/README.en.md)** - Installs a comprehensive Unicode font set and configuration files via the Magisk framework. `FOSS` `[M]`
+- **[Unicode Font Set](https://github.com/Losketch/UnicodeFontSet-magisk-module/blob/main/README.en.md)** - Installs a comprehensive Unicode font set and configuration files via the Magisk framework. `FOSS` `[M]` `[A]`
 - **[zFont 3](https://play.google.com/store/apps/details?id=com.htetznaing.zfont2&hl=en)** - Change custom font styles on Samsung, Vivo, iQOO, LG, Huawei, Honor, OnePlus, ASUS, OPPO, Realme, Xiaomi, Tecno, and Infinix devices. `Proprietary`
 
 ## Gestures & Controls
@@ -97,7 +97,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[Pointer Replacer](https://github.com/thesandipv/pointer_replacer)** - Replaces a dot appears when user touch the screen [Require Show Touches to be enabled in Developer Options]. `FOSS` `[LSP]`
 - **[Pseudo DC Dimming](https://github.com/dantmnf/PseudoDCDimming)** - Enable alternative dimming mode (likely DC-like) on low brightness for some OLED displays by using software brightness gain. `FOSS` `[LSP]`
 - **[PureShot](https://github.com/kazutoiris/PureShot)** - Hide status bar, navigation bar, popups, PiP, toast & more. `FOSS` `[LSP]`
-- **[Rotation Suggestions Closed](https://github.com/Astoritin/RotationSuggestionsClosed)** - Stop showing rotation suggestion button as rotating screen. `FOSS` `[M]`
+- **[Rotation Suggestions Closed](https://github.com/Astoritin/RotationSuggestionsClosed)** - Stop showing rotation suggestion button as rotating screen. `FOSS` `[M]` `[A]`
 
 ## Status Bar & Navigation
 
@@ -106,7 +106,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[Lyricon](https://github.com/tomakino/lyricon)** - An Android status bar lyric enhancement tool based on the Xposed framework. `FOSS` `[LSP]`
 - **[LyricProvider](https://github.com/tomakino/LyricProvider/tree/master)** - A lyric provider for Lyricon. `FOSS` `[LSP]`
 - **[MiNavBarImmerse](https://github.com/Ianzb/MiNavBarImmerse)** - Optimizes the Xiaomi NavBar immersion by replacing the NavBar configuration file of third-party applications built into Xiaomi HyperOS 2.2. `FOSS` `[LSP]`
-- **[NavTweaks](https://github.com/Magisk-Modules-Alt-Repo/HideNavBar)** - Fullscreen/Immersive Gesture Tweaks for Android 10-14. `FOSS` `[M]`
+- **[NavTweaks](https://github.com/Magisk-Modules-Alt-Repo/HideNavBar)** - Fullscreen/Immersive Gesture Tweaks for Android 10-14. `FOSS` `[M]` `[A]`
 - **[QS Boundless Tiles](https://github.com/hxreborn/qs-boundless-tiles)** - Keeps third-party Quick Settings tiles responsive on Android 13+. `FOSS` `[LSP]`
 - **[Quick-Tile Settings](https://github.com/RBN-Apps/Quick-Tile-Settings)** - Provides customizable Quick Settings tiles for managing Private DNS and USB Debugging. `FOSS` | [🌱](https://f-droid.org/packages/com.rbn.qtsettings) 
 - **[Smart Dock](https://github.com/axel358/smartdock)** - A user-friendly desktop mode launcher that offers a modern and customizable user interface. `FOSS`
@@ -117,7 +117,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[Global Icon Pack](https://github.com/RichardLuo0/global-icon-pack-android)** - Apply icon packs globally. `FOSS` `[LSP]`
 - **[HyperLight](https://github.com/KiminonawaResa/HyperLight#english)** - Completes the highlight blur effects for HyperOS 3, bringing a unified visual experience to the desktop, notification shade, and control center. `FOSS` `[LSP]`
 - **[HyperOS Theme Manager](https://github.com/Mods-Center/HyperOS-Theme-Manager)** - Multi-theme servers, premium themes, AI wallpapers, third-party imports, super icons/widgets etc. `Proprietary` `[M]` `[K]`
-- **[Iconify](https://github.com/Mahmud0808/Iconify)** - Customize your Android 12+ device easily. `FOSS` `[M]`
+- **[Iconify](https://github.com/Mahmud0808/Iconify)** - Customize your Android 12+ device easily. `FOSS` `[M]` `[A]`
 - **[Lite Blur Control Center For HyperOS2](https://github.com/fakerieh/Lite-Blur-Control-Center-For-HyperOS2)** - Control Center Blur for HyperOS2 but LIGHTER. `FOSS` `[M]`
 - **[Monetify](https://github.com/KaeruShi/Monetify)** - Customize third-party apps seamlessly to match your device style. `FOSS` `[LSP]`
 - **[Project Themer](https://play.google.com/store/apps/details?id=com.drsants.eggproject)** - Provides tools and features for rooted devices. `Proprietary` `[M]`

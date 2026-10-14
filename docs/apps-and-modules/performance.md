@@ -26,7 +26,7 @@ optimization**, charging control and task & process management.
 
 ## Battery Optimization
 
-- **[⭐ FROSTY](https://github.com/Drsexo/Frosty)** - Optimizes battery life by selectively freezing Google Mobile Services (GMS) components and applying system-wide doze enhancements. `FOSS` `[M]` `[K]`
+- **[⭐ FROSTY](https://github.com/Drsexo/Frosty)** - Optimizes battery life by selectively freezing Google Mobile Services (GMS) components and applying system-wide doze enhancements. `FOSS` `[M]` `[K]` `[A]`
 - **[Always Battery Saver](https://github.com/icepony/AlwaysBatterySaver)** - Prevent Android from automatically disabling Battery Saver when the device is charging. `FOSS` `[LSP]`
 - **[AntiWakeLock](https://github.com/binarynoise/XposedModulets/releases?q=AntiWakeLock)** - Disable WAKE_LOCK and FLAG_KEEP_SCREEN_ON to save battery. `FOSS` `[LSP]`
 - **[Auto Sleep](https://github.com/The-First-King/Auto-Sleep)** - Scheduled sleep mode that enables airplane mode, turns off Wi-Fi/Bluetooth and forces Doze using root, then restores the previous states. `FOSS`
@@ -48,8 +48,8 @@ optimization**, charging control and task & process management.
 - **[Plus Plus Battery](https://github.com/dijia1124/plusplusbattery)** - Real-time battery stats & health estimator for OnePlus/Oppo/Realme phones. `FOSS` | [🌱](https://f-droid.org/en/packages/com.dijia1124.plusplusbattery/)
 - **[Realme-GT3-neo5-CPU-limiter](https://github.com/Quantom2/Realme-GT3-neo5-CPU-limiter)** - A Magisk/KSU based module to slow down your CPU to make your screen time better. `FOSS` `[M]` `[K]`
 - **[SaverTuner](https://codeberg.org/s1m/savertuner)** - Allows you to take advantage of this built-in battery saver. You can now set different profiles that save the battery more or less aggressively. [Does not work on Xiaomi](https://codeberg.org/s1m/savertuner/issues/98#issuecomment-5777054). `FOSS` | [🌱](https://f-droid.org/packages/s1m.savertuner/)
-- **[Universal GMS Doze Fork](https://github.com/MarsPatrick/universal-gms-doze)** - Patches Google Play services app and certain processes/services to be able to use battery optimization. View this [issue](https://github.com/awesome-android-root/awesome-android-root/issues/167) before use. `FOSS` `[M]` 
-- **[Xtreme-Battery-Saver](https://github.com/Magisk-Modules-Alt-Repo/Xtreme-Battery-Saver)** - An extreme battery saver Magisk Module for users who want to really stretch their battery life. `FOSS` `[M]`
+- **[Universal GMS Doze Fork](https://github.com/MarsPatrick/universal-gms-doze)** - Patches Google Play services app and certain processes/services to be able to use battery optimization. View this [issue](https://github.com/awesome-android-root/awesome-android-root/issues/167) before use. `FOSS` `[M]` `[A]` 
+- **[Xtreme-Battery-Saver](https://github.com/Magisk-Modules-Alt-Repo/Xtreme-Battery-Saver)** - An extreme battery saver Magisk Module for users who want to really stretch their battery life. `FOSS` `[M]` `[A]`
 
 > [!TIP]
 > For privacy benefits of reducing Google Services activity, also see [privacy tools](privacy.md#privacy-tools).
@@ -58,7 +58,7 @@ optimization**, charging control and task & process management.
 
 - **[AccA](https://github.com/VR-25/acc)** - Advanced Charging Controller app. `FOSS`
 - **[Charging Bypass](https://github.com/AbhishekTor55/charging-bypass-magisk)** - Disables charging when screen is ON and re-enables when OFF. Useful for gaming/dev use. `FOSS` `[M]`
-- **[FastCharge Next](https://github.com/Dev97633/Fastcharge-next)** - Boost charging speed with smart tweaks. `FOSS` `[M]`
+- **[FastCharge Next](https://github.com/Dev97633/Fastcharge-next)** - Boost charging speed with smart tweaks. `FOSS` `[M]` `[A]`
 
 ## Kernel Management
 
@@ -71,7 +71,7 @@ optimization**, charging control and task & process management.
 - **[KonaBess](https://github.com/libxzr/KonaBess)** - A straightforward application designed to customize GPU frequency and voltage tables without the need for kernel recompilation. `FOSS` 
 - **[KonaBess Next](https://github.com/KonaBess-Next/KonaBess-Next)** - Fork of KonaBess, Custom GPU overclocking and undervolting tool with granulated voltage for rooted Snapdragon Android devices. `FOSS`
 - **[Minimal Kernel Manager](https://github.com/abhay-byte/mkm)** - Android kernel management and system monitoring application. `FOSS` | [🌱](https://f-droid.org/packages/com.ivarna.fluxlinux/)
-- **[PerfMTK](https://github.com/JUANIMAN/PerfMTK)** - Designed to optimize performance and power efficiency on MediaTek devices with Mali GPUs. `FOSS` `[M]`
+- **[PerfMTK](https://github.com/JUANIMAN/PerfMTK)** - Designed to optimize performance and power efficiency on MediaTek devices with Mali GPUs. `FOSS` `[M]` `[A]`
 - **[Rv Kernel Manager](https://github.com/Rve27/RvKernel-Manager)** - A modern Kernel Manager with Material 3 Expressive Design. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.rve.rvkernelmanager)
 - **[Zuan Kernel Manager](https://github.com/ZUANVFX01/ZKM/)** - Advanced Android kernel management tool, rebuilt from the Rve Kernel Manager project base with Material 3 Expressive Modern Style. `FOSS`
 
@@ -88,12 +88,12 @@ optimization**, charging control and task & process management.
 - **[⭐ 3C All-in-One Toolbox](https://play.google.com/store/apps/details?id=ccc71.at.free)** - A comprehensive utility that offers a wide range of tools for monitoring, controlling, and optimizing device performance in a user-friendly interface. `Proprietary`
 - **[Androoster](https://github.com/cioccarellia/androoster)** - Android root tweak toolbox. It is built to help you tweak your device, keeping it cool, fast and responsive. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.andreacioccarelli.androoster)
 - **[AZenith](https://github.com/Liliya2727/AZenith)** - All-In-One (AIO) system optimization module designed to enhance Android performance. `FOSS` `[M]` `[K]`
-- **[COPG](https://github.com/AlirezaParsi/COPG)** - Spoof your device to enjoy premium features, max performance, and exclusive benefits. `FOSS` `[M]`
-- **[COPG-VD](https://github.com/VD171/COPG-VD)** - Fork of COPG with additional features and optimizations. `FOSS` `[M]` `[K]`
+- **[COPG](https://github.com/AlirezaParsi/COPG)** - Spoof your device to enjoy premium features, max performance, and exclusive benefits. `FOSS` `[M]` `[A]`
+- **[COPG-VD](https://github.com/VD171/COPG-VD)** - Fork of COPG with additional features and optimizations. `FOSS` `[M]` `[K]` `[A]`
 - **[Dynamic System Tweaks Magisk Module](https://github.com/PS2ClassicsVault/Dynamic-System-Tweaks-Magisk-Module)** - Improves overall System performance without overheating and losing battery power for armeabi-v7a devices. `FOSS` `[M]`
 - **[FDE.AI](https://github.com/feravolt/FDE.AI-docs)** - All-in-One ultimate optimizer for all devices running Android OS. `Proprietary` `[LSP]`
 - **[Hydrostellaire](https://github.com/AestasBritannia/Hydro-Br-leur)** - A magisk module for devices running on Dimensity flagship platforms and OnePlus, Realme devices. `FOSS` `[M]`
-- **[MAGNETAR](https://github.com/Kyliekyler/MAGNETAR)** - Device Performance Optimizer - Aims To Provide An Optimal Experience At Every Usage Scenario. `FOSS` `[M]`
+- **[MAGNETAR](https://github.com/Kyliekyler/MAGNETAR)** - Device Performance Optimizer - Aims To Provide An Optimal Experience At Every Usage Scenario. `FOSS` `[M]` `[A]`
 - **[SpeedCool](https://github.com/Llucs/SpeedCool-Magisk-Module)** - Boost, cool down, and optimize your Android with SpeedCool: less lag, more performance, and a cooler system. `FOSS` `[M]`
 - **[Stellar Tweaks](https://github.com/kanaodnd/Stellar-Tweaks)** - Sophisticated scheduler designed to harmonize device performance and efficiency. `Proprietary` `[M]` `[K]` `[A]`
 - **[TNF Tweaker](https://github.com/topnotchfreaks/tnf_tweaker)** - Optimization tool designed exclusively for devices running the TopNotchFreaks and Zephyr kernels. `FOSS` `[K]`
@@ -103,7 +103,7 @@ optimization**, charging control and task & process management.
 - **[Appzuku](https://github.com/northmendo/Appzuku)** - Simple app to boost performance by stopping background apps, relying on Root/Shizuku permissions. `FOSS`
 - **[Background App Slayer (BAS)](https://github.com/UNKNUW/Background-App-Slayer)** - Automatic Killing Background apps. `FOSS` `[M]`
 - **[DeepSuppressor](https://github.com/Aurora-Nasa-1/DeepSuppressor)** - Background process management tool to monitor and control application processes. `FOSS` `[M]`
-- **[Greenify4Magisk/KSU Reborn](https://github.com/Drsexo/Greenify4Magisk-KSU-Reborn)** - Integrates Greenify as a privileged system app to enable Boost Mode, enhancing hibernation performance without modifying the ROM. `FOSS` `[M]` `[K]`
+- **[Greenify4Magisk/KSU Reborn](https://github.com/Drsexo/Greenify4Magisk-KSU-Reborn)** - Integrates Greenify as a privileged system app to enable Boost Mode, enhancing hibernation performance without modifying the ROM. `FOSS` `[M]` `[K]` `[A]`
 - **[KillMyApps](https://github.com/dedeadend/KillMyApps)** - Terminates background processes through root or Shizuku to free RAM and save battery, with scheduled auto-kill and a Quick Settings tile. `FOSS`
 - **[No More Background](https://github.com/adil192/no_more_background)** - A fire-and-forget program to stop Android apps from running in the background. `FOSS` | [🌱](https://f-droid.org/en/packages/com.adilhanney.no_more_background/)
 - **[Operator](https://github.com/by-architect/Operator)** - Matrix-inspired Android Task Manager that lets you monitor, manage, and terminate processes directly from your device. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.byarchitect.operator)

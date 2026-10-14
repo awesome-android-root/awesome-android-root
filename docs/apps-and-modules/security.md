@@ -30,7 +30,7 @@ firewalls for hardening your device, controlling which apps can reach the networ
 - **[Athena](https://github.com/Kin69/Athena)** - Material You (Material 3) firewall and ad blocker that works seamlessly on both rooted and non-rooted devices. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.kin.athena)
 - **[De1984 Firewall](https://github.com/dorumrr/de1984)** - A privacy-focused Firewall and Package Manager for Android devices. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/io.github.dorumrr.de1984)
 - **[Fyrypt](https://github.com/mirfatif/Fyrypt)** - Android firewall with UID + PID rules, dnscrypt-proxy management, and per-app live network monitoring. `Proprietary`
-- **[Net Switch](https://github.com/Rem01Gaming/net-switch)** - Isolate any app from Internet access. `FOSS` `[M]`
+- **[Net Switch](https://github.com/Rem01Gaming/net-switch)** - Isolate any app from Internet access. `FOSS` `[M]` `[A]`
 - **[NetGuard](https://github.com/M66B/NetGuard)** - Block access to the internet. Apps and addresses can individually be allowed or denied access to your Wi-Fi and/or mobile connection. `FOSS`
 - **[PCAPdroid](https://github.com/emanuele-f/PCAPdroid#pcapdroid)** - Lets you track, analyze and block the connections made by the other apps in your device. `FOSS` | [🌱](https://f-droid.org/packages/com.emanuelef.remote_capture) | [▶️](https://play.google.com/store/apps/details?id=com.emanuelef.remote_capture)
 - **[ShizuWall](https://github.com/AhmetCanArslan/ShizuWall)** - Android firewall without VPN powered by Shizuku / local ADB daemon / Root. `FOSS` | [🌱](https://f-droid.org/packages/com.arslan.shizuwall/) | [▶️](https://play.google.com/store/apps/details?id=com.arslan.shizuwall)
@@ -43,7 +43,7 @@ firewalls for hardening your device, controlling which apps can reach the networ
 
 - **[⭐ Enable Screenshot](https://github.com/LSPosed/DisableFlagSecure)** - Enabling screenshots in apps that normally wouldn't allow it, and disabling screenshot(Android 14+) and screen record(Android 15+) detection. `FOSS` `[LSP]`
 - **[⭐ Flag Secure Patcher](https://github.com/j-hc/FlagSecurePatcher)** - Patch service.jar on device to disable secure lock and screenshot listeners. `FOSS` `[M]`
-- **[⭐ Move Certificate](https://github.com/ys1231/MoveCertificate)** - Move user certificates to system certificates. Supports Android 7-16. `FOSS` `[M]` `[K]`
+- **[⭐ Move Certificate](https://github.com/ys1231/MoveCertificate)** - Move user certificates to system certificates. Supports Android 7-16. `FOSS` `[M]` `[K]` `[A]`
 - **[⭐ SSL Killer](https://github.com/Xposed-Modules-Repo/com.simo.ssl.killer)** - Bypass multiple ssl pinning implementations. `Proprietary` `[LSP]`
 - **[AlternativeUnlockXposed](https://github.com/leohearts/AlternativeUnlockXposed)** - Unlock your Android phone with an alternative PIN. `FOSS` `[LSP]`
 - **[Always Trust User Certs](https://github.com/NVISOsecurity/AlwaysTrustUserCerts)** - A Magisk/KernelSU module that automatically adds user certificates to the system root CA store. `FOSS` `[M]` `[K]`
@@ -62,7 +62,7 @@ firewalls for hardening your device, controlling which apps can reach the networ
 - **[OneShot Extended](https://github.com/chickendrop89/OneShot-Extended)** - Performs various WPS attacks without the requirement of monitor mode. `FOSS` `[M]` `[K]`
 - **[PinGuard](https://github.com/khiqwq/PinGuard/blob/main/README_EN.md)** - LSPosed module that requires fingerprint / password to unpin screen-pinned apps. `FOSS` `[LSP]`
 - **[SafetyCore Placeholder](https://github.com/daboynb/Safetycore-placeholder)** - Placeholder APK that keeps Google SafetyCore from being installed or updated again, thanks to a signature mismatch. `FOSS`
-- **[Simple Flag Secure](https://github.com/ShivamXD6/Simple-Flag-Secure)** - Disable Secure Flag and allow taking screenshots/screen recording in apps supports KSU/APatch . `FOSS` `[M]` `[K]`
+- **[Simple Flag Secure](https://github.com/ShivamXD6/Simple-Flag-Secure)** - Disable Secure Flag and allow taking screenshots/screen recording in apps supports KSU/APatch . `FOSS` `[M]` `[K]` `[A]`
 - **[StrykerOSS](https://github.com/zalexdev/strykerapp)** - Bundles a curated set of network, wireless and web security tools into a single rooted-Android application for penetration testing. `FOSS`
 - **[TapDucky](https://github.com/iodn/tap-ducky)** - Open-source DuckyScript runner for rooted Android with USB Gadget (ConfigFS) support. `FOSS`  | [🌱](https://f-droid.org/en/packages/org.kaijinlab.tap_ducky/)
 - **[Zygisk Cacerts](https://github.com/vvb2060/zygisk_cacerts)** - Zygisk module that replaces the local root certificate store with the AOSP CA certificate list. `Proprietary` `[M]` `[K]`
