@@ -3,9 +3,6 @@ layout: doc
 title: Android Rooting Resources 2026
 description: "Complete collection of Android rooting resources, tools, communities, guides, and expert materials for safe rooting, custom ROMs, and device customization."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/resources
   - - meta
     - property: og:type
       content: website
@@ -15,18 +12,6 @@ head:
   - - meta
     - property: og:description
       content: Ultimate collection of Android rooting resources including tools, communities, guides, and expert materials for safe device customization and root access.
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/resources
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
   - - meta
     - property: og:image:secure_url
       content: https://awesome-android-root.xyz/images/og.png
@@ -43,12 +28,6 @@ head:
     - property: og:image:type
       content: image/png
   - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
   - - meta
@@ -57,9 +36,6 @@ head:
   - - meta
     - name: twitter:description
       content: Everything you need for Android rooting - tools, communities, guides, and expert resources in one comprehensive collection.
-  - - meta
-    - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Android Rooting Resources 2026 - Tools, Communities & Guides

@@ -3,51 +3,12 @@ layout: doc
 title: "Gaming"
 description: "Gaming apps and modules for rooted Android: performance tweaks, FPS unlockers and resolution changers, plus game modification tools."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/apps-and-modules/gaming
   - - meta
     - name: robots
       content: index, follow
   - - meta
     - name: author
       content: Awesome Android Root
-  - - meta
-    - property: og:type
-      content: article
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - property: og:title
-      content: "Gaming | Awesome Android Root"
-  - - meta
-    - property: og:description
-      content: "Gaming apps and modules for rooted Android: performance tweaks, FPS unlockers and resolution changers, plus game modification tools."
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/apps-and-modules/gaming
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
-    - name: twitter:title
-      content: "Gaming | Awesome Android Root"
-  - - meta
-    - name: twitter:description
-      content: "Gaming apps and modules for rooted Android: performance tweaks, FPS unlockers and resolution changers, plus game modification tools."
-  - - meta
-    - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og.png
 ---
 
 # Gaming

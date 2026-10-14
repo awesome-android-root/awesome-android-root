@@ -3,9 +3,6 @@ layout: doc
 title: "Networking"
 description: "VPN, proxy, Wi‑Fi, Bluetooth, and mobile-data tools for traffic control and networking on rooted Android."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/apps-and-modules/networking
   - - meta
     - name: robots
       content: index, follow
@@ -13,41 +10,8 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - property: og:type
-      content: article
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - property: og:title
-      content: "Networking | Awesome Android Root"
-  - - meta
-    - property: og:description
-      content: "VPN, proxy, Wi‑Fi, Bluetooth, and mobile-data tools for traffic control and networking on rooted Android."
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/apps-and-modules/networking
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
-    - name: twitter:title
-      content: "Networking | Awesome Android Root"
-  - - meta
     - name: twitter:description
       content: "Networking tools for rooted Android: VPN & proxy modules (Clash, sing-box, v2ray), network tools, Wi-Fi & mobile data utilities and Bluetooth & NFC apps & modules."
-  - - meta
-    - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og.png
 ---
 
 # Networking

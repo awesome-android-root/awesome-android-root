@@ -3,9 +3,6 @@ layout: doc
 title: "Temporary Root for Android: Methods & Solutions"
 description: "Compare temporary root methods for Android, including locked-bootloader options, bootloader modifications, reboot behavior, device limits and safety risks."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/rooting-guides/temporary-root-solutions
   - - meta
     - name: author
       content: Awesome Android Root
@@ -13,26 +10,11 @@ head:
     - name: robots
       content: index, follow
   - - meta
-    - property: og:type
-      content: article
-  - - meta
     - property: og:title
       content: "Temporary Root for Android: Methods & Solutions"
   - - meta
     - property: og:description
       content: "Compare Android temporary root, bootloader modification tools and standard Magisk, KernelSU and APatch rooting, with device limits and safety notes."
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/rooting-guides/temporary-root-solutions
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
   - - meta
     - name: twitter:title
       content: "Temporary Root for Android: Methods & Solutions"

@@ -3,12 +3,6 @@ layout: doc
 title: Complete APatch Root Guide
 description: "Master APatch rooting with a practical 2026 guide: compatibility checks, safe install flow, OTA survival, and recovery steps."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/rooting-guides/apatch-guide
-  - - meta
-    - property: og:type
-      content: article
   - - meta
     - property: og:title
       content: Complete APatch Root Guide - Modern Kernel-Based Android Rooting
@@ -16,17 +10,8 @@ head:
     - property: og:description
       content: Install APatch safely with updated boot/init_boot guidance, OTA handling, module basics, and troubleshooting.
   - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/rooting-guides/apatch-guide
-  - - meta
     - property: og:image
       content: https://awesome-android-root.xyz/images/og/apatch-guide.png
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
   - - meta
     - name: twitter:creator
       content: "@awsm_and_root"

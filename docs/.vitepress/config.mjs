@@ -40,26 +40,33 @@ function llmsSidebar(sidebar) {
   )
 }
 
+const SITE = 'https://awesome-android-root.xyz'
+const SITE_NAME = 'Awesome Android Root'
+const TWITTER_SITE = '@awsm_and_root'
+const DEFAULT_OG_IMAGE = '/images/og.png'
+
+function routeFromRelativePath(relativePath = 'index.md') {
+  if (relativePath === 'index.md') return '/'
+  return `/${relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')}`
+}
+
 export default withPwa(defineConfig({
   lang: 'en-US',
-  title: 'Awesome Android Root',
+  title: SITE_NAME,
   ignoreDeadLinks: true,
   cleanUrls: true,
   lastUpdated: true,
   metaChunk: true,
 
   transformHead({ pageData }) {
-    const site = 'https://awesome-android-root.xyz'
+    const site = SITE
     const relativePath = pageData.relativePath || 'index.md'
-    const route = relativePath === 'index.md'
-      ? '/'
-      : `/${relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')}`
+    const route = routeFromRelativePath(relativePath)
     const pageUrl = `${site}${route}`
 
-    if (route === '/') return []
-
-    const title = pageData.title || pageData.frontmatter?.title || 'Awesome Android Root'
+    const title = pageData.title || pageData.frontmatter?.title || SITE_NAME
     const description = pageData.description || pageData.frontmatter?.description || ''
+    const socialTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`
     const labels = route.split('/').filter(Boolean).map((part) =>
       part.split('-').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
     )
@@ -132,9 +139,10 @@ export default withPwa(defineConfig({
       }
     ]
 
-    const dateTags = []
+    const tags = []
+
     if (pageData.lastUpdated) {
-      dateTags.push([
+      tags.push([
         'meta',
         { property: 'article:modified_time', content: new Date(pageData.lastUpdated).toISOString() }
       ])
@@ -143,21 +151,55 @@ export default withPwa(defineConfig({
     if (publishedDate) {
       const published = new Date(publishedDate)
       if (!Number.isNaN(published.getTime())) {
-        dateTags.push([
+        tags.push([
           'meta',
           { property: 'article:published_time', content: published.toISOString() }
         ])
       }
     }
 
-    return [
-      [
+    const frontmatterHead = pageData.frontmatter?.head ?? []
+    const frontmatterTagKeys = new Set()
+    for (const entry of frontmatterHead) {
+      if (!Array.isArray(entry) || entry.length < 2) continue
+      const [tagName, attrs] = entry
+      const key = attrs && (attrs.property || attrs.name || attrs.rel)
+      if (tagName === 'meta' && attrs?.property) frontmatterTagKeys.add(attrs.property)
+      else if (tagName === 'meta' && attrs?.name) frontmatterTagKeys.add(attrs.name)
+      else if (tagName === 'link' && attrs?.rel === 'canonical') frontmatterTagKeys.add('link:canonical')
+    }
+
+    const ogImage = `${site}${DEFAULT_OG_IMAGE}`
+    const socialTags = [
+      ['link', { rel: 'canonical', href: pageUrl }, 'link:canonical'],
+      ['meta', { property: 'og:type', content: route === '/' ? 'website' : 'article' }, 'og:type'],
+      ['meta', { property: 'og:site_name', content: SITE_NAME }, 'og:site_name'],
+      ['meta', { property: 'og:locale', content: 'en_US' }, 'og:locale'],
+      ['meta', { property: 'og:title', content: socialTitle }, 'og:title'],
+      ['meta', { property: 'og:description', content: description }, 'og:description'],
+      ['meta', { property: 'og:url', content: pageUrl }, 'og:url'],
+      ['meta', { property: 'og:image', content: ogImage }, 'og:image'],
+      ['meta', { property: 'og:image:alt', content: socialTitle }, 'og:image:alt'],
+      ['meta', { name: 'twitter:card', content: 'summary_large_image' }, 'twitter:card'],
+      ['meta', { name: 'twitter:title', content: socialTitle }, 'twitter:title'],
+      ['meta', { name: 'twitter:description', content: description }, 'twitter:description'],
+      ['meta', { name: 'twitter:image', content: ogImage }, 'twitter:image'],
+      ['meta', { name: 'twitter:site', content: TWITTER_SITE }, 'twitter:site']
+    ]
+    for (const [tagName, attrs, key] of socialTags) {
+      if (frontmatterTagKeys.has(key)) continue
+      tags.push([tagName, attrs])
+    }
+
+    if (route !== '/') {
+      tags.push([
         'script',
         { type: 'application/ld+json' },
         JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })
-      ],
-      ...dateTags
-    ]
+      ])
+    }
+
+    return tags
   },
 
   vite: {
@@ -340,13 +382,9 @@ export default withPwa(defineConfig({
     ['link', { rel: 'manifest', href: '/manifest.json' }],
 
     // --- SEO Meta Tags ---
-    ['meta', { name: 'publisher', content: 'Awesome Android Root Project' }],
-    ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1' }],
-    ['meta', { name: 'googlebot', content: 'index, follow, max-image-preview:large' }],
-    ['meta', { name: 'language', content: 'en-US' }],
-    ['meta', { name: 'distribution', content: 'global' }],
-    ['meta', { name: 'rating', content: 'general' }],
-    ['meta', { name: 'referrer', content: 'no-referrer-when-downgrade' }],
+    // Titles, descriptions, canonicals and social tags are generated centrally
+    // in transformHead, so only page-level directives live here.
+    ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large' }],
 
     // --- Verification Tags ---
     ['meta', { name: 'google-site-verification', content: 'LZTsUH49HHfaPFDezfkN4dE0JmLUbOrY3NJKLr1ZPrE' }]
