@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
@@ -45,9 +46,132 @@ const SITE_NAME = 'Awesome Android Root'
 const TWITTER_SITE = '@awsm_and_root'
 const DEFAULT_OG_IMAGE = '/images/og.png'
 
+const ORGANIZATION_ID = `${SITE}/#organization`
+const WEBSITE_ID = `${SITE}/#website`
+
+const ORGANIZATION_NODE = {
+  '@type': 'Organization',
+  '@id': ORGANIZATION_ID,
+  name: SITE_NAME,
+  description: 'A community-curated resource for Android rooting guides, troubleshooting, and root apps and modules.',
+  url: `${SITE}/`,
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      contactType: 'general support',
+      url: 'https://github.com/awesome-android-root/awesome-android-root/issues/new'
+    },
+    {
+      '@type': 'ContactPoint',
+      contactType: 'security reports',
+      email: 'security@awesome-android-root.xyz',
+      url: 'https://github.com/awesome-android-root/awesome-android-root/security/advisories/new'
+    }
+  ],
+  logo: {
+    '@type': 'ImageObject',
+    url: `${SITE}/images/logo.png`,
+    width: 330,
+    height: 330
+  },
+  sameAs: [
+    'https://github.com/awesome-android-root',
+    'https://x.com/awsm_and_root'
+  ]
+}
+
+const WEBSITE_NODE = {
+  '@type': 'WebSite',
+  '@id': WEBSITE_ID,
+  name: SITE_NAME,
+  url: `${SITE}/`,
+  inLanguage: 'en-US',
+  publisher: { '@id': ORGANIZATION_ID }
+}
+
+const FOLDER_LABELS = {
+  'rooting-guides': 'Rooting Guides',
+  'apps-and-modules': 'Apps & Modules',
+  'general-guides': 'Tutorials'
+}
+
 function routeFromRelativePath(relativePath = 'index.md') {
   if (relativePath === 'index.md') return '/'
   return `/${relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')}`
+}
+
+/** CollectionPage for category hubs, TechArticle for step-by-step guides. */
+function pageTypeFor(route) {
+  const segments = route.split('/').filter(Boolean)
+  const isSectionIndex = segments.length === 1 && Boolean(FOLDER_LABELS[segments[0]])
+  if (segments[0] === 'apps-and-modules') return 'CollectionPage'
+  if (isSectionIndex) return 'CollectionPage'
+  if (segments[0] === 'rooting-guides' || segments[0] === 'general-guides') return 'TechArticle'
+  return 'WebPage'
+}
+
+/** Read a page's raw markdown so structured data can be derived from it at build time. */
+const markdownCache = new Map()
+function readMarkdown(relativePath) {
+  if (markdownCache.has(relativePath)) return markdownCache.get(relativePath)
+  let markdown = ''
+  try {
+    markdown = readFileSync(fileURLToPath(new URL(`../${relativePath}`, import.meta.url)), 'utf-8')
+  } catch {
+    markdown = ''
+  }
+  markdownCache.set(relativePath, markdown)
+  return markdown
+}
+
+/** Build FAQPage mainEntity from question headings and their answer paragraphs. */
+function faqFromMarkdown(markdown) {
+  if (!markdown) return []
+  const body = markdown.replace(/^---[\s\S]*?\n---\n/, '')
+  const lines = body.split('\n')
+  const questions = []
+  let current = null
+  let inFence = false
+
+  for (const line of lines) {
+    if (/^\s*```/.test(line)) {
+      inFence = !inFence
+      if (current) current.lines.push('')
+      continue
+    }
+    if (inFence) continue
+
+    const heading = /^(#{2,4})\s+(.+?)\s*$/.exec(line)
+    if (heading) {
+      if (current) questions.push(current)
+      const text = heading[2].trim()
+      current = /^(how|what|why|when|where|which|who|can|is|are|does|do|will|should|if)\b.*\?\s*$/i.test(text)
+        ? { question: text, lines: [] }
+        : null
+      continue
+    }
+    if (current) current.lines.push(line)
+  }
+  if (current) questions.push(current)
+
+  return questions
+    .map(({ question, lines }) => {
+      const answer = lines
+        .join('\n')
+        .replace(/^\s*[-*]\s+/gm, '')
+        .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+        .replace(/[`*_>#]/g, '')
+        .replace(/\n{3,}/g, '\n\n')
+        .trim()
+      return answer.length >= 40
+        ? {
+            '@type': 'Question',
+            name: question,
+            acceptedAnswer: { '@type': 'Answer', text: answer }
+          }
+        : null
+    })
+    .filter(Boolean)
 }
 
 export default withPwa(defineConfig({
@@ -67,77 +191,75 @@ export default withPwa(defineConfig({
     const title = pageData.title || pageData.frontmatter?.title || SITE_NAME
     const description = pageData.description || pageData.frontmatter?.description || ''
     const socialTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`
-    const labels = route.split('/').filter(Boolean).map((part) =>
-      part.split('-').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
-    )
+
+    const dateModified = pageData.lastUpdated
+      ? new Date(pageData.lastUpdated).toISOString()
+      : undefined
+    const published = pageData.frontmatter?.date
+      ? new Date(pageData.frontmatter.date)
+      : null
+    const datePublished = published && !Number.isNaN(published.getTime())
+      ? published.toISOString()
+      : undefined
+
+    const segments = route.split('/').filter(Boolean)
     const breadcrumbItems = [
       { '@type': 'ListItem', position: 1, name: 'Home', item: `${site}/` }
     ]
-    labels.forEach((label, index) => {
-      const itemRoute = `/${route.split('/').filter(Boolean).slice(0, index + 1).join('/')}`
+    segments.forEach((segment, index) => {
+      const itemRoute = `/${segments.slice(0, index + 1).join('/')}`
+      const isLast = index === segments.length - 1
       breadcrumbItems.push({
         '@type': 'ListItem',
         position: index + 2,
-        name: label,
+        name: isLast
+          ? title
+          : (FOLDER_LABELS[segment] ??
+            segment.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')),
         item: `${site}${itemRoute}`
       })
     })
 
-    const graph = [
-      {
-        '@type': 'Organization',
-        '@id': `${site}/#organization`,
-        name: 'Awesome Android Root',
-        description: 'A community-curated resource for Android rooting guides, troubleshooting, and root apps and modules.',
-        url: `${site}/`,
-        contactPoint: [
-          {
-            '@type': 'ContactPoint',
-            contactType: 'general support',
-            url: 'https://github.com/awesome-android-root/awesome-android-root/issues/new'
-          },
-          {
-            '@type': 'ContactPoint',
-            contactType: 'security reports',
-            email: 'security@awesome-android-root.xyz',
-            url: 'https://github.com/awesome-android-root/awesome-android-root/security/advisories/new'
-          }
-        ],
-        logo: {
-          '@type': 'ImageObject',
-          url: `${site}/images/logo.png`,
-          width: 330,
-          height: 330
-        },
-        sameAs: [
-          'https://github.com/awesome-android-root',
-          'https://x.com/awsm_and_root'
-        ]
-      },
-      {
-        '@type': 'WebSite',
-        '@id': `${site}/#website`,
-        name: 'Awesome Android Root',
-        url: `${site}/`,
-        inLanguage: 'en-US',
-        publisher: { '@id': `${site}/#organization` }
-      },
-      {
-        '@type': 'WebPage',
-        '@id': `${pageUrl}#webpage`,
-        name: title,
-        description,
-        url: pageUrl,
-        inLanguage: 'en-US',
-        isPartOf: { '@id': `${site}/#website` },
-        publisher: { '@id': `${site}/#organization` }
-      },
-      {
+    const pageNode = {
+      '@type': pageTypeFor(route),
+      '@id': `${pageUrl}#webpage`,
+      name: title,
+      headline: title,
+      description,
+      url: pageUrl,
+      inLanguage: 'en-US',
+      isPartOf: { '@id': WEBSITE_ID },
+      author: { '@id': ORGANIZATION_ID },
+      publisher: { '@id': ORGANIZATION_ID }
+    }
+    if (dateModified) pageNode.dateModified = dateModified
+    if (datePublished) pageNode.datePublished = datePublished
+
+    const graph = [ORGANIZATION_NODE, WEBSITE_NODE]
+
+    if (route !== '/') {
+      graph.push(pageNode)
+      graph.push({
         '@type': 'BreadcrumbList',
         '@id': `${pageUrl}#breadcrumb`,
         itemListElement: breadcrumbItems
+      })
+      if (route === '/faqs') {
+        const mainEntity = faqFromMarkdown(readMarkdown(relativePath))
+        if (mainEntity.length) {
+          graph.push({
+            '@type': 'FAQPage',
+            '@id': `${pageUrl}#faq`,
+            name: title,
+            description,
+            url: pageUrl,
+            inLanguage: 'en-US',
+            isPartOf: { '@id': WEBSITE_ID },
+            mainEntity
+          })
+        }
       }
-    ]
+    }
 
     const tags = []
 
@@ -191,13 +313,11 @@ export default withPwa(defineConfig({
       tags.push([tagName, attrs])
     }
 
-    if (route !== '/') {
-      tags.push([
-        'script',
-        { type: 'application/ld+json' },
-        JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })
-      ])
-    }
+    tags.push([
+      'script',
+      { type: 'application/ld+json' },
+      JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })
+    ])
 
     return tags
   },
