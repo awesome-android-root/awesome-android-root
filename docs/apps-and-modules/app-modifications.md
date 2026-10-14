@@ -91,8 +91,8 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 
 ### Bilibili
 
-- **[Bilibili Innocent Lab](https://github.com/jichuo1/Bilibili_Innocent_Lab)** - Interface purification and interaction enhancement module for Android Bilibili client. `FOSS` `[LSP]`
 - **[BBZQ](https://github.com/HSSkyBoy/BBZQ)** - Removes unnecessary content, optimizes the core experience, and provide various practical functions. `FOSS` `[LSP]`
+- **[Bilibili Innocent Lab](https://github.com/jichuo1/Bilibili_Innocent_Lab)** - Interface purification and interaction enhancement module for Android Bilibili client. `FOSS` `[LSP]`
 
 ### Discord
 
@@ -114,11 +114,11 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 
 ### QQ
 
-- **[NewQStory](https://github.com/Xposed-Modules-Repo/lin.xposed/)** - Xposed QQ module. `Proprietary` `[LSP]`
+- **[NewQStory](https://github.com/Xposed-Modules-Repo/lin.xposed/)** - Xposed module adding extra features and tweaks to QQ. `Proprietary` `[LSP]`
 - **[QAuxiliary](https://github.com/cinit/QAuxiliary)** - Xposed module based on QNotified. `FOSS` `[LSP]`
 - **[QFun](https://github.com/oneQAQone/QFun)** - Functionality enhancement module developed based on the Xposed framework. `FOSS` `[LSP]`
 - **[TCQT Module](https://github.com/callng/TCQT)** - An Xposed module designed for Android QQ/TIM clients, which is used to intercept and retain messages that would otherwise be "retracted". `FOSS` `[LSP]`
-- **[XAutoDaily](https://github.com/LuckyPray/XAutoDaily)** - Various tweaks for QQ. `FOSS` `[LSP]`
+- **[XAutoDaily](https://github.com/LuckyPray/XAutoDaily)** - Xposed module with various tweaks for the QQ client. `FOSS` `[LSP]`
 
 ### Reddit
 
@@ -156,8 +156,8 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 - **[MaskWechat](https://github.com/Mingyueyixi/MaskWechat)** - Hide the chat records of specific users to prevent private chats from being peeked by third parties. `FOSS` `[LSP]`
 - **[NewMiko](https://modules.lsposed.org/module/im.mingxi.miko/)** - Various tweaks related to  WeChat app. `Proprietary` `[LSP]`
 - **[WeChat Auxiliary](https://github.com/HdShare/WAuxiliary_Public)** - Various tweaks for WeChat. `Proprietary` `[LSP]`
-- **[WePadBridge](https://github.com/libingtong/WePadBridge)** - Enables tablet interface and features in WeChat Work mobile app. `FOSS` `[LSP]`
 - **[WeChatTablet](https://github.com/Xposed-Modules-Repo/top.hookvip.wxtablet)** - Enables tablet interface and features in WeChat mobile app. `Proprietary` `[LSP]`
+- **[WePadBridge](https://github.com/libingtong/WePadBridge)** - Enables tablet interface and features in WeChat Work mobile app. `FOSS` `[LSP]`
 
 ### Weibo
 

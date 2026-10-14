@@ -27,7 +27,7 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 - **[Android-ADB-over-WiFi](https://github.com/warren-bank/Android-ADB-over-WiFi)** - Toggles a rooted device's Android Debug Bridge daemon (adbd) between USB and WiFi mode. `FOSS` `[LSP]`
 - **[Debug Assistant](https://github.com/ThePedroo/DebugAssistant)** - The simplest yet powerful logcat capture system as Magisk module. `FOSS` `[M]`
 - **[Hotspot Wireless Debugging](https://github.com/droserasprout/io.drsr.hotspotadb)** - Xposed module to allow Wireless Debugging over Wi-Fi Hotspot. `FOSS` `[LSP]`
-- **[LADB](https://github.com/tytydraco/LADB)** - Local ADB shell. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.draco.ladb)
+- **[LADB](https://github.com/tytydraco/LADB)** - Local ADB shell with a built-in terminal interface. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.draco.ladb)
 - **[Log Catcher](https://github.com/hxreborn/Log-Catcher)** - Captures logcat and kernel messages during startup and archives them as timestamped tarballs after unlock. `FOSS` `[M]` `[K]`
 - **[Logcat Extreme](https://play.google.com/store/apps/details?id=scd.lcex)** - Logcat reader and capture tool for rooted Android devices. `Proprietary`
 - **[Loki](https://github.com/trinadhthatakula/Loki)** - Logcat reader that captures, saves and shares another app's logs using root or Shizuku. `FOSS`
