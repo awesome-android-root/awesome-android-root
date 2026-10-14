@@ -1,21 +1,21 @@
 ---
 layout: home
-title: Awesome Android Root | Root Apps, Modules & Guides
+title: Android Root Apps, Modules & Guides | Awesome Android Root
 titleTemplate: Awesome Android Root
-description: "Browse 650+ Android root apps and modules, practical rooting guides, and troubleshooting help for rooted devices."
+description: "Browse 650+ curated Magisk, KernelSU, APatch and LSPosed modules and root apps, plus step-by-step rooting guides, and fixes for Play Integrity and bootloops."
 head:
   - - meta
     - name: robots
       content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
   - - meta
     - property: og:title
-      content: "Android Root Apps, Modules & Rooting Guides | Awesome Android Root"
+      content: "Android Root Apps, Modules & Guides | Awesome Android Root"
   - - meta
     - property: og:image:secure_url
       content: "https://awesome-android-root.xyz/images/og.png"
   - - meta
     - property: og:image:alt
-      content: "Android Root Apps, Modules & Rooting Guides | Awesome Android Root"
+      content: "Android Root Apps, Modules & Guides | Awesome Android Root"
   - - meta
     - property: og:image:width
       content: "1200"
@@ -27,17 +27,120 @@ head:
       content: "image/png"
   - - meta
     - name: twitter:title
-      content: "Android Root Apps, Modules & Rooting Guides | Awesome Android Root"
+      content: "Android Root Apps, Modules & Guides | Awesome Android Root"
   - - meta
     - name: twitter:image:alt
-      content: "Android Root Apps, Modules & Rooting Guides | Awesome Android Root"
-  - - meta
-    - property: og:updated_time
-      content: "2026-09-13T00:00:00Z"
+      content: "Android Root Apps, Modules & Guides | Awesome Android Root"
   - - link
     - rel: prefetch
       href: "/apps-and-modules/"
+
+hero:
+  name: "Awesome Android Root"
+  text: "Android Root Apps, Modules & Rooting Guides"
+  tagline: "Explore 650+ root apps and modules, step-by-step rooting guides, and practical troubleshooting for Android power users."
+  image:
+    light: /images/logo.svg
+    dark: /images/logo_dark.svg
+    alt: Awesome Android Root - Ultimate Rooting Hub Logo
+  actions:
+    - theme: brand
+      text: Browse Root Apps
+      link: /apps-and-modules/
+      size: large
+    - theme: alt
+      text: Complete Rooting Guides
+      link: /rooting-guides/
+    - theme: alt
+      text: "Troubleshooting"
+      link: /troubleshooting
+features:
+  - icon: 🛡️
+    title: System-Wide Ad Blocking
+    details: "Block ads, trackers & malware across your entire system with hosts & DNS tools."
+    link: /apps-and-modules/ad-blocking
+
+  - icon: 🛠️
+    title: Root Management
+    details: "Root managers, module managers, LSPosed & Zygisk, and root hiding & Play Integrity."
+    link: /apps-and-modules/root-management
+
+  - icon: 🧩
+    title: App Modifications
+    details: "App patchers, social media mods, browser & YouTube clients, signature tools."
+    link: /apps-and-modules/app-modifications
+
+  - icon: ⚡
+    title: Performance & Battery
+    details: "Performance optimization, kernel management, memory, battery & charging tools."
+    link: /apps-and-modules/performance
+
+  - icon: 🎨
+    title: Customization
+    details: "Custom themes, fonts, launchers, status bar, notifications & display tweaks."
+    link: /apps-and-modules/customization
+
+  - icon: ⚙️
+    title: System & App Management
+    details: "System tweaks, OEM frameworks, app & package management, permissions & AppOps."
+    link: /apps-and-modules/system
+
+  - icon: 🗂️
+    title: File Management
+    details: "Root file managers, storage cleaners, and file & partition tools."
+    link: /apps-and-modules/file-management
+
+  - icon: 💾
+    title: Backup & Restore
+    details: "Full app & data backups, cloud sync and data recovery for rooted devices."
+    link: /apps-and-modules/backup
+
+  - icon: 🧹
+    title: Debloating
+    details: "Remove bloatware and unwanted system apps safely."
+    link: /apps-and-modules/debloating
+
+  - icon: 🕵️
+    title: Privacy Tools
+    details: "Privacy apps & modules, device ID & location spoofing, app isolation."
+    link: /apps-and-modules/privacy
+
+  - icon: 🔐
+    title: Security & Firewalls
+    details: "Security tools and per-app firewalls that control network access."
+    link: /apps-and-modules/security
+
+  - icon: 🌐
+    title: Networking
+    details: "VPN & proxy modules, network tools, Wi-Fi, Bluetooth & NFC."
+    link: /apps-and-modules/networking
+
+  - icon: 🎮
+    title: Gaming Optimization
+    details: "FPS unlockers, gaming tweaks, and game modification tools."
+    link: /apps-and-modules/gaming
+
+  - icon: 🧑‍💻
+    title: Development & Automation
+    details: "Terminal, ADB, Linux environments, automation, and hardware tools."
+    link: /apps-and-modules/development
+
+  - icon: 🎵
+    title: Audio
+    details: "Audio effects, enhancement, routing and device-specific audio tools."
+    link: /apps-and-modules/audio
+
+  - icon: 🧰
+    title: General Utilities
+    details: "Sync, power, sharing and practical root utilities."
+    link: /apps-and-modules/utilities
 ---
+
+<script setup>
+import { data as githubStats } from './.vitepress/github-stats.data.js'
+
+const { starsLabel } = githubStats
+</script>
 
 <div class="vp-doc">
 
@@ -141,7 +244,7 @@ head:
   <a href="https://github.com/awesome-android-root/awesome-android-root" class="community-card github">
     <span class="icon">⭐</span>
     <strong>GitHub</strong>
-    <span>5.1k stars</span>
+    <span v-if="starsLabel">{{ starsLabel }} stars</span>
   </a>
   <a href="https://x.com/awsm_and_root" class="community-card twitter">
     <span class="icon">𝕏</span>
