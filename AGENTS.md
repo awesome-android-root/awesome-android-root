@@ -121,19 +121,24 @@ For dependency changes, check existing dependencies before adding new ones.
 For documentation changes:
 
 ```bash
-python3 scripts/check_links.py
+bun run check:links
 bun run docs:build
 ```
 
-For Cloudflare Pages, use `bun run docs:build` as the build command and
-`docs/.vitepress/dist` as the output directory. Pin the build environment to
-Bun 1.4.3 and Node.js 24 or newer.
-
-For app/module additions or reordering, also run when relevant:
+For app and module entries, also run:
 
 ```bash
+bun run lint:entries # reports entry format, ordering and badge problems
 bash scripts/counter.sh
 ```
+
+CI runs `check:links` and `docs:build` as blocking steps and `lint:entries` as
+non-blocking. Keep lint clean even though CI does not enforce it. The build
+needs full git history because of `lastUpdated`.
+
+For Cloudflare Pages, use `bun run docs:build` as the build command and
+`docs/.vitepress/dist` as the output directory. Pin the build environment using
+`.bun-version` and the `engines.node` field in `package.json`.
 
 For site configuration or theme changes, build the site and manually inspect affected behavior when practical.
 
@@ -212,14 +217,7 @@ Preserve least-privilege permissions in GitHub Actions.
 
 ## 12. Definition of Done
 
-Before finishing:
-
-* The change is in the correct location.
-* No duplicate or unsupported claim was introduced.
-* Links, categories, tags, and badges are correct.
-* Relevant anchors and navigation still work.
-* Required validation passes.
-* The final diff contains no unrelated edits.
-* The result is concise, maintainable, and consistent with the repository.
+All checks in section 7 pass, the change sits in the correct category with
+correct links, tags, and badges, and the diff contains no unrelated edits.
 
 **Core principle:** Prefer accurate, concise, sourced, and maintainable changes over large, speculative, or impressive-looking changes.
