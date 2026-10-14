@@ -461,6 +461,8 @@ module choices, configuration order and the STRONG integrity limits are document
 [Play Integrity and Banking Apps](./troubleshooting.md#play-integrity-and-banking-apps), and the
 tools are listed under
 [Root Hiding & Play Integrity](./apps-and-modules/root-management#root-hiding-play-integrity).
+On KernelSU and its forks, kernel-level hiding with SUSFS closes leaks that userspace modules cannot;
+see the [SUSFS Root Hiding Guide](./rooting-guides/susfs-guide.md).
 
 Before depending on it, check that Play Store still shows "Device is certified" and test your
 actual banking app. If it is mission critical, do not root until you have verified it.
