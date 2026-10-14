@@ -1,11 +1,11 @@
 ---
 layout: doc
-title: "SUSFS Root Hiding Guide: Setup, Verification & NoMount"
+title: "SUSFS Root Hiding Guide: Setup, Verification & Config"
 description: "What SUSFS does, how its kernel patches and userspace tool work, how to get it via a patched kernel or a loadable kernel module, and how to verify it hides root on Android."
 head:
   - - meta
     - property: og:title
-      content: "SUSFS Root Hiding Guide: Setup, Verification & NoMount"
+      content: "SUSFS Root Hiding Guide: Setup, Verification & Config"
   - - meta
     - property: og:description
       content: "SUSFS kernel-level root hiding for KernelSU: requirements, patched kernels, SUSFS as a loadable kernel module, configuration and verification."
@@ -58,12 +58,11 @@ Requires an unlocked bootloader and root. Read the [KernelSU Guide](./kernelsu-g
 - [Getting SUSFS](#getting-susfs)
 - [Configuring It](#configuring-it)
 - [Verifying It Works](#verifying-it-works)
-- [NoMount: The Mountless Alternative](#nomount-the-mountless-alternative)
 - [Troubleshooting](#troubleshooting)
 - [Links](#links)
 
 **Related Guides:**
-- [KernelSU Guide](./kernelsu-guide.md) - KernelSU installation, metamodules and app profiles
+- [KernelSU Guide](./kernelsu-guide.md) - Installation, metamodules (including mountless options) and app profiles
 - [Root Hiding & Play Integrity](../apps-and-modules/root-management.md#root-hiding-play-integrity) - Module list and community tools
 - [Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps) - Attestation setup
 - [Root Framework Comparison](./root-framework-comparison.md) - KernelSU vs Magisk vs APatch
@@ -225,29 +224,6 @@ Do these in order. If step 2 fails, nothing later matters.
 
 ---
 
-## NoMount: The Mountless Alternative
-
-Classic module mounting always leaves an artifact: an entry in `/proc/mounts` that a detector can read. NoMount attacks that specific signal by redirecting path lookups in the kernel instead of creating mounts at all, so injected files appear in directory listings and open normally while the mount table stays clean.
-
-Both current projects are distributed as **metamodules** and add UID isolation, so a chosen app sees the untouched filesystem:
-
-- **[NoMount](https://github.com/maxsteeel/nomount)** - the reference implementation, with a WebUI for hot load/unload and per-app exclusion. It needs kernel integration, but its release ZIP ships prebuilt kernel modules and injects the subsystem automatically on GKI kernels, so a stock GKI device usually does not need a rebuild. Manual rules added with `nm` are RAM-only and disappear on reboot; the metamodule re-injects installed modules every boot.
-- **[NoMount Suite](https://github.com/Bouteillepleine/NoMount-Suite)** - a newer, more ambitious variant built on its own Prism kernel engine. It requires a kernel built with that engine, publishes prebuilt kernels for limited device families, and is explicitly in beta.
-
-**SUSFS or NoMount?** They solve overlapping but different problems:
-
-| | SUSFS | NoMount |
-|---|---|---|
-| Approach | Hides and spoofs what the kernel reports | Avoids creating mounts at all |
-| Needs | Patched kernel or loaded kernel module, plus a userspace module | Kernel integration (prebuilt modules exist) |
-| Hide paths and spoof `stat` | Yes | Hide files and directories, injection oriented |
-| Per-app isolation | Via app profiles and mount hiding | Yes, UID based, first class |
-| Best when | You want broad, configurable hiding on a supported kernel | You want no mount table entries and per-app exclusion |
-
-Running both is possible in principle, but they overlap and each adds its own kernel-side attack surface. Pick one, get it stable, and only then consider adding the other.
-
----
-
 ## Troubleshooting
 
 | Symptom | Likely cause | Fix |
@@ -274,8 +250,6 @@ Recovery basics live in the [KernelSU Guide](./kernelsu-guide.md#troubleshooting
 | BRENE | [github.com/rrr333nnn333/BRENE](https://github.com/rrr333nnn333/BRENE) |
 | SUSFS LKM loader module | [github.com/Nixie24/susfs4ksu-lkm-module](https://github.com/Nixie24/susfs4ksu-lkm-module) |
 | SUSFS LKM source | [github.com/inforcqb/susfs4ksu-lkm](https://github.com/inforcqb/susfs4ksu-lkm) |
-| NoMount | [github.com/maxsteeel/nomount](https://github.com/maxsteeel/nomount) |
-| NoMount Suite | [github.com/Bouteillepleine/NoMount-Suite](https://github.com/Bouteillepleine/NoMount-Suite) |
 | KernelSU-Next (SUSFS kernel module management) | [github.com/KernelSU-Next/KernelSU-Next](https://github.com/KernelSU-Next/KernelSU-Next) |
 | Build a KernelSU kernel | [kernelsu.org/guide/how-to-build.html](https://kernelsu.org/guide/how-to-build.html) |
 

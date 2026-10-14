@@ -160,7 +160,7 @@ SUSFS (Systemless User Space File System) is a kernel-level module that allows r
 - ~~ReSuSFS~~: Removed on author's request
 
 > [!TIP]
-> New to SUSFS? The [SUSFS Root Hiding Guide](../rooting-guides/susfs-guide.md) covers requirements, patched kernels versus the loadable kernel module, configuration, verification, and how mountless options like [NoMount](#metamodules) compare.
+> New to SUSFS? The [SUSFS Root Hiding Guide](../rooting-guides/susfs-guide.md) covers requirements, patched kernels versus the loadable kernel module, configuration and verification. For metamodules that avoid mounts entirely, see [NoMount](#metamodules).
 
 ---
 

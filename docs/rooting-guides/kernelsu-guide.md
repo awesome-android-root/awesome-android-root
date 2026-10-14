@@ -339,9 +339,9 @@ Metamodules also reduce the detection surface: the root solution itself is not t
 | **[mountify](https://github.com/backslashxx/mountify)** | OverlayFS with tmpfs/ext4 sparse storage | Works on APatch and Magisk as well as KernelSU |
 | **Magic Mount RS** | Magic Mount (bind mount) semantics | For older or picky environments where OverlayFS misbehaves |
 | **[ZeroMount](https://github.com/Enginex0/zeromount)** | Mountless VFS path redirection | Optional SUSFS integration, developer-oriented |
-| **[NoMount](https://github.com/maxsteeel/nomount)** | Mountless VFS path redirection, per-app UID isolation | Needs kernel integration; prebuilt modules cover GKI kernels. The newer [NoMount Suite](https://github.com/Bouteillepleine/NoMount-Suite) uses its own kernel engine and is in beta |
+| **[NoMount](https://github.com/maxsteeel/nomount)** | Mountless: VFS path redirection with per-app UID isolation | Nothing is mounted, so nothing appears in `/proc/mounts`. Needs kernel integration, but prebuilt modules cover GKI kernels. The newer [NoMount Suite](https://github.com/Bouteillepleine/NoMount-Suite) uses its own kernel engine and is in beta |
 
-> **Recommendation:** start with the metamodule currently listed in the [official module repository](https://modules.kernelsu.org/) (filter "Metamodules only"). Use Hybrid Mount or mountify when you need per-module mount control or extra storage options.
+> **Recommendation:** start with the metamodule currently listed in the [official module repository](https://modules.kernelsu.org/) (filter "Metamodules only"). Use Hybrid Mount or mountify when you need per-module mount control or extra storage options, and NoMount when leaving no mount table traces matters more than convenience.
 
 **Switching metamodules:** uninstall regular modules -> uninstall the metamodule -> reboot -> install the new metamodule -> reinstall modules -> reboot. Skipping the reinstall step is the usual cause of "modules install but do nothing".
 
@@ -490,7 +490,7 @@ On A/B devices, flash the slot that is actually booting, or switch slots.
 
 1. Configure **App Profiles** for banking, payment and anti-cheat apps before adding anything else.
 2. Install a **metamodule**, then the modules you actually need (Zygisk implementation, hiding stack).
-3. Harden with **SUSFS** (compiled-in or as a loaded kernel module) if your threat model needs it. The [SUSFS Root Hiding Guide](./susfs-guide.md) covers requirements, installation and verification, and compares it with mountless options like NoMount.
+3. Harden with **SUSFS** (compiled-in or as a loaded kernel module) if your threat model needs it. The [SUSFS Root Hiding Guide](./susfs-guide.md) covers requirements, installation, configuration and verification.
 4. Explore: [LSPosed Framework](./lsposed-guide.md), [Custom ROMs](./custom-rom-installation.md), [Root Apps Collection](../apps-and-modules/)
 5. Optimize: [Ad Blocking](../general-guides/android-adblocking.md), [Debloating](../general-guides/android-apps-debloating.md)
 
