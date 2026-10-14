@@ -136,12 +136,6 @@ features:
     link: /apps-and-modules/utilities
 ---
 
-<script setup>
-import { data as githubStats } from './.vitepress/github-stats.data.mjs'
-
-const { starsLabel } = githubStats
-</script>
-
 <div class="vp-doc">
 
 ## Start Your Rooting Journey
@@ -244,7 +238,7 @@ const { starsLabel } = githubStats
   <a href="https://github.com/awesome-android-root/awesome-android-root" class="community-card github">
     <span class="icon">⭐</span>
     <strong>GitHub</strong>
-    <span v-if="starsLabel">{{ starsLabel }} stars</span>
+    <span>5.1k stars</span>
   </a>
   <a href="https://x.com/awsm_and_root" class="community-card twitter">
     <span class="icon">𝕏</span>
