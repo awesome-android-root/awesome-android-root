@@ -416,13 +416,11 @@ This applies to all variants: Official KernelSU, KernelSU-Next, Wild KSU, SukiSU
 
 | Metamodule | Description | Best For |
 |------------|-------------|----------|
-| **[meta-overlayfs](https://github.com/KernelSU-Modules-Repo/meta-overlayfs)** | Official reference using OverlayFS | Most users, standard setup |
 | **[mountify](https://github.com/backslashxx/mountify)** | OverlayFS + tmpfs/ext4 sparse, cross-platform | Reduced detection, multi-root |
 | **[meta-hybrid_mount](https://github.com/YuzakiKokuban/meta-hybrid_mount)** | Dual engine (OverlayFS + Magic Mount) + auto-fallback | Advanced control, stealth |
-| **[meta-mm](https://github.com/KernelSU-Modules-Repo/meta-mm)** | Lightweight Magic Mount alternative | Magisk-like mounting |
 | **[ZeroMount](https://github.com/Enginex0/zeromount)** | Mountless VFS path redirection + SUSFS | Maximum stealth |
 
-> **Recommendation:** Start with **meta-overlayfs** or **mountify**.
+> **Recommendation:** Start with **mountify** or **meta-hybrid_mount**.
 
 ### Installing a Metamodule
 
@@ -506,7 +504,7 @@ tools are listed under
 | **Manager shows "Unsupported"** | Device not GKI 2.0 compatible | Try KernelSU-Next or SukiSU-Ultra for broader compat, or use Magisk |
 | **"Not Installed" after flashing** | Wrong GKI kernel | Use correct kernel for your Android version; try LKM patching |
 | **Bootloop** | Incompatible kernel/module | Flash stock boot.img via fastboot → `fastboot flash boot stock_boot.img` |
-| **Modules not mounted** | No metamodule installed | Install a metamodule (meta-overlayfs recommended) → reboot |
+| **Modules not mounted** | No metamodule installed | Install a metamodule (mountify or meta-hybrid_mount) → reboot |
 | **Apps not getting root** | Profile restriction or Manager issue | Check Manager shows "Installed", verify App Profile, check logs |
 | **Banking app detects root** | Insufficient hiding | Hide Manager, create restrictive profile, install SUSFS + Play Integrity Fix |
 | **Play Integrity fails** | Detection not fully bypassed | Install PIF/TrickyStore, clear Google Play Services data |

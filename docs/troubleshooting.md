@@ -547,8 +547,7 @@ resetprop --delete ro.secure
 **Solutions:**
 
 1. **Install a metamodule first**
-   - Download [meta-overlayfs](https://github.com/KernelSU-Modules-Repo/meta-overlayfs) (official)
-   - Or [mountify](https://github.com/backslashxx/mountify), [meta-hybrid_mount](https://github.com/YuzakiKokuban/meta-hybrid_mount)
+   - Download [Mountify](https://github.com/backslashxx/mountify) or [meta-hybrid_mount](https://github.com/YuzakiKokuban/meta-hybrid_mount)
    - Install via KernelSU Manager → Modules
    - Reboot and try installing modules again
 
