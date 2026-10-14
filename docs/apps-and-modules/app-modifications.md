@@ -1,11 +1,8 @@
 ---
 layout: doc
-title: "App Modifications"
-description: "App patchers, social media mods, YouTube tweaks, and signature tools for customizing Android apps on rooted devices."
+title: "App Patchers & Mods for Root"
+description: Browse app patchers, social media and browser mods, YouTube clients, signature verification tools and LSPosed modules that customize Android apps.
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/apps-and-modules/app-modifications
   - - meta
     - name: robots
       content: index, follow
@@ -13,44 +10,11 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - property: og:type
-      content: article
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - property: og:title
-      content: "App Modifications | Awesome Android Root"
-  - - meta
-    - property: og:description
-      content: "App patchers, social media mods, YouTube tweaks, and signature tools for customizing Android apps on rooted devices."
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/apps-and-modules/app-modifications
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
-    - name: twitter:title
-      content: "App Modifications | Awesome Android Root"
-  - - meta
     - name: twitter:description
-      content: "App modification tools for rooted Android: patchers (ReVanced-style), app mods, social media clients (Telegram, WhatsApp, Reddit, X/Twitter and more), browser and YouTube mods and signature verification tools."
-  - - meta
-    - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og.png
+      content: Browse app patchers, social media and browser mods, YouTube clients, signature verification tools and LSPosed modules that customize Android apps.
 ---
 
-# App Modifications
+# App Patchers & Mods for Root
 
 **App modifications** let you patch, mod and extend Android apps: app patchers (**ReVanced/Morphe-style**),
 modded app clients (social media, browsers, YouTube), signature & verification bypasses and LSPosed modules

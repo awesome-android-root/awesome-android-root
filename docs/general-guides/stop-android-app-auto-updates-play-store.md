@@ -4,26 +4,12 @@ title: Stop Android App Auto Updates from Play Store
 description: Complete step-by-step guide to disable automatic app updates from Google Play Store.
 head:
   # Canonical and preconnect links
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/general-guides/stop-android-app-auto-updates-play-store
-
-  # Stop App Updates specific OpenGraph
-  - - meta
-    - property: og:type
-      content: article
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
   - - meta
     - property: og:title
       content: How to Stop Android App Auto Updates from Play Store | Complete Zygisk Detach Guide
   - - meta
     - property: og:description
       content: Learn how to permanently disable automatic app updates from Google Play Store using Zygisk Detach module. Complete step-by-step guide for rooted Android devices with Magisk/KernelSU. Prevent unwanted app updates today!
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/general-guides/stop-android-app-auto-updates-play-store
   - - meta
     - property: og:image
       content: https://awesome-android-root.xyz/images/og/zygisk-detach.png
@@ -43,19 +29,10 @@ head:
     - property: og:image:type
       content: image/png
   - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
     - property: og:updated_time
       content: 2026-09-27T00:00:00Z
 
   # Stop App Updates specific Twitter Card
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
   - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
@@ -72,7 +49,6 @@ head:
     - name: twitter:image:alt
       content: Android app auto updates disable guide - Zygisk Detach method for rooted devices
 
-
   # Stop App Updates specific social tags
   - - meta
     - property: article:author
@@ -80,12 +56,6 @@ head:
   - - meta
     - property: article:publisher
       content: https://awesome-android-root.xyz
-  - - meta
-    - property: article:published_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
-    - property: article:modified_time
-      content: 2026-09-27T00:00:00Z
   - - meta
     - property: article:section
       content: Android Root Guides

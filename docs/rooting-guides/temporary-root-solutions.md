@@ -1,11 +1,8 @@
 ---
 layout: doc
-title: "Temporary Root for Android: Methods & Solutions"
-description: "Compare temporary root methods for Android, including locked-bootloader options, bootloader modifications, reboot behavior, device limits and safety risks."
+title: "Bootloader Mods & Temporary Root"
+description: Compare bootloader modification tools and other temporary root methods for locked-bootloader Android devices, with reboot behavior and safety notes.
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/rooting-guides/temporary-root-solutions
   - - meta
     - name: author
       content: Awesome Android Root
@@ -13,41 +10,14 @@ head:
     - name: robots
       content: index, follow
   - - meta
-    - property: og:type
-      content: article
-  - - meta
-    - property: og:title
-      content: "Temporary Root for Android: Methods & Solutions"
-  - - meta
     - property: og:description
-      content: "Compare Android temporary root, bootloader modification tools and standard Magisk, KernelSU and APatch rooting, with device limits and safety notes."
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/rooting-guides/temporary-root-solutions
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:title
-      content: "Temporary Root for Android: Methods & Solutions"
+      content: Compare bootloader modification tools and other temporary root methods for locked-bootloader Android devices, with reboot behavior and safety notes.
   - - meta
     - name: twitter:description
-      content: "Temporary root for Android: Kaeru, Fenrir and GhostLock family tools, supported-device cautions and differences from permanent root."
+      content: Compare bootloader modification tools and other temporary root methods for locked-bootloader Android devices, with reboot behavior and safety notes.
   - - meta
     - name: article:author
       content: Awesome Android Root
-  - - meta
-    - name: article:published_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
-    - name: article:modified_time
-      content: 2026-09-27T00:00:00Z
   - - meta
     - name: article:section
       content: Guides
@@ -67,7 +37,7 @@ head:
         "@context": "https://schema.org",
         "@type": "TechArticle",
         "@id": "https://awesome-android-root.xyz/rooting-guides/temporary-root-solutions#article",
-        "headline": "Temporary Root for Android: Methods & Solutions",
+        "headline": "Bootloader Mods & Temporary Root",
         "description": "A practical comparison of Android temporary root, bootloader modification tools and their limitations.",
         "image": "https://awesome-android-root.xyz/images/og.png",
         "author": { "@id": "https://awesome-android-root.xyz/#organization" },
@@ -84,7 +54,7 @@ head:
 
 ---
 
-# Temporary Root for Android: Methods & Solutions
+# Bootloader Mods & Temporary Root
 
 Most of this site covers root frameworks that patch the **boot image** (Magisk, KernelSU, APatch) after the bootloader is unlocked. This page covers two related but distinct categories that don't fit that model:
 

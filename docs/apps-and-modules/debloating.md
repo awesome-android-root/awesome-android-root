@@ -1,56 +1,17 @@
 ---
 layout: doc
-title: "Debloating"
-description: "Debloating apps and Magisk/KernelSU modules for rooted Android: remove preinstalled bloatware, uninstall system apps safely, and keep only what you use."
+title: "Best Android Debloat Tools & Modules"
+description: "Browse debloating tools for rooted Android: bloatware removal apps, Magisk, KernelSU and APatch modules for freezing, disabling and uninstalling system apps."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/apps-and-modules/debloating
   - - meta
     - name: robots
       content: index, follow
   - - meta
     - name: author
       content: Awesome Android Root
-  - - meta
-    - property: og:type
-      content: article
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - property: og:title
-      content: "Debloating | Awesome Android Root"
-  - - meta
-    - property: og:description
-      content: "Debloating apps and Magisk/KernelSU modules for rooted Android: remove preinstalled bloatware, uninstall system apps safely, and keep only what you use."
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/apps-and-modules/debloating
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
-    - name: twitter:title
-      content: "Debloating | Awesome Android Root"
-  - - meta
-    - name: twitter:description
-      content: "Debloating apps and Magisk/KernelSU modules for rooted Android: remove preinstalled bloatware, uninstall system apps safely, and keep only what you use."
-  - - meta
-    - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og.png
 ---
 
-# Debloating
+# Best Android Debloat Tools & Modules
 
 **Debloating** removes preinstalled bloatware and system apps you never asked for. These debloating apps and
 Magisk/KernelSU modules work on rooted devices to uninstall, freeze or hide unwanted packages - improving

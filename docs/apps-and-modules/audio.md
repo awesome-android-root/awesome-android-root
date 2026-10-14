@@ -1,56 +1,17 @@
 ---
 layout: doc
-title: "Audio"
-description: "Audio apps and modules for rooted Android: system-wide audio enhancement (Viper-style processing, Dolby and more), audio control and audio effect tools."
+title: Audio Mods for Rooted Android
+description: "Browse audio modules and apps for rooted Android: system-wide audio enhancement, Dolby and Viper-style processing, audio control tools and effects."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/apps-and-modules/audio
   - - meta
     - name: robots
       content: index, follow
   - - meta
     - name: author
       content: Awesome Android Root
-  - - meta
-    - property: og:type
-      content: article
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - property: og:title
-      content: "Audio | Awesome Android Root"
-  - - meta
-    - property: og:description
-      content: "Audio apps and modules for rooted Android: system-wide audio enhancement (Viper-style processing, Dolby and more), audio control and audio effect tools."
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/apps-and-modules/audio
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
-    - name: twitter:title
-      content: "Audio | Awesome Android Root"
-  - - meta
-    - name: twitter:description
-      content: "Audio apps and modules for rooted Android: system-wide audio enhancement (Viper-style processing, Dolby and more), audio control and audio effect tools."
-  - - meta
-    - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og.png
 ---
 
-# Audio
+# Audio Mods for Rooted Android
 
 **Audio** apps and modules for rooted Android devices - system-wide **audio enhancement** (Viper-style
 processing, Dolby and more), audio control tools and audio effects. All entries below are listed together

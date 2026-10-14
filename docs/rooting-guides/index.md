@@ -3,30 +3,9 @@ layout: doc
 title: Android Rooting Guide
 description: "The ultimate Android rooting guide. Learn Magisk, KernelSU & APatch with step-by-step instructions, device-specific guides, and root-hiding techniques."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/rooting-guides/  
-  - - meta
-    - property: og:type
-      content: article
-  - - meta
-    - property: og:title
-      content: Android Rooting Guide | Awesome Android Root
   - - meta
     - property: og:description
       content: The ultimate Android rooting guide covering Magisk, KernelSU, APatch installation with device-specific tutorials for Pixel, Samsung, Xiaomi, OnePlus & more.
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/rooting-guides/  
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png  
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:title
-      content: Android Rooting Guide | Awesome Android Root
   - - meta
     - name: twitter:description
       content: Complete Android rooting tutorial with Magisk, KernelSU, APatch guides and device-specific instructions for safe rooting. Includes Vector/LSPosed framework & Play Integrity bypass.
@@ -69,12 +48,6 @@ head:
   - - meta
     - property: article:tag
       content: Android Customization
-  - - meta
-    - property: article:published_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
-    - property: article:modified_time
-      content: 2026-09-27T00:00:00Z
   - - meta
     - name: robots
       content: index, follow, max-image-preview:large
@@ -513,11 +486,15 @@ If a rogue module causes bootloop:
 
 **Factory Reset Protection (FRP)**
 
-If locked out after factory reset:
-1. Use previously synced Google account credentials
-2. Follow manufacturer-specific FRP bypass methods
-3. Flash stock firmware with all partitions
-4. Contact manufacturer support if purchased legitimately
+FRP is an anti-theft lock that activates after a factory reset and requires the Google account that
+was on the device. If you are locked out:
+
+1. Sign in with the Google account that was previously synced to the device
+2. If you no longer have access, use [Google account recovery](https://accounts.google.com/signin/recovery)
+3. If the device was bought second-hand or you cannot prove ownership, contact the manufacturer
+   with proof of purchase
+
+There is no supported way around FRP on a device you cannot prove you own.
 
 **Complete Brick Recovery (EDL/9008 Mode)**
 
@@ -565,19 +542,13 @@ Replace stock Android with privacy-focused custom ROMs:
 
 ### Root Hiding & Play Integrity Resources
 
-Play Integrity bypass is essential for banking apps in 2026. Key tools:
-
-| Tool | Purpose | Status |
-|------|---------|--------|
-| **[Tricky Store](https://github.com/5ec1cff/TrickyStore)** | Advanced key attestation spoofing | Active |
-| **[Shamiko](https://github.com/LSPosed/LSPosed.github.io)** | Systemlessly hides Zygisk/modules from detection | Closed-source |
-| **[Zygisk Assistant](https://github.com/snake-4/Zygisk-Assistant)** | Open-source alternative to Shamiko | Active (FOSS) |
-| **[Zygisk Next](https://github.com/LSPosed/ZygiskNext)** | Standalone Zygisk implementation for Magisk/KernelSU | Active |
-| **[Play Integrity Fork](https://github.com/osm0sis/PlayIntegrityFork)** | Community-maintained PIF script | Active |
-
+Play Integrity is what most banking and DRM apps check, so root hiding matters after rooting. The
+curated tools live in the [Root Hiding & Play Integrity category](../apps-and-modules/root-management#root-hiding-play-integrity),
+and the current module stack and configuration steps are documented in
+[Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps).
 
 > [!TIP]
-> For the complete and up-to-date list, see our [Root Hiding & Play Integrity apps](../apps-and-modules/root-management#root-hiding-play-integrity)
+> Check the tool list first, then follow the troubleshooting page for your root framework.
 
 ---
 

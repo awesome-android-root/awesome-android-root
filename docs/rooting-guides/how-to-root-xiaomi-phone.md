@@ -3,12 +3,6 @@ layout: doc
 title: Xiaomi/Redmi/POCO Root Guide
 description: Complete guide to root Xiaomi, Redmi, and POCO devices. Navigate HyperOS/MIUI, Mi Unlock Tool, anti-rollback protection, and Magisk installation.
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/rooting-guides/how-to-root-xiaomi-phone
-  - - meta
-    - property: og:type
-      content: article
   - - meta
     - property: og:title
       content: Complete Xiaomi Rooting Guide - All Models Supported
@@ -16,23 +10,14 @@ head:
     - property: og:description
       content: Root any Xiaomi device with our comprehensive guide covering Mi Unlock Tool, bootloader unlock and Magisk installation for MIUI/HyperOS.
   - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/rooting-guides/how-to-root-xiaomi-phone
-  - - meta
     - property: og:image
       content: https://awesome-android-root.xyz/images/og/xiaomi.png
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
   - - meta
     - name: twitter:title
       content: Complete Xiaomi Rooting Guide - All Models
   - - meta
     - name: twitter:description
       content: Root any Xiaomi device with Mi Unlock Tool and Magisk installation guide.
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
   - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
@@ -63,12 +48,6 @@ head:
   - - meta
     - property: article:tag
       content: Mi Unlock Tool
-  - - meta
-    - property: article:published_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
-    - property: article:modified_time
-      content: 2026-09-27T00:00:00Z
   - - meta
     - name: robots
       content: index, follow
@@ -106,8 +85,6 @@ Xiaomi is among the strictest OEMs for unlocking/root.
 :::
 
 ## Device Compatibility
-
-### Device Compatibility
 
 Most Xiaomi/Redmi/POCO devices with unlockable bootloaders can be rooted. Check [XDA Forums](https://forum.xda-developers.com/) for your specific model's status.
 
@@ -372,11 +349,10 @@ adb devices
 - Consider modules/apps that tame background killing (varies per build)
 
 **Play Integrity (SafetyNet replacement):**
-- Passing device integrity often needs:
-  - Latest Magisk + Zygisk enabled
-  - Play Integrity Fix module (latest maintained fork)
-  - Proper DenyList configuration (Google Play services, GMS, wallet/banking)
-  - Clear Play Store/Services data after configuration, then wait a few minutes
+- Passing device integrity needs a Zygisk implementation, a Play Integrity Fix module and a correct
+  DenyList, then clearing Play Store/Services data and waiting a few minutes
+- Full module choices and configuration order:
+  [Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps)
 
 ## Success Verification
 
