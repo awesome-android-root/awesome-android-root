@@ -182,6 +182,13 @@ export default withPwa(defineConfig({
   lastUpdated: true,
   metaChunk: true,
 
+  sitemap: {
+    hostname: SITE,
+    transformItems(items) {
+      return items.filter((item) => !/^\/?404(\.html)?$/.test(item.url))
+    }
+  },
+
   transformHead({ pageData }) {
     const site = SITE
     const relativePath = pageData.relativePath || 'index.md'
