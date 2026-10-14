@@ -23,7 +23,9 @@ def route_for(rel):
     if rel == 'index.md':
         return '/'
     rel = re.sub(r'(^|/)index\.md$', r'\1', rel)
-    return '/' + rel[:-3]
+    if rel.endswith('.md'):
+        rel = rel[:-3]
+    return '/' + rel
 
 
 def social_title(title):

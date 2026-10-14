@@ -3,18 +3,12 @@ layout: doc
 title: Android General Guides & Tutorials
 description: "Practical Android general guides and tutorials for ad blocking, debloating, privacy, customization and app management."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/general-guides/  
   - - meta
     - property: og:type
       content: website
   - - meta
     - property: og:description
       content: Master Android with comprehensive tutorials covering ad blocking, app debloating, privacy enhancement, performance tuning, and customization. Expert guides for all skill levels.
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/general-guides/  
   - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
