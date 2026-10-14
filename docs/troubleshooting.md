@@ -3,27 +3,12 @@ layout: doc
 title: "Android Root Troubleshooting: Bootloops, Modules & Root Problems"
 description: "Fix common Android root problems: bootloops, missing root, incompatible modules, Play Integrity detection, recovery and flashing errors."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/troubleshooting
-  - - meta
-    - property: og:type
-      content: article
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
   - - meta
     - property: og:title
       content: "Android Root Troubleshooting: Bootloops, Modules & Root Problems"
   - - meta
     - property: og:description
       content: Diagnose Android root bootloops, missing root, module failures, Play Integrity detection, recovery and flashing errors.
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/troubleshooting
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:image:secure_url
       content: https://awesome-android-root.xyz/images/og.png
@@ -40,15 +25,6 @@ head:
     - property: og:image:type
       content: image/png
   - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
   - - meta
@@ -57,9 +33,6 @@ head:
   - - meta
     - name: twitter:description
       content: Practical fixes for bootloops, missing root, incompatible modules, integrity checks and recovery problems.
-  - - meta
-    - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - name: twitter:image:alt
       content: Root Troubleshooting Guide - Fix Bootloops and Installation Errors

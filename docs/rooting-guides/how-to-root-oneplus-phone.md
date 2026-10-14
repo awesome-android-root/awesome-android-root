@@ -3,12 +3,6 @@ layout: doc
 title: Complete OnePlus Rooting Guide
 description: "Master guide to root all OnePlus devices - OnePlus 15, 13, 12, 11, 10, Nord series with bootloader unlock and Magisk installation for OxygenOS."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/rooting-guides/how-to-root-oneplus-phone
-  - - meta
-    - property: og:type
-      content: article
   - - meta
     - property: og:title
       content: Complete OnePlus Rooting Guide - All Models Supported
@@ -16,23 +10,14 @@ head:
     - property: og:description
       content: Root any OnePlus device with our comprehensive guide covering bootloader unlock, MSM tool, custom recovery and Magisk installation for OxygenOS.
   - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/rooting-guides/how-to-root-oneplus-phone
-  - - meta
     - property: og:image
       content: https://awesome-android-root.xyz/images/og/oneplus.png
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
   - - meta
     - name: twitter:title
       content: Complete OnePlus Rooting Guide - All Models
   - - meta
     - name: twitter:description
       content: Root any OnePlus phone with bootloader unlock and Magisk installation guide.
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
   - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
@@ -63,12 +48,6 @@ head:
   - - meta
     - property: article:tag
       content: Magisk Installation
-  - - meta
-    - property: article:published_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
-    - property: article:modified_time
-      content: 2026-09-27T00:00:00Z
   - - meta
     - name: robots
       content: index, follow
@@ -308,8 +287,8 @@ adb push boot.img /sdcard/Download/
 **Step 4: Install Magisk and Patch**
 
 ```bash
-# Install Magisk APK
-adb install Magisk-v27.0.apk
+# Install Magisk APK (substitute the version you downloaded)
+adb install Magisk-*.apk
 ```
 
 On device:
@@ -385,7 +364,7 @@ fastboot boot twrp.img
 1. Download Magisk ZIP
 2. Push to device:
 ```bash
-adb push Magisk-v27.0.zip /sdcard/
+adb push Magisk-*.zip /sdcard/
 ```
 3. In TWRP: Install > Select ZIP
 4. Swipe to flash
@@ -408,12 +387,8 @@ Magisk > Settings:
 
 **Step 2: Configure DenyList**
 
-Add to DenyList:
-- Google Play Services (all)
-- Google Play Store
-- Banking apps
-- Payment apps (Google Pay, etc.)
-- Play Integrity-sensitive apps
+Add Google Play Services, Google Play Store, your banking apps, payment apps and any other
+Play Integrity-sensitive app. Expand each entry and cover all sub-processes.
 
 **Step 3: Install Essential Modules**
 
@@ -535,13 +510,8 @@ Solutions:
 
 **Play Integrity Fails**
 
-Solutions:
-1. Enable Zygisk
-2. Configure DenyList
-3. Hide Magisk app
-4. Install Play Integrity Fix module
-5. Clear Google Play Services
-6. Reboot
+Follow the module stack and configuration order in
+[Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps).
 
 ---
 

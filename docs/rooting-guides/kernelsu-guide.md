@@ -3,12 +3,6 @@ layout: doc
 title: "KernelSU Root Guide: Installation, Modules & Troubleshooting"
 description: "Learn KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles and troubleshooting for supported Android devices."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/rooting-guides/kernelsu-guide
-  - - meta
-    - property: og:type
-      content: article
   - - meta
     - property: og:title
       content: "KernelSU Root Guide: Installation, Modules & Troubleshooting"
@@ -16,14 +10,8 @@ head:
     - property: og:description
       content: Learn KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles and troubleshooting.
   - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/rooting-guides/kernelsu-guide
-  - - meta
     - property: og:image
       content: https://awesome-android-root.xyz/images/og/kernelsu-guide.png
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
   - - meta
     - name: twitter:title
       content: "KernelSU Root Guide: Installation, Modules & Troubleshooting"
@@ -52,12 +40,6 @@ head:
     - name: robots
       content: index, follow
   - - meta
-    - property: article:published_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
-    - property: article:modified_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
     - property: article:tag
       content: KernelSU
   - - meta
@@ -81,12 +63,6 @@ head:
   - - meta
     - property: article:tag
       content: Android Customization
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
   - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
@@ -495,13 +471,17 @@ Modern banking apps use Play Integrity API with hardware-backed attestation - in
 
 ### Recommended Setup
 
-| Step | Action | Details |
-|------|--------|---------|
-| 1 | **Hide Manager** | KernelSU Manager → Settings → "Hide the KernelSU Manager" → rename (e.g., "Settings") |
-| 2 | **Banking Profile** | Create App Profile denying root, filesystem, and hardware access for banking apps |
-| 3 | **Install SUSFS** | For SUSFS-patched kernels - advanced root hiding with filesystem manipulation |
-| 4 | **Install Play Integrity Fix** | Use [Play Integrity Fork](https://github.com/osm0sis/PlayIntegrityFork) or [Play Integrity Fix (inject)](https://github.com/KOWX712/PlayIntegrityFix) for MEETS_DEVICE_INTEGRITY |
-| 5 | **Clear app data** | Clear data for Google Play Services, Play Store, and banking apps → Reboot |
+The stack is the same shape as Magisk: a Zygisk implementation (ZygiskNext, ReZygisk or
+NeoZygisk), a Play Integrity Fix module, a root hiding module and an App Profile that denies root,
+filesystem and hardware access to your banking apps. Configure it in that order and clear Google
+Play Services, Play Store and banking app data afterwards.
+
+SUSFS is worth adding on SUSFS-patched kernels for filesystem-level hiding.
+
+The module versions and configuration table are in
+[Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps), and the
+tools are listed under
+[Root Hiding & Play Integrity](../apps-and-modules/root-management#root-hiding-play-integrity).
 
 ### What's Realistic
 

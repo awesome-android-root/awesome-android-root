@@ -1,11 +1,8 @@
 ---
 layout: doc
-title: "General Utilities"
-description: "General rooted Android utilities for sync, reboot, sharing, communication, and all-in-one control tools."
+title: General Root Utilities for Android
+description: "Browse general root utilities for Android: file sync and transfer, reboot and power controls, sharing and intent tools, messaging helpers and toolboxes."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/apps-and-modules/utilities
   - - meta
     - name: robots
       content: index, follow
@@ -13,44 +10,11 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - property: og:type
-      content: article
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - property: og:title
-      content: "General Utilities | Awesome Android Root"
-  - - meta
-    - property: og:description
-      content: "General rooted Android utilities for sync, reboot, sharing, communication, and all-in-one control tools."
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/apps-and-modules/utilities
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
-    - name: twitter:title
-      content: "General Utilities | Awesome Android Root"
-  - - meta
     - name: twitter:description
-      content: "General utilities for rooted Android that do not fit a single category: file sync & transfer, reboot & power tools, sharing & intent tweaks, communication helpers and all-in-one toolboxes."
-  - - meta
-    - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og.png
+      content: "Browse general root utilities for Android: file sync and transfer, reboot and power controls, sharing and intent tools, messaging helpers and toolboxes."
 ---
 
-# General Utilities
+# General Root Utilities for Android
 
 **General utilities** for rooted Android that don't fit one narrow job: file sync & transfer, reboot & power
 tools, sharing & intent tweaks, communication helpers and all-in-one power-user toolboxes.

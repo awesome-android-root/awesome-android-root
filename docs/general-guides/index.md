@@ -3,42 +3,15 @@ layout: doc
 title: Android General Guides & Tutorials
 description: "Practical Android general guides and tutorials for ad blocking, debloating, privacy, customization and app management."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/general-guides/  
   - - meta
     - property: og:type
       content: website
   - - meta
-    - property: og:title
-      content: Android General Guides & Tutorials | Awesome Android Root
-  - - meta
     - property: og:description
       content: Master Android with comprehensive tutorials covering ad blocking, app debloating, privacy enhancement, performance tuning, and customization. Expert guides for all skill levels.
   - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/general-guides/  
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png  
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
-  - - meta
-    - name: twitter:title
-      content: Android General Guides & Tutorials | Awesome Android Root
   - - meta
     - name: twitter:description
       content: Master Android with expert tutorials covering ad blocking, debloating, privacy, optimization, and customization for rooted and stock devices.
@@ -49,57 +22,8 @@ head:
     - property: article:section
       content: Android Guides & Tutorials
   - - meta
-    - property: article:published_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
-    - property: article:modified_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
     - name: robots
       content: index, follow, max-image-preview:large, max-snippet:-1
-  - - script
-    - type: application/ld+json
-    - |
-      {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "Android Tutorials & Guides Collection",
-        "description": "Comprehensive collection of Android tutorials covering rooting, customization, privacy, and optimization.",
-        "url": "https://awesome-android-root.xyz/general-guides/",
-        "mainEntity": {
-          "@type": "ItemList",
-          "name": "Android Tutorial Categories",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "item": {
-                "@type": "HowTo",
-                "name": "System-Wide Ad Blocking",
-                "url": "https://awesome-android-root.xyz/general-guides/android-adblocking"
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "item": {
-                "@type": "HowTo",
-                "name": "Android Debloating",
-                "url": "https://awesome-android-root.xyz/general-guides/android-apps-debloating"
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "item": {
-                "@type": "HowTo",
-                "name": "Stop Auto Updates",
-                "url": "https://awesome-android-root.xyz/general-guides/stop-android-app-auto-updates-play-store"
-              }
-            }
-          ]
-        }
-      }
 ---
 
 # Android General Guides & Tutorials

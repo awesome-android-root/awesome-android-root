@@ -3,9 +3,6 @@ layout: doc
 title: "Android Ad Blocking Guide"
 description: "Complete guide to system-wide ad blocking on rooted Android using AdAway and Bindhosts. Block ads in all apps."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/general-guides/android-adblocking
   - - meta
     - name: author
       content: Awesome Android Root
@@ -13,38 +10,20 @@ head:
     - name: robots
       content: index, follow
   - - meta
-    - property: og:type
-      content: article
-  - - meta
     - property: og:title
       content: "Ultimate Android Ad Blocking Guide for Rooted Devices (2026)"
   - - meta
     - property: og:description
       content: "Complete guide to system-wide ad blocking on rooted Android using AdAway and Bindhosts. Block ads in all apps, improve performance, and enhance privacy with root access."
   - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/general-guides/android-adblocking
-  - - meta
     - property: og:image
       content: https://awesome-android-root.xyz/images/og/android-adblocking.png
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
   - - meta
     - name: twitter:title
       content: "Ultimate Android Ad Blocking Guide for Rooted Devices (2026)"
   - - meta
     - name: twitter:description
       content: "Complete guide to system-wide ad blocking on rooted Android using AdAway and Bindhosts. Block ads in all apps, improve performance, and enhance privacy."
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
   - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
@@ -57,12 +36,6 @@ head:
   - - meta
     - name: article:author
       content: Awesome Android Root
-  - - meta
-    - name: article:published_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
-    - name: article:modified_time
-      content: 2026-09-27T00:00:00Z
   - - meta
     - name: article:section
       content: Guides

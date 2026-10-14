@@ -4,7 +4,7 @@
 # Comma-separated in one header to avoid duplicate-header handling differences.
 # -----------------------------------------------------------------------------
 /
-  Link: </llms.txt>; rel="api-catalog", </llms.txt>; rel="service-desc", </llms-full.txt>; rel="service-doc", </llms.txt>; rel="describedby"
+  Link: </llms.txt>; rel="describedby", </llms-full.txt>; rel="service-doc"
 
 # -----------------------------------------------------------------------------
 # Service Worker - MUST never be cached by browser or CDN.
@@ -73,6 +73,8 @@
   Cross-Origin-Opener-Policy: same-origin-allow-popups
 
   # ---------------------------------------------------------------------------
-  # Content Security Policy - REPORT ONLY for now.
+  # Content Security Policy - REPORT ONLY, and no report-uri/report-to endpoint
+  # is configured, so violations are collected by no one. Switching this to an
+  # enforcing header is an owner decision that should follow a review period.
   # ---------------------------------------------------------------------------
   Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://img.shields.io https://raw.githubusercontent.com https://avatars.githubusercontent.com https://user-images.githubusercontent.com; font-src 'self' data:; connect-src 'self'; worker-src 'self'; manifest-src 'self'; media-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'

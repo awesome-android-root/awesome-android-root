@@ -1,11 +1,8 @@
 ---
 layout: doc
-title: "Customization"
-description: "Themes, launchers, gesture tweaks, fonts, lockscreen mods, and UI tools for turning rooted Android into your own setup."
+title: Customization Mods for Root
+description: "Browse customization modules and apps for rooted Android: themes, fonts, launchers, status bar, notifications, lockscreen, gestures and display tweaks."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/apps-and-modules/customization
   - - meta
     - name: robots
       content: index, follow
@@ -13,44 +10,11 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - property: og:type
-      content: article
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - property: og:title
-      content: "Customization | Awesome Android Root"
-  - - meta
-    - property: og:description
-      content: "Themes, launchers, gesture tweaks, fonts, lockscreen mods, and UI tools for turning rooted Android into your own setup."
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/apps-and-modules/customization
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
-    - name: twitter:title
-      content: "Customization | Awesome Android Root"
-  - - meta
     - name: twitter:description
-      content: "Customization for rooted Android: themes and visual mods, launchers, status bar & navigation tweaks, gestures, fonts & emojis, notifications, lockscreen/AOD and screen & display modules and apps."
-  - - meta
-    - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og.png
+      content: "Browse customization modules and apps for rooted Android: themes, fonts, launchers, status bar, notifications, lockscreen, gestures and display tweaks."
 ---
 
-# Customization
+# Customization Mods for Root
 
 **Customization** tools for rooted Android devices - themes and visual mods, launchers, status bar &
 navigation tweaks, gestures, fonts & emojis, notifications, lockscreen/AOD and screen & display apps and

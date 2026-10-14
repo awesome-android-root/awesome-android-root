@@ -1,8 +1,9 @@
 # Contributing to Awesome Android Root
 
-Thanks for contributing.
+The complete contribution guide lives at [`docs/contributing.md`](docs/contributing.md).
 
-This file is the short version. The complete contribution guide, including entry format, tags, category rules, quality requirements, and examples, lives in [`docs/contributing.md`](docs/contributing.md).
+It covers the entry format, badges, category placement, quality requirements and examples, and it is
+the single source of truth so this file and the site cannot drift apart.
 
 ## Quick start
 
@@ -11,31 +12,15 @@ This file is the short version. The complete contribution guide, including entry
 3. Add or update the entry in alphabetical order.
 4. Open a pull request.
 
-The root `README.md` is an index. The collection itself is maintained under `docs/`.
-
 ## Before opening a PR
 
-- Use the correct topic page.
-- Check for duplicates.
-- Use an official, working link.
-- Keep the description factual and concise.
-- Follow the entry format and tags in the [full guide](docs/contributing.md).
-- Check the quality requirements before submitting.
-
-### Typical entry
-
-```markdown
-- **[Name](link)** - Short description. `FOSS` `[M]`
-````
-
-Use only the tags that apply. See the [full guide](docs/contributing.md) for the complete format and tag reference.
+Read [`docs/contributing.md`](docs/contributing.md) first. It lists the entry format, the allowed
+tags, the quality requirements and the pull request template.
 
 ## Need help?
 
-* [Full contribution guide](docs/contributing.md)
-* [Issue templates](.github/ISSUE_TEMPLATE/)
-* [Pull request template](.github/PULL_REQUEST_TEMPLATE.md)
-
-If a category or taxonomy needs to change, use the relevant issue template before restructuring existing entries.
+- [Full contribution guide](docs/contributing.md)
+- [Issue templates](.github/ISSUE_TEMPLATE/)
+- [Pull request template](.github/PULL_REQUEST_TEMPLATE.md)
 
 Contributions are licensed under the [MIT License](LICENSE).

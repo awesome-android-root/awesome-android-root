@@ -3,12 +3,6 @@ layout: doc
 title: "How to Root a Samsung Galaxy: Odin, AP & Magisk"
 description: "Learn how to root a Samsung Galaxy with model- and region-specific bootloader checks, Download Mode, Odin AP patching, Magisk, Knox and One UI warnings."
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/rooting-guides/how-to-root-samsung-phone
-  - - meta
-    - property: og:type
-      content: article
   - - meta
     - property: og:title
       content: "How to Root a Samsung Galaxy: Odin, AP & Magisk"
@@ -16,23 +10,14 @@ head:
     - property: og:description
       content: Samsung Galaxy rooting guide covering bootloader eligibility, OEM unlocking, Download Mode, Odin AP patching, Magisk, Knox and One UI differences.
   - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/rooting-guides/how-to-root-samsung-phone
-  - - meta
     - property: og:image
       content: https://awesome-android-root.xyz/images/og/samsung.png
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
   - - meta
     - name: twitter:title
       content: "How to Root a Samsung Galaxy: Odin, AP & Magisk"
   - - meta
     - name: twitter:description
       content: Rooting steps for eligible Samsung Galaxy models, with Odin AP patching, Magisk and model-specific restrictions.
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
   - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
@@ -63,12 +48,6 @@ head:
   - - meta
     - property: article:tag
       content: Magisk Installation
-  - - meta
-    - property: article:published_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
-    - property: article:modified_time
-      content: 2026-09-27T00:00:00Z
   - - meta
     - name: robots
       content: index, follow
@@ -301,8 +280,8 @@ adb shell getprop ro.csc.countryiso_code
 # Transfer AP file to device
 adb push AP_*.tar.md5 /sdcard/Download/
 
-# Install Magisk APK
-adb install Magisk-v27.0.apk
+# Install Magisk APK (substitute the version you downloaded)
+adb install Magisk-*.apk
 ```
 
 **On Device:**
@@ -424,14 +403,6 @@ For older Samsung devices with TWRP support:
 **Note:** Most modern Samsung devices lack TWRP support due to A/B partitions and encryption changes.
 
 
-### Verify Knox Trip
-
-After setup:
-1. Dial `*#0*#` for service mode
-2. Check Knox warranty status
-3. Should show "0x1" (tripped, permanent)
-
-
 ---
 
 ## Post-Root Setup
@@ -447,19 +418,9 @@ Magisk > Settings:
 
 **Step 2: Configure DenyList**
 
-Critical for Samsung due to Knox detection:
-
-Add to DenyList:
-- Google Play Services (all)
-- Google Play Store (all)
-- Samsung apps:
-  - Samsung Health
-  - Samsung Members
-  - Samsung Galaxy Store
-  - Samsung Pay (won't work anyway)
-- Banking apps
-- Payment apps
-- Any Knox-dependent apps
+Critical for Samsung due to Knox detection. Add Google Play Services, Google Play Store, your
+banking and payment apps, and the Knox-dependent Samsung apps you use (Samsung Health, Samsung
+Members, Samsung Galaxy Store, Samsung Pay). For each entry, expand it and cover all sub-processes.
 
 **Step 3: Install Essential Modules**
 
@@ -470,16 +431,9 @@ Recommended for Samsung:
 
 ### Samsung-Specific Root Hiding
 
-**Additional Steps:**
+Samsung Health, Samsung Members and the other Knox-dependent Samsung apps cache their integrity
+state, so clear their data after the DenyList is configured and before you judge the result:
 
-1. **Hide Magisk App:**
-   - Magisk > Settings
-   - "Hide the Magisk app"
-   - Enter custom name (e.g., "Settings")
-
-2. **Clear App Data:**
-
-After DenyList configuration:
 ```bash
 # Clear Google Play Services
 pm clear com.google.android.gms
@@ -491,7 +445,9 @@ pm clear com.android.vending
 pm clear com.sec.android.app.shealth
 ```
 
-3. **Reboot device**
+Then reboot. The general root-hiding and Play Integrity setup, including module choice and the
+STRONG integrity limits, is covered in
+[Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps).
 
 ---
 
@@ -570,9 +526,8 @@ Solutions:
 1. Reinstall Samsung USB drivers
 2. Try different USB port (USB 2.0)
 3. Run Odin as Administrator
-4. Disable antivirus temporarily
-5. Try different USB cable
-6. Reboot computer
+4. Try different USB cable
+5. Reboot computer
 
 **FAIL! Error in Odin**
 
@@ -614,14 +569,8 @@ Solutions:
 
 **Play Integrity Fails**
 
-Solutions:
-1. Enable Zygisk
-2. Configure DenyList properly
-3. Hide Magisk app
-4. Install Play Integrity Fix
-5. Install Shamiko module
-6. Clear Google Play Services
-7. Reboot
+Follow the module stack and configuration order in
+[Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps).
 
 Note: Due to Knox trip, some apps may always fail.
 

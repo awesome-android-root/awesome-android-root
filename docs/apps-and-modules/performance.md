@@ -1,11 +1,8 @@
 ---
 layout: doc
-title: "Performance & Battery"
-description: "Kernel managers, RAM tuning, battery optimization, charging controls, and task tools to improve speed and battery life on rooted Android."
+title: "Performance & Battery Mods for Root"
+description: Browse performance modules, kernel managers, memory and RAM tuning, battery optimization, charging controls and task killers for rooted Android devices.
 head:
-  - - link
-    - rel: canonical
-      href: https://awesome-android-root.xyz/apps-and-modules/performance
   - - meta
     - name: robots
       content: index, follow
@@ -13,44 +10,11 @@ head:
     - name: author
       content: Awesome Android Root
   - - meta
-    - property: og:type
-      content: article
-  - - meta
-    - property: og:site_name
-      content: Awesome Android Root
-  - - meta
-    - property: og:title
-      content: "Performance & Battery | Awesome Android Root"
-  - - meta
-    - property: og:description
-      content: "Kernel managers, RAM tuning, battery optimization, charging controls, and task tools to improve speed and battery life on rooted Android."
-  - - meta
-    - property: og:url
-      content: https://awesome-android-root.xyz/apps-and-modules/performance
-  - - meta
-    - property: og:image
-      content: https://awesome-android-root.xyz/images/og.png
-  - - meta
-    - property: og:locale
-      content: en_US
-  - - meta
-    - name: twitter:card
-      content: summary_large_image
-  - - meta
-    - name: twitter:site
-      content: "@awsm_and_root"
-  - - meta
-    - name: twitter:title
-      content: "Performance & Battery | Awesome Android Root"
-  - - meta
     - name: twitter:description
-      content: "Performance and battery tools for rooted Android: performance optimization, kernel management, memory & RAM tuning, battery optimization, charging control and task/process management apps & modules."
-  - - meta
-    - name: twitter:image
-      content: https://awesome-android-root.xyz/images/og.png
+      content: Browse performance modules, kernel managers, memory and RAM tuning, battery optimization, charging controls and task killers for rooted Android devices.
 ---
 
-# Performance & Battery
+# Performance & Battery Mods for Root
 
 **Performance & Battery** collects apps and modules that make a rooted Android faster and last longer:
 CPU/GPU and general **performance optimization**, **kernel management**, **memory & RAM** tuning, **battery
