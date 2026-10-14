@@ -233,6 +233,7 @@ head:
 | **Master Rooting Guide** | Complete rooting workflow | [Index](./rooting-guides/index.md) |
 | **Device-Specific Guides** | Brand-specific procedures | [Device Guides](./rooting-guides/index.md#device-specific-guides) |
 | **Method Comparisons** | Choose the right root method | [Comparison](./rooting-guides/root-framework-comparison.md) |
+| **SUSFS Root Hiding** | Kernel-level hiding: requirements, installation, verification | [SUSFS Guide](./rooting-guides/susfs-guide.md) |
 | **Debloating** | Remove unwanted apps safely | [Debloat Guide](./general-guides/android-apps-debloating.md) |
 | **Ad Blocking** | System-wide ad removal | [AdBlock Guide](./general-guides/android-adblocking.md) |
 | **Custom Recovery Basics** | Flashing and backup workflow | [How to Install Custom Recovery](./rooting-guides/how-to-install-custom-recovery.md) |

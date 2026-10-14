@@ -669,6 +669,7 @@ export default withPwa(defineConfig({
             { text: 'Compare Methods', link: '/rooting-guides/root-framework-comparison' },
             { text: 'Magisk (Recommended)', link: '/rooting-guides/magisk-guide' },
             { text: 'KernelSU', link: '/rooting-guides/kernelsu-guide' },
+            { text: 'SUSFS Root Hiding', link: '/rooting-guides/susfs-guide' },
             { text: 'APatch', link: '/rooting-guides/apatch-guide' },
             { text: 'Temporary Root, No Unlock (GhostLock)', link: '/rooting-guides/root-without-unlocking-bootloader' }
           ]

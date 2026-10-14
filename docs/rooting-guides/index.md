@@ -349,6 +349,10 @@ Choose and install your preferred root method. The modern approach uses boot ima
 
 **[📖 Complete KernelSU Guide](./kernelsu-guide.md)**
 
+> [!TIP]
+> KernelSU hides root at the kernel level through the module system and App Profiles. For hiding that
+> goes further, see the [SUSFS Root Hiding Guide](./susfs-guide.md).
+
 #### Option C: APatch
 
 1. Verify device compatibility (ARM64, kernel 3.18–6.12)
@@ -449,6 +453,9 @@ Solutions (2026 best practices):
 6. Use **[Zygisk Next](https://github.com/LSPosed/ZygiskNext)** (alternative Zygisk implementation, works on KernelSU too)
 7. Clear banking app data after setting up hiding
 8. See [detailed Play Integrity troubleshooting](../troubleshooting.md#play-integrity-and-banking-apps)
+
+> [!TIP]
+> On KernelSU and its forks, kernel-level hiding is stronger than userspace alone. See the [SUSFS Root Hiding Guide](./susfs-guide.md).
 
 > [!NOTE]
 > **Strong Integrity** (required by some wallet/payment apps) is generally **not achievable** on unlocked bootloaders. Even with all fixes, some apps may refuse to run. Consider using a secondary unrooted device for critical banking.
