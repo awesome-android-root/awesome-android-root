@@ -486,11 +486,15 @@ If a rogue module causes bootloop:
 
 **Factory Reset Protection (FRP)**
 
-If locked out after factory reset:
-1. Use previously synced Google account credentials
-2. Follow manufacturer-specific FRP bypass methods
-3. Flash stock firmware with all partitions
-4. Contact manufacturer support if purchased legitimately
+FRP is an anti-theft lock that activates after a factory reset and requires the Google account that
+was on the device. If you are locked out:
+
+1. Sign in with the Google account that was previously synced to the device
+2. If you no longer have access, use [Google account recovery](https://accounts.google.com/signin/recovery)
+3. If the device was bought second-hand or you cannot prove ownership, contact the manufacturer
+   with proof of purchase
+
+There is no supported way around FRP on a device you cannot prove you own.
 
 **Complete Brick Recovery (EDL/9008 Mode)**
 

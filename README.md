@@ -81,7 +81,7 @@ Browse them in [`docs/apps-and-modules/`](docs/apps-and-modules/):
 
 ## Contributing
 
-> 📝 Read the the [`Contributing Guide ↗`](docs/contributing.md) and the
+> 📝 Read the [`Contributing Guide ↗`](docs/contributing.md) and the
 [`PR template ↗`](.github/PULL_REQUEST_TEMPLATE.md) for entry format, badges and category placement.
 
 

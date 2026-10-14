@@ -280,8 +280,8 @@ adb shell getprop ro.csc.countryiso_code
 # Transfer AP file to device
 adb push AP_*.tar.md5 /sdcard/Download/
 
-# Install Magisk APK
-adb install Magisk-v27.0.apk
+# Install Magisk APK (substitute the version you downloaded)
+adb install Magisk-*.apk
 ```
 
 **On Device:**
@@ -401,14 +401,6 @@ For older Samsung devices with TWRP support:
 5. Reboot system
 
 **Note:** Most modern Samsung devices lack TWRP support due to A/B partitions and encryption changes.
-
-
-### Verify Knox Trip
-
-After setup:
-1. Dial `*#0*#` for service mode
-2. Check Knox warranty status
-3. Should show "0x1" (tripped, permanent)
 
 
 ---
@@ -534,9 +526,8 @@ Solutions:
 1. Reinstall Samsung USB drivers
 2. Try different USB port (USB 2.0)
 3. Run Odin as Administrator
-4. Disable antivirus temporarily
-5. Try different USB cable
-6. Reboot computer
+4. Try different USB cable
+5. Reboot computer
 
 **FAIL! Error in Odin**
 

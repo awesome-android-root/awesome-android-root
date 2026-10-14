@@ -287,8 +287,8 @@ adb push boot.img /sdcard/Download/
 **Step 4: Install Magisk and Patch**
 
 ```bash
-# Install Magisk APK
-adb install Magisk-v27.0.apk
+# Install Magisk APK (substitute the version you downloaded)
+adb install Magisk-*.apk
 ```
 
 On device:
@@ -364,7 +364,7 @@ fastboot boot twrp.img
 1. Download Magisk ZIP
 2. Push to device:
 ```bash
-adb push Magisk-v27.0.zip /sdcard/
+adb push Magisk-*.zip /sdcard/
 ```
 3. In TWRP: Install > Select ZIP
 4. Swipe to flash
