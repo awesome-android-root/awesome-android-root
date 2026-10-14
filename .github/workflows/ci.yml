@@ -34,14 +34,14 @@ jobs:
           path: |
             ~/.bun/install/cache
             node_modules
-          key: bun-${{ runner.os }}-${{ hashFiles('bun.lock', 'package.json') }}
+          key: bun-${{ runner.os }}-${{ hashFiles('package.json') }}
           restore-keys: bun-${{ runner.os }}-
 
       - name: Install dependencies
         run: bun install
 
       - name: Check internal links
-        run: python3 scripts/check_links.py
+        run: bun run check:links
 
       - name: Build documentation
         run: bun run docs:build

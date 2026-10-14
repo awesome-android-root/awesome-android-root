@@ -10,6 +10,5 @@ docs/count.md
 __pycache__/
 *.pyc
 
-# Local build artifacts
-dist-before/
+# Bun lockfile is not tracked
 bun.lock
