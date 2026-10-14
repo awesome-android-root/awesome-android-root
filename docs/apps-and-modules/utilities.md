@@ -41,7 +41,7 @@ tools, sharing & intent tweaks, communication helpers and all-in-one power-user 
 - **[System Tools Android](https://play.google.com/store/apps/details?id=com.redhome.sta)** - A system utility suite with many small tools for finer system work, including root utilities. `Proprietary`
 - **[UotanToolbox NT](https://github.com/Uotan-Dev/UotanToolboxNT)** - A modern toolbox for Android power users and geeks. `FOSS`
 - **[XposedModulets](https://github.com/binarynoise/XposedModulets)** - A collection of many small useful Xposed Modules. `FOSS` `[LSP]`
-- **[Zygisk Sui](https://github.com/XiaoTong6666/Sui)** - Modern superuser interface (SUI) implementation for Android. `FOSS` `[M]` `[K]`
+- **[Zygisk Sui](https://github.com/XiaoTong6666/Sui)** - Modern superuser interface (SUI) implementation for Android. `FOSS` `[M]` `[K]` `[A]`
 
 > [!TIP]
 > If you are looking for classic root managers and module managers, start with [Root Management](root-management.md). If you need shell commands or Linux tooling, see [Terminal and Shell Tools](development.md#terminal-shell).
