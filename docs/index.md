@@ -220,6 +220,11 @@ features:
     <strong>Framework Comparison</strong>
     <span>Magisk vs KernelSU vs APatch</span>
   </a>
+  <a href="/rooting-guides/susfs-guide" class="community-card github">
+    <span class="icon">🥷</span>
+    <strong>SUSFS Root Hiding</strong>
+    <span>Kernel-level hiding setup</span>
+  </a>
   <a href="/non-root-alternatives" class="community-card reddit">
     <span class="icon">🛡️</span>
     <strong>Non-Root Alternatives</strong>

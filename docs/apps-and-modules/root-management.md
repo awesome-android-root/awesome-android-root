@@ -76,7 +76,7 @@ Exploits like **GhostLock (CVE-2026-43499)** - a 15-year-old Linux kernel bug - 
 > **Metamodules** provides the core mounting infrastructure for the module system. Unlike regular modules that modify system files, metamodules control *how* regular modules are installed and mounted.
 
 - **[⭐ Mountify](https://github.com/backslashxx/mountify)** - OverlayFS with tmpfs/ext4 sparse support for reduced detection, works on APatch/Magisk too. `FOSS` `[M]` `[K]` `[A]`
-- **[⭐ NoMount](https://github.com/maxsteeel/nomount)** - VFS (Virtual File System) path redirection framework for Android kernels. `FOSS` `[K]` `[A]`
+- **[⭐ NoMount](https://github.com/maxsteeel/nomount)** - Mountless module injection: kernel VFS path redirection with per-app UID isolation and a WebUI, so injected files never appear in `/proc/mounts`. Needs kernel integration; prebuilt modules cover GKI kernels. `FOSS` `[K]` `[A]`
 - **[Magic Mount Metamodule](https://github.com/Tools-cx-app/meta-magic_mount-rs)** - An implementation of a metamodule using Magic Mount, based on MKSU. `FOSS` `[M]` `[K]` `[A]`
 - **[Meta-hybrid_mount](https://github.com/Hybrid-Mount/meta-hybrid_mount)** - Three-engine mount orchestration (OverlayFS + Magic Mount + Kasumi LKM) with conflict monitor, SolidJS WebUI, auto-fallback, and EROFS storage backend support. `FOSS` `[K]` `[A]`
 - **[ZeroMount](https://github.com/Enginex0/zeromount)** - Mountless module loading with Kernel-level VFS path redirection & SUSFS integration, WebUI, bootloop guard, and strategy fallback. `FOSS` `[M]` `[K]` `[A]`
@@ -154,9 +154,13 @@ SUSFS (Systemless User Space File System) is a kernel-level module that allows r
 
 </details><br>
 
-- **[⭐ SUSFS for KernelSU](https://github.com/sidex15/susfs4ksu-module)** - Add-on root-hiding service for SUSFS-patched kernels (KernelSU/Next). The core of modern KSU hiding setups. `FOSS` `[M]` `[K]`
-- **[BRENE](https://github.com/rrr333nnn333/BRENE)** - SUSFS/KernelSU module for patched kernels with enhanced root hiding & spoofing. `FOSS` `[M]` `[K]`
+- **[⭐ SUSFS for KernelSU](https://github.com/sidex15/susfs4ksu-module)** - Add-on root-hiding service for SUSFS-patched kernels (KernelSU/Next). The core of modern KSU hiding setups. `FOSS` `[K]`
+- **[BRENE](https://github.com/rrr333nnn333/BRENE)** - SUSFS/KernelSU module for patched kernels with enhanced root hiding & spoofing. `FOSS` `[K]`
+- **[SUSFS LKM Loader](https://github.com/Nixie24/susfs4ksu-lkm-module)** - Loads SUSFS as a loadable kernel module through `ksud`, for GKI kernels that carry no SUSFS patches. `FOSS` `[K]`
 - ~~ReSuSFS~~: Removed on author's request
+
+> [!TIP]
+> New to SUSFS? The [SUSFS Root Hiding Guide](../rooting-guides/susfs-guide.md) covers requirements, patched kernels versus the loadable kernel module, configuration, verification, and how mountless options like [NoMount](#metamodules) compare.
 
 ---
 

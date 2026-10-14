@@ -547,7 +547,7 @@ resetprop --delete ro.secure
 **Solutions:**
 
 1. **Install a metamodule first**
-   - Download [Mountify](https://github.com/backslashxx/mountify) or [meta-hybrid_mount](https://github.com/YuzakiKokuban/meta-hybrid_mount)
+   - Install a metamodule from the [official module repository](https://modules.kernelsu.org/) (filter "Metamodules only")
    - Install via KernelSU Manager → Modules
    - Reboot and try installing modules again
 
@@ -890,6 +890,7 @@ The Play Integrity ecosystem has evolved significantly. The current typical stac
 3. **Root Hiding** (choose one):
    - Shamiko - hides root & Magisk from detection
    - Zygisk Assistant / NoHello
+   - SUSFS - kernel-level hiding when your kernel supports it; setup and verification are in the [SUSFS Root Hiding Guide](./rooting-guides/susfs-guide.md)
 
 4. **Key Attestation** (for STRONG integrity):
    - For attempting to pass STRONG integrity, only the latest official Tricky Store or TEESimulator release is recommended.
@@ -901,7 +902,7 @@ The Play Integrity ecosystem has evolved significantly. The current typical stac
 | Root Method | Zygisk | PIF Module | Root Hiding |
 |:---|:---|:---|:---|
 | Magisk | Built-in Zygisk | PlayIntegrityFork / PIF | Shamiko or DenyList |
-| KernelSU | ZygiskNext / ReZygisk / NeoZygisk | PlayIntegrityFork / PIF | App Profiles + Shamiko |
+| KernelSU | ZygiskNext / ReZygisk / NeoZygisk | PlayIntegrityFork / PIF | App Profiles + SUSFS or Shamiko |
 | APatch | ZygiskNext / ReZygisk / NeoZygisk | PlayIntegrityFork / PIF | Built-in exclusion + Shamiko |
 
 **Testing Tools:**

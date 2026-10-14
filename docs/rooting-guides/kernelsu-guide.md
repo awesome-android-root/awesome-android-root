@@ -339,6 +339,7 @@ Metamodules also reduce the detection surface: the root solution itself is not t
 | **[mountify](https://github.com/backslashxx/mountify)** | OverlayFS with tmpfs/ext4 sparse storage | Works on APatch and Magisk as well as KernelSU |
 | **Magic Mount RS** | Magic Mount (bind mount) semantics | For older or picky environments where OverlayFS misbehaves |
 | **[ZeroMount](https://github.com/Enginex0/zeromount)** | Mountless VFS path redirection | Optional SUSFS integration, developer-oriented |
+| **[NoMount](https://github.com/maxsteeel/nomount)** | Mountless VFS path redirection, per-app UID isolation | Needs kernel integration; prebuilt modules cover GKI kernels. The newer [NoMount Suite](https://github.com/Bouteillepleine/NoMount-Suite) uses its own kernel engine and is in beta |
 
 > **Recommendation:** start with the metamodule currently listed in the [official module repository](https://modules.kernelsu.org/) (filter "Metamodules only"). Use Hybrid Mount or mountify when you need per-module mount control or extra storage options.
 
@@ -413,7 +414,7 @@ Hiding root in 2026 is a stack, not a single module. KernelSU covers the kernel 
 ### The three layers
 
 1. **Kernel:** App Profiles hide mounts per app. SUSFS adds filesystem-level hiding (path, kstat, stat and mount spoofing). KernelSU also supports hiding its own SELinux additions, which removes a well-known detection signal.
-2. **SUSFS, compiled-in or loaded:** SUSFS used to require a SUSFS-patched kernel. It is now also available as a loadable kernel module (`susfs_guard_lkm`) loaded through `ksud` or a loader module. KernelSU-Next ships prebuilt modules per KMI and can load them itself; other variants use community loader modules. This makes SUSFS practical on stock GKI kernels without recompiling.
+2. **SUSFS, compiled-in or loaded:** SUSFS used to require a SUSFS-patched kernel. It is now also available as a loadable kernel module (`susfs_guard_lkm`) loaded through `ksud` or a loader module. KernelSU-Next ships prebuilt modules per KMI and can load them itself; other variants use community loader modules. This makes SUSFS practical on stock GKI kernels without recompiling. Full setup is in the [SUSFS Root Hiding Guide](./susfs-guide.md).
 3. **Userspace and attestation:** a Zygisk implementation plus a hiding module, and a Play Integrity stack for apps that use attestation. The module list, versions and configuration table live in [Root Hiding & Play Integrity](../apps-and-modules/root-management#root-hiding-play-integrity) and [Troubleshooting](../troubleshooting.md#play-integrity-and-banking-apps), so this guide only covers what changes for KernelSU.
 
 ### What is realistic
@@ -489,7 +490,7 @@ On A/B devices, flash the slot that is actually booting, or switch slots.
 
 1. Configure **App Profiles** for banking, payment and anti-cheat apps before adding anything else.
 2. Install a **metamodule**, then the modules you actually need (Zygisk implementation, hiding stack).
-3. Harden with **SUSFS** (compiled-in or as a loaded kernel module) if your threat model needs it.
+3. Harden with **SUSFS** (compiled-in or as a loaded kernel module) if your threat model needs it. The [SUSFS Root Hiding Guide](./susfs-guide.md) covers requirements, installation and verification, and compares it with mountless options like NoMount.
 4. Explore: [LSPosed Framework](./lsposed-guide.md), [Custom ROMs](./custom-rom-installation.md), [Root Apps Collection](../apps-and-modules/)
 5. Optimize: [Ad Blocking](../general-guides/android-adblocking.md), [Debloating](../general-guides/android-apps-debloating.md)
 
