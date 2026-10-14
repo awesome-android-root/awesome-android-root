@@ -64,7 +64,7 @@ head:
 
 # Magisk vs KernelSU vs APatch
 
-Root frameworks change fast. This page reflects upstream releases, READMEs, and official docs as of **14 October 2026**. Verify device-specific steps in the official docs before flashing anything.
+Root frameworks change fast. Version and activity badges on this page are generated from GitHub, so they stay current. Other facts were verified against upstream READMEs and official docs on **14 October 2026**. Verify device-specific steps in the official docs before flashing anything.
 
 **Related guides:**
 - [Main Rooting Guide](./index.md)
@@ -76,18 +76,17 @@ Root frameworks change fast. This page reflects upstream releases, READMEs, and 
 Unlocking the bootloader usually wipes data, weakens device security, and can break OTA, warranty, DRM, wallet, banking, and work-profile apps. Keep a stock firmware package and a recovery plan ready.
 :::
 
-## Current status (October 2026)
+## Current status
 
-| Project | Latest release | Channel | What to know |
+| Project | Latest release | Last commit | What to know |
 |---|---|---|---|
-| **Magisk** | v30.7 (Feb 2026) | Stable | Current stable has Android 16 QPR2 sepolicy and Zygisk support |
-| **Magisk** | v31.0 (Sep 2026) | Beta | Full app rewrite (Jetpack Compose, Material 3), built-in terminal, boot image extraction from remote OTA URLs, **Zygisk for Android 17 (API 37)**. Legacy APK still published |
-| **KernelSU** | v3.3.1 (Oct 2026) | Stable | Manager APK, `ksud`, and LKM `.ko` per KMI (`android12-5.10` through `android17-6.18`); **no ready-to-flash `boot.img`** |
-| **KernelSU Next** | v3.4.2 (Oct 2026) | Stable | Kernels 4.4 to 6.18, ships SUSFS LKM per KMI, spoofable package name |
-| **SukiSU-Ultra** | v4.2.0 (Sep 2026) | Stable | Non-GKI and GKI 1.0 backports, KPM support, built-in SUSFS controls |
-| **APatch** | 11224 (Aug 2026) | Stable | KernelPatch 0.13.9 (Sep 2026); slow release cadence, Samsung Knox support still listed as "planned" |
+| **Magisk** | ![Magisk stable](https://img.shields.io/github/v/release/topjohnwu/Magisk?label=stable) ![Magisk including betas](https://img.shields.io/github/v/release/topjohnwu/Magisk?include_prereleases&label=incl.%20betas) | ![Magisk last commit](https://img.shields.io/github/last-commit/topjohnwu/Magisk?label=last%20commit) | Stable channel moves slowly. The beta line is the app rewrite (Jetpack Compose, Material 3, built-in terminal, boot image extraction from remote OTA URLs, **Zygisk for Android 17**). Legacy APK still published |
+| **KernelSU** | ![KernelSU release](https://img.shields.io/github/v/release/tiann/KernelSU?label=stable) | ![KernelSU last commit](https://img.shields.io/github/last-commit/tiann/KernelSU?label=last%20commit) | Manager APK, `ksud`, and LKM `.ko` per KMI (`android12-5.10` through `android17-6.18`); **no ready-to-flash `boot.img`** |
+| **KernelSU Next** | ![KernelSU Next release](https://img.shields.io/github/v/release/KernelSU-Next/KernelSU-Next?label=stable) | ![KernelSU Next last commit](https://img.shields.io/github/last-commit/KernelSU-Next/KernelSU-Next?label=last%20commit) | Kernels 4.4 to 6.18, ships SUSFS LKM per KMI, spoofable package name |
+| **SukiSU-Ultra** | ![SukiSU-Ultra release](https://img.shields.io/github/v/release/SukiSU-Ultra/SukiSU-Ultra?label=stable) | ![SukiSU-Ultra last commit](https://img.shields.io/github/last-commit/SukiSU-Ultra/SukiSU-Ultra?label=last%20commit) | Non-GKI and GKI 1.0 backports, KPM support, built-in SUSFS controls |
+| **APatch** | ![APatch release](https://img.shields.io/github/v/release/bmax121/APatch?label=stable) ![KernelPatch release](https://img.shields.io/github/v/release/bmax121/KernelPatch?label=KernelPatch) | ![APatch last commit](https://img.shields.io/github/last-commit/bmax121/APatch?label=last%20commit) | Slow release cadence, Samsung Knox support still listed as "planned" |
 
-All four projects (Magisk, KernelSU, KernelSU Next, APatch) had commits in October 2026. None are abandoned.
+Read the badges as a health check: a recent "last commit" means the project is alive, while months of inactivity or a version badge reporting no releases means you should check the repository before trusting any guide that recommends it.
 
 ## Quick recommendation
 
@@ -107,13 +106,13 @@ All four projects (Magisk, KernelSU, KernelSU Next, APatch) had commits in Octob
 | **Install model** | Patches `boot.img`, `init_boot.img`, recovery, or `vendor_boot.img` | LKM module into the stock kernel, or a KernelSU-enabled kernel | Patches the stock `boot.img` with KernelPatch |
 | **Best for** | Beginners, daily drivers, module-heavy setups | Power users on GKI devices | KernelPatch use cases and edge cases |
 | **Main requirement** | Unlocked bootloader, Android 6.0+ | GKI 2.0 (kernel 5.10+) officially; 4.14+ needs a manual kernel build | ARM64, kernel 3.18 to 6.12, `CONFIG_KALLSYMS` |
-| **Android 17 (API 37)** | Core root works on v30.7; **Zygisk needs the v31.0 beta** | LKM shipped for `android17-6.18` | Covers 6.12 kernels; **6.18 kernels are out of range** |
+| **Android 17 (API 37)** | Core root works on stable; **Zygisk needs the beta line** | LKM shipped for `android17-6.18` | Covers 6.12 kernels; **6.18 kernels are out of range** |
 | **Modules** | Magisk modules, Zygisk modules | Metamodule-based since v3.0; many Magisk modules need a compatible metamodule | APModule plus KPModule for kernel-level code (metamodule support added to `apd`) |
 | **Root control** | App-based MagiskSU prompts | App Profiles with fine-grained privileges | SuperKey-based access control |
 | **Hiding / integrity** | No built-in hiding (upstream FAQ states this directly) | Kernel-level traces are smaller; SUSFS can be loaded as an LKM | Kernel-level, but no guarantee |
 | **OTA behavior** | Re-patch or use the inactive-slot flow | LKM installs to the inactive slot without reflashing | Depends on device and install path |
 | **Troubleshooting** | Easiest, largest community | Medium, kernel knowledge helps | Hardest, smallest ecosystem |
-| **Latest Version** | ![GitHub Release](https://img.shields.io/github/v/release/topjohnwu/Magisk) | ![GitHub Release](https://img.shields.io/github/v/release/tiann/KernelSU) | ![GitHub Release](https://img.shields.io/github/v/release/bmax121/APatch) |
+| **Latest Version** | ![Magisk release](https://img.shields.io/github/v/release/topjohnwu/Magisk?label=stable) | ![KernelSU release](https://img.shields.io/github/v/release/tiann/KernelSU?label=stable) | ![APatch release](https://img.shields.io/github/v/release/bmax121/APatch?label=stable) |
 
 ## Framework notes
 
@@ -121,7 +120,7 @@ All four projects (Magisk, KernelSU, KernelSU Next, APatch) had commits in Octob
 
 **Best default.** Magisk is the most mature and widely documented root solution: MagiskSU, Magisk modules, MagiskBoot, and optional Zygisk for code in app processes.
 
-**Version reality in 2026:** the stable channel moves slowly. v30.7 (Feb 2026) added Android 16 QPR2 sepolicy and Zygisk support. The v31.0 beta (Sep 2026) rebuilt the app in Jetpack Compose with Material 3, added a built-in terminal with TTY/ANSI support for module flashing, added boot image extraction from remote OTA URLs, and added Zygisk support for Android 17 (API 37). On Android 17, core root works on v30.7, but Zygisk-dependent modules need v31.0.
+**Two channels, choose deliberately:** stable ![Magisk stable](https://img.shields.io/github/v/release/topjohnwu/Magisk?label=stable) versus the beta line ![Magisk including betas](https://img.shields.io/github/v/release/topjohnwu/Magisk?include_prereleases&label=incl.%20betas). The stable channel added Android 16 QPR2 sepolicy and Zygisk support and moves slowly. The beta line rebuilt the app in Jetpack Compose with Material 3, added a built-in terminal with TTY/ANSI support for module flashing, added boot image extraction from remote OTA URLs, and added Zygisk support for Android 17 (API 37). On Android 17, core root works on stable, but Zygisk-dependent modules need the beta line.
 
 **Use Magisk when:**
 - You are rooting for the first time.
@@ -269,10 +268,10 @@ Pick **no root** if banking, wallet, enterprise, or anti-cheat reliability matte
 Magisk for most users. KernelSU for GKI power users. KernelSU Next or SukiSU-Ultra for non-GKI kernels. APatch for KernelPatch use cases.
 
 **Is Magisk still maintained?**
-Yes, but the stable channel lags: v30.7 (Feb 2026) is the current stable, and the v31.0 app rewrite has been in beta since Sep 2026.
+Yes, on both channels: stable ![Magisk stable](https://img.shields.io/github/v/release/topjohnwu/Magisk?label=stable) and the beta line ![Magisk including betas](https://img.shields.io/github/v/release/topjohnwu/Magisk?include_prereleases&label=incl.%20betas). The stable channel lags, so the app rewrite reaches users through the beta line first.
 
 **Does Android 17 change the choice?**
-Yes. Zygisk modules on Android 17 need the Magisk v31.0 beta. KernelSU and KernelSU Next ship LKM for `android17-6.18`. APatch's documented kernel ceiling is 6.12, so devices that moved to 6.18 are out of scope.
+Yes. Zygisk modules on Android 17 need the current Magisk beta line. KernelSU and KernelSU Next ship LKM for `android17-6.18`. APatch's documented kernel ceiling is 6.12, so devices that moved to 6.18 are out of scope.
 
 **Which hides root best?**
 None reliably. Magisk upstream explicitly does not handle hiding. Kernel-level solutions plus SUSFS reduce userspace traces, but modern apps use many signals beyond `su` visibility.
