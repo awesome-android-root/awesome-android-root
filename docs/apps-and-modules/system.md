@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: "System"
-description: "System tweaks, OEM UI mods, boot tools, app management, permissions, and diagnostics for rooted Android devices."
+title: System Tweaks for Rooted Android
+description: Browse system tweak and VBMeta modules, OEM System UI frameworks, boot and startup scripts, package management, permissions, AppOps and diagnostics for root.
 head:
   - - meta
     - name: robots
@@ -11,10 +11,10 @@ head:
       content: Awesome Android Root
   - - meta
     - name: twitter:description
-      content: "System-level tools for rooted Android: system tweaks and VBMeta modules, System UI & OEM framework customization (AOSP, HyperOS, One UI, OxygenOS and more), boot & startup, app & package management, permissions and system diagnostics."
+      content: Browse system tweak and VBMeta modules, OEM System UI frameworks, boot and startup scripts, package management, permissions, AppOps and diagnostics for root.
 ---
 
-# System
+# System Tweaks for Rooted Android
 
 **System** tools let you modify how Android itself works: system tweaks and **VBMeta** modules, System UI and
 OEM framework mods (**AOSP, ColorOS, HyperOS, NothingOS, One UI, Onyx, OxygenOS, ZUI**), boot & startup

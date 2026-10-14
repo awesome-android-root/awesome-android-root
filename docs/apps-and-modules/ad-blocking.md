@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: "Ad Blocking"
-description: "Hosts-based ad blockers, Magisk/KernelSU modules, and DNS tools to block ads, trackers, and malware across Android apps."
+title: Best Ad Blockers for Rooted Android
+description: "Browse ad blocking tools for rooted Android: hosts-based blockers, DNS filtering, Pi-hole and AdAway style modules, trackers and anti-telemetry utilities."
 head:
   - - meta
     - name: robots
@@ -11,10 +11,10 @@ head:
       content: Awesome Android Root
   - - meta
     - name: twitter:description
-      content: "Ad blocking for rooted Android: hosts-file ad blockers, ad-blocking Magisk & KernelSU modules, LSPosed ad-blockers and DNS-level filtering tools that block ads and trackers system-wide."
+      content: "Browse ad blocking tools for rooted Android: hosts-based blockers, DNS filtering, Pi-hole and AdAway style modules, trackers and anti-telemetry utilities."
 ---
 
-# Ad Blocking
+# Best Ad Blockers for Rooted Android
 
 **Ad blocking** for rooted Android devices - root apps, Magisk modules, KernelSU modules, LSPosed modules and
 hosts/DNS-based tools that block ads, trackers and malware system-wide, in every app and browser.

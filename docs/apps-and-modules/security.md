@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: "Security"
-description: "Root firewalls, network filters, and security modules that control app access and harden rooted Android devices."
+title: "Security Apps & Firewalls for Root"
+description: "Browse security tools for rooted Android: root firewalls, network and DNS filtering, permission auditors and modules that control app network access."
 head:
   - - meta
     - name: robots
@@ -11,10 +11,10 @@ head:
       content: Awesome Android Root
   - - meta
     - name: twitter:description
-      content: "Security tools for rooted Android: security apps, firewalls and filtering apps and modules (Magisk, KernelSU, LSPosed) that control app network access and harden your device."
+      content: "Browse security tools for rooted Android: root firewalls, network and DNS filtering, permission auditors and modules that control app network access."
 ---
 
-# Security
+# Security Apps & Firewalls for Root
 
 **Security** tools for rooted Android devices - root apps, Magisk modules, KernelSU modules, LSPosed modules and
 firewalls for hardening your device, controlling which apps can reach the network, and auditing what runs on it.

@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: "App Modifications"
-description: "App patchers, social media mods, YouTube tweaks, and signature tools for customizing Android apps on rooted devices."
+title: "App Patchers & Mods for Root"
+description: Browse app patchers, social media and browser mods, YouTube clients, signature verification tools and LSPosed modules that customize Android apps.
 head:
   - - meta
     - name: robots
@@ -11,10 +11,10 @@ head:
       content: Awesome Android Root
   - - meta
     - name: twitter:description
-      content: "App modification tools for rooted Android: patchers (ReVanced-style), app mods, social media clients (Telegram, WhatsApp, Reddit, X/Twitter and more), browser and YouTube mods and signature verification tools."
+      content: Browse app patchers, social media and browser mods, YouTube clients, signature verification tools and LSPosed modules that customize Android apps.
 ---
 
-# App Modifications
+# App Patchers & Mods for Root
 
 **App modifications** let you patch, mod and extend Android apps: app patchers (**ReVanced/Morphe-style**),
 modded app clients (social media, browsers, YouTube), signature & verification bypasses and LSPosed modules

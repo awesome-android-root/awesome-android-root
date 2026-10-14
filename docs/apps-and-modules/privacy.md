@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: "Privacy"
-description: "Privacy apps and modules for hiding files, spoofing IDs, controlling app data access, and reducing tracking on rooted Android."
+title: Privacy Apps for Rooted Android
+description: Browse privacy tools for rooted Android, including app isolation, device ID and GPS location spoofing, trackers and permissions that restrict app data access.
 head:
   - - meta
     - name: robots
@@ -11,10 +11,10 @@ head:
       content: Awesome Android Root
   - - meta
     - name: twitter:description
-      content: "Privacy tools for rooted Android devices: privacy apps, Magisk modules, KernelSU modules and LSPosed modules for controlling data access, hiding private files, spoofing device ID and location, and isolating apps."
+      content: Browse privacy tools for rooted Android, including app isolation, device ID and GPS location spoofing, trackers and permissions that restrict app data access.
 ---
 
-# Privacy
+# Privacy Apps for Rooted Android
 
 **Privacy** tools for rooted Android devices - root apps, Magisk modules, KernelSU modules, LSPosed modules and
 other tools for improving privacy and controlling data access: hiding private files and apps, preventing
