@@ -341,7 +341,7 @@ Choose and install your preferred root method. The modern approach uses boot ima
 2. Download KernelSU-supported kernel for your device or use LKM (Loadable Kernel Module) mode
 3. Flash kernel via fastboot or KernelSU app
 4. Install **KernelSU Manager** app
-5. Install a **metamodule** (meta-overlayfs or Meta-Hybrid Mount) - required for modules to work
+5. Install a **metamodule** (Mountify or Meta-Hybrid Mount) - required for modules to work
 6. Configure App Profiles for fine-grained root access control
 
 > [!WARNING]
