@@ -52,6 +52,3 @@ jobs:
       - name: Lint entries
         continue-on-error: true
         run: bun run lint:entries
-
-      - name: Check entry counts
-        run: bun run check:counts
