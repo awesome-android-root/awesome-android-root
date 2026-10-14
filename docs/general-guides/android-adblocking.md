@@ -58,12 +58,6 @@ head:
     - name: article:author
       content: Awesome Android Root
   - - meta
-    - name: article:published_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
-    - name: article:modified_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
     - name: article:section
       content: Guides
   - - meta

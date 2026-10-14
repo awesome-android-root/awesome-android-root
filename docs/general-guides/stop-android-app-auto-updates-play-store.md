@@ -81,12 +81,6 @@ head:
     - property: article:publisher
       content: https://awesome-android-root.xyz
   - - meta
-    - property: article:published_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
-    - property: article:modified_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
     - property: article:section
       content: Android Root Guides
   - - meta

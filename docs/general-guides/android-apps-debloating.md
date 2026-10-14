@@ -47,12 +47,6 @@ head:
   - - meta
     - name: twitter:image:alt
       content: Android Debloating Guide - Remove Bloatware Safely
-  - - meta
-    - property: article:published_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
-    - property: article:modified_time
-      content: 2026-09-27T00:00:00Z
   - - link
     - rel: canonical
       href: https://awesome-android-root.xyz/general-guides/android-apps-debloating

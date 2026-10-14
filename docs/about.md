@@ -67,15 +67,6 @@ head:
     - property: article:tag
       content: Community
   - - meta
-    - property: article:modified_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
-    - property: article:published_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
-    - property: article:modified_time
-      content: 2026-09-27T00:00:00Z
-  - - meta
     - name: robots
       content: index, follow, max-image-preview:large
 ---
