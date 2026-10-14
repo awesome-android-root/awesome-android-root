@@ -20,7 +20,10 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "sh -c 'if [ -f .git/shallow ]; then git fetch --unshallow || true; fi' && bash scripts/counter.sh && vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "lint:entries": "node scripts/lint-entries.mjs",
+    "check:counts": "node scripts/check-counts.mjs",
+    "check:links": "python3 scripts/check_links.py"
   },
   "keywords": [
     "android",

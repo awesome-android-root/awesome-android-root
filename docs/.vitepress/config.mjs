@@ -177,7 +177,7 @@ function faqFromMarkdown(markdown) {
 export default withPwa(defineConfig({
   lang: 'en-US',
   title: SITE_NAME,
-  ignoreDeadLinks: true,
+  ignoreDeadLinks: false,
   cleanUrls: true,
   lastUpdated: true,
   metaChunk: true,
