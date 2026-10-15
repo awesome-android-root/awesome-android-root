@@ -602,4 +602,7 @@ fastboot oem lock
 
 ## Next Steps
 
-For common post-root tasks, browse the [apps and modules collection](../apps-and-modules/), [debloating guide](../general-guides/android-apps-debloating.md), and [ad-blocking guide](../general-guides/android-adblocking.md). The [main rooting guide](./index.md#step-4-post-root-configuration) covers root setup; the [LSPosed guide](./lsposed-guide.md) and [custom ROM guide](./custom-rom-installation.md) cover optional extensions.
+- **Root setup:** **[Post-root configuration](./index.md#step-4-post-root-configuration)**
+- **Tools:** **[Apps and modules](../apps-and-modules/)**
+- **Common tasks:** **[Debloating](../general-guides/android-apps-debloating.md)** · **[Ad blocking](../general-guides/android-adblocking.md)**
+- **Optional extensions:** **[LSPosed](./lsposed-guide.md)** · **[Custom ROM installation](./custom-rom-installation.md)**

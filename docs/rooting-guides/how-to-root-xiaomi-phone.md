@@ -441,17 +441,17 @@ CN ROM devices (⚠️):
 ## 🔗 Additional Resources
 
 ### Official Links
-- Mi Unlock Tool: https://en.miui.com/unlock/download_en.html
-- Xiaomi Community: https://new.c.mi.com/global/
-- MIUI Downloads: https://c.mi.com/global/miuidownload/index
-- Xiaomi Global Support: https://www.mi.com/global/support/
+- [Mi Unlock Tool](https://en.miui.com/unlock/download_en.html)
+- [Xiaomi Community](https://new.c.mi.com/global/)
+- [MIUI Downloads](https://c.mi.com/global/miuidownload/index)
+- [Xiaomi Global Support](https://www.mi.com/global/support/)
 
 ### Community Resources
-- XDA Xiaomi Forums: https://xdaforums.com/c/xiaomi.12005/
-- xiaomi.eu: https://xiaomi.eu/
-- Xiaomi Firmware Updater: https://xiaomifirmwareupdater.com/
-- r/Xiaomi: https://reddit.com/r/Xiaomi
-- MIUI Updates Tracker (Telegram): https://t.me/MIUIUpdatesTracker
+- [XDA Xiaomi Forums](https://xdaforums.com/c/xiaomi.12005/)
+- [xiaomi.eu](https://xiaomi.eu/)
+- [Xiaomi Firmware Updater](https://xiaomifirmwareupdater.com/)
+- [r/Xiaomi](https://reddit.com/r/Xiaomi)
+- [MIUI Updates Tracker (Telegram)](https://t.me/MIUIUpdatesTracker)
 
 ---
 
