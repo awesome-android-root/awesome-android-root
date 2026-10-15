@@ -115,8 +115,9 @@ Rules:
 * Quote a frontmatter `description` in YAML when it contains a colon.
 * Keep `og:title`, `twitter:title`, `og:description`, and `twitter:description`
   overrides in sync with `title` and `description` when they repeat them.
-* `docs/count.md` is generated and gitignored. Edit its frontmatter in
-  `scripts/counter.sh`, since the build regenerates the file.
+* `docs/count.md` and `docs/public/count.json` are generated and gitignored.
+  Edit the page frontmatter and JSON fields in `scripts/counter.sh`, since the
+  build regenerates both files.
 
 ## 6. Site and Code Changes
 

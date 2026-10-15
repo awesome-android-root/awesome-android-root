@@ -5,8 +5,15 @@ This directory contains utility scripts used in the awesome-android-root project
 ## counter.sh
 
 Counts entries in the Apps & Modules category pages (`docs/apps-and-modules/*.md`), displays a categorized
-summary, and writes a copyable Markdown table to `docs/count.md`. The documentation build runs this script
-before VitePress, publishing the table at `/count`.
+summary, and writes a rendered Markdown table to `docs/count.md` plus the same counts as JSON to
+`docs/public/count.json`. The documentation build runs this script before VitePress, publishing the table at
+`/count` and the JSON at `/count.json`.
+
+The JSON works with the shields.io dynamic JSON endpoint, for example:
+
+```markdown
+[![Apps & Modules](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fawesome-android-root.xyz%2Fcount.json&query=%24.total&label=apps%20%26%20modules&color=blue&logo=android&style=for-the-badge)](https://awesome-android-root.xyz/apps-and-modules/)
+```
 
 ### Usage
 

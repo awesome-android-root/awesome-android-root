@@ -6,6 +6,7 @@ docs/README.md
 docs/rooting-guides/*_NEW.md
 improvements.md
 docs/count.md
+docs/public/count.json
 # Python
 __pycache__/
 *.pyc
