@@ -10,7 +10,7 @@
 
 **🛡️ The Ultimate Android Rooting Hub**
 
-<sub>Browse 650+ Android apps and modules, including Magisk, KernelSU, APatch and LSPosed (Xposed) tools, plus step-by-step rooting guides.</sub>
+<sub>Discover 650+ root apps, Magisk / KernelSU / APatch / LSPosed (Xposed) modules and step-by-step rooting guides.</sub>
 
 [![Website](https://img.shields.io/badge/Website-awesome--android--root.xyz%E2%86%97-blue?style=for-the-badge&logo=googlechrome&logoColor=white)](https://awesome-android-root.xyz/)
 
