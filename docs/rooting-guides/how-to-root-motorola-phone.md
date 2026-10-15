@@ -576,17 +576,7 @@ fastboot oem lock
 
 ## Next Steps
 
-**After Rooting:**
-
-1. **Essential apps:**
-   - [Root Apps Collection](../apps-and-modules/)
-
-2. **Enhance:**
-   - [Ad Blocking Guide](../general-guides/android-adblocking.md)
-   - [Debloating Guide](../general-guides/android-apps-debloating.md)
-   - [LSPosed Guide](./lsposed-guide.md)
-
-3. **Explore ROMs:**
-   - [Custom ROM Guide](./custom-rom-installation.md)
-   - LineageOS for stability
-   - Pixel Experience for clean look
+- **Root setup:** **[Post-root configuration](./index.md#step-4-post-root-configuration)**
+- **Tools:** **[Apps and modules](../apps-and-modules/)**
+- **Common tasks:** **[Debloating](../general-guides/android-apps-debloating.md)** · **[Ad blocking](../general-guides/android-adblocking.md)**
+- **Optional extensions:** **[LSPosed](./lsposed-guide.md)** · **[Custom ROM installation](./custom-rom-installation.md)**

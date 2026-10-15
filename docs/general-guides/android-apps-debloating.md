@@ -287,32 +287,11 @@ When removing OEM apps, consider these open-source alternatives (explore more in
 3. **Update debloat lists**: Keep App Manager updated for latest recommendations
 4. **Test core functions**: Periodically verify all essential features work
 
-### Performance Benefits
+For performance tools unrelated to app removal, browse [performance optimization apps](../apps-and-modules/performance#performance-optimization).
 
-After successful debloating, you should notice:
-- **Faster boot times**
-- **Improved battery life** (also see [battery optimization apps](../apps-and-modules/performance))
-- **More available storage**
-- **Reduced background data usage**
-- **Fewer unwanted notifications**
+## Command Line Debloating
 
-For additional performance improvements, check out [performance optimization apps](../apps-and-modules/performance#performance-optimization).
-
-## Advanced Techniques
-
-### Using Profiles in App Manager
-
-Create reusable debloating profiles:
-
-1. **Create Profile**: Go to Profiles → New Profile
-2. **Add Apps**: Select bloatware packages
-3. **Configure Actions**: Set to "Uninstall" or "Disable"
-4. **Save and Apply**: Store profile for future use
-5. **Export Profile**: Share configurations across devices
-
-### Command Line Debloating
-
-For advanced users, direct ADB commands:
+For advanced users, use ADB commands:
 
 ```bash
 # List all packages
@@ -328,20 +307,12 @@ adb shell pm disable-user --user 0 com.example.bloatware
 adb shell cmd package install-existing com.example.bloatware
 ```
 
-## Conclusion
+## Choosing a method
 
-Both App Manager and Canta provide excellent solutions for safe Android debloating:
+- Choose **App Manager** for root/ADB access, safety categories, component blocking, and profile support.
+- Choose **Canta** for a Shizuku-based workflow without conventional root.
 
-- **Choose App Manager** for comprehensive features, root users, or advanced customization
-- **Choose Canta** for simplicity, modern UI, and no-root requirements
-
-Remember to:
-- Start conservatively with obvious bloatware
-- Research each app before removal
-- Keep restoration tools available
-- Test functionality after debloating
-
-With proper care and the right tools, you can significantly improve your Android device's performance and privacy by removing unnecessary bloatware while maintaining system stability.
+Use the restore steps above if an app or device feature stops working.
 
 ## Related Guides
 

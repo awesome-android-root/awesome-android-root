@@ -444,25 +444,11 @@ adb shell su -c id             # Check root access
 
 ## Next Steps
 
-After rooting your Pixel:
+- **Root setup:** **[Post-root configuration](./index.md#step-4-post-root-configuration)**
+- **Tools:** **[Apps and modules](../apps-and-modules/)**
+- **Common tasks:** **[Debloating](../general-guides/android-apps-debloating.md)** · **[Ad blocking](../general-guides/android-adblocking.md)**
+- **Optional extensions:** **[LSPosed](./lsposed-guide.md)** · **[Custom ROM installation](./custom-rom-installation.md)**
 
-
-1. **Explore Root Apps:**
-   - [Root Apps Collection](../apps-and-modules/)
-   - [LSPosed Guide](./lsposed-guide.md)
-
-2. **Optimize Performance:**
-   - [Debloating Guide](../general-guides/android-apps-debloating.md)
-   - [Ad Blocking Guide](../general-guides/android-adblocking.md)
-
-3. **Consider custom ROMs:**
-   - [Custom ROM Guide](./custom-rom-installation.md) - Installation steps
-   - GrapheneOS for maximum privacy
-   - CalyxOS for balanced privacy
-   - LineageOS for customization
-
----
-
-::: tip SUCCESS
-Your Pixel is now rooted! Remember to keep Magisk updated and always backup before major changes - except on Pixel 1 / 1st gen Pixel devices, where you should stay on Magisk v30.6 until the upstream issue is resolved.
+::: warning
+For Pixel 1 (first-generation Pixel) devices, stay on Magisk v30.6 until the upstream issue is resolved.
 :::

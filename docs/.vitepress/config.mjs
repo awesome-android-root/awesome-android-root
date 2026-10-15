@@ -825,7 +825,7 @@ export default withPwa(defineConfig({
             { text: 'App Mods', link: '/apps-and-modules/app-modifications#app-mods' },
             { text: 'Social Media Mods', link: '/apps-and-modules/app-modifications#social-media-mods' },
             { text: 'Browser Mods', link: '/apps-and-modules/app-modifications#browser-mods' },
-            { text: 'YouTube & Media Mods', link: '/apps-and-modules/app-modifications#youtube-media-mods' },
+            { text: 'Media & Camera Mods', link: '/apps-and-modules/app-modifications#media-camera-mods' },
             { text: 'Signature & Verification', link: '/apps-and-modules/app-modifications#signature-verification' },
           ]
         },
@@ -941,60 +941,39 @@ export default withPwa(defineConfig({
       // General Guides Sidebar
       '/general-guides/': [
         {
-          text: '📚 All Tutorials',
+          text: '📚 General Guides',
           collapsed: false,
           items: [
             { text: 'Overview', link: '/general-guides/' },
-            { text: 'Quick Navigation', link: '/general-guides/#quick-navigation' }
+            { text: 'Privacy & Ad Blocking', link: '/general-guides/#privacy-ad-blocking' },
+            { text: 'App Management', link: '/general-guides/#app-management' },
+            { text: 'Related Documentation', link: '/general-guides/#related-documentation' }
           ]
         },
         {
-          text: '🛡️ Privacy & Security',
+          text: '🛡️ Privacy & Ad Blocking',
           collapsed: false,
           items: [
-            { text: 'Security Guides', link: '/general-guides/#privacy-security-guides' },
-            { text: 'Ad Blocking', link: '/general-guides/android-adblocking' }
+            { text: 'Android Ad Blocking', link: '/general-guides/android-adblocking' }
           ]
         },
         {
           text: '📦 App Management',
           collapsed: false,
           items: [
-            { text: 'App Optimization', link: '/general-guides/#app-management-optimization' },
-            { text: 'Debloating Guide', link: '/general-guides/android-apps-debloating' },
-            { text: 'Stop Auto Updates', link: '/general-guides/stop-android-app-auto-updates-play-store' }
+            { text: 'Safely Debloat Android Apps', link: '/general-guides/android-apps-debloating' },
+            { text: 'Stop Play Store Auto-Updates', link: '/general-guides/stop-android-app-auto-updates-play-store' }
           ]
         },
         {
-          text: '⚡ System Optimization',
+          text: 'More Documentation',
           collapsed: true,
           items: [
-            { text: 'Performance Guides', link: '/general-guides/#performance-system-optimization' },
-            { text: 'Battery Optimization', link: '/general-guides/#battery-power-management' }
-          ]
-        },
-        {
-          text: 'Customization',
-          collapsed: true,
-          items: [
-            { text: 'Theming Guides', link: '/general-guides/#customization-theming' },
-            { text: 'UI Modifications', link: '/general-guides/#system-ui-changes' }
-          ]
-        },
-        {
-          text: 'Advanced Topics',
-          collapsed: true,
-          items: [
-            { text: 'Technical Guides', link: '/general-guides/#development-technical-guides' },
-            { text: 'Android Knowledge', link: '/general-guides/#essential-android-knowledge' }
-          ]
-        },
-        {
-          text: 'Community',
-          collapsed: true,
-          items: [
-            { text: 'Resources', link: '/general-guides/#community-resources' },
-            { text: 'Contributing', link: '/general-guides/#contributing-to-our-guides' }
+            { text: 'Non-root Alternatives', link: '/non-root-alternatives' },
+            { text: 'Rooting Guides', link: '/rooting-guides/' },
+            { text: 'Troubleshooting', link: '/troubleshooting' },
+            { text: 'FAQs', link: '/faqs' },
+            { text: 'Apps & Modules', link: '/apps-and-modules/' }
           ]
         }
       ],
@@ -1069,12 +1048,10 @@ export default withPwa(defineConfig({
         {
           text: 'About',
           items: [
-            { text: 'Our Mission', link: '/about#our-mission' },
-            { text: 'What We Offer', link: '/about#what-we-offer' },
+            { text: 'Overview', link: '/about' },
+            { text: 'What the Project Covers', link: '/about#what-the-project-covers' },
             { text: 'Getting Started', link: '/about#getting-started' },
-            { text: 'Community & Support', link: '/about#community-support' },
-            { text: 'Core Values', link: '/about#core-values' },
-            { text: 'Support the Project', link: '/about#support-the-project' }
+            { text: 'Community & Contributions', link: '/about#community-and-contributions' }
           ]
         },
         {

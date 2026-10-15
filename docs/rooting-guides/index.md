@@ -382,7 +382,7 @@ After successful root installation, complete these essential steps:
 - [Block Ads System-Wide](../general-guides/android-adblocking.md) - Eliminate ads across all apps
 - [Debloat Your Device](../general-guides/android-apps-debloating.md) - Remove bloatware safely
 - [Install LSPosed / Vector Framework](./lsposed-guide.md) - Advanced app customization with Xposed modules
-- [Browse 650+ Root Apps](../apps-and-modules/) - Discover essential tools
+- [Browse 650+ apps and modules](../apps-and-modules/) - Discover essential tools
 
 ---
 
@@ -587,24 +587,3 @@ Include this information for faster troubleshooting:
 - **Screenshots** of error states if applicable
 
 ---
-
-## Next Steps
-
-### Your Path Forward
-1. **[Unlock Bootloader](./how-to-unlock-bootloader.md)** - The essential first step
-2. **[Install Recovery](./how-to-install-custom-recovery.md)** - Optional but recommended
-3. **[Choose Your Root Method](#choosing-a-root-method)** - Magisk, KernelSU, or APatch
-4. **[Follow Device-Specific Guide](#device-specific-guides)** - Tailored for your phone
-5. **[Set Up Root Hiding](#step-4-post-root-configuration)** - Essential for banking apps
-6. **[Install Vector/LSPosed](./lsposed-guide.md)** - Unlock app customization
-
-> [!IMPORTANT]
-> - Join our [community discussions](../about.md#community-support)
-> - Contribute to the [project](../contributing.md)
-> - Stay updated via [X (Twitter)](https://x.com/awsm_and_root)
-
----
-
-🎉 **Welcome to the World of Android Freedom!**
-
-Your journey to unlimited Android possibilities begins now! The rooting community is stronger than ever in 2026

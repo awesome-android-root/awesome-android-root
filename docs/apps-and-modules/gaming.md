@@ -23,6 +23,7 @@ game-specific tools, mixing root apps, Magisk/KernelSU modules and LSPosed modul
 ## Game Modifications & Tools
 
 - **[Boosteroid+](https://github.com/nitanmarcel/BoosteroidPlus)** - Customize advanced settings for the Boosteroid app, including frame rate, bitrate, and resolution options. `FOSS` `[LSP]`
+- **[iUnlocker GLTool](https://github.com/i-Taylo/iUnlockerGL)** - Designed to spoof GPU information, allowing users to modify GPU information for unlocking graphics in games and testing. `FOSS` `[M]`
 - **[JoyCon Droid](https://joycondroid.gitbook.io/joycondroid)** - Allows you to turn your Android device into a controller for your Nintendo Switch. `FOSS`
 
 ## Gaming Optimization

@@ -456,12 +456,7 @@ fastboot reboot
 
 ## Next Steps
 
-1. Install only essential modules first
-2. Keep stock images and notes for your exact build/slot
-3. Explore practical root use cases:
-   - [Android Ad Blocking](../general-guides/android-adblocking.md)
-   - [Android Debloating](../general-guides/android-apps-debloating.md)
-   - [Root Apps Collection](../apps-and-modules/)
+Start with only essential modules, and keep the stock image plus your exact build and slot notes for recovery. Browse the [root apps and modules collection](../apps-and-modules/), [ad-blocking guide](../general-guides/android-adblocking.md), and [debloating guide](../general-guides/android-apps-debloating.md) for common uses.
 
 ---
 
