@@ -147,6 +147,9 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 > [!TIP]
 > Combine these with a proper [Zygisk implementation](#zygisk) for best results.
 
+> [!NOTE]
+> KernelSU hides earlier: unpermitted apps cannot see `su`, and SUSFS hides paths and mounts in the kernel. That is why the SUSFS tools below list `[K]` only.
+
 ---
 
 ## Susfs

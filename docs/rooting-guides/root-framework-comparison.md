@@ -93,6 +93,7 @@ Read the badges as a health check: a recent "last commit" means the project is a
 | If you want... | Choose | Why |
 |---|---|---|
 | The safest default for most devices | **Magisk** | Broadest compatibility, largest module ecosystem, easiest recovery |
+| Fewer root traces on a supported device | **KernelSU** or a variant | Kernel root, only permitted apps see `su`, easier SUSFS access |
 | Kernel-level root with per-app control on a GKI 2.0 device | **KernelSU** | Root in kernel space, App Profiles restrict UID, groups, capabilities, SELinux |
 | Kernel root on a non-GKI or older kernel | **KernelSU Next** or **SukiSU-Ultra** | Wider kernel range (4.4 to 6.18) and built-in SUSFS support |
 | KernelPatch features such as KPM kernel hooks | **APatch** | ARM64 only, kernel 3.18 to 6.12, needs a strong SuperKey |
@@ -195,6 +196,8 @@ No root framework can promise that banking, wallet, streaming, work-profile, or 
 
 Community hiding stacks (Zygisk, SUSFS, keybox-based spoofing) are a cat-and-mouse game. See the [SUSFS Root Hiding Guide](./susfs-guide.md) for the current kernel-side approach. If these apps matter more than root, keep one unrooted phone.
 
+SUSFS is kernel level and needs KernelSU or a variant; Magisk has no equivalent. If Magisk hiding is set up correctly and an app still detects root, switching frameworks beats stacking more userspace modules.
+
 ## Sideloading and app installs (2026)
 
 Root users install managers, modules, and tools as APKs, so Google's developer verification rollout matters:
@@ -295,5 +298,5 @@ Usually no. Relocking with modified partitions can brick or wipe the device. Ret
 - **In this repo:** [SUSFS Root Hiding Guide](./susfs-guide.md) · [Temporary Root Solutions](./temporary-root-solutions.md)
 
 ::: tip Final rule
-When in doubt, start with Magisk, unless your device community specifically recommends KernelSU, a KernelSU variant, or APatch for your exact model, ROM, and kernel.
+When in doubt, start with Magisk. Pick KernelSU or a variant only if your exact build is supported and hiding or per-app control matters more than module choice.
 :::
