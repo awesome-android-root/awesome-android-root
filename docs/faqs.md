@@ -220,7 +220,7 @@ Research more and ask community
 | Method | Best For | Pros | Cons |
 |:---|:---|:---|:---|
 | **Magisk** | Most users, general use | Widest compatibility, mature, large module ecosystem, Zygisk, active development | Requires boot/init_boot patching |
-| **KernelSU** | Supported GKI devices, users who care about hiding or per-app control | Kernel-integrated, only permitted apps see `su`, App Profiles, SUSFS on variants | Needs a supported kernel or variant, smaller module ecosystem |
+| **KernelSU** | Supported GKI devices, hiding or per-app control | Kernel-integrated, only permitted apps see `su`, SUSFS on variants | Needs a supported kernel, smaller module ecosystem |
 | **APatch** | Advanced users, developers | Kernel patching approach, powerful for specific use cases | Limited device support, requires technical knowledge |
 
 **Detailed Comparison:**
@@ -239,10 +239,10 @@ Research more and ask community
 - Using stock or stock-based ROM
 
 **KernelSU**
-- **Installation:** LKM mode patches `init_boot` on Android 13+ and keeps the stock kernel on supported GKI devices. A KSU-enabled kernel is only needed for GKI mode, older devices, or where LKM is blocked
-- **Compatibility:** Official builds need GKI 2.0 (kernel 5.10+). KernelSU Next and SukiSU-Ultra cover older and non-GKI kernels
-- **Modules:** Growing ecosystem, some Magisk modules work, but a metamodule is required for mounting since KernelSU 3.0
-- **Hiding:** Only permitted apps can see `su`. App Profiles can also keep module mounts away from an app, set the UID, groups, capabilities, and SELinux domain for root, and variants with SUSFS hide paths and mounts in the kernel
+- **Installation:** LKM mode keeps the stock kernel on supported GKI devices; a custom kernel is only needed for GKI mode or older devices
+- **Compatibility:** Official builds need GKI 2.0 (5.10+). KernelSU Next and SukiSU-Ultra cover older and non-GKI kernels
+- **Modules:** Growing ecosystem; a metamodule is required for mounting since KernelSU 3.0
+- **Hiding:** Only permitted apps see `su`, App Profiles hide module mounts per app, and SUSFS variants hide paths in the kernel
 - **Performance:** Generally excellent, kernel-level integration
 - **Support:** Active development, smaller but knowledgeable community
 
@@ -250,7 +250,7 @@ Research more and ask community
 - Your device and kernel are supported, including by a variant if the official build reports `Unsupported`
 - Want kernel-level root solution
 - Prefer profile-based permission system
-- Hiding root from banking, payment, or anti-cheat apps matters more to you than having every Magisk module available
+- Hiding matters more than the full Magisk module catalog
 - Don't need every Magisk module
 
 **APatch**
@@ -272,7 +272,7 @@ Research more and ask community
 ```
 New to rooting? → Magisk
 Stock ROM, most devices? → Magisk
-Supported kernel, and hiding or per-app root control is the priority? → KernelSU or a variant
+Hiding or per-app control first, on a supported kernel? → KernelSU or a variant
 Using custom ROM with KSU kernel? → KernelSU
 Advanced user, specific needs? → Research all three
 ```
