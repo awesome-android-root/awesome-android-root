@@ -65,6 +65,10 @@ head:
 - **What it is not:** persistent root, a bootloader unlock, a way to flash a custom ROM or recovery, or a guarantee that every listed model still works.
 - **After reboot:** the session root is gone and the tool must be run again, if the device firmware is still vulnerable.
 
+> [!TIP]
+> **Jump to [Table of GhostLock projects ↗](#all-apps-and-projects-for-ghostlock) for your device**
+
+
 *The GhostLock bug (CVE-2026-43499), explained in plain English.*
 
 Almost every root method on this site follows the same recipe: **unlock the bootloader, then flash a patched boot image**. But unlocking comes with costs - a wiped phone, a tripped Knox fuse on Samsung devices, a bootloader that reports "unlocked" to banking apps. That's why the discovery of **GhostLock** in mid-2026 caused such a stir: for a narrow window of devices, some documented runtime chains avoid conventional bootloader unlocking and boot-image flashing.
