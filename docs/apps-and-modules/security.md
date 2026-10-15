@@ -57,12 +57,14 @@ firewalls for hardening your device, controlling which apps can reach the networ
 - **[Custom Certificates](https://github.com/YujiaCheng1996/custom-certificates)** - A Magisk/KernelSU module which adds custom certificates to the system trust store. `FOSS` `[M]` `[K]`
 - **[Disable usb debugging](https://github.com/Aakif17/disable_usb_debugging)** - Disables USB Debugging after every reboot. `FOSS` `[M]`
 - **[DriFiCrack](https://github.com/ZeltNamizake/DriFiCrack)** - Brute Force Tool to Crack Wi-Fi Passwords. `FOSS` `[M]`
+- **[FLAG_SECURE-next](https://github.com/Dev97633/FLAG_SECURE-next)** - LSPosed module that disables FLAG_SECURE globally, so secure windows can be screenshotted and recorded. `Proprietary` `[LSP]`
 - **[ih8SecureLock](https://github.com/j-hc/ih8SecureLock)** - Prevent apps from blocking and listening to your screenshots with Zygisk. `FOSS` `[M]` `[K]`
 - **[Just Trust Me Pro](https://github.com/hang666/JustTrustMePro)** - Disables SSL certificate checking for the purposes of auditing an app with cert pinning. `FOSS` `[M]`
 - **[OneShot Extended](https://github.com/chickendrop89/OneShot-Extended)** - Performs various WPS attacks without the requirement of monitor mode. `FOSS` `[M]` `[K]`
 - **[PinGuard](https://github.com/khiqwq/PinGuard/blob/main/README_EN.md)** - LSPosed module that requires fingerprint / password to unpin screen-pinned apps. `FOSS` `[LSP]`
 - **[SafetyCore Placeholder](https://github.com/daboynb/Safetycore-placeholder)** - Placeholder APK that keeps Google SafetyCore from being installed or updated again, thanks to a signature mismatch. `FOSS`
 - **[Simple Flag Secure](https://github.com/ShivamXD6/Simple-Flag-Secure)** - Disable Secure Flag and allow taking screenshots/screen recording in apps supports KSU/APatch . `FOSS` `[M]` `[K]` `[A]`
+- **[Smali Patcher Reborn](https://github.com/saadnahid7/SmaliPatcherReborn)** - Patches services.jar on the device to hide the mock-location flag, allow screenshots in secure windows and more on Android 10-17. `FOSS` `[M]` `[K]` `[A]`
 - **[StrykerOSS](https://github.com/zalexdev/strykerapp)** - Bundles a curated set of network, wireless and web security tools into a single rooted-Android application for penetration testing. `FOSS`
 - **[TapDucky](https://github.com/iodn/tap-ducky)** - Open-source DuckyScript runner for rooted Android with USB Gadget (ConfigFS) support. `FOSS`  | [🌱](https://f-droid.org/en/packages/org.kaijinlab.tap_ducky/)
 - **[Zygisk Cacerts](https://github.com/vvb2060/zygisk_cacerts)** - Zygisk module that replaces the local root certificate store with the AOSP CA certificate list. `Proprietary` `[M]` `[K]`
