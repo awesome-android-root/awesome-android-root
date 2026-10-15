@@ -2,10 +2,13 @@
 
 # Counts entries in the Apps & Modules category pages (docs/apps-and-modules/*.md).
 # The docs pages are the canonical home of the database (see README).
+# Writes a rendered table to docs/count.md and machine-readable counts to
+# docs/public/count.json (published at /count.json for shields.io dynamic badges).
 
 # Resolve repo root (scripts/..)
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 COUNT_PAGE="$ROOT_DIR/docs/count.md"
+COUNT_JSON="$ROOT_DIR/docs/public/count.json"
 
 # All category pages, excluding the hub index
 mapfile -t pages < <(find "$ROOT_DIR/docs/apps-and-modules" -maxdepth 1 -name '*.md' ! -name 'index.md' | sort)
@@ -41,8 +44,6 @@ root_apps=$((all_entries - all_module_entries))
   printf '%s\n' '---' 'title: Apps and Modules Count' 'description: Current counts of Android root apps and modules in this documentation, broken down by category and root framework, updated on every build.' '---' '' \
     '# Apps and Modules Count' '' \
     'Updated automatically on each documentation build. Counts are based on entries in `docs/apps-and-modules/`.' '' \
-    'Copyable Markdown table:' '' \
-    '```markdown' \
     '| Category | Count |' \
     '| --- | ---: |'
   printf '| Total entries | %s |\n' "$all_entries"
@@ -51,8 +52,20 @@ root_apps=$((all_entries - all_module_entries))
   printf '| KernelSU modules | %s |\n' "$kernelsu_modules"
   printf '| APatch modules | %s |\n' "$apatch_modules"
   printf '| LSPosed modules | %s |\n' "$lsposed_modules"
-  printf '%s\n' '```' '' 'Framework counts may overlap when an entry has multiple framework tags.'
+  printf '%s\n' '' 'Framework counts may overlap when an entry has multiple framework tags.' '' \
+    'The same counts are published as JSON at `count.json` for dynamic badges and other tooling.'
 } > "$COUNT_PAGE"
+
+cat > "$COUNT_JSON" <<JSON
+{
+  "total": $all_entries,
+  "root_apps": $root_apps,
+  "magisk_modules": $magisk_modules,
+  "kernelsu_modules": $kernelsu_modules,
+  "apatch_modules": $apatch_modules,
+  "lsposed_modules": $lsposed_modules
+}
+JSON
 
 # Display
 echo ""
@@ -66,4 +79,5 @@ echo -e "  ${GRAY}${RESET}  ${GREEN}KernelSU Modules${RESET}      ${BOLD}${WHITE
 echo -e "  ${GRAY}${RESET}  ${CYAN}APatch Modules${RESET}        ${BOLD}${WHITE}${apatch_modules}${RESET}      ${GRAY}${RESET}"
 echo -e "  ${GRAY}${RESET}  ${PURPLE}LSPosed Modules${RESET}       ${BOLD}${WHITE}${lsposed_modules}${RESET}      ${GRAY}${RESET}"
 echo -e "  ${GRAY}Markdown table updated: docs/count.md${RESET}"
+echo -e "  ${GRAY}JSON stats updated: docs/public/count.json${RESET}"
 echo ""
