@@ -144,9 +144,9 @@ Magisk is a systemless root solution that provides superuser access without modi
 |---------|--------|----------|---------|
 | Ease of Use | Excellent | Moderate | Moderate |
 | Module Support | Excellent | Excellent | Good |
-| Root Hiding | Good | Excellent | Excellent |
-| Device Support | Universal | Limited | Limited |
-| Custom Kernel Required | No | Yes | No |
+| Root Hiding | Userspace modules only | Kernel-level, plus SUSFS on supported setups | Kernel-level |
+| Device Support | Broadest | GKI 2.0 for official builds, wider via variants | ARM64, kernel 3.18 to 6.12 |
+| Custom Kernel Required | No | No for LKM mode, yes for GKI mode | No |
 
 **Choose Magisk if:**
 - You want easiest installation
@@ -526,6 +526,13 @@ Shamiko hides root more effectively than the built-in DenyList: install it, rebo
 > The full root hiding and Play Integrity setup, including module choices and testing tools, is in
 > [Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps) and
 > [Root Hiding & Play Integrity](../apps-and-modules/root-management#root-hiding-play-integrity).
+
+<details>
+<summary><strong>Still detected after setting up Shamiko?</strong></summary>
+
+This is a known limit of the approach, not always a mistake in your setup. Upstream Magisk no longer handles root hiding (the [official Magisk FAQ](https://topjohnwu.github.io/Magisk/faq.html) states this directly), so DenyList and Shamiko work in userspace and can only cover the traces they know to look for. Kernel-based root starts from a different place: with KernelSU, only apps you permit can see `su` at all, App Profiles can keep module mounts away from a specific app, and SUSFS can hide paths and mounts in the kernel on supported setups. None of that guarantees a banking app will pass, and Play Integrity is a separate problem. But if hiding is the main reason you rooted and your kernel is supported, a clean switch is worth considering before you add more hiding modules. Follow the migration steps in the [Root Framework Comparison](./root-framework-comparison.md#migration-guide) and install only one framework at a time.
+
+</details>
 
 ### Testing Play Integrity
 
