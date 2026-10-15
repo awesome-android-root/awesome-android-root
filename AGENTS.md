@@ -94,6 +94,30 @@ python3 scripts/check_links.py
 
 External links should be authoritative and verified when relevant.
 
+### Titles and meta descriptions
+
+Target lengths for every page:
+
+* Title: 50 to 60 characters. Absolute maximum 70.
+* Meta description: 110 to 155 characters. Absolute range 70 to 160.
+
+Rules:
+
+* Put the primary keyword first. Drop trailing qualifiers before shortening a
+  keyword-rich title.
+* The site suffix `| Awesome Android Root` counts toward the title length.
+* Never put the site name in a frontmatter `title`. VitePress appends it, which
+  renders a duplicated title such as `Privacy | Awesome Android Root |
+  Awesome Android Root`. The only exception is `docs/index.md`, which sets
+  `titleTemplate: Awesome Android Root` and therefore uses its title verbatim.
+* Write descriptions from the actual page content. Do not pad them to reach a
+  length and do not use claims the page does not support.
+* Quote a frontmatter `description` in YAML when it contains a colon.
+* Keep `og:title`, `twitter:title`, `og:description`, and `twitter:description`
+  overrides in sync with `title` and `description` when they repeat them.
+* `docs/count.md` is generated and gitignored. Edit its frontmatter in
+  `scripts/counter.sh`, since the build regenerates the file.
+
 ## 6. Site and Code Changes
 
 The project uses Node.js, VitePress, Markdown/YAML, JavaScript, Python, and Bash.
