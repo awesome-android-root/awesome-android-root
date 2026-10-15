@@ -89,7 +89,7 @@ Magisk/KernelSU/LSPosed modules.
 ## Screen & Display
 
 - **[Adaptive Theme: Auto Dark Mode by Ambient Light](https://github.com/xLexip/Adaptive-Theme)** - Automatically switches between Light and Dark mode using the ambient light sensor. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=dev.lexip.hecate)
-- **[Anti Brightness Change](https://github.com/binarynoise/XposedModulets)** - Prevents every app from changing the screen brightness. `FOSS` `[LSP]` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.programminghoch10.AntiBrightnessChange)
+- **[Anti Brightness Change](https://github.com/binarynoise/XposedModulets/blob/main/AntiBrightnessChange/README.md)** - Prevents every app from changing the screen brightness. `FOSS` `[LSP]` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.programminghoch10.AntiBrightnessChange)
 - **[DarQ Fork](https://github.com/Arora-Sir/DarQ)** - Provides a per-app selectable force dark option for Android 10 and above. `FOSS`
 - **[DPIS](https://github.com/Kwensiu/DPIS)** - LSPosed module for per-app interface scale, smallest width, and font size tuning. `FOSS` `[LSP]`
 - **[Keep Screen Off](https://github.com/Xposed-Modules-Repo/com.ncyxie.keepscreenoff)** - Stops selected apps from holding the screen awake by ignoring `FLAG_KEEP_SCREEN_ON` and screen wakelocks. `FOSS` `[LSP]`
@@ -100,6 +100,7 @@ Magisk/KernelSU/LSPosed modules.
 
 ## Status Bar & Navigation
 
+- **[BatteryRemapper](https://github.com/Dhangofa/BatteryRemapper)** - Customize Status Bar Battery Percentage. `FOSS` `[LSP]`
 - **[Duo Status Bar](https://github.com/Xposed-Modules-Repo/io.github.kvmy666.duostatusbar)** - Turns the battery, Wi-Fi and signal icons into one smooth, Apple-style element. `Proprietary` `[LSP]`
 - **[Hide Navbar Keyboard](https://github.com/UNKNUW/Hide-Navbar-Keyboard)** - Hide navbar when keyboard appears. Supports Android 10 -15+. `FOSS` `[M]`
 - **[Lost Xposed](https://github.com/uraniam9/lost-xposed)** - Composable status bar clock, per-app display settings and notification rules that filter messages before they are posted. `FOSS` `[LSP]`

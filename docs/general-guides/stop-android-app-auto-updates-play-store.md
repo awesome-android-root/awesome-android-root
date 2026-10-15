@@ -30,7 +30,7 @@ head:
       content: image/png
   - - meta
     - property: og:updated_time
-      content: 2026-09-27T00:00:00Z
+      content: 2026-10-15T00:00:00Z
 
   # Stop App Updates specific Twitter Card
   - - meta
@@ -114,14 +114,7 @@ App detaching removes the connection between installed apps and Google Play Stor
 
 ## Prerequisites
 
-**Need to root your device first?** Check our device-specific guides:
-- 📱 [Samsung Phone Rooting Guide](../rooting-guides/how-to-root-samsung-phone.md)
-- 📱 [Pixel Phone Rooting Guide](../rooting-guides/how-to-root-pixel-phone.md)
-- 📱 [OnePlus Phone Rooting Guide](../rooting-guides/how-to-root-oneplus-phone.md)
-- 📱 [Xiaomi Phone Rooting Guide](../rooting-guides/how-to-root-xiaomi-phone.md)
-- 📱 [Nothing Phone Rooting Guide](../rooting-guides/how-to-root-nothing-phone.md)
-- 📱 [Motorola Phone Rooting Guide](../rooting-guides/how-to-root-motorola-phone.md)
-- 🔓 [Bootloader Unlocking Guide](../rooting-guides/how-to-unlock-bootloader.md)
+**Need root first?** Start with the [rooting guides](../rooting-guides/) and follow the instructions for your device.
 
 **Required:**
 - ✅ **Rooted Android device** (Magisk or KernelSU)
@@ -214,11 +207,6 @@ su -c /data/adb/modules/zygisk-detach/detach
 
 ## Related Guides
 
-- 📋 [Android Root Apps Collection](../apps-and-modules/)
-- 🔧 [Custom Recovery Installation](../rooting-guides/how-to-install-custom-recovery.md)
-- 🏠 [Custom ROM Installation](../rooting-guides/custom-rom-installation.md)
-- 📚 [All Root Guides](../rooting-guides/)
-
----
-
-**Need help rooting your device first?** Check our [comprehensive rooting guides](../rooting-guides/) for step-by-step instructions tailored to your specific device.
+- [Zygisk modules and tools](../apps-and-modules/root-management#zygisk)
+- [Rooting guides](../rooting-guides/)
+- [Troubleshooting](../troubleshooting.md)

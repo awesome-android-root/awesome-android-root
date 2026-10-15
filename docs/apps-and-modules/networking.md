@@ -33,7 +33,6 @@ more), network diagnostics, Wi-Fi & mobile data utilities and Bluetooth & NFC ap
 
 ## Network Tools
 
-- **[Hosts Manager Lite](https://play.google.com/store/apps/details?id=awais.hostsmanager.lite)** - Advanced /etc/hosts editor. `Proprietary`
 - **[MagicNet](https://github.com/LIghtJUNction/MagicNet#english-summary)** - Module for device-side traffic governance that enforce network rules below the app layer instead of relying on every app to respect a proxy setting. `FOSS` `[M]` `[K]` `[A]`
 - **[Magisk LAN Auto Switch](https://github.com/NewFuture/magisk-modules/tree/main/magisk-lan-auto-switch)** - Automatically switch LAN and WiFi based on eth0 connection status. `FOSS` `[M]`
 - **[MultiRoute](https://github.com/Linoleic/MultiRoute)** - An LSPosed module that gives every app its own network channel. `FOSS` `[LSP]`

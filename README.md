@@ -10,7 +10,7 @@
 
 **🛡️ The Ultimate Android Rooting Hub**
 
-<sub>Discover 650+ root apps, Magisk / KernelSU / APatch / LSPosed (Xposed) modules and step-by-step rooting guides.</sub>
+<sub>Browse 650+ Android apps and modules, including Magisk, KernelSU, APatch and LSPosed (Xposed) tools, plus step-by-step rooting guides.</sub>
 
 [![Website](https://img.shields.io/badge/Website-awesome--android--root.xyz%E2%86%97-blue?style=for-the-badge&logo=googlechrome&logoColor=white)](https://awesome-android-root.xyz/)
 
@@ -25,7 +25,7 @@
 Awesome Android Root is a community-curated knowledge base for **rooting Android devices and getting the most out of root access**:
 
 - **Rooting guides** - Magisk, KernelSU, APatch, LSPosed, bootloader unlocking and device-specific walkthroughs (Pixel, Samsung, Xiaomi, OnePlus, Nothing, Motorola).
-- **Apps & Modules database** - 650+ curated root apps, Magisk modules, KernelSU modules, APatch modules and LSPosed/Xposed modules, each with source links, F-Droid/Play Store badges and license info.
+- **Apps & Modules database** - 650+ curated apps and modules, including root apps and Magisk, KernelSU, APatch and LSPosed/Xposed modules, with source links, store badges and license information.
 - **Tutorials, FAQs & troubleshooting** - ad blocking, debloating, Play Integrity, bootloops and more.
 
 ## 🌐 Use the Website
@@ -54,7 +54,7 @@ Browse them in [`docs/apps-and-modules/`](docs/apps-and-modules/):
 | **🕵️ [Privacy](docs/apps-and-modules/privacy.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/privacy) | Privacy tools, device ID & location spoofing, app isolation |
 | **🔐 [Security](docs/apps-and-modules/security.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/security) | Security tools & firewalls |
 | **🚫 [Ad Blocking](docs/apps-and-modules/ad-blocking.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/ad-blocking) | Hosts-based ad blockers & DNS filtering |
-| **🧩 [App Modifications](docs/apps-and-modules/app-modifications.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/app-modifications) | App patchers, social media & browser mods, YouTube clients |
+| **🧩 [App Modifications](docs/apps-and-modules/app-modifications.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/app-modifications) | App patchers, social and browser mods, media/camera tools, signature verification |
 | **🧹 [Debloating](docs/apps-and-modules/debloating.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/debloating) | Remove bloatware & unwanted system apps |
 | **🗂️ [File Management](docs/apps-and-modules/file-management.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/file-management) | Root file managers, cleaners & partition tools |
 | **💾 [Backup & Restore](docs/apps-and-modules/backup.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/backup) | Full app & data backups and recovery |
