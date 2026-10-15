@@ -48,6 +48,7 @@ tracking, spoofing your device identity or location, and isolating apps from you
 - **[SpoofMyDevice](https://github.com/BuSung-dev/SpoofMyDevice)** - Xposed module and companion app for building, saving, and applying spoofed Android device profiles to selected apps. `FOSS` `[LSP]`
 - **[SSAID (Android ID Modifier)](https://github.com/HSSkyBoy/AndroidIDChange)** - A modern Android SSAID (Android ID) inspector, modifier, backup, and management utility. `FOSS` `[LSP]`
 - **[Telephony Spoofer](https://github.com/BrianWalczak/TelephonySpoofer)** - Spoof cellular information, including eSIM compatibility. `FOSS` `[LSP]`
+- **[YumyHook](https://github.com/Xposed-Modules-Repo/com.yumito.yumyhook)** - System-level device spoofing with anti-detection: fake build properties, SIM data, identifiers and location per app. `Proprietary` `[LSP]`
 
 ## Location & GPS
 
@@ -64,6 +65,7 @@ tracking, spoofing your device identity or location, and isolating apps from you
 
 - **[⭐ Amarok](https://github.com/deltazefiro/Amarok-Hider)** - Android application which enables you to hide your private files and apps with a single click. `FOSS` | [🌱](https://f-droid.org/zh_Hans/packages/deltazero.amarok.foss/)
 - **[Do Not Try Accessibility](https://github.com/Nitsuya/DoNotTryAccessibility)** - Hook System Framework makes the app think that accessibility services are not enabled. `FOSS` `[LSP]`
+- **[DuckUSB](https://github.com/Bouteillepleine/DuckUSB)** - Makes apps read USB debugging, wireless debugging and Developer Options as OFF while they stay enabled. `Proprietary` `[M]` `[K]` `[LSP]`
 - **[FuseFixer](https://github.com/5ec1cff/FuseFixer)** - Hooks the MediaProvider Fuse Daemon to stop apps probing package existence through `Android/data` directory quirks (Unicode casefold tricks). `FOSS` `[LSP]`
 - **[FuseHide](https://github.com/XiaoTong6666/FuseHide)** - Hides chosen storage paths from MediaProvider on Android 12+ at runtime, and debugs/fixes `Android/data` Unicode casefold scenarios. `FOSS` `[LSP]`
 - **[Ghost Mode](https://github.com/Foxlape/GhostMode)** - Turn your Android device 'unavailable' for incoming calls while keeping LTE/5G mobile data fully working. `FOSS` `[LSP]`
@@ -74,6 +76,7 @@ tracking, spoofing your device identity or location, and isolating apps from you
 - **[MicroGPlus](https://bitgapps.io/extra)** - Installs microG services and other useful apps. `Proprietary` `[M]` `[K]`
 - **[Oplus16 Hide Zoom Window](https://github.com/jhl337/Oplus16_HideZoomWindow)** - Hides small windows from screenshots and screen recordings (designed for ColorOS 16). `FOSS` `[LSP]`
 - **[PrivacyFlip](https://github.com/dorumrr/privacyflip)** - Automatically disables/enables Wi-Fi, Bluetooth, mobile data, location services, NFC, and even camera/microphone sensors based on lock/unlock state. `FOSS` | [🌱](https://f-droid.org/packages/io.github.dorumrr.privacyflip/)
+- **[ScreenshotFaker](https://github.com/Huai-Tian/ScreenshotFaker)** - Protects on-screen content from being captured in screenshots, recordings and screen sharing, with anti-detection features. `FOSS` `[LSP]`
 - **[Stealth Debug](https://github.com/sp11xy/StealthDebug)** - Hide USB-Debugging properties. `FOSS` `[M]`
 - **[Tarnhelm](https://github.com/lz233/Tarnhelm)** - The magic to clean sharing links up. `FOSS` `[LSP]`
 - **[Transparent Screenshot](https://github.com/Dszsu/Transparent_screenshot)** - Hide the application window during screenshots, screen recording, and screen casting. `FOSS` `[LSP]`
