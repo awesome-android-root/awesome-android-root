@@ -803,44 +803,6 @@ fastboot reboot
 
 ---
 
-## Next Steps
-
-Custom recovery successfully installed. Choose your path forward:
-
-### For Rooting
-
-**Install root solution:**
-- [Magisk Guide](./magisk-guide.md) - Most popular, extensive modules
-- [KernelSU Guide](./kernelsu-guide.md) - Kernel-based, better hiding
-- [APatch Guide](./apatch-guide.md) - Alternative approach
-
-**Essential root apps:**
-- [Root Apps Collection](../apps-and-modules/) - Curated list of root apps
-
-### For Custom ROMs
-
-**Install custom ROM:**
-- [Custom ROM Installation Guide](./custom-rom-installation.md) - Complete process
-- LineageOS, Pixel Experience, Paranoid Android, etc.
-
-### For Learning
-
-**Practice operations:**
-- Create and restore backups
-- Install simple mods
-- Learn ADB sideload
-- Experiment safely with backups
-
-### For Support
-
-**Get help:**
-- [FAQ](../faqs.md) - Common questions
-- [Troubleshooting Guide](../troubleshooting.md)
-- [XDA Forums](https://forum.xda-developers.com/) - Device-specific help
-- [GitHub Issues](https://github.com/awesome-android-root/awesome-android-root/issues) - Report problems
-
----
-
 ## Additional Resources
 
 **Official Recovery Sites:**
@@ -856,31 +818,13 @@ Custom recovery successfully installed. Choose your path forward:
 - [Main Rooting Guide](./index.md) - Complete overview
 - [Bootloader Unlocking](./how-to-unlock-bootloader.md) - Required prerequisite
 - [Root Framework Comparison](./root-framework-comparison.md) - Choose root method
+- [Root apps and modules](../apps-and-modules/) - Browse tools by task
+- [Custom ROM Installation](./custom-rom-installation.md) - Optional operating-system replacement
 
 ---
 
 ## Safety Reminders
 
-**Before making changes:**
-- Create complete backup
-- Verify you have correct files
-- Understand what you're doing
-- Have recovery plan ready
-
-**When experimenting:**
-- Start with small changes
-- Test one thing at a time
-- Keep backups current
-- Document what you do
-
-### If problems occur:
-- [🌐 GitHub](https://github.com/awesome-android-root/awesome-android-root): Contribute to the project's source and development.
-- [𝕏 Twitter](https://x.com/awsm_and_root): Stay updated with the latest news and community highlights.
-- [Complete FAQ](../faqs.md)
-- XDA Forums - Device-specific help and threads
-
----
-
-::: tip 🎉 Congratulations!
-You’ve installed custom recovery or set up a safe temporary-boot flow. Always back up before major changes, and follow device-specific instructions for best results.
-:::
+- Back up first, verify the image and device, and keep a recovery plan.
+- Make one change at a time, test it, and record what changed.
+- If recovery fails, consult the [troubleshooting guide](../troubleshooting.md), [FAQ](../faqs.md), or your device's [XDA forum](https://forum.xda-developers.com/).

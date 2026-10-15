@@ -652,17 +652,4 @@ Once Knox trips to 0x1, it is permanent. Flashing stock firmware does NOT reset 
 
 ## Next Steps
 
-**After Rooting Your Samsung:**
-
-1. **Essential apps:**
-   - [Root Apps Collection](../apps-and-modules/) - Curated list
-
-2. **Enhance experience:**
-   - [Ad Blocking Guide](../general-guides/android-adblocking.md) - System-wide blocking
-   - [Debloating Guide](../general-guides/android-apps-debloating.md) - Remove Samsung bloat
-   - [LSPosed Guide](./lsposed-guide.md) - App modifications
-
-3. **Consider alternatives:**
-   - [Custom ROM Guide](./custom-rom-installation.md) - LineageOS, Evolution X
-   - Explore Samsung-specific ROMs
-   - Join development community
+For common post-root tasks, browse the [apps and modules collection](../apps-and-modules/), [debloating guide](../general-guides/android-apps-debloating.md), and [ad-blocking guide](../general-guides/android-adblocking.md). The [main rooting guide](./index.md#step-4-post-root-configuration) covers root setup; the [LSPosed guide](./lsposed-guide.md) and [custom ROM guide](./custom-rom-installation.md) cover optional extensions.

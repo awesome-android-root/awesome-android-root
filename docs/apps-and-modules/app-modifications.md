@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "App Patchers & Mods for Root"
-description: Browse app patchers, social media and browser mods, YouTube clients, signature verification tools and LSPosed modules that customize Android apps.
+description: Browse Android app patchers, social and browser mods, media and camera tools, signature-verification utilities, and LSPosed modules.
 head:
   - - meta
     - name: robots
@@ -11,14 +11,12 @@ head:
       content: Awesome Android Root
   - - meta
     - name: twitter:description
-      content: Browse app patchers, social media and browser mods, YouTube clients, signature verification tools and LSPosed modules that customize Android apps.
+      content: Browse Android app patchers, social and browser mods, media and camera tools, signature-verification utilities, and LSPosed modules.
 ---
 
 # App Patchers & Mods for Root
 
-**App modifications** let you patch, mod and extend Android apps: app patchers (**ReVanced/Morphe-style**),
-modded app clients (social media, browsers, YouTube), signature & verification bypasses and LSPosed modules
-that change app behavior. Root (or LSPosed) is required for most entries.
+This category covers app patchers (including YouTube), social and browser mods, media and camera tools, signature and verification changes, and LSPosed modules. Most entries require root or LSPosed.
 
 > [!NOTE]
 > Clicking an entry opens its **Source Code** page (GitHub/GitLab etc.) for `FOSS` apps, otherwise the
@@ -27,8 +25,8 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 ## App Patchers
 
 - **[⭐ Morphe](https://morphe.software/)** - A next-generation app patcher built by some of the original ReVanced developers. It offers a modern interface, enhanced stability, and a growing list of supported apps and features. `FOSS`
-- **[NexAlloy](https://github.com/NexAlloy/NexAlloy)** - ChsBuffer's LSPosed module, powered by Morphe, ReVanced supporting multiple apps. `FOSS` `[LSP]`
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (use with caution). `Proprietary`
+- **[NexAlloy](https://github.com/NexAlloy/NexAlloy)** - ChsBuffer's LSPosed module, powered by Morphe, ReVanced supporting multiple apps. `FOSS` `[LSP]`
 - **[ReVanced](https://revanced.app/)** - A powerful app patcher that allows you to modify popular apps like YouTube, Spotify, and more with additional features and customizations. `FOSS`
 - **[ReVanced Extended](https://github.com/NoName-exe/revanced-extended)** - ReVanced eXtended (now Morphe) YT and YT-M for both root and non-root users. `FOSS` `[M]` `[K]`
 - **[ReVanced Magisk Module by j-hc](https://github.com/j-hc/revanced-magisk-module)** - Extensive ReVanced & morphe builder. `FOSS` `[M]` `[K]`
@@ -186,7 +184,7 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 > [!TIP]
 > Also check out [App Patchers section](app-modifications.md#app-patchers)
 
-## YouTube & Media Mods
+## Media & Camera Mods
 
 - **[GlassMic](https://github.com/lm060719/io.mo.glassmic)** - Lets you route an imported audio file into target recording apps through AudioRecord/AAudio hooks. `FOSS` `[LSP]`
 - **[OnePlus 8 Series and 9R Camera Unlocker](https://github.com/Magisk-Modules-Alt-Repo/oneplus-8series-9r-camera-unlocker)** - Enables 48MP RAW10 capture support, both on the main (8/8T/9R) and ultra wide (8 Pro) lenses and much more. `FOSS` `[M]`

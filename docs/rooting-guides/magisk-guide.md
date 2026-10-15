@@ -150,7 +150,7 @@ Magisk is a systemless root solution that provides superuser access without modi
 
 **Choose Magisk if:**
 - You want easiest installation
-- You need extensive modules (explore [650+ apps](../apps-and-modules/))
+- You need extensive modules (browse the [650+ app and module collection](../apps-and-modules/))
 - You want maximum compatibility
 - You're new to rooting
 
@@ -817,21 +817,10 @@ Reality: Impossible to pass with:
 
 ## Next Steps
 
-**After Installing Magisk:**
-
-1. **Install essential modules:**
-   - [LSPosed Framework](./lsposed-guide.md) - Advanced app modifications and Xposed modules
-   - [Ad blocking modules](../apps-and-modules/ad-blocking#ad-tracker-blocking) - System-wide ad blocking
-   - [Performance modules](../apps-and-modules/performance#performance-optimization) - Device optimization and battery management
-
-2. **Explore root apps:**
-   - [Browse 650+ Root Apps](../apps-and-modules/) - Curated collection by category
-   - [Starter Kit](../apps-and-modules/#starter-kit-must-have-apps) - Essential apps for new root users
-
-3. **Learn advanced features:**
-   - [Custom ROM Installation](./custom-rom-installation.md) - Next level
-   - [Ad Blocking Guide](../general-guides/android-adblocking.md) - Block all ads
-   - [Debloating Guide](../general-guides/android-apps-debloating.md) - Remove bloat
+Browse the [root apps and modules](../apps-and-modules/) and [starter kit](../apps-and-modules/#starter-kit-must-have-apps).
+For optional app modifications, see the [LSPosed guide](./lsposed-guide.md); for ad blocking, see the [module list](../apps-and-modules/ad-blocking#ad-tracker-blocking)
+and [tutorial](../general-guides/android-adblocking.md). The [performance modules](../apps-and-modules/performance#performance-optimization),
+[debloating guide](../general-guides/android-apps-debloating.md), and [custom ROM guide](./custom-rom-installation.md) cover other common tasks.
 
 ---
 
