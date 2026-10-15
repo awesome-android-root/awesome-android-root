@@ -148,7 +148,7 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 > Combine these with a proper [Zygisk implementation](#zygisk) for best results.
 
 > [!NOTE]
-> Your root framework sets the floor here. Magisk does not hide root itself, so its hiding tools are userspace modules working after the fact. With KernelSU, an app you have not permitted cannot see `su` in the first place, and an App Profile can keep module mounts away from it. The SUSFS tools in the next section go one step further in the kernel, which is why they list `[K]` only. None of this replaces a Play Integrity setup, and no combination passes every app.
+> KernelSU hides earlier: unpermitted apps cannot see `su`, and SUSFS hides paths and mounts in the kernel. That is why the SUSFS tools below list `[K]` only.
 
 ---
 

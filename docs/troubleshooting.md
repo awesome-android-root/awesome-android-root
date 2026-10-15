@@ -460,7 +460,7 @@ Recovery options vary by SoC/manufacturer:
 <details>
 <summary><strong>Still detected after all of this?</strong></summary>
 
-Check the basics once (one hiding strategy only, app data cleared, no leftover Magisk app under its original package name), then stop adding modules. Magisk hiding works in userspace, and some apps look for traces it does not cover. If your kernel is supported, a clean switch to KernelSU starts from less visible ground: unpermitted apps cannot see `su`, an App Profile can keep module mounts away from the app, and SUSFS on a supported variant hides paths and mounts in the kernel. That still does not promise the app will pass, since Play Integrity and server-side checks are separate. Uninstall Magisk fully before switching, follow the [migration steps](./rooting-guides/root-framework-comparison.md#migration-guide), and set up hiding again from scratch on the new framework.
+Recheck the setup once, then stop stacking modules: Magisk hiding is userspace only. On a supported kernel, a clean switch to KernelSU may help (unpermitted apps cannot see `su`; SUSFS hides in the kernel), but Play Integrity is separate. See the [migration steps](./rooting-guides/root-framework-comparison.md#migration-guide).
 
 </details>
 
@@ -897,7 +897,7 @@ The Play Integrity ecosystem has evolved significantly. The current typical stac
 3. **Root Hiding** (choose one):
    - Shamiko - hides root & Magisk from detection
    - Zygisk Assistant / NoHello
-   - SUSFS - kernel-level hiding when your kernel supports it, and only with a kernel-based manager such as KernelSU, KernelSU Next, or SukiSU-Ultra (it is not a Magisk module); setup and verification are in the [SUSFS Root Hiding Guide](./rooting-guides/susfs-guide.md)
+   - SUSFS - kernel-level hiding, KernelSU family only; setup in the [SUSFS Root Hiding Guide](./rooting-guides/susfs-guide.md)
 
 4. **Key Attestation** (for STRONG integrity):
    - For attempting to pass STRONG integrity, only the latest official Tricky Store or TEESimulator release is recommended.

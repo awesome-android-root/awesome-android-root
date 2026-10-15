@@ -130,7 +130,7 @@ On several OnePlus/OPPO/realme devices (OnePlus 13/15, Ace 6T, OPPO Pad 4 Pro an
    - Latest stable version
 
 ::: tip Alternative Root Methods
-For the OnePlus 15 and 13 series, **KernelSU** is worth considering instead of Magisk if root hiding matters to you. Root runs in the kernel, only permitted apps can see `su`, and community kernels for these models often ship with KernelSU and SUSFS already built in, which covers traces that Magisk's userspace hiding does not. That is not a Play Integrity guarantee: Strong Integrity still needs a valid, unrevoked keybox and usually fails on an unlocked bootloader. Magisk stays the easier choice if you want the largest module ecosystem and the simplest recovery. See the [KernelSU Guide](./kernelsu-guide.md) and the [framework comparison](./root-framework-comparison.md) before deciding.
+On the OnePlus 15 and 13, consider **KernelSU** if hiding matters: only permitted apps see `su`, and many community kernels include SUSFS. Magisk is still easier, and neither guarantees Play Integrity. See the [KernelSU Guide](./kernelsu-guide.md).
 :::
 
 2. **File Manager**

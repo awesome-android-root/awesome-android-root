@@ -530,7 +530,7 @@ Shamiko hides root more effectively than the built-in DenyList: install it, rebo
 <details>
 <summary><strong>Still detected after setting up Shamiko?</strong></summary>
 
-This is a known limit of the approach, not always a mistake in your setup. Upstream Magisk no longer handles root hiding (the [official Magisk FAQ](https://topjohnwu.github.io/Magisk/faq.html) states this directly), so DenyList and Shamiko work in userspace and can only cover the traces they know to look for. Kernel-based root starts from a different place: with KernelSU, only apps you permit can see `su` at all, App Profiles can keep module mounts away from a specific app, and SUSFS can hide paths and mounts in the kernel on supported setups. None of that guarantees a banking app will pass, and Play Integrity is a separate problem. But if hiding is the main reason you rooted and your kernel is supported, a clean switch is worth considering before you add more hiding modules. Follow the migration steps in the [Root Framework Comparison](./root-framework-comparison.md#migration-guide) and install only one framework at a time.
+Magisk no longer hides root upstream ([official FAQ](https://topjohnwu.github.io/Magisk/faq.html)), so Shamiko only covers known userspace traces. If an app still detects root and your kernel is supported, consider a clean switch to KernelSU instead of stacking more modules: unpermitted apps cannot see `su`, and SUSFS hides in the kernel. See the [migration guide](./root-framework-comparison.md#migration-guide).
 
 </details>
 
