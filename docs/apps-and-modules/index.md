@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Best Android Root Apps & Modules
-description: Browse a curated directory of 650+ Android root apps, Magisk, KernelSU, APatch and LSPosed modules, organized by use case with source and compatibility labels.
+description: Browse 650+ Android apps and modules, including root apps and Magisk, KernelSU, APatch and LSPosed modules, organized by use case with source and compatibility labels.
 head:
   - - link
     - rel: alternate
@@ -22,7 +22,7 @@ head:
       content: website
   - - meta
     - property: og:description
-      content: Browse 650+ curated Android root apps, Magisk, KernelSU, APatch and LSPosed modules organized by use case, framework and source.
+      content: Browse 650+ curated Android apps and modules, including root apps and Magisk, KernelSU, APatch and LSPosed modules, organized by use case, framework and source.
   - - meta
     - property: og:image:secure_url
       content: https://awesome-android-root.xyz/images/og.png
@@ -40,7 +40,7 @@ head:
       content: image/png
   - - meta
     - name: twitter:description
-      content: Browse 650+ curated Android root apps and modules organized by use case and root framework.
+      content: Browse 650+ curated Android apps and modules organized by use case and root framework.
   - - meta
     - name: robots
       content: index, follow, max-image-preview:large
@@ -56,7 +56,7 @@ head:
 
 # Best Android Root Apps & Modules
 
-<p class="apps-lede">Explore a curated directory of 650+ Android root apps and modules. Find Magisk, KernelSU, APatch and LSPosed tools by what they help you do, then check the framework, FOSS status and official source before installing.</p>
+<p class="apps-lede">Explore 650+ Android apps and modules, including root tools and framework-specific modules. Browse by task, then check compatibility, license and official source before installing.</p>
 
 <div class="quick-nav">
 

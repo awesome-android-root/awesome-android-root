@@ -20,8 +20,9 @@ head:
 hosts/DNS-based tools that block ads, trackers and malware system-wide, in every app and browser.
 
 > [!TIP]
-> Start with our [Complete Android Ad Blocking Tutorial](/general-guides/android-adblocking.md), then pick the
-> tools below. Apps and modules are combined here because they all solve the same problem - blocking ads.
+> Use the [complete Android ad-blocking tutorial](/general-guides/android-adblocking.md) for setup and
+> troubleshooting. The sections below separate hosts-based blockers from DNS/network filters; see
+> [firewall tools](security.md#firewalls-filtering) for per-app filtering.
 
 
 ## Ad & Tracker Blocking
@@ -45,17 +46,11 @@ hosts/DNS-based tools that block ads, trackers and malware system-wide, in every
 - **[Systemless hosts KernelSU module](https://github.com/symbuzzer/systemless-hosts-KernelSU-module)** - Required module to use applications such as AdAway on KernelSU and APatch. `FOSS` `[K]` `[A]`
 - **[systemless-adblocker](https://github.com/Magisk-Modules-Alt-Repo/systemless-adblocker)** - Ultimate adblocker module derived from gloeyisk/systemless-hosts. `FOSS` `[M]`
 
-> [!TIP]
-> **Related Guide**: [Complete Android Ad Blocking Tutorial ↗](../general-guides/android-adblocking.md)  
-> For network-level blocking, also check [DNS Tools](#dns-network-filtering) and [Firewall Tools](security.md#firewalls-filtering)
-
 ## DNS & Network Filtering
 
 - **[AdGuardHome for Root](https://github.com/twoone-3/AdGuardHomeForRoot/blob/main/README_en.md#adguardhome-for-root)** - A module to easily execute AdGuardHome on Android. `FOSS` `[M]` `[A]`
 - **[DNS Toggle](https://github.com/ELowry/DNSToggle)** - A tiny Android app that allows you to easily toggle your phone's Private DNS through the Quick Settings panel. `FOSS`
 - **[ForceDNS Cloudflare](https://github.com/LuferOS/forcedns_Magisk-kernelsu)** - Forces all standard DNS traffic (port 53) to use 1.1.1.1 via iptables. Overrides network DNS. `FOSS` `[M]` `[K]`
+- **[Hosts Manager Lite](https://play.google.com/store/apps/details?id=awais.hostsmanager.lite)** - Advanced /etc/hosts editor. `Proprietary`
 - **[personalDNSfilter](https://github.com/IngoZenz/personaldnsfilter)** - A DNS filter proxy that provides local filtering of ads, malware, and tracking servers, supporting secure DNS protocols like DOH and DOT for enhanced privacy. `FOSS` | [🌱](https://f-droid.org/packages/dnsfilter.android/)
 - **[Pi-hole-for-Android](https://github.com/DesktopECHO/Pi-hole-for-Android)** - Pi-hole/Unbound Raspbian APK installer for Android 5.0+ devices. `FOSS`
-
-> [!TIP]
-> For ad blocking at network level, combine these tools with our [ad blockers](#ad-tracker-blocking). See the [ad blocking guide](../general-guides/android-adblocking.md).

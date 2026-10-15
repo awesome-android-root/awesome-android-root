@@ -522,17 +522,9 @@ fastboot flashing lock
 
 ## Next Steps
 
-**After Rooting:**
+- **Root setup:** **[Post-root configuration](./index.md#step-4-post-root-configuration)**
+- **Tools:** **[Apps and modules](../apps-and-modules/)**
+- **Common tasks:** **[Debloating](../general-guides/android-apps-debloating.md)** · **[Ad blocking](../general-guides/android-adblocking.md)**
+- **Optional extensions:** **[LSPosed](./lsposed-guide.md)** · **[Custom ROM installation](./custom-rom-installation.md)**
 
-1. **Essential apps:**
-   - [Root Apps Collection](../apps-and-modules/)
-
-2. **Enhance experience:**
-   - [Ad Blocking Guide](../general-guides/android-adblocking.md)
-   - [Debloating Guide](../general-guides/android-apps-debloating.md)
-   - [LSPosed Guide](./lsposed-guide.md)
-
-3. **Explore ROMs:**
-   - [Custom ROM Guide](./custom-rom-installation.md)
-   - Test Glyph support before switching
-
+> Before switching to a custom ROM, verify Glyph support for your exact device and ROM.

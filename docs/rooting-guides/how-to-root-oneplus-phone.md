@@ -602,18 +602,7 @@ fastboot oem lock
 
 ## Next Steps
 
-**After Rooting Your OnePlus:**
-
-1. **Essential apps:**
-   - [Root Apps Collection](../apps-and-modules/) - Curated list
-
-2. **Enhance experience:**
-   - [Ad Blocking Guide](../general-guides/android-adblocking.md) - System-wide blocking
-   - [Debloating Guide](../general-guides/android-apps-debloating.md) - Remove bloat
-   - [LSPosed Guide](./lsposed-guide.md) - App modifications
-
-3. **Explore ROMs:**
-   - [Custom ROM Guide](./custom-rom-installation.md) - Installation guide
-   - LineageOS for stability
-   - Pixel Experience for clean look
-
+- **Root setup:** **[Post-root configuration](./index.md#step-4-post-root-configuration)**
+- **Tools:** **[Apps and modules](../apps-and-modules/)**
+- **Common tasks:** **[Debloating](../general-guides/android-apps-debloating.md)** · **[Ad blocking](../general-guides/android-adblocking.md)**
+- **Optional extensions:** **[LSPosed](./lsposed-guide.md)** · **[Custom ROM installation](./custom-rom-installation.md)**
