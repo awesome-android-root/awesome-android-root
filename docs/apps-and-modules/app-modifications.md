@@ -50,6 +50,7 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 - **[FingerprintPay](https://github.com/eritpchy/FingerprintPay)** - Enables fingerprint payment via WeChat, Alipay, Taobao, Tencent QQ, and UnionPay on phones that support fingerprint recognition. `FOSS` `[M]` `[A]` `[LSP]`
 - **[G-News Control](https://github.com/mango0oo/G-News-Control)** - Magisk / KernelSU module for control the Google News on the home screen. `Proprietary` `[M]` `[K]`
 - **[Gboard Material Expressive Black](https://github.com/hxreborn/gboard-material-expressive-black)** - Enables pitch black Gboard background on Android 16 dynamic theme. `FOSS` `[LSP]`
+- **[Gboard+](https://github.com/Xposed-Modules-Repo/io.github.kvmy666.gboardplus)** - Gboard toolbar with a clipboard vault for text and images, shortcuts, cursor and trackpad tools and screenshot capture. `Proprietary` `[LSP]`
 - **[GboardHook](https://github.com/chenyue404/GboardHook)** - Modifies the number of clipboard items displayed and their expiration time. `FOSS` `[LSP]`
 - **[GH FastPass](https://github.com/hxreborn/gh-fast-pass)** - Closes the verification screen once the request is approved on Github android app. `FOSS` `[LSP]`
 - **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
@@ -92,6 +93,7 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 ### Bilibili
 
 - **[BBZQ](https://github.com/HSSkyBoy/BBZQ)** - Removes unnecessary content, optimizes the core experience, and provide various practical functions. `FOSS` `[LSP]`
+- **[Bili2233](https://github.com/ch6vip/lsposed-bili-sponsorblock)** - Skips or mutes SponsorBlock segments during playback in the Bilibili international client using community segment data. `FOSS` `[LSP]`
 - **[Bilibili Innocent Lab](https://github.com/jichuo1/Bilibili_Innocent_Lab)** - Interface purification and interaction enhancement module for Android Bilibili client. `FOSS` `[LSP]`
 
 ### Discord
@@ -178,6 +180,7 @@ that change app behavior. Root (or LSPosed) is required for most entries.
 
 ### Zalo
 - **[Zalo Patch](https://github.com/amarinne/zalo-patch)** - Zalo customization module for LSPosed. `FOSS` `[LSP]`
+- **[ZaloXposed](https://github.com/ElectroHeavenVN/ZaloXposed)** - Experimental Xposed module for Zalo with anti-recall, anti-delete, ad hiding, tracking protection and UI tweaks. `Proprietary` `[LSP]`
 
 
 > [!TIP]
