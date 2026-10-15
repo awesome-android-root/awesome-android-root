@@ -136,6 +136,18 @@ html.dark {
   --vp-button-brand-active-text: var(--brand-contrast);
 }
 
+
+@media (min-width: 48rem) {
+  .VPNavBarSearchButton {
+    --vp-c-bg-alt: var(--vp-c-bg-soft);
+    border: 1px solid var(--vp-c-divider);
+  }
+
+  .VPNavBarSearchButton:hover {
+    border-color: var(--vp-c-brand-1);
+  }
+}
+
 /**
  * Component: Home
  * -------------------------------------------------------------------------- */
