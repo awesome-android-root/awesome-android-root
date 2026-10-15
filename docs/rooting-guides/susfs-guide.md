@@ -10,6 +10,24 @@ head:
     - property: og:description
       content: "SUSFS kernel-level root hiding for KernelSU: requirements, patched kernels, SUSFS as a loadable kernel module, configuration and verification."
   - - meta
+    - property: og:image
+      content: https://awesome-android-root.xyz/images/og/susfs.png
+  - - meta
+    - property: og:image:secure_url
+      content: https://awesome-android-root.xyz/images/og/susfs.png
+  - - meta
+    - property: og:image:alt
+      content: SUSFS Root Hiding Setup and Verification for KernelSU
+  - - meta
+    - property: og:image:width
+      content: '1200'
+  - - meta
+    - property: og:image:height
+      content: '630'
+  - - meta
+    - property: og:image:type
+      content: image/png
+  - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
   - - meta
