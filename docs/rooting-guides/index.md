@@ -374,7 +374,7 @@ After successful root installation, complete these essential steps:
 2. **Install Essential Apps** - Visit [Starter Kit: Must-Have Apps](../apps-and-modules/#starter-kit-must-have-apps)
 3. **Configure Root Hiding** (critical for banking apps):
    - **Magisk:** Enable Zygisk + DenyList, install any Play Integrity Fix module + [Tricky Store](https://github.com/5ec1cff/TrickyStore) + [Shamiko](https://github.com/LSPosed/LSPosed.github.io) (or open-source [Zygisk Assistant](https://github.com/snake-4/Zygisk-Assistant))
-   - **KernelSU:** Use App Profiles, install Zygisk Next + PIF + Tricky Store
+   - **KernelSU:** Use App Profiles, install Zygisk Next + PIF + Tricky Store. Set the profile for each sensitive app so it gets no root and does not see module mounts. On a variant or kernel with SUSFS, enable that too; it hides paths and mounts in the kernel, which userspace modules cannot do. See the [SUSFS Root Hiding Guide](./susfs-guide.md)
    - **APatch:** Use SuperKey credential system + PIF modules
 4. **Create Full Backup** - Use Swift Backup, Neo Backup, or recovery nandroid
 

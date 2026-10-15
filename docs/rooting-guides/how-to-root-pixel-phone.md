@@ -318,6 +318,10 @@ fastboot boot magisk_patched_*.img  # Temporary boot
 2. **[LSPosed](https://github.com/LSPosed/LSPosed)** - Xposed framework
 3. **[AdAway](https://adaway.org/)** - System-wide ad blocking
 
+::: tip If banking or payment apps are the hard part
+Magisk is the right starting point on a Pixel, and it is what the steps above use. If a banking or payment app still detects root after DenyList and Shamiko are set up properly, it is worth knowing that Pixels are also one of the easier families to run KernelSU on, since retail units use GKI kernels and unlock with a single fastboot command. In LKM mode KernelSU keeps the stock kernel, only apps you permit can see `su`, and variants such as KernelSU Next can load SUSFS without a custom kernel. Read the [KernelSU Guide](./kernelsu-guide.md) and the [comparison](./root-framework-comparison.md) before switching, and never run two frameworks at once.
+:::
+
 ---
 
 ## OTA Updates with Root

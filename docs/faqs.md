@@ -220,7 +220,7 @@ Research more and ask community
 | Method | Best For | Pros | Cons |
 |:---|:---|:---|:---|
 | **Magisk** | Most users, general use | Widest compatibility, mature, large module ecosystem, Zygisk, active development | Requires boot/init_boot patching |
-| **KernelSU** | Custom ROM users, kernel enthusiasts | Kernel-integrated, excellent performance, strong isolation | Requires KSU-enabled kernel, smaller module ecosystem |
+| **KernelSU** | Supported GKI devices, users who care about hiding or per-app control | Kernel-integrated, only permitted apps see `su`, App Profiles, SUSFS on variants | Needs a supported kernel or variant, smaller module ecosystem |
 | **APatch** | Advanced users, developers | Kernel patching approach, powerful for specific use cases | Limited device support, requires technical knowledge |
 
 **Detailed Comparison:**
@@ -236,21 +236,21 @@ Research more and ask community
 **When to choose Magisk:**
 - First time rooting
 - Want maximum module selection
-- Need good app hiding capabilities
 - Using stock or stock-based ROM
 
 **KernelSU**
-- **Installation:** Flash custom kernel with KSU built-in
-- **Compatibility:** Requires compatible kernel for your ROM
-- **Modules:** Growing ecosystem, some Magisk modules work
-- **Hiding:** Profile-based system
+- **Installation:** LKM mode patches `init_boot` on Android 13+ and keeps the stock kernel on supported GKI devices. A KSU-enabled kernel is only needed for GKI mode, older devices, or where LKM is blocked
+- **Compatibility:** Official builds need GKI 2.0 (kernel 5.10+). KernelSU Next and SukiSU-Ultra cover older and non-GKI kernels
+- **Modules:** Growing ecosystem, some Magisk modules work, but a metamodule is required for mounting since KernelSU 3.0
+- **Hiding:** Only permitted apps can see `su`. App Profiles can also keep module mounts away from an app, set the UID, groups, capabilities, and SELinux domain for root, and variants with SUSFS hide paths and mounts in the kernel
 - **Performance:** Generally excellent, kernel-level integration
 - **Support:** Active development, smaller but knowledgeable community
 
 **When to choose KernelSU:**
-- Using custom ROM with KSU kernel available
+- Your device and kernel are supported, including by a variant if the official build reports `Unsupported`
 - Want kernel-level root solution
 - Prefer profile-based permission system
+- Hiding root from banking, payment, or anti-cheat apps matters more to you than having every Magisk module available
 - Don't need every Magisk module
 
 **APatch**
@@ -271,8 +271,9 @@ Research more and ask community
 
 ```
 New to rooting? → Magisk
-Using custom ROM with KSU kernel? → KernelSU
 Stock ROM, most devices? → Magisk
+Supported kernel, and hiding or per-app root control is the priority? → KernelSU or a variant
+Using custom ROM with KSU kernel? → KernelSU
 Advanced user, specific needs? → Research all three
 ```
 
