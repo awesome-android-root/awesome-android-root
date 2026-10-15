@@ -1,11 +1,11 @@
 ---
 layout: doc
-title: "Magisk Root Guide: Installation, Modules & Troubleshooting"
+title: "Magisk Root Guide: Install, Modules & Zygisk"
 description: "Learn Magisk installation, boot image patching, modules, Zygisk, DenyList, Play Integrity and troubleshooting for supported Android devices."
 head:
   - - meta
     - property: og:title
-      content: "Magisk Root Guide: Installation, Modules & Troubleshooting"
+      content: "Magisk Root Guide: Install, Modules & Zygisk"
   - - meta
     - property: og:description
       content: Install Magisk with boot image patching, systemless modules, Zygisk, DenyList and practical troubleshooting guidance.
@@ -14,7 +14,7 @@ head:
       content: https://awesome-android-root.xyz/images/og/magisk-guide.png
   - - meta
     - name: twitter:title
-      content: "Magisk Root Guide: Installation, Modules & Troubleshooting"
+      content: "Magisk Root Guide: Install, Modules & Zygisk"
   - - meta
     - name: twitter:description
       content: Magisk installation, boot image patching, modules, Zygisk, root hiding and Play Integrity troubleshooting.

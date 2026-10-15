@@ -1,6 +1,6 @@
 ---
-title: Privacy | Awesome Android Root
-description: Privacy information for the Awesome Android Root documentation website.
+title: Privacy
+description: "How the Awesome Android Root documentation site handles data: Cloudflare request logs, no analytics or ads, local browser search, and offline caching."
 ---
 
 # Privacy

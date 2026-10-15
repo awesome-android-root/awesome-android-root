@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Best Android Root Apps & Modules
-description: Browse 650+ Android apps and modules, including root apps and Magisk, KernelSU, APatch and LSPosed modules, organized by use case with source and compatibility labels.
+description: Browse 650+ curated Android root apps and modules, including Magisk, KernelSU, APatch and LSPosed modules, organized by use case with source links.
 head:
   - - link
     - rel: alternate

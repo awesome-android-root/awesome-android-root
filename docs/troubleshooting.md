@@ -1,11 +1,11 @@
 ---
 layout: doc
-title: "Android Root Troubleshooting: Bootloops, Modules & Root Problems"
+title: "Android Root Troubleshooting: Bootloops"
 description: "Fix common Android root problems: bootloops, missing root, incompatible modules, Play Integrity detection, recovery and flashing errors."
 head:
   - - meta
     - property: og:title
-      content: "Android Root Troubleshooting: Bootloops, Modules & Root Problems"
+      content: "Android Root Troubleshooting: Bootloops"
   - - meta
     - property: og:description
       content: Diagnose Android root bootloops, missing root, module failures, Play Integrity detection, recovery and flashing errors.
