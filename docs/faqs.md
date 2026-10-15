@@ -220,7 +220,7 @@ Research more and ask community
 | Method | Best For | Pros | Cons |
 |:---|:---|:---|:---|
 | **Magisk** | Most users, general use | Widest compatibility, mature, large module ecosystem, Zygisk, active development | Requires boot/init_boot patching |
-| **KernelSU** | Custom ROM users, kernel enthusiasts | Kernel-integrated, excellent performance, strong isolation | Requires KSU-enabled kernel, smaller module ecosystem |
+| **KernelSU** | Supported GKI devices, hiding or per-app control | Kernel-integrated, only permitted apps see `su`, SUSFS on variants | Needs a supported kernel, smaller module ecosystem |
 | **APatch** | Advanced users, developers | Kernel patching approach, powerful for specific use cases | Limited device support, requires technical knowledge |
 
 **Detailed Comparison:**
@@ -236,21 +236,21 @@ Research more and ask community
 **When to choose Magisk:**
 - First time rooting
 - Want maximum module selection
-- Need good app hiding capabilities
 - Using stock or stock-based ROM
 
 **KernelSU**
-- **Installation:** Flash custom kernel with KSU built-in
-- **Compatibility:** Requires compatible kernel for your ROM
-- **Modules:** Growing ecosystem, some Magisk modules work
-- **Hiding:** Profile-based system
+- **Installation:** LKM mode keeps the stock kernel on supported GKI devices; a custom kernel is only needed for GKI mode or older devices
+- **Compatibility:** Official builds need GKI 2.0 (5.10+). KernelSU Next and SukiSU-Ultra cover older and non-GKI kernels
+- **Modules:** Growing ecosystem; a metamodule is required for mounting since KernelSU 3.0
+- **Hiding:** Only permitted apps see `su`, App Profiles hide module mounts per app, and SUSFS variants hide paths in the kernel
 - **Performance:** Generally excellent, kernel-level integration
 - **Support:** Active development, smaller but knowledgeable community
 
 **When to choose KernelSU:**
-- Using custom ROM with KSU kernel available
+- Your device and kernel are supported, including by a variant if the official build reports `Unsupported`
 - Want kernel-level root solution
 - Prefer profile-based permission system
+- Hiding matters more than the full Magisk module catalog
 - Don't need every Magisk module
 
 **APatch**
@@ -271,8 +271,9 @@ Research more and ask community
 
 ```
 New to rooting? → Magisk
-Using custom ROM with KSU kernel? → KernelSU
 Stock ROM, most devices? → Magisk
+Hiding or per-app control first, on a supported kernel? → KernelSU or a variant
+Using custom ROM with KSU kernel? → KernelSU
 Advanced user, specific needs? → Research all three
 ```
 

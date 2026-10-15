@@ -457,6 +457,13 @@ Recovery options vary by SoC/manufacturer:
    - Clear its cache and data
    - Reboot, then re-open app
 
+<details>
+<summary><strong>Still detected after all of this?</strong></summary>
+
+Recheck the setup once, then stop stacking modules: Magisk hiding is userspace only. On a supported kernel, a clean switch to KernelSU may help (unpermitted apps cannot see `su`; SUSFS hides in the kernel), but Play Integrity is separate. See the [migration steps](./rooting-guides/root-framework-comparison.md#migration-guide).
+
+</details>
+
 **Advanced detection evasion:**
 
 ```bash
@@ -890,7 +897,7 @@ The Play Integrity ecosystem has evolved significantly. The current typical stac
 3. **Root Hiding** (choose one):
    - Shamiko - hides root & Magisk from detection
    - Zygisk Assistant / NoHello
-   - SUSFS - kernel-level hiding when your kernel supports it; setup and verification are in the [SUSFS Root Hiding Guide](./rooting-guides/susfs-guide.md)
+   - SUSFS - kernel-level hiding, KernelSU family only; setup in the [SUSFS Root Hiding Guide](./rooting-guides/susfs-guide.md)
 
 4. **Key Attestation** (for STRONG integrity):
    - For attempting to pass STRONG integrity, only the latest official Tricky Store or TEESimulator release is recommended.

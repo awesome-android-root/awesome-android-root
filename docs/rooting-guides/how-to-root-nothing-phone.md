@@ -303,6 +303,10 @@ id
 The full root-hiding and Play Integrity setup is covered in
 [Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps).
 
+::: tip If an app still detects root
+The Magisk setup above is simplest. Nothing phones use GKI kernels, so KernelSU (LKM) is worth checking: its App Profiles hide `su` and module mounts per app. See the [KernelSU Guide](./kernelsu-guide.md), and switch cleanly, not over Magisk.
+:::
+
 ### Nothing OS Optimization
 
 **Battery Optimization:**

@@ -144,9 +144,9 @@ Magisk is a systemless root solution that provides superuser access without modi
 |---------|--------|----------|---------|
 | Ease of Use | Excellent | Moderate | Moderate |
 | Module Support | Excellent | Excellent | Good |
-| Root Hiding | Good | Excellent | Excellent |
-| Device Support | Universal | Limited | Limited |
-| Custom Kernel Required | No | Yes | No |
+| Root Hiding | Userspace modules only | Kernel-level, plus SUSFS on supported setups | Kernel-level |
+| Device Support | Broadest | GKI 2.0 for official builds, wider via variants | ARM64, kernel 3.18 to 6.12 |
+| Custom Kernel Required | No | No for LKM mode, yes for GKI mode | No |
 
 **Choose Magisk if:**
 - You want easiest installation
@@ -526,6 +526,13 @@ Shamiko hides root more effectively than the built-in DenyList: install it, rebo
 > The full root hiding and Play Integrity setup, including module choices and testing tools, is in
 > [Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps) and
 > [Root Hiding & Play Integrity](../apps-and-modules/root-management#root-hiding-play-integrity).
+
+<details>
+<summary><strong>Still detected after setting up Shamiko?</strong></summary>
+
+Magisk no longer hides root upstream ([official FAQ](https://topjohnwu.github.io/Magisk/faq.html)), so Shamiko only covers known userspace traces. If an app still detects root and your kernel is supported, consider a clean switch to KernelSU instead of stacking more modules: unpermitted apps cannot see `su`, and SUSFS hides in the kernel. See the [migration guide](./root-framework-comparison.md#migration-guide).
+
+</details>
 
 ### Testing Play Integrity
 

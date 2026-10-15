@@ -318,6 +318,10 @@ fastboot boot magisk_patched_*.img  # Temporary boot
 2. **[LSPosed](https://github.com/LSPosed/LSPosed)** - Xposed framework
 3. **[AdAway](https://adaway.org/)** - System-wide ad blocking
 
+::: tip If a banking app still detects root
+Pixels usually support KernelSU in LKM mode, which keeps the stock kernel and hides `su` and mounts per app. See the [KernelSU Guide](./kernelsu-guide.md) before switching from Magisk.
+:::
+
 ---
 
 ## OTA Updates with Root
