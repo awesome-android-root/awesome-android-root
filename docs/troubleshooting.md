@@ -10,8 +10,11 @@ head:
     - property: og:description
       content: Diagnose Android root bootloops, missing root, module failures, Play Integrity detection, recovery and flashing errors.
   - - meta
+    - property: og:image
+      content: https://awesome-android-root.xyz/images/og/troubleshooting.png
+  - - meta
     - property: og:image:secure_url
-      content: https://awesome-android-root.xyz/images/og.png
+      content: https://awesome-android-root.xyz/images/og/troubleshooting.png
   - - meta
     - property: og:image:alt
       content: Android Root Troubleshooting Guide - Fix Common Rooting Issues

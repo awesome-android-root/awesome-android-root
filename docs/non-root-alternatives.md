@@ -7,8 +7,11 @@ head:
     - property: og:title
       content: Non-Root Alternatives - Customize Android Without Root Access 2026
   - - meta
+    - property: og:image
+      content: https://awesome-android-root.xyz/images/og/non-root-alternatives.png
+  - - meta
     - property: og:image:secure_url
-      content: https://awesome-android-root.xyz/images/og.png
+      content: https://awesome-android-root.xyz/images/og/non-root-alternatives.png
   - - meta
     - property: og:image:alt
       content: Non-Root Alternatives - Customize Android Without Root 2026

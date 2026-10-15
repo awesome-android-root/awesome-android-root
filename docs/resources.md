@@ -13,8 +13,11 @@ head:
     - property: og:description
       content: Ultimate collection of Android rooting resources including tools, communities, guides, and expert materials for safe device customization and root access.
   - - meta
+    - property: og:image
+      content: https://awesome-android-root.xyz/images/og/resources.png
+  - - meta
     - property: og:image:secure_url
-      content: https://awesome-android-root.xyz/images/og.png
+      content: https://awesome-android-root.xyz/images/og/resources.png
   - - meta
     - property: og:image:alt
       content: Android Rooting Resources - Complete Guide & Tools Collection

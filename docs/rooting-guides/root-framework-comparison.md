@@ -10,8 +10,11 @@ head:
     - property: og:description
       content: Practical comparison of Android root frameworks with recommendations, risks, and migration notes.
   - - meta
+    - property: og:image
+      content: https://awesome-android-root.xyz/images/og/root-framework-comparison.png
+  - - meta
     - property: og:image:secure_url
-      content: https://awesome-android-root.xyz/images/og.png
+      content: https://awesome-android-root.xyz/images/og/root-framework-comparison.png
   - - meta
     - property: og:image:alt
       content: Magisk vs KernelSU vs APatch - Root Framework Comparison

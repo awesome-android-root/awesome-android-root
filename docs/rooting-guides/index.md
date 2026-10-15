@@ -7,6 +7,24 @@ head:
     - property: og:description
       content: The ultimate Android rooting guide covering Magisk, KernelSU, APatch installation with device-specific tutorials for Pixel, Samsung, Xiaomi, OnePlus & more.
   - - meta
+    - property: og:image
+      content: https://awesome-android-root.xyz/images/og/rooting-guides.png
+  - - meta
+    - property: og:image:secure_url
+      content: https://awesome-android-root.xyz/images/og/rooting-guides.png
+  - - meta
+    - property: og:image:alt
+      content: Android Rooting Guide - Magisk, KernelSU and APatch Tutorials
+  - - meta
+    - property: og:image:width
+      content: '1200'
+  - - meta
+    - property: og:image:height
+      content: '630'
+  - - meta
+    - property: og:image:type
+      content: image/png
+  - - meta
     - name: twitter:description
       content: Complete Android rooting tutorial with Magisk, KernelSU, APatch guides and device-specific instructions for safe rooting. Includes Vector/LSPosed framework & Play Integrity bypass.
   - - meta
