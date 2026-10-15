@@ -38,7 +38,7 @@ all_module_entries=$(grep -hE "$entry_pattern" "${pages[@]}" | grep -cE '`\[(M|K
 root_apps=$((all_entries - all_module_entries))
 
 {
-  printf '%s\n' '---' 'title: Apps and Modules Count' 'description: Current counts of root apps and Android root modules listed in the documentation.' '---' '' \
+  printf '%s\n' '---' 'title: Apps and Modules Count' 'description: Current counts of Android root apps and modules in this documentation, broken down by category and root framework, updated on every build.' '---' '' \
     '# Apps and Modules Count' '' \
     'Updated automatically on each documentation build. Counts are based on entries in `docs/apps-and-modules/`.' '' \
     'Copyable Markdown table:' '' \

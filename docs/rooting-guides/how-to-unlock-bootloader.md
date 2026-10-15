@@ -1,11 +1,11 @@
 ---
 layout: doc
-title: How to Unlock an Android Bootloader | Complete Guide
+title: How to Unlock an Android Bootloader
 description: "Learn how to unlock an Android bootloader safely: warnings, OEM unlocking, ADB and Fastboot, manufacturer-specific steps and common errors."
 head:
   - - meta
     - property: og:title
-      content: How to Unlock an Android Bootloader | Complete Guide
+      content: How to Unlock an Android Bootloader
   - - meta
     - property: og:description
       content: Step-by-step Android bootloader unlocking with data-wipe warnings, OEM unlocking, ADB/Fastboot and Pixel, Samsung, Xiaomi, OnePlus and Motorola guidance.
@@ -14,7 +14,7 @@ head:
       content: https://awesome-android-root.xyz/images/og/bootloader.png
   - - meta
     - name: twitter:title
-      content: How to Unlock an Android Bootloader | Complete Guide
+      content: How to Unlock an Android Bootloader
   - - meta
     - name: twitter:description
       content: Unlock an Android bootloader with practical preparation, manufacturer-specific instructions and troubleshooting.

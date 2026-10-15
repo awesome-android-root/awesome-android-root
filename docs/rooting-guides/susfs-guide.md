@@ -1,11 +1,11 @@
 ---
 layout: doc
-title: "SUSFS Root Hiding Guide: Setup, Verification & Config"
-description: "What SUSFS does, how its kernel patches and userspace tool work, how to get it via a patched kernel or a loadable kernel module, and how to verify it hides root on Android."
+title: "SUSFS Root Hiding: Setup & Verification"
+description: "What SUSFS does, how its kernel patches and userspace tool work, how to install it via a patched kernel or loadable module, and how to verify root hiding."
 head:
   - - meta
     - property: og:title
-      content: "SUSFS Root Hiding Guide: Setup, Verification & Config"
+      content: "SUSFS Root Hiding: Setup & Verification"
   - - meta
     - property: og:description
       content: "SUSFS kernel-level root hiding for KernelSU: requirements, patched kernels, SUSFS as a loadable kernel module, configuration and verification."
@@ -14,7 +14,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:title
-      content: "SUSFS Root Hiding Guide | Awesome Android Root"
+      content: "SUSFS Root Hiding: Setup & Verification"
   - - meta
     - name: twitter:description
       content: How SUSFS hides root at the kernel level, how to install it with KernelSU or KernelSU-Next, and how to check what is actually enabled.

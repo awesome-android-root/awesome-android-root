@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Stop Android App Auto Updates from Play Store
-description: Complete step-by-step guide to disable automatic app updates from Google Play Store.
+description: "Step-by-step guide to stop automatic Google Play Store app updates on a rooted device by detaching apps with the Zygisk Detach module."
 head:
   # Canonical and preconnect links
   - - meta
