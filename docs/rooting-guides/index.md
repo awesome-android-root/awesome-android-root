@@ -245,7 +245,17 @@ Root access grants **superuser (administrator) privileges** on Android, providin
 
 ## Choosing a Root Method
 
-Three primary rooting solutions exist, each with distinct advantages and trade-offs. **Magisk** offers the broadest compatibility and largest ecosystem, **KernelSU** provides kernel-level root with granular app control, and **APatch** combines kernel patching with module support.
+Three primary rooting solutions exist, each with distinct advantages and trade-offs. **Magisk** offers the broadest compatibility and largest module ecosystem, **KernelSU** provides kernel-level root with granular per-app control, and **APatch** combines kernel patching with Magisk-like module support. All three require an unlocked bootloader.
+
+### Check Your Device First
+
+The right method depends on your device's specifics, not brand reputation:
+
+1. **Bootloader** - Confirm the OEM Unlocking toggle exists in Developer Options (greyed out often means carrier-locked). Unlocking wipes all data.
+2. **Kernel type** - GKI 2.0 devices (kernel 5.10+) can run KernelSU in LKM mode. Older non-GKI kernels need a custom KernelSU build, which favors Magisk or APatch. Check with `adb shell uname -r`.
+3. **Boot partition** - Android 13+ devices usually boot from `init_boot.img`, older devices from `boot.img`. Patch the wrong image and root will not apply.
+4. **Kernel config (APatch only)** - APatch needs ARM64 with `CONFIG_KALLSYMS=y`. Check with `zcat /proc/config.gz | grep CONFIG_KALLSYMS` (needs root) or inspect your kernel source.
+5. **Kernel source** - Non-GKI KernelSU builds require the exact kernel source for your device. If the vendor never published it, Magisk or APatch are the practical options.
 
 ### Quick Comparison
 
@@ -254,41 +264,43 @@ Three primary rooting solutions exist, each with distinct advantages and trade-o
 | **Guide** | [Magisk Guide](./magisk-guide.md) | [KernelSU Guide](./kernelsu-guide.md) | [APatch Guide](./apatch-guide.md) |
 | **Target Users** | Beginners, most users | GKI devices, privacy-focused | Developers, edge cases |
 | **Architecture** | Systemless (boot/init_boot/vendor_boot) | Kernel-level (GKI/LKM) | Kernel patching (KernelPatch) |
-| **Android Support** | Android 6.0+ | GKI 2.0 (kernel 5.10+) | ARM64, kernel 3.18+ |
-| **Installation** | Easy (patch & flash) | Moderate (needs compatible kernel) | Moderate (ARM64 only) |
-| **Module Ecosystem** | 1000+ Magisk modules | Modified Magisk modules via metamodule | APModule + KPM (kernel-level) |
-| **Module Mounting** | Built-in Magic Mount | Metamodule required | Magic Mount default; OverlayFS optional |
-| **Root Hiding** | Good (DenyList + Shamiko + PIF) | Excellent (app profiles, uid/gid/selinux control) | Good (SuperKey credential system) |
+| **Android Support** | Android 6.0+ | Android 12+ (GKI 2.0) officially, older via custom kernel | ARM64, kernel 3.18 to 6.12 |
+| **Kernel Requirement** | Any bootable kernel | GKI 2.0 for LKM mode, custom build otherwise | CONFIG_KALLSYMS=y |
+| **Installation** | Easy (patch and flash boot image) | Easy on GKI (patch and flash), custom kernel build on non-GKI | Patch and flash boot image (ARM64 only) |
+| **Module Ecosystem** | Largest module ecosystem | Most Magisk modules work via metamodule | APModule (Magisk-like) plus KPM (kernel-level) |
+| **Module Mounting** | Built-in Magic Mount | Metamodule, only for /system modifications (e.g. meta-overlayfs) | Built-in, Magisk-like |
+| **Root Hiding** | Good (DenyList + Shamiko + PIF) | Strong (app profiles: uid, gid, capabilities, SELinux) | Good (SuperKey credential system) |
 | **Community** | Largest | Growing | Small |
-| **Development** | Active | Very active | Active |
-| **Unique Strength** | Ecosystem & broad compatibility | Kernel space, only permitted apps see su | KPM kernel code injection without source |
-| **OTA Handling** | Re-patch after OTA | Some OTA flows survive via LKM | Initial A/B OTA support |
+| **Unique Strength** | Ecosystem and broad compatibility | Kernel space, only permitted apps see su | KPM kernel code injection without kernel source |
+| **OTA Handling** | Re-patch boot image after OTA | Re-patch or reflash kernel after OTA | Re-patch boot image after OTA |
 
 ### Decision Guide
 
 **Choose Magisk if:**
 - You are new to rooting and want the easiest path
-- You need maximum module compatibility
-- You want universal device support across Android versions
-- You prefer in-app updates and the largest community
+- You need the widest module compatibility and device support
+- You want in-app updates and the largest community
+- Your device has a non-GKI kernel without published kernel source
 
 **Choose KernelSU if:**
-- Your device runs a GKI kernel (5.10+) and you want kernel-level security
+- Your device runs a GKI 2.0 kernel (5.10+) and you want kernel-level root
 - Fine-grained app profiles (uid, gid, groups, capabilities, SELinux) matter to you
-- You want the best root concealment (only permitted apps can see `su`)
-- You're comfortable with metamodule setup for module support
+- You want root hidden from apps that are not explicitly permitted
+- You are comfortable installing a metamodule for modules that modify /system
+
+KernelSU variants such as KernelSU Next and SukiSU-Ultra add SUSFS integration and support for older kernels. See the comparison page for current options.
 
 **Choose APatch if:**
-- Magisk/KernelSU are blocked on your specific firmware
+- Magisk and KernelSU are blocked on your specific firmware
 - You need kernel-level code injection (KPM) without kernel source
-- Your device is ARM64 with a compatible kernel
-- You want both Magisk-like modules AND kernel patching
+- Your device is ARM64 with a kernel in the 3.18 to 6.12 range and KALLSYMS enabled
+- You want both Magisk-like modules and kernel patching in one tool
 
 > [!IMPORTANT]
-> For detailed comparison including migration guides, see [Root Framework Comparison](./root-framework-comparison.md)
+> For detailed comparison including migration guides and live release/commit badges, see [Root Framework Comparison](./root-framework-comparison.md)
 
 > [!TIP]
-> **Can't (or don't want to) unlock your bootloader?** All three frameworks above assume an unlocked bootloader. On a narrow set of 2024-2026 devices, the **GhostLock** bug (CVE-2026-43499) instead grants **temporary, session-only root** with the bootloader locked - no Knox trip, no data wipe. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) for what it can and can't do, plus the broader [Temporary Root for Android: Methods & Solutions](./temporary-root-solutions.md) page.
+> **Can't (or don't want to) unlock your bootloader?** All three frameworks above assume an unlocked bootloader. The **GhostLock** bug (CVE-2026-43499) instead grants **temporary, session-only root** with the bootloader locked - no Knox trip, no data wipe - but only on specific vulnerable device builds, and the root disappears after a reboot. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) for what it can and can't do, plus the broader [Temporary Root for Android: Methods & Solutions](./temporary-root-solutions.md) page.
 
 ---
 
