@@ -33,8 +33,10 @@ problem - controlling root access.
 - **[Aster](https://github.com/LyraVoid/Aster)** - Root manager built on KernelPatch and continuing the APatch capability chain, with APM and KPM modules, a module repository and protected runtime operations. `FOSS`
 - **[FolkPatch](https://github.com/LyraVoid/FolkPatch)** - A Root management tool focused on interface optimization and feature extension, based on APatch. `FOSS`
 - **[KernelSU-next](https://github.com/KernelSU-Next/KernelSU-Next)** - An advanced Kernel based root solution for Android. `FOSS`
+- **[QuestStack](https://github.com/starseed12345/QuestStack)** - Desktop workflow for Windows, Linux and macOS that roots Meta Quest 1 and Quest 2 headsets through the GhostLock chain and the CVE-2021-1931 ABL/fastboot bug, with temporary boot of a vulnerable ABL, verified backups, A/B slot handling and bootloader unlocking. `FOSS`
 - **[ReSukiSU](https://github.com/ReSukiSU/ReSukiSU)** - Fork of SukiSU-Ultra with additional features. `FOSS`
 - **[SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra)** - A kernel-based root solution for Android devices, forked from `KernelSU` with some useful changes. `FOSS`
+- **[YukiSU](https://github.com/Rouyashiki/YukiSU)** - Kernel-based root solution forked from SukiSU-Ultra with the userspace manager rewritten in C++, external MetaModule lifecycle and script integration, app profiles and dynamic manager support. `FOSS`
 
 
 ## Temporary Root (Locked Bootloader)
@@ -80,6 +82,7 @@ Exploits like **GhostLock (CVE-2026-43499)** - a 15-year-old Linux kernel bug - 
 - **[⭐ NoMount](https://github.com/maxsteeel/nomount)** - Mountless module injection: kernel VFS path redirection with per-app UID isolation and a WebUI, so injected files never appear in `/proc/mounts`. Needs kernel integration; prebuilt modules cover GKI kernels. `FOSS` `[K]` `[A]`
 - **[Magic Mount Metamodule](https://github.com/Tools-cx-app/meta-magic_mount-rs)** - An implementation of a metamodule using Magic Mount, based on MKSU. `FOSS` `[M]` `[K]` `[A]`
 - **[Meta-hybrid_mount](https://github.com/Hybrid-Mount/meta-hybrid_mount)** - Three-engine mount orchestration (OverlayFS + Magic Mount + Kasumi LKM) with conflict monitor, SolidJS WebUI, auto-fallback, and EROFS storage backend support. `FOSS` `[K]` `[A]`
+- **[NoMount Suite](https://github.com/Bouteillepleine/NoMount-Suite)** - Mountless module loading on the Prism kernel VFS engine, RRO theme overlays included, classifying every file under `/data/adb/modules/` at boot and programming the kernel over netlink. Needs a custom kernel carrying the Prism driver; beta, and OnePlus/Oppo `my_*` partitions still take a visible bind mount. `FOSS` `[M]` `[K]` `[A]`
 - **[ZeroMount](https://github.com/Enginex0/zeromount)** - Mountless module loading with Kernel-level VFS path redirection & SUSFS integration, WebUI, bootloop guard, and strategy fallback. `FOSS` `[M]` `[K]` `[A]`
 
 ## Module Managers
@@ -128,6 +131,7 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 - **[Always Strong](https://github.com/evoker0/AlwaysStrong)** - Bundles TEESimulator-RS and PlayIntegrityFork into a single module for strong integrity on rooted devices. `FOSS` `[M]` `[K]` `[A]`
 - **[AuditPatch](https://github.com/silvzr/AuditPatch)** - Hooks `logd` to replace sensitive SELinux contexts in the audit log, fixing AVC log leak detection without SUSFS or ZygiskNext. `Proprietary` `[M]` `[K]`
 - **[DirtySepolicy Bypass](https://github.com/flipphoneguy/DirtySepolicy_Bypass)** - Bypasses new DirtySepolicy on rooted Android devices to keep apps working. `FOSS` `[M]` `[K]` `[A]`
+- **[Duck ToolBox](https://github.com/eltavine/Duck-ToolBox)** - KernelSU, APatch or Magisk module putting Android attestation tooling behind one WebUI: a Tricky Store, TEESimulator and OhMyKeymint configuration manager, a Remote Key Provisioning workbench that builds and verifies CSRs, and a Qualcomm Keymaster device ID provisioner. `FOSS` `[M]` `[K]` `[A]`
 - **[Komodo Build Props](https://github.com/Elcapitanoe/Komodo-Build-Prop#komodo-build-props)** - Spoofs your device as a Pixel 9 Pro XL (komodo). `FOSS` `[M]` `[A]`
 - **[NoHello](https://github.com/MhmRdd/NoHello)** - Lightweight Zygisk module to hide root. `FOSS` `[M]` `[A]`
 - **[OhMyKeymint](https://github.com/qwq233/OhMyKeymint)** - Custom keystore implementation for Android Keystore Spoofer. `FOSS` `[M]` `[K]`
@@ -162,6 +166,7 @@ SUSFS (Systemless User Space File System) is a kernel-level module that allows r
 - **[⭐ SUSFS for KernelSU](https://github.com/sidex15/susfs4ksu-module)** - Add-on root-hiding service for SUSFS-patched kernels (KernelSU/Next). The core of modern KSU hiding setups. `FOSS` `[K]`
 - **[BRENE](https://github.com/rrr333nnn333/BRENE)** - SUSFS/KernelSU module for patched kernels with enhanced root hiding & spoofing. `FOSS` `[K]`
 - **[SUSFS LKM Loader](https://github.com/Nixie24/susfs4ksu-lkm-module)** - Loads SUSFS as a loadable kernel module through `ksud`, for GKI kernels that carry no SUSFS patches. `FOSS` `[K]`
+- **[SUSFS LKM Module](https://github.com/matsuzaka-yuki/susfs-lkm-module)** - KernelSU ZIP wrapper around a pinned inforcqb SUSFS LKM release, selecting the matching arm64 binary from `/proc/sys/kernel/osrelease` at install and every boot with no nearest-version fallback. Loader only: rules stay with FolkSU or another chosen configuration tool. `FOSS` `[K]`
 - ~~ReSuSFS~~: Removed on author's request
 
 > [!TIP]
