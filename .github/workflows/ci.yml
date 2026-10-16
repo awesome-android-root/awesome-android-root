@@ -17,7 +17,7 @@ jobs:
 
   links:
     name: Check internal links
-    runs-on: blacksmith-4vcpu-ubuntu-2404
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
@@ -44,7 +44,7 @@ jobs:
 
   lint:
     name: Lint entries
-    runs-on: blacksmith-4vcpu-ubuntu-2404
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
@@ -74,7 +74,7 @@ jobs:
 
   build:
     name: Build documentation
-    runs-on: blacksmith-4vcpu-ubuntu-2404
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
@@ -115,7 +115,7 @@ jobs:
     name: Deploy to Cloudflare Pages
     needs: build
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    runs-on: blacksmith-4vcpu-ubuntu-2404
+    runs-on: ubuntu-latest
     steps:
       - name: Download built site
         uses: actions/download-artifact@v8
@@ -134,7 +134,7 @@ jobs:
   # deploy-preview:
   #   needs: build
   #   if: github.event_name == 'pull_request'
-  #   runs-on: blacksmith-4vcpu-ubuntu-2404
+  #   runs-on: ubuntu-latest
   #   steps:
   #     - uses: actions/download-artifact@v8
   #       with:
