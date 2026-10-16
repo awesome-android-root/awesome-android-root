@@ -49,7 +49,6 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 
 ## Developer Tools
 
-- **[⭐ Shizuku Fork](https://github.com/thedjchi/Shizuku)** - Shizuku fork with automatic Shizuku startup, automation, and recovery features. `FOSS`
 - **[AndroidSpect](https://github.com/thecybersandeep/androidspect)** - Live runtime audit for installed Android apps, serves a browser dashboard. `FOSS` `[LSP]`
 - **[Bluetooth Hook](https://github.com/jingyu233/bluetoothhook#english)** - Inject virtual BLE devices into Android system Bluetooth scan results, facilitating Bluetooth application debugging for developers. `FOSS` `[LSP]`
 - **[Covalent](https://github.com/PalmDevs/covalent)** - Modification framework for React Native apps that runs custom Hermes bytecode before the app's own, forces DevSupport on and exposes React Native DevTools for live inspection and editing. Targets React Native 0.86.3 with Hermes V1. `FOSS` `[LSP]`
@@ -59,10 +58,22 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 - **[Nano for Android NDK](https://github.com/Magisk-Modules-Repo/nano-ndk)** - Allows temporary recovery use, so you can trigger it from adb shell or TWRP Terminal. `FOSS` `[M]`
 - **[Py2Droid](https://github.com/Mrakorez/py2droid)** - Install Python 3 on Android, including the standard library (STDLIB). `FOSS` `[M]` `[A]`
 - **[SELinux Permissive](https://github.com/evdenis/selinux_permissive)** - Magisk Module that switches SELinux to permissive mode. `FOSS` `[M]`
-- **[Shevery](https://github.com/HmnDev-Tech/shevery)** - Based on shizuku with Jetpack Compose, Material 3, and compatibility enhancements. `FOSS`
 - **[Shizuku](https://github.com/RikkaApps/Shizuku)** - Use system APIs directly with ADB/root privileges. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/moe.shizuku.privileged.api) | [▶️](https://play.google.com/store/search?q=shizuku&c=apps)
 - **[SQLite3 for Android](https://github.com/rojenzaman/sqlite3-magisk-module)** - Provides a statically linked `sqlite3` binary for arm64-v8a, armeabi-v7a, x86 and x86_64. `Proprietary` `[M]`
 - **[Zygisk-Loader](https://github.com/HanSoBored/Zygisk-Loader)** - Module for hot-swapping native libraries into Android applications without rebooting. `FOSS` `[K]` `[A]`
+
+### Shizuku Forks
+
+The official Shizuku app sees infrequent releases, and community trackers report it breaks on the newest Android versions. These forks keep the Shizuku API, so compatible apps work with them unchanged. Forks share the official package name (except Shizako), so uninstall the current Shizuku before installing one. See the [awesome-shizuku catalog](https://github.com/timschneeb/awesome-shizuku) for the full ecosystem.
+
+- **[⭐ Porter](https://github.com/d4rken-org/porter)** - Minimal maintained fork by the SD Maid developer that gives apps ADB access through the Shizuku APIs, with optional root and a compatibility companion for Shizuku-only apps. `FOSS`
+- **[Fork Shizuku](https://github.com/symbuzzer/fork-Shizuku)** - Easy-to-use variant of thedjchi's fork with watchdog auto-restart, TCP mode and stealth mode. `FOSS`
+- **[Nightzuku](https://github.com/kerneldroid/Nightzuku)** - Fork with a Material 3 Expressive UI and current Android SDK updates. `FOSS`
+- **[shevery](https://github.com/HmnDev-Tech/shevery)** - Material 3 fork with autostart, TCP mode, Dhizuku, module support and a built-in terminal. `FOSS`
+- **[Shizako](https://github.com/cr1437/Shizako)** - Drop-in replacement that ships a distinct package name, since upstream's license forbids forks from using the stock application ID. `FOSS`
+- **[Shizuku Fork](https://github.com/thedjchi/Shizuku)** - Fork with automatic startup, TCP mode, watchdog and stealth mode. Maintenance is currently paused, and many other forks build on it. `FOSS`
+- **[Shizuku Next](https://github.com/rushiranpise/Shizuku-Next)** - Continuation of thedjchi's fork with improved setup, reliability, UI and additional start methods. `FOSS`
+- **[ShizukuPlus](https://github.com/thejaustin/ShizukuPlus)** - Enhanced fork unifying root, ADB and Dhizuku privileges with an extended API suite and Android 16/17 compatibility fixes. `FOSS`
 
 ### Frida & Reverse Engineering
 

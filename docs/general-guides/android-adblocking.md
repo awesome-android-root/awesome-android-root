@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: "Android Ad Blocking Guide"
-description: "Complete guide to system-wide ad blocking on rooted Android using AdAway and Bindhosts. Block ads in all apps."
+title: Rooted Android Ad Blocking Guide
+description: "Block ads system-wide on rooted Android with AdAway and Bindhosts using hosts files, plus DNS and non-root alternatives."
 head:
   - - meta
     - name: author
@@ -11,19 +11,19 @@ head:
       content: index, follow
   - - meta
     - property: og:title
-      content: "Ultimate Android Ad Blocking Guide for Rooted Devices (2026)"
+      content: "Android Ad Blocking Guide for Rooted Devices"
   - - meta
     - property: og:description
-      content: "Complete guide to system-wide ad blocking on rooted Android using AdAway and Bindhosts. Block ads in all apps, improve performance, and enhance privacy with root access."
+      content: "Block ads system-wide on rooted Android with AdAway and Bindhosts. Covers hosts files, DNS filters, setup, and troubleshooting."
   - - meta
     - property: og:image
       content: https://awesome-android-root.xyz/images/og/android-adblocking.png
   - - meta
     - name: twitter:title
-      content: "Ultimate Android Ad Blocking Guide for Rooted Devices (2026)"
+      content: "Android Ad Blocking Guide for Rooted Devices"
   - - meta
     - name: twitter:description
-      content: "Complete guide to system-wide ad blocking on rooted Android using AdAway and Bindhosts. Block ads in all apps, improve performance, and enhance privacy."
+      content: "Block ads system-wide on rooted Android with AdAway and Bindhosts. Covers hosts files, DNS filters, setup, and troubleshooting."
   - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
@@ -43,7 +43,7 @@ head:
     - name: article:tag
       content: Android
   - - meta
-    - name: article:tag  
+    - name: article:tag
       content: Root
   - - meta
     - name: article:tag
@@ -56,19 +56,22 @@ head:
       content: Bindhosts
 ---
 
-# Ultimate Android Ad Blocking Guide for Rooted Devices (2026)
+# Android Ad Blocking Guide
 
 <div align="center">
 
 🛡️ **Block Ads System-Wide with Root Access**
 
-*The complete guide to eliminating ads across your entire Android system using powerful root-based solutions*
+*The complete guide to eliminating ads across your Android system using hosts-based solutions*
 
 [![Root Required](https://img.shields.io/badge/Root-Required-red?style=for-the-badge)](#requirements)
 [![AdAway Compatible](https://img.shields.io/badge/AdAway-Compatible-green?style=for-the-badge)](#method-1-adaway-recommended)
 [![Systemless](https://img.shields.io/badge/Systemless-Supported-blue?style=for-the-badge)](#method-2-bindhosts-advanced)
 
 </div>
+
+> [!NOTE]
+> Not rooted? See the [non-root alternatives guide](../non-root-alternatives.md) for Private DNS, RethinkDNS, browser-based blocking, and patched-app options.
 
 ---
 
@@ -91,12 +94,12 @@ head:
 Root access enables **system-level ad blocking** that surpasses traditional methods:
 
 ### ✅ **Advantages of Root Ad Blocking**
+
 - **System-wide protection** - Blocks ads in all apps, browsers, and system components
-- **No battery drain** - Unlike VPN-based blockers, no additional battery consumption
+- **No battery drain** - Unlike VPN-based blockers, hosts blocking adds no extra battery consumption
 - **No network overhead** - Ads are blocked at the hosts file level before network requests
-- **Complete invisibility** - Apps cannot detect or bypass the blocking mechanism
-- **Offline functionality** - Continues working without internet connectivity
-- **Performance boost** - Faster browsing and app loading by eliminating ad requests
+- **Works offline** - Continues working without internet connectivity
+- **Fewer ad requests** - Pages and apps load without fetching ad content
 
 ### 🔄 **How Root Ad Blocking Works**
 
@@ -105,29 +108,36 @@ Root ad blocking operates by modifying the **hosts file** (`/system/etc/hosts`),
 1. The system checks the hosts file first
 2. Ad domains are redirected to `0.0.0.0` or `127.0.0.1` (localhost)
 3. The connection fails instantly, blocking the ad
-4. Content loads faster without ad network delays
+4. Content loads without waiting for ad network requests
+
+**Honest limits:** apps that use hardcoded DNS or DNS-over-HTTPS can bypass hosts blocking, and some first-party ads are served from the same domains as content. Pair hosts blocking with a DNS filter for those cases.
 
 ---
 
 ## Requirements
 
 ### 📱 **Device Requirements**
-- ✅ **Rooted Android device** ([Complete rooting guide](../rooting-guides/))
-- ✅ **Android 8.0+** for modern solutions
+
+- ✅ **Rooted Android device** ([complete rooting guide](../rooting-guides/))
 - ✅ **Magisk**, **KernelSU**, or **APatch** installed ([compare methods](../rooting-guides/root-framework-comparison.md))
-- ✅ **Root access verification** (use Root Checker apps)
+- ✅ **Working root access** (verify with a terminal: `su -c whoami` should print `root`)
 
 ### 🔧 **Supported Root Managers**
-| Root Manager | AdAway Support | Bindhosts Support | Systemless | Notes |
-|--------------|----------------|-------------------|------------|-------|
-| **Magisk** | ✅ Full | ✅ Full | ✅ Yes | Most compatible |
-| **KernelSU** | ⚠️ Limited | ✅ Full | ✅ Yes | Use Bindhosts for best results |
-| **APatch** | ✅ Full | ✅ Full | ✅ Yes | Latest features supported |
+
+| Root Manager | AdAway | Bindhosts | Notes |
+|--------------|--------|-----------|-------|
+| **Magisk** | ✅ Systemless | ✅ Magic mount (no WebUI) | Widest compatibility |
+| **KernelSU** | ⚠️ Needs helper module | ✅ OverlayFS default, SuSFS modes | Use the systemless hosts module or AdAway Helper for AdAway |
+| **APatch** | ⚠️ Needs helper module | ✅ hosts_file_redirect mode | Kernel redirect module available |
+
+> [!TIP]
+> On KernelSU and APatch, AdAway needs the [systemless hosts module](https://github.com/symbuzzer/systemless-hosts-KernelSU-module) or [AdAway Helper](https://github.com/DEMONNICA/AdAway-Helper) to write the hosts file. Bindhosts works on all three managers without helpers.
 
 ### ⚠️ **Important Notes**
-- Always backup your current hosts file before proceeding
-- Some banking/payment apps may require whitelisting
-- OTA updates may reset modifications (systemless methods prevent this)
+
+- Always know how to revert changes before proceeding
+- Some banking and payment apps may require whitelisting
+- OTA updates can reset direct system modifications; systemless methods survive them
 
 ---
 
@@ -136,235 +146,133 @@ Root ad blocking operates by modifying the **hosts file** (`/system/etc/hosts`),
 | Feature | AdAway | Bindhosts |
 |---------|--------|-----------|
 | **Ease of Use** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ |
-| **User Interface** | Native Android App | Web UI + Terminal |
+| **User Interface** | Native Android app | Web UI + action button + terminal |
 | **Host Sources** | Multiple built-in | Extensive collection |
 | **Customization** | Good | Excellent |
-| **Root Hiding** | Basic | Advanced |
-| **Update Method** | Manual/Scheduled | Auto-updating |
-| **Performance** | Standard | Optimized |
-| **Best For** | Beginners | Power users |
+| **Root Hiding** | Basic | Advanced (SuSFS, redirect modes) |
+| **Update Method** | Built-in auto-updater | Self-updating |
+| **Best For** | Most users | Power users, KernelSU/APatch |
 
 ---
 
 ## Method 1: AdAway (Recommended)
 
-**AdAway** is the most user-friendly and widely-adopted root ad blocker for Android. Also available in our [ad blocker collection](../apps-and-modules/ad-blocking#ad-tracker-blocking).
+**AdAway** is the most user-friendly root ad blocker for Android. It writes a merged hosts file systemlessly and also offers a local VPN mode for non-rooted devices. Also available in our [ad blocker collection](../apps-and-modules/ad-blocking#ad-tracker-blocking).
 
 ### 📥 **Installation**
 
-#### **Option A: Official Website (Recommended)**
-```bash
-# Download latest version
-wget https://app.adaway.org/adaway.apk
-# Install via ADB
-adb install adaway.apk
-```
-
-#### **Option B: F-Droid**
-1. Install [F-Droid](https://f-droid.org/) if not already installed
-2. Search for "AdAway" and install
-3. Or use direct link: [AdAway on F-Droid](https://f-droid.org/packages/org.adaway/)
+- **F-Droid (recommended):** [AdAway on F-Droid](https://f-droid.org/packages/org.adaway)
+- **GitHub:** [AdAway releases](https://github.com/AdAway/AdAway/releases)
+- Or install the APK directly with `adb install adaway.apk`
 
 ### ⚙️ **Initial Setup**
 
 1. **Launch AdAway** and grant root permissions when prompted
-2. **Choose blocking method**:
-   - **Root method** (Recommended): Modifies system hosts file
-   - **VPN method**: For non-rooted devices (not needed for rooted)
+2. **Choose blocking method:**
+   - **Root method** (recommended on rooted devices): writes the hosts file systemlessly
+   - **VPN method**: local VPN that filters DNS requests, no root needed
+3. **Configure hosts sources** (see below)
+4. **Apply changes** - AdAway downloads and merges the lists
 
-3. **Configure hosts sources**:
-   ```
-   Default sources included:
-   • StevenBlack hosts
-   • AdAway hosts
-   • Dan Pollock hosts
-   ```
+### 📋 **Hosts Sources Setup**
 
-4. **Enable AdAway** by tapping the toggle switch
-5. **Apply changes** - AdAway will download and apply hosts files
+Navigate to **Hosts Sources**. AdAway ships with defaults (AdAway hosts, StevenBlack, Peter Lowe). Valid hosts-format sources you can add:
+
+```text
+• AdAway default: https://adaway.org/hosts.txt
+• StevenBlack Unified: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+• StevenBlack with social/fakenews/gambling/porn extensions:
+  https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts
+• Peter Lowe ad servers:
+  https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext
+• AdGuard DNS filter (hosts format):
+  https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt
+```
+
+> [!WARNING]
+> Only use hosts-format sources. Adblock-syntax lists such as EasyList and EasyPrivacy are for browser blockers and do not work in AdAway.
 
 ### 🔧 **Optimal Configuration**
 
-#### **Hosts Sources Setup**
-Navigate to **Hosts Sources** and add these recommended sources:
-
-```
-• StevenBlack (Default) - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
-• AdGuard DNS - https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers.txt
-• EasyList - https://easylist.to/easylist/easylist.txt
-```
-
-#### **Advanced Settings**
-- **Enable "Systemless" mode** if using Magisk
-- **Set automatic updates** (daily/weekly recommended)
-- **Enable logging** for troubleshooting
-- **Configure whitelist** for problematic apps
-
-### 📊 **Performance Optimization**
-
-```bash
-# Check hosts file size (optimal: 100k-500k entries)
-wc -l /system/etc/hosts
-
-# Monitor blocked requests
-logcat | grep AdAway
-
-# Clear DNS cache after updates
-su -c "ndc resolver clearnetdns"
-```
+- **Enable automatic updates** in settings (daily or weekly)
+- **Configure the whitelist** for apps that break when their domains are blocked
+- **Check the blocked domain count** after applying to confirm lists loaded
 
 ---
 
 ## Method 2: Bindhosts (Advanced)
 
-**Bindhosts** offers advanced systemless ad blocking with superior root hiding and auto-updating capabilities. Find it in our [ad blocking modules](../apps-and-modules/ad-blocking#ad-tracker-blocking).
+**Bindhosts** provides systemless hosts blocking with auto-updating, AdAway coexistence, and multiple redirect methods for stronger root hiding. Find it in our [ad blocking modules](../apps-and-modules/ad-blocking#ad-tracker-blocking).
 
 ### 🎯 **Why Choose Bindhosts?**
-- **Fully systemless** - No permanent system modifications
-- **Self-updating** - Automatically maintains latest hosts lists
-- **Advanced root hiding** - Better detection avoidance
-- **Multiple operating modes** - Adapts to your root manager
-- **Web-based management** - Modern interface for configuration
+
+- **Fully systemless** - no permanent system modifications
+- **Self-updating** - maintains current hosts lists automatically
+- **Advanced root hiding** - SuSFS bind mounts and in-kernel redirect methods
+- **Web UI management** on KernelSU and APatch (Magisk uses the action button and terminal)
+- **AdAway coexistence** - can run alongside AdAway
 
 ### 📥 **Installation**
 
-1. **Download from GitHub**:
-   ```bash
-   wget https://github.com/bindhosts/bindhosts/releases/latest/download/bindhosts.zip
-   ```
+1. Download the module zip from [GitHub releases](https://github.com/bindhosts/bindhosts/releases)
+2. Flash it in your root manager (Magisk, KernelSU, or APatch)
+3. Reboot, then open the module action button or Web UI
 
-2. **Install via Root Manager**:
-   - **Magisk**: Flash in Magisk Manager
-   - **KernelSU**: Install via KernelSU Manager
-   - **APatch**: Install via APatch Manager
+### ⚙️ **Operating Modes**
 
-3. **Verify installation**:
-   ```bash
-   su
-   bindhosts --help
-   ```
+Bindhosts probes the best mode automatically. You can override it in the developer options:
 
-### ⚙️ **Configuration**
+| Mode | Method | Root Manager | Notes |
+|------|--------|--------------|-------|
+| `0` (default) | Magic mount / OverlayFS + path_umount | All | Automatic; AdAway compatible on Magisk and APatch |
+| `1` | SuSFS assisted bind mount | KernelSU | Requires a SuSFS-patched kernel |
+| `2` | Plain bind mount | All | Highest compatibility; leaks a mount if unassisted |
+| `3` | hosts_file_redirect | APatch | In-kernel redirect; requires the KPM |
+| `4` | ZN-hostsredirect | All with ZygiskNext | No mount; recommended by the author |
 
-#### **Operating Modes**
-Bindhosts automatically selects the optimal mode, but you can manually configure:
+Higher SuSFS modes (overlay, bind + spoof, source mod) exist for KernelSU. See the [official modes documentation](https://github.com/bindhosts/bindhosts/blob/master/Documentation/modes.md) for the full table.
 
-| Mode | Description | Best For |
-|------|-------------|----------|
-| `mode=0` | Default systemless | Most users |
-| `mode=1` | KernelSU + SuSFS | Advanced KernelSU users |
-| `mode=2` | Plain bind mount | Maximum compatibility |
-| `mode=4` | Zygisk injection | Best hiding |
+### 🖥️ **Web UI and Terminal**
 
-#### **Web UI Setup**
-1. **Access Web Interface**:
-   ```bash
-   # Enable WebUI (if supported by your root manager)
-   su
-   bindhosts --webui
-   ```
+The Web UI (KernelSU and APatch) manages custom rules, sources, whitelists, and blacklists. From a root shell or Termux:
 
-2. **Configuration via Terminal**:
-   ```bash
-   # Enable bindhosts
-   bindhosts --action
-   
-   # Force update hosts
-   bindhosts --force-update
-   
-   # Check status
-   bindhosts --query example.com
-   ```
-
-#### **Custom Sources**
-Add your preferred hosts sources via WebUI or terminal:
 ```bash
-# Add custom source
-echo "https://your-custom-hosts-source.com/hosts" >> /data/adb/modules/bindhosts/sources.txt
-
-# Update with new sources
-bindhosts --force-update
+su
+bindhosts                  # interactive menu
+bindhosts --action         # toggle apply/reset
+bindhosts --force-update   # update lists now
+bindhosts --query doubleclick.net   # check a domain
+bindhosts --tcpdump        # sniff active IPs (no DNS filter running)
+bindhosts --custom-cron    # set update hour
+bindhosts --enable-cron    # enable scheduled updates
+bindhosts --force-reset    # reset the hosts file
 ```
 
-### 🔄 **Automation Setup**
+### 📋 **Custom Sources**
 
-#### **Enable Automatic Updates**
-```bash
-# Set update time (10 AM daily)
-bindhosts --custom-cron 10
-
-# Enable cron job
-bindhosts --enable-cron
-
-# Verify cron status
-crontab -l
-```
-
-#### **Network Monitoring**
-```bash
-# Monitor active connections
-bindhosts --tcpdump
-
-# Check blocked domains
-bindhosts --query doubleclick.net
-```
+Add hosts-format sources in the Web UI, or append them to the module's sources file, then run `bindhosts --force-update`.
 
 ---
 
 ## Configuration & Optimization
 
-### 🎛️ **Fine-Tuning Your Setup**
+### 🎛️ **Whitelist Management**
 
-#### **Whitelist Management**
-Essential apps that may require whitelisting:
+Apps that may need whitelisting when they break:
 
-```bash
-# Banking & Payment Apps
-• PayPal, Google Pay, Samsung Pay
-• Banking apps (varies by region)
-
-# Social Media (if experiencing issues)
-• Facebook, Instagram (ads in feed may still appear)
-• Twitter, LinkedIn
-
-# Google Services (be selective)
-• Gmail, Google Drive
-• YouTube (may break some features)
+```text
+• Banking and payment apps (PayPal, Google Pay, Samsung Pay, regional banks)
+• Social media (Facebook, Instagram) if feeds misbehave
+• Google services (Gmail, Drive) if sync fails
+• YouTube if in-app features break
 ```
 
-#### **Custom Rules**
-Create custom blocking/allowing rules:
+**AdAway custom rules:** Your Lists → Allowed/Blocked Hosts.
+**Bindhosts custom rules:** add them in the Web UI.
 
-**AdAway Custom Rules**:
-- Navigate to **Your Lists** → **Allowed/Blocked Hosts**
-- Add specific domains as needed
+### 📱 **App-Specific Configuration**
 
-**Bindhosts Custom Rules**:
-```bash
-# Block specific domain
-echo "0.0.0.0 annoying-ads.com" >> /data/adb/modules/bindhosts/custom_rules.txt
-
-# Allow specific domain
-echo "# Allow: important-site.com" >> /data/adb/modules/bindhosts/whitelist.txt
-```
-
-### 📱 **App-Specific Configurations**
-
-#### **Chrome/Chromium Browsers**
-For KernelSU users experiencing issues:
-1. Open **KernelSU Manager**
-2. Go to **Superuser** → **Chrome**
-3. Select **Custom** → **Disable umount modules**
-
-#### **System WebView**
-Update Android System WebView for better compatibility:
-```bash
-# Check WebView version
-dumpsys webviewupdate
-
-# Force WebView update via Play Store
-am start -a android.intent.action.VIEW -d "market://details?id=com.google.android.webview"
-```
+**Chrome or WebView still showing ads on KernelSU:** open KernelSU Manager → Superuser → Chrome (and Android System WebView) and disable **Umount modules**, so the browser sees the modified hosts file.
 
 ---
 
@@ -372,132 +280,59 @@ am start -a android.intent.action.VIEW -d "market://details?id=com.google.androi
 
 ### 🔧 **Common Issues & Solutions**
 
-#### **Issue: Ads Still Appearing**
+#### Issue: Ads Still Appearing
 
-**Symptoms**: Ads visible in browsers or apps
-**Solutions**:
-1. **Clear DNS cache**:
-   ```bash
-   su
-   ndc resolver clearnetdns
-   ```
+1. **Confirm the blocker applied:** check the blocked domain count in AdAway or run `bindhosts --query doubleclick.net`
+2. **Reboot the device** after applying
+3. **Check the Chrome/WebView umount setting** on KernelSU (see above)
+4. **Hardcoded DNS apps:** apps using DoH or fixed DNS servers bypass hosts blocking; use a DNS filter such as [RethinkDNS](https://github.com/celzero/rethink-app) for those
 
-2. **Restart network stack**:
-   ```bash
-   su
-   svc wifi disable && svc wifi enable
-   ```
+#### Issue: Apps Crashing or Not Working
 
-3. **Check hosts file**:
-   ```bash
-   su
-   grep -i "doubleclick\|googlesyndication\|googleadservices" /system/etc/hosts
-   ```
+1. **Whitelist the domains** the app needs in AdAway or Bindhosts
+2. **Remove conflicting sources** that block content delivery networks
 
-#### **Issue: Apps Crashing or Not Working**
+#### Issue: Banking Apps Fail
 
-**Symptoms**: Banking apps, games, or social media apps malfunctioning
-**Solutions**:
-1. **Add to whitelist**:
-   - AdAway: Add problematic domains to "Allowed Hosts"
-   - Bindhosts: Add to whitelist file
+1. Whitelist the bank's domains
+2. Configure root hiding (Zygisk denylist, Shamiko, ZygiskNext, or SuSFS)
+3. Some apps still refuse to run on rooted devices; this is not fixable by whitelisting
 
-2. **Configure root hiding** for banking apps:
-   - See [root hiding solutions](../apps-and-modules/root-management#root-hiding-play-integrity)
-   - Check [Play Integrity troubleshooting](../troubleshooting.md#play-integrity-and-banking-apps)
+#### Issue: Slow Browsing
 
-#### **Issue: Slow Internet or Connection Problems**
+1. **Reduce sources:** fewer, focused lists beat many large ones
+2. Remove duplicate sources that overlap heavily
 
-**Symptoms**: Slower browsing, connection timeouts
-**Solutions**:
-1. **Reduce hosts file size**:
-   - Remove duplicate or unnecessary sources
-   - Use more focused lists
-
-2. **Optimize DNS**:
-   ```bash
-   # Set custom DNS (Cloudflare)
-   setprop net.dns1 1.1.1.1
-   setprop net.dns2 1.0.0.1
-   ```
-
-### 🔍 **Diagnostic Commands**
+### 🔍 **Diagnostics**
 
 ```bash
-# Check if hosts file is active
-nslookup doubleclick.net
+# Verify root works
+su -c whoami
 
-# Monitor network requests
-tcpdump -i any host doubleclick.net
+# View the effective hosts file
+su -c head /system/etc/hosts
 
-# View blocked connections
-logcat | grep -i "blocked\|denied"
-
-# Check root permissions
-su -c "whoami"
+# Check whether a domain is blocked (bindhosts)
+bindhosts --query doubleclick.net
 ```
 
 ---
 
 ## Advanced Tips
 
-### 🚀 **Performance Optimization**
+### 🔐 **Malware and Tracker Blocking**
 
-#### **Hosts File Optimization**
-```bash
-# Remove duplicate entries
-sort /system/etc/hosts | uniq > /tmp/hosts_clean
-cp /tmp/hosts_clean /system/etc/hosts
-
-# Remove comments and empty lines
-grep -v "^#\|^$" /system/etc/hosts > /tmp/hosts_minimal
-```
-
-#### **Memory Management**
-```bash
-# Monitor memory usage
-free -h
-
-# Clear system cache
-sync; echo 3 > /proc/sys/vm/drop_caches
-```
-
-### 🔐 **Security Enhancements**
-
-#### **Malware Protection**
-Add malware-blocking hosts sources (also check our [privacy & security apps](../apps-and-modules/privacy)):
-```
-• Malware Domain List: https://www.malwaredomainlist.com/hostslist/hosts.txt
-• URLVoid: https://www.urlvoid.com/downloads/hostformat.php
-• Malware domains: https://mirror1.malwaredomains.com/files/justdomains
-```
-
-#### **Privacy Enhancement**
-Block tracking and analytics:
-```
-• EasyPrivacy: https://easylist.to/easylist/easyprivacy.txt
-• Disconnect: https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
-```
+Hosts lists focus on ads. For malware and phishing, pair your blocker with a DNS filter (RethinkDNS, AdGuard DNS, or NextDNS), or use StevenBlack's alternate lists that bundle the social tracking extension.
 
 ### 🔄 **Backup and Restore**
 
-#### **Create Backups**
-```bash
-# Backup original hosts file
-cp /system/etc/hosts /sdcard/hosts_original
+- **AdAway:** use the built-in backup/export in settings
+- **Bindhosts:** settings and sources live in the module folder under `/data/adb/modules/bindhosts/`
 
-# Backup AdAway settings
-cp -r /data/data/org.adaway /sdcard/adaway_backup
-```
+### 🧩 **Complementary Root Tools**
 
-#### **Restore from Backup**
-```bash
-# Restore original hosts
-cp /sdcard/hosts_original /system/etc/hosts
-
-# Restart network
-svc wifi disable && svc wifi enable
-```
+- [ForceDNS Cloudflare](https://github.com/LuferOS/forcedns_Magisk-kernelsu) - forces all DNS traffic to Cloudflare via iptables
+- [AdGuard Home for Root](https://github.com/twoone-3/AdGuardHomeForRoot) - runs a full DNS filter on the device
 
 ---
 
@@ -506,28 +341,28 @@ svc wifi disable && svc wifi enable
 ### ❓ **Frequently Asked Questions**
 
 **Q: Will ad blocking affect app functionality?**
-A: Most apps work normally, but some apps with strict ad requirements may malfunction. Use whitelisting for problematic apps.
+A: Most apps work normally. Whitelist domains for apps that rely on blocked networks.
 
-**Q: Can I use multiple ad blockers simultaneously?**
-A: Not recommended. Use either AdAway OR Bindhosts, not both, to avoid conflicts.
+**Q: Can I run AdAway and Bindhosts together?**
+A: Bindhosts supports AdAway coexistence, but a single active hosts writer avoids conflicts. Do not run two hosts writers in competition.
 
 **Q: Do I need to update hosts files manually?**
-A: AdAway can be set to auto-update. Bindhosts updates automatically. Manual updates ensure you have the latest protection.
+A: AdAway has a built-in auto-updater, and Bindhosts self-updates on a schedule. Manual updates are a fallback.
 
-**Q: Will this work with VPN?**
-A: Yes, hosts-based blocking works alongside VPN services since it operates at a lower system level.
+**Q: Will this work with a VPN?**
+A: Yes. Hosts-based blocking operates below the VPN layer and works alongside VPN apps, unlike VPN-slot blockers.
 
 **Q: How much storage do hosts files use?**
-A: Typically 5-20MB depending on the number of sources. Larger files may impact DNS resolution speed.
-
-**Q: Can Netflix/Spotify detect ad blocking?**
-A: Some streaming services detect and may restrict access. Use app-specific whitelisting if needed.
+A: Typically 1-3 MB depending on the sources. Very large lists can slow DNS lookups slightly.
 
 **Q: Does this work on mobile data?**
-A: Yes, hosts-based blocking works on both WiFi and mobile data connections.
+A: Yes, hosts blocking applies to Wi-Fi and mobile data alike.
 
 **Q: Will OTA updates remove ad blocking?**
-A: Systemless methods (Magisk modules) survive OTA updates. Traditional modifications may be reset.
+A: Systemless methods (AdAway root mode, Bindhosts) survive OTA updates. Direct writes to `/system` do not.
+
+**Q: What about non-root ad blocking?**
+A: See the [non-root alternatives guide](../non-root-alternatives.md) for Private DNS, RethinkDNS, browser extensions, and patched apps.
 
 ---
 
@@ -545,15 +380,14 @@ A: Systemless methods (Magisk modules) survive OTA updates. Traditional modifica
 
 ## Conclusion
 
-Root-based ad blocking provides the most comprehensive and efficient way to eliminate advertisements across your entire Android system. Whether you choose the user-friendly **AdAway** or the advanced **Bindhosts** solution, you'll enjoy faster performance, better privacy, and an ad-free Android experience.
+Root-based ad blocking provides the most comprehensive way to eliminate advertisements across your Android system. **AdAway** suits most users with its simple interface and built-in updater, while **Bindhosts** suits power users who want SuSFS hiding, redirect methods, and KernelSU/APatch optimization.
 
 Remember to:
-- ✅ Keep your hosts sources updated
-- ✅ Maintain whitelist for essential apps
-- ✅ Monitor system performance
-- ✅ Backup your configuration
 
-**Happy ad-free browsing!** 🎉
+- ✅ Keep your hosts sources updated
+- ✅ Maintain a whitelist for essential apps
+- ✅ Pair with a DNS filter for hardcoded-DNS apps
+- ✅ Back up your configuration
 
 ---
 
