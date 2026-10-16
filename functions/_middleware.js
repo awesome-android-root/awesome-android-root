@@ -18,10 +18,13 @@ function markdownPath(pathname) {
 }
 
 function addAcceptVary(headers) {
-  const varyValues = (headers.get('Vary') ?? '').split(',').map((value) => value.trim()).filter(Boolean)
-  if (!varyValues.some((value) => value.toLowerCase() === 'accept') && !varyValues.includes('*')) {
-    varyValues.push('Accept')
+  const current = headers.get('Vary') ?? ''
+  // Fast path: nothing to do when Accept (or wildcard) is already advertised.
+  if (/(^|,)\s*accept\s*(,|$)/i.test(current) || /(^|,)\s*\*\s*(,|$)/.test(current)) {
+    return
   }
+  const varyValues = current.split(',').map((value) => value.trim()).filter(Boolean)
+  varyValues.push('Accept')
   headers.set('Vary', varyValues.join(', '))
 }
 
@@ -34,6 +37,18 @@ function responseWithAcceptVary(response) {
     headers
   })
 }
+
+const NOT_FOUND_BODY =
+  '# Page not found\n\nThe requested page could not be found. Browse the [rooting guides](/rooting-guides/), [sitemap](/sitemap.xml), or [home page](/).\n'
+
+const STRIPPED_HEADERS = [
+  'Content-Encoding',
+  'Content-Length',
+  'Content-Range',
+  'ETag',
+  'Last-Modified',
+  'Transfer-Encoding'
+]
 
 export async function onRequest(context) {
   const { request } = context
@@ -62,13 +77,11 @@ export async function onRequest(context) {
     const headers = new Headers(markdownResponse.headers)
     headers.set('Content-Type', 'text/markdown; charset=utf-8')
     addAcceptVary(headers)
-    for (const header of ['Content-Encoding', 'Content-Length', 'Content-Range', 'ETag', 'Last-Modified', 'Transfer-Encoding']) {
+    for (const header of STRIPPED_HEADERS) {
       headers.delete(header)
     }
 
-    const body = request.method === 'HEAD'
-      ? null
-      : '# Page not found\n\nThe requested page could not be found. Browse the [rooting guides](/rooting-guides/), [sitemap](/sitemap.xml), or [home page](/).\n'
+    const body = request.method === 'HEAD' ? null : NOT_FOUND_BODY
     return new Response(body, { status: 404, statusText: 'Not Found', headers })
   }
 
