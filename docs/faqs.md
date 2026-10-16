@@ -93,7 +93,7 @@ Looking for troubleshooting? Visit our [Troubleshooting Guide](./troubleshooting
 
 **What You Can Do:**
 - **System Modification:** Remove bloatware, customize UI, install system-wide ad blockers
-- **Advanced Backups:** Complete app data backups with Titanium Backup or Swift Backup
+- **Advanced Backups:** Complete app data backups with Neo Backup or Swift Backup
 - **Automation:** Enhanced Tasker automation with root actions
 - **Performance Tuning:** Custom kernels, CPU/GPU governors, memory management
 - **Privacy Control:** Firewall apps, per-app permissions, network monitoring
