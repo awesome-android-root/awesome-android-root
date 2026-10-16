@@ -26,6 +26,7 @@ Magisk/KernelSU/LSPosed modules.
 
 ## Fonts & Emojis
 
+- **[Apple Fonts & Emoji](https://github.com/kvmy666/iosEmojis-Font-module)** - Systemless KernelSU/Magisk module replacing the system Latin, Arabic and emoji fonts with SF Pro, SF Arabic, Geeza Pro or Cocon and Apple Color Emoji, each toggleable from a WebUI. `Proprietary` `[M]` `[K]`
 - **[Emoji Replacer](https://play.google.com/work/apps/details?id=com.htetz.emojireplacer)** - Swap system emojis with styles from iOS 16.4, Samsung, Google, JoyPixels, Facebook, Twemoji etc. `Proprietary`
 - **[EvilFont](https://github.com/dedeadend/EvilFont)** - Cange your Arabic/Persian font to Teshrin + IOS emojis. `FOSS` `[M]` `[K]` `[A]`
 - **[Font Manager](https://play.google.com/store/apps/details?id=com.androidacy.fontmanager)** - A great font and emoji changer by Androidacy. `Proprietary`
@@ -56,6 +57,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[Three-Finger-Screenshot](https://github.com/hxreborn/three-finger-swipe)**- Standalone LSPosed implementation of three-finger swipe. `FOSS` `[LSP]`
 - **[Volume Key Track Control Module](https://github.com/Hepolise/VolumeKeyTrackControlModule)** - Allows to skip and play/pause track with volume keys. `FOSS` `[LSP]`
 - **[Volume Scroll](https://github.com/farfromrefug/VolumeScroll)** - Android app to scroll using volume keys. `FOSS` `[M]`
+- **[XGesture](https://github.com/qpst4/XGesture)** - Gesture and one-hand navigation suite with edge panels, reachability cursor, floating-ball OCR, notification/OTP handling, app freezer and freeform windows, using Shizuku, root or an optional LSPosed module. `FOSS` `[LSP]`
 
 ## Launchers & Home Screen
 
@@ -66,6 +68,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[HyperOS Launcher](https://github.com/Mods-Center/HyperOS-Launcher#hyperos-launcher-v5)** - Enhanced HyperOS Launcher with features from high-end devices, including customizable app drawer, icon packs, and more. `Proprietary` `[M]` `[K]`
 - **[Launcher3 QuickLaunch](https://github.com/hddq/launcher3-quicklaunch)** - Lets you press Enter in Launcher3's app drawer search to instantly launch the first search result. `FOSS` `[LSP]`
 - **[NovaInstaller](https://github.com/Minionguyjpro/NovaInstaller/)** - Installs Nova Launcher to /system/app/ on Android. `FOSS`
+- **[One UI Home 31](https://github.com/reiryuki/One-UI-Home-31-Magisk-Module)** - Ports Samsung's One UI Home launcher (target SDK 31) to non-One UI ROMs as a system module. Requires the One UI Core module; Android 8.0 to 12.1, not for Samsung devices. `Proprietary` `[M]` `[K]` `[A]`
 - **[OnePlusPlusLauncher](https://github.com/wizpizz/OnePlusPlusLauncher)** - An XPosed module for the System Launcher on OnePlus' OxygenOS 15, providing extra useful features. `FOSS` `[LSP]`
 - **[Pixel Launcher Enhanced](https://github.com/Mahmud0808/PixelLauncherEnhanced)** - Unlock a variety of exciting features including customizing the look to adding more functionality and many more. `FOSS` `[LSP]`
 - **[Pixel Launcher Mods](https://github.com/KieronQuinn/PixelLauncherMods/)** - Mods for enhancing the Pixel Launcher experience. `FOSS`
@@ -93,6 +96,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[DarQ Fork](https://github.com/Arora-Sir/DarQ)** - Provides a per-app selectable force dark option for Android 10 and above. `FOSS`
 - **[DPIS](https://github.com/Kwensiu/DPIS)** - LSPosed module for per-app interface scale, smallest width, and font size tuning. `FOSS` `[LSP]`
 - **[Keep Screen Off](https://github.com/Xposed-Modules-Repo/com.ncyxie.keepscreenoff)** - Stops selected apps from holding the screen awake by ignoring `FLAG_KEEP_SCREEN_ON` and screen wakelocks. `FOSS` `[LSP]`
+- **[Lune Bridge](https://github.com/uraniam9/lune-bridge)** - Moves the conservative display limits in `framework-res` so Android's own compositor reaches candlelight warmth down to 1700K, dimming below the panel minimum and flicker-safe low brightness, plus an optional notification quiet-hours half. Android 9+. `FOSS` `[M]` `[K]` `[A]`
 - **[Pointer Replacer](https://github.com/thesandipv/pointer_replacer)** - Replaces a dot appears when user touch the screen [Require Show Touches to be enabled in Developer Options]. `FOSS` `[LSP]`
 - **[Pseudo DC Dimming](https://github.com/dantmnf/PseudoDCDimming)** - Enable alternative dimming mode (likely DC-like) on low brightness for some OLED displays by using software brightness gain. `FOSS` `[LSP]`
 - **[PureShot](https://github.com/kazutoiris/PureShot)** - Hide status bar, navigation bar, popups, PiP, toast & more. `FOSS` `[LSP]`
@@ -115,6 +119,7 @@ Magisk/KernelSU/LSPosed modules.
 ## Themes & Visual Mods
 
 - **[ColorBlendr](https://github.com/Mahmud0808/ColorBlendr)** - Customize Material You colors of your device. `FOSS` | [🌱](https://f-droid.org/en/packages/com.drdisagree.colorblendr/)
+- **[Duo Open](https://github.com/marcoazeem/duo-open)** - Frosted-glass fold effect for book-style foldables driven by the real hinge angle, drawn through an accessibility overlay above every window or as a live wallpaper. Android 13+, no root. `FOSS`
 - **[Global Icon Pack](https://github.com/RichardLuo0/global-icon-pack-android)** - Apply icon packs globally. `FOSS` `[LSP]`
 - **[HyperLight](https://github.com/KiminonawaResa/HyperLight#english)** - Completes the highlight blur effects for HyperOS 3, bringing a unified visual experience to the desktop, notification shade, and control center. `FOSS` `[LSP]`
 - **[HyperOS MTZ Studio](https://github.com/GloriousApps/HyperOS-MTZ-Studio)** - MTZ theme workspace for HyperOS: import, translate, convert, compose and apply themes, with an optional root module for native MTZ import. `Proprietary`
