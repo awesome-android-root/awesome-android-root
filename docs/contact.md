@@ -1,6 +1,7 @@
 ---
 title: Contact Awesome Android Root
 description: Contact the Awesome Android Root project about documentation, corrections, contributions, and security reports.
+search: false
 ---
 
 # Contact Awesome Android Root

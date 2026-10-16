@@ -32,16 +32,23 @@ GRAY='\033[38;5;240m'
 # Patterns (same entry format as always: "- **[[Name]](url)** ...")
 entry_pattern='^- \*\*\[[^]]+\]\([^)]*\)\*\*'
 
-all_entries=$(grep -hE "$entry_pattern" "${pages[@]}" | wc -l)
-magisk_modules=$(grep -hE "$entry_pattern" "${pages[@]}" | grep -cE '`\[M\]`' || true)
-kernelsu_modules=$(grep -hE "$entry_pattern" "${pages[@]}" | grep -cE '`\[K\]`' || true)
-apatch_modules=$(grep -hE "$entry_pattern" "${pages[@]}" | grep -cE '`\[A\]`' || true)
-lsposed_modules=$(grep -hE "$entry_pattern" "${pages[@]}" | grep -cE '`\[LSP\]`' || true)
-all_module_entries=$(grep -hE "$entry_pattern" "${pages[@]}" | grep -cE '`\[(M|K|LSP|A)\]`' || true)
+# Single pass over all category pages: collect entry lines once, then classify.
+all_entry_lines=$(grep -hE "$entry_pattern" "${pages[@]}" 2>/dev/null || true)
+
+if [[ -z "$all_entry_lines" ]]; then
+  all_entries=0
+else
+  all_entries=$(printf '%s\n' "$all_entry_lines" | wc -l)
+fi
+magisk_modules=$(printf '%s\n' "$all_entry_lines" | grep -cE '`\[M\]`' || true)
+kernelsu_modules=$(printf '%s\n' "$all_entry_lines" | grep -cE '`\[K\]`' || true)
+apatch_modules=$(printf '%s\n' "$all_entry_lines" | grep -cE '`\[A\]`' || true)
+lsposed_modules=$(printf '%s\n' "$all_entry_lines" | grep -cE '`\[LSP\]`' || true)
+all_module_entries=$(printf '%s\n' "$all_entry_lines" | grep -cE '`\[(M|K|LSP|A)\]`' || true)
 root_apps=$((all_entries - all_module_entries))
 
 {
-  printf '%s\n' '---' 'title: Apps and Modules Count' 'description: Current counts of Android root apps and modules in this documentation, broken down by category and root framework, updated on every build.' '---' '' \
+  printf '%s\n' '---' 'title: Apps and Modules Count' 'description: Current counts of Android root apps and modules in this documentation, broken down by category and root framework, updated on every build.' 'search: false' '---' '' \
     '# Apps and Modules Count' '' \
     'Updated automatically on each documentation build. Counts are based on entries in `docs/apps-and-modules/`.' '' \
     '| Category | Count |' \
