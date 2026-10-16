@@ -9,6 +9,7 @@ import StoreLink from './components/StoreLink.vue'
 import LandingIcon from './components/LandingIcon.vue'
 import BrandIcon from './components/BrandIcon.vue'
 import ThemeToggle from './components/ThemeToggle.vue'
+import Home from './Home.vue'
 import CopyOrDownloadAsMarkdownButtons from 'vitepress-plugin-llms/vitepress-components/CopyOrDownloadAsMarkdownButtons.vue'
 
 /** @type {import('vitepress').Theme} */
@@ -31,6 +32,7 @@ export default {
       app.component('StoreLink', StoreLink)
       app.component('LandingIcon', LandingIcon)
       app.component('BrandIcon', BrandIcon)
+      app.component('home', Home)
       app.component('CopyOrDownloadAsMarkdownButtons', CopyOrDownloadAsMarkdownButtons)
     } catch (error) {
       console.error('Failed to register components:', error)
