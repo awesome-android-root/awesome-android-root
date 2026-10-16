@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
 import llmstxt, { copyOrDownloadAsMarkdownButtons } from 'vitepress-plugin-llms'
 import { storeLinkPlugin } from './markdown/storeLinkPlugin.mjs'
+import { withIcons } from './icons.mjs'
 
 const isLlmPageLink = (link) =>
   typeof link === 'string' && link.startsWith('/') && link !== '/' && !link.includes('#')
@@ -27,6 +28,9 @@ function llmsSidebar(sidebar) {
     if (!link && (!nestedItems || nestedItems.length === 0)) return []
 
     const sanitized = { ...item }
+    if (typeof sanitized.text === 'string') {
+      sanitized.text = sanitized.text.replace(/<[^>]+>/g, '').trim()
+    }
     if (link) sanitized.link = link
     else delete sanitized.link
     if (nestedItems) sanitized.items = nestedItems
@@ -567,7 +571,7 @@ export default withPwa(defineConfig({
       }
     },
 
-    nav: [
+    nav: withIcons([
       { text: 'Home', link: '/' },
       {
         text: 'Apps & Modules',
@@ -599,9 +603,9 @@ export default withPwa(defineConfig({
           { text: '⭐ GitHub', link: 'https://github.com/awesome-android-root/awesome-android-root' }
         ],
       },
-    ],
+    ]),
 
-    sidebar: {
+    sidebar: withIcons({
       // Main/Home Sidebar
       '/': [
         {
@@ -1105,7 +1109,7 @@ export default withPwa(defineConfig({
           ]
         }
       ]
-    },
+    }),
 
 
     footer: {
