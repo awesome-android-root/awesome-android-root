@@ -52,7 +52,7 @@ head:
 
 # Android Rooting FAQ 2026
 
-**Common questions answered** about Android rooting, root methods, device compatibility, and best practices. Updated for Android 14/15 in 2026.
+**Common questions answered** about Android rooting, root methods, device compatibility, and best practices. Use the exact device, firmware and root framework requirements rather than Android version alone.
 
 :::tip Quick Help
 Looking for troubleshooting? Visit our [Troubleshooting Guide](./troubleshooting.md) for step-by-step fixes.
@@ -116,7 +116,7 @@ Looking for troubleshooting? Visit our [Troubleshooting Guide](./troubleshooting
 
 ### Is Rooting Safe?
 
-**Yes, when done correctly**, but it comes with responsibilities and trade-offs.
+**Rooting is not risk-free, even when the instructions are correct.** Compatibility changes, firmware mistakes and privileged apps can affect security, data and essential services.
 
 **Benefits:**
 - Full control over your device
@@ -125,16 +125,16 @@ Looking for troubleshooting? Visit our [Troubleshooting Guide](./troubleshooting
 - Enhanced privacy and security options (if configured properly)
 
 **Risks:**
-- **Warranty:** Most manufacturers void warranty when bootloader is unlocked
+- **Warranty:** Coverage depends on manufacturer terms, region, local law and whether modification caused the fault
 - **Data Loss:** Bootloader unlock wipes all data
-- **Bricking:** Small risk of soft brick (fixable) or hard brick (rare, if not following guides)
+- **Bricking:** Recovery can require a data wipe, authorized service or board-level repair; a working fastboot connection does not guarantee a safe restore
 - **Security:** Root access can be exploited by malicious apps if not managed carefully
 - **App Compatibility:** Some apps check for root/unlocked bootloader (banking, DRM, mobile payments)
 
 **Permanent Changes:**
-- **Samsung KNOX:** Permanently trips to 0x1, cannot be reset
+- **Samsung KNOX:** Installing custom binaries such as Magisk can trip the irreversible Warranty Bit (0x1)
 - **Bootloader Unlock:** Some devices record unlock status permanently
-- **Warranty Status:** May be irreversible even after relocking
+- **Device History:** Relocking does not necessarily erase unlock/tamper records
 
 **Is It Safe for You?**
 
@@ -229,7 +229,7 @@ Research more and ask community
 - **Installation:** Patch boot/init_boot image, flash via fastboot or custom recovery
 - **Compatibility:** Works on most devices with unlocked bootloader
 - **Modules:** Largest ecosystem of modules
-- **Hiding:** DenyList + Zygisk for hiding root from apps
+- **DenyList:** Reverts Magisk changes for selected processes; not a universal root-hiding or integrity solution
 - **OTA Updates:** Built-in support for A/B devices
 - **Support:** Extensive community support, well-documented
 
@@ -240,7 +240,7 @@ Research more and ask community
 
 **KernelSU**
 - **Installation:** LKM mode keeps the stock kernel on supported GKI devices; a custom kernel is only needed for GKI mode or older devices
-- **Compatibility:** Official builds need GKI 2.0 (5.10+). KernelSU Next and SukiSU-Ultra cover older and non-GKI kernels
+- **Compatibility:** Official GKI support starts at kernel 5.10; upstream also documents manual builds for older 4.14+ kernels. Forks have separate compatibility requirements
 - **Modules:** Growing ecosystem; a metamodule is required for mounting since KernelSU 3.0
 - **Hiding:** Only permitted apps see `su`, App Profiles hide module mounts per app, and SUSFS variants hide paths in the kernel
 - **Performance:** Generally excellent, kernel-level integration
@@ -295,10 +295,10 @@ Advanced user, specific needs? → Research all three
 
 | Feature | Magisk | KernelSU | APatch |
 |:---|:---|:---|:---|
-| **Installation Method** | Patch boot/init_boot image | Custom kernel required | Kernel patching |
-| **Module Ecosystem** | Largest (1000+ modules) | Growing (100+ modules) | Limited |
-| **Root Hiding** | DenyList + Zygisk | Profile-based | Built-in |
-| **OTA Support** | Excellent (A/B devices) | Manual re-flash | Manual re-flash |
+| **Installation Method** | Patch boot/init_boot/recovery or Samsung AP | Supported LKM or integrated kernel | Patch kernel in boot image |
+| **Module Ecosystem** | Magisk modules | Check script compatibility and metamodule requirements | APM and kernel patch modules |
+| **Root Hiding** | DenyList is limited | Per-app authorization/profiles | Per-app authorization/exclusion |
+| **OTA Support** | Supported A/B flow with prerequisites | Mode/device-specific; may need repatching | May need updated boot image repatched |
 | **Performance Impact** | Minimal | Minimal | Minimal |
 | **Community Support** | Extensive | Active, smaller | Niche |
 | **Best For** | Most users, beginners | Custom ROM enthusiasts | Advanced users |
@@ -327,9 +327,9 @@ An unlocked bootloader allows you to:
 
 **Q: Is unlocking the bootloader safe?**
 
-Yes, but with caveats:
+Unlocking has important consequences:
 - **Wipes all data** - backup first
-- **Voids warranty** on most devices
+- **May affect warranty**, depending on terms and local law
 - **Permanent flags** on some devices (Samsung KNOX)
 - **Security implications** - easier for thieves to access data if device is stolen
 
@@ -342,13 +342,9 @@ Generally no, or not recommended:
 
 **Q: Can I root without unlocking the bootloader?**
 
-Normally no - but there is one narrow exception. The **GhostLock** bug (CVE-2026-43499), disclosed in 2026, lets specially built apps gain **temporary root in memory** on certain devices with a locked bootloader:
-- **No bootloader unlock, no data wipe, no Knox trip** - Secure Folder, Samsung Wallet, and Play Integrity keep working
-- **Root lasts only until the next reboot** - you re-run the tool each time you want root back
-- **Nothing can be flashed** - no custom ROMs, recoveries, or kernels
-- **Short-lived window** - only works on specific devices running firmware up to ~the June 2026 security patch
+The standard Magisk, KernelSU and APatch installation paths require permission to boot modified images, normally through bootloader unlocking. Firmware-specific exploits can sometimes grant temporary privileges, but there is no general "no-unlock" method.
 
-Tools include Root My Galaxy, Root My Pixel, GhostLock App, and ghostlock-oneplus.
+Treat named exploits, CVE numbers and affected-patch claims as unverified until backed by the original disclosure and reproducible device-specific evidence. A locked bootloader does not make an exploit APK safe, and temporary root does not guarantee that banking apps, Knox services or attestation will remain unaffected. Do not stay on vulnerable firmware solely to retain root.
 
 **Learn More:**
 - [Root Without Unlocking the Bootloader: GhostLock Temporary Root](./rooting-guides/root-without-unlocking-bootloader.md)
@@ -364,10 +360,10 @@ Tools include Root My Galaxy, Root My Pixel, GhostLock App, and ghostlock-oneplu
 
 | Partition | Used On | Contains | When to Patch |
 |:---|:---|:---|:---|
-| **boot.img** | Android 12 and older | Kernel + Ramdisk | Older devices |
-| **init_boot.img** | Android 13+ (GKI 2.0) | Ramdisk only | Pixel 7/8/9, newer devices |
+| **boot.img** | Devices with kernel here; ramdisk location varies | Kernel, and sometimes generic ramdisk | Magisk if boot ramdisk is here; APatch patches this kernel image |
+| **init_boot.img** | Many devices launched with Android 13+; not every upgraded device | Generic ramdisk, not kernel | Magisk where this partition exists and the device guide specifies it |
 
-**Important:** Patching the wrong image won't root your device!
+**Important:** Follow the framework and model-specific guide. Upgrading to Android 13+ does not automatically add `init_boot`. Some Magisk devices use recovery; Samsung commonly uses a patched AP archive. See [upstream Magisk installation](https://github.com/topjohnwu/Magisk/blob/master/docs/install.md).
 
 **Q: What are A/B partitions?**
 
@@ -391,29 +387,26 @@ Modern devices use A/B (seamless) update system:
 
 **Q: Can I receive OTA updates after rooting?**
 
-**With Magisk (A/B devices):**
-- Yes, using "Install to Inactive Slot (After OTA)" feature
-- Process:
-  1. Download OTA via system updater (don't reboot)
-  2. Open Magisk → Install → "Install to Inactive Slot"
-  3. Reboot when Magisk finishes
-  4. Root preserved on new version
+Often, but the update path depends on the device, updater, root framework, and whether stock partitions were modified. Back up data and obtain the matching stock firmware before updating.
 
-**With Magisk (non-A/B devices):**
-- Must unroot, apply OTA, then re-root
-- Or manually flash new firmware and re-patch
+**Magisk on supported A/B devices:**
+1. Disable problematic modules and restore images through **Magisk → Uninstall → Restore Images**. **Do not reboot.** If stock backups are missing, use the device's documented update method instead.
+2. Apply the OTA and wait for installation/optimization to finish. **Do not reboot yet.**
+3. Select **Install → Install to Inactive Slot (After OTA)** if available.
+4. Follow Magisk's completion instructions; current upstream directs you to the system updater's **Restart now** button.
+5. Verify the updated build and root before restoring modules.
 
-**With KernelSU/APatch:**
-- Must manually flash compatible kernel after OTA
-- Or wait for kernel update for new firmware version
+See the [upstream OTA instructions](https://github.com/topjohnwu/Magisk/blob/master/docs/ota.md). This is not a universal Samsung or custom-ROM update procedure. Never use inactive-slot installation as a general repair action.
+
+**Non-A/B devices:** stock recovery/images may need restoring before OTA; root usually needs reinstalling from the new build's image afterward.
+
+**KernelSU/APatch:** follow the installation mode's upstream OTA procedure, or repatch the updated firmware's boot image. Do not reuse an older kernel/image on the new build.
 
 **Q: Will OTA break root?**
 
-- Magisk A/B: No, if you use correct method
-- Other scenarios: Yes, OTA replaces boot partition
+It can replace the patched image and switch slots. Root survival is not guaranteed. If you already rebooted, check the running build and slot instead of flashing both slots.
 
-**Learn More:**
-- [OTA Update Troubleshooting](./troubleshooting.md#ota-update-problems)
+[OTA Update Troubleshooting](./troubleshooting.md#ota-update-problems)
 
 ---
 
@@ -439,7 +432,7 @@ Modern devices use A/B (seamless) update system:
 
 **Mitigation:**
 - Configure root hiding with the DenyList, Zygisk and a hiding module
-- Keep apps updated and clear app data after configuring hiding
+- Keep apps updated; clear data only when necessary, since it can erase registration, credentials or local content
 
 **Reality Check:** Some apps with hardware-backed attestation (STRONG Play Integrity) cannot be fooled on unlocked bootloaders.
 
@@ -447,64 +440,28 @@ Modern devices use A/B (seamless) update system:
 
 ### Can I Use Banking Apps?
 
-**It depends on the app and your configuration.**
+**It depends on the service, device state and current app policy.** No root framework or module stack can guarantee compatibility, even if a test app reports passing Play Integrity.
 
-**Current Status (2026):**
-- **Play Integrity BASIC:** Often passable with proper configuration
-- **Play Integrity DEVICE:** Sometimes passable
-- **Play Integrity STRONG:** Typically fails on unlocked bootloader (hardware-backed)
+- **Play Integrity** verdicts, **Play Protect certification**, and an app's own root checks are separate.
+- On Android 13+, `MEETS_DEVICE_INTEGRITY` requires hardware-backed evidence of a locked bootloader and a certified manufacturer image. `MEETS_STRONG_INTEGRITY` adds requirements including recent security updates. See [Google's verdict definitions](https://developer.android.com/google/play/integrity/verdicts).
+- Test the actual app, but do not rely on today's result to predict future access. Updates and server-side policies can change behavior.
+- A work profile does not give the phone a different bootloader or attestation state.
+- Do not import leaked attestation keys or repeatedly clear banking/Google Play Services data as routine troubleshooting.
 
-**To Improve Compatibility:**
-
-Play Integrity DEVICE passes need a Zygisk implementation, a Play Integrity Fix module and a
-correctly configured DenyList, then clearing app and Google Play Services data and rebooting. The
-module choices, configuration order and the STRONG integrity limits are documented in
-[Play Integrity and Banking Apps](./troubleshooting.md#play-integrity-and-banking-apps), and the
-tools are listed under
-[Root Hiding & Play Integrity](./apps-and-modules/root-management#root-hiding-play-integrity).
-On KernelSU and its forks, kernel-level hiding with SUSFS closes leaks that userspace modules cannot;
-see the [SUSFS Root Hiding Guide](./rooting-guides/susfs-guide.md).
-
-Before depending on it, check that Play Store still shows "Device is certified" and test your
-actual banking app. If it is mission critical, do not root until you have verified it.
-
-**Alternative Solutions:**
-- Use browser-based banking (usually works)
-- Keep a secondary non-rooted device for banking
-- Use work profile with non-rooted user profile
-
-**We don't provide methods to bypass app security.** These are legitimate compatibility steps only.
+Start with [Play Integrity and Banking Apps](./troubleshooting.md#play-integrity-and-banking-apps). For mission-critical banking, payments or work access, keep an unmodified supported device or use the service's official web option.
 
 ---
 
 ### What About Warranty?
 
-**Warranty status varies by manufacturer:**
+**There is no universal warranty rule.** Manufacturer commercial warranties, carrier terms and statutory consumer rights differ by region. Modification-related damage may be excluded without eliminating all rights for unrelated hardware faults.
 
-| Manufacturer | Warranty Status After Unlock | Notes |
-|:---|:---|:---|
-| **Google Pixel** | Void | Can be restored by relocking (data wipe) |
-| **Samsung** | Void | KNOX 0x1 flag is permanent, even after relock |
-| **OnePlus** | Void | May be restored by relocking in some regions |
-| **Xiaomi** | Void | Varies by region |
-| **Nothing** | Void | Official unlock supported |
-| **Motorola** | Void | Explicit warning during unlock |
-| **Sony** | Void | DRM keys permanently lost |
+- Read the current warranty and unlock warning for your exact model and country.
+- Do not assume relocking restores warranty coverage or erases an unlock record.
+- On supported Samsung devices, installing Magisk trips the **irreversible Knox Warranty Bit**. Restoring stock firmware does not reset it; affected Knox-dependent services may remain unavailable. See [Magisk's Samsung warnings](https://github.com/topjohnwu/Magisk/blob/master/docs/install.md#samsung-devices).
+- Some devices have irreversible DRM/provisioning consequences; verify the manufacturer's warning before unlocking.
 
-**Important Points:**
-- Most manufacturers detect and record bootloader unlock
-- Warranty void for hardware issues as well as software
-- Some regions have laws protecting software modifications (check local laws)
-- Carrier variants often have additional restrictions
-
-**Before Unlocking:**
-- Check warranty terms for your device
-- Consider waiting until warranty expires
-- Understand you're accepting the risk
-
-**Learn More:**
-- [Legal Disclaimer](./legal-disclaimer.md)
-- [Device-Specific Considerations](#device-specific-considerations)
+[Legal Disclaimer](./legal-disclaimer.md) · [Device-Specific Considerations](#device-specific-considerations)
 
 ---
 
@@ -512,18 +469,18 @@ actual banking app. If it is mission critical, do not root until you have verifi
 
 **Google Pixel:**
 - Easy to root, excellent community support
-- Android 13+: Must patch `init_boot.img`
+- Magisk: Pixel 6 uses `boot`; Pixel 7 and later normally use `init_boot`. Confirm the exact model and framework.
 - Factory images readily available
 - [Pixel Root Guide](./rooting-guides/how-to-root-pixel-phone.md)
 
 **Samsung:**
-- KNOX permanently trips (0x1)
+- Installing Magisk trips the irreversible Knox Warranty Bit (0x1)
 - US/Canada models usually cannot unlock
 - Requires Odin for flashing
 - [Samsung Root Guide](./rooting-guides/how-to-root-samsung-phone.md)
 
 **Xiaomi/Redmi/POCO:**
-- Requires Mi Unlock Tool and waiting period (3-30 days)
+- Mi Unlock eligibility and waiting periods vary by account, region, model and current HyperOS policy; follow the actual tool message
 - Beware Anti-Rollback (ARB) protection
 - MIUI heavily modified, some compatibility issues
 - [Xiaomi Root Guide](./rooting-guides/how-to-root-xiaomi-phone.md)
@@ -561,11 +518,11 @@ actual banking app. If it is mission critical, do not root until you have verifi
 
 2. **Configure root manager:**
    - Set default grant behavior (prompt/deny)
-   - Enable Zygisk if using Magisk
+   - Enable Zygisk only if a trusted module requires it; use one implementation
    - Configure DenyList for sensitive apps
 
 3. **Make a backup:**
-   - TWRP/OrangeFox: Full NANDroid backup
+   - TWRP/OrangeFox: Only if your exact device/build is supported and data decrypts; recovery backups may omit internal storage
    - Swift Backup: App data backup
    - Copy to external storage/cloud
 
@@ -629,20 +586,20 @@ actual banking app. If it is mission critical, do not root until you have verifi
    - Some updates may break compatibility
 
 4. **Know how to remove problematic modules:**
-   - Safe mode: Hold Volume Up during boot
-   - ADB: `adb shell magisk --remove-modules`
-   - Recovery: Delete `/data/adb/modules/[module-name]`
+   - Magisk: Use the device's Android safe-mode sequence; there is no universal volume-key shortcut
+   - ADB with authorized root: `adb shell su -c 'magisk --remove-modules'` removes all Magisk modules
+   - Decrypting recovery: create a `disable` marker inside the suspect module directory first, rather than deleting it
    - [Emergency Recovery Guide](./troubleshooting.md#device-won-t-boot-bootloop)
 
 **Red Flags (Avoid These Modules):**
 - No source code available (closed source)
 - Requests excessive permissions
 - Poor reviews or many issue reports
-- Abandoned (not updated in 1+ year)
+- Unresolved compatibility/security reports; an old release date alone does not prove abandonment
 - Claims to do impossible things
 
 **Recommended Module Sources:**
-- Magisk official repository
+- The module author's upstream releases (Magisk no longer has its old built-in centralized module repository)
 - GitHub (open source, verifiable)
 - XDA Developers (established developers)
 - [Curated Root Apps List](./apps-and-modules/index.md)
@@ -667,9 +624,11 @@ actual banking app. If it is mission critical, do not root until you have verifi
 
 2. **Verify:**
    - Root checker should show "not rooted"
-   - SafetyNet/Play Integrity may still fail if bootloader unlocked
+   - Play Integrity may still fail if bootloader unlocked
 
-**Method 2: Flash Stock Boot Image**
+**Method 2: Restore the Image Actually Modified**
+
+Use the exact installed build and documented partition/slot. APatch modifies `boot`; Magisk may modify `boot`, `init_boot`, recovery or Samsung AP firmware. Run only the applicable command below, never both as a generic recipe.
 
 ```bash
 # Download stock firmware for your exact build
@@ -678,18 +637,20 @@ actual banking app. If it is mission critical, do not root until you have verifi
 
 adb reboot bootloader
 fastboot flash boot stock_boot.img
-# Or for Android 13+
+# Alternative only if Magisk modified init_boot on this device
 fastboot flash init_boot stock_init_boot.img
 fastboot reboot
 ```
 
-**Method 3: Factory Reset + Stock Firmware**
+**Method 3: Stock Firmware Restoration**
+
+A factory reset alone erases user data, not patched boot images. Use a reset only if the manufacturer's restore process requires it.
 
 1. **Flash complete stock firmware:**
    - Pixel: Android Flash Tool or factory images
    - Samsung: Odin with full firmware
    - Xiaomi: Mi Flash Tool
-   - OnePlus: MSM Tool or fastboot ROM
+   - OnePlus: Model-specific supported restore package; legacy MSM tools are not universal
 
 2. **Factory reset:**
    - Wipe all data
@@ -706,12 +667,7 @@ Relocking bootloader with modified software can **hard brick** your device!
 - All partitions verified
 - You understand the risks
 
-```bash
-# After flashing complete stock firmware
-fastboot flashing lock
-# Some devices require
-fastboot oem lock
-```
+Follow only the manufacturer/model-specific relock procedure after restoring and successfully booting the complete signed firmware. Do not copy a generic lock command from another device guide.
 
 **Important Notes:**
 - Relocking wipes data again
@@ -722,7 +678,7 @@ fastboot oem lock
 **After Unrooting:**
 - Root apps will stop working
 - System modifications revert (with stock firmware)
-- SafetyNet/Play Integrity may still fail on unlocked bootloader
+- Play Integrity may still fail on unlocked bootloader
 - Banking apps may start working (depends on checks)
 
 ---
@@ -756,10 +712,12 @@ Provide complete information:
 ```
 Device: [Model + variant]
 Firmware: [Android version, build number, security patch]
-Root: [Method + version]
+Root: [Framework/fork + manager version + installation mode]
+Kernel/slot: [Kernel release/KMI + active slot if known]
+Modules: [Installed modules + last change]
 Issue: [Detailed description]
 Steps Tried: [What you've already attempted]
-Logs: [Attach if possible]
+Logs: [Relevant redacted logs; never share tokens, keyboxes or private identifiers]
 ```
 
 **Good example:**
@@ -792,10 +750,10 @@ adb pull /sdcard/file.zip     # Copy file from device
 **Fastboot Commands:**
 ```bash
 fastboot devices              # List devices in fastboot
-fastboot flashing unlock      # Unlock bootloader
-fastboot flash boot boot.img  # Flash boot partition
+fastboot getvar product        # Read product identifier (where supported)
+fastboot getvar current-slot   # Read active slot on supported A/B devices
 fastboot reboot               # Reboot device
-fastboot -w                   # Wipe userdata
+# Flash/unlock/wipe commands intentionally omitted: use the exact device guide
 ```
 
 **Root Verification:**
