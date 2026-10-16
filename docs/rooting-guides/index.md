@@ -400,7 +400,7 @@ After successful root installation, complete these essential steps:
 - [Block Ads System-Wide](../general-guides/android-adblocking.md) - Eliminate ads across all apps
 - [Debloat Your Device](../general-guides/android-apps-debloating.md) - Remove bloatware safely
 - [Install LSPosed / Vector Framework](./lsposed-guide.md) - Advanced app customization with Xposed modules
-- [Browse 650+ apps and modules](../apps-and-modules/) - Discover essential tools
+- [Browse 700+ apps and modules](../apps-and-modules/) - Discover essential tools
 
 ---
 

@@ -575,7 +575,7 @@ actual banking app. If it is mission critical, do not root until you have verifi
    - [Backup apps](./apps-and-modules/backup#backup-restore) - Complete backups
    - [File managers](./apps-and-modules/file-management#file-managers) - Root-enabled file access
    - [Firewall tools](./apps-and-modules/security#firewalls-filtering) - Network control
-   - [Browse the 650+ app and module collection](./apps-and-modules/) for more
+   - [Browse the 700+ app and module collection](./apps-and-modules/) for more
 
 **Next Steps:**
 
