@@ -17,7 +17,7 @@ head:
 # System Tweaks for Rooted Android
 
 **System** tools let you modify how Android itself works: system tweaks and **VBMeta** modules, System UI and
-OEM framework mods (**AOSP, ColorOS, HyperOS, NothingOS, One UI, Onyx, OxygenOS, ZUI**), boot & startup
+OEM framework mods (**AOSP, ColorOS, Flyme, HyperOS, NothingOS, One UI, Onyx, OxygenOS, ZUI**), boot & startup
 customization, **app & package management**, permissions (**AppOps**) and system diagnostics. Both apps and
 Magisk/KernelSU/LSPosed modules are listed together per topic.
 
@@ -115,10 +115,10 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 
 ## System UI & Framework
 
+|  | | | | | | | | | |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| [AOSP (Android Open Source Project)](#aosp-android-open-source-project) | [ColorOS (Oppo)](#coloros-oppo) | [Flyme (Meizu)](#flyme-meizu) | [HyperOS (Xiaomi)](#hyperos-xiaomi) | [NothingOS](#nothingos) | [One UI (Samsung)](#one-ui-samsung) | [Onyx](#onyx) | [Oxygen OS (OnePlus)](#oxygen-os-oneplus) | [Pixel](#pixel) | [ZUI](#zui) |
 |  | | | | | | | | |
-| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| [AOSP (Android Open Source Project)](#aosp-android-open-source-project) | [ColorOS (Oppo)](#coloros-oppo) | [HyperOS (Xiaomi)](#hyperos-xiaomi) | [NothingOS](#nothingos) | [One UI (Samsung)](#one-ui-samsung) | [Onyx](#onyx) | [Oxygen OS (OnePlus)](#oxygen-os-oneplus) | [Pixel](#pixel) | [ZUI](#zui) |
-|  | | | | | | | |
 
 ### AOSP (Android Open Source Project)
 
@@ -140,6 +140,10 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[OPCameraPro](https://github.com/Xposed-Modules-Repo/com.tlsu.opluscamerapro)** - ColorOS and realmeUI module providing various AI functions, enhancing cameras and other photo related tweaks. `Proprietary` `[LSP]`
 - **[Oplus Launcher Radius Optimization](https://github.com/Qjj7679/Oplus-Luncher-RadiusOptimization)** - Optimize the rounded corners of the recent tasks card on the ColorOS system desktop. `FOSS` `[LSP]`
 - **[OShin](https://github.com/suqi8/OShin/blob/master/README_EN.md)** - Auxiliary module deeply integrated with ColorOS, designed to enhance and optimize your operating system experience. `FOSS` `[LSP]`
+
+### Flyme (Meizu)
+
+- **[Flyme Mod](https://github.com/Xposed-Modules-Repo/dev.rikumi.flymemod)** - All-round Flyme experience enhancement covering the home screen, control center, notification center and status bar, lock screen and system cleanup. Sister project of ColorOS Mod, tested on Meizu 21 Pro and Meizu 22 with Flyme 12.6 on Android 16. `FOSS` `[LSP]`
 
 ### HyperOS (Xiaomi)
 

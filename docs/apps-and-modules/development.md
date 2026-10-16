@@ -86,6 +86,7 @@ Frida allows you to inject your own scripts into black box processes, enabling y
 - **[HID Gadget Module](https://github.com/kelexine/hid-gadget-module)** - Enables Human Interface Device (HID) emulation/support on Android Devices. `FOSS` `[M]`
 - **[Input Leaf](https://github.com/anasvhora284/input-leaf)** - Android client for Input Leap and compatible Deskflow setups that shares a PC's keyboard and mouse with a phone or tablet over Wi-Fi/LAN. Android 8.0+, no root required. `FOSS`
 - **[OnePlus Flash Control](https://github.com/Bartixxx32/Opflashcontrol-app)** - Precise control over the brightness of the dual-tone and quad-tone LED flashes for OnePlus devices. `FOSS`
+- **[Open Headunit](https://github.com/andreknieriem/open-headunit)** - Turns an Android phone or tablet into an Android Auto receiver over a USB wireless dongle, Wi-Fi Direct or a headunit hotspot. Root is optional and only needed to re-enable Android Auto's wireless startup receiver on 17.4 and newer. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.andrerinas.headunitrevived)
 - **[USB HID Client](https://github.com/Arian04/android-hid-client)** - Use your phone as a keyboard and mouse without any software on the other end. `FOSS` | [🌱](https://apt.izzysoft.de/packages/me.arianb.usb_hid_client)
 
 ## Linux Environments
