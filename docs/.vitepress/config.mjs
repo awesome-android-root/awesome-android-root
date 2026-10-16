@@ -1096,8 +1096,13 @@ export default withPwa(defineConfig({
             { text: 'Overview', link: '/non-root-alternatives' },
             { text: 'Quick Assessment', link: '/non-root-alternatives#quick-assessment' },
             { text: 'Foundation Technologies', link: '/non-root-alternatives#foundation-technologies' },
-            { text: 'Core Solutions by Need', link: '/non-root-alternatives#core-solutions-by-need' },
-            { text: 'Effectiveness Comparison', link: '/non-root-alternatives#effectiveness-comparison' }
+            { text: 'Solutions by Need', link: '/non-root-alternatives#solutions-by-need' },
+            { text: 'Non-Root Toolkit', link: '/non-root-alternatives#non-root-toolkit' },
+            { text: 'Key ADB Commands', link: '/non-root-alternatives#key-adb-commands' },
+            { text: 'Limitations', link: '/non-root-alternatives#limitations' },
+            { text: 'Decision Guide', link: '/non-root-alternatives#decision-guide' },
+            { text: 'Quick Start Guide', link: '/non-root-alternatives#quick-start-guide' },
+            { text: 'Resources', link: '/non-root-alternatives#resources' }
           ]
         },
         {
@@ -1130,9 +1135,6 @@ export default withPwa(defineConfig({
     outline: {
       level: [2, 3],
       label: 'On this page'
-    },
-    lastUpdated: {
-      text: 'Last updated'
     },
     appearance: 'auto',
     socialLinks: [
