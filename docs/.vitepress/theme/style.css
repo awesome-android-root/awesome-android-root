@@ -148,6 +148,88 @@ html.dark {
   }
 }
 
+/* Appearance toggle */
+.VPNavBarAppearance,
+.VPNavScreenAppearance,
+.menu-appearance {
+  display: none !important;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--vp-c-text-2);
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+@media (min-width: 48rem) {
+  .theme-toggle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -0.5rem;
+    height: 1.25rem;
+    border-left: 1px solid var(--vp-c-divider);
+    transform: translateY(-50%);
+  }
+}
+
+.theme-toggle:hover {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
+.theme-toggle svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.theme-toggle {
+  order: 1;
+}
+
+.VPNav .social-links {
+  order: 2;
+}
+
+.VPNav .extra {
+  order: 3;
+}
+
+.VPNav .hamburger {
+  order: 4;
+}
+
+.theme-icon-enter-active,
+.theme-icon-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.theme-icon-enter-from {
+  opacity: 0;
+  transform: rotate(-70deg) scale(0.6);
+}
+
+.theme-icon-leave-to {
+  opacity: 0;
+  transform: rotate(70deg) scale(0.6);
+}
+
 /**
  * Component: Home
  * -------------------------------------------------------------------------- */
@@ -204,24 +286,103 @@ html.dark {
 }
 
 
-/* ── Feature cards (home page) ── */
-.VPFeatures .VPFeature {
-  border-color: var(--vp-c-divider);
+/* ── Feature grid (home page) ── */
+.landing-features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 72rem;
+  margin: 0 auto 3rem;
 }
 
-.VPFeatures .VPFeature.link:hover {
-  border-color: var(--vp-c-brand-1);
-  box-shadow: 0 4px 20px -6px rgba(0, 0, 0, 0.12);
-  transform: translateY(-2px);
+@media (min-width: 40rem) {
+  .landing-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-.VPFeatures .VPFeature .icon {
-  background-color: var(--vp-c-brand-soft);
+@media (min-width: 60rem) {
+  .landing-features {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.landing-features .feature-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
+  background: var(--vp-c-bg-alt);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
+  text-decoration: none;
+  transition: border-color 0.25s, background-color 0.25s, transform 0.25s, box-shadow 0.25s;
 }
 
-.VPHome .VPFeatures {
-  padding-bottom: 3rem;
+.landing-features .feature-card:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -18px rgba(0, 0, 0, 0.4);
+}
+
+.landing-features .feature-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1.25rem;
+  border-radius: 12px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.landing-features .feature-card:hover .feature-icon {
+  background: var(--vp-c-brand-1);
+  color: var(--brand-contrast);
+}
+
+.landing-features .feature-title {
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+.landing-features .feature-text {
+  flex-grow: 1;
+  padding-top: 0.5rem;
+  line-height: 1.7142857;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--vp-c-text-2);
+}
+
+/* Nav and sidebar icons */
+.navicon {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: -0.16em;
+  margin-right: 0.45em;
+}
+
+.navicon > svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+}
+
+.VPHome {
+  background: radial-gradient(1100px 620px at 50% 0%, rgba(10, 125, 62, 0.09), rgba(10, 125, 62, 0) 70%);
+}
+
+html.dark .VPHome {
+  background: radial-gradient(1100px 620px at 50% 0%, rgba(61, 220, 132, 0.1), rgba(61, 220, 132, 0) 70%);
+}
+
+.VPHome .vp-doc h2 {
+  border-top-color: color-mix(in srgb, var(--vp-c-brand-1) 45%, var(--vp-c-divider));
 }
 
 
@@ -300,99 +461,124 @@ img {
 }
 
 /* Custom Elements Styles */
-.custom-journey-selector {
+.custom-journey-selector,
+.community-cards,
+.guide-time-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2.5rem;
 }
 
-.journey-card {
-  background: var(--vp-c-bg-soft);
+.custom-journey-selector {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.journey-card,
+.community-card {
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
-  padding: 2rem 1.5rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
+  background: var(--vp-c-bg-alt);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
 }
 
-.journey-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  transition: transform 0.3s ease;
-  transform: scaleX(0);
-  transform-origin: left;
+.journey-card:hover,
+.community-card:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -18px rgba(0, 0, 0, 0.4);
 }
 
-.journey-card:hover::before {
-  transform: scaleX(1);
+.journey-card .icon,
+.community-card .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 12px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  line-height: 1;
+  margin-bottom: 1.25rem;
+  transition: background-color 0.25s, color 0.25s;
 }
 
-.journey-card:hover {
-  border-color: var(--vp-c-brand-2);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15);
+.journey-card:hover .icon,
+.community-card:hover .icon {
+  background: var(--vp-c-brand-1);
+  color: var(--brand-contrast);
+}
+
+/* ── Journey cards ── */
+.journey-card {
+  padding: 1.75rem 1.5rem;
+}
+
+.journey-card .icon {
+  align-self: flex-start;
 }
 
 .journey-card h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-size: 1.35rem;
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
+  line-height: 1.4;
   color: var(--vp-c-text-1);
 }
 
 .journey-card p {
-  color: var(--vp-c-text-2);
-  margin: 0.5rem 0 1rem;
+  margin: 0 0 1.25rem;
   font-size: 0.95rem;
   line-height: 1.5;
+  color: var(--vp-c-text-2);
 }
 
 .journey-card ul {
   list-style: none;
   padding: 0;
-  margin: 1rem 0 1.5rem;
+  margin: 0 0 1.5rem;
 }
 
-.journey-card li {
-  padding: 0.4rem 0;
-  font-size: 0.9rem;
-  color: var(--vp-c-text-2);
+.journey-card li,
+.journey-card li + li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.3rem 0;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--vp-c-text-2);
 }
 
 .journey-card li::before {
   content: '';
-  display: inline-block;
+  flex-shrink: 0;
   width: 16px;
   height: 16px;
-  margin-right: 0.5rem;
-  background: currentColor;
+  margin-top: 0.15rem;
+  background: var(--vp-c-brand-1);
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd'/%3E%3C/svg%3E");
   mask-size: contain;
-  flex-shrink: 0;
 }
 
 .journey-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  align-self: flex-start;
+  margin-top: auto;
   padding: 0.625rem 1.25rem;
   background: var(--vp-c-brand-3);
   color: var(--brand-contrast) !important;
   border-radius: 8px;
-  text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: none;
+  transition: background 0.25s, transform 0.25s;
   text-decoration: none !important;
 }
 
@@ -409,67 +595,34 @@ img {
   background: currentColor;
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E");
   mask-size: contain;
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
 }
 
 .journey-btn:hover::after {
   transform: translateX(4px);
 }
 
-/* Community Cards */
-.community-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.25rem;
-  margin: 2rem 0;
-}
-
+/* ── Community & guide cards ── */
 .community-card {
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 2rem 1.5rem;
-  background: var(--vp-c-bg-soft);
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 12px;
+  padding: 1.75rem 1.5rem;
   text-decoration: none !important;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
 }
-
-.community-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--vp-c-brand-2);
-  box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.15);
-}
-
 
 .community-card strong {
   display: block;
-  color: var(--vp-c-text-1);
-  font-size: 1.05rem;
-  font-weight: 600;
   margin-bottom: 0.375rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
 }
 
 .community-card span:last-child {
   font-size: 0.875rem;
-  color: var(--vp-c-text-2);
   line-height: 1.5;
-}
- 
-.community-card .icon {
-font-size: x-large;
-padding: 0.5rem;
-margin-bottom: 0.5rem;
-}
-
-.guide-time-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  margin: 1rem 0 2rem;
+  color: var(--vp-c-text-2);
 }
 
 
@@ -482,9 +635,9 @@ margin-bottom: 0.5rem;
   max-width: min(72ch, 100%);
 }
 
-/* Home page needs wider content lanes on desktop for card-based sections */
+/* Home page content lane */
 .VPHome .vp-doc {
-  max-width: min(1160px, 100%);
+  max-width: min(80rem, 100%);
 }
 
 /* Responsive tables with scroll indicators */
@@ -563,27 +716,23 @@ margin-bottom: 0.5rem;
     margin: -4px -2px;
   }
 
-  /* Journey cards - tighter spacing */
   .custom-journey-selector {
     grid-template-columns: 1fr;
     gap: 1rem;
-    margin: 1.5rem 0;
-  }
-  
-  .journey-card {
-    padding: 1.25rem 1rem;
-  }
-  
-  /* Community cards - 2 columns max with tighter spacing */
-  .community-cards {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 0.75rem;
+    margin: 1.25rem 0 2rem;
   }
 
+  .community-cards,
   .guide-time-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.25rem 0 2rem;
   }
-  
+
+  .journey-card {
+    padding: 1.5rem 1.25rem;
+  }
+
   .community-card {
     padding: 1.5rem 1rem;
   }
@@ -615,59 +764,34 @@ margin-bottom: 0.5rem;
 }
 
 @media (max-width: 480px) {
-  .community-cards {
-    grid-template-columns: 1fr;
-  }
-  
-  .journey-card h3 {
-    font-size: 1.2rem;
-  }
-  
-}
-
-@media (min-width: 1280px) {
-  .custom-journey-selector,
   .community-cards,
   .guide-time-grid {
-    max-width: 1160px;
-    margin-left: auto;
-    margin-right: auto;
+    grid-template-columns: 1fr;
   }
 
-  .community-cards {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .guide-time-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+  .journey-card h3 {
+    font-size: 1.15rem;
   }
 }
 
 /* Dark mode enhancements */
-.dark .journey-card {
-  background: var(--vp-c-bg-soft);
-  border-color: var(--vp-c-divider);
+.dark .journey-card,
+.dark .community-card,
+.dark .landing-features .feature-card {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-.dark .journey-card:hover {
-  border-color: var(--vp-c-brand-1);
-  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.3);
-}
-
-.dark .community-card {
-  background: var(--vp-c-bg-soft);
-  border-color: var(--vp-c-divider);
-}
-
-.dark .community-card:hover {
-  border-color: var(--vp-c-brand-1);
-  box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.3);
+.dark .journey-card:hover,
+.dark .community-card:hover,
+.dark .landing-features .feature-card:hover {
+  box-shadow: 0 10px 30px -14px rgba(0, 0, 0, 0.7);
 }
 
 /* Accessibility improvements */
 @media (prefers-reduced-motion: reduce) {
   .journey-card,
   .community-card,
+  .landing-features .feature-card,
   .journey-btn {
     transition: none;
   }
@@ -682,14 +806,12 @@ margin-bottom: 0.5rem;
 .community-card:focus-visible {
   outline: 2px solid var(--vp-c-brand-1);
   outline-offset: 2px;
-  border-color: var(--vp-c-brand-2);
+  border-color: var(--vp-c-brand-1);
 }
 
-/* ── Guide time grid card icons ── */
-.guide-time-grid .community-card .icon {
-  font-size: 1.75rem;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
+.landing-features .feature-card:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
 }
 
 /* High contrast mode support */

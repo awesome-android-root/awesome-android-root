@@ -6,6 +6,9 @@ import PwaReload from './PwaReload.vue'
 import BackToTop from './BackToTop.vue'
 import WebMcp from './WebMcp.vue'
 import StoreLink from './components/StoreLink.vue'
+import LandingIcon from './components/LandingIcon.vue'
+import BrandIcon from './components/BrandIcon.vue'
+import ThemeToggle from './components/ThemeToggle.vue'
 import CopyOrDownloadAsMarkdownButtons from 'vitepress-plugin-llms/vitepress-components/CopyOrDownloadAsMarkdownButtons.vue'
 
 /** @type {import('vitepress').Theme} */
@@ -14,6 +17,7 @@ export default {
 
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
+      'nav-bar-content-after': () => [h(ThemeToggle)],
       'layout-bottom': () => [
         h(PwaReload),
         h(BackToTop),
@@ -25,6 +29,8 @@ export default {
   enhanceApp({ app }) {
     try {
       app.component('StoreLink', StoreLink)
+      app.component('LandingIcon', LandingIcon)
+      app.component('BrandIcon', BrandIcon)
       app.component('CopyOrDownloadAsMarkdownButtons', CopyOrDownloadAsMarkdownButtons)
     } catch (error) {
       console.error('Failed to register components:', error)
