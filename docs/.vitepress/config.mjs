@@ -762,6 +762,7 @@ export default withPwa(defineConfig({
             { text: 'System UI & Framework', link: '/apps-and-modules/system#system-ui-framework' },
             { text: 'AOSP (Android Open Source Project)', link: '/apps-and-modules/system#aosp-android-open-source-project' },
             { text: 'ColorOS (Oppo)', link: '/apps-and-modules/system#coloros-oppo' },
+            { text: 'Flyme (Meizu)', link: '/apps-and-modules/system#flyme-meizu' },
             { text: 'HyperOS (Xiaomi)', link: '/apps-and-modules/system#hyperos-xiaomi' },
             { text: 'NothingOS', link: '/apps-and-modules/system#nothingos' },
             { text: 'One UI (Samsung)', link: '/apps-and-modules/system#one-ui-samsung' },

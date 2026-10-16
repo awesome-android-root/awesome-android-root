@@ -38,6 +38,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 ## App Mods
 
 - **[⭐ GPhotosUnlimited](https://github.com/Rev4N1/GPhotosUnlimited)** - A Zygisk module which gives unlimited Google Photos storage. `FOSS` `[M]` `[K]` `[A]`
+- **[AM++](https://github.com/Zennmn/AM-plus-plus/blob/main/README.en.md)** - Apple Music enhancements: tablet dual-pane player, lyric blur and custom lyric fonts, TTML lyric injection, song title correction and Liquid Glass navigation. `FOSS` `[LSP]`
 - **[AmznKiller](https://github.com/hxreborn/amznkiller)** - Hides sponsored content and ads in the Amazon Shopping app. `FOSS` `[LSP]`
 - **[Breeno Source Changer](https://github.com/Xposed-Modules-Repo/com.niki.breeno.openai/tree/main)** - Allows ColorOS's Breeno Assistant to change its AI model source and customize large language model (LLM) APIs. `FOSS` `[LSP]`
 - **[Deekseep](https://github.com/lllucccian/Deekseep)** - Adds account, chat, image, interface, and local API tools to the official DeepSeek Android app. `FOSS` `[LSP]`
@@ -51,6 +52,8 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[Gboard+](https://github.com/Xposed-Modules-Repo/io.github.kvmy666.gboardplus)** - Gboard toolbar with a clipboard vault for text and images, shortcuts, cursor and trackpad tools and screenshot capture. `Proprietary` `[LSP]`
 - **[GboardHook](https://github.com/chenyue404/GboardHook)** - Modifies the number of clipboard items displayed and their expiration time. `FOSS` `[LSP]`
 - **[GH FastPass](https://github.com/hxreborn/gh-fast-pass)** - Closes the verification screen once the request is approved on Github android app. `FOSS` `[LSP]`
+- **[Gmail Hide Ads](https://github.com/MrxSiN/GmailHideAds)** - Xposed module that removes sponsored rows from the Gmail Android app by collapsing them before the list is measured. `FOSS` `[LSP]`
+- **[GMS Flags Reborn](https://github.com/polodarb/GMS-Flags-Reborn)** - Browse and override the hidden Google Phenotype feature flags that gate rollouts across Gboard, YouTube, Google Photos, Play Store and other Google apps. Requires root and Xposed/LSPosed. `FOSS` `[LSP]`
 - **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
 - **[KeyFlux](https://github.com/NawafCode/KeyFlux)** - Customize Google Gboard, exposing selected hidden features, and adding clipboard-related enhancements. `FOSS` `[LSP]`
 - **[KGPT](https://github.com/eluea/KGPT)** - LSPosed Module to integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
@@ -77,6 +80,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[EdgeX](https://github.com/SoClear/EdgeX)** - An Xposed module for Microsoft Edge on Android, designed to enhance your browsing experience with UI tweaks and functional improvements. `FOSS` `[LSP]`
 - **[FoldDevtools](https://github.com/achyuki/FoldDevtools)** - Using chrome devtools to debug webview on Android. `FOSS` `[LSP]`
 - **[Fxxk-MiBrowser](https://github.com/DuhMatt/Fxxk-MiBrowser)** - Redirects forced Xiaomi Browser links to the system default browser. `FOSS` `[LSP]`
+- **[SBPlus](https://github.com/Xposed-Modules-Repo/com.sbplus.browser)** - Samsung Internet enhancement module with a download bridge to third-party managers, userscript manager, UA spoofing, region switch, bookmark import/export and m3u8 media sniffing. `Proprietary` `[LSP]`
 
 ## Signature & Verification
 
@@ -98,6 +102,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 
 - **[Kettu](https://github.com/C0C0B01/KettuXposed)** - A Discord mobile app client modification continuing Bunny's mission. `FOSS` `[LSP]`
 - **[Revenge](https://github.com/revenge-mod/revenge-bundle-next)** - Revenge is a client modification for Discord Android. `FOSS`
+- **[RevengeXposed](https://github.com/revenge-mod/revenge-xposed)** - Xposed module that bootstraps the Revenge bundle inside the Discord Android process and bridges its plugin system to the platform. The root installation method for Revenge. `FOSS` `[LSP]`
 
 ### Facebook
 
@@ -134,6 +139,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 
 - **[GramSieve](https://github.com/Xposed-Modules-Repo/com.tianqianguai.gramsieve)** - Message filtering, host-settings integration, anti-recall, anti-edit/edit interception etc. `Proprietary` `[LSP]`
 - **[Killergram](https://github.com/shatyuka/Killergram)** - Remove sponsored messages of Telegram. `FOSS` `[LSP]`
+- **[Re: TeleVIP](https://github.com/Xposed-Modules-Repo/io.github.re_televip.televip)** - Privacy, ad blocking and quality-of-life features for Telegram and its forks, built on libxposed API 102. `FOSS` `[LSP]`
 - **[Telegami](https://github.com/aoya111/Telegami)** - Various tweaks for Telegram. `FOSS` `[LSP]`
 - **[Telegram Speed Hook](https://github.com/araafroyall/Telegram-Speed-Hook)** - Increase Telegram files/media downloading speed. `FOSS` `[LSP]`
 - **[Telegram Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.sidestories)** - Remove action bar stories in the Telegram messenger (+block unmute button). `Proprietary` `[LSP]`
@@ -146,6 +152,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 ### TikTok
 
 - **[Douyin Enhancer](https://github.com/twyora/DouyinEnhancer)** - Adds minor quality-of-life features to Douyin (Chinese TikTok). `FOSS` `[LSP]`
+- **[TikProfileBanner](https://github.com/vanquzie/TikProfileBanner)** - Lifts the account allow-list check that hides TikTok's profile banner ("Add background") button. Targets TikTok 47.1.3 with LSPosed API 102+. `FOSS` `[LSP]`
 - **[TikTok AntiBurn](https://github.com/0mnr0/TikTokAntiBurn)** - Overlap the TikTok app elements to prevent the screen from burning out. `FOSS` `[LSP]`
 - **[TiktokPatchXposed](https://github.com/hik0w/TiktokPatchXposed)** - Xposed module for TikTok app adding various patches. `FOSS` `[LSP]`
 - **[Toki](https://github.com/MeiYongAI/Toki)** - Adds various tweaks to TikTok app. `FOSS` `[LSP]`
@@ -174,6 +181,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 
 - **[⭐ Piko Patches](https://github.com/crimera/piko)** - Morphe patches for twitter with features like hide promoted tweets, hide promoted accounts, hide promoted trends, hide "who to follow" etc. `FOSS`
 - **[Re:X](https://github.com/Xposed-Modules-Repo/one.dot.rex)** -  Tweaks for the new X / Twitter app. `Proprietary` `[LSP]`
+- **[Twitter Hide Ads](https://github.com/MrxSiN/TwitterHideAds)** - Xposed module that stops promoted posts in the X Android app before they are drawn, re-resolving its obfuscated targets per app version. `FOSS` `[LSP]`
 - **[XBlocker](https://github.com/bileizhen/xblocker)** - Hide spam replies, promoted content and selected categories on android x / twitter app. `FOSS` `[LSP]`
 
 ### Zalo
