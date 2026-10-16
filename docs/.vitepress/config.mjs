@@ -1,10 +1,22 @@
-import { readFileSync } from 'node:fs'
+import { readFileSync, writeFileSync, existsSync } from 'node:fs'
+import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
 import llmstxt, { copyOrDownloadAsMarkdownButtons } from 'vitepress-plugin-llms'
 import { storeLinkPlugin } from './markdown/storeLinkPlugin.mjs'
 import { withIcons } from './icons.mjs'
+
+// ── Context7 Ask ───────────────────────────────────────────────────────
+const CONTEXT7_SEARCH_ENDPOINT = 'https://context7.com/api/v2/ask?siteKey=ask_e76b34059e0dee80c89ca4c0'
+const CONTEXT7_SEARCH_NOTE =
+  'This site has a search endpoint: ' + CONTEXT7_SEARCH_ENDPOINT + '&query=<URL-encoded question>. It returns documentation that answers the question, with a source link for each part. No API key is needed. If nothing matches, it says so.'
+// Hidden blockquote injected at top of <body> for agent discovery
+const CONTEXT7_BODY_BLOCKQUOTE =
+  '<blockquote data-context7-ask="true" aria-hidden="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">' +
+  '<h2>Search</h2>' +
+  '<p>' + CONTEXT7_SEARCH_NOTE.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</p>' +
+  '</blockquote>'
 
 const isLlmPageLink = (link) =>
   typeof link === 'string' && link.startsWith('/') && link !== '/' && !link.includes('#')
@@ -186,6 +198,27 @@ export default withPwa(defineConfig({
   lastUpdated: true,
   metaChunk: true,
 
+  transformHtml(code) {
+    // Inject hidden Context7 search blockquote at the top of <body> for agent discovery
+    return code.replace('<body>', '<body>' + CONTEXT7_BODY_BLOCKQUOTE)
+  },
+
+  buildEnd(siteConfig) {
+    // Inject Context7 search section into llms-full.txt after the first page's frontmatter
+    const llmsFullPath = join(siteConfig.outDir, 'llms-full.txt')
+    if (!existsSync(llmsFullPath)) return
+    let content = readFileSync(llmsFullPath, 'utf-8')
+    // Find the end of the first frontmatter block (second '---')
+    const firstFence = content.indexOf('---')
+    if (firstFence === -1) return
+    const secondFence = content.indexOf('---', firstFence + 3)
+    if (secondFence === -1) return
+    const insertPos = secondFence + 3
+    const section = `\n\n## Search\n\n${CONTEXT7_SEARCH_NOTE}\n\n`
+    content = content.slice(0, insertPos) + section + content.slice(insertPos)
+    writeFileSync(llmsFullPath, content, 'utf-8')
+  },
+
   sitemap: {
     hostname: SITE,
     transformItems(items) {
@@ -335,7 +368,9 @@ export default withPwa(defineConfig({
 
   vite: {
     plugins: [
-      llmstxt({ sidebar: llmsSidebar, excludeIndexPage: false }),
+      llmstxt({ sidebar: llmsSidebar, excludeIndexPage: false,
+        customLLMsTxtTemplate: `# {title}\n\n> {description}\n\n## Search\n\n${CONTEXT7_SEARCH_NOTE}\n\n{details}\n\n## Table of Contents\n\n{toc}`,
+      }),
       systemFontsPlugin
     ],
     build: {
@@ -518,7 +553,8 @@ export default withPwa(defineConfig({
     ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large' }],
 
     // --- Verification Tags ---
-    ['meta', { name: 'google-site-verification', content: 'LZTsUH49HHfaPFDezfkN4dE0JmLUbOrY3NJKLr1ZPrE' }]
+    ['meta', { name: 'google-site-verification', content: 'LZTsUH49HHfaPFDezfkN4dE0JmLUbOrY3NJKLr1ZPrE' }],
+    ['meta', { name: 'context7-site-verification', content: 'ask_e76b34059e0dee80c89ca4c0' }]
   ],
 
   themeConfig: {
