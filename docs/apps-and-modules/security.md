@@ -53,6 +53,7 @@ firewalls for hardening your device, controlling which apps can reach the networ
 - **[Biometric Bypass Module](https://github.com/hxreborn/biometric-bypass)** - Fast-forwards face unlock by skipping the biometric confirmation step in System UI on Android 10+. `FOSS` `[LSP]` | [🌱](https://f-droid.org/packages/eu.rafareborn.biometricbypass)
 - **[CaptureSposed](https://github.com/99keshav99/CaptureSposed)** - Disables the newly introduced screenshot detection API in Android 14. `FOSS` `[LSP]`
 - **[Cert-Fixer](https://github.com/pwnlogs/cert-fixer)** - Installs custom CA certificates to Android's system certificate store. `FOSS` `[M]`
+- **[CertBridge](https://github.com/Eikeitsu/CertBridge)** - Merges Reqable, ProxyPin and custom PEM certificates into the Android system trust store without rewriting the system partition, with a WebUI, hot mount and automatic APEX Conscrypt injection on Android 14+. Android 7-16. `FOSS` `[M]` `[K]` `[A]`
 - **[Custom Certificate Authorities](https://github.com/Magisk-Modules-Alt-Repo/custom-certificate-authorities)** - Moves user-installed certificate authorities into the system trust store, making them trusted by all apps. `FOSS` `[M]`
 - **[Custom Certificates](https://github.com/YujiaCheng1996/custom-certificates)** - A Magisk/KernelSU module which adds custom certificates to the system trust store. `FOSS` `[M]` `[K]`
 - **[Disable usb debugging](https://github.com/Aakif17/disable_usb_debugging)** - Disables USB Debugging after every reboot. `FOSS` `[M]`
