@@ -72,6 +72,12 @@ jobs:
         continue-on-error: true
         run: bun run lint:entries
 
+      # The committed URL index must match the current entries, otherwise
+      # external tools reading /app-index.json fall behind the list.
+      - name: Check app index
+        continue-on-error: true
+        run: bun run index:check
+
   build:
     name: Build documentation
     runs-on: ubuntu-latest
