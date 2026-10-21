@@ -201,7 +201,7 @@ Android 16 is not a developer-preview-only platform. For example, [Magisk v30.7]
 | **MMRL** | Multi-repository module manager | Supports Magisk, KernelSU and APatch; inspect each module's source | [GitHub](https://github.com/MMRLApp/MMRL) |
 | **Fox Magisk Module Manager (archived)** | Historical module manager | Repository archived; not a current default recommendation | [GitHub](https://github.com/Fox2Code/FoxMagiskModuleManager) |
 | **LSPosed Modules** | Xposed modules | App modifications | [Repository](https://github.com/Xposed-Modules-Repo) |
-| **Apps & Modules Index** | Curated collection | 700+ apps and modules | [Collection](./apps-and-modules/index.md) |
+| **Apps & Modules Index** | Curated collection | 750++ apps and modules | [Collection](./apps-and-modules/index.md) |
 | **IzzyOnDroid** | F-Droid repo | FOSS apps | [IzzyOnDroid](https://apt.izzysoft.de/fdroid/) |
 | **KernelSU Module Repo** | KernelSU modules | Official module repository | [modules.kernelsu.org](https://modules.kernelsu.org/) |
 
