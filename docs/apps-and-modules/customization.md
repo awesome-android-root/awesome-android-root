@@ -52,6 +52,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[Hide App from Recent](https://github.com/Young-Lord/hideRecent)** - Hide any app from recent task list. `FOSS` `[LSP]`
 - **[Multi Finger Gesture X](https://github.com/EliLei/MultiFingerGestureX)** - An LSPosed/Xposed module that adds 3+ finger gesture support to Android 15+. `FOSS` `[LSP]`
 - **[Ogesture](https://github.com/tanujnotes/ogesture)** - Use gesture navigation with third-party launchers on any Android phone. `FOSS` `[LSP]`
+- **[OPlusKey](https://github.com/Xposed-Modules-Repo/io.github.lo0kie.opluskey)** - LSPosed module to remap OnePlus/OPPO side key to single, double and long press actions. `Proprietary` `[LSP]`
 - **[OPPO/OnePlus side button enhancement](https://github.com/ItosEO/OplusKey)** - Customize the side button behavior on Oppo and OnePlus devices. `Proprietary` `[M]`
 - **[Recents](https://github.com/tymwitko/Recents)** - Launcher-agnostic "Recents" menu for Android. `FOSS`
 - **[Three-Finger-Screenshot](https://github.com/hxreborn/three-finger-swipe)**- Standalone LSPosed implementation of three-finger swipe. `FOSS` `[LSP]`
@@ -79,6 +80,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[AlwaysOn](https://github.com/Domi04151309/AlwaysOn)** - Adds an always-on display with various customization options regarding watch face, behavior, and background. `FOSS` `[LSP]`
 - **[ColorOS Live Lyrics Bridge](https://github.com/Andrea-lyz/ColorOS-Live-Lyrics-Bridge)** - Bridges timed lyrics from supported players into the ColorOS/OPlus lock-screen lyric pipeline. `FOSS` `[LSP]`
 - **[HyperGlow](https://github.com/amarinne/hyperglow)** - Animated lock screen and always-on display lyrics for HyperOS 3. `FOSS` `[LSP]`
+- **[HyperLyrics Enhanced](https://github.com/juren233/HyperLyrics-Enhanced)** - LSPosed module for HyperOS that shows HyperIsland and AOD lyrics with Apple Music enhancements and bundled Lyricon providers. `FOSS` `[LSP]`
 - **[HyperOS AOD](https://github.com/Mods-Center/HyperOS-AOD)** - Enhanced HyperOS AOD and Lock Screen Editor app with unlocked features. `Proprietary` `[M]` `[K]`
 
 ## Notifications

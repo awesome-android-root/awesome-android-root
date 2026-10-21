@@ -38,6 +38,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 ## App Mods
 
 - **[⭐ GPhotosUnlimited](https://github.com/Rev4N1/GPhotosUnlimited)** - A Zygisk module which gives unlimited Google Photos storage. `FOSS` `[M]` `[K]` `[A]`
+- **[AA Mods](https://github.com/ImNoammm/aa-mods)** - Vector module for Android Auto that adds launcher start, recents button, phone apps on car screen and microG without telemetry. `FOSS` `[LSP]`
 - **[AM++](https://github.com/Zennmn/AM-plus-plus/blob/main/README.en.md)** - Apple Music enhancements: tablet dual-pane player, lyric blur and custom lyric fonts, TTML lyric injection, song title correction and Liquid Glass navigation. `FOSS` `[LSP]`
 - **[AmznKiller](https://github.com/hxreborn/amznkiller)** - Hides sponsored content and ads in the Amazon Shopping app. `FOSS` `[LSP]`
 - **[Breeno Source Changer](https://github.com/Xposed-Modules-Repo/com.niki.breeno.openai/tree/main)** - Allows ColorOS's Breeno Assistant to change its AI model source and customize large language model (LLM) APIs. `FOSS` `[LSP]`
@@ -64,6 +65,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[Pixel Mask](https://github.com/kinginu/PixelMask)** - Spoofs a Pixel device profile inside Google Photos to unlock Pixel-only perks on any rooted Android phone. `FOSS` `[LSP]`
 - **[Pixelify Infinity](https://github.com/samson910022/pixelify-google-photos-modern)** - Xposed module to enable Pixel-exclusive features in Google Photos. `FOSS` `[LSP]`
 - **[Play Store Adblock](https://github.com/hxreborn/playstore-adblock)** - Xposed module to remove sponsored listings and ads from the Google Play Store. `FOSS` `[LSP]`
+- **[PureNGA](https://github.com/chr233/PureNGA)** - LSPosed module that removes ads and sponsored content from NGA forum app with support for LSPatch. `FOSS` `[LSP]`
 - **[Rboard Theme Manager](https://github.com/DerTyp7214/RboardThemeManagerV3)** - A customizable manager app for Google Gboard that allows users to download, apply, and manage various themes and sound settings. `FOSS` `[LSP]`
 - **[Spicy EX](https://github.com/amarinne/spicy-ex)** - Adds Spicy lyrics in Spotify along with translation and much more UI features. `FOSS` `[LSP]`
 - **[Spotify Plus](https://github.com/LeNerd46/SpotifyPlus)** - Adds beautiful lyrics to Spotify. `FOSS` `[LSP]`
@@ -183,6 +185,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[Re:X](https://github.com/Xposed-Modules-Repo/one.dot.rex)** -  Tweaks for the new X / Twitter app. `Proprietary` `[LSP]`
 - **[Twitter Hide Ads](https://github.com/MrxSiN/TwitterHideAds)** - Xposed module that stops promoted posts in the X Android app before they are drawn, re-resolving its obfuscated targets per app version. `FOSS` `[LSP]`
 - **[XBlocker](https://github.com/bileizhen/xblocker)** - Hide spam replies, promoted content and selected categories on android x / twitter app. `FOSS` `[LSP]`
+- **[XTQ](https://github.com/Xposed-Modules-Repo/com.tianqianguai.xtq)** - LSPosed enhancement for X/Twitter that adds browsing history, translation and media download support for X 12.35.0. `Proprietary` `[LSP]`
 
 ### Zalo
 - **[Zalo Patch](https://github.com/amarinne/zalo-patch)** - Zalo customization module for LSPosed. `FOSS` `[LSP]`
