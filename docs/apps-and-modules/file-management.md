@@ -35,6 +35,7 @@ Magisk/KernelSU modules, and file & partition tools for power users.
 
 ## File & Partition Tools
 
+- **[HEX Editor](https://github.com/reiryuki/HEX-Editor-Magisk-Module)** - Magisk module that bypasses security restrictions for HEX Editor to access all directories without permissive SELinux. `FOSS` `[M]` `[K]` `[A]`
 - **[Partition Backup](https://github.com/rhythmcache/partition-backup)** - This Utility Allows You To Save Android Device Partition. `FOSS` `[M]` `[A]`
 - **[SD Flasher](https://github.com/theblazehen/sd_flasher)** - Flash disk images (.img, .img.gz, .img.xz, .zip) directly to SD cards from your Android device. `FOSS`
 - **[StorageFixer](https://github.com/omersusin/StorageFixer)** - Root app, with an optional Xposed module, that repairs the broken `Android/data`, `Android/obb` and `Android/media` directories and appops left by Android 16 QPR1+ on AOSP-based ROMs. `FOSS` `[LSP]`
