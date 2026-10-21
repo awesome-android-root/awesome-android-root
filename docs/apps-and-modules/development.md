@@ -27,6 +27,7 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 - **[altdb](https://github.com/Dr-TSNG/altdb)** - KernelSU module running a separate wireless ADB server over the local network with six-digit TLS pairing and a WebUI, leaving the system adbd and its authorizations untouched. Android 11+ arm64. `FOSS` `[K]`
 - **[Android-ADB-over-WiFi](https://github.com/warren-bank/Android-ADB-over-WiFi)** - Toggles a rooted device's Android Debug Bridge daemon (adbd) between USB and WiFi mode. `FOSS` `[LSP]`
 - **[Debug Assistant](https://github.com/ThePedroo/DebugAssistant)** - The simplest yet powerful logcat capture system as Magisk module. `FOSS` `[M]` `[A]`
+- **[Enable MIUI ADB](https://github.com/Ylarod/enable-miui-adb)** - Enables adb install on MIUI/HyperOS without Xiaomi account login or SIM verification via a one-shot KernelSU/Magisk script. `FOSS` `[M]` `[K]` `[A]`
 - **[Hotspot Wireless Debugging](https://github.com/droserasprout/io.drsr.hotspotadb)** - Xposed module to allow Wireless Debugging over Wi-Fi Hotspot. `FOSS` `[LSP]`
 - **[LADB](https://github.com/tytydraco/LADB)** - Local ADB shell with a built-in terminal interface. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.draco.ladb)
 - **[Log Catcher](https://github.com/hxreborn/Log-Catcher)** - Captures logcat and kernel messages during startup and archives them as timestamped tarballs after unlock. `FOSS` `[M]` `[K]` `[A]`
@@ -34,6 +35,7 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 - **[Loki](https://github.com/trinadhthatakula/Loki)** - Logcat reader that captures, saves and shares another app's logs using root or Shizuku. `FOSS`
 - **[Magisk-WiFiADB](https://github.com/mrh929/magisk-wifiadb)** - Enable WiFi ADB automatically. `FOSS` `[M]`
 - **[USBManager](https://github.com/TigerSpirit217/USBManager/blob/master/README_ENG.md)** - Shows a USB mode picker when the phone is connected to a computer, with one-tap ADB toggles and optional auto-disable of USB debugging on unplug. `FOSS` `[LSP]`
+- **[Wireless ADB Controller](https://github.com/Magisk-Modules-Alt-Repo/wadbd)** - Magisk module to enable, disable and manage wireless ADB daemon per session or at boot with custom port and key support. `FOSS` `[M]` `[K]` `[A]`
 - **[Wireless ADB Switch](https://github.com/Smooth-E/wireless-adb-switch)** - Quickly enable or disable Android's Wireless Debugging feature. Includes widgets and a quick settings tile for convenience. `FOSS` | [🌱](https://f-droid.org/ru/packages/com.smoothie.wirelessDebuggingSwitch)
 
 ## Automation
