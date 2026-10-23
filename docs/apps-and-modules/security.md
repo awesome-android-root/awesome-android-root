@@ -28,6 +28,7 @@ firewalls for hardening your device, controlling which apps can reach the networ
 
 - **[AFWall+](https://github.com/ukanth/afwall)** - Iptables-based firewall with per-app network control. `FOSS` | [🌱](https://f-droid.org/packages/dev.ukanth.ufirewall/) | [▶️](https://play.google.com/store/apps/details?id=dev.ukanth.ufirewall)
 - **[Athena](https://github.com/Kin69/Athena)** - Material You (Material 3) firewall and ad blocker that works seamlessly on both rooted and non-rooted devices. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.kin.athena)
+- **[AEGIS // FIREWALL](https://github.com/privshell/aegis-firewall)** - Kernel-level per-app firewall with netfilter and screen-off blocking delivered via module WebUI.`FOSS` `[M]` `[K]` `[A]`
 - **[De1984 Firewall](https://github.com/dorumrr/de1984)** - A privacy-focused Firewall and Package Manager for Android devices. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/io.github.dorumrr.de1984)
 - **[Fyrypt](https://github.com/mirfatif/Fyrypt)** - Android firewall with UID + PID rules, dnscrypt-proxy management, and per-app live network monitoring. `Proprietary`
 - **[Net Switch](https://github.com/Rem01Gaming/net-switch)** - Isolate any app from Internet access. `FOSS` `[M]` `[A]`
