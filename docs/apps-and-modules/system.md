@@ -36,7 +36,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[AppDash: App Manager & Backup](https://play.google.com/store/apps/details?id=flar2.appdashboard&hl=en)** - Makes it easy to manage APKs and apps installed on your device. `Proprietary`
 - **[Aurora Store](https://github.com/whyorean/AuroraStore)** - A Google Play Store client to search, view app details, and download APKs directly to your device. `FOSS` | [🌱](https://f-droid.org/packages/com.aurora.store/)
 - **[Auto Uninstaller](https://github.com/MeRaazi/auto-uninstaller)** - Automatically uninstall blacklisted apps. `FOSS` `[K]` `[A]`
-- **[APEX // APPS](https://github.com/kreza6173-pixel/apex-apps)** - Root app manager shipped as a module WebUI for package freezing, battery policy tuning, and backups.`FOSS` `[M]` `[K]` `[A]`
+- **[APEX // APPS](https://github.com/privshell/apex-apps)** - Root app manager shipped as a module WebUI for package freezing, battery policy tuning, and backups.`FOSS` `[M]` `[K]` `[A]`
 - **[BanUninstall](https://github.com/TinyHai/BanUninstall/)** - Prevents apps from being uninstalled or apps' data from being cleared. `FOSS` `[LSP]`
 - **[BetterKnownInstalled](https://github.com/Pixel-Props/BetterKnownInstalled)** - Patches packages to fix DroidGuard UNKNOWN_INSTALLED issues. `FOSS` `[LSP]`
 - **[Buge App Manager](https://github.com/BugeStudioTeam/Buge-App-Manager)** - Built with Material Design 3 Expressive designed for advanced app and permission management. `FOSS`
