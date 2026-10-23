@@ -38,6 +38,7 @@ tools, sharing & intent tweaks, communication helpers and all-in-one power-user 
 - **[Kaorios Toolbox](https://github.com/Wuang26/Kaorios-Toolbox)** - Toolbox for the Kaorios ROM with Play Integrity fix, device and per-app property spoofing, Google Photos unlimited backup, payload dumper and high-FPS unlock. `Proprietary`
 - **[KernelSU Grant Toast](https://github.com/NativeStar/KernelSUGrantToast)** - Make KernelSU show a root granted toast like Magisk. `FOSS` `[K]`
 - **[nebulaOS Toolkit](https://github.com/Smart-Home-User/XREAL-Beam-Pro-nebulaOS-Toolkit)** - Control overlay for the XREAL Beam Pro trackpad adding one-handed gesture presets, spatial app launching, quick apps, QR/barcode scanning, media and volume controls and D-pad navigation. Shizuku, Sui or root enables the privileged input controls. `FOSS`
+- **[Nexus-ai](https://github.com/privshell/Nexus-ai)** - Modular AI-powered assistant and integration suite for workflow automation and API handling.`FOSS`
 - **[SvcHub](https://github.com/LimpidMo/SvcHub)** - Keeps Termux services and binary services alive, and provides WebUI aggregation management. `FOSS` `[M]` `[K]` `[A]`
 - **[SwitchAI - Switch AI Digital Assistant](https://github.com/WSTxda/SwitchAI)** - Easily select, start, and manage your preferred AI digital assistants. `FOSS`
 - **[System Tools Android](https://play.google.com/store/apps/details?id=com.redhome.sta)** - A system utility suite with many small tools for finer system work, including root utilities. `Proprietary`
