@@ -100,6 +100,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[Secure Element Access](https://github.com/jqssun/android-se-access)** - Enable access to secure element for trusted apps. `FOSS`
 - **[TWRP A/B Retention Script](https://github.com/Magisk-Modules-Repo/twrp-keep)** - Keep TWRP installed after an A/B OTA. `FOSS` `[M]`
 - **[Vanadium WebView & Browser](https://github.com/NoneBaiano/Vanadium-WebViewBrowser)** - Replaces the system WebView with Vanadium WebView and installs the Vanadium browser. `FOSS` `[M]` `[K]`
+- **[Vanadium WebView Manager](https://github.com/LeanxModulostk/VanadiumWebviewManager)** - Installs and updates GrapheneOS Vanadium WebView, Browser and Config through a root-manager WebUI, sets Vanadium as the active system WebView and includes automatic bootloop recovery. Android 14+ arm64. `Proprietary` `[M]` `[K]` `[A]`
 
 ### VBMeta Mods
 
@@ -155,16 +156,19 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[ColorOS_Control_Center](https://github.com/Mods-Center/ColorOS_Control_Center)** - Replace HyperOS control panel with ColorOS-style quick settings, featuring customizable and squared tiles. `Proprietary`
 - **[CustoMIUIzer A14](https://github.com/thetvplus/customiuizer-a14)** - Kotlin rewrite of CustoMIUIzer for HyperOS 1 on Android 14, built on the libxposed API. `FOSS` `[LSP]`
 - **[Fingerprint Catalog](https://github.com/custombeta/fingerprint-cataloge)** - Allows you to create, upload, import, and apply your own fingerprint icons and animations on HyperOS. `Proprietary` `[LSP]`
+- **[FusionStatusBar](https://github.com/yudigaga/FusionStatusBar)** - LibXposed module for MIUI and HyperOS offering status bar fusion icons, dual-row layout, clock, weather and device telemetry, Control Center layout and material editing, and launcher gesture tweaks. Android 13+. `Proprietary` `[LSP]`
 - **[Hyper Helper](https://github.com/HowieHChen/XiaomiHelper/blob/master/README_EN-US.md)** - Lightweight customization module for HyperOS only. `FOSS` `[LSP]`
 - **[Hyper Unlocked](https://github.com/ukriu/HyperUnlocked)** - Unlock all high-end features possible to be unlocked on low-end xiaomi devices. `FOSS` `[M]` `[A]`
 - **[HyperChanger](https://github.com/ColdP/HyperChanger)** - LSPosed module for HyperOS 4 that customizes the Control Center, System UI, lock screen and camera. `FOSS` `[LSP]`
 - **[HyperClipFix](https://github.com/Xposed-Modules-Repo/com.clipboardfix)** - LSPosed module that fixes HyperOS 3.0+ clipboard history access for third-party input methods and unlocks fullscreen optimizations. `Proprietary` `[LSP]`
+- **[HyperDesktop Unlock](https://github.com/the-marox/HyperDesktopUnlock)** - Unlocks Android 17's native external-display desktop mode on Xiaomi HyperOS 4 devices with DisplayPort Alt Mode, adding Quick Settings tiles, desktop keyboard shortcuts and an optional phone touchpad. `FOSS` `[LSP]`
 - **[HyperOS 4 SmallWindow Input Filter](https://github.com/zilewang7/HyperOS4SmallWindowInputFilter)** - Restores the two-finger recents-drag small-window gesture on HyperOS 4 by loading an arm64 payload into the native HYOS `com.miui.home` process. Needs Zygisk Next 1.5.0+ and LSPosed 2.1.1+. `FOSS` `[LSP]`
 - **[HyperOSUnf*cker](https://github.com/Enki013/hyperosunfcker)** - Unlocks hidden system performance, display, memory, battery, and visual settings on Xiaomi/POCO/Redmi devices. `FOSS` `[LSP]`
 - **[HyperStar](https://github.com/YunZiA/HyperStar/blob/master/README_EN-US.md)** - An LSPosed module mainly designed to customize the Xiaomi HyperOS Control Center, along with some features. `FOSS` `[LSP]`
 - **[Janus](https://modules.lsposed.org/module/org.pysh.janus/)** - Enhances Xiaomi rear screens with multitasking, app shortcuts, gestures, notification mirroring, and power-saving features. `Proprietary` `[LSP]`
 - **[MeowPower](https://github.com/Xposed-Modules-Repo/io.github.yuhj319.meowpower)** - Unlocks HyperOS Security Center controls for charging protection, power saving, background cleanup and network limits. `Proprietary` `[LSP]`
 - **[Pengeek](https://github.com/monwf/customiuizer)** - Customize your HyperOS to your liking. For HyperOS based on Android 14. `FOSS` `[LSP]`
+- **[XGoogle](https://github.com/Leekin2/XGoogle)** - Brings Google Assistant/Gemini power-button trigger, Circle to Search, Hey Google voice activation, Google Lens, Android Auto and GMS restriction removal to Xiaomi HyperOS 4 China ROMs via LSPosed and an optional companion root module. `FOSS` `[K]` `[LSP]`
 - **[XiaoAi Plug](https://github.com/lm060719/XiaoAi-plug)** - Hooks `com.miui.voiceassist` to allow changing the AI model. `FOSS` `[LSP]`
 - **[ZHITool](https://github.com/XZOWO/ZHITool)** - Back screen toolkit for the Xiaomi 17 series: cast apps to the rear display, capture it, and show notifications or real-time lyrics. `FOSS` `[LSP]`
 
