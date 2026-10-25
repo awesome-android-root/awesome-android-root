@@ -1,11 +1,11 @@
 ---
 layout: doc
-title: "How to Root a Samsung Galaxy: Odin, AP & Magisk"
+title: "How to Root Samsung: Odin & Magisk"
 description: "Learn how to root a Samsung Galaxy with model- and region-specific bootloader checks, Download Mode, Odin AP patching, Magisk, Knox and One UI warnings."
 head:
   - - meta
     - property: og:title
-      content: "How to Root a Samsung Galaxy: Odin, AP & Magisk"
+      content: "How to Root Samsung: Odin & Magisk"
   - - meta
     - property: og:description
       content: Samsung Galaxy rooting guide covering bootloader eligibility, OEM unlocking, Download Mode, Odin AP patching, Magisk, Knox and One UI differences.
@@ -14,7 +14,7 @@ head:
       content: https://awesome-android-root.xyz/images/og/samsung.png
   - - meta
     - name: twitter:title
-      content: "How to Root a Samsung Galaxy: Odin, AP & Magisk"
+      content: "How to Root Samsung: Odin & Magisk"
   - - meta
     - name: twitter:description
       content: Rooting steps for eligible Samsung Galaxy models, with Odin AP patching, Magisk and model-specific restrictions.

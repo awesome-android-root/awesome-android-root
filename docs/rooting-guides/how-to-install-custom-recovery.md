@@ -1,11 +1,11 @@
 ---
 layout: doc
-title: Complete Custom Recovery Installation Guide
+title: Custom Recovery Installation Guide
 description: "Master guide to install custom recovery - TWRP, OrangeFox, SKYHAWK. Gateway to rooting, custom ROMs, and advanced Android modifications."
 head:
   - - meta
     - property: og:title
-      content: Complete Custom Recovery Installation Guide - TWRP & More
+      content: Custom Recovery Installation Guide - TWRP & More
   - - meta
     - property: og:description
       content: Install custom recovery with our comprehensive guide covering TWRP, OrangeFox, and SKYHAWK for Android rooting and ROM installation.
@@ -14,7 +14,7 @@ head:
       content: https://awesome-android-root.xyz/images/og/custom-recovery.png
   - - meta
     - name: twitter:title
-      content: Complete Custom Recovery Installation Guide
+      content: Custom Recovery Installation Guide
   - - meta
     - name: twitter:description
       content: Install TWRP, OrangeFox, and SKYHAWK custom recovery for Android rooting and customization.

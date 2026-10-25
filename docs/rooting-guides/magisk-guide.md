@@ -1,11 +1,11 @@
 ---
 layout: doc
-title: "Magisk Root Guide: Install, Modules & Zygisk"
+title: "Magisk Root Guide: Install & Modules"
 description: "Learn Magisk installation, boot image patching, modules, Zygisk, DenyList, Play Integrity and troubleshooting for supported Android devices."
 head:
   - - meta
     - property: og:title
-      content: "Magisk Root Guide: Install, Modules & Zygisk"
+      content: "Magisk Root Guide: Install & Modules"
   - - meta
     - property: og:description
       content: Install Magisk with boot image patching, systemless modules, Zygisk, DenyList and practical troubleshooting guidance.
@@ -14,7 +14,7 @@ head:
       content: https://awesome-android-root.xyz/images/og/magisk-guide.png
   - - meta
     - name: twitter:title
-      content: "Magisk Root Guide: Install, Modules & Zygisk"
+      content: "Magisk Root Guide: Install & Modules"
   - - meta
     - name: twitter:description
       content: Magisk installation, boot image patching, modules, Zygisk, root hiding and Play Integrity troubleshooting.
@@ -57,49 +57,6 @@ head:
   - - meta
     - name: robots
       content: index, follow, max-image-preview:large
-  - - script
-    - type: application/ld+json
-    - |
-      {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "Complete Magisk Root Installation Guide",
-        "description": "Step-by-step guide to install Magisk systemless root on Android devices",
-        "totalTime": "PT45M",
-        "estimatedCost": {
-          "@type": "MonetaryAmount",
-          "currency": "USD", 
-          "value": "0"
-        },
-        "tool": [
-          {"@type": "HowToTool", "name": "Android Device with Unlocked Bootloader"},
-          {"@type": "HowToTool", "name": "Computer with ADB/Fastboot"},
-          {"@type": "HowToTool", "name": "Magisk APK"},
-          {"@type": "HowToTool", "name": "Stock Boot Image"}
-        ],
-        "step": [
-          {
-            "@type": "HowToStep",
-            "name": "Download Required Files",
-            "text": "Download latest Magisk APK and extract boot.img from device firmware"
-          },
-          {
-            "@type": "HowToStep",
-            "name": "Patch Boot Image",
-            "text": "Use Magisk app to patch the stock boot image creating magisk_patched.img"
-          },
-          {
-            "@type": "HowToStep",
-            "name": "Flash Patched Boot",
-            "text": "Use fastboot to flash the patched boot image to device"
-          },
-          {
-            "@type": "HowToStep",
-            "name": "Install Magisk Manager",
-            "text": "Install Magisk app for root management and module installation"
-          }
-        ]
-      }
 ---
 
 # Magisk Root Guide: Installation, Modules & Root Management
