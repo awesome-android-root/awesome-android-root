@@ -153,7 +153,9 @@ This category covers app patchers (including YouTube), social and browser mods, 
 
 ### TikTok
 
+- **[DouAi](https://github.com/yudigaga/DouAi)** - Enhancement module for Douyin (Chinese TikTok) on libxposed API 102 with feed filtering, UI cleanup, playback gesture and speed controls, media download options and AI-assisted comment and message tools. `Proprietary` `[LSP]`
 - **[Douyin Enhancer](https://github.com/twyora/DouyinEnhancer)** - Adds minor quality-of-life features to Douyin (Chinese TikTok). `FOSS` `[LSP]`
+- **[TikFreed](https://github.com/Xposed-Modules-Repo/io.github.ba6_oss.tikfreed)** - LSPosed module for the international TikTok client on libxposed API 102 that overrides SIM, carrier, locale, timezone and GPS region parameters, hides ads and promotional cards, and adds playback speed and comment translation controls. `Proprietary` `[LSP]`
 - **[TikProfileBanner](https://github.com/vanquzie/TikProfileBanner)** - Lifts the account allow-list check that hides TikTok's profile banner ("Add background") button. Targets TikTok 47.1.3 with LSPosed API 102+. `FOSS` `[LSP]`
 - **[TikTok AntiBurn](https://github.com/0mnr0/TikTokAntiBurn)** - Overlap the TikTok app elements to prevent the screen from burning out. `FOSS` `[LSP]`
 - **[TiktokPatchXposed](https://github.com/hik0w/TiktokPatchXposed)** - Xposed module for TikTok app adding various patches. `FOSS` `[LSP]`
