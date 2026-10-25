@@ -5,7 +5,7 @@ description: "Replace root-only functions without rooting using ADB, Shizuku, wi
 head:
   - - meta
     - property: og:title
-      content: Non-Root Alternatives - Customize Android Without Root 2026
+      content: Non-Root Alternatives - Customize Android Without Root
   - - meta
     - property: og:image
       content: https://awesome-android-root.xyz/images/og/non-root-alternatives.png
@@ -29,7 +29,7 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:title
-      content: Non-Root Alternatives - Customize Android Without Root 2026
+      content: Non-Root Alternatives - Customize Android Without Root
   - - meta
     - name: twitter:description
       content: "Replace root-only functions without root using ADB, Shizuku, wireless debugging, work profiles, and current no-root apps."

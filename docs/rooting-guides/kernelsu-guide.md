@@ -1,11 +1,11 @@
 ---
 layout: doc
-title: "KernelSU Root Guide: Install & Modules"
+title: "KernelSU Guide: Install & Modules"
 description: "Learn KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles and troubleshooting for supported Android devices."
 head:
   - - meta
     - property: og:title
-      content: "KernelSU Root Guide: Install & Modules"
+      content: "KernelSU Guide: Install & Modules"
   - - meta
     - property: og:description
       content: Learn KernelSU installation, GKI and LKM modes, KernelSU Next, modules, WebUI, app profiles and troubleshooting.
@@ -14,7 +14,7 @@ head:
       content: https://awesome-android-root.xyz/images/og/kernelsu-guide.png
   - - meta
     - name: twitter:title
-      content: "KernelSU Root Guide: Install & Modules"
+      content: "KernelSU Guide: Install & Modules"
   - - meta
     - name: twitter:description
       content: KernelSU root installation, GKI/LKM modes, modules, WebUI and app profile management.

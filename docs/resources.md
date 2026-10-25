@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Android Rooting Resources 2026
+title: Android Rooting Resources & Tools
 description: "Complete collection of Android rooting resources, tools, communities, guides, and expert materials for safe rooting, custom ROMs, and device customization."
 head:
   - - meta
@@ -8,7 +8,7 @@ head:
       content: website
   - - meta
     - property: og:title
-      content: Android Rooting Resources 2026 - Complete Guide & Tools Collection
+      content: Android Rooting Resources - Complete Guide & Tools Collection
   - - meta
     - property: og:description
       content: Ultimate collection of Android rooting resources including tools, communities, guides, and expert materials for safe device customization and root access.
@@ -35,13 +35,13 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:title
-      content: Android Rooting Resources 2026 - Complete Collection
+      content: Android Rooting Resources - Complete Collection
   - - meta
     - name: twitter:description
       content: Everything you need for Android rooting - tools, communities, guides, and expert resources in one comprehensive collection.
   - - meta
     - name: twitter:image:alt
-      content: Android Rooting Resources 2026 - Tools, Communities & Guides
+      content: Android Rooting Resources - Tools, Communities & Guides
   - - meta
     - name: author
       content: Awesome Android Root Project
@@ -65,7 +65,7 @@ head:
       content: index, follow, max-image-preview:large
 ---
 
-# Android Rooting Resources Hub 2026
+# Android Rooting Resources Hub
 
 > Reference for Android rooting, customization, and recovery. GitHub project descriptions and release information reviewed on **2026-10-16**.
 

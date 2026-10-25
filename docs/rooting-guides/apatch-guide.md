@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Complete APatch Root Guide
-description: "Master APatch rooting with a practical 2026 guide: compatibility checks, safe install flow, OTA survival, and recovery steps."
+description: "Master APatch rooting with a practical guide: compatibility checks, safe install flow, OTA survival, and recovery steps."
 head:
   - - meta
     - property: og:title
