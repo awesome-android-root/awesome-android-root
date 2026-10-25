@@ -32,6 +32,7 @@ hosts/DNS-based tools that block ads, trackers and malware system-wide, in every
 - **[AdAway Helper](https://github.com/DEMONNICA/AdAway-Helper)** - Enables AdAway to work on KernelSU, its variants by managing /system/etc/hosts via bind mount and overlay. `FOSS` `[M]` `[K]` `[A]`
 - **[AdClose](https://github.com/Xposed-Modules-Repo/com.close.hook.ads/)** - Prevents the initial loading of the advertising SDK within the application and intercepts application advertising requests to block ads. `Proprietary` `[LSP]`
 - **[AdGuard](https://adguard.com/en/adguard-android/overview.html)** - Comprehensive ad blocking solution. `Proprietary` 
+- **[Ads Kill](https://github.com/Shuoh118/Ads-kill)** - LSPosed module built on libxposed API 102 that removes splash screens and in-app ads in scoped Android apps by hooking common ad SDKs and ad views. `FOSS` `[LSP]`
 - **[BlockAds](https://github.com/pass-with-high-score/blockads-android)** - System‑wide ad, tracker, & malware filtering, custom blocklists, per‑app controls etc. `FOSS` | [🌱](https://f-droid.org/packages/app.pwhs.blockads)
 - **[BlockAds Module](https://github.com/pantsufan/BlockAds)** - BlockAds is an advertisement blocking Magisk module. `FOSS` `[M]` `[K]`
 - **[Blokada](https://blokada.org/)** - Advanced ad blocker with VPN functionality. `Proprietary`

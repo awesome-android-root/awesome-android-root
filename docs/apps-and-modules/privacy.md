@@ -53,6 +53,7 @@ tracking, spoofing your device identity or location, and isolating apps from you
 ## Location & GPS
 
 - **[AnyWhere](https://github.com/cxOrz/AnyWhere)** - Location simulation tool for debugging LBS applications and for users to test geolocation functionality. `FOSS` `[LSP]`
+- **[Fake GPS](https://github.com/Xposed-Modules-Repo/io.github.mwarevn.fakegps)** - System-wide or per-app GPS spoofing module on libxposed API 102 with route navigation simulation, an analog joystick, track recording and replay, scheduled actions and sensor/network side-channel hiding. `Proprietary` `[LSP]`
 - **[GPS Setter](https://github.com/jqssun/android-gps-setter)** - Allows to mock locations for any specific app or entire system. `FOSS` `[LSP]` | [🌱](https://f-droid.org/packages/io.github.jqssun.gpssetter)
 - **[Hide Mock Location](https://github.com/auag0/HideMockLocation)** - Hide Mock Location Settings. `FOSS` `[LSP]`
 - **[HLocation](https://github.com/sparr-sherrya/hlocation-release)** - Location spoofing framework that synchronizes fake GPS and related environment signals across system and app processes for more consistent location virtualization. `FOSS` `[LSP]`
