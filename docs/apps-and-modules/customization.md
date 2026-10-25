@@ -107,7 +107,7 @@ Magisk/KernelSU/LSPosed modules.
 ## Status Bar & Navigation
 
 - **[BatteryRemapper](https://github.com/Dhangofa/BatteryRemapper)** - Customize Status Bar Battery Percentage. `FOSS` `[LSP]`
-- **[Duo Status Bar](https://github.com/Xposed-Modules-Repo/io.github.kvmy666.duostatusbar)** - Turns the battery, Wi-Fi and signal icons into one smooth, Apple-style element. `Proprietary` `[LSP]`
+- **[Duo Status Bar](https://github.com/kvmy666/duoStatusBar)** - Turns the battery, Wi-Fi and signal icons into one smooth, Apple-style element. `FOSS` `[LSP]`
 - **[Hide Navbar Keyboard](https://github.com/UNKNUW/Hide-Navbar-Keyboard)** - Hide navbar when keyboard appears. Supports Android 10 -15+. `FOSS` `[M]`
 - **[Lost Xposed](https://github.com/uraniam9/lost-xposed)** - Composable status bar clock, per-app display settings and notification rules that filter messages before they are posted. `FOSS` `[LSP]`
 - **[Lyricon](https://github.com/tomakino/lyricon)** - An Android status bar lyric enhancement tool based on the Xposed framework. `FOSS` `[LSP]`
