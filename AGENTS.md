@@ -116,7 +116,7 @@ Rules:
 * Keep `og:title`, `twitter:title`, `og:description`, and `twitter:description`
   overrides in sync with `title` and `description` when they repeat them.
 * `docs/count.md` and `docs/public/count.json` are generated and gitignored.
-  Edit the page frontmatter and JSON fields in `scripts/counter.sh`, since the
+  Edit the page frontmatter and JSON fields in `scripts/app-entries.mjs`, since the
   build regenerates both files.
 
 ## 6. Site and Code Changes
@@ -153,8 +153,7 @@ bun run docs:build
 For app and module entries, also run:
 
 ```bash
-bun run index:build  # regenerates the app index and reports entry format, ordering and badge problems
-bash scripts/counter.sh
+bun run index:build  # regenerates the app index, count page and reports entry format, ordering and badge problems
 ```
 
 CI runs `check:links` and `docs:build` as blocking steps and `index:build` as
