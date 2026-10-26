@@ -100,7 +100,11 @@ Exploits like **GhostLock (CVE-2026-43499)** - a 15-year-old Linux kernel bug - 
 - **[⭐ Duck Detector Fork](https://github.com/rrr333nnn333/Duck-Detector-Refactoring)** - Duck Detector fork with additional features and improvements. `FOSS`
 - **[Android-Device-Trust](https://github.com/reveny/Android-Device-Trust)** - Android device attestation and fingerprinting tool. `FOSS`
 - **[Chunqiu Detector](https://github.com/mingzun09/Chunqiu-Detector-Problem-solution)** - Solutions, scripts, and modules for bypassing and troubleshooting Chunqiu Detector checks on rooted Android devices. `FOSS`
+- **[Demo](https://github.com/JingMatrix/Demo)** - Asks whether a library is injected into its address space, mounts are missing from its mount table, or a dirty SELinux policy is present; the detection target paired with NeoZygisk. `FOSS`
+- **[DirtySepolicy](https://github.com/LSPosed/DirtySepolicy)** - Queries the device SELinux policy from an app zygote and reports the dirty rules injected by userspace root and hooking solutions. `FOSS`
 - **[Duck Detector](https://github.com/eltavine/Duck-Detector-Refactoring)** - Android environment integrity inspection tool for root, hook, bootloader, SELinux, virtualization, and attestation signals. `FOSS`
+- **[FOSS Root Checker](https://github.com/Chill-Astro/FOSS-Root-Checker)** - Root checker that shows the checks it runs, with an offline build that leaves out the update checker. `FOSS`
+- **[GarudaDefender](https://github.com/kikyps/GarudaDefender)** - RASP sample that reports root, hooking, emulator, debugger and memory-patch signals, shipped as an APK to test the framework's detection. `Proprietary`
 - **[Key Attestation](https://github.com/VisionR1/KeyAttestation)** - Generates, saves, parses and verifies Android key and ID attestation certificate chains for self-testing and diagnostics. `FOSS`
 - **[Kknd Root Detector](https://github.com/juanma0511/Kknd_Root_Detector)** - Deep root, hook framework, SELinux and system integrity detection combining native C++ and Kotlin checks. `FOSS`
 - **[MagiskDetection](https://github.com/apkunpacker/MagiskDetection)** - Collection of Some publicly Available POC Apps to Detect Root/Magisk presence. `Proprietary`
@@ -108,6 +112,7 @@ Exploits like **GhostLock (CVE-2026-43499)** - a 15-year-old Linux kernel bug - 
 - **[Play Integrity Alert](https://github.com/Xiddoc/PlayIntegrityAlert)** - Get notified when an app calls the Play Integrity API. `FOSS` `[LSP]`
 - **[Play Integrity API Checker](https://github.com/1nikolas/play-integrity-checker-app)** - This app shows info about your device integrity as reported by Google Play Services. If any of this fails could mean your device is rooted or tampered in a way. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck)
 - **[Securify](https://github.com/RabehX/Securify)** - Yet Another Root Checker and Play Integrity API Application. `FOSS`
+- **[TB Checker](https://play.google.com/store/apps/details?id=krypton.tbsafetychecker)** - Safety checker that reports root, hooking, Play Integrity and SafetyNet attestation results. `Proprietary`
 - **[ZygoteNextProbe](https://github.com/XiaoTong6666/ZygoteNextProbe)** - Research probe that checks whether Android 17's `zygote_next` native isolated services leak a global mount view - potentially exposing Magisk/Zygisk/LSPosed mounts to apps. `FOSS`
 
 ## Root Hiding & Play Integrity
