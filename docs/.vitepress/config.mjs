@@ -509,7 +509,7 @@ export default withPwa(defineConfig({
     ['link', { rel: 'robots', type: 'text/plain', href: '/robots.txt' }],
     ['link', { rel: 'sitemap', type: 'application/xml', href: '/sitemap.xml' }],
 
-    // web manifest 
+    // web manifest
     ['link', { rel: 'manifest', href: '/manifest.json' }],
 
     // --- SEO Meta Tags ---

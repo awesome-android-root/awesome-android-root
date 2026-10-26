@@ -1,4 +1,3 @@
-// https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
@@ -28,15 +27,11 @@ export default {
   },
 
   enhanceApp({ app }) {
-    try {
-      app.component('StoreLink', StoreLink)
-      app.component('LandingIcon', LandingIcon)
-      app.component('BrandIcon', BrandIcon)
-      app.component('home', Home)
-      app.component('CopyOrDownloadAsMarkdownButtons', CopyOrDownloadAsMarkdownButtons)
-    } catch (error) {
-      console.error('Failed to register components:', error)
-    }
+    app.component('StoreLink', StoreLink)
+    app.component('LandingIcon', LandingIcon)
+    app.component('BrandIcon', BrandIcon)
+    app.component('home', Home)
+    app.component('CopyOrDownloadAsMarkdownButtons', CopyOrDownloadAsMarkdownButtons)
 
     // Global error handler - only verbose in development
     app.config.errorHandler = (err, instance, info) => {
