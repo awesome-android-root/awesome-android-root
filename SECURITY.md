@@ -12,8 +12,8 @@ Security reports are primarily accepted for the latest version of the project.
 
 | Version | Supported |
 | ------- | --------- |
-| 5.x     | Yes       |
-| < 5.0    | No        |
+| 6.x     | Yes       |
+| < 6.0    | No        |
 
 ## Reporting a Vulnerability
 
