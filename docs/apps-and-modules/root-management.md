@@ -99,8 +99,6 @@ Exploits like **GhostLock (CVE-2026-43499)** - a 15-year-old Linux kernel bug - 
 - **[⭐ Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector)** - A tool for detecting root on android. `FOSS`
 - **[⭐ Duck Detector Fork](https://github.com/rrr333nnn333/Duck-Detector-Refactoring)** - Duck Detector fork with additional features and improvements. `FOSS`
 - **[Android-Device-Trust](https://github.com/reveny/Android-Device-Trust)** - Android device attestation and fingerprinting tool. `FOSS`
-- **[Applist Detector](https://github.com/Dr-TSNG/ApplistDetector)** - Reports installed apps and hidden packages that point to root or hooking frameworks, and doubles as a library for app-list checks. `FOSS`
-- **[Checker](https://github.com/FoedusProgramme/Checker)** - ROM sanity checker that dumps build, Widevine, connectivity and media properties and flags abnormalities such as software-only Widevine or an unlocked verified boot state. `FOSS`
 - **[Chunqiu Detector](https://github.com/mingzun09/Chunqiu-Detector-Problem-solution)** - Solutions, scripts, and modules for bypassing and troubleshooting Chunqiu Detector checks on rooted Android devices. `FOSS`
 - **[Demo](https://github.com/JingMatrix/Demo)** - Asks whether a library is injected into its address space, mounts are missing from its mount table, or a dirty SELinux policy is present; the detection target paired with NeoZygisk. `FOSS`
 - **[DirtySepolicy](https://github.com/LSPosed/DirtySepolicy)** - Queries the device SELinux policy from an app zygote and reports the dirty rules injected by userspace root and hooking solutions. `FOSS`
@@ -113,14 +111,9 @@ Exploits like **GhostLock (CVE-2026-43499)** - a 15-year-old Linux kernel bug - 
 - **[PIF Detector](https://github.com/IR0NBYTE/playIntegrityFixDetector)** - Native app designed to detect modifications, bypasses, or "fixes" applied to the Google Play Integrity API. `FOSS` `[M]` `[K]` `[A]`
 - **[Play Integrity Alert](https://github.com/Xiddoc/PlayIntegrityAlert)** - Get notified when an app calls the Play Integrity API. `FOSS` `[LSP]`
 - **[Play Integrity API Checker](https://github.com/1nikolas/play-integrity-checker-app)** - This app shows info about your device integrity as reported by Google Play Services. If any of this fails could mean your device is rooted or tampered in a way. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck)
-- **[RootBeerFresh](https://github.com/KimChangYoun/rootbeerFresh)** - RootBeer sample with added Magisk checks such as Unix domain socket and file stat detection, also usable as a library. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.kimchangyoun.rootbeerFresh.sample)
-- **[Ruru](https://github.com/byxiaorun/Ruru)** - Reports suspicious apps and environment changes such as root, hooking frameworks, developer options, ADB and VPN. `FOSS`
 - **[Securify](https://github.com/RabehX/Securify)** - Yet Another Root Checker and Play Integrity API Application. `FOSS`
 - **[TB Checker](https://play.google.com/store/apps/details?id=krypton.tbsafetychecker)** - Safety checker that reports root, hooking, Play Integrity and SafetyNet attestation results. `Proprietary`
 - **[ZygoteNextProbe](https://github.com/XiaoTong6666/ZygoteNextProbe)** - Research probe that checks whether Android 17's `zygote_next` native isolated services leak a global mount view - potentially exposing Magisk/Zygisk/LSPosed mounts to apps. `FOSS`
-
-> [!TIP]
-> [rushiranpise/detection](https://github.com/rushiranpise/detection) keeps a wider index of detection apps, including releases published only on Telegram such as Momo, Native Test and Disclosure.
 
 ## Root Hiding & Play Integrity
 
