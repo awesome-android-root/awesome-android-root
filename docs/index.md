@@ -2,7 +2,7 @@
 layout: home
 title: Android Root Apps, Modules & Guides | Awesome Android Root
 titleTemplate: Awesome Android Root
-description: "Browse 750++ curated Android apps and root modules across Magisk, KernelSU, APatch and LSPosed, plus rooting guides and troubleshooting."
+description: "Browse 750+ curated Android apps and root modules across Magisk, KernelSU, APatch and LSPosed, plus rooting guides and troubleshooting."
 head:
   - - meta
     - name: robots
@@ -38,7 +38,7 @@ head:
 hero:
   name: "Awesome Android Root"
   text: "Android Root Apps, Modules & Rooting Guides"
-  tagline: "Explore 750++ Android apps and root modules, step-by-step rooting guides, and practical troubleshooting for Android power users."
+  tagline: "Explore 750+ Android apps and root modules, step-by-step rooting guides, and practical troubleshooting for Android power users."
   image:
     light: /images/logo.svg
     dark: /images/logo_dark.svg
@@ -173,7 +173,7 @@ hero:
     <h3>Already Rooted</h3>
     <p>Maximize your rooted device's potential</p>
     <ul>
-      <li>750++ apps and modules</li>
+      <li>750+ apps and modules</li>
       <li>Advanced modules</li>
       <li>Custom ROMs</li>
     </ul>

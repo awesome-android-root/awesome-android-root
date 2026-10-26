@@ -107,7 +107,7 @@ Magisk is a systemless root solution that provides superuser access without modi
 
 **Choose Magisk if:**
 - You want easiest installation
-- You need extensive modules (browse the [750++ app and module collection](../apps-and-modules/))
+- You need extensive modules (browse the [750+ app and module collection](../apps-and-modules/))
 - You want maximum compatibility
 - You're new to rooting
 
