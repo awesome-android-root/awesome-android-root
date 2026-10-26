@@ -532,7 +532,7 @@ Start with [Play Integrity and Banking Apps](./troubleshooting.md#play-integrity
    - [Backup apps](./apps-and-modules/backup#backup-restore) - Complete backups
    - [File managers](./apps-and-modules/file-management#file-managers) - Root-enabled file access
    - [Firewall tools](./apps-and-modules/security#firewalls-filtering) - Network control
-   - [Browse the 750++ app and module collection](./apps-and-modules/) for more
+   - [Browse the 750+ app and module collection](./apps-and-modules/) for more
 
 **Next Steps:**
 
