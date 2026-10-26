@@ -23,6 +23,9 @@
  *   p  category page, without the .md extension
  *   s  section heading inside that page
  *
+ * It also regenerates the count page and JSON consumed by shields.io badges:
+ * docs/count.md and docs/public/count.json.
+ *
  * Exit code never reflects the lint result; run the script to regenerate the
  * index whenever an entry changes.
  */
@@ -32,6 +35,8 @@ import { join, relative, resolve } from 'node:path'
 const ROOT = resolve(import.meta.dirname, '..')
 const DIR = join(ROOT, 'docs', 'apps-and-modules')
 const OUT_FILE = join(ROOT, 'docs', 'public', 'app-index.json')
+const COUNT_PAGE = join(ROOT, 'docs', 'count.md')
+const COUNT_JSON = join(ROOT, 'docs', 'public', 'count.json')
 
 // ---- Parsing (shared by the lint and the index builder) ---------------------
 
@@ -235,7 +240,17 @@ function lint() {
   console.log(`\n${errors.length} error(s), ${warnings.length} warning(s).`)
 }
 
-// ---- Index ------------------------------------------------------------------
+// ---- Index and counts --------------------------------------------------------
+
+const countStats = {
+  total: 0,
+  rootApps: 0,
+  magisk: 0,
+  kernelsu: 0,
+  apatch: 0,
+  lsposed: 0
+}
+const FRAMEWORK_TAGS = ['[M]', '[K]', '[A]', '[LSP]']
 
 function buildIndex() {
   const files = readdirSync(DIR).filter((file) => file.endsWith('.md')).sort()
@@ -255,6 +270,16 @@ function buildIndex() {
         s: record.indexSection
       })
       pages[page] = (pages[page] ?? 0) + 1
+
+      if (page === 'index') continue
+      const tags = record.tags
+      const frameworks = FRAMEWORK_TAGS.filter((tag) => tags.includes(tag))
+      countStats.total++
+      if (frameworks.length === 0) countStats.rootApps++
+      if (tags.includes('[M]')) countStats.magisk++
+      if (tags.includes('[K]')) countStats.kernelsu++
+      if (tags.includes('[A]')) countStats.apatch++
+      if (tags.includes('[LSP]')) countStats.lsposed++
     }
   }
 
@@ -274,8 +299,48 @@ function writeIndex(payload) {
   console.log(`Written to ${OUT_FILE}`)
 }
 
+function writeCounts() {
+  const table = [
+    '---',
+    'title: Apps and Modules Count',
+    'description: Current counts of Android root apps and modules in this documentation, broken down by category and root framework, updated on every build.',
+    'search: false',
+    '---',
+    '',
+    '# Apps and Modules Count',
+    '',
+    'Updated automatically on each documentation build. Counts are based on entries in `docs/apps-and-modules/`.',
+    '',
+    '| Category | Count |',
+    '| --- | ---: |',
+    `| Total entries | ${countStats.total} |`,
+    `| Root apps | ${countStats.rootApps} |`,
+    `| Magisk modules | ${countStats.magisk} |`,
+    `| KernelSU modules | ${countStats.kernelsu} |`,
+    `| APatch modules | ${countStats.apatch} |`,
+    `| LSPosed modules | ${countStats.lsposed} |`,
+    '',
+    'Framework counts may overlap when an entry has multiple framework tags.',
+    '',
+    'The same counts are published as JSON at `count.json` for dynamic badges and other tooling.'
+  ].join('\n')
+  writeFileSync(COUNT_PAGE, `${table}\n`)
+
+  const json = {
+    total: countStats.total,
+    root_apps: countStats.rootApps,
+    magisk_modules: countStats.magisk,
+    kernelsu_modules: countStats.kernelsu,
+    apatch_modules: countStats.apatch,
+    lsposed_modules: countStats.lsposed
+  }
+  writeFileSync(COUNT_JSON, `${JSON.stringify(json, null, 2)}\n`)
+  console.log(`Counts written to docs/count.md and docs/public/count.json`)
+}
+
 // ---- Main -------------------------------------------------------------------
 
 lint()
 
 writeIndex(buildIndex())
+writeCounts()

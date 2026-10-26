@@ -2,25 +2,6 @@
 
 This directory contains utility scripts used in the awesome-android-root project.
 
-## counter.sh
-
-Counts entries in the Apps & Modules category pages (`docs/apps-and-modules/*.md`), displays a categorized
-summary, and writes a rendered Markdown table to `docs/count.md` plus the same counts as JSON to
-`docs/public/count.json`. The documentation build runs this script before VitePress, publishing the table at
-`/count` and the JSON at `/count.json`.
-
-The JSON works with the shields.io dynamic JSON endpoint, for example:
-
-```markdown
-[![Apps & Modules](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fawesome-android-root.xyz%2Fcount.json&query=%24.total&label=apps%20%26%20modules&color=blue&logo=android&style=for-the-badge)](https://awesome-android-root.xyz/apps-and-modules/)
-```
-
-### Usage
-
-```bash
-cd scripts && bash counter.sh
-```
-
 ## optimize-assets.sh
 
 Optimizes the static assets in `docs/public`: the Open Graph cards in
@@ -55,6 +36,16 @@ link (`u`), every link on the line (`a`), the badges (`t`), the category page
 (`p`) and the section heading inside that page (`s`). Regenerate it whenever an
 entry is added, removed or relinked.
 
+The same run regenerates the count page and JSON consumed by shields.io
+badges: `docs/count.md` (published at `/count`) and `docs/public/count.json`
+(published at `/count.json`) with the total entry count, root apps and the
+Magisk/KernelSU/APatch/LSPosed module counts. The JSON works with the
+shields.io dynamic JSON endpoint, for example:
+
+```markdown
+[![Apps & Modules](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fawesome-android-root.xyz%2Fcount.json&query=%24.total&label=apps%20%26%20modules&color=blue&logo=android&style=for-the-badge)](https://awesome-android-root.xyz/apps-and-modules/)
+```
+
 Lint findings are printed but never change the exit code, so neither
 `docs:build`, which regenerates the index, nor CI, which runs `index:build`
 non-blocking, are ever blocked by them.
@@ -62,10 +53,10 @@ non-blocking, are ever blocked by them.
 ### Usage
 
 ```bash
-node scripts/app-entries.mjs   # lint + write docs/public/app-index.json
+node scripts/app-entries.mjs   # lint + write docs/public/app-index.json, docs/count.md and docs/public/count.json
 ```
 
-It is also exposed as `bun run index:build`.
+It is also exposed as `bun run index:build` and runs inside `docs:build`.
 
 ## check_links.py
 
