@@ -30,8 +30,10 @@ problem; it never rewrites or reorders entries. Checks cover the entry format,
 the `FOSS`/`Proprietary` and framework badges, store icon links, duplicate URLs,
 and the recommended-first then alphabetical ordering inside each section.
 
-The index pass exports every entry to `docs/public/app-index.json`, published
-at `/app-index.json`. Each record carries the entry name (`n`), its primary
+The index pass exports every entry to `docs/public/app-index.json`. The file is
+committed for other tools, which fetch it via raw.githubusercontent.com; CI drops
+it from the deploy bundle, so it is no longer published at `/app-index.json`.
+Each record carries the entry name (`n`), its primary
 link (`u`), every link on the line (`a`), the badges (`t`), the category page
 (`p`) and the section heading inside that page (`s`). Regenerate it whenever an
 entry is added, removed or relinked.
