@@ -7,8 +7,6 @@
 # already optimized files produces identical bytes.
 #
 # What it does:
-#   SVG               svgo (see scripts/svgo.config.mjs), ids and the inline
-#                     light/dark <style> block are preserved
 #   OG card PNGs      requantized to a 64 colour palette without dithering,
 #                     then losslessly recompressed with oxipng. The source
 #                     cards are flat graphics saved with heavy dithering, which
@@ -17,8 +15,9 @@
 #                     names are unchanged so Open Graph consumers keep working.
 #   Other PNGs        oxipng only (lossless, pixel identical)
 #
-# docs/public/images/og.png is deliberately skipped: it is the primary social
-# card and contains smooth gradients where requantization is visible.
+# docs/public/images/og.png is deliberately skipped in the palette step: it is
+# the primary social card and contains smooth gradients where requantization is
+# visible. SVGs are not touched - they are committed already optimized.
 #
 # Requirements: ImageMagick (`convert`) and Node.js (`npx`).
 
@@ -27,18 +26,11 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PUBLIC_DIR="$ROOT_DIR/docs/public"
 OXIPNG="npx --yes oxipng@1"
-SVGO="npx --yes svgo@3"
 
 command -v convert >/dev/null || { echo "ImageMagick 'convert' is required" >&2; exit 1; }
 command -v npx >/dev/null || { echo "npx (Node.js) is required" >&2; exit 1; }
 
 size() { stat -c%s "$1"; }
-
-echo "==> SVG"
-$SVGO --config "$ROOT_DIR/scripts/svgo.config.mjs" --quiet \
-  "$PUBLIC_DIR/favicon.svg" -o "$PUBLIC_DIR/favicon.svg"
-$SVGO --config "$ROOT_DIR/scripts/svgo.config.mjs" --quiet \
-  -f "$PUBLIC_DIR/images" -o "$PUBLIC_DIR/images"
 
 echo "==> Open Graph cards (docs/public/images/og)"
 for file in "$PUBLIC_DIR"/images/og/*.png; do
