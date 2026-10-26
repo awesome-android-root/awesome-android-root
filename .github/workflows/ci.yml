@@ -53,6 +53,9 @@ jobs:
       - name: Build documentation
         run: bun run docs:build
 
+      - name: Drop app-index.json from the deploy bundle
+        run: rm -f docs/.vitepress/dist/app-index.json
+
       - name: Deploy to Cloudflare Pages
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: cloudflare/wrangler-action@v4

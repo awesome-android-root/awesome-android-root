@@ -11,7 +11,8 @@
  *
  * The index exports every entry to docs/public/app-index.json, with the
  * category page, its section heading and every URL found on the entry line.
- * The file is committed so other tools can read it without building the site:
+ * The file is committed for other tools to fetch via raw.githubusercontent.com;
+ * it is never served from the deployed site:
  *
  *   https://raw.githubusercontent.com/awesome-android-root/awesome-android-root/main/docs/public/app-index.json
  *
