@@ -240,18 +240,6 @@ html.dark {
   --vp-home-hero-image-background-image: none;
 }
 
-@media (min-width: 640px) {
-  :root {
-    --vp-home-hero-image-filter: blur(56px);
-  }
-}
-
-@media (min-width: 960px) {
-  :root {
-    --vp-home-hero-image-filter: blur(68px);
-  }
-}
-
 /**
  * Component: Custom Block
  * -------------------------------------------------------------------------- */
@@ -325,6 +313,8 @@ html.dark {
   box-shadow: 0 10px 30px -18px rgba(0, 0, 0, 0.4);
 }
 
+/* Icon tiles stay neutral so green remains the interaction accent: tiles only
+   turn green on hover/focus, matching the CTA and link treatment. */
 .landing-features .feature-icon {
   display: flex;
   justify-content: center;
@@ -333,8 +323,8 @@ html.dark {
   height: 3rem;
   margin-bottom: 1.25rem;
   border-radius: 12px;
-  background: var(--vp-c-brand-soft);
-  color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg-mute);
+  color: var(--vp-c-text-2);
   transition: background-color 0.25s, color 0.25s;
 }
 
@@ -383,6 +373,17 @@ html.dark .VPHome {
 
 .VPHome .vp-doc h2 {
   border-top-color: color-mix(in srgb, var(--vp-c-brand-1) 45%, var(--vp-c-divider));
+}
+
+/* Desktop-only heading refinement: the mobile clamp rules below own small
+   screens, this owns spacing, weight and tracking above 48rem. */
+@media (min-width: 48rem) {
+  .VPHome .vp-doc h2 {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
 }
 
 
@@ -500,8 +501,8 @@ img {
   width: 3rem;
   height: 3rem;
   border-radius: 12px;
-  background: var(--vp-c-brand-soft);
-  color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg-mute);
+  color: var(--vp-c-text-2);
   line-height: 1;
   margin-bottom: 1.25rem;
   transition: background-color 0.25s, color 0.25s;
@@ -792,7 +793,8 @@ img {
   .journey-card,
   .community-card,
   .landing-features .feature-card,
-  .journey-btn {
+  .journey-btn,
+  .vp-doc details summary::after {
     transition: none;
   }
 }
@@ -840,7 +842,6 @@ img {
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
   transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
   z-index: 9998;
-  backdrop-filter: blur(4px);
 }
 
 .back-to-top:hover {
@@ -857,7 +858,7 @@ img {
 }
 
 @media (max-width: 640px) {
-  .back-to-top { bottom: 1.25rem; right: 1rem; width: 40px; height: 40px; }
+  .back-to-top { bottom: 1.25rem; right: 1rem; width: 44px; height: 44px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -883,6 +884,83 @@ img {
 .vp-doc li code {
   border: none !important;
   box-shadow: none !important;
+}
+
+/* Collapsible blocks: guides use raw <details>, which VitePress leaves at
+   browser default. Match the card system here: bordered surface, a real
+   44px tap target, chevron state indicator, keyboard-operable header. */
+.vp-doc details {
+  margin: 1.25rem 0;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-alt);
+  overflow: hidden;
+}
+
+.vp-doc details summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  min-height: 44px;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  cursor: pointer;
+  list-style: none;
+  transition: color 0.2s ease;
+}
+
+.vp-doc details summary::-webkit-details-marker {
+  display: none;
+}
+
+.vp-doc details summary::after {
+  content: '';
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin-left: auto;
+  background: currentColor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M5.22 7.47a.75.75 0 011.06 0L10 11.19l3.72-3.72a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.22 8.53a.75.75 0 010-1.06z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  mask-size: contain;
+  transition: transform 0.2s ease;
+}
+
+.vp-doc details summary:hover {
+  color: var(--vp-c-brand-1);
+}
+
+.vp-doc details summary:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: -2px;
+}
+
+.vp-doc details[open] summary {
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+/* Inner content keeps the resolver margin override but gains horizontal
+   padding; the sibling of summary gets its top spacing back. */
+.vp-doc details[open] > *:not(summary) {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.vp-doc details[open] > summary + * {
+  margin-top: 1rem;
+}
+
+/* Command blocks are the riskiest content on the site; the hairline marks
+   the copyable boundary of each block against light page backgrounds. */
+.vp-doc div[class*='language-'] {
+  border: 1px solid var(--vp-c-divider);
 }
 
 /* Inline SVG icons */
