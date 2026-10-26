@@ -22,25 +22,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v7
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
-        with:
-          bun-version-file: .bun-version
-
-      - name: Cache dependencies
-        uses: actions/cache@v6
-        with:
-          path: |
-            ~/.bun/install/cache
-            node_modules
-          key: bun-${{ runner.os }}-${{ hashFiles('package.json') }}
-          restore-keys: bun-${{ runner.os }}-
-
-      - name: Install dependencies
-        run: bun install
-
+      # Pure stdlib Python, no Node dependencies needed.
       - name: Check internal links
-        run: bun run check:links
+        run: python3 scripts/check_links.py
 
   lint:
     name: Lint entries
