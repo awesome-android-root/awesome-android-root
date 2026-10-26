@@ -66,17 +66,13 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      # Reports entry problems but does not block the PR. The outstanding
-      # issues are pre-existing curation debt. Flip to blocking once cleaned.
-      - name: Lint entries
+      # Regenerates the app index and reports entry lint problems, and does
+      # not block the PR (the build regenerates the index anyway, so staleness
+      # cannot leak into the site). The outstanding lint issues are pre-existing
+      # curation debt. Flip to blocking once cleaned.
+      - name: Lint entries and build app index
         continue-on-error: true
-        run: bun run lint:entries
-
-      # The committed URL index must match the current entries, otherwise
-      # external tools reading /app-index.json fall behind the list.
-      - name: Check app index
-        continue-on-error: true
-        run: bun run index:check
+        run: bun run index:build
 
   build:
     name: Build documentation

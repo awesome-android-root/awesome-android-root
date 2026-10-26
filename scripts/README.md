@@ -23,12 +23,12 @@ cd scripts && bash counter.sh
 
 ## optimize-assets.sh
 
-Optimizes the static assets in `docs/public`: SVGs through SVGO (using
-`scripts/svgo.config.mjs`), the Open Graph cards in `docs/public/images/og/`
-through a 64-colour requantization plus lossless `oxipng`, and the remaining
-PNGs through `oxipng` only. File names, formats and dimensions never change, so
-Open Graph and favicon consumers keep working. Run it after adding or replacing
-an image, then commit the result; it is idempotent.
+Optimizes the static assets in `docs/public`: the Open Graph cards in
+`docs/public/images/og/` through a 64-colour requantization plus lossless
+`oxipng`, and the remaining PNGs through `oxipng` only. SVGs are not touched -
+they are committed already optimized. File names, formats and dimensions never
+change, so Open Graph and favicon consumers keep working. Run it after adding or
+replacing an image, then commit the result; it is idempotent.
 
 Requires ImageMagick (`convert`) and Node.js (`npx`).
 
@@ -38,22 +38,34 @@ Requires ImageMagick (`convert`) and Node.js (`npx`).
 bash scripts/optimize-assets.sh
 ```
 
-## build-app-index.mjs
+## app-entries.mjs
 
-Exports every entry of the Apps & Modules category pages to `docs/public/app-index.json`, published
-at `/app-index.json`. Each record carries the entry name (`n`), its primary link (`u`), every link on
-the line (`a`), the badges (`t`), the category page (`p`) and the section heading inside that page
-(`s`).
+Lints and indexes the entries of the Apps & Modules category pages
+(`docs/apps-and-modules/*.md`) with a single parse pass.
 
-Regenerate it whenever an entry is added, removed or relinked; CI runs `index:check` as a
-non-blocking step to catch a stale index.
+The lint pass checks each line against the entry format documented in
+`docs/contributing.md` and the PR template and reports every `file:line`
+problem; it never rewrites or reorders entries. Checks cover the entry format,
+the `FOSS`/`Proprietary` and framework badges, store icon links, duplicate URLs,
+and the recommended-first then alphabetical ordering inside each section.
+
+The index pass exports every entry to `docs/public/app-index.json`, published
+at `/app-index.json`. Each record carries the entry name (`n`), its primary
+link (`u`), every link on the line (`a`), the badges (`t`), the category page
+(`p`) and the section heading inside that page (`s`). Regenerate it whenever an
+entry is added, removed or relinked.
+
+Lint findings are printed but never change the exit code, so neither
+`docs:build`, which regenerates the index, nor CI, which runs `index:build`
+non-blocking, are ever blocked by them.
 
 ### Usage
 
 ```bash
-node scripts/build-app-index.mjs           # write docs/public/app-index.json
-node scripts/build-app-index.mjs --check   # fail when the committed file is stale
+node scripts/app-entries.mjs   # lint + write docs/public/app-index.json
 ```
+
+It is also exposed as `bun run index:build`.
 
 ## check_links.py
 

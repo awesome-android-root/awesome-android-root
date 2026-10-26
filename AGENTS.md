@@ -153,11 +153,11 @@ bun run docs:build
 For app and module entries, also run:
 
 ```bash
-bun run lint:entries # reports entry format, ordering and badge problems
+bun run index:build  # regenerates the app index and reports entry format, ordering and badge problems
 bash scripts/counter.sh
 ```
 
-CI runs `check:links` and `docs:build` as blocking steps and `lint:entries` as
+CI runs `check:links` and `docs:build` as blocking steps and `index:build` as
 non-blocking. Keep lint clean even though CI does not enforce it. The build
 needs full git history because of `lastUpdated`.
 
