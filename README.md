@@ -28,6 +28,8 @@ Awesome Android Root is a community-curated knowledge base for **rooting Android
 - **Apps & Modules database** - 750+ curated apps and modules, including root apps and Magisk, KernelSU, APatch and LSPosed/Xposed modules, with source links, store badges and license information.
 - **Tutorials, FAQs & troubleshooting** - ad blocking, debloating, Play Integrity, bootloops and more.
 
+**New to rooting?** Start with the [Rooting Guides](docs/rooting-guides/index.md) and read the [FAQ](docs/faqs.md) before touching the bootloader.
+
 ## 🌐 Use the Website
 
 The full collection is **much easier to browse on the website**:
@@ -91,7 +93,7 @@ Browse them in [`docs/apps-and-modules/`](docs/apps-and-modules/):
 |:---|:---|:---|
 | **Website** | Browse apps, modules & guides | [awesome-android-root.xyz](https://awesome-android-root.xyz) |
 | **GitHub** | Source & discussions | [GitHub Repo](https://github.com/awesome-android-root/awesome-android-root) |
-| **Issues** | Issues reporting | [GitHub Issues](https://github.com/awesome-android-root/awesome-android-root/issues) |
+| **Issues** | Issue reporting | [GitHub Issues](https://github.com/awesome-android-root/awesome-android-root/issues) |
 | **X/Twitter** | Updates & news | [@awsm_and_root](https://x.com/awsm_and_root) |
 
 ## License & Disclaimer
@@ -100,7 +102,7 @@ Browse them in [`docs/apps-and-modules/`](docs/apps-and-modules/):
 - Read the [Legal Disclaimer](docs/legal-disclaimer.md) for details.
 
 > [!NOTE]
-> This project is maintained by `HUMANS` , AI is used for coding, formatting and proofreading and not for content creation or curation. 
+> This project is maintained by `HUMANS`, AI is used for coding, formatting and proofreading and not for content creation or curation. 
 
 > [!IMPORTANT]
 > **Educational reference only. Proceed at your own risk.**
