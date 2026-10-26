@@ -13,7 +13,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # --- Parallel, independent checks (item 1 from issue #188) ---
 
   links:
     name: Check internal links
@@ -22,7 +21,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v7
 
-      # Pure stdlib Python, no Node dependencies needed.
       - name: Check internal links
         run: python3 scripts/check_links.py
 
@@ -33,7 +31,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v7
         with:
-          # lastUpdated needs the full history
           fetch-depth: 0
 
       - name: Setup Bun
@@ -56,15 +53,14 @@ jobs:
       - name: Build documentation
         run: bun run docs:build
 
-      # Replaces the former standalone deploy job: direct upload from the same
-      # runner, no artifact round trip. PRs and non-main pushes skip it.
+
       - name: Deploy to Cloudflare Pages
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy docs/.vitepress/dist --project-name=awesome-android-root --branch=main
+          command: pages deploy docs/.vitepress/dist --project-name=awesome-android-root --branch=main --commit-dirty=true
 
   # Optional: per-PR preview deployments. Since the artifact is no longer
   # uploaded, a preview job would need to rebuild the site. Simplest variant:
