@@ -156,9 +156,10 @@ For app and module entries, also run:
 bun run index:build  # regenerates the app index, count page and reports entry format, ordering and badge problems
 ```
 
-CI runs `check:links` and `docs:build` as blocking steps and `index:build` as
-non-blocking. Keep lint clean even though CI does not enforce it. The build
-needs full git history because of `lastUpdated`.
+CI runs `check:links` and `docs:build` as blocking steps. `docs:build` runs
+`index:build` itself, so entry lint findings appear in the build job logs; keep
+lint clean even though nothing gates on it. The build needs full git history
+because of `lastUpdated`.
 
 For Cloudflare Pages, use `bun run docs:build` as the build command and
 `docs/.vitepress/dist` as the output directory. Pin the build environment using
