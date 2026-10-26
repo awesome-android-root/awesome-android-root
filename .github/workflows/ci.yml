@@ -53,7 +53,6 @@ jobs:
       - name: Build documentation
         run: bun run docs:build
 
-
       - name: Deploy to Cloudflare Pages
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: cloudflare/wrangler-action@v4
