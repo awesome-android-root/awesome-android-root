@@ -56,46 +56,18 @@ jobs:
       - name: Build documentation
         run: bun run docs:build
 
-      - name: Upload built site
-        uses: actions/upload-artifact@v7
-        with:
-          name: site-dist
-          path: docs/.vitepress/dist
-          retention-days: 1
-
-  # --- Deploy the CI-built site to Cloudflare Pages (Direct Upload) ---
-
-  deploy:
-    name: Deploy to Cloudflare Pages
-    needs: build
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download built site
-        uses: actions/download-artifact@v8
-        with:
-          name: site-dist
-          path: dist
-
+      # Replaces the former standalone deploy job: direct upload from the same
+      # runner, no artifact round trip. PRs and non-main pushes skip it.
       - name: Deploy to Cloudflare Pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=awesome-android-root --branch=main
+          command: pages deploy docs/.vitepress/dist --project-name=awesome-android-root --branch=main
 
-  # Optional: per-PR preview deployments. Uncomment to enable.
-  # deploy-preview:
-  #   needs: build
-  #   if: github.event_name == 'pull_request'
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/download-artifact@v8
-  #       with:
-  #         name: site-dist
-  #         path: dist
-  #     - uses: cloudflare/wrangler-action@v4
-  #       with:
-  #         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-  #         accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-  #         command: pages deploy dist --project-name=awesome-android-root --branch=pr-${{ github.event.pull_request.number }}
+  # Optional: per-PR preview deployments. Since the artifact is no longer
+  # uploaded, a preview job would need to rebuild the site. Simplest variant:
+  # copy the two steps above into a deploy-preview job that runs on
+  # pull_request with a --branch=pr-${{ github.event.pull_request.number }}
+  # guard.
