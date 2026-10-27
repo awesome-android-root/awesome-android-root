@@ -173,6 +173,12 @@ html.dark {
 }
 
 @media (min-width: 48rem) {
+  .theme-toggle {
+    /* divider sits centered in the left gap: 0.5rem before it, 0.5rem after;
+       matches the 0.5rem gap to the social links on the right */
+    margin-inline: 1rem 0.5rem;
+  }
+
   .theme-toggle::before {
     content: '';
     position: absolute;
@@ -886,9 +892,6 @@ img {
   box-shadow: none !important;
 }
 
-/* Collapsible blocks: guides use raw <details>, which VitePress leaves at
-   browser default. Match the card system here: bordered surface, a real
-   44px tap target, chevron state indicator, keyboard-operable header. */
 .vp-doc details {
   margin: 1.25rem 0;
   border: 1px solid var(--vp-c-divider);
