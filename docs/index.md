@@ -34,6 +34,16 @@ head:
   - - link
     - rel: prefetch
       href: "/apps-and-modules/"
+  - - link
+    - rel: preload
+      as: image
+      href: "/images/logo.svg"
+      fetchpriority: high
+  - - link
+    - rel: preload
+      as: image
+      href: "/images/logo_dark.svg"
+      fetchpriority: high
 
 hero:
   name: "Awesome Android Root"
