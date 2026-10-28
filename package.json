@@ -1,7 +1,7 @@
 {
   "name": "awesome-android-root",
   "version": "6.1.0",
-  "description": "A curated collection of 750+ Android root apps, Magisk, KernelSU, APatch and LSPosed modules, with step-by-step rooting guides.",
+  "description": "A curated collection of 770+ Android root apps, Magisk, KernelSU, APatch and LSPosed modules, with step-by-step rooting guides.",
   "private": true,
   "license": "MIT",
   "packageManager": "bun@1.4.4",

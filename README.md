@@ -10,7 +10,7 @@
 
 **🛡️ Community-curated Android rooting knowledge base**
 
-<sub>750+ root apps, Magisk / KernelSU / APatch / LSPosed (Xposed) modules, and step-by-step rooting guides.</sub>
+<sub>770+ root apps, Magisk / KernelSU / APatch / LSPosed (Xposed) modules, and step-by-step rooting guides.</sub>
 
 [![Website](https://img.shields.io/badge/Website-awesome--android--root.xyz%E2%86%97-blue?style=for-the-badge&logo=googlechrome&logoColor=white)](https://awesome-android-root.xyz/)
 
@@ -25,7 +25,7 @@
 Awesome Android Root is a community-curated knowledge base for **rooting Android devices and getting the most out of root access**:
 
 - **Rooting guides** - Magisk, KernelSU, APatch, LSPosed, bootloader unlocking, and device-specific walkthroughs (Pixel, Samsung, Xiaomi, OnePlus, Nothing, Motorola).
-- **Apps & Modules database** - 750+ curated apps and modules with source links, store badges, and license information.
+- **Apps & Modules database** - 770+ curated apps and modules with source links, store badges, and license information.
 - **Tutorials, FAQs & troubleshooting** - ad blocking, debloating, Play Integrity, bootloop recovery, and more.
 
 Every entry links to its primary source (GitHub, F-Droid, or the project site) with license and framework badges, so you can verify a tool before installing it.

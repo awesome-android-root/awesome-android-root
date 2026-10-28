@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Best Root Apps & Modules
-description: Browse 750+ curated Android root apps and modules, including Magisk, KernelSU, APatch and LSPosed modules, organized by use case with source links.
+description: Browse 770+ curated Android root apps and modules, including Magisk, KernelSU, APatch and LSPosed modules, organized by use case with source links.
 head:
   - - link
     - rel: alternate
@@ -22,13 +22,13 @@ head:
       content: website
   - - meta
     - property: og:description
-      content: Browse 750+ curated Android apps and modules, including root apps and Magisk, KernelSU, APatch and LSPosed modules, organized by use case, framework and source.
+      content: Browse 770+ curated Android apps and modules, including root apps and Magisk, KernelSU, APatch and LSPosed modules, organized by use case, framework and source.
   - - meta
     - property: og:image:secure_url
       content: https://awesome-android-root.xyz/images/og.png
   - - meta
     - property: og:image:alt
-      content: Best Android Root Apps & Modules - 750+ curated tools
+      content: Best Android Root Apps & Modules - 770+ curated tools
   - - meta
     - property: og:image:width
       content: '1200'
@@ -40,7 +40,7 @@ head:
       content: image/png
   - - meta
     - name: twitter:description
-      content: Browse 750+ curated Android apps and modules organized by use case and root framework.
+      content: Browse 770+ curated Android apps and modules organized by use case and root framework.
   - - meta
     - name: robots
       content: index, follow, max-image-preview:large
@@ -56,7 +56,7 @@ head:
 
 # Best Android Root Apps & Modules
 
-<p class="apps-lede">Explore 750+ Android apps and modules, including root tools and framework-specific modules. Browse by task, then check compatibility, license and official source before installing.</p>
+<p class="apps-lede">Explore 770+ Android apps and modules, including root tools and framework-specific modules. Browse by task, then check compatibility, license and official source before installing.</p>
 
 <div class="quick-nav">
 
