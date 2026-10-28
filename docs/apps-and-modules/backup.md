@@ -23,7 +23,7 @@ unlocking - always.
 - **[⭐ Swift Backup](https://play.google.com/store/apps/details?id=org.swiftapps.swiftbackup)** - Modern backup solution with cloud support. `Proprietary`
 - **[AppSnapshoter](https://github.com/TIIEHenry/AppSnapshoter/blob/main/README_EN.md)** - Packages an app's APK, data directories, OBB, media files, etc. into compressed snapshots for backup and restore. `FOSS`
 - **[DataBackup](https://github.com/XayahSuSuSu/Android-DataBackup)** - DataBackup for Android 7.0+. `FOSS` | [🌱](https://f-droid.org/zh_Hans/packages/com.xayah.databackup.foss/)
-- **[DiskDigger](https://play.google.com/store/apps/details?id=com.defianttech.diskdigger)** - A powerful data recovery tool for Android devices. `Proprietary`
+- **[DiskDigger](https://play.google.com/store/apps/details?id=com.defianttech.diskdigger)** - Recovers data on Android devices. `Proprietary`
 - **[Dumpster: Photo/Video Recovery](https://play.google.com/store/apps/details?id=com.baloota.dumpster)** - You can recover deleted videos, restore photos, undelete recently deleted apps, and other files. `Proprietary`
-- **[Neo Backup](https://github.com/NeoApplications/Neo-Backup)** - Powerful open-source backup solution. `FOSS` | [🌱](https://f-droid.org/packages/com.machiav3lli.backup/)
+- **[Neo Backup](https://github.com/NeoApplications/Neo-Backup)** - Backs up and restores apps. `FOSS` | [🌱](https://f-droid.org/packages/com.machiav3lli.backup/)
 - **[Restoid](https://github.com/hddq/restoid)** - modern, root-based Android app backup tool powered by restic. `FOSS`

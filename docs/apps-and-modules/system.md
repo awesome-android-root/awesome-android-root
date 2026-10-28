@@ -29,7 +29,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[⭐ Droid-ify](https://github.com/Droid-ify/client)** - F-Droid client with Material UI and auto updating apps using root. `FOSS` | [🌱](https://f-droid.org/packages/com.looker.droidify)
 - **[⭐ Hail](https://github.com/aistra0528/Hail)** - Disable / Hide / Suspend / Uninstall Android apps. `FOSS` | [🌱](https://f-droid.org/packages/com.aistra.hail/)
 - **[⭐ InstallerX-Revived](https://github.com/wxxsfxyzm/InstallerX-Revived)** - A modern and functional Android app installer. `FOSS` `[LSP]`
-- **[⭐ Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Zygisk module to detach installed apps from Play Store, hooking binder. `FOSS` `[M]` `[K]`
+- **[⭐ Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Detaches installed apps from the Play Store by hooking Binder. `FOSS` `[M]` `[K]`
 - **[AlterInstaller](https://github.com/chenxiaolong/AlterInstaller)** - Spoof Android package manager installer fields to bypass installation restrictions. `FOSS` `[M]` `[K]`
 - **[App Manager](https://play.google.com/store/apps/details?id=com.lb.app_manager)** - A feature rich app manager with batch operation support. `Proprietary`
 - **[AppControl-X](https://github.com/risunCode/AppControl-X)** - Freeze, force stop, clear data and uninstall apps, plus CPU, RAM, storage and battery monitoring, using root or Shizuku. `FOSS`
@@ -45,7 +45,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[InxLocker](https://github.com/Chimioo/InxLocker)** - Intercepts/forwards Android system application installation and uninstallation requests, redirecting them to your specified installer app. `FOSS` `[LSP]`
 - **[Let Me Downgrade](https://github.com/DavidBerdik/Let-Me-Downgrade)** - Add support for downgrading apps on Android 12 through 15 QPR1. `FOSS` `[LSP]` | [🌱](https://f-droid.org/packages/com.berdik.letmedowngrade/) | [▶️](https://play.google.com/store/apps/details?id=com.berdik.letmedowngrade)
 - **[Neo Store](https://github.com/NeoApplications/Neo-Store)** - An F-Droid client with modern UI and an arsenal of extra features. `FOSS` | [🌱](https://f-droid.org/packages/com.machiav3lli.fdroid)
-- **[Package Manager](https://github.com/SmartPack/PackageManager)** - A highly powerful app to manage both system and user apps installed on an Android device. `FOSS` | [🌱](https://f-droid.org/packages/com.smartpack.packagemanager) | [▶️](https://play.google.com/store/apps/details?id=com.smartpack.packagemanager)
+- **[Package Manager](https://github.com/SmartPack/PackageManager)** - Manages system and user apps installed on an Android device. `FOSS` | [🌱](https://f-droid.org/packages/com.smartpack.packagemanager) | [▶️](https://play.google.com/store/apps/details?id=com.smartpack.packagemanager)
 - **[PI (PackageInstaller)](https://github.com/SanmerApps/PI)** - Package installer that installs and updates APKs through a root or Shizuku installation service. `FOSS`
 - **[Play Store Self Update Blocker](https://github.com/himanshujjp/PlayStoreSelfUpdateBlocker)** - Prevents the Google Play Store from auto-updating itself. Useful for users trying to maintain valid device attestation under the newer Play Integrity API rules. `FOSS` `[M]` `[K]` `[A]`
 - **[Play Version Spoofer](https://github.com/byemaxx/PlayVersionSpoofer)** - Prevents the Google Play Store from automatically updating itself. `FOSS` `[LSP]`
@@ -65,7 +65,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[Live Boot](https://play.google.com/store/apps/details?id=eu.chainfire.liveboot)** - Get a Linux-like live boot screen on Android. `Proprietary`
 - **[Live Boot Module](https://github.com/symbuzzer/livebootmodule)** - Enables unix-style (verbose) boot animation for Android devices. `FOSS` `[M]` `[K]` `[A]`
 - **[Samsung Boot Animation Module](https://github.com/John0n1/SMbootFX)** - Custom boot animations for Samsung devices via Magisk. `FOSS` `[M]`
-- **[video-to-bootanimation](https://github.com/Magisk-Modules-Alt-Repo/video-to-bootanimation)** - A Magisk Module Which Can Set Videos as Android Device BootAnimation. `FOSS` `[M]`
+- **[video-to-bootanimation](https://github.com/Magisk-Modules-Alt-Repo/video-to-bootanimation)** - Sets videos as Android boot animations. `FOSS` `[M]`
 - **[Yuki Boot Animation](https://github.com/OhMyDitzzy/Yuki-Bootanim)** - Installs custom boot animations from its WebUI, supporting standard bootanimation.zip and Samsung .qmg files. `FOSS` `[M]` `[K]` `[A]`
 
 ## Permissions & AppOps
@@ -82,7 +82,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 
 - **[Castro - system info](https://play.google.com/store/apps/details?id=com.itemstudio.castro)** - A huge collection of information about your device and a set of tools for monitoring its status. `Proprietary`
 - **[Device Info HW](https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw)** - A hardware and software information app for Android devices. `Proprietary`
-- **[Infamick Script](https://github.com/Infamousmick/Infamick-script/)** - A powerful system utility script that provides easy access to various system information and settings. `FOSS` `[M]` `[A]`
+- **[Infamick Script](https://github.com/Infamousmick/Infamick-script/)** - Provides access to system information and settings. `FOSS` `[M]` `[A]`
 - **[VD Google](https://github.com/VD171/VD-Google)** - Reads Google service state on-device with no network access: RCS provisioning and entitlement, Google Wallet and tap-to-pay attestation, DroidGuard and Play Protect certification, and the apps that recently requested Play Integrity. Ships as an APK and as a root-manager WebUI module; root required. `FOSS` `[M]` `[K]` `[A]`
 - **[VD Infos](https://github.com/VD171/VD-Infos/)** - Reads several of details and information to show you an example of what can be captured from your device in use.​ A.k.a VDInfos, VDInfo, VD Info. `FOSS`
 
@@ -95,7 +95,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[HyperOS Security Center](https://github.com/Mods-Center/HyperOS-Security-Center)** - Advanced app info tools, system app Wi-Fi management, removal of root/account restrictions etc. `Proprietary` `[M]` `[K]`
 - **[Legacy WebView Magisk](https://github.com/tangshui9527/legacy-webview-magisk)** - Build script that downloads an upstream AOSP Chromium prebuilt and produces a Magisk module replacing the system WebView on Android 5.1-7.1, where the RRO overlay and `webviewupdate` mechanisms used by Android 8+ modules do not exist. `FOSS` `[M]`
 - **[MiPushFramework](https://github.com/magisk317/MiPushFramework)** - Provides Xiaomi system-level push service as com.xiaomi.xmsf on non-MIUI devices with notification rewriting and HyperIsland support. `FOSS` `[LSP]` | [▶️](https://play.google.com/store/apps/details?id=io.github.magisk317.mipush)
-- **[Multi Userui Enabler](https://github.com/InsertX2k/multiuseruienabler)** - Magisk module that tries to enable Multi-User UI. `FOSS` `[M]`
+- **[Multi Userui Enabler](https://github.com/InsertX2k/multiuseruienabler)** - Attempts to enable the multi-user interface. `FOSS` `[M]`
 - **[Noogle Magisk](https://github.com/SelfRef/noogle-magisk)** - Magisk modules for removing/replacing Google applications on stock Android 11-15. `FOSS` `[M]`
 - **[Secure Element Access](https://github.com/jqssun/android-se-access)** - Enable access to secure element for trusted apps. `FOSS`
 - **[TWRP A/B Retention Script](https://github.com/Magisk-Modules-Repo/twrp-keep)** - Keep TWRP installed after an A/B OTA. `FOSS` `[M]`
@@ -111,7 +111,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 <br>
 </details>
 
-- **[Android VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer)** - A Magisk/KernelSU/Apatch module to fix VBMeta detections on Android. `FOSS` `[M]` `[K]` `[A]`
+- **[Android VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer)** - Addresses VBMeta detection on Android. `FOSS` `[M]` `[K]` `[A]`
 - **[VBMeta Disguiser](https://github.com/Astoritin/VBMetaDisguiser)** - Disguises the properties of vbmeta. `FOSS` `[M]` `[K]` `[A]`
 - **[VBMeta Tool](https://github.com/KOWX712/vbmeta_tool)** - Command-line tool that reads the device's vbmeta digest (`verifiedBootHash`) with root. `FOSS`
 
@@ -124,25 +124,25 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 
 ### AOSP (Android Open Source Project)
 
-- **[⭐ PixelXpert](https://github.com/siavash79/PixelXpert)** - A mixed Xposed+Magisk module, which is made to allow customizations that are not originally designed in AOSP. `FOSS` `[M]` `[LSP]`
-- **[PIXELIFY NEXT](https://github.com/BasGame1/Pixelify-Next)** - A Magisk Module which enables Pixel UI and some exclusive features. `FOSS` `[M]`
+- **[⭐ PixelXpert](https://github.com/siavash79/PixelXpert)** - Enables additional customizations on AOSP. `FOSS` `[M]` `[LSP]`
+- **[PIXELIFY NEXT](https://github.com/BasGame1/Pixelify-Next)** - Enables the Pixel UI and some Pixel-exclusive features. `FOSS` `[M]`
 - **[PixelUpdater](https://github.com/PixelUpdater/PixelUpdater)** - Pixel Updater is an app for installing Android A/B OTA updates from Google's OTA server. `FOSS` `[M]`
-- **[PixelXpert-Next](https://github.com/anirudhgupta109/PixelXpert-Next)** - Continuation of PixelXpert as a mixed Xposed+Magisk module for Google Pixel stock firmware on Android 17+. `FOSS` `[M]` `[LSP]`
+- **[PixelXpert-Next](https://github.com/anirudhgupta109/PixelXpert-Next)** - Continues PixelXpert customizations for Google Pixel stock firmware on Android 17+; uses both Xposed and Magisk. `FOSS` `[M]` `[LSP]`
 - **[SystemUI Tuner](https://github.com/zacharee/Tweaker?tab=readme-ov-file)** - View and modify hidden settings on Android devices. `FOSS` `[M]`
 
 ### ColorOS (Oppo)
 
-- **[AstraFlow](https://github.com/Xposed-Modules-Repo/com.astraflow.tool)** - LSPosed module for ColorOS 16 and realme UI 7 that enhances Fluid Cloud with live lyrics, resident capsules and status bar tweaks. `Proprietary` `[LSP]`
+- **[AstraFlow](https://github.com/Xposed-Modules-Repo/com.astraflow.tool)** - Enhances Fluid Cloud with live lyrics, resident capsules and status bar tweaks on ColorOS 16 and realme UI 7. `Proprietary` `[LSP]`
 - **[ColorOS Feature Enhance](https://github.com/ItosEO/ColorFeatureEnhance)** - Visually edit and managing ColorOS feature switches. `FOSS` `[LSP]`
-- **[ColorOS Mod](https://github.com/Xposed-Modules-Repo/com.rikumi.colorosmod)** - Comprehensive ColorOS experience enhancement module with desktop, control center and system interface tweaks. `FOSS` `[LSP]`
+- **[ColorOS Mod](https://github.com/Xposed-Modules-Repo/com.rikumi.colorosmod)** - Customizes the desktop, Control Center and system interface on ColorOS. `FOSS` `[LSP]`
 - **[FCMFix ColorOS](https://github.com/Artifical0/fcmfix-coloros)** - Restores Google FCM push delivery on Chinese ColorOS 16/17 by lifting the background restrictions that block Google services. `Proprietary` `[LSP]`
-- **[LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool/blob/main/README_EN.md)** - Extended functionality and optimization module for ColorOS. `Proprietary` `[LSP]`
+- **[LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool/blob/main/README_EN.md)** - Adds functionality and optimizations to ColorOS. `Proprietary` `[LSP]`
 - **[Miband-OPlusBridge](https://github.com/Xposed-Modules-Repo/io.github.miam1ku.mibandoplusbridge)** - Bridges Xiaomi bands paired over SPP into the ColorOS device space and OPPO Health, writing steps, heart rate and sleep there and forwarding notifications, calls and playback to the band. Requires LSPosed and root; Mi Band 11 verified. `FOSS` `[LSP]`
 - **[NeXtep](https://github.com/lujinxin/NeXtep)** - Adds a Smartisan OneStep-style side workspace to ColorOS 16/17 with a main window and three live task slots. `FOSS` `[LSP]`
 - **[ONextBox](https://github.com/MiToverG422/ONextBox)** - ColorOS optimization and extension toolbox powered by root and modern Xposed. `FOSS` `[LSP]`
-- **[OPCameraPro](https://github.com/Xposed-Modules-Repo/com.tlsu.opluscamerapro)** - ColorOS and realmeUI module providing various AI functions, enhancing cameras and other photo related tweaks. `Proprietary` `[LSP]`
+- **[OPCameraPro](https://github.com/Xposed-Modules-Repo/com.tlsu.opluscamerapro)** - Adds AI functions and camera and photo tweaks to ColorOS and realme UI. `Proprietary` `[LSP]`
 - **[Oplus Launcher Radius Optimization](https://github.com/Qjj7679/Oplus-Luncher-RadiusOptimization)** - Optimize the rounded corners of the recent tasks card on the ColorOS system desktop. `FOSS` `[LSP]`
-- **[OShin](https://github.com/suqi8/OShin/blob/master/README_EN.md)** - Auxiliary module deeply integrated with ColorOS, designed to enhance and optimize your operating system experience. `FOSS` `[LSP]`
+- **[OShin](https://github.com/suqi8/OShin/blob/master/README_EN.md)** - Adds customizations and optimizations to ColorOS. `FOSS` `[LSP]`
 
 ### Flyme (Meizu)
 
@@ -156,15 +156,15 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[ColorOS_Control_Center](https://github.com/Mods-Center/ColorOS_Control_Center)** - Replace HyperOS control panel with ColorOS-style quick settings, featuring customizable and squared tiles. `Proprietary`
 - **[CustoMIUIzer A14](https://github.com/thetvplus/customiuizer-a14)** - Kotlin rewrite of CustoMIUIzer for HyperOS 1 on Android 14, built on the libxposed API. `FOSS` `[LSP]`
 - **[Fingerprint Catalog](https://github.com/custombeta/fingerprint-cataloge)** - Allows you to create, upload, import, and apply your own fingerprint icons and animations on HyperOS. `Proprietary` `[LSP]`
-- **[FusionStatusBar](https://github.com/yudigaga/FusionStatusBar)** - LibXposed module for MIUI and HyperOS offering status bar fusion icons, dual-row layout, clock, weather and device telemetry, Control Center layout and material editing, and launcher gesture tweaks. Android 13+. `Proprietary` `[LSP]`
-- **[Hyper Helper](https://github.com/HowieHChen/XiaomiHelper/blob/master/README_EN-US.md)** - Lightweight customization module for HyperOS only. `FOSS` `[LSP]`
+- **[FusionStatusBar](https://github.com/yudigaga/FusionStatusBar)** - Customizes status bar icons, layout, clock, weather and device telemetry, Control Center layout and materials, and launcher gestures on MIUI and HyperOS. Android 13+. `Proprietary` `[LSP]`
+- **[Hyper Helper](https://github.com/HowieHChen/XiaomiHelper/blob/master/README_EN-US.md)** - Customizes HyperOS; developed on the China ROM for Xiaomi 15 Pro. `FOSS` `[LSP]`
 - **[Hyper Unlocked](https://github.com/ukriu/HyperUnlocked)** - Unlock all high-end features possible to be unlocked on low-end xiaomi devices. `FOSS` `[M]` `[A]`
-- **[HyperChanger](https://github.com/ColdP/HyperChanger)** - LSPosed module for HyperOS 4 that customizes the Control Center, System UI, lock screen and camera. `FOSS` `[LSP]`
-- **[HyperClipFix](https://github.com/Xposed-Modules-Repo/com.clipboardfix)** - LSPosed module that fixes HyperOS 3.0+ clipboard history access for third-party input methods and unlocks fullscreen optimizations. `Proprietary` `[LSP]`
+- **[HyperChanger](https://github.com/ColdP/HyperChanger)** - Customizes the Control Center, system UI, lock screen and camera on HyperOS 4. `FOSS` `[LSP]`
+- **[HyperClipFix](https://github.com/Xposed-Modules-Repo/com.clipboardfix)** - Fixes HyperOS 3.0+ clipboard history access for third-party input methods and unlocks fullscreen optimizations. `Proprietary` `[LSP]`
 - **[HyperDesktop Unlock](https://github.com/the-marox/HyperDesktopUnlock)** - Unlocks Android 17's native external-display desktop mode on Xiaomi HyperOS 4 devices with DisplayPort Alt Mode, adding Quick Settings tiles, desktop keyboard shortcuts and an optional phone touchpad. `FOSS` `[LSP]`
 - **[HyperOS 4 SmallWindow Input Filter](https://github.com/zilewang7/HyperOS4SmallWindowInputFilter)** - Restores the two-finger recents-drag small-window gesture on HyperOS 4 by loading an arm64 payload into the native HYOS `com.miui.home` process. Needs Zygisk Next 1.5.0+ and LSPosed 2.1.1+. `FOSS` `[LSP]`
 - **[HyperOSUnf*cker](https://github.com/Enki013/hyperosunfcker)** - Unlocks hidden system performance, display, memory, battery, and visual settings on Xiaomi/POCO/Redmi devices. `FOSS` `[LSP]`
-- **[HyperStar](https://github.com/YunZiA/HyperStar/blob/master/README_EN-US.md)** - An LSPosed module mainly designed to customize the Xiaomi HyperOS Control Center, along with some features. `FOSS` `[LSP]`
+- **[HyperStar](https://github.com/YunZiA/HyperStar/blob/master/README_EN-US.md)** - Customizes the Xiaomi HyperOS Control Center. `FOSS` `[LSP]`
 - **[Janus](https://modules.lsposed.org/module/org.pysh.janus/)** - Enhances Xiaomi rear screens with multitasking, app shortcuts, gestures, notification mirroring, and power-saving features. `Proprietary` `[LSP]`
 - **[MeowPower](https://github.com/Xposed-Modules-Repo/io.github.yuhj319.meowpower)** - Unlocks HyperOS Security Center controls for charging protection, power saving, background cleanup and network limits. `Proprietary` `[LSP]`
 - **[Pengeek](https://github.com/monwf/customiuizer)** - Customize your HyperOS to your liking. For HyperOS based on Android 14. `FOSS` `[LSP]`
@@ -177,30 +177,30 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 
 ### NothingOS
 
-- **[NothingTweaks](https://github.com/RevealedSoulEven/NothingTweaks)** - A customization module for Nothing OS based on Xposed framework. `FOSS` `[LSP]`
+- **[NothingTweaks](https://github.com/RevealedSoulEven/NothingTweaks)** - Customizes the status bar and other parts of Nothing OS. `FOSS` `[LSP]`
 
 ### One UI (Samsung)
 
 - **[⭐ KnoxPatch](https://github.com/salvogiangri/KnoxPatch)** - Get Samsung apps/features working again in your rooted Galaxy device. For better experience, please also [read this ↗](https://github.com/salvogiangri/KnoxPatch?tab=readme-ov-file#knoxpatch-enhancer) . `FOSS` `[LSP]`
 - **[One Design](https://github.com/Xposed-Modules-Repo/qyz.onedesign)** - Customize multiple applications at the system level, providing feature enhancements, and system optimizations. `Proprietary` `[LSP]`
-- **[One UI X](https://github.com/SoClear/OneUIX)** - Remove annoying restrictions, and inject powerful enhancements into the Status Bar, Quick Settings, and native apps etc on Samsung's One UI. `FOSS` `[LSP]`
+- **[One UI X](https://github.com/SoClear/OneUIX)** - Removes restrictions and customizes the status bar, Quick Settings and native apps on Samsung's One UI. `FOSS` `[LSP]`
 - **[OneLab](https://github.com/pigerzhu/OneLab)** - One UI feature extensions and foldable app adaptations for Samsung devices. `FOSS` `[LSP]`
 - **[Samsung Dex Standalone Mode](https://github.com/supermarsx/magisk-samsung-dex-standalone-mode)** - Systemlessly enable Samsung DeX standalone mode. `FOSS` `[M]`
 
 ### Onyx
 
-- **[OnyxTweaks](https://github.com/timschneeb/OnyxTweaks)** - Xposed module for Onyx Boox e-Ink devices with Android 12.It adds other mods to the SystemUI, Android Framework, and Onyx Launcher. `FOSS` `[LSP]`
+- **[OnyxTweaks](https://github.com/timschneeb/OnyxTweaks)** - Adds system UI, Android framework and Onyx Launcher tweaks on Onyx Boox e-ink devices running Android 12. `FOSS` `[LSP]`
 
 ### Oxygen OS (OnePlus)
 
 - **[Oxygen-Customizer](https://github.com/DHD2280/Oxygen-Customizer/)** - Open-source Oxygen OS customizer application. `FOSS` `[LSP]`
 
 ### Pixel
-- **[PixelInjector](https://github.com/hxreborn/pixelinjector)** - Opinionated Xposed module of some tweaks, specially for Pixel phones. `FOSS` `[LSP]`
-- **[PixelSuite](https://github.com/RovianDev/PixelSuite)** - LSPosed module for Pixel devices adding app-drawer folders and grids, app renaming and icon replacement, power and volume gesture shortcuts, Pixel Studio screenshot tools and Files sorting. Tested on Pixel 11 Pro with Android 17 and LSPosed API 102. `FOSS` `[LSP]`
+- **[PixelInjector](https://github.com/hxreborn/pixelinjector)** - Adds tweaks for Pixel phones. `FOSS` `[LSP]`
+- **[PixelSuite](https://github.com/RovianDev/PixelSuite)** - Adds app-drawer folders and grids, app renaming and icon replacement, power and volume gesture shortcuts, Pixel Studio screenshot tools and Files sorting on Pixel devices. Tested on Pixel 11 Pro with Android 17 and LSPosed API 102. `FOSS` `[LSP]`
 
 ### ZUI
 
-- **[BetterZUIKey](https://github.com/CommandPrompt-Wang/BetterZUIKey)** - An LSPosed module for overriding keyboard shortcuts on Lenovo ZUXOS devices. `FOSS` `[LSP]`
+- **[BetterZUIKey](https://github.com/CommandPrompt-Wang/BetterZUIKey)** - Overrides keyboard shortcuts on Lenovo ZUXOS devices. `FOSS` `[LSP]`
 - **[Unf**k ZUI Tablet](https://github.com/Xposed-Modules-Repo/xyz.cirno.unfuckzui/)** - Adjust notification icon size, restore AOSP-style installers/permissions, enforce screen rotation persistence, and allow package querying etc. `Proprietary` `[LSP]`
 - **[ZTool](https://github.com/qwqawa64/ZUX-ZTool)** - Provides optimization and customization features for the ZUXOS system. `FOSS` `[LSP]`
