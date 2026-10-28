@@ -54,6 +54,6 @@
     "workbox-window": "^7.4.1"
   },
   "engines": {
-    "node": ">=24"
+    "node": ">=26"
   }
 }

@@ -38,6 +38,11 @@ jobs:
         with:
           bun-version-file: .bun-version
 
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+
       - name: Cache dependencies
         uses: actions/cache@v6
         with:
