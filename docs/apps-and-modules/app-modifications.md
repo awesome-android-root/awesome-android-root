@@ -141,7 +141,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 
 - **[GramSieve](https://github.com/Xposed-Modules-Repo/com.tianqianguai.gramsieve)** - Message filtering, host-settings integration, anti-recall, anti-edit/edit interception etc. `Proprietary` `[LSP]`
 - **[Killergram](https://github.com/shatyuka/Killergram)** - Remove sponsored messages of Telegram. `FOSS` `[LSP]`
-- **[Re: TeleVIP](https://github.com/Xposed-Modules-Repo/io.github.re_televip.televip)** - Privacy, ad blocking and quality-of-life features for Telegram and its forks, built on libxposed API 102. `FOSS` `[LSP]`
+- **[Re: TeleVIP](https://github.com/Xposed-Modules-Repo/io.github.re_televip.televip)** - Privacy, ad blocking and quality-of-life features for Telegram and its forks. `FOSS` `[LSP]`
 - **[Telegami](https://github.com/aoya111/Telegami)** - Various tweaks for Telegram. `FOSS` `[LSP]`
 - **[Telegram Speed Hook](https://github.com/araafroyall/Telegram-Speed-Hook)** - Increase Telegram files/media downloading speed. `FOSS` `[LSP]`
 - **[Telegram Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.sidestories)** - Remove action bar stories in the Telegram messenger (+block unmute button). `Proprietary` `[LSP]`
@@ -153,10 +153,10 @@ This category covers app patchers (including YouTube), social and browser mods, 
 
 ### TikTok
 
-- **[DouAi](https://github.com/yudigaga/DouAi)** - Adds feed filtering, UI cleanup, playback gesture and speed controls, media download options and AI-assisted comment and message tools to Douyin (Chinese TikTok). Uses libxposed API 102. `Proprietary` `[LSP]`
+- **[DouAi](https://github.com/yudigaga/DouAi)** - Adds feed filtering, UI cleanup, playback gesture and speed controls, media download options and AI-assisted comment and message tools to Douyin (Chinese TikTok). `Proprietary` `[LSP]`
 - **[Douyin Enhancer](https://github.com/twyora/DouyinEnhancer)** - Adds minor quality-of-life features to Douyin (Chinese TikTok). `FOSS` `[LSP]`
-- **[TikFreed](https://github.com/Xposed-Modules-Repo/io.github.ba6_oss.tikfreed)** - Overrides SIM, carrier, locale, timezone and GPS region parameters, hides ads and promotional cards, and adds playback speed and comment translation controls to the international TikTok client. Uses libxposed API 102. `Proprietary` `[LSP]`
-- **[TikProfileBanner](https://github.com/vanquzie/TikProfileBanner)** - Lifts the account allow-list check that hides TikTok's profile banner ("Add background") button. Targets TikTok 47.1.3 with LSPosed API 102+. `FOSS` `[LSP]`
+- **[TikFreed](https://github.com/Xposed-Modules-Repo/io.github.ba6_oss.tikfreed)** - Overrides SIM, carrier, locale, timezone and GPS region parameters, hides ads and promotional cards, and adds playback speed and comment translation controls to the international TikTok client. `Proprietary` `[LSP]`
+- **[TikProfileBanner](https://github.com/vanquzie/TikProfileBanner)** - Lifts the account allow-list check that hides TikTok's profile banner ("Add background") button. Targets TikTok 47.1.3. `FOSS` `[LSP]`
 - **[TikTok AntiBurn](https://github.com/0mnr0/TikTokAntiBurn)** - Overlap the TikTok app elements to prevent the screen from burning out. `FOSS` `[LSP]`
 - **[TiktokPatchXposed](https://github.com/hik0w/TiktokPatchXposed)** - Adds ad blocking, downloads and interface customization to TikTok. `FOSS` `[LSP]`
 - **[Toki](https://github.com/MeiYongAI/Toki)** - Adds various tweaks to TikTok app. `FOSS` `[LSP]`

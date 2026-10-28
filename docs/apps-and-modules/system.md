@@ -154,7 +154,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[Better Miui Express](https://github.com/Robotxm/BetterMiuiExpress)** - Prevents MIUI/HyperOS's express widget from jumping to third-party applications such as Taobao and Cainiao, and uses a customized interface to display express details. `FOSS` `[LSP]`
 - **[ClipboardList](https://github.com/HChenX/ClipboardList/blob/master/README-en.md)** - Remove the 20-item limit and time limit for the Clipboard and Phrases feature. Only for MIUI and HyperOS. `FOSS` `[LSP]`
 - **[ColorOS_Control_Center](https://github.com/Mods-Center/ColorOS_Control_Center)** - Replace HyperOS control panel with ColorOS-style quick settings, featuring customizable and squared tiles. `Proprietary`
-- **[CustoMIUIzer A14](https://github.com/thetvplus/customiuizer-a14)** - Kotlin rewrite of CustoMIUIzer for HyperOS 1 on Android 14, built on the libxposed API. `FOSS` `[LSP]`
+- **[CustoMIUIzer A14](https://github.com/thetvplus/customiuizer-a14)** - Kotlin rewrite of CustoMIUIzer for HyperOS 1 on Android 14. `FOSS` `[LSP]`
 - **[Fingerprint Catalog](https://github.com/custombeta/fingerprint-cataloge)** - Allows you to create, upload, import, and apply your own fingerprint icons and animations on HyperOS. `Proprietary` `[LSP]`
 - **[FusionStatusBar](https://github.com/yudigaga/FusionStatusBar)** - Customizes status bar icons, layout, clock, weather and device telemetry, Control Center layout and materials, and launcher gestures on MIUI and HyperOS. Android 13+. `Proprietary` `[LSP]`
 - **[Hyper Helper](https://github.com/HowieHChen/XiaomiHelper/blob/master/README_EN-US.md)** - Customizes HyperOS; developed on the China ROM for Xiaomi 15 Pro. `FOSS` `[LSP]`
@@ -197,7 +197,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 
 ### Pixel
 - **[PixelInjector](https://github.com/hxreborn/pixelinjector)** - Adds tweaks for Pixel phones. `FOSS` `[LSP]`
-- **[PixelSuite](https://github.com/RovianDev/PixelSuite)** - Adds app-drawer folders and grids, app renaming and icon replacement, power and volume gesture shortcuts, Pixel Studio screenshot tools and Files sorting on Pixel devices. Tested on Pixel 11 Pro with Android 17 and LSPosed API 102. `FOSS` `[LSP]`
+- **[PixelSuite](https://github.com/RovianDev/PixelSuite)** - Adds app-drawer folders and grids, app renaming and icon replacement, power and volume gesture shortcuts, Pixel Studio screenshot tools and Files sorting on Pixel devices. Tested on Pixel 11 Pro with Android 17. `FOSS` `[LSP]`
 
 ### ZUI
 
