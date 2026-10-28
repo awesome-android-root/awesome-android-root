@@ -8,9 +8,9 @@
 
 # Awesome Android Root
 
-**🛡️ The Ultimate Android Rooting Hub**
+**🛡️ Community-curated Android rooting knowledge base**
 
-<sub>Discover 750+ root apps, Magisk / KernelSU / APatch / LSPosed (Xposed) modules and step-by-step rooting guides.</sub>
+<sub>750+ root apps, Magisk / KernelSU / APatch / LSPosed (Xposed) modules, and step-by-step rooting guides.</sub>
 
 [![Website](https://img.shields.io/badge/Website-awesome--android--root.xyz%E2%86%97-blue?style=for-the-badge&logo=googlechrome&logoColor=white)](https://awesome-android-root.xyz/)
 
@@ -24,48 +24,40 @@
 
 Awesome Android Root is a community-curated knowledge base for **rooting Android devices and getting the most out of root access**:
 
-- **Rooting guides** - Magisk, KernelSU, APatch, LSPosed, bootloader unlocking and device-specific walkthroughs (Pixel, Samsung, Xiaomi, OnePlus, Nothing, Motorola).
-- **Apps & Modules database** - 750+ curated apps and modules, including root apps and Magisk, KernelSU, APatch and LSPosed/Xposed modules, with source links, store badges and license information.
-- **Tutorials, FAQs & troubleshooting** - ad blocking, debloating, Play Integrity, bootloops and more.
+- **Rooting guides** - Magisk, KernelSU, APatch, LSPosed, bootloader unlocking, and device-specific walkthroughs (Pixel, Samsung, Xiaomi, OnePlus, Nothing, Motorola).
+- **Apps & Modules database** - 750+ curated apps and modules with source links, store badges, and license information.
+- **Tutorials, FAQs & troubleshooting** - ad blocking, debloating, Play Integrity, bootloop recovery, and more.
+
+Every entry links to its primary source (GitHub, F-Droid, or the project site) with license and framework badges, so you can verify a tool before installing it.
 
 **New to rooting?** Start with the [Rooting Guides](docs/rooting-guides/index.md) and read the [FAQ](docs/faqs.md) before touching the bootloader.
 
 ## 🌐 Use the Website
 
-The full collection is **much easier to browse on the website**:
-
-[![Web App](https://img.shields.io/badge/Browse%20Awesome%20Android%20Root-%E2%86%97-blue?style=for-the-badge&logo=googlechrome&logoColor=white)](https://awesome-android-root.xyz)
-
-The website adds what a single README cannot:
-
-- **Instant local search** across every app, module and guide (with fuzzy matching)
-- **Clean category navigation** and a sidebar for every topic
-- **A PWA** - installable, caches images, and fetches current pages online
-- **Shareable pages and anchors** for every category and section
+The collection is easier to browse on the **[website ↗](https://awesome-android-root.xyz)**, which adds instant search across every app, module, and guide, clean per-category navigation, and works as an installable PWA.
 
 ## Apps & Modules by Category
 
-Browse them in [`docs/apps-and-modules/`](docs/apps-and-modules/):
+Entries live in [`docs/apps-and-modules/`](docs/apps-and-modules/index.md), the collection's source of truth. Each category is mirrored on the [website](https://awesome-android-root.xyz/apps-and-modules/) with search (🌐).
 
-| Category | Website | Description |
-| :--- | :--- | :--- |
-| **[📜 Category index](docs/apps-and-modules/index.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/index) | Index of all categories |
-| **🛠️ [Root Management](docs/apps-and-modules/root-management.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/root-management) | Root managers, temporary root, module managers, metamodules, LSPosed, Zygisk, root hiding & Play Integrity |
-| **⚙️ [System](docs/apps-and-modules/system.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/system) | System tweaks, VBMeta, System UI & OEM frameworks, boot & startup, app & package management |
-| **⚡ [Performance & Battery](docs/apps-and-modules/performance.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/performance) | Performance optimization, kernels, memory, battery & charging |
-| **🕵️ [Privacy](docs/apps-and-modules/privacy.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/privacy) | Privacy tools, device ID & location spoofing, app isolation |
-| **🔐 [Security](docs/apps-and-modules/security.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/security) | Security tools & firewalls |
-| **🚫 [Ad Blocking](docs/apps-and-modules/ad-blocking.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/ad-blocking) | Hosts-based ad blockers & DNS filtering |
-| **🧩 [App Modifications](docs/apps-and-modules/app-modifications.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/app-modifications) | App patchers, social and browser mods, media/camera tools, signature verification |
-| **🧹 [Debloating](docs/apps-and-modules/debloating.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/debloating) | Remove bloatware & unwanted system apps |
-| **🗂️ [File Management](docs/apps-and-modules/file-management.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/file-management) | Root file managers, cleaners & partition tools |
-| **💾 [Backup & Restore](docs/apps-and-modules/backup.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/backup) | Full app & data backups and recovery |
-| **🎨 [Customization](docs/apps-and-modules/customization.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/customization) | Themes, launchers, status bar, fonts, display |
-| **🎵 [Audio](docs/apps-and-modules/audio.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/audio) | Audio enhancement, control & effects |
-| **🌐 [Networking](docs/apps-and-modules/networking.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/networking) | VPN/proxy modules, network tools, Wi-Fi, Bluetooth & NFC |
-| **🎮 [Gaming](docs/apps-and-modules/gaming.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/gaming) | Gaming optimization, FPS unlockers & game tools |
-| **🧑‍💻 [Development & Automation](docs/apps-and-modules/development.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/development) | Terminal, ADB, developer tools, Linux environments, automation |
-| **🧰 [General Utilities](docs/apps-and-modules/utilities.md)** | [Web App↗](https://awesome-android-root.xyz/apps-and-modules/utilities) | Sync, power, sharing, communication, toolboxes |
+| Category | 🌐 | Description |
+| :--- | :-: | :--- |
+| 🛠️ **[Root Management](docs/apps-and-modules/root-management.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/root-management) | Root managers, temporary root, module managers, metamodules, LSPosed, Zygisk, root hiding & Play Integrity |
+| ⚙️ **[System](docs/apps-and-modules/system.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/system) | System tweaks, VBMeta, System UI & OEM frameworks, boot & startup, app & package management |
+| ⚡ **[Performance & Battery](docs/apps-and-modules/performance.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/performance) | Performance optimization, kernels, memory, battery & charging |
+| 🕵️ **[Privacy](docs/apps-and-modules/privacy.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/privacy) | Privacy tools, device ID & location spoofing, app isolation |
+| 🔐 **[Security](docs/apps-and-modules/security.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/security) | Security tools & firewalls |
+| 🚫 **[Ad Blocking](docs/apps-and-modules/ad-blocking.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/ad-blocking) | Hosts-based ad blockers & DNS filtering |
+| 🧩 **[App Modifications](docs/apps-and-modules/app-modifications.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/app-modifications) | App patchers, social and browser mods, media/camera tools, signature verification |
+| 🧹 **[Debloating](docs/apps-and-modules/debloating.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/debloating) | Remove bloatware & unwanted system apps |
+| 🗂️ **[File Management](docs/apps-and-modules/file-management.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/file-management) | Root file managers, cleaners & partition tools |
+| 💾 **[Backup & Restore](docs/apps-and-modules/backup.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/backup) | Full app & data backups and recovery |
+| 🎨 **[Customization](docs/apps-and-modules/customization.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/customization) | Themes, launchers, status bar, fonts, display |
+| 🎵 **[Audio](docs/apps-and-modules/audio.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/audio) | Audio enhancement, control & effects |
+| 🌐 **[Networking](docs/apps-and-modules/networking.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/networking) | VPN/proxy modules, network tools, Wi-Fi, Bluetooth & NFC |
+| 🎮 **[Gaming](docs/apps-and-modules/gaming.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/gaming) | Gaming optimization, FPS unlockers & game tools |
+| 🧑‍💻 **[Development & Automation](docs/apps-and-modules/development.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/development) | Terminal, ADB, developer tools, Linux environments, automation |
+| 🧰 **[General Utilities](docs/apps-and-modules/utilities.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/utilities) | Sync, power, sharing, communication, toolboxes |
 
 ## Guides & Documentation
 
@@ -80,12 +72,15 @@ Browse them in [`docs/apps-and-modules/`](docs/apps-and-modules/):
 | **[Contributing](docs/contributing.md)** | How to add apps, modules &amp; guides |
 | **[About and Legal](docs/about.md)** | Mission, legal disclaimer |
 
-
 ## Contributing
 
-> 📝 Read the [`Contributing Guide ↗`](docs/contributing.md) and the
-[`PR template ↗`](.github/PULL_REQUEST_TEMPLATE.md) for entry format, badges and category placement.
+Fixes and additions to the collection are welcome. The quality bar for new entries:
 
+- Actively maintained and updated within the last 18 months, with a working source link to the project itself (not a mirror).
+- Factual description, license badge (`FOSS` / `Proprietary`), and framework badges (`[M]` `[K]` `[A]` `[LSP]`); no duplicates.
+- `⭐` is reserved for widely trusted resources.
+
+Read the [Contributing Guide](docs/contributing.md) and the [PR template](.github/PULL_REQUEST_TEMPLATE.md), then submit a pull request. Questions go to [Issues](https://github.com/awesome-android-root/awesome-android-root/issues) or [Discussions](https://github.com/awesome-android-root/awesome-android-root/discussions).
 
 ## Community & Contact
 
@@ -98,11 +93,11 @@ Browse them in [`docs/apps-and-modules/`](docs/apps-and-modules/):
 
 ## License & Disclaimer
 
-- Licensed under [MIT](LICENSE). 
+- Licensed under [MIT](LICENSE).
 - Read the [Legal Disclaimer](docs/legal-disclaimer.md) for details.
 
 > [!NOTE]
-> This project is maintained by `HUMANS`, AI is used for coding, formatting and proofreading and not for content creation or curation. 
+> This project is maintained by `HUMANS`, AI is used for coding, formatting and proofreading and not for content creation or curation.
 
 > [!IMPORTANT]
 > **Educational reference only. Proceed at your own risk.**
