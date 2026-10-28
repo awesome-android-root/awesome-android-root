@@ -455,6 +455,21 @@ export default withPwa(defineConfig({
             },
           }
         },
+        {
+          urlPattern: ({ url, sameOrigin }) => sameOrigin && url.pathname === '/llms-full.txt',
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'aar-llms-txt',
+            expiration: {
+              maxEntries: 1,
+              maxAgeSeconds: 60 * 60 * 24 * 7,  // 7 days; regenerated per build
+              purgeOnQuotaError: true,
+            },
+            cacheableResponse: {
+              statuses: [0, 200],
+            },
+          }
+        },
       ]
     },
 
