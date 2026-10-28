@@ -47,6 +47,8 @@ For entries in `docs/apps-and-modules/`:
   framework is already conveyed by the badges.
 * Remove promotional language, filler, and unsupported superlatives such as
   "best" or "powerful". Do not repeat the project name unnecessarily.
+* Omit framework API names and versions, such as "Uses libxposed API 102", from
+  entry descriptions; focus on functionality instead.
 * Preserve relevant requirements, compatibility limits, safety warnings, and
   technical details. Mention a framework in the description when its role is
   important or cannot be conveyed accurately by the badges alone.
