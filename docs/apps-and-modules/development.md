@@ -53,6 +53,7 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 ## Developer Tools
 
 - **[AndroidSpect](https://github.com/thecybersandeep/androidspect)** - Live runtime audit for installed Android apps, serves a browser dashboard. `FOSS` `[LSP]`
+- **[APK Compatibility Checker](https://file-label-guide.github.io/apk-compatibility-checker/)** - Browser tool that reports whether an APK, XAPK or APKS will install on a chosen Android version and ABI, flags native libraries not aligned for 16 KB page-size devices and lists v1/v2/v3 signatures with the certificate SHA-256. No root needed; files are parsed locally. `Proprietary`
 - **[Bluetooth Hook](https://github.com/jingyu233/bluetoothhook#english)** - Inject virtual BLE devices into Android system Bluetooth scan results, facilitating Bluetooth application debugging for developers. `FOSS` `[LSP]`
 - **[Covalent](https://github.com/PalmDevs/covalent)** - Modification framework for React Native apps that runs custom Hermes bytecode before the app's own, forces DevSupport on and exposes React Native DevTools for live inspection and editing. Targets React Native 0.86.3 with Hermes V1. `FOSS` `[LSP]`
 - **[Dhizuku API for Xposed](https://github.com/iamr0s/Dhizuku-API-Xposed)** - Force applications to support Dhizuku. `FOSS` `[LSP]`
