@@ -50,8 +50,7 @@
     "magicast": "^0.5.5",
     "simple-icons": "^16.36.0",
     "vitepress": "2.0.0-alpha.21",
-    "vitepress-plugin-llms": "^1.14.0",
-    "workbox-window": "^7.4.1"
+    "vitepress-plugin-llms": "^1.14.0"
   },
   "engines": {
     "node": ">=26"

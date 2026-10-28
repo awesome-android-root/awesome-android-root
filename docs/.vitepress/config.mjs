@@ -367,8 +367,7 @@ export default withPwa(defineConfig({
     strategies: 'generateSW',
     registerType: 'autoUpdate',
 
-    workbox: {
-      
+    generateSW: {
       globPatterns: [
         '**/*.{png,jpg,jpeg,svg,gif,webp,avif,ico}',
       ],
@@ -380,11 +379,7 @@ export default withPwa(defineConfig({
         '**/images/og/**',
       ],
 
-      skipWaiting: true,
-      clientsClaim: true,
       cleanupOutdatedCaches: true,
-
-      maximumFileSizeToCacheInBytes: 2 * 1024 * 1024,
 
       runtimeCaching: [
         {
@@ -473,6 +468,7 @@ export default withPwa(defineConfig({
 
     injectRegister: 'script',
     minify: true,
+    maximumFileSizeToCacheInBytes: 2 * 1024 * 1024,
 
   },
 
