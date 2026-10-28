@@ -19,7 +19,7 @@
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
-    "docs:build": "sh -c 'if [ -f .git/shallow ]; then git fetch --unshallow || true; fi' && npm run index:build && (cd docs && vitepress build .)",
+    "docs:build": "sh -c 'if [ -f .git/shallow ]; then git fetch --unshallow || true; fi' && bun run index:build && (cd docs && vitepress build .)",
     "docs:preview": "vitepress preview docs",
     "check:links": "python3 scripts/check_links.py",
     "index:build": "node scripts/app-entries.mjs"
