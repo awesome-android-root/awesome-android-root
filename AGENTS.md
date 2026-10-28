@@ -40,8 +40,19 @@ For entries in `docs/apps-and-modules/`:
   2. F-Droid
   3. Official website
   4. Google Play
-* Keep descriptions short, factual, and technical.
-* Avoid promotional language and unsupported superlatives.
+* Keep descriptions short, factual, technical, and grammatically correct.
+* Lead with what the project actually does, preferably using an action verb, such
+  as "Removes blur from HyperOS." Avoid repetitive introductions such as
+  "An LSPosed module designed to..." or "A Magisk module that..." when the
+  framework is already conveyed by the badges.
+* Remove promotional language, filler, and unsupported superlatives such as
+  "best" or "powerful". Do not repeat the project name unnecessarily.
+* Preserve relevant requirements, compatibility limits, safety warnings, and
+  technical details. Mention a framework in the description when its role is
+  important or cannot be conveyed accurately by the badges alone.
+* Do not invent functionality to make a description more specific or longer.
+  Check the upstream project when the existing description is unclear; add
+  useful, verified detail when addressing short-description lint warnings.
 * Use framework tags only when verified:
   `[M]` Magisk, `[K]` KernelSU, `[A]` APatch, `[LSP]` LSPosed/Xposed.
 * Mark `FOSS` only when the source and license support it.
