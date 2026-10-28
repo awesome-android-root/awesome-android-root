@@ -1,59 +1,261 @@
 # AGENTS.md
 
-Guidance for agents working on the Awesome Android Root knowledge base and VitePress site.
+Guidelines for coding agents and automated contributors working in `awesome-android-root`.
 
-## Repository and scope
+## 1. Repository Fundamentals
 
-- `docs/` contains the site; `docs/apps-and-modules/` is the source of truth for listings. The root `README.md` is an index, not a duplicate database.
-- Site configuration and theme code live in `docs/.vitepress/`; validation tools live in `scripts/`. Follow `docs/contributing.md` and the relevant PR template.
-- Read surrounding content and search for duplicates, references, and affected anchors before editing. Prefer small, focused changes; do not reformat, reorganize, upgrade dependencies, or rewrite unrelated content without a reason.
-- Verify important claims against authoritative upstream sources. Never invent facts, links, compatibility, licenses, releases, CVEs, or project status. Generated text is not evidence; flag uncertainty rather than guessing.
+* This is a community-curated Android rooting knowledge base and VitePress documentation site.
+* Primary content lives in `docs/`.
+* App and module listings in `docs/apps-and-modules/` are the source of truth.
+* `README.md` is an index and landing page, not a duplicate database.
+* Site configuration and theme code live under `docs/.vitepress/`.
+* Validation utilities are under `scripts/`.
+* Contribution guidelines are in `CONTRIBUTING.md`.
+* Prefer small, focused, reviewable changes.
+* Preserve existing conventions unless there is a clear reason to change them.
+* Never fabricate facts, links, compatibility claims, licenses, releases, CVEs, or project status.
 
-## Apps and modules
+## 2. Before Editing
 
-- Use the best existing category. Check for duplicates and follow the established order: recommended entries first, then alphabetically. Do not change a recommendation star casually.
-- Prefer the project's GitHub, then F-Droid, official site, or Google Play. Check that links and store badges identify the correct project.
-- Include exactly one license badge (`FOSS` or `Proprietary`) and only verified framework tags: `[M]` Magisk, `[K]` KernelSU, `[A]` APatch, `[LSP]` LSPosed/Xposed. Use `FOSS` only when the source and license support it.
-- Write short, factual, grammatically correct descriptions that lead with what the project does, for example, "Removes blur from HyperOS." Avoid filler, promotional claims, repeated project names, and introductions such as "An LSPosed module designed to...".
-- Omit framework API names and versions such as "Uses libxposed API 102". Retain relevant root or framework requirements, device and app compatibility, and safety warnings where needed; badges may convey framework support.
-- If the function is unclear, consult upstream. Do not invent details or pad descriptions to satisfy lint; add verified, useful detail instead.
+1. Read the relevant file and surrounding content.
+2. Search for duplicates, aliases, references, and affected headings.
+3. Check existing taxonomy and formatting conventions.
+4. Verify important technical claims against authoritative upstream sources.
+5. Make the smallest change that fully solves the task.
 
-Entry format:
+Do not rewrite unrelated content or perform broad cleanup unless explicitly requested.
+
+## 3. Apps and Modules
+
+For entries in `docs/apps-and-modules/`:
+
+* Put each project in the category that best matches its purpose.
+* Prefer an existing category over creating a new one.
+* Do not duplicate an existing project.
+* Keep categories, subcategories, and entries consistently ordered.
+* Follow the existing convention: recommended entries first, then alphabetical order.
+* Prefer authoritative links, generally:
+
+  1. GitHub
+  2. F-Droid
+  3. Official website
+  4. Google Play
+* Keep descriptions short, factual, technical, and grammatically correct.
+* Lead with what the project actually does, preferably using an action verb, such
+  as "Removes blur from HyperOS." Avoid repetitive introductions such as
+  "An LSPosed module designed to..." or "A Magisk module that..." when the
+  framework is already conveyed by the badges.
+* Remove promotional language, filler, and unsupported superlatives such as
+  "best" or "powerful". Do not repeat the project name unnecessarily.
+* Omit framework API names and versions, such as "Uses libxposed API 102", from
+  entry descriptions; focus on functionality instead.
+* Preserve relevant requirements, compatibility limits, safety warnings, and
+  technical details. Mention a framework in the description when its role is
+  important or cannot be conveyed accurately by the badges alone.
+* Do not invent functionality to make a description more specific or longer.
+  Check the upstream project when the existing description is unclear; add
+  useful, verified detail when addressing short-description lint warnings.
+* Use framework tags only when verified:
+  `[M]` Magisk, `[K]` KernelSU, `[A]` APatch, `[LSP]` LSPosed/Xposed.
+* Mark `FOSS` only when the source and license support it.
+* Store badges must point to the correct application.
+* Do not add or remove `⭐` without understanding its existing meaning.
+
+Typical format:
 
 ```markdown
 - **[Name](link)** - Short factual description. `FOSS` `[M]`
 ```
 
-## Rooting and security
+## 4. Technical and Rooting Content
 
-Rooting can cause data loss, bootloops, or device damage. Verify device model, Android version, bootloader state, partition layout, image and firmware requirements, commands, and recovery steps before changing instructions. Do not generalize device-specific guidance or weaken backup, data-loss, bricking, or security warnings.
+Rooting instructions can cause data loss, bootloops, or device damage.
 
-Verify claims about root frameworks, OTA, encryption, attestation, root hiding, vulnerabilities, and security behavior. Do not promise bypasses or universal compatibility. Preserve least-privilege GitHub Actions permissions and never commit secrets.
+Verify claims involving:
 
-## Markdown and site
+* Android and device compatibility
+* Bootloader and partition requirements
+* `boot`, `init_boot`, `vendor_boot`, and firmware
+* Magisk, KernelSU, APatch, Zygisk, LSPosed/Xposed
+* Play Integrity, SafetyNet, root hiding, Knox, OTA, and encryption
+* Exploits, CVEs, security behavior, and maintenance status
 
-- Treat headings and generated anchors as public interfaces; search for references before changing them. Keep navigation and sidebars in sync with page structure.
-- Preserve frontmatter, SEO, JSON-LD, canonical URLs, social metadata, and custom Markdown behavior unless the task requires changes. Check references before deleting assets, scripts, or configuration; avoid shared mutable state in Markdown rendering.
-- For titles, target 50-60 characters including the `| Awesome Android Root` suffix, maximum 70. For meta descriptions, target 110-155 characters, absolute range 70-160; use supported content rather than padding.
-- VitePress appends the site name to titles: do not include it in frontmatter, except for `docs/index.md`, which uses its own `titleTemplate`. Quote YAML descriptions containing a colon and keep matching Open Graph and Twitter overrides synchronized.
-- Write concise, natural prose. Do not add decorative formatting or use an em dash (`—`).
+For device-specific guides, verify the exact model, Android version, partition layout, bootloader state, image type, flashing method, and recovery procedure.
 
-## Validation and generated files
+Never generalize device-specific instructions without evidence.
 
-Use the Bun version in `.bun-version` and Node.js 24 or later as specified in `package.json`. For documentation changes:
+Do not weaken warnings about backups, data loss, bricking, firmware mismatch, or security implications.
+
+Commands must be understood and relevant before being added.
+
+## 5. Markdown, Links, and Navigation
+
+* Preserve frontmatter and metadata unless the task requires changes.
+* Do not casually modify SEO, JSON-LD, canonical URLs, or social metadata.
+* Treat headings and generated anchors as public interfaces.
+* Before renaming or moving headings, search for references to their anchors.
+* Keep VitePress navigation and sidebars synchronized with page structure.
+* Do not delete assets, scripts, or configuration without checking references.
+* Preserve custom Markdown plugins and their expected behavior.
+* Do not introduce shared mutable state into Markdown rendering.
+
+For internal links:
+
+```bash
+python3 scripts/check_links.py
+```
+
+External links should be authoritative and verified when relevant.
+
+### Titles and meta descriptions
+
+Target lengths for every page:
+
+* Title: 50 to 60 characters. Absolute maximum 70.
+* Meta description: 110 to 155 characters. Absolute range 70 to 160.
+
+Rules:
+
+* Put the primary keyword first. Drop trailing qualifiers before shortening a
+  keyword-rich title.
+* The site suffix `| Awesome Android Root` counts toward the title length.
+* Never put the site name in a frontmatter `title`. VitePress appends it, which
+  renders a duplicated title such as `Privacy | Awesome Android Root |
+  Awesome Android Root`. The only exception is `docs/index.md`, which sets
+  `titleTemplate: Awesome Android Root` and therefore uses its title verbatim.
+* Write descriptions from the actual page content. Do not pad them to reach a
+  length and do not use claims the page does not support.
+* Quote a frontmatter `description` in YAML when it contains a colon.
+* Keep `og:title`, `twitter:title`, `og:description`, and `twitter:description`
+  overrides in sync with `title` and `description` when they repeat them.
+* `docs/count.md` and `docs/public/count.json` are generated and gitignored.
+  Edit the page frontmatter and JSON fields in `scripts/app-entries.mjs`, since the
+  build regenerates both files.
+
+## 6. Site and Code Changes
+
+The project uses Node.js, VitePress, Markdown/YAML, JavaScript, Python, and Bash.
+
+Use the existing commands from `package.json`:
+
+```bash
+bun run docs:dev
+bun run docs:build
+bun run docs:preview
+```
+
+When changing JavaScript:
+
+* Use modern ECMAScript syntax.
+* Prefer `const` and `let`.
+* Keep functions focused and deterministic.
+* Avoid unnecessary dependencies and abstractions.
+* Preserve existing behavior unless a change is required.
+
+For dependency changes, check existing dependencies before adding new ones.
+
+## 7. Validation
+
+For documentation changes:
 
 ```bash
 bun run check:links
 bun run docs:build
 ```
 
-For app or module entries, also run `bun run index:build`. It reports entry format, ordering, badge, and duplicate problems, but **does not fail on lint findings**; inspect its output and resolve findings. `docs:build` runs it too. CI blocks on the link check and build; the build needs full Git history for `lastUpdated`.
+For app and module entries, also run:
 
-- The link checker validates internal Markdown links and anchors, not external links or technical claims. Verify external links and facts separately when relevant.
-- `index:build` generates tracked `docs/public/app-index.json` and ignored `docs/count.md` and `docs/public/count.json`. Commit the index when its records change; avoid timestamp-only churn. Edit count metadata in `scripts/app-entries.mjs`, not generated files.
-- For theme or configuration changes, inspect the affected behavior when practical. Report checks actually run and any failures or limitations; a successful build does not prove content accuracy.
-- Cloudflare Pages uses `bun run docs:build` and `docs/.vitepress/dist`. See `scripts/README.md` for script behavior and asset optimization.
+```bash
+bun run index:build  # regenerates the app index, count page and reports entry format, ordering and badge problems
+```
 
-## Before finishing
+CI runs `check:links` and `docs:build` as blocking steps. `docs:build` runs
+`index:build` itself, so entry lint findings appear in the build job logs; keep
+lint clean even though nothing gates on it. The build needs full git history
+because of `lastUpdated`.
 
-Review the diff for unrelated changes and, for structural edits, check entry counts, links, badges, categories, and anchors. A PR should explain what changed, why, validation performed, and any uncertainty. Use a descriptive commit message and follow the project's contribution and PR guidance.
+For Cloudflare Pages, use `bun run docs:build` as the build command and
+`docs/.vitepress/dist` as the output directory. Pin the build environment using
+`.bun-version` and the `engines.node` field in `package.json`.
+
+For site configuration or theme changes, build the site and manually inspect affected behavior when practical.
+
+Build success alone does not prove factual correctness or external link validity.
+
+## 8. Contributions
+
+Keep each contribution focused and reviewable.
+
+A good PR should explain:
+
+* What changed
+* Why it changed
+* What was validated
+* Any relevant uncertainty
+
+Commit messages should describe the actual change, for example:
+
+```text
+add Battery Monitor to performance tools
+fix broken customization link
+sort app-modification categories
+update KernelSU guide links
+```
+
+Avoid vague messages such as `update stuff` or `changes`.
+
+Follow existing issue and PR templates.
+
+## 9. AI-Assisted Work
+
+AI may assist with implementation, formatting, proofreading, and mechanical maintenance.
+
+Human judgment is required for:
+
+* Project inclusion
+* Categorization
+* Recommendations
+* Technical claims
+* Compatibility
+* Trustworthiness
+* Licensing
+* Statements about upstream behavior
+
+Do not treat generated text as evidence.
+
+Do not generate filler, fake completeness, repetitive summaries, or formulaic prose.
+
+## 10. Scope and Safety
+
+Do not automatically:
+
+* Rewrite unrelated descriptions
+* Reformat unrelated files
+* Upgrade dependencies
+* Redesign navigation
+* Change SEO metadata
+* Replace links without reason
+* Add new categories for a single entry
+* Introduce frameworks or tooling
+* Perform unrelated refactors
+
+For large structural changes, verify important invariants such as entry counts, links, anchors, categories, and unchanged content where applicable.
+
+Never commit secrets, credentials, tokens, or private authentication data.
+
+Preserve least-privilege permissions in GitHub Actions.
+
+## 11. Style
+
+* Write concise, natural, factual prose.
+* Avoid marketing language and unsupported claims such as "universal", "undetectable", "100% compatible", or "completely safe".
+* Use existing emojis only where they have an established semantic purpose.
+* Do not add decorative formatting.
+* Never use the em dash character (`—`).
+
+## 12. Definition of Done
+
+All checks in section 7 pass, the change sits in the correct category with
+correct links, tags, and badges, and the diff contains no unrelated edits.
+
+**Core principle:** Prefer accurate, concise, sourced, and maintainable changes over large, speculative, or impressive-looking changes.
