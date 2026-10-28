@@ -53,12 +53,12 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 ## Developer Tools
 
 - **[AndroidSpect](https://github.com/thecybersandeep/androidspect)** - Live runtime audit for installed Android apps, serves a browser dashboard. `FOSS` `[LSP]`
-- **[APK Compatibility Checker](https://file-label-guide.github.io/apk-compatibility-checker/)** - Browser tool that reports whether an APK, XAPK or APKS will install on a chosen Android version and ABI, flags native libraries not aligned for 16 KB page-size devices and lists v1/v2/v3 signatures with the certificate SHA-256. No root needed; files are parsed locally. `Proprietary`
 - **[Bluetooth Hook](https://github.com/jingyu233/bluetoothhook#english)** - Inject virtual BLE devices into Android system Bluetooth scan results, facilitating Bluetooth application debugging for developers. `FOSS` `[LSP]`
 - **[Covalent](https://github.com/PalmDevs/covalent)** - Modification framework for React Native apps that runs custom Hermes bytecode before the app's own, forces DevSupport on and exposes React Native DevTools for live inspection and editing. Targets React Native 0.86.3 with Hermes V1. `FOSS` `[LSP]`
 - **[Dhizuku API for Xposed](https://github.com/iamr0s/Dhizuku-API-Xposed)** - Force applications to support Dhizuku. `FOSS` `[LSP]`
 - **[DuckPolicy](https://github.com/Xposed-Modules-Repo/com.strawing.duckdevicepolicy)** - Makes apps see no device-policy restrictions on your own device. `Proprietary` `[LSP]`
 - **[KSU Toolkit](https://github.com/backslashxx/ksu_toolkit)** - Small extensions on top of KernelSU for testing and debugging purposes. `FOSS` `[K]`
+- **[Magisk Module Checker](https://file-label-guide.github.io/magisk-module-checker/)** - Browser tool that checks a Magisk, KernelSU or APatch module zip before flashing: nested module.prop, CRLF line endings, invalid id or versionCode, Zygisk libraries built for the wrong ABI and other install blockers. Files are parsed locally. `Proprietary`
 - **[Nano for Android NDK](https://github.com/Magisk-Modules-Repo/nano-ndk)** - Allows temporary recovery use, so you can trigger it from adb shell or TWRP Terminal. `FOSS` `[M]`
 - **[Py2Droid](https://github.com/Mrakorez/py2droid)** - Install Python 3 on Android, including the standard library (STDLIB). `FOSS` `[M]` `[A]`
 - **[SELinux Permissive](https://github.com/evdenis/selinux_permissive)** - Switches SELinux to permissive mode. `FOSS` `[M]`
