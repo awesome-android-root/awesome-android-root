@@ -22,7 +22,7 @@ tools, sharing & intent tweaks, communication helpers and all-in-one power-user 
 
 ## Communication & Messaging
 
-- **[ACR Phone](https://play.google.com/store/apps/details?id=com.nll.cb)** - ACR Phone is a call recording app that uses root to record calls on Android 10 and above. `Proprietary`
+- **[ACR Phone](https://play.google.com/store/apps/details?id=com.nll.cb)** - Records calls using root on Android 10 and above. `Proprietary`
 - **[Basic Call Recorder](https://github.com/chenxiaolong/BCR)** - A Basic Call Recorder for rooted Android devices. Also check out [GUI for BCR ↗](https://github.com/nicorac/bcr-gui). `FOSS` `[M]` `[K]`
 - **[Contacts Sync](https://play.google.com/store/apps/details?id=com.lb.contacts_sync)** - Uses root to sync your address book with high-quality contacts photos from WhatsApp. `Proprietary`
 - **[Xinyi Relay](https://github.com/magisk317/xinyi-relay)** - Forwards SMS, app notifications and call notifications to multiple channels with rule filtering and auto OTP handling via LSPosed Enhanced mode. `FOSS` `[LSP]` | [▶️](https://play.google.com/store/apps/details?id=io.github.magisk317.xinyi.relay)
@@ -34,7 +34,7 @@ tools, sharing & intent tweaks, communication helpers and all-in-one power-user 
 
 - **[⭐ Essentials](https://github.com/sameerasw/essentials)** - Multi-purpose tweaks for display, notifications and alerts, security and privacy, sound and haptics, and app freezing. `FOSS`
 - **[APatch Utilities](https://github.com/lzghzr/APatch_kpm)** - Collection of utility modules for APatch. `FOSS`
-- **[GreaseMilkyway](https://play.google.com/store/apps/details?id=net.kollnig.greasemilkyway)** - Android accessibility service designed to help people with attention-related conditions (such as ADHD) manage their digital environment and focus on what matters. `FOSS` `[LSP]`
+- **[GreaseMilkyway](https://play.google.com/store/apps/details?id=net.kollnig.greasemilkyway)** - Helps people with attention-related conditions such as ADHD manage their digital environment using an accessibility service. `FOSS` `[LSP]`
 - **[Kaorios Toolbox](https://github.com/Wuang26/Kaorios-Toolbox)** - Toolbox for the Kaorios ROM with Play Integrity fix, device and per-app property spoofing, Google Photos unlimited backup, payload dumper and high-FPS unlock. `Proprietary`
 - **[KernelSU Grant Toast](https://github.com/NativeStar/KernelSUGrantToast)** - Make KernelSU show a root granted toast like Magisk. `FOSS` `[K]`
 - **[nebulaOS Toolkit](https://github.com/Smart-Home-User/XREAL-Beam-Pro-nebulaOS-Toolkit)** - Control overlay for the XREAL Beam Pro trackpad adding one-handed gesture presets, spatial app launching, quick apps, QR/barcode scanning, media and volume controls and D-pad navigation. Shizuku, Sui or root enables the privileged input controls. `FOSS`
@@ -51,7 +51,7 @@ tools, sharing & intent tweaks, communication helpers and all-in-one power-user 
 ## Reboot & Power
 
 - **[Advanced Power Menu](https://github.com/Xposed-Modules-Repo/com.sui.advancedpowermenu)** - Provides a highly compatible extended advanced power menu. `Proprietary` `[LSP]`
-- **[RebootNya](https://github.com/daisukiKaffuChino/RebootNya)** - A simple yet advanced reboot utility for Android devices. `FOSS`
+- **[RebootNya](https://github.com/daisukiKaffuChino/RebootNya)** - Provides reboot options for Android devices. `FOSS`
 
 ## Sharing & Intent Tools
 

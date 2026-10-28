@@ -23,26 +23,26 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 
 ## ADB & Debugging
 
-- **[ADB Root](https://github.com/evdenis/adb_root)** - A Magisk module that runs the adbd daemon as root and skips USB authentication. `FOSS` `[M]`
-- **[altdb](https://github.com/Dr-TSNG/altdb)** - KernelSU module running a separate wireless ADB server over the local network with six-digit TLS pairing and a WebUI, leaving the system adbd and its authorizations untouched. Android 11+ arm64. `FOSS` `[K]`
+- **[ADB Root](https://github.com/evdenis/adb_root)** - Runs the adbd daemon as root and skips USB authentication. `FOSS` `[M]`
+- **[altdb](https://github.com/Dr-TSNG/altdb)** - Runs a separate wireless ADB server over the local network with six-digit TLS pairing and a WebUI, leaving the system adbd and its authorizations untouched. Android 11+ arm64. `FOSS` `[K]`
 - **[Android-ADB-over-WiFi](https://github.com/warren-bank/Android-ADB-over-WiFi)** - Toggles a rooted device's Android Debug Bridge daemon (adbd) between USB and WiFi mode. `FOSS` `[LSP]`
 - **[Auto USB MTP](https://github.com/Shuoh118/Auto-USB-MTP)** - Hooks UsbDeviceManager and AdbService in the system framework on Android 12+ to automatically switch USB connections to MTP mode when a cable is plugged in. `Proprietary` `[LSP]`
-- **[Debug Assistant](https://github.com/ThePedroo/DebugAssistant)** - The simplest yet powerful logcat capture system as Magisk module. `FOSS` `[M]` `[A]`
+- **[Debug Assistant](https://github.com/ThePedroo/DebugAssistant)** - Captures logcat logs across three boots. `FOSS` `[M]` `[A]`
 - **[Enable MIUI ADB](https://github.com/Ylarod/enable-miui-adb)** - Enables adb install on MIUI/HyperOS without Xiaomi account login or SIM verification via a one-shot KernelSU/Magisk script. `FOSS` `[M]` `[K]` `[A]`
-- **[Hotspot Wireless Debugging](https://github.com/droserasprout/io.drsr.hotspotadb)** - Xposed module to allow Wireless Debugging over Wi-Fi Hotspot. `FOSS` `[LSP]`
+- **[Hotspot Wireless Debugging](https://github.com/droserasprout/io.drsr.hotspotadb)** - Enables wireless debugging over a Wi-Fi hotspot. `FOSS` `[LSP]`
 - **[LADB](https://github.com/tytydraco/LADB)** - Local ADB shell with a built-in terminal interface. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.draco.ladb)
 - **[Log Catcher](https://github.com/hxreborn/Log-Catcher)** - Captures logcat and kernel messages during startup and archives them as timestamped tarballs after unlock. `FOSS` `[M]` `[K]` `[A]`
 - **[Logcat Extreme](https://play.google.com/store/apps/details?id=scd.lcex)** - Logcat reader and capture tool for rooted Android devices. `Proprietary`
 - **[Loki](https://github.com/trinadhthatakula/Loki)** - Logcat reader that captures, saves and shares another app's logs using root or Shizuku. `FOSS`
 - **[Magisk-WiFiADB](https://github.com/mrh929/magisk-wifiadb)** - Enable WiFi ADB automatically. `FOSS` `[M]`
 - **[USBManager](https://github.com/TigerSpirit217/USBManager/blob/master/README_ENG.md)** - Shows a USB mode picker when the phone is connected to a computer, with one-tap ADB toggles and optional auto-disable of USB debugging on unplug. `FOSS` `[LSP]`
-- **[Wireless ADB Controller](https://github.com/Magisk-Modules-Alt-Repo/wadbd)** - Magisk module to enable, disable and manage wireless ADB daemon per session or at boot with custom port and key support. `FOSS` `[M]` `[K]` `[A]`
+- **[Wireless ADB Controller](https://github.com/Magisk-Modules-Alt-Repo/wadbd)** - Enables, disables and manages the wireless ADB daemon per session or at boot, with custom port and key support. `FOSS` `[M]` `[K]` `[A]`
 - **[Wireless ADB Switch](https://github.com/Smooth-E/wireless-adb-switch)** - Quickly enable or disable Android's Wireless Debugging feature. Includes widgets and a quick settings tile for convenience. `FOSS` | [🌱](https://f-droid.org/ru/packages/com.smoothie.wirelessDebuggingSwitch)
 
 ## Automation
 
-- **[⭐ MacroDroid](https://play.google.com/store/search?q=macrodroid&c=apps)** - Easy to use automation app. `Proprietary`
-- **[⭐ Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)** - An advanced and powerful automation app. `Proprietary`
+- **[⭐ MacroDroid](https://play.google.com/store/search?q=macrodroid&c=apps)** - Automates tasks on Android. `Proprietary`
+- **[⭐ Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)** - Automates tasks on Android. `Proprietary`
 - **[Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate)** - Lets you create custom automation workflows using flowcharts, enabling seamless management of tasks, files, and device settings. `Proprietary`
 - **[crond4Android](https://github.com/powerAn2020/crond4android)** - Cron daemon for scheduled jobs on KernelSU, APatch, and Magisk. `FOSS` `[M]` `[K]` `[A]`
 - **[Eta](https://github.com/Mangi-11/Eta/blob/main/README_EN.md)** - System-level BYOK AI agent with direct Android API calls, a GUI agent, terminal and Alpine/Debian environments, Skills and MCP. Core features run without root; root and LSPosed add system access and assistant entry points. Android 13+. `Proprietary` `[LSP]`
@@ -60,10 +60,10 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 - **[KSU Toolkit](https://github.com/backslashxx/ksu_toolkit)** - Small extensions on top of KernelSU for testing and debugging purposes. `FOSS` `[K]`
 - **[Nano for Android NDK](https://github.com/Magisk-Modules-Repo/nano-ndk)** - Allows temporary recovery use, so you can trigger it from adb shell or TWRP Terminal. `FOSS` `[M]`
 - **[Py2Droid](https://github.com/Mrakorez/py2droid)** - Install Python 3 on Android, including the standard library (STDLIB). `FOSS` `[M]` `[A]`
-- **[SELinux Permissive](https://github.com/evdenis/selinux_permissive)** - Magisk Module that switches SELinux to permissive mode. `FOSS` `[M]`
+- **[SELinux Permissive](https://github.com/evdenis/selinux_permissive)** - Switches SELinux to permissive mode. `FOSS` `[M]`
 - **[Shizuku](https://github.com/RikkaApps/Shizuku)** - Use system APIs directly with ADB/root privileges. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/moe.shizuku.privileged.api) | [▶️](https://play.google.com/store/search?q=shizuku&c=apps)
 - **[SQLite3 for Android](https://github.com/rojenzaman/sqlite3-magisk-module)** - Provides a statically linked `sqlite3` binary for arm64-v8a, armeabi-v7a, x86 and x86_64. `Proprietary` `[M]`
-- **[Zygisk-Loader](https://github.com/HanSoBored/Zygisk-Loader)** - Module for hot-swapping native libraries into Android applications without rebooting. `FOSS` `[K]` `[A]`
+- **[Zygisk-Loader](https://github.com/HanSoBored/Zygisk-Loader)** - Hot-swaps native libraries into Android apps without rebooting. `FOSS` `[K]` `[A]`
 
 ### Shizuku Forks
 
@@ -112,7 +112,7 @@ Frida allows you to inject your own scripts into black box processes, enabling y
 - **[Chroot Distro](https://github.com/Magisk-Modules-Alt-Repo/chroot-distro)** - Install Gnu/Linux distributions on Android. `FOSS` `[M]` `[A]`
 - **[DebDroid](https://github.com/NICUP14/DebDroid)** - Debian Container Runtime for Android. `FOSS` 
 - **[LinuxOnAndroid](https://github.com/HsOjo/LinuxOnAndroid)** - Runs a Linux rootfs on the host kernel in a private mount namespace with `pivot_root`, fresh `/proc` `/sys` `/dev` and a loop-mounted ext4 image, so mount-aware tools and services such as SSH, Tailscale, Samba and Podman behave correctly. `FOSS` `[M]`
-- **[Magisk Docker](https://github.com/mgksu/dockerd)** - Magisk and KernelSU module for running Docker on rooted Android devices. `FOSS` `[M]` `[K]`
+- **[Magisk Docker](https://github.com/mgksu/dockerd)** - Runs Docker on rooted Android devices. `FOSS` `[M]` `[K]`
 - **[Trixie.apk](https://github.com/DesktopECHO/trixie.apk)** - Debian 13 (Trixie) Server/Desktop container for rooted Android 5.0+ devices. `FOSS`
 - **[Ubuntu Chroot](https://github.com/ravindu644/Ubuntu-Chroot)** - Run Ubuntu 24.04 on Android With full Hardware Access and pure namespace isolation. `FOSS` `[M]` `[K]` `[A]`
 
@@ -124,4 +124,4 @@ Frida allows you to inject your own scripts into black box processes, enabling y
 - **[ReTerminal](https://github.com/RohitKushvaha01/ReTerminal)** - Material 3 terminal emulator built on Termux's TerminalView, with multiple sessions, virtual keys and Alpine Linux support. `FOSS`
 - **[ssh-ksu](https://github.com/jtnqr/ssh-ksu)** - Statically compiled musl builds of OpenSSH, Bash, rsync, tmux, htop and nano for KernelSU and Magisk, running the SSH daemon in an isolated mount namespace with a WebUI for logs, config and host keys. `FOSS` `[M]` `[K]`
 - **[Termux-Root-Recovery-Tool](https://github.com/Ishu43642/Termux-Root-Recovery-Tool)** - Install GSi Rom , Flashing Fastboot Rom, install Twrp Recovery, Boot.img & vbmeta.img files. `FOSS` 
-- **[TermuxRootMods](https://github.com/rompelhd/TermuxRootMods)** - A Magisk module that enhances the Termux experience for rooted devices. `FOSS` `[M]`
+- **[TermuxRootMods](https://github.com/rompelhd/TermuxRootMods)** - Enhances Termux on rooted devices. `FOSS` `[M]`
