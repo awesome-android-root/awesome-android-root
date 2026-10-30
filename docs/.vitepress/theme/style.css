@@ -201,8 +201,21 @@ html.dark {
 }
 
 .theme-toggle svg {
+  position: absolute;
+  inset: 0;
+  margin: auto;
   width: 1rem;
   height: 1rem;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* both icons always render; html.dark is set before first paint, so the
+   visible icon comes from CSS and stays correct through hydration */
+html:not(.dark) .theme-toggle .theme-icon-moon,
+html.dark .theme-toggle .theme-icon-sun {
+  opacity: 0;
+  transform: rotate(70deg) scale(0.6);
+  pointer-events: none;
 }
 
 .theme-toggle {
@@ -219,21 +232,6 @@ html.dark {
 
 .VPNav .hamburger {
   order: 4;
-}
-
-.theme-icon-enter-active,
-.theme-icon-leave-active {
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.theme-icon-enter-from {
-  opacity: 0;
-  transform: rotate(-70deg) scale(0.6);
-}
-
-.theme-icon-leave-to {
-  opacity: 0;
-  transform: rotate(70deg) scale(0.6);
 }
 
 /**
