@@ -23,7 +23,7 @@ regardless of whether they are apps, Magisk modules, KernelSU modules or LSPosed
 - **[Audio jitter silencer](https://github.com/Magisk-Modules-Alt-Repo/audio-jitter-silencer)** - For avoiding distortion on all digital audio outputs, it disables audio jitter generators (w.r.t. battery draining and optimizations, and wireless connectivity). `FOSS` `[M]`
 - **[DisableAudioFocus](https://github.com/auag0/DisableAudioFocus)** - Allows you to disable audio focus, enabling you to play multiple videos and audios simultaneously. `FOSS` `[LSP]`
 - **[HuaweiPods](https://github.com/Nshpiter/HuaweiPods)** - Huawei audio device integration for Xiaomi HyperOS. `FOSS` `[LSP]`
-- **[HyperEars](https://github.com/silverpoetry/HyperEars)** - Brings third-party Bluetooth headsets into the HyperOS MiLink device hub, with battery readings, noise-control modes and device hand-off. Scopes to Bluetooth and MiLink. `FOSS` `[LSP]`
+- **[HyperEars](https://github.com/silverpoetry/HyperEars)** - Adds battery level and noise-control modes for third-party Bluetooth headphones to the HyperOS MiLink device center, so they show up next to Xiaomi earbuds. `FOSS` `[LSP]`
 - **[LibrePods](https://github.com/kavishdevar/librepods)** - Unlocks Apple's exclusive premium AirPods features on non-Apple devices. `FOSS` `[LSP]` `[M]` `[K]`
 - **[SonyPods](https://github.com/Mercury000/SonyPods)** - System-level Sony headphone control for HyperOS devices. `FOSS` `[LSP]`
 
