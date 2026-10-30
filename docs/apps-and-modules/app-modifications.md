@@ -55,6 +55,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[GH FastPass](https://github.com/hxreborn/gh-fast-pass)** - Closes the verification screen once the request is approved on Github android app. `FOSS` `[LSP]`
 - **[Gmail Hide Ads](https://github.com/MrxSiN/GmailHideAds)** - Removes sponsored rows from Gmail by collapsing them before the list is measured. `FOSS` `[LSP]`
 - **[GMS Flags Reborn](https://github.com/polodarb/GMS-Flags-Reborn)** - Browse and override the hidden Google Phenotype feature flags that gate rollouts across Gboard, YouTube, Google Photos, Play Store and other Google apps. Requires root and Xposed/LSPosed. `FOSS` `[LSP]`
+- **[GText](https://github.com/comewhy/com.comewhy.gtext)** - Replaces text that other apps display, using exact-match or regular-expression rules, including launcher app names and system UI text; an overlay lets you tap a word on screen to make a rule. Android 14 to 17. `Proprietary` `[LSP]`
 - **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
 - **[KeyFlux](https://github.com/NawafCode/KeyFlux)** - Customize Google Gboard, exposing selected hidden features, and adding clipboard-related enhancements. `FOSS` `[LSP]`
 - **[KGPT](https://github.com/eluea/KGPT)** - Integrates generative AI such as ChatGPT into the keyboard. `FOSS` `[LSP]`
@@ -74,6 +75,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[XposedPhotosFix](https://github.com/RevealedSoulEven/XposedPhotosFIX)** - Prevents Google Photos app from merging all folders into Camera and creates separate albums for each folder, useful for backups. `FOSS` `[LSP]`
 - **[Yandex Maps Patcher](https://github.com/Xposed-Modules-Repo/ru.bluecat.yandexmapspatcher)** - Hides ads and intrusive services in the Yandex Maps app. `Proprietary` `[LSP]`
 - **[Yandex Music Downloader](https://github.com/errorman-awful/YMDownloaderXposed)** - Download flac Music from Yandex Music app. `Proprietary` `[LSP]`
+- **[YouTube Hide Ads](https://github.com/MrxSiN/YouTubeHideAds)** - Removes video, feed, search and Shorts ads from the official YouTube app, skips sponsor segments reported to SponsorBlock, and adds fullscreen brightness and volume swipes. `FOSS` `[LSP]`
 
 ## Browser Mods
 
@@ -172,6 +174,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 
 ### Weibo
 
+- **[ReWeibo](https://github.com/Xposed-Modules-Repo/com.tianqianguai.reweibo)** - Removes splash and timeline ads from Weibo Lite, forces a newest-first timeline, and saves your reading position so the feed reopens where you stopped. `Proprietary` `[LSP]`
 - **[WeiboHelper](https://github.com/Xposed-Modules-Repo/com.skyhand.sinahelper)** - Remove all available advertisements and recommendations from Weibo. `Proprietary` `[LSP]`
 
 ### WhatsApp

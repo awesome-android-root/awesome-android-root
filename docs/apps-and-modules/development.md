@@ -52,6 +52,7 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 
 ## Developer Tools
 
+- **[AA Experiments](https://github.com/HighwindBR/AA-Experiments)** - Lists the hidden experiment flags inside the installed Android Auto app and lets you change their values, without patching or reinstalling it. `FOSS` `[LSP]`
 - **[AndroidSpect](https://github.com/thecybersandeep/androidspect)** - Live runtime audit for installed Android apps, serves a browser dashboard. `FOSS` `[LSP]`
 - **[Bluetooth Hook](https://github.com/jingyu233/bluetoothhook#english)** - Inject virtual BLE devices into Android system Bluetooth scan results, facilitating Bluetooth application debugging for developers. `FOSS` `[LSP]`
 - **[Covalent](https://github.com/PalmDevs/covalent)** - Modification framework for React Native apps that runs custom Hermes bytecode before the app's own, forces DevSupport on and exposes React Native DevTools for live inspection and editing. Targets React Native 0.86.3 with Hermes V1. `FOSS` `[LSP]`
@@ -64,6 +65,7 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 - **[SELinux Permissive](https://github.com/evdenis/selinux_permissive)** - Switches SELinux to permissive mode. `FOSS` `[M]`
 - **[Shizuku](https://github.com/RikkaApps/Shizuku)** - Use system APIs directly with ADB/root privileges. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/moe.shizuku.privileged.api) | [▶️](https://play.google.com/store/search?q=shizuku&c=apps)
 - **[SQLite3 for Android](https://github.com/rojenzaman/sqlite3-magisk-module)** - Provides a statically linked `sqlite3` binary for arm64-v8a, armeabi-v7a, x86 and x86_64. `Proprietary` `[M]`
+- **[StethoX](https://github.com/5ec1cff/StethoX)** - Inspects any app from Chrome DevTools over ADB: view hierarchy, screen mirroring, JavaScript that reaches the app's Java objects, and an option to hold an app at startup until you attach. `FOSS` `[LSP]`
 - **[Zygisk-Loader](https://github.com/HanSoBored/Zygisk-Loader)** - Hot-swaps native libraries into Android apps without rebooting. `FOSS` `[K]` `[A]`
 
 ### Shizuku Forks
@@ -104,6 +106,7 @@ Frida allows you to inject your own scripts into black box processes, enabling y
 - **[OnePlus Flash Control](https://github.com/Bartixxx32/Opflashcontrol-app)** - Precise control over the brightness of the dual-tone and quad-tone LED flashes for OnePlus devices. `FOSS`
 - **[Open Headunit](https://github.com/andreknieriem/open-headunit)** - Turns an Android phone or tablet into an Android Auto receiver over a USB wireless dongle, Wi-Fi Direct or a headunit hotspot. Root is optional and only needed to re-enable Android Auto's wireless startup receiver on 17.4 and newer. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.andrerinas.headunitrevived)
 - **[USB HID Client](https://github.com/Arian04/android-hid-client)** - Use your phone as a keyboard and mouse without any software on the other end. `FOSS` | [🌱](https://apt.izzysoft.de/packages/me.arianb.usb_hid_client)
+- **[USB-Arsenal](https://github.com/ravindu644/USB-Arsenal)** - Shows a rooted phone to a computer as a USB drive, CD-ROM, network adapter, keyboard or mouse over one cable, and gives the port back to Android when stopped. Needs a kernel with USB configfs. `FOSS`
 
 ## Linux Environments
 
