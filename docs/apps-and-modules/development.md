@@ -64,6 +64,7 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 - **[SELinux Permissive](https://github.com/evdenis/selinux_permissive)** - Switches SELinux to permissive mode. `FOSS` `[M]`
 - **[Shizuku](https://github.com/RikkaApps/Shizuku)** - Use system APIs directly with ADB/root privileges. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/moe.shizuku.privileged.api) | [▶️](https://play.google.com/store/search?q=shizuku&c=apps)
 - **[SQLite3 for Android](https://github.com/rojenzaman/sqlite3-magisk-module)** - Provides a statically linked `sqlite3` binary for arm64-v8a, armeabi-v7a, x86 and x86_64. `Proprietary` `[M]`
+- **[StethoX](https://github.com/5ec1cff/StethoX)** - Opens Chrome DevTools for any app through Stetho, exposing the view tree, screen mirroring, Java hooks and optional suspend at process start. Connect over ADB. `FOSS` `[LSP]`
 - **[Zygisk-Loader](https://github.com/HanSoBored/Zygisk-Loader)** - Hot-swaps native libraries into Android apps without rebooting. `FOSS` `[K]` `[A]`
 
 ### Shizuku Forks
@@ -104,6 +105,7 @@ Frida allows you to inject your own scripts into black box processes, enabling y
 - **[OnePlus Flash Control](https://github.com/Bartixxx32/Opflashcontrol-app)** - Precise control over the brightness of the dual-tone and quad-tone LED flashes for OnePlus devices. `FOSS`
 - **[Open Headunit](https://github.com/andreknieriem/open-headunit)** - Turns an Android phone or tablet into an Android Auto receiver over a USB wireless dongle, Wi-Fi Direct or a headunit hotspot. Root is optional and only needed to re-enable Android Auto's wireless startup receiver on 17.4 and newer. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.andrerinas.headunitrevived)
 - **[USB HID Client](https://github.com/Arian04/android-hid-client)** - Use your phone as a keyboard and mouse without any software on the other end. `FOSS` | [🌱](https://apt.izzysoft.de/packages/me.arianb.usb_hid_client)
+- **[USB-Arsenal](https://github.com/ravindu644/USB-Arsenal)** - Turns a rooted phone into USB drives, a CD-ROM, a network adapter and a keyboard at once over one cable, then returns the port to Android on stop. Needs a kernel with USB configfs. `FOSS`
 
 ## Linux Environments
 

@@ -38,6 +38,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 ## App Mods
 
 - **[⭐ GPhotosUnlimited](https://github.com/Rev4N1/GPhotosUnlimited)** - Enables unlimited Google Photos storage. `FOSS` `[M]` `[K]` `[A]`
+- **[AA Experiments](https://github.com/HighwindBR/AA-Experiments)** - Discovers and selectively overrides experiment flags in the installed Android Auto build, with typed overrides, recovery bundles and warnings before risky entries. Scope the module to Android Auto. `FOSS` `[LSP]`
 - **[AA Mods](https://github.com/ImNoammm/aa-mods)** - Adds launcher start, a recents button, phone apps on the car screen and microG without telemetry to Android Auto using Vector. `FOSS` `[LSP]`
 - **[AM++](https://github.com/Zennmn/AM-plus-plus/blob/main/README.en.md)** - Apple Music enhancements: tablet dual-pane player, lyric blur and custom lyric fonts, TTML lyric injection, song title correction and Liquid Glass navigation. `FOSS` `[LSP]`
 - **[AmznKiller](https://github.com/hxreborn/amznkiller)** - Hides sponsored content and ads in the Amazon Shopping app. `FOSS` `[LSP]`
@@ -55,6 +56,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[GH FastPass](https://github.com/hxreborn/gh-fast-pass)** - Closes the verification screen once the request is approved on Github android app. `FOSS` `[LSP]`
 - **[Gmail Hide Ads](https://github.com/MrxSiN/GmailHideAds)** - Removes sponsored rows from Gmail by collapsing them before the list is measured. `FOSS` `[LSP]`
 - **[GMS Flags Reborn](https://github.com/polodarb/GMS-Flags-Reborn)** - Browse and override the hidden Google Phenotype feature flags that gate rollouts across Gboard, YouTube, Google Photos, Play Store and other Google apps. Requires root and Xposed/LSPosed. `FOSS` `[LSP]`
+- **[GText](https://github.com/comewhy/com.comewhy.gtext)** - Replaces text shown inside other apps by exact match or regular expression, including app names and system labels, with an on-screen picker for new rules. Android 14 to 17. `Proprietary` `[LSP]`
 - **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
 - **[KeyFlux](https://github.com/NawafCode/KeyFlux)** - Customize Google Gboard, exposing selected hidden features, and adding clipboard-related enhancements. `FOSS` `[LSP]`
 - **[KGPT](https://github.com/eluea/KGPT)** - Integrates generative AI such as ChatGPT into the keyboard. `FOSS` `[LSP]`
@@ -74,6 +76,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[XposedPhotosFix](https://github.com/RevealedSoulEven/XposedPhotosFIX)** - Prevents Google Photos app from merging all folders into Camera and creates separate albums for each folder, useful for backups. `FOSS` `[LSP]`
 - **[Yandex Maps Patcher](https://github.com/Xposed-Modules-Repo/ru.bluecat.yandexmapspatcher)** - Hides ads and intrusive services in the Yandex Maps app. `Proprietary` `[LSP]`
 - **[Yandex Music Downloader](https://github.com/errorman-awful/YMDownloaderXposed)** - Download flac Music from Yandex Music app. `Proprietary` `[LSP]`
+- **[YouTube Hide Ads](https://github.com/MrxSiN/YouTubeHideAds)** - Removes video, feed, search and Shorts ads from the official YouTube app, skips SponsorBlock segments and adds fullscreen brightness and volume swipes. `FOSS` `[LSP]`
 
 ## Browser Mods
 
@@ -172,6 +175,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 
 ### Weibo
 
+- **[ReWeibo](https://github.com/Xposed-Modules-Repo/com.tianqianguai.reweibo)** - Removes splash and timeline ads from Weibo Lite, reverses the timeline, fills cache gaps and restores the last reading position. `Proprietary` `[LSP]`
 - **[WeiboHelper](https://github.com/Xposed-Modules-Repo/com.skyhand.sinahelper)** - Remove all available advertisements and recommendations from Weibo. `Proprietary` `[LSP]`
 
 ### WhatsApp
