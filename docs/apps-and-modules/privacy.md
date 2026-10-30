@@ -27,6 +27,7 @@ tracking, spoofing your device identity or location, and isolating apps from you
 
 ## App Isolation
 
+- **[App Clone](https://github.com/doccstat/appclone)** - Lifts the stock clone-profile limit with an Xposed hook, then lists, opens, freezes and removes each cloned app instance. Android 13+. `FOSS` `[LSP]`
 - **[Insular](https://gitlab.com/secure-system/Insular)** - Isolate your big brother app. A fork based on the excellent Island. `FOSS` | [🌱](https://f-droid.org/packages/com.oasisfeng.island.fdroid)
 - **[Island](https://github.com/oasisfeng/island/tree/dev)** - App isolation and cloning. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.oasisfeng.island)
 - **[Shelter](https://gitea.angry.im/PeterCxy/Shelter)** - Isolate and clone apps in a work profile. `FOSS` | [🌱](https://f-droid.org/app/net.typeblog.shelter)
@@ -48,6 +49,7 @@ tracking, spoofing your device identity or location, and isolating apps from you
 - **[SpoofMyDevice](https://github.com/BuSung-dev/SpoofMyDevice)** - Builds, saves and applies spoofed Android device profiles to selected apps. `FOSS` `[LSP]`
 - **[SSAID (Android ID Modifier)](https://github.com/HSSkyBoy/AndroidIDChange)** - A modern Android SSAID (Android ID) inspector, modifier, backup, and management utility. `FOSS` `[LSP]`
 - **[Telephony Spoofer](https://github.com/BrianWalczak/TelephonySpoofer)** - Spoof cellular information, including eSIM compatibility. `FOSS` `[LSP]`
+- **[VirtualRegion](https://github.com/Xposed-Modules-Repo/io.github.zhou6514ctrl.virtualregion)** - Virtualizes location, Wi-Fi, cell, Bluetooth, SIM, language and timezone per app, with saved environments and route simulation. Not permitted for use in China. `Proprietary` `[LSP]`
 - **[YumyHook](https://github.com/Xposed-Modules-Repo/com.yumito.yumyhook)** - System-level device spoofing with anti-detection: fake build properties, SIM data, identifiers and location per app. `Proprietary` `[LSP]`
 
 ## Location & GPS
@@ -68,6 +70,7 @@ tracking, spoofing your device identity or location, and isolating apps from you
 - **[⭐ Amarok](https://github.com/deltazefiro/Amarok-Hider)** - Android application which enables you to hide your private files and apps with a single click. `FOSS` | [🌱](https://f-droid.org/zh_Hans/packages/deltazero.amarok.foss/)
 - **[Do Not Try Accessibility](https://github.com/Nitsuya/DoNotTryAccessibility)** - Hook System Framework makes the app think that accessibility services are not enabled. `FOSS` `[LSP]`
 - **[Do Not Try Accessibility Reborn](https://github.com/zjz-Beiming/DoNotTryAccessibility-Reborn)** - Prevents blacklisted apps from seeing enabled accessibility services, with optional hiding of the installed service list and hot-reloading config. `FOSS` `[LSP]`
+- **[Doppel](https://github.com/akano12/Doppel)** - Feeds apps fake identifiers, location, contacts and other restricted data instead of revoking permissions, and logs the real and fake values. Continues XPrivacyLua. Android 8.1+. `FOSS` `[LSP]`
 - **[DuckUSB](https://github.com/Bouteillepleine/DuckUSB)** - Makes apps read USB debugging, wireless debugging and Developer Options as OFF while they stay enabled. `Proprietary` `[M]` `[K]` `[LSP]`
 - **[FuseFixer](https://github.com/5ec1cff/FuseFixer)** - Hooks the MediaProvider Fuse Daemon to stop apps probing package existence through `Android/data` directory quirks (Unicode casefold tricks). `FOSS` `[LSP]`
 - **[FuseHide](https://github.com/XiaoTong6666/FuseHide)** - Hides chosen storage paths from MediaProvider on Android 12+ at runtime, and debugs/fixes `Android/data` Unicode casefold scenarios. `FOSS` `[LSP]`

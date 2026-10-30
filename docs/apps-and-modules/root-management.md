@@ -101,6 +101,7 @@ Exploits like **GhostLock (CVE-2026-43499)** - a 15-year-old Linux kernel bug - 
 - **[Android-Device-Trust](https://github.com/reveny/Android-Device-Trust)** - Android device attestation and fingerprinting tool. `FOSS`
 - **[Chunqiu Detector](https://github.com/mingzun09/Chunqiu-Detector-Problem-solution)** - Solutions, scripts, and modules for bypassing and troubleshooting Chunqiu Detector checks on rooted Android devices. `FOSS`
 - **[Demo](https://github.com/JingMatrix/Demo)** - Asks whether a library is injected into its address space, mounts are missing from its mount table, or a dirty SELinux policy is present; the detection target paired with NeoZygisk. `FOSS`
+- **[Detection](https://github.com/rushiranpise/detection)** - Index of Android apps and tools that detect root, hooking, custom ROMs, bootloader unlocks, SafetyNet and Play Integrity, with package names and versions. `Proprietary`
 - **[DirtySepolicy](https://github.com/LSPosed/DirtySepolicy)** - Queries the device SELinux policy from an app zygote and reports the dirty rules injected by userspace root and hooking solutions. `FOSS`
 - **[Duck Detector](https://github.com/eltavine/Duck-Detector-Refactoring)** - Android environment integrity inspection tool for root, hook, bootloader, SELinux, virtualization, and attestation signals. `FOSS`
 - **[FOSS Root Checker](https://github.com/Chill-Astro/FOSS-Root-Checker)** - Root checker that shows the checks it runs, with an offline build that leaves out the update checker. `FOSS`
