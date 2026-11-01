@@ -171,6 +171,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[WeChat Auxiliary](https://github.com/HdShare/WAuxiliary_Public)** - Various tweaks for WeChat. `Proprietary` `[LSP]`
 - **[WeChatTablet](https://github.com/Xposed-Modules-Repo/top.hookvip.wxtablet)** - Enables tablet interface and features in WeChat mobile app. `Proprietary` `[LSP]`
 - **[WePadBridge](https://github.com/libingtong/WePadBridge)** - Enables tablet interface and features in WeChat Work mobile app. `FOSS` `[LSP]`
+- **[Wren](https://github.com/Xposed-Modules-Repo/top.haif.xposed)** - Adds various chat and media tweaks to WeChat. `Proprietary` `[LSP]`
 
 ### Weibo
 
