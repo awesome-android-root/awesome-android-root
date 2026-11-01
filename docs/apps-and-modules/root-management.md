@@ -93,6 +93,7 @@ Exploits like **GhostLock (CVE-2026-43499)** - a 15-year-old Linux kernel bug - 
 - **[KPatch Next Module](https://github.com/KernelSU-Next/KPatch-Next-Module)** - Standalone implementation of KPM (KernelSU Patch Module) support for Magisk/KernelSU with WebUI. `FOSS` `[M]` `[K]` `[A]`
 - **[LSP Store](https://github.com/Xposed-Modules-Repo/io.github.tophtab.lspstore)** - Updater and browser for LSPosed modules. `Proprietary` `[LSP]`
 - **[Magisk Manager for Recovery Mode](https://github.com/Rikj000/Magisk-Manager-for-Recovery-Mode)** - Easily manage your Magisk Modules from a terminal session in your custom recovery. `FOSS` `[M]`
+- **[Modules Manager](https://github.com/Xposed-Modules-Repo/io.github.rushiranpise.modulesmanager)** - An Android app for finding, installing and updating Xposed/Lsposed modules. `Proprietary` `[LSP]`
 - **[ScopeView](https://github.com/Xposed-Modules-Repo/io.github.zhongjitianqianguai.scopeview)** - Shows which LSPosed modules target an app and updates installed modules individually or in batch. `Proprietary` `[LSP]`
 
 ## Root Detection & Testing
