@@ -44,8 +44,6 @@ hosts/DNS-based tools that block ads, trackers and malware system-wide, in every
 - **[Marketing Notification Blocker](https://github.com/lm060719/io.mo.mnblocker)** - Intercepts and blocks annoying marketing ads and spam push notifications. `FOSS` `[LSP]`
 - **[Re-Malwack](https://github.com/ZG089/Re-Malwack)** - Blocks ads, malware and trackers using a configurable hosts file. `FOSS` `[M]` `[A]`
 - **[StevenBlock](https://github.com/mikropsoft/StevenBlock)** - Blocks ads, trackers and malware using a systemless hosts file and configurable blocklists. `FOSS` `[M]` `[A]`
-- **[Systemless hosts KernelSU module](https://github.com/symbuzzer/systemless-hosts-KernelSU-module)** - Provides systemless hosts support for apps such as AdAway on KernelSU and APatch. `FOSS` `[K]` `[A]`
-- **[systemless-adblocker](https://github.com/Magisk-Modules-Alt-Repo/systemless-adblocker)** - Blocks ads using a systemless hosts file, based on gloeyisk/systemless-hosts. `FOSS` `[M]`
 
 ## DNS & Network Filtering
 

@@ -46,7 +46,6 @@ firewalls for hardening your device, controlling which apps can reach the networ
 - **[⭐ Move Certificate](https://github.com/ys1231/MoveCertificate)** - Move user certificates to system certificates. Supports Android 7-16. `FOSS` `[M]` `[K]` `[A]`
 - **[⭐ SSL Killer](https://github.com/Xposed-Modules-Repo/com.simo.ssl.killer)** - Bypass multiple ssl pinning implementations. `Proprietary` `[LSP]`
 - **[AlternativeUnlockXposed](https://github.com/leohearts/AlternativeUnlockXposed)** - Unlock your Android phone with an alternative PIN. `FOSS` `[LSP]`
-- **[Always Trust User Certs](https://github.com/NVISOsecurity/AlwaysTrustUserCerts)** - Automatically adds user certificates to the system root CA store. `FOSS` `[M]` `[K]`
 - **[Android-FlagSecure-Disabler](https://github.com/BlassGO/Android-FlagSecure-Disabler)** - FlagSecure Disabler, Screenshot Observer Disabler & DRM Disabler. `FOSS` `[M]` `[K]`
 - **[Anti SafetyCore](https://github.com/Astoritin/AntiSafetyCore)** - Blocks Google from quietly installing Android System SafetyCore and Android System Key Verifier by holding the package names with differently signed placeholder apps. `FOSS` `[M]` `[K]` `[A]`
 - **[Biometric App Lock](https://github.com/hxreborn/biometric-app-lock)** - Locks apps you choose behind fingerprint or face unlock. `FOSS` `[LSP]`
@@ -56,8 +55,6 @@ firewalls for hardening your device, controlling which apps can reach the networ
 - **[CertBridge](https://github.com/Eikeitsu/CertBridge)** - Merges Reqable, ProxyPin and custom PEM certificates into the Android system trust store without rewriting the system partition, with a WebUI, hot mount and automatic APEX Conscrypt injection on Android 14+. Android 7-16. `FOSS` `[M]` `[K]` `[A]`
 - **[Custom Certificate Authorities](https://github.com/Magisk-Modules-Alt-Repo/custom-certificate-authorities)** - Moves user-installed certificate authorities into the system trust store, making them trusted by all apps. `FOSS` `[M]`
 - **[Custom Certificates](https://github.com/YujiaCheng1996/custom-certificates)** - Adds custom certificates to the system trust store. `FOSS` `[M]` `[K]`
-- **[Disable usb debugging](https://github.com/Aakif17/disable_usb_debugging)** - Disables USB Debugging after every reboot. `FOSS` `[M]`
-- **[DriFiCrack](https://github.com/ZeltNamizake/DriFiCrack)** - Brute Force Tool to Crack Wi-Fi Passwords. `FOSS` `[M]`
 - **[FLAG_SECURE-next](https://github.com/Dev97633/FLAG_SECURE-next)** - Disables FLAG_SECURE globally, allowing secure windows to be screenshotted and recorded. `Proprietary` `[LSP]`
 - **[ih8SecureLock](https://github.com/j-hc/ih8SecureLock)** - Prevent apps from blocking and listening to your screenshots with Zygisk. `FOSS` `[M]` `[K]`
 - **[Just Trust Me Pro](https://github.com/hang666/JustTrustMePro)** - Disables SSL certificate checking for the purposes of auditing an app with cert pinning. `FOSS` `[M]`

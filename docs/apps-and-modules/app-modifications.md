@@ -43,12 +43,9 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[AmznKiller](https://github.com/hxreborn/amznkiller)** - Hides sponsored content and ads in the Amazon Shopping app. `FOSS` `[LSP]`
 - **[Breeno Source Changer](https://github.com/Xposed-Modules-Repo/com.niki.breeno.openai/tree/main)** - Allows ColorOS's Breeno Assistant to change its AI model source and customize large language model (LLM) APIs. `FOSS` `[LSP]`
 - **[Deekseep](https://github.com/lllucccian/Deekseep)** - Adds account, chat, image, interface, and local API tools to the official DeepSeek Android app. `FOSS` `[LSP]`
-- **[E-Government Liberator](https://github.com/Crazyphil/digitales-amt-liberator)** - Removes root and bootloader checks from e-government apps. `FOSS` `[LSP]`
-- **[EDS NG Crack](https://github.com/dumbasPL/EDS-NG-crack)** - Unlocks all features in [EDS NG](https://play.google.com/store/apps/details?id=com.sovworks.projecteds&hl=en_US). `FOSS` `[M]`
 - **[Enhance Google Phone](https://github.com/Rove24/EnhanceGooglePhone)** - Natively unlocks full-function call recording, and other features in the Google Phone app. `FOSS` `[LSP]`
 - **[F**k Solid Explorer](https://github.com/fzer0x/dev.fzer0x.fucksolidexplorer)** - Unlock premium features and remove advertisements from Solid Explorer. `FOSS` `[LSP]`
 - **[FingerprintPay](https://github.com/eritpchy/FingerprintPay)** - Enables fingerprint payment via WeChat, Alipay, Taobao, Tencent QQ, and UnionPay on phones that support fingerprint recognition. `FOSS` `[M]` `[A]` `[LSP]`
-- **[G-News Control](https://github.com/mango0oo/G-News-Control)** - Controls Google News on the home screen. `Proprietary` `[M]` `[K]`
 - **[Gboard Material Expressive Black](https://github.com/hxreborn/gboard-material-expressive-black)** - Enables pitch black Gboard background on Android 16 dynamic theme. `FOSS` `[LSP]`
 - **[Gboard+](https://github.com/Xposed-Modules-Repo/io.github.kvmy666.gboardplus)** - Gboard toolbar with a clipboard vault for text and images, shortcuts, cursor and trackpad tools and screenshot capture. `Proprietary` `[LSP]`
 - **[GboardHook](https://github.com/chenyue404/GboardHook)** - Modifies the number of clipboard items displayed and their expiration time. `FOSS` `[LSP]`
@@ -56,7 +53,6 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[Gmail Hide Ads](https://github.com/MrxSiN/GmailHideAds)** - Removes sponsored rows from Gmail by collapsing them before the list is measured. `FOSS` `[LSP]`
 - **[GMS Flags Reborn](https://github.com/polodarb/GMS-Flags-Reborn)** - Browse and override the hidden Google Phenotype feature flags that gate rollouts across Gboard, YouTube, Google Photos, Play Store and other Google apps. Requires root and Xposed/LSPosed. `FOSS` `[LSP]`
 - **[GText](https://github.com/comewhy/com.comewhy.gtext)** - Replaces text that other apps display, using exact-match or regular-expression rules, including launcher app names and system UI text; an overlay lets you tap a word on screen to make a rule. Android 14 to 17. `Proprietary` `[LSP]`
-- **[Keyboard GPT](https://github.com/Mino260806/KeyboardGPT)** - Lets you integrate Generative AI like ChatGPT in keyboard. `FOSS` `[LSP]`
 - **[KeyFlux](https://github.com/NawafCode/KeyFlux)** - Customize Google Gboard, exposing selected hidden features, and adding clipboard-related enhancements. `FOSS` `[LSP]`
 - **[KGPT](https://github.com/eluea/KGPT)** - Integrates generative AI such as ChatGPT into the keyboard. `FOSS` `[LSP]`
 - **[LSpot](https://codeberg.org/dapsvi/LSpot)** - Blocks ads in Spotify by intercepting OkHttp requests to ad endpoints. `FOSS` `[LSP]`
@@ -90,9 +86,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 
 - **[⭐ Core Patch N](https://github.com/LSPosed/CorePatch)** - Disable signature verification For Android. `FOSS` `[LSP]`
 - **[⭐ Pairipfix](https://github.com/ahmedmani/pairipfix)** - Bypasses the "Get this app from Play" screen that appears when installing Android apps as an APK instead of from the Google Play Store. `FOSS` `[LSP]`
-- **[Apk Protection Patch](https://github.com/Mods-Center/Apk-Protection-Patch)** - Removes signature verification restrictions on AOSP and OEM ROMs (HyperOS, ColorOS, etc.), allowing installation of modified APKs. `Proprietary` `[M]` `[K]`
 - **[F**k Google License](https://github.com/JiGuroLGC/FuckGoogleLicense)** - Bypass Google Service License Verification. `FOSS` `[LSP]`
-- **[XSpoofSignatures](https://github.com/rushiiMachine/XSpoofSignatures)** - Spoof package signatures. `FOSS` `[LSP]`
 
 ## Social Media Mods
 
@@ -166,17 +160,14 @@ This category covers app patchers (including YouTube), social and browser mods, 
 ### WeChat
 
 - **[Inkhide](https://github.com/Xposed-Modules-Repo/com.lu.wxmask272)** -  Protect privacy, setting specific contacts as “close friends”, and hiding their presence throughout WeChat. `Proprietary` `[LSP]`
-- **[MaskWechat](https://github.com/Mingyueyixi/MaskWechat)** - Hide the chat records of specific users to prevent private chats from being peeked by third parties. `FOSS` `[LSP]`
 - **[NewMiko](https://modules.lsposed.org/module/im.mingxi.miko/)** - Various tweaks related to  WeChat app. `Proprietary` `[LSP]`
 - **[WeChat Auxiliary](https://github.com/HdShare/WAuxiliary_Public)** - Various tweaks for WeChat. `Proprietary` `[LSP]`
 - **[WeChatTablet](https://github.com/Xposed-Modules-Repo/top.hookvip.wxtablet)** - Enables tablet interface and features in WeChat mobile app. `Proprietary` `[LSP]`
-- **[WePadBridge](https://github.com/libingtong/WePadBridge)** - Enables tablet interface and features in WeChat Work mobile app. `FOSS` `[LSP]`
 - **[Wren](https://github.com/Xposed-Modules-Repo/top.haif.xposed)** - Adds various chat and media tweaks to WeChat. `Proprietary` `[LSP]`
 
 ### Weibo
 
 - **[ReWeibo](https://github.com/Xposed-Modules-Repo/com.tianqianguai.reweibo)** - Removes splash and timeline ads from Weibo Lite, forces a newest-first timeline, and saves your reading position so the feed reopens where you stopped. `Proprietary` `[LSP]`
-- **[WeiboHelper](https://github.com/Xposed-Modules-Repo/com.skyhand.sinahelper)** - Remove all available advertisements and recommendations from Weibo. `Proprietary` `[LSP]`
 
 ### WhatsApp
 
@@ -204,7 +195,5 @@ This category covers app patchers (including YouTube), social and browser mods, 
 ## Media & Camera Mods
 
 - **[GlassMic](https://github.com/lm060719/io.mo.glassmic)** - Lets you route an imported audio file into target recording apps through AudioRecord/AAudio hooks. `FOSS` `[LSP]`
-- **[OnePlus 8 Series and 9R Camera Unlocker](https://github.com/Magisk-Modules-Alt-Repo/oneplus-8series-9r-camera-unlocker)** - Enables 48MP RAW10 capture support, both on the main (8/8T/9R) and ultra wide (8 Pro) lenses and much more. `FOSS` `[M]`
 - **[VideoSpeed](https://github.com/MarsGao/io.github.MarsGao.speed)** - Adjusts video playback speed across multiple apps. `FOSS` `[LSP]`
-- **[XAudioCapture](https://github.com/Xposed-Modules-Repo/io.github.wzhy.xaudiocapture)** - Lets you capture any audio stream you desire, bypassing these restrictions. `Proprietary` `[LSP]`
 - **[xCam](https://github.com/hazbu/xCam)** - Replace live camera feeds and actual photo captures with virtual media sources. `FOSS` `[LSP]`

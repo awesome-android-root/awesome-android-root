@@ -60,7 +60,6 @@ Exploits like **GhostLock (CVE-2026-43499)** - a 15-year-old Linux kernel bug - 
 
 ## Bootloop Protection
 
-- **[Anti bootloop](https://github.com/Magisk-Modules-Alt-Repo/abootloop)** - Restores the previous boot image if a module causes a bootloop. `FOSS` `[M]`
 - **[AshReXcue - Bootloop Protector](https://github.com/RipperHybrid/AshLooper)** - Prevent boot loops caused by problematic modules installed via KernelSU or Magisk. `FOSS` `[M]` `[K]` `[A]`
 - **[YetAnotherBootloopProtector](https://github.com/Magisk-Modules-Alt-Repo/YetAnotherBootloopProtector)** - Monitor and fix potential Bootloops and SystemUI failures. `FOSS` `[M]` `[A]`
 
@@ -113,7 +112,6 @@ Exploits like **GhostLock (CVE-2026-43499)** - a 15-year-old Linux kernel bug - 
 - **[MagiskDetection](https://github.com/apkunpacker/MagiskDetection)** - Collection of Some publicly Available POC Apps to Detect Root/Magisk presence. `Proprietary`
 - **[PIF Detector](https://github.com/IR0NBYTE/playIntegrityFixDetector)** - Detects modifications, bypasses or fixes applied to the Google Play Integrity API. `FOSS` `[M]` `[K]` `[A]`
 - **[Play Integrity Alert](https://github.com/Xiddoc/PlayIntegrityAlert)** - Get notified when an app calls the Play Integrity API. `FOSS` `[LSP]`
-- **[Play Integrity API Checker](https://github.com/1nikolas/play-integrity-checker-app)** - This app shows info about your device integrity as reported by Google Play Services. If any of this fails could mean your device is rooted or tampered in a way. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck)
 - **[Securify](https://github.com/RabehX/Securify)** - Yet Another Root Checker and Play Integrity API Application. `FOSS`
 - **[TB Checker](https://play.google.com/store/apps/details?id=krypton.tbsafetychecker)** - Safety checker that reports root, hooking, Play Integrity and SafetyNet attestation results. `Proprietary`
 - **[ZygoteNextProbe](https://github.com/XiaoTong6666/ZygoteNextProbe)** - Research probe that checks whether Android 17's `zygote_next` native isolated services leak a global mount view - potentially exposing Magisk/Zygisk/LSPosed mounts to apps. `FOSS`
@@ -143,7 +141,6 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 - **[DirtySepolicy Bypass](https://github.com/flipphoneguy/DirtySepolicy_Bypass)** - Bypasses new DirtySepolicy on rooted Android devices to keep apps working. `FOSS` `[M]` `[K]` `[A]`
 - **[Duck ToolBox](https://github.com/eltavine/Duck-ToolBox)** - Provides a WebUI for Tricky Store, TEESimulator and OhMyKeymint configuration, Remote Key Provisioning CSR creation and verification, and Qualcomm Keymaster device ID provisioning. `FOSS` `[M]` `[K]` `[A]`
 - **[Komodo Build Props](https://github.com/Elcapitanoe/Komodo-Build-Prop#komodo-build-props)** - Spoofs your device as a Pixel 9 Pro XL (komodo). `FOSS` `[M]` `[A]`
-- **[NoHello](https://github.com/MhmRdd/NoHello)** - Hides root and Zygisk from apps. `FOSS` `[M]` `[A]`
 - **[OhMyKeymint](https://github.com/qwq233/OhMyKeymint)** - Custom keystore implementation for Android Keystore Spoofer. `FOSS` `[M]` `[K]`
 - **[Play Integrity Fix (inject)](https://github.com/KOWX712/PlayIntegrityFix)** - Actively maintained fork using injected GMS/Play Store spoofing with a WebUI. `FOSS` `[M]`
 - **[Play Integrity Fork (PIF)](https://github.com/osm0sis/PlayIntegrityFork)** - The most actively maintained PIF. Fixes `DEVICE_INTEGRITY` verdicts with custom fields/props. Recommended starting point after chiteroman's original was discontinued. `FOSS` `[M]` `[A]`

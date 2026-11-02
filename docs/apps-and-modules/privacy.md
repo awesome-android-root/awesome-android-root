@@ -29,7 +29,6 @@ tracking, spoofing your device identity or location, and isolating apps from you
 
 - **[App Clone](https://github.com/doccstat/appclone)** - Runs more copies of an app than Android's built-in app cloning allows, and lists, opens, freezes or removes each copy. Android 13+. `FOSS` `[LSP]`
 - **[Insular](https://gitlab.com/secure-system/Insular)** - Isolate your big brother app. A fork based on the excellent Island. `FOSS` | [🌱](https://f-droid.org/packages/com.oasisfeng.island.fdroid)
-- **[Island](https://github.com/oasisfeng/island/tree/dev)** - App isolation and cloning. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.oasisfeng.island)
 - **[Shelter](https://gitea.angry.im/PeterCxy/Shelter)** - Isolate and clone apps in a work profile. `FOSS` | [🌱](https://f-droid.org/app/net.typeblog.shelter)
 - **[TargetedHide](https://github.com/VisionR1/TargetedHide)** - Ηide files, folders, and packages from specific target apps. `FOSS` `[LSP]`
 
@@ -56,7 +55,6 @@ tracking, spoofing your device identity or location, and isolating apps from you
 
 - **[AnyWhere](https://github.com/cxOrz/AnyWhere)** - Location simulation tool for debugging LBS applications and for users to test geolocation functionality. `FOSS` `[LSP]`
 - **[Fake GPS](https://github.com/Xposed-Modules-Repo/io.github.mwarevn.fakegps)** - Spoofs GPS system-wide or per app, with route simulation, a joystick, track recording and replay, scheduled actions and sensor and network side-channel hiding. `Proprietary` `[LSP]`
-- **[GPS Setter](https://github.com/jqssun/android-gps-setter)** - Allows to mock locations for any specific app or entire system. `FOSS` `[LSP]` | [🌱](https://f-droid.org/packages/io.github.jqssun.gpssetter)
 - **[Hide Mock Location](https://github.com/auag0/HideMockLocation)** - Hide Mock Location Settings. `FOSS` `[LSP]`
 - **[HLocation](https://github.com/sparr-sherrya/hlocation-release)** - Location spoofing framework that synchronizes fake GPS and related environment signals across system and app processes for more consistent location virtualization. `FOSS` `[LSP]`
 - **[Location Indicator Whitelist](https://github.com/gilbsgilbs/LocationIndicatorWhitelist)** - Prevents applications from spamming the annoying location notification dot on Android 12 +. `FOSS` `[LSP]`
@@ -68,7 +66,6 @@ tracking, spoofing your device identity or location, and isolating apps from you
 ## Privacy Tools
 
 - **[⭐ Amarok](https://github.com/deltazefiro/Amarok-Hider)** - Android application which enables you to hide your private files and apps with a single click. `FOSS` | [🌱](https://f-droid.org/zh_Hans/packages/deltazero.amarok.foss/)
-- **[Do Not Try Accessibility](https://github.com/Nitsuya/DoNotTryAccessibility)** - Hook System Framework makes the app think that accessibility services are not enabled. `FOSS` `[LSP]`
 - **[Do Not Try Accessibility Reborn](https://github.com/zjz-Beiming/DoNotTryAccessibility-Reborn)** - Prevents blacklisted apps from seeing enabled accessibility services, with optional hiding of the installed service list and hot-reloading config. `FOSS` `[LSP]`
 - **[Doppel](https://github.com/akano12/Doppel)** - Hands apps fake device IDs, location, contacts and other data instead of blocking the request, so they keep working, and lists each call with the real and fake value. Continues XPrivacyLua. Android 8.1+. `FOSS` `[LSP]`
 - **[DuckUSB](https://github.com/Bouteillepleine/DuckUSB)** - Makes apps read USB debugging, wireless debugging and Developer Options as OFF while they stay enabled. `Proprietary` `[M]` `[K]` `[LSP]`
@@ -77,13 +74,11 @@ tracking, spoofing your device identity or location, and isolating apps from you
 - **[Ghost Mode](https://github.com/Foxlape/GhostMode)** - Turn your Android device 'unavailable' for incoming calls while keeping LTE/5G mobile data fully working. `FOSS` `[LSP]`
 - **[GreenDotHide](https://github.com/Dorian399/GreenDotHide)** - Hides the green dot indicating sensitive permission use. Works only on MIUI/HyperOS. `FOSS` `[LSP]`
 - **[IAmNotADeveloper](https://github.com/xfqwdsj/IAmNotADeveloper)** - Hide Android developer-related switches status. `FOSS` `[LSP]`
-- **[Image Copy Hide](https://github.com/cookieof/ImageCopyHide)** - Automatically copy and hide files from /sdcard/DCIM/Camera to /sdcard/wot/cptp. `FOSS` `[M]` 
 - **[microG Installer Revived Again](https://github.com/spacealtctrl/microg_installer_revived_again)** - Promote microG GmsCore, GsfProxy, Companion/Play Store, and MapsV1 to system with privileged permissions. `FOSS` `[M]` `[K]`
 - **[MicroGPlus](https://bitgapps.io/extra)** - Installs microG services and other useful apps. `Proprietary` `[M]` `[K]`
 - **[Oplus16 Hide Zoom Window](https://github.com/jhl337/Oplus16_HideZoomWindow)** - Hides small windows from screenshots and screen recordings (designed for ColorOS 16). `FOSS` `[LSP]`
 - **[PrivacyFlip](https://github.com/dorumrr/privacyflip)** - Automatically disables/enables Wi-Fi, Bluetooth, mobile data, location services, NFC, and even camera/microphone sensors based on lock/unlock state. `FOSS` | [🌱](https://f-droid.org/packages/io.github.dorumrr.privacyflip/)
 - **[ScreenshotFaker](https://github.com/Huai-Tian/ScreenshotFaker)** - Protects on-screen content from being captured in screenshots, recordings and screen sharing, with anti-detection features. `FOSS` `[LSP]`
-- **[Stealth Debug](https://github.com/sp11xy/StealthDebug)** - Hide USB-Debugging properties. `FOSS` `[M]`
 - **[Tarnhelm](https://github.com/lz233/Tarnhelm)** - The magic to clean sharing links up. `FOSS` `[LSP]`
 - **[Transparent Screenshot](https://github.com/Dszsu/Transparent_screenshot)** - Hide the application window during screenshots, screen recording, and screen casting. `FOSS` `[LSP]`
 - **[Turn Off Sensors](https://github.com/KatelynTheStargazer/TurnOffSensors-Magisk)** - Disables device sensors on startup via the sensor_privacy service on Android. `FOSS` `[M]`

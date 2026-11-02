@@ -25,7 +25,6 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 ## App & Package Management
 
 - **[⭐ App Manager](https://github.com/MuntashirAkon/AppManager)** - A full-featured package manager and viewer for Android. `FOSS` | [🌱](https://f-droid.org/packages/io.github.muntashirakon.AppManager/)
-- **[⭐ Disable Target API Block](https://github.com/buttercookie42/DisableTargetAPIBlock)** - Disable Android 14's installation block for old apps. `FOSS` `[LSP]`
 - **[⭐ Droid-ify](https://github.com/Droid-ify/client)** - F-Droid client with Material UI and auto updating apps using root. `FOSS` | [🌱](https://f-droid.org/packages/com.looker.droidify)
 - **[⭐ Hail](https://github.com/aistra0528/Hail)** - Disable / Hide / Suspend / Uninstall Android apps. `FOSS` | [🌱](https://f-droid.org/packages/com.aistra.hail/)
 - **[⭐ InstallerX-Revived](https://github.com/wxxsfxyzm/InstallerX-Revived)** - A modern and functional Android app installer. `FOSS` `[LSP]`
@@ -46,7 +45,6 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[Neo Store](https://github.com/NeoApplications/Neo-Store)** - An F-Droid client with modern UI and an arsenal of extra features. `FOSS` | [🌱](https://f-droid.org/packages/com.machiav3lli.fdroid)
 - **[Package Manager](https://github.com/SmartPack/PackageManager)** - Manages system and user apps installed on an Android device. `FOSS` | [🌱](https://f-droid.org/packages/com.smartpack.packagemanager) | [▶️](https://play.google.com/store/apps/details?id=com.smartpack.packagemanager)
 - **[PI (PackageInstaller)](https://github.com/SanmerApps/PI)** - Package installer that installs and updates APKs through a root or Shizuku installation service. `FOSS`
-- **[Play Store Self Update Blocker](https://github.com/himanshujjp/PlayStoreSelfUpdateBlocker)** - Prevents the Google Play Store from auto-updating itself. Useful for users trying to maintain valid device attestation under the newer Play Integrity API rules. `FOSS` `[M]` `[K]` `[A]`
 - **[Play Version Spoofer](https://github.com/byemaxx/PlayVersionSpoofer)** - Prevents the Google Play Store from automatically updating itself. `FOSS` `[LSP]`
 - **[Thor](https://github.com/trinadhthatakula/Thor)** - Android App Manager and App Installer utility. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.valhalla.thor) | [▶️](https://play.google.com/store/apps/details?id=com.valhalla.thor)
 - **[Universal Installer](https://github.com/pass-with-high-score/universal-installer)** - Install and manage APK packages with split APK support. `FOSS` `[LSP]`
@@ -110,9 +108,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 <br>
 </details>
 
-- **[Android VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer)** - Addresses VBMeta detection on Android. `FOSS` `[M]` `[K]` `[A]`
 - **[VBMeta Disguiser](https://github.com/Astoritin/VBMetaDisguiser)** - Disguises the properties of vbmeta. `FOSS` `[M]` `[K]` `[A]`
-- **[VBMeta Tool](https://github.com/KOWX712/vbmeta_tool)** - Command-line tool that reads the device's vbmeta digest (`verifiedBootHash`) with root. `FOSS`
 
 ## System UI & Framework
 
@@ -132,7 +128,6 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 ### ColorOS (Oppo)
 
 - **[AstraFlow](https://github.com/Xposed-Modules-Repo/com.astraflow.tool)** - Enhances Fluid Cloud with live lyrics, resident capsules and status bar tweaks on ColorOS 16 and realme UI 7. `Proprietary` `[LSP]`
-- **[ColorOS Feature Enhance](https://github.com/ItosEO/ColorFeatureEnhance)** - Visually edit and managing ColorOS feature switches. `FOSS` `[LSP]`
 - **[ColorOS Mod](https://github.com/Xposed-Modules-Repo/com.rikumi.colorosmod)** - Customizes the desktop, Control Center and system interface on ColorOS. `FOSS` `[LSP]`
 - **[FCMFix ColorOS](https://github.com/Artifical0/fcmfix-coloros)** - Restores Google FCM push delivery on Chinese ColorOS 16/17 by lifting the background restrictions that block Google services. `Proprietary` `[LSP]`
 - **[LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool/blob/main/README_EN.md)** - Adds functionality and optimizations to ColorOS. `Proprietary` `[LSP]`
@@ -151,7 +146,6 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 
 - **[⭐ HyperCeiler](https://github.com/ReChronoRain/HyperCeiler/blob/main/README_en-US.md)** - Extensive customizations for HyperOS. `FOSS` `[LSP]`
 - **[Better Miui Express](https://github.com/Robotxm/BetterMiuiExpress)** - Prevents MIUI/HyperOS's express widget from jumping to third-party applications such as Taobao and Cainiao, and uses a customized interface to display express details. `FOSS` `[LSP]`
-- **[ClipboardList](https://github.com/HChenX/ClipboardList/blob/master/README-en.md)** - Remove the 20-item limit and time limit for the Clipboard and Phrases feature. Only for MIUI and HyperOS. `FOSS` `[LSP]`
 - **[ColorOS_Control_Center](https://github.com/Mods-Center/ColorOS_Control_Center)** - Replace HyperOS control panel with ColorOS-style quick settings, featuring customizable and squared tiles. `Proprietary`
 - **[CustoMIUIzer A14](https://github.com/thetvplus/customiuizer-a14)** - Kotlin rewrite of CustoMIUIzer for HyperOS 1 on Android 14. `FOSS` `[LSP]`
 - **[Fingerprint Catalog](https://github.com/custombeta/fingerprint-cataloge)** - Allows you to create, upload, import, and apply your own fingerprint icons and animations on HyperOS. `Proprietary` `[LSP]`

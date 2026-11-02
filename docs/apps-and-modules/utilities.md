@@ -26,7 +26,6 @@ tools, sharing & intent tweaks, communication helpers and all-in-one power-user 
 - **[Basic Call Recorder](https://github.com/chenxiaolong/BCR)** - A Basic Call Recorder for rooted Android devices. Also check out [GUI for BCR ↗](https://github.com/nicorac/bcr-gui). `FOSS` `[M]` `[K]`
 - **[Contacts Sync](https://play.google.com/store/apps/details?id=com.lb.contacts_sync)** - Uses root to sync your address book with high-quality contacts photos from WhatsApp. `Proprietary`
 - **[Xinyi Relay](https://github.com/magisk317/xinyi-relay)** - Forwards SMS, app notifications and call notifications to multiple channels with rule filtering and auto OTP handling via LSPosed Enhanced mode. `FOSS` `[LSP]` | [▶️](https://play.google.com/store/apps/details?id=io.github.magisk317.xinyi.relay)
-- **[XposedForwardSms](https://github.com/XiaoMiHongZhaJi/XposedForwardSms)** - Forwards received text messages to other numbers or apps. `FOSS` `[LSP]`
 - **[XposedSmsCode](https://gitlab.com/magisk3171/XposedSmsCode)** - Recognize SMS verification codes and copy them to the clipboard, or automatically input verification codes. `FOSS` `[LSP]` | [▶️](https://play.google.com/store/apps/details?id=com.github.tianma8023.xposed.smscode)
 - **[XposedSmsCode by Rove24](https://github.com/Rove24/XposedSmsCode)** - Automatically recognizes and parses SMS verification codes, copies them to the clipboard, and auto-fills them into active text fields. `FOSS` `[LSP]`
 
@@ -62,4 +61,3 @@ tools, sharing & intent tweaks, communication helpers and all-in-one power-user 
 ## Sync & File Transfer
 
 - **[Rclone Magisk Module](https://github.com/NewFuture/rclone-fuse3-magisk)** - Integrates Rclone with FUSE support into Android, allowing you to manage remote storage mounts seamlessly. `FOSS` `[M]`
-- **[Rsync Magisk](https://github.com/KatelynTheStargazer/rsync-magisk)** - Static rsync binary for Magisk-based file sync and backup workflows. `FOSS` `[M]`

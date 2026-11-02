@@ -31,15 +31,11 @@ Magisk/KernelSU/LSPosed modules.
 - **[EvilFont](https://github.com/dedeadend/EvilFont)** - Cange your Arabic/Persian font to Teshrin + IOS emojis. `FOSS` `[M]` `[K]` `[A]`
 - **[Font Manager](https://play.google.com/store/apps/details?id=com.androidacy.fontmanager)** - A great font and emoji changer by Androidacy. `Proprietary`
 - **[FontCraft Pro](https://github.com/RipperHybrid/FontCraft)** - Stylish fonts & emojis for a personalized experience. `FOSS` `[M]` `[K]` `[A]`
-- **[FontLoader](https://github.com/JingMatrix/FontLoader)** - Preloads customized fonts to prevent app crashes when Magisk modules are hidden from apps on Android 12 and later. `FOSS` `[M]`
 - **[G-Font Installer](https://xdaforums.com/t/development-magisk-module-g-font-installer.4617743/)** - Install Official Google font that is used in most Google apps like Google play and Google Pixel phones right to your phone. `Proprietary` `[M]`
 - **[JetBrains Font](https://github.com/Mars-Wave/jetbrains-font-magisk-module)** - Make your phone prettier with jetbrains mono and magisk. `FOSS` `[M]`
 - **[KernelSU-iOS-Emoji](https://github.com/n4bi10p/Ios-emoji)** - Systemlessly replaces emoji font with iOS Emoji. `FOSS` `[K]`
-- **[Magisk Fonts](https://github.com/JingMatrix/MagiskFonts)** - Add custom fonts to Android for system-wide usage. `FOSS` `[M]`
 - **[Magisk-iOS-Emoji](https://github.com/Keinta15/Magisk-iOS-Emoji)** - Systemlessly replaces the emoji font with iOS Emoji. `FOSS` `[M]`
-- **[Magisk-Minecraft-Font](https://github.com/DethByte64/Magisk-Minecraft-Font)** - Changes the default font to the Minecraft font. `FOSS` `[M]`
 - **[MakeFontsGreatAgain](https://github.com/Numbersf/MakeFontsGreatAgain)** - System-wide Font Overrider with Unique GMS Masking & Multi-Range Unicode Filter. `FOSS` `[M]` `[K]`
-- **[MiSans](https://github.com/adivenxnataly/MiSans)** - Enhance your font devices with MiSans. `FOSS` `[M]`
 - **[Nastaliq Urdu Font](https://xdaforums.com/t/module-font-nastaliq-urdu-font.4645787/)** - Adds a Nastaliq font for Urdu. `FOSS` `[M]`
 - **[Oh My Font](https://gitlab.com/nongthaihoang/oh_my_font)** - A collection of typefaces for Android. `FOSS` `[M]`
 - **[OneUI Emoji Pack](https://github.com/aloozchips/OneUIEmojiPack)** - Systemlessly replaces the AOSP emoji pack with the OneUI emoji pack. `FOSS` `[M]` `[K]` `[A]`
@@ -57,7 +53,6 @@ Magisk/KernelSU/LSPosed modules.
 - **[Recents](https://github.com/tymwitko/Recents)** - Launcher-agnostic "Recents" menu for Android. `FOSS`
 - **[Three-Finger-Screenshot](https://github.com/hxreborn/three-finger-swipe)**- Standalone LSPosed implementation of three-finger swipe. `FOSS` `[LSP]`
 - **[Volume Key Track Control Module](https://github.com/Hepolise/VolumeKeyTrackControlModule)** - Allows to skip and play/pause track with volume keys. `FOSS` `[LSP]`
-- **[Volume Scroll](https://github.com/farfromrefug/VolumeScroll)** - Scrolls using the volume keys. `FOSS` `[M]`
 - **[XGesture](https://github.com/qpst4/XGesture)** - Gesture and one-hand navigation suite with edge panels, reachability cursor, floating-ball OCR, notification/OTP handling, app freezer and freeform windows, using Shizuku, root or an optional LSPosed module. `FOSS` `[LSP]`
 
 ## Launchers & Home Screen
@@ -68,16 +63,13 @@ Magisk/KernelSU/LSPosed modules.
 - **[HyperOS App Vault](https://github.com/Mods-Center/HyperOS-App-Vault)** - Enhanced HyperOS App Vault with unlocked widgets, high-end device features, blur adjustments, and scrolling animations. `Proprietary` `[M]` `[K]`
 - **[HyperOS Launcher](https://github.com/Mods-Center/HyperOS-Launcher#hyperos-launcher-v5)** - Enhanced HyperOS Launcher with features from high-end devices, including customizable app drawer, icon packs, and more. `Proprietary` `[M]` `[K]`
 - **[Launcher3 QuickLaunch](https://github.com/hddq/launcher3-quicklaunch)** - Lets you press Enter in Launcher3's app drawer search to instantly launch the first search result. `FOSS` `[LSP]`
-- **[NovaInstaller](https://github.com/Minionguyjpro/NovaInstaller/)** - Installs Nova Launcher to /system/app/ on Android. `FOSS`
 - **[One UI Home 31](https://github.com/reiryuki/One-UI-Home-31-Magisk-Module)** - Ports Samsung's One UI Home launcher (target SDK 31) to non-One UI ROMs as a system module. Requires the One UI Core module; Android 8.0 to 12.1, not for Samsung devices. `Proprietary` `[M]` `[K]` `[A]`
 - **[OnePlusPlusLauncher](https://github.com/wizpizz/OnePlusPlusLauncher)** - Adds features to the System Launcher on OnePlus OxygenOS 15. `FOSS` `[LSP]`
 - **[Pixel Launcher Enhanced](https://github.com/Mahmud0808/PixelLauncherEnhanced)** - Unlock a variety of exciting features including customizing the look to adding more functionality and many more. `FOSS` `[LSP]`
-- **[Pixel Launcher Mods](https://github.com/KieronQuinn/PixelLauncherMods/)** - Mods for enhancing the Pixel Launcher experience. `FOSS`
 - **[Root Activity Launcher](https://play.google.com/store/apps/details?id=tk.zwander.rootactivitylauncher)** - Launch activities directly from your home screen with root access. `Proprietary`
 
 ## Lockscreen & AOD
 
-- **[AlwaysOn](https://github.com/Domi04151309/AlwaysOn)** - Adds an always-on display with various customization options regarding watch face, behavior, and background. `FOSS` `[LSP]`
 - **[ColorOS Live Lyrics Bridge](https://github.com/Andrea-lyz/ColorOS-Live-Lyrics-Bridge)** - Bridges timed lyrics from supported players into the ColorOS/OPlus lock-screen lyric pipeline. `FOSS` `[LSP]`
 - **[HyperGlow](https://github.com/amarinne/hyperglow)** - Animated lock screen and always-on display lyrics for HyperOS 3. `FOSS` `[LSP]`
 - **[HyperLyrics Enhanced](https://github.com/juren233/HyperLyrics-Enhanced)** - Shows HyperIsland and always-on display lyrics on HyperOS, with Apple Music enhancements and bundled Lyricon providers. `FOSS` `[LSP]`
@@ -99,7 +91,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[DarQ Fork](https://github.com/Arora-Sir/DarQ)** - Provides a per-app selectable force dark option for Android 10 and above. `FOSS`
 - **[DPIS](https://github.com/Kwensiu/DPIS)** - Adjusts interface scale, smallest width and font size per app. `FOSS` `[LSP]`
 - **[Keep Screen Off](https://github.com/Xposed-Modules-Repo/com.ncyxie.keepscreenoff)** - Stops selected apps from holding the screen awake by ignoring `FLAG_KEEP_SCREEN_ON` and screen wakelocks. `FOSS` `[LSP]`
-- **[Lune Bridge](https://github.com/uraniam9/lune-bridge)** - Moves the conservative display limits in `framework-res` so Android's own compositor reaches candlelight warmth down to 1770+K, dimming below the panel minimum and flicker-safe low brightness, plus an optional notification quiet-hours half. Android 9+. `FOSS` `[M]` `[K]` `[A]`
+- **[Lune Bridge](https://github.com/uraniam9/lune-bridge)** - Moves the conservative display limits in `framework-res` so Android's own compositor reaches candlelight warmth down to 1700+K, dimming below the panel minimum and flicker-safe low brightness, plus an optional notification quiet-hours half. Android 9+. `FOSS` `[M]` `[K]` `[A]`
 - **[Pointer Replacer](https://github.com/thesandipv/pointer_replacer)** - Replaces a dot appears when user touch the screen [Require Show Touches to be enabled in Developer Options]. `FOSS` `[LSP]`
 - **[Pseudo DC Dimming](https://github.com/dantmnf/PseudoDCDimming)** - Enable alternative dimming mode (likely DC-like) on low brightness for some OLED displays by using software brightness gain. `FOSS` `[LSP]`
 - **[PureShot](https://github.com/kazutoiris/PureShot)** - Hide status bar, navigation bar, popups, PiP, toast & more. `FOSS` `[LSP]`
@@ -109,7 +101,6 @@ Magisk/KernelSU/LSPosed modules.
 
 - **[BatteryRemapper](https://github.com/Dhangofa/BatteryRemapper)** - Customize Status Bar Battery Percentage. `FOSS` `[LSP]`
 - **[Duo Status Bar](https://github.com/kvmy666/duoStatusBar)** - Turns the battery, Wi-Fi and signal icons into one smooth, Apple-style element. `FOSS` `[LSP]`
-- **[Hide Navbar Keyboard](https://github.com/UNKNUW/Hide-Navbar-Keyboard)** - Hide navbar when keyboard appears. Supports Android 10 -15+. `FOSS` `[M]`
 - **[Lost Xposed](https://github.com/uraniam9/lost-xposed)** - Composable status bar clock, per-app display settings and notification rules that filter messages before they are posted. `FOSS` `[LSP]`
 - **[Lyricon](https://github.com/tomakino/lyricon)** - An Android status bar lyric enhancement tool based on the Xposed framework. `FOSS` `[LSP]`
 - **[LyricProvider](https://github.com/tomakino/LyricProvider/tree/master)** - A lyric provider for Lyricon. `FOSS` `[LSP]`

@@ -34,11 +34,9 @@ more), network diagnostics, Wi-Fi & mobile data utilities and Bluetooth & NFC ap
 ## Network Tools
 
 - **[MagicNet](https://github.com/LIghtJUNction/MagicNet#english-summary)** - Enforces device-side network rules below the app layer rather than relying on apps to respect proxy settings. `FOSS` `[M]` `[K]` `[A]`
-- **[Magisk LAN Auto Switch](https://github.com/NewFuture/magisk-modules/tree/main/magisk-lan-auto-switch)** - Automatically switch LAN and WiFi based on eth0 connection status. `FOSS` `[M]`
 - **[MultiRoute](https://github.com/Linoleic/MultiRoute)** - Gives each app its own network channel. `FOSS` `[LSP]`
 - **[Netcut](https://github.com/rajnishsubedi0/Netcut)** - Cuts internet access for other devices on the local network through ARP spoofing, with ban, unban, protect and save lists. Requires root; use only on networks you own or are authorized to test. `FOSS`
 - **[Network Utilities](https://play.google.com/store/apps/details?id=com.myprog.netutils)** - Application contains a set of tools for networks diagnostics. `Proprietary`
-- **[SimbaDroid](https://github.com/buttercookie42/SimbaDroid)** - Runs an SMB file server on Android. `FOSS` | [🌱](https://f-droid.org/packages/de.buttercookie.simbadroid)
 - **[TCP Optimiser Module](https://github.com/fatalcoder524/TCP_Optimiser_Module)** - Change tcp congestion algorithm based on current active internet type and some network enhancements. `FOSS` `[M]` `[K]` `[A]`
 
 ## VPN & Proxy
@@ -62,7 +60,6 @@ more), network diagnostics, Wi-Fi & mobile data utilities and Bluetooth & NFC ap
 - **[VPN Hotspot](https://github.com/Mygod/VPNHotspot)** - Share your VPN connection over hotspot or repeater. `FOSS`
 - **[zapret for Magisk](https://github.com/sevcator/zapret-magisk)** - DPI bypass on Android with additional features. `FOSS` `[M]`
 - **[ZDT-D Root Module](https://github.com/GAME-OVER-op/ZDT-D)** - Provides traffic routing, DPI bypass, proxy chaining, DNS control and per-app network management. `FOSS` `[M]` `[K]` `[A]`
-- **[ZeroTier for Magisk](https://github.com/eventlOwOp/zerotier-magisk)** - Run zerotier in the background after booting with no conflicts with other Android VPN services. Use Android App to control ZeroTier. `FOSS` `[M]`
 
 ## Wi-Fi & Mobile Data
 

@@ -22,7 +22,6 @@ game-specific tools, mixing root apps, Magisk/KernelSU modules and LSPosed modul
 
 ## Game Modifications & Tools
 
-- **[Boosteroid+](https://github.com/nitanmarcel/BoosteroidPlus)** - Customize advanced settings for the Boosteroid app, including frame rate, bitrate, and resolution options. `FOSS` `[LSP]`
 - **[CheatDroid](https://android-cheats.com/)** - Edits the data games keep on the device (shared preferences, Unity PlayerPrefs, SQLite databases, raw files) and searches, edits and freezes values in a running game's memory. Requires root. `Proprietary`
 - **[iUnlocker GLTool](https://github.com/i-Taylo/iUnlockerGL)** - Spoofs GPU information for game graphics unlocking and testing. `FOSS` `[M]`
 - **[JoyCon Droid](https://joycondroid.gitbook.io/joycondroid)** - Allows you to turn your Android device into a controller for your Nintendo Switch. `FOSS`
@@ -31,10 +30,6 @@ game-specific tools, mixing root apps, Magisk/KernelSU modules and LSPosed modul
 
 - **[AsoulOpt](https://github.com/nakixii/Magisk_AsoulOpt)** - Game threads tweaker for Android, suitable for mainstream games and some niche games. `FOSS` `[M]`
 - **[Encore Tweaks](https://github.com/Rem01Gaming/encore)** - Enhance device performance during gaming sessions, while keeping battery life optimized for normal use. `Proprietary` `[M]` `[A]`
-- **[EnCorinVest](https://github.com/LoggingNewMemory/EnCorinVest)** - Applies performance tweaks for MediaTek, Snapdragon and Exynos devices. Do not combine with other performance modules. `FOSS` `[M]`
 - **[FPS Limitations Patcher](https://github.com/Mods-Center/FPS-Limitation-Patcher)** - Removes FPS limitations in system apps and games on HyperOS. `Proprietary` `[M]` `[K]`
 - **[FPS Unlocker](https://github.com/yadavnikhil03/GameUnlocker#fps-unlocker)** - Enables 90 FPS options in BGMI and PUBG and other Games as well for smoother gameplay on low-end devices. `FOSS` `[M]` `[A]`
-- **[GameResChange](https://github.com/Xposed-Modules-Repo/com.game.reschange)** - Change the resolution of any app/game on Android 13+. `Proprietary` `[LSP]`
-- **[MIUIPerfSaver](https://github.com/rdtoy/MIUIPerfSaver)** - Remove MIUI's performance limit, run app at maximum FPS. `FOSS` `[LSP]`
-- **[PerfGame](https://github.com/adivenxnataly/PerfGame)** - Enable custom resolution and frame-rate mechanism for your games. `FOSS` `[M]`
 - **[Uperf-Game-Turbo](https://github.com/yinwanxi/Uperf-Game-Turbo)** - Userspace performance controller for Android. `FOSS` `[M]`
