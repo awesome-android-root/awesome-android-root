@@ -59,14 +59,12 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 - **[Dhizuku API for Xposed](https://github.com/iamr0s/Dhizuku-API-Xposed)** - Force applications to support Dhizuku. `FOSS` `[LSP]`
 - **[DuckPolicy](https://github.com/Xposed-Modules-Repo/com.strawing.duckdevicepolicy)** - Makes apps see no device-policy restrictions on your own device. `Proprietary` `[LSP]`
 - **[KSU Toolkit](https://github.com/backslashxx/ksu_toolkit)** - Small extensions on top of KernelSU for testing and debugging purposes. `FOSS` `[K]`
-- **[Magisk Module Checker](https://file-label-guide.github.io/magisk-module-checker/)** - Browser tool that checks a Magisk, KernelSU or APatch module zip before flashing: nested module.prop, CRLF line endings, invalid id or versionCode, Zygisk libraries built for the wrong ABI and other install blockers. Files are parsed locally. `Proprietary`
 - **[Nano for Android NDK](https://github.com/Magisk-Modules-Repo/nano-ndk)** - Allows temporary recovery use, so you can trigger it from adb shell or TWRP Terminal. `FOSS` `[M]`
 - **[Py2Droid](https://github.com/Mrakorez/py2droid)** - Install Python 3 on Android, including the standard library (STDLIB). `FOSS` `[M]` `[A]`
 - **[SELinux Permissive](https://github.com/evdenis/selinux_permissive)** - Switches SELinux to permissive mode. `FOSS` `[M]`
 - **[Shizuku](https://github.com/RikkaApps/Shizuku)** - Use system APIs directly with ADB/root privileges. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/moe.shizuku.privileged.api) | [▶️](https://play.google.com/store/search?q=shizuku&c=apps)
 - **[SQLite3 for Android](https://github.com/rojenzaman/sqlite3-magisk-module)** - Provides a statically linked `sqlite3` binary for arm64-v8a, armeabi-v7a, x86 and x86_64. `Proprietary` `[M]`
 - **[StethoX](https://github.com/5ec1cff/StethoX)** - Inspects any app from Chrome DevTools over ADB: view hierarchy, screen mirroring, JavaScript that reaches the app's Java objects, and an option to hold an app at startup until you attach. `FOSS` `[LSP]`
-- **[Zygisk-Loader](https://github.com/HanSoBored/Zygisk-Loader)** - Hot-swaps native libraries into Android apps without rebooting. `FOSS` `[K]` `[A]`
 
 ### Shizuku Forks
 
@@ -112,7 +110,6 @@ Frida allows you to inject your own scripts into black box processes, enabling y
 ## Linux Environments
 
 - **[⭐ Droidspaces](https://github.com/ravindu644/Droidspaces-OSS)** - Run full Linux environments on top of Android, with complete init system support. `FOSS`
-- **[Auto-Linux](https://github.com/HanSoBored/Auto-Linux)** - A TUI application to install and manage Linux (chroot) environments on rooted Android devices. `FOSS`
 - **[Boot Nethunter](https://github.com/cipherswami/boot-nethunter)** - Boots Kali-Chroot (one Installed with Nethunter apk) in Termux. `FOSS` 
 - **[Chroot Distro](https://github.com/Magisk-Modules-Alt-Repo/chroot-distro)** - Install Gnu/Linux distributions on Android. `FOSS` `[M]` `[A]`
 - **[DebDroid](https://github.com/NICUP14/DebDroid)** - Debian Container Runtime for Android. `FOSS` 

@@ -318,13 +318,6 @@ Wizard-based automation with about 80 triggers and 150 actions. Free tier allows
 
 [Website](https://www.macrodroid.com/)
 
-#### Automate
-
-Flowchart-based automation from LlamaLab with about 180 actions. Free tier with ads; one-time premium purchase.
-
-[GitHub](https://github.com/llamaLAB/Automate)
-
-All three run without root. Root actions are optional add-ons, and deep system changes still require root.
 
 ### Backup
 

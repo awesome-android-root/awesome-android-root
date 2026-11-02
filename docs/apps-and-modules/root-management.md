@@ -138,7 +138,7 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 - **[⭐ HMA-OSS](https://github.com/frknkrc44/HMA-OSS)** - FOSS rewrite of Hide My Applist; hides your app list, settings, and package installers. `FOSS` `[LSP]`
 - **[⭐ Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)** - Hides Magisk root from detection. `Proprietary` `[M]`
 - **[⭐ TEESimulator](https://github.com/JingMatrix/TEESimulator)** - Create a complete, software-based simulation of a hardware-backed Trusted Execution Environment (TEE) for Key Attestation. `FOSS` `[M]` `[K]` `[A]`
-- **[Always Strong](https://github.com/evoker0/AlwaysStrong)** - Bundles TEESimulator-RS and PlayIntegrityFork into a single module for strong integrity on rooted devices. `FOSS` `[M]` `[K]` `[A]`
+- **[Always Strong](https://gitlab.com/Evokerr/AlwaysStrong)** - Bundles TEESimulator-RS and PlayIntegrityFork into a single module for strong integrity on rooted devices. `FOSS` `[M]` `[K]` `[A]`
 - **[AuditPatch](https://github.com/silvzr/AuditPatch)** - Hooks `logd` to replace sensitive SELinux contexts in the audit log, fixing AVC log leak detection without SUSFS or ZygiskNext. `Proprietary` `[M]` `[K]`
 - **[DirtySepolicy Bypass](https://github.com/flipphoneguy/DirtySepolicy_Bypass)** - Bypasses new DirtySepolicy on rooted Android devices to keep apps working. `FOSS` `[M]` `[K]` `[A]`
 - **[Duck ToolBox](https://github.com/eltavine/Duck-ToolBox)** - Provides a WebUI for Tricky Store, TEESimulator and OhMyKeymint configuration, Remote Key Provisioning CSR creation and verification, and Qualcomm Keymaster device ID provisioning. `FOSS` `[M]` `[K]` `[A]`
@@ -175,8 +175,8 @@ SUSFS (Systemless User Space File System) is a kernel-level module that allows r
 
 - **[⭐ SUSFS for KernelSU](https://github.com/sidex15/susfs4ksu-module)** - Add-on root-hiding service for SUSFS-patched kernels (KernelSU/Next). The core of modern KSU hiding setups. `FOSS` `[K]`
 - **[BRENE](https://github.com/rrr333nnn333/BRENE)** - Provides root hiding and spoofing using SUSFS on patched KernelSU kernels. `FOSS` `[K]`
-- **[SUSFS LKM Loader](https://github.com/Nixie24/susfs4ksu-lkm-module)** - Loads SUSFS as a loadable kernel module through `ksud`, for GKI kernels that carry no SUSFS patches. `FOSS` `[K]`
-- **[SUSFS LKM Module](https://github.com/matsuzaka-yuki/susfs-lkm-module)** - KernelSU ZIP wrapper around a pinned inforcqb SUSFS LKM release, selecting the matching arm64 binary from `/proc/sys/kernel/osrelease` at install and every boot with no nearest-version fallback. Loader only: rules stay with FolkSU or another chosen configuration tool. `FOSS` `[K]`
+- **[SUSFS LKM Loader](https://github.com/matsuzaka-yuki/susfs-lkm-module)** - KernelSU ZIP wrapper around a pinned inforcqb SUSFS LKM release, selecting the matching arm64 binary from `/proc/sys/kernel/osrelease` at install and every boot with no nearest-version fallback. `FOSS` `[K]`
+- **[susfs4ksu-lkm](https://github.com/inforcqb/susfs4ksu-for-lkm/)** - SUSFS ported to a loadable kernel module (LKM) for GKI/CFI devices, loaded via KernelSU ksud. `FOSS` `[K]` 
 - ~~ReSuSFS~~: Removed on author's request
 
 > [!TIP]

@@ -494,8 +494,7 @@ Magisk no longer hides root upstream ([official FAQ](https://topjohnwu.github.io
 ### Testing Play Integrity
 
 Use a Play Integrity checker app such as
-[Play Integrity API Checker](https://github.com/1nikolas/play-integrity-checker-app) or
-[SPIC](https://github.com/Dr-TSNG/SPIC). YASNAC is legacy (SafetyNet) and is no longer
+[Play Integrity API Checker](https://github.com/1nikolas/play-integrity-checker-app). YASNAC is legacy (SafetyNet) and is no longer
 authoritative.
 
 ---

@@ -32,7 +32,6 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[⭐ Zygisk Detach](https://github.com/j-hc/zygisk-detach)** - Detaches installed apps from the Play Store by hooking Binder. `FOSS` `[M]` `[K]`
 - **[AlterInstaller](https://github.com/chenxiaolong/AlterInstaller)** - Spoof Android package manager installer fields to bypass installation restrictions. `FOSS` `[M]` `[K]`
 - **[App Manager](https://play.google.com/store/apps/details?id=com.lb.app_manager)** - A feature rich app manager with batch operation support. `Proprietary`
-- **[AppControl-X](https://github.com/risunCode/AppControl-X)** - Freeze, force stop, clear data and uninstall apps, plus CPU, RAM, storage and battery monitoring, using root or Shizuku. `FOSS`
 - **[AppDash: App Manager & Backup](https://play.google.com/store/apps/details?id=flar2.appdashboard&hl=en)** - Makes it easy to manage APKs and apps installed on your device. `Proprietary`
 - **[Aurora Store](https://github.com/whyorean/AuroraStore)** - A Google Play Store client to search, view app details, and download APKs directly to your device. `FOSS` | [🌱](https://f-droid.org/packages/com.aurora.store/)
 - **[Auto Uninstaller](https://github.com/MeRaazi/auto-uninstaller)** - Automatically uninstall blacklisted apps. `FOSS` `[K]` `[A]`
