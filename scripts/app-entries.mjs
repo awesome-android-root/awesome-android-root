@@ -300,7 +300,15 @@ function writeIndex(payload) {
   console.log(`Written to ${OUT_FILE}`)
 }
 
-function writeCounts() {
+function writeCounts(pages) {
+  const pageRows = Object.entries(pages).map(([page, count]) => {
+    const category = page
+      .split('-')
+      .map((word) => word[0].toUpperCase() + word.slice(1))
+      .join(' ')
+    return `| [${category}](/apps-and-modules/${page}) | ${count} |`
+  })
+
   const table = [
     '---',
     'title: Apps and Modules Count',
@@ -320,6 +328,12 @@ function writeCounts() {
     `| KernelSU modules | ${countStats.kernelsu} |`,
     `| APatch modules | ${countStats.apatch} |`,
     `| LSPosed modules | ${countStats.lsposed} |`,
+    '',
+    '## Entries by Category',
+    '',
+    '| Category | Entries |',
+    '| --- | ---: |',
+    ...pageRows,
     '',
     'Framework counts may overlap when an entry has multiple framework tags.',
     '',
@@ -343,5 +357,6 @@ function writeCounts() {
 
 lint()
 
-writeIndex(buildIndex())
-writeCounts()
+const payload = buildIndex()
+writeIndex(payload)
+writeCounts(payload.pages)
