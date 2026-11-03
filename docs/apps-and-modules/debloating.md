@@ -23,6 +23,7 @@ privacy, battery life and performance.
 > [!TIP]
 > **Related Guide**: [Complete Debloating Tutorial](../general-guides/android-apps-debloating.md)
 
+- **[BakaBlocker](https://github.com/11010001101001/BakaBlocker)** - One-tap rootless 120Hz Android & HyperOS kernel tuner and bloatware remover with an embedded ADB RSA-2048 engine. `FOSS`
 - **[⭐ Canta](https://github.com/samolego/Canta)** - Uninstall any app without root using [Shizuku](development.md#developer-tools). `FOSS` | [🌱](https://f-droid.org/en/packages/io.github.samolego.canta/) | [▶️](https://play.google.com/store/apps/details?id=io.github.samolego.canta)
 - **[De-Bloater](https://github.com/sunilpaulmathew/De-Bloater)** - An application using the power of Magisk to debloat unwanted system apps!. `FOSS` | [🌱](https://f-droid.org/packages/com.sunilpaulmathew.debloater) | [▶️](https://play.google.com/store/apps/details?id=com.sunilpaulmathew.debloater)
 - **[EXA System App Remover](https://play.google.com/store/apps/details?id=exa.free.saux)** - Remove Bloatware, clear memory and speed up your phone now by uninstalling unused system apps. `Proprietary`
