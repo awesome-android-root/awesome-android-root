@@ -57,6 +57,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 
 ## Boot & Startup
 
+- **[Bootanimation Module](https://github.com/readonlynux/bootanimation-module)** - A systemless boot animation replacer using early-boot (post-fs-data) bind-mounts, without requiring OverlayFS. OneUI (Samsung) ROMS are not supported. `FOSS` `[M]` `[K]` `[A]`
 - **[BootStudio](https://github.com/gauthier1024/BootStudio)** - Boot animation manager and creator that bind-mounts custom animations systemlessly through a module, with import/export, in-app live preview and a community store. Magisk, KernelSU and APatch; Samsung devices are not supported. `FOSS` `[M]` `[K]` `[A]`
 - **[fancyboot](https://github.com/Dr-TSNG/fancyboot)** - Takes over the boot animation through Zygisk Next to show live kernel and logcat output or play your own bootanimation.zip, with a WebUI for fonts, margins and log levels and on-device preview. Android 17 arm64, Zygisk Next 1.5.0+. `Proprietary` `[M]` `[K]` `[A]`
 - **[Live Boot](https://play.google.com/store/apps/details?id=eu.chainfire.liveboot)** - Get a Linux-like live boot screen on Android. `Proprietary`
