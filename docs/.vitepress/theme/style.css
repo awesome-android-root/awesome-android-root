@@ -986,6 +986,11 @@ img {
   opacity: 0.25;
 }
 
+/* Store badges are already distinct chips, so a pipe between them is noise. */
+.vp-doc .store-badge + .store-separator {
+  display: none;
+}
+
 /* Back to top links alignment */
 .vp-doc p:has(a[href*="#table-of-contents"]) {
   text-align: right;

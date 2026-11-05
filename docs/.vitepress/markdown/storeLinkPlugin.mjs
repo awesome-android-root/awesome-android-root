@@ -1,25 +1,42 @@
 /**
- * Markdown-it plugin to transform F-Droid and Play Store badge links into
+ * Markdown-it plugin to transform F-Droid, IzzyOnDroid and Play Store badge links into
  * custom <StoreLink> Vue components.
  *
- * Only converts links whose text is a store badge (🌱 F-Droid / ▶️ Play Store)
- * pointing at the matching store. Everything else renders normally.
+ * Only converts links whose text starts with a store badge emoji (🌱 for
+ * F-Droid or IzzyOnDroid, ▶️ for Google Play) and whose host matches that
+ * store. Everything else renders normally.
  *
- * VitePress 2 renders markdown with markdown-it-async (pages are rendered
- * concurrently), so this plugin is fully STATELESS: each rule derives whether
- * it is inside a store link from the token stream itself rather than from a
- * shared mutable flag.
  */
-
-const FDROID_HREF = /f-droid\.org|apt\.izzysoft\.de/
 
 // Minimal HTML attribute escape - only double-quotes matter here since the
 // href is placed inside a double-quoted HTML attribute.
 const escapeAttr = (s) => s.replace(/"/g, '&quot;')
 
+/** Resolve a store from the link host, ignoring query strings and paths. */
+function getStoreForHref(href) {
+  let host
+  try {
+    host = new URL(href).hostname.toLowerCase()
+  } catch {
+    return null
+  }
+
+  if (host === 'f-droid.org' || host === 'www.f-droid.org') return 'fdroid'
+  if (
+    host === 'apt.izzysoft.de' ||
+    host === 'android.izzysoft.de' ||
+    host === 'izzyondroid.org' ||
+    host === 'www.izzyondroid.org'
+  ) {
+    return 'izzy'
+  }
+  if (host === 'play.google.com') return 'playstore'
+  return null
+}
+
 /**
  * Determine whether the link opened at `openIdx` is a store badge.
- * Returns the store name ('fdroid' | 'playstore') or null.
+ * Returns the store name ('fdroid' | 'izzy' | 'playstore') or null.
  * Looks at the inline text content following the opening token, so nested
  * inline markup (e.g. `[🌱 **F-Droid**](...)`) is handled by reading content
  * from every text token up to the matching link_close.
@@ -40,12 +57,14 @@ function getStoreForLink(tokens, openIdx) {
     if (t.type === 'text' || t.type === 'code_inline') text += t.content
   }
   const label = text.trim()
+  const store = getStoreForHref(href)
+  if (!store) return null
 
-  if ((label === '🌱' || label === '🌱 F-Droid') && FDROID_HREF.test(href)) {
-    return { store: 'fdroid', href }
+  if ((store === 'fdroid' || store === 'izzy') && label.startsWith('🌱')) {
+    return { store, href }
   }
-  if ((label === '▶️' || label === '▶️ Play Store') && href.includes('play.google.com')) {
-    return { store: 'playstore', href }
+  if (store === 'playstore' && label.startsWith('▶')) {
+    return { store, href }
   }
   return null
 }
