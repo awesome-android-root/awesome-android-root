@@ -29,7 +29,7 @@ game-specific tools, mixing root apps, Magisk/KernelSU modules and LSPosed modul
 ## Gaming Optimization
 
 - **[AsoulOpt](https://github.com/nakixii/Magisk_AsoulOpt)** - Game threads tweaker for Android, suitable for mainstream games and some niche games. `FOSS` `[M]`
-- **[Encore Tweaks](https://github.com/Rem01Gaming/encore)** - Enhance device performance during gaming sessions, while keeping battery life optimized for normal use. `Proprietary` `[M]` `[A]`
+- **[Encore Tweaks](https://github.com/Rem01Gaming/encore)** - Enhance device performance during gaming sessions, while keeping battery life optimized for normal use. `FOSS` `[M]` `[A]`
 - **[FPS Limitations Patcher](https://github.com/Mods-Center/FPS-Limitation-Patcher)** - Removes FPS limitations in system apps and games on HyperOS. `Proprietary` `[M]` `[K]`
 - **[FPS Unlocker](https://github.com/yadavnikhil03/GameUnlocker#fps-unlocker)** - Enables 90 FPS options in BGMI and PUBG and other Games as well for smoother gameplay on low-end devices. `FOSS` `[M]` `[A]`
 - **[Uperf-Game-Turbo](https://github.com/yinwanxi/Uperf-Game-Turbo)** - Userspace performance controller for Android. `FOSS` `[M]`
