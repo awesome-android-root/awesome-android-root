@@ -22,6 +22,7 @@ game-specific tools, mixing root apps, Magisk/KernelSU modules and LSPosed modul
 
 ## Game Modifications & Tools
 
+- **[CatSmoker](https://github.com/catsmoker/catsmoker-app)** - Combines device spoofing to unlock higher graphics settings and FPS, resolution and DPI changes, etc. `Proprietary` `[LSP]`
 - **[CheatDroid](https://android-cheats.com/)** - Edits the data games keep on the device (shared preferences, Unity PlayerPrefs, SQLite databases, raw files) and searches, edits and freezes values in a running game's memory. Requires root. `Proprietary`
 - **[iUnlocker GLTool](https://github.com/i-Taylo/iUnlockerGL)** - Spoofs GPU information for game graphics unlocking and testing. `FOSS` `[M]`
 - **[JoyCon Droid](https://joycondroid.gitbook.io/joycondroid)** - Allows you to turn your Android device into a controller for your Nintendo Switch. `FOSS`

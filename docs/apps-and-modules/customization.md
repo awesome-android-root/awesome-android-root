@@ -36,6 +36,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[KernelSU-iOS-Emoji](https://github.com/n4bi10p/Ios-emoji)** - Systemlessly replaces emoji font with iOS Emoji. `FOSS` `[K]`
 - **[Magisk-iOS-Emoji](https://github.com/Keinta15/Magisk-iOS-Emoji)** - Systemlessly replaces the emoji font with iOS Emoji. `FOSS` `[M]`
 - **[MakeFontsGreatAgain](https://github.com/Numbersf/MakeFontsGreatAgain)** - System-wide Font Overrider with Unique GMS Masking & Multi-Range Unicode Filter. `FOSS` `[M]` `[K]`
+- **[MFFMv14](https://github.com/mistu01/MFFMv14)** - Builds flashable font modules from user-supplied fonts, with automatic fixes for lockscreen clock colons, digit-width jitter and OEM quirks. Android 15+, built from a PC or Termux. `FOSS` `[M]` `[K]` `[A]`
 - **[Nastaliq Urdu Font](https://xdaforums.com/t/module-font-nastaliq-urdu-font.4645787/)** - Adds a Nastaliq font for Urdu. `FOSS` `[M]`
 - **[Oh My Font](https://gitlab.com/nongthaihoang/oh_my_font)** - A collection of typefaces for Android. `FOSS` `[M]`
 - **[OneUI Emoji Pack](https://github.com/aloozchips/OneUIEmojiPack)** - Systemlessly replaces the AOSP emoji pack with the OneUI emoji pack. `FOSS` `[M]` `[K]` `[A]`
@@ -77,6 +78,7 @@ Magisk/KernelSU/LSPosed modules.
 
 ## Notifications
 
+- **[Aura](https://github.com/tgvdufuture/aura)** - Lights the POCO X8 Pro rear LED ring with per-app and per-contact colors and animations while the screen is off. POCO X8 Pro on HyperOS 3. `FOSS`
 - **[Auto Expand Notifications](https://github.com/kvmy666/-AutoExpandNotifications)** - Notification Tweaks for OxygenOS. `FOSS` `[LSP]`
 - **[Dynamic Island](https://github.com/sampple-korea/dynamicisland)** - Replaces the Now Bar capsule on Samsung One UI with an island that opens into cards for calls, timers, media and notifications. Android 15+. `FOSS` `[LSP]`
 - **[HyperIsland](https://github.com/1812z/HyperIsland/blob/main/README_EN.md)** - Dynamic Island-style notifications for HyperOS 3, powered by LSPosed. `FOSS` `[LSP]`

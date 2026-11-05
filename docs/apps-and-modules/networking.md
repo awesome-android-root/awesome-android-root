@@ -54,6 +54,7 @@ more), network diagnostics, Wi-Fi & mobile data utilities and Bluetooth & NFC ap
 - **[NoVPNDetect](https://github.com/RuslanUC/NoVPNDetect)** - Prevents some apps from detecting your phone is connected to a VPN. `FOSS` `[LSP]`
 - **[NoVPNDetect Enhanced](https://github.com/BlueCat300/NoVPNDetectEnhanced/)** - An enhanced version of NoVPNDetect that prevents apps from detecting VPN usage by modifying system properties and network configurations. `FOSS` `[LSP]`
 - **[SAM](https://github.com/5MayRain/SAM)** - Combines SmartDNS, AdGuardHome and mihomo. `FOSS` `[M]` `[K]`
+- **[Shellscaled](https://github.com/KyuubiRan/Shellscaled)** - Runs Tailscale's tailscaled daemon natively on rooted Android. `FOSS` `[M]` `[K]`
 - **[Surfing](https://github.com/GitMetaio/Surfing)** - Magisk and KernelSU modules for Clash/mihomo, sing-box, v2ray, xray, hysteria services. `FOSS` `[M]` `[K]` `[A]`
 - **[Tailscale-android-cli](https://github.com/anasfanani/tailscale-android-cli)** - A command-line interface for Tailscale on Android. `FOSS` 
 - **[VPN Hide](https://github.com/okhsunrog/vpnhide)** - Hide active VPN from selected Android apps (kernel module + LSPosed + Zygisk) `FOSS` `[M]` `[K]` `[A]`

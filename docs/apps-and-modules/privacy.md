@@ -37,6 +37,7 @@ tracking, spoofing your device identity or location, and isolating apps from you
 - **[Device Changer](https://deviceschanger.org)** - Configures device identifiers, build fingerprint, and OS properties per app via Zygisk for QA and compatibility testing. `Proprietary` `[M]`
 - **[Device Faker](https://github.com/Seyud/device_faker/)** - Spoofs device models separately for different apps using Zygisk. `FOSS` `[M]` `[K]`
 - **[DeviceID/SSAID Changer](https://github.com/sidex15/deviceidchanger)** - Changes SSAID and device ID through a WebUI. `FOSS` `[M]` `[K]`
+- **[DeviceSpoofLab-Hooks](https://github.com/yubunus/DeviceSpoofLab-Hooks)** - Spoofs device identifiers, build properties, telephony, network, locale and WebView surfaces inside scoped app processes. `FOSS` `[LSP]`
 - **[Geergit](https://github.com/pyshivam/geergit-discussion)** - Change (MASKE) the various IDs in the Phone. `Proprietary` `[LSP]`
 - **[HideMyAndroid](https://github.com/Xposed-Modules-Repo/com.wowsoftware.hidemyandroid/)** - Provides profile isolation and device spoofing. `Proprietary` `[LSP]`
 - **[MAC Editor for Android](https://github.com/jqssun/android-mac-editor)** - Securely edit Wi-Fi MAC address on Android. `FOSS` `[LSP]`
@@ -53,6 +54,7 @@ tracking, spoofing your device identity or location, and isolating apps from you
 
 ## Location & GPS
 
+- **[AnyDoor](https://github.com/zhaoyuxiangyyds-lab/AnyDoor)** - GPS spoofing by hooking the system location service, hides Wi-Fi, cell and GNSS leaks, with map picker. `FOSS` `[LSP]`
 - **[AnyWhere](https://github.com/cxOrz/AnyWhere)** - Location simulation tool for debugging LBS applications and for users to test geolocation functionality. `FOSS` `[LSP]`
 - **[Fake GPS](https://github.com/Xposed-Modules-Repo/io.github.mwarevn.fakegps)** - Spoofs GPS system-wide or per app, with route simulation, a joystick, track recording and replay, scheduled actions and sensor and network side-channel hiding. `Proprietary` `[LSP]`
 - **[Hide Mock Location](https://github.com/auag0/HideMockLocation)** - Hide Mock Location Settings. `FOSS` `[LSP]`

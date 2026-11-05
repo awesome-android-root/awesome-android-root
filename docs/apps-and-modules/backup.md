@@ -27,3 +27,4 @@ unlocking - always.
 - **[Dumpster: Photo/Video Recovery](https://play.google.com/store/apps/details?id=com.baloota.dumpster)** - You can recover deleted videos, restore photos, undelete recently deleted apps, and other files. `Proprietary`
 - **[Neo Backup](https://github.com/NeoApplications/Neo-Backup)** - Backs up and restores apps. `FOSS` | [🌱](https://f-droid.org/packages/com.machiav3lli.backup/)
 - **[Restoid](https://github.com/hddq/restoid)** - modern, root-based Android app backup tool powered by restic. `FOSS`
+- **[VD-Backup](https://github.com/VD171/VD-Backup)** - Full app and data backup and restore from a root-manager WebUI: APKs and splits, app data, OBB and media etc. `FOSS` `[M]` `[K]` `[A]`

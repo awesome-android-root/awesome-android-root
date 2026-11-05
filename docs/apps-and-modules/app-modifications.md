@@ -27,6 +27,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[⭐ Morphe](https://morphe.software/)** - A next-generation app patcher built by some of the original ReVanced developers. It offers a modern interface, enhanced stability, and a growing list of supported apps and features. `FOSS`
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (use with caution). `Proprietary`
 - **[NexAlloy](https://github.com/NexAlloy/NexAlloy)** - Applies Morphe and ReVanced-based patches to supported apps, including YouTube. Requires root. `FOSS` `[LSP]`
+- **[NexFusion](https://github.com/a092devs/NexFusion)** - Applies runtime bytecode patches to supported apps process start, without modifying or re-signing APKs.`FOSS`
 - **[ReVanced](https://revanced.app/)** - Patches apps such as YouTube and Spotify to add features and customizations. `FOSS`
 - **[ReVanced Extended](https://github.com/NoName-exe/revanced-extended)** - ReVanced eXtended (now Morphe) YT and YT-M for both root and non-root users. `FOSS` `[M]` `[K]`
 - **[ReVanced Magisk Module by j-hc](https://github.com/j-hc/revanced-magisk-module)** - Extensive ReVanced & morphe builder. `FOSS` `[M]` `[K]`
@@ -41,6 +42,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[AA Mods](https://github.com/ImNoammm/aa-mods)** - Adds launcher start, a recents button, phone apps on the car screen and microG without telemetry to Android Auto using Vector. `FOSS` `[LSP]`
 - **[AM++](https://github.com/Zennmn/AM-plus-plus/blob/main/README.en.md)** - Apple Music enhancements: tablet dual-pane player, lyric blur and custom lyric fonts, TTML lyric injection, song title correction and Liquid Glass navigation. `FOSS` `[LSP]`
 - **[AmznKiller](https://github.com/hxreborn/amznkiller)** - Hides sponsored content and ads in the Amazon Shopping app. `FOSS` `[LSP]`
+- **[BetterHeybox](https://github.com/Mrmiaomrzh/BetterHeybox)** - Adds ad filtering, UI tweaks, in-app downloads etc to Heybox (Xiaoheihe). `FOSS` `[LSP]`
 - **[Breeno Source Changer](https://github.com/Xposed-Modules-Repo/com.niki.breeno.openai/tree/main)** - Allows ColorOS's Breeno Assistant to change its AI model source and customize large language model (LLM) APIs. `FOSS` `[LSP]`
 - **[Deekseep](https://github.com/lllucccian/Deekseep)** - Adds account, chat, image, interface, and local API tools to the official DeepSeek Android app. `FOSS` `[LSP]`
 - **[Enhance Google Phone](https://github.com/Rove24/EnhanceGooglePhone)** - Natively unlocks full-function call recording, and other features in the Google Phone app. `FOSS` `[LSP]`
@@ -59,6 +61,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[MiFitnessAdAway](https://github.com/hao1196561270/MiFitnessAdAway)** - Remove ads from Xiaomi Mi Fitness (Xiaomi Sports & Health, com.mi.health 3.0+). `FOSS` `[LSP]`
 - **[Nexus](https://github.com/niki914/agentic-nexus)** - Plug your own model into your phone's voice assistant. `Proprietary` `[LSP]`
 - **[NSG Tweaks](https://github.com/h3nnes/nsg-tweaks)** - Extends [NSG (QuickTest) ↗](https://play.google.com/store/apps/details?id=com.qtrun.QuickTest) with additional columns, rows, signaling tools, and log-replay improvements. `Proprietary` `[LSP]`
+- **[Nuke](https://github.com/dartcv/Nuke)** - Adds feature extensions, interface customization and ad filtering to QQ, WeChat and Douyin. Closed source. `Proprietary` `[LSP]`
 - **[Pixel Mask](https://github.com/kinginu/PixelMask)** - Spoofs a Pixel device profile inside Google Photos to unlock Pixel-only perks on any rooted Android phone. `FOSS` `[LSP]`
 - **[Pixelify Infinity](https://github.com/samson910022/pixelify-google-photos-modern)** - Enables Pixel-exclusive features in Google Photos. `FOSS` `[LSP]`
 - **[Play Store Adblock](https://github.com/hxreborn/playstore-adblock)** - Removes sponsored listings and ads from the Google Play Store. `FOSS` `[LSP]`
@@ -151,6 +154,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 
 - **[DouAi](https://github.com/yudigaga/DouAi)** - Adds feed filtering, UI cleanup, playback gesture and speed controls, media download options and AI-assisted comment and message tools to Douyin (Chinese TikTok). `Proprietary` `[LSP]`
 - **[Douyin Enhancer](https://github.com/twyora/DouyinEnhancer)** - Adds minor quality-of-life features to Douyin (Chinese TikTok). `FOSS` `[LSP]`
+- **[NukeApp-OSS](https://github.com/dartcv/NukeApp-OSS)** - Adds ad filtering, read receipts, playback controls and privacy, etc to Douyin. `FOSS` `[LSP]`
 - **[TikFreed](https://github.com/Xposed-Modules-Repo/io.github.ba6_oss.tikfreed)** - Overrides SIM, carrier, locale, timezone and GPS region parameters, hides ads and promotional cards, and adds playback speed and comment translation controls to the international TikTok client. `Proprietary` `[LSP]`
 - **[TikProfileBanner](https://github.com/vanquzie/TikProfileBanner)** - Lifts the account allow-list check that hides TikTok's profile banner ("Add background") button. Targets TikTok 47.1.3. `FOSS` `[LSP]`
 - **[TikTok AntiBurn](https://github.com/0mnr0/TikTokAntiBurn)** - Overlap the TikTok app elements to prevent the screen from burning out. `FOSS` `[LSP]`
