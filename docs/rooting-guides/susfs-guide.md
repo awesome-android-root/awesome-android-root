@@ -266,7 +266,6 @@ Recovery basics live in the [KernelSU Guide](./kernelsu-guide.md#troubleshooting
 | SUSFS patches and tool (upstream) | [gitlab.com/simonpunk/susfs4ksu](https://gitlab.com/simonpunk/susfs4ksu) |
 | SUSFS for KernelSU (module) | [github.com/sidex15/susfs4ksu-module](https://github.com/sidex15/susfs4ksu-module) |
 | BRENE | [github.com/rrr333nnn333/BRENE](https://github.com/rrr333nnn333/BRENE) |
-| SUSFS LKM loader module | [github.com/Nixie24/susfs4ksu-lkm-module](https://github.com/Nixie24/susfs4ksu-lkm-module) |
 | SUSFS LKM source | [github.com/inforcqb/susfs4ksu-lkm](https://github.com/inforcqb/susfs4ksu-lkm) |
 | KernelSU-Next (SUSFS kernel module management) | [github.com/KernelSU-Next/KernelSU-Next](https://github.com/KernelSU-Next/KernelSU-Next) |
 | Build a KernelSU kernel | [kernelsu.org/guide/how-to-build.html](https://kernelsu.org/guide/how-to-build.html) |
