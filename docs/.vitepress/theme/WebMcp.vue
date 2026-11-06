@@ -119,9 +119,9 @@ function registerTools(modelContext) {
         const page = pages.find((entry) => entry.url === url)
         if (!page) throw new TypeError('url must match a documentation page from list_pages')
 
-        const response = await fetch(page.url, { signal })
-        if (!response.ok) throw new Error(`Page request failed: ${response.status}`)
-        return { title: page.title, url: page.url, markdown: await response.text() }
+        assertActive(signal)
+        // The index already holds every page body, so no second request is needed.
+        return { title: page.title, url: page.url, markdown: page.content }
       }
     },
     {
