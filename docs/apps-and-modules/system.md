@@ -135,7 +135,6 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool/blob/main/README_EN.md)** - Adds functionality and optimizations to ColorOS. `Proprietary` `[LSP]`
 - **[Miband-OPlusBridge](https://github.com/Xposed-Modules-Repo/io.github.miam1ku.mibandoplusbridge)** - Bridges Xiaomi bands paired over SPP into the ColorOS device space and OPPO Health, writing steps, heart rate and sleep there and forwarding notifications, calls and playback to the band. Requires LSPosed and root; Mi Band 11 verified. `FOSS` `[LSP]`
 - **[NeXtep](https://github.com/lujinxin/NeXtep)** - Adds a Smartisan OneStep-style side workspace to ColorOS 16/17 with a main window and three live task slots. `FOSS` `[LSP]`
-- **[ONextBox](https://github.com/MiToverG422/ONextBox)** - ColorOS optimization and extension toolbox powered by root and modern Xposed. `FOSS` `[LSP]`
 - **[OPCameraPro](https://github.com/Xposed-Modules-Repo/com.tlsu.opluscamerapro)** - Adds AI functions and camera and photo tweaks to ColorOS and realme UI. `Proprietary` `[LSP]`
 - **[Oplus Launcher Radius Optimization](https://github.com/Qjj7679/Oplus-Luncher-RadiusOptimization)** - Optimize the rounded corners of the recent tasks card on the ColorOS system desktop. `FOSS` `[LSP]`
 - **[OShin](https://github.com/suqi8/OShin/blob/master/README_EN.md)** - Adds customizations and optimizations to ColorOS. `FOSS` `[LSP]`
