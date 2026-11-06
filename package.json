@@ -51,7 +51,7 @@
     "vitepress"
   ],
   "devDependencies": {
-    "@lucide/vue": "^1.62.0",
+    "@lucide/vue": "^1.69.0",
     "@vite-pwa/vitepress": "^2.0.1",
     "magicast": "^0.5.5",
     "simple-icons": "^16.36.0",
