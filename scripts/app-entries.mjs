@@ -226,14 +226,11 @@ function lintRecords(records) {
   }
 }
 
-function lint() {
-  for (const fileName of readdirSync(DIR).sort()) {
-    if (!fileName.endsWith('.md')) continue
-    const records = parseFile(fileName)
-    if (fileName !== 'index.md') {
-      for (const record of records) lintRecord(record)
-      lintRecords(records)
-    }
+function lint(parsedFiles) {
+  for (const { fileName, records } of parsedFiles) {
+    if (fileName === 'index.md') continue
+    for (const record of records) lintRecord(record)
+    lintRecords(records)
   }
 
   for (const message of warnings) console.log(`warning: ${message}`)
@@ -253,14 +250,13 @@ const countStats = {
 }
 const FRAMEWORK_TAGS = ['[M]', '[K]', '[A]', '[LSP]']
 
-function buildIndex() {
-  const files = readdirSync(DIR).filter((file) => file.endsWith('.md')).sort()
+function buildIndex(parsedFiles) {
   const entries = []
   const pages = {}
 
-  for (const fileName of files) {
+  for (const { fileName, records } of parsedFiles) {
     const page = fileName.replace(/\.md$/, '')
-    for (const record of parseFile(fileName)) {
+    for (const record of records) {
       if (record.malformed) continue
       entries.push({
         n: record.name,
@@ -295,9 +291,6 @@ function buildIndex() {
 
 function writeIndex(payload) {
   writeFileSync(OUT_FILE, `${JSON.stringify(payload, null, 0)}\n`)
-  console.log(`App index: ${payload.count} entries from ${Object.keys(payload.pages).length} category pages`)
-  for (const [page, count] of Object.entries(payload.pages)) console.log(`  ${page}: ${count}`)
-  console.log(`Written to ${OUT_FILE}`)
 }
 
 function writeCounts(pages) {
@@ -350,13 +343,17 @@ function writeCounts(pages) {
     lsposed_modules: countStats.lsposed
   }
   writeFileSync(COUNT_JSON, `${JSON.stringify(json, null, 2)}\n`)
-  console.log(`Counts written to docs/count.md and docs/public/count.json`)
 }
 
 // ---- Main -------------------------------------------------------------------
 
-lint()
+const parsedFiles = readdirSync(DIR)
+  .filter((fileName) => fileName.endsWith('.md'))
+  .sort()
+  .map((fileName) => ({ fileName, records: parseFile(fileName) }))
 
-const payload = buildIndex()
+lint(parsedFiles)
+
+const payload = buildIndex(parsedFiles)
 writeIndex(payload)
 writeCounts(payload.pages)
