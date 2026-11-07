@@ -42,22 +42,22 @@ Entries live in [`docs/apps-and-modules/`](docs/apps-and-modules/index.md), the 
 
 | Category | 🌐 | Description |
 | :--- | :-: | :--- |
-| 🛠️ **[Root Management](docs/apps-and-modules/root-management.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/root-management) | Root managers, temporary root, module managers, metamodules, LSPosed, Zygisk, root hiding & Play Integrity |
-| ⚙️ **[System](docs/apps-and-modules/system.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/system) | System tweaks, VBMeta, System UI & OEM frameworks, boot & startup, app & package management |
-| ⚡ **[Performance & Battery](docs/apps-and-modules/performance.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/performance) | Performance optimization, kernels, memory, battery & charging |
-| 🕵️ **[Privacy](docs/apps-and-modules/privacy.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/privacy) | Privacy tools, device ID & location spoofing, app isolation |
-| 🔐 **[Security](docs/apps-and-modules/security.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/security) | Security tools & firewalls |
-| 🚫 **[Ad Blocking](docs/apps-and-modules/ad-blocking.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/ad-blocking) | Hosts-based ad blockers & DNS filtering |
-| 🧩 **[App Modifications](docs/apps-and-modules/app-modifications.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/app-modifications) | App patchers, social and browser mods, media/camera tools, signature verification |
-| 🧹 **[Debloating](docs/apps-and-modules/debloating.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/debloating) | Remove bloatware & unwanted system apps |
-| 🗂️ **[File Management](docs/apps-and-modules/file-management.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/file-management) | Root file managers, cleaners & partition tools |
-| 💾 **[Backup & Restore](docs/apps-and-modules/backup.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/backup) | Full app & data backups and recovery |
-| 🎨 **[Customization](docs/apps-and-modules/customization.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/customization) | Themes, launchers, status bar, fonts, display |
-| 🎵 **[Audio](docs/apps-and-modules/audio.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/audio) | Audio enhancement, control & effects |
-| 🌐 **[Networking](docs/apps-and-modules/networking.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/networking) | VPN/proxy modules, network tools, Wi-Fi, Bluetooth & NFC |
-| 🎮 **[Gaming](docs/apps-and-modules/gaming.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/gaming) | Gaming optimization, FPS unlockers & game tools |
-| 🧑‍💻 **[Development & Automation](docs/apps-and-modules/development.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/development) | Terminal, ADB, developer tools, Linux environments, automation |
-| 🧰 **[General Utilities](docs/apps-and-modules/utilities.md)** | [↗](https://awesome-android-root.xyz/apps-and-modules/utilities) | Sync, power, sharing, communication, toolboxes |
+| 🛠️ **[Root Management](docs/apps-and-modules/root-management.md)** | [🌐](https://awesome-android-root.xyz/apps-and-modules/root-management) | Root managers, temporary root, module managers, metamodules, LSPosed, Zygisk, root hiding & Play Integrity |
+| ⚙️ **[System](docs/apps-and-modules/system.md)** | [🌐](https://awesome-android-root.xyz/apps-and-modules/system) | System tweaks, VBMeta, System UI & OEM frameworks, boot & startup, app & package management |
+| ⚡ **[Performance & Battery](docs/apps-and-modules/performance.md)** | [🌐](https://awesome-android-root.xyz/apps-and-modules/performance) | Performance optimization, kernels, memory, battery & charging |
+| 🕵️ **[Privacy](docs/apps-and-modules/privacy.md)** | [🌐](https://awesome-android-root.xyz/apps-and-modules/privacy) | Privacy tools, device ID & location spoofing, app isolation |
+| 🔐 **[Security](docs/apps-and-modules/security.md)** | [🌐](https://awesome-android-root.xyz/apps-and-modules/security) | Security tools & firewalls |
+| 🚫 **[Ad Blocking](docs/apps-and-modules/ad-blocking.md)** | [🌐](https://awesome-android-root.xyz/apps-and-modules/ad-blocking) | Hosts-based ad blockers & DNS filtering |
+| 🧩 **[App Modifications](docs/apps-and-modules/app-modifications.md)** | [🌐](https://awesome-android-root.xyz/apps-and-modules/app-modifications) | App patchers, social and browser mods, media/camera tools, signature verification |
+| 🧹 **[Debloating](docs/apps-and-modules/debloating.md)** | [🌐](https://awesome-android-root.xyz/apps-and-modules/debloating) | Remove bloatware & unwanted system apps |
+| 🗂️ **[File Management](docs/apps-and-modules/file-management.md)** | [🌐](https://awesome-android-root.xyz/apps-and-modules/file-management) | Root file managers, cleaners & partition tools |
+| 💾 **[Backup & Restore](docs/apps-and-modules/backup.md)** | [🌐](https://awesome-android-root.xyz/apps-and-modules/backup) | Full app & data backups and recovery |
+| 🎨 **[Customization](docs/apps-and-modules/customization.md)** | [🌐](https://awesome-android-root.xyz/apps-and-modules/customization) | Themes, launchers, status bar, fonts, display |
+| 🎵 **[Audio](docs/apps-and-modules/audio.md)** | [🌐](https://awesome-android-root.xyz/apps-and-modules/audio) | Audio enhancement, control & effects |
+| 🌐 **[Networking](docs/apps-and-modules/networking.md)** | [🌐](https://awesome-android-root.xyz/apps-and-modules/networking) | VPN/proxy modules, network tools, Wi-Fi, Bluetooth & NFC |
+| 🎮 **[Gaming](docs/apps-and-modules/gaming.md)** | [🌐](https://awesome-android-root.xyz/apps-and-modules/gaming) | Gaming optimization, FPS unlockers & game tools |
+| 🧑‍💻 **[Development & Automation](docs/apps-and-modules/development.md)** | [🌐](https://awesome-android-root.xyz/apps-and-modules/development) | Terminal, ADB, developer tools, Linux environments, automation |
+| 🧰 **[General Utilities](docs/apps-and-modules/utilities.md)** | [🌐](https://awesome-android-root.xyz/apps-and-modules/utilities) | Sync, power, sharing, communication, toolboxes |
 
 ## Guides & Documentation
 
@@ -95,6 +95,8 @@ Read the [Contributing Guide](docs/contributing.md) and the [PR template](.githu
 
 - Licensed under [MIT](LICENSE).
 - Read the [Legal Disclaimer](docs/legal-disclaimer.md) for details.
+
+---
 
 > [!NOTE]
 > This project is maintained by `HUMANS`, AI is used for coding, formatting and proofreading and not for content creation or curation.
