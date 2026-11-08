@@ -120,7 +120,7 @@ The bootloader is your device's startup manager - the first program that runs wh
 | Limited modification | Warranty void (usually) |
 
 > [!TIP]
-> **Can't unlock, or unlocking isn't worth the trade-offs?** On a narrow set of devices, the **GhostLock** bug (CVE-2026-43499) provides **temporary, reboot-to-clear root on a locked bootloader** - no wipe, no Knox trip. It can't flash ROMs or recoveries, but it may cover occasional root needs. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) and the broader [Temporary Root Solutions](./temporary-root-solutions.md) page.
+> **Can't unlock, or unlocking isn't worth the trade-offs?** On a narrow set of vulnerable builds, the **GhostLock** bug (CVE-2026-43499) can provide temporary root with a locked bootloader. A full reboot clears active root, not necessarily files changed during the session; Knox and app compatibility are not guaranteed. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) and [Temporary Root Solutions](./temporary-root-solutions.md).
 
 ---
 

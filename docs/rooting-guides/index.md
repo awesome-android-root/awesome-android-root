@@ -248,7 +248,7 @@ KernelSU variants such as KernelSU Next and SukiSU-Ultra add SUSFS integration a
 > For detailed comparison including migration guides and live release/commit badges, see [Root Framework Comparison](./root-framework-comparison.md)
 
 > [!TIP]
-> **Can't (or don't want to) unlock your bootloader?** All three frameworks above assume an unlocked bootloader. The **GhostLock** bug (CVE-2026-43499) instead grants **temporary, session-only root** with the bootloader locked - no Knox trip, no data wipe - but only on specific vulnerable device builds, and the root disappears after a reboot. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) for what it can and can't do, plus the broader [Temporary Root for Android: Methods & Solutions](./temporary-root-solutions.md) page.
+> **Can't (or don't want to) unlock your bootloader?** The three frameworks above assume an unlocked bootloader. On specific vulnerable builds, **GhostLock** (CVE-2026-43499) can instead provide session-only root with the bootloader locked. A full reboot clears active root but may leave files and settings changed during the session; Knox and app compatibility are not guaranteed. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) and [Temporary Root Solutions](./temporary-root-solutions.md).
 
 ---
 

@@ -100,7 +100,7 @@ Read the badges as a health check: a recent "last commit" means the project is a
 | Kernel-level root with per-app control on a GKI 2.0 device | **KernelSU** | Root in kernel space, App Profiles restrict UID, groups, capabilities, SELinux |
 | Kernel root on a non-GKI or older kernel | **KernelSU Next** or **SukiSU-Ultra** | Wider kernel range (4.4 to 6.18) and built-in SUSFS support |
 | KernelPatch features such as KPM kernel hooks | **APatch** | ARM64 only, kernel 3.18 to 6.12, needs a strong SuperKey |
-| Root without unlocking the bootloader (temporarily) | **[GhostLock temp root](./root-without-unlocking-bootloader.md)** | Session-only root via CVE-2026-43499 on select devices; no Knox trip, nothing survives a reboot |
+| Root without unlocking the bootloader (temporarily) | **[GhostLock temp root](./root-without-unlocking-bootloader.md)** | Session-only root on exact vulnerable builds; modified files may persist, and Knox behavior is not guaranteed |
 | Maximum reliability for banking, wallet, enterprise, or anti-cheat apps | **No root** | No framework can guarantee Play Integrity or app-specific checks |
 
 ## Quick comparison

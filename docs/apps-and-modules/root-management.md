@@ -45,14 +45,16 @@ problem - controlling root access.
 
 <summary><strong>What is temporary root (GhostLock)?</strong></summary>
 
-Exploits like **GhostLock (CVE-2026-43499)** - a 15-year-old Linux kernel bug - grant root **in memory only**, for the current boot. No bootloader unlock, no flashing, no Knox trip, no data wipe: reboot and the device is bone-stock again. The trade-offs: root doesn't survive reboots, you can't flash ROMs/recoveries, and it only works on specific devices running firmware up to ~the June 2026 patch level.
+Exploits such as **GhostLock (CVE-2026-43499)** can grant root in memory on specific vulnerable builds while the bootloader stays locked. A full reboot clears the active root session, but files and settings changed during it may remain. Kernel crashes and bootloops are possible; a locked bootloader or patch date does not guarantee device support, Knox behavior or Play Integrity.
 
 <br>
 </details>
 
-- **[⭐ Root My Galaxy](https://github.com/BuSung-dev/Root-My-Galaxy)** - One-tap temporary root for Snapdragon Galaxy flagships (S24/S25 series, S24 FE, A56...) via GhostLock; bootloader stays locked, Knox isn't tripped. `FOSS`
+- **[⭐ Root My Galaxy](https://github.com/BuSung-dev/Root-My-Galaxy)** - Temporary root via GhostLock on supported Samsung Galaxy device and firmware combinations, with the bootloader locked. `FOSS`
 - **[DirtyFrag](https://github.com/mitschud/DirtyFrag)** - Ephemeral root exploit for CVE-2026-43284 that grants in-memory root via page-cache and can load KernelSU without bootloader unlock. `FOSS`
 - **[GhostLock](https://github.com/YuKongA/ghostlock-app)** - One-tap temporary root app using GhostLock CVE-2026-43499 to gain in-memory root and load KernelSU with bootloader locked. `FOSS`
+- **[Shark](https://github.com/Yunnijian/Shark)** - Uses Shizuku or Stellar and a POSIX-timer exploit to load a KernelSU-compatible manager on select vulnerable OnePlus, OPPO, Realme and iQOO builds. Some bundled component licensing is unclear. `Proprietary`
+- **[Temporary Root](https://github.com/ShivamXD6/Temporary-Root)** - Uses DirtyFrag or GhostLock to load a KernelSU-compatible manager on supported vulnerable Android 12L+ arm64 builds. Source is published without a project-wide license. `Proprietary`
 
 > [!TIP]
 > Also check out **[Root Without Unlocking the Bootloader ↗](../rooting-guides/root-without-unlocking-bootloader.md)** and [Bootloader Mods & Temporary Root Solutions ↗](../rooting-guides/temporary-root-solutions.md) 

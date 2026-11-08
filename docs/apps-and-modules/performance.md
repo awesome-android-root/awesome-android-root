@@ -44,7 +44,7 @@ optimization**, charging control and task & process management.
 - **[Plus Plus Battery](https://github.com/dijia1124/plusplusbattery)** - Real-time battery stats & health estimator for OnePlus/Oppo/Realme phones. `FOSS` | [🌱](https://f-droid.org/en/packages/com.dijia1124.plusplusbattery/)
 - **[SaverTuner](https://codeberg.org/s1m/savertuner)** - Allows you to take advantage of this built-in battery saver. You can now set different profiles that save the battery more or less aggressively. [Does not work on Xiaomi](https://codeberg.org/s1m/savertuner/issues/98#issuecomment-5777054). `FOSS` | [🌱](https://f-droid.org/packages/s1m.savertuner/)
 - **[TSBattery](https://github.com/fankes/TSBattery)** - Lowers the battery use of QQ, TIM and WeChat. `FOSS` `[LSP]`
-- **[Universal GMS Doze Fork](https://github.com/MarsPatrick/universal-gms-doze)** - Patches Google Play services app and certain processes/services to be able to use battery optimization. View this [issue](https://github.com/awesome-android-root/awesome-android-root/issues/167) before use. `FOSS` `[M]` `[A]` 
+- **[Universal GMS Doze Fork](https://github.com/MarsPatrick/universal-gms-doze)** - Enables battery optimization for Google Play services. **Warning:** its installer and the [Plus fork](https://github.com/LeanxModulostk/universal-gms-doze) delete files with gms in their names across /data/data, including other apps; Plus also disables Find My Device's admin receiver at boot. See [issue #167](https://github.com/awesome-android-root/awesome-android-root/issues/167). `FOSS` `[M]` `[K]` `[A]`
 
 > [!TIP]
 > For privacy benefits of reducing Google Services activity, also see [privacy tools](privacy.md#privacy-tools).

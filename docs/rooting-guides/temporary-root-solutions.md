@@ -52,9 +52,9 @@ head:
       }
 ---
 
-# Bootloader Mods & Temporary Root
+# Bootloader Mods & Temporary Root {#bootloader-mods-temporary-root}
 
-Most guides here cover boot-image root installed after unlocking the bootloader. This page covers two different approaches: persistent MediaTek bootloader modifications, and session-only kernel-exploit root that leaves the bootloader locked.
+Most guides here cover boot-image root installed after unlocking the bootloader. This page distinguishes persistent boot-chain modifications from session-only kernel-exploit root that can leave the bootloader locked.
 
 > [!CAUTION]
 > These are device-specific research tools that operate below the OS. A bad bootloader flash or failed exploit run can brick a device. Read the project's current documentation and keep stock firmware and recovery options available before proceeding.
@@ -75,6 +75,16 @@ These MediaTek tools are useful alongside Kaeru and Fenrir, or as a starting poi
 - **[liblk](https://github.com/R0rt1z2/liblk)** - Python library for parsing and rebuilding MediaTek LK images; used by lkpatcher and the Kaeru/Fenrir injectors. `FOSS`
 - **[amonet](https://github.com/R0rt1z2/amonet)** - Older BootROM and LK exploit chain, mainly for Amazon-branded MediaTek devices with locked-down BROM stages that mtkclient alone cannot reach. `FOSS`
 
+## Samsung Exynos Bootloader Research
+
+These are boot-chain research references, **not temporary-root tools**. Samsung's [November 2026 security bulletin](https://security.samsungmobile.com/securityUpdate.smsb) describes CVE-2026-21155 / SVE-2026-3546 as a bootloader out-of-bounds write requiring physical access and lists a fix in SMR Nov-2026 Release 1.
+
+- **[CVE-2026-21155 / SVE-2026-3546 writeup](https://github.com/UnsignedChad/CVE-2026-21155-SVE-2026-3546)** - The researcher reports an unsigned partition flash and a boot-logo decoder issue on a Galaxy S25 FE `SM-S731U1`. The reported hardware test is specific to that model.
+- **[SVE-2026-3546 S-LK proof of concept](https://github.com/Gabriel2392/SVE-2026-3546)** - Research code for the `s5e8825` platform that fuses Secure Boot KEY2 and flashes re-signed bootloader files; it is not a general Galaxy root method.
+
+> [!CAUTION]
+> Fusing a custom Secure Boot key is [irreversible](https://github.com/henr1kas/Exynos#optional-key-fusing) and can leave the device dependent on custom-signed images. Rebooting does not undo it. Wrong images, lost keys or unsupported hardware can prevent recovery; do not downgrade security updates to pursue an exploit.
+
 ## GhostLock Temporary Root
 
 GhostLock is a kernel exploit that can provide root in memory on specifically vulnerable Android builds without a conventional bootloader unlock or firmware flash. The session ends on reboot, and updates may remove the vulnerability. It is not a persistent root method.
@@ -82,7 +92,16 @@ GhostLock is a kernel exploit that can provide root in memory on specifically vu
 > [!TIP]
 > The dedicated [GhostLock temporary-root guide](./root-without-unlocking-bootloader.md) is the source for the exploit overview, supported devices and exact builds, project ports, setup instructions, and current limitations. Check that guide and the linked project documentation before assuming a device is supported.
 
+## Other Temporary-Root Tools
+
+- **[Temporary Root](https://github.com/ShivamXD6/Temporary-Root)** - An Android 12L+ arm64 app offering DirtyFrag (CVE-2026-43284) or GhostLock. DirtyFrag needs a vulnerable supported GKI kernel and a loadable matching module; GhostLock needs a profile matching the exact kernel release. A KernelSU-compatible manager with `libksud.so` is required; the app names a separate Samsung fork. The source has no project-wide license.
+- **[Shark](https://github.com/Yunnijian/Shark)** - Uses Shizuku or Stellar and the distinct [CVE-2026-98260](https://github.com/CVEProject/cvelistV5/blob/main/cves/2026/98xxx/CVE-2026-98260.json) POSIX CPU-timer bug to load a compatible KernelSU manager. Upstream lists exact OnePlus, OPPO, Realme and iQOO targets, including OnePlus 16 `PYB110` on `6.18.21-android17-5-gf957accaf563-ab15926176-4k` and iQOO 15 `V2505A` on `6.12.23-android16-5-g41f4cb1fa7c7-abogki465038634-4k`. Its [NOTICE](https://github.com/Yunnijian/Shark/blob/main/NOTICE) says redistribution permission for a 6.12/iQOO component is not established.
+
+The lists and compatibility checks are upstream claims, not independent device tests or guarantees of a successful run. A kernel crash can occur; a full reboot clears active runtime root but may leave files or settings changed during the session.
+
 ## Comparison
+
+The Samsung KEY2 proof of concept is not covered in the table: its fused signing key is permanent.
 
 | | Magisk / KernelSU / APatch | Kaeru / Fenrir | GhostLock family |
 |---|---|---|---|
@@ -108,7 +127,7 @@ Some compatible tools load a session root manager such as KernelSU and may suppo
 
 ### Which devices are supported?
 
-There is no universal device list. Check the exact model and build in the [GhostLock device table](./root-without-unlocking-bootloader.md#device-support-at-a-glance) and the relevant project's documentation; a shared model family or kernel version is not proof of support.
+There is no universal device list. Check the exact model and build in the [GhostLock device table](./root-without-unlocking-bootloader.md#device-support-at-a-glance) or the other tool's own documentation; a shared model family or kernel version is not proof of support.
 
 ### Is temporary root safe?
 
@@ -117,7 +136,8 @@ Avoiding a firmware flash does not make an exploit risk-free. It still runs priv
 ## Safety & Legal Notes
 
 - For Kaeru and Fenrir, verify offsets for the exact bootloader version and keep a stock LK/preloader image before changing it.
-- For GhostLock, use only project-documented targets and inspect the linked project's issue tracker for current status.
+- For runtime exploits, use only project-documented targets and inspect the linked project's issue tracker for current status.
+- Do not confuse Samsung KEY2 fusing with session-only root or assume that a firmware flash can reverse a fuse.
 - These tools are research software maintained by individuals; expect device-specific limitations and breakage after updates.
 - See the project's [Legal & Safety](../legal-disclaimer.md) page for the general disclaimer.
 
@@ -128,4 +148,4 @@ Avoiding a firmware flash does not make an exploit risk-free. It still runs priv
 - [Bootloader unlocking guide](./how-to-unlock-bootloader.md)
 - [Troubleshooting](../troubleshooting.md)
 
-[↑ Back to top](#mediatek-bootloader-modification-spoofing-tools)
+[↑ Back to top](#bootloader-mods-temporary-root)

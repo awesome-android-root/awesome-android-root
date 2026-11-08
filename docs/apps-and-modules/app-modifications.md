@@ -198,5 +198,6 @@ This category covers app patchers (including YouTube), social and browser mods, 
 ## Media & Camera Mods
 
 - **[GlassMic](https://github.com/lm060719/io.mo.glassmic)** - Lets you route an imported audio file into target recording apps through AudioRecord/AAudio hooks. `FOSS` `[LSP]`
+- **[MYCAM](https://github.com/elementtime6969/mycam)** - Replaces supported apps' camera feeds with local media or RTMP on rooted Android; offers an optional LSPosed mode and paid access. `Proprietary` `[LSP]`
 - **[VideoSpeed](https://github.com/MarsGao/io.github.MarsGao.speed)** - Adjusts video playback speed across multiple apps. `FOSS` `[LSP]`
 - **[xCam](https://github.com/hazbu/xCam)** - Replace live camera feeds and actual photo captures with virtual media sources. `FOSS` `[LSP]`

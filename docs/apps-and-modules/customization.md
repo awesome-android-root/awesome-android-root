@@ -61,6 +61,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[⭐ Lawnchair](https://github.com/Goooler/LawnchairRelease/)** - A customizable launcher offering a Pixel-like experience. `FOSS`
 - **[Activity Manager](https://github.com/sdex/ActivityManager)** - Discover the activities of installed applications, run them, and create shortcuts. `FOSS` | [🌱](https://f-droid.org/packages/com.activitymanager/)
 - **[Google Shortcuts Launcher](https://github.com/WSTxda/Google-Shortcuts-Launcher)** - Easily access essential Google apps features directly from your launcher app drawer. `FOSS`
+- **[HyperDesk](https://github.com/LuigiColantuono/HyperDesk)** - Applies icon packs and per-app icons to HyperOS and POCO launchers, and tweaks launcher and System UI visuals. HyperOS 2+; some hooks depend on the ROM build. `FOSS` `[LSP]`
 - **[HyperOS App Vault](https://github.com/Mods-Center/HyperOS-App-Vault)** - Enhanced HyperOS App Vault with unlocked widgets, high-end device features, blur adjustments, and scrolling animations. `Proprietary` `[M]` `[K]`
 - **[HyperOS Launcher](https://github.com/Mods-Center/HyperOS-Launcher#hyperos-launcher-v5)** - Enhanced HyperOS Launcher with features from high-end devices, including customizable app drawer, icon packs, and more. `Proprietary` `[M]` `[K]`
 - **[Launcher3 QuickLaunch](https://github.com/hddq/launcher3-quicklaunch)** - Lets you press Enter in Launcher3's app drawer search to instantly launch the first search result. `FOSS` `[LSP]`
@@ -71,6 +72,7 @@ Magisk/KernelSU/LSPosed modules.
 
 ## Lockscreen & AOD
 
+- **[AOD Notify](https://github.com/Makish003/AodNotify)** - Shows brief banners or up to four notification cards on the ColorOS 17 always-on display. Tested upstream on OnePlus 15T with the China ROM. `FOSS` `[LSP]`
 - **[ColorOS Live Lyrics Bridge](https://github.com/Andrea-lyz/ColorOS-Live-Lyrics-Bridge)** - Bridges timed lyrics from supported players into the ColorOS/OPlus lock-screen lyric pipeline. `FOSS` `[LSP]`
 - **[HyperGlow](https://github.com/amarinne/hyperglow)** - Animated lock screen and always-on display lyrics for HyperOS 3. `FOSS` `[LSP]`
 - **[HyperLyrics Enhanced](https://github.com/juren233/HyperLyrics-Enhanced)** - Shows HyperIsland and always-on display lyrics on HyperOS, with Apple Music enhancements and bundled Lyricon providers. `FOSS` `[LSP]`
