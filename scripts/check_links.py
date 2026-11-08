@@ -33,18 +33,31 @@ def vp_slugify(text):
 
 
 def heading_ids(text):
-    """Map anchor id -> True for every heading (incl. custom {#id} ids)."""
+    """Map VitePress heading IDs, including explicit {#id} attributes."""
     ids = {}
-    counts = {}
+    used_slugs = set()
     for m in re.finditer(r'^(#{1,6})\s+(.+?)\s*$', text, re.M):
+        level = len(m.group(1))
         raw = m.group(2).strip()
         cm = re.match(r'^(.*?)\s*\{#([\w\-]+)\}\s*$', raw)
+        # The attrs plugin also accepts explicit IDs on h1, h5 and h6, but
+        # config.mjs only generates and deduplicates anchors for h2 through h4.
+        if level not in (2, 3, 4):
+            if cm:
+                ids[cm.group(2)] = True
+            continue
         if cm:
-            base = cm.group(2)
+            # VitePress rejects duplicate explicit IDs rather than suffixing them.
+            slug = cm.group(2)
         else:
             base = vp_slugify(raw)
-        counts[base] = counts.get(base, 0) + 1
-        ids[base if counts[base] == 1 else f'{base}-{counts[base]}'] = True
+            slug = base
+            suffix = 1
+            while slug in used_slugs:
+                slug = f'{base}-{suffix}'
+                suffix += 1
+        used_slugs.add(slug)
+        ids[slug] = True
     return ids
 
 
@@ -85,7 +98,8 @@ def main():
     checked = 0
     for f in files:
         rel = os.path.relpath(f, DOCS).replace(os.sep, '/')
-        text = open(f, encoding='utf-8').read()
+        with open(f, encoding='utf-8') as source:
+            text = source.read()
         ids = heading_ids(text)
         dirn = os.path.dirname(f)
         for m in re.finditer(r'(?<!!)\[([^\]]*)\]\(([^)\s]+?)(?:\s+["\'][^)]*?["\'])?\)', strip_code(text)):
@@ -110,7 +124,8 @@ def main():
                 errors.append(f'{rel}: broken link "{dest}" ({label})')
                 continue
             if anchor:
-                tids = heading_ids(open(target, encoding='utf-8').read())
+                with open(target, encoding='utf-8') as source:
+                    tids = heading_ids(source.read())
                 if anchor not in tids:
                     errors.append(f'{rel}: missing anchor #{anchor} on {os.path.relpath(target, DOCS)} ({label})')
     print(f'checked {checked} markdown links')
