@@ -91,8 +91,8 @@ Do not treat a guide for one Galaxy model as proof that another model or region 
 - **Samsung Cloud & Find My Mobile** – May flag device as compromised
 :::
 
-::: tip 💡 Want root WITHOUT tripping Knox?
-On a subset of specifically verified Galaxy builds, the **GhostLock** bug (CVE-2026-43499) may provide **temporary root with the bootloader still locked**. That is not a general Samsung rooting method: root is lost on reboot and support depends on the exact firmware. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) for the current limitations.
+::: tip 💡 Want temporary root with a locked bootloader?
+On specific vulnerable Galaxy builds, **DirtyFrag** or **GhostLock** may provide temporary root without unlocking. Support depends on the exact firmware; a full reboot ends active root but may leave changed files or settings. Knox fuse and service behavior are not guaranteed. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) for the current limitations.
 :::
 
 

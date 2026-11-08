@@ -951,7 +951,7 @@ Error: Stuck on OnePlus logo, no response
 - [Bootloader Unlock](./rooting-guides/how-to-unlock-bootloader.md)
 - [Custom Recovery Installation](./rooting-guides/how-to-install-custom-recovery.md)
 - [Root Framework Comparison](./rooting-guides/root-framework-comparison.md)
-- [Root Without Unlocking the Bootloader (GhostLock Temp Root)](./rooting-guides/root-without-unlocking-bootloader.md)
+- [Root Without Unlocking the Bootloader (DirtyFrag and GhostLock)](./rooting-guides/root-without-unlocking-bootloader.md)
 
 **Device Guides:**
 - [Pixel](./rooting-guides/how-to-root-pixel-phone.md)

@@ -215,13 +215,16 @@ Research more and ask community
 
 ### Which Root Method Should I Use?
 
-**Three Main Options in 2026:**
+**Root frameworks and temporary root:**
 
 | Method | Best For | Pros | Cons |
 |:---|:---|:---|:---|
 | **Magisk** | Most users, general use | Widest compatibility, mature, large module ecosystem, Zygisk, active development | Requires boot/init_boot patching |
 | **KernelSU** | Supported GKI devices, hiding or per-app control | Kernel-integrated, only permitted apps see `su`, SUSFS on variants | Needs a supported kernel, smaller module ecosystem |
 | **APatch** | Advanced users, developers | Kernel patching approach, powerful for specific use cases | Limited device support, requires technical knowledge |
+| **Temporary root** | Supported builds with a locked bootloader | No boot-image flash or unlock for supported DirtyFrag or GhostLock loaders | Supported vulnerable device and kernel required; active root ends on full reboot |
+
+Temporary root is an access method rather than a separate framework; some loaders use KernelSU during the session.
 
 **Detailed Comparison:**
 
@@ -270,6 +273,7 @@ Research more and ask community
 **Quick Decision Guide:**
 
 ```
+Bootloader locked? → Check DirtyFrag or GhostLock support for your exact build
 New to rooting? → Magisk
 Stock ROM, most devices? → Magisk
 Hiding or per-app control first, on a supported kernel? → KernelSU or a variant
@@ -282,6 +286,7 @@ Advanced user, specific needs? → Research all three
 - [Magisk Guide](./rooting-guides/magisk-guide.md)
 - [KernelSU Guide](./rooting-guides/kernelsu-guide.md)
 - [APatch Guide](./rooting-guides/apatch-guide.md)
+- [Temporary Root Guide](./rooting-guides/root-without-unlocking-bootloader.md)
 
 ---
 
@@ -293,21 +298,26 @@ Advanced user, specific needs? → Research all three
 
 **Quick Summary:**
 
-| Feature | Magisk | KernelSU | APatch |
-|:---|:---|:---|:---|
-| **Installation Method** | Patch boot/init_boot/recovery or Samsung AP | Supported LKM or integrated kernel | Patch kernel in boot image |
-| **Module Ecosystem** | Magisk modules | Check script compatibility and metamodule requirements | APM and kernel patch modules |
-| **Root Hiding** | DenyList is limited | Per-app authorization/profiles | Per-app authorization/exclusion |
-| **OTA Support** | Supported A/B flow with prerequisites | Mode/device-specific; may need repatching | May need updated boot image repatched |
-| **Performance Impact** | Minimal | Minimal | Minimal |
-| **Community Support** | Extensive | Active, smaller | Niche |
-| **Best For** | Most users, beginners | Custom ROM enthusiasts | Advanced users |
+| Feature | Magisk | KernelSU | APatch | Temporary root |
+|:---|:---|:---|:---|:---|
+| **Installation Method** | Patch boot/init_boot/recovery or Samsung AP | Supported LKM or integrated kernel | Patch kernel in boot image | Run a compatible DirtyFrag or GhostLock loader; some late-load KernelSU |
+| **Bootloader** | Normally unlocked | Normally unlocked for standard installation | Normally unlocked | Can stay locked on supported builds |
+| **Full Reboot** | Root normally returns | Root normally returns after standard installation | Root normally returns | Active root ends; a loader can re-run it |
+| **Module Ecosystem** | Magisk modules | Check script compatibility and metamodule requirements | APM and kernel patch modules | Compatible session modules if supported; some loaders provide a shell only |
+| **Root Hiding** | DenyList is limited | Per-app authorization/profiles | Per-app authorization/exclusion | No guarantee of Integrity or app compatibility |
+| **OTA Support** | Supported A/B flow with prerequisites | Mode/device-specific; may need repatching | May need updated boot image repatched | Updates can patch the vulnerability or break the loader |
+| **Performance Impact** | Minimal | Minimal | Minimal | Varies by tool; a failed exploit can crash or reboot |
+| **Community Support** | Extensive | Active, smaller | Niche | Device- and loader-specific |
+| **Best For** | Most users, beginners | Custom ROM enthusiasts | Advanced users | Exact vulnerable builds without bootloader unlocking |
+
+Temporary root is a method, not a fourth framework; some loaders use KernelSU for the session. A full reboot clears active root, but files and settings changed during the session can remain.
 
 **Learn More:**
 - [Detailed Framework Comparison](./rooting-guides/root-framework-comparison.md)
 - [Magisk Installation Guide](./rooting-guides/magisk-guide.md)
 - [KernelSU Installation Guide](./rooting-guides/kernelsu-guide.md)
 - [APatch Installation Guide](./rooting-guides/apatch-guide.md)
+- [DirtyFrag and GhostLock Temporary Root](./rooting-guides/root-without-unlocking-bootloader.md)
 
 ---
 
@@ -322,7 +332,7 @@ The bootloader is the first program that runs when you power on your Android dev
 An unlocked bootloader allows you to:
 - Flash custom recovery (TWRP, OrangeFox)
 - Install custom ROMs
-- Root your device
+- Install a standard persistent root image
 - Flash modified boot images
 
 **Q: Is unlocking the bootloader safe?**
@@ -347,7 +357,7 @@ The standard Magisk, KernelSU and APatch installation paths require permission t
 Treat named exploits, CVE numbers and affected-patch claims as unverified until backed by the original disclosure and reproducible device-specific evidence. A locked bootloader does not make an exploit APK safe, and temporary root does not guarantee that banking apps, Knox services or attestation will remain unaffected. Do not stay on vulnerable firmware solely to retain root.
 
 **Learn More:**
-- [Root Without Unlocking the Bootloader: GhostLock Temporary Root](./rooting-guides/root-without-unlocking-bootloader.md)
+- [Root Without Unlocking the Bootloader: DirtyFrag and GhostLock](./rooting-guides/root-without-unlocking-bootloader.md)
 - [Bootloader Modification & Temporary Root Solutions](./rooting-guides/temporary-root-solutions.md)
 - [Complete Bootloader Unlock Guide](./rooting-guides/how-to-unlock-bootloader.md)
 - [OEM Unlock Policies by Manufacturer](./rooting-guides/how-to-unlock-bootloader.md#manufacturer-policy-overview)

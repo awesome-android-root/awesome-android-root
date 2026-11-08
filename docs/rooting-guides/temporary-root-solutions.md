@@ -85,47 +85,53 @@ These are boot-chain research references, **not temporary-root tools**. Samsung'
 > [!CAUTION]
 > Fusing a custom Secure Boot key is [irreversible](https://github.com/henr1kas/Exynos#optional-key-fusing) and can leave the device dependent on custom-signed images. Rebooting does not undo it. Wrong images, lost keys or unsupported hardware can prevent recovery; do not downgrade security updates to pursue an exploit.
 
-## GhostLock Temporary Root
+## DirtyFrag and GhostLock Temporary Root {#ghostlock-temporary-root}
 
-GhostLock (CVE-2026-43499) is a Linux futex priority-inheritance use-after-free. On specifically vulnerable Android builds, a successful race can provide root in memory without a conventional bootloader unlock or firmware flash; a failed attempt can panic or reboot the device. A full reboot ends the session, and updates may remove the vulnerability.
+**DirtyFrag** (CVE-2026-43284) uses a page-cache vulnerability on supported kernels. Some loaders need a matching kernel module and a specific root manager.
+
+**GhostLock** (CVE-2026-43499) uses a kernel race on builds with a matching device profile. A failed attempt can panic or reboot the device.
+
+Both can provide root without unlocking or flashing a boot image on supported builds. A full reboot ends the active session, and updates may remove the vulnerability.
 
 > [!TIP]
-> Our sister project **[Awesome Temporary Root](https://awesome-temporary-root.pages.dev/)** ([GitHub](https://github.com/fynks/awesome-temporary-root)) maintains device/build sections, links to live upstream tables, tools, module reports, setup and troubleshooting. Our [GhostLock guide](./root-without-unlocking-bootloader.md#all-apps-and-projects-for-ghostlock) links to its sections. The index is not exhaustive, so also check the loader's own target list.
+> Our sister project **[Awesome Temporary Root](https://awesome-temporary-root.pages.dev/)** ([GitHub](https://github.com/fynks/awesome-temporary-root)) maintains device/build sections, links to live upstream tables, tools, module reports, setup and troubleshooting. Our [temporary-root guide](./root-without-unlocking-bootloader.md#all-apps-and-projects-for-ghostlock) links to its sections.
 
 ## Other Temporary-Root Tools
 
 Some loaders late-load a KernelSU-compatible module to grant `su` and support compatible modules; others provide only a root shell. ADB or Shizuku may be used to stage a loader, but Shizuku's shell access is not root by itself. Use the manager and transport named by the chosen loader.
 
 - **[Temporary Root](https://github.com/ShivamXD6/Temporary-Root)** - An Android 12L+ arm64 app offering DirtyFrag (CVE-2026-43284) or GhostLock. DirtyFrag uses a page-cache vulnerability and needs a vulnerable supported GKI kernel and a loadable matching module; GhostLock needs a profile matching the exact kernel release. A KernelSU-compatible manager with `libksud.so` is required; the app names a separate Samsung fork. The source has no project-wide license.
-- **[Shark](https://github.com/Yunnijian/Shark)** - Uses Shizuku or Stellar and the distinct [CVE-2026-98260](https://github.com/CVEProject/cvelistV5/blob/main/cves/2026/98xxx/CVE-2026-98260.json) POSIX CPU-timer bug to late-load a KernelSU-compatible module for the chosen manager. Check its upstream README for exact supported device and kernel targets; the sister index does not necessarily cover every loader. Its [NOTICE](https://github.com/Yunnijian/Shark/blob/main/NOTICE) says redistribution permission for a 6.12/iQOO component is not established.
+- **[Shark](https://github.com/Yunnijian/Shark)** - Uses Shizuku or Stellar and the distinct [CVE-2026-98260](https://github.com/CVEProject/cvelistV5/blob/main/cves/2026/98xxx/CVE-2026-98260.json) POSIX CPU-timer bug to late-load a KernelSU-compatible module for the chosen manager. Check its upstream README for exact supported device and kernel targets. Its [NOTICE](https://github.com/Yunnijian/Shark/blob/main/NOTICE) says redistribution permission for a 6.12/iQOO component is not established.
 
 Upstream target lists and compatibility checks are not guarantees of a successful run. A kernel crash can occur; a full reboot clears active runtime root but may leave files or settings changed during the session.
 
 ## Comparison
 
-The Samsung KEY2 proof of concept is not covered in the table: its fused signing key is permanent.
+The Samsung KEY2 proof of concept is not covered in the table: its fused signing key is permanent. DirtyFrag and GhostLock are temporary-root methods, not root frameworks; some loaders use KernelSU during the session.
 
-| | Magisk / KernelSU / APatch | Kaeru / Fenrir | GhostLock family |
-|---|---|---|---|
-| Bootloader unlock | Required | Required to flash the modification | Not required |
-| Survives reboot | Usually, until removed or an update replaces the image | Yes, until restored or replaced | No; rerun each boot while the target remains vulnerable |
-| Scope | Boot or init_boot image | LK / boot-chain images | Kernel, in memory |
-| Device support | Broad, but device-specific images and procedures still apply | MediaTek only; exact-device support | Per-device and per-build; check [Awesome Temporary Root](https://awesome-temporary-root.pages.dev/guide/#supported-devices) and the loader's target list |
-| Main limitation | Requires an unlockable device and careful image/OTA handling | Wrong LK or preloader changes can brick a device | Narrow compatibility window; an OTA may patch the exploit |
-| Knox / warranty fuse | Depends on OEM | Depends on OEM | The dedicated guide does not guarantee fuse or Knox-service behavior; check its device-specific notes |
-| Lock-state and Play Integrity | Usually needs separate hiding tools; see [Tricky Store](https://github.com/5ec1cff/TrickyStore) | Lock-state spoofing is available in some tools; Fenrir's upstream description claims strong Integrity can pass, but verify current results | A locked bootloader alone does not establish Play Integrity results |
+| | Magisk / KernelSU / APatch | Kaeru / Fenrir | DirtyFrag | GhostLock |
+|---|---|---|---|---|
+| Bootloader | Normally unlocked for standard installation | Unlocked to flash the modification | Can stay locked on supported builds | Can stay locked on supported builds |
+| Full reboot | Root usually returns until removed or replaced | Modification remains until restored or replaced | Active root ends | Active root ends |
+| Scope | Compatible boot-related image or custom kernel | LK / boot-chain images | Kernel page cache; some loaders use KernelSU | Kernel race; some loaders use KernelSU |
+| Device support | Broad, but device-specific images and procedures apply | MediaTek only; exact-device support | Vulnerable kernel and compatible loader/module | Exact device and kernel profile |
+| Main limitation | Requires an unlockable device and careful image/OTA handling | Wrong LK or preloader changes can brick a device | An OTA can patch the vulnerability or break compatibility | An OTA can patch the vulnerability or break the profile; a failed race can reboot |
+| Knox / warranty fuse | Depends on OEM and install method | Depends on OEM | Fuse and Knox-service behavior are not guaranteed | Fuse and Knox-service behavior are not guaranteed |
+| Lock-state and Play Integrity | May need separate hiding tools; results are not guaranteed | Lock-state spoofing is available in some tools; Integrity results are not guaranteed | A locked bootloader does not establish Integrity results | A locked bootloader does not establish Integrity results |
+
+For either temporary-root method, check [Awesome Temporary Root](https://awesome-temporary-root.pages.dev/guide/#supported-devices) and the loader's own requirements. Some loaders can automatically re-run after a reboot; files or settings changed during a session may remain.
 
 For root-hiding tools and configuration on a normally rooted device, see [Root Hiding & Play Integrity](../apps-and-modules/root-management#root-hiding-play-integrity) and the [troubleshooting guide](../troubleshooting.md#play-integrity-and-banking-apps).
 
 ## FAQ
 
-### Does GhostLock survive reboot or replace permanent root?
+### Does temporary root survive reboot or replace permanent root? {#does-ghostlock-survive-reboot-or-replace-permanent-root}
 
-No. Root access ends on reboot; rerun the tool only if the exact device and build remain supported. It cannot replace bootloader unlocking when you need to flash a recovery, custom ROM, or persistent root image.
+No. Active root access ends on a full reboot; rerun the tool only if the exact device and build remain supported. It cannot replace bootloader unlocking when you need to flash a recovery, custom ROM, or persistent root image.
 
 ### Can it load root modules?
 
-Some compatible tools load a session root manager such as KernelSU and may support modules for that session. Do not assume every Magisk or KernelSU module is compatible or that module changes persist after reboot.
+Some compatible tools load a KernelSU module and use a root manager, and may support modules for that session. Do not assume every Magisk or KernelSU module is compatible, or that a reboot undoes files and settings changed by a module.
 
 ### Which devices are supported?
 
@@ -146,7 +152,7 @@ Avoiding a firmware flash does not make an exploit risk-free. It still runs priv
 ## Related Resources
 
 - [Awesome Temporary Root](https://awesome-temporary-root.pages.dev/) ([GitHub](https://github.com/fynks/awesome-temporary-root)) - maintained device/build sections and practical guidance
-- [GhostLock temporary-root guide](./root-without-unlocking-bootloader.md)
+- [DirtyFrag and GhostLock temporary-root guide](./root-without-unlocking-bootloader.md)
 - [Root framework comparison](./root-framework-comparison.md)
 - [Bootloader unlocking guide](./how-to-unlock-bootloader.md)
 - [Troubleshooting](../troubleshooting.md)

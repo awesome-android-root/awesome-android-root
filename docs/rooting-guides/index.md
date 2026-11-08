@@ -84,10 +84,10 @@ Master Android rooting with comprehensive tutorials covering bootloader unlockin
 ::: info Steps
 **Ready to begin?** Choose your path:
 - [Prerequisites and Safety](#prerequisites-and-safety) - Critical preparations
-- [Universal Rooting Process](#universal-rooting-process) - Four-step guide for all devices
+- [Universal Rooting Process](#universal-rooting-process) - Standard unlocked-bootloader installation
 - [Device-Specific Guides](#device-specific-guides) - Tailored instructions for your device
-- [Root Method Comparison](#choosing-a-root-method) - Magisk vs KernelSU vs APatch
-- [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) - GhostLock temporary root
+- [Root Method Comparison](#choosing-a-root-method) - Frameworks and temporary root
+- [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) - DirtyFrag and GhostLock temporary root
 :::
 
 > [!NOTE]
@@ -193,34 +193,38 @@ Root access grants **superuser (administrator) privileges** on Android, providin
 
 ## Choosing a Root Method
 
-Three primary rooting solutions exist, each with distinct advantages and trade-offs. **Magisk** offers the broadest compatibility and largest module ecosystem, **KernelSU** provides kernel-level root with granular per-app control, and **APatch** combines kernel patching with Magisk-like module support. All three require an unlocked bootloader.
+**Magisk** offers broad compatibility and a large module ecosystem, **KernelSU** provides kernel-level root with per-app control, and **APatch** combines kernel patching with Magisk-like module support. Their standard installations normally require an unlocked bootloader. On some vulnerable builds, temporary-root loaders can instead provide session root while the bootloader remains locked, sometimes by late-loading KernelSU.
 
 ### Check Your Device First
 
-The right method depends on your device's specifics, not brand reputation:
+For a locked bootloader, follow the separate [temporary-root guide](./root-without-unlocking-bootloader.md). For a standard installation, check these device details first:
 
 1. **Bootloader** - Confirm the OEM Unlocking toggle exists in Developer Options (greyed out often means carrier-locked). Unlocking wipes all data.
 2. **Kernel type** - GKI 2.0 devices (kernel 5.10+) can run KernelSU in LKM mode. Older non-GKI kernels need a custom KernelSU build, which favors Magisk or APatch. Check with `adb shell uname -r`.
-3. **Boot partition** - Android 13+ devices usually boot from `init_boot.img`, older devices from `boot.img`. Patch the wrong image and root will not apply.
+3. **Boot image** - Select the image required by your device and framework. Many Android 13+ devices put the generic ramdisk in `init_boot.img`, while the kernel remains in `boot.img`; APatch needs the kernel-containing `boot.img`. A wrong image can prevent root or booting.
 4. **Kernel config (APatch only)** - APatch needs ARM64 with `CONFIG_KALLSYMS=y`. Check with `zcat /proc/config.gz | grep CONFIG_KALLSYMS` (needs root) or inspect your kernel source.
 5. **Kernel source** - Non-GKI KernelSU builds require the exact kernel source for your device. If the vendor never published it, Magisk or APatch are the practical options.
 
 ### Quick Comparison
 
-| Feature | Magisk | KernelSU | APatch |
-|---------|---------|----------|---------|
-| **Guide** | [Magisk Guide](./magisk-guide.md) | [KernelSU Guide](./kernelsu-guide.md) | [APatch Guide](./apatch-guide.md) |
-| **Target Users** | Beginners, most users | GKI devices, privacy-focused | Developers, edge cases |
-| **Architecture** | Systemless (boot/init_boot/vendor_boot) | Kernel-level (GKI/LKM) | Kernel patching (KernelPatch) |
-| **Android Support** | Android 6.0+ | Android 12+ (GKI 2.0) officially, older via custom kernel | ARM64, kernel 3.18 to 6.12 |
-| **Kernel Requirement** | Any bootable kernel | GKI 2.0 for LKM mode, custom build otherwise | CONFIG_KALLSYMS=y |
-| **Installation** | Easy (patch and flash boot image) | Easy on GKI (patch and flash), custom kernel build on non-GKI | Patch and flash boot image (ARM64 only) |
-| **Module Ecosystem** | Largest module ecosystem | Most Magisk modules work via metamodule | APModule (Magisk-like) plus KPM (kernel-level) |
-| **Module Mounting** | Built-in Magic Mount | Metamodule, only for /system modifications (e.g. meta-overlayfs) | Built-in, Magisk-like |
-| **Root Hiding** | Good (DenyList + Shamiko + PIF) | Strong (app profiles: uid, gid, capabilities, SELinux) | Good (SuperKey credential system) |
-| **Community** | Largest | Growing | Small |
-| **Unique Strength** | Ecosystem and broad compatibility | Kernel space, only permitted apps see su | KPM kernel code injection without kernel source |
-| **OTA Handling** | Re-patch boot image after OTA | Re-patch or reflash kernel after OTA | Re-patch boot image after OTA |
+| Feature | Magisk | KernelSU | APatch | Temporary root |
+|---------|---------|----------|---------|---------|
+| **Guide** | [Magisk Guide](./magisk-guide.md) | [KernelSU Guide](./kernelsu-guide.md) | [APatch Guide](./apatch-guide.md) | [DirtyFrag and GhostLock](./root-without-unlocking-bootloader.md) |
+| **Target Users** | Beginners, most users | GKI devices, privacy-focused | Developers, edge cases | Supported builds with a locked bootloader |
+| **Architecture** | Systemless (boot/init_boot/vendor_boot) | Kernel-level (GKI/LKM) | Kernel patching (KernelPatch) | Exploit-based session; some loaders use KernelSU |
+| **Android Support** | Android 6.0+ | Android 12+ (GKI 2.0) officially, older via custom kernel | ARM64, kernel 3.18 to 6.12 | Exact vulnerable device and build, not Android version alone |
+| **Kernel Requirement** | A compatible bootable kernel | GKI 2.0 for LKM mode, custom build otherwise | CONFIG_KALLSYMS=y | Vulnerable kernel and compatible loader, profile or module |
+| **Bootloader** | Normally unlocked | Normally unlocked for standard installation | Normally unlocked | Can stay locked on supported builds |
+| **Installation** | Patch and flash the correct image | Patch and flash for standard LKM, or use a custom kernel | Patch and flash the kernel-containing `boot.img` | Run a matching loader without flashing a boot image |
+| **Full Reboot** | Root normally returns | Root normally returns after standard installation | Root normally returns | Active root ends; some loaders can re-run it |
+| **Module Ecosystem** | Largest module ecosystem | Most Magisk modules work via metamodule | APModule (Magisk-like) plus KPM (kernel-level) | Compatible session modules if supported; some loaders provide a shell only |
+| **Module Mounting** | Built-in Magic Mount | Metamodule, only for /system modifications (e.g. meta-overlayfs) | Built-in, Magisk-like | Depends on the loader and manager; early-boot stages may not run |
+| **Root Hiding** | DenyList and separate modules | App profiles and optional variants | SuperKey credential system | Locked bootloader alone does not guarantee Integrity or app compatibility |
+| **Community** | Largest | Growing | Small | Depends on the loader and device |
+| **Unique Strength** | Ecosystem and broad compatibility | Kernel space, only permitted apps see su | KPM kernel code injection without kernel source | No unlock needed on supported builds |
+| **OTA Handling** | Re-patch boot image after OTA | Re-patch or reflash kernel after OTA | Re-patch boot image after OTA | An update can patch the exploit or break compatibility |
+
+Temporary root is an access method, not a fourth framework. Some loaders late-load KernelSU on locked devices. A full reboot ends the active session, but files and settings changed during it may remain.
 
 ### Decision Guide
 
@@ -248,13 +252,13 @@ KernelSU variants such as KernelSU Next and SukiSU-Ultra add SUSFS integration a
 > For detailed comparison including migration guides and live release/commit badges, see [Root Framework Comparison](./root-framework-comparison.md)
 
 > [!TIP]
-> **Can't (or don't want to) unlock your bootloader?** The three frameworks above assume an unlocked bootloader. On specific vulnerable builds, **GhostLock** (CVE-2026-43499) can instead provide session-only root with the bootloader locked. A full reboot clears active root but may leave files and settings changed during the session; Knox and app compatibility are not guaranteed. See our sister project [Awesome Temporary Root](https://awesome-temporary-root.pages.dev/) for device/build sections, plus [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) and [Temporary Root Solutions](./temporary-root-solutions.md).
+> **Can't (or don't want to) unlock your bootloader?** On specific vulnerable builds, **DirtyFrag** or **GhostLock** can provide session-only root while it stays locked. A full reboot clears active root but may leave files and settings changed during the session; Knox and app compatibility are not guaranteed. See our sister project [Awesome Temporary Root](https://awesome-temporary-root.pages.dev/) for device/build sections, plus [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) and [Temporary Root Solutions](./temporary-root-solutions.md).
 
 ---
 
 ## Universal Rooting Process
 
-All Android devices follow this four-step rooting process, regardless of manufacturer or root method. Modern devices (Android 13+) often use `init_boot.img` instead of `boot.img` for root patching - check your device specifics.
+This four-step flow describes standard unlocked-bootloader installations, not [temporary root](./root-without-unlocking-bootloader.md). Many Android 13+ devices store the generic ramdisk in `init_boot.img`, while APatch needs the kernel in `boot.img`; check your device and framework instructions.
 
 ### Step 1: Unlock Bootloader
 

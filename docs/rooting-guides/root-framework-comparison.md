@@ -1,14 +1,14 @@
 ---
 layout: doc
-title: Magisk vs KernelSU vs APatch
-description: Detailed comparison of Magisk, KernelSU, and APatch root frameworks with practical recommendations and migration notes.
+title: Root Frameworks & Temporary Root
+description: Compare Magisk, KernelSU, APatch and locked-bootloader temporary root, including compatibility, modules, risks and updates.
 head:
   - - meta
     - property: og:title
-      content: Magisk vs KernelSU vs APatch - Which Root Method is Best?
+      content: Root Frameworks and Temporary Root - Which Method is Best?
   - - meta
     - property: og:description
-      content: Practical comparison of Android root frameworks with recommendations, risks, and migration notes.
+      content: Compare Magisk, KernelSU, APatch and locked-bootloader temporary root, including compatibility, modules, risks and updates.
   - - meta
     - property: og:image
       content: https://awesome-android-root.xyz/images/og/root-framework-comparison.png
@@ -17,7 +17,7 @@ head:
       content: https://awesome-android-root.xyz/images/og/root-framework-comparison.png
   - - meta
     - property: og:image:alt
-      content: Magisk vs KernelSU vs APatch - Root Framework Comparison
+      content: Root Frameworks and Temporary Root - Android Rooting Comparison
   - - meta
     - property: og:image:width
       content: '1200'
@@ -32,10 +32,10 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:title
-      content: Magisk vs KernelSU vs APatch - Root Framework Comparison
+      content: Root Frameworks and Temporary Root - Android Rooting Comparison
   - - meta
     - name: twitter:description
-      content: Practical comparison of Android root frameworks with recommendations, risks, and migration notes.
+      content: Compare Magisk, KernelSU, APatch and locked-bootloader temporary root, including compatibility, modules, risks and updates.
   - - meta
     - name: twitter:image:alt
       content: Root Framework Comparison - Magisk vs KernelSU vs APatch
@@ -65,15 +65,16 @@ head:
       content: index, follow
 ---
 
-# Magisk vs KernelSU vs APatch
+# Root Frameworks & Temporary Root {#magisk-vs-kernelsu-vs-apatch}
 
-Root frameworks change fast. Version and activity badges on this page are generated from GitHub, so they stay current. Other facts were verified against upstream READMEs and official docs on **14 October 2026**. Verify device-specific steps in the official docs before flashing anything.
+Root methods change fast. Version and activity badges on this page come from GitHub; check the current upstream documentation and device-specific instructions before making changes.
 
 **Related guides:**
 - [Main Rooting Guide](./index.md)
 - [Magisk Guide](./magisk-guide.md)
 - [KernelSU Guide](./kernelsu-guide.md)
 - [APatch Guide](./apatch-guide.md)
+- [Temporary Root Guide](./root-without-unlocking-bootloader.md)
 
 ::: warning Before you root
 Unlocking the bootloader usually wipes data, weakens device security, and can break OTA, warranty, DRM, wallet, banking, and work-profile apps. Keep a stock firmware package and a recovery plan ready.
@@ -100,23 +101,29 @@ Read the badges as a health check: a recent "last commit" means the project is a
 | Kernel-level root with per-app control on a GKI 2.0 device | **KernelSU** | Root in kernel space, App Profiles restrict UID, groups, capabilities, SELinux |
 | Kernel root on a non-GKI or older kernel | **KernelSU Next** or **SukiSU-Ultra** | Wider kernel range (4.4 to 6.18) and built-in SUSFS support |
 | KernelPatch features such as KPM kernel hooks | **APatch** | ARM64 only, kernel 3.18 to 6.12, needs a strong SuperKey |
-| Root without unlocking the bootloader (temporarily) | **[GhostLock temp root](./root-without-unlocking-bootloader.md)** | Session-only root on exact vulnerable builds; modified files may persist, and Knox behavior is not guaranteed |
+| Root without unlocking the bootloader (temporarily) | **[DirtyFrag or GhostLock](./root-without-unlocking-bootloader.md)** | Session-only root on exact vulnerable builds; modified files may persist, and Knox behavior is not guaranteed |
 | Maximum reliability for banking, wallet, enterprise, or anti-cheat apps | **No root** | No framework can guarantee Play Integrity or app-specific checks |
 
 ## Quick comparison
 
-| Area | Magisk | KernelSU | APatch |
-|---|---|---|---|
-| **Install model** | Patches `boot.img`, `init_boot.img`, recovery, or `vendor_boot.img` | LKM module into the stock kernel, or a KernelSU-enabled kernel | Patches the stock `boot.img` with KernelPatch |
-| **Best for** | Beginners, daily drivers, module-heavy setups | Power users on GKI devices | KernelPatch use cases and edge cases |
-| **Main requirement** | Unlocked bootloader, Android 6.0+ | GKI 2.0 (kernel 5.10+) officially; 4.14+ needs a manual kernel build | ARM64, kernel 3.18 to 6.12, `CONFIG_KALLSYMS` |
-| **Android 17 (API 37)** | Core root works on stable; **Zygisk needs the beta line** | LKM shipped for `android17-6.18` | Covers 6.12 kernels; **6.18 kernels are out of range** |
-| **Modules** | Magisk modules, Zygisk modules | Metamodule-based since v3.0; many Magisk modules need a compatible metamodule | APModule plus KPModule for kernel-level code (metamodule support added to `apd`) |
-| **Root control** | App-based MagiskSU prompts | App Profiles with fine-grained privileges | SuperKey-based access control |
-| **Hiding / integrity** | No built-in hiding (upstream FAQ states this directly) | Kernel-level traces are smaller; SUSFS can be loaded as an LKM | Kernel-level, but no guarantee |
-| **OTA behavior** | Re-patch or use the inactive-slot flow | LKM installs to the inactive slot without reflashing | Depends on device and install path |
-| **Troubleshooting** | Easiest, largest community | Medium, kernel knowledge helps | Hardest, smallest ecosystem |
-| **Latest Version** | ![Magisk release](https://img.shields.io/github/v/release/topjohnwu/Magisk?label=stable) | ![KernelSU release](https://img.shields.io/github/v/release/tiann/KernelSU?label=stable) | ![APatch release](https://img.shields.io/github/v/release/bmax121/APatch?label=stable) |
+Temporary root is a **method**, not a fourth framework. Some loaders use KernelSU by late-loading a compatible module on a supported locked-bootloader build.
+
+| Area | Magisk | KernelSU | APatch | Temporary root (e.g. DirtyFrag / GhostLock) |
+|---|---|---|---|---|
+| **Install model** | Patches `boot.img`, `init_boot.img`, recovery, or `vendor_boot.img` | LKM module into the stock kernel, or a KernelSU-enabled kernel | Patches the stock `boot.img` with KernelPatch | Runs a compatible exploit loader; some late-load KernelSU |
+| **Bootloader** | Normally unlocked | Normally unlocked for standard installation | Normally unlocked | Can stay locked on supported builds |
+| **Best for** | Beginners, daily drivers, module-heavy setups | Power users on GKI devices | KernelPatch use cases and edge cases | Session root on a specific vulnerable build |
+| **Main requirement** | Unlocked bootloader, Android 6.0+ | GKI 2.0 (kernel 5.10+) officially; 4.14+ needs a manual kernel build | ARM64, kernel 3.18 to 6.12, `CONFIG_KALLSYMS` | Exact vulnerable kernel and compatible loader, profile or module |
+| **Android 17 (API 37)** | Core root works on stable; **Zygisk needs the beta line** | LKM shipped for `android17-6.18` | Covers 6.12 kernels; **6.18 kernels are out of range** | Depends on the exact device and build, not Android version alone |
+| **Full reboot** | Root normally returns | Root normally returns after standard installation | Root normally returns | Active root ends; some loaders can re-run it |
+| **Modules** | Magisk modules, Zygisk modules | Metamodule-based since v3.0; many Magisk modules need a compatible metamodule | APModule plus KPModule for kernel-level code (metamodule support added to `apd`) | Compatible session modules if the loader supports them; some provide a shell only |
+| **Root control** | App-based MagiskSU prompts | App Profiles with fine-grained privileges | SuperKey-based access control | Depends on loader and manager; some offer only a root shell |
+| **Hiding / integrity** | No built-in hiding (upstream FAQ states this directly) | Kernel-level traces are smaller; SUSFS can be loaded as an LKM | Kernel-level, but no guarantee | Locked bootloader does not guarantee Integrity or app compatibility |
+| **OTA behavior** | Re-patch or use the inactive-slot flow | Depends on device and installation mode | Depends on device and install path | Update may patch the vulnerability or break the loader |
+| **Troubleshooting** | Easiest, largest community | Medium, kernel knowledge helps | Hardest, smallest ecosystem | Device- and loader-specific; failed exploits can crash or reboot |
+| **Latest Version** | ![Magisk release](https://img.shields.io/github/v/release/topjohnwu/Magisk?label=stable) | ![KernelSU release](https://img.shields.io/github/v/release/tiann/KernelSU?label=stable) | ![APatch release](https://img.shields.io/github/v/release/bmax121/APatch?label=stable) | Varies by [loader](../apps-and-modules/root-management.md#temporary-root-locked-bootloader) |
+
+A full reboot ends active temporary root, but files and settings changed during the session can remain. Check the loader's current target list and back up before use.
 
 ## Framework notes
 
@@ -177,7 +184,7 @@ Choose by **bootloader unlockability, firmware availability, kernel support, and
 | Device family | Practical guidance |
 |---|---|
 | **Google Pixel** | Easiest path. Retail, non-carrier-locked units unlock with `fastboot flashing unlock`. Magisk for most users, KernelSU if the KMI is supported. |
-| **Samsung Galaxy** | Research carefully. Rooting permanently trips Knox (Samsung Wallet/Pay, Secure Folder, Samsung Pass). US/Canada variants usually show no OEM Lock option and are not unlockable. LKM is blocked, so KernelSU needs GKI mode or a custom kernel. Magisk's first install requires a full data wipe. |
+| **Samsung Galaxy** | Installing custom boot images can trip Knox permanently. US/Canada variants often lack an unlock option. Samsung protections can complicate standard KernelSU LKM installs, while some exact-build temporary-root loaders use adapted modules. Magisk's first install requires a full data wipe. |
 | **Xiaomi / Redmi / POCO** | Unlocking requires permission through the Mi Community flow. Xiaomi removed the bootloader-unlock application entry from Mi Community (reported December 2025), so confirm the current status for your region and model before relying on it. Magisk remains the usual starting point. |
 | **OnePlus** | Global retail units unlock with a single `fastboot oem unlock`. Avoid ColorOS/OxygenOS builds ending in `.500`, `.501`, or `.503`: reports from January 2026 say these trip a hardware anti-rollback fuse that permanently blocks downgrades and most unbricking methods. Units converted from ColorOS to OxygenOS generally cannot be unlocked. |
 | **Nothing** | Unlockable with fastboot on retail units. Magisk first, KernelSU if the kernel path is supported. |
@@ -185,7 +192,7 @@ Choose by **bootloader unlockability, firmware availability, kernel support, and
 | **OPPO / Realme / vivo / Honor** | Bootloader access is the main blocker. OPPO and Realme use a discretionary Deep Test approval app; many models have no official unlock at all. Verify current regional policy before planning root. |
 
 ::: danger Samsung Knox
-On Knox-protected Samsung devices, rooting or custom binaries permanently break Knox-dependent features such as Samsung Wallet/Pay, Secure Folder, and Samsung Pass. Relocking or flashing stock firmware normally does not restore them.
+On Knox-protected Samsung devices, installing custom binaries can trip the irreversible warranty fuse and break Knox-dependent features such as Samsung Wallet/Pay, Secure Folder, and Samsung Pass. Relocking or flashing stock firmware normally does not restore them. Locked-bootloader temporary root does not guarantee fuse or service behavior.
 :::
 
 ## Play Integrity and root detection
