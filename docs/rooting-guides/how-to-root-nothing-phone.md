@@ -84,7 +84,7 @@ All Nothing and CMF by Nothing Phone models support bootloader unlocking and roo
 > All Nothing Phones are unlockable globally. No known incompatible models.
 
 > [!TIP]
-> **Don't want to unlock?** [Root My Nothing](https://github.com/ang3lo-azevedo/root-my-nothing) lists its Nothing Phone (1) GhostLock port as **in progress**, with an end-to-end exploit still unchecked. Do not assume the model is supported; see [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) for current project evidence and limitations.
+> **Don't want to unlock?** [Root My Nothing](https://github.com/ang3lo-azevedo/root-my-nothing) lists its Nothing Phone (1) GhostLock port as **in progress**, with an end-to-end exploit still unchecked. Do not assume the model is supported; check its upstream status and the sister project's [Nothing section](https://awesome-temporary-root.pages.dev/guide/#xiaomi-asus-nothing-and-honor).
 
 ---
 

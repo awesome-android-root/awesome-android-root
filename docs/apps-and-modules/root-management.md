@@ -57,7 +57,7 @@ Exploits such as **GhostLock (CVE-2026-43499)** can grant root in memory on spec
 - **[Temporary Root](https://github.com/ShivamXD6/Temporary-Root)** - Uses DirtyFrag or GhostLock to load a KernelSU-compatible manager on supported vulnerable Android 12L+ arm64 builds. Source is published without a project-wide license. `Proprietary`
 
 > [!TIP]
-> Also check out **[Root Without Unlocking the Bootloader ↗](../rooting-guides/root-without-unlocking-bootloader.md)** and [Bootloader Mods & Temporary Root Solutions ↗](../rooting-guides/temporary-root-solutions.md) 
+> Our sister project [Awesome Temporary Root](https://awesome-temporary-root.pages.dev/) ([GitHub](https://github.com/fynks/awesome-temporary-root)) maintains device/build sections, tools and module reports. Also see [Root Without Unlocking the Bootloader](../rooting-guides/root-without-unlocking-bootloader.md) and [Bootloader Mods & Temporary Root Solutions](../rooting-guides/temporary-root-solutions.md).
 
 
 ## Bootloop Protection

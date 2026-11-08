@@ -87,17 +87,19 @@ These are boot-chain research references, **not temporary-root tools**. Samsung'
 
 ## GhostLock Temporary Root
 
-GhostLock is a kernel exploit that can provide root in memory on specifically vulnerable Android builds without a conventional bootloader unlock or firmware flash. The session ends on reboot, and updates may remove the vulnerability. It is not a persistent root method.
+GhostLock (CVE-2026-43499) is a Linux futex priority-inheritance use-after-free. On specifically vulnerable Android builds, a successful race can provide root in memory without a conventional bootloader unlock or firmware flash; a failed attempt can panic or reboot the device. A full reboot ends the session, and updates may remove the vulnerability.
 
 > [!TIP]
-> The dedicated [GhostLock temporary-root guide](./root-without-unlocking-bootloader.md) is the source for the exploit overview, supported devices and exact builds, project ports, setup instructions, and current limitations. Check that guide and the linked project documentation before assuming a device is supported.
+> Our sister project **[Awesome Temporary Root](https://awesome-temporary-root.pages.dev/)** ([GitHub](https://github.com/fynks/awesome-temporary-root)) maintains device/build sections, links to live upstream tables, tools, module reports, setup and troubleshooting. Our [GhostLock guide](./root-without-unlocking-bootloader.md#all-apps-and-projects-for-ghostlock) links to its sections. The index is not exhaustive, so also check the loader's own target list.
 
 ## Other Temporary-Root Tools
 
-- **[Temporary Root](https://github.com/ShivamXD6/Temporary-Root)** - An Android 12L+ arm64 app offering DirtyFrag (CVE-2026-43284) or GhostLock. DirtyFrag needs a vulnerable supported GKI kernel and a loadable matching module; GhostLock needs a profile matching the exact kernel release. A KernelSU-compatible manager with `libksud.so` is required; the app names a separate Samsung fork. The source has no project-wide license.
-- **[Shark](https://github.com/Yunnijian/Shark)** - Uses Shizuku or Stellar and the distinct [CVE-2026-98260](https://github.com/CVEProject/cvelistV5/blob/main/cves/2026/98xxx/CVE-2026-98260.json) POSIX CPU-timer bug to load a compatible KernelSU manager. Upstream lists exact OnePlus, OPPO, Realme and iQOO targets, including OnePlus 16 `PYB110` on `6.18.21-android17-5-gf957accaf563-ab15926176-4k` and iQOO 15 `V2505A` on `6.12.23-android16-5-g41f4cb1fa7c7-abogki465038634-4k`. Its [NOTICE](https://github.com/Yunnijian/Shark/blob/main/NOTICE) says redistribution permission for a 6.12/iQOO component is not established.
+Some loaders late-load a KernelSU-compatible module to grant `su` and support compatible modules; others provide only a root shell. ADB or Shizuku may be used to stage a loader, but Shizuku's shell access is not root by itself. Use the manager and transport named by the chosen loader.
 
-The lists and compatibility checks are upstream claims, not independent device tests or guarantees of a successful run. A kernel crash can occur; a full reboot clears active runtime root but may leave files or settings changed during the session.
+- **[Temporary Root](https://github.com/ShivamXD6/Temporary-Root)** - An Android 12L+ arm64 app offering DirtyFrag (CVE-2026-43284) or GhostLock. DirtyFrag uses a page-cache vulnerability and needs a vulnerable supported GKI kernel and a loadable matching module; GhostLock needs a profile matching the exact kernel release. A KernelSU-compatible manager with `libksud.so` is required; the app names a separate Samsung fork. The source has no project-wide license.
+- **[Shark](https://github.com/Yunnijian/Shark)** - Uses Shizuku or Stellar and the distinct [CVE-2026-98260](https://github.com/CVEProject/cvelistV5/blob/main/cves/2026/98xxx/CVE-2026-98260.json) POSIX CPU-timer bug to late-load a KernelSU-compatible module for the chosen manager. Check its upstream README for exact supported device and kernel targets; the sister index does not necessarily cover every loader. Its [NOTICE](https://github.com/Yunnijian/Shark/blob/main/NOTICE) says redistribution permission for a 6.12/iQOO component is not established.
+
+Upstream target lists and compatibility checks are not guarantees of a successful run. A kernel crash can occur; a full reboot clears active runtime root but may leave files or settings changed during the session.
 
 ## Comparison
 
@@ -108,7 +110,7 @@ The Samsung KEY2 proof of concept is not covered in the table: its fused signing
 | Bootloader unlock | Required | Required to flash the modification | Not required |
 | Survives reboot | Usually, until removed or an update replaces the image | Yes, until restored or replaced | No; rerun each boot while the target remains vulnerable |
 | Scope | Boot or init_boot image | LK / boot-chain images | Kernel, in memory |
-| Device support | Broad, but device-specific images and procedures still apply | MediaTek only; exact-device support | Per-device and per-build; use the [supported-targets table](./root-without-unlocking-bootloader.md#device-support-at-a-glance) |
+| Device support | Broad, but device-specific images and procedures still apply | MediaTek only; exact-device support | Per-device and per-build; check [Awesome Temporary Root](https://awesome-temporary-root.pages.dev/guide/#supported-devices) and the loader's target list |
 | Main limitation | Requires an unlockable device and careful image/OTA handling | Wrong LK or preloader changes can brick a device | Narrow compatibility window; an OTA may patch the exploit |
 | Knox / warranty fuse | Depends on OEM | Depends on OEM | The dedicated guide does not guarantee fuse or Knox-service behavior; check its device-specific notes |
 | Lock-state and Play Integrity | Usually needs separate hiding tools; see [Tricky Store](https://github.com/5ec1cff/TrickyStore) | Lock-state spoofing is available in some tools; Fenrir's upstream description claims strong Integrity can pass, but verify current results | A locked bootloader alone does not establish Play Integrity results |
@@ -127,7 +129,7 @@ Some compatible tools load a session root manager such as KernelSU and may suppo
 
 ### Which devices are supported?
 
-There is no universal device list. Check the exact model and build in the [GhostLock device table](./root-without-unlocking-bootloader.md#device-support-at-a-glance) or the other tool's own documentation; a shared model family or kernel version is not proof of support.
+There is no universal device list. Check the exact model, firmware and kernel in [Awesome Temporary Root](https://awesome-temporary-root.pages.dev/guide/#supported-devices) and the loader's own target list; a shared model family or kernel version is not proof of support.
 
 ### Is temporary root safe?
 
@@ -143,6 +145,7 @@ Avoiding a firmware flash does not make an exploit risk-free. It still runs priv
 
 ## Related Resources
 
+- [Awesome Temporary Root](https://awesome-temporary-root.pages.dev/) ([GitHub](https://github.com/fynks/awesome-temporary-root)) - maintained device/build sections and practical guidance
 - [GhostLock temporary-root guide](./root-without-unlocking-bootloader.md)
 - [Root framework comparison](./root-framework-comparison.md)
 - [Bootloader unlocking guide](./how-to-unlock-bootloader.md)
