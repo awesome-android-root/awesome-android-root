@@ -38,7 +38,7 @@ The collection is easier to browse on the **[website ↗](https://awesome-androi
 
 ## Apps & Modules by Category
 
-Entries live in [`docs/apps-and-modules/`](docs/apps-and-modules/index.md), the collection's source of truth. Each category is mirrored on the [website](https://awesome-android-root.xyz/apps-and-modules/) with search (🌐).
+Entries live in [`docs/apps-and-modules/`](docs/apps-and-modules/index.md), the collection's source of truth. Each category is mirrored on the **[website ↗](https://awesome-android-root.xyz/apps-and-modules/)** with search (🌐).
 
 | Category | 🌐 | Description |
 | :--- | :-: | :--- |
@@ -80,7 +80,7 @@ Fixes and additions to the collection are welcome. The quality bar for new entri
 - Factual description, license badge (`FOSS` / `Proprietary`), and framework badges (`[M]` `[K]` `[A]` `[LSP]`); no duplicates.
 - `⭐` is reserved for widely trusted resources.
 
-Read the [Contributing Guide](docs/contributing.md) and the [PR template](.github/PULL_REQUEST_TEMPLATE.md), then submit a pull request. Questions go to [Issues](https://github.com/awesome-android-root/awesome-android-root/issues) or [Discussions](https://github.com/awesome-android-root/awesome-android-root/discussions).
+> Read the **[Contributing Guide ↗](docs/contributing.md)** and the **[PR template ↗](.github/PULL_REQUEST_TEMPLATE.md)**, then submit a pull request. Questions go to [Issues](https://github.com/awesome-android-root/awesome-android-root/issues) or [Discussions](https://github.com/awesome-android-root/awesome-android-root/discussions).
 
 ## Community & Contact
 
