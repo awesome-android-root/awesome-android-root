@@ -19,7 +19,7 @@
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
-    "docs:build": "sh -c 'if [ -f .git/shallow ]; then git fetch --unshallow || true; fi' && bun run index:build && (cd docs && vitepress build .)",
+    "docs:build": "sh -c 'if [ -f .git/shallow ]; then git fetch --unshallow || true; fi' && bun run index:build && vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "check:links": "python3 scripts/check_links.py",
     "index:build": "node scripts/app-entries.mjs",
@@ -51,8 +51,8 @@
     "vitepress"
   ],
   "devDependencies": {
-    "@lucide/vue": "^1.69.0",
-    "@vite-pwa/vitepress": "^2.0.1",
+    "@lucide/vue": "^1.70.0",
+    "@vite-pwa/vitepress": "^2.0.2",
     "magicast": "^0.5.5",
     "simple-icons": "^16.36.0",
     "vitepress": "2.0.0-alpha.21",
