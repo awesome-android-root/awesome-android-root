@@ -200,7 +200,9 @@ adb reboot bootloader
 fastboot devices
 ```
 
-On A/B devices, check the active slot with `fastboot getvar current-slot` and follow the device's instructions for the intended slot. Use **only the one command** that matches the verified original image and target partition. The examples use `magisk_patched-EXAMPLE.img` as the local filename; replace it with yours.
+On standard A/B devices, unsuffixed `fastboot flash` commands for a slotted partition target the current active slot by default ([AOSP](https://source.android.com/docs/core/ota/ab/ab_implement#kernel-slot-arguments)); `fastboot getvar current-slot` reports the slot selected for the next boot. Use these examples only if that is the intended slot and the image matches its firmware. For a different slot, follow the exact-device procedure instead.
+
+Use **only the one command** that matches the verified original image and target partition. The examples use `magisk_patched-EXAMPLE.img` as the local filename; replace it with yours.
 
 If you patched the verified `boot.img`:
 

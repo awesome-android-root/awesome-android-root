@@ -1,23 +1,23 @@
 ---
 layout: doc
 title: Complete Motorola Rooting Guide
-description: "Master guide to root all Motorola phones - Edge series, Moto G series with bootloader unlock codes, Magisk installation, and A/B partition handling."
+description: "Root eligible Motorola phones with model-specific bootloader checks, firmware selection, Magisk installation and recovery guidance."
 head:
   - - meta
     - property: og:title
-      content: Complete Motorola Rooting Guide - All Models Supported
+      content: "Complete Motorola Rooting Guide"
   - - meta
     - property: og:description
-      content: Root any Motorola device with our comprehensive guide covering bootloader unlock codes, Magisk installation, and special A/B partition procedures.
+      content: "Root eligible Motorola phones with model-specific bootloader checks, firmware selection, Magisk installation and recovery guidance."
   - - meta
     - property: og:image
       content: https://awesome-android-root.xyz/images/og/motorola.png
   - - meta
     - name: twitter:title
-      content: Complete Motorola Rooting Guide - All Models
+      content: "Complete Motorola Rooting Guide"
   - - meta
     - name: twitter:description
-      content: Root any Motorola phone with bootloader unlock codes and Magisk installation guide.
+      content: "Root eligible Motorola phones with model-specific bootloader checks, firmware selection, Magisk installation and recovery guidance."
   - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
@@ -26,7 +26,7 @@ head:
       content: https://awesome-android-root.xyz/images/og/motorola.png
   - - meta
     - name: twitter:image:alt
-      content: Motorola Root Guide - All Models
+      content: "Complete Motorola Rooting Guide with model-specific requirements"
   - - meta
     - name: author
       content: Awesome Android Root Project
@@ -52,11 +52,13 @@ head:
 
 # Motorola Root Guide
 
-::: danger VERIFY BEFORE FLASHING
-Some image-selection, flashing, OTA and recovery steps on this page are outdated. Do not use them without checking the exact model and firmware. Consult the [Magisk guide](./magisk-guide.md) or [KernelSU guide](./kernelsu-guide.md), then verify the device-specific image, target partition, slot and recovery method. Android version, the presence of `init_boot` or Magisk's Ramdisk field alone does not determine the target. Do not disable verification or relock a modified device as a generic fix.
+::: danger BEFORE FLASHING
+Unlocking wipes data. Back up first and verify the exact model, region, installed firmware, Magisk image, target partition, slot and recovery method. Do not disable verified boot or relock a modified device as a generic fix. Motorola's [Software Fix Rescue](https://en-us.support.motorola.com/app/answers/detail/a_id/167770/~/how-to-run-a-rescue-software-update) erases personal data on supported devices.
 :::
 
-Root Motorola devices via the official unlock code system. Covers Edge 60, Edge 50, Edge 40, Edge 30, Moto G series, and legacy Moto devices.
+These steps use Magisk. [KernelSU](./kernelsu-guide.md) and [APatch](./apatch-guide.md) have different image and compatibility requirements.
+
+This guide covers eligible Motorola devices using Motorola's bootloader unlock program. Eligibility and procedures vary by model, region and carrier.
 
 ## Quick Navigation
 
@@ -82,21 +84,13 @@ Most Motorola devices with unlockable bootloaders can be rooted. Check [XDA Foru
 
 ### Incompatible / Restricted Devices
 
-::: danger CANNOT BE ROOTED
-- **Carrier-exclusive models** (Verizon, AT&T, Tracfone) - bootloader unlock codes not available
-- **Amazon Branded devices** - permanently locked
-- **ThinkShield / Enterprise devices** - locked down by policy
-- **Prepaid carrier-locked variants** - typically cannot unlock
+::: warning VERIFY ELIGIBILITY
+Carrier-exclusive, prepaid and enterprise-managed variants may have unlock restrictions. [Motorola's unlock program](https://en-us.support.motorola.com/app/answers/detail/a_id/87215) lists carrier restrictions; check the exact model and policy instead of assuming every device is eligible or ineligible.
 :::
 
 ### Image Type Quick Reference
 
-| Device Generation | Image to Patch |
-|---|---|
-| Modern Edge/Moto G (Android 13+) | `init_boot.img` |
-| Older Moto G/Edge (Android 12-) | `boot.img` |
-
-**Check Magisk "Ramdisk" field if unsure.**
+Magisk may need `boot.img`, `init_boot.img`, `vendor_boot.img` or recovery, depending on the exact device and firmware. Android version, the existence of `init_boot`, or Magisk's Ramdisk field alone does not determine the target. See [Magisk's upstream instructions](https://topjohnwu.github.io/Magisk/install.html#getting-started) and confirm the model-specific partition and slot.
 
 ## Prerequisites
 
@@ -104,9 +98,9 @@ Most Motorola devices with unlockable bootloaders can be rooted. Check [XDA Foru
 
 ::: danger ⚠️ BEFORE YOU START
 
-**Warranty Void:** Once you get the unlock code, your device is no longer covered by the Motorola warranty.
+**Warranty:** Motorola's [unlock terms](https://en-us.support.motorola.com/ci/fattach/get/741421/1385047216/redirect/1/filename/Boot_revised.pdf) describe warranty consequences, with a Developer Edition exception. Terms and consumer rights can vary by region.
 
-**Unlock Code Required:** Must request from Motorola's official website. May take minutes to hours.
+**Unlock Code:** For supported models that require one, request it through Motorola's official program. Eligibility and wait times vary.
 
 **Data Wipe:** Unlocking erases all data including internal storage.
 
@@ -138,7 +132,7 @@ Most Motorola devices with unlockable bootloaders can be rooted. Check [XDA Foru
 
 1. **Magisk APK**
    - Download: [Magisk GitHub Releases](https://github.com/topjohnwu/Magisk/releases)
-   - Android compatibility: Android 6.0 and higher
+   - See [Magisk compatibility](./magisk-guide.md#compatibility) and upstream release notes for the current Android requirement
 
 2. **Motorola Account**
    - For unlock code request
@@ -168,7 +162,7 @@ adb devices
 
 ## Get Unlock Code
 
-Motorola requires an official unlock code from their website.
+Many eligible Motorola devices use an unlock code from Motorola's website. Follow the program's instructions for the exact model and region.
 
 ### Step 1: Gather Device Information
 
@@ -212,10 +206,9 @@ Be careful not to remove part of the unlock key when removing the junk, spaces a
 
 3. Unlocking your device and installing your own software might cause the device to stop working, disable important features and functionality.
 
-4. Paste the string on the website. Click "Can my device be unlocked?" You'll receive an email with your unlock key.
+4. Paste the string on the website and check eligibility. If eligible, follow the portal's instructions to request the unlock key.
 
-5. **Check email:**
-   - Try to use Gmail as your account email for Motorola. If you don't receive the unlock code (which should come in about a minute or so), try changing your account email address and requesting the code again.
+5. **Check email:** If the key does not arrive, check spam and consult Motorola support. Do not share the key publicly.
 
 ### Step 3: Save Unlock Code
 
@@ -271,85 +264,55 @@ On boot you will see a "Bootloader unlocked" warning - this is normal.
 
 ### Determine Correct Image
 
-| Device Generation | Image to Patch |
-|---|---|
-| Modern Edge/Moto G (Android 13+) | `init_boot.img` |
-| Older devices (Android 12 and below) | `boot.img` |
-
-**Open the Magisk app and check the "Ramdisk" field if unsure. If Ramdisk = Yes, use `boot.img`. If your device has a separate `init_boot` partition, use `init_boot.img`.**
+Confirm the image containing the relevant Magisk ramdisk and its destination from a trusted guide for the exact Motorola model and firmware. Depending on the device it may be `boot`, `init_boot`, `vendor_boot` or recovery. A newer Android version or an `init_boot` filename does not establish the right target; see [Magisk upstream](https://topjohnwu.github.io/Magisk/install.html#getting-started).
 
 ### Method 1: Boot Image Patching (Standard)
 
-**Step 1: Get Stock Firmware**
+**Step 1: Get stock firmware**
 
-1. Download from [Motorola Rescue and Smart Assistant (Software Fix)](https://en-us.support.motorola.com/app/softwarefix) or [Lolinet Motorola Firmware Mirror](https://mirrors.lolinet.com/firmware/moto/). 
-2. If using the Motorola Rescue and Smart Assistant software, the installer must be run on an x86-based Windows machine. The firmware image must be downloaded by specifying the exact model, though the IMEI number can also be provided.
-3. Find `boot.img` or `init_boot.img` in the installed directory.
+Obtain the original firmware for the exact model, region and **installed build**, and keep a recovery copy. [Motorola Software Fix](https://en-us.support.motorola.com/app/softwarefix) can identify and restore supported phones; its Rescue workflow offers the available update, not necessarily the currently installed build, and **erases data**. A community mirror such as [Lolinet](https://mirrors.lolinet.com/firmware/moto/) is not Motorola support. Verify the source and exact build before using any file. If the matching image is unavailable, stop rather than using launch firmware or another variant.
 
-::: warning FIRMWARE VERSION MATCH
-If you already installed an official update before rooting: Do NOT extract init_boot.img from the initial/launch firmware. DO extract init_boot.img from the updated firmware that matches your current build number.
-:::
+**Step 2: Patch on the phone**
 
-**Step 2: Transfer to Device**
+Transfer the verified image to the phone. Install the official [Magisk APK](https://github.com/topjohnwu/Magisk/releases) and choose **Install > Patch firmware / image > Select from storage**. Patch on the **same device** that will use the image, and note the output filename. Do not use a shared pre-patched image.
 
-```bash
-# For newer devices (Android 13+)
-adb push init_boot.img /sdcard/Download/
+**Step 3: Flash the patched image**
 
-# For older devices (Android 12 and below)
-adb push boot.img /sdcard/Download/
-```
-
-**Step 3: Patch with Magisk**
+Replace the example filename with the actual output. On an A/B device, check the current slot and follow the exact model's instructions for the intended slot. Do not flash both slots or change slots blindly.
 
 ```bash
-# Install Magisk
-adb install magisk.apk
-```
-
-On device:
-1. Open Magisk
-2. Install > Select and Patch a File
-3. Choose boot/init_boot image
-4. Wait for patching to complete
-
-**Step 4: Flash Patched Image**
-
-```bash
-# Get patched image back to PC
-adb pull /sdcard/Download/magisk_patched_xxxxx.img ./
-
-# Reboot to fastboot
+adb pull /sdcard/Download/magisk_patched-EXAMPLE.img .
 adb reboot bootloader
-
-# Flash (use the correct partition for your device)
-# For devices with init_boot partition:
-fastboot flash init_boot magisk_patched_xxxxx.img
-
-# For devices using boot.img:
-fastboot flash boot magisk_patched_xxxxx.img
-
-# Reboot
-fastboot reboot
+fastboot devices
 ```
 
-**Step 5: Verify Root**
+On standard A/B devices, unsuffixed `fastboot flash` commands for a slotted partition target the current active slot by default ([AOSP](https://source.android.com/docs/core/ota/ab/ab_implement#kernel-slot-arguments)); `fastboot getvar current-slot` reports the slot selected for the next boot. Use these examples only if that is the intended slot and the image matches its firmware. For a different slot, follow the exact-device procedure instead.
 
-1. Open Magisk app
-2. Should show "Installed" with version number
-3. Test: `adb shell su`
+Run **only one** command matching the verified original image and destination:
 
-### Method 2: Fastboot Boot + Direct Install (Edge 50 Fusion and similar)
+If you patched the verified `boot.img`:
 
-Some Motorola devices (especially MediaTek-based ones like the Edge 50 Fusion) don't work with the standard flash method. Use this alternative:
+```bash
+fastboot flash boot magisk_patched-EXAMPLE.img
+```
 
-1. Unlock bootloader like any other Motorola device
-2. Install Magisk app
-3. Patch boot.img with Magisk and transfer to PC
-4. Execute `adb reboot bootloader`
-5. Execute `fastboot boot patched_boot.img`
-6. Open Magisk app and select "Direct Install"
-7. Reboot - device is now rooted
+If you patched the verified `init_boot.img`:
+
+```bash
+fastboot flash init_boot magisk_patched-EXAMPLE.img
+```
+
+For `vendor_boot` or recovery, follow the [Magisk guide](./magisk-guide.md#step-3-flash-patched-image) and the exact-device instructions instead. A recovery-based installation requires its recovery boot sequence to enable Magisk. For the `boot` or `init_boot` examples above, reboot with `fastboot reboot` and complete any Magisk setup prompt.
+
+**Step 4: Verify root**
+
+Confirm Magisk reports installed. Grant a trusted app access in **Superuser** before testing; grant **ADB shell** first for `adb shell su -c id`, and revoke that grant afterward if it is no longer needed.
+
+### Method 2: Fastboot Boot + Direct Install (Device-Specific) {#method-2-fastboot-boot-direct-install-edge-50-fusion-and-similar}
+
+Use temporary boot only when a reliable guide confirms it for the exact device and a compatible, bootable `boot.img`. An `init_boot.img` is not a standalone bootable image, and Direct Install makes a persistent write. Temporary boot can still fail and is not a generic fix for a rejected flash.
+
+The Edge 50 Fusion example previously associated with this heading is not evidence of a universal method. Motorola lists a [Qualcomm processor](https://en-au.support.motorola.com/app/answers/detail/a_id/187366/~/specifications---motorola-edge-50-fusion) for that model; chipset alone does not establish temporary-boot support.
 
 ---
 
@@ -357,18 +320,7 @@ Some Motorola devices (especially MediaTek-based ones like the Edge 50 Fusion) d
 
 ### Configure Magisk
 
-**Settings:**
-- **Zygisk**: Enable
-- **Enforce DenyList**: Enable
-
-**DenyList:**
-- Google Play Services
-- Google Play Store
-- Banking apps
-- Payment apps
-
-The full root-hiding and Play Integrity setup is covered in
-[Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps).
+Grant root only to trusted apps in **Superuser**. Enable Zygisk only when a trusted module requires it. Enforced DenyList reverts Magisk modifications in selected processes, but does not guarantee banking or payment app compatibility. See the [Magisk guide](./magisk-guide.md#post-installation-setup) and [Play Integrity guidance](../troubleshooting.md#play-integrity-and-banking-apps).
 
 ### Motorola Optimization
 
@@ -382,26 +334,22 @@ The full root-hiding and Play Integrity setup is covered in
 
 ### Recommended Modules
 
-- **Play Integrity Fix** (replaces Universal SafetyNet Fix)
-- **Shamiko** (hide root from detection)
-- **LSPosed** (Xposed framework)
-- **Systemless Hosts** (ad blocking support)
+Install only modules needed for your setup, and verify their device and Android compatibility. See the [app and module catalog](../apps-and-modules/) and [Play Integrity guidance](../troubleshooting.md#play-integrity-and-banking-apps). No module guarantees that a banking or payment app will work.
 
 ---
 
 ## OTA Handling
 
-### For A/B Devices (All Modern Motorola)
+### For supported A/B devices {#for-a-b-devices-all-modern-motorola}
 
-**Process:**
-1. Download OTA
-2. Magisk > Install to Inactive Slot
-3. Reboot
-4. Root preserved
+[Magisk's A/B OTA workflow](https://topjohnwu.github.io/Magisk/ota.html) was tested on Pixel and procedures can differ on Motorola. Use this order only when the exact device and updater support it:
 
-::: warning
-After rooting, OTA updates may fail with "package verification failed." The only way to update is to download the full firmware package and flash it yourself using Rescue and Smart Assistant or fastboot.
-:::
+1. If stock images are required, choose **Uninstall > Restore Images** in Magisk before applying the OTA. Do not reboot. If the needed backup is unavailable, stop and follow a verified exact-device update or recovery procedure.
+2. Apply the system OTA and wait for installation to finish. **Do not restart yet.** Modified read-only partitions may cause verification to fail.
+3. Choose **Install > Install to Inactive Slot (After OTA)** in Magisk and wait for completion.
+4. Return to the system update screen and choose **Restart now**. Verify root after boot.
+
+If the option is unavailable or the OTA fails, follow the exact-device stock update or recovery instructions, then patch an image from the new installed build if desired. Root retention is not guaranteed. Motorola's Software Fix Rescue is an option for supported devices but **wipes personal data**; see [Motorola's instructions](https://en-us.support.motorola.com/app/answers/detail/a_id/167770/~/how-to-run-a-rescue-software-update).
 
 ---
 
@@ -430,56 +378,26 @@ Solutions:
 
 **OEM Unlocking Greyed Out**
 
-Causes:
-- Carrier-locked device
-- ThinkShield/enterprise model
-- Device not eligible
-
-If greyed out: device likely cannot be unlocked.
+Carrier restrictions, enterprise policy or other eligibility limits may apply. Verify the exact device with Motorola; the presence of a security feature alone does not establish unlock eligibility.
 
 **Device Shows "Not Eligible" on Motorola Website**
 
-- The site often gives false ineligible responses
-- The device's CID is one of the factors that can determine if it is eligible for unlocking
-- Check your CID with: `fastboot getvar cid`
-- Try submitting again or use a different browser
+- Verify the device ID was copied correctly and consult [Motorola's eligibility information](https://en-us.support.motorola.com/app/answers/detail/a_id/87215).
+- Contact Motorola if eligibility is unclear. Do not assume an ineligible response is false or try to bypass it with a flash command.
 
 ### "Preflash Validation Failed"
 
-This is a common Motorola-specific error when flashing patched images.
-
-**Cause:** This can mean multiple things including flashing an older image, or DMVerity/Verification still being enabled. If DMVerity/Verification is still enabled and you try to flash a rooted image, it will be denied because the device can detect it's been modified.
-
-**Solution 1: Use fastbootd mode**
-Reboot into Fastboot-Fastboot mode (fastbootd) instead of Fastboot-bootloader. While still in bootloader mode, send: `fastboot reboot fastboot`. While in fastbootd mode, repeat flashing the images - they should succeed this time.
-
-**Solution 2: Disable vbmeta verification**
-```bash
-fastboot flash --disable-verity --disable-verification vbmeta vbmeta.img
-```
-
-**Solution 3: Use the fastboot boot method**
-Instead of flashing directly, use `fastboot boot patched_boot.img`, then do a Direct Install from within the Magisk app.
+Stop and record the full fastboot error. Check the exact model, firmware version, anti-rollback restrictions, bootloader status and the device-specific procedure. A preflash error does not by itself establish that dm-verity must be disabled. Do not switch to fastbootd, flash `vbmeta` with verification disabled, or try temporary boot as automatic fixes. Consult Motorola or a trusted guide for the exact device.
 
 ### Installation Issues
 
 **Magisk Not Working After Flash**
 
-Solutions:
-1. On some devices like the Edge 50 Ultra, flashing patched boot.img alone doesn't work - you may need to patch init_boot.img instead
-2. Verify firmware version matches your current build
-3. Re-patch and flash
-4. Clear Magisk data
+Verify that the firmware, selected image, partition and slot match the device. If Magisk was installed in recovery, follow its required boot sequence. Check the Magisk log and device-specific instructions before attempting another flash.
 
 **Bootloop**
 
-```bash
-# Restore stock image
-fastboot flash boot stock_boot.img
-# Or
-fastboot flash init_boot stock_init_boot.img
-fastboot reboot
-```
+If only the Magisk image was changed, restore the matching stock image to every affected partition and slot using the exact-device recovery procedure. Restoring `boot` alone does not fix a mistaken write to `init_boot` or another partition. For wider changes or uncertain firmware and slot contents, use a supported full-firmware recovery method or contact Motorola. [Software Fix Rescue](https://en-us.support.motorola.com/app/answers/detail/a_id/167770/~/how-to-run-a-rescue-software-update) wipes personal data.
 
 </details>
 
@@ -489,29 +407,17 @@ fastboot reboot
 
 ### Remove Root
 
-```bash
-# Magisk > Uninstall > Restore Images
-```
+If Android boots and the required backups exist, use **Uninstall > Complete Uninstall** in Magisk. **Restore Images** is an OTA preparation step, not a complete uninstall. Other modifications or affected slots may still need stock recovery; the bootloader remains unlocked.
 
 ### Flash Stock
 
-```bash
-# Flash stock firmware images
-fastboot flash boot stock_boot.img
-# Or for newer devices:
-fastboot flash init_boot stock_init_boot.img
-fastboot reboot
-```
+For supported phones, [Motorola Software Fix Rescue](https://en-us.support.motorola.com/app/answers/detail/a_id/167770/~/how-to-run-a-rescue-software-update) matches firmware to the phone and performs a full software update. It **erases personal data**, and the previously associated Google account may be required during setup. Otherwise, use a verified full-firmware procedure for the exact model, region and compatible build, or contact Motorola support. Do not assume flashing one boot-related image restores the whole device.
 
 ### Relock Bootloader
 
 ::: danger RELOCK WARNING
-Don't relock the bootloader if it was unlocked by any other method than official. Reflash stock firmware, factory reset, reboot, and make sure everything is working correctly before relocking. Warranty remains void after relocking.
+Relocking a modified or incompatible device can leave it unbootable and may erase data. Only consider it after restoring compatible stock firmware and verified-boot state for every required partition and slot, successfully booting, and verifying Motorola's exact-model procedure. Warranty or service restrictions may remain after relocking.
 :::
-
-```bash
-fastboot oem lock
-```
 
 ---
 
@@ -543,7 +449,7 @@ fastboot oem lock
 
 1. **Configure DenyList** for sensitive apps
 2. **Trusted modules only** - verify sources
-3. **Keep Magisk updated** - latest versions support new sepolicy binary format introduced in Android 16
+3. **Keep Magisk updated** - check upstream release notes for device and Android compatibility
 4. **Back up boot images** before every update
 
 ---

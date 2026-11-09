@@ -225,24 +225,34 @@ This boots the image temporarily without flashing it. Check APatch in the manage
 
 ## Step 4: Flash Permanently
 
-The example below is only for devices whose documented APatch installation uses fastboot. Confirm the device, build, bootloader state and target slot first. Use the patched file from the previous step, not an image made for another device or build.
+The example below is only for devices whose documented APatch installation uses fastboot. Confirm the device, build and bootloader state first. Transfer the patched output to the computer if you have not already, replacing the example path with the actual file. If Android is running, enter the bootloader:
 
 ```bash
+adb pull /sdcard/Download/apatch_patched.img .
 adb reboot bootloader
 fastboot devices
-fastboot flash boot apatch_patched.img
-fastboot reboot
 ```
 
 ### A/B Slot Awareness
 
-On devices that support it, check the active slot:
+On devices that support it, check the active slot **before flashing**:
 
 ```bash
 fastboot getvar current-slot
 ```
 
+On standard A/B devices, unsuffixed `fastboot flash` commands for a slotted partition target the current active slot by default ([AOSP](https://source.android.com/docs/core/ota/ab/ab_implement#kernel-slot-arguments)); `fastboot getvar current-slot` reports the slot selected for the next boot. Use these examples only if that is the intended slot and the image matches its firmware. For a different slot, follow the exact-device procedure instead.
+
 Use the result alongside your device's instructions to identify the correct `boot` slot and matching image. If explicit `boot_a` or `boot_b` targeting is required, follow the documented procedure for that device. Do not flash both slots or switch slots blindly; Samsung and some other devices use different tools.
+
+### Flash the verified image
+
+Use the patched file made on this device, not an image made for another device or build. After confirming that the example applies to the intended slot:
+
+```bash
+fastboot flash boot apatch_patched.img
+fastboot reboot
+```
 
 ::: warning VERIFIED BOOT NOTE
 Do not disable AVB as a default APatch setup step. APatch workflows are designed to operate without broadly disabling verification.
@@ -355,7 +365,7 @@ Play Integrity behavior changes frequently server-side. There is no permanent by
 
 ## Uninstallation
 
-To remove a normal APatch installation, restore the unmodified `boot.img` matching the firmware on the affected boot slot. This removes the active APatch boot modification, but other files or settings may remain. If more than one slot was modified, each needs the stock image matching its own firmware and the device-specific recovery procedure. The following example applies only when your device's documented recovery method uses fastboot. Verify the target slot first and replace `stock_boot.img` with the matching stock image:
+To remove a normal APatch installation, restore the unmodified `boot.img` matching the firmware on the affected boot slot. This removes the active APatch boot modification, but other files or settings may remain. If more than one slot was modified, each needs the stock image matching its own firmware and the device-specific recovery procedure. The following example applies only when your device's documented recovery method uses fastboot. On a standard A/B device, this unsuffixed command targets the current active slot. Use it only if that is the affected slot and the image matches its firmware; otherwise follow the exact-device recovery procedure. Replace `stock_boot.img` with the matching stock image:
 
 ```bash
 adb reboot bootloader

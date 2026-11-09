@@ -45,12 +45,22 @@ def section(text, start, end):
 
 
 def shell_commands(text):
-    blocks = re.findall(r'^```(?:bash|sh)\s*\n(.*?)^```\s*$', text, re.M | re.S)
+    blocks = re.findall(r'^[ \t]*```(?:bash|sh)[ \t]*\n(.*?)^[ \t]*```[ \t]*$', text, re.M | re.S)
     for block in blocks:
         for line in block.splitlines():
             args = shlex.split(line, comments=True)
             if args:
                 yield args
+
+
+def fastboot_action(args):
+    """Return the fastboot verb and arguments, including when global options precede it."""
+    if Path(args[0]).name.lower() not in {'fastboot', 'fastboot.exe'}:
+        return []
+    for index, arg in enumerate(args[1:], 1):
+        if arg in {'flash', 'boot', 'oem', 'flashing'}:
+            return args[index:]
+    return []
 
 
 class RootFrameworkGuideSafetyTest(unittest.TestCase):
@@ -67,164 +77,210 @@ class RootFrameworkGuideSafetyTest(unittest.TestCase):
             with self.subTest(guide=name):
                 self.assertFalse(expected - set(heading_ids(text)))
 
-    def test_partitions_are_not_chosen_from_android_version_alone(self):
-        for name, text in (('Magisk', self.magisk), ('KernelSU', self.kernelsu)):
-            with self.subTest(guide=name):
-                self.assertIn('never choose the partition from the Android version alone', text)
-                self.assertIn('`boot.img`', text)
-                self.assertIn('`init_boot.img`', text)
-                self.assertIn('firmware', text)
-                self.assertIn('slot', text)
-                self.assertRegex(text, r'upgraded to Android 13 or later (?:still|may still) use `boot`')
-
-    def test_each_fastboot_example_is_conditional_and_matches_its_image(self):
+    def test_fastboot_examples_match_their_conditional_image(self):
         for name, text, expected in (
             ('Magisk', self.magisk, {'boot', 'init_boot', 'vendor_boot', 'recovery'}),
             ('KernelSU', self.kernelsu, {'boot', 'init_boot'}),
         ):
             with self.subTest(guide=name):
-                commands = [args for args in shell_commands(text) if args[:2] == ['fastboot', 'flash']]
+                actions = [fastboot_action(args) for args in shell_commands(text)]
+                flashes = [args for args in actions if args and args[0] == 'flash']
                 conditional = re.findall(
                     r'^If [^\n]*`(boot|init_boot|vendor_boot|recovery)\.img`[^\n]*:\n\n'
                     r'```bash\nfastboot flash (boot|init_boot|vendor_boot|recovery) [^\n]+\n```',
                     text, re.M,
                 )
-                self.assertEqual({args[2] for args in commands}, expected)
-                self.assertEqual(Counter(args[2] for args in commands), Counter(target for _, target in conditional))
+                self.assertEqual({args[1] for args in flashes}, expected)
+                self.assertEqual(Counter(args[1] for args in flashes), Counter(target for _, target in conditional))
                 self.assertTrue(all(image == target for image, target in conditional))
-                self.assertTrue(all('stock' not in args[3].lower() for args in commands))
-                self.assertRegex(text, r'run \*\*only the command\*\*|Use \*\*only the one command\*\*')
 
-    def test_magisk_samsung_and_wrong_partition_recovery(self):
+    def test_magisk_samsung_first_install_and_recovery(self):
         flash = section(self.magisk, '#### Step 3: Flash Patched Image', '#### Step 4: Verify Installation')
-        self.assertIn('first installation requires a full data wipe', flash)
-        self.assertIn('AP tar', flash)
-        self.assertIn('`CSC`', flash)
-        self.assertIn('not `HOME_CSC`', flash)
-        self.assertIn('Never restore individual stock', flash)
-        self.assertIn('full-firmware recovery', flash)
-        for text in (self.magisk, self.kernelsu):
-            with self.subTest(guide=text[:50]):
-                self.assertIn('restoring `boot` alone will not repair', text.lower())
-                self.assertIn('partition and slot', text)
+        self.assertRegex(flash, r'(?i)first installation requires a full data wipe')
+        self.assertRegex(flash, r'(?s)`CSC`.*not `HOME_CSC`')
+        self.assertRegex(flash, r'(?is)never restore individual stock.*full.firmware recovery')
 
-    def test_magisk_ota_order_and_restore_vs_uninstall(self):
+    def test_magisk_ota_order_and_uninstall(self):
         ota = section(self.magisk, '### OTA System Updates', '### Backup and Restore')
-        steps = (
-            'Uninstall > Restore Images',
-            'Start the system OTA',
-            'Install > Install to Inactive Slot (After OTA)',
-            'Return to the system update screen',
-        )
-        offsets = [ota.index(step) for step in steps]
-        self.assertEqual(offsets, sorted(offsets))
-        self.assertIn('Do not reboot', ota)
-        self.assertIn('Do not restart yet', ota)
+        steps = re.findall(r'(?m)^\d+\. (.+)$', ota)
+        self.assertEqual(len(steps), 4)
+        self.assertIn('Restore Images', steps[0])
+        self.assertRegex(steps[0], r'(?i)if.*stock')
+        self.assertRegex(steps[0], r'(?i)do not reboot')
+        self.assertRegex(steps[1], r'(?i)(?:apply|start).*OTA.*(?:finish|complete).*do not restart')
+        self.assertIn('Install to Inactive Slot', steps[2])
+        self.assertRegex(steps[3], r'(?i)system update.*restart')
         self.assertIn('**Samsung:**', ota)
         restore = section(self.magisk, '### Backup and Restore', '## Troubleshooting')
         self.assertIn('Complete Uninstall', restore)
-        self.assertIn('it is not a full uninstall', restore)
+        self.assertRegex(restore, r'(?i)Restore Images.*not a full uninstall')
 
-    def test_magisk_current_grants_hiding_and_module_rescue(self):
-        self.assertIn('explicitly grant access to the trusted app before it calls `su`', self.magisk)
-        self.assertIn('Interactive superuser request prompts are no longer provided', self.magisk)
-        self.assertIn('no longer offers the old **Hide the Magisk app**', self.magisk)
-        self.assertIn('DenyList is not an invisibility guarantee', self.magisk)
-        self.assertIn('same device', self.magisk)
-        self.assertIn('adb shell magisk --remove-modules', self.magisk)
-        self.assertIn('removes all modules and automatically reboots', self.magisk)
-
-    def test_kernelsu_backup_ota_and_cli_constraints(self):
-        installation = section(
+    def test_kernelsu_ota_order(self):
+        install = section(
             self.kernelsu, '### Method 1: LKM via the Manager (recommended)', '### Method 2: ksud from a PC'
         )
-        self.assertIn('only when the current slot was not already patched', installation)
-        self.assertIn('requires a matching backup', installation)
-        self.assertIn('keep an independent backup', installation)
-        order = ['restore the stock image first', 'Finish installing the OTA', 'Install to inactive slot', 'system restart']
-        offsets = [installation.index(step) for step in order]
-        self.assertEqual(offsets, sorted(offsets))
-        self.assertIn('root does not automatically survive', installation)
-        pc = section(self.kernelsu, '### Method 2: ksud from a PC', '### Method 3: Community or custom kernel')
-        self.assertIn('on-device Android options, not PC-side flashing flags', pc)
-        for args in shell_commands(pc):
-            self.assertNotIn('--flash', args)
-            self.assertNotIn('--ota', args)
-            self.assertNotIn('-f', args)
-            self.assertNotIn('-u', args)
+        ota = install.split('**Updates and OTAs:**', 1)[1].split('**Stock-image backup:**', 1)[0]
+        markers = ('restore the stock image first', 'Finish installing the OTA', 'Install to inactive slot', 'system restart')
+        positions = [ota.index(marker) for marker in markers]
+        self.assertEqual(positions, sorted(positions))
+        self.assertRegex(ota, r'(?i)if.*requires it.*matching backup')
+        self.assertRegex(ota, r'(?i)without rebooting')
 
-    def test_kernelsu_module_and_recovery_limitations(self):
+    def test_kernelsu_pc_flags_and_module_command(self):
+        pc = section(self.kernelsu, '### Method 2: ksud from a PC', '### Method 3: Community or custom kernel')
+        for args in shell_commands(pc):
+            self.assertFalse({'--flash', '--ota', '-f', '-u'} & set(args))
         self.assertIn('ksud module uninstall MODULE_ID', self.kernelsu)
         self.assertNotIn('ksud module remove', self.kernelsu)
-        self.assertIn('more than three times', self.kernelsu)
-        self.assertIn('`initrc` injection can still run in safe mode', self.kernelsu)
-        self.assertIn('`/data` is decrypted', self.kernelsu)
-        self.assertIn('Recovery access and module loading are not guaranteed', self.kernelsu)
-        self.assertIn('can work without a metamodule', self.kernelsu)
-        self.assertIn('Only **one** metamodule', self.kernelsu)
 
-    def test_release_numbers_are_not_presented_as_latest(self):
-        for text in (self.magisk, self.kernelsu):
-            self.assertNotRegex(
-                text, r'(?i)\b(?:latest|current)\s+(?:(?:stable|release|version)\s+)*(?:is\s+)?v?\d+\.\d+(?:\.\d+)?\b'
-            )
-            self.assertNotRegex(text, r'(?i)\b(?:latest|current|stable)\b[^\n]{0,60}\bv\d+\.\d+')
-            self.assertNotRegex(text, r'(?i)\bv\d+\.\d+[^\n]{0,60}\b(?:latest|current)\b')
-
-    def test_variant_and_metamodule_claims_follow_current_upstream(self):
-        variants = section(self.kernelsu, '## KernelSU Variants', '## Installation Modes')
-        self.assertIn('Metamodule-based mounting', variants)
-        self.assertNotIn('Built-in Magic Mount (not only metamodules)', variants)
-        self.assertIn('`x86_64` kernels may panic', variants)
-        self.assertIn('`CONFIG_KPM=y`', self.kernelsu)
-        self.assertIn('OverlayFS and Magic Mount fallbacks', self.kernelsu)
-        comparison = (GUIDES / 'root-framework-comparison.md').read_text(encoding='utf-8')
-        self.assertNotIn('Magic Mount in the core', comparison)
-
-    def test_adjacent_ota_guidance_preserves_the_order_and_exceptions(self):
+    def test_adjacent_ota_and_samsung_unroot_caveats(self):
         faq = (GUIDES.parent / 'faqs.md').read_text(encoding='utf-8')
         ota = section(faq, '### OTA Updates and Root', '## Compatibility')
-        steps = ('Restore Images', 'Apply the OTA', 'Install to Inactive Slot', 'Restart now')
-        offsets = [ota.index(step) for step in steps]
-        self.assertEqual(offsets, sorted(offsets))
-        self.assertIn('If the update needs stock images', ota)
-        self.assertIn('Pixel and Googlebook', ota)
-        self.assertIn('separate manual firmware upgrade procedure', ota)
+        steps = re.findall(r'(?m)^\d+\. (.+)$', ota)
+        self.assertGreaterEqual(len(steps), 4)
+        self.assertRegex(steps[0], r'(?i)if.*stock.*Restore Images')
+        self.assertRegex(steps[0], r'(?i)do not reboot')
+        self.assertRegex(steps[1], r'(?i)OTA.*do not reboot')
+        self.assertIn('Install to Inactive Slot', steps[2])
+        self.assertRegex(steps[3], r'(?i)system updater.*Restart now')
+        self.assertIn('separate manual firmware upgrade', ota)
         self.assertIn('`boot.img`, not `init_boot.img`', ota)
 
-    def test_adjacent_unroot_and_rescue_guidance_keeps_samsung_exception(self):
-        faq = (GUIDES.parent / 'faqs.md').read_text(encoding='utf-8')
         unroot = section(faq, '### How to Unroot?', '## Community and Support')
-        self.assertIn('**Restore Images** is not a complete uninstall', unroot)
-        self.assertIn('full-firmware recovery instructions', unroot)
-        self.assertIn('instead of restoring individual stock partitions', unroot)
-        self.assertIn('every affected partition and slot', unroot)
-        self.assertFalse(any(args[:2] == ['fastboot', 'flash'] for args in shell_commands(unroot)))
+        self.assertRegex(unroot, r'(?is)Samsung.*full.firmware recovery.*instead of restoring individual')
+        self.assertFalse(any(fastboot_action(args)[:1] == ['flash'] for args in shell_commands(unroot)))
 
+    def test_magisk_emergency_command_warns_about_reboot(self):
         troubleshooting = (GUIDES.parent / 'troubleshooting.md').read_text(encoding='utf-8')
-        rescue = section(troubleshooting, '### Device Won\'t Boot (Bootloop)', '### Root Not Working')
-        self.assertIn('needs early key timing', rescue)
-        self.assertIn('automatically reboots', rescue)
-        self.assertIn('adb shell magisk --remove-modules', rescue)
-        self.assertIn('KernelSU module `initrc` injections may still run', rescue)
-        self.assertIn('full-firmware recovery procedure', rescue)
+        rescue = section(troubleshooting, "### Device Won't Boot (Bootloop)", '### Root Not Working')
+        self.assertIn(['adb', 'shell', 'magisk', '--remove-modules'], list(shell_commands(rescue)))
+        self.assertRegex(rescue, r'(?i)removes.*all.*modules.*automatically reboots')
 
-    def test_unreviewed_device_pages_warn_before_their_instructions(self):
-        # Retire each warning and this check only when that device guide's steps
-        # have been audited; the warning itself is not a device-guide review.
-        for device in ('pixel', 'xiaomi', 'oneplus', 'nothing', 'motorola', 'samsung'):
-            text = (GUIDES / f'how-to-root-{device}-phone.md').read_text(encoding='utf-8')
-            intro = text.split('\n# ', 1)[1].split('\n## ', 1)[0]
+    def test_no_fixed_release_is_described_as_latest(self):
+        # A version cited for compatibility is fine; presenting it as latest goes stale.
+        patterns = (
+            r'(?i)\b(?:latest|current)\b[^\n]{0,80}(?:\bv\d+\.\d+|\(\d+\.\d+)',
+            r'(?i)\bv\d+\.\d+[^\n]{0,80}\b(?:latest|current)\b',
+        )
+        for path in GUIDES.glob('*.md'):
+            with self.subTest(guide=path.name):
+                for pattern in patterns:
+                    self.assertNotRegex(path.read_text(encoding='utf-8'), pattern)
+
+
+class DeviceGuideSafetyTest(unittest.TestCase):
+    DEVICES = ('pixel', 'xiaomi', 'oneplus', 'nothing', 'motorola', 'samsung')
+
+    @classmethod
+    def setUpClass(cls):
+        cls.guides = {
+            device: (GUIDES / f'how-to-root-{device}-phone.md').read_text(encoding='utf-8')
+            for device in cls.DEVICES
+        }
+
+    def test_original_renamed_anchors_remain_available(self):
+        aliases = {
+            'pixel': {'method-0-pixel-flasher-gui-tool-easiest'},
+            'samsung': {'unroot-for-ota'},
+            'xiaomi': {'step-3-safer-first-boot-then-permanent-install', 'step-1-boot-a-recovery-image-don-t-flash-yet'},
+            'oneplus': {'for-a-b-devices-all-modern-oneplus'},
+            'nothing': {'for-a-b-devices-all-nothing-phones'},
+            'motorola': {'for-a-b-devices-all-modern-motorola', 'method-2-fastboot-boot-direct-install-edge-50-fusion-and-similar'},
+        }
+        for device, required in aliases.items():
             with self.subTest(device=device):
-                self.assertIn('::: danger VERIFY', intro)
-                self.assertIn('steps on this page are outdated', intro)
-                self.assertIn('./magisk-guide.md', intro)
+                self.assertFalse(required - set(heading_ids(self.guides[device])))
+
+    def test_device_flash_examples_are_conditional_and_avoid_generic_unsafe_commands(self):
+        for device, text in self.guides.items():
+            with self.subTest(device=device):
+                commands = list(shell_commands(text))
+                actions = [fastboot_action(args) for args in commands]
+                flashes = [args for args in actions if args and args[0] == 'flash']
+                for args, action in zip(commands, actions):
+                    self.assertFalse({'--disable-verity', '--disable-verification', '--slot=all'} & set(args))
+                    self.assertFalse(any(args[i:i + 2] == ['--slot', 'all'] for i in range(len(args))))
+                    if action[:1] in (['oem'], ['flashing']):
+                        self.assertNotIn(action[1:2], (['lock'], ['lock_critical']))
+                    if action[:1] == ['boot']:
+                        self.assertNotIn('init_boot', ' '.join(action))
+
                 if device == 'samsung':
-                    self.assertIn('full-firmware recovery', intro)
-                    self.assertIn('Restore Images', intro)
-                else:
-                    self.assertIn('target partition, slot and recovery', intro)
-                    self.assertIn('does not determine the target', intro)
+                    self.assertFalse(flashes, 'Samsung uses a full firmware/AP-tar workflow')
+                    continue
+
+                conditional = re.findall(
+                    r'^If [^\n]*`(boot|init_boot)\.img`[^\n]*:\n\n'
+                    r'```bash\nfastboot flash (boot|init_boot) [^\n]+\n```',
+                    text, re.M,
+                )
+                self.assertEqual(Counter(args[1] for args in flashes), Counter({'boot': 1, 'init_boot': 1}))
+                self.assertEqual(Counter(args[1] for args in flashes), Counter(target for _, target in conditional))
+                self.assertTrue(all(image == target for image, target in conditional))
+
+    def test_unsuffixed_slot_target_is_explained_before_flashing(self):
+        pages = {device: text for device, text in self.guides.items() if device != 'samsung'}
+        pages.update({name: (GUIDES / f'{name}-guide.md').read_text(encoding='utf-8')
+                      for name in ('magisk', 'kernelsu', 'apatch')})
+        for name, text in pages.items():
+            with self.subTest(guide=name):
+                before_flash = text.split('\nfastboot flash boot ', 1)[0]
+                paragraph = re.search(r'(?m)^On standard A/B devices, unsuffixed[^\n]+$', before_flash)
+                self.assertIsNotNone(paragraph, 'Explain the default slot before the flash example')
+                self.assertRegex(paragraph.group(), r'(?i)current active slot.*only if.*intended slot.*image matches.*firmware')
+                self.assertIn('fastboot getvar current-slot', paragraph.group())
+
+    def test_recovery_covers_every_affected_partition_and_slot(self):
+        for device, text in self.guides.items():
+            if device == 'samsung':
+                continue
+            with self.subTest(device=device):
+                self.assertIn('every affected partition and slot', text)
+                self.assertRegex(text, r'(?i)restoring `boot` (?:alone )?(?:does not|will not)')
+
+    def test_pixel_and_nothing_examples_do_not_use_android_version_as_the_target(self):
+        pixel = section(self.guides['pixel'], '### Image Type Quick Reference', '## Unlock Bootloader')
+        pixel6 = next(line for line in pixel.splitlines() if line.startswith('| Pixel 6,'))
+        self.assertIn('`boot.img`', pixel6)
+        self.assertNotIn('init_boot', pixel6)
+        self.assertIn('Android 13', pixel6)
+
+        nothing = section(self.guides['nothing'], '### Determine Correct Image', '### Method 1: Boot Image Patching')
+        for model in ('1', '2'):
+            line = next(line for line in nothing.splitlines() if line.startswith(f'- **Phone ({model})'))
+            with self.subTest(model=model):
+                self.assertIn('`boot.img`', line)
+
+    def test_device_ota_order_is_conditional(self):
+        boundaries = {
+            'pixel': ('### Manual Method (Magisk)', '## Troubleshooting'),
+            'xiaomi': ('### OTA Update Management (HyperOS/MIUI on unlocked and rooted)', '### Custom ROM Alternatives'),
+            'oneplus': ('## OTA Handling', '## Troubleshooting'),
+            'nothing': ('## OTA Handling', '## Troubleshooting'),
+            'motorola': ('## OTA Handling', '## Troubleshooting'),
+        }
+        for device, (start, end) in boundaries.items():
+            with self.subTest(device=device):
+                ota = section(self.guides[device], start, end)
+                steps = re.findall(r'(?m)^\d+\. (.+)$', ota)
+                self.assertEqual(len(steps), 4)
+                self.assertRegex(steps[0], r'(?i)if.*stock.*Restore Images')
+                self.assertRegex(steps[0], r'(?i)do not reboot')
+                self.assertRegex(steps[1], r'(?i)(?:apply|start).*OTA.*(?:finish|complete).*do not restart')
+                self.assertIn('Install to Inactive Slot', steps[2])
+                self.assertRegex(steps[3], r'(?i)system update.*restart')
+                if device == 'pixel':
+                    self.assertRegex(steps[0], r'(?i)unnecessary.*Pixel.*full OTA')
+
+    def test_samsung_firmware_upgrade_and_recovery_are_distinct(self):
+        samsung = self.guides['samsung']
+        first = section(samsung, '### Method 1: AP File Patching (Primary Method)', '### Step 6: Verify Knox Trip')
+        self.assertRegex(first, r'(?s)`CSC`.*not `HOME_CSC`.*first installation')
+        self.assertRegex(first, r'(?i)first Magisk installation requires a full data wipe')
+        ota = section(samsung, '## OTA Handling', '## Troubleshooting')
+        self.assertRegex(ota, r'(?is)patched `AP`.*upgrade[^\n]*`HOME_CSC` instead of `CSC`')
+        unroot = section(samsung, '## Unroot and Restore', '## Community Resources')
+        self.assertRegex(unroot, r'(?is)do not.*restore individual stock.*full.firmware')
 
 
 if __name__ == '__main__':

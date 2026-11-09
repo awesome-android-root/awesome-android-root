@@ -270,7 +270,9 @@ adb reboot bootloader
 fastboot devices
 ```
 
-On A/B devices, check the intended slot, for example with `fastboot getvar current-slot`. Replace `kernelsu_patched.img` below with the actual output filename, and run **only the command** for the image and partition you verified.
+On standard A/B devices, unsuffixed `fastboot flash` commands for a slotted partition target the current active slot by default ([AOSP](https://source.android.com/docs/core/ota/ab/ab_implement#kernel-slot-arguments)); `fastboot getvar current-slot` reports the slot selected for the next boot. Use these examples only if that is the intended slot and the image matches its firmware. For a different slot, follow the exact-device procedure instead.
+
+Replace `kernelsu_patched.img` below with the actual output filename, and run **only the command** for the image and partition you verified.
 
 If the verified image is `boot.img`:
 

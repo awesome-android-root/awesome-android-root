@@ -1,23 +1,23 @@
 ---
 layout: doc
 title: Xiaomi/Redmi/POCO Root Guide
-description: Complete guide to root Xiaomi, Redmi, and POCO devices. Navigate HyperOS/MIUI, Mi Unlock Tool, anti-rollback protection, and Magisk installation.
+description: "Root eligible Xiaomi, Redmi and POCO devices with model-specific unlock, firmware, Magisk, anti-rollback and recovery guidance."
 head:
   - - meta
     - property: og:title
-      content: Complete Xiaomi Rooting Guide - All Models Supported
+      content: "Xiaomi/Redmi/POCO Root Guide"
   - - meta
     - property: og:description
-      content: Root any Xiaomi device with our comprehensive guide covering Mi Unlock Tool, bootloader unlock and Magisk installation for MIUI/HyperOS.
+      content: "Root eligible Xiaomi, Redmi and POCO devices with model-specific unlock, firmware, Magisk, anti-rollback and recovery guidance."
   - - meta
     - property: og:image
       content: https://awesome-android-root.xyz/images/og/xiaomi.png
   - - meta
     - name: twitter:title
-      content: Complete Xiaomi Rooting Guide - All Models
+      content: "Xiaomi/Redmi/POCO Root Guide"
   - - meta
     - name: twitter:description
-      content: Root any Xiaomi device with Mi Unlock Tool and Magisk installation guide.
+      content: "Root eligible Xiaomi, Redmi and POCO devices with model-specific unlock, firmware, Magisk, anti-rollback and recovery guidance."
   - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
@@ -26,7 +26,7 @@ head:
       content: https://awesome-android-root.xyz/images/og/xiaomi.png
   - - meta
     - name: twitter:image:alt
-      content: Xiaomi Root Guide - All Models
+      content: "Xiaomi/Redmi/POCO Root Guide with model-specific requirements"
   - - meta
     - name: author
       content: Awesome Android Root Project
@@ -55,9 +55,11 @@ head:
 
 # Complete Xiaomi Rooting Guide
 
-::: danger VERIFY BEFORE FLASHING
-Some image-selection, flashing, OTA and recovery steps on this page are outdated. Do not use them without checking the exact model and firmware. Consult the [Magisk guide](./magisk-guide.md) or [KernelSU guide](./kernelsu-guide.md), then verify the device-specific image, target partition, slot and recovery method. Android version, the presence of `init_boot` or Magisk's Ramdisk field alone does not determine the target. Do not disable verification or relock a modified device as a generic fix.
+::: danger BEFORE FLASHING
+Unlocking wipes data. Back up first, obtain the exact model/region/build firmware and verify its anti-rollback restrictions. Identify the Magisk image, target partition, slot and recovery method from device-specific instructions; do not choose them from Android version alone. Never relock a modified device or use a relocking flash option as a recovery shortcut.
 :::
+
+These steps use Magisk. [KernelSU](./kernelsu-guide.md) and [APatch](./apatch-guide.md) have different requirements.
 
 This page focuses on Xiaomi/Redmi/POCO specifics (Mi Unlock, ARB, HyperOS, payload extraction). For universal prep and Magisk steps, see: [Main Rooting Guide](./index.md), [Bootloader Unlocking](./how-to-unlock-bootloader.md), and [Magisk Guide](./magisk-guide.md).
 
@@ -175,8 +177,8 @@ fastboot oem device-info
 # Expect: (bootloader) Device unlocked: true
 ```
 
-:::tip 💡 **MUST SEE**
-See [Alternate Bypass sections](#alternative-bypass-methods-community-use-at-your-own-risk) for bypassing the bootloader unlocking restriction
+::: warning UNOFFICIAL UNLOCK METHODS
+Community bypasses are not guaranteed to work and can carry account or device risks. See the [caveats below](#alternative-bypass-methods-community-use-at-your-own-risk); do not assume they override device eligibility.
 :::
 
 ### Troubleshooting Unlock Issues
@@ -199,98 +201,64 @@ Common errors and tips:
 
 ## Root Installation Methods
 
-Important: On Android 13+ (GKI), many Xiaomi devices use an init_boot partition for the ramdisk. Magisk must patch init_boot if it exists; otherwise it patches boot. You can check your ROM contents or run:
-```bash
-fastboot getvar all 2>&1 | findstr /i "init_boot"
-```
-If your firmware contains init_boot.img, patch that. If not, patch boot.img.
+Magisk patches the image containing the relevant ramdisk, which may be `boot.img`, `init_boot.img`, `vendor_boot.img`, or recovery depending on the device. A filename in a ROM, Android version, `fastboot getvar` output or Magisk's Ramdisk field alone does not establish the correct target. [Magisk upstream](https://topjohnwu.github.io/Magisk/install.html#getting-started) notes exceptions on some Xiaomi devices. Confirm the image and slot for the exact model and build before proceeding.
 
 ### Method A: Patch-and-Flash (Recommended)
 
 #### Step 1: Get the correct image(s)
-1. Download the exact same build you’re running.
-   - Use Fastboot ROM if available (images are already extracted)
-   - For Recovery/OTA packages (payload.bin), extract with payload-dumper-go
-2. Identify the partition to patch:
-   - If init_boot.img exists → use init_boot.img
-   - Else → use boot.img
 
-Never patch or flash an image from a different build or ARB index.
+1. Download stock firmware matching the exact model, region and installed build. A Fastboot ROM may include images directly; some recovery or OTA packages contain `payload.bin`.
+2. For a supported full payload, [payload-dumper-go](https://github.com/ssut/payload-dumper-go#usage) can extract images. An incremental OTA may require its exact base images and the extractor's `-old` option; it is not interchangeable with a full package.
+3. Verify the image, partition and intended slot in a trusted guide for the exact device and firmware. Keep an independent copy of the unpatched image and full firmware. Check anti-rollback restrictions; do not downgrade just because a flash package exists.
 
 #### Step 2: Patch with Magisk (see [Magisk Guide](./magisk-guide.md#method-1-boot-image-patching-recommended))
-1. Transfer the image to the phone:
+
+1. Transfer the verified image to the phone. For example, if it is `boot.img`:
+
    ```bash
-   adb push init_boot.img /sdcard/Download/   # if exists
-   # or
    adb push boot.img /sdcard/Download/
    ```
-2. Install/open the Magisk app (APK).
-3. Tap Install → “Select and Patch a File” → choose the image you pushed.
-4. Magisk creates magisk_patched-*.img in /Download.
 
-Pull the patched image to PC:
+2. On that **same device**, open the official Magisk app and choose **Install > Patch firmware / image > Select from storage**. Select the verified image and note the output filename. Never flash a pre-patched image from another device.
+3. Pull the output, replacing the example with its actual name:
+
+   ```bash
+   adb pull /sdcard/Download/magisk_patched-EXAMPLE.img .
+   ```
+
+#### Step 3: Flash the verified image {#step-3-safer-first-boot-then-permanent-install}
+
+Reboot to the bootloader with `adb reboot bootloader`. On an A/B device, check the active slot with `fastboot getvar current-slot` and follow the verified device instructions for the intended slot. Do not assume both slots contain the same firmware or flash both blindly.
+
+On standard A/B devices, unsuffixed `fastboot flash` commands for a slotted partition target the current active slot by default ([AOSP](https://source.android.com/docs/core/ota/ab/ab_implement#kernel-slot-arguments)); `fastboot getvar current-slot` reports the slot selected for the next boot. Use these examples only if that is the intended slot and the image matches its firmware. For a different slot, follow the exact-device procedure instead.
+
+Run **only one** command matching the verified image and partition, replacing the example filename:
+
+If you patched the verified `boot.img`:
+
 ```bash
-adb pull /sdcard/Download/magisk_patched-*.img ./
+fastboot flash boot magisk_patched-EXAMPLE.img
 ```
 
-#### Step 3: Safer first boot, then permanent install
-1. Reboot to fastboot:
-   ```bash
-   adb reboot bootloader
-   ```
-2. Test-boot the patched image (doesn’t write flash):
-   ```bash
-   fastboot boot magisk_patched-*.img
-   ```
-   - The device will boot once with root. Open Magisk → Install → Direct Install to make it persistent on the active slot.
-   - This approach avoids flashing the wrong slot or causing bootloops.
+If you patched the verified `init_boot.img`:
 
-If your device won’t fastboot boot (rare), you may flash directly:
-- If using init_boot:
-  ```bash
-  fastboot flash init_boot magisk_patched-*.img
-  ```
-- If using boot on A/B devices, prefer specifying the active slot:
-  ```bash
-  fastboot getvar current-slot
-  fastboot flash boot_a magisk_patched-*.img    # if current-slot is a
-  fastboot flash boot_b magisk_patched-*.img    # if current-slot is b
-  ```
-Then:
 ```bash
-fastboot reboot
+fastboot flash init_boot magisk_patched-EXAMPLE.img
 ```
 
-**Notes:**
-- Do NOT disable AVB/verity for Magisk. Magisk works with AVB intact.
-- If you bootloop, fastboot flash the stock image (init_boot/boot) from the same build.
+For `vendor_boot` or recovery, follow the [Magisk guide](./magisk-guide.md#step-3-flash-patched-image) and the exact-device instructions instead. A recovery-based installation requires its recovery boot sequence to enable Magisk. For the `boot` or `init_boot` examples above, reboot with `fastboot reboot` and complete any Magisk setup prompt.
+
+A temporary `fastboot boot` followed by Direct Install is an option **only** when the exact device supports it and the image is a compatible bootable `boot.img`. It is not a universal safety test; `init_boot.img` is not a standalone bootable image. Direct Install writes to the device. Keep Magisk's verified-boot and encryption defaults unless a reliable device-specific procedure explains otherwise.
 
 ### Method B: Custom Recovery + Magisk
 
-Custom recoveries on Android 12+/HyperOS often live in vendor_boot (no standalone recovery partition). Decryption of /data is hit-or-miss on A14+, so don’t rely on recovery for backups.
+#### Step 1: Use a compatible recovery {#step-1-boot-a-recovery-image-don-t-flash-yet}
 
-#### Step 1: Boot a recovery image (don’t flash yet)
-- TWRP/OrangeFox/SkyHawk builds differ by device/Android version.
-- Prefer fastboot boot first:
-  ```bash
-  fastboot boot recovery.img
-  ```
-  If your device requires vendor_boot-based recovery, follow the maintainer’s instructions (some require flashing vendor_boot; others install to boot ramdisk).
-
-If your device still has a recovery partition (older MIUI):
-```bash
-fastboot flash recovery recovery.img
-fastboot reboot recovery
-```
+Recovery layouts and installation methods differ. Use a recovery maintainer's instructions for the exact model, firmware and slot; do not assume `fastboot boot recovery.img` or a dedicated recovery partition is supported. Recovery may be unable to decrypt `/data`, so maintain an independent backup.
 
 #### Step 2: Install Magisk from recovery
-- Magisk is no longer distributed as a classic ZIP. Rename the APK to .zip for recovery flashing, or use recovery’s “Install APK/Install Magisk” feature if available.
-  - Example: rename Magisk-vXX.X.apk → Magisk-vXX.X.zip and flash it.
-- Alternatively, sideload the APK/ZIP if the recovery supports it.
-- Reboot system; open Magisk to complete setup.
 
-Notes:
-- On recent HyperOS, using Method A (patch init_boot/boot) is more reliable than recovery flashing.
+Magisk's [recovery installation](https://topjohnwu.github.io/Magisk/install.html#custom-recovery) is deprecated and requires a boot ramdisk. It cannot install or update Magisk when Magisk itself must be installed in recovery. If the exact recovery supports the method, upstream describes renaming the official APK to `.zip`, flashing it, then completing the app's direct reinstallation. Otherwise use the verified image-patching method.
 
 ### Current Bootloader Restrictions
 - Newer HyperOS devices (late-2023/2024+) can require additional “eligibility” checks. CN models are the most restricted.
@@ -342,10 +310,10 @@ adb devices
 
 ### MIUI/HyperOS Specific Issues
 
-**Accidental system app removal:**
-- Boot custom recovery (if installed) and dirty-flash your exact ROM build
-- Or flash stock boot/init_boot back if only root-related change caused bootloop
-- Keep a nandroid backup if your recovery supports decryption for your Android version
+**Bootloop or accidental system app removal:**
+- Check exactly which partitions and slots were modified. Restore the correct stock image to every affected partition and slot using the model-specific procedure; restoring `boot` alone will not repair a different partition or an uninstalled system app.
+- For broader changes, use a verified full-firmware recovery method for the exact model, region, build and anti-rollback state. A community [Xiaomi flashing guide](https://new.c.mi.com/global/post/110686) describes Mi Flash's **clean all** option for supported models, which wipes data. Do not select **clean all and lock** as a generic recovery step. Contact Xiaomi support if the correct package or method is unclear.
+- To remove Magisk on a booting device, **Uninstall > Complete Uninstall** is distinct from **Restore Images**. Full stock restoration may still be necessary for other modifications.
 
 **Battery/killing apps:**
 - Disable MIUI battery optimization for root-dependent apps
@@ -353,40 +321,33 @@ adb devices
 - Consider modules/apps that tame background killing (varies per build)
 
 **Play Integrity (SafetyNet replacement):**
-- Passing device integrity needs a Zygisk implementation, a Play Integrity Fix module and a correct
-  DenyList, then clearing Play Store/Services data and waiting a few minutes
-- Full module choices and configuration order:
-  [Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps)
+- A DenyList or module does not guarantee device integrity or app compatibility.
+- See [Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps) for current limitations.
 
 ## Success Verification
 
 ### Root Access Confirmation
 - Open Magisk → should show “Installed” with current version
-- adb shell su -c "id" → expect uid=0(root) gid=0(root)
+- Grant **ADB shell** in Magisk's Superuser tab first; then `adb shell su -c id` should report `uid=0(root)`. Revoke the shell grant when no longer needed.
 - Optional: install a root checker app
 
 ## Staying Updated
 
 ### OTA Update Management (HyperOS/MIUI on unlocked and rooted)
-- Unlocked bootloader usually does NOT block OTA on Xiaomi. Root might.
-- To take OTA safely with Magisk:
-  1. In Magisk: Restore Images (if available)
-  2. Apply OTA normally (Settings → System Update)
-  3. Don’t reboot when OTA finishes; open Magisk → Install → “Install to Inactive Slot (After OTA)”
-  4. Then reboot
-- Alternatively, manually sideload or fastboot flash the update, then re-patch the new init_boot/boot for the updated build.
 
-**Notes:**
-- Bootloader does not re-lock after OTA unless you explicitly choose a “clean all and lock” flash.
-- If OTA fails, dirty-flash the same build via recovery/fastboot and re-root.
+OTA availability and root retention vary by model and build. [Magisk's A/B OTA workflow](https://topjohnwu.github.io/Magisk/ota.html) was tested on Pixel, so use it on Xiaomi only if your exact device and update method support it:
+
+1. If the OTA requires stock images, select **Uninstall > Restore Images** in Magisk before applying the update. Do not reboot. If the required backup is unavailable, stop and use a verified exact-device update or recovery procedure.
+2. Apply the system OTA and let installation finish. **Do not restart yet.** Modified read-only partitions can cause verification to fail.
+3. Select **Install > Install to Inactive Slot (After OTA)** in Magisk and wait for it to finish.
+4. Return to the system update screen and choose **Restart now**. Verify root after boot.
+
+If the device is not A/B, the option is unavailable, or the OTA fails, do not assume a dirty flash will fix it. Follow the device-specific stock update or full-firmware recovery instructions, then patch an image from the new installed build if desired. Do not select a flash option that relocks the bootloader.
 
 ### Custom ROM Alternatives
 - **Xiaomi.eu** LineageOS, EvolutionX, Pixel Experience, AOSP Extended builds
 - Read your device’s XDA thread for firmware prerequisites (modem/vendor), dynamic/super partition flash instructions, and AVB/vbmeta notes
-- Most ROMs require unlocked bootloader; many expect flashing via fastbootd (userspace fastboot):
-  ```bash
-  adb reboot fastboot  # to enter fastbootd on dynamic partition devices
-  ```
+- Use fastbootd only when the ROM maintainer's exact-device instructions require it; do not switch modes as a generic fix for a failed flash.
 
 ---
 
@@ -394,9 +355,9 @@ adb devices
 - Be patient with the unlock timer; don’t constantly rebind or reset
 - Use mobile data for account binding; keep SIM inserted
 - Always patch and flash images that match your exact build and ARB index
-- Prefer fastboot boot patched image first; then Direct Install in Magisk
-- On A13+/HyperOS, expect init_boot to be the target for Magisk
-- Avoid disabling AVB/verity unless a ROM explicitly requires it
+- Verify the actual ramdisk image, target partition and slot for the exact firmware
+- Use temporary boot and Direct Install only when supported for that device and image
+- Keep AVB/verity defaults unless a verified device-specific procedure explains a change and its risks
 :::
 
 ---
@@ -429,10 +390,7 @@ Bypasses may work temporarily and then stop after Xiaomi patches server-side. Th
 
 ### Troubleshooting Specific Devices
 
-“Unsupported” devices in databases may still be unlockable:
-- Try earlier MIUI versions (only if ARB allows; check first)
-- Try older Mi Unlock Tool versions (e.g., 7.6.727.43)
-- Consult device-specific threads on XDA/Telegram
+For an unsupported or restricted device, check the exact model and region with Xiaomi or a trusted device-specific source. Do not downgrade firmware or use an older unlock tool as a generic workaround; anti-rollback and eligibility restrictions can make that unsafe.
 
 CN ROM devices (⚠️):
 - Options are very limited since 2022 policy changes

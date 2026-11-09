@@ -40,6 +40,16 @@ class APatchGuideSafetyTest(unittest.TestCase):
         self.assertIn('restoring `boot` alone will not repair that partition', self.text)
         self.assertIn('correct **stock** image to every affected partition and slot', self.text)
 
+    def test_slot_checks_precede_installation_and_stock_restore(self):
+        install = self.text.split('## Step 4: Flash Permanently\n', 1)[1].split('## Step 5:', 1)[0]
+        before_flash = install.split('\nfastboot flash boot ', 1)[0]
+        self.assertIn('\nfastboot getvar current-slot\n', before_flash)
+        self.assertRegex(before_flash, r'(?is)current active slot.*only if.*intended slot.*image matches')
+
+        uninstall = self.text.split('## Uninstallation\n', 1)[1].split('## Device-Specific Notes', 1)[0]
+        before_restore = uninstall.split('\nfastboot flash boot ', 1)[0]
+        self.assertRegex(before_restore, r'(?is)current active slot.*only if.*affected slot.*image matches')
+
 
 if __name__ == '__main__':
     unittest.main()
