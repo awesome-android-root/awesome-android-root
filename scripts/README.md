@@ -70,6 +70,5 @@ URLs, and tolerates `/images/` assets.
 ### Usage
 
 ```bash
-python3 -m unittest discover -s scripts/tests
 python3 scripts/check_links.py
 ```
