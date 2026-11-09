@@ -167,15 +167,14 @@ html.dark {
   border: 0;
   border-radius: 50%;
   background: transparent;
-  color: var(--vp-c-text-2);
+  color: var(--vp-c-text-1);
   cursor: pointer;
   transition: color 0.2s, background-color 0.2s;
 }
 
 @media (min-width: 48rem) {
   .theme-toggle {
-    /* divider sits centered in the left gap: 0.5rem before it, 0.5rem after;
-       matches the 0.5rem gap to the social links on the right */
+    color: var(--vp-c-text-2);
     margin-inline: 1rem 0.5rem;
   }
 
@@ -208,9 +207,6 @@ html.dark {
   height: 1rem;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
-
-/* both icons always render; html.dark is set before first paint, so the
-   visible icon comes from CSS and stays correct through hydration */
 html:not(.dark) .theme-toggle .theme-icon-moon,
 html.dark .theme-toggle .theme-icon-sun {
   opacity: 0;
