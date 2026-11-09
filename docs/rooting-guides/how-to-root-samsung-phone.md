@@ -55,6 +55,10 @@ head:
 
 # How to Root a Samsung Galaxy: Odin, AP & Magisk
 
+::: danger VERIFY SAMSUNG MAGISK STEPS
+Some installation, OTA and removal steps on this page are outdated. Follow the [Magisk guide](./magisk-guide.md#step-3-flash-patched-image) and [upstream Samsung instructions](https://topjohnwu.github.io/Magisk/install.html#samsung-devices) for the exact model and firmware. The first Magisk installation requires a full data wipe and irreversibly trips Knox. **Restore Images** is not a full uninstall; upstream warns against restoring individual stock partitions and calls for full-firmware recovery.
+:::
+
 There is no single Samsung rooting procedure. Bootloader availability, chipset, CSC/region, Android version and One UI release determine whether a Galaxy device can be rooted. This guide explains the checks first, then covers Download Mode, Odin AP-file patching and Magisk for models that are actually eligible.
 
 ## Quick Navigation

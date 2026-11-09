@@ -55,6 +55,10 @@ head:
 
 # OnePlus Root Guide
 
+::: danger VERIFY BEFORE FLASHING
+Some image-selection, flashing, OTA and recovery steps on this page are outdated. Do not use them without checking the exact model and firmware. Consult the [Magisk guide](./magisk-guide.md) or [KernelSU guide](./kernelsu-guide.md), then verify the device-specific image, target partition, slot and recovery method. Android version, the presence of `init_boot` or Magisk's Ramdisk field alone does not determine the target. Do not disable verification or relock a modified device as a generic fix.
+:::
+
 Root OnePlus devices with straightforward bootloader unlock. Covers OxygenOS and ColorOS, OnePlus 15, 13, 12, 11, 10, 9, Nord series, and legacy devices.
 
 ## Quick Navigation

@@ -55,6 +55,10 @@ head:
 
 # Google Pixel Root Guide
 
+::: danger VERIFY BEFORE FLASHING
+Some image-selection, flashing, OTA and recovery steps on this page are outdated. Do not use them without checking the exact model and firmware. Consult the [Magisk guide](./magisk-guide.md) or [KernelSU guide](./kernelsu-guide.md), then verify the device-specific image, target partition, slot and recovery method. Android version, the presence of `init_boot` or Magisk's Ramdisk field alone does not determine the target. Do not disable verification or relock a modified device as a generic fix.
+:::
+
 Root any Google Pixel device with the easiest rooting process in Android. Clean bootloader unlock, official factory images, and Magisk support.
 
 ::: tip QUICK START

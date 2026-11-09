@@ -91,10 +91,10 @@ If your device won't boot, jump to [Emergency Recovery](#emergency-recovery) imm
 
 **Stop flashing and record the last change.** Do not factory-reset, change slots, disable verification or relock the bootloader as a first response. Those actions can destroy data or make recovery harder.
 
-1. **If the bootloop followed a module install:** try Android safe mode using your device's documented key sequence. Magisk disables modules when safe mode is detected. KernelSU/APatch have their own rescue procedures; do not assume identical key combinations.
-2. **If ADB is already authorized and a root shell works:** remove Magisk modules with the following command. This removes **all** modules, not just the suspect module:
+1. **If the bootloop followed a module install:** try the framework's safe mode. [Magisk Safe Mode](./rooting-guides/magisk-guide.md#managing-installed-modules) needs early key timing that may differ from Android's safe mode. KernelSU/APatch have their own rescue procedures; do not assume identical key combinations.
+2. **If ADB is already authorized and Magisk's command is available:** remove Magisk modules with the following command. This removes **all** modules, not just the suspect module, and automatically reboots:
    ```bash
-   adb shell su -c 'magisk --remove-modules'
+   adb shell magisk --remove-modules
    ```
    ADB is normally unavailable during early boot. An `unauthorized` or offline device cannot run this command.
 3. **If a compatible custom recovery can decrypt `/data`:** disable only the suspect module. In the recovery's privileged terminal, replace `MODULE_ID` with its actual directory name:
@@ -102,8 +102,8 @@ If your device won't boot, jump to [Emergency Recovery](#emergency-recovery) imm
    ls /data/adb/modules
    touch /data/adb/modules/MODULE_ID/disable
    ```
-   The `disable` marker belongs **inside each module directory**, not in `/data/adb/modules/disable`. If `/data` is encrypted or empty, stop rather than formatting it to access modules.
-4. **If the bootloop followed image/kernel flashing:** restore the original image for the exact installed build and the partition actually changed. Magisk can target `boot`, `init_boot`, or recovery; APatch patches the kernel in `boot`. Samsung uses its own AP/Odin workflow.
+   The `disable` marker belongs **inside each module directory**, not in `/data/adb/modules/disable`. If `/data` is encrypted or empty, stop rather than formatting it to access modules. KernelSU module `initrc` injections may still run; see its [rescue guide](https://kernelsu.org/guide/rescue-from-bootloop.html).
+4. **If the bootloop followed image/kernel flashing:** restore the exact-build original for every partition and slot actually changed. Magisk can target `boot`, `init_boot`, `vendor_boot` or recovery; APatch patches the kernel in `boot`. If Magisk was installed on Samsung, upstream warns against restoring individual stock partitions; follow its full-firmware recovery procedure.
 5. **If needed, restore matching stock firmware** using the exact model/region guide. Check anti-rollback restrictions and whether the procedure wipes data. HOME_CSC is not a backup or a guarantee of data preservation. Modern Qualcomm/OnePlus rescue may require authorized service access.
 
 **Read-only checks in bootloader fastboot:**
@@ -123,21 +123,22 @@ A factory reset erases data but does not restore a damaged kernel or remove ever
 
 ### Root Not Working
 
-**Symptoms:** Apps report "no root," superuser prompts don't appear, or manager shows N/A.
+**Symptoms:** Apps report "no root," access is denied, or the manager shows N/A.
 
 **Basic Verification:**
 
 1. **Check Root Manager Status**
-   - **Magisk:** App should show version numbers. "Installed" should display. If N/A, installation failed
+   - **Magisk:** Check whether the app shows "Installed". If it shows N/A, verify the image and slot; a recovery-based installation also needs its special boot sequence
    - **KernelSU:** Check supported/enabled status and matching manager/kernel integration before changing any image
    - **APatch:** App shows KernelPatch status. Check SuperKey configuration
-   - Test with a simple root checker app or Termux + `su`
+   - In current Magisk releases, explicitly grant a trusted test app access in the Superuser tab before testing with `su`
 
-2. **Verify Correct Image**
+2. **Verify shell access**
+   Grant the ADB shell root access first if the manager requires it, then test:
    ```bash
    adb shell su -c "echo Root works"
    ```
-   If `su` is not found, check installation status and the requesting app's root permissions/profile. KernelSU can hide `su` from unapproved apps; this result alone does not prove root is absent.
+   Revoke the shell grant afterward if not needed. If `su` is not found, check installation status and the requesting app's root permissions/profile. KernelSU can hide `su` from unapproved apps; this result alone does not prove root is absent.
 
 **Solutions by Root Method:**
 
@@ -150,12 +151,12 @@ A factory reset erases data but does not restore a damaged kernel or remove ever
    - See [complete Magisk guide](./rooting-guides/magisk-guide.md) for detailed instructions
 
 2. **Ensure Correct Target Image**
-   - For Magisk, check the actual ramdisk location: use `init_boot.img` if present, otherwise the supported `boot.img` or recovery workflow. An Android upgrade alone does not change the partition layout.
+   - For Magisk, verify the actual ramdisk image and device-specific workflow: `boot`, `init_boot`, `vendor_boot` or recovery may apply. The presence of `init_boot` or an Android version alone does not determine the target. Samsung uses a separate AP-tar workflow.
    - Extract from your exact firmware build
 
 3. **Enable Zygisk (if needed)**
    - Settings → Enable Zygisk
-   - Configure DenyList for apps that mustn't see root
+   - DenyList reverts Magisk modifications in selected processes; it does not guarantee root hiding
    - Reboot after changes
 
 4. **Check Module Conflicts**
@@ -163,13 +164,12 @@ A factory reset erases data but does not restore a damaged kernel or remove ever
    - See [Emergency Recovery](#emergency-recovery)
 
 5. **Android 16 QPR2 Compatibility**
-   - Magisk now supports the new sepolicy binary format introduced in Android 16 QPR2. Ensure you are on the latest stable release (v30.7+) if running Android 16.
-   - Magisk 30.7 was released with support for Android 16 QPR2; if you updated your firmware recently, update Magisk before re-patching.
+   - Check the [release notes](https://github.com/topjohnwu/Magisk/releases) for your Android build and Zygisk requirements before updating or re-patching.
 
 **KernelSU:**
 - KernelSU officially supports Android GKI 2.0 devices (kernel 5.10+). Older kernels (4.14+) are also supported, but the kernel will need to be built manually.
 - Match kernel to your ROM/firmware version and vendor partition
-- Use official KernelSU Manager
+- Use the compatible Manager for your chosen KernelSU variant
 - Check the current release assets for an LKM matching your kernel branch/KMI
 - See [complete KernelSU guide](./rooting-guides/kernelsu-guide.md) for installation help
 
@@ -180,7 +180,7 @@ A factory reset erases data but does not restore a damaged kernel or remove ever
 
 **Clean Re-install (Magisk):**
 
-Extract the correct image from your installed firmware, patch it on the same device, and flash only the partition/slot specified by your device guide. Do not overwrite both slots or use someone else's patched image. Recovery ZIP installation is deprecated upstream and is not appropriate for every device.
+Extract the correct image from your installed firmware, patch it on the same device, and flash only the partition/slot specified by your device guide. Samsung uses the separate patched AP-tar workflow. Do not overwrite both slots or use someone else's patched image. Recovery ZIP installation is deprecated upstream and is not appropriate for every device.
 
 ---
 
@@ -243,8 +243,8 @@ Check that the file was fully extracted from firmware for the exact device/build
 **Solutions:**
 
 1. **Update Magisk**
-   - Download latest version (v30.7+ for Android 16 QPR2 support)
-   - Alpha/Beta may support newer devices first
+   - Check the official [release notes](https://github.com/topjohnwu/Magisk/releases) for your firmware and Android build
+   - Do not assume a beta or another root framework supports your device without checking its requirements
 
 2. **Check device compatibility**
    - Some devices need special Magisk builds
@@ -307,23 +307,21 @@ Use the [supported A/B flow](#ota-survival-with-magisk-a-b-devices), including i
 
 1. **Verify kernel**
    ```bash
-   adb shell
-   su -c "cat /proc/version"
+   adb shell uname -r
    # Kernel version alone does not prove KernelSU is installed
    ```
 
 2. **Understand running modes**
-   - Since version 0.9.0, KernelSU supports two running modes on GKI devices: GKI: Replace the original kernel of the device with the Generic Kernel Image (GKI) provided by KernelSU.
-   - **LKM mode:** Load KernelSU as a kernel module (recommended for GKI devices). Use `ksud boot-patch` to patch boot image with LKM.
-   - Kernel version and Android version aren't necessarily the same! If you find that your kernel version is android12-5.10.101, but your Android system version is Android 13 or other, don't be surprised.
+   - **GKI mode:** Replace the kernel with a compatible KernelSU-enabled kernel. Upstream's GKI build guide is archived, and official release assets vary.
+   - **LKM mode:** Load KernelSU into a supported kernel. Patch the verified ramdisk image for the device and firmware, not a partition chosen solely from Android version.
+   - Kernel and Android release labels need not match. Check KMI, device support and firmware before patching or flashing.
 
 3. **Use ksud tool to patch**
-   - The ksud tool provided by KernelSU can help you quickly patch the official firmware and then flash it. This tool supports macOS, Linux, and Windows. You can download the corresponding version from GitHub Release.
+   - Check the [KernelSU guide](./rooting-guides/kernelsu-guide.md#method-2-ksud-from-a-pc) and the tool's help. Host `ksud` patches an image; on-device flash and OTA flags are not PC-side options.
 
-4. **Build kernel with KernelSU (advanced)**
-   - Follow KernelSU documentation
-   - Compile custom kernel
-   - Flash and test
+4. **Consider a custom kernel (advanced)**
+   - Verify the exact device, kernel/KMI, firmware, anti-rollback rules and recovery plan before building or flashing
+   - Follow the device kernel maintainer's and KernelSU's instructions
 
 ---
 
@@ -331,10 +329,9 @@ Use the [supported A/B flow](#ota-survival-with-magisk-a-b-devices), including i
 
 **Diagnosis:**
 
-1. **Check if a metamodule is installed (Most Common Issue!)**
-   - KernelSU requires a **metamodule** to mount modules
-   - Without a metamodule, modules are installed but NOT mounted
-   - Open KernelSU Manager → Modules and verify a metamodule is active
+1. **Check whether the module needs mounting**
+   - KernelSU requires a compatible **metamodule** for system-file mounts; scripts, properties and policy rules can work without one
+   - Open KernelSU Manager → Modules and verify a metamodule is active if the module needs it
 
 2. **Check module compatibility**
    - Many modules use a Magisk-like format, but scripts and mount assumptions may be incompatible
@@ -342,7 +339,7 @@ Use the [supported A/B flow](#ota-survival-with-magisk-a-b-devices), including i
 
 **Solutions:**
 
-1. **Install a metamodule first**
+1. **If system-file mounting is needed, install a metamodule first**
    - Install a metamodule from the [official module repository](https://modules.kernelsu.org/) (filter "Metamodules only")
    - Install via KernelSU Manager → Modules
    - Reboot and try installing modules again
@@ -381,9 +378,8 @@ First distinguish a temporary `fastboot boot` session from a persistent installa
 **Configuration:**
 
 1. **Set up profiles**
-   - KernelSU Manager → Profiles
-   - Create profiles for different use cases
-   - Assign apps to profiles
+   - KernelSU Manager → Superuser → select an app → edit its profile
+   - Adjust root privileges or non-root mount visibility as needed
    - Only permitted apps can access `su`; this does not guarantee other apps cannot detect a modified device. KernelSU allows customization of su's uid, gid, groups, capabilities, and SELinux rules, hardening root privileges.
 
 2. **Profile not applying**
@@ -431,7 +427,7 @@ Check the active slot and whether an OTA replaced the image. Use the boot image 
 
 ### APatch OTA Updates
 
-Root survival with APatch is image-based, so OTAs usually require repatching the updated boot chain image. Always patch image from the newly installed build, not from an older firmware package.
+Root survival with APatch is image-based, so OTAs usually require repatching the stock `boot.img` from the newly installed build, not an older firmware package or `init_boot.img`.
 
 ---
 
@@ -490,7 +486,7 @@ Most Magisk installations do not need AVB disabled. Only follow a verification-d
 
 Follow the [upstream OTA guide](https://github.com/topjohnwu/Magisk/blob/master/docs/ota.md) and any device-specific exceptions. Back up data and stock images first; disable suspect modules. This flow requires working root, a supported A/B updater, and unmodified read-only partitions.
 
-1. In Magisk choose **Uninstall → Restore Images**. **Do not reboot.** If the stock backup is unavailable, stop and use the device's documented full-update method.
+1. If the update needs stock images, choose **Uninstall → Restore Images** in Magisk. **Do not reboot.** If a required stock backup is unavailable, stop and use the device's documented full-update method. Upstream notes that Pixel and Googlebook devices normally receive a full OTA when modified, so restoration is not needed there.
 2. Install the OTA in the system updater and wait until installation/optimization is complete. **Do not reboot yet.**
 3. In Magisk choose **Install → Install to Inactive Slot (After OTA)**, if offered. Do not use this option before installing the OTA.
 4. Follow the completion instructions from your Magisk version. Current upstream instructions direct you back to the system updater's **Restart now** button to enter the updated slot.
@@ -500,15 +496,11 @@ If the device already rebooted, do not blindly patch the inactive slot. Identify
 
 ### Non-A/B Devices
 
-**Process:**
-1. Uninstall Magisk (Restore Images)
-2. Apply OTA normally
-3. Re-patch new boot image
-4. Flash via fastboot or custom recovery
+The upstream seamless OTA flow above is for supported A/B devices. For a non-A/B device, follow its documented update procedure and, if supported, patch the appropriate image from the new build. **Restore Images** is not a full uninstall. Samsung uses its [separate manual firmware upgrade procedure](https://topjohnwu.github.io/Magisk/install.html#upgrading-the-os), not a generic fastboot flow.
 
 ### OTA Survival with APatch
 
-Root survival with APatch is image-based, so OTAs usually require repatching the updated boot chain image. Always patch image from the newly installed build, not from an older firmware package.
+Root survival with APatch is image-based, so OTAs usually require repatching the stock `boot.img` from the newly installed build, not an older firmware package or `init_boot.img`.
 
 ---
 
@@ -557,7 +549,7 @@ See the [root-management tool index](./apps-and-modules/root-management.md#root-
 
 3. **Android 16 QPR2 Rooting Issues**
    - After certain 2026 firmware updates, some users lost root and re-rooting failed, resulting in bootloops.
-   - Magisk 30.7 was released with support for Android 16 QPR2 - ensure you are using the latest Magisk version
+   - Check the [Magisk release notes](https://github.com/topjohnwu/Magisk/releases) for support for your exact Android build
    - If rooting fails after a firmware update, try waiting for a Magisk update that addresses your specific build
 
 4. **OTA updates**

@@ -105,12 +105,12 @@ Android version alone does not determine which root framework works. Check the e
 
 | Framework | Upstream requirements | What to verify |
 |:----------|:----------------------|:---------------|
-| **Magisk** | Android 6.0 and newer; see [upstream](https://github.com/topjohnwu/Magisk) | Ramdisk location and whether to patch `boot`, `init_boot`, recovery, or Samsung AP firmware |
-| **KernelSU** | Official GKI 2.0 support (kernel 5.10+); older 4.14+ kernels require manual builds | Kernel compatibility and supported LKM/GKI installation mode in the [README](https://github.com/tiann/KernelSU#compatibility-state) |
+| **Magisk** | Check Android and platform requirements in [upstream releases](https://github.com/topjohnwu/Magisk/releases) | Ramdisk location and whether to patch `boot`, `init_boot`, `vendor_boot`, recovery, or Samsung AP firmware |
+| **KernelSU** | Official GKI 2.0 support (kernel 5.10+); older 4.14+ kernels require manual builds | Kernel compatibility and supported LKM/GKI installation mode in the [installation guide](https://kernelsu.org/guide/installation.html) |
 | **KernelSU Next** | Separate fork with its own kernel integration requirements | Exact kernel build, installation mode, and manager compatibility in [upstream documentation](https://github.com/KernelSU-Next/KernelSU-Next) |
 | **APatch** | ARM64, kernels 3.18–6.12, required kernel configuration | `CONFIG_KALLSYMS` requirements and device restrictions in the [README](https://github.com/bmax121/APatch#supported-versions) |
 
-Android 16 is not a developer-preview-only platform. For example, [Magisk v30.7](https://github.com/topjohnwu/Magisk/releases/tag/v30.7) explicitly adds Android 16 QPR2 sepolicy and Zygisk support. Do not interpret support for an Android release as support for every phone running it.
+Check the [Magisk release notes](https://github.com/topjohnwu/Magisk/releases) for changes relevant to your Android build and Zygisk. Support for an Android release does not imply support for every phone running it.
 
 ---
 

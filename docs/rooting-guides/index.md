@@ -169,9 +169,9 @@ Root access grants **superuser (administrator) privileges** on Android, providin
 - Backup solution for your data (Swift Backup, Neo Backup, or manual copy)
 
 **Files You'll Need:**
-- Stock `boot.img` or `init_boot.img` (extract from your device's firmware - Android 13+ devices typically use `init_boot.img`)
+- Exact-build stock firmware and the images required by your device and chosen framework; keep originals for recovery
 - Latest root solution APK/ZIP (Magisk, KernelSU, or APatch)
-- Custom recovery image (optional but recommended)
+- Compatible custom recovery image (optional, only if needed and supported)
 
 **Knowledge:**
 - Basic command line / terminal familiarity
@@ -183,11 +183,11 @@ Root access grants **superuser (administrator) privileges** on Android, providin
 
 1. ✅ **Backup all data** - Photos, contacts, messages, app data (see [Backup Apps](../apps-and-modules/backup#backup-restore))
 2. ✅ **Charge device** - Minimum 50% battery
-3. ✅ **Verify bootloader unlockability** - Check OEM Unlocking toggle in Developer Options (greyed out = likely carrier-locked)
-4. ✅ **Download necessary files** - Stock firmware, root solution (APK+ZIP), recovery image
+3. ✅ **Verify bootloader unlockability** - Check your model and OEM unlock status; a greyed-out toggle can have different meanings by device
+4. ✅ **Download necessary files** - Exact-build stock firmware and the selected root manager; a custom recovery is optional
 5. ✅ **Research your device** - Read XDA forums and device-specific guides thoroughly
 6. ✅ **Prepare recovery plan** - Know how to restore stock firmware via fastboot/recovery
-7. ✅ **Identify correct partition** - Determine if your device uses `boot.img` or `init_boot.img` (Android 13+ typically = `init_boot.img`)
+7. ✅ **Identify correct partition** - Match the image, partition and slot to the device and root method, not the Android version alone
 
 ---
 
@@ -199,8 +199,8 @@ Root access grants **superuser (administrator) privileges** on Android, providin
 
 For a locked bootloader, follow the separate [temporary-root guide](./root-without-unlocking-bootloader.md). For a standard installation, check these device details first:
 
-1. **Bootloader** - Confirm the OEM Unlocking toggle exists in Developer Options (greyed out often means carrier-locked). Unlocking wipes all data.
-2. **Kernel type** - GKI 2.0 devices (kernel 5.10+) can run KernelSU in LKM mode. Older non-GKI kernels need a custom KernelSU build, which favors Magisk or APatch. Check with `adb shell uname -r`.
+1. **Bootloader** - Confirm that the exact model can be unlocked using its OEM instructions. The OEM Unlocking toggle can be greyed out for different reasons; unlocking normally wipes all data.
+2. **Kernel type** - Official KernelSU LKM requires a supported GKI kernel and device. Older non-GKI kernels need a custom build, and variants have different requirements. Check the kernel with `adb shell uname -r` and verify compatibility in the Manager.
 3. **Boot image** - Select the image required by your device and framework. Many Android 13+ devices put the generic ramdisk in `init_boot.img`, while the kernel remains in `boot.img`; APatch needs the kernel-containing `boot.img`. A wrong image can prevent root or booting.
 4. **Kernel config (APatch only)** - APatch needs ARM64 with `CONFIG_KALLSYMS=y`. Check with `zcat /proc/config.gz | grep CONFIG_KALLSYMS` (needs root) or inspect your kernel source.
 5. **Kernel source** - Non-GKI KernelSU builds require the exact kernel source for your device. If the vendor never published it, Magisk or APatch are the practical options.
@@ -211,18 +211,18 @@ For a locked bootloader, follow the separate [temporary-root guide](./root-witho
 |---------|---------|----------|---------|---------|
 | **Guide** | [Magisk Guide](./magisk-guide.md) | [KernelSU Guide](./kernelsu-guide.md) | [APatch Guide](./apatch-guide.md) | [DirtyFrag and GhostLock](./root-without-unlocking-bootloader.md) |
 | **Target Users** | Beginners, most users | GKI devices, privacy-focused | Developers, edge cases | Supported builds with a locked bootloader |
-| **Architecture** | Systemless (boot/init_boot/vendor_boot) | Kernel-level (GKI/LKM) | Kernel patching (KernelPatch) | Exploit-based session; some loaders use KernelSU |
-| **Android Support** | Android 6.0+ | Android 12+ (GKI 2.0) officially, older via custom kernel | ARM64, kernel 3.18 to 6.12 | Exact vulnerable device and build, not Android version alone |
+| **Architecture** | Systemless (boot/init_boot/vendor_boot or recovery) | Kernel-level (GKI/LKM) | Kernel patching (KernelPatch) | Exploit-based session; some loaders use KernelSU |
+| **Android Support** | Check [upstream releases](https://github.com/topjohnwu/Magisk/releases) | Official support depends on a compatible GKI 2.0 kernel; older kernels need a custom build | ARM64, kernel 3.18 to 6.12 | Exact vulnerable device and build, not Android version alone |
 | **Kernel Requirement** | A compatible bootable kernel | GKI 2.0 for LKM mode, custom build otherwise | CONFIG_KALLSYMS=y | Vulnerable kernel and compatible loader, profile or module |
 | **Bootloader** | Normally unlocked | Normally unlocked for standard installation | Normally unlocked | Can stay locked on supported builds |
 | **Installation** | Patch and flash the correct image | Patch and flash for standard LKM, or use a custom kernel | Patch and flash the kernel-containing `boot.img` | Run a matching loader without flashing a boot image |
-| **Full Reboot** | Root normally returns | Root normally returns after standard installation | Root normally returns | Active root ends; some loaders can re-run it |
-| **Module Ecosystem** | Largest module ecosystem | Most Magisk modules work via metamodule | APModule (Magisk-like) plus KPM (kernel-level) | Compatible session modules if supported; some loaders provide a shell only |
-| **Module Mounting** | Built-in Magic Mount | Metamodule, only for /system modifications (e.g. meta-overlayfs) | Built-in, Magisk-like | Depends on the loader and manager; early-boot stages may not run |
-| **Root Hiding** | DenyList and separate modules | App profiles and optional variants | SuperKey credential system | Locked bootloader alone does not guarantee Integrity or app compatibility |
+| **Full Reboot** | Root returns with the required boot sequence; recovery installs need special steps | Root normally returns after standard installation | Root normally returns | Active root ends; some loaders can re-run it |
+| **Module Ecosystem** | Largest module ecosystem | Some Magisk-format modules work; check compatibility and mounting requirements | APModule (Magisk-like) plus KPM (kernel-level) | Compatible session modules if supported; some loaders provide a shell only |
+| **Module Mounting** | Built-in Magic Mount | Metamodule for system-file mounts; scripts can work without one | Built-in, Magisk-like | Depends on the loader and manager; early-boot stages may not run |
+| **Root Hiding** | DenyList reverts modifications; separate modules may address detection | App Profiles and optional tools; no guarantee | SuperKey controls access; no guarantee | Locked bootloader alone does not guarantee Integrity or app compatibility |
 | **Community** | Largest | Growing | Small | Depends on the loader and device |
 | **Unique Strength** | Ecosystem and broad compatibility | Kernel space, only permitted apps see su | KPM kernel code injection without kernel source | No unlock needed on supported builds |
-| **OTA Handling** | Re-patch boot image after OTA | Re-patch or reflash kernel after OTA | Re-patch boot image after OTA | An update can patch the exploit or break compatibility |
+| **OTA Handling** | Re-patch the correct image or use a supported inactive-slot flow | Re-patch or use a supported inactive-slot flow | Re-patch boot image after OTA | An update can patch the exploit or break compatibility |
 
 Temporary root is an access method, not a fourth framework. Some loaders late-load KernelSU on locked devices. A full reboot ends the active session, but files and settings changed during it may remain.
 
@@ -237,7 +237,7 @@ Temporary root is an access method, not a fourth framework. Some loaders late-lo
 **Choose KernelSU if:**
 - Your device runs a GKI 2.0 kernel (5.10+) and you want kernel-level root
 - Fine-grained app profiles (uid, gid, groups, capabilities, SELinux) matter to you
-- You want root hidden from apps that are not explicitly permitted
+- You want per-app control over root access and module mount visibility
 - You are comfortable installing a metamodule for modules that modify /system
 
 KernelSU variants such as KernelSU Next and SukiSU-Ultra add SUSFS integration and support for older kernels. See the comparison page for current options.
@@ -258,44 +258,22 @@ KernelSU variants such as KernelSU Next and SukiSU-Ultra add SUSFS integration a
 
 ## Universal Rooting Process
 
-This four-step flow describes standard unlocked-bootloader installations, not [temporary root](./root-without-unlocking-bootloader.md). Many Android 13+ devices store the generic ramdisk in `init_boot.img`, while APatch needs the kernel in `boot.img`; check your device and framework instructions.
+This four-step flow describes standard unlocked-bootloader installations, not [temporary root](./root-without-unlocking-bootloader.md). Image and partition selection is device- and framework-specific; APatch needs the kernel in `boot.img`. Check the exact firmware and instructions rather than choosing by Android version alone.
 
 ### Step 1: Unlock Bootloader
 
-Unlocking the bootloader is the essential first step that enables all subsequent modifications.
-
-**Quick Steps:**
-1. **Enable Developer Options** (Settings > About > Tap Build Number 7 times)
-2. **Enable OEM Unlocking** (Developer Options > OEM Unlocking)
-3. **Enable USB Debugging** (Developer Options > USB Debugging)
-4. **Boot to fastboot mode** (Power + Volume Down or `adb reboot bootloader`)
-5. **Execute unlock command** (`fastboot flashing unlock` or `fastboot oem unlock`)
+An unlocked bootloader is normally required for these installation methods. First back up your data, enable Developer Options and check the OEM unlock requirements for your exact model. Follow the manufacturer's device-specific unlocking procedure; not every device uses fastboot, and Samsung uses download mode.
 
 > [!CAUTION]
-> ⚠️ This step **erases ALL data**. Backup everything first. On Samsung devices, this also **permanently trips Knox** (Samsung Pay, Secure Folder, Samsung Pass lost forever).
+> Unlocking normally **erases all data**. Installing Magisk or other custom images on Samsung can permanently trip Knox and disable Knox-dependent features.
 
 **[📖 How to unlock an Android bootloader](./how-to-unlock-bootloader.md)**
 
-### Step 2: Install Custom Recovery (Optional but Recommended)
+### Step 2: Install Custom Recovery (Optional) {#step-2-install-custom-recovery-optional-but-recommended}
 
-Custom recovery provides advanced features and safer modification workflows. While not strictly required for all modern root methods, it's invaluable for backups and emergency recovery.
+A custom recovery is not required for the usual Magisk or KernelSU image-patching workflow. Install or temporarily boot one only when a build and method are verified for your exact device. Modern layouts may lack a separate recovery partition, and a recovery may not decrypt `/data`.
 
-**Popular Options:**
-- **TWRP** - Most widely supported, active development
-- **OrangeFox** - Modern UI, frequent updates, EROFS support
-- **SKYHAWK** - Feature-rich recovery project
-- **PitchBlack** - Based on TWRP with enhanced features
-
-**Process:**
-1. **Download device-specific recovery image**
-2. **Boot to fastboot mode**
-3. **Flash recovery image** - `fastboot flash recovery recovery.img`
-4. **Boot to recovery** - Test functionality before proceeding
-
-> [!NOTE]
-> Some modern devices (especially A/B partition schemes) may not have a dedicated recovery partition. In these cases, you can `fastboot boot recovery.img` to temporarily boot recovery without flashing.
-
-**[📖 Custom Recovery Installation Guide](./how-to-install-custom-recovery.md)**
+Do not assume `fastboot flash recovery` or `fastboot boot` is supported. Check the device-specific instructions and recovery plan first: [Custom Recovery Installation Guide](./how-to-install-custom-recovery.md).
 
 ### Step 3: Install Root Solution
 
@@ -303,37 +281,21 @@ Choose and install your preferred root method. The modern approach uses boot ima
 
 #### Option A: Magisk (Recommended for Most Users)
 
-1. Download latest **Magisk APK** from [official GitHub](https://github.com/topjohnwu/Magisk/releases)
-2. Extract the correct image from your device's stock firmware:
-   - **Android 13+ (most devices):** `init_boot.img`
-   - **Android 12 and older:** `boot.img`
-   - **Some Samsung devices:** `boot.img` + `vendor_boot.img` (Magisk v30.3+)
-3. Transfer image to device, patch it using the Magisk app
-4. Flash patched image via fastboot (`fastboot flash init_boot magisk_patched...img`)
-5. Reboot and complete Magisk app setup
-
-> [!TIP]
-> Magisk now supports XZ-compressed modules and 16k page size devices. Use the latest stable release from [GitHub](https://github.com/topjohnwu/Magisk/releases).
+1. Download the official [Magisk APK](https://github.com/topjohnwu/Magisk/releases).
+2. Identify the exact-build image that contains the ramdisk: `boot`, `init_boot`, `vendor_boot` or, on some devices, recovery. Do not choose by Android version alone.
+3. Patch the image on the **same device**, then flash only to the verified partition and slot using the device's method. Samsung instead uses the patched AP-tar workflow and requires a first-install data wipe.
+4. Reboot using the required sequence, complete setup, and explicitly grant trusted apps access in Magisk's Superuser tab.
 
 **[📖 Complete Magisk Guide](./magisk-guide.md)**
 
 #### Option B: KernelSU
 
-1. Verify your device has a **GKI-compatible kernel** (kernel 5.10+ with GKI 2.0)
-2. Download KernelSU-supported kernel for your device or use LKM (Loadable Kernel Module) mode
-3. Flash kernel via fastboot or KernelSU app
-4. Install **KernelSU Manager** app
-5. Install a **metamodule** (Mountify or Meta-Hybrid Mount) - required for modules to work
-6. Configure App Profiles for fine-grained root access control
-
-> [!WARNING]
-> KernelSU **no longer has built-in module mounting**. Fresh installations require a metamodule for modules to function. See the [KernelSU Guide](./kernelsu-guide.md) for details.
+1. Check the Manager's support status, the device's kernel/KMI and the exact firmware.
+2. In LKM mode, patch the verified `boot` or `init_boot` image and flash it to the corresponding partition and slot. Other layouts need device-specific verification. GKI mode uses a compatible KernelSU-enabled kernel instead.
+3. Open KernelSU Manager and configure root access. Install a compatible **metamodule** only for modules that need system-file mounts; script-only modules may work without one.
+4. Follow the device-specific OTA and recovery procedure. Neither root persistence nor app compatibility is guaranteed.
 
 **[📖 Complete KernelSU Guide](./kernelsu-guide.md)**
-
-> [!TIP]
-> KernelSU hides root at the kernel level through the module system and App Profiles. For hiding that
-> goes further, see the [SUSFS Root Hiding Guide](./susfs-guide.md).
 
 #### Option C: APatch
 
@@ -350,27 +312,22 @@ Choose and install your preferred root method. The modern approach uses boot ima
 
 ### Step 4: Post-Root Configuration
 
-After successful root installation, complete these essential steps:
-
-1. **Verify Root Access** - Use a root checker app to confirm superuser access works
-2. **Install Essential Apps** - Visit [Starter Kit: Must-Have Apps](../apps-and-modules/#starter-kit-must-have-apps)
-3. **Configure Root Hiding** (critical for banking apps):
-   - **Magisk:** Enable Zygisk + DenyList, install any Play Integrity Fix module + [Tricky Store](https://github.com/5ec1cff/TrickyStore) + [Shamiko](https://github.com/LSPosed/LSPosed.github.io) (or open-source [Zygisk Assistant](https://github.com/snake-4/Zygisk-Assistant))
-   - **KernelSU:** Use App Profiles, install Zygisk Next + PIF + Tricky Store. Hide mounts from sensitive apps in their profile, and add [SUSFS](./susfs-guide.md) if supported
-   - **APatch:** Use SuperKey credential system + PIF modules
-4. **Create Full Backup** - Use Swift Backup, Neo Backup, or recovery nandroid
+1. **Verify root:** grant only a trusted test app access in your root manager. Current Magisk releases require an explicit Superuser grant before the app calls `su`.
+2. **Back up important data:** keep an independent copy of the exact-build stock firmware and check what your backup tool can actually restore.
+3. **Add modules selectively:** install one trusted module at a time. Enable Zygisk or a KernelSU metamodule only if a module requires it.
+4. **Check app compatibility:** DenyList and App Profiles control different exposures but do not guarantee banking, Play Integrity or other app checks. See [Play Integrity troubleshooting](../troubleshooting.md#play-integrity-and-banking-apps).
 
 **Recommended Next Steps:**
-- [Block Ads System-Wide](../general-guides/android-adblocking.md) - Eliminate ads across all apps
-- [Debloat Your Device](../general-guides/android-apps-debloating.md) - Remove bloatware safely
-- [Install LSPosed / Vector Framework](./lsposed-guide.md) - Advanced app customization with Xposed modules
-- [Browse 700+ apps and modules](../apps-and-modules/) - Discover essential tools
+- [Block Ads System-Wide](../general-guides/android-adblocking.md)
+- [Debloat Your Device](../general-guides/android-apps-debloating.md)
+- [Install LSPosed / Vector Framework](./lsposed-guide.md)
+- [Browse apps and modules](../apps-and-modules/)
 
 ---
 
 ## Device-Specific Guides
 
-Detailed rooting instructions tailored for specific manufacturers and models.
+Detailed rooting instructions tailored for specific manufacturers and models. Device-specific steps and app screenshots can lag upstream: verify the current [Magisk](./magisk-guide.md) or [KernelSU](./kernelsu-guide.md) workflow, firmware, partition and recovery instructions before flashing.
 
 ### 📱 [Google Pixel Series](./how-to-root-pixel-phone.md)
 
@@ -401,23 +358,19 @@ Detailed rooting instructions tailored for specific manufacturers and models.
 Symptoms: Device stuck on boot logo, constantly rebooting
 
 Solutions:
-1. Boot to recovery mode (Power + Volume Up, varies by device)
-2. Wipe cache partition from recovery
-3. Restore from backup if available
-4. Restore the exact-build stock image to the partition and slot actually changed, using the device-specific method. APatch uses `boot`, not `init_boot`.
-5. Flash full stock firmware via fastboot/recovery
-6. Seek help on your device-specific XDA forum
+1. Stop flashing and identify the last change. If a module caused the bootloop, try the root method's own safe mode or recovery steps.
+2. Restore the exact-build stock image to every affected partition and slot using the device-specific method. APatch uses `boot`, not `init_boot`.
+3. If Magisk was installed on Samsung, do not restore individual stock partitions; follow its full-firmware recovery procedure.
+4. See [emergency recovery](../troubleshooting.md#emergency-recovery) and seek device-specific help. Do not wipe cache or metadata as a first response.
 
 **Root Not Detected**
 
 Symptoms: Root checker shows no root, apps can't get superuser access
 
 Solutions:
-1. Verify root manager app is installed and running
-2. Check if Zygisk is enabled (Magisk settings)
-3. Grant root permission when prompted by apps
-4. Re-patch and re-flash boot image
-5. Verify the patched image wasn't overwritten by an OTA
+1. Verify the root manager shows an active installation.
+2. Grant the trusted app access through the manager. Current Magisk releases require the grant before the app calls `su`.
+3. Check whether an OTA replaced the patched image. If necessary, follow the framework and device guide to patch the correct image from the installed firmware.
 
 **Banking Apps Not Working (Play Integrity)**
 
@@ -426,18 +379,7 @@ Symptoms: Apps detect root and refuse to run, Play Integrity check fails
 > [!WARNING]
 > Play Integrity bypass is a **cat-and-mouse game** - Google continuously updates detection. No solution is permanent.
 
-Solutions (2026 best practices):
-1. **Magisk:** Enable Zygisk → Configure DenyList (add banking app) → Enforce DenyList
-2. Install Play Integrity Fix module (provides working device fingerprint)
-3. Install **[Tricky Store](https://github.com/5ec1cff/TrickyStore)** for advanced key attestation spoofing
-4. Install **[Shamiko](https://github.com/LSPosed/LSPosed.github.io)** (closed-source) or **[Zygisk Assistant](https://github.com/snake-4/Zygisk-Assistant)** (open-source) for better root hiding
-5. Hide the Magisk app (Settings → Hide the Magisk app → repackage with random name)
-6. Use **[Zygisk Next](https://github.com/LSPosed/ZygiskNext)** (alternative Zygisk implementation, works on KernelSU too)
-7. Clear banking app data after setting up hiding
-8. See [detailed Play Integrity troubleshooting](../troubleshooting.md#play-integrity-and-banking-apps)
-
-> [!TIP]
-> On KernelSU and its forks, kernel-level hiding is stronger than userspace alone. See the [SUSFS Root Hiding Guide](./susfs-guide.md).
+Check the exact failing signal and the app's requirements. Magisk no longer offers app repackaging or built-in root hiding; DenyList and KernelSU App Profiles are not guarantees. Optional community modules and [SUSFS](./susfs-guide.md) have their own compatibility and security risks. See [Play Integrity troubleshooting](../troubleshooting.md#play-integrity-and-banking-apps) before adding modules or clearing app data.
 
 > [!NOTE]
 > **Strong Integrity** (required by some wallet/payment apps) is generally **not achievable** on unlocked bootloaders. Even with all fixes, some apps may refuse to run. Consider using a secondary unrooted device for critical banking.
@@ -447,11 +389,9 @@ Solutions (2026 best practices):
 Symptoms: System updates fail to install or cause bootloop
 
 Solutions:
-1. **Magisk:** Use "Restore Images" in Magisk app before OTA, then "Install to Inactive Slot" after OTA
-2. Flash full OTA package manually, then re-patch and re-flash root
-3. **KernelSU:** Some OTA flows survive via LKM mode, but verify after each update
-4. **APatch:** Initial A/B OTA support available (experimental)
-5. Consider switching to a custom ROM with built-in OTA + root support
+1. Follow the device- and framework-specific OTA procedure; do not assume root survives automatically.
+2. On supported A/B devices, install the OTA completely without rebooting before using the manager's inactive-slot option. Magisk may require **Restore Images** before the OTA; see the [Magisk OTA guide](./magisk-guide.md#ota-system-updates).
+3. Samsung and non-A/B devices require different procedures. If root is lost, use the correct image from the new build rather than flashing the old one.
 
 **Fastboot Not Recognized**
 
@@ -468,10 +408,7 @@ Solutions:
 
 **Safe Mode (Disable All Modules)**
 
-If a rogue module causes bootloop:
-1. Hold **Power + Volume Down** (or your device's Safe Mode key combo) during boot
-2. This disables all Magisk modules temporarily
-3. Uninstall the problematic module and reboot
+If a module causes a bootloop, follow the method-specific rescue steps: [Magisk](./magisk-guide.md#managing-installed-modules), [KernelSU](./kernelsu-guide.md#recovery) or [APatch](./apatch-guide.md#bootloop-after-flash). Safe-mode timing and recovery availability differ; KernelSU `initrc` injections can still run in safe mode.
 
 **Factory Reset Protection (FRP)**
 
@@ -497,7 +434,7 @@ If device won't power on or enter any mode:
 - 📥 Always keep stock firmware downloaded before starting
 - 💾 Create regular backups (Swift Backup, Neo Backup, recovery nandroid)
 - 📖 Read your device's XDA forum thoroughly before attempting anything
-- 🔑 Keep a copy of your stock `boot.img` and `init_boot.img`
+- 🔑 Keep the exact-build stock firmware and images needed for your device's recovery
 - 🧪 Test one module at a time, reboot between installations
 - 📋 Join device-specific Telegram/Discord communities for real-time help
 
@@ -562,7 +499,7 @@ and the current module stack and configuration steps are documented in
 Include this information for faster troubleshooting:
 - **Device model** and exact variant (e.g., Pixel 8 Pro `husky`, not just "Pixel 8")
 - **Android version** and build number (e.g., Android 16 QPR2, build BP1A)
-- **Root method and version** (e.g., Magisk v30.7, KernelSU v3.2)
+- **Root method and installed version** as shown in the manager
 - **Modules installed** (list all active Magisk/KernelSU/APatch modules)
 - **Exact error messages** (screenshots or copy-pasted text)
 - **Steps already tried** (so helpers don't suggest things you've done)

@@ -55,6 +55,10 @@ head:
 
 # Complete Xiaomi Rooting Guide
 
+::: danger VERIFY BEFORE FLASHING
+Some image-selection, flashing, OTA and recovery steps on this page are outdated. Do not use them without checking the exact model and firmware. Consult the [Magisk guide](./magisk-guide.md) or [KernelSU guide](./kernelsu-guide.md), then verify the device-specific image, target partition, slot and recovery method. Android version, the presence of `init_boot` or Magisk's Ramdisk field alone does not determine the target. Do not disable verification or relock a modified device as a generic fix.
+:::
+
 This page focuses on Xiaomi/Redmi/POCO specifics (Mi Unlock, ARB, HyperOS, payload extraction). For universal prep and Magisk steps, see: [Main Rooting Guide](./index.md), [Bootloader Unlocking](./how-to-unlock-bootloader.md), and [Magisk Guide](./magisk-guide.md).
 
 ## 🔗 Essential Resources

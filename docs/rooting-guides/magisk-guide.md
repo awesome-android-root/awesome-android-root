@@ -61,7 +61,7 @@ head:
 
 # Magisk Root Guide: Installation, Modules & Root Management
 
-Magisk provides systemless root through a patched boot or init_boot image. This guide covers the installation decision, boot image patching, modules, Zygisk, DenyList, Play Integrity and recovery when an update or module goes wrong.
+Magisk provides systemless root through a patched boot-related image. This guide covers image selection, installation, modules, Zygisk, DenyList, Play Integrity and recovery when an update or module goes wrong.
 
 ## Quick Navigation
 
@@ -86,14 +86,16 @@ Magisk provides systemless root through a patched boot or init_boot image. This 
 
 ## Understanding Magisk
 
-Magisk is a systemless root solution that provides superuser access without modifying system partitions. It uses Magic Mount to overlay modifications, making root reversible and OTA-friendly.
+Magisk provides superuser access and can apply systemless modifications without directly changing read-only system partitions. Updates and recovery still depend on the device, firmware and installation method.
 
 ### Core Features
 
-- **Magic Mount overlays**: Virtualizes changes over read-only partitions (including EROFS on Android 13+)
-- **Boot/init_boot patching**: Modifies the boot chain (not /system)
-- **Zygisk**: Injects code into the Zygote process to enable powerful user-space modules
-- **Reversible**: Uninstall to fully restore stock images (if you kept originals)
+- **Magic Mount overlays**: Apply module files over read-only partitions.
+- **Image patching**: Patch the appropriate `boot`, `init_boot`, `vendor_boot` or recovery image for the device.
+- **Zygisk**: Run compatible module code in app processes.
+- **MagiskSU**: Manage superuser access for selected apps and shell users.
+
+Removing Magisk does not reverse a bootloader unlock or a tripped Samsung Knox warranty bit.
 
 ### Magisk vs Alternatives
 
@@ -101,7 +103,7 @@ Magisk is a systemless root solution that provides superuser access without modi
 |---------|--------|----------|---------|
 | Ease of Use | Excellent | Moderate | Moderate |
 | Module Support | Excellent | Excellent | Good |
-| Root Hiding | Userspace modules only | Kernel-level, plus SUSFS on supported setups | Kernel-level |
+| Root Hiding | Community tools; no built-in hiding | App Profiles and optional tools | No guarantee |
 | Device Support | Broadest | GKI 2.0 for official builds, wider via variants | ARM64, kernel 3.18 to 6.12 |
 | Custom Kernel Required | No | No for LKM mode, yes for GKI mode | No |
 
@@ -151,174 +153,115 @@ Magisk is a systemless root solution that provides superuser access without modi
 
 ### Compatibility
 
-Magisk supports Android 6.0 and above, including the latest Android releases. It works on most devices with an unlockable bootloader.
+The official release requires Android 7.0 or newer. Minimum requirements can change, so check the [official project](https://github.com/topjohnwu/Magisk) and [release notes](https://github.com/topjohnwu/Magisk/releases) before installing. An unlockable bootloader alone does not guarantee device compatibility.
 
-**Check device compatibility:**
-1. Verify bootloader is unlockable
-2. Confirm stock firmware availability
-3. Check [device-specific guides](./index.md#device-specific-guides) or [XDA forums](https://forum.xda-developers.com/) for device notes
+1. Verify that your exact device variant can be unlocked and flashed.
+2. Obtain firmware matching the installed build and a device-specific recovery plan.
+3. Check the [upstream installation guide](https://topjohnwu.github.io/Magisk/install.html) and [device-specific guides](./index.md#device-specific-guides) for partition layout and known restrictions.
 
 ---
 
 ## Installation Methods
 
-Three installation methods available. Choose based on your device and comfort level.
+The image-patching workflow below is for a supported, unlocked device. Samsung and Googlebook devices have separate upstream procedures. Read the [official installation guide](https://topjohnwu.github.io/Magisk/install.html) and your device's instructions before flashing.
 
 ### Method 1: Boot Image Patching (Recommended)
 
-**Best for:** Most users, all modern devices
-
-This is the official and safest method.
+**Best for:** devices with a verified image-patching and fastboot workflow. Samsung uses a patched firmware tar and download mode, not these generic fastboot examples.
 
 #### Step 1: Download Required Files
 
-**Magisk APK:**
-1. Visit [Magisk GitHub Releases](https://github.com/topjohnwu/Magisk/releases)
-2. Download the latest stable APK
-3. Transfer to device
+1. Get the official Magisk APK from [GitHub Releases](https://github.com/topjohnwu/Magisk/releases) and install it on the device you intend to root.
+2. Download stock firmware for the exact device variant and installed build. Keep an independent copy of the complete firmware and original images needed for recovery.
+3. Identify the image and partition using the device's layout and [upstream instructions](https://topjohnwu.github.io/Magisk/install.html#getting-started):
+   - If the device has a boot ramdisk, Magisk patches the image containing it: `boot.img`, `init_boot.img` or `vendor_boot.img`, depending on the device.
+   - If there is no boot ramdisk, Magisk may need `recovery.img` and a special boot sequence. Read [Magisk in Recovery](https://topjohnwu.github.io/Magisk/install.html#magisk-in-recovery) first.
+   - Some devices upgraded to Android 13 or later still use `boot`; **never choose the partition from the Android version alone**. Magisk's **Ramdisk** status is helpful but does not by itself identify the image to flash.
+4. If you cannot verify the image, target partition and slot for this device, stop and consult its device-specific instructions.
 
-**Stock Boot Image:**
-
-Determine correct partition:
-- Android 13+ (most devices): `init_boot.img`
-- Android 12 and older: `boot.img`
-- Check in Magisk app: Shows "Ramdisk: Yes/No"
-
-Extract from firmware:
-- Google Pixel: Download factory image from [Google](https://developers.google.com/android/images)
-- Samsung: Extract from AP file
-- Xiaomi: Extract from fastboot ROM
-- Other devices: Use payload-dumper-go for OTA files
+For Pixel devices, official [factory images](https://developers.google.com/android/images) are one source. Other manufacturers may use fastboot firmware or OTA payloads. For Samsung, use the AP-tar workflow below; for Googlebooks, follow the separate [upstream instructions](https://topjohnwu.github.io/Magisk/install.html#googlebooks).
 
 #### Step 2: Patch Boot Image
 
-1. **Install Magisk APK** on device
-   - Enable "Install Unknown Apps" for file manager
-   - Install downloaded APK
+1. Open Magisk on the **same device** that will run the patched image. Never flash an image patched on another device or shared by someone else.
+2. Tap **Install** in the Magisk card. Select **Recovery Mode** only when following the recovery-image installation path, not merely because a custom recovery is installed.
+3. Choose **Patch firmware / image**. Select the verified raw image or supported official firmware package from storage, or provide a direct firmware URL if appropriate. The app can extract the target image from supported OTA or factory packages.
+4. Start patching and note the output filename and location, normally in Download. Confirm that the selected output corresponds to the image and partition you intended to patch.
 
-2. **Transfer boot image** to device
-   - Copy boot.img or init_boot.img to Downloads folder
-
-3. **Patch image in Magisk**
-   - Open Magisk app
-   - Tap "Install" next to Magisk
-   - Select "Select and Patch a File"
-   - Choose your boot/init_boot image
-   - Wait for patching to complete
-   - Note output location (usually Download folder)
-
-Output file named: `magisk_patched_[random].img`
+Keep the original image unchanged for recovery. For Samsung, select the firmware **AP tar** instead of extracting and flashing an individual image.
 
 #### Step 3: Flash Patched Image
 
-**Transfer to computer:**
-```bash
-adb pull /sdcard/Download/magisk_patched_xxxxx.img
-```
+**For devices using fastboot:** transfer the patched image to the computer using ADB. Replace the example filename with the actual output name in the commands below.
 
-**Boot to fastboot:**
 ```bash
+adb pull /sdcard/Download/magisk_patched-EXAMPLE.img
 adb reboot bootloader
-```
-
-**Verify fastboot connection:**
-```bash
 fastboot devices
 ```
 
-**Flash patched image:**
+On A/B devices, check the active slot with `fastboot getvar current-slot` and follow the device's instructions for the intended slot. Use **only the one command** that matches the verified original image and target partition. The examples use `magisk_patched-EXAMPLE.img` as the local filename; replace it with yours.
 
-For boot.img:
+If you patched the verified `boot.img`:
+
 ```bash
-fastboot flash boot magisk_patched_xxxxx.img
+fastboot flash boot magisk_patched-EXAMPLE.img
 ```
 
-For init_boot.img (Android 13+):
+If you patched the verified `init_boot.img`:
+
 ```bash
-fastboot flash init_boot magisk_patched_xxxxx.img
+fastboot flash init_boot magisk_patched-EXAMPLE.img
 ```
 
-**Reboot device:**
+If you patched the verified `vendor_boot.img`:
+
 ```bash
-fastboot reboot
+fastboot flash vendor_boot magisk_patched-EXAMPLE.img
 ```
 
+If your device requires Magisk in recovery and you patched its verified `recovery.img`:
 
-**Samsung (Odin devices):**
-1. Copy the generated magisk_patched-xxxxx.tar to PC.
-2.  Open Odin (Windows), load the patched TAR into AP.
-3. Untick “Auto Reboot”, start flash. When done, force reboot to recovery (Power + Vol Up while disconnecting USB) and factory reset if required (VaultKeeper behavior; first unlock already wiped data).
-4) First boot will be slower; open Magisk to finalize. KNOX is permanently tripped; Samsung Pay/Secure Folder may not work again.
+```bash
+fastboot flash recovery magisk_patched-EXAMPLE.img
+```
+
+Then reboot with `fastboot reboot`. For a recovery-based installation, a normal boot does **not** enable Magisk: use the device's recovery key combination and the release/hold sequence described in [Magisk in Recovery](https://topjohnwu.github.io/Magisk/install.html#magisk-in-recovery).
+
+**Samsung devices:** follow the complete [Samsung-specific upstream procedure](https://topjohnwu.github.io/Magisk/install.html#samsung-devices), not the fastboot commands above.
+
+1. Check that the bootloader and KnoxGuard permit installation and back up your data. Magisk permanently trips the Knox warranty bit, and **first installation requires a full data wipe**, in addition to the bootloader-unlock wipe.
+2. From the matching Samsung firmware package, copy its `AP` tar to the device. In Magisk, select **Patch firmware / image** and patch the AP tar on that same device. Select Recovery Mode if the device lacks a boot ramdisk.
+3. Copy the resulting patched tar back to the computer with ADB, not MTP. In download mode, follow upstream's full firmware flashing sequence with patched `AP` and the matching `BL`, `CP` and **`CSC`**, not `HOME_CSC`, for the first install. Complete the factory reset if prompted.
+4. If Magisk is installed in recovery, use the recovery boot sequence to enable it. Reinstall/open the app and complete its additional setup when prompted.
+
+**Never restore individual stock `boot`, `init_boot`, `recovery` or `vbmeta` partitions on Samsung.** Upstream warns this can brick the device; use its full-firmware recovery procedure instead.
 
 #### Step 4: Verify Installation
 
-1. First boot may take 2-5 minutes
-2. Open Magisk app
-3. Should show:
-   - Magisk: Installed (version number)
-   - App: Latest (version number)
+1. Allow the first boot to complete, then open the Magisk app and follow any additional setup prompt.
+2. Check that the Magisk card reports an installed version rather than **N/A**. If installed in recovery, first use the required recovery key sequence.
+3. Grant a trusted test app superuser access in the **Superuser** tab before testing. See [Initial Configuration](#initial-configuration).
 
-::: tip SUCCESS CHECK
-If Magisk app shows version numbers for both Magisk and App, installation succeeded!
-:::
+An installed app alone does not prove that the patched image booted or that root access works.
 
 ---
 
 ### Method 2: Custom Recovery Installation (Legacy)
 
-**Best for:** Older devices, recovery users
+Magisk's [custom recovery method](https://topjohnwu.github.io/Magisk/install.html#custom-recovery) is deprecated and maintained with minimal effort. It is only possible on devices with a boot ramdisk; it **cannot** install or upgrade Magisk when Magisk must be installed in recovery.
 
-**Note:** Not officially supported on modern Android. Use Method 1 instead.
-
-If you must use recovery ([installation guide](./how-to-install-custom-recovery.md)):
-
-1. Patch boot image using Method 1
-2. Boot to custom recovery (TWRP/OrangeFox)
-3. Install > Install Image
-4. Select patched boot image
-5. Choose Boot partition
-6. Swipe to flash
-7. Reboot system
+If your exact device and recovery support this method, upstream describes renaming the official APK to `.zip`, installing it in recovery and then completing the app's direct reinstallation. For problems, use the verified image-patching method instead. A recovery may not be able to decrypt `/data` or access the right partitions.
 
 ---
 
 ### Method 3: Direct Installation (Advanced)
 
-**Best for:** Switching from another root method, temporary root
+For an existing, working Magisk installation, upstream recommends opening Magisk and using **Install > Direct Install** to update it, then rebooting. Do not assume this is a safe shortcut for switching between root frameworks; remove the previous framework using its own device-specific instructions first.
 
-**Scenario A: Already Rooted**
+Temporary boot is device-specific. Only try `fastboot boot` if the device supports it and you have a compatible, bootable `boot` image. An `init_boot` image is not a standalone bootable image. A successful temporary boot is not itself a permanent installation.
 
-1. Install Magisk APK
-2. Open Magisk app
-3. Tap Install > Direct Install
-4. Reboot
-
-**Scenario B: Temporary Boot Method**
-
-1. Patch boot image (Method 1, Step 2)
-2. Boot patched image without flashing:
-```bash
-fastboot boot magisk_patched_xxxxx.img
-```
-3. Device boots with temporary root
-4. Open Magisk > Install > Direct Install
-5. Makes root permanent
-6. Reboot
-
-**Scenario C: Dump Current Boot Image**
-
-If stock firmware unavailable:
-
-```bash
-adb shell su -c "dd if=/dev/block/by-name/boot of=/sdcard/boot.img"
-```
-
-Or for init_boot:
-```bash
-adb shell su -c "dd if=/dev/block/by-name/init_boot of=/sdcard/init_boot.img"
-```
-
-Then proceed with Method 1 patching.
+If stock firmware is unavailable, do not assume a dump of an already-patched partition is stock. Obtain the exact-build original and confirm the recovery path before proceeding.
 
 ---
 
@@ -326,47 +269,24 @@ Then proceed with Method 1 patching.
 
 ### Initial Configuration
 
-**1. Verify Root Access**
+**1. Grant and verify root access**
 
-Test with root checker app or terminal:
+In the current Magisk app, open **Superuser**, use the add button and explicitly grant access to the trusted app before it calls `su`. Interactive superuser request prompts are no longer provided. Older releases may behave differently; see the [release notes](https://github.com/topjohnwu/Magisk/releases).
+
+To test from ADB, grant the **ADB shell** entry access first, then run:
+
 ```bash
-adb shell
-su
+adb shell su -c id
 ```
 
-Should grant root access.
+An unrestricted root shell should report `uid=0(root)`. Revoke shell access afterward if it is not needed; granting it gives a connected, authorized computer root access.
 
-**2. Configure Magisk Settings**
+**2. Review settings**
 
-Open Magisk > Settings:
-
-**Magisk Tab:**
-- Preserve force encryption: Depends on preference
-- Preserve AVB 2.0/dm-verity: Keep enabled
-- Recovery Mode: Enable if using custom recovery
-
-**App Tab:**
-- Hide Magisk app: Recommended for banking apps
-- Restore images: Keep enabled
-- Grant root to shell: Enable for ADB root
-
-**Zygisk:**
-- Enable Zygisk: Recommended (required for many modules)
-- Enforce DenyList: Enable for root hiding
-- Configure DenyList: Add apps that detect root
-
-**3. Security Settings**
-
-Configure superuser access:
-- Superuser access: Apps only
-- Multiuser mode: Owner only
-- Mount namespace mode: Isolated (recommended)
-- Automatic response: Prompt (recommended)
-- Request timeout: 10 seconds
-
-Enable authentication:
-- Biometric authentication: Enable
-- Require authentication: Enable
+- Keep the encryption and AVB/dm-verity preservation defaults unless verified device-specific instructions explain a change and its risks. Changing them can cause data loss or boot failure.
+- **Recovery Mode** is for patching a recovery image when the device needs Magisk in recovery, not a setting for every custom-recovery user.
+- Enable **Zygisk** only if a trusted module needs it. When enforced, **DenyList** reverts Magisk modifications in selected processes; it does not guarantee root hiding or app compatibility.
+- Review and revoke Superuser grants regularly. Use authentication and capability restrictions where appropriate, and avoid granting root to apps you do not trust.
 
 ---
 
@@ -388,42 +308,26 @@ Enable authentication:
 Only install modules from trusted sources. Malicious modules can damage your system.
 :::
 
-**Trusted Module Sources:**
-- Official GitHub repositories
-- [Magisk Module Manager](https://github.com/MMRLApp/MMRL)
-- [Our curated module collection](../apps-and-modules/)
-- XDA Developers forums
-- Known developers only
+**Where to research modules:**
+- The module developer's official release page
+- [MMRL](https://github.com/MMRLApp/MMRL) and [our curated module collection](../apps-and-modules/)
+- XDA Developers forums for device-specific reports
+
+A listing or forum post is not a security guarantee. Check the developer, source and compatibility before installing.
 
 ### Managing Installed Modules
 
-**Enable/Disable Modules:**
-- Tap module in list
-- Toggle switch
-- Reboot to apply
+Use the **Modules** tab to enable, disable or remove modules, and reboot when required. Install one module at a time so a failure can be isolated.
 
-**Remove Modules:**
-- Tap module
-- Tap "Remove"
-- Reboot to apply
+If a module causes a bootloop, Magisk can automatically disable modules and Zygisk after two failed boots. You can also try Magisk Safe Mode by holding **Volume Down before the boot animation**, as described in the [upstream FAQ](https://topjohnwu.github.io/Magisk/faq.html). Timing matters; system Safe Mode and Magisk Safe Mode are not always the same.
 
-**Module Issues:**
+If ADB is enabled, authorized and able to run Magisk's command during the failed boot, the following **removes all modules and automatically reboots**:
 
-If module causes bootloop:
-1. Boot to safe mode (power + volume down at boot)
-2. Open Magisk
-3. Disable problematic module
-4. Reboot
-
-Or via recovery:
 ```bash
-rm -rf /data/adb/modules/[module_name]
+adb shell magisk --remove-modules
 ```
 
-Or via ADB:
-```bash
-adb wait-for-device shell magisk --remove-modules
-```
+Recovery-based manual removal requires a compatible recovery that can mount and decrypt `/data`; it is not available on every device. If these methods fail, use the [device-specific stock recovery procedure](#backup-and-restore).
 
 ---
 
@@ -431,65 +335,29 @@ adb wait-for-device shell magisk --remove-modules
 
 ### Understanding Play Integrity
 
-Google Play Integrity replaced SafetyNet. Three levels exist:
+Play Integrity verdicts, Play Protect certification and an app's own root checks are different signals. Refer to Google's [verdict definitions](https://developer.android.com/google/play/integrity/verdicts):
 
-| Level | Description | Rooted Devices |
-|-------|-------------|----------------|
-| Basic | Basic app integrity | Easily passable |
-| Device | Device integrity verified | Passable with Play Integrity Fix |
-| Strong | Hardware attestation | Nearly impossible |
+| Verdict | What to know |
+|---------|--------------|
+| `MEETS_BASIC_INTEGRITY` | A basic verdict, not proof of a locked or certified device. |
+| `MEETS_DEVICE_INTEGRITY` | Requirements vary by Android version; hardware-backed evidence can be required. |
+| `MEETS_STRONG_INTEGRITY` | Adds stronger requirements, including security-update requirements on newer Android versions. |
 
-**Reality for Rooted Devices:**
-- Basic & Device Integrity: Can pass using the Play Integrity Fix (PIF) module.
-- Strong Integrity: Impossible with an unlocked bootloader.
+An unlocked bootloader, modified firmware or independent app checks can prevent acceptance. No module guarantees any verdict or banking-app compatibility.
 
 ### Configuring Root Hiding
 
-**Step 1: Hide Magisk App**
+The [Magisk FAQ](https://topjohnwu.github.io/Magisk/faq.html) states that Magisk no longer handles root hiding. The current official app also no longer offers the old **Hide the Magisk app** repackaging feature.
 
-1. Magisk > Settings
-2. Tap "Hide the Magisk app"
-3. Enter custom name (e.g., "Settings")
-4. App repackages with new name and icon
+In **Settings > Configure DenyList**, select the processes whose Magisk modifications should be reverted and enable **Enforce DenyList** if that behavior is wanted. DenyList is not an invisibility guarantee. Enable Zygisk only when a module needs it, and check that module's own DenyList and Zygisk requirements before changing settings.
 
-**Step 2: Enable DenyList**
-
-1. Magisk > Settings
-2. Enable "Zygisk" (if not enabled)
-3. Enable "Enforce DenyList"
-4. Tap "Configure DenyList"
-
-**Step 3: Configure DenyList**
-
-Add your banking and financial apps, payment apps such as Google Wallet, apps that detect root,
-and games with anti-cheat. For each app, expand the entry, check every sub-process and enable it for
-all of them.
-
-::: warning IMPORTANT
-**Do NOT** add Google Play Services (GMS) or Google Play Store to the DenyList if you are using the Play Integrity Fix (PIF) module. Doing so will break the module's ability to spoof device integrity.
-:::
-
-**Step 4: Clear App Data**
-
-After DenyList configuration, clear data for Google Play Store, Google Wallet / Pay and your
-banking apps, then reboot and reopen them.
+Uninstalling the Magisk app alone does not uninstall the installed root framework or ensure that apps cannot detect it. Keep access to the official app if you need to manage root grants and modules.
 
 ### Advanced Root Hiding
 
-Shamiko hides root more effectively than the built-in DenyList: install it, reboot, and leave
-"Enforce DenyList" off in Magisk settings. Shamiko reads the DenyList but applies its own hiding.
+Community Zygisk and integrity modules may address particular detection signals, but their requirements and effectiveness change. Use only sources you trust, follow each project's instructions and avoid stacking overlapping modules. Never download or purchase leaked attestation keys.
 
-> [!TIP]
-> The full root hiding and Play Integrity setup, including module choices and testing tools, is in
-> [Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps) and
-> [Root Hiding & Play Integrity](../apps-and-modules/root-management#root-hiding-play-integrity).
-
-<details>
-<summary><strong>Still detected after setting up Shamiko?</strong></summary>
-
-Magisk no longer hides root upstream ([official FAQ](https://topjohnwu.github.io/Magisk/faq.html)), so Shamiko only covers known userspace traces. If an app still detects root and your kernel is supported, consider a clean switch to KernelSU instead of stacking more modules: unpermitted apps cannot see `su`, and SUSFS hides in the kernel. See the [migration guide](./root-framework-comparison.md#migration-guide).
-
-</details>
+See [Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps) and the [root-management index](../apps-and-modules/root-management#root-hiding-play-integrity) for options and limitations. Switching frameworks or adding SUSFS also does not guarantee that an app will accept the device.
 
 ### Testing Play Integrity
 
@@ -526,51 +394,32 @@ authoritative.
 
 ### OTA System Updates
 
-<details><summary>👉 Click to expand details</summary>
+<details><summary>Click to expand details</summary>
 
-**For A/B Devices (Most Modern Devices):**
+**A/B devices:** upstream's [OTA procedure](https://topjohnwu.github.io/Magisk/ota.html) was tested on Pixel; verify that it applies to your device and update. Disable automatic system updates, keep a recovery plan and avoid directly modifying read-only partitions.
 
-1. Download OTA update (don't install yet)
-2. Wait for "Ready to install" notification
-3. Open Magisk
-4. Tap Install
-5. Select "Install to Inactive Slot (After OTA)"
-6. Wait for completion
-7. Reboot from system update
-8. Verify Magisk still installed
+1. When an OTA is available, use **Uninstall > Restore Images** if the update requires stock images and a matching backup is available. **Do not reboot** after restoring. Upstream notes that Pixel and Googlebook devices normally receive a full OTA when modified, so this restore step is not needed there.
+2. Start the system OTA and wait for it to finish installing and optimizing. **Do not restart yet.**
+3. In Magisk, choose **Install > Install to Inactive Slot (After OTA)** and wait for it to complete.
+4. Return to the system update screen and press **Restart now** there. After rebooting into the updated slot, verify Magisk and your apps.
 
-**For Non-A/B Devices:**
+If the inactive-slot option is unavailable, a required restore backup is missing or a step fails, stop and follow the device's update instructions. Do not guess a slot or flash an old image to the updated firmware.
 
-1. Uninstall Magisk (Restore Images)
-2. Install OTA update
-3. Re-patch new boot image
-4. Flash patched image
-5. Reinstall modules
+**Non-A/B devices:** upstream does not provide the above seamless OTA flow. Follow the device's stock update procedure, then patch and flash the appropriate image from the new build if supported.
+
+**Samsung:** OTA upgrading is not supported by upstream's rooted Samsung workflow. Follow its [manual firmware upgrade instructions](https://topjohnwu.github.io/Magisk/install.html#upgrading-the-os), patching the new `AP` tar; `HOME_CSC` is for an upgrade, not the first installation.
 
 </details>
 
 ### Backup and Restore
 
-<details><summary>👉 Click to expand details</summary>
+<details><summary>Click to expand details</summary>
 
-**Backup Important Files:**
-- Original boot/init_boot image
-- Magisk installation files
-- Module ZIPs
-- DenyList configuration (screenshot)
-- Full device backup using [backup tools](../apps-and-modules/backup#backup-restore)
+Back up personal data, the exact-build stock firmware and every original image that may be changed, together with your module list and root settings. Keep the backup somewhere other than the device.
 
-**Restore to Stock:**
+For a supported non-Samsung device, Magisk's **Uninstall > Complete Uninstall** is the usual removal method. **Restore Images** only restores backed-up images, normally as preparation for an OTA; it is not a full uninstall. If the app cannot restore the images, use the matching stock firmware and your device's recovery instructions for the affected partition and slot.
 
-1. Magisk > Uninstall
-2. Select "Restore Images"
-3. Reboot
-4. Root removed, system restored
-
-Or flash stock boot image:
-```bash
-fastboot flash boot stock_boot.img
-```
+If you accidentally flashed the wrong partition, restoring `boot` alone will not repair that partition. Restore the correct stock image to **every affected partition and slot** using the device-specific method. For Samsung, do not restore individual stock `boot`, `init_boot`, `recovery` or `vbmeta` partitions; follow the [full firmware procedure](https://topjohnwu.github.io/Magisk/install.html#samsung-devices). A full firmware restore can wipe data and does not undo Knox or a bootloader unlock.
 
 </details>
 
@@ -580,174 +429,49 @@ fastboot flash boot stock_boot.img
 
 ### Installation Issues
 
-**Magisk Shows N/A After Installation**
+**Magisk shows N/A after installation**
 
-<details><summary>👉 Click to expand details</summary>
+- Confirm the image, target partition and slot against the exact device and firmware; `boot`, `init_boot`, `vendor_boot` and recovery are not interchangeable.
+- If Magisk was installed in recovery, use its required recovery key sequence to boot with Magisk enabled.
+- If an incorrect partition was flashed, follow [Backup and Restore](#backup-and-restore) before trying again.
 
-Causes:
-- Wrong partition flashed (boot vs init_boot)
-- Wrong image for device/Android version
-- Flashed to inactive slot on A/B device
+**Device bootloops after flashing**
 
-Solutions:
-1. Verify correct partition for your device
-2. Re-patch with correct boot image
-3. Flash to currently active slot
-4. Check Magisk app for "Ramdisk" status
+Use the [recovery guidance](#backup-and-restore) to restore every changed or accidentally flashed partition and slot with matching firmware. On Samsung, use its full-firmware procedure instead of flashing stock partitions individually. See also [emergency recovery](../troubleshooting.md#emergency-recovery).
 
-</details>
+**Fastboot does not detect the device**
 
-**Device Bootloops After Flashing**
-
-<details><summary>👉 Click to expand details</summary>
-
-Solutions:
-1. Boot to fastboot
-2. Flash stock boot image:
-```bash
-fastboot flash boot stock_boot.img
-fastboot reboot
-```
-3. Verify correct image for your device
-4. Try different Magisk version
-5. See [emergency recovery guide](../troubleshooting.md#emergency-recovery) for advanced solutions
-
-</details>
-
-**Fastboot Not Detecting Device**
-
-<details><summary>👉 Click to expand details</summary>
-
-Solutions:
-- Reinstall USB drivers (Windows)
-- Try USB 2.0 port
-- Use different USB cable
-- Update Platform Tools
-- Try different computer
-
-</details>
+Check that the device is in fastboot mode, the cable carries data, Platform Tools are current and the correct USB drivers are installed. Samsung devices use download mode and a separate flashing workflow.
 
 ### Root Access Issues
 
-**Apps Not Detecting Root**
+**Apps do not get root**
 
-<details><summary>👉 Click to expand details</summary>
+1. Check that Magisk reports **Installed** and, if using Magisk in recovery, that you booted with its key sequence.
+2. In **Superuser**, explicitly grant the trusted app access before it calls `su`. Grant the ADB shell only if needed for a shell test.
+3. Check the app's logs and permission settings. An app update alone does not install the Magisk runtime.
 
-Solutions:
-1. Verify Magisk shows "Installed"
-2. Check superuser requests tab
-3. Grant root to shell: Magisk > Settings
-4. Test with root checker app
-5. Reinstall Magisk
+**Root lost after an update**
 
-</details>
-
-**Root Randomly Lost**
-
-<details><summary>👉 Click to expand details</summary>
-
-Causes:
-- Module conflict
-- Magisk updated without direct install
-- System update overwrote boot
-
-Solutions:
-1. Open Magisk > Install > Direct Install
-2. Remove recently installed modules
-3. Reboot device
-
-</details>
+A system update can replace the patched image. Follow the device's update procedure and, if needed, patch the correct image from the **new** firmware. Direct Install is for an existing working Magisk installation; it may not be available after root is lost.
 
 ### Module Problems
 
-**Module Causes Bootloop**
+**Module causes a bootloop**
 
-<details><summary>👉 Click to expand details</summary>
+Use the [module recovery steps](#managing-installed-modules). The ADB `magisk --remove-modules` command removes **all** modules and reboots; recovery-based removal requires accessible, decrypted `/data`. A restore of the affected stock image or full firmware may be necessary if neither path works.
 
-Solutions:
+**Module not working**
 
-Via recovery:
-1. Boot to TWRP/custom recovery
-2. File Manager
-3. Navigate to `/data/adb/modules/`
-4. Delete problematic module folder
-5. Reboot
-
-Via ADB:
-```bash
-adb wait-for-device shell
-magisk --remove-modules
-```
-
-Via safe mode:
-1. Force reboot: Hold power 10+ seconds
-2. Boot to safe mode at logo
-3. Open Magisk
-4. Disable module
-5. Reboot normally
-
-</details>
-
-**Module Not Working**
-
-<details><summary>👉 Click to expand details</summary>
-
-Solutions:
-1. Verify Zygisk enabled (if module requires it)
-2. Check module compatibility with Android version
-3. Reinstall module
-4. Check module logs: `/data/adb/modules/[module]/`
-5. Contact module developer
-
-</details>
+Check its compatibility and instructions, enable Zygisk only if required, and inspect the module and Magisk logs. Disable or remove conflicting modules and test one at a time.
 
 ### Banking App Issues
 
-**App Detects Root Despite DenyList**
-
-<details><summary>👉 Click to expand details</summary>
-
-Solutions:
-1. Hide Magisk app with a different name
-2. Clear app data completely
-3. Install Shamiko module
-4. Try [Play Integrity Fix modules](../apps-and-modules/root-management#root-hiding-play-integrity)
-5. Check if app requires Device/Strong integrity (may be impossible)
-6. See [comprehensive banking app solutions](../troubleshooting.md#play-integrity-and-banking-apps)
-
-</details>
-
-**App Crashes on Launch**
-
-<details><summary>👉 Click to expand details</summary>
-
-Solutions:
-1. Remove app from DenyList temporarily
-2. Clear app cache and data
-3. Reinstall app
-4. Check for app-specific Magisk modules
-5. Try older app version
-
-</details>
+DenyList does not guarantee that an app will ignore root, an unlocked bootloader or other device signals. Check the app's requirements and any module's documentation, then see [Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps). Clearing app data may remove local information or require re-registration; back it up before doing so. An unmodified supported device may be necessary for critical apps.
 
 ### Play Integrity Failures
 
-<details><summary>👉 Click to expand details</summary>
-
-**Basic or Device Integrity Fails**
-
-Follow the module stack and configuration order in
-[Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps). If the
-current fingerprint has been banned, wait for a PIF update.
-
-**Strong Integrity Fails**
-
-Reality: Impossible to pass with:
-- Unlocked bootloader
-- Custom boot image
-- Hardware attestation
-
-</details>
+Use a current Play Integrity checker and compare the exact verdict against [Google's definitions](https://developer.android.com/google/play/integrity/verdicts). A verdict alone does not prove that a banking app will work. Attestation requirements and server-side checks change, and no module can guarantee Basic, Device or Strong Integrity.
 
 ---
 
@@ -789,8 +513,8 @@ and [tutorial](../general-guides/android-adblocking.md). The [performance module
 - [XDA Magisk Forum](https://forum.xda-developers.com/f/magisk.5903/) - Community support
 
 **Module Repositories:**
-- [Magisk Module Manager](https://github.com/Magisk-Modules-Alt-Repo) - Module collection
-- [Magisk Modules Repo](https://github.com/Magisk-Modules-Repo) - Official repo
+- [Magisk Modules Alt Repo](https://github.com/Magisk-Modules-Alt-Repo) - Community module collection
+- [Magisk Modules Repo](https://github.com/Magisk-Modules-Repo) - Legacy module collection; check individual project maintenance
 
 **Support Communities:**
 - [Reddit r/Magisk](https://www.reddit.com/r/Magisk/) - Community discussions
