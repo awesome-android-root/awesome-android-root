@@ -1,3 +1,4 @@
+import { execFileSync } from 'node:child_process'
 import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vitepress'
@@ -104,14 +105,50 @@ function routeFromRelativePath(relativePath = 'index.md') {
   return `/${relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')}`
 }
 
-/** CollectionPage for category hubs, TechArticle for step-by-step guides. */
+/** CollectionPage for category hubs, WebPage for every other page. */
 function pageTypeFor(route) {
   const segments = route.split('/').filter(Boolean)
   const isSectionIndex = segments.length === 1 && Boolean(FOLDER_LABELS[segments[0]])
   if (segments[0] === 'apps-and-modules') return 'CollectionPage'
   if (isSectionIndex) return 'CollectionPage'
-  if (segments[0] === 'rooting-guides' || segments[0] === 'general-guides') return 'TechArticle'
   return 'WebPage'
+}
+
+/** Pages whose content is an article and therefore need an Article schema item. */
+const ARTICLE_SECTIONS = new Set(['rooting-guides', 'general-guides', 'apps-and-modules'])
+const ARTICLE_ROUTES = new Set([
+  '/non-root-alternatives',
+  '/resources',
+  '/contributing',
+  '/troubleshooting',
+  '/count'
+])
+function isArticleRoute(route) {
+  const [section] = route.split('/').filter(Boolean)
+  return ARTICLE_SECTIONS.has(section) || ARTICLE_ROUTES.has(route)
+}
+
+const REPO_ROOT = fileURLToPath(new URL('../..', import.meta.url))
+const firstPublishedCache = new Map()
+
+/** First commit date for a page, used as datePublished when no frontmatter date exists. */
+function firstPublishedDate(relativePath) {
+  if (firstPublishedCache.has(relativePath)) return firstPublishedCache.get(relativePath)
+  let value = null
+  try {
+    const output = execFileSync(
+      'git',
+      ['log', '--follow', '--format=%aI', '--', `docs/${relativePath}`],
+      { cwd: REPO_ROOT, encoding: 'utf-8', stdio: ['ignore', 'pipe', 'ignore'] }
+    ).trim()
+    const dates = output.split('\n').filter(Boolean)
+    const date = dates.length ? new Date(dates[dates.length - 1]) : null
+    if (date && !Number.isNaN(date.getTime())) value = date
+  } catch {
+    value = null
+  }
+  firstPublishedCache.set(relativePath, value)
+  return value
 }
 
 /** Read a page's raw markdown so structured data can be derived from it at build time. */
@@ -208,10 +245,10 @@ export default withPwa(defineConfig({
       : undefined
     const published = pageData.frontmatter?.date
       ? new Date(pageData.frontmatter.date)
-      : null
+      : firstPublishedDate(relativePath)
     const datePublished = published && !Number.isNaN(published.getTime())
       ? published.toISOString()
-      : undefined
+      : (dateModified ?? new Date().toISOString())
 
     const segments = route.split('/').filter(Boolean)
     const breadcrumbItems = [
@@ -231,6 +268,23 @@ export default withPwa(defineConfig({
       })
     })
 
+    const frontmatterHead = pageData.frontmatter?.head ?? []
+    const frontmatterTagKeys = new Set()
+    for (const entry of frontmatterHead) {
+      if (!Array.isArray(entry) || entry.length < 2) continue
+      const [tagName, attrs] = entry
+      const key = attrs && (attrs.property || attrs.name || attrs.rel)
+      if (tagName === 'meta' && attrs?.property) frontmatterTagKeys.add(attrs.property)
+      else if (tagName === 'meta' && attrs?.name) frontmatterTagKeys.add(attrs.name)
+      else if (tagName === 'link' && attrs?.rel === 'canonical') frontmatterTagKeys.add('link:canonical')
+    }
+
+    const ogImage = `${site}${DEFAULT_OG_IMAGE}`
+    const frontmatterOgImage = frontmatterHead.find(
+      (entry) => Array.isArray(entry) && entry[0] === 'meta' && entry[1]?.property === 'og:image'
+    )?.[1]?.content
+    const articleImage = frontmatterOgImage || ogImage
+
     const pageNode = {
       '@type': pageTypeFor(route),
       '@id': `${pageUrl}#webpage`,
@@ -244,7 +298,6 @@ export default withPwa(defineConfig({
       publisher: { '@id': ORGANIZATION_ID }
     }
     if (dateModified) pageNode.dateModified = dateModified
-    if (datePublished) pageNode.datePublished = datePublished
 
     const graph = [ORGANIZATION_NODE, WEBSITE_NODE]
 
@@ -255,6 +308,24 @@ export default withPwa(defineConfig({
         '@id': `${pageUrl}#breadcrumb`,
         itemListElement: breadcrumbItems
       })
+      if (isArticleRoute(route)) {
+        graph.push({
+          '@type': 'Article',
+          '@id': `${pageUrl}#article`,
+          headline: title,
+          name: title,
+          description,
+          url: pageUrl,
+          mainEntityOfPage: { '@id': `${pageUrl}#webpage` },
+          inLanguage: 'en-US',
+          isPartOf: { '@id': WEBSITE_ID },
+          author: { '@id': ORGANIZATION_ID },
+          publisher: { '@id': ORGANIZATION_ID },
+          image: articleImage,
+          datePublished,
+          dateModified: dateModified ?? datePublished
+        })
+      }
       if (route === '/faqs') {
         const mainEntity = faqFromMarkdown(readMarkdown(relativePath))
         if (mainEntity.length) {
@@ -280,29 +351,13 @@ export default withPwa(defineConfig({
         { property: 'article:modified_time', content: new Date(pageData.lastUpdated).toISOString() }
       ])
     }
-    const publishedDate = pageData.frontmatter?.date
-    if (publishedDate) {
-      const published = new Date(publishedDate)
-      if (!Number.isNaN(published.getTime())) {
-        tags.push([
-          'meta',
-          { property: 'article:published_time', content: published.toISOString() }
-        ])
-      }
+    if (isArticleRoute(route)) {
+      tags.push([
+        'meta',
+        { property: 'article:published_time', content: datePublished }
+      ])
     }
 
-    const frontmatterHead = pageData.frontmatter?.head ?? []
-    const frontmatterTagKeys = new Set()
-    for (const entry of frontmatterHead) {
-      if (!Array.isArray(entry) || entry.length < 2) continue
-      const [tagName, attrs] = entry
-      const key = attrs && (attrs.property || attrs.name || attrs.rel)
-      if (tagName === 'meta' && attrs?.property) frontmatterTagKeys.add(attrs.property)
-      else if (tagName === 'meta' && attrs?.name) frontmatterTagKeys.add(attrs.name)
-      else if (tagName === 'link' && attrs?.rel === 'canonical') frontmatterTagKeys.add('link:canonical')
-    }
-
-    const ogImage = `${site}${DEFAULT_OG_IMAGE}`
     const socialTags = [
       ['link', { rel: 'canonical', href: pageUrl }, 'link:canonical'],
       ['meta', { property: 'og:type', content: route === '/' ? 'website' : 'article' }, 'og:type'],
