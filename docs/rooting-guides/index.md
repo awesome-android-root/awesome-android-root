@@ -404,7 +404,7 @@ Solutions:
 1. Boot to recovery mode (Power + Volume Up, varies by device)
 2. Wipe cache partition from recovery
 3. Restore from backup if available
-4. Flash stock `boot.img` / `init_boot.img` via fastboot to undo root
+4. Restore the exact-build stock image to the partition and slot actually changed, using the device-specific method. APatch uses `boot`, not `init_boot`.
 5. Flash full stock firmware via fastboot/recovery
 6. Seek help on your device-specific XDA forum
 

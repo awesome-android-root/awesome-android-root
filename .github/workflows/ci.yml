@@ -21,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v7
 
-      - name: Test link checker
+      - name: Run documentation tests
         run: python3 -m unittest discover -s scripts/tests
 
       - name: Check internal links
