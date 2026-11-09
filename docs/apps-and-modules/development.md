@@ -47,6 +47,7 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 - **[Eta](https://github.com/Mangi-11/Eta/blob/main/README_EN.md)** - System-level BYOK AI agent with direct Android API calls, a GUI agent, terminal and Alpine/Debian environments, Skills and MCP. Core features run without root; root and LSPosed add system access and assistant entry points. Android 13+. `Proprietary` `[LSP]`
 - **[FIRERPA (lamda)](https://github.com/firerpa/lamda)** - On-device control platform driven by a Python client: remote desktop streaming, UI/OCR automation, traffic capture, built-in Frida and proxy/VPN networking. Runs with or without root. `FOSS`
 - **[Geto](https://github.com/T31n/Geto)** - Applies device settings automatically when selected apps are launched, using `WRITE_SECURE_SETTINGS` granted through Shizuku or root. `FOSS` | [🌱](https://f-droid.org/en/packages/com.android.geto/)
+- **[Rootless Store](https://github.com/Resilien-Mobile/RootlessStore)** - Manages and runs plugins and automations through the app shell, Shizuku/ADB or optional root. Inspect plugins before granting elevated access. `FOSS`
 - **[Zafiro](https://github.com/niki914/zafiro)** - BYOK AI agent with full phone control, native Shell and Python 3, and Skills and MCP support. Runs via Shizuku with root optional. `FOSS`
 
 ## Developer Tools

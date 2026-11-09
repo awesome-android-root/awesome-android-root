@@ -1,14 +1,14 @@
 ---
 layout: doc
-title: Magisk vs KernelSU vs APatch
-description: Detailed comparison of Magisk, KernelSU, and APatch root frameworks with practical recommendations and migration notes.
+title: Root Frameworks & Temporary Root
+description: Compare Magisk, KernelSU, APatch and locked-bootloader temporary root, including compatibility, modules, risks and updates.
 head:
   - - meta
     - property: og:title
-      content: Magisk vs KernelSU vs APatch - Which Root Method is Best?
+      content: Root Frameworks and Temporary Root - Which Method is Best?
   - - meta
     - property: og:description
-      content: Practical comparison of Android root frameworks with recommendations, risks, and migration notes.
+      content: Compare Magisk, KernelSU, APatch and locked-bootloader temporary root, including compatibility, modules, risks and updates.
   - - meta
     - property: og:image
       content: https://awesome-android-root.xyz/images/og/root-framework-comparison.png
@@ -17,7 +17,7 @@ head:
       content: https://awesome-android-root.xyz/images/og/root-framework-comparison.png
   - - meta
     - property: og:image:alt
-      content: Magisk vs KernelSU vs APatch - Root Framework Comparison
+      content: Root Frameworks and Temporary Root - Android Rooting Comparison
   - - meta
     - property: og:image:width
       content: '1200'
@@ -32,10 +32,10 @@ head:
       content: "@awsm_and_root"
   - - meta
     - name: twitter:title
-      content: Magisk vs KernelSU vs APatch - Root Framework Comparison
+      content: Root Frameworks and Temporary Root - Android Rooting Comparison
   - - meta
     - name: twitter:description
-      content: Practical comparison of Android root frameworks with recommendations, risks, and migration notes.
+      content: Compare Magisk, KernelSU, APatch and locked-bootloader temporary root, including compatibility, modules, risks and updates.
   - - meta
     - name: twitter:image:alt
       content: Root Framework Comparison - Magisk vs KernelSU vs APatch
@@ -65,15 +65,16 @@ head:
       content: index, follow
 ---
 
-# Magisk vs KernelSU vs APatch
+# Root Frameworks & Temporary Root {#magisk-vs-kernelsu-vs-apatch}
 
-Root frameworks change fast. Version and activity badges on this page are generated from GitHub, so they stay current. Other facts were verified against upstream READMEs and official docs on **14 October 2026**. Verify device-specific steps in the official docs before flashing anything.
+Root methods change fast. Version and activity badges on this page come from GitHub; check the current upstream documentation and device-specific instructions before making changes.
 
 **Related guides:**
 - [Main Rooting Guide](./index.md)
 - [Magisk Guide](./magisk-guide.md)
 - [KernelSU Guide](./kernelsu-guide.md)
 - [APatch Guide](./apatch-guide.md)
+- [Temporary Root Guide](./root-without-unlocking-bootloader.md)
 
 ::: warning Before you root
 Unlocking the bootloader usually wipes data, weakens device security, and can break OTA, warranty, DRM, wallet, banking, and work-profile apps. Keep a stock firmware package and a recovery plan ready.
@@ -83,9 +84,9 @@ Unlocking the bootloader usually wipes data, weakens device security, and can br
 
 | Project | Latest release | Last commit | What to know |
 |---|---|---|---|
-| **Magisk** | ![Magisk stable](https://img.shields.io/github/v/release/topjohnwu/Magisk?label=stable) ![Magisk including betas](https://img.shields.io/github/v/release/topjohnwu/Magisk?include_prereleases&label=incl.%20betas) | ![Magisk last commit](https://img.shields.io/github/last-commit/topjohnwu/Magisk?label=last%20commit) | Stable channel moves slowly. The beta line is the app rewrite (Jetpack Compose, Material 3, built-in terminal, boot image extraction from remote OTA URLs, **Zygisk for Android 17**). Legacy APK still published |
-| **KernelSU** | ![KernelSU release](https://img.shields.io/github/v/release/tiann/KernelSU?label=stable) | ![KernelSU last commit](https://img.shields.io/github/last-commit/tiann/KernelSU?label=last%20commit) | Manager APK, `ksud`, and LKM `.ko` per KMI (`android12-5.10` through `android17-6.18`); **no ready-to-flash `boot.img`** |
-| **KernelSU Next** | ![KernelSU Next release](https://img.shields.io/github/v/release/KernelSU-Next/KernelSU-Next?label=stable) | ![KernelSU Next last commit](https://img.shields.io/github/last-commit/KernelSU-Next/KernelSU-Next?label=last%20commit) | Kernels 4.4 to 6.18, ships SUSFS LKM per KMI, spoofable package name |
+| **Magisk** | ![Magisk stable](https://img.shields.io/github/v/release/topjohnwu/Magisk?label=stable) ![Magisk including betas](https://img.shields.io/github/v/release/topjohnwu/Magisk?include_prereleases&label=incl.%20betas) | ![Magisk last commit](https://img.shields.io/github/last-commit/topjohnwu/Magisk?label=last%20commit) | Image and firmware patching, built-in Zygisk and explicit Superuser grants; check [release notes](https://github.com/topjohnwu/Magisk/releases) for support |
+| **KernelSU** | ![KernelSU release](https://img.shields.io/github/v/release/tiann/KernelSU?label=stable) | ![KernelSU last commit](https://img.shields.io/github/last-commit/tiann/KernelSU?label=last%20commit) | Manager, tools and KMI-specific LKM assets; check [release assets](https://github.com/tiann/KernelSU/releases) for the target architecture and kernel |
+| **KernelSU Next** | ![KernelSU Next release](https://img.shields.io/github/v/release/KernelSU-Next/KernelSU-Next?label=stable) | ![KernelSU Next last commit](https://img.shields.io/github/last-commit/KernelSU-Next/KernelSU-Next?label=last%20commit) | Check the fork's kernel requirements and available SUSFS LKM assets |
 | **SukiSU-Ultra** | ![SukiSU-Ultra release](https://img.shields.io/github/v/release/SukiSU-Ultra/SukiSU-Ultra?label=stable) | ![SukiSU-Ultra last commit](https://img.shields.io/github/last-commit/SukiSU-Ultra/SukiSU-Ultra?label=last%20commit) | Non-GKI and GKI 1.0 backports, KPM support, built-in SUSFS controls |
 | **APatch** | ![APatch release](https://img.shields.io/github/v/release/bmax121/APatch?label=stable) ![KernelPatch release](https://img.shields.io/github/v/release/bmax121/KernelPatch?label=KernelPatch) | ![APatch last commit](https://img.shields.io/github/last-commit/bmax121/APatch?label=last%20commit) | Slow release cadence, Samsung Knox support still listed as "planned" |
 
@@ -95,28 +96,34 @@ Read the badges as a health check: a recent "last commit" means the project is a
 
 | If you want... | Choose | Why |
 |---|---|---|
-| The safest default for most devices | **Magisk** | Broadest compatibility, largest module ecosystem, easiest recovery |
+| A broadly documented starting point | **Magisk** | Broad compatibility and a large module ecosystem; recovery still depends on the device |
 | Fewer root traces on a supported device | **KernelSU** or a variant | Kernel root, only permitted apps see `su`, easier SUSFS access |
 | Kernel-level root with per-app control on a GKI 2.0 device | **KernelSU** | Root in kernel space, App Profiles restrict UID, groups, capabilities, SELinux |
-| Kernel root on a non-GKI or older kernel | **KernelSU Next** or **SukiSU-Ultra** | Wider kernel range (4.4 to 6.18) and built-in SUSFS support |
+| Kernel root on a non-GKI or older kernel | Research **KernelSU Next** or **SukiSU-Ultra** | Check each fork's device and kernel requirements; a compatible build is not guaranteed |
 | KernelPatch features such as KPM kernel hooks | **APatch** | ARM64 only, kernel 3.18 to 6.12, needs a strong SuperKey |
-| Root without unlocking the bootloader (temporarily) | **[GhostLock temp root](./root-without-unlocking-bootloader.md)** | Session-only root via CVE-2026-43499 on select devices; no Knox trip, nothing survives a reboot |
+| Root without unlocking the bootloader (temporarily) | **[DirtyFrag or GhostLock](./root-without-unlocking-bootloader.md)** | Session-only root on exact vulnerable builds; modified files may persist, and Knox behavior is not guaranteed |
 | Maximum reliability for banking, wallet, enterprise, or anti-cheat apps | **No root** | No framework can guarantee Play Integrity or app-specific checks |
 
 ## Quick comparison
 
-| Area | Magisk | KernelSU | APatch |
-|---|---|---|---|
-| **Install model** | Patches `boot.img`, `init_boot.img`, recovery, or `vendor_boot.img` | LKM module into the stock kernel, or a KernelSU-enabled kernel | Patches the stock `boot.img` with KernelPatch |
-| **Best for** | Beginners, daily drivers, module-heavy setups | Power users on GKI devices | KernelPatch use cases and edge cases |
-| **Main requirement** | Unlocked bootloader, Android 6.0+ | GKI 2.0 (kernel 5.10+) officially; 4.14+ needs a manual kernel build | ARM64, kernel 3.18 to 6.12, `CONFIG_KALLSYMS` |
-| **Android 17 (API 37)** | Core root works on stable; **Zygisk needs the beta line** | LKM shipped for `android17-6.18` | Covers 6.12 kernels; **6.18 kernels are out of range** |
-| **Modules** | Magisk modules, Zygisk modules | Metamodule-based since v3.0; many Magisk modules need a compatible metamodule | APModule plus KPModule for kernel-level code (metamodule support added to `apd`) |
-| **Root control** | App-based MagiskSU prompts | App Profiles with fine-grained privileges | SuperKey-based access control |
-| **Hiding / integrity** | No built-in hiding (upstream FAQ states this directly) | Kernel-level traces are smaller; SUSFS can be loaded as an LKM | Kernel-level, but no guarantee |
-| **OTA behavior** | Re-patch or use the inactive-slot flow | LKM installs to the inactive slot without reflashing | Depends on device and install path |
-| **Troubleshooting** | Easiest, largest community | Medium, kernel knowledge helps | Hardest, smallest ecosystem |
-| **Latest Version** | ![Magisk release](https://img.shields.io/github/v/release/topjohnwu/Magisk?label=stable) | ![KernelSU release](https://img.shields.io/github/v/release/tiann/KernelSU?label=stable) | ![APatch release](https://img.shields.io/github/v/release/bmax121/APatch?label=stable) |
+Temporary root is a **method**, not a fourth framework. Some loaders use KernelSU by late-loading a compatible module on a supported locked-bootloader build.
+
+| Area | Magisk | KernelSU | APatch | Temporary root (e.g. DirtyFrag / GhostLock) |
+|---|---|---|---|---|
+| **Install model** | Patches `boot.img`, `init_boot.img`, recovery, or `vendor_boot.img` | LKM module into the stock kernel, or a KernelSU-enabled kernel | Patches the stock `boot.img` with KernelPatch | Runs a compatible exploit loader; some late-load KernelSU |
+| **Bootloader** | Normally unlocked | Normally unlocked for standard installation | Normally unlocked | Can stay locked on supported builds |
+| **Best for** | Beginners, daily drivers, module-heavy setups | Power users on GKI devices | KernelPatch use cases and edge cases | Session root on a specific vulnerable build |
+| **Main requirement** | Unlocked bootloader; check [upstream Android support](https://github.com/topjohnwu/Magisk) | GKI 2.0 (kernel 5.10+) officially; 4.14+ needs a manual kernel build | ARM64, kernel 3.18 to 6.12, `CONFIG_KALLSYMS` | Exact vulnerable kernel and compatible loader, profile or module |
+| **Android 17 (API 37)** | Check release notes for Android and Zygisk support, plus device compatibility | Check release assets for the target KMI and architecture | Covers 6.12 kernels; **6.18 kernels are out of range** | Depends on the exact device and build, not Android version alone |
+| **Full reboot** | Root returns with the required boot sequence; recovery installs need special steps | Root normally returns after standard installation | Root normally returns | Active root ends; some loaders can re-run it |
+| **Modules** | Magisk modules, Zygisk modules | Metamodule-based since v3.0; many Magisk modules need a compatible metamodule | APModule plus KPModule for kernel-level code (metamodule support added to `apd`) | Compatible session modules if the loader supports them; some provide a shell only |
+| **Root control** | Explicit MagiskSU grants in the Superuser tab | App Profiles with fine-grained privileges | SuperKey-based access control | Depends on loader and manager; some offer only a root shell |
+| **Hiding / integrity** | No built-in hiding (upstream FAQ states this directly) | App Profiles and optional tools; no guarantee | Kernel-level, but no guarantee | Locked bootloader does not guarantee Integrity or app compatibility |
+| **OTA behavior** | Re-patch or use the inactive-slot flow | Depends on device and installation mode | Depends on device and install path | Update may patch the vulnerability or break the loader |
+| **Troubleshooting** | Easiest, largest community | Medium, kernel knowledge helps | Hardest, smallest ecosystem | Device- and loader-specific; failed exploits can crash or reboot |
+| **Latest Version** | ![Magisk release](https://img.shields.io/github/v/release/topjohnwu/Magisk?label=stable) | ![KernelSU release](https://img.shields.io/github/v/release/tiann/KernelSU?label=stable) | ![APatch release](https://img.shields.io/github/v/release/bmax121/APatch?label=stable) | Varies by [loader](../apps-and-modules/root-management.md#temporary-root-locked-bootloader) |
+
+A full reboot ends active temporary root, but files and settings changed during the session can remain. Check the loader's current target list and back up before use.
 
 ## Framework notes
 
@@ -124,12 +131,12 @@ Read the badges as a health check: a recent "last commit" means the project is a
 
 **Best default.** Magisk is the most mature and widely documented root solution: MagiskSU, Magisk modules, MagiskBoot, and optional Zygisk for code in app processes.
 
-**Two channels, choose deliberately:** stable ![Magisk stable](https://img.shields.io/github/v/release/topjohnwu/Magisk?label=stable) versus the beta line ![Magisk including betas](https://img.shields.io/github/v/release/topjohnwu/Magisk?include_prereleases&label=incl.%20betas). The stable channel added Android 16 QPR2 sepolicy and Zygisk support and moves slowly. The beta line rebuilt the app in Jetpack Compose with Material 3, added a built-in terminal with TTY/ANSI support for module flashing, added boot image extraction from remote OTA URLs, and added Zygisk support for Android 17 (API 37). On Android 17, core root works on stable, but Zygisk-dependent modules need the beta line.
+**Choose a channel deliberately:** stable ![Magisk stable](https://img.shields.io/github/v/release/topjohnwu/Magisk?label=stable) or the beta line ![Magisk including betas](https://img.shields.io/github/v/release/topjohnwu/Magisk?include_prereleases&label=incl.%20betas). Check the [release notes](https://github.com/topjohnwu/Magisk/releases) for Android and Zygisk support. The current app can patch supported firmware packages and grants superuser access ahead of time rather than showing interactive root prompts.
 
 **Use Magisk when:**
 - You are rooting for the first time.
 - You need the highest chance that guides, modules, and fixes already exist for your device.
-- You want the simplest recovery path if a module bootloops the device (`adb shell magisk --remove-modules`, or Magisk Safe Mode).
+- You value a documented module recovery path. Magisk Safe Mode and `adb shell magisk --remove-modules` have different prerequisites; the command removes all modules and reboots.
 
 **Watch out for:**
 - Patch the correct image for your device on that same device. Never flash a patched image made by someone else.
@@ -140,17 +147,17 @@ Read the badges as a health check: a recent "last commit" means the project is a
 
 **Best for supported kernels.** KernelSU grants root from kernel space, only permitted apps can see `su`, and App Profiles allow tighter control than classic superuser prompts.
 
-**Install model:** LKM is the default on phones and patches `init_boot` on Android 13+, keeping the stock kernel. GKI mode replaces the kernel and now mainly matters for emulators, WSA/Waydroid, Knox-locked Samsung devices, and community kernels. Official releases no longer ship a ready-to-flash GKI `boot.img`, so GKI mode means using a trusted community kernel or building your own.
+**Install model:** LKM keeps the existing kernel and patches the device's verified ramdisk image, often `boot` or `init_boot`. Do not choose the partition from the Android version alone. GKI mode replaces the kernel; check the release assets and device-specific instructions before choosing a compatible build. Upstream's [GKI build guide](https://kernelsu.org/guide/how-to-build.html) is archived.
 
-**Variants matter:** if the official Manager reports `Unsupported`, pick a variant instead of forcing it.
-- **KernelSU Next**: kernels 4.4 to 6.18, prebuilt SUSFS LKM per KMI, spoofable package name.
-- **SukiSU-Ultra**: non-GKI and GKI 1.0 backports, KPM support, built-in SUSFS controls, Magic Mount in the core.
+**Variants matter:** if the official Manager reports `Unsupported`, research a device-compatible kernel or variant instead of forcing installation. A different variant is not automatically compatible.
+- **KernelSU Next**: check the fork's requirements and available SUSFS LKM assets for your kernel.
+- **SukiSU-Ultra**: non-GKI and GKI 1.0 backports, metamodule-based mounting, KPM support with compatible kernel configuration, and SUSFS controls.
 - **BakaSU**: metamodule-based, non-GKI hooks, built-in SUSFS management.
 
 **Watch out for:**
-- Module mounting is handled by metamodules since v3.0, so a fresh install needs a suitable metamodule for systemless modifications.
+- Official KernelSU uses a metamodule for systemless file mounts; scripts, properties and policy rules can work without one.
 - KMI or security-patch-level mismatch can bootloop. Match both.
-- Knox-protected Samsung devices block LKM, so plan for GKI mode or a custom kernel there.
+- Knox protections may block LKM on Samsung. A compatible custom kernel is not guaranteed and installing one may permanently trip Knox.
 
 ### APatch
 
@@ -177,7 +184,7 @@ Choose by **bootloader unlockability, firmware availability, kernel support, and
 | Device family | Practical guidance |
 |---|---|
 | **Google Pixel** | Easiest path. Retail, non-carrier-locked units unlock with `fastboot flashing unlock`. Magisk for most users, KernelSU if the KMI is supported. |
-| **Samsung Galaxy** | Research carefully. Rooting permanently trips Knox (Samsung Wallet/Pay, Secure Folder, Samsung Pass). US/Canada variants usually show no OEM Lock option and are not unlockable. LKM is blocked, so KernelSU needs GKI mode or a custom kernel. Magisk's first install requires a full data wipe. |
+| **Samsung Galaxy** | Installing custom boot images can trip Knox permanently. US/Canada variants often lack an unlock option. Samsung protections can complicate standard KernelSU LKM installs, while some exact-build temporary-root loaders use adapted modules. Magisk's first install requires a full data wipe. |
 | **Xiaomi / Redmi / POCO** | Unlocking requires permission through the Mi Community flow. Xiaomi removed the bootloader-unlock application entry from Mi Community (reported December 2025), so confirm the current status for your region and model before relying on it. Magisk remains the usual starting point. |
 | **OnePlus** | Global retail units unlock with a single `fastboot oem unlock`. Avoid ColorOS/OxygenOS builds ending in `.500`, `.501`, or `.503`: reports from January 2026 say these trip a hardware anti-rollback fuse that permanently blocks downgrades and most unbricking methods. Units converted from ColorOS to OxygenOS generally cannot be unlocked. |
 | **Nothing** | Unlockable with fastboot on retail units. Magisk first, KernelSU if the kernel path is supported. |
@@ -185,7 +192,7 @@ Choose by **bootloader unlockability, firmware availability, kernel support, and
 | **OPPO / Realme / vivo / Honor** | Bootloader access is the main blocker. OPPO and Realme use a discretionary Deep Test approval app; many models have no official unlock at all. Verify current regional policy before planning root. |
 
 ::: danger Samsung Knox
-On Knox-protected Samsung devices, rooting or custom binaries permanently break Knox-dependent features such as Samsung Wallet/Pay, Secure Folder, and Samsung Pass. Relocking or flashing stock firmware normally does not restore them.
+On Knox-protected Samsung devices, installing custom binaries can trip the irreversible warranty fuse and break Knox-dependent features such as Samsung Wallet/Pay, Secure Folder, and Samsung Pass. Relocking or flashing stock firmware normally does not restore them. Locked-bootloader temporary root does not guarantee fuse or service behavior.
 :::
 
 ## Play Integrity and root detection
@@ -199,7 +206,7 @@ No root framework can promise that banking, wallet, streaming, work-profile, or 
 
 Community hiding stacks (Zygisk, SUSFS, keybox-based spoofing) are a cat-and-mouse game. See the [SUSFS Root Hiding Guide](./susfs-guide.md) for the current kernel-side approach. If these apps matter more than root, keep one unrooted phone.
 
-SUSFS is kernel level and needs KernelSU or a variant; Magisk has no equivalent. If Magisk hiding is set up correctly and an app still detects root, switching frameworks beats stacking more userspace modules.
+SUSFS support depends on the kernel and variant. Switching frameworks or stacking more modules does not guarantee app compatibility; check device support and the risks before making changes.
 
 ## Sideloading and app installs (2026)
 
@@ -234,16 +241,16 @@ Switch cleanly. Mixing patched images, modules, and managers from multiple frame
 
 1. Export your module list and app root settings.
 2. Disable or uninstall risky modules.
-3. Restore the stock boot-related image or fully uninstall Magisk.
-4. Install KernelSU (LKM on Android 13+ patches `init_boot`), or flash a trusted KernelSU-enabled kernel for GKI mode.
+3. Fully uninstall Magisk or restore the affected stock images using the device-specific procedure. On Samsung, follow Magisk's full-firmware instructions rather than restoring individual partitions.
+4. Install KernelSU using the verified ramdisk image and partition, or a trusted device-compatible KernelSU-enabled kernel.
 5. Install KernelSU Manager.
-6. Install a compatible metamodule if you need systemless modules.
+6. Install a compatible metamodule if your modules need system-file mounts.
 7. Reinstall modules one at a time and configure App Profiles.
 
 ### Magisk to APatch
 
 1. Back up your current stock `boot.img`.
-2. Fully uninstall Magisk or restore the stock boot image.
+2. Fully uninstall Magisk or restore the affected stock images using the device-specific procedure. On Samsung, follow Magisk's full-firmware instructions.
 3. Confirm kernel support first: ARM64, kernel 3.18 to 6.12, `CONFIG_KALLSYMS`.
 4. Patch the stock `boot.img` with APatch Manager (not `init_boot.img`).
 5. Set a strong SuperKey and keep it private.
@@ -252,8 +259,8 @@ Switch cleanly. Mixing patched images, modules, and managers from multiple frame
 ### KernelSU/APatch to Magisk
 
 1. Remove modules and document app permissions.
-2. Restore stock boot-related images or flash the ROM's clean kernel or boot image.
-3. Patch the correct image with Magisk on the target device.
+2. Restore the matching stock images for each affected partition and slot using the device's instructions. If Magisk was previously installed on Samsung, follow its full-firmware recovery procedure instead of restoring individual partitions.
+3. Patch the correct image with Magisk on the target device; Samsung uses its separate AP-tar workflow.
 4. Flash, boot, then reinstall only the modules you need.
 
 ## Decision checklist
@@ -262,7 +269,7 @@ Pick **Magisk** if you are new to rooting, rely on many Magisk or Zygisk modules
 
 Pick **KernelSU** if your device is GKI 2.0 (kernel 5.10+) or has a trusted KernelSU-enabled kernel, you can match KMI and security patch level, and you want App Profiles.
 
-Pick **KernelSU Next** or **SukiSU-Ultra** if your kernel falls outside official support (non-GKI, GKI 1.0, older than 5.10) or you want SUSFS without building a kernel.
+Consider **KernelSU Next** or **SukiSU-Ultra** if official KernelSU does not support your kernel or you want SUSFS. Verify the fork and available builds for your exact device first.
 
 Pick **APatch** if your device is ARM64 with a 3.18 to 6.12 kernel, you accept the SuperKey risk, and you need KPModule or KernelPatch features.
 
@@ -274,10 +281,10 @@ Pick **no root** if banking, wallet, enterprise, or anti-cheat reliability matte
 Magisk for most users. KernelSU for GKI power users. KernelSU Next or SukiSU-Ultra for non-GKI kernels. APatch for KernelPatch use cases.
 
 **Is Magisk still maintained?**
-Yes, on both channels: stable ![Magisk stable](https://img.shields.io/github/v/release/topjohnwu/Magisk?label=stable) and the beta line ![Magisk including betas](https://img.shields.io/github/v/release/topjohnwu/Magisk?include_prereleases&label=incl.%20betas). The stable channel lags, so the app rewrite reaches users through the beta line first.
+Yes. Compare the stable ![Magisk stable](https://img.shields.io/github/v/release/topjohnwu/Magisk?label=stable) and beta-inclusive ![Magisk including betas](https://img.shields.io/github/v/release/topjohnwu/Magisk?include_prereleases&label=incl.%20betas) channels with the [release notes](https://github.com/topjohnwu/Magisk/releases) before updating.
 
 **Does Android 17 change the choice?**
-Yes. Zygisk modules on Android 17 need the current Magisk beta line. KernelSU and KernelSU Next ship LKM for `android17-6.18`. APatch's documented kernel ceiling is 6.12, so devices that moved to 6.18 are out of scope.
+Check each project's release notes and the actual device kernel. Magisk supports Android 17 Zygisk in releases that include that change; KernelSU LKM support depends on the KMI and architecture. APatch's documented kernel ceiling is 6.12, so devices using 6.18 are out of scope.
 
 **Which hides root best?**
 None reliably. Magisk upstream explicitly does not handle hiding. Kernel-level solutions plus SUSFS reduce userspace traces, but modern apps use many signals beyond `su` visibility.
@@ -286,7 +293,7 @@ None reliably. Magisk upstream explicitly does not handle hiding. Kernel-level s
 Some do, some do not. Mounting method, Zygisk needs, SELinux changes, and service scripts all matter. Test one module at a time.
 
 **Will OTA updates work?**
-Sometimes. Assume root must be restored after an OTA, and keep stock images for both slots when relevant. LKM-based KernelSU has the smoothest OTA story.
+Sometimes. Keep exact-build stock images and follow the device and framework OTA instructions. A supported A/B update may allow an inactive-slot installation before reboot; root persistence is not guaranteed.
 
 **Can I relock the bootloader after rooting?**
 Usually no. Relocking with modified partitions can brick or wipe the device. Return fully stock first and follow device-specific instructions.

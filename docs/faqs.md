@@ -215,22 +215,25 @@ Research more and ask community
 
 ### Which Root Method Should I Use?
 
-**Three Main Options in 2026:**
+**Root frameworks and temporary root:**
 
 | Method | Best For | Pros | Cons |
 |:---|:---|:---|:---|
-| **Magisk** | Most users, general use | Widest compatibility, mature, large module ecosystem, Zygisk, active development | Requires boot/init_boot patching |
+| **Magisk** | Most users, general use | Widest compatibility, mature, large module ecosystem, Zygisk, active development | Patch the image appropriate to the device, or use the Samsung AP workflow |
 | **KernelSU** | Supported GKI devices, hiding or per-app control | Kernel-integrated, only permitted apps see `su`, SUSFS on variants | Needs a supported kernel, smaller module ecosystem |
 | **APatch** | Advanced users, developers | Kernel patching approach, powerful for specific use cases | Limited device support, requires technical knowledge |
+| **Temporary root** | Supported builds with a locked bootloader | No boot-image flash or unlock for supported DirtyFrag or GhostLock loaders | Supported vulnerable device and kernel required; active root ends on full reboot |
+
+Temporary root is an access method rather than a separate framework; some loaders use KernelSU during the session.
 
 **Detailed Comparison:**
 
 **Magisk** (Recommended for Most)
-- **Installation:** Patch boot/init_boot image, flash via fastboot or custom recovery
+- **Installation:** Patch the device-specific ramdisk image, or use Samsung's separate AP-tar workflow
 - **Compatibility:** Works on most devices with unlocked bootloader
 - **Modules:** Largest ecosystem of modules
 - **DenyList:** Reverts Magisk changes for selected processes; not a universal root-hiding or integrity solution
-- **OTA Updates:** Built-in support for A/B devices
+- **OTA Updates:** Supported A/B devices may use the inactive-slot flow; check the device and updater requirements
 - **Support:** Extensive community support, well-documented
 
 **When to choose Magisk:**
@@ -270,6 +273,7 @@ Research more and ask community
 **Quick Decision Guide:**
 
 ```
+Bootloader locked? → Check DirtyFrag or GhostLock support for your exact build
 New to rooting? → Magisk
 Stock ROM, most devices? → Magisk
 Hiding or per-app control first, on a supported kernel? → KernelSU or a variant
@@ -282,6 +286,7 @@ Advanced user, specific needs? → Research all three
 - [Magisk Guide](./rooting-guides/magisk-guide.md)
 - [KernelSU Guide](./rooting-guides/kernelsu-guide.md)
 - [APatch Guide](./rooting-guides/apatch-guide.md)
+- [Temporary Root Guide](./rooting-guides/root-without-unlocking-bootloader.md)
 
 ---
 
@@ -293,21 +298,26 @@ Advanced user, specific needs? → Research all three
 
 **Quick Summary:**
 
-| Feature | Magisk | KernelSU | APatch |
-|:---|:---|:---|:---|
-| **Installation Method** | Patch boot/init_boot/recovery or Samsung AP | Supported LKM or integrated kernel | Patch kernel in boot image |
-| **Module Ecosystem** | Magisk modules | Check script compatibility and metamodule requirements | APM and kernel patch modules |
-| **Root Hiding** | DenyList is limited | Per-app authorization/profiles | Per-app authorization/exclusion |
-| **OTA Support** | Supported A/B flow with prerequisites | Mode/device-specific; may need repatching | May need updated boot image repatched |
-| **Performance Impact** | Minimal | Minimal | Minimal |
-| **Community Support** | Extensive | Active, smaller | Niche |
-| **Best For** | Most users, beginners | Custom ROM enthusiasts | Advanced users |
+| Feature | Magisk | KernelSU | APatch | Temporary root |
+|:---|:---|:---|:---|:---|
+| **Installation Method** | Patch boot/init_boot/vendor_boot/recovery or Samsung AP | Supported LKM or integrated kernel | Patch kernel in boot image | Run a compatible DirtyFrag or GhostLock loader; some late-load KernelSU |
+| **Bootloader** | Normally unlocked | Normally unlocked for standard installation | Normally unlocked | Can stay locked on supported builds |
+| **Full Reboot** | Root returns with the required boot sequence; recovery installs need special steps | Root normally returns after standard installation | Root normally returns | Active root ends; a loader can re-run it |
+| **Module Ecosystem** | Magisk modules | Check script compatibility and metamodule requirements | APM and kernel patch modules | Compatible session modules if supported; some loaders provide a shell only |
+| **Root Hiding** | DenyList is limited | Per-app authorization/profiles | Per-app authorization/exclusion | No guarantee of Integrity or app compatibility |
+| **OTA Support** | Supported A/B flow with prerequisites | Mode/device-specific; may need repatching | May need updated boot image repatched | Updates can patch the vulnerability or break the loader |
+| **Performance Impact** | Minimal | Minimal | Minimal | Varies by tool; a failed exploit can crash or reboot |
+| **Community Support** | Extensive | Active, smaller | Niche | Device- and loader-specific |
+| **Best For** | Most users, beginners | Custom ROM enthusiasts | Advanced users | Exact vulnerable builds without bootloader unlocking |
+
+Temporary root is a method, not a fourth framework; some loaders use KernelSU for the session. A full reboot clears active root, but files and settings changed during the session can remain.
 
 **Learn More:**
 - [Detailed Framework Comparison](./rooting-guides/root-framework-comparison.md)
 - [Magisk Installation Guide](./rooting-guides/magisk-guide.md)
 - [KernelSU Installation Guide](./rooting-guides/kernelsu-guide.md)
 - [APatch Installation Guide](./rooting-guides/apatch-guide.md)
+- [DirtyFrag and GhostLock Temporary Root](./rooting-guides/root-without-unlocking-bootloader.md)
 
 ---
 
@@ -322,7 +332,7 @@ The bootloader is the first program that runs when you power on your Android dev
 An unlocked bootloader allows you to:
 - Flash custom recovery (TWRP, OrangeFox)
 - Install custom ROMs
-- Root your device
+- Install a standard persistent root image
 - Flash modified boot images
 
 **Q: Is unlocking the bootloader safe?**
@@ -347,7 +357,7 @@ The standard Magisk, KernelSU and APatch installation paths require permission t
 Treat named exploits, CVE numbers and affected-patch claims as unverified until backed by the original disclosure and reproducible device-specific evidence. A locked bootloader does not make an exploit APK safe, and temporary root does not guarantee that banking apps, Knox services or attestation will remain unaffected. Do not stay on vulnerable firmware solely to retain root.
 
 **Learn More:**
-- [Root Without Unlocking the Bootloader: GhostLock Temporary Root](./rooting-guides/root-without-unlocking-bootloader.md)
+- [Root Without Unlocking the Bootloader: DirtyFrag and GhostLock](./rooting-guides/root-without-unlocking-bootloader.md)
 - [Bootloader Modification & Temporary Root Solutions](./rooting-guides/temporary-root-solutions.md)
 - [Complete Bootloader Unlock Guide](./rooting-guides/how-to-unlock-bootloader.md)
 - [OEM Unlock Policies by Manufacturer](./rooting-guides/how-to-unlock-bootloader.md#manufacturer-policy-overview)
@@ -390,7 +400,7 @@ Modern devices use A/B (seamless) update system:
 Often, but the update path depends on the device, updater, root framework, and whether stock partitions were modified. Back up data and obtain the matching stock firmware before updating.
 
 **Magisk on supported A/B devices:**
-1. Disable problematic modules and restore images through **Magisk → Uninstall → Restore Images**. **Do not reboot.** If stock backups are missing, use the device's documented update method instead.
+1. Disable problematic modules. If the update needs stock images, use **Magisk → Uninstall → Restore Images**. **Do not reboot.** If a required stock backup is missing, use the device's documented update method. Upstream notes that Pixel and Googlebook devices normally receive a full OTA when modified, so restoration is not needed there.
 2. Apply the OTA and wait for installation/optimization to finish. **Do not reboot yet.**
 3. Select **Install → Install to Inactive Slot (After OTA)** if available.
 4. Follow Magisk's completion instructions; current upstream directs you to the system updater's **Restart now** button.
@@ -398,9 +408,11 @@ Often, but the update path depends on the device, updater, root framework, and w
 
 See the [upstream OTA instructions](https://github.com/topjohnwu/Magisk/blob/master/docs/ota.md). This is not a universal Samsung or custom-ROM update procedure. Never use inactive-slot installation as a general repair action.
 
-**Non-A/B devices:** stock recovery/images may need restoring before OTA; root usually needs reinstalling from the new build's image afterward.
+**Non-A/B devices:** follow the device's stock update instructions and reinstall root from the appropriate new-build image if supported. Samsung uses its [separate manual firmware upgrade procedure](https://topjohnwu.github.io/Magisk/install.html#upgrading-the-os).
 
-**KernelSU/APatch:** follow the installation mode's upstream OTA procedure, or repatch the updated firmware's boot image. Do not reuse an older kernel/image on the new build.
+**KernelSU:** follow the [installation mode's OTA procedure](./rooting-guides/kernelsu-guide.md#method-1-lkm-via-the-manager-recommended), or repatch the verified image from the updated firmware.
+
+**APatch:** follow its [OTA instructions](./rooting-guides/apatch-guide.md#ota-handling) and use the updated firmware's stock `boot.img`, not `init_boot.img`. Do not reuse an older image on the new build.
 
 **Q: Will OTA break root?**
 
@@ -431,7 +443,7 @@ It can replace the patched image and switch slots. Root survival is not guarante
 - Games with anti-cheat (Pokemon GO, Call of Duty Mobile)
 
 **Mitigation:**
-- Configure root hiding with the DenyList, Zygisk and a hiding module
+- Review the app's requirements and the exact failing signal; DenyList and optional community modules do not guarantee compatibility
 - Keep apps updated; clear data only when necessary, since it can erase registration, credentials or local content
 
 **Reality Check:** Some apps with hardware-backed attestation (STRONG Play Integrity) cannot be fooled on unlocked bootloaders.
@@ -512,14 +524,14 @@ Start with [Play Integrity and Banking Apps](./troubleshooting.md#play-integrity
 **Immediate Steps:**
 
 1. **Verify root works:**
-   - Install root checker app or Termux
+   - Install a trusted root checker app or Termux and grant it access in your root manager first
    - Test: `su -c "id"` in Termux
    - Should show `uid=0(root)`
 
 2. **Configure root manager:**
-   - Set default grant behavior (prompt/deny)
+   - Grant root only to trusted apps; current Magisk releases require an explicit grant in the Superuser tab before an app calls `su`
    - Enable Zygisk only if a trusted module requires it; use one implementation
-   - Configure DenyList for sensitive apps
+   - Configure DenyList if you want Magisk modifications reverted in selected processes; it is not a root-hiding guarantee
 
 3. **Make a backup:**
    - TWRP/OrangeFox: Only if your exact device/build is supported and data decrypts; recovery backups may omit internal storage
@@ -586,9 +598,9 @@ Start with [Play Integrity and Banking Apps](./troubleshooting.md#play-integrity
    - Some updates may break compatibility
 
 4. **Know how to remove problematic modules:**
-   - Magisk: Use the device's Android safe-mode sequence; there is no universal volume-key shortcut
-   - ADB with authorized root: `adb shell su -c 'magisk --remove-modules'` removes all Magisk modules
-   - Decrypting recovery: create a `disable` marker inside the suspect module directory first, rather than deleting it
+   - Magisk: [Safe Mode](./rooting-guides/magisk-guide.md#managing-installed-modules) uses early key timing that can differ from Android's safe mode
+   - If authorized ADB and the Magisk command are available, `adb shell magisk --remove-modules` removes all Magisk modules and automatically reboots
+   - Decrypting recovery: create a `disable` marker inside the suspect module directory first, rather than deleting it. KernelSU `initrc` injections can still run
    - [Emergency Recovery Guide](./troubleshooting.md#device-won-t-boot-bootloop)
 
 **Red Flags (Avoid These Modules):**
@@ -614,33 +626,15 @@ Start with [Play Integrity and Banking Apps](./troubleshooting.md#play-integrity
 
 **Complete Unroot Process:**
 
-**Method 1: Using Magisk (Easiest)**
+**Method 1: Using Magisk (supported non-Samsung devices)**
 
-1. **Uninstall via Magisk app:**
-   - Open Magisk Manager
-   - Tap Uninstall
-   - Choose "Complete Uninstall"
-   - Reboot
+Open Magisk and choose **Uninstall → Complete Uninstall**. **Restore Images** is not a complete uninstall. Verify the manager's installed status and use your device's instructions to confirm the firmware state; a root-checker denial alone does not prove the device is stock. Play Integrity may still fail with an unlocked bootloader.
 
-2. **Verify:**
-   - Root checker should show "not rooted"
-   - Play Integrity may still fail if bootloader unlocked
+If Magisk was installed on Samsung, follow [Magisk's full-firmware recovery instructions](https://topjohnwu.github.io/Magisk/install.html#samsung-devices) instead of restoring individual stock partitions. Recovery can wipe data and cannot undo the Knox warranty bit.
 
 **Method 2: Restore the Image Actually Modified**
 
-Use the exact installed build and documented partition/slot. APatch modifies `boot`; Magisk may modify `boot`, `init_boot`, recovery or Samsung AP firmware. Run only the applicable command below, never both as a generic recipe.
-
-```bash
-# Download stock firmware for your exact build
-# Extract boot.img or init_boot.img
-# Flash via fastboot
-
-adb reboot bootloader
-fastboot flash boot stock_boot.img
-# Alternative only if Magisk modified init_boot on this device
-fastboot flash init_boot stock_init_boot.img
-fastboot reboot
-```
+On devices where individual image restoration is supported, follow the exact model's instructions and restore the matching stock image to every affected partition and slot, including any partition flashed by mistake. APatch patches `boot`; Magisk can modify `boot`, `init_boot`, `vendor_boot` or recovery. Do not flash both slots or choose an image by Android version alone. Restoring an image may leave root-related files or settings behind; consult the framework's uninstall instructions. See [Emergency Recovery](./troubleshooting.md#emergency-recovery).
 
 **Method 3: Stock Firmware Restoration**
 
@@ -652,9 +646,8 @@ A factory reset alone erases user data, not patched boot images. Use a reset onl
    - Xiaomi: Mi Flash Tool
    - OnePlus: Model-specific supported restore package; legacy MSM tools are not universal
 
-2. **Factory reset:**
-   - Wipe all data
-   - Clean slate
+2. **Factory reset only if required:**
+   - Check the exact restore procedure and confirm your data backup before agreeing to a wipe
 
 **Method 4: Relock Bootloader (Advanced)**
 

@@ -1,23 +1,23 @@
 ---
 layout: doc
 title: Nothing & CMF Phone Rooting Guide
-description: "Master guide to root all Nothing & CMF by Nothing Phone models with bootloader unlock and Magisk installation for Nothing OS."
+description: "Root eligible Nothing and CMF phones with model-specific bootloader checks, firmware selection, Magisk installation and recovery guidance."
 head:
   - - meta
     - property: og:title
-      content: Complete Nothing & CMF by Nothing Phone Rooting Guide - All Models
+      content: "Nothing & CMF Phone Rooting Guide"
   - - meta
     - property: og:description
-      content: Root any Nothing Phone with our comprehensive guide covering bootloader unlock, custom recovery, and Magisk installation for Nothing OS.
+      content: "Root eligible Nothing and CMF phones with model-specific bootloader checks, firmware selection, Magisk installation and recovery guidance."
   - - meta
     - property: og:image
       content: https://awesome-android-root.xyz/images/og/nothing.png
   - - meta
     - name: twitter:title
-      content: Complete Nothing & CMF by Nothing Phone Rooting Guide - All Models
+      content: "Nothing & CMF Phone Rooting Guide"
   - - meta
     - name: twitter:description
-      content: Root any Nothing & CMF by Nothing Phone with bootloader unlock and Magisk installation guide.
+      content: "Root eligible Nothing and CMF phones with model-specific bootloader checks, firmware selection, Magisk installation and recovery guidance."
   - - meta
     - name: twitter:creator
       content: "@awsm_and_root"
@@ -26,7 +26,7 @@ head:
       content: https://awesome-android-root.xyz/images/og/nothing.png
   - - meta
     - name: twitter:image:alt
-      content: Nothing Phone Root Guide - All Models
+      content: "Nothing & CMF Phone Rooting Guide with model-specific requirements"
   - - meta
     - name: author
       content: Awesome Android Root Project
@@ -55,7 +55,13 @@ head:
 
 # Nothing & CMF Phone Root Guide
 
-Root Nothing Phone devices with straightforward process. 
+::: danger BEFORE FLASHING
+Unlocking wipes data. Back up first, obtain stock firmware for the exact model, region and installed build, and verify the Magisk image, target partition, slot and recovery method. Do not disable verified boot or relock a modified device as a generic fix.
+:::
+
+These steps use Magisk. [KernelSU](./kernelsu-guide.md) and [APatch](./apatch-guide.md) have different image and compatibility requirements.
+
+This guide covers Magisk on eligible Nothing and CMF phones. Verify the exact model and firmware before unlocking or flashing.
 
 ## Quick Navigation
 - [Device Compatibility](#device-compatibility)
@@ -74,17 +80,17 @@ Root Nothing Phone devices with straightforward process.
 
 ## Device Compatibility
 
-All Nothing and CMF by Nothing Phone models support bootloader unlocking and rooting. No regional restrictions - all devices are unlockable globally.
+Unlock eligibility and flashing instructions depend on the exact model and firmware. Check OEM unlocking and a device-specific recovery path rather than assuming every variant is supported.
 
-**Codenames for firmware identification:**
-- Phone (1): `Spacewar` · Phone (2): `Pong` · Phone (2a): `Pacman`/`PacmanPro` · Phone (3): `Metroid` · Phone (3a): `Asteroids`
-- CMF Phone (1): `Tetris` · CMF Phone (2): `Galaga`
+**Examples of codenames for firmware identification:**
+- Phone (1): `Spacewar` · Phone (2): `Pong` · Phone (2a): `Pacman` · Phone (2a) Plus: `PacmanPro`
+- Phone (3): `Metroid` · Phone (3a): `Asteroids` · Phone (3a) Pro: `AsteroidsPro`
+- CMF Phone (1): `Tetris` · CMF Phone (2) Pro: `Galaga`
 
-> [!NOTE]
-> All Nothing Phones are unlockable globally. No known incompatible models.
+The community-maintained [Nothing Archive device index](https://github.com/spike0en/nothing_archive/blob/main/website/docs/devices.md) lists model numbers and firmware links; verify region and build as well as codename.
 
 > [!TIP]
-> **Don't want to unlock?** On the Nothing Phone (1), the community tool **root-my-nothing** grants **temporary root via the GhostLock bug (CVE-2026-43499)** - KernelSU installs with the bootloader still locked, and everything resets on reboot. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md).
+> **Don't want to unlock?** [Root My Nothing](https://github.com/ang3lo-azevedo/root-my-nothing) lists its Nothing Phone (1) GhostLock port as **in progress**, with an end-to-end exploit still unchecked. Do not assume the model is supported; check its upstream status and the sister project's [Nothing section](https://awesome-temporary-root.pages.dev/guide/#xiaomi-asus-nothing-and-honor).
 
 ---
 
@@ -97,7 +103,7 @@ All Nothing and CMF by Nothing Phone models support bootloader unlocking and roo
 
 **Backup Everything:** Photos, contacts, messages, app data, authenticator codes.
 
-**Warranty Void:** Bootloader unlock voids manufacturer warranty permanently.
+**Warranty:** Unlocking may affect warranty and service eligibility; check the terms for your region.
 
 **Glyph Interface:** May not work on some custom ROMs. Test before full switch.
 :::
@@ -121,9 +127,8 @@ All Nothing and CMF by Nothing Phone models support bootloader unlocking and roo
    - Or download generic Android drivers
 
 3. **Stock Firmware** (for recovery)
-   - Download from [Github](https://github.com/spike0en/nothing_archive)
-   - Official updates via OTA
-   - Nothing Phone (2) OTA: [XDA Thread](https://xdaforums.com/t/nothing-phone-2-official-ota-zip-full-incremental.4604803/)
+   - The community-maintained [Nothing Archive](https://github.com/spike0en/nothing_archive) indexes firmware and OTA packages. Verify model, region and exact installed build before using a file.
+   - [Nothing Support](https://support.nothing.tech/hc/en-us/articles/43114751704209-How-do-I-download-the-latest-firmware) describes the normal system-update path. An OTA package is not necessarily a complete factory recovery package.
 
 **On Device:**
 
@@ -170,23 +175,7 @@ adb reboot bootloader
 
 ### Step 2: Unlock Bootloader
 
-```bash
-# Verify connection
-fastboot devices
-
-# Unlock bootloader
-fastboot flashing unlock
-
-# Alternatively (if first doesn't work)
-fastboot oem unlock
-```
-
-**On Device:**
-1. Warning screen appears
-2. Use Volume keys to navigate
-3. Select "UNLOCK THE BOOTLOADER"
-4. Press Power to confirm
-5. Device wipes and reboots
+Verify the command for the exact device. For example, LineageOS documents `fastboot flashing unlock` for the Nothing Phone [(1)](https://wiki.lineageos.org/devices/Spacewar/install/) and [(2)](https://wiki.lineageos.org/devices/Pong/install/). Follow the on-device confirmation. **Unlocking wipes data.** Do not try a different unlock command as a generic fallback if it fails; check the model's instructions and eligibility.
 
 ### Step 3: Complete Setup
 
@@ -201,87 +190,60 @@ After automatic factory reset:
 
 ### Determine Correct Image
 
-| Device Generation | Image to Patch |
-|---|---|
-| All Nothing Phones (Android 13+) | `init_boot.img` |
-| Phone (1) on Android 12 | `boot.img` |
+The image depends on the exact phone and firmware, not the currently running Android version. For example:
 
-**Check in Magisk app "Ramdisk" field if unsure.**
+- **Phone (1):** community reports describe patching `boot.img`, including on [Android 15](https://github.com/broisnees/phone).
+- **Phone (2), model A065:** a [device-specific community discussion](https://xdaforums.com/t/guide-unlock-bootloader-root-with-magisk-stock-and-patched-boot-images-model-a065-eea.4605979/page-32) identifies `boot.img`, despite its Android 13 launch.
+
+Other Nothing/CMF models may use `init_boot` or another layout. Check the exact model, build, ramdisk image, partition and slot with [Magisk upstream](https://topjohnwu.github.io/Magisk/install.html#getting-started) and a trusted device-specific source. Magisk's Ramdisk field or the presence of a file named `init_boot.img` alone does not determine the target.
 
 ### Method 1: Boot Image Patching
 
-**Step 1: Extract Boot Image**
+**Step 1: Obtain the stock image**
 
-For Nothing Phone (2) and (2a):
-1. Download OTA update or firmware
-2. Extract payload.bin
-3. Use payload-dumper-go:
-```bash
-./payload-dumper-go -o extracted payload.bin
-```
-4. Find init_boot.img in extracted/
-
-For Nothing Phone (1):
-- Check current Android version
-- Android 13+ uses init_boot.img
-- Android 12 uses boot.img
-
-**Step 2: Transfer to Device**
+Get a full firmware or OTA package matching the exact model, region and installed build, for example through the community [Nothing Archive](https://github.com/spike0en/nothing_archive). Keep a separate copy of the original firmware and the verified image. Some packages contain `payload.bin`; [payload-dumper-go](https://github.com/ssut/payload-dumper-go#usage) can extract supported payloads:
 
 ```bash
-adb push init_boot.img /sdcard/Download/
-# Or
-adb push boot.img /sdcard/Download/
+payload-dumper-go -o extracted payload.bin
 ```
 
-**Step 3: Install Magisk and Patch**
+An incremental OTA may need the exact base images and the extractor's `-old` option. If the correct image or a supported recovery path is unavailable, stop instead of using another build.
+
+**Step 2: Patch with Magisk**
+
+Transfer the verified image to the phone. On the **same device**, install the [official Magisk APK](https://github.com/topjohnwu/Magisk/releases), then select **Install > Patch firmware / image > Select from storage** and patch the image. Never flash an image patched on another device. Note the actual output filename.
+
+**Step 3: Flash the patched image**
+
+Replace the example filename below with the actual output. Check the active slot on A/B devices and follow the exact model's instructions for the intended slot. Do not flash both slots or change slots blindly.
 
 ```bash
-adb install magisk.apk
-```
-
-**Note:** Use latest Magisk version from [GitHub Releases](https://github.com/topjohnwu/Magisk/releases)
-
-On device:
-1. Open Magisk
-2. Install > Select and Patch a File
-3. Choose boot/init_boot image
-4. Wait for patching
-
-**Step 4: Transfer Patched Image**
-
-```bash
-adb pull /sdcard/Download/magisk_patched_xxxxx.img ./
-```
-
-**Step 5: Flash Patched Image**
-
-```bash
+adb pull /sdcard/Download/magisk_patched-EXAMPLE.img .
 adb reboot bootloader
-
-# For Android 13/14
-fastboot flash init_boot magisk_patched_xxxxx.img
-
-# For Android 12
-fastboot flash boot magisk_patched_xxxxx.img
-
-fastboot reboot
+fastboot devices
 ```
 
-**Step 6: Verify Root**
+On standard A/B devices, unsuffixed `fastboot flash` commands for a slotted partition target the current active slot by default ([AOSP](https://source.android.com/docs/core/ota/ab/ab_implement#kernel-slot-arguments)); `fastboot getvar current-slot` reports the slot selected for the next boot. Use these examples only if that is the intended slot and the image matches its firmware. For a different slot, follow the exact-device procedure instead.
 
-1. Open Magisk app
-2. Should show:
-   - Magisk: Installed
-   - App: Latest
+Run **only one** command matching the verified original image and target partition:
 
-Test:
+If you patched the verified `boot.img`:
+
 ```bash
-adb shell
-su
-id
-# Returns: uid=0(root)
+fastboot flash boot magisk_patched-EXAMPLE.img
 ```
+
+If you patched the verified `init_boot.img`:
+
+```bash
+fastboot flash init_boot magisk_patched-EXAMPLE.img
+```
+
+For `vendor_boot` or recovery, follow the [Magisk guide](./magisk-guide.md#step-3-flash-patched-image) and the exact-device instructions instead. A recovery-based installation requires its recovery boot sequence to enable Magisk. For the `boot` or `init_boot` examples above, reboot with `fastboot reboot` and complete any Magisk setup prompt.
+
+**Step 4: Verify root**
+
+Check that Magisk reports installed. Grant a trusted app root in **Superuser** before testing, or grant **ADB shell** before running `adb shell su -c id`. Revoke the shell grant when it is not needed.
 
 ---
 
@@ -289,23 +251,9 @@ id
 
 ### Configure Magisk
 
-**Settings:**
-- **Zygisk**: Enable
-- **Enforce DenyList**: Enable
-- **Hide Magisk app**: For banking apps
+Grant root only to trusted apps in **Superuser**. Enable Zygisk only when a trusted module needs it. Enforced DenyList reverts Magisk modifications in selected processes; it does not guarantee banking or payment app compatibility. The old **Hide the Magisk app** rename option is no longer present in current releases. See [Magisk configuration](./magisk-guide.md#post-installation-setup) and [Play Integrity guidance](../troubleshooting.md#play-integrity-and-banking-apps).
 
-**DenyList Configuration:**
-- Google Play Services
-- Google Play Store
-- Banking apps
-- Payment apps
-
-The full root-hiding and Play Integrity setup is covered in
-[Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps).
-
-::: tip If an app still detects root
-The Magisk setup above is simplest. Nothing phones use GKI kernels, so KernelSU (LKM) is worth checking: its App Profiles hide `su` and module mounts per app. See the [KernelSU Guide](./kernelsu-guide.md), and switch cleanly, not over Magisk.
-:::
+KernelSU is an alternative only if the exact device and kernel are supported. See the [KernelSU guide](./kernelsu-guide.md) before switching; do not install it over Magisk.
 
 ### Nothing OS Optimization
 
@@ -321,31 +269,22 @@ The Magisk setup above is simplest. Nothing phones use GKI kernels, so KernelSU 
 
 ### Recommended Modules
 
-- **Play Integrity Fix** - Banking app compatibility
-- **Shamiko** - Root hiding
-- **LSPosed** - Framework
-- **Systemless Hosts** - Ad blocking
+Install only modules needed for your setup, and verify their device and Android compatibility. See the [app and module catalog](../apps-and-modules/) and [Play Integrity guidance](../troubleshooting.md#play-integrity-and-banking-apps). No module guarantees that a banking or payment app will work.
 
 ---
 
 ## OTA Handling
 
-### For A/B Devices (All Nothing Phones)
+### For supported A/B devices {#for-a-b-devices-all-nothing-phones}
 
-**Step 1: Download OTA**
+[Magisk's A/B OTA workflow](https://topjohnwu.github.io/Magisk/ota.html) was tested on Pixel and other devices can differ. Use this order only if the exact Nothing/CMF device and update method support it:
 
-Settings > System > System update
+1. If the OTA requires stock images, choose **Uninstall > Restore Images** in Magisk before applying it. Do not reboot. If a required backup is unavailable, stop and use a verified exact-device update or recovery plan.
+2. Apply the system OTA and wait for installation to finish. **Do not restart yet.** Modified read-only partitions can cause verification to fail.
+3. In Magisk choose **Install > Install to Inactive Slot (After OTA)** and wait for completion.
+4. Return to the system update screen and select **Restart now**. Verify root after boot.
 
-Download but don't reboot yet
-
-**Step 2: Magisk Installation**
-
-1. Magisk > Install
-2. "Install to Inactive Slot (After OTA)"
-3. Wait for completion
-4. Reboot when prompted
-
-Root preserved after update!
+If the option is unavailable or the update fails, follow the device-specific stock update instructions and patch an image from the new build if desired. Root preservation is not guaranteed.
 
 ---
 
@@ -357,11 +296,7 @@ Root preserved after update!
 
 **OEM Unlocking Greyed Out**
 
-Solutions:
-1. Remove all accounts
-2. Factory reset
-3. Wait 24 hours
-4. Try again
+Check the exact model and unlock eligibility. A factory reset or waiting period is not a guaranteed fix; do not flash if unlocking is unavailable.
 
 **Fastboot Not Detecting**
 
@@ -375,29 +310,17 @@ Solutions:
 
 **Magisk Shows N/A**
 
-Solutions:
-1. Verify correct image
-2. Check Android version
-3. Re-patch correct image
-4. Flash to correct partition
+Verify the exact firmware, selected image, target partition and slot against the device-specific instructions. If the device needs Magisk in recovery, use its required boot sequence. Do not select an image solely from Android version or reflash blindly.
 
 **Bootloop After Root**
 
-```bash
-fastboot flash init_boot stock_init_boot.img
-# Or
-fastboot flash boot stock_boot.img
-fastboot reboot
-```
+If only the Magisk image was changed, restore the matching stock image to every affected partition and slot using the exact-device recovery procedure. Restoring `boot` alone does not fix a mistaken write to `init_boot` or another partition. If other partitions were changed or the slot/build is uncertain, use a verified full-firmware recovery method for that model or contact [Nothing Support](https://nothing.tech/support). Recovery can erase data; do not change slots blindly.
 
 ### Glyph Interface Issues
 
 **Glyph Not Working After Root**
 
-Usually continues working with Magisk. If issues:
-1. Check for Glyph-related modules
-2. Reinstall Nothing OS stock
-3. Some custom ROMs may not support Glyph
+Check Glyph-related modules and the ROM maintainer's support for the exact model. If a stock restore is necessary, use the [device-specific recovery guidance](#flash-stock-firmware); a full restore may erase data.
 
 </details>
 
@@ -407,29 +330,17 @@ Usually continues working with Magisk. If issues:
 
 ### Remove Root
 
-```bash
-# Magisk > Uninstall > Restore Images
-```
+If Android boots and the required stock backups exist, use **Uninstall > Complete Uninstall** in Magisk. **Restore Images** is an OTA preparation step, not a complete uninstall. Other modifications or affected slots may still need stock recovery; the bootloader remains unlocked.
 
 ### Flash Stock Firmware
 
-Via fastboot:
-```bash
-# Flash stock images
-fastboot flash boot stock_boot.img
-fastboot flash init_boot stock_init_boot.img
-fastboot reboot
-```
+Obtain the complete compatible firmware and recovery procedure for the exact model, region and build. The community [Nothing Archive](https://github.com/spike0en/nothing_archive) indexes device-specific packages and guides; an OTA or a pair of `boot` images is not necessarily a complete stock restore. A full restore may wipe data. If the correct method is unclear, contact [Nothing Support](https://nothing.tech/support) rather than flashing every image blindly.
 
 ### Relock Bootloader
 
 ::: danger RELOCK WARNING
-Only when completely stock!
+Relocking a modified or incompatible device can make it unbootable and may erase data. Only consider it after restoring compatible stock firmware and verified-boot state for every required partition and slot, successfully booting, and confirming a manufacturer or exact-model procedure. Do not assume the same lock command applies to every model.
 :::
-
-```bash
-fastboot flashing lock
-```
 
 ---
 
@@ -475,7 +386,7 @@ fastboot flashing lock
 - Android 15/16
 - 3 major Android upgrades promised
 - IP64 water resistance
-- Shared codename: `Asteroids`
+- Device codenames: `Asteroids` and `AsteroidsPro` (the firmware archive groups them under `Asteroids`)
 
 ### CMF Phone (2) Pro
 - Released April 2025
@@ -488,9 +399,9 @@ fastboot flashing lock
 
 ### Security
 
-1. **Hide Magisk** for sensitive apps
-2. **Configure DenyList** properly
-3. **Only trusted modules**
+1. **Grant root only to trusted apps**
+2. **Use DenyList where appropriate**, without assuming it bypasses app checks
+3. **Install only trusted modules**
 4. **Keep Magisk updated**
 
 ---

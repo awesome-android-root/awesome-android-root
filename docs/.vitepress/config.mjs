@@ -638,7 +638,7 @@ export default withPwa(defineConfig({
             { text: '⚡ KernelSU', link: '/rooting-guides/kernelsu-guide' },
             { text: '🤖 APatch', link: '/rooting-guides/apatch-guide' },
             { text: '⚙️ LSPosed Framework', link: '/rooting-guides/lsposed-guide' },
-            { text: '👻 Root Without Unlocking (GhostLock)', link: '/rooting-guides/root-without-unlocking-bootloader' }
+            { text: '👻 Temporary Root (No Unlock)', link: '/rooting-guides/root-without-unlocking-bootloader' }
           ]
         },
         {
@@ -686,14 +686,14 @@ export default withPwa(defineConfig({
             { text: 'KernelSU', link: '/rooting-guides/kernelsu-guide' },
             { text: 'SUSFS Root Hiding', link: '/rooting-guides/susfs-guide' },
             { text: 'APatch', link: '/rooting-guides/apatch-guide' },
-            { text: 'Temporary Root, No Unlock (GhostLock)', link: '/rooting-guides/root-without-unlocking-bootloader' }
+            { text: 'Temporary Root, No Unlock', link: '/rooting-guides/root-without-unlocking-bootloader' }
           ]
         },
         {
           text: '🔒 Locked-Bootloader Options',
           collapsed: true,
           items: [
-            { text: 'GhostLock Temporary Root', link: '/rooting-guides/root-without-unlocking-bootloader' },
+            { text: 'DirtyFrag & GhostLock', link: '/rooting-guides/root-without-unlocking-bootloader' },
             { text: 'Bootloader Mods & Temp Root', link: '/rooting-guides/temporary-root-solutions' }
           ]
         },

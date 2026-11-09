@@ -218,7 +218,7 @@ hero:
   <a href="/rooting-guides/root-without-unlocking-bootloader" class="community-card">
     <span class="icon"><LandingIcon name="ghost" /></span>
     <strong>Temp Root, No Unlock</strong>
-    <span>GhostLock (CVE-2026-43499)</span>
+    <span>DirtyFrag &amp; GhostLock</span>
   </a>
 </div>
 

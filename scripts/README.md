@@ -62,12 +62,14 @@ It is also exposed as `bun run index:build` and runs inside `docs:build`.
 
 ## check_links.py
 
-Validates all internal Markdown links and heading anchors across `docs/` against
-VitePress' exact slugify rules (so anchors resolve the same way the site renders them).
-Skips links inside code fences, ignores external URLs, and tolerates `/images/` assets.
+Validates internal Markdown links and heading anchors across `docs/` using
+VitePress' slugify rules and the site's h2-h4 automatic anchor levels. Explicit
+heading IDs are also recognized. Skips links inside code fences, ignores external
+URLs, and tolerates `/images/` assets.
 
 ### Usage
 
 ```bash
+python3 -m unittest discover -s scripts/tests
 python3 scripts/check_links.py
 ```

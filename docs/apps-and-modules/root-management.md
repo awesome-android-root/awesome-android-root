@@ -43,19 +43,33 @@ problem - controlling root access.
 
 <details>
 
-<summary><strong>What is temporary root (GhostLock)?</strong></summary>
+<summary><strong>What is temporary root?</strong></summary>
 
-Exploits like **GhostLock (CVE-2026-43499)** - a 15-year-old Linux kernel bug - grant root **in memory only**, for the current boot. No bootloader unlock, no flashing, no Knox trip, no data wipe: reboot and the device is bone-stock again. The trade-offs: root doesn't survive reboots, you can't flash ROMs/recoveries, and it only works on specific devices running firmware up to ~the June 2026 patch level.
+Exploits such as **DirtyFrag (CVE-2026-43284)** and **GhostLock (CVE-2026-43499)** can grant root in memory on specific vulnerable builds while the bootloader stays locked. A full reboot clears the active root session, but files and settings changed during it may remain. Kernel crashes and bootloops are possible; a locked bootloader or patch date does not guarantee device support, Knox behavior or Play Integrity.
 
 <br>
 </details>
 
-- **[⭐ Root My Galaxy](https://github.com/BuSung-dev/Root-My-Galaxy)** - One-tap temporary root for Snapdragon Galaxy flagships (S24/S25 series, S24 FE, A56...) via GhostLock; bootloader stays locked, Knox isn't tripped. `FOSS`
+- **[⭐ Root My Galaxy](https://github.com/BuSung-dev/Root-My-Galaxy)** - Temporary root via GhostLock on supported Samsung Galaxy device and firmware combinations, with the bootloader locked. `FOSS`
+- **[ANB Root](https://github.com/Chuniex-0631/honor-anb-an00-root)** - Uses Shizuku and GhostLock to load KernelSU on specific HONOR 80 Pro Flat builds. `FOSS`
+- **[Anchor](https://github.com/byemaxx/ghostlock-anchor)** - Runs the ghostlock-oneplus chain through local ADB on supported builds for authorized research and education. Initial TCP ADB setup needs a computer and may expose a network debugging port. `Proprietary`
+- **[DFRoot](https://github.com/diabl0w/DFRoot)** - Uses DirtyFrag to late-load a KernelSU-compatible module on vulnerable Android 12L+ arm64 builds without Shizuku; Samsung requires its named manager fork. `FOSS`
 - **[DirtyFrag](https://github.com/mitschud/DirtyFrag)** - Ephemeral root exploit for CVE-2026-43284 that grants in-memory root via page-cache and can load KernelSU without bootloader unlock. `FOSS`
-- **[GhostLock](https://github.com/YuKongA/ghostlock-app)** - One-tap temporary root app using GhostLock CVE-2026-43499 to gain in-memory root and load KernelSU with bootloader locked. `FOSS`
+- **[DirtyInit](https://github.com/combeng6th/DirtyInit)** - Uses DirtyFrag to provide restricted init-context root commands on vulnerable Samsung builds through ADB; it is not a general su installer. `Proprietary`
+- **[GhostLock](https://github.com/YuKongA/ghostlock-app)** - Uses GhostLock and device-specific profiles for temporary root and KernelSU; some profiles require Shizuku. `FOSS`
+- **[GhostLock Galaxy](https://github.com/wxxsfxyzm/GhostLock-Galaxy)** - Runs GhostLock using ADB or Shizuku on specific Galaxy Z Fold6 kernel builds. `FOSS`
+- **[GhostLock OnePlus](https://github.com/JoinChang/ghostlock-oneplus)** - Uses ADB and device-specific GhostLock profiles for supported OnePlus, OPPO and Xiaomi builds. Upstream restricts use to authorized research and education; source has no project-wide license. `Proprietary`
+- **[GhostSam](https://github.com/snothin/GhostSam)** - Runs DirtyFrag or GhostLock with ADB on supported Samsung builds. The [MocLG fork](https://github.com/MocLG/GhostSam) has its own device profiles. `FOSS`
+- **[Root My Device (tqmane)](https://github.com/tqmane/Root-My-Device)** - Provides separate Shizuku-based GhostLock apps for exact Nothing Phone (3a) and OnePlus Pad 3 builds. `FOSS`
+- **[Root My Device (WitAqua)](https://github.com/WitAqua-tools/Root-My-Device)** - Downloads matched GhostLock payloads for supported Xiaomi and Meta Quest builds and loads KernelSU temporarily. `FOSS`
+- **[Root My Pixel](https://github.com/alex193a/Root-My-Pixel)** - Uses Shizuku, GhostLock and the ReSukiSU manager on exact supported Pixel builds. Source has no project-wide license. `Proprietary`
+- **[RootMyS24](https://github.com/NanoTurtle1145/root-my-s24)** - Uses Shizuku with GhostLock or a timer exploit on selected Galaxy builds. The app is GPL-3.0, but its payload build chain is not included in the repository. `Proprietary`
+- **[RootMyVivo](https://github.com/zenyxx-xd/RootMyVivo)** - Uses Shizuku or ADB for temporary root on supported vivo and iQOO builds; it can enable TCP debugging. Source has no project-wide license. `Proprietary`
+- **[Shark](https://github.com/Yunnijian/Shark)** - Uses Shizuku or Stellar and a POSIX-timer exploit to load a KernelSU-compatible module on selected vulnerable OnePlus, OPPO, Realme and iQOO builds. Some bundled component licensing is unclear. `Proprietary`
+- **[Temporary Root](https://github.com/ShivamXD6/Temporary-Root)** - Uses DirtyFrag or GhostLock to late-load a KernelSU-compatible module on supported vulnerable Android 12L+ arm64 builds. Source is published without a project-wide license. `Proprietary`
 
 > [!TIP]
-> Also check out **[Root Without Unlocking the Bootloader ↗](../rooting-guides/root-without-unlocking-bootloader.md)** and [Bootloader Mods & Temporary Root Solutions ↗](../rooting-guides/temporary-root-solutions.md) 
+> Our sister project [Awesome Temporary Root](https://awesome-temporary-root.pages.dev/) ([GitHub](https://github.com/fynks/awesome-temporary-root)) maintains device/build sections, tools and module reports. Also see [Root Without Unlocking the Bootloader](../rooting-guides/root-without-unlocking-bootloader.md) and [Bootloader Mods & Temporary Root Solutions](../rooting-guides/temporary-root-solutions.md).
 
 
 ## Bootloop Protection
