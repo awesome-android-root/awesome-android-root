@@ -390,7 +390,11 @@ export default withPwa(defineConfig({
 
   vite: {
     plugins: [
-      llmstxt({ sidebar: llmsSidebar, excludeIndexPage: false }),
+      llmstxt({
+        sidebar: llmsSidebar,
+        excludeIndexPage: false,
+        includeUnlistedPages: true
+      }),
       systemFontsPlugin
     ],
     build: {
@@ -549,7 +553,7 @@ export default withPwa(defineConfig({
     image: { lazyLoad: true },
     config: (md) => {
       md.use(storeLinkPlugin)
-      md.use(copyOrDownloadAsMarkdownButtons)
+      md.use(copyOrDownloadAsMarkdownButtons, { componentName: 'MarkdownActions' })
     }
   },
 

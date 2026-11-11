@@ -51,12 +51,12 @@
     "vitepress"
   ],
   "devDependencies": {
-    "@lucide/vue": "^1.70.0",
-    "@vite-pwa/vitepress": "^2.0.2",
+    "@lucide/vue": "^1.71.0",
+    "@vite-pwa/vitepress": "^2.0.3",
     "magicast": "^0.5.5",
     "simple-icons": "^16.37.0",
     "vitepress": "2.0.0-alpha.21",
-    "vitepress-plugin-llms": "^1.14.0"
+    "vitepress-plugin-llms": "^1.15.0"
   },
   "engines": {
     "node": ">=26"

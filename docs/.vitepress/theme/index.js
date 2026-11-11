@@ -9,7 +9,7 @@ import LandingIcon from './components/LandingIcon.vue'
 import BrandIcon from './components/BrandIcon.vue'
 import ThemeToggle from './components/ThemeToggle.vue'
 import Home from './Home.vue'
-import CopyOrDownloadAsMarkdownButtons from 'vitepress-plugin-llms/vitepress-components/CopyOrDownloadAsMarkdownButtons.vue'
+import MarkdownActions from './components/MarkdownActions.vue'
 
 /** @type {import('vitepress').Theme} */
 export default {
@@ -31,7 +31,7 @@ export default {
     app.component('LandingIcon', LandingIcon)
     app.component('BrandIcon', BrandIcon)
     app.component('home', Home)
-    app.component('CopyOrDownloadAsMarkdownButtons', CopyOrDownloadAsMarkdownButtons)
+    app.component('MarkdownActions', MarkdownActions)
 
     // Global error handler - only verbose in development
     app.config.errorHandler = (err, instance, info) => {
