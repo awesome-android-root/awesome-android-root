@@ -66,7 +66,6 @@ Exploits such as **DirtyFrag (CVE-2026-43284)** and **GhostLock (CVE-2026-43499)
 - **[RootMyS24](https://github.com/NanoTurtle1145/root-my-s24)** - Uses Shizuku with GhostLock or a timer exploit on selected Galaxy builds. The app is GPL-3.0, but its payload build chain is not included in the repository. `Proprietary`
 - **[RootMyVivo](https://github.com/zenyxx-xd/RootMyVivo)** - Uses Shizuku or ADB for temporary root on supported vivo and iQOO builds; it can enable TCP debugging. Source has no project-wide license. `Proprietary`
 - **[Shark](https://github.com/Yunnijian/Shark)** - Uses Shizuku or Stellar and a POSIX-timer exploit to load a KernelSU-compatible module on selected vulnerable OnePlus, OPPO, Realme and iQOO builds. Some bundled component licensing is unclear. `Proprietary`
-- **[Temporary Root](https://github.com/ShivamXD6/Temporary-Root)** - Uses DirtyFrag or GhostLock to late-load a KernelSU-compatible module on supported vulnerable Android 12L+ arm64 builds. Source is published without a project-wide license. `Proprietary`
 
 > [!TIP]
 > Our sister project [Awesome Temporary Root](https://awesome-temporary-root.pages.dev/) ([GitHub](https://github.com/fynks/awesome-temporary-root)) maintains device/build sections, tools and module reports. Also see [Root Without Unlocking the Bootloader](../rooting-guides/root-without-unlocking-bootloader.md) and [Bootloader Mods & Temporary Root Solutions](../rooting-guides/temporary-root-solutions.md).
