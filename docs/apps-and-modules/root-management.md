@@ -184,8 +184,8 @@ SUSFS (Systemless User Space File System) is a kernel-level module that allows r
 
 </details><br>
 
+- **[⭐ BRENE](https://github.com/rrr333nnn333/BRENE)** - Provides root hiding and spoofing using SUSFS on patched KernelSU kernels. `FOSS` `[K]` 
 - **[⭐ SUSFS for KernelSU](https://github.com/sidex15/susfs4ksu-module)** - Add-on root-hiding service for SUSFS-patched kernels (KernelSU/Next). The core of modern KSU hiding setups. `FOSS` `[K]`
-- **[BRENE](https://github.com/rrr333nnn333/BRENE)** - Provides root hiding and spoofing using SUSFS on patched KernelSU kernels. `FOSS` `[K]`
 - **[SUSFS LKM Loader](https://github.com/matsuzaka-yuki/susfs-lkm-module)** - KernelSU ZIP wrapper around a pinned inforcqb SUSFS LKM release, selecting the matching arm64 binary from `/proc/sys/kernel/osrelease` at install and every boot with no nearest-version fallback. `FOSS` `[K]`
 - **[susfs4ksu-lkm](https://github.com/inforcqb/susfs4ksu-for-lkm/)** - SUSFS ported to a loadable kernel module (LKM) for GKI/CFI devices, loaded via KernelSU ksud. `FOSS` `[K]` 
 - ~~ReSuSFS~~: Removed on author's request
