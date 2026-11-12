@@ -199,7 +199,7 @@ The newest route, and the reason SUSFS no longer forces a kernel rebuild on GKI 
   ksud susfs autoload status
   ```
   This is arm64 only. Set the fallback KMI if boot-time detection is unreliable.
-- **Other variants** use a loader module that detects the device, downloads the matching module file and loads it on boot, for example [susfs4ksu-lkm-module](https://github.com/Nixie24/susfs4ksu-lkm-module). The kernel modules themselves are published by [susfs4ksu-lkm](https://github.com/inforcqb/susfs4ksu-lkm).
+- **Other variants** The kernel modules themselves are published by [susfs4ksu-lkm](https://github.com/inforcqb/susfs4ksu-lkm).
 
 You still need the userspace module from the previous section: the loadable kernel module provides the kernel half, not the rules.
 
