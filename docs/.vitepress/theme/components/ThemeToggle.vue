@@ -1,6 +1,7 @@
 <script setup>
 import { ref, watchPostEffect } from 'vue'
-import { Moon, Sun } from '@lucide/vue'
+import Moon from '@lucide/vue/dist/esm/icons/moon.mjs'
+import Sun from '@lucide/vue/dist/esm/icons/sun.mjs'
 import { useData } from 'vitepress'
 
 const { isDark, theme } = useData()
@@ -19,7 +20,13 @@ function toggle() {
 </script>
 
 <template>
-  <button type="button" class="theme-toggle" :title="title" aria-label="Switch theme" @click="toggle">
+  <button
+    type="button"
+    class="theme-toggle"
+    :title="title"
+    :aria-label="title || 'Switch theme'"
+    @click="toggle"
+  >
     <Sun class="theme-icon-sun" aria-hidden="true" />
     <Moon class="theme-icon-moon" aria-hidden="true" />
   </button>
