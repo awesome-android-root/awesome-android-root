@@ -1194,7 +1194,6 @@ export default withPwa(defineConfig({
           <a href="/legal-disclaimer" style="color: var(--vp-c-text-2); transition: color 0.2s; text-decoration: none; font-weight: 500;">Legal</a>
           <span style="color: var(--vp-c-divider);">•</span>
           <a href="https://github.com/awesome-android-root/awesome-android-root" style="color: var(--vp-c-text-2); transition: color 0.2s; text-decoration: none; font-weight: 500;">GitHub</a>
-          <span style="color: var(--vp-c-divider);">•</span>
         </div>
       `,
       copyright: `Copyright © ${new Date().getFullYear()} Awesome Android Root Project`
