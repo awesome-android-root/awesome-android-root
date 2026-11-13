@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
 
   schedule:
-    # Every Monday at 03:00 UTC
-    - cron: "0 3 * * 1"
+    # Every night at 22:00 UTC
+    - cron: "0 22 * * *"
 
 # Read access is only needed to clone the repository; the mirror push uses
 # Codeberg credentials, never GITHUB_TOKEN.
@@ -51,12 +51,23 @@ jobs:
           auth="$(printf '%s:%s' "$CODEBERG_USERNAME" "$CODEBERG_TOKEN" | base64 -w0)"
           git remote add codeberg https://codeberg.org/awesome-android-root/awesome-android-root.git
 
-          GIT_CONFIG_COUNT=1 \
-          GIT_CONFIG_KEY_0=http.extraheader \
-          GIT_CONFIG_VALUE_0="Authorization: Basic $auth" \
-            git push codeberg --all --force
+          # actions/checkout leaves only the checked-out ref as a local branch,
+          # and refs/remotes/origin/HEAD would be pushed as a branch named HEAD.
+          # Refresh the remote-tracking refs, drop the symref, and push those so
+          # --prune removes only branches deleted on GitHub.
+          if git symbolic-ref --quiet refs/remotes/origin/HEAD >/dev/null; then
+            git symbolic-ref --delete refs/remotes/origin/HEAD
+          fi
+          git fetch --prune origin \
+            '+refs/heads/*:refs/remotes/origin/*' \
+            '+refs/tags/*:refs/tags/*'
 
           GIT_CONFIG_COUNT=1 \
           GIT_CONFIG_KEY_0=http.extraheader \
           GIT_CONFIG_VALUE_0="Authorization: Basic $auth" \
-            git push codeberg --tags --force
+            git push codeberg --force --prune 'refs/remotes/origin/*:refs/heads/*'
+
+          GIT_CONFIG_COUNT=1 \
+          GIT_CONFIG_KEY_0=http.extraheader \
+          GIT_CONFIG_VALUE_0="Authorization: Basic $auth" \
+            git push codeberg --tags --force --prune
