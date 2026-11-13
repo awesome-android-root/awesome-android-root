@@ -281,7 +281,6 @@ function buildIndex(parsedFiles) {
   }
 
   return {
-    generatedAt: new Date().toISOString(),
     source: 'docs/apps-and-modules/*.md',
     count: entries.length,
     pages,
