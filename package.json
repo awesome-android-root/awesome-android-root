@@ -54,7 +54,6 @@
     "@lucide/vue": "^1.72.0",
     "@vite-pwa/vitepress": "^2.0.3",
     "magicast": "^0.5.5",
-    "simple-icons": "^16.37.0",
     "vitepress": "2.0.0-alpha.21",
     "vitepress-plugin-llms": "^1.15.0"
   },
