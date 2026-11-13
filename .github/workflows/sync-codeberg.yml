@@ -7,25 +7,56 @@ on:
     # Every Monday at 03:00 UTC
     - cron: "0 3 * * 1"
 
+# Read access is only needed to clone the repository; the mirror push uses
+# Codeberg credentials, never GITHUB_TOKEN.
 permissions:
   contents: read
+
+concurrency:
+  group: sync-codeberg
+  cancel-in-progress: false
 
 jobs:
   mirror:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
         with:
           fetch-depth: 0
+          # Never leave GITHUB_TOKEN in the local git config.
+          persist-credentials: false
+
+      - name: Validate Codeberg credentials
+        env:
+          CODEBERG_USERNAME: ${{ secrets.CODEBERG_USERNAME }}
+          CODEBERG_TOKEN: ${{ secrets.CODEBERG_TOKEN }}
+        run: |
+          if [ -z "$CODEBERG_USERNAME" ] || [ -z "$CODEBERG_TOKEN" ]; then
+            echo "::error::CODEBERG_USERNAME and CODEBERG_TOKEN must be configured."
+            exit 1
+          fi
 
       - name: Push mirror to Codeberg
         env:
-          USERNAME: ${{ secrets.CODEBERG_USERNAME }}
-          TOKEN: ${{ secrets.CODEBERG_TOKEN }}
+          CODEBERG_USERNAME: ${{ secrets.CODEBERG_USERNAME }}
+          CODEBERG_TOKEN: ${{ secrets.CODEBERG_TOKEN }}
+          GIT_TERMINAL_PROMPT: "0"
         run: |
-          git remote add codeberg https://${USERNAME}:${TOKEN}@codeberg.org/awesome-android-root/awesome-android-root.git
+          # Keep the token out of the remote URL, the repository config and the
+          # process command line. It reaches git only through environment-based
+          # config, so failed requests and git errors cannot print it.
+          auth="$(printf '%s:%s' "$CODEBERG_USERNAME" "$CODEBERG_TOKEN" | base64 -w0)"
+          git remote add codeberg https://codeberg.org/awesome-android-root/awesome-android-root.git
 
-          git push codeberg --all --force
-          git push codeberg --tags --force
+          GIT_CONFIG_COUNT=1 \
+          GIT_CONFIG_KEY_0=http.extraheader \
+          GIT_CONFIG_VALUE_0="Authorization: Basic $auth" \
+            git push codeberg --all --force
+
+          GIT_CONFIG_COUNT=1 \
+          GIT_CONFIG_KEY_0=http.extraheader \
+          GIT_CONFIG_VALUE_0="Authorization: Basic $auth" \
+            git push codeberg --tags --force
