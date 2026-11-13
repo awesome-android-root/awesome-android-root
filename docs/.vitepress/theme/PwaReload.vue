@@ -1,8 +1,7 @@
 <template>
   <div
-    v-if="isOffline"
     class="pwa-toast"
-    :class="{ 'pwa-toast--offline': isOffline }"
+    :class="{ 'pwa-toast--offline': isOffline, 'pwa-toast--hidden': !isOffline }"
     role="status"
     aria-live="polite"
     aria-atomic="true"
@@ -27,8 +26,8 @@ function updateOnlineStatus() {
 
 onMounted(() => {
   updateOnlineStatus()
-    window.addEventListener('online', updateOnlineStatus)
-    window.addEventListener('offline', updateOnlineStatus)
+  window.addEventListener('online', updateOnlineStatus)
+  window.addEventListener('offline', updateOnlineStatus)
 })
 
 onUnmounted(() => {
@@ -38,6 +37,7 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+/* Kept in the DOM so the live region exists before a status change. */
 .pwa-toast {
   position: fixed;
   bottom: 20px;
@@ -49,16 +49,28 @@ onUnmounted(() => {
   border: 1px solid var(--vp-c-divider);
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  animation: slideUp 0.3s ease-out;
   max-width: 90vw;
   width: auto;
   min-width: 300px;
+}
+
+.pwa-toast--hidden {
+  width: 1px;
+  height: 1px;
+  min-width: 0;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .pwa-toast--offline {
   background: var(--warn-soft);
   color: var(--warn);
   border-color: var(--warn);
+  animation: slideUp 0.3s ease-out;
 }
 
 .pwa-toast--offline .pwa-toast__icon {
@@ -87,28 +99,6 @@ onUnmounted(() => {
   color: var(--warn);
 }
 
-.pwa-toast__button {
-  flex-shrink: 0;
-  padding: 4px 12px;
-  margin-left: 8px;
-  background: var(--vp-c-brand-1);
-  color: var(--brand-contrast);
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
-
-.pwa-toast__button:hover {
-  opacity: 0.9;
-}
-
-.pwa-toast__button:active {
-  transform: scale(0.98);
-}
-
 @keyframes slideUp {
   from {
     opacity: 0;
@@ -130,7 +120,13 @@ onUnmounted(() => {
     max-width: none;
     width: auto;
   }
-  
+
+  .pwa-toast--hidden {
+    left: 0;
+    right: auto;
+    width: 1px;
+  }
+
   @keyframes slideUp {
     from {
       opacity: 0;
@@ -151,12 +147,8 @@ onUnmounted(() => {
 
 /* Reduce motion */
 @media (prefers-reduced-motion: reduce) {
-  .pwa-toast {
+  .pwa-toast--offline {
     animation: none;
-  }
-  
-  .pwa-toast__button:active {
-    transform: none;
   }
 }
 </style>
