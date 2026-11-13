@@ -32,14 +32,5 @@ export default {
     app.component('BrandIcon', BrandIcon)
     app.component('home', Home)
     app.component('MarkdownActions', MarkdownActions)
-
-    // Global error handler - only verbose in development
-    app.config.errorHandler = (err, instance, info) => {
-      if (import.meta.env.DEV) {
-        console.error('Global error:', err)
-        console.error('Error info:', info)
-        console.error('Component instance:', instance)
-      }
-    }
   }
 }
