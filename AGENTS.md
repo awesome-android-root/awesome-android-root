@@ -154,6 +154,16 @@ When changing JavaScript:
 
 For dependency changes, check existing dependencies before adding new ones.
 
+### Modern web guidance
+
+For VitePress theme and client-side changes, consult [Modern Web Guidance](https://github.com/googlechrome/modern-web-guidance) for current, task-specific patterns rather than outdated examples.
+
+* Prefer semantic HTML, modern CSS, and native browser APIs before custom JavaScript or new dependencies.
+* Keep interfaces keyboard-accessible, with managed focus, accessible names, readable contrast, and reduced-motion support.
+* Optimize loading, responsiveness, and layout stability without speculative complexity.
+* Adapt examples to Vue/VitePress, guard browser-only APIs during server rendering, and verify affected behavior in browsers.
+
+
 ## 7. Validation
 
 For documentation changes:
