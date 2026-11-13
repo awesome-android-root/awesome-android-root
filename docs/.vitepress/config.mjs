@@ -669,8 +669,7 @@ export default withPwa(defineConfig({
           { text: 'Legal Disclaimer', link: '/legal-disclaimer' },
           { text: 'About', link: '/about' },
           { text: 'Contact', link: '/contact' },
-          { text: 'Privacy', link: '/privacy' },
-          { text: '⭐ GitHub', link: 'https://github.com/awesome-android-root/awesome-android-root' }
+          { text: 'Privacy', link: '/privacy' }
         ],
       },
     ]),
@@ -1196,7 +1195,6 @@ export default withPwa(defineConfig({
           <span style="color: var(--vp-c-divider);">•</span>
           <a href="https://github.com/awesome-android-root/awesome-android-root" style="color: var(--vp-c-text-2); transition: color 0.2s; text-decoration: none; font-weight: 500;">GitHub</a>
           <span style="color: var(--vp-c-divider);">•</span>
-          <a href="https://x.com/awsm_and_root" style="color: var(--vp-c-text-2); transition: color 0.2s; text-decoration: none; font-weight: 500;">Twitter/X</a>
         </div>
       `,
       copyright: `Copyright © ${new Date().getFullYear()} Awesome Android Root Project`
