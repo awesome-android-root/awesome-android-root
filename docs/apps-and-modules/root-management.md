@@ -66,7 +66,6 @@ Exploits such as **DirtyFrag (CVE-2026-43284)** and **GhostLock (CVE-2026-43499)
 - **[RootMyS24](https://github.com/NanoTurtle1145/root-my-s24)** - Uses Shizuku with GhostLock or a timer exploit on selected Galaxy builds. The app is GPL-3.0, but its payload build chain is not included in the repository. `Proprietary`
 - **[RootMyVivo](https://github.com/zenyxx-xd/RootMyVivo)** - Uses Shizuku or ADB for temporary root on supported vivo and iQOO builds; it can enable TCP debugging. Source has no project-wide license. `Proprietary`
 - **[Shark](https://github.com/Yunnijian/Shark)** - Uses Shizuku or Stellar and a POSIX-timer exploit to load a KernelSU-compatible module on selected vulnerable OnePlus, OPPO, Realme and iQOO builds. Some bundled component licensing is unclear. `Proprietary`
-- **[Temporary Root](https://github.com/ShivamXD6/Temporary-Root)** - Uses DirtyFrag or GhostLock to late-load a KernelSU-compatible module on supported vulnerable Android 12L+ arm64 builds. Source is published without a project-wide license. `Proprietary`
 
 > [!TIP]
 > Our sister project [Awesome Temporary Root](https://awesome-temporary-root.pages.dev/) ([GitHub](https://github.com/fynks/awesome-temporary-root)) maintains device/build sections, tools and module reports. Also see [Root Without Unlocking the Bootloader](../rooting-guides/root-without-unlocking-bootloader.md) and [Bootloader Mods & Temporary Root Solutions](../rooting-guides/temporary-root-solutions.md).
@@ -102,7 +101,7 @@ Exploits such as **DirtyFrag (CVE-2026-43284)** and **GhostLock (CVE-2026-43499)
 
 ## Module Managers
 
-- **[⭐ MMRL](https://github.com/DerGoogler/MMRL)** - Manages module repositories. `FOSS` `[M]` `[K]` `[A]` | [🌱](https://f-droid.org/en/packages/com.dergoogler.mmrl/) | [▶️](https://play.google.com/store/apps/details?id=com.dergoogler.mmrl)
+- **[⭐ MMRL](https://github.com/DerGoogler/MMRL)** - Manages module repositories. `FOSS` `[M]` `[K]` `[A]` | [▶️](https://play.google.com/store/apps/details?id=com.dergoogler.mmrl)
 - **[KPatch Next Module](https://github.com/KernelSU-Next/KPatch-Next-Module)** - Standalone implementation of KPM (KernelSU Patch Module) support for Magisk/KernelSU with WebUI. `FOSS` `[M]` `[K]` `[A]`
 - **[LSP Store](https://github.com/Xposed-Modules-Repo/io.github.tophtab.lspstore)** - Updater and browser for LSPosed modules. `Proprietary` `[LSP]`
 - **[Magisk Manager for Recovery Mode](https://github.com/Rikj000/Magisk-Manager-for-Recovery-Mode)** - Easily manage your Magisk Modules from a terminal session in your custom recovery. `FOSS` `[M]`
