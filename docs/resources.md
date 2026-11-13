@@ -219,6 +219,7 @@ Check the [Magisk release notes](https://github.com/topjohnwu/Magisk/releases) f
 | **Universal Android Debloater Next Generation** | ADB-based package management with community package descriptions; no root needed | [GitHub](https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation) |
 | **Neo Backup** | Root-based app and app-data backup/restore; test restores and copy backups off-device | [GitHub](https://github.com/NeoApplications/Neo-Backup) |
 | **SD Maid SE** | Storage analysis and cleanup with optional root/ADB access | [GitHub](https://github.com/d4rken-org/sdmaid-se) |
+| **Pixel Prop Builder** | Auto-updated archive of the full Pixel build.prop (every partition, with ro.boot.vbmeta.digest) from Google's factory and OTA images, indexed in index.json; can also build one locally | [GitHub](https://github.com/VictorGabriel7Dev/build.prop) |
 
 Prefer full OTA payloads when extracting standalone images; incremental updates may require the original partition data. Back up before debloating, keep a record of package changes, and do not disable core system components in bulk.
 
