@@ -58,9 +58,6 @@ jobs:
       - name: Build documentation
         run: bun run docs:build
 
-      - name: Drop app-index.json from the deploy bundle
-        run: rm -f docs/.vitepress/dist/app-index.json
-
       - name: Deploy to Cloudflare Pages
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: cloudflare/wrangler-action@v4
@@ -69,8 +66,49 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy docs/.vitepress/dist --project-name=awesome-android-root --branch=main --commit-dirty=true
 
-  # Optional: per-PR preview deployments. Since the artifact is no longer
-  # uploaded, a preview job would need to rebuild the site. Simplest variant:
-  # copy the two steps above into a deploy-preview job that runs on
-  # pull_request with a --branch=pr-${{ github.event.pull_request.number }}
-  # guard.
+  preview:
+    name: Deploy PR preview
+    needs: build
+    if: >-
+      github.event_name == 'pull_request' &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version-file: .bun-version
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+
+      - name: Cache dependencies
+        uses: actions/cache@v6
+        with:
+          path: |
+            ~/.bun/install/cache
+            node_modules
+          key: bun-${{ runner.os }}-${{ hashFiles('package.json') }}
+          restore-keys: bun-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Build documentation
+        run: bun run docs:build
+
+      - name: Deploy preview to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy docs/.vitepress/dist --project-name=awesome-android-root --branch=pr-${{ github.event.pull_request.number }} --commit-dirty=true
