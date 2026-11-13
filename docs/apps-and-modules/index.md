@@ -2,6 +2,7 @@
 layout: doc
 title: Best Root Apps & Modules
 description: Browse 750+ curated Android root apps and modules, including Magisk, KernelSU, APatch and LSPosed modules, organized by use case with source links.
+search: false
 head:
   - - link
     - rel: alternate

@@ -2,6 +2,7 @@
 layout: doc
 title: Contribution Guidelines
 description: "Guidelines for contributing Android apps, modules, and documentation to the Awesome Android Root collection."
+search: false
 head:
   - - meta
     - property: og:title

@@ -2,6 +2,7 @@
 layout: doc
 title: About Awesome Android Root
 description: "Learn about the Awesome Android Root project, its editorial approach, and the Android rooting resources it maintains."
+search: false
 head:
   - - meta
     - property: og:type

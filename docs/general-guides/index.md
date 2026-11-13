@@ -2,6 +2,7 @@
 layout: doc
 title: Android General Guides & Tutorials
 description: "Task-focused Android guides for rooted ad blocking, app debloating, and controlling Play Store updates."
+search: false
 head:
   - - meta
     - property: og:type
