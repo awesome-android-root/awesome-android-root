@@ -161,10 +161,8 @@ For VitePress theme and client-side changes, consult [Modern Web Guidance](https
 * Prefer semantic HTML, modern CSS, and native browser APIs before custom JavaScript or new dependencies.
 * Keep interfaces keyboard-accessible, with managed focus, accessible names, readable contrast, and reduced-motion support.
 * Optimize loading, responsiveness, and layout stability without speculative complexity.
-* Check browser compatibility and Baseline status; use feature detection and lightweight fallbacks where needed.
 * Adapt examples to Vue/VitePress, guard browser-only APIs during server rendering, and verify affected behavior in browsers.
 
-Apply this guidance only to the requested change; do not modernize unrelated code.
 
 ## 7. Validation
 
