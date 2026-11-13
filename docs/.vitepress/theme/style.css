@@ -183,9 +183,15 @@ html.dark {
     position: absolute;
     top: 50%;
     left: -0.5rem;
-    height: 1.25rem;
+    height: 1.5rem;
     border-left: 1px solid var(--vp-c-divider);
     transform: translateY(-50%);
+  }
+
+  /* The built-in appearance switch is hidden, so its 1rem of extra space before
+     the social-links divider leaves the custom toggle visually off-center. */
+  html .VPNav .content-body > .appearance + .social-links::before {
+    margin-inline-start: 0;
   }
 }
 
