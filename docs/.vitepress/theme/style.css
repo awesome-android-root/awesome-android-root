@@ -1024,8 +1024,29 @@ img {
   background: var(--vp-c-bg-soft);
 }
 
-.VPFooter a:hover {
-  color: var(--vp-c-brand-1) !important;
+.vp-footer-links {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.vp-footer-links a {
+  color: var(--vp-c-text-2);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.VPFooter .vp-footer-links a:hover {
+  color: var(--vp-c-brand-1);
+}
+
+.vp-footer-sep {
+  color: var(--vp-c-divider);
 }
 
 
