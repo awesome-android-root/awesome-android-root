@@ -1,5 +1,5 @@
 import { execFileSync } from 'node:child_process'
-import { readFileSync } from 'node:fs'
+import { readFileSync, rmSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
@@ -18,6 +18,19 @@ const systemFontsPlugin = {
       return fileURLToPath(new URL('./theme/fonts.css', import.meta.url))
     }
     return null
+  }
+}
+
+/**
+ * docs/public/app-index.json stays fetchable through raw.githubusercontent.com,
+ * but it is not part of the deployed site, so remove the copy Vite emits.
+ */
+const dropAppIndexFromDist = {
+  name: 'aar-drop-app-index',
+  apply: 'build',
+  enforce: 'post',
+  closeBundle() {
+    rmSync(fileURLToPath(new URL('./dist/app-index.json', import.meta.url)), { force: true })
   }
 }
 
@@ -152,26 +165,66 @@ function isArticleRoute(route) {
 }
 
 const REPO_ROOT = fileURLToPath(new URL('../..', import.meta.url))
-const firstPublishedCache = new Map()
+let firstPublishedDates = null
 
-/** First commit date for a page, used as datePublished when no frontmatter date exists. */
-function firstPublishedDate(relativePath) {
-  if (firstPublishedCache.has(relativePath)) return firstPublishedCache.get(relativePath)
-  let value = null
+/**
+ * Publication dates for every page, collected in a single git pass.
+ * `--reverse` lists the oldest commit first, so the first hit for a path is its
+ * publication date. Rename and copy records inherit the date of the file they
+ * came from, which matches `git log --follow` without one subprocess per page.
+ */
+function loadFirstPublishedDates() {
+  if (firstPublishedDates) return firstPublishedDates
+  firstPublishedDates = new Map()
   try {
     const output = execFileSync(
       'git',
-      ['log', '--follow', '--format=%aI', '--', `docs/${relativePath}`],
-      { cwd: REPO_ROOT, encoding: 'utf-8', stdio: ['ignore', 'pipe', 'ignore'] }
-    ).trim()
-    const dates = output.split('\n').filter(Boolean)
-    const date = dates.length ? new Date(dates[dates.length - 1]) : null
-    if (date && !Number.isNaN(date.getTime())) value = date
+      [
+        'log',
+        '--reverse',
+        '--format=@@%aI',
+        '--name-status',
+        '-M',
+        '-C',
+        '--find-copies-harder',
+        '--',
+        '.'
+      ],
+      {
+        cwd: REPO_ROOT,
+        encoding: 'utf-8',
+        stdio: ['ignore', 'pipe', 'ignore'],
+        maxBuffer: 64 * 1024 * 1024
+      }
+    )
+    let date = null
+    for (const line of output.split('\n')) {
+      if (!line) continue
+      if (line.startsWith('@@')) {
+        const parsed = new Date(line.slice(2))
+        date = Number.isNaN(parsed.getTime()) ? null : parsed
+        continue
+      }
+      if (!date) continue
+
+      const [status, first, second] = line.split('\t')
+      if (!status) continue
+      const isRenameOrCopy = status.startsWith('R') || status.startsWith('C')
+      const path = isRenameOrCopy ? second : first
+      if (!path || firstPublishedDates.has(path)) continue
+
+      const inherited = isRenameOrCopy ? firstPublishedDates.get(first) : undefined
+      firstPublishedDates.set(path, inherited ?? date)
+    }
   } catch {
-    value = null
+    // Git history is unavailable (shallow clone or source export); dates stay unknown.
   }
-  firstPublishedCache.set(relativePath, value)
-  return value
+  return firstPublishedDates
+}
+
+/** First commit date for a page, used as datePublished when no frontmatter date exists. */
+function firstPublishedDate(relativePath) {
+  return loadFirstPublishedDates().get(`docs/${relativePath}`) ?? null
 }
 
 /** Read a page's raw markdown so structured data can be derived from it at build time. */
@@ -204,6 +257,8 @@ function faqFromMarkdown(markdown) {
       continue
     }
     if (inFence) continue
+    // Thematic breaks separate FAQ sections; they are not answer content.
+    if (/^\s{0,3}([-*_])(?:\s*\1){2,}\s*$/.test(line)) continue
 
     const heading = /^(#{2,4})\s+(.+?)\s*$/.exec(line)
     if (heading) {
@@ -221,9 +276,15 @@ function faqFromMarkdown(markdown) {
   return questions
     .map(({ question, lines }) => {
       const answer = lines
+        .filter((line) => !/^\s*\|?[\s:|-]*-{3,}[\s:|-]*\|?\s*$/.test(line))
+        .map((line) => (/^\s*\|.*\|\s*$/.test(line)
+          ? line.trim().slice(1, -1).split('|').map((cell) => cell.trim()).filter(Boolean).join(' ')
+          : line))
         .join('\n')
-        .replace(/^\s*[-*]\s+/gm, '')
+        .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
         .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+        .replace(/<[^>]+>/g, '')
+        .replace(/^\s*[-*]\s+/gm, '')
         .replace(/[`*_>#]/g, '')
         .replace(/\n{3,}/g, '\n\n')
         .trim()
@@ -269,9 +330,10 @@ export default withPwa(defineConfig({
     const published = pageData.frontmatter?.date
       ? new Date(pageData.frontmatter.date)
       : firstPublishedDate(relativePath)
+    // Omit rather than invent a date when git history is unavailable.
     const datePublished = published && !Number.isNaN(published.getTime())
       ? published.toISOString()
-      : (dateModified ?? new Date().toISOString())
+      : undefined
 
     const segments = route.split('/').filter(Boolean)
     const breadcrumbItems = [
@@ -332,7 +394,7 @@ export default withPwa(defineConfig({
         itemListElement: breadcrumbItems
       })
       if (isArticleRoute(route)) {
-        graph.push({
+        const articleNode = {
           '@type': 'Article',
           '@id': `${pageUrl}#article`,
           headline: title,
@@ -344,10 +406,12 @@ export default withPwa(defineConfig({
           isPartOf: { '@id': WEBSITE_ID },
           author: { '@id': ORGANIZATION_ID },
           publisher: { '@id': ORGANIZATION_ID },
-          image: articleImage,
-          datePublished,
-          dateModified: dateModified ?? datePublished
-        })
+          image: articleImage
+        }
+        if (datePublished) articleNode.datePublished = datePublished
+        const modified = dateModified ?? datePublished
+        if (modified) articleNode.dateModified = modified
+        graph.push(articleNode)
       }
       if (route === '/faqs') {
         const mainEntity = faqFromMarkdown(readMarkdown(relativePath))
@@ -374,7 +438,7 @@ export default withPwa(defineConfig({
         { property: 'article:modified_time', content: new Date(pageData.lastUpdated).toISOString() }
       ])
     }
-    if (isArticleRoute(route)) {
+    if (isArticleRoute(route) && datePublished) {
       tags.push([
         'meta',
         { property: 'article:published_time', content: datePublished }
@@ -418,9 +482,11 @@ export default withPwa(defineConfig({
         excludeIndexPage: false,
         includeUnlistedPages: true
       }),
-      systemFontsPlugin
+      systemFontsPlugin,
+      dropAppIndexFromDist
     ],
     build: {
+      target: 'es2024',
       chunkSizeWarningLimit: 1000,
     },
     server: {
@@ -429,7 +495,7 @@ export default withPwa(defineConfig({
     },
     css: { devSourcemap: false },
     oxc: {
-      target: 'es2022'
+      target: 'es2024'
     },
     rolldownOptions: {
       output: {
@@ -1228,12 +1294,12 @@ export default withPwa(defineConfig({
 
     footer: {
       message: `
-        <div style="display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; align-items: center; margin-bottom: 8px; font-size: 14px;">
-          <a href="/contributing" style="color: var(--vp-c-text-2); transition: color 0.2s; text-decoration: none; font-weight: 500;">Contribute</a>
-          <span style="color: var(--vp-c-divider);">•</span>
-          <a href="/legal-disclaimer" style="color: var(--vp-c-text-2); transition: color 0.2s; text-decoration: none; font-weight: 500;">Legal</a>
-          <span style="color: var(--vp-c-divider);">•</span>
-          <a href="https://github.com/awesome-android-root/awesome-android-root" style="color: var(--vp-c-text-2); transition: color 0.2s; text-decoration: none; font-weight: 500;">GitHub</a>
+        <div class="vp-footer-links">
+          <a href="/contributing">Contribute</a>
+          <span class="vp-footer-sep" aria-hidden="true">•</span>
+          <a href="/legal-disclaimer">Legal</a>
+          <span class="vp-footer-sep" aria-hidden="true">•</span>
+          <a href="https://github.com/awesome-android-root/awesome-android-root">GitHub</a>
         </div>
       `,
       copyright: `Copyright © ${new Date().getFullYear()} Awesome Android Root Project`
