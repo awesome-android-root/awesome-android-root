@@ -100,6 +100,29 @@ const FOLDER_LABELS = {
   'general-guides': 'Tutorials'
 }
 
+/** Shared sidebar for standalone pages such as policies, contact, and project info. */
+const STANDALONE_PAGE_SIDEBAR = [
+  {
+    text: '📄 Project',
+    items: [
+      { text: 'About', link: '/about' },
+      { text: 'Contributing', link: '/contributing' },
+      { text: 'Contact', link: '/contact' },
+      { text: 'Privacy', link: '/privacy' },
+      { text: 'Legal Disclaimer', link: '/legal-disclaimer' }
+    ]
+  },
+  {
+    text: '❓ Help',
+    items: [
+      { text: 'FAQ', link: '/faqs' },
+      { text: 'Troubleshooting', link: '/troubleshooting' },
+      { text: 'Resources', link: '/resources' },
+      { text: 'Non-Root Alternatives', link: '/non-root-alternatives' }
+    ]
+  }
+]
+
 function routeFromRelativePath(relativePath = 'index.md') {
   if (relativePath === 'index.md') return '/'
   return `/${relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')}`
@@ -661,69 +684,30 @@ export default withPwa(defineConfig({
       {
         text: 'Help',
         items: [
-          { text: 'FAQ', link: '/faqs' },
-          { text: 'Troubleshooting', link: '/troubleshooting' },
-          { text: 'Resources', link: '/resources' },
-          { text: 'Non-Root Alternatives', link: '/non-root-alternatives' },
-          { text: 'Contributing', link: '/contributing' },
-          { text: 'Legal Disclaimer', link: '/legal-disclaimer' },
-          { text: 'About', link: '/about' },
-          { text: 'Contact', link: '/contact' },
-          { text: 'Privacy', link: '/privacy' }
+          {
+            text: 'Support',
+            items: [
+              { text: 'FAQ', link: '/faqs' },
+              { text: 'Troubleshooting', link: '/troubleshooting' },
+              { text: 'Resources', link: '/resources' },
+              { text: 'Non-Root Alternatives', link: '/non-root-alternatives' }
+            ]
+          },
+          {
+            text: 'Project',
+            items: [
+              { text: 'About', link: '/about' },
+              { text: 'Contributing', link: '/contributing' },
+              { text: 'Contact', link: '/contact' },
+              { text: 'Privacy', link: '/privacy' },
+              { text: 'Legal Disclaimer', link: '/legal-disclaimer' }
+            ]
+          }
         ],
       },
     ]),
 
     sidebar: withIcons({
-      // Main/Home Sidebar
-      '/': [
-        {
-          text: '🚀 Quick Start',
-          collapsed: false,
-          items: [
-            { text: 'What is Android Root?', link: '/rooting-guides/#understanding-root-access' },
-            { text: 'Complete Rooting Guide', link: '/rooting-guides/' },
-            { text: 'Browse All Apps & Modules', link: '/apps-and-modules/' },
-            { text: 'Essential Must-Have Apps', link: '/apps-and-modules/#starter-kit-must-have-apps' }
-          ]
-        },
-        {
-          text: '🏆 Root Methods',
-          collapsed: false,
-          items: [
-            { text: '⚖️ Compare Root Methods', link: '/rooting-guides/root-framework-comparison' },
-            { text: '🏅 Magisk (Recommended)', link: '/rooting-guides/magisk-guide' },
-            { text: '⚡ KernelSU', link: '/rooting-guides/kernelsu-guide' },
-            { text: '🤖 APatch', link: '/rooting-guides/apatch-guide' },
-            { text: '⚙️ LSPosed Framework', link: '/rooting-guides/lsposed-guide' },
-            { text: '👻 Temporary Root (No Unlock)', link: '/rooting-guides/root-without-unlocking-bootloader' }
-          ]
-        },
-        {
-          text: '📱 Device Guides',
-          collapsed: true,
-          items: [
-            { text: '🔷 Google Pixel', link: '/rooting-guides/how-to-root-pixel-phone' },
-            { text: '🔷 Samsung Galaxy', link: '/rooting-guides/how-to-root-samsung-phone' },
-            { text: '🔷 Xiaomi/Redmi/POCO', link: '/rooting-guides/how-to-root-xiaomi-phone' },
-            { text: '🔷 OnePlus', link: '/rooting-guides/how-to-root-oneplus-phone' },
-            { text: '🔷 Nothing Phone', link: '/rooting-guides/how-to-root-nothing-phone' },
-            { text: '🔷 Motorola', link: '/rooting-guides/how-to-root-motorola-phone' },
-            { text: '📋 View All Devices', link: '/rooting-guides/#device-specific-guides' }
-          ]
-        },
-        {
-          text: '📚 Help & Resources',
-          collapsed: true,
-          items: [
-            { text: '❓ Frequently Asked Questions', link: '/faqs' },
-            { text: '🔧 Troubleshooting Guide', link: '/troubleshooting' },
-            { text: '📖 Rooting Glossary', link: '/apps-and-modules/#glossary' },
-            { text: '🌐 Community Resources', link: '/resources' },
-            { text: '🔀 Non-Root Alternatives', link: '/non-root-alternatives' }
-          ]
-        }
-      ],
       // Rooting Guides Sidebar
       '/rooting-guides/': [
         {
@@ -908,7 +892,7 @@ export default withPwa(defineConfig({
           link: '/apps-and-modules/debloating',
           collapsed: true,
           items: [
-            { text: 'Debloating Tools & Modules', link: '/apps-and-modules/debloating#debloating' },
+            { text: 'Debloating Apps & Modules', link: '/apps-and-modules/debloating#debloating-apps-modules' },
           ]
         },
         {
@@ -1141,11 +1125,11 @@ export default withPwa(defineConfig({
         {
           text: 'Contributing',
           items: [
-            { text: 'Quick Start', link: '/contributing#quick-start' },
+            { text: 'Add an App or Module', link: '/contributing#add-an-app-or-module' },
             { text: 'Entry Format', link: '/contributing#entry-format' },
-            { text: 'Categories & Tags', link: '/contributing#categories-tags' },
-            { text: 'Quality Requirements', link: '/contributing#quality-requirements' },
-            { text: 'Pull Request Template', link: '/contributing#pull-request-template' }
+            { text: 'Badges', link: '/contributing#badges' },
+            { text: 'Quality Checklist', link: '/contributing#quality-checklist' },
+            { text: 'Other Contributions', link: '/contributing#other-contributions' }
           ]
         },
         {
@@ -1180,6 +1164,62 @@ export default withPwa(defineConfig({
             { text: 'Benefits vs Risks', link: '/rooting-guides/#benefits-vs-risks' },
             { text: 'Root Apps', link: '/apps-and-modules/' },
             { text: 'Home', link: '/' }
+          ]
+        }
+      ],
+
+      '/contact': STANDALONE_PAGE_SIDEBAR,
+      '/privacy': STANDALONE_PAGE_SIDEBAR,
+      '/legal-disclaimer': STANDALONE_PAGE_SIDEBAR,
+
+      // Fallback sidebar for routes without a dedicated entry (for example /count).
+      // Keep this key last: VitePress keeps config order when route prefixes
+      // match equally, so the standalone page entries above must be checked first.
+      '/': [
+        {
+          text: '🚀 Quick Start',
+          collapsed: false,
+          items: [
+            { text: 'What is Android Root?', link: '/rooting-guides/#understanding-root-access' },
+            { text: 'Complete Rooting Guide', link: '/rooting-guides/' },
+            { text: 'Browse All Apps & Modules', link: '/apps-and-modules/' },
+            { text: 'Essential Must-Have Apps', link: '/apps-and-modules/#starter-kit-must-have-apps' }
+          ]
+        },
+        {
+          text: '🏆 Root Methods',
+          collapsed: false,
+          items: [
+            { text: '⚖️ Compare Root Methods', link: '/rooting-guides/root-framework-comparison' },
+            { text: '🏅 Magisk (Recommended)', link: '/rooting-guides/magisk-guide' },
+            { text: '⚡ KernelSU', link: '/rooting-guides/kernelsu-guide' },
+            { text: '🤖 APatch', link: '/rooting-guides/apatch-guide' },
+            { text: '⚙️ LSPosed Framework', link: '/rooting-guides/lsposed-guide' },
+            { text: '👻 Temporary Root (No Unlock)', link: '/rooting-guides/root-without-unlocking-bootloader' }
+          ]
+        },
+        {
+          text: '📱 Device Guides',
+          collapsed: true,
+          items: [
+            { text: '🔷 Google Pixel', link: '/rooting-guides/how-to-root-pixel-phone' },
+            { text: '🔷 Samsung Galaxy', link: '/rooting-guides/how-to-root-samsung-phone' },
+            { text: '🔷 Xiaomi/Redmi/POCO', link: '/rooting-guides/how-to-root-xiaomi-phone' },
+            { text: '🔷 OnePlus', link: '/rooting-guides/how-to-root-oneplus-phone' },
+            { text: '🔷 Nothing Phone', link: '/rooting-guides/how-to-root-nothing-phone' },
+            { text: '🔷 Motorola', link: '/rooting-guides/how-to-root-motorola-phone' },
+            { text: '📋 View All Devices', link: '/rooting-guides/#device-specific-guides' }
+          ]
+        },
+        {
+          text: '📚 Help & Resources',
+          collapsed: true,
+          items: [
+            { text: '❓ Frequently Asked Questions', link: '/faqs' },
+            { text: '🔧 Troubleshooting Guide', link: '/troubleshooting' },
+            { text: '📖 Rooting Glossary', link: '/apps-and-modules/#glossary' },
+            { text: '🌐 Community Resources', link: '/resources' },
+            { text: '🔀 Non-Root Alternatives', link: '/non-root-alternatives' }
           ]
         }
       ]
