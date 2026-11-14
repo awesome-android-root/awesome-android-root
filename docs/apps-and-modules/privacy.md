@@ -84,4 +84,5 @@ tracking, spoofing your device identity or location, and isolating apps from you
 - **[Tarnhelm](https://github.com/lz233/Tarnhelm)** - The magic to clean sharing links up. `FOSS` `[LSP]`
 - **[Transparent Screenshot](https://github.com/Dszsu/Transparent_screenshot)** - Hide the application window during screenshots, screen recording, and screen casting. `FOSS` `[LSP]`
 - **[Turn Off Sensors](https://github.com/KatelynTheStargazer/TurnOffSensors-Magisk)** - Disables device sensors on startup via the sensor_privacy service on Android. `FOSS` `[M]`
+- **[VD-Google](https://github.com/VD171/VD-Google)** - Reads your Google service state on-device (RCS, Gemini, Wallet, Play Integrity and Play Protect attestations) with no internet access. `FOSS` `[M]` `[K]` `[A]`
 - **[VirtualNet](https://github.com/saadnahid7/VirtualNet)** - Controls whether each app sees Wi-Fi, mobile data or both. `FOSS` `[LSP]`
