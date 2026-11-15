@@ -122,5 +122,6 @@ Frida allows you to inject your own scripts into black box processes, enabling y
 - **[aShell You](https://github.com/DP-Hridayan/aShellYou)** - Android shell utility app with Material Design 3 UI, letting you run ADB, root and shell commands. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/in.hridayan.ashell)
 - **[ReTerminal](https://github.com/RohitKushvaha01/ReTerminal)** - Material 3 terminal emulator built on Termux's TerminalView, with multiple sessions, virtual keys and Alpine Linux support. `FOSS`
 - **[ssh-ksu](https://github.com/jtnqr/ssh-ksu)** - Statically compiled musl builds of OpenSSH, Bash, rsync, tmux, htop and nano for KernelSU and Magisk, running the SSH daemon in an isolated mount namespace with a WebUI for logs, config and host keys. `FOSS` `[M]` `[K]`
+- **[TermRover CF Access](https://github.com/xboto/termrover-cfaccess)** - Adds Cloudflare Access hosts, RSA SHA-2 user keys, custom terminal themes and analytics blocking to the TermRover SSH client. Scoped to TermRover. `FOSS` `[LSP]`
 - **[Termux-Root-Recovery-Tool](https://github.com/Ishu43642/Termux-Root-Recovery-Tool)** - Install GSi Rom , Flashing Fastboot Rom, install Twrp Recovery, Boot.img & vbmeta.img files. `FOSS` 
 - **[TermuxRootMods](https://github.com/rompelhd/TermuxRootMods)** - Enhances Termux on rooted devices. `FOSS` `[M]`

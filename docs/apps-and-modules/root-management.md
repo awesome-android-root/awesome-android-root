@@ -60,11 +60,14 @@ Exploits such as **DirtyFrag (CVE-2026-43284)** and **GhostLock (CVE-2026-43499)
 - **[GhostLock Galaxy](https://github.com/wxxsfxyzm/GhostLock-Galaxy)** - Runs GhostLock using ADB or Shizuku on specific Galaxy Z Fold6 kernel builds. `FOSS`
 - **[GhostLock OnePlus](https://github.com/JoinChang/ghostlock-oneplus)** - Uses ADB and device-specific GhostLock profiles for supported OnePlus, OPPO and Xiaomi builds. Upstream restricts use to authorized research and education; source has no project-wide license. `Proprietary`
 - **[GhostSam](https://github.com/snothin/GhostSam)** - Runs DirtyFrag or GhostLock with ADB on supported Samsung builds. The [MocLG fork](https://github.com/MocLG/GhostSam) has its own device profiles. `FOSS`
+- **[Pixel Timer](https://github.com/Sirpixelalittle/Pixel-Timer)** - Runs the CVE-2026-98260 timer exploit through Shizuku to late-load KernelSU Next on one tested Pixel 8 Pro build and kernel. Root lasts until reboot, and a failed run can leave the device unstable until one. Source has no project-wide license. `Proprietary`
 - **[Root My Device (tqmane)](https://github.com/tqmane/Root-My-Device)** - Provides separate Shizuku-based GhostLock apps for exact Nothing Phone (3a) and OnePlus Pad 3 builds. `FOSS`
 - **[Root My Device (WitAqua)](https://github.com/WitAqua-tools/Root-My-Device)** - Downloads matched GhostLock payloads for supported Xiaomi and Meta Quest builds and loads KernelSU temporarily. `FOSS`
 - **[Root My Pixel](https://github.com/alex193a/Root-My-Pixel)** - Uses Shizuku, GhostLock and the ReSukiSU manager on exact supported Pixel builds. Source has no project-wide license. `Proprietary`
 - **[RootMyS24](https://github.com/NanoTurtle1145/root-my-s24)** - Uses Shizuku with GhostLock or a timer exploit on selected Galaxy builds. The app is GPL-3.0, but its payload build chain is not included in the repository. `Proprietary`
 - **[RootMyVivo](https://github.com/zenyxx-xd/RootMyVivo)** - Uses Shizuku or ADB for temporary root on supported vivo and iQOO builds; it can enable TCP debugging. Source has no project-wide license. `Proprietary`
+- **[SamTimer (RiosWesley)](https://github.com/RiosWesley/SamTimer)** - Galaxy S24 Ultra port of the CVE-2026-98260 timer exploit that late-loads a KDP-patched KernelSU 3.2.5 module through Shizuku. Root lasts until reboot, and a failed run can leave the device unstable until one. Source has no project-wide license. `Proprietary`
+- **[SamTimer (yoro1836)](https://github.com/yoro1836/SamTimer)** - One-tap CVE-2026-98260 timer exploit for tested Samsung builds that late-loads a KernelSU-Next module through Shizuku, with auto-root after reboot and a safe-boot switch. Root lasts until reboot. Source has no project-wide license. `Proprietary`
 - **[Shark](https://github.com/Yunnijian/Shark)** - Uses Shizuku or Stellar and a POSIX-timer exploit to load a KernelSU-compatible module on selected vulnerable OnePlus, OPPO, Realme and iQOO builds. Some bundled component licensing is unclear. `Proprietary`
 
 > [!TIP]
@@ -186,6 +189,7 @@ SUSFS (Systemless User Space File System) is a kernel-level module that allows r
 
 - **[⭐ SUSFS for KernelSU](https://github.com/sidex15/susfs4ksu-module)** - Add-on root-hiding service for SUSFS-patched kernels (KernelSU/Next). The core of modern KSU hiding setups. `FOSS` `[K]`
 - **[⭐ BRENE](https://github.com/rrr333nnn333/BRENE)** - Provides root hiding and spoofing using SUSFS on patched KernelSU kernels. `FOSS` `[K]`
+- **[SusDock](https://github.com/Nixie24/susdock)** - Picks and installs the prebuilt SUSFS loadable kernel module that matches the device from upstream releases, with a WebUI for status, updates, log level and boot autoload. KernelSU, arm64, Android 12+. `FOSS` `[K]`
 - **[SUSFS LKM Loader](https://github.com/matsuzaka-yuki/susfs-lkm-module)** - KernelSU ZIP wrapper around a pinned inforcqb SUSFS LKM release, selecting the matching arm64 binary from `/proc/sys/kernel/osrelease` at install and every boot with no nearest-version fallback. `FOSS` `[K]`
 - **[susfs4ksu-lkm](https://github.com/inforcqb/susfs4ksu-for-lkm/)** - SUSFS ported to a loadable kernel module (LKM) for GKI/CFI devices, loaded via KernelSU ksud. `FOSS` `[K]` 
 - ~~ReSuSFS~~: Removed on author's request

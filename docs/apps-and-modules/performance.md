@@ -34,11 +34,13 @@ optimization**, charging control and task & process management.
 - **[Battery Guru](https://play.google.com/store/apps/details?id=com.paget96.batteryguru)** - Battery optimization and monitoring. `Proprietary`
 - **[Battery Info Enabler](https://github.com/klab7/BatteryInfoEnabler)** - Enlocks and enhances the native battery information for Pixel 6+ devices. `FOSS` `[LSP]`
 - **[Battery Monitor](https://github.com/tswistak/Battery-Monitor)** - See battery status at a glance, get meaningful notifications, and track battery behavior over time. `FOSS` | [🌱](https://f-droid.org/packages/codes.swistak.batterymonitor/)
+- **[ChargingRecord Evolution](https://github.com/f1owkang/CRecordEvolution)** - Writes battery health, capacity, cycle count and live charging data into the root manager's module description, with a WebUI for history and trends. `FOSS` `[M]` `[K]` `[A]`
 - **[Doze Disabler](https://github.com/draumaz/dozedisabler)** - Disables Doze battery optimizations at boot. `FOSS` `[M]`
 - **[Drowser](https://gitlab.com/juanitobananas/drowser)** - Stops selected apps when the screen turns off. `FOSS` | [🌱](https://f-droid.org/app/com.jarsilio.android.drowser)
 - **[EnforceDoze](https://github.com/farfromrefug/EnforceDoze)** - Enables Doze mode immediately after screen-off and disables motion sensing. `FOSS` | [🌱](https://f-droid.org/packages/com.akylas.enforcedoze/)
 - **[GhostGMS](https://github.com/kaushikieeee/GhostGMS)** - Optimize Google Mobile Services for better battery life, privacy, and performance. `FOSS` `[M]`
 - **[Hyper Optimize](https://github.com/TatshSiow/HyperOptimize)** - Tune HyperOS System and Kernel parameters to reduce power consumption. `FOSS` `[M]`
+- **[HyperCool](https://github.com/yudharn/HyperCool)** - Tunes thermal and kernel parameters on Qualcomm and MediaTek phones to lower heat and battery drain, configured through a WebUI and applied on the next boot. Android 11+. `FOSS` `[M]` `[K]`
 - **[LSPDoze](https://github.com/Xposed-Modules-Repo/com.op.lspdoze)** - Optimizes your standby battery life. `Proprietary` `[LSP]`
 - **[NoWakeLock](https://github.com/NoWakeLock/NoWakeLock)** - Controls Android wakelocks on Android N and later. `FOSS` `[LSP]`
 - **[Plus Plus Battery](https://github.com/dijia1124/plusplusbattery)** - Real-time battery stats & health estimator for OnePlus/Oppo/Realme phones. `FOSS` | [🌱](https://f-droid.org/en/packages/com.dijia1124.plusplusbattery/)
@@ -51,6 +53,7 @@ optimization**, charging control and task & process management.
 
 ## Charging & Power
 
+- **[ACC with WebUI](https://github.com/Infiniti151/acc-with-webui)** - Adds a WebUI to Advanced Charging Controller for limiting charging current, voltage, temperature and capacity to extend battery service life. `FOSS` `[M]` `[K]` `[A]`
 - **[FastCharge Next](https://github.com/Dev97633/Fastcharge-next)** - Boost charging speed with smart tweaks. `FOSS` `[M]` `[A]`
 
 ## Kernel Management
@@ -78,9 +81,9 @@ optimization**, charging control and task & process management.
 ## Performance Optimization
 
 - **[⭐ 3C All-in-One Toolbox](https://play.google.com/store/apps/details?id=ccc71.at.free)** - A comprehensive utility that offers a wide range of tools for monitoring, controlling, and optimizing device performance in a user-friendly interface. `Proprietary`
+- **[Aether OptExt](https://github.com/NetizenNemo/Aether_OptExt)** - Pins app and game threads to chosen CPU cores through per-package and per-thread-name rules, with eBPF-accelerated process tracking and automatic allocation for apps without a rule. Built for the Aether scheduler. `FOSS` `[M]` `[K]`
 - **[AZenith](https://github.com/Liliya2727/AZenith)** - Applies system optimizations to Android. `FOSS` `[M]` `[K]`
 - **[COPG](https://github.com/AlirezaParsi/COPG)** - Spoof your device to enjoy premium features, max performance, and exclusive benefits. `FOSS` `[M]` `[A]`
-- **[COPG-VD](https://github.com/VD171/COPG-VD)** - Fork of COPG with additional features and optimizations. `FOSS` `[M]` `[K]` `[A]`
 - **[Dynamic System Tweaks Magisk Module](https://github.com/PS2ClassicsVault/Dynamic-System-Tweaks-Magisk-Module)** - Improves overall System performance without overheating and losing battery power for armeabi-v7a devices. `FOSS` `[M]`
 - **[FDE.AI](https://github.com/feravolt/FDE.AI-docs)** - Applies performance optimizations to Android devices. `Proprietary` `[LSP]`
 - **[Hydrostellaire](https://github.com/AestasBritannia/Hydro-Br-leur)** - A magisk module for devices running on Dimensity flagship platforms and OnePlus, Realme devices. `FOSS` `[M]`
