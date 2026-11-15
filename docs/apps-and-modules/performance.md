@@ -84,7 +84,6 @@ optimization**, charging control and task & process management.
 - **[Aether OptExt](https://github.com/NetizenNemo/Aether_OptExt)** - Pins app and game threads to chosen CPU cores through per-package and per-thread-name rules, with eBPF-accelerated process tracking and automatic allocation for apps without a rule. Built for the Aether scheduler. `FOSS` `[M]` `[K]`
 - **[AZenith](https://github.com/Liliya2727/AZenith)** - Applies system optimizations to Android. `FOSS` `[M]` `[K]`
 - **[COPG](https://github.com/AlirezaParsi/COPG)** - Spoof your device to enjoy premium features, max performance, and exclusive benefits. `FOSS` `[M]` `[A]`
-- **[COPG-VD](https://github.com/VD171/COPG-VD)** - Fork of COPG with additional features and optimizations. `FOSS` `[M]` `[K]` `[A]`
 - **[Dynamic System Tweaks Magisk Module](https://github.com/PS2ClassicsVault/Dynamic-System-Tweaks-Magisk-Module)** - Improves overall System performance without overheating and losing battery power for armeabi-v7a devices. `FOSS` `[M]`
 - **[FDE.AI](https://github.com/feravolt/FDE.AI-docs)** - Applies performance optimizations to Android devices. `Proprietary` `[LSP]`
 - **[Hydrostellaire](https://github.com/AestasBritannia/Hydro-Br-leur)** - A magisk module for devices running on Dimensity flagship platforms and OnePlus, Realme devices. `FOSS` `[M]`
