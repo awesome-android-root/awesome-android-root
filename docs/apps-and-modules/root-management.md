@@ -151,6 +151,7 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 - **[⭐ TEESimulator](https://github.com/JingMatrix/TEESimulator)** - Create a complete, software-based simulation of a hardware-backed Trusted Execution Environment (TEE) for Key Attestation. `FOSS` `[M]` `[K]` `[A]`
 - **[Always Strong](https://gitlab.com/Evokerr/AlwaysStrong)** - Bundles TEESimulator-RS and PlayIntegrityFork into a single module for strong integrity on rooted devices. `FOSS` `[M]` `[K]` `[A]`
 - **[AuditPatch](https://github.com/silvzr/AuditPatch)** - Hooks `logd` to replace sensitive SELinux contexts in the audit log, fixing AVC log leak detection without SUSFS or ZygiskNext. `Proprietary` `[M]` `[K]`
+- **[COPG-VD](https://github.com/VD171/COPG-VD)** - Global device fingerprint spoofing for Play Integrity across the whole device, including system apps, with per-app scope and a WebUI. `FOSS` `[M]` `[K]` `[A]`
 - **[DirtySepolicy Bypass](https://github.com/flipphoneguy/DirtySepolicy_Bypass)** - Bypasses new DirtySepolicy on rooted Android devices to keep apps working. `FOSS` `[M]` `[K]` `[A]`
 - **[Duck ToolBox](https://github.com/eltavine/Duck-ToolBox)** - Provides a WebUI for Tricky Store, TEESimulator and OhMyKeymint configuration, Remote Key Provisioning CSR creation and verification, and Qualcomm Keymaster device ID provisioning. `FOSS` `[M]` `[K]` `[A]`
 - **[Komodo Build Props](https://github.com/Elcapitanoe/Komodo-Build-Prop#komodo-build-props)** - Spoofs your device as a Pixel 9 Pro XL (komodo). `FOSS` `[M]` `[A]`

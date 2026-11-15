@@ -38,6 +38,7 @@ more), network diagnostics, Wi-Fi & mobile data utilities and Bluetooth & NFC ap
 - **[Netcut](https://github.com/rajnishsubedi0/Netcut)** - Cuts internet access for other devices on the local network through ARP spoofing, with ban, unban, protect and save lists. Requires root; use only on networks you own or are authorized to test. `FOSS`
 - **[Network Utilities](https://play.google.com/store/apps/details?id=com.myprog.netutils)** - Application contains a set of tools for networks diagnostics. `Proprietary`
 - **[TCP Optimiser Module](https://github.com/fatalcoder524/TCP_Optimiser_Module)** - Change tcp congestion algorithm based on current active internet type and some network enhancements. `FOSS` `[M]` `[K]` `[A]`
+- **[VD-dropbear](https://github.com/VD171/VD-dropbear)** - Standalone, configurable rooted SSH (Dropbear) server with a WebUI and bundled sftp-server, scp and rsync. `FOSS` `[M]` `[K]` `[A]`
 
 ## VPN & Proxy
 
