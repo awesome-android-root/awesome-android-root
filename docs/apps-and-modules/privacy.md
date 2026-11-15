@@ -68,6 +68,7 @@ tracking, spoofing your device identity or location, and isolating apps from you
 ## Privacy Tools
 
 - **[⭐ Amarok](https://github.com/deltazefiro/Amarok-Hider)** - Android application which enables you to hide your private files and apps with a single click. `FOSS` | [🌱](https://f-droid.org/zh_Hans/packages/deltazero.amarok.foss/)
+- **[ClipBait](https://github.com/pgntgz/ClipBait)** - Intercepts clipboard reads in `system_server` and answers them with decoy text or blocks them, while the active input method's own paste still works. Android 10 to 17. `FOSS` `[LSP]`
 - **[Do Not Try Accessibility Reborn](https://github.com/zjz-Beiming/DoNotTryAccessibility-Reborn)** - Prevents blacklisted apps from seeing enabled accessibility services, with optional hiding of the installed service list and hot-reloading config. `FOSS` `[LSP]`
 - **[Doppel](https://github.com/akano12/Doppel)** - Hands apps fake device IDs, location, contacts and other data instead of blocking the request, so they keep working, and lists each call with the real and fake value. Continues XPrivacyLua. Android 8.1+. `FOSS` `[LSP]`
 - **[DuckUSB](https://github.com/Bouteillepleine/DuckUSB)** - Makes apps read USB debugging, wireless debugging and Developer Options as OFF while they stay enabled. `Proprietary` `[M]` `[K]` `[LSP]`

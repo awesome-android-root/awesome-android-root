@@ -74,6 +74,7 @@ Magisk/KernelSU/LSPosed modules.
 
 - **[AOD Notify](https://github.com/Makish003/AodNotify)** - Shows brief banners or up to four notification cards on the ColorOS 17 always-on display. Tested upstream on OnePlus 15T with the China ROM. `FOSS` `[LSP]`
 - **[ColorOS Live Lyrics Bridge](https://github.com/Andrea-lyz/ColorOS-Live-Lyrics-Bridge)** - Bridges timed lyrics from supported players into the ColorOS/OPlus lock-screen lyric pipeline. `FOSS` `[LSP]`
+- **[Dressroom Advanced](https://github.com/BlueOutside/Dressroom-Advanced)** - Adds clock, widget and Now Bar controls to Samsung's Dressroom lock screen editor on One UI 9, with partial 8.5 support, plus variable font imports, live previews and separate cover and inner screen layouts. Android 16+. `Proprietary` `[LSP]`
 - **[HyperGlow](https://github.com/amarinne/hyperglow)** - Animated lock screen and always-on display lyrics for HyperOS 3. `FOSS` `[LSP]`
 - **[HyperLyrics Enhanced](https://github.com/juren233/HyperLyrics-Enhanced)** - Shows HyperIsland and always-on display lyrics on HyperOS, with Apple Music enhancements and bundled Lyricon providers. `FOSS` `[LSP]`
 - **[HyperOS AOD](https://github.com/Mods-Center/HyperOS-AOD)** - Enhanced HyperOS AOD and Lock Screen Editor app with unlocked features. `Proprietary` `[M]` `[K]`
@@ -86,6 +87,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[HyperIsland](https://github.com/1812z/HyperIsland/blob/main/README_EN.md)** - Dynamic Island-style notifications for HyperOS 3, powered by LSPosed. `FOSS` `[LSP]`
 - **[Notification Code](https://gitlab.com/n00byara/NotificationCode)** - Automatically extracting authentication codes and other useful information from notifications. `FOSS` `[LSP]`
 - **[Notification Icon Fix](https://github.com/Xposed-Modules-Repo/io.github.howard20181.notificationiconfix/)** - Converts white notification icons into recognizable icons on AOSP, MIUI and HyperOS. `FOSS` `[LSP]`
+- **[OneUisland](https://github.com/Spottq/OneUisland)** - Replaces the One UI 9 Now Bar capsule with a dynamic island around the camera cutout, with live activities, a ColorOS-style media player and flashlight and voice recorder cards. Android 17. Source has no project-wide license. `Proprietary` `[LSP]`
 - **[Punch-hole Download Progress](https://github.com/hxreborn/punch-hole-download-progress)** - Displays download progress as an animated ring around the camera cutout. `FOSS` `[LSP]` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/eu.hxreborn.phdp)
 
 ## Screen & Display

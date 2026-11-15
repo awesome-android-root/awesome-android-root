@@ -35,6 +35,7 @@ regardless of whether they are apps, Magisk modules, KernelSU modules or LSPosed
 - **[Hi-Res Audio Enabler](https://github.com/reiryuki/Hi-Res-Audio-Enabler-Magisk-Module)** - Enables high resolution 24 or 32-bit width audio output if device is supported. `FOSS` `[M]` `[A]`
 - **[Hifi-maximizer-mod](https://github.com/yzyhk904/hifi-maximizer-mod)** - Maximize the digital audio fidelity by reducing jitters on audio outputs (USB DACs, Bluetooth a2dp, DLNA, etc.) `FOSS` `[M]`
 - **[High Performance DAC](https://github.com/ahkehra/high_perf_dac)** - Tunes kernel-level audio settings on Qualcomm devices. `FOSS` `[K]`
+- **[LHDC A2DP Enabler](https://github.com/Makuro-Arisaka/android17-lhdc-a2dp-universal)** - Makes Android 17's built-in LHDC codec produce sound on Qualcomm phones that negotiate LHDCv5 but stay silent, by declaring the A2DP ports on an AOSP bluetooth audio HAL module instead of the vendor offload path. `FOSS` `[M]` `[K]` `[A]`
 
 ## Audio Enhancement
 

@@ -17,7 +17,7 @@ head:
 # System Tweaks for Rooted Android
 
 **System** tools let you modify how Android itself works: system tweaks and **VBMeta** modules, System UI and
-OEM framework mods (**AOSP, ColorOS, Flyme, HyperOS, NothingOS, One UI, Onyx, OxygenOS, ZUI**), boot & startup
+OEM framework mods (**AOSP, ColorOS, Flyme, Hisense, HyperOS, NothingOS, One UI, Onyx, OxygenOS, ZUI**), boot & startup
 customization, **app & package management**, permissions (**AppOps**) and system diagnostics. Both apps and
 Magisk/KernelSU/LSPosed modules are listed together per topic.
 
@@ -143,6 +143,10 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 
 - **[Flyme Mod](https://github.com/Xposed-Modules-Repo/dev.rikumi.flymemod)** - All-round Flyme experience enhancement covering the home screen, control center, notification center and status bar, lock screen and system cleanup. Sister project of ColorOS Mod, tested on Meizu 21 Pro and Meizu 22 with Flyme 12.6 on Android 16. `FOSS` `[LSP]`
 
+### Hisense (E-ink)
+
+- **[Hisense Mod](https://github.com/Xposed-Modules-Repo/io.github.asimon655.hisensemod)** - Fixes Hisense A5 Pro CC firmware annoyances and adds e-ink lock screen icons with unread, missed call and SMS counts, now playing, monochrome status bar icons and system-wide e-ink notification styling. Needs root and Vector. Source has no project-wide license. `Proprietary` `[LSP]`
+
 ### HyperOS (Xiaomi)
 
 - **[⭐ HyperCeiler](https://github.com/ReChronoRain/HyperCeiler/blob/main/README_en-US.md)** - Extensive customizations for HyperOS. `FOSS` `[LSP]`
@@ -150,6 +154,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[ColorOS_Control_Center](https://github.com/Mods-Center/ColorOS_Control_Center)** - Replace HyperOS control panel with ColorOS-style quick settings, featuring customizable and squared tiles. `Proprietary`
 - **[CustoMIUIzer A14](https://github.com/thetvplus/customiuizer-a14)** - Kotlin rewrite of CustoMIUIzer for HyperOS 1 on Android 14. `FOSS` `[LSP]`
 - **[Fingerprint Catalog](https://github.com/custombeta/fingerprint-cataloge)** - Allows you to create, upload, import, and apply your own fingerprint icons and animations on HyperOS. `Proprietary` `[LSP]`
+- **[FreeStyle Control Center](https://github.com/Mods-Center/FreeStyle-Control-Center)** - Restyles any HyperOS FreeStyle control center tile, with an expandable media player, extended power menu, 5G and SystemUI restart tiles and glass blur on HyperOS 4. On Android 15+ signature verification must be disabled first. `Proprietary` `[M]` `[K]` `[A]`
 - **[FusionStatusBar](https://github.com/yudigaga/FusionStatusBar)** - Customizes status bar icons, layout, clock, weather and device telemetry, Control Center layout and materials, and launcher gestures on MIUI and HyperOS. Android 13+. `Proprietary` `[LSP]`
 - **[Hyper Helper](https://github.com/HowieHChen/XiaomiHelper/blob/master/README_EN-US.md)** - Customizes HyperOS; developed on the China ROM for Xiaomi 15 Pro. `FOSS` `[LSP]`
 - **[Hyper Unlocked](https://github.com/ukriu/HyperUnlocked)** - Unlock all high-end features possible to be unlocked on low-end xiaomi devices. `FOSS` `[M]` `[A]`
@@ -158,7 +163,9 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[HyperDesktop Unlock](https://github.com/the-marox/HyperDesktopUnlock)** - Unlocks Android 17's native external-display desktop mode on Xiaomi HyperOS 4 devices with DisplayPort Alt Mode, adding Quick Settings tiles, desktop keyboard shortcuts and an optional phone touchpad. `FOSS` `[LSP]`
 - **[HyperOpen](https://github.com/qmryqmm/HyperOpen)** - Rebuilds the HyperOS fingerprint-press quick-open panel with circular, ring and arc-fan layouts, draggable and custom icons, blur materials and shortcut actions for app launch, WeChat and Alipay scan and shell commands. Needs an under-display fingerprint and LSPosed. `Proprietary` `[LSP]`
 - **[HyperOS 4 SmallWindow Input Filter](https://github.com/zilewang7/HyperOS4SmallWindowInputFilter)** - Restores the two-finger recents-drag small-window gesture on HyperOS 4 by loading an arm64 payload into the native HYOS `com.miui.home` process. Needs Zygisk Next 1.5.0+ and LSPosed 2.1.1+. `FOSS` `[LSP]`
+- **[HyperOS Screenshot Mod](https://github.com/Mods-Center/HyperOS-Screenshot-mod)** - Adds device frames, an app-name pill and saved presets to the HyperOS screenshot editor, and can apply them while capturing. `Proprietary` `[M]` `[K]` `[A]`
 - **[HyperOSUnf*cker](https://github.com/Enki013/hyperosunfcker)** - Unlocks hidden system performance, display, memory, battery, and visual settings on Xiaomi/POCO/Redmi devices. `FOSS` `[LSP]`
+- **[HyperSelect](https://github.com/Yilink1/HyperSelect)** - Cleans up the HyperOS text selection menu, system share sheet and open-with list by hiding AI entries and reordering or hiding items, with changes applied without a reboot. `FOSS` `[LSP]`
 - **[HyperStar](https://github.com/YunZiA/HyperStar/blob/master/README_EN-US.md)** - Customizes the Xiaomi HyperOS Control Center. `FOSS` `[LSP]`
 - **[Janus](https://modules.lsposed.org/module/org.pysh.janus/)** - Enhances Xiaomi rear screens with multitasking, app shortcuts, gestures, notification mirroring, and power-saving features. `Proprietary` `[LSP]`
 - **[MeowPower](https://github.com/Xposed-Modules-Repo/io.github.yuhj319.meowpower)** - Unlocks HyperOS Security Center controls for charging protection, power saving, background cleanup and network limits. `Proprietary` `[LSP]`
