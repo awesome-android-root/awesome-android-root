@@ -31,6 +31,7 @@ regardless of whether they are apps, Magisk modules, KernelSU modules or LSPosed
 
 - **[Audio Misc Settings](https://github.com/Magisk-Modules-Alt-Repo/audio-misc-settings)** - For setting miscellaneous audio configuration values (media audio volume steps (100 steps), raising the resampling quality, disabling the effects framework, etc.) `FOSS` `[M]`
 - **[Audio SampleRate Changer](https://github.com/Magisk-Modules-Alt-Repo/audio-samplerate-changer)** - Changes audio sample rates in the system-wide mixer. `FOSS` `[M]`
+- **[Auto Samplerate Changer for Android](https://github.com/ArupEn1/Auto-Samplerate-Changer-Android)** - Follows each track's sample rate on a USB DAC, with a WebUI and optional bit-perfect mode. Needs root and a USB DAC. `FOSS` `[M]` `[K]` `[A]`
 - **[DSP AudioFix](https://github.com/ahmed-alnassif/DSP-AudioFix)** - A simple fix for distorted audio on Xiaomi/MediaTek devices with Awinic smart amps. `FOSS` `[M]` `[K]`
 - **[Hi-Res Audio Enabler](https://github.com/reiryuki/Hi-Res-Audio-Enabler-Magisk-Module)** - Enables high resolution 24 or 32-bit width audio output if device is supported. `FOSS` `[M]` `[A]`
 - **[Hifi-maximizer-mod](https://github.com/yzyhk904/hifi-maximizer-mod)** - Maximize the digital audio fidelity by reducing jitters on audio outputs (USB DACs, Bluetooth a2dp, DLNA, etc.) `FOSS` `[M]`
