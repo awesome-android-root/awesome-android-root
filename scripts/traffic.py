@@ -8,6 +8,7 @@ import os
 import urllib.request
 
 API = "https://api.github.com"
+REQUEST_TIMEOUT_SECONDS = 30
 TOKEN = os.environ.get("TRAFFIC_TOKEN", "")
 
 EYE_SVG = (
@@ -34,7 +35,7 @@ def call(method, url, body=None):
             "X-GitHub-Api-Version": "2022-11-28",
         },
     )
-    with urllib.request.urlopen(req) as r:
+    with urllib.request.urlopen(req, timeout=REQUEST_TIMEOUT_SECONDS) as r:
         return json.load(r)
 
 
