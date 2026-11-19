@@ -51,8 +51,8 @@
     "vitepress"
   ],
   "devDependencies": {
-    "@lucide/vue": "^1.72.0",
-    "@vite-pwa/vitepress": "^2.0.3",
+    "@lucide/vue": "^1.75.0",
+    "@vite-pwa/vitepress": "^2.0.4",
     "magicast": "^0.5.5",
     "vitepress": "2.0.0-alpha.21",
     "vitepress-plugin-llms": "^1.15.0"
