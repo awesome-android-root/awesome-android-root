@@ -13,10 +13,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-
   links:
     name: Check internal links
     runs-on: ubuntu-latest
+    timeout-minutes: 5
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
@@ -27,6 +28,8 @@ jobs:
   build:
     name: Build documentation
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
@@ -43,72 +46,65 @@ jobs:
         with:
           node-version-file: .nvmrc
 
-      - name: Cache dependencies
+      - name: Cache Bun packages
         uses: actions/cache@v6
         with:
-          path: |
-            ~/.bun/install/cache
-            node_modules
-          key: bun-${{ runner.os }}-${{ hashFiles('package.json') }}
-          restore-keys: bun-${{ runner.os }}-
+          path: ~/.bun/install/cache
+          key: bun-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('.bun-version', 'package.json') }}
+          restore-keys: |
+            bun-${{ runner.os }}-${{ runner.arch }}-
 
       - name: Install dependencies
         run: bun install
 
       - name: Build documentation
         run: bun run docs:build
+
+      - name: Upload built site
+        if: >-
+          github.event_name == 'push' ||
+          (
+            github.event_name == 'pull_request' &&
+            github.event.pull_request.head.repo.full_name == github.repository
+          )
+        uses: actions/upload-artifact@v7
+        with:
+          name: site-${{ github.sha }}
+          path: docs/.vitepress/dist
+          if-no-files-found: error
+          retention-days: 1
+
+  deploy:
+    name: Deploy to Cloudflare Pages
+    needs: [build, links]
+    if: >-
+      github.event_name == 'push' ||
+      (
+        github.event_name == 'pull_request' &&
+        github.event.pull_request.head.repo.full_name == github.repository
+      )
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+
+      - name: Download built site
+        uses: actions/download-artifact@v8
+        with:
+          name: site-${{ github.sha }}
+          path: docs/.vitepress/dist
 
       - name: Deploy to Cloudflare Pages
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy docs/.vitepress/dist --project-name=awesome-android-root --branch=main --commit-dirty=true
-
-  preview:
-    name: Deploy PR preview
-    needs: build
-    if: >-
-      github.event_name == 'pull_request' &&
-      github.event.pull_request.head.repo.full_name == github.repository
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v7
-        with:
-          fetch-depth: 0
-
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
-        with:
-          bun-version-file: .bun-version
-
-      - name: Setup Node
-        uses: actions/setup-node@v7
-        with:
-          node-version-file: .nvmrc
-
-      - name: Cache dependencies
-        uses: actions/cache@v6
-        with:
-          path: |
-            ~/.bun/install/cache
-            node_modules
-          key: bun-${{ runner.os }}-${{ hashFiles('package.json') }}
-          restore-keys: bun-${{ runner.os }}-
-
-      - name: Install dependencies
-        run: bun install
-
-      - name: Build documentation
-        run: bun run docs:build
-
-      - name: Deploy preview to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v4
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy docs/.vitepress/dist --project-name=awesome-android-root --branch=pr-${{ github.event.pull_request.number }} --commit-dirty=true
+          command: >-
+            pages deploy docs/.vitepress/dist
+            --project-name=awesome-android-root
+            --branch=${{ github.event_name == 'push' && 'main' || format('pr-{0}', github.event.pull_request.number) }}
+            --commit-dirty=true
