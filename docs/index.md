@@ -260,7 +260,7 @@ hero:
   <a href="https://github.com/awesome-android-root/awesome-android-root" class="community-card">
     <span class="icon"><BrandIcon name="github" /></span>
     <strong>GitHub</strong>
-    <span>6K stars</span>
+    <span>6.1 K stars</span>
   </a>
   <a href="https://x.com/awsm_and_root" class="community-card">
     <span class="icon"><BrandIcon name="x" /></span>
