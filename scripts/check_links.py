@@ -32,8 +32,51 @@ def vp_slugify(text):
     return s.lower()
 
 
+def strip_fenced_code(text):
+    """Blank out Markdown fenced code blocks while preserving line breaks."""
+    lines = []
+    fence_char = None
+    fence_length = 0
+
+    for line in text.splitlines(keepends=True):
+        content = line.rstrip('\r\n')
+        newline = line[len(content):]
+
+        if fence_char:
+            closing = re.match(r'^ {0,3}(`+|~+)[ \t]*$', content)
+            if (
+                closing
+                and closing.group(1)[0] == fence_char
+                and len(closing.group(1)) >= fence_length
+            ):
+                fence_char = None
+                fence_length = 0
+            lines.append(newline)
+            continue
+
+        opening = re.match(r'^ {0,3}(`{3,}|~{3,})(.*)$', content)
+        if opening:
+            marker, info = opening.groups()
+            if marker[0] != '`' or '`' not in info:
+                fence_char = marker[0]
+                fence_length = len(marker)
+                lines.append(newline)
+                continue
+
+        lines.append(line)
+
+    return ''.join(lines)
+
+
+def strip_code(text):
+    """Blank out fenced code blocks & inline code so links there are skipped."""
+    text = strip_fenced_code(text)
+    return re.sub(r'`[^`]*`', ' ', text)
+
+
 def heading_ids(text):
     """Map VitePress heading IDs, including explicit {#id} attributes."""
+    text = strip_fenced_code(text)
     ids = {}
     used_slugs = set()
     for m in re.finditer(r'^(#{1,6})\s+(.+?)\s*$', text, re.M):
@@ -59,13 +102,6 @@ def heading_ids(text):
         used_slugs.add(slug)
         ids[slug] = True
     return ids
-
-
-def strip_code(text):
-    """Blank out fenced code blocks & inline code so links there are skipped."""
-    text = re.sub(r'```.*?```', ' ' * 100000, text, flags=re.S)
-    text = re.sub(r'`[^`]*`', ' ', text)
-    return text
 
 
 def find_target(path, dirn):
