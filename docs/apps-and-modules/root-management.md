@@ -32,10 +32,12 @@ problem - controlling root access.
 - **[APatch](https://github.com/bmax121/APatch)** - The patching of Android kernel and Android system. `FOSS`
 - **[Aster](https://github.com/LyraVoid/Aster)** - Root manager built on KernelPatch and continuing the APatch capability chain, with APM and KPM modules, a module repository and protected runtime operations. `FOSS`
 - **[FolkPatch](https://github.com/LyraVoid/FolkPatch)** - A Root management tool focused on interface optimization and feature extension, based on APatch. `FOSS`
+- **[KazeSU](https://github.com/KazeSU/KazeSU)** - Kernel-based root solution in the SukiSU lineage, with per-app profiles, KPM modules, a built-in Zygisk, SUSFS tooling, themes and a kernel extension center in the manager. Install only the release APK whose name ends in `-release.apk`; other builds are rejected as unofficial. `FOSS`
 - **[KernelSU-next](https://github.com/KernelSU-Next/KernelSU-Next)** - An advanced Kernel based root solution for Android. `FOSS`
 - **[QuestStack](https://github.com/starseed12345/QuestStack)** - Desktop workflow for Windows, Linux and macOS that roots Meta Quest 1 and Quest 2 headsets through the GhostLock chain and the CVE-2021-1931 ABL/fastboot bug, with temporary boot of a vulnerable ABL, verified backups, A/B slot handling and bootloader unlocking. `FOSS`
 - **[ReSukiSU](https://github.com/ReSukiSU/ReSukiSU)** - Fork of SukiSU-Ultra with additional features. `FOSS`
 - **[SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra)** - A kernel-based root solution for Android devices, forked from `KernelSU` with some useful changes. `FOSS`
+- **[XECKernel Ultra](https://github.com/byBOOK10086/XECKernelPro)** - KernelSU fork with its own manager, per-app profiles, hot-loadable `kernelsu.ko` per KMI, a late-load route that avoids flashing boot, module backup and restore, and SUSFS support in GKI builds. GKI 2.0 kernels 5.10 and newer; older kernels use the KernelPatch or Magisk mount route. `FOSS`
 - **[YukiSU](https://github.com/Rouyashiki/YukiSU)** - Kernel-based root solution forked from SukiSU-Ultra with the userspace manager rewritten in C++, external MetaModule lifecycle and script integration, app profiles and dynamic manager support. `FOSS`
 
 

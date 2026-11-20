@@ -67,6 +67,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[Launcher3 QuickLaunch](https://github.com/hddq/launcher3-quicklaunch)** - Lets you press Enter in Launcher3's app drawer search to instantly launch the first search result. `FOSS` `[LSP]`
 - **[One UI Home 31](https://github.com/reiryuki/One-UI-Home-31-Magisk-Module)** - Ports Samsung's One UI Home launcher (target SDK 31) to non-One UI ROMs as a system module. Requires the One UI Core module; Android 8.0 to 12.1, not for Samsung devices. `Proprietary` `[M]` `[K]` `[A]`
 - **[OnePlusPlusLauncher](https://github.com/wizpizz/OnePlusPlusLauncher)** - Adds features to the System Launcher on OnePlus OxygenOS 15. `FOSS` `[LSP]`
+- **[PigLauncher](https://github.com/dinopig1219/PigLauncher)** - Unlocks dark folders, advanced textures and widget animations in POCO Launcher, and adds folder icon fill, home screen icon hiding and a predictive back speed fix. Targets `com.mi.android.globallauncher`, tested on the OS3 builds named upstream; source has no project-wide license. `Proprietary` `[LSP]`
 - **[Pixel Launcher Enhanced](https://github.com/Mahmud0808/PixelLauncherEnhanced)** - Unlock a variety of exciting features including customizing the look to adding more functionality and many more. `FOSS` `[LSP]`
 - **[Root Activity Launcher](https://play.google.com/store/apps/details?id=tk.zwander.rootactivitylauncher)** - Launch activities directly from your home screen with root access. `Proprietary`
 
@@ -78,6 +79,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[HyperGlow](https://github.com/amarinne/hyperglow)** - Animated lock screen and always-on display lyrics for HyperOS 3. `FOSS` `[LSP]`
 - **[HyperLyrics Enhanced](https://github.com/juren233/HyperLyrics-Enhanced)** - Shows HyperIsland and always-on display lyrics on HyperOS, with Apple Music enhancements and bundled Lyricon providers. `FOSS` `[LSP]`
 - **[HyperOS AOD](https://github.com/Mods-Center/HyperOS-AOD)** - Enhanced HyperOS AOD and Lock Screen Editor app with unlocked features. `Proprietary` `[M]` `[K]`
+- **[XMorph Clock](https://github.com/Mahmud0808/XMorphClock)** - Replaces the stock lock screen clock with animated morphing faces, weather, widgets and user-placed elements with separate layouts for the large clock, small clock and always-on display. Android 12 to 17 on Pixel firmware and Pixel-based ROMs; manufacturer skins are not supported. `FOSS` `[LSP]`
 
 ## Notifications
 
@@ -119,7 +121,9 @@ Magisk/KernelSU/LSPosed modules.
 ## Themes & Visual Mods
 
 - **[ColorBlendr](https://github.com/Mahmud0808/ColorBlendr)** - Customize Material You colors of your device. `FOSS` | [🌱](https://f-droid.org/en/packages/com.drdisagree.colorblendr/)
+- **[Duo Fold Live](https://github.com/joeconsorti/duo-fold-live)** - Animates the Galaxy Z Fold 8 opening and closing from the live hinge angle, with windowed glass, cover previews and a fade around Samsung's display handoff. Only tested on the SM-F971U with Android 17, and needs Shizuku plus Samsung's fold wallpapers. `FOSS`
 - **[Duo Open](https://github.com/marcoazeem/duo-open)** - Frosted-glass fold effect for book-style foldables driven by the real hinge angle, drawn through an accessibility overlay above every window or as a live wallpaper. Android 13+, no root. `FOSS`
+- **[Glass Layer](https://github.com/Mahmud0808/GlassLayer)** - Adds live liquid glass with refraction, blur, rim light and reflection to Quick Settings, notifications, the lock screen and system dialogs, with per-surface switches and styles that apply without a SystemUI restart. Android 16+, tested on PixelOS with Android 17. `FOSS` `[LSP]`
 - **[Global Icon Pack](https://github.com/RichardLuo0/global-icon-pack-android)** - Apply icon packs globally. `FOSS` `[LSP]`
 - **[HyperLight](https://github.com/KiminonawaResa/HyperLight#english)** - Completes the highlight blur effects for HyperOS 3, bringing a unified visual experience to the desktop, notification shade, and control center. `FOSS` `[LSP]`
 - **[HyperOS MTZ Studio](https://github.com/GloriousApps/HyperOS-MTZ-Studio)** - MTZ theme workspace for HyperOS: import, translate, convert, compose and apply themes, with an optional root module for native MTZ import. `Proprietary`
