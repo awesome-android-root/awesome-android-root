@@ -70,6 +70,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[ReelsBlock](https://github.com/Xposed-Modules-Repo/io.github.sfsakhawat999.reelsblock)** - Stops endless short-video scrolling: swiping to the next Short, Sample or Reel does nothing in YouTube, YouTube Music, Instagram and Facebook, and Shorts links are blocked in Chromium browsers, 1DM and Firefox. `FOSS` `[LSP]`
 - **[Spicy EX](https://github.com/amarinne/spicy-ex)** - Adds Spicy lyrics in Spotify along with translation and much more UI features. `FOSS` `[LSP]`
 - **[Timeline Unlocker](https://github.com/SherlockChiang/ReLocationReportEnabler)** - Lets GMS Location History / Timeline be enabled on devices whose SIM is registered in a region where Google has restricted the feature. `FOSS` `[LSP]`
+- **[VDExtra](https://github.com/git-morin/io.github.git_morin.vdextra)** - Adds UI translations and an extended bitrate range to the Virtual Desktop VR streaming app. Early stage and tested only on Quest 3 with Virtual Desktop 1.34.x; the app itself still needs a license. `FOSS` `[LSP]`
 - **[Xposed Translate Text](https://github.com/tianci-sh/XPTranslateText)** - Translate text by MLKit / gemini2.0 / google api. `FOSS` `[LSP]`
 - **[XposedPhotosFix](https://github.com/RevealedSoulEven/XposedPhotosFIX)** - Prevents Google Photos app from merging all folders into Camera and creates separate albums for each folder, useful for backups. `FOSS` `[LSP]`
 - **[Yandex Maps Patcher](https://github.com/Xposed-Modules-Repo/ru.bluecat.yandexmapspatcher)** - Hides ads and intrusive services in the Yandex Maps app. `Proprietary` `[LSP]`
@@ -123,6 +124,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[NewQStory](https://github.com/Xposed-Modules-Repo/lin.xposed/)** - Adds features and tweaks to QQ. `Proprietary` `[LSP]`
 - **[QAuxiliary](https://github.com/cinit/QAuxiliary)** - Customizes QQ and TIM, based on QNotified. `FOSS` `[LSP]`
 - **[QFun](https://github.com/oneQAQone/QFun)** - Adds features such as anti-recall and interface customization to QQ and TIM. `FOSS` `[LSP]`
+- **[QWish](https://github.com/Xposed-Modules-Repo/top.qwish.xposed)** - Adds anti-recall, message timestamps and group helpers to QQ, blocks some in-app ads, and loads online scripts and emoji packs. Android 8.1+ on arm64-v8a. `Proprietary` `[LSP]`
 - **[TCQT Module](https://github.com/callng/TCQT)** - Intercepts and retains retracted messages in the Android QQ and TIM clients. `FOSS` `[LSP]`
 - **[XAutoDaily](https://github.com/LuckyPray/XAutoDaily)** - Adds tweaks to the QQ client. `FOSS` `[LSP]`
 

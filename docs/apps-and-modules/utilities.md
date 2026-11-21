@@ -61,3 +61,4 @@ tools, sharing & intent tweaks, communication helpers and all-in-one power-user 
 ## Sync & File Transfer
 
 - **[Rclone Magisk Module](https://github.com/NewFuture/rclone-fuse3-magisk)** - Integrates Rclone with FUSE support into Android, allowing you to manage remote storage mounts seamlessly. `FOSS` `[M]`
+- **[Syncthing Live Update](https://github.com/MrxSiN/syncthing-liveupdate)** - Turns Syncthing's sync progress into an Android Live Update in the status bar chip, lock screen and always-on display, without a second notification or REST polling. Android 16+ and Syncthing-Fork 2.1.x. `FOSS` `[LSP]`

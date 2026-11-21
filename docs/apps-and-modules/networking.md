@@ -60,11 +60,14 @@ more), network diagnostics, Wi-Fi & mobile data utilities and Bluetooth & NFC ap
 - **[Tailscale-android-cli](https://github.com/anasfanani/tailscale-android-cli)** - A command-line interface for Tailscale on Android. `FOSS` 
 - **[VPN Hide](https://github.com/okhsunrog/vpnhide)** - Hide active VPN from selected Android apps (kernel module + LSPosed + Zygisk) `FOSS` `[M]` `[K]` `[A]`
 - **[VPN Hotspot](https://github.com/Mygod/VPNHotspot)** - Share your VPN connection over hotspot or repeater. `FOSS`
+- **[WireGuard Plus](https://github.com/AliHaider704/wgplus)** - Runs a userspace WireGuard and AmneziaWG tunnel for Telegram only, keeping Android's single VPN slot free for other apps. Rootless through LSPatch or rooted through LSPosed; a Windows build is included upstream. `FOSS` `[LSP]`
 - **[zapret for Magisk](https://github.com/sevcator/zapret-magisk)** - DPI bypass on Android with additional features. `FOSS` `[M]`
 - **[ZDT-D Root Module](https://github.com/GAME-OVER-op/ZDT-D)** - Provides traffic routing, DPI bypass, proxy chaining, DNS control and per-app network management. `FOSS` `[M]` `[K]` `[A]`
 
 ## Wi-Fi & Mobile Data
 
+- **[Data SIM Switcher](https://github.com/jksalcedo/data-sim-switcher)** - Quick Settings tile that switches the default mobile data SIM on dual-SIM devices through a root service started only for the tap, with no daemon or phone-state permissions. Android 7+. `FOSS`
+- **[Hotspot Monitor](https://github.com/justakhi/hotspot-monitor)** - Monitors hotspot clients with per-device speeds, app and domain usage and history reports, and adds per-device telemetry when root is granted. Read-only and offline; the source is under the PolyForm Noncommercial license, which restricts commercial use. `Proprietary`
 - **[Hyper 5G Switch](https://github.com/buffcow/Hyper5GSwitch)** - Add a 5G switch to the mobile network panel, only for devices that support 5G net and equipped with HyperOS. `FOSS` `[LSP]`
 - **[NetToggle](https://github.com/Dhangofa/NetToggle)** - Quick Settings tile that switches cellular network modes (5G Only, 4G/LTE Only, Preferred 5G/4G/3G, 2G Only) through root or Shizuku, with dual-SIM targeting. `FOSS` | [🌱](https://f-droid.org/packages/com.dhangofa.networktoggle)
 - **[Network Switch](https://github.com/aunchagaonkar/NetworkSwitch#installation)** - Modern Android app for 4G/5G network mode switching. `FOSS` | [🌱](https://apt.izzysoft.de/packages/com.supernova.networkswitch)
@@ -73,4 +76,5 @@ more), network diagnostics, Wi-Fi & mobile data utilities and Bluetooth & NFC ap
 - **[VirtualAP](https://github.com/ravindu644/VirtualAP)** - Turn a rooted Android phone into Wi-Fi access point with static gateway, selectable upstream (mobile data, Wi-Fi, Ethernet, or a VPN tunnel) etc. `FOSS` `[LSP]`
 - **[WiFi Password Manager](https://github.com/Khh-vu/wifi-password-manager)** - Manages saved Wi-Fi networks and passwords using root or Shizuku. `FOSS` | [🌱](https://apt.izzysoft.de/packages/io.github.wifi_password_manager)
 - **[WiFi Password Viewer for MMRL](https://github.com/Googlers-Repo/wpd)** - WiFi Password Viewer for MMRL. `FOSS`
+- **[WifiCountryCode](https://github.com/mirukurusan/WifiCountryCode)** - Overrides the system Wi-Fi country code so channels blocked in the current region can be used. Android 10+ with the System Framework in scope. `FOSS` `[LSP]`
 - **[Wi‑Fi Passwords Exporter](https://github.com/mlm-games/wifi-exporter)** - Exports saved Wi-Fi credentials as JSON using root. `FOSS`
