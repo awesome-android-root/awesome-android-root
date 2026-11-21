@@ -26,6 +26,7 @@ regardless of whether they are apps, Magisk modules, KernelSU modules or LSPosed
 - **[HyperEars](https://github.com/silverpoetry/HyperEars)** - Adds battery level and noise-control modes for third-party Bluetooth headphones to the HyperOS MiLink device center, so they show up next to Xiaomi earbuds. `FOSS` `[LSP]`
 - **[LibrePods](https://github.com/kavishdevar/librepods)** - Unlocks Apple's exclusive premium AirPods features on non-Apple devices. `FOSS` `[LSP]` `[M]` `[K]`
 - **[SonyPods](https://github.com/Mercury000/SonyPods)** - System-level Sony headphone control for HyperOS devices. `FOSS` `[LSP]`
+- **[VirtuMic](https://gitlab.com/IndiDevs/VirtuMic)** - Virtual microphone manager that injects audio (files or other apps) into the system's recording flow. `FOSS` `[M]` `[K]` | (https://github.com/IndiTheo/VirtuMic)
 
 ## Audio Effects
 
