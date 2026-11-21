@@ -99,7 +99,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[DarQ Fork](https://github.com/Arora-Sir/DarQ)** - Provides a per-app selectable force dark option for Android 10 and above. `FOSS`
 - **[DPIS](https://github.com/Kwensiu/DPIS)** - Adjusts interface scale, smallest width and font size per app. `FOSS` `[LSP]`
 - **[Keep Screen Off](https://github.com/Xposed-Modules-Repo/com.ncyxie.keepscreenoff)** - Stops selected apps from holding the screen awake by ignoring `FLAG_KEEP_SCREEN_ON` and screen wakelocks. `FOSS` `[LSP]`
-- **[Lune Bridge](https://github.com/uraniam9/lune-bridge)** - Moves the conservative display limits in `framework-res` so Android's own compositor reaches candlelight warmth down to 1750+K, dimming below the panel minimum and flicker-safe low brightness, plus an optional notification quiet-hours half. Android 9+. `FOSS` `[M]` `[K]` `[A]`
+- **[Lune Bridge](https://github.com/uraniam9/lune-bridge)** - Moves the conservative display limits in `framework-res` so Android's own compositor reaches candlelight warmth down to 1770+K, dimming below the panel minimum and flicker-safe low brightness, plus an optional notification quiet-hours half. Android 9+. `FOSS` `[M]` `[K]` `[A]`
 - **[Pointer Replacer](https://github.com/thesandipv/pointer_replacer)** - Replaces a dot appears when user touch the screen [Require Show Touches to be enabled in Developer Options]. `FOSS` `[LSP]`
 - **[Pseudo DC Dimming](https://github.com/dantmnf/PseudoDCDimming)** - Enable alternative dimming mode (likely DC-like) on low brightness for some OLED displays by using software brightness gain. `FOSS` `[LSP]`
 - **[PureShot](https://github.com/kazutoiris/PureShot)** - Hide status bar, navigation bar, popups, PiP, toast & more. `FOSS` `[LSP]`
