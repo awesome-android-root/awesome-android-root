@@ -138,7 +138,7 @@ Read the **[Contributing Guide ↗](docs/contributing.md)** and the **[PR templa
 > Rooting can void your warranty, break device security (Knox, Play Integrity), and lock you out of banking and DRM apps. Do not root a mission-critical device, and never start without a verified backup.
 
 > [!NOTE]
-> This project is **maintained by `HUMANS`**. AI is used for coding, formatting, and proofreading, never for content creation or curation.
+> This project is **maintained by `HUMANS`**. AI is used for coding, formatting, and proofreading, never for content creation or curation. Read the [AI Manifesto ↗](AI_Manifesto.md) for details.
 
 ---
 
