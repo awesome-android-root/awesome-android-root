@@ -88,6 +88,7 @@ Exploits such as **DirtyFrag (CVE-2026-43284)** and **GhostLock (CVE-2026-43499)
 
 - **[⭐ Vector](https://github.com/JingMatrix/Vector)** - Open Source *Fork* of original LSPosed with dynamic module loading, and other improvements. `FOSS` `[M]`
 - **[LSPosed](https://lsposed.zip)** - Provides an ART hooking framework using LSPlant and APIs compatible with the original Xposed. Runs through Riru or Zygisk. `Proprietary`
+- **[Vector-SR](https://github.com/byemaxx/Vector-SR)** - Improves soft-restart recovery for Vector's ART hooking framework under Magisk or KernelSU with Zygisk. Android 8.1 to 17. `FOSS` `[M]` `[K]`
 
 > [!TIP]
 > See our [LSPosed installation guide ↗](../rooting-guides/lsposed-guide.md) for setup instructions.
@@ -102,6 +103,7 @@ Exploits such as **DirtyFrag (CVE-2026-43284)** and **GhostLock (CVE-2026-43499)
 - **[Magic Mount Metamodule](https://github.com/Tools-cx-app/meta-magic_mount-rs)** - An implementation of a metamodule using Magic Mount, based on MKSU. `FOSS` `[M]` `[K]` `[A]`
 - **[Meta-hybrid_mount](https://github.com/Hybrid-Mount/meta-hybrid_mount)** - Three-engine mount orchestration (OverlayFS + Magic Mount + Kasumi LKM) with conflict monitor, SolidJS WebUI, auto-fallback, and EROFS storage backend support. `FOSS` `[K]` `[A]`
 - **[NoMount Suite](https://github.com/Bouteillepleine/NoMount-Suite)** - Mountless module loading on the Prism kernel VFS engine, RRO theme overlays included, classifying every file under `/data/adb/modules/` at boot and programming the kernel over netlink. Needs a custom kernel carrying the Prism driver; beta, and OnePlus/Oppo `my_*` partitions still take a visible bind mount. `FOSS` `[M]` `[K]` `[A]`
+- **[OverlayFS Enhanced](https://github.com/RipperHybrid/meta-overlayfsx)** - Manages modules on an ext4 image overlay with a WebUI, mount inspector and conflict detection. `FOSS` `[K]`
 - **[ZeroMount](https://github.com/Enginex0/zeromount)** - Mountless module loading with Kernel-level VFS path redirection & SUSFS integration, WebUI, bootloop guard, and strategy fallback. `FOSS` `[M]` `[K]` `[A]`
 
 ## Module Managers
@@ -159,6 +161,7 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 - **[COPG-VD](https://github.com/VD171/COPG-VD)** - Global device fingerprint spoofing for Play Integrity across the whole device, including system apps, with per-app scope and a WebUI. `FOSS` `[M]` `[K]` `[A]`
 - **[DirtySepolicy Bypass](https://github.com/flipphoneguy/DirtySepolicy_Bypass)** - Bypasses new DirtySepolicy on rooted Android devices to keep apps working. `FOSS` `[M]` `[K]` `[A]`
 - **[Duck ToolBox](https://github.com/eltavine/Duck-ToolBox)** - Provides a WebUI for Tricky Store, TEESimulator and OhMyKeymint configuration, Remote Key Provisioning CSR creation and verification, and Qualcomm Keymaster device ID provisioning. `FOSS` `[M]` `[K]` `[A]`
+- **[KernelNoSu](https://github.com/fatalcoder524/kernelnosu)** - Replaces KernelSU's kprobe-based su compatibility with a stealth su binary. Needs a kernel carrying the KernelNoSU core_hook patch. `FOSS` `[K]`
 - **[Komodo Build Props](https://github.com/Elcapitanoe/Komodo-Build-Prop#komodo-build-props)** - Spoofs your device as a Pixel 9 Pro XL (komodo). `FOSS` `[M]` `[A]`
 - **[OhMyKeymint](https://github.com/qwq233/OhMyKeymint)** - Custom keystore implementation for Android Keystore Spoofer. `FOSS` `[M]` `[K]`
 - **[Play Integrity Fix (inject)](https://github.com/KOWX712/PlayIntegrityFix)** - Actively maintained fork using injected GMS/Play Store spoofing with a WebUI. `FOSS` `[M]`
@@ -218,6 +221,7 @@ A feature that lets modules inject code into Android's Zygote process for system
 - **[ReZygisk](https://github.com/PerformanC/ReZygisk)** A high-performance implementation **entirely rewritten in C**. It introduces **custom linkers** to bypass modern linker-based detections, offering a WebUI for status monitoring and compatibility with Android 15 and 16. `FOSS` `[M]` `[K]` `[A]`
 - **[VexZygisk](https://github.com/Lxiaoyao077/VexZygisk/)** - Standalone implementation of Zygisk for KernelSU and APatch. `FOSS` `[M]` `[K]` `[A]`
 - **[YukiZygisk](https://github.com/Rouyashiki/YukiZygisk)** - Runs Zygisk and ZN native modules using a kernel-based implementation with a status and settings WebUI. `FOSS` `[M]` `[K]` `[A]`
+- **[ZNNext](https://github.com/VeryBaaad/ZNNext)** - Loads Zygisk Next API modules on Android 5 and newer through Magisk, KernelSU or APatch. Not a Zygisk implementation itself. `FOSS` `[M]` `[K]` `[A]`
 
 <details><summary><strong>Comparison table</strong></summary><br>
 

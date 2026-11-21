@@ -46,6 +46,7 @@ firewalls for hardening your device, controlling which apps can reach the networ
 - **[⭐ Move Certificate](https://github.com/ys1231/MoveCertificate)** - Move user certificates to system certificates. Supports Android 7-16. `FOSS` `[M]` `[K]` `[A]`
 - **[⭐ SSL Killer](https://github.com/Xposed-Modules-Repo/com.simo.ssl.killer)** - Bypass multiple ssl pinning implementations. `Proprietary` `[LSP]`
 - **[AlternativeUnlockXposed](https://github.com/leohearts/AlternativeUnlockXposed)** - Unlock your Android phone with an alternative PIN. `FOSS` `[LSP]`
+- **[Always Trust User Certificates](https://github.com/NVISOsecurity/AlwaysTrustUserCerts)** - Copies installed user CA certificates into the system trust store so all apps trust them. Changes device-wide trust; Android 7 to 16. `Proprietary` `[M]` `[K]`
 - **[Android-FlagSecure-Disabler](https://github.com/BlassGO/Android-FlagSecure-Disabler)** - FlagSecure Disabler, Screenshot Observer Disabler & DRM Disabler. `FOSS` `[M]` `[K]`
 - **[Anti SafetyCore](https://github.com/Astoritin/AntiSafetyCore)** - Blocks Google from quietly installing Android System SafetyCore and Android System Key Verifier by holding the package names with differently signed placeholder apps. `FOSS` `[M]` `[K]` `[A]`
 - **[Biometric App Lock](https://github.com/hxreborn/biometric-app-lock)** - Locks apps you choose behind fingerprint or face unlock. `FOSS` `[LSP]`
@@ -56,6 +57,7 @@ firewalls for hardening your device, controlling which apps can reach the networ
 - **[Custom Certificate Authorities](https://github.com/Magisk-Modules-Alt-Repo/custom-certificate-authorities)** - Moves user-installed certificate authorities into the system trust store, making them trusted by all apps. `FOSS` `[M]`
 - **[Custom Certificates](https://github.com/YujiaCheng1996/custom-certificates)** - Adds custom certificates to the system trust store. `FOSS` `[M]` `[K]`
 - **[FLAG_SECURE-next](https://github.com/Dev97633/FLAG_SECURE-next)** - Disables FLAG_SECURE globally, allowing secure windows to be screenshotted and recorded. `Proprietary` `[LSP]`
+- **[FreeUnlock](https://github.com/TheWhiteDog9487/FreeUnlock)** - Disables Android's 72-hour requirement to unlock with a password. Weakens screen-lock security; state resets on reboot. `FOSS` `[LSP]`
 - **[ih8SecureLock](https://github.com/j-hc/ih8SecureLock)** - Prevent apps from blocking and listening to your screenshots with Zygisk. `FOSS` `[M]` `[K]`
 - **[Just Trust Me Pro](https://github.com/hang666/JustTrustMePro)** - Disables SSL certificate checking for the purposes of auditing an app with cert pinning. `FOSS` `[M]`
 - **[OneShot Extended](https://github.com/chickendrop89/OneShot-Extended)** - Performs various WPS attacks without the requirement of monitor mode. `FOSS` `[M]` `[K]`
@@ -64,6 +66,7 @@ firewalls for hardening your device, controlling which apps can reach the networ
 - **[Smali Patcher Reborn](https://github.com/saadnahid7/SmaliPatcherReborn)** - Patches services.jar on the device to hide the mock-location flag, allow screenshots in secure windows and more on Android 10-17. `FOSS` `[M]` `[K]` `[A]`
 - **[StrykerOSS](https://github.com/zalexdev/strykerapp)** - Bundles a curated set of network, wireless and web security tools into a single rooted-Android application for penetration testing. `FOSS`
 - **[TapDucky](https://github.com/iodn/tap-ducky)** - Open-source DuckyScript runner for rooted Android with USB Gadget (ConfigFS) support. `FOSS`  | [🌱](https://f-droid.org/en/packages/org.kaijinlab.tap_ducky/)
+- **[TrustAnyCert](https://github.com/gorkemgun/TrustAnyCert)** - Installs CA certificates into the system trust store from a WebUI, including an APEX bypass on Android 14 and newer. Changes trust for all apps. `FOSS` `[M]` `[K]` `[A]`
 - **[VD-Infos](https://github.com/VD171/VD-Infos)** - Diagnostics app that shows what apps can read from your device: fingerprint, attestation, and root, tamper and hook detection signals. `FOSS` `[M]` `[K]` `[A]`
 - **[WPAForge](https://github.com/wlmosv-png/wpaforge)** - Wi-Fi audit tool for rooted Android that builds candidates from the target SSID and hints and verifies each one with a real association, plus WPS PIN and split-halving attacks, LAN recon and offline `.cap`/`.hc22000` checks. `FOSS`
 - **[Zygisk Cacerts](https://github.com/vvb2060/zygisk_cacerts)** - Replaces the local root certificate store with the AOSP CA certificate list. `Proprietary` `[M]` `[K]`

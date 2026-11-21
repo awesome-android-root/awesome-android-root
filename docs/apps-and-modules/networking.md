@@ -51,6 +51,7 @@ more), network diagnostics, Wi-Fi & mobile data utilities and Bluetooth & NFC ap
 - **[FlClash](https://github.com/chen08209/FlClash)** - Provides a multi-platform proxy client based on Clash Meta. `FOSS`
 - **[Github-direct](https://github.com/FxxkLocation/Github-direct)** - Per-app connectivity module combining pollution-resistant DNS, verified endpoint candidates and transparent TCP/TLS relaying over IPv4 and IPv6, with fail-open rollback and a VPN backend for devices without root. GitHub is the validated profile; Google, YouTube, Discord and OpenAI routing stays experimental and off by default. `FOSS` `[M]` `[K]` `[LSP]`
 - **[Happwner](https://github.com/Omegaplexx/Happwner)** - Exporte Happ subscriptions to other VPN clients. `FOSS` `[LSP]`
+- **[Magisk Tailscaled](https://github.com/anasfanani/magisk-tailscaled)** - Runs Tailscale's daemon in userspace on rooted Android so it coexists with another active VPN. arm and arm64 only; MagicDNS does not work. `FOSS` `[M]` `[K]`
 - **[NetProxy-Magisk](https://github.com/Fanju6/NetProxy-Magisk)** - Starts and stops a transparent proxy based on Xray. `FOSS` `[M]` `[A]`
 - **[NoVPNDetect](https://github.com/RuslanUC/NoVPNDetect)** - Prevents some apps from detecting your phone is connected to a VPN. `FOSS` `[LSP]`
 - **[NoVPNDetect Enhanced](https://github.com/BlueCat300/NoVPNDetectEnhanced/)** - An enhanced version of NoVPNDetect that prevents apps from detecting VPN usage by modifying system properties and network configurations. `FOSS` `[LSP]`

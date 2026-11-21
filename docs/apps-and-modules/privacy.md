@@ -37,6 +37,7 @@ tracking, spoofing your device identity or location, and isolating apps from you
 - **[Device Changer](https://deviceschanger.org)** - Configures device identifiers, build fingerprint, and OS properties per app via Zygisk for QA and compatibility testing. `Proprietary` `[M]`
 - **[Device Faker](https://github.com/Seyud/device_faker/)** - Spoofs device models separately for different apps using Zygisk. `FOSS` `[M]` `[K]`
 - **[DeviceID/SSAID Changer](https://github.com/sidex15/deviceidchanger)** - Changes SSAID and device ID through a WebUI. `FOSS` `[M]` `[K]`
+- **[DeviceSpoofLab](https://github.com/yubunus/DeviceSpoofLab-Magisk)** - Spoofs device identifiers and per-app Android ID through a configurable persona with a WebUI. Disable before updates; soft reboots may retain spoofed values. `FOSS` `[M]` `[K]` `[A]`
 - **[DeviceSpoofLab-Hooks](https://github.com/yubunus/DeviceSpoofLab-Hooks)** - Spoofs device identifiers, build properties, telephony, network, locale and WebView surfaces inside scoped app processes. `FOSS` `[LSP]`
 - **[Geergit](https://github.com/pyshivam/geergit-discussion)** - Change (MASKE) the various IDs in the Phone. `Proprietary` `[LSP]`
 - **[HideMyAndroid](https://github.com/Xposed-Modules-Repo/com.wowsoftware.hidemyandroid/)** - Provides profile isolation and device spoofing. `Proprietary` `[LSP]`

@@ -34,6 +34,7 @@ tools, sharing & intent tweaks, communication helpers and all-in-one power-user 
 - **[⭐ Essentials](https://github.com/sameerasw/essentials)** - Multi-purpose tweaks for display, notifications and alerts, security and privacy, sound and haptics, and app freezing. `FOSS`
 - **[APatch Utilities](https://github.com/lzghzr/APatch_kpm)** - Collection of utility modules for APatch. `FOSS`
 - **[GreaseMilkyway](https://play.google.com/store/apps/details?id=net.kollnig.greasemilkyway)** - Helps people with attention-related conditions such as ADHD manage their digital environment using an accessibility service. `FOSS` `[LSP]`
+- **[IslandRecorder](https://github.com/wxxsfxyzm/IslandRecorder)** - Records the screen through HyperOS Super Island with a countdown, timer and local-only storage. Needs root or Shizuku on Android 15 and newer. `FOSS`
 - **[Kaorios Toolbox](https://github.com/Wuang26/Kaorios-Toolbox)** - Toolbox for the Kaorios ROM with Play Integrity fix, device and per-app property spoofing, Google Photos unlimited backup, payload dumper and high-FPS unlock. `Proprietary`
 - **[KernelSU Grant Toast](https://github.com/NativeStar/KernelSUGrantToast)** - Make KernelSU show a root granted toast like Magisk. `FOSS` `[K]`
 - **[nebulaOS Toolkit](https://github.com/Smart-Home-User/XREAL-Beam-Pro-nebulaOS-Toolkit)** - Control overlay for the XREAL Beam Pro trackpad adding one-handed gesture presets, spatial app launching, quick apps, QR/barcode scanning, media and volume controls and D-pad navigation. Shizuku, Sui or root enables the privileged input controls. `FOSS`
@@ -55,7 +56,9 @@ tools, sharing & intent tweaks, communication helpers and all-in-one power-user 
 ## Sharing & Intent Tools
 
 - **[⭐ CleanShare](https://github.com/hxreborn/cleanshare)** - Removes Direct Share's suggested contact/conversation shortcuts from Android's Share Sheet. `FOSS` `[LSP]`
+- **[Clipboard Whitelist](https://github.com/fei-ke/ClipboardWhitelist)** - Lets whitelisted apps read the clipboard in the background on Android 10 and newer. `FOSS` `[LSP]`
 - **[ClipVault](https://github.com/kaduvert/AClipBoardManager)** - Android ClipBoard Manager using LSPosed / Magisk. `FOSS` `[M]` `[K]` `[LSP]`
+- **[HyperCopy](https://github.com/1812z/HyperCopy)** - Opens copied links, addresses and tracking numbers in matching apps using configurable rules. LSPosed or Shizuku; cloud rules are fetched online. `Proprietary` `[LSP]`
 - **[No Photo Picker API](https://github.com/yureitzk/NoPhotoPickerAPI)** - Bypasses the Android Photo Picker API and lets apps use the classic document/file picker. `FOSS` `[LSP]`
 
 ## Sync & File Transfer

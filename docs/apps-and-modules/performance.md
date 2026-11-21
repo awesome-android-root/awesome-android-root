@@ -88,6 +88,7 @@ optimization**, charging control and task & process management.
 - **[FDE.AI](https://github.com/feravolt/FDE.AI-docs)** - Applies performance optimizations to Android devices. `Proprietary` `[LSP]`
 - **[Hydrostellaire](https://github.com/AestasBritannia/Hydro-Br-leur)** - A magisk module for devices running on Dimensity flagship platforms and OnePlus, Realme devices. `FOSS` `[M]`
 - **[MaxManager](https://github.com/nader295/MaxManager)** - Advanced performance and power control suite to monitor and tune CPU, GPU, RAM, ZRAM and thermals with Max AI and Max Atlas. `Proprietary` `[M]` `[K]`
+- **[Scene](https://omarea.com/#/)** - Tunes CPU and GPU behavior and monitors performance, battery and apps from a root system toolkit. ROOT mode needs a paid license after a 15-day trial. `Proprietary`
 - **[SpeedCool](https://github.com/Llucs/SpeedCool-Magisk-Module)** - Boost, cool down, and optimize your Android with SpeedCool: less lag, more performance, and a cooler system. `FOSS` `[M]`
 - **[Stellar Tweaks](https://github.com/kanaodnd/Stellar-Tweaks)** - Adjusts scheduling to balance device performance and efficiency. `Proprietary` `[M]` `[K]` `[A]`
 - **[TNF Tweaker](https://github.com/topnotchfreaks/tnf_tweaker)** - Optimization tool designed exclusively for devices running the TopNotchFreaks and Zephyr kernels. `FOSS` `[K]`
