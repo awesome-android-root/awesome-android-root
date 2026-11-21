@@ -5,6 +5,9 @@
 **What does this PR do?**
 (Clear description of changes)
 
+**Link to added project:**
+(Required for new app/module additions: paste the project's URL here)
+
 **Type of change:**
 - [ ] New app/module addition
 - [ ] Documentation update
