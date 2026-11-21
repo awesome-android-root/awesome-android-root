@@ -25,6 +25,7 @@ regardless of whether they are apps, Magisk modules, KernelSU modules or LSPosed
 - **[HuaweiPods](https://github.com/Nshpiter/HuaweiPods)** - Huawei audio device integration for Xiaomi HyperOS. `FOSS` `[LSP]`
 - **[HyperEars](https://github.com/silverpoetry/HyperEars)** - Adds battery level and noise-control modes for third-party Bluetooth headphones to the HyperOS MiLink device center, so they show up next to Xiaomi earbuds. `FOSS` `[LSP]`
 - **[LibrePods](https://github.com/kavishdevar/librepods)** - Unlocks Apple's exclusive premium AirPods features on non-Apple devices. `FOSS` `[LSP]` `[M]` `[K]`
+- **[No Volume Warnings](https://github.com/zahahah/No-Volume-Warnings)** - Disables the safe-media-volume warning on Pixel phones through a system product overlay. KernelSU may need a mounting metamodule. `FOSS` `[M]` `[K]`
 - **[SonyPods](https://github.com/Mercury000/SonyPods)** - System-level Sony headphone control for HyperOS devices. `FOSS` `[LSP]`
 - **[VirtuMic](https://gitlab.com/IndiDevs/VirtuMic)** - Virtual microphone manager that injects audio (files or other apps) into the system's recording flow. `FOSS` `[M]` `[K]` | (https://github.com/IndiTheo/VirtuMic)
 
@@ -44,5 +45,6 @@ regardless of whether they are apps, Magisk modules, KernelSU modules or LSPosed
 - **[⭐ ViPERFX_RE](https://github.com/likelikeslike/ViPERFX_RE)** - A fork of ViPER4Android FX with a redesigned UI and additional features. `FOSS` `[M]` `[K]` `[A]`
 - **[Audio Modification Library Ryuki Mod](https://github.com/reiryuki/Audio-Modification-Library-Ryuki-Mod-Magisk-Module)** - Enables supported audio mods to share the same needed files, such as audio_effects. `FOSS` `[M]` `[A]`
 - **[Equalizer314](https://github.com/bearinmindcat/Equalizer314)** - System-wide EQ with multiband compression, limiter, and audio-visual feedback. `FOSS` `[M]`
+- **[LightningDSP](https://github.com/zahahah/LightningDSP)** - Applies system-wide audio effects with EQ, convolution and per-app volume control through a root module and app. KernelSU needs a mounting metamodule. `FOSS` `[M]` `[K]`
 - **[NLSound](https://github.com/Briclyaz/NLSound_module_QCom)** - Adjusts audio and microphone settings on Snapdragon devices. `FOSS` `[M]` `[A]`
 - **[ViPER4Android FX Redesign](https://github.com/WSTxda/ViperFX-RE-Releases)** - Allows improving the audio quality by offering features such as equalizer settings, surround sound effects, bass boost, and more. `Proprietary` `[M]` `[A]`

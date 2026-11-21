@@ -68,7 +68,9 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[PureNGA](https://github.com/chr233/PureNGA)** - Removes ads and sponsored content from the NGA forum app, with LSPatch support. `FOSS` `[LSP]`
 - **[Rboard Theme Manager](https://github.com/DerTyp7214/RboardThemeManagerV3)** - A customizable manager app for Google Gboard that allows users to download, apply, and manage various themes and sound settings. `FOSS` `[LSP]`
 - **[ReelsBlock](https://github.com/Xposed-Modules-Repo/io.github.sfsakhawat999.reelsblock)** - Stops endless short-video scrolling: swiping to the next Short, Sample or Reel does nothing in YouTube, YouTube Music, Instagram and Facebook, and Shorts links are blocked in Chromium browsers, 1DM and Firefox. `FOSS` `[LSP]`
+- **[ReVanced Xposed Spotify](https://github.com/TheWinner02/ReVancedXposed_Spotify)** - Adds Spotify UI themes and a module menu through LSPosed. Root required; server checks since January 2026 break ad blocking and downloads. `FOSS` `[LSP]`
 - **[Spicy EX](https://github.com/amarinne/spicy-ex)** - Adds Spicy lyrics in Spotify along with translation and much more UI features. `FOSS` `[LSP]`
+- **[SpotifyNext](https://github.com/Xposed-Modules-Repo/cc.meteormc.spotifynext)** - Adds lyric, playback and ad-blocking tweaks to Spotify through an Xposed module. The source mirror ships no code or license. `Proprietary` `[LSP]`
 - **[Timeline Unlocker](https://github.com/SherlockChiang/ReLocationReportEnabler)** - Lets GMS Location History / Timeline be enabled on devices whose SIM is registered in a region where Google has restricted the feature. `FOSS` `[LSP]`
 - **[VDExtra](https://github.com/git-morin/io.github.git_morin.vdextra)** - Adds UI translations and an extended bitrate range to the Virtual Desktop VR streaming app. Early stage and tested only on Quest 3 with Virtual Desktop 1.34.x; the app itself still needs a license. `FOSS` `[LSP]`
 - **[Xposed Translate Text](https://github.com/tianci-sh/XPTranslateText)** - Translate text by MLKit / gemini2.0 / google api. `FOSS` `[LSP]`
@@ -90,6 +92,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 
 - **[⭐ Core Patch N](https://github.com/LSPosed/CorePatch)** - Disable signature verification For Android. `FOSS` `[LSP]`
 - **[⭐ Pairipfix](https://github.com/ahmedmani/pairipfix)** - Bypasses the "Get this app from Play" screen that appears when installing Android apps as an APK instead of from the Google Play Store. `FOSS` `[LSP]`
+- **[Core Patch N for One UI 9](https://github.com/igorcv88/CorePatch-OneUI9)** - Bypasses APK signature and downgrade checks on Android 17 and One UI 9. Tested on Galaxy S25 Ultra with firmware S938BXXUCZZI4. `FOSS` `[LSP]`
 - **[F**k Google License](https://github.com/JiGuroLGC/FuckGoogleLicense)** - Bypass Google Service License Verification. `FOSS` `[LSP]`
 
 ## Social Media Mods
@@ -178,6 +181,8 @@ This category covers app patchers (including YouTube), social and browser mods, 
 ### WhatsApp
 
 - **[⭐ WAEnhancer](https://github.com/Dev4Mod/WaEnhancer)** - Enhances your WhatsApp experience. `FOSS` `[LSP]`
+- **[F**kMeta](https://github.com/fzer0x/FuckMeta)** - Blocks Meta AI in WhatsApp, including its floating button, suggestions and prompt shortcuts. Closed source; Android 11 and newer with LSPosed. `Proprietary` `[LSP]`
+- **[WaDeepDark](https://github.com/Dhangofa/WaDeepDark)** - Forces black backgrounds in the official WhatsApp client on rooted devices. Needs LSPosed; Android 9 and newer. `FOSS` `[LSP]`
 - **[WaEnhancer X](https://github.com/WaEnhancerX/WaEnhancerX)** - Fork of WA Enhancer with additional features. `FOSS` `[LSP]`
 - **[WAPlus](https://github.com/RevealedSoulEven/WAPlusXposed)** - Unlock WhatsApp Plus Features. `FOSS` `[LSP]`
 - **[WaThemer](https://github.com/ayane-04/wathemer)** - Themes WhatsApp with custom colors, chat bubble shapes, wallpapers, fonts, icons, system bars and a Liquid Glass mode. Requires Android 12+. `FOSS` `[LSP]`
