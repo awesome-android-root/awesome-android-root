@@ -19,16 +19,16 @@
 # the primary social card and contains smooth gradients where requantization is
 # visible. SVGs are not touched - they are committed already optimized.
 #
-# Requirements: ImageMagick (`convert`) and Node.js (`npx`).
+# Requirements: ImageMagick (`convert`) and Bun (`bunx`).
 
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PUBLIC_DIR="$ROOT_DIR/docs/public"
-OXIPNG="npx --yes oxipng@1"
+OXIPNG="bunx --yes oxipng@1"
 
 command -v convert >/dev/null || { echo "ImageMagick 'convert' is required" >&2; exit 1; }
-command -v npx >/dev/null || { echo "npx (Node.js) is required" >&2; exit 1; }
+command -v bunx >/dev/null || { echo "bunx (Bun) is required" >&2; exit 1; }
 
 size() { stat -c%s "$1"; }
 
