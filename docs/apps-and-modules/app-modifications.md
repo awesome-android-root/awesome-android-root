@@ -60,6 +60,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[MiFitnessAdAway](https://github.com/hao1196561270/MiFitnessAdAway)** - Remove ads from Xiaomi Mi Fitness (Xiaomi Sports & Health, com.mi.health 3.0+). `FOSS` `[LSP]`
 - **[NSG Tweaks](https://github.com/h3nnes/nsg-tweaks)** - Extends NSG (QuickTest) with additional columns, rows, signaling tools, and log-replay improvements. Current releases support qtrun v4.8.14, not the Google Play version. `FOSS` `[LSP]`
 - **[Nuke](https://github.com/dartcv/Nuke)** - Adds feature extensions, interface customization and ad filtering to QQ, WeChat and Douyin. Closed source. `Proprietary` `[LSP]`
+- **[Oplati Name Fix](https://github.com/atorixa/oplati-name-fix)** - Rewrites the name and avatar initials that the Oplati (by.lwo.oplati) app displays, without touching the account, server data or app data. Works with Vector and LSPosed on KernelSU, APatch or Magisk. `FOSS` `[LSP]`
 - **[Pixel Mask](https://github.com/kinginu/PixelMask)** - Spoofs a Pixel device profile inside Google Photos to unlock Pixel-only perks on any rooted Android phone. `FOSS` `[LSP]`
 - **[Pixelify Infinity](https://github.com/samson910022/pixelify-google-photos-modern)** - Enables Pixel-exclusive features in Google Photos. `FOSS` `[LSP]`
 - **[Play Store Adblock](https://github.com/hxreborn/playstore-adblock)** - Removes sponsored listings and ads from the Google Play Store. `FOSS` `[LSP]`
