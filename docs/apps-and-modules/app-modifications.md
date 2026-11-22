@@ -114,10 +114,6 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[Chat Head Enabler](https://github.com/NeonOrbit/ChatHeadEnabler)** - Lets you choose between chat head and bubble in Facebook Messenger. `FOSS` `[LSP]`
 - **[Facebook App Ads Remover](https://github.com/Xposed-Modules-Repo/tn.loukious.facebookappadsremover)** - Removes ads from Facebook app. `FOSS` `[LSP]`
 
-### Instagram
-
-- **[InstaEclipse](https://github.com/ReSo7200/InstaEclipse/)** - Adds Features like Developer Options, Ghost Mode, Ad-Free browsing, and Distraction-Free Mode to Instagram. `FOSS` `[LSP]`
-
 ### Line
 
 - **[Knot](https://github.com/2b-zipper/Knot)** - Message privacy, notification tweaks & Screen display & UI mods for Line. `FOSS` `[LSP]`
