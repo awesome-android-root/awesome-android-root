@@ -64,6 +64,7 @@ more), network diagnostics, Wi-Fi & mobile data utilities and Bluetooth & NFC ap
 - **[WireGuard Plus](https://github.com/AliHaider704/wgplus)** - Runs a userspace WireGuard and AmneziaWG tunnel for Telegram only, keeping Android's single VPN slot free for other apps. Rootless through LSPatch or rooted through LSPosed; a Windows build is included upstream. `FOSS` `[LSP]`
 - **[zapret for Magisk](https://github.com/sevcator/zapret-magisk)** - DPI bypass on Android with additional features. `FOSS` `[M]`
 - **[ZDT-D Root Module](https://github.com/GAME-OVER-op/ZDT-D)** - Provides traffic routing, DPI bypass, proxy chaining, DNS control and per-app network management. `FOSS` `[M]` `[K]` `[A]`
+- **[ZeroTier for KernelSU](https://github.com/powerAn2020/ZeroTierForKSU)** - Runs a ZeroTier client from a module WebUI, with network and peer management through the legacy Central API. Magisk needs a standalone WebUI host. `FOSS` `[K]` `[A]`
 
 ## Wi-Fi & Mobile Data
 

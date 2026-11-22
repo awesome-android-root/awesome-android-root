@@ -43,10 +43,9 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[AM++](https://github.com/Zennmn/AM-plus-plus/blob/main/README.en.md)** - Apple Music enhancements: tablet dual-pane player, lyric blur and custom lyric fonts, TTML lyric injection, song title correction and Liquid Glass navigation. `FOSS` `[LSP]`
 - **[AmznKiller](https://github.com/hxreborn/amznkiller)** - Hides sponsored content and ads in the Amazon Shopping app. `FOSS` `[LSP]`
 - **[BetterHeybox](https://github.com/Mrmiaomrzh/BetterHeybox)** - Adds ad filtering, UI tweaks, in-app downloads etc to Heybox (Xiaoheihe). `FOSS` `[LSP]`
-- **[Breeno Source Changer](https://github.com/Xposed-Modules-Repo/com.niki.breeno.openai/tree/main)** - Allows ColorOS's Breeno Assistant to change its AI model source and customize large language model (LLM) APIs. `FOSS` `[LSP]`
 - **[Deekseep](https://github.com/lllucccian/Deekseep)** - Adds account, chat, image, interface, and local API tools to the official DeepSeek Android app. `FOSS` `[LSP]`
 - **[Enhance Google Phone](https://github.com/Rove24/EnhanceGooglePhone)** - Natively unlocks full-function call recording, and other features in the Google Phone app. `FOSS` `[LSP]`
-- **[F**k Solid Explorer](https://github.com/fzer0x/dev.fzer0x.fucksolidexplorer)** - Unlock premium features and remove advertisements from Solid Explorer. `FOSS` `[LSP]`
+- **[F**k Solid Explorer](https://github.com/fzer0x/fucksolidexplorer)** - Unlock premium features and remove advertisements from Solid Explorer. `FOSS` `[LSP]`
 - **[FingerprintPay](https://github.com/eritpchy/FingerprintPay)** - Enables fingerprint payment via WeChat, Alipay, Taobao, Tencent QQ, and UnionPay on phones that support fingerprint recognition. `FOSS` `[M]` `[A]` `[LSP]`
 - **[Gboard Material Expressive Black](https://github.com/hxreborn/gboard-material-expressive-black)** - Enables pitch black Gboard background on Android 16 dynamic theme. `FOSS` `[LSP]`
 - **[Gboard+](https://github.com/Xposed-Modules-Repo/io.github.kvmy666.gboardplus)** - Gboard toolbar with a clipboard vault for text and images, shortcuts, cursor and trackpad tools and screenshot capture. `Proprietary` `[LSP]`
@@ -59,14 +58,13 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[KGPT](https://github.com/eluea/KGPT)** - Integrates generative AI such as ChatGPT into the keyboard. `FOSS` `[LSP]`
 - **[LSpot](https://codeberg.org/dapsvi/LSpot)** - Blocks ads in Spotify by intercepting OkHttp requests to ad endpoints. `FOSS` `[LSP]`
 - **[MiFitnessAdAway](https://github.com/hao1196561270/MiFitnessAdAway)** - Remove ads from Xiaomi Mi Fitness (Xiaomi Sports & Health, com.mi.health 3.0+). `FOSS` `[LSP]`
-- **[Nexus](https://github.com/niki914/agentic-nexus)** - Plug your own model into your phone's voice assistant. `Proprietary` `[LSP]`
-- **[NSG Tweaks](https://github.com/h3nnes/nsg-tweaks)** - Extends [NSG (QuickTest) ↗](https://play.google.com/store/apps/details?id=com.qtrun.QuickTest) with additional columns, rows, signaling tools, and log-replay improvements. `Proprietary` `[LSP]`
+- **[NSG Tweaks](https://github.com/h3nnes/nsg-tweaks)** - Extends NSG (QuickTest) with additional columns, rows, signaling tools, and log-replay improvements. Current releases support qtrun v4.8.14, not the Google Play version. `FOSS` `[LSP]`
 - **[Nuke](https://github.com/dartcv/Nuke)** - Adds feature extensions, interface customization and ad filtering to QQ, WeChat and Douyin. Closed source. `Proprietary` `[LSP]`
 - **[Pixel Mask](https://github.com/kinginu/PixelMask)** - Spoofs a Pixel device profile inside Google Photos to unlock Pixel-only perks on any rooted Android phone. `FOSS` `[LSP]`
 - **[Pixelify Infinity](https://github.com/samson910022/pixelify-google-photos-modern)** - Enables Pixel-exclusive features in Google Photos. `FOSS` `[LSP]`
 - **[Play Store Adblock](https://github.com/hxreborn/playstore-adblock)** - Removes sponsored listings and ads from the Google Play Store. `FOSS` `[LSP]`
 - **[PureNGA](https://github.com/chr233/PureNGA)** - Removes ads and sponsored content from the NGA forum app, with LSPatch support. `FOSS` `[LSP]`
-- **[Rboard Theme Manager](https://github.com/DerTyp7214/RboardThemeManagerV3)** - A customizable manager app for Google Gboard that allows users to download, apply, and manage various themes and sound settings. `FOSS` `[LSP]`
+- **[Rboard Theme Manager](https://github.com/DerTyp7214/RboardThemeManagerV3)** - Manages Gboard themes and sound settings. `FOSS` `[LSP]`
 - **[ReelsBlock](https://github.com/Xposed-Modules-Repo/io.github.sfsakhawat999.reelsblock)** - Stops endless short-video scrolling: swiping to the next Short, Sample or Reel does nothing in YouTube, YouTube Music, Instagram and Facebook, and Shorts links are blocked in Chromium browsers, 1DM and Firefox. `FOSS` `[LSP]`
 - **[ReVanced Xposed Spotify](https://github.com/TheWinner02/ReVancedXposed_Spotify)** - Adds Spotify UI themes and a module menu through LSPosed. Root required; server checks since January 2026 break ad blocking and downloads. `FOSS` `[LSP]`
 - **[Spicy EX](https://github.com/amarinne/spicy-ex)** - Adds Spicy lyrics in Spotify along with translation and much more UI features. `FOSS` `[LSP]`
@@ -76,7 +74,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[Xposed Translate Text](https://github.com/tianci-sh/XPTranslateText)** - Translate text by MLKit / gemini2.0 / google api. `FOSS` `[LSP]`
 - **[XposedPhotosFix](https://github.com/RevealedSoulEven/XposedPhotosFIX)** - Prevents Google Photos app from merging all folders into Camera and creates separate albums for each folder, useful for backups. `FOSS` `[LSP]`
 - **[Yandex Maps Patcher](https://github.com/Xposed-Modules-Repo/ru.bluecat.yandexmapspatcher)** - Hides ads and intrusive services in the Yandex Maps app. `Proprietary` `[LSP]`
-- **[Yandex Music Downloader](https://github.com/errorman-awful/YMDownloaderXposed)** - Download flac Music from Yandex Music app. `Proprietary` `[LSP]`
+- **[Yandex Music Downloader](https://github.com/errorman-awful/YMDownloaderXposed)** - Downloads tracks from Yandex Music. `Proprietary` `[LSP]`
 - **[YouTube Hide Ads](https://github.com/MrxSiN/YouTubeHideAds)** - Removes video, feed, search and Shorts ads from the official YouTube app, skips sponsor segments reported to SponsorBlock, and adds fullscreen brightness and volume swipes. `FOSS` `[LSP]`
 
 ## Browser Mods
@@ -106,17 +104,13 @@ This category covers app patchers (including YouTube), social and browser mods, 
 ### Discord
 
 - **[Kettu](https://github.com/C0C0B01/KettuXposed)** - A Discord mobile app client modification continuing Bunny's mission. `FOSS` `[LSP]`
-- **[Revenge](https://github.com/revenge-mod/revenge-bundle-next)** - Revenge is a client modification for Discord Android. `FOSS`
+- **[Revenge](https://github.com/revenge-mod/revenge-bundle-next)** - Modifies the Discord Android client. Upstream is discontinued and archived. `FOSS`
 - **[RevengeXposed](https://github.com/revenge-mod/revenge-xposed)** - Bootstraps the Revenge bundle inside the Discord Android process and bridges its plugin system to the platform. Provides a root installation method for Revenge. `FOSS` `[LSP]`
 
 ### Facebook
 
 - **[Chat Head Enabler](https://github.com/NeonOrbit/ChatHeadEnabler)** - Lets you choose between chat head and bubble in Facebook Messenger. `FOSS` `[LSP]`
 - **[Facebook App Ads Remover](https://github.com/Xposed-Modules-Repo/tn.loukious.facebookappadsremover)** - Removes ads from Facebook app. `FOSS` `[LSP]`
-
-### Instagram
-
-- **[InstaEclipse](https://github.com/ReSo7200/InstaEclipse/)** - Adds Features like Developer Options, Ghost Mode, Ad-Free browsing, and Distraction-Free Mode to Instagram. `FOSS` `[LSP]`
 
 ### Line
 
@@ -143,12 +137,12 @@ This category covers app patchers (including YouTube), social and browser mods, 
 
 ### Telegram
 
-- **[GramSieve](https://github.com/Xposed-Modules-Repo/com.tianqianguai.gramsieve)** - Message filtering, host-settings integration, anti-recall, anti-edit/edit interception etc. `Proprietary` `[LSP]`
+- **[GramSieve](https://github.com/Xposed-Modules-Repo/com.tianqianguai.gramsieve)** - Filters messages and adds anti-recall and edit history features to Telegram. `FOSS` `[LSP]`
 - **[Killergram](https://github.com/shatyuka/Killergram)** - Remove sponsored messages of Telegram. `FOSS` `[LSP]`
-- **[Re: TeleVIP](https://github.com/Xposed-Modules-Repo/io.github.re_televip.televip)** - Privacy, ad blocking and quality-of-life features for Telegram and its forks. `FOSS` `[LSP]`
+- **[Re: TeleVIP](https://github.com/Xposed-Modules-Repo/io.github.re_televip.televip)** - Privacy, ad blocking and quality-of-life features for Telegram and its forks. `Proprietary` `[LSP]`
 - **[Telegami](https://github.com/aoya111/Telegami)** - Various tweaks for Telegram. `FOSS` `[LSP]`
 - **[Telegram Speed Hook](https://github.com/araafroyall/Telegram-Speed-Hook)** - Increase Telegram files/media downloading speed. `FOSS` `[LSP]`
-- **[Telegram Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.sidestories)** - Remove action bar stories in the Telegram messenger (+block unmute button). `Proprietary` `[LSP]`
+- **[Telegram Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.telegramtweaks)** - Remove action bar stories in the Telegram messenger (+block unmute button). `Proprietary` `[LSP]`
 - **[TeleVip](https://github.com/Xposed-Modules-Repo/com.my.televip/)** - Modifies Telegram with options to hide seen status and unlock channel restrictions. `Proprietary` `[LSP]`
 - **[TMoe](https://github.com/cinit/TMoe)** - Adds various tweaks to various Telegram clients. `FOSS` `[LSP]`
 
@@ -197,7 +191,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 
 ### Zalo
 - **[Zalo Patch](https://github.com/amarinne/zalo-patch)** - Cleans up Zalo interfaces, filters promotional notifications and blocks analytics and advertising services. Supports specific Zalo versions. `FOSS` `[LSP]`
-- **[ZaloXposed](https://github.com/ElectroHeavenVN/ZaloXposed)** - Adds anti-recall, anti-delete, ad hiding, tracking protection and UI tweaks to Zalo. Experimental. `Proprietary` `[LSP]`
+- **[ZaloXposed](https://github.com/ElectroHeavenVN/ZaloXposed)** - Adds anti-recall, anti-delete, ad hiding, tracking protection and UI tweaks to Zalo. Experimental. `FOSS` `[LSP]`
 
 
 > [!TIP]
