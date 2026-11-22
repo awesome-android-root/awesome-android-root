@@ -64,7 +64,7 @@ optimization**, charging control and task & process management.
 - **[Kernel Flasher](https://github.com/fatalcoder524/KernelFlasher)** - Flashes AK3 files and backs up and restores kernels. `FOSS`
 - **[KernelSU Tuner](https://github.com/ylh440104/KernelSU-Tuner/blob/main/README.en.md)** - Tunes kernel parameters on rooted Android and keeps track of what it changed. `FOSS` `[M]` `[K]`
 - **[KonaBess Next](https://github.com/KonaBess-Next/KonaBess-Next)** - Fork of KonaBess, Custom GPU overclocking and undervolting tool with granulated voltage for rooted Snapdragon Android devices. `FOSS`
-- **[Minimal Kernel Manager](https://github.com/abhay-byte/mkm)** - Android kernel management and system monitoring application. `FOSS` | [🌱](https://f-droid.org/packages/com.ivarna.fluxlinux/)
+- **[Minimal Kernel Manager](https://github.com/zenithblue-oss/mkm)** - Android kernel management and system monitoring application. `FOSS` | [🌱](https://f-droid.org/packages/com.ivarna.fluxlinux/)
 - **[PerfMTK](https://github.com/JUANIMAN/PerfMTK)** - Applies performance and power-efficiency optimizations on MediaTek devices with Mali GPUs. `FOSS` `[M]` `[A]`
 - **[Rv Kernel Manager](https://github.com/Rve27/RvKernel-Manager)** - A modern Kernel Manager with Material 3 Expressive Design. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.rve.rvkernelmanager)
 - **[Zuan Kernel Manager](https://github.com/ZUANVFX01/ZKM/)** - Advanced Android kernel management tool, rebuilt from the Rve Kernel Manager project base with Material 3 Expressive Modern Style. `FOSS`
@@ -72,7 +72,7 @@ optimization**, charging control and task & process management.
 
 ## Memory & RAM
 
-- **[Magisk Swapspace](https://github.com/chickendrop89/magisk-swapspace)** - Creates persistent swap space on Android. `FOSS` `[M]`
+- **[Magisk Swapspace](https://github.com/chkndrp/magisk-swapspace)** - Creates persistent swap space on Android. `FOSS` `[M]`
 - **[SkyScene Add-on](https://github.com/WeirdMidas/SkySceneAddon)** - Optimizations for most memory management subsystems, as well as integrated intelligent memory expansion, a way to expand memory that mimics OEMs like Ram Plus. `FOSS` `[M]` `[K]`
 - **[Swap Disabler](https://github.com/rompelhd/Swap-Disabler)** - Disable swap at system startup. `FOSS` `[M]`
 - **[SwapBoost Pro](https://github.com/yadavnikhil03/SwapBoost-Pro)** - Optimizes your device's memory performance through persistent zRAM + Swapfile optimization with VM tweaks. `FOSS` `[M]`
@@ -90,9 +90,9 @@ optimization**, charging control and task & process management.
 - **[IA Optimizer](https://github.com/TeyZen18/IA_Optimizer)** - Adaptive performance and battery optimizer with a std-only Rust daemon and a Kotlin companion app. Eco/Balanced/Performance profiles, live telemetry, an in-game panel and charging controls; kernel writes are verified by read-back with automatic rollback. `FOSS` `[M]` `[K]` `[A]`
 - **[MaxManager](https://github.com/nader295/MaxManager)** - Advanced performance and power control suite to monitor and tune CPU, GPU, RAM, ZRAM and thermals with Max AI and Max Atlas. `Proprietary` `[M]` `[K]`
 - **[Scene](https://omarea.com/#/)** - Tunes CPU and GPU behavior and monitors performance, battery and apps from a root system toolkit. ROOT mode needs a paid license after a 15-day trial. `Proprietary`
-- **[SpeedCool](https://github.com/Llucs/SpeedCool-Magisk-Module)** - Boost, cool down, and optimize your Android with SpeedCool: less lag, more performance, and a cooler system. `FOSS` `[M]`
+- **[SpeedCool](https://github.com/Llucs/SpeedCool-Magisk-Module)** - Adjusts performance and thermal settings. Upstream is archived and its license restricts commercial use. `Proprietary` `[M]`
 - **[Stellar Tweaks](https://github.com/kanaodnd/Stellar-Tweaks)** - Adjusts scheduling to balance device performance and efficiency. `Proprietary` `[M]` `[K]` `[A]`
-- **[TNF Tweaker](https://github.com/topnotchfreaks/tnf_tweaker)** - Optimization tool designed exclusively for devices running the TopNotchFreaks and Zephyr kernels. `FOSS` `[K]`
+- **[TNF Tweaker](https://github.com/topnotchfreaks/tnf_tweaker)** - Tweaks devices running the TopNotchFreaks and Zephyr kernels. Upstream is archived. `FOSS` `[K]`
 
 ## Task & Process Management
 

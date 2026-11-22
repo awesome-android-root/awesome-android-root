@@ -33,7 +33,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[App Manager](https://play.google.com/store/apps/details?id=com.lb.app_manager)** - A feature rich app manager with batch operation support. `Proprietary`
 - **[AppDash: App Manager & Backup](https://play.google.com/store/apps/details?id=flar2.appdashboard&hl=en)** - Makes it easy to manage APKs and apps installed on your device. `Proprietary`
 - **[Aurora Store](https://github.com/whyorean/AuroraStore)** - A Google Play Store client to search, view app details, and download APKs directly to your device. `FOSS` | [🌱](https://f-droid.org/packages/com.aurora.store/)
-- **[Auto Uninstaller](https://github.com/MeRaazi/auto-uninstaller)** - Automatically uninstall blacklisted apps. `FOSS` `[K]` `[A]`
+- **[Auto Uninstaller](https://github.com/meerazi/auto-uninstaller)** - Automatically uninstall blacklisted apps. `FOSS` `[K]` `[A]`
 - **[BanUninstall](https://github.com/TinyHai/BanUninstall/)** - Prevents apps from being uninstalled or apps' data from being cleared. `FOSS` `[LSP]`
 - **[BetterKnownInstalled](https://github.com/Pixel-Props/BetterKnownInstalled)** - Patches packages to fix DroidGuard UNKNOWN_INSTALLED issues. `FOSS` `[LSP]`
 - **[Buge App Manager](https://github.com/BugeStudioTeam/Buge-App-Manager)** - Built with Material Design 3 Expressive designed for advanced app and permission management. `FOSS`
@@ -93,7 +93,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[Cromite SystemWebView](https://github.com/hddq/magisk-cromite-webview)** - Replaces the Android System WebView with Cromite WebView. `FOSS` `[M]`
 - **[Disable Low Ram Flag](https://github.com/Magisk-Modules-Alt-Repo/disable-low-ram)** - Disable Low‑RAM flag on Android Go devices. `FOSS` `[M]`
 - **[Dsu Extended](https://github.com/kerneldroid/Dsu-Extended)** - Installs GSIs over DSU with a pre-install compatibility check that reads the image and verifies Treble, ABI, SDK and storage before writing anything. Runs with root, Shizuku or Dhizuku. `FOSS`
-- **[HyperOS Accessibility Fix](https://github.com/chickendrop89/hyperos-accessibility-fix)** - Stop HyperOS from randomly disabling accessibility services. `FOSS` `[M]` `[K]`
+- **[HyperOS Accessibility Fix](https://github.com/chkndrp/hyperos-accessibility-fix)** - Stop HyperOS from randomly disabling accessibility services. `FOSS` `[M]` `[K]`
 - **[HyperOS Security Center](https://github.com/Mods-Center/HyperOS-Security-Center)** - Advanced app info tools, system app Wi-Fi management, removal of root/account restrictions etc. `Proprietary` `[M]` `[K]`
 - **[Legacy WebView Magisk](https://github.com/tangshui9527/legacy-webview-magisk)** - Build script that downloads an upstream AOSP Chromium prebuilt and produces a Magisk module replacing the system WebView on Android 5.1-7.1, where the RRO overlay and `webviewupdate` mechanisms used by Android 8+ modules do not exist. `FOSS` `[M]`
 - **[MiPushFramework](https://github.com/magisk317/MiPushFramework)** - Provides Xiaomi system-level push service as com.xiaomi.xmsf on non-MIUI devices with notification rewriting and HyperIsland support. `FOSS` `[LSP]`
@@ -124,7 +124,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 
 ### AOSP (Android Open Source Project)
 
-- **[⭐ PixelXpert](https://github.com/siavash79/PixelXpert)** - Enables additional customizations on AOSP. `FOSS` `[M]` `[LSP]`
+- **[⭐ PixelXpert](https://github.com/siavash79/PixelXpert)** - Customizes Google Pixel stock firmware. Upstream is archived; custom ROMs and non-Pixel devices are not supported. `FOSS` `[M]` `[LSP]`
 - **[PIXELIFY NEXT](https://github.com/BasGame1/Pixelify-Next)** - Enables the Pixel UI and some Pixel-exclusive features. `FOSS` `[M]`
 - **[PixelUpdater](https://github.com/PixelUpdater/PixelUpdater)** - Pixel Updater is an app for installing Android A/B OTA updates from Google's OTA server. `FOSS` `[M]`
 - **[PixelXpert-Next](https://github.com/anirudhgupta109/PixelXpert-Next)** - Continues PixelXpert customizations for Google Pixel stock firmware on Android 17+; uses both Xposed and Magisk. `FOSS` `[M]` `[LSP]`
@@ -134,7 +134,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 
 - **[AstraFlow](https://github.com/Xposed-Modules-Repo/com.astraflow.tool)** - Enhances Fluid Cloud with live lyrics, resident capsules and status bar tweaks on ColorOS 16 and realme UI 7. `Proprietary` `[LSP]`
 - **[ColorOS Mod](https://github.com/Xposed-Modules-Repo/com.rikumi.colorosmod)** - Customizes the desktop, Control Center and system interface on ColorOS. `FOSS` `[LSP]`
-- **[FCMFix ColorOS](https://github.com/Artifical0/fcmfix-coloros)** - Restores Google FCM push delivery on Chinese ColorOS 16/17 by lifting the background restrictions that block Google services. `Proprietary` `[LSP]`
+- **[FCMFix ColorOS](https://github.com/ByteJuno/fcmfix-coloros)** - Restores Google FCM push delivery on Chinese ColorOS 16/17 by lifting the background restrictions that block Google services. `FOSS` `[LSP]`
 - **[LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool/blob/main/README_EN.md)** - Adds functionality and optimizations to ColorOS. `Proprietary` `[LSP]`
 - **[Miband-OPlusBridge](https://github.com/Xposed-Modules-Repo/io.github.miam1ku.mibandoplusbridge)** - Bridges Xiaomi bands paired over SPP into the ColorOS device space and OPPO Health, writing steps, heart rate and sleep there and forwarding notifications, calls and playback to the band. Requires LSPosed and root; Mi Band 11 verified. `FOSS` `[LSP]`
 - **[NeXtep](https://github.com/lujinxin/NeXtep)** - Adds a Smartisan OneStep-style side workspace to ColorOS 16/17 with a main window and three live task slots. `FOSS` `[LSP]`
