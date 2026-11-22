@@ -164,14 +164,14 @@ The KernelSU ecosystem is now mostly forks. Names, maintainers and repositories 
 |---------|----------------|-------|
 | **[Official KernelSU](https://github.com/tiann/KernelSU)** | GKI 2.0 (5.10+), manual backports for older | LKM-first, metamodule-based, official module repository |
 | **[KernelSU-Next](https://github.com/KernelSU-Next/KernelSU-Next)** | See the fork's kernel requirements | Metamodule-based, ships prebuilt SUSFS LKM `susfs_guard_lkm.ko` per KMI, module and app profile backup, risk detection that blocks suspicious modules, spoofed-package Manager builds |
-| **[SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra)** | GKI 2.0, plus non-GKI/GKI 1.0 backports | [Metamodule-based mounting](https://github.com/SukiSU-Ultra/SukiSU-Ultra/blob/main/userspace/ksud/src/init_event.rs), KPM with a compatible kernel configuration, SUSFS controls in the Manager |
+| **[SukiSU Nova](https://github.com/SukiSU-Nova/SukiSU-Nova)** (formerly SukiSU-Ultra) | GKI 2.0, plus non-GKI/GKI 1.0 backports | Bundled mount engine with metamodule hooks available, KPM with a compatible kernel configuration, SUSFS controls in the Manager |
 | **[BakaSU](https://github.com/Baka-SU/BakaSU)** (formerly ReSukiSU) | GKI 2.0, manual hooks down to 3.4 | Metamodule-based, built-in SUSFS management, multi-manager support (official or KOWX712 KernelSU Manager can manage its kernel) |
 | **[Wild KSU](https://github.com/WildKernels/Wild_KSU)** | Discontinued | Repository archived in 2026; the WildKernels kernel repos still publish KernelSU/KernelSU-Next builds |
 
 **How to pick:**
 - Supported GKI device, stock or near-stock firmware: consider **official KernelSU** in LKM mode after checking the Manager.
 - You want SUSFS or module backup: check whether **KernelSU-Next** supports your exact device and kernel.
-- Non-GKI or KPM support: consider **SukiSU-Ultra** after checking your device, kernel and required configuration.
+- Non-GKI or KPM support: consider **SukiSU Nova** after checking your device, kernel and required configuration.
 - You want a second manager or old-kernel manual hooks: **BakaSU**.
 
 > [!WARNING]
@@ -363,8 +363,8 @@ To uninstall instead of disabling, use `ksud module uninstall MODULE_ID`. Check 
 | Module type | Requirement |
 |-------------|-------------|
 | Magisk-style systemless modules | A metamodule for anything mounted |
-| Zygisk modules | An external compatible implementation such as [ZygiskNext](https://github.com/LSPosed/ZygiskNext) or [ReZygisk](https://github.com/PerformanC/ReZygisk); check the module's requirements |
-| KPM (kernel patch modules) | A compatible KPM-capable setup, such as SukiSU-Ultra with `CONFIG_KPM=y` or [KPatch-Next](https://github.com/KernelSU-Next/KPatch-Next-Module); check each project's requirements |
+| Zygisk modules | An external compatible implementation such as [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) or [ReZygisk](https://github.com/PerformanC/ReZygisk); check the module's requirements |
+| KPM (kernel patch modules) | A compatible KPM-capable setup, such as SukiSU Nova with `CONFIG_KPM=y` or [KPatch-Next](https://github.com/KernelSU-Next/KPatch-Next-Module); check each project's requirements |
 | WebUI modules | Manager with WebUI support; the module ships `webroot/index.html` |
 | Kernel modules (`.ko`) | `ksud insmod` with kallsyms access, used by SUSFS LKM loaders |
 

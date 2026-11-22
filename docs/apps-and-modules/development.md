@@ -59,6 +59,7 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 - **[Dhizuku API for Xposed](https://github.com/iamr0s/Dhizuku-API-Xposed)** - Force applications to support Dhizuku. `FOSS` `[LSP]`
 - **[DuckPolicy](https://github.com/Xposed-Modules-Repo/com.strawing.duckdevicepolicy)** - Makes apps see no device-policy restrictions on your own device. `Proprietary` `[LSP]`
 - **[KSU Toolkit](https://github.com/backslashxx/ksu_toolkit)** - Small extensions on top of KernelSU for testing and debugging purposes. `FOSS` `[K]`
+- **[KSUPatcher](https://github.com/AkuaTech/ksupatcher)** - Patches boot images for KernelSU or KernelSU-Next on device, including flashing to the inactive slot to survive OTA updates. `FOSS`
 - **[Nano for Android NDK](https://github.com/Magisk-Modules-Repo/nano-ndk)** - Allows temporary recovery use, so you can trigger it from adb shell or TWRP Terminal. `FOSS` `[M]`
 - **[Py2Droid](https://github.com/Mrakorez/py2droid)** - Install Python 3 on Android, including the standard library (STDLIB). `FOSS` `[M]` `[A]`
 - **[SELinux Permissive](https://github.com/evdenis/selinux_permissive)** - Switches SELinux to permissive mode. `FOSS` `[M]`
@@ -112,6 +113,7 @@ Frida allows you to inject your own scripts into black box processes, enabling y
 - **[Chroot Distro](https://github.com/Magisk-Modules-Alt-Repo/chroot-distro)** - Install Gnu/Linux distributions on Android. `FOSS` `[M]` `[A]`
 - **[DebDroid](https://github.com/NICUP14/DebDroid)** - Debian Container Runtime for Android. `FOSS` 
 - **[LinuxOnAndroid](https://github.com/HsOjo/LinuxOnAndroid)** - Runs a Linux rootfs on the host kernel in a private mount namespace with `pivot_root`, fresh `/proc` `/sys` `/dev` and a loop-mounted ext4 image, so mount-aware tools and services such as SSH, Tailscale, Samba and Podman behave correctly. `FOSS` `[M]`
+- **[NetHunter for KernelSU](https://github.com/SherlockChiang/Nethunter_for_KernelSU)** - Packages the Kali NetHunter apps, an arm64 Kali rootfs and helper binaries as a KernelSU module. Xiaomi 15 is the maintained target; other arm64 devices are experimental and need a metamodule for the `system/` files. `FOSS` `[K]`
 - **[Trixie.apk](https://github.com/DesktopECHO/trixie.apk)** - Debian 13 (Trixie) Server/Desktop container for rooted Android 5.0+ devices. `FOSS`
 - **[Ubuntu Chroot](https://github.com/ravindu644/Ubuntu-Chroot)** - Run Ubuntu 24.04 on Android With full Hardware Access and pure namespace isolation. `FOSS` `[M]` `[K]` `[A]`
 
