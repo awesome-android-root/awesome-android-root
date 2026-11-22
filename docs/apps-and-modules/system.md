@@ -52,6 +52,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[Universal Installer](https://github.com/pass-with-high-score/universal-installer)** - Install and manage APK packages with split APK support. `FOSS` `[LSP]`
 - **[Update Locker](https://github.com/Xposed-Modules-Repo/ru.mike.updatelocker/)** - Block updates (and auto-updates) selected apps via popular markets including Google Play Market, Huawei AppGallery and Samsung Galaxy Store. `Proprietary`
 - **[Updates Manager Extended](https://github.com/Senliast/xposed-modules/tree/main/Updates_Manager_Extended)** - Allows to block app updates (including automatic updates) for specific apps, no matter from which app store they were installed. `FOSS` `[LSP]`
+- **[VD-Installer](https://github.com/VD171/VD-Installer)** - Installs single, batch and split APKs (xapk/apkm/apks) from a root WebUI, with a Play Protect verifier toggle and install-source spoofing. `FOSS` `[M]` `[K]` `[A]`
 
 > [!TIP]
 >

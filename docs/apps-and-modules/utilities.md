@@ -42,7 +42,6 @@ tools, sharing & intent tweaks, communication helpers and all-in-one power-user 
 - **[SwitchAI - Switch AI Digital Assistant](https://github.com/WSTxda/SwitchAI)** - Easily select, start, and manage your preferred AI digital assistants. `FOSS`
 - **[System Tools Android](https://play.google.com/store/apps/details?id=com.redhome.sta)** - A system utility suite with many small tools for finer system work, including root utilities. `Proprietary`
 - **[UotanToolbox NT](https://github.com/Uotan-Dev/UotanToolboxNT)** - A modern toolbox for Android power users and geeks. `FOSS`
-- **[VD-Installer](https://github.com/VD171/VD-Installer)** - Frictionless root sideload installer for single, batch and split APKs (xapk/apkm/apks), with a Play Protect verifier toggle and install-source spoofing, from a WebUI. `FOSS` `[M]` `[K]` `[A]`
 - **[XposedModulets](https://github.com/binarynoise/XposedModulets)** - A collection of many small useful Xposed Modules. `FOSS` `[LSP]`
 - **[Zygisk Sui](https://github.com/XiaoTong6666/Sui)** - Modern superuser interface (SUI) implementation for Android. `FOSS` `[M]` `[K]` `[A]`
 
