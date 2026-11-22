@@ -240,7 +240,7 @@ Temporary root is an access method, not a fourth framework. Some loaders late-lo
 - You want per-app control over root access and module mount visibility
 - You are comfortable installing a metamodule for modules that modify /system
 
-KernelSU variants such as KernelSU Next and SukiSU-Ultra add SUSFS integration and support for older kernels. See the comparison page for current options.
+KernelSU variants such as KernelSU Next and SukiSU Nova add SUSFS integration and support for older kernels. See the comparison page for current options.
 
 **Choose APatch if:**
 - Magisk and KernelSU are blocked on your specific firmware

@@ -87,7 +87,7 @@ Unlocking the bootloader usually wipes data, weakens device security, and can br
 | **Magisk** | ![Magisk stable](https://img.shields.io/github/v/release/topjohnwu/Magisk?label=stable) ![Magisk including betas](https://img.shields.io/github/v/release/topjohnwu/Magisk?include_prereleases&label=incl.%20betas) | ![Magisk last commit](https://img.shields.io/github/last-commit/topjohnwu/Magisk?label=last%20commit) | Image and firmware patching, built-in Zygisk and explicit Superuser grants; check [release notes](https://github.com/topjohnwu/Magisk/releases) for support |
 | **KernelSU** | ![KernelSU release](https://img.shields.io/github/v/release/tiann/KernelSU?label=stable) | ![KernelSU last commit](https://img.shields.io/github/last-commit/tiann/KernelSU?label=last%20commit) | Manager, tools and KMI-specific LKM assets; check [release assets](https://github.com/tiann/KernelSU/releases) for the target architecture and kernel |
 | **KernelSU Next** | ![KernelSU Next release](https://img.shields.io/github/v/release/KernelSU-Next/KernelSU-Next?label=stable) | ![KernelSU Next last commit](https://img.shields.io/github/last-commit/KernelSU-Next/KernelSU-Next?label=last%20commit) | Check the fork's kernel requirements and available SUSFS LKM assets |
-| **SukiSU-Ultra** | ![SukiSU-Ultra release](https://img.shields.io/github/v/release/SukiSU-Ultra/SukiSU-Ultra?label=stable) | ![SukiSU-Ultra last commit](https://img.shields.io/github/last-commit/SukiSU-Ultra/SukiSU-Ultra?label=last%20commit) | Non-GKI and GKI 1.0 backports, KPM support, built-in SUSFS controls |
+| **SukiSU Nova** | ![SukiSU Nova release](https://img.shields.io/github/v/release/SukiSU-Nova/SukiSU-Nova?label=stable) | ![SukiSU Nova last commit](https://img.shields.io/github/last-commit/SukiSU-Nova/SukiSU-Nova?label=last%20commit) | Formerly SukiSU-Ultra; non-GKI and GKI 1.0 backports, KPM support, built-in SUSFS controls |
 | **APatch** | ![APatch release](https://img.shields.io/github/v/release/bmax121/APatch?label=stable) ![KernelPatch release](https://img.shields.io/github/v/release/bmax121/KernelPatch?label=KernelPatch) | ![APatch last commit](https://img.shields.io/github/last-commit/bmax121/APatch?label=last%20commit) | Slow release cadence, Samsung Knox support still listed as "planned" |
 
 Read the badges as a health check: a recent "last commit" means the project is alive, while months of inactivity or a version badge reporting no releases means you should check the repository before trusting any guide that recommends it.
@@ -99,7 +99,7 @@ Read the badges as a health check: a recent "last commit" means the project is a
 | A broadly documented starting point | **Magisk** | Broad compatibility and a large module ecosystem; recovery still depends on the device |
 | Fewer root traces on a supported device | **KernelSU** or a variant | Kernel root, only permitted apps see `su`, easier SUSFS access |
 | Kernel-level root with per-app control on a GKI 2.0 device | **KernelSU** | Root in kernel space, App Profiles restrict UID, groups, capabilities, SELinux |
-| Kernel root on a non-GKI or older kernel | Research **KernelSU Next** or **SukiSU-Ultra** | Check each fork's device and kernel requirements; a compatible build is not guaranteed |
+| Kernel root on a non-GKI or older kernel | Research **KernelSU Next** or **SukiSU Nova** | Check each fork's device and kernel requirements; a compatible build is not guaranteed |
 | KernelPatch features such as KPM kernel hooks | **APatch** | ARM64 only, kernel 3.18 to 6.12, needs a strong SuperKey |
 | Root without unlocking the bootloader (temporarily) | **[DirtyFrag or GhostLock](./root-without-unlocking-bootloader.md)** | Session-only root on exact vulnerable builds; modified files may persist, and Knox behavior is not guaranteed |
 | Maximum reliability for banking, wallet, enterprise, or anti-cheat apps | **No root** | No framework can guarantee Play Integrity or app-specific checks |
@@ -151,7 +151,7 @@ A full reboot ends active temporary root, but files and settings changed during 
 
 **Variants matter:** if the official Manager reports `Unsupported`, research a device-compatible kernel or variant instead of forcing installation. A different variant is not automatically compatible.
 - **KernelSU Next**: check the fork's requirements and available SUSFS LKM assets for your kernel.
-- **SukiSU-Ultra**: non-GKI and GKI 1.0 backports, metamodule-based mounting, KPM support with compatible kernel configuration, and SUSFS controls.
+- **SukiSU Nova**: formerly SukiSU-Ultra; non-GKI and GKI 1.0 backports, a bundled mount engine with optional metamodules, KPM support with compatible kernel configuration, and SUSFS controls.
 - **BakaSU**: metamodule-based, non-GKI hooks, built-in SUSFS management.
 
 **Watch out for:**
@@ -269,7 +269,7 @@ Pick **Magisk** if you are new to rooting, rely on many Magisk or Zygisk modules
 
 Pick **KernelSU** if your device is GKI 2.0 (kernel 5.10+) or has a trusted KernelSU-enabled kernel, you can match KMI and security patch level, and you want App Profiles.
 
-Consider **KernelSU Next** or **SukiSU-Ultra** if official KernelSU does not support your kernel or you want SUSFS. Verify the fork and available builds for your exact device first.
+Consider **KernelSU Next** or **SukiSU Nova** if official KernelSU does not support your kernel or you want SUSFS. Verify the fork and available builds for your exact device first.
 
 Pick **APatch** if your device is ARM64 with a 3.18 to 6.12 kernel, you accept the SuperKey risk, and you need KPModule or KernelPatch features.
 
@@ -278,7 +278,7 @@ Pick **no root** if banking, wallet, enterprise, or anti-cheat reliability matte
 ## FAQ
 
 **Which is best overall?**
-Magisk for most users. KernelSU for GKI power users. KernelSU Next or SukiSU-Ultra for non-GKI kernels. APatch for KernelPatch use cases.
+Magisk for most users. KernelSU for GKI power users. KernelSU Next or SukiSU Nova for non-GKI kernels. APatch for KernelPatch use cases.
 
 **Is Magisk still maintained?**
 Yes. Compare the stable ![Magisk stable](https://img.shields.io/github/v/release/topjohnwu/Magisk?label=stable) and beta-inclusive ![Magisk including betas](https://img.shields.io/github/v/release/topjohnwu/Magisk?include_prereleases&label=incl.%20betas) channels with the [release notes](https://github.com/topjohnwu/Magisk/releases) before updating.

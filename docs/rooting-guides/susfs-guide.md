@@ -150,7 +150,7 @@ Two community modules ship the tool plus curated rule sets, so you get sensible 
 
 | Requirement | Detail |
 |-------------|--------|
-| Root | KernelSU, KernelSU-Next, SukiSU-Ultra or BakaSU. Magisk cannot use SUSFS |
+| Root | KernelSU, KernelSU-Next, SukiSU Nova or BakaSU. Magisk cannot use SUSFS |
 | SUSFS-capable kernel | Either compiled into the kernel, or loaded as a kernel module (see below) |
 | Matching KMI | Only for prebuilt kernels and prebuilt SUSFS modules |
 | Userspace module | Provides `ksu_susfs` and the rules; kernel alone does nothing by itself |
