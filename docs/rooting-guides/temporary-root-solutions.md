@@ -100,7 +100,7 @@ Both can provide root without unlocking or flashing a boot image on supported bu
 
 Some loaders late-load a KernelSU-compatible module to grant `su` and support compatible modules; others provide only a root shell. ADB or Shizuku may be used to stage a loader, but Shizuku's shell access is not root by itself. Use the manager and transport named by the chosen loader.
 
-- **[Shark](https://github.com/Yunnijian/Shark)** - Uses Shizuku or Stellar and the distinct [CVE-2026-98260](https://github.com/CVEProject/cvelistV5/blob/main/cves/2026/98xxx/CVE-2026-98260.json) POSIX CPU-timer bug to late-load a KernelSU-compatible module for the chosen manager. Check its upstream README for exact supported device and kernel targets. Its [NOTICE](https://github.com/Yunnijian/Shark/blob/main/NOTICE) says redistribution permission for a 6.12/iQOO component is not established.
+- **[Shark](https://github.com/Yunnijian/Shark-Releases)** - Uses Shizuku or Stellar and the distinct [CVE-2026-98260](https://github.com/CVEProject/cvelistV5/blob/main/cves/2026/98xxx/CVE-2026-98260.json) POSIX CPU-timer bug to late-load a KernelSU-compatible module for the chosen manager. Check its upstream README for exact supported device and kernel targets.
 
 Upstream target lists and compatibility checks are not guarantees of a successful run. A kernel crash can occur; a full reboot clears active runtime root but may leave files or settings changed during the session.
 
