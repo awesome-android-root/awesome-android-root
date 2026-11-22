@@ -65,7 +65,7 @@ Exploits such as **DirtyFrag (CVE-2026-43284)** and **GhostLock (CVE-2026-43499)
 - **[DirtyFrag](https://github.com/mitschud/DirtyFrag)** - Ephemeral root exploit for CVE-2026-43284 that grants in-memory root via page-cache and can load KernelSU without bootloader unlock. `FOSS`
 - **[DirtyInit](https://github.com/combeng6th/DirtyInit)** - Uses DirtyFrag to provide restricted init-context root commands on vulnerable Samsung builds through ADB; it is not a general su installer. `Proprietary`
 - **[GhostLock](https://github.com/YuKongA/ghostlock-app)** - Uses GhostLock and device-specific profiles for temporary root and KernelSU; some profiles require Shizuku. `FOSS`
-- **[GhostLock Galaxy](https://github.com/wxxsfxyzm/GhostLock-Galaxy)** - Runs GhostLock using ADB or Shizuku on specific Galaxy Z Fold6 kernel builds. Upstream is archived. `FOSS`
+- **[GhostLock Galaxy](https://github.com/wxxsfxyzm/GhostLock-Galaxy)** - Runs GhostLock using ADB or Shizuku on specific Galaxy Z Fold6 kernel builds. `FOSS`
 - **[GhostLock OnePlus](https://github.com/JoinChang/ghostlock-oneplus)** - Uses ADB and device-specific GhostLock profiles for supported OnePlus, OPPO and Xiaomi builds. Upstream restricts use to authorized research and education; source has no project-wide license. `Proprietary`
 - **[GhostSam](https://github.com/snothin/GhostSam)** - Runs DirtyFrag or GhostLock with ADB on supported Samsung builds. The [MocLG fork](https://github.com/MocLG/GhostSam) has its own device profiles. `FOSS`
 - **[Pixel Timer](https://github.com/Sirpixelalittle/Pixel-Timer)** - Runs the CVE-2026-98260 timer exploit through Shizuku to late-load KernelSU Next on one tested Pixel 8 Pro build and kernel. Root lasts until reboot, and a failed run can leave the device unstable until one. Source has no project-wide license. `Proprietary`
@@ -126,7 +126,7 @@ Exploits such as **DirtyFrag (CVE-2026-43284)** and **GhostLock (CVE-2026-43499)
 ## Root Detection & Testing
 
 - **[⭐ Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector)** - Detects root on Android devices. `FOSS`
-- **[⭐ Duck Detector Fork](https://github.com/rrr333nnn333/Duck-Detector-Refactoring)** - Duck Detector fork with additional features and improvements. Upstream is archived. `FOSS`
+- **[⭐ Duck Detector Fork](https://github.com/rrr333nnn333/Duck-Detector-Refactoring)** - Duck Detector fork with additional features and improvements. `FOSS`
 - **[Android-Device-Trust](https://github.com/reveny/Android-Device-Trust)** - Android device attestation and fingerprinting tool. `FOSS`
 - **[Chunqiu Detector](https://github.com/mingzun09/Chunqiu-Detector-Problem-solution)** - Solutions, scripts, and modules for bypassing and troubleshooting Chunqiu Detector checks on rooted Android devices. `FOSS`
 - **[Demo](https://github.com/JingMatrix/Demo)** - Asks whether a library is injected into its address space, mounts are missing from its mount table, or a dirty SELinux policy is present; the detection target paired with NeoZygisk. `FOSS`

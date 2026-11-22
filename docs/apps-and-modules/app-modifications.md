@@ -64,7 +64,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[Pixelify Infinity](https://github.com/samson910022/pixelify-google-photos-modern)** - Enables Pixel-exclusive features in Google Photos. `FOSS` `[LSP]`
 - **[Play Store Adblock](https://github.com/hxreborn/playstore-adblock)** - Removes sponsored listings and ads from the Google Play Store. `FOSS` `[LSP]`
 - **[PureNGA](https://github.com/chr233/PureNGA)** - Removes ads and sponsored content from the NGA forum app, with LSPatch support. `FOSS` `[LSP]`
-- **[Rboard Theme Manager](https://github.com/DerTyp7214/RboardThemeManagerV3)** - Manages Gboard themes and sound settings. Upstream is archived. `FOSS` `[LSP]`
+- **[Rboard Theme Manager](https://github.com/DerTyp7214/RboardThemeManagerV3)** - Manages Gboard themes and sound settings. `FOSS` `[LSP]`
 - **[ReelsBlock](https://github.com/Xposed-Modules-Repo/io.github.sfsakhawat999.reelsblock)** - Stops endless short-video scrolling: swiping to the next Short, Sample or Reel does nothing in YouTube, YouTube Music, Instagram and Facebook, and Shorts links are blocked in Chromium browsers, 1DM and Firefox. `FOSS` `[LSP]`
 - **[ReVanced Xposed Spotify](https://github.com/TheWinner02/ReVancedXposed_Spotify)** - Adds Spotify UI themes and a module menu through LSPosed. Root required; server checks since January 2026 break ad blocking and downloads. `FOSS` `[LSP]`
 - **[Spicy EX](https://github.com/amarinne/spicy-ex)** - Adds Spicy lyrics in Spotify along with translation and much more UI features. `FOSS` `[LSP]`
@@ -74,7 +74,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[Xposed Translate Text](https://github.com/tianci-sh/XPTranslateText)** - Translate text by MLKit / gemini2.0 / google api. `FOSS` `[LSP]`
 - **[XposedPhotosFix](https://github.com/RevealedSoulEven/XposedPhotosFIX)** - Prevents Google Photos app from merging all folders into Camera and creates separate albums for each folder, useful for backups. `FOSS` `[LSP]`
 - **[Yandex Maps Patcher](https://github.com/Xposed-Modules-Repo/ru.bluecat.yandexmapspatcher)** - Hides ads and intrusive services in the Yandex Maps app. `Proprietary` `[LSP]`
-- **[Yandex Music Downloader](https://github.com/errorman-awful/YMDownloaderXposed)** - Downloads tracks from Yandex Music. Source code is not published in the repository. `Proprietary` `[LSP]`
+- **[Yandex Music Downloader](https://github.com/errorman-awful/YMDownloaderXposed)** - Downloads tracks from Yandex Music. `Proprietary` `[LSP]`
 - **[YouTube Hide Ads](https://github.com/MrxSiN/YouTubeHideAds)** - Removes video, feed, search and Shorts ads from the official YouTube app, skips sponsor segments reported to SponsorBlock, and adds fullscreen brightness and volume swipes. `FOSS` `[LSP]`
 
 ## Browser Mods
@@ -139,7 +139,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 
 - **[GramSieve](https://github.com/Xposed-Modules-Repo/com.tianqianguai.gramsieve)** - Filters messages and adds anti-recall and edit history features to Telegram. `FOSS` `[LSP]`
 - **[Killergram](https://github.com/shatyuka/Killergram)** - Remove sponsored messages of Telegram. `FOSS` `[LSP]`
-- **[Re: TeleVIP](https://github.com/Xposed-Modules-Repo/io.github.re_televip.televip)** - Privacy, ad blocking and quality-of-life features for Telegram and its forks. Versions 1.5.4 and later use a restrictive license. `Proprietary` `[LSP]`
+- **[Re: TeleVIP](https://github.com/Xposed-Modules-Repo/io.github.re_televip.televip)** - Privacy, ad blocking and quality-of-life features for Telegram and its forks. `Proprietary` `[LSP]`
 - **[Telegami](https://github.com/aoya111/Telegami)** - Various tweaks for Telegram. `FOSS` `[LSP]`
 - **[Telegram Speed Hook](https://github.com/araafroyall/Telegram-Speed-Hook)** - Increase Telegram files/media downloading speed. `FOSS` `[LSP]`
 - **[Telegram Tweaks](https://github.com/Xposed-Modules-Repo/ru.mike.telegramtweaks)** - Remove action bar stories in the Telegram messenger (+block unmute button). `Proprietary` `[LSP]`

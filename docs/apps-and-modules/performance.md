@@ -90,9 +90,9 @@ optimization**, charging control and task & process management.
 - **[IA Optimizer](https://github.com/TeyZen18/IA_Optimizer)** - Adaptive performance and battery optimizer with a std-only Rust daemon and a Kotlin companion app. Eco/Balanced/Performance profiles, live telemetry, an in-game panel and charging controls; kernel writes are verified by read-back with automatic rollback. `FOSS` `[M]` `[K]` `[A]`
 - **[MaxManager](https://github.com/nader295/MaxManager)** - Advanced performance and power control suite to monitor and tune CPU, GPU, RAM, ZRAM and thermals with Max AI and Max Atlas. `Proprietary` `[M]` `[K]`
 - **[Scene](https://omarea.com/#/)** - Tunes CPU and GPU behavior and monitors performance, battery and apps from a root system toolkit. ROOT mode needs a paid license after a 15-day trial. `Proprietary`
-- **[SpeedCool](https://github.com/Llucs/SpeedCool-Magisk-Module)** - Adjusts performance and thermal settings. Upstream is archived and its license restricts commercial use. `Proprietary` `[M]`
+- **[SpeedCool](https://github.com/Llucs/SpeedCool-Magisk-Module)** - Adjusts performance and thermal settings. `Proprietary` `[M]`
 - **[Stellar Tweaks](https://github.com/kanaodnd/Stellar-Tweaks)** - Adjusts scheduling to balance device performance and efficiency. `Proprietary` `[M]` `[K]` `[A]`
-- **[TNF Tweaker](https://github.com/topnotchfreaks/tnf_tweaker)** - Tweaks devices running the TopNotchFreaks and Zephyr kernels. Upstream is archived. `FOSS` `[K]`
+- **[TNF Tweaker](https://github.com/topnotchfreaks/tnf_tweaker)** - Tweaks devices running the TopNotchFreaks and Zephyr kernels. `FOSS` `[K]`
 
 ## Task & Process Management
 

@@ -48,7 +48,7 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 - **[FIRERPA (lamda)](https://github.com/firerpa/lamda)** - On-device control platform driven by a Python client: remote desktop streaming, UI/OCR automation, traffic capture, built-in Frida and proxy/VPN networking. Runs with or without root. `FOSS`
 - **[Geto](https://github.com/T31n/Geto)** - Applies device settings automatically when selected apps are launched, using `WRITE_SECURE_SETTINGS` granted through Shizuku or root. `FOSS` | [🌱](https://f-droid.org/en/packages/com.android.geto/)
 - **[Rootless Store](https://github.com/Resilien-Mobile/RootlessStore)** - Manages and runs plugins and automations through the app shell, Shizuku/ADB or optional root. Inspect plugins before granting elevated access. `FOSS`
-- **[Zafiro](https://github.com/niki914/zafiro)** - BYOK AI agent with phone control, native Shell and Python 3, and Skills and MCP support. Runs via Shizuku with root optional; LSPosed enables supported voice assistant integration. `FOSS` `[LSP]`
+- **[Zafiro](https://github.com/niki914/zafiro)** - BYOK AI agent with phone control, native Shell and Python 3, and Skills and MCP support. Runs via Shizuku with root optional. `FOSS` `[LSP]`
 
 ## Developer Tools
 
@@ -115,7 +115,7 @@ Frida allows you to inject your own scripts into black box processes, enabling y
 - **[LinuxOnAndroid](https://github.com/HsOjo/LinuxOnAndroid)** - Runs a Linux rootfs on the host kernel in a private mount namespace with `pivot_root`, fresh `/proc` `/sys` `/dev` and a loop-mounted ext4 image, so mount-aware tools and services such as SSH, Tailscale, Samba and Podman behave correctly. `FOSS` `[M]`
 - **[NetHunter for KernelSU](https://github.com/SherlockChiang/Nethunter_for_KernelSU)** - Packages the Kali NetHunter apps, an arm64 Kali rootfs and helper binaries as a KernelSU module. Xiaomi 15 is the maintained target; other arm64 devices are experimental and need a metamodule for the `system/` files. `FOSS` `[K]`
 - **[Trixie.apk](https://github.com/DesktopECHO/trixie.apk)** - Debian 13 (Trixie) Server/Desktop container for rooted Android 5.0+ devices. `FOSS`
-- **[Ubuntu Chroot](https://github.com/ravindu644/Ubuntu-Chroot)** - Runs Ubuntu 24.04 in a chroot on Android. Upstream is archived. `FOSS` `[M]` `[K]` `[A]`
+- **[Ubuntu Chroot](https://github.com/ravindu644/Ubuntu-Chroot)** - Runs Ubuntu 24.04 in a chroot on Android. `FOSS` `[M]` `[K]` `[A]`
 
 ## Terminal & Shell
 

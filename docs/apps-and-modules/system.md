@@ -124,7 +124,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 
 ### AOSP (Android Open Source Project)
 
-- **[⭐ PixelXpert](https://github.com/siavash79/PixelXpert)** - Customizes Google Pixel stock firmware. Upstream is archived; custom ROMs and non-Pixel devices are not supported. `FOSS` `[M]` `[LSP]`
+- **[⭐ PixelXpert](https://github.com/siavash79/PixelXpert)** - Customizes Google Pixel stock firmware. Custom ROMs and non-Pixel devices are not supported. `FOSS` `[M]` `[LSP]`
 - **[PIXELIFY NEXT](https://github.com/BasGame1/Pixelify-Next)** - Enables the Pixel UI and some Pixel-exclusive features. `FOSS` `[M]`
 - **[PixelUpdater](https://github.com/PixelUpdater/PixelUpdater)** - Pixel Updater is an app for installing Android A/B OTA updates from Google's OTA server. `FOSS` `[M]`
 - **[PixelXpert-Next](https://github.com/anirudhgupta109/PixelXpert-Next)** - Continues PixelXpert customizations for Google Pixel stock firmware on Android 17+; uses both Xposed and Magisk. `FOSS` `[M]` `[LSP]`

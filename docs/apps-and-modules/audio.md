@@ -47,4 +47,4 @@ regardless of whether they are apps, Magisk modules, KernelSU modules or LSPosed
 - **[Equalizer314](https://github.com/bearinmindcat/Equalizer314)** - System-wide EQ with multiband compression, limiter, and audio-visual feedback. `FOSS` `[M]`
 - **[LightningDSP](https://github.com/zahahah/LightningDSP)** - Applies system-wide audio effects with EQ, convolution and per-app volume control through a root module and app. KernelSU needs a mounting metamodule. `FOSS` `[M]` `[K]`
 - **[NLSound](https://github.com/Briclyaz/NLSound)** - Adjusts audio and microphone settings on Snapdragon devices. `FOSS` `[M]` `[A]`
-- **[ViPER4Android FX Redesign](https://github.com/WSTxda/ViperFX-RE-Releases)** - Provides audio effects including equalizer and bass settings. Upstream is archived. `Proprietary` `[M]` `[A]`
+- **[ViPER4Android FX Redesign](https://github.com/WSTxda/ViperFX-RE-Releases)** - Provides audio effects including equalizer and bass settings. `Proprietary` `[M]` `[A]`
