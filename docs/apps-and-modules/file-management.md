@@ -28,7 +28,7 @@ Magisk/KernelSU modules, and file & partition tools for power users.
 - **[⭐ SD Maid 2/SE](https://github.com/d4rken-org/sdmaid-se)** - A file management tool for Android that specializes in maintenance. Its core purpose is freeing up space and removing unwanted data. `FOSS` | [🌱](https://f-droid.org/en/packages/eu.darken.sdmse/) | [▶️](https://play.google.com/store/apps/details?id=eu.darken.sdmse)
 - **[Cache Cleaner Widget](https://gitlab.com/Zinaro/CacheCleanerWidget)** - A root-based widget with no UI that clears all app caches in one tap. `FOSS` | [🌱](https://f-droid.org/packages/com.zinaro.cachecleanerwidget/)
 - **[Cleaner Royall](https://github.com/araafroyall/Cleaner-Royall)** - Cleans files on Android devices. `Proprietary` `[LSP]`
-- **[ClearBox](https://github.com/FLYCOM-E/ClearBox)** - Can delete all software caches, installation packages, compressed packages, garbage, empty folders etc. `Proprietary` `[M]` `[K]` `[A]`
+- **[ClearBox](https://github.com/FLYCOM-E/ClearBox)** - Cleans caches and files using configurable rules, including scheduled cleanup. `FOSS` `[M]` `[K]` `[A]`
 - **[CZero](https://github.com/Xocio/CZero)** - Cleans the cache of frequently used apps, and adds background suppression, empty-folder cleanup, and F2FS garbage collection. `FOSS` `[M]` `[K]` `[A]`
 
 ## File & Partition Tools

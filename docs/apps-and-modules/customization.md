@@ -67,7 +67,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[HyperStack](https://github.com/cramqin/HyperStack)** - Enables widget stacking on HyperOS 4 V8 launchers by flipping a hidden launcher preference. `FOSS`
 - **[Launcher3 QuickLaunch](https://github.com/hddq/launcher3-quicklaunch)** - Lets you press Enter in Launcher3's app drawer search to instantly launch the first search result. `FOSS` `[LSP]`
 - **[One UI Home 31](https://github.com/reiryuki/One-UI-Home-31-Magisk-Module)** - Ports Samsung's One UI Home launcher (target SDK 31) to non-One UI ROMs as a system module. Requires the One UI Core module; Android 8.0 to 12.1, not for Samsung devices. `Proprietary` `[M]` `[K]` `[A]`
-- **[OnePlusPlusLauncher](https://github.com/wizpizz/OnePlusPlusLauncher)** - Adds features to the System Launcher on OnePlus OxygenOS 15. `FOSS` `[LSP]`
+- **[OnePlusPlusLauncher](https://github.com/oenderg/OnePlusPlusLauncher)** - Adds features to the System Launcher on OnePlus OxygenOS 15. `FOSS` `[LSP]`
 - **[PigLauncher](https://github.com/dinopig1219/PigLauncher)** - Unlocks dark folders, advanced textures and widget animations in POCO Launcher, and adds folder icon fill, home screen icon hiding and a predictive back speed fix. Targets `com.mi.android.globallauncher`, tested on the OS3 builds named upstream; source has no project-wide license. `Proprietary` `[LSP]`
 - **[Pixel Launcher Enhanced](https://github.com/Mahmud0808/PixelLauncherEnhanced)** - Unlock a variety of exciting features including customizing the look to adding more functionality and many more. `FOSS` `[LSP]`
 - **[Root Activity Launcher](https://play.google.com/store/apps/details?id=tk.zwander.rootactivitylauncher)** - Launch activities directly from your home screen with root access. `Proprietary`
@@ -98,7 +98,7 @@ Magisk/KernelSU/LSPosed modules.
 
 - **[Adaptive Theme: Auto Dark Mode by Ambient Light](https://github.com/xLexip/Adaptive-Theme)** - Automatically switches between Light and Dark mode using the ambient light sensor. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=dev.lexip.hecate)
 - **[Anti Brightness Change](https://github.com/binarynoise/XposedModulets/blob/main/AntiBrightnessChange/README.md)** - Prevents every app from changing the screen brightness. `FOSS` `[LSP]` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.programminghoch10.AntiBrightnessChange)
-- **[DarQ Fork](https://github.com/Arora-Sir/DarQ)** - Provides a per-app selectable force dark option for Android 10 and above. `FOSS`
+- **[DarQ Fork](https://github.com/Arora-Sir/DarQ-Reborn)** - Provides a per-app selectable force dark option for Android 10 and above. `FOSS`
 - **[DPIS](https://github.com/Kwensiu/DPIS)** - Adjusts interface scale, smallest width and font size per app. `FOSS` `[LSP]`
 - **[Keep Screen Off](https://github.com/Xposed-Modules-Repo/com.ncyxie.keepscreenoff)** - Stops selected apps from holding the screen awake by ignoring `FLAG_KEEP_SCREEN_ON` and screen wakelocks. `FOSS` `[LSP]`
 - **[Lune Bridge](https://github.com/uraniam9/lune-bridge)** - Moves the conservative display limits in `framework-res` so Android's own compositor reaches candlelight warmth down to 1800+K, dimming below the panel minimum and flicker-safe low brightness, plus an optional notification quiet-hours half. Android 9+. `FOSS` `[M]` `[K]` `[A]`
