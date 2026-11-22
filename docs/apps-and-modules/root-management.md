@@ -106,7 +106,7 @@ Exploits such as **DirtyFrag (CVE-2026-43284)** and **GhostLock (CVE-2026-43499)
 
 - **[⭐ Mountify](https://github.com/backslashxx/mountify)** - OverlayFS with tmpfs/ext4 sparse support for reduced detection, works on APatch/Magisk too. `FOSS` `[M]` `[K]` `[A]`
 - **[⭐ NoMount](https://github.com/maxsteeel/nomount)** - Mountless module injection: kernel VFS path redirection with per-app UID isolation and a WebUI, so injected files never appear in `/proc/mounts`. Needs kernel integration; prebuilt modules cover GKI kernels. `FOSS` `[K]` `[A]`
-- **[Magic Mount](https://github.com/backslashxx/meta-magic_mount)** - Original Magic Mount metamodule, for modules that need Magisk-identical mounts. `FOSS` `[M]` `[K]` `[A]`
+- **[Magic Mount](https://github.com/backslashxx/meta-magic_mount)** - Original Magic Mount metamodule for modules that expect Magisk-identical mounts. Upstream supports the official KernelSU branch only. `FOSS` `[K]`
 - **[Magic Mount Metamodule](https://github.com/Tools-cx-app/meta-magic_mount-rs)** - An implementation of a metamodule using Magic Mount, based on MKSU. `FOSS` `[M]` `[K]` `[A]`
 - **[Meta-hybrid_mount](https://github.com/Hybrid-Mount/meta-hybrid_mount)** - Three-engine mount orchestration (OverlayFS + Magic Mount + Kasumi LKM) with conflict monitor, SolidJS WebUI, auto-fallback, and EROFS storage backend support. `FOSS` `[K]` `[A]`
 - **[NoMount Suite](https://github.com/Bouteillepleine/NoMount-Suite)** - Mountless module loading on the Prism kernel VFS engine, RRO theme overlays included, classifying every file under `/data/adb/modules/` at boot and programming the kernel over netlink. Needs a custom kernel carrying the Prism driver; beta, and OnePlus/Oppo `my_*` partitions still take a visible bind mount. `FOSS` `[M]` `[K]` `[A]`
@@ -169,7 +169,7 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 - **[COPG-VD](https://github.com/VD171/COPG-VD)** - Global device fingerprint spoofing for Play Integrity across the whole device, including system apps, with per-app scope and a WebUI. `FOSS` `[M]` `[K]` `[A]`
 - **[DirtySepolicy Bypass](https://github.com/flipphoneguy/DirtySepolicy_Bypass)** - Bypasses new DirtySepolicy on rooted Android devices to keep apps working. `FOSS` `[M]` `[K]` `[A]`
 - **[Duck ToolBox](https://github.com/eltavine/Duck-ToolBox)** - Provides a WebUI for Tricky Store, TEESimulator and OhMyKeymint configuration, Remote Key Provisioning CSR creation and verification, and Qualcomm Keymaster device ID provisioning. `FOSS` `[M]` `[K]` `[A]`
-- **[Integrity-Box](https://github.com/MeowDump/Integrity-Box)** - Combines Play Integrity fixes with keybox and target management, property spoofing and system environment cleanup in one module with a WebUI. `FOSS` `[M]` `[K]` `[A]`
+- **[Integrity-Box](https://github.com/MeowDump/Integrity-Box)** - Combines Play Integrity fixes with keybox and target management, property spoofing and system environment cleanup in one module with a WebUI. `FOSS` `[M]` `[K]`
 - **[KernelNoSu](https://github.com/fatalcoder524/kernelnosu)** - Replaces KernelSU's kprobe-based su compatibility with a stealth su binary. Needs a kernel carrying the KernelNoSU core_hook patch. `FOSS` `[K]`
 - **[Komodo Build Props](https://github.com/Elcapitanoe/Komodo-Build-Prop#komodo-build-props)** - Spoofs your device as a Pixel 9 Pro XL (komodo). `FOSS` `[M]` `[A]`
 - **[OhMyKeymint](https://github.com/qwq233/OhMyKeymint)** - Custom keystore implementation for Android Keystore Spoofer. `FOSS` `[M]` `[K]`
