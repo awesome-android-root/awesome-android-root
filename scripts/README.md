@@ -11,7 +11,7 @@ they are committed already optimized. File names, formats and dimensions never
 change, so Open Graph and favicon consumers keep working. Run it after adding or
 replacing an image, then commit the result; it is idempotent.
 
-Requires ImageMagick (`convert`) and Node.js (`npx`).
+Requires ImageMagick (`convert`) and Bun (`bunx`).
 
 ### Usage
 
@@ -55,10 +55,17 @@ non-blocking, are ever blocked by them.
 ### Usage
 
 ```bash
-node scripts/app-entries.mjs   # lint + write docs/public/app-index.json, docs/count.md and docs/public/count.json
+bun scripts/app-entries.mjs   # lint + write docs/public/app-index.json, docs/count.md and docs/public/count.json
 ```
 
 It is also exposed as `bun run index:build` and runs inside `docs:build`.
+
+## prepare-build.mjs
+
+Fetches full git history when `.git/shallow` is present, because VitePress needs
+it to compute `lastUpdated`. A failed fetch only logs a warning; the build still
+proceeds with the history available. Run through `docs:build`, which calls it
+before regenerating the index.
 
 ## check_links.py
 

@@ -197,8 +197,7 @@ function lintRecords(records) {
   const bySection = new Map()
   for (const record of records) {
     const key = record.lintSection ?? ''
-    if (!bySection.has(key)) bySection.set(key, [])
-    bySection.get(key).push(record)
+    bySection.getOrInsert(key, []).push(record)
   }
 
   for (const [name, group] of bySection) {
@@ -348,7 +347,7 @@ function writeCounts(pages) {
 
 const parsedFiles = readdirSync(DIR)
   .filter((fileName) => fileName.endsWith('.md'))
-  .sort()
+  .toSorted()
   .map((fileName) => ({ fileName, records: parseFile(fileName) }))
 
 lint(parsedFiles)
