@@ -96,7 +96,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[HyperOS Accessibility Fix](https://github.com/chickendrop89/hyperos-accessibility-fix)** - Stop HyperOS from randomly disabling accessibility services. `FOSS` `[M]` `[K]`
 - **[HyperOS Security Center](https://github.com/Mods-Center/HyperOS-Security-Center)** - Advanced app info tools, system app Wi-Fi management, removal of root/account restrictions etc. `Proprietary` `[M]` `[K]`
 - **[Legacy WebView Magisk](https://github.com/tangshui9527/legacy-webview-magisk)** - Build script that downloads an upstream AOSP Chromium prebuilt and produces a Magisk module replacing the system WebView on Android 5.1-7.1, where the RRO overlay and `webviewupdate` mechanisms used by Android 8+ modules do not exist. `FOSS` `[M]`
-- **[MiPushFramework](https://github.com/magisk317/MiPushFramework)** - Provides Xiaomi system-level push service as com.xiaomi.xmsf on non-MIUI devices with notification rewriting and HyperIsland support. `FOSS` `[LSP]` | [▶️](https://play.google.com/store/apps/details?id=io.github.magisk317.mipush)
+- **[MiPushFramework](https://github.com/magisk317/MiPushFramework)** - Provides Xiaomi system-level push service as com.xiaomi.xmsf on non-MIUI devices with notification rewriting and HyperIsland support. `FOSS` `[LSP]`
 - **[Multi Userui Enabler](https://github.com/InsertX2k/multiuseruienabler)** - Attempts to enable the multi-user interface. `FOSS` `[M]`
 - **[Noogle Magisk](https://github.com/SelfRef/noogle-magisk)** - Magisk modules for removing/replacing Google applications on stock Android 11-15. `FOSS` `[M]`
 - **[Secure Element Access](https://github.com/jqssun/android-se-access)** - Enable access to secure element for trusted apps. `FOSS`
