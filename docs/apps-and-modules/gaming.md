@@ -22,6 +22,7 @@ game-specific tools, mixing root apps, Magisk/KernelSU modules and LSPosed modul
 
 ## Game Modifications & Tools
 
+- **[Bannerlator](https://github.com/The412Banner/Bannerlator)** - Runs Windows games and apps on Android through Wine and Box64/Box86, with optional root-only performance extras. A personal build tuned for the author's devices. `FOSS`
 - **[CatSmoker](https://github.com/catsmoker/catsmoker-app)** - Combines device spoofing to unlock higher graphics settings and FPS, resolution and DPI changes, etc. `Proprietary` `[LSP]`
 - **[CheatDroid](https://android-cheats.com/)** - Edits the data games keep on the device (shared preferences, Unity PlayerPrefs, SQLite databases, raw files) and searches, edits and freezes values in a running game's memory. Requires root. `Proprietary`
 - **[iUnlocker GLTool](https://github.com/i-Taylo/iUnlockerGL)** - Spoofs GPU information for game graphics unlocking and testing. `FOSS` `[M]`
