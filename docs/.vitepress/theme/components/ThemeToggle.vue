@@ -23,8 +23,10 @@ function toggle() {
   <button
     type="button"
     class="theme-toggle"
-    :title="title"
-    :aria-label="title || 'Switch theme'"
+    role="switch"
+    :title="title || undefined"
+    :aria-label="theme.darkModeSwitchLabel || 'Appearance'"
+    :aria-checked="isDark"
     @click="toggle"
   >
     <Sun class="theme-icon-sun" aria-hidden="true" />
