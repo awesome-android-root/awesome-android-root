@@ -157,7 +157,7 @@ function registerTools(modelContext) {
 }
 
 onMounted(() => {
-  const modelContext = navigator.modelContext ?? document.modelContext
+  const modelContext = document.modelContext ?? navigator.modelContext
   if (modelContext?.registerTool) registerTools(modelContext)
 })
 
