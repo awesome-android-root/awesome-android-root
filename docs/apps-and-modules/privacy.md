@@ -60,6 +60,7 @@ tracking, spoofing your device identity or location, and isolating apps from you
 - **[Fake GPS](https://github.com/Xposed-Modules-Repo/io.github.mwarevn.fakegps)** - Spoofs GPS system-wide or per app, with route simulation, a joystick, track recording and replay, scheduled actions and sensor and network side-channel hiding. `Proprietary` `[LSP]`
 - **[Hide Mock Location](https://github.com/auag0/HideMockLocation)** - Hide Mock Location Settings. `FOSS` `[LSP]`
 - **[HLocation](https://github.com/sparr-sherrya/hlocation-release)** - Location spoofing framework that synchronizes fake GPS and related environment signals across system and app processes for more consistent location virtualization. `FOSS` `[LSP]`
+- **[Latebris](https://github.com/ianlyoo/latebris)** - Plays back a saved GPS position, Wi-Fi scan and LTE cell list together for testing location-dependent apps, scoped to chosen apps through LSPosed with the mock flag cleared. Android 12+. `FOSS` `[LSP]`
 - **[Location Indicator Whitelist](https://github.com/gilbsgilbs/LocationIndicatorWhitelist)** - Prevents applications from spamming the annoying location notification dot on Android 12 +. `FOSS` `[LSP]`
 - **[Location Joystick](https://github.com/fzer0x/LocationJoystick)** - Realtime Location Spoofer by using a Overlay Joystick to control the mock location. `Proprietary` `[LSP]`
 - **[LocationMax](https://github.com/Xposed-Modules-Repo/com.huaMax)** - Simulates location on rooted Android devices. `Proprietary` `[LSP]`

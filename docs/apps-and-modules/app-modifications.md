@@ -54,6 +54,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[Gmail Hide Ads](https://github.com/MrxSiN/GmailHideAds)** - Removes sponsored rows from Gmail by collapsing them before the list is measured. `FOSS` `[LSP]`
 - **[GMS Flags Reborn](https://github.com/polodarb/GMS-Flags-Reborn)** - Browse and override the hidden Google Phenotype feature flags that gate rollouts across Gboard, YouTube, Google Photos, Play Store and other Google apps. Requires root and Xposed/LSPosed. `FOSS` `[LSP]`
 - **[GText](https://github.com/comewhy/com.comewhy.gtext)** - Replaces text that other apps display, using exact-match or regular-expression rules, including launcher app names and system UI text; an overlay lets you tap a word on screen to make a rule. Android 14 to 17. `Proprietary` `[LSP]`
+- **[Index Record](https://github.com/zimya/index_record)** - Archives posts viewed in Zhihu, Weibo, Tieba, Douban, X, Threads, Reddit, Bluesky and other apps by hooking their network traffic, keeping local snapshots with reading history and diffs. `FOSS` `[LSP]`
 - **[KeyFlux](https://github.com/NawafCode/KeyFlux)** - Customize Google Gboard, exposing selected hidden features, and adding clipboard-related enhancements. `FOSS` `[LSP]`
 - **[KGPT](https://github.com/eluea/KGPT)** - Integrates generative AI such as ChatGPT into the keyboard. `FOSS` `[LSP]`
 - **[LSpot](https://codeberg.org/dapsvi/LSpot)** - Blocks ads in Spotify by intercepting OkHttp requests to ad endpoints. `FOSS` `[LSP]`

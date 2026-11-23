@@ -24,6 +24,7 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 ## ADB & Debugging
 
 - **[ADB Root](https://github.com/evdenis/adb_root)** - Runs the adbd daemon as root and skips USB authentication. `FOSS` `[M]`
+- **[ADBLive](https://github.com/pangziqiang/adblive)** - Keeps wireless ADB alive on port 5555 with an LSPosed hook that blocks the system from disabling it or killing adbd, plus an optional KernelSU or Magisk watchdog that restores it every 10 seconds. `FOSS` `[LSP]`
 - **[altdb](https://github.com/Dr-TSNG/altdb)** - Runs a separate wireless ADB server over the local network with six-digit TLS pairing and a WebUI, leaving the system adbd and its authorizations untouched. Android 11+ arm64. `FOSS` `[K]`
 - **[Android-ADB-over-WiFi](https://github.com/warren-bank/Android-ADB-over-WiFi)** - Toggles a rooted device's Android Debug Bridge daemon (adbd) between USB and WiFi mode. `FOSS` `[LSP]`
 - **[Auto USB MTP](https://github.com/Shuoh118/Auto-USB-MTP)** - Hooks UsbDeviceManager and AdbService in the system framework on Android 12+ to automatically switch USB connections to MTP mode when a cable is plugged in. `Proprietary` `[LSP]`
