@@ -116,7 +116,7 @@ const FOLDER_LABELS = {
 /** Shared sidebar for standalone pages such as policies, contact, and project info. */
 const STANDALONE_PAGE_SIDEBAR = [
   {
-    text: '📄 Project',
+    text: 'Project', icon: 'file-text',
     items: [
       { text: 'About', link: '/about' },
       { text: 'Contributing', link: '/contributing' },
@@ -126,7 +126,7 @@ const STANDALONE_PAGE_SIDEBAR = [
     ]
   },
   {
-    text: '❓ Help',
+    text: 'Help', icon: 'circle-question-mark',
     items: [
       { text: 'FAQ', link: '/faqs' },
       { text: 'Troubleshooting', link: '/troubleshooting' },
@@ -167,12 +167,7 @@ function isArticleRoute(route) {
 const REPO_ROOT = fileURLToPath(new URL('../..', import.meta.url))
 let firstPublishedDates = null
 
-/**
- * Publication dates for every page, collected in a single git pass.
- * `--reverse` lists the oldest commit first, so the first hit for a path is its
- * publication date. Rename and copy records inherit the date of the file they
- * came from, which matches `git log --follow` without one subprocess per page.
- */
+
 function loadFirstPublishedDates() {
   if (firstPublishedDates) return firstPublishedDates
   firstPublishedDates = new Map()
@@ -777,7 +772,7 @@ export default withPwa(defineConfig({
       // Rooting Guides Sidebar
       '/rooting-guides/': [
         {
-          text: '📖 Guide Overview',
+          text: 'Guide Overview', icon: 'book-open',
           collapsed: false,
           items: [
             { text: 'Table of Contents', link: '/rooting-guides/' },
@@ -798,7 +793,7 @@ export default withPwa(defineConfig({
           ]
         },
         {
-          text: '🔒 Locked-Bootloader Options',
+          text: 'Locked-Bootloader Options', icon: 'lock',
           collapsed: true,
           items: [
             { text: 'DirtyFrag & GhostLock', link: '/rooting-guides/root-without-unlocking-bootloader' },
@@ -806,7 +801,7 @@ export default withPwa(defineConfig({
           ]
         },
         {
-          text: '🔧 Step-by-Step Process',
+          text: 'Step-by-Step Process', icon: 'wrench',
           collapsed: false,
           items: [
             { text: '1️⃣ Unlock Bootloader', link: '/rooting-guides/how-to-unlock-bootloader' },
@@ -817,12 +812,12 @@ export default withPwa(defineConfig({
           ]
         },
         {
-          text: '📱 Device-Specific Guides',
+          text: 'Device-Specific Guides', icon: 'smartphone',
           collapsed: true,
           items: [
-            { text: '📋 All Supported Devices', link: '/rooting-guides/#device-specific-guides' },
+            { text: 'All Supported Devices', icon: 'clipboard-list', link: '/rooting-guides/#device-specific-guides' },
             {
-              text: '🏆 Popular Brands',
+              text: 'Popular Brands', icon: 'trophy',
               items: [
                 { text: 'Google Pixel Phones', link: '/rooting-guides/how-to-root-pixel-phone' },
                 { text: 'Samsung Galaxy Devices', link: '/rooting-guides/how-to-root-samsung-phone' },
@@ -849,17 +844,17 @@ export default withPwa(defineConfig({
       // Apps and Modules Sidebar
       '/apps-and-modules/': [
         {
-          text: '⭐ Quick Access',
+          text: 'Quick Access', icon: 'star',
           collapsed: false,
           items: [
             { text: 'Category Overview', link: '/apps-and-modules/' },
-            { text: '⭐ Must-Have Apps', link: '/apps-and-modules/#starter-kit-must-have-apps' },
-            { text: '📘 Glossary & Badges', link: '/apps-and-modules/#glossary' },
-            { text: '🛡️ Safety Checklist', link: '/apps-and-modules/#safety-legal' }
+            { text: 'Must-Have Apps', icon: 'star', link: '/apps-and-modules/#starter-kit-must-have-apps' },
+            { text: 'Glossary & Badges', icon: 'book', link: '/apps-and-modules/#glossary' },
+            { text: 'Safety Checklist', icon: 'shield', link: '/apps-and-modules/#safety-legal' }
           ]
         },
         {
-          text: '🛠️ Root Management',
+          text: 'Root Management', icon: 'wrench',
           link: '/apps-and-modules/root-management',
           collapsed: true,
           items: [
@@ -876,7 +871,7 @@ export default withPwa(defineConfig({
           ]
         },
         {
-          text: '⚙️ System',
+          text: 'System', icon: 'settings',
           link: '/apps-and-modules/system',
           collapsed: true,
           items: [
@@ -899,7 +894,7 @@ export default withPwa(defineConfig({
           ]
         },
         {
-          text: '⚡ Performance & Battery',
+          text: 'Performance & Battery', icon: 'zap',
           link: '/apps-and-modules/performance',
           collapsed: true,
           items: [
@@ -912,7 +907,7 @@ export default withPwa(defineConfig({
           ]
         },
         {
-          text: '🕵️ Privacy',
+          text: 'Privacy', icon: 'eye-off',
           link: '/apps-and-modules/privacy',
           collapsed: true,
           items: [
@@ -923,7 +918,7 @@ export default withPwa(defineConfig({
           ]
         },
         {
-          text: '🔐 Security',
+          text: 'Security', icon: 'lock-keyhole',
           link: '/apps-and-modules/security',
           collapsed: true,
           items: [
@@ -932,7 +927,7 @@ export default withPwa(defineConfig({
           ]
         },
         {
-          text: '🚫 Ad Blocking',
+          text: 'Ad Blocking', icon: 'shield-off',
           link: '/apps-and-modules/ad-blocking',
           collapsed: true,
           items: [
@@ -941,7 +936,7 @@ export default withPwa(defineConfig({
           ]
         },
         {
-          text: '🧩 App Modifications',
+          text: 'App Modifications', icon: 'puzzle',
           link: '/apps-and-modules/app-modifications',
           collapsed: true,
           items: [
@@ -954,7 +949,7 @@ export default withPwa(defineConfig({
           ]
         },
         {
-          text: '🧹 Debloating',
+          text: 'Debloating', icon: 'eraser',
           link: '/apps-and-modules/debloating',
           collapsed: true,
           items: [
@@ -962,7 +957,7 @@ export default withPwa(defineConfig({
           ]
         },
         {
-          text: '🗂️ File Management',
+          text: 'File Management', icon: 'folder-tree',
           link: '/apps-and-modules/file-management',
           collapsed: true,
           items: [
@@ -972,7 +967,7 @@ export default withPwa(defineConfig({
           ]
         },
         {
-          text: '💾 Backup & Restore',
+          text: 'Backup & Restore', icon: 'database-backup',
           link: '/apps-and-modules/backup',
           collapsed: true,
           items: [
@@ -980,7 +975,7 @@ export default withPwa(defineConfig({
           ]
         },
         {
-          text: '🎨 Customization',
+          text: 'Customization', icon: 'palette',
           link: '/apps-and-modules/customization',
           collapsed: true,
           items: [
@@ -995,7 +990,7 @@ export default withPwa(defineConfig({
           ]
         },
         {
-          text: '🎵 Audio',
+          text: 'Audio', icon: 'audio-lines',
           link: '/apps-and-modules/audio',
           collapsed: true,
           items: [
@@ -1005,7 +1000,7 @@ export default withPwa(defineConfig({
           ]
         },
         {
-          text: '🌐 Networking',
+          text: 'Networking', icon: 'globe',
           link: '/apps-and-modules/networking',
           collapsed: true,
           items: [
@@ -1016,7 +1011,7 @@ export default withPwa(defineConfig({
           ]
         },
         {
-          text: '🎮 Gaming',
+          text: 'Gaming', icon: 'gamepad-2',
           link: '/apps-and-modules/gaming',
           collapsed: true,
           items: [
@@ -1025,7 +1020,7 @@ export default withPwa(defineConfig({
           ]
         },
         {
-          text: '🧑‍💻 Development & Automation',
+          text: 'Development & Automation', icon: 'square-terminal',
           link: '/apps-and-modules/development',
           collapsed: true,
           items: [
@@ -1038,7 +1033,7 @@ export default withPwa(defineConfig({
           ]
         },
         {
-          text: '🧰 General Utilities',
+          text: 'General Utilities', icon: 'box',
           link: '/apps-and-modules/utilities',
           collapsed: true,
           items: [
@@ -1050,7 +1045,7 @@ export default withPwa(defineConfig({
           ]
         },
         {
-          text: '📚 More Resources',
+          text: 'More Resources', icon: 'book-open',
           collapsed: true,
           items: [
             { text: 'Rooting Guides', link: '/rooting-guides/' },
@@ -1065,7 +1060,7 @@ export default withPwa(defineConfig({
       // General Guides Sidebar
       '/general-guides/': [
         {
-          text: '📚 General Guides',
+          text: 'General Guides', icon: 'book-open',
           collapsed: false,
           items: [
             { text: 'Overview', link: '/general-guides/' },
@@ -1075,14 +1070,14 @@ export default withPwa(defineConfig({
           ]
         },
         {
-          text: '🛡️ Privacy & Ad Blocking',
+          text: 'Privacy & Ad Blocking', icon: 'shield',
           collapsed: false,
           items: [
             { text: 'Android Ad Blocking', link: '/general-guides/android-adblocking' }
           ]
         },
         {
-          text: '📦 App Management',
+          text: 'App Management', icon: 'box',
           collapsed: false,
           items: [
             { text: 'Safely Debloat Android Apps', link: '/general-guides/android-apps-debloating' },
@@ -1243,7 +1238,7 @@ export default withPwa(defineConfig({
       // match equally, so the standalone page entries above must be checked first.
       '/': [
         {
-          text: '🚀 Quick Start',
+          text: 'Quick Start', icon: 'rocket',
           collapsed: false,
           items: [
             { text: 'What is Android Root?', link: '/rooting-guides/#understanding-root-access' },
@@ -1253,39 +1248,39 @@ export default withPwa(defineConfig({
           ]
         },
         {
-          text: '🏆 Root Methods',
+          text: 'Root Methods', icon: 'trophy',
           collapsed: false,
           items: [
-            { text: '⚖️ Compare Root Methods', link: '/rooting-guides/root-framework-comparison' },
-            { text: '🏅 Magisk (Recommended)', link: '/rooting-guides/magisk-guide' },
-            { text: '⚡ KernelSU', link: '/rooting-guides/kernelsu-guide' },
-            { text: '🤖 APatch', link: '/rooting-guides/apatch-guide' },
-            { text: '⚙️ LSPosed Framework', link: '/rooting-guides/lsposed-guide' },
-            { text: '👻 Temporary Root (No Unlock)', link: '/rooting-guides/root-without-unlocking-bootloader' }
+            { text: 'Compare Root Methods', icon: 'scale', link: '/rooting-guides/root-framework-comparison' },
+            { text: 'Magisk (Recommended)', icon: 'medal', link: '/rooting-guides/magisk-guide' },
+            { text: 'KernelSU', icon: 'zap', link: '/rooting-guides/kernelsu-guide' },
+            { text: 'APatch', icon: 'bot', link: '/rooting-guides/apatch-guide' },
+            { text: 'LSPosed Framework', icon: 'settings', link: '/rooting-guides/lsposed-guide' },
+            { text: 'Temporary Root (No Unlock)', icon: 'ghost', link: '/rooting-guides/root-without-unlocking-bootloader' }
           ]
         },
         {
-          text: '📱 Device Guides',
+          text: 'Device Guides', icon: 'smartphone',
           collapsed: true,
           items: [
-            { text: '🔷 Google Pixel', link: '/rooting-guides/how-to-root-pixel-phone' },
-            { text: '🔷 Samsung Galaxy', link: '/rooting-guides/how-to-root-samsung-phone' },
-            { text: '🔷 Xiaomi/Redmi/POCO', link: '/rooting-guides/how-to-root-xiaomi-phone' },
-            { text: '🔷 OnePlus', link: '/rooting-guides/how-to-root-oneplus-phone' },
-            { text: '🔷 Nothing Phone', link: '/rooting-guides/how-to-root-nothing-phone' },
-            { text: '🔷 Motorola', link: '/rooting-guides/how-to-root-motorola-phone' },
-            { text: '📋 View All Devices', link: '/rooting-guides/#device-specific-guides' }
+            { text: 'Google Pixel', icon: 'smartphone', link: '/rooting-guides/how-to-root-pixel-phone' },
+            { text: 'Samsung Galaxy', icon: 'smartphone', link: '/rooting-guides/how-to-root-samsung-phone' },
+            { text: 'Xiaomi/Redmi/POCO', icon: 'smartphone', link: '/rooting-guides/how-to-root-xiaomi-phone' },
+            { text: 'OnePlus', icon: 'smartphone', link: '/rooting-guides/how-to-root-oneplus-phone' },
+            { text: 'Nothing Phone', icon: 'smartphone', link: '/rooting-guides/how-to-root-nothing-phone' },
+            { text: 'Motorola', icon: 'smartphone', link: '/rooting-guides/how-to-root-motorola-phone' },
+            { text: 'View All Devices', icon: 'clipboard-list', link: '/rooting-guides/#device-specific-guides' }
           ]
         },
         {
-          text: '📚 Help & Resources',
+          text: 'Help & Resources', icon: 'book-open',
           collapsed: true,
           items: [
-            { text: '❓ Frequently Asked Questions', link: '/faqs' },
-            { text: '🔧 Troubleshooting Guide', link: '/troubleshooting' },
-            { text: '📖 Rooting Glossary', link: '/apps-and-modules/#glossary' },
-            { text: '🌐 Community Resources', link: '/resources' },
-            { text: '🔀 Non-Root Alternatives', link: '/non-root-alternatives' }
+            { text: 'Frequently Asked Questions', icon: 'circle-question-mark', link: '/faqs' },
+            { text: 'Troubleshooting Guide', icon: 'wrench', link: '/troubleshooting' },
+            { text: 'Rooting Glossary', icon: 'book-open', link: '/apps-and-modules/#glossary' },
+            { text: 'Community Resources', icon: 'globe', link: '/resources' },
+            { text: 'Non-Root Alternatives', icon: 'shuffle', link: '/non-root-alternatives' }
           ]
         }
       ]
