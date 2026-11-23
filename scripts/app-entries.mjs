@@ -194,8 +194,10 @@ function lintRecord(record) {
 }
 
 function lintRecords(records) {
+  // Malformed lines already carry their own error and have no name to sort.
   const bySection = new Map()
   for (const record of records) {
+    if (record.malformed) continue
     const key = record.lintSection ?? ''
     bySection.getOrInsert(key, []).push(record)
   }
