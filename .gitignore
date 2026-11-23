@@ -3,13 +3,15 @@ docs/.vitepress/cache
 docs/dev-dist
 node_modules
 docs/README.md
-docs/rooting-guides/*_NEW.md
 improvements.md
 docs/count.md
 docs/public/count.json
+.superpowers
+
 # Python
 __pycache__/
 *.pyc
 
 # Bun lockfile is not tracked
 bun.lock
+
