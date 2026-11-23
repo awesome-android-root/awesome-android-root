@@ -1,8 +1,9 @@
 /**
  * Nav and sidebar icons.
  *
- * VitePress renders sidebar labels and nav items with `v-html`, so a leading
- * emoji is replaced by inline SVG.
+ * VitePress renders sidebar labels and nav items with `v-html`, so an `icon`
+ * key on a config item is replaced by inline SVG in its `text` at build time.
+ * Keys are Lucide icon slugs, for example `icon: 'book-open'`.
  */
 import { __iconData as audioLines } from '@lucide/vue/dist/esm/icons/audio-lines.mjs'
 import { __iconData as book } from '@lucide/vue/dist/esm/icons/book.mjs'
@@ -13,6 +14,7 @@ import { __iconData as clipboardList } from '@lucide/vue/dist/esm/icons/clipboar
 import { __iconData as databaseBackup } from '@lucide/vue/dist/esm/icons/database-backup.mjs'
 import { __iconData as eraser } from '@lucide/vue/dist/esm/icons/eraser.mjs'
 import { __iconData as eyeOff } from '@lucide/vue/dist/esm/icons/eye-off.mjs'
+import { __iconData as fileText } from '@lucide/vue/dist/esm/icons/file-text.mjs'
 import { __iconData as folderTree } from '@lucide/vue/dist/esm/icons/folder-tree.mjs'
 import { __iconData as gamepad2 } from '@lucide/vue/dist/esm/icons/gamepad-2.mjs'
 import { __iconData as ghost } from '@lucide/vue/dist/esm/icons/ghost.mjs'
@@ -36,48 +38,40 @@ import { __iconData as trophy } from '@lucide/vue/dist/esm/icons/trophy.mjs'
 import { __iconData as wrench } from '@lucide/vue/dist/esm/icons/wrench.mjs'
 import { __iconData as zap } from '@lucide/vue/dist/esm/icons/zap.mjs'
 
-const EMOJI_ICONS = {
-  '🚀': rocket,
-  '🏆': trophy,
-  '📱': smartphone,
-  '🔷': smartphone,
-  '📚': bookOpen,
-  '📖': bookOpen,
-  '📘': book,
-  '❓': circleQuestionMark,
-  '🔧': wrench,
-  '🛠': wrench,
-  '🌐': globe,
-  '🛡': shield,
-  '🔐': lockKeyhole,
-  '🔒': lock,
-  '🏅': medal,
-  '🤖': bot,
-  '👻': ghost,
-  '🔀': shuffle,
-  '⚙': settings,
-  '⚖': scale,
-  '⚡': zap,
-  '🕵': eyeOff,
-  '🚫': shieldOff,
-  '🧩': puzzle,
-  '🧹': eraser,
-  '🗂': folderTree,
-  '💾': databaseBackup,
-  '🎨': palette,
-  '🎵': audioLines,
-  '🎮': gamepad2,
-  '🧑‍💻': squareTerminal,
-  '🧰': box,
-  '📦': box,
-  '📋': clipboardList,
-  '⭐': star
+const NAMED_ICONS = {
+  'audio-lines': audioLines,
+  book,
+  'book-open': bookOpen,
+  bot,
+  box,
+  'circle-question-mark': circleQuestionMark,
+  'clipboard-list': clipboardList,
+  'database-backup': databaseBackup,
+  eraser,
+  'eye-off': eyeOff,
+  'file-text': fileText,
+  'folder-tree': folderTree,
+  'gamepad-2': gamepad2,
+  ghost,
+  globe,
+  lock,
+  'lock-keyhole': lockKeyhole,
+  medal,
+  palette,
+  puzzle,
+  rocket,
+  scale,
+  settings,
+  shield,
+  'shield-off': shieldOff,
+  shuffle,
+  smartphone,
+  'square-terminal': squareTerminal,
+  star,
+  trophy,
+  wrench,
+  zap
 }
-
-const LEADING_EMOJI =
-  /^[\p{Extended_Pictographic}\u{FE0E}\u{FE0F}\u{20E3}\u{200D}\u{1F3FB}-\u{1F3FF}]+/u
-
-const stripVariants = (value) => value.replace(/[\u{FE0E}\u{FE0F}]/gu, '')
 
 function toSvg({ node }) {
   const body = node
@@ -98,28 +92,29 @@ function toSvg({ node }) {
   )
 }
 
-function iconifyText(text) {
-  const match = LEADING_EMOJI.exec(text)
-  if (!match) return text
-
-  const icon = EMOJI_ICONS[stripVariants(match[0])]
-  if (!icon) return text
-
-  return `${toSvg(icon)} ${text.slice(match[0].length).trim()}`
+function prependIcon(text, name) {
+  const icon = NAMED_ICONS[name]
+  if (!icon) throw new Error(`Unknown icon "${name}"`)
+  return `${toSvg(icon)} ${text}`
 }
 
-/** Replaces the leading emoji of every `text` field with an inline SVG icon. */
+/** Replaces the `icon` key of every config item with inline SVG in its `text`. */
 export function withIcons(node) {
   if (Array.isArray(node)) return node.map(withIcons)
+  if (!node || typeof node !== 'object') return node
 
-  if (node && typeof node === 'object') {
-    return Object.fromEntries(
-      Object.entries(node).map(([key, value]) => [
-        key,
-        key === 'text' && typeof value === 'string' ? iconifyText(value) : withIcons(value)
-      ])
-    )
+  const { icon } = node
+  if (typeof icon === 'string' && typeof node.text !== 'string') {
+    throw new Error(`Item with icon "${icon}" requires a string text field`)
   }
 
-  return node
+  return Object.fromEntries(
+    Object.entries(node).flatMap(([key, value]) => {
+      if (key === 'icon') return []
+      if (key === 'text' && typeof icon === 'string') {
+        return [[key, prependIcon(value, icon)]]
+      }
+      return [[key, withIcons(value)]]
+    })
+  )
 }

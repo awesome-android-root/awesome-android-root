@@ -22,6 +22,7 @@
     "docs:build": "bun scripts/prepare-build.mjs && bun run index:build && vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "check:links": "python3 scripts/check_links.py",
+    "test": "node --test scripts/*.test.mjs",
     "index:build": "bun scripts/app-entries.mjs",
     "check": "bun run check:links && bun run docs:build"
   },
