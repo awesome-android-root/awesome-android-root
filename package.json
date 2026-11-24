@@ -4,7 +4,7 @@
   "description": "A curated collection of 800+ Android root apps, Magisk, KernelSU, APatch and LSPosed modules, with step-by-step rooting guides.",
   "private": true,
   "license": "MIT",
-  "packageManager": "bun@1.4.4",
+  "packageManager": "bun@1.4.5",
   "author": {
     "name": "awesome-android-root",
     "url": "https://github.com/awesome-android-root"
