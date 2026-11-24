@@ -67,7 +67,7 @@ head:
 
 # Android Rooting Resources Hub
 
-> Reference for Android rooting, customization, and recovery. GitHub project descriptions and release information reviewed on **2026-10-16**.
+> Reference for Android rooting, customization, and recovery. GitHub project descriptions and release information reviewed on **2026-11-24**.
 
 Use upstream READMEs and release notes to check requirements before downloading. Recent commits do not prove device compatibility, and a GitHub repository is not a security audit. Prefer tagged releases over CI artifacts unless debugging with the maintainer.
 
@@ -83,7 +83,6 @@ Use upstream READMEs and release notes to check requirements before downloading.
 - [Communities and Support](#communities-and-support)
 - [Emergency and Recovery](#emergency-and-recovery)
 - [Advanced Engineering](#advanced-engineering)
-- [Video Tutorials](#video-tutorials)
 - [Official Project Links](#official-project-links)
 
 ---
@@ -123,6 +122,7 @@ Check the [Magisk release notes](https://github.com/topjohnwu/Magisk/releases) f
 | **[Magisk](./rooting-guides/magisk-guide.md)** | Image-based root, systemless modules, built-in Zygisk | DenyList is not a guarantee of undetectable root | [GitHub](https://github.com/topjohnwu/Magisk) |
 | **[KernelSU](./rooting-guides/kernelsu-guide.md)** | Kernel-based root with per-app profiles | Match the kernel; systemless mounting uses metamodules | [GitHub](https://github.com/tiann/KernelSU) |
 | **[KernelSU Next](./rooting-guides/kernelsu-guide.md)** | Alternative kernel-based root implementation | Use this fork's own manager and compatibility instructions | [GitHub](https://github.com/KernelSU-Next/KernelSU-Next) |
+| **[SukiSU Nova](./rooting-guides/kernelsu-guide.md)** | KernelSU fork with KPM support and built-in SUSFS controls | Developed independently of KernelSU; kernel support differs from upstream | [GitHub](https://github.com/SukiSU-Nova/SukiSU-Nova) |
 | **[APatch](./rooting-guides/apatch-guide.md)** | Kernel patching, Android modules and kernel patch modules | ARM64 and kernel configuration requirements; protect the SuperKey | [GitHub](https://github.com/bmax121/APatch) |
 | **[Vector](./rooting-guides/lsposed-guide.md)** | Xposed-compatible ART hooking, formerly JingMatrix's LSPosed fork | Requires a supported root and Zygisk environment; not a standalone root solution | [GitHub](https://github.com/JingMatrix/Vector) |
 
@@ -134,11 +134,12 @@ Check the [Magisk release notes](https://github.com/topjohnwu/Magisk/releases) f
 | Tool | Purpose | Compatibility | Source |
 |:-----|:--------|:--------------|:-------|
 | **Magisk Built-in Zygisk** | Default Zygisk in Magisk | Magisk 24+ | Built into [Magisk](https://github.com/topjohnwu/Magisk) |
-| **ZygiskNext** | Standalone Zygisk for KSU/Magisk/APatch | Magisk, KernelSU, APatch | [GitHub](https://github.com/Dr-TSNG/ZygiskNext) |
+| **ZygiskNext** | Standalone Zygisk; closed source since v4-0.9.2 | Magisk, KernelSU, APatch | [GitHub](https://github.com/Dr-TSNG/ZygiskNext) |
 | **ReZygisk** | Transparent, open-source Zygisk fork | Magisk, KernelSU, APatch | [GitHub](https://github.com/PerformanC/ReZygisk) |
+| **NeoZygisk** | Open-source Zygisk based on ptrace injection | Magisk, KernelSU, APatch | [GitHub](https://github.com/JingMatrix/NeoZygisk) |
 
 > [!TIP]
-> Compare the strengths and trade-offs of each Zygisk implementation in the table above.
+> Use one Zygisk implementation at a time. ZygiskNext and ReZygisk require Magisk's built-in Zygisk to be turned off.
 
 ### Non-root privilege tools
 
@@ -157,7 +158,6 @@ Check the [Magisk release notes](https://github.com/topjohnwu/Magisk/releases) f
 | **TWRP** | Custom recovery and backups | Supported devices only; decryption varies | [twrp.me](https://twrp.me/) |
 | **OrangeFox** | Enhanced UI, built-in tools | Select devices | [orangefox.download](https://orangefox.download/) |
 | **PitchBlack** | TWRP fork with extras | Select devices | [pitchblackrecovery.com](https://pitchblackrecovery.com/) |
-| **SkyHawk** | Lightweight alternative | Select devices | [GitHub](https://github.com/SHRP) |
 | **AOSP Recovery Source** | Official base recovery | Reference | [AOSP](https://android.googlesource.com/platform/bootable/recovery/) |
 
 #### Platform tools
@@ -166,12 +166,15 @@ Check the [Magisk release notes](https://github.com/topjohnwu/Magisk/releases) f
 |:-----|:--------|:---------|:-------|
 | **ADB & Fastboot** | Core Android debug/flash tools | All | [Android SDK](https://developer.android.com/studio/releases/platform-tools) |
 | **Android Flash Tool** | Web-based flashing (Pixel/AOSP) | Web | [flash.android.com](https://flash.android.com/) |
-| **Heimdall** | Open-source Samsung flashing | All | [GitHub](https://github.com/Benjamin-Dobell/Heimdall) |
+| **Heimdall** | Open-source Samsung flashing (maintained fork) | Linux; macOS and Windows untested by the maintainer | [SourceHut](https://git.sr.ht/~grimler/Heimdall) |
+| **samloader** | Samsung firmware download, decryption and Download Mode flashing | Windows/macOS/Linux | [GitHub](https://github.com/topjohnwu/samloader-rs) |
 | **Odin** | Samsung Download Mode flashing | Windows | Follow a trusted device guide; avoid repackaged binaries |
 | **Mi Flash Tool** | Xiaomi fastboot flashing | Windows | Obtain via Xiaomi support/device documentation, not lookalike download sites |
+| **MiUnlockTool** | Third-party Xiaomi bootloader unlock client that signs in with your Xiaomi account; same official process, no waiting-period bypass | All (Python) | [GitHub](https://github.com/MiForge/MiUnlockTool) |
 | **SP Flash Tool** | MediaTek flashing with device-specific scatter/DA files | Windows/Linux | Use the device vendor's documented package |
 | **MTK Client** | Open-source MediaTek bypass/flash | Python | [GitHub](https://github.com/bkerler/mtkclient) |
 | **QFIL (Qualcomm)** | Qualcomm EDL mode flashing | Windows | Qualcomm package |
+| **QDL** | Qualcomm's open-source EDL flasher; needs a matching flash loader | Windows/macOS/Linux | [GitHub](https://github.com/qualcomm/qdl) |
 | **LineageOS Recovery** | Official LineageOS recovery builds | Device-specific | [LineageOS Wiki](https://wiki.lineageos.org/devices/) |
 | **PixelFlasher** | Desktop firmware, boot-image patching and flashing workflow | Windows/macOS/Linux; check supported devices | [GitHub](https://github.com/badabing2005/PixelFlasher) |
 | **scrcpy** | Display/control Android over USB or TCP/IP for diagnosis | Windows/macOS/Linux; Android 5+ | [GitHub](https://github.com/Genymobile/scrcpy) |
@@ -186,20 +189,20 @@ Check the [Magisk release notes](https://github.com/topjohnwu/Magisk/releases) f
 | Brand | Official Source | Alternative | Notes |
 |:------|:----------------|:------------|:------|
 | **Google Pixel** | [Factory Images](https://developers.google.com/android/images) | [OTA Images](https://developers.google.com/android/ota) | Direct from Google |
-| **Samsung** | [Samsung Developers](https://developer.samsung.com/) | SamMobile, Frija, SamFW | Region-specific |
-| **Xiaomi** | [MIUI ROM](https://c.mi.com/global/miuidownload/) | [Xiaomi Firmware Updater](https://xiaomifirmwareupdater.com/) | Fastboot & Recovery |
-| **OnePlus** | [OnePlus Support](https://www.oneplus.com/support) | Oxygen Updater app | payload.bin format |
-| **Nothing** | [Nothing Support](https://nothing.tech/support) | Device-specific community packages | Match model and exact Nothing OS build |
-| **Motorola** | [Motorola Support](https://motorola-global-portal.custhelp.com/) | [Lolinet Mirrors](https://mirrors.lolinet.com/firmware/moto/) | Verify region |
+| **Samsung** | Samsung update servers via [samloader](https://github.com/topjohnwu/samloader-rs) | [Bifrost](https://github.com/zacharee/Bifrost), [Frija](https://github.com/SlackingVeteran/frija) | Match model and CSC/region |
+| **Xiaomi** | [MIUI/HyperOS ROM](https://c.mi.com/global/miuidownload/index) | [XM Firmware Updater](https://xmfirmwareupdater.com/) | Fastboot & Recovery |
+| **OnePlus** | [OnePlus Support](https://service.oneplus.com/) | [OS Updater](https://github.com/oxygen-updater/os-updater) (formerly Oxygen Updater) | payload.bin format |
+| **Nothing** | [Nothing Support](https://nothing.tech/support) | [Nothing Archive](https://github.com/spike0en/nothing_archive) | Match model and exact Nothing OS build |
+| **Motorola** | [Software Fix](https://en-us.support.motorola.com/app/softwarefix) | [Lolinet Mirrors](https://mirrors.lolinet.com/firmware/lenomola/) | Verify region |
 | **ASUS** | [ASUS Support](https://www.asus.com/support/) | Direct downloads | ROG & Zenfone |
-| **Realme** | [Realme Support](https://www.realme.com/support/software-update) | realme-updater | OZIP format |
+| **Realme** | [Realme Support](https://www.realme.com/support/software-update) | [OS Updater](https://github.com/oxygen-updater/os-updater) | Match model and region |
 
 ### Module & App Repositories
 
 | Repository | Type | Content | Link |
 |:-----------|:-----|:--------|:-----|
 | **MMRL** | Multi-repository module manager | Supports Magisk, KernelSU and APatch; inspect each module's source | [GitHub](https://github.com/MMRLApp/MMRL) |
-| **Fox Magisk Module Manager (archived)** | Historical module manager | Repository archived; not a current default recommendation | [GitHub](https://github.com/Fox2Code/FoxMagiskModuleManager) |
+| **Magisk Modules Alt Repo** | Magisk module repository | Community-submitted modules, browsable with MMRL | [GitHub](https://github.com/Magisk-Modules-Alt-Repo) |
 | **LSPosed Modules** | Xposed modules | App modifications | [Repository](https://github.com/Xposed-Modules-Repo) |
 | **Apps & Modules Index** | Curated collection | 800+ apps and modules | [Collection](./apps-and-modules/index.md) |
 | **IzzyOnDroid** | F-Droid repo | FOSS apps | [IzzyOnDroid](https://apt.izzysoft.de/fdroid/) |
@@ -212,10 +215,10 @@ Check the [Magisk release notes](https://github.com/topjohnwu/Magisk/releases) f
 |:-----|:--------|:-------|
 | **Payload-Dumper-Android** | Extract partitions from OTA.zip or payload.bin on Android without a PC | [GitHub](https://github.com/rajmani7584/Payload-Dumper-Android) |
 | **payload-dumper-go** | Extract payload.bin | [GitHub](https://github.com/ssut/payload-dumper-go) |
-| **payload-dumper-py** | Python payload extractor | [GitHub](https://github.com/vm03/payload_dumper) |
 | **payload-dumper-rust** | Android OTA payload dumper | [GitHub](https://github.com/rhythmcache/payload-dumper-rust) |
 | **AnyKernel3** | Kernel packaging/flashing framework | [GitHub](https://github.com/osm0sis/AnyKernel3) |
-| **Android Image Kitchen** | Unpack/repack supported boot and recovery images; not a substitute for framework-specific patching | [GitHub](https://github.com/osm0sis/Android-Image-Kitchen) |
+| **magiskboot** | Magisk's tool for unpacking, patching and repacking boot images | [Docs](https://topjohnwu.github.io/Magisk/tools.html) |
+| **Android_boot_image_editor** | Unpack and repack boot, init_boot, vendor_boot, recovery and vbmeta images on a PC; not a substitute for framework-specific patching | [GitHub](https://github.com/cfig/Android_boot_image_editor) |
 | **Universal Android Debloater Next Generation** | ADB-based package management with community package descriptions; no root needed | [GitHub](https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation) |
 | **Neo Backup** | Root-based app and app-data backup/restore; test restores and copy backups off-device | [GitHub](https://github.com/NeoApplications/Neo-Backup) |
 | **SD Maid SE** | Storage analysis and cleanup with optional root/ADB access | [GitHub](https://github.com/d4rken-org/sdmaid-se) |
@@ -235,6 +238,9 @@ Community kernels are not manufacturer firmware. Verify Android kernel branch, K
 |:--------|:---------|:-------|
 | **WildKernels GKI** | Community GKI kernel builds with KernelSU and SUSFS; check each release's KMI and manager requirements | [GitHub](https://github.com/WildKernels/GKI_KernelSU_SUSFS) |
 | **WildKernels OnePlus** | KSU + SUSFS builds for OnePlus GKI devices | [GitHub](https://github.com/WildKernels/OnePlus_KernelSU_SUSFS) |
+| **WildKernels Pixel** | KernelSU and SUSFS kernels for specific Pixel devices, built from Sultan sources | [GitHub](https://github.com/WildKernels/Sultan_KernelSU_SUSFS) |
+| **WildKernels Samsung** | KernelSU and SUSFS kernels built from Samsung sources | [GitHub](https://github.com/WildKernels/Samsung_KernelSU_SUSFS) |
+| **SUSFS (susfs4ksu)** | Upstream SUSFS kernel patches and userspace module; current code lives in the per-kernel branches | [GitLab](https://gitlab.com/simonpunk/susfs4ksu) |
 
 ---
 
@@ -254,6 +260,20 @@ Community kernels are not manufacturer firmware. Verify Android kernel branch, K
 | **Temporary Root (No Unlock)** | DirtyFrag and GhostLock temporary root with a locked bootloader | [Root Without Unlocking the Bootloader](./rooting-guides/root-without-unlocking-bootloader.md) |
 | **Bootloader Mods & Temp Root** | Kaeru, Fenrir, and locked-bootloader approaches | [Temporary Root Solutions](./rooting-guides/temporary-root-solutions.md) |
 
+### Upstream documentation
+
+Project documentation is the reference for installation steps and requirements. Check it before following a third-party tutorial.
+
+| Project | Covers | Link |
+|:--------|:-------|:-----|
+| **Magisk** | Installation, OTA upgrades, FAQ, module developer guides and tool reference | [topjohnwu.github.io/Magisk](https://topjohnwu.github.io/Magisk/) |
+| **KernelSU** | Installation, App Profile, modules and metamodules, non-GKI integration | [kernelsu.org](https://kernelsu.org/) |
+| **KernelSU Next** | Installation for GKI and non-GKI kernels | [kernelsu-next.github.io](https://kernelsu-next.github.io/webpage/) |
+| **APatch** | Installation, APM and KPM guides, FAQ | [apatch.dev](https://apatch.dev/) |
+| **SukiSU Nova** | Installation, App Profile and kernel integration | [sukisu.org](https://sukisu.org/) |
+| **libxposed API** | Reference for the modern Xposed module API | [libxposed.github.io/api](https://libxposed.github.io/api/) |
+| **KernelSU Developer Portal** | Publishing modules to the official KernelSU module repository | [developers.kernelsu.org](https://developers.kernelsu.org/) |
+
 ---
 
 ## Communities and Support
@@ -262,12 +282,13 @@ Community kernels are not manufacturer firmware. Verify Android kernel branch, K
 
 | Platform | Focus | Best For | Link |
 |:---------|:------|:---------|:-----|
-| **XDA Developers** | Development hub | ROMs, kernels, mods | [Forum](https://forum.xda-developers.com/) |
+| **XDA Forums** | Development hub | ROMs, kernels, mods | [Forum](https://xdaforums.com/) |
+| **r/androidroot** | General rooting | Support questions, methods, news | [Reddit](https://www.reddit.com/r/androidroot/) |
 | **X/Twitter** | General rooting | Quick help, discussions | [X](https://x.com/awsm_and_root) |
 | **r/Magisk** | Magisk specific | Modules, troubleshooting | [Reddit](https://reddit.com/r/Magisk) |
 | **r/LineageOS** | Custom ROMs | ROM support | [Reddit](https://reddit.com/r/LineageOS) |
-| **Telegram Groups** | Real-time chat | Quick responses | Various channels |
-| **Pixel Community** | Pixel specific rooting | Device updates | [Reddit](https://reddit.com/r/GooglePixel) |
+| **KernelSU Telegram** | Official KernelSU channel | Announcements and discussion | [Telegram](https://t.me/KernelSU) |
+| **APatch Telegram** | Official APatch channels | Updates and discussion | [Channel](https://t.me/APatchChannel), [Group](https://t.me/Apatch_discuss) |
 | **ReZygisk Telegram** | ReZygisk support | Module updates & discussion | [Telegram](https://t.me/rezygisk) |
 
 
@@ -277,7 +298,9 @@ Community kernels are not manufacturer firmware. Verify Android kernel branch, K
 |:----------|:------|:---------|
 | **Android Developers** | Official documentation | [developer.android.com](https://developer.android.com/) |
 | **AOSP** | Android Open Source | [source.android.com](https://source.android.com/) |
-| **GrapheneOS Discord** | Hardening and security insights | [grapheneos.org](https://discord.com/invite/grapheneos) |
+| **KernelSU Discussions** | KernelSU questions and development | [GitHub](https://github.com/tiann/KernelSU/discussions) |
+| **APatch Discussions** | APatch questions and development | [GitHub](https://github.com/bmax121/APatch/discussions) |
+| **Vector Discussions** | Xposed framework and module development | [GitHub](https://github.com/JingMatrix/Vector/discussions) |
 
 ---
 
@@ -298,6 +321,8 @@ Unlock eligibility depends on the exact model, carrier, region, account and firm
 
 For other brands, confirm the manufacturer's current policy for your model before buying tools or requesting codes. Do not assume an old ASUS/Realme/Huawei/OPPO tutorial still works. Warranty coverage and statutory consumer rights depend on local law and the cause of the fault, not just unlock status.
 
+The community-maintained [Bootloader Unlock Wall of Shame](https://github.com/zenfyrdev/bootloader-unlock-wall-of-shame) tracks how each manufacturer handles unlocking. Check it before buying a device.
+
 ### Popular custom ROMs
 
 | ROM | Base | Focus | Root Support | Website |
@@ -307,10 +332,9 @@ For other brands, confirm the manufacturer's current policy for your model befor
 | **CalyxOS** | AOSP | Privacy with usability | Optional | [calyxos.org](https://calyxos.org/) |
 | **/e/OS (Murena)** | LineageOS | De-Googled, microG built-in | Optional | [e.foundation](https://e.foundation/) |
 | **crDroid** | LineageOS | Heavy customization | Check device build | [crdroid.net](https://crdroid.net/) |
-| **Evolution X** | AOSP | Pixel features + customization | Check device build | [evolution-x.org](https://evolution-x.org/) |
+| **Evolution X** | LineageOS | Pixel features + customization | Check device build | [evolution-x.org](https://evolution-x.org/) |
 | **Paranoid Android** | AOSP | Unique UX features | Optional | [paranoidandroid.co](https://paranoidandroid.co/) |
 | **PixelOS** | AOSP | Pixel experience on non-Pixels | Check device build | [pixelos.net](https://pixelos.net/) |
-| **Pixel Experience (historical)** | AOSP | Archived project; not a current ROM recommendation | Do not assume maintained builds | [Archived manifest](https://github.com/PixelExperience/manifest) |
 
 > [!NOTE]
 > Root is separate from installing a custom ROM. Check the exact device build and maintainer instructions. Do not assume a ROM bundles root, integrity spoofing or attestation keys; third-party key material can be revoked and creates trust and privacy risks.
@@ -329,13 +353,21 @@ For other brands, confirm the manufacturer's current policy for your model befor
 | **IMEI Loss** | No network | Backup restoration | See device forums |
 | **Play Integrity/app rejection** | App detection | Diagnose app policy and device state | [Hiding Guide](./troubleshooting.md#play-integrity-and-banking-apps) |
 
+### Upstream rescue guides
+
+| Framework | Covers | Link |
+|:----------|:-------|:-----|
+| **Magisk** | Automatic bootloop protection, Safe Mode and `magisk --remove-modules` | [FAQ](https://topjohnwu.github.io/Magisk/faq.html) |
+| **KernelSU** | Restoring the stock boot image, Safe Mode and `ksud` module management | [Rescue from bootloop](https://kernelsu.org/guide/rescue-from-bootloop.html) |
+| **APatch** | Built-in Safe Mode that disables all modules | [Rescue from bootloop](https://apatch.dev/rescue-bootloop.html) |
+
 ### Emergency tools by chipset
 
 | Chipset | Tool | Mode | Purpose |
 |:--------|:-----|:-----|:--------|
-| **Qualcomm** | QFIL/EDL Tools | EDL (9008) | Deep flash recovery |
+| **Qualcomm** | QFIL, QDL or EDL | EDL (9008) | Deep flash recovery |
 | **MediaTek** | SP Flash Tool | Download Mode | Full flash recovery |
-| **Samsung Exynos** | Odin/Heimdall | Download Mode | Firmware restoration |
+| **Samsung Exynos** | Odin, Heimdall or samloader | Download Mode | Firmware restoration |
 | **Kirin (Huawei)** | HiSuite | Fastboot | Limited recovery |
 
 ### Critical backups
@@ -358,13 +390,15 @@ Recovery backups may omit internal storage and may not decrypt modern Android da
 | Resource | Purpose | Link |
 |:---------|:--------|:-----|
 | **Android Debug Bridge** | Command reference | [ADB Docs](https://developer.android.com/studio/command-line/adb) |
-| **Fastboot Commands** | Bootloader operations | [Fastboot Docs](https://developer.android.com/studio/releases/platform-tools) |
+| **Fastboot Commands** | Bootloader operations | [Flash with Fastboot](https://source.android.com/docs/setup/test/running) |
 | **Kernel Building** | Custom kernel development | [Kernel Guide](https://source.android.com/docs/setup/build/building-kernels) |
 | **SELinux Policies** | Security configuration | [SELinux Docs](https://source.android.com/docs/security/features/selinux) |
 | **Android Security Bulletin** | Security updates | [Security Updates](https://source.android.com/docs/security/bulletin) |
 | **Android Verified Boot** | Chain of trust explained | [AVB Documentation](https://source.android.com/docs/security/features/verifiedboot) |
 | **Dynamic Partitions** | Flexible partitioning | [Dynamic Partitions](https://source.android.com/docs/core/ota/dynamic_partitions) |
 | **Generic Kernel Image** | GKI architecture | [GKI Docs](https://source.android.com/docs/core/architecture/kernel/generic-kernel-image) |
+| **Bootloader Lock and Unlock** | `fastboot flashing unlock`, lock state and OEM unlocking | [Bootloader Docs](https://source.android.com/docs/core/architecture/bootloader/locking_unlocking) |
+| **Generic Boot Partition** | Boot image and generic ramdisk layout by Android release | [Boot Partition Docs](https://source.android.com/docs/core/architecture/partitions/generic-boot) |
 
 ### Security and compliance references
 
@@ -374,21 +408,20 @@ Recovery backups may omit internal storage and may not decrypt modern Android da
 | **A/B System Updates** | Seamless update flow | [A/B System](https://source.android.com/docs/core/ota/ab) |
 | **Project Treble** | HAL abstraction layers | [Treble Docs](https://source.android.com/docs/core/architecture) |
 | **Mainline Modules** | Modular update delivery | [Mainline](https://source.android.com/docs/core/architecture/modular-system) |
+| **Key and ID Attestation** | Hardware-backed key and device ID attestation | [Attestation Docs](https://source.android.com/docs/security/features/keystore/attestation) |
 
----
+### Kernel sources
 
-## Video Tutorials
+Vendor kernel source is needed to build KernelSU into a non-GKI kernel. Use the branch or package that matches the device and installed build.
 
-### Recommended channels
-
-| Channel | Content Type | Quality | Link |
-|:--------|:-------------|:--------|:-----|
-| **XDA TV** | Official tutorials | Professional | [YouTube](https://www.youtube.com/user/xdadevelopers) |
-| **HowToMen** | Android modifications | Step-by-step | [YouTube](https://www.youtube.com/@howtomen) |
-| **Sam Beckman** | Reviews & tutorials | Well-produced | [YouTube](https://www.youtube.com/@sambeckman) |
-| **TechDoctorUK** | Android TV & phones | Comprehensive | [YouTube](https://www.youtube.com/results?search_query=TechDoctorUK) |
-
-⚠️ **Always verify video tutorials against written documentation for accuracy**
+| Vendor | Content | Source |
+|:-------|:--------|:-------|
+| **Google** | Android Common Kernel, the base of GKI builds | [AOSP](https://android.googlesource.com/kernel/common/) |
+| **Xiaomi** | Kernel source with one branch per device and Android release | [GitHub](https://github.com/MiCode/Xiaomi_Kernel_OpenSource) |
+| **OnePlus** | Kernel, module and device-tree repositories per SoC platform | [GitHub](https://github.com/OnePlusOSS) |
+| **Motorola** | Kernel for MSM-based Motorola devices | [GitHub](https://github.com/MotorolaMobilityLLC/kernel-msm) |
+| **Nothing** | Kernel and module repositories per platform | [GitHub](https://github.com/NothingOSS) |
+| **Samsung** | Source packages per model and firmware version, searchable in the Release Center | [Samsung Open Source](https://opensource.samsung.com/uploadList?menuItem=mobile) |
 
 ---
 
@@ -409,9 +442,9 @@ Recovery backups may omit internal storage and may not decrypt modern Android da
 
 | Need | Primary Resource | Backup Resource |
 |:-----|:----------------|:----------------|
-| **Emergency Help** | [Troubleshooting](./troubleshooting.md#emergency-recovery) | [XDA Device Forums](https://forum.xda-developers.com/) |
+| **Emergency Help** | [Troubleshooting](./troubleshooting.md#emergency-recovery) | [XDA Device Forums](https://xdaforums.com/) |
 | **Root Apps** | [App Collection](./apps-and-modules/index.md) | [F-Droid](https://f-droid.org/) |
-| **Module Discovery** | [MMRL](https://github.com/MMRLApp/MMRL) | [Telegram Channels](https://t.me/magiskmod_update) |
+| **Module Discovery** | [MMRL](https://github.com/MMRLApp/MMRL) | [Magisk Modules Alt Repo](https://github.com/Magisk-Modules-Alt-Repo) |
 | **Firmware** | Manufacturer site | [Firmware databases](#firmware-sources) |
 
 ---
