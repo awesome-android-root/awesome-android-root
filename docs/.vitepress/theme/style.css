@@ -369,6 +369,29 @@ html.dark {
   height: 1em;
 }
 
+.VPSidebarItem.is-link > .item > .link {
+  margin-inline: -8px;
+  padding-inline: 8px;
+  border-radius: 6px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.VPSidebarItem.is-link > .item > .link:hover {
+  background-color: color-mix(in srgb, var(--vp-c-brand-1) 8%, transparent);
+}
+
+.VPSidebarItem.is-active > .item > .link,
+.VPSidebarItem.is-active > .item > .link:hover {
+  background-color: var(--vp-c-brand-soft);
+}
+
+.VPSidebarItem.is-link > .item > .link:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: -2px;
+}
+
 .VPHome {
   background: radial-gradient(1100px 620px at 50% 0%, rgba(10, 125, 62, 0.09), rgba(10, 125, 62, 0) 70%);
 }
@@ -800,7 +823,8 @@ img {
   .community-card,
   .landing-features .feature-card,
   .journey-btn,
-  .vp-doc details summary::after {
+  .vp-doc details summary::after,
+  .VPSidebarItem.is-link > .item > .link {
     transition: none;
   }
 }
