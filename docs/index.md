@@ -4,6 +4,7 @@ title: Android Root Apps, Modules & Guides | Awesome Android Root
 titleTemplate: Awesome Android Root
 description: "Browse 800+ curated Android apps and root modules across Magisk, KernelSU, APatch and LSPosed, plus rooting guides and troubleshooting."
 search: false
+editLink: false
 head:
   - - meta
     - name: robots

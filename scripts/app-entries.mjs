@@ -307,6 +307,7 @@ function writeCounts(pages) {
     'title: Apps and Modules Count',
     'description: Current counts of Android root apps and modules in this documentation, broken down by category and root framework, updated on every build.',
     'search: false',
+    'editLink: false',
     '---',
     '',
     '# Apps and Modules Count',

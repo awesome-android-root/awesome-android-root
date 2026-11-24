@@ -1300,6 +1300,11 @@ export default withPwa(defineConfig({
       copyright: `Copyright © ${new Date().getFullYear()} Awesome Android Root Project`
     },
 
+    editLink: {
+      pattern: 'https://github.com/awesome-android-root/awesome-android-root/edit/main/docs/:path',
+      text: 'Suggest an edit on GitHub'
+    },
+
     outline: {
       level: [2, 3],
       label: 'On this page'
