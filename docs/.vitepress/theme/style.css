@@ -453,18 +453,18 @@ div:has(img[src*="img.shields.io"]) {
   min-height: 40px;
 }
 
-/* Store link styling */
-  a[href*="f-droid.org"],
-  a[href*="play.google.com"],
-  a[href*="apt.izzysoft.de"] {
-    display: inline-flex;
-    align-items: center;
-    min-height: 28px;
-    min-width: 28px;
-    padding: 8px 12px;
-    margin: 4px;
-    text-decoration: none;
-  }
+
+.store-badge[href*="f-droid.org"],
+.store-badge[href*="play.google.com"],
+.store-badge[href*="apt.izzysoft.de"] {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  min-width: 28px;
+  padding: 8px 12px;
+  margin: 4px;
+  text-decoration: none;
+}
   
 
 /* Image loading states and optimization */
