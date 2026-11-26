@@ -63,11 +63,11 @@ These steps use Magisk. [KernelSU](./kernelsu-guide.md) and [APatch](./apatch-gu
 
 This page focuses on Xiaomi/Redmi/POCO specifics (Mi Unlock, ARB, HyperOS, payload extraction). For universal prep and Magisk steps, see: [Main Rooting Guide](./index.md), [Bootloader Unlocking](./how-to-unlock-bootloader.md), and [Magisk Guide](./magisk-guide.md).
 
-## 🔗 Essential Resources
-- [📖 Main Rooting Guide](./index.md) - Universal rooting principles and safety
-- [🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md) - General bootloader concepts
-- [🛠️ Custom Recovery](./how-to-install-custom-recovery.md) - TWRP installation guide
-- [❓ FAQ & Troubleshooting](../faqs.md) - Solutions for common issues
+## Essential Resources
+- [Main Rooting Guide](./index.md) - Universal rooting principles and safety
+- [Bootloader Unlocking](./how-to-unlock-bootloader.md) - General bootloader concepts
+- [Custom Recovery](./how-to-install-custom-recovery.md) - TWRP installation guide
+- [FAQ & Troubleshooting](../faqs.md) - Solutions for common issues
 
 ## Xiaomi Rooting Complexity
 
@@ -81,7 +81,7 @@ Xiaomi is among the strictest OEMs for unlocking/root.
 
 ## Critical Warnings
 
-::: danger ⚠️ Xiaomi-Specific Risks
+::: danger Xiaomi-Specific Risks
 - Mi Account/device restrictions are possible (account/device can be flagged)
 - Warranty may be void in many regions after unlocking
 - Xiaomi Wallet/Mi Pay and some regional services may be disabled
@@ -351,7 +351,7 @@ If the device is not A/B, the option is unavailable, or the OTA fails, do not as
 
 ---
 
-::: tip 💡 Xiaomi Root Success Tips
+::: tip Xiaomi Root Success Tips
 - Be patient with the unlock timer; don’t constantly rebind or reset
 - Use mobile data for account binding; keep SIM inserted
 - Always patch and flash images that match your exact build and ARB index
@@ -392,7 +392,7 @@ Bypasses may work temporarily and then stop after Xiaomi patches server-side. Th
 
 For an unsupported or restricted device, check the exact model and region with Xiaomi or a trusted device-specific source. Do not downgrade firmware or use an older unlock tool as a generic workaround; anti-rollback and eligibility restrictions can make that unsafe.
 
-CN ROM devices (⚠️):
+CN ROM devices ():
 - Options are very limited since 2022 policy changes
 - Flashing Global ROM to CN hardware can be risky and may not help
 - Paid/EDL services exist but are risky and often not recommended
@@ -400,7 +400,7 @@ CN ROM devices (⚠️):
 ---
 
 
-## 🔗 Additional Resources
+## Additional Resources
 
 ### Official Links
 - [Mi Unlock Tool](https://en.miui.com/unlock/download_en.html)
@@ -417,7 +417,7 @@ CN ROM devices (⚠️):
 
 ---
 
-## ⚠️ Final Disclaimer
+## Final Disclaimer
 
 By following this guide, you acknowledge:
 - Warranty may be void in your region after unlocking

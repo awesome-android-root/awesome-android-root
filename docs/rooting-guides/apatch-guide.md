@@ -408,7 +408,7 @@ For a fully stock state, follow the manufacturer or device-specific instructions
 
 ## Troubleshooting
 
-<details><summary>👉 Click to expand details</summary><br>
+<details><summary>Click to expand details</summary><br>
 
 ### Bootloop After Flash
 

@@ -136,7 +136,7 @@ Root access grants **superuser (administrator) privileges** on Android: elevated
 
 ### Critical Warnings
 
-::: danger ⚠️ PERMANENT CONSEQUENCES
+::: danger PERMANENT CONSEQUENCES
 **Data Loss** - Unlocking bootloader completely erases all device data. Backup everything before proceeding.
 
 **Warranty Void** - Bootloader unlocking permanently voids manufacturer warranty on most devices.
@@ -263,7 +263,7 @@ An unlocked bootloader is normally required for these installation methods. Firs
 > [!CAUTION]
 > Unlocking normally **erases all data**. Installing Magisk or other custom images on Samsung can permanently trip Knox and disable Knox-dependent features.
 
-**[📖 How to unlock an Android bootloader](./how-to-unlock-bootloader.md)**
+**[How to unlock an Android bootloader](./how-to-unlock-bootloader.md)**
 
 ### Step 2: Install Custom Recovery (Optional) {#step-2-install-custom-recovery-optional-but-recommended}
 
@@ -282,7 +282,7 @@ Choose and install your preferred root method. The modern approach uses boot ima
 3. Patch the image on the **same device**, then flash only to the verified partition and slot using the device's method. Samsung instead uses the patched AP-tar workflow and requires a first-install data wipe.
 4. Reboot using the required sequence, complete setup, and explicitly grant trusted apps access in Magisk's Superuser tab.
 
-**[📖 Complete Magisk Guide](./magisk-guide.md)**
+**[Complete Magisk Guide](./magisk-guide.md)**
 
 #### Option B: KernelSU
 
@@ -291,7 +291,7 @@ Choose and install your preferred root method. The modern approach uses boot ima
 3. Open KernelSU Manager and configure root access. Install a compatible **metamodule** only for modules that need system-file mounts; script-only modules may work without one.
 4. Follow the device-specific OTA and recovery procedure. Neither root persistence nor app compatibility is guaranteed.
 
-**[📖 Complete KernelSU Guide](./kernelsu-guide.md)**
+**[Complete KernelSU Guide](./kernelsu-guide.md)**
 
 #### Option C: APatch
 
@@ -304,7 +304,7 @@ Choose and install your preferred root method. The modern approach uses boot ima
 > [!NOTE]
 > APatch combines Magisk's convenient boot.img install with KernelSU's kernel patching power. KPM allows kernel function inline-hook and syscall-table-hook without kernel source.
 
-**[📖 Complete APatch Guide](./apatch-guide.md)**
+**[Complete APatch Guide](./apatch-guide.md)**
 
 ### Step 4: Post-Root Configuration
 
@@ -325,17 +325,17 @@ Choose and install your preferred root method. The modern approach uses boot ima
 
 Detailed rooting instructions tailored for specific manufacturers and models. Device-specific steps and app screenshots can lag upstream: verify the current [Magisk](./magisk-guide.md) or [KernelSU](./kernelsu-guide.md) workflow, firmware, partition and recovery instructions before flashing.
 
-### 📱 [Google Pixel Series](./how-to-root-pixel-phone.md)
+### [Google Pixel Series](./how-to-root-pixel-phone.md)
 
-### 📱 [Samsung Galaxy Series](./how-to-root-samsung-phone.md)
+### [Samsung Galaxy Series](./how-to-root-samsung-phone.md)
 
-### 📱 [Xiaomi Devices](./how-to-root-xiaomi-phone.md)
+### [Xiaomi Devices](./how-to-root-xiaomi-phone.md)
 
-### 📱 [OnePlus Devices](./how-to-root-oneplus-phone.md)
+### [OnePlus Devices](./how-to-root-oneplus-phone.md)
 
-### 📱 [Motorola Devices](./how-to-root-motorola-phone.md)
+### [Motorola Devices](./how-to-root-motorola-phone.md)
 
-### 📱 [Nothing Phone Series](./how-to-root-nothing-phone.md)
+### [Nothing Phone Series](./how-to-root-nothing-phone.md)
 
 > [!TIP]
 > **Can't find your device?** Check [XDA Developers Forums](https://forum.xda-developers.com/) or search device-specific Telegram groups. Most devices with unlockable bootloaders follow the universal process above.
@@ -427,12 +427,12 @@ If device won't power on or enter any mode:
 4. Professional repair may be necessary for hardware-level bricks
 
 **Prevention Tips:**
-- 📥 Always keep stock firmware downloaded before starting
-- 💾 Create regular backups (Swift Backup, Neo Backup, recovery nandroid)
-- 📖 Read your device's XDA forum thoroughly before attempting anything
-- 🔑 Keep the exact-build stock firmware and images needed for your device's recovery
-- 🧪 Test one module at a time, reboot between installations
-- 📋 Join device-specific Telegram/Discord communities for real-time help
+- Always keep stock firmware downloaded before starting
+- Create regular backups (Swift Backup, Neo Backup, recovery nandroid)
+- Read your device's XDA forum thoroughly before attempting anything
+- Keep the exact-build stock firmware and images needed for your device's recovery
+- Test one module at a time, reboot between installations
+- Join device-specific Telegram/Discord communities for real-time help
 
 ---
 
@@ -460,7 +460,7 @@ Replace stock Android with privacy-focused custom ROMs:
 - Popular options: LineageOS, PixelOS, crDroid, GrapheneOS (now supports Zygisk Next)
 - Reduces telemetry, removes bloatware, extends device lifespan
 
-**[📖 Custom ROM Installation Guide](./custom-rom-installation.md)**
+**[Custom ROM Installation Guide](./custom-rom-installation.md)**
 
 ### Root Hiding & Play Integrity Resources
 

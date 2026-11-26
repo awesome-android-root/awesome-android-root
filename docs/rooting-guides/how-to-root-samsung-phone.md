@@ -88,15 +88,15 @@ Do not treat a guide for one Galaxy model as proof that another model or region 
 :::
 
 
-::: danger ⚠️ Samsung-Specific Risks
-- **Knox permanently tripped (0x1)** – **Cannot be reversed**, affects Knox-dependent services such as Samsung Pay and Secure Folder
-- **Warranty impact** – A tripped Knox bit is permanent; service and warranty terms depend on region and circumstances
-- **Carrier restrictions** – US carrier models (Verizon, AT&T) often **cannot unlock bootloader**
-- **Banking & financial app detection** – Enhanced root detection via **Play Integrity** and **SafetyNet**
-- **OTA updates** – After rooting, Magisk upstream directs Samsung users to update through a manually patched firmware package, not the generic OTA method
+::: danger Samsung-Specific Risks
+- **Knox permanently tripped (0x1)** - **Cannot be reversed**, affects Knox-dependent services such as Samsung Pay and Secure Folder
+- **Warranty impact** - A tripped Knox bit is permanent; service and warranty terms depend on region and circumstances
+- **Carrier restrictions** - US carrier models (Verizon, AT&T) often **cannot unlock bootloader**
+- **Banking & financial app detection** - Enhanced root detection via **Play Integrity** and **SafetyNet**
+- **OTA updates** - After rooting, Magisk upstream directs Samsung users to update through a manually patched firmware package, not the generic OTA method
 :::
 
-::: tip 💡 Want temporary root with a locked bootloader?
+::: tip Want temporary root with a locked bootloader?
 On specific vulnerable Galaxy builds, **DirtyFrag** or **GhostLock** may provide temporary root without unlocking. Support depends on the exact firmware; a full reboot ends active root but may leave changed files or settings. Knox fuse and service behavior are not guaranteed. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md) for the current limitations.
 :::
 
@@ -400,16 +400,16 @@ Once Knox trips to 0x1, it is permanent. Flashing stock firmware does NOT reset 
 - [Samsung Developers](https://developer.samsung.com/) - Drivers and tools
 
 **Community Forums:**
-- **[Samsung XDA Forums](https://xdaforums.com/c/samsung.11975/)** – Device-specific development
-- **[Odin stock and patched downloads](https://xdaforums.com/t/patched-odin-3-13-1.3762572/)** – Community thread with package-specific warnings; choose the build required for your device
-- **[One UI Mods Community](https://t.me/oneuimods)** – Samsung customization
-- **[r/Samsung](https://www.reddit.com/r/samsung/)** – Latest device discussions
-- **[Samsung Firmware Database](https://samfrew.com/)** – Firmware downloads
+- **[Samsung XDA Forums](https://xdaforums.com/c/samsung.11975/)** - Device-specific development
+- **[Odin stock and patched downloads](https://xdaforums.com/t/patched-odin-3-13-1.3762572/)** - Community thread with package-specific warnings; choose the build required for your device
+- **[One UI Mods Community](https://t.me/oneuimods)** - Samsung customization
+- **[r/Samsung](https://www.reddit.com/r/samsung/)** - Latest device discussions
+- **[Samsung Firmware Database](https://samfrew.com/)** - Firmware downloads
 
 **Essential Samsung Resources:**
-- **[Samsung Smart Switch](https://www.samsung.com/us/support/owners/app/smart-switch)** – Backup tool
-- **[SamFrew](https://samfrew.com/)** – Firmware downloads
-- **[Heimdall](https://glassechidna.com.au/heimdall/)** – Open-source alternative
+- **[Samsung Smart Switch](https://www.samsung.com/us/support/owners/app/smart-switch)** - Backup tool
+- **[SamFrew](https://samfrew.com/)** - Firmware downloads
+- **[Heimdall](https://glassechidna.com.au/heimdall/)** - Open-source alternative
 
 **Custom ROM Resources:**
 - [LineageOS](https://lineageos.org/) - Official builds

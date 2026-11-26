@@ -77,14 +77,14 @@ Install custom recovery to unlock advanced Android modifications including rooti
 Custom recovery replaces Android's stock recovery with enhanced software providing advanced system management capabilities.
 
 ### What Recovery Enables
-- ⚡ Complete device backups (NANDroid)
-- ⚡ Root installation (Magisk, KernelSU, APatch)
-- ⚡ Custom ROM installation
-- ⚡ System-level modifications
-- ⚡ Module and mod installation
-- ⚡ File system access
-- ⚡ ADB sideload support
-- ⚡ System repair tools
+- Complete device backups (NANDroid)
+- Root installation (Magisk, KernelSU, APatch)
+- Custom ROM installation
+- System-level modifications
+- Module and mod installation
+- File system access
+- ADB sideload support
+- System repair tools
 
 ### Requirements
 
@@ -159,7 +159,7 @@ Three primary custom recovery options exist, each with distinct features.
 
 
 > [!TIP]
->  **💡 Quick Decision Guide**
+> **Quick Decision Guide**
 > - New to custom recovery? → Choose TWRP
 > - Want modern interface? → Choose OrangeFox
 > - Need advanced features? → Choose SKYHAWK
@@ -171,7 +171,7 @@ Three primary custom recovery options exist, each with distinct features.
 
 ### Critical Warnings
 
-::: danger ⚠️ ESSENTIAL REQUIREMENTS
+::: danger ESSENTIAL REQUIREMENTS
 **Unlocked Bootloader** - Custom recovery requires an unlocked bootloader, and unlocking normally wipes all device data. Complete [bootloader unlocking](./how-to-unlock-bootloader.md) first and back up before starting.
 
 **Device Match** - Recovery images are device-specific. Installing the wrong image can brick your device. Verify the exact model and codename against the recovery's own device page.

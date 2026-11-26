@@ -198,7 +198,7 @@ su -c /data/adb/modules/zygisk-detach/detach
 
 ## Important Notes
 
-⚠️ **Security Warning:** Detached apps won't receive security updates. Only detach apps you specifically don't want updated.
+**Security Warning:** Detached apps won't receive security updates. Only detach apps you specifically don't want updated.
 
 ✅ **Best Practices:**
 - Keep banking/security apps attached

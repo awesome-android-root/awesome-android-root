@@ -126,7 +126,7 @@ The bootloader is your device's startup manager - the first program that runs wh
 
 ## Prerequisites
 
-### ⚠️ Critical Warnings
+### Critical Warnings
 
 ::: danger IRREVERSIBLE CONSEQUENCES
 **Data Erasure** - Unlocking bootloader completely wipes all data. Backup everything before proceeding.

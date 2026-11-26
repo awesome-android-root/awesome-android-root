@@ -57,11 +57,11 @@ head:
 
 **Transform your Android experience** - Install privacy-focused, security-enhanced custom ROMs to revive and enhance your device.
 
-## 🔗 Essential Resources
-- **[📖 Main Rooting Guide](./index.md)** - Universal rooting principles and safety
-- **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - Required first step
-- **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - Only if the ROM's documented install method calls for one
-- **[❓ FAQ & Troubleshooting](../faqs.md)** - Solutions for common issues
+## Essential Resources
+- **[Main Rooting Guide](./index.md)** - Universal rooting principles and safety
+- **[Bootloader Unlocking](./how-to-unlock-bootloader.md)** - Required first step
+- **[Custom Recovery](./how-to-install-custom-recovery.md)** - Only if the ROM's documented install method calls for one
+- **[FAQ & Troubleshooting](../faqs.md)** - Solutions for common issues
 
 ---
 
@@ -121,7 +121,7 @@ ROM projects change maintainers, device support and release cadence often. Befor
 
 ## Critical Warnings
 
-::: danger ⚠️ **Custom ROM Risks**
+::: danger **Custom ROM Risks**
 - **Warranty implications** - may void warranty depending on region (statutory warranty rights may still apply in some jurisdictions)
 - **Brick risk** - wrong images or wrong partition can hard-brick
 - **App compatibility** - Banking/government apps rely on Play Integrity and may refuse to run
@@ -231,7 +231,7 @@ There are two primary install flows:
 
 ### Step 4: Wipe / Format
 
-::: warning ⚠️ Data Loss Warning
+::: warning Data Loss Warning
 Switching ROM families or coming from stock usually requires a full “Format Data” (not just factory reset), which erases internal storage. Back up first.
 :::
 
@@ -422,7 +422,7 @@ Official Resources:
 
 ---
 
-::: tip 💡 **Custom ROM Success Tips**
+::: tip **Custom ROM Success Tips**
 - Always keep a known-good backup and stock firmware handy
 - Read your device’s XDA/official thread end-to-end before flashing
 - Use the ROM-recommended recovery and GApps

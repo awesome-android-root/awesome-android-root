@@ -136,7 +136,7 @@ Many Pixel devices can be unlocked and rooted, but carrier policy and the exact 
 **Verizon and some carrier-locked models** may have OEM unlocking permanently disabled. Always verify "OEM unlocking" is available in Developer Options before purchasing a device for rooting.
 :::
 
-::: tip 💡 Rather not unlock at all?
+::: tip Rather not unlock at all?
 **Root My Pixel** uses the GhostLock kernel bug (CVE-2026-43499) to give supported Pixel devices **temporary, session-only root without unlocking the bootloader** - staged on-device via Shizuku. A full reboot ends active root, though files or settings changed during the session may remain. See [Root Without Unlocking the Bootloader](./root-without-unlocking-bootloader.md).
 :::
 
@@ -297,7 +297,7 @@ The OTA may fail if read-only partitions such as `system` or `vendor` were modif
 
 ## Troubleshooting
 
-<details><summary>🔧 Common Issues & Fixes</summary>
+<details><summary>Common Issues & Fixes</summary>
 
 ### OEM Unlocking Greyed Out
 

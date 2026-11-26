@@ -101,7 +101,7 @@ Most OnePlus devices with unlockable bootloaders can be rooted. Check [XDA Forum
 - **Chinese-market models** running ColorOS may have additional restrictions
 :::
 
-::: tip 💡 Locked bootloader? Temporary root exists
+::: tip Locked bootloader? Temporary root exists
 On specific OnePlus, OPPO and realme builds, **ghostlock-oneplus** uses GhostLock (CVE-2026-43499) for session-only root without unlocking the bootloader. A full reboot clears active root, but files and settings changed during the session may remain. Other tools use different exploits and target lists; check the exact model and kernel in the loader's own documentation and the sister project's [OnePlus, OPPO and Realme section](https://awesome-temporary-root.pages.dev/guide/#oneplus-oppo-and-realme).
 :::
 

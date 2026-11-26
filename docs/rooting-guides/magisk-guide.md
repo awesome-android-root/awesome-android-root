@@ -358,7 +358,7 @@ authoritative.
 
 **In-App Updates:**
 
-<details><summary>👉 Click to expand details</summary>
+<details><summary>Click to expand details</summary>
 
 1. Magisk > Settings
 2. Update channel: Stable (recommended)

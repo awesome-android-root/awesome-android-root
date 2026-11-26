@@ -96,7 +96,7 @@ Magisk may need `boot.img`, `init_boot.img`, `vendor_boot.img` or recovery, depe
 
 ### Critical Requirements
 
-::: danger ⚠️ BEFORE YOU START
+::: danger BEFORE YOU START
 
 **Warranty:** Motorola's [unlock terms](https://en-us.support.motorola.com/ci/fattach/get/741421/1385047216/redirect/1/filename/Boot_revised.pdf) describe warranty consequences, with a Developer Edition exception. Terms and consumer rights can vary by region.
 
