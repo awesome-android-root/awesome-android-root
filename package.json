@@ -63,7 +63,6 @@
     "magicast": "^0.5.5",
     "pagefind": "^1.6.0",
     "puppeteer-core": "^25.19.0",
-    "typescript": "7.0.2",
     "vite": "^8.4.0",
     "vitepress": "2.0.0-alpha.21",
     "vitepress-plugin-llms": "^1.15.0",

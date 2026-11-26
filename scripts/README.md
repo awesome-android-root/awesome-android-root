@@ -108,11 +108,11 @@ use `git diff --check`.
 
 All project/CI typechecks use **`bun check`**, not the standalone `tsc` command.
 Bun 1.4.5 embeds TypeScript **7.0.2** semantics and standard-library types; verify
-with `bun -p process.versions.typescript`. The installed `typescript@7.0.2`
-package is kept for editor/tool version alignment, as recommended by Bun, but is
-not invoked by our validation scripts. There is no older compiler/alias or
-`vue-tsc` fallback. When upgrading Bun, recheck that its reported TypeScript
-version and the editor package still match.
+with `bun -p process.versions.typescript`. No direct `typescript` dependency is
+needed: Bun includes the checker and standard-library declarations. Editors use
+their own TypeScript installation, whose version can differ from Bun's; use the
+reported version when investigating editor/CLI differences. There is no older
+compiler/alias or `vue-tsc` fallback.
 
 The command is `bun check --no-script -p tsconfig.<environment>.json`.
 `--no-script` matters here: this repository already has a `check` package script
