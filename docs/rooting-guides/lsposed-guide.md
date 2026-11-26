@@ -109,7 +109,7 @@ API support changes between releases - verify against the project's release note
 | AOSP-based ROMs | Excellent | LineageOS, PixelOS, etc. |
 | OneUI (Samsung) | Good | Works with Magisk + Zygisk |
 | OxygenOS (OnePlus) | Good | ColorOS base also works |
-| MIUI/HyperOS (Xiaomi) | Moderate | Known crashes on some HyperOS 2.x versions - see [troubleshooting](#hyperos--xiaomi-specific-issues) |
+| MIUI/HyperOS (Xiaomi) | Moderate | Known crashes on some HyperOS 2.x versions - see [troubleshooting](#hyperos-xiaomi-specific-issues) |
 | Nothing OS | Good | Growing compatibility |
 | Custom GSI | Variable | Depends on implementation |
 | GrapheneOS | Good* | *Via Zygisk Next/NeoZygisk stable |
