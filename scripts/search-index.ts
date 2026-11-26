@@ -66,14 +66,19 @@ async function writeSearchIndex(outputPath: string, outDir: string, srcDir: stri
     for (const file of await readdir(outDir, { recursive: true })) {
       if (!file.endsWith('.html') || file === '404.html') continue
       const source = join(srcDir, file.replace(/\.html$/, '.md'))
-      let markdown: string
-      try { markdown = await readFile(source, 'utf8') } catch { continue }
+      // Source and rendered file reads are independent; fetch both together.
+      // node:fs APIs here: this module is bundled into VitePress's config,
+      // where the Bun global is not defined.
+      const [markdown, html] = await Promise.all([
+        readFile(source, 'utf8').catch(() => null),
+        readFile(join(outDir, file), 'utf8')
+      ])
+      if (markdown === null) continue
       const frontmatter = markdown.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] ?? ''
       if (/^search:\s*false\s*$/m.test(frontmatter) || /^layout:\s*home\s*$/m.test(frontmatter)) {
         excludedFiles.add(file)
         continue
       }
-      const html = await readFile(join(outDir, file), 'utf8')
       if (!html.includes('vp-doc')) continue
       const url = '/' + file.replace(/(^|\/)index\.html$/, '$1').replace(/\.html$/, '')
       claimUrl(url)

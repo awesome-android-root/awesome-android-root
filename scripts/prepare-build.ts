@@ -7,17 +7,19 @@
  * shallow-clone marker is present. A failed fetch is reported but does not
  * abort the build: the site still builds with whatever history is available.
  */
-import { execFileSync } from 'node:child_process'
-import { existsSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 
 const ROOT = resolve(import.meta.dirname, '..')
 
-if (existsSync(join(ROOT, '.git', 'shallow'))) {
+if (await Bun.file(join(ROOT, '.git', 'shallow')).exists()) {
   console.log('Shallow clone detected, fetching full git history...')
-  try {
-    execFileSync('git', ['fetch', '--unshallow'], { cwd: ROOT, stdio: 'inherit' })
-  } catch {
+  const { exitCode } = Bun.spawnSync(['git', 'fetch', '--unshallow'], {
+    cwd: ROOT,
+    stdin: 'inherit',
+    stdout: 'inherit',
+    stderr: 'inherit'
+  })
+  if (exitCode !== 0) {
     console.warn('warning: could not unshallow the repository; lastUpdated may be incomplete')
   }
 }
