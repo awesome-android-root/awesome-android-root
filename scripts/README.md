@@ -263,6 +263,11 @@ Index chunks and fragments load only for nonempty queries. Only the top 12 resul
 corpus. Queries are debounced, stale responses ignored and failed imports retried
 with a fresh module URL only on failure. The same lazy Pagefind instance powers
 WebMCP `search_site`; other MCP tools retain on-demand Markdown page retrieval.
+The WebMCP component loads only after mount when `document.modelContext` or
+`navigator.modelContext` exposes `registerTool`. Unsupported browsers do not
+fetch its module; supported browsers register all four tools without fetching
+the Markdown corpus or Pagefind until a tool needs them. Keep the Pagefind loader
+shared with the search dialog to avoid duplicate engines/workers.
 Ctrl/Cmd+K intentionally opens search even from an editable field; `/` does not
 interrupt typing. Enter with no arrow selection opens the first result. Search's
 shortcuts, arrow/Enter selection, Escape, reset,
