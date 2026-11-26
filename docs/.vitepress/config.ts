@@ -2,15 +2,19 @@ import { execFileSync } from 'node:child_process'
 import { readFileSync, rmSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vitepress'
+import type { DefaultTheme, HeadConfig } from 'vitepress'
+import type { Plugin } from 'vite'
+import { buildSearchIndex } from '../../scripts/search-index.ts'
+import { entrySearchPlugin } from './markdown/entrySearchPlugin.ts'
 import { withPwa } from '@vite-pwa/vitepress'
 import llmstxt, { copyOrDownloadAsMarkdownButtons } from 'vitepress-plugin-llms'
-import { storeLinkPlugin } from './markdown/storeLinkPlugin.mjs'
-import { withIcons } from './icons.mjs'
+import { storeLinkPlugin } from './markdown/storeLinkPlugin.ts'
+import { withIcons } from './icons.ts'
 
-const isLlmPageLink = (link) =>
+const isLlmPageLink = (link: unknown): link is string =>
   typeof link === 'string' && link.startsWith('/') && link !== '/' && !link.includes('#')
 
-const systemFontsPlugin = {
+const systemFontsPlugin: Plugin = {
   name: 'aar-system-fonts',
   enforce: 'pre',
   resolveId(source, importer) {
@@ -25,7 +29,7 @@ const systemFontsPlugin = {
  * docs/public/app-index.json stays fetchable through raw.githubusercontent.com,
  * but it is not part of the deployed site, so remove the copy Vite emits.
  */
-const dropAppIndexFromDist = {
+const dropAppIndexFromDist: Plugin = {
   name: 'aar-drop-app-index',
   apply: 'build',
   enforce: 'post',
@@ -34,30 +38,26 @@ const dropAppIndexFromDist = {
   }
 }
 
-function llmsSidebar(sidebar) {
-  const sanitizeItems = (items = []) => items.flatMap((item) => {
+function llmsSidebar(sidebar: DefaultTheme.Sidebar = []): DefaultTheme.Sidebar {
+  const sanitizeItems = (items: DefaultTheme.SidebarItem[] = []): DefaultTheme.SidebarItem[] => items.flatMap((item) => {
     const nestedItems = item.items ? sanitizeItems(item.items) : undefined
     const link = isLlmPageLink(item.link) ? item.link : undefined
-
     if (!link && (!nestedItems || nestedItems.length === 0)) return []
-
     const sanitized = { ...item }
-    if (typeof sanitized.text === 'string') {
-      sanitized.text = sanitized.text.replace(/<[^>]+>/g, '').trim()
-    }
+    if (typeof sanitized.text === 'string') sanitized.text = sanitized.text.replace(/<[^>]+>/g, '').trim()
     if (link) sanitized.link = link
     else delete sanitized.link
     if (nestedItems) sanitized.items = nestedItems
     else delete sanitized.items
     return [sanitized]
   })
-
   if (Array.isArray(sidebar)) return sanitizeItems(sidebar)
-
-  return Object.fromEntries(
-    Object.entries(sidebar ?? {}).map(([route, items]) => [route, sanitizeItems(items)])
-  )
+  return Object.fromEntries(Object.entries(sidebar).map(([route, value]) => [
+    route, Array.isArray(value) ? sanitizeItems(value) : { ...value, items: sanitizeItems(value.items) }
+  ]))
 }
+
+type SchemaNode = { '@type': string; '@id': string; [key: string]: unknown }
 
 const SITE = 'https://awesome-android-root.xyz'
 const SITE_NAME = 'Awesome Android Root'
@@ -107,7 +107,7 @@ const WEBSITE_NODE = {
   publisher: { '@id': ORGANIZATION_ID }
 }
 
-const FOLDER_LABELS = {
+const FOLDER_LABELS: Record<string, string> = {
   'rooting-guides': 'Rooting Guides',
   'apps-and-modules': 'Apps & Modules',
   'general-guides': 'Tutorials'
@@ -142,7 +142,7 @@ function routeFromRelativePath(relativePath = 'index.md') {
 }
 
 /** CollectionPage for category hubs, WebPage for every other page. */
-function pageTypeFor(route) {
+function pageTypeFor(route: string) {
   const segments = route.split('/').filter(Boolean)
   const isSectionIndex = segments.length === 1 && Boolean(FOLDER_LABELS[segments[0]])
   if (segments[0] === 'apps-and-modules') return 'CollectionPage'
@@ -159,13 +159,13 @@ const ARTICLE_ROUTES = new Set([
   '/troubleshooting',
   '/count'
 ])
-function isArticleRoute(route) {
+function isArticleRoute(route: string) {
   const [section] = route.split('/').filter(Boolean)
   return ARTICLE_SECTIONS.has(section) || ARTICLE_ROUTES.has(route)
 }
 
 const REPO_ROOT = fileURLToPath(new URL('../..', import.meta.url))
-let firstPublishedDates = null
+let firstPublishedDates: Map<string, Date> | null = null
 
 
 function loadFirstPublishedDates() {
@@ -192,7 +192,7 @@ function loadFirstPublishedDates() {
         maxBuffer: 64 * 1024 * 1024
       }
     )
-    let date = null
+    let date: Date | null = null
     for (const line of output.split('\n')) {
       if (!line) continue
       if (line.startsWith('@@')) {
@@ -218,14 +218,14 @@ function loadFirstPublishedDates() {
 }
 
 /** First commit date for a page, used as datePublished when no frontmatter date exists. */
-function firstPublishedDate(relativePath) {
+function firstPublishedDate(relativePath: string) {
   return loadFirstPublishedDates().get(`docs/${relativePath}`) ?? null
 }
 
 /** Read a page's raw markdown so structured data can be derived from it at build time. */
-const markdownCache = new Map()
-function readMarkdown(relativePath) {
-  if (markdownCache.has(relativePath)) return markdownCache.get(relativePath)
+const markdownCache = new Map<string, string>()
+function readMarkdown(relativePath: string) {
+  if (markdownCache.has(relativePath)) return markdownCache.get(relativePath)!
   let markdown = ''
   try {
     markdown = readFileSync(fileURLToPath(new URL(`../${relativePath}`, import.meta.url)), 'utf-8')
@@ -237,12 +237,12 @@ function readMarkdown(relativePath) {
 }
 
 /** Build FAQPage mainEntity from question headings and their answer paragraphs. */
-function faqFromMarkdown(markdown) {
+function faqFromMarkdown(markdown: string) {
   if (!markdown) return []
   const body = markdown.replace(/^---[\s\S]*?\n---\n/, '')
   const lines = body.split('\n')
-  const questions = []
-  let current = null
+  const questions: { question: string; lines: string[] }[] = []
+  let current: { question: string; lines: string[] } | null = null
   let inFence = false
 
   for (const line of lines) {
@@ -296,11 +296,12 @@ function faqFromMarkdown(markdown) {
 
 export default withPwa(defineConfig({
   lang: 'en-US',
+  base: process.env.SITE_BASE || '/',
+  async buildEnd(site) { await buildSearchIndex(site.outDir, site.srcDir) },
   title: SITE_NAME,
   ignoreDeadLinks: false,
   cleanUrls: true,
   lastUpdated: true,
-  metaChunk: true,
 
   sitemap: {
     hostname: SITE,
@@ -348,7 +349,7 @@ export default withPwa(defineConfig({
       })
     })
 
-    const frontmatterHead = pageData.frontmatter?.head ?? []
+    const frontmatterHead: HeadConfig[] = pageData.frontmatter?.head ?? []
     const frontmatterTagKeys = new Set()
     for (const entry of frontmatterHead) {
       if (!Array.isArray(entry) || entry.length < 2) continue
@@ -365,7 +366,7 @@ export default withPwa(defineConfig({
     )?.[1]?.content
     const articleImage = frontmatterOgImage || ogImage
 
-    const pageNode = {
+    const pageNode: SchemaNode = {
       '@type': pageTypeFor(route),
       '@id': `${pageUrl}#webpage`,
       name: title,
@@ -379,7 +380,7 @@ export default withPwa(defineConfig({
     }
     if (dateModified) pageNode.dateModified = dateModified
 
-    const graph = [ORGANIZATION_NODE, WEBSITE_NODE]
+    const graph: SchemaNode[] = [ORGANIZATION_NODE, WEBSITE_NODE]
 
     if (route !== '/') {
       graph.push(pageNode)
@@ -389,7 +390,7 @@ export default withPwa(defineConfig({
         itemListElement: breadcrumbItems
       })
       if (isArticleRoute(route)) {
-        const articleNode = {
+        const articleNode: SchemaNode = {
           '@type': 'Article',
           '@id': `${pageUrl}#article`,
           headline: title,
@@ -425,7 +426,7 @@ export default withPwa(defineConfig({
       }
     }
 
-    const tags = []
+    const tags: HeadConfig[] = []
 
     if (pageData.lastUpdated) {
       tags.push([
@@ -440,7 +441,7 @@ export default withPwa(defineConfig({
       ])
     }
 
-    const socialTags = [
+    const socialTags: [string, Record<string, string>, string][] = [
       ['link', { rel: 'canonical', href: pageUrl }, 'link:canonical'],
       ['meta', { property: 'og:type', content: route === '/' ? 'website' : 'article' }, 'og:type'],
       ['meta', { property: 'og:site_name', content: SITE_NAME }, 'og:site_name'],
@@ -488,21 +489,10 @@ export default withPwa(defineConfig({
       warmup: { clientFiles: ['.vitepress/theme/**/*.{js,ts,vue}'] },
       allowedHosts: true,
     },
-    css: { devSourcemap: false },
     oxc: {
       target: 'es2024'
     },
-    rolldownOptions: {
-      output: {
-        minify: process.env.NODE_ENV === 'production'
-          ? {
-            compress: { dropConsole: true, dropDebugger: true },
-            mangle: true,
-            codegen: { legalComments: 'none' }
-          }
-          : false
-      }
-    }
+
   },
 
 
@@ -637,6 +627,7 @@ export default withPwa(defineConfig({
     image: { lazyLoad: true },
     config: (md) => {
       md.use(storeLinkPlugin)
+      md.use(entrySearchPlugin)
       md.use(copyOrDownloadAsMarkdownButtons, { componentName: 'MarkdownActions' })
     }
   },
@@ -680,49 +671,6 @@ export default withPwa(defineConfig({
       light: '/images/logo.svg',
       dark: '/images/logo_dark.svg',
       alt: 'Awesome Android Root Logo'
-    },
-    search: {
-      provider: 'local',
-      options: {
-        detailedView: true,
-        miniSearch: {
-          searchOptions: {
-            fuzzy: 0.2,
-            prefix: true,
-            boost: {
-              title: 4,
-              text: 2,
-              titles: 3
-            },
-            boostDocument: (documentId) => {
-              if (documentId.includes('apps-and-modules')) return 10
-              return 1
-            }
-          }
-        },
-        async _render(src, env, md) {
-          const html = await md.renderAsync(src, env)
-          if (env.frontmatter?.search === false) return ''
-          return html
-        },
-        translations: {
-          button: {
-            buttonText: 'Search',
-            buttonAriaLabel: 'Search'
-          },
-          modal: {
-            displayDetails: 'Display detailed list',
-            resetButtonTitle: 'Reset search',
-            backButtonTitle: 'Close search',
-            noResultsText: 'No results for',
-            footer: {
-              selectText: 'to select',
-              navigateText: 'to navigate',
-              closeText: 'to close'
-            }
-          }
-        }
-      }
     },
 
     nav: withIcons([
@@ -1309,7 +1257,6 @@ export default withPwa(defineConfig({
       level: [2, 3],
       label: 'On this page'
     },
-    appearance: 'auto',
     socialLinks: [
       { icon: 'x', link: 'https://x.com/awsm_and_root' },
       { icon: 'github', link: 'https://github.com/awesome-android-root/awesome-android-root' }

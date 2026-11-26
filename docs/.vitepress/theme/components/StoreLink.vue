@@ -21,20 +21,11 @@
   </a>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import type { Store } from '../../shared/entries'
 import { computed } from 'vue'
 
-const props = defineProps({
-  href: {
-    type: String,
-    required: true
-  },
-  store: {
-    type: String,
-    required: true,
-    validator: (value) => ['fdroid', 'izzy', 'playstore'].includes(value)
-  }
-})
+const props = defineProps<{ href: string; store: Store }>()
 
 // F-Droid and Google Play marks come from Simple Icons (CC0).
 // IzzyOnDroid has no bundled official mark, so its badge uses a generic

@@ -1,3 +1,7 @@
+import type MarkdownIt from 'markdown-it'
+import type Token from 'markdown-it/lib/token.mjs'
+import type { Store } from '../shared/entries.ts'
+
 /**
  * Markdown-it plugin to transform F-Droid, IzzyOnDroid and Play Store badge links into
  * custom <StoreLink> Vue components.
@@ -10,10 +14,10 @@
 
 // Minimal HTML attribute escape - only double-quotes matter here since the
 // href is placed inside a double-quoted HTML attribute.
-const escapeAttr = (s) => s.replace(/"/g, '&quot;')
+const escapeAttr = (s: string) => s.replace(/"/g, '&quot;')
 
 /** Resolve a store from the link host, ignoring query strings and paths. */
-function getStoreForHref(href) {
+function getStoreForHref(href: string): Store | null {
   let host
   try {
     host = new URL(href).hostname.toLowerCase()
@@ -41,13 +45,13 @@ function getStoreForHref(href) {
  * inline markup (e.g. `[🌱 **F-Droid**](...)`) is handled by reading content
  * from every text token up to the matching link_close.
  */
-function getStoreForLink(tokens, openIdx) {
+function getStoreForLink(tokens: Token[], openIdx: number): { store: Store; href: string } | null {
   const openToken = tokens[openIdx]
   if (!openToken || openToken.type !== 'link_open') return null
 
   const hrefIndex = openToken.attrIndex('href')
   if (hrefIndex < 0) return null
-  const href = openToken.attrs[hrefIndex][1] || ''
+  const href = openToken.attrGet('href') || ''
 
   // Gather the link's text from the text tokens between open and close.
   let text = ''
@@ -73,7 +77,7 @@ function getStoreForLink(tokens, openIdx) {
  * If the token at `idx` is wrapped by a store-badge link, find the index of
  * that link_open token; otherwise return -1.
  */
-function findEnclosingStoreLinkOpen(tokens, idx) {
+function findEnclosingStoreLinkOpen(tokens: Token[], idx: number): number {
   let depth = 0
   for (let i = idx - 1; i >= 0; i--) {
     const t = tokens[i]
@@ -89,7 +93,7 @@ function findEnclosingStoreLinkOpen(tokens, idx) {
   return -1
 }
 
-export function storeLinkPlugin(md) {
+export function storeLinkPlugin(md: MarkdownIt) {
   const defaultLinkOpenRender =
     md.renderer.rules.link_open ||
     function (tokens, idx, options, env, self) {

@@ -1,7 +1,7 @@
-<script setup>
+<script setup lang="ts">
 import { ref, watchPostEffect } from 'vue'
-import Moon from '@lucide/vue/dist/esm/icons/moon.mjs'
-import Sun from '@lucide/vue/dist/esm/icons/sun.mjs'
+import { Moon } from '@lucide/vue'
+import { Sun } from '@lucide/vue'
 import { useData } from 'vitepress'
 
 const { isDark, theme } = useData()

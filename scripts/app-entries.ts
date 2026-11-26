@@ -27,9 +27,10 @@
  * It also regenerates the count page and JSON consumed by shields.io badges:
  * docs/count.md and docs/public/count.json.
  *
- * Exit code never reflects the lint result; run the script to regenerate the
+ * Exit code reflects lint errors only with --check; run the script to regenerate the
  * index whenever an entry changes.
  */
+import type { Badge, Entry, ParsedRecord, ParsedFile, EntryIndex } from '../docs/.vitepress/shared/entries.ts'
 import { readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import { join, relative, resolve } from 'node:path'
 
@@ -62,7 +63,7 @@ const ALLOWED_TAGS = new Set(['FOSS', 'Proprietary', '[M]', '[K]', '[A]', '[LSP]
  * Only the tail of the line is a badge run, so inline code used inside the
  * description (`Android/data`, `zygote_next`, ...) is not mistaken for a badge.
  */
-function extractBadges(rest) {
+export function extractBadges(rest: string) {
   let tail = rest.trimEnd()
   const found = []
   for (;;) {
@@ -71,7 +72,7 @@ function extractBadges(rest) {
     found.unshift(match[0].trim())
     tail = tail.slice(0, match.index).trimEnd()
   }
-  const badges = []
+  const badges: Badge[] = []
   for (const token of found) {
     for (const m of token.matchAll(STORE_BADGE_RE)) {
       badges.push(m[1] !== undefined
@@ -86,10 +87,10 @@ function extractBadges(rest) {
  * Parse one category page once. Returns the index records together with the
  * data lint needs (line numbers, stars, sections and malformed lines).
  */
-function parseFile(fileName) {
+export function parseFile(fileName: string): ParsedRecord[] {
   const file = relative(ROOT, join(DIR, fileName)).replaceAll('\\', '/')
-  const records = []
-  let section = null // last h2/h3 heading, used for lint grouping
+  const records: ParsedRecord[] = []
+  let section: string | null = null // last h2/h3 heading, used for lint grouping
   let lastHeading = '' // last h2/h3/h4 heading, recorded in the index
   let inFence = false
 
@@ -141,19 +142,19 @@ function parseFile(fileName) {
 
 // ---- Lint -------------------------------------------------------------------
 
-const errors = []
-const warnings = []
-const seenUrls = new Map()
+const errors: string[] = []
+const warnings: string[] = []
+const seenUrls = new Map<string, string>()
 
-function error(file, line, message) {
+function error(file: string, line: number, message: string) {
   errors.push(`${file}:${line} ${message}`)
 }
 
-function warn(file, line, message) {
+function warn(file: string, line: number, message: string) {
   warnings.push(`${file}:${line} ${message}`)
 }
 
-function lintRecord(record) {
+function lintRecord(record: ParsedRecord) {
   const { file, line } = record
   if (record.malformed) {
     error(file, line, 'does not match the format "- **[Name](url)** - Description."')
@@ -193,13 +194,14 @@ function lintRecord(record) {
   }
 }
 
-function lintRecords(records) {
+function lintRecords(records: ParsedRecord[]) {
   // Malformed lines already carry their own error and have no name to sort.
-  const bySection = new Map()
+  const bySection = new Map<string, Entry[]>()
   for (const record of records) {
     if (record.malformed) continue
     const key = record.lintSection ?? ''
-    bySection.getOrInsert(key, []).push(record)
+    if (!bySection.has(key)) bySection.set(key, [])
+    bySection.get(key)!.push(record)
   }
 
   for (const [name, group] of bySection) {
@@ -211,7 +213,7 @@ function lintRecords(records) {
       if (!record.starred) sawPlain = true
     }
 
-    let previous = null
+    let previous: Entry | null = null
     for (const record of group) {
       if (previous && previous.starred === record.starred) {
         if (record.name.toLowerCase() < previous.name.toLowerCase()) {
@@ -227,7 +229,7 @@ function lintRecords(records) {
   }
 }
 
-function lint(parsedFiles) {
+function lint(parsedFiles: ParsedFile[]) {
   for (const { fileName, records } of parsedFiles) {
     if (fileName === 'index.md') continue
     for (const record of records) lintRecord(record)
@@ -251,9 +253,9 @@ const countStats = {
 }
 const FRAMEWORK_TAGS = ['[M]', '[K]', '[A]', '[LSP]']
 
-function buildIndex(parsedFiles) {
-  const entries = []
-  const pages = {}
+function buildIndex(parsedFiles: ParsedFile[]): EntryIndex {
+  const entries: EntryIndex['entries'] = []
+  const pages: Record<string, number> = {}
 
   for (const { fileName, records } of parsedFiles) {
     const page = fileName.replace(/\.md$/, '')
@@ -289,11 +291,11 @@ function buildIndex(parsedFiles) {
   }
 }
 
-function writeIndex(payload) {
+function writeIndex(payload: EntryIndex) {
   writeFileSync(OUT_FILE, `${JSON.stringify(payload, null, 0)}\n`)
 }
 
-function writeCounts(pages) {
+function writeCounts(pages: Record<string, number>) {
   const pageRows = Object.entries(pages).map(([page, count]) => {
     const category = page
       .split('-')
@@ -348,13 +350,18 @@ function writeCounts(pages) {
 
 // ---- Main -------------------------------------------------------------------
 
-const parsedFiles = readdirSync(DIR)
-  .filter((fileName) => fileName.endsWith('.md'))
-  .toSorted()
-  .map((fileName) => ({ fileName, records: parseFile(fileName) }))
+export function parseEntries(): ParsedFile[] {
+  return readdirSync(DIR)
+    .filter((fileName) => fileName.endsWith('.md'))
+    .toSorted()
+    .map((fileName) => ({ fileName, records: parseFile(fileName) }))
+}
 
-lint(parsedFiles)
-
-const payload = buildIndex(parsedFiles)
-writeIndex(payload)
-writeCounts(payload.pages)
+if (import.meta.main) {
+  const parsedFiles = parseEntries()
+  lint(parsedFiles)
+  if (process.argv.includes('--check') && errors.length) process.exitCode = 1
+  const payload = buildIndex(parsedFiles)
+  writeIndex(payload)
+  writeCounts(payload.pages)
+}

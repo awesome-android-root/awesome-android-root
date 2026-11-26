@@ -84,7 +84,7 @@ def heading_ids(text):
         raw = m.group(2).strip()
         cm = re.match(r'^(.*?)\s*\{#([\w\-]+)\}\s*$', raw)
         # The attrs plugin also accepts explicit IDs on h1, h5 and h6, but
-        # config.mjs only generates and deduplicates anchors for h2 through h4.
+        # config.ts only generates and deduplicates anchors for h2 through h4.
         if level not in (2, 3, 4):
             if cm:
                 ids[cm.group(2)] = True

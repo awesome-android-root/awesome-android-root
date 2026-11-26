@@ -17,6 +17,9 @@ the single source of truth so this file and the site cannot drift apart.
 Read [`docs/contributing.md`](docs/contributing.md) first. It lists the entry format, the allowed
 tags, the quality requirements and the pull request template.
 
+For theme, TypeScript and search changes, see the [development and validation
+commands](scripts/README.md#typescript-and-validation).
+
 ## Need help?
 
 - [Full contribution guide](docs/contributing.md)

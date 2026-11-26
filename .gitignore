@@ -15,3 +15,8 @@ __pycache__/
 # Bun lockfile is not tracked
 bun.lock
 
+
+# Local tooling and browser-test artifacts
+.cache/
+test-results/
+playwright-report/

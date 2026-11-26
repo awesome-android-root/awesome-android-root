@@ -129,12 +129,12 @@ Rules:
 * Keep `og:title`, `twitter:title`, `og:description`, and `twitter:description`
   overrides in sync with `title` and `description` when they repeat them.
 * `docs/count.md` and `docs/public/count.json` are generated and gitignored.
-  Edit the page frontmatter and JSON fields in `scripts/app-entries.mjs`, since the
+  Edit the page frontmatter and JSON fields in `scripts/app-entries.ts`, since the
   build regenerates both files.
 
 ## 6. Site and Code Changes
 
-The project uses Node.js, VitePress, Markdown/YAML, JavaScript, Python, and Bash.
+The project uses Node.js, VitePress, Markdown/YAML, TypeScript, Python, and Bash.
 
 Use the existing commands from `package.json`:
 
@@ -144,7 +144,7 @@ bun run docs:build
 bun run docs:preview
 ```
 
-When changing JavaScript:
+When changing TypeScript:
 
 * Use modern ECMAScript syntax.
 * Prefer `const` and `let`.
@@ -179,9 +179,10 @@ For app and module entries, also run:
 bun run index:build  # regenerates the app index, count page and reports entry format, ordering and badge problems
 ```
 
-CI runs `check:links` and `docs:build` as blocking steps. `docs:build` runs
-`index:build` itself, so entry lint findings appear in the build job logs; keep
-lint clean even though nothing gates on it. The build needs full git history
+CI runs internal links, entry lint, typecheck, unit tests, the build, index
+verification and browser search tests as blocking steps. `docs:build` also runs
+`index:build` and generates Pagefind. See `scripts/README.md` for local search
+and validation commands. The build needs full git history
 because of `lastUpdated`.
 
 For Cloudflare Pages, use `bun run docs:build` as the build command and

@@ -66,13 +66,6 @@
   --vp-code-copy-code-bg: var(--surface-2);
   --vp-code-copy-code-hover-bg: var(--surface);
   --vp-code-tab-active-bar-color: var(--accent);
-  --vp-local-search-bg: var(--surface);
-  --vp-local-search-result-bg: var(--surface);
-  --vp-local-search-result-border: var(--border);
-  --vp-local-search-result-selected-bg: var(--accent-soft);
-  --vp-local-search-result-selected-border: var(--accent);
-  --vp-local-search-highlight-bg: var(--accent-soft);
-  --vp-local-search-highlight-text: var(--text);
 }
 
 html.dark {

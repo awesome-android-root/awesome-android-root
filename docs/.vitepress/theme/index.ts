@@ -1,3 +1,4 @@
+import type { Theme } from 'vitepress'
 import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
@@ -8,14 +9,15 @@ import StoreLink from './components/StoreLink.vue'
 import LandingIcon from './components/LandingIcon.vue'
 import BrandIcon from './components/BrandIcon.vue'
 import ThemeToggle from './components/ThemeToggle.vue'
+import PagefindSearch from './components/PagefindSearch.vue'
 import MarkdownActions from './components/MarkdownActions.vue'
 
-/** @type {import('vitepress').Theme} */
 export default {
   extends: DefaultTheme,
 
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
+      'nav-bar-content-before': () => h(PagefindSearch),
       'nav-bar-content-after': () => [h(ThemeToggle)],
       'layout-bottom': () => [
         h(PwaReload),
@@ -31,4 +33,4 @@ export default {
     app.component('BrandIcon', BrandIcon)
     app.component('MarkdownActions', MarkdownActions)
   }
-}
+} satisfies Theme

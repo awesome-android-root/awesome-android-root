@@ -57,8 +57,26 @@ jobs:
       - name: Install dependencies
         run: bun install
 
+      - name: Typecheck custom code and Vue components
+        run: bun run typecheck
+
+      - name: Test custom code
+        run: bun run test
+
+      - name: Lint entries
+        run: bun run lint:entries
+
       - name: Build documentation
         run: bun run docs:build
+
+      - name: Verify Pagefind index and entry anchors
+        run: bun run test:index
+
+      - name: Install Chromium
+        run: bunx playwright install --with-deps chromium
+
+      - name: Test search in Chromium
+        run: bun run test:search
 
       - name: Upload built site
         if: >-

@@ -2,37 +2,22 @@
   <span hidden aria-hidden="true"></span>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { onMounted, onUnmounted } from 'vue'
-import { useRouter } from 'vitepress'
+import { useRouter, withBase } from 'vitepress'
+import { parsePageIndex, toolInput, stringInput, resultLimit, pageRoute } from './utils/mcp'
+import { createSearchSession, loadPagefind } from './utils/search'
+import type { PageRecord, ModelContext, ModelTool } from './utils/mcp'
 
 const router = useRouter()
 const registrationController = new AbortController()
-let pageIndexPromise
+let pageIndexPromise: Promise<PageRecord[]> | undefined
 
-function parsePageIndex(markdown) {
-  return markdown.split(/(?=^---\nurl:\s*\/)/m).flatMap((section) => {
-    const frontmatterEnd = section.indexOf('\n---\n', 4)
-    if (frontmatterEnd === -1) return []
-
-    const frontmatter = section.slice(4, frontmatterEnd)
-    const content = section.slice(frontmatterEnd + 5).trim()
-    const url = frontmatter.match(/^url:\s*(\/[^\n]+)$/m)?.[1]
-    if (!url) return []
-
-    return [{
-      url,
-      title: content.match(/^#\s+(.+)$/m)?.[1] ?? url,
-      content
-    }]
-  })
-}
-
-async function getPageIndex(signal) {
+async function getPageIndex(signal: AbortSignal) {
   if (signal.aborted) throw signal.reason
 
   if (!pageIndexPromise) {
-    pageIndexPromise = fetch('/llms-full.txt')
+    pageIndexPromise = fetch(withBase('/llms-full.txt'))
       .then((response) => {
         if (!response.ok) throw new Error(`Page index request failed: ${response.status}`)
         return response.text()
@@ -49,12 +34,12 @@ async function getPageIndex(signal) {
   return pages
 }
 
-function assertActive(signal) {
+function assertActive(signal: AbortSignal) {
   if (signal.aborted) throw signal.reason
 }
 
-function registerTools(modelContext) {
-  const tools = [
+function registerTools(modelContext: ModelContext) {
+  const tools: ModelTool[] = [
     {
       name: 'search_site',
       title: 'Search site content',
@@ -69,26 +54,19 @@ function registerTools(modelContext) {
         additionalProperties: false
       },
       annotations: { readOnlyHint: true, untrustedContentHint: true },
-      execute: async ({ query, maxResults = 5 }, { signal }) => {
-        const normalizedQuery = query.trim().toLowerCase()
-        if (!normalizedQuery) throw new TypeError('query must not be empty')
-
-        const pages = await getPageIndex(signal)
-        const results = pages.flatMap((page) => {
-          const matchIndex = page.content.toLowerCase().indexOf(normalizedQuery)
-          if (matchIndex === -1) return []
-
-          const start = Math.max(0, matchIndex - 180)
-          const end = Math.min(page.content.length, matchIndex + normalizedQuery.length + 260)
-          return [{
-            title: page.title,
-            url: page.url,
-            excerpt: page.content.slice(start, end).replace(/\s+/g, ' ').trim()
-          }]
-        })
-
+      execute: async (rawInput, { signal }) => {
+        const input = toolInput(rawInput)
+        const query = stringInput(input, 'query', 160)
+        const maxResults = resultLimit(input)
+        const engine = await loadPagefind(withBase('/'))
         assertActive(signal)
-        return { results: results.slice(0, Math.min(maxResults, 10)) }
+        const results = await createSearchSession().run(engine, query, maxResults)
+        assertActive(signal)
+        return { results: (results ?? []).map((result) => ({
+          title: result.meta.title || result.url,
+          url: result.url,
+          excerpt: result.plain_excerpt || result.excerpt.replace(/<\/?mark>/g, '')
+        })) }
       }
     },
     {
@@ -114,7 +92,8 @@ function registerTools(modelContext) {
         additionalProperties: false
       },
       annotations: { readOnlyHint: true, untrustedContentHint: true },
-      execute: async ({ url }, { signal }) => {
+      execute: async (rawInput, { signal }) => {
+        const url = stringInput(toolInput(rawInput), 'url', 256)
         const pages = await getPageIndex(signal)
         const page = pages.find((entry) => entry.url === url)
         if (!page) throw new TypeError('url must match a documentation page from list_pages')
@@ -127,21 +106,23 @@ function registerTools(modelContext) {
     {
       name: 'navigate_to_page',
       title: 'Navigate to a documentation page',
-      description: 'Open a documentation page on this site. The URL must match a page listed by list_pages, or be / for the homepage.',
+      description: 'Open a documentation page on this site. The URL must match a page listed by list_pages, or a search result on a listed page, or be / for the homepage.',
       inputSchema: {
         type: 'object',
         properties: { url: { type: 'string', minLength: 1, maxLength: 256 } },
         required: ['url'],
         additionalProperties: false
       },
-      execute: async ({ url }, { signal }) => {
+      execute: async (rawInput, { signal }) => {
+        const url = stringInput(toolInput(rawInput), 'url', 256)
         const pages = await getPageIndex(signal)
         assertActive(signal)
-        if (url !== '/' && !pages.some((page) => page.url === url)) {
+        if (pageRoute(url, withBase('/')) !== '/' && !pages.some((page) => pageRoute(page.url, withBase('/')) === pageRoute(url, withBase('/')))) {
           throw new TypeError('url must match a documentation page from list_pages, or be /')
         }
 
-        await router.go(url)
+        const hash = url.includes('#') ? '#' + url.split('#').slice(1).join('#') : ''
+        await router.go(withBase(pageRoute(url, withBase('/')) + hash))
         return { navigatedTo: url }
       }
     }

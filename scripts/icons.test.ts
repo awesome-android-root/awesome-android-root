@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { withIcons } from '../docs/.vitepress/icons.mjs'
+import { withIcons } from '../docs/.vitepress/icons.ts'
 
 test('resolves a named icon into an inline svg and drops the icon key', () => {
   const result = withIcons({ text: 'Quick Start', icon: 'rocket' })
@@ -23,7 +23,7 @@ test('walks nested arrays and objects', () => {
         items: [{ text: 'Table of Contents', link: '/rooting-guides/' }]
       },
       [{ text: 'Quick Start', icon: 'rocket' }]
-    ]
+    ] as const
   })
 
   assert.match(result['/rooting-guides/'][0].text, /^<span class="navicon" /)

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import CopyOrDownloadAsMarkdownButtons from 'vitepress-plugin-llms/vitepress-components/CopyOrDownloadAsMarkdownButtons.vue'
 </script>
 
