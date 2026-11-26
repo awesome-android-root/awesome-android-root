@@ -120,36 +120,19 @@ Removing Magisk does not reverse a bootloader unlock or a tripped Samsung Knox w
 
 ## Prerequisites
 
-### Critical Requirements
-
 ::: danger ESSENTIAL PREREQUISITES
-**Unlocked Bootloader** - Magisk requires unlocked bootloader. Complete [bootloader unlocking](./how-to-unlock-bootloader.md) first.
+**Unlocked bootloader** - Magisk requires an unlocked bootloader, and unlocking normally wipes all device data. Complete [bootloader unlocking](./how-to-unlock-bootloader.md) first.
 
-**Stock Firmware** - Download your device's stock firmware for boot image extraction.
+**Exact-build stock firmware** - Download the stock firmware for your installed build before starting: it contains the image you patch and is your recovery path. Keep the complete package and original images somewhere other than the device.
 
-**Complete Backup** - Backup all important data before proceeding.
+**Complete backup** - Back up all important data before proceeding.
+
+**A computer** (Windows, macOS, or Linux) with [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools) (ADB/Fastboot), Windows USB drivers if needed, and a data-capable USB cable.
 
 **Battery 50%+** - Ensure sufficient battery to prevent interruption.
+
+**On device:** the latest [Magisk APK](https://github.com/topjohnwu/Magisk/releases), a file manager app, and at least 500 MB of free storage.
 :::
-
-### Hardware Requirements
-
-- Android device with unlocked bootloader
-- 50% or higher battery charge
-- Quality USB cable (data-capable)
-- Computer (Windows, macOS, or Linux)
-
-### Software Requirements
-
-**On Computer:**
-- [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools) (ADB/Fastboot)
-- Device-specific USB drivers (Windows only)
-- Stock firmware for your device
-
-**On Device:**
-- Latest Magisk APK from [GitHub](https://github.com/topjohnwu/Magisk/releases)
-- File manager app
-- At least 500MB free storage
 
 ### Compatibility
 

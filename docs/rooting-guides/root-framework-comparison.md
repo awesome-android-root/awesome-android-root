@@ -113,8 +113,8 @@ Temporary root is a **method**, not a fourth framework. Some loaders use KernelS
 | **Install model** | Patches `boot.img`, `init_boot.img`, recovery, or `vendor_boot.img` | LKM module into the stock kernel, or a KernelSU-enabled kernel | Patches the stock `boot.img` with KernelPatch | Runs a compatible exploit loader; some late-load KernelSU |
 | **Bootloader** | Normally unlocked | Normally unlocked for standard installation | Normally unlocked | Can stay locked on supported builds |
 | **Best for** | Beginners, daily drivers, module-heavy setups | Power users on GKI devices | KernelPatch use cases and edge cases | Session root on a specific vulnerable build |
-| **Main requirement** | Unlocked bootloader; check [upstream Android support](https://github.com/topjohnwu/Magisk) | GKI 2.0 (kernel 5.10+) officially; 4.14+ needs a manual kernel build | ARM64, kernel 3.18 to 6.12, `CONFIG_KALLSYMS` | Exact vulnerable kernel and compatible loader, profile or module |
-| **Android 17 (API 37)** | Check release notes for Android and Zygisk support, plus device compatibility | Check release assets for the target KMI and architecture | Covers 6.12 kernels; **6.18 kernels are out of range** | Depends on the exact device and build, not Android version alone |
+| **Main requirement** | Unlocked bootloader; check [upstream Android support](https://github.com/topjohnwu/Magisk) | A supported GKI 2.0 kernel for official LKM; older kernels need a verified custom build - check [upstream requirements](https://kernelsu.org/guide/installation.html) | ARM64, kernel 3.18 to 6.12, `CONFIG_KALLSYMS` - verify the [upstream install requirements](https://apatch.dev/install.html) | Exact vulnerable kernel and compatible loader, profile or module |
+| **Newer Android releases** | Check the [release notes](https://github.com/topjohnwu/Magisk/releases) for Android and Zygisk support | Check release assets for the target KMI and architecture | Verify the upstream kernel range before assuming support | Depends on the exact device and build, not Android version alone |
 | **Full reboot** | Root returns with the required boot sequence; recovery installs need special steps | Root normally returns after standard installation | Root normally returns | Active root ends; some loaders can re-run it |
 | **Modules** | Magisk modules, Zygisk modules | Metamodule-based since v3.0; many Magisk modules need a compatible metamodule | APModule plus KPModule for kernel-level code (metamodule support added to `apd`) | Compatible session modules if the loader supports them; some provide a shell only |
 | **Root control** | Explicit MagiskSU grants in the Superuser tab | App Profiles with fine-grained privileges | SuperKey-based access control | Depends on loader and manager; some offer only a root shell |
@@ -149,10 +149,10 @@ A full reboot ends active temporary root, but files and settings changed during 
 
 **Install model:** LKM keeps the existing kernel and patches the device's verified ramdisk image, often `boot` or `init_boot`. Do not choose the partition from the Android version alone. GKI mode replaces the kernel; check the release assets and device-specific instructions before choosing a compatible build. Upstream's [GKI build guide](https://kernelsu.org/guide/how-to-build.html) is archived.
 
-**Variants matter:** if the official Manager reports `Unsupported`, research a device-compatible kernel or variant instead of forcing installation. A different variant is not automatically compatible.
+**Variants matter:** if the official Manager reports `Unsupported`, research a device-compatible kernel or variant instead of forcing installation. A different variant is not automatically compatible, and fork features change quickly - verify each fork's current requirements in its own README and releases.
 - **KernelSU Next**: check the fork's requirements and available SUSFS LKM assets for your kernel.
-- **SukiSU Nova**: formerly SukiSU-Ultra; non-GKI and GKI 1.0 backports, a bundled mount engine with optional metamodules, KPM support with compatible kernel configuration, and SUSFS controls.
-- **BakaSU**: metamodule-based, non-GKI hooks, built-in SUSFS management.
+- **SukiSU Nova**: formerly SukiSU-Ultra; reports non-GKI and GKI 1.0 backports, a bundled mount engine with optional metamodules, KPM support with compatible kernel configuration, and SUSFS controls - verify current kernel support upstream.
+- **BakaSU**: reports metamodule support, non-GKI hooks and built-in SUSFS management - verify upstream status before relying on it.
 
 **Watch out for:**
 - Official KernelSU uses a metamodule for systemless file mounts; scripts, properties and policy rules can work without one.

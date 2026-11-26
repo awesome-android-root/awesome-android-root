@@ -320,7 +320,7 @@ The Edge 50 Fusion example previously associated with this heading is not eviden
 
 ### Configure Magisk
 
-Grant root only to trusted apps in **Superuser**. Enable Zygisk only when a trusted module requires it. Enforced DenyList reverts Magisk modifications in selected processes, but does not guarantee banking or payment app compatibility. See the [Magisk guide](./magisk-guide.md#post-installation-setup) and [Play Integrity guidance](../troubleshooting.md#play-integrity-and-banking-apps).
+Follow the universal post-root setup in the [main rooting guide](./index.md#step-4-post-root-configuration); see the [Magisk guide](./magisk-guide.md#post-installation-setup) for details.
 
 ### Motorola Optimization
 
@@ -334,7 +334,7 @@ Grant root only to trusted apps in **Superuser**. Enable Zygisk only when a trus
 
 ### Recommended Modules
 
-Install only modules needed for your setup, and verify their device and Android compatibility. See the [app and module catalog](../apps-and-modules/) and [Play Integrity guidance](../troubleshooting.md#play-integrity-and-banking-apps). No module guarantees that a banking or payment app will work.
+Pick modules from the [app and module catalog](../apps-and-modules/) and follow its [safety guidance](../apps-and-modules/index.md#safety-legal).
 
 ---
 
@@ -423,23 +423,7 @@ Relocking a modified or incompatible device can leave it unbootable and may eras
 
 ## Custom ROMs
 
-### Popular ROMs
-
-**LineageOS:**
-- Official for many Moto G and Edge devices
-- Stable and well-maintained
-
-**Pixel Experience:**
-- Pixel-like interface
-- Good performance
-
-**crDroid:**
-- Feature-rich
-- Active development
-
-**Evolution X:**
-- Customizable
-- Growing support
+LineageOS provides official builds for many Moto G and Edge devices. Check the [custom ROM guide](./custom-rom-installation.md) for selection criteria and the installation workflow, and the [LineageOS device list](https://wiki.lineageos.org/devices/) for your exact model before unlocking.
 
 ---
 

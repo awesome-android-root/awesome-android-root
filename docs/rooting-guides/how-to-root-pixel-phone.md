@@ -268,13 +268,11 @@ This is different from [temporary root without unlocking](./root-without-unlocki
 
 ### Essential Magisk Configuration
 
-- In current Magisk, use **Superuser** to explicitly grant trusted apps access before they request `su`. To test with ADB, grant **ADB shell** first, then run `adb shell su -c id`; revoke the shell grant when finished. Older releases, including the version noted for the first-generation Pixel above, may instead show interactive request prompts.
-- Enable **Zygisk** only when a trusted module needs it. **DenyList** can revert Magisk modifications in selected processes, but it does not guarantee that apps will accept a rooted device.
-- Current Magisk releases do not offer the old **Hide the Magisk app** rename option. See the [Magisk guide](./magisk-guide.md#root-hiding-and-play-integrity) for current limitations.
+Follow the universal post-root setup in the [main rooting guide](./index.md#step-4-post-root-configuration): explicit Superuser grants, Zygisk only when a trusted module needs it, and the current root-hiding limitations described in the [Magisk guide](./magisk-guide.md#root-hiding-and-play-integrity).
 
 ### Recommended Modules
 
-Install only modules needed for your setup, and verify their device and Android compatibility. See the [app and module catalog](../apps-and-modules/) and [Play Integrity guidance](../troubleshooting.md#play-integrity-and-banking-apps). No module guarantees that a banking or payment app will work.
+Pick modules from the [app and module catalog](../apps-and-modules/) and follow its [safety guidance](../apps-and-modules/index.md#safety-legal). See also the [Play Integrity guidance](../troubleshooting.md#play-integrity-and-banking-apps).
 
 ---
 

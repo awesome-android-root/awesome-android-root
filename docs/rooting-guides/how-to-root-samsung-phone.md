@@ -285,9 +285,7 @@ Magisk's [custom recovery method](https://topjohnwu.github.io/Magisk/install.htm
 
 ### Configure Magisk
 
-- Grant root to trusted apps in Magisk's **Superuser** tab before they request `su`.
-- Enable Zygisk only if a trusted module requires it. DenyList reverts Magisk modifications in selected processes when enforced; it is not a guarantee of app compatibility.
-- Current Magisk releases no longer offer the old **Hide the Magisk app** rename option. Review the [Magisk setup guide](./magisk-guide.md#post-installation-setup).
+Follow the universal post-root setup in the [main rooting guide](./index.md#step-4-post-root-configuration) and the [Magisk setup guide](./magisk-guide.md#post-installation-setup).
 
 ### Samsung-Specific Root Hiding
 

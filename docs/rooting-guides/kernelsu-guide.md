@@ -158,21 +158,17 @@ Use the [official releases](https://github.com/tiann/KernelSU/releases) for the 
 
 ## KernelSU Variants
 
-The KernelSU ecosystem is now mostly forks. Names, maintainers and repositories change quickly, so check that a project is still receiving commits before flashing its kernel.
+The KernelSU ecosystem is now mostly forks. Names, maintainers and repositories change quickly, so check that a project is still receiving commits before flashing its kernel, and verify each variant's kernel and Manager requirements against its own documentation for your exact device.
 
-| Variant | Kernel support | Notes |
-|---------|----------------|-------|
-| **[Official KernelSU](https://github.com/tiann/KernelSU)** | GKI 2.0 (5.10+), manual backports for older | LKM-first, metamodule-based, official module repository |
-| **[KernelSU-Next](https://github.com/KernelSU-Next/KernelSU-Next)** | See the fork's kernel requirements | Metamodule-based, ships prebuilt SUSFS LKM `susfs_guard_lkm.ko` per KMI, module and app profile backup, risk detection that blocks suspicious modules, spoofed-package Manager builds |
-| **[SukiSU Nova](https://github.com/SukiSU-Nova/SukiSU-Nova)** (formerly SukiSU-Ultra) | GKI 2.0, plus non-GKI/GKI 1.0 backports | Bundled mount engine with metamodule hooks available, KPM with a compatible kernel configuration, SUSFS controls in the Manager |
-| **[BakaSU](https://github.com/Baka-SU/BakaSU)** (formerly ReSukiSU) | GKI 2.0, manual hooks down to 3.4 | Metamodule-based, built-in SUSFS management, multi-manager support (official or KOWX712 KernelSU Manager can manage its kernel) |
-| **[Wild KSU](https://github.com/WildKernels/Wild_KSU)** | Discontinued | Repository archived in 2026; the WildKernels kernel repos still publish KernelSU/KernelSU-Next builds |
+| Variant | Main reason to consider it | Compatibility |
+|---------|----------------------------|---------------|
+| **[Official KernelSU](https://github.com/tiann/KernelSU)** | The official upstream implementation | GKI 2.0 (kernel 5.10+) for LKM; check the official [kernel/KMI requirements](https://kernelsu.org/guide/installation.html) |
+| **[KernelSU-Next](https://github.com/KernelSU-Next/KernelSU-Next)** | Additional fork features such as prebuilt SUSFS kernel modules, module and profile backup, and risk detection | Verify the fork's kernel requirements and use the matching Manager |
+| **[SukiSU Nova](https://github.com/SukiSU-Nova/SukiSU-Nova)** (formerly SukiSU-Ultra) | Non-GKI/GKI 1.0 backports and KPM support with a compatible kernel configuration | Verify the exact supported kernel and required configuration |
+| **[BakaSU](https://github.com/Baka-SU/BakaSU)** (formerly ReSukiSU) | Manual hooks for older kernels and alternative Manager pairing | Verify the fork's kernel range and Manager compatibility |
+| Other forks | Specialized or legacy use cases | Confirm upstream status before trusting any feature claim; do not flash archived projects (Wild KSU was archived in 2026, though the WildKernels kernel repos still publish KernelSU/KernelSU-Next builds) |
 
-**How to pick:**
-- Supported GKI device, stock or near-stock firmware: consider **official KernelSU** in LKM mode after checking the Manager.
-- You want SUSFS or module backup: check whether **KernelSU-Next** supports your exact device and kernel.
-- Non-GKI or KPM support: consider **SukiSU Nova** after checking your device, kernel and required configuration.
-- You want a second manager or old-kernel manual hooks: **BakaSU**.
+Release-specific details - metamodule behavior, SUSFS asset names, Manager pairing - change quickly and belong in each fork's README and release notes rather than this guide. See the [Root Framework Comparison](./root-framework-comparison.md) for how the variants fit into framework choice.
 
 > [!WARNING]
 > Everything except official KernelSU is community code. A fork can add detection vectors, drop in maintenance, or rename itself (ReSukiSU to BakaSU is the recent example). Read the project's own README before assuming features carry over. [KernelSU Next](https://github.com/KernelSU-Next/KernelSU-Next) also warns that some recent `x86_64` kernels may panic; check the fork's compatibility notes before installing.

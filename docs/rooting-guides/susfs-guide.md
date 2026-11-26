@@ -182,10 +182,13 @@ For control, or when no prebuilt kernel covers your device. Upstream keeps per k
 1. Clone official KernelSU at a release tag, and the matching SUSFS branch at a tag.
 2. Apply `10_enable_susfs_for_ksu.patch` inside the KernelSU directory and `50_add_susfs_in_kernel-<version>.patch` at the kernel root, then copy the patch set's `fs/susfs.c` and `include/linux/susfs.h` into place.
 3. Enable `CONFIG_KSU_SUSFS=y` and choose the `CONFIG_KSU_SUSFS_*` features you want in `defconfig` or the KernelSU Kconfig.
-4. Build against the Google GKI artifacts (or the DDK toolchain for LKM builds). For Android 14 and newer GKI builds, delete the `abi_gki_protected_exports_*` files or some vendor modules will not load, and make sure the boot image's security patch level is not older than your device's.
+4. Build against the Google GKI artifacts (or the DDK toolchain for LKM builds). Make sure the boot image's security patch level is not older than your device's.
 5. Flash, boot, install the userspace module.
 
 Upstream's README has the exact copy and patch commands, plus notes for `-dirty` version strings and spoofing `/proc/config.gz` with your stock config.
+
+> [!WARNING]
+> **GKI ABI symbol protections:** some Android 14+ GKI kernel-build workflows remove the `abi_gki_protected_exports_*` files so that modules built against modified symbol lists can load. This is a build-specific workaround tied to how a particular kernel tree and its vendor modules handle the GKI ABI, not a general step: whether it is needed at all depends on the exact kernel build you are reproducing. Before touching ABI files, verify the target kernel's build instructions and the [upstream SUSFS patch set](https://gitlab.com/simonpunk/susfs4ksu) documentation, and confirm the resulting kernel still loads your device's vendor modules.
 
 ### Option 3: SUSFS as a loadable kernel module
 

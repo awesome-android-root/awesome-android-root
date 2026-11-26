@@ -172,9 +172,11 @@ Three primary custom recovery options exist, each with distinct features.
 ### Critical Warnings
 
 ::: danger ⚠️ ESSENTIAL REQUIREMENTS
-**Unlocked Bootloader** - Custom recovery requires unlocked bootloader. Complete [bootloader unlocking](./how-to-unlock-bootloader.md) first.
+**Unlocked Bootloader** - Custom recovery requires an unlocked bootloader, and unlocking normally wipes all device data. Complete [bootloader unlocking](./how-to-unlock-bootloader.md) first and back up before starting.
 
-**Device Match** - Installing wrong recovery image can brick your device. Verify exact model and codename.
+**Device Match** - Recovery images are device-specific. Installing the wrong image can brick your device. Verify the exact model and codename against the recovery's own device page.
+
+**No Dedicated Recovery Partition** - Most modern A/B devices (Android 10+) have no separate recovery partition; recovery lives in `boot`, `vendor_boot` or `init_boot` depending on the device. These partitions are not interchangeable - never guess, follow the recovery's instructions for your device.
 
 **Data Safety** - While recovery installation shouldn't erase data, always backup important files first.
 
@@ -317,32 +319,32 @@ Or use hardware keys after flashing to prevent stock recovery restoration.
 
 #### Method B: Modern A/B Devices (No Dedicated Recovery)
 
-For devices with A/B partitions and no dedicated recovery (Android 10+).
+For devices with A/B partitions and no dedicated recovery (Android 10+). On these devices there is no single "recovery partition" to flash: the recovery image targets `boot`, `vendor_boot` or `init_boot` depending on the device and recovery build, and these partitions are **not interchangeable**. A wrong write can leave the device unbootable, so every step below follows the recovery's own instructions rather than a generic rule.
 
-**Step 1: Boot recovery temporarily**
+**Step 1: Verify support before touching any partition**
+
+1. Confirm the recovery project officially supports your exact device **and firmware build** - check its device page or XDA thread, not just the model family.
+2. Read that page's installation instructions. They name the correct image, the correct partition (for example `vendor_boot` on some devices, `init_boot` on others) and the supported installation method.
+3. If no officially supported installation method exists for your device, stop. Do not substitute a partition from another guide.
+
+**Step 2: Boot the recovery temporarily (no flashing)**
+
 ```bash
 fastboot boot recovery.img
 ```
 
-Device boots to recovery without permanent installation.
+Device boots to recovery without any permanent installation. `fastboot boot` writes nothing and is reversible by rebooting, but it is only available on devices that support it - check the recovery's instructions. If temporary boot fails or is unsupported, do not start flashing; return to Step 1.
 
-**Step 2: Install permanently from recovery**
+**Step 3: Install permanently using the recovery's documented method**
 
-Option 1: Using installer ZIP
-1. Transfer recovery installer ZIP to device
-2. In recovery: Install > Select ZIP > Swipe to confirm
-3. Reboot to recovery
+Use only the installation path the recovery maintainer specifies for your exact device, which is typically one of:
 
-Option 2: Install to correct partition
-1. In recovery: Install > Install Image
-2. Select recovery.img file
-3. Choose correct partition:
-   - Boot (most common)
-   - Vendor_Boot (some devices)
-   - Init_Boot (Android 13+ GKI devices)
-4. Swipe to confirm
+- Flashing a recovery installer ZIP from within the recovery, or
+- Flashing the recovery image to the single partition named in the recovery's instructions, with the command it provides.
 
-**Step 3: Verify installation**
+Do not choose a partition by Android version, device generation or "most common" advice. If the recovery's instructions do not explicitly name a partition for your device, do not flash one.
+
+**Step 4: Verify installation**
 ```bash
 fastboot reboot recovery
 ```
@@ -634,9 +636,9 @@ Used for:
 ### GKI Devices (Generic Kernel Image)
 
 **Android 12+ devices with GKI:**
-- Recovery may be in init_boot partition
-- Check device instructions carefully
-- Use appropriate partition for flashing
+- Some GKI devices keep recovery in `init_boot`; others do not
+- Check the recovery's device-specific instructions for the partition it names
+- Flash only the partition the recovery maintainer specifies
 
 ---
 
@@ -655,14 +657,13 @@ fastboot boot recovery.img
 
 2. Verify correct recovery for your device and Android version
 
-3. Flash to correct partition (check device instructions):
+3. If a partition was flashed, confirm it is the one named in the recovery's instructions for your device, and restore the matching stock image to that partition before retrying:
+
 ```bash
-fastboot flash boot recovery.img
-# or
-fastboot flash vendor_boot recovery.img
-# or
-fastboot flash init_boot recovery.img
+fastboot flash <verified-partition> stock_image.img
 ```
+
+If no recovery-specific installation instructions exist for your device, restore the stock image and use `fastboot boot recovery.img` instead of flashing.
 
 4. Restore stock image:
 ```bash

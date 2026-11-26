@@ -98,15 +98,14 @@ Master Android rooting with comprehensive tutorials covering bootloader unlockin
 
 ## Understanding Root Access
 
-Root access grants **superuser (administrator) privileges** on Android, providing complete control over your device's operating system and hardware.
+Root access grants **superuser (administrator) privileges** on Android: elevated access to parts of the system that are normally restricted to privileged processes. What root can actually change depends on the device, boot chain, kernel and root solution - it is not unrestricted control of every hardware feature or security boundary.
 
 ### What Root Enables
 
-- **System-level control** over files, processes, and hardware
-- **Bypass manufacturer restrictions** on any Android version
+- **Elevated system access** to files and processes, where the device, boot chain and root solution permit it
 - **Install powerful apps** requiring deep system integration (see [Root Apps](../apps-and-modules/))
-- **Modify core system files** and customize every aspect via Magic Mount, OverlayFS, or KPM
-- **Access hidden hardware features** and advanced kernel-level configurations
+- **Modify core system files** systemlessly via Magic Mount, OverlayFS, or KPM
+- **Access functions otherwise restricted to privileged processes**, including some kernel-level configurations
 - **Kernel-level code injection** via APatch KPM (inline-hook, syscall-table-hook)
 - **Fine-grained root access control** via KernelSU App Profiles (uid, gid, capabilities, SELinux)
 
@@ -114,7 +113,7 @@ Root access grants **superuser (administrator) privileges** on Android, providin
 
 | Benefits | Risks |
 |----------|-------|
-| Complete device control | Warranty void (usually permanent) |
+| Deep system customization, within what the device and boot chain allow | Warranty impact varies by manufacturer, region and modification type |
 | [System-wide ad blocking](../general-guides/android-adblocking.md) | Reduced security if misconfigured |
 | [Performance tuning](../apps-and-modules/performance#performance-optimization) | Banking apps require active hiding ([solutions](../troubleshooting.md#play-integrity-and-banking-apps)) |
 | Privacy enhancements (firewall, permission control) | OTA updates require manual re-patching |
@@ -123,16 +122,13 @@ Root access grants **superuser (administrator) privileges** on Android, providin
 | Kernel-level tweaks (CPU, GPU, scheduler) | Strong Integrity generally unachievable on unlocked devices |
 | Custom ROM installation freedom | Bootloader unlock wipes ALL data |
 
+> **On warranty:** consequences differ by manufacturer, country and the type of modification. Bootloader unlocking, root installation and permanent hardware flags such as Samsung Knox are separate matters, and statutory consumer protections vary by region. Check your manufacturer's terms for your region before unlocking.
+
 ### Is Rooting Right for You?
 
-| **✅ Root If:** | **❌ Don't Root If:** |
-|---------------------------|---------------------|
-| Want complete control over your device | Rely solely on banking/finance apps |
-| System-wide ad blocking is priority | Uncomfortable with terminal/command-line |
-| Enjoy deep customization & theming | Need 100% warranty coverage |
-| Privacy & anti-tracking matters | Want seamless automatic OTA updates |
-| Willing to learn & troubleshoot | New to Android and risk-averse |
-| Use device as daily driver with backups | Prefer stock, zero-maintenance experience |
+**Root if** you want deep customization, system-wide ad blocking or privacy tooling, are comfortable with the command line, and keep regular backups.
+
+**Don't root if** you rely on banking or finance apps with no fallback device, need guaranteed warranty coverage or seamless automatic OTA updates, or prefer a stock, zero-maintenance experience.
 
 ---
 

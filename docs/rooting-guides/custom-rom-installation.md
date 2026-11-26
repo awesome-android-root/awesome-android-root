@@ -60,7 +60,7 @@ head:
 ## 🔗 Essential Resources
 - **[📖 Main Rooting Guide](./index.md)** - Universal rooting principles and safety
 - **[🔓 Bootloader Unlocking](./how-to-unlock-bootloader.md)** - Required first step
-- **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - Installation prerequisite
+- **[🛠️ Custom Recovery](./how-to-install-custom-recovery.md)** - Only if the ROM's documented install method calls for one
 - **[❓ FAQ & Troubleshooting](../faqs.md)** - Solutions for common issues
 
 ---
@@ -101,15 +101,18 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 - **CalyxOS** - Privacy-first with optional Sandboxed Google Play
 
 #### General Use & Features:
-- **LineageOS** - Most popular, widest device support
-- **Pixel Experience** - Pixel-like UX for non-Pixel devices
-- **crDroid** - Feature-rich with heavy customization
-- **PixelOS** / ArrowOS - Lightweight, clean, frequent updates
-- **iodéOS** - Privacy-focused with built-in ad/tracker blocking
+- **[LineageOS](https://lineageos.org/)** - Near-stock Android with official builds for a wide range of devices
+- **crDroid** - LineageOS-based with an extensive customization options set
+- **PixelOS** / **ArrowOS** - AOSP-based builds with a Pixel-style or lean interface
+- **iodéOS** - LineageOS-based with built-in ad/tracker blocking
+- **Evolution X** - AOSP-based with a large feature set
 
-#### Gaming & Performance:
-- **Evolution X** - Balanced features and performance
-- **Project Sakura** - Performance-focused builds
+> [!WARNING]
+> **Pixel Experience is discontinued.** Development ended in 2024 and its final builds (Android 14) receive no further security updates. Old builds are still downloadable, but treat them as unmaintained; **PixelOS** is a separate, active project with a similar Pixel-style experience.
+
+::: warning ROM STATUS CHANGES
+ROM projects change maintainers, device support and release cadence often. Before choosing, check the project's official download page for your device: active official builds, recent security updates and documented install instructions matter more than feature descriptions.
+:::
 
 ::: warning **Notes:**
 - GrapheneOS is Pixel-only and supports secure bootloader re-locking. Most other ROMs require leaving the bootloader unlocked; do NOT relock unless the ROM explicitly supports AVB re-lock.
@@ -132,7 +135,7 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 
 ### Essential Prerequisites
 1. **[Unlocked bootloader](./how-to-unlock-bootloader.md)**
-2. **[Custom recovery](./how-to-install-custom-recovery.md)** (TWRP/OrangeFox) or ROM’s own recovery
+2. **The ROM's documented install method** - this may be the ROM's own recovery, a custom recovery such as TWRP/OrangeFox, fastboot images, a web installer or ADB sideload. Do not install a separate custom recovery unless the ROM's instructions for your device call for one; see the [custom recovery guide](./how-to-install-custom-recovery.md).
 3. **Compatible ROM** - for your exact device codename/variant
 4. **Backup everything** - consider both a NANDroid (if supported) and app/data backups
 5. **Stock firmware on hand** - for emergency restore (EDL/Odin/Mi Flash/fastboot images)
@@ -140,7 +143,7 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 ### Required Tools
 - **Latest Android Platform Tools (ADB/Fastboot**) from Google
 - **USB drivers (Windows)**: OEM or Google USB Driver
-- **Custom recovery image/installer ZIP** (device-specific)
+- **Custom recovery image/installer ZIP** (only if the ROM's documented method uses one)
 - **ROM ZIP/Images** + optional GApps (see notes below)
 - **A computer** (Windows/macOS/Linux) and reliable USB cable
 
@@ -158,14 +161,14 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 
 ### Decision Matrix
 
-| Need | Recommended ROM | Why |
+| Need | Established options | Check before choosing |
 |------|------------------|-----|
 | **Maximum privacy** | GrapheneOS (Pixel) | Hardware-backed security, strict app sandboxing, relockable |
-| **Privacy + broad app compatibility** | CalyxOS | Privacy defaults with optional Sandboxed Play |
-| **Most devices** | LineageOS | Broadest device support, mature updates |
-| **Pixel UX** | Pixel Experience / PixelOS | Pixel look-and-feel on non-Pixel devices |
-| **Customization** | crDroid / Evolution X | Granular feature set |
-| **Lightweight performance** | ArrowOS | Clean, lean builds |
+| **Privacy + Google apps** | CalyxOS | Privacy defaults with optional Sandboxed Play |
+| **Broad device coverage** | LineageOS | Official build availability for your exact codename |
+| **Pixel-style UI** | PixelOS | Active builds; Pixel Experience is discontinued |
+| **Customization** | crDroid / Evolution X | Official support for your device |
+| **Lean system** | ArrowOS | Official support for your device |
 
 ::: warning **GApps notes:**
 - LineageOS recommends MindTheGapps; NikGapps also popular.
@@ -302,15 +305,18 @@ Standard method:
 
 Benefits: Broad support, stable updates, trustable infrastructure
 
-### Pixel Experience / PixelOS
+### PixelOS
 
-- Pixel Experience: https://download.pixelexperience.org/
-- PixelOS: search official site or XDA thread for your device
+- PixelOS: search the project's official site or XDA thread for your device
 
 Notes:
-- Some builds include GApps; others are “vanilla”
-- Install via recovery/ADB sideload; follow device thread instructions
+- Some builds include GApps; others are "vanilla"
+- Install via the method documented for your device (recovery/ADB sideload/fastboot)
 - Monthly security patches common
+
+::: warning PIXEL EXPERIENCE STATUS
+Pixel Experience development ended in 2024; its final Android 14 builds receive no security updates. The project's site and downloads may still be online, but archived builds are not maintained. Prefer an active ROM with official builds for your device.
+:::
 
 ---
 

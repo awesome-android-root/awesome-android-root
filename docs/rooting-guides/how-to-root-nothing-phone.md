@@ -251,9 +251,7 @@ Check that Magisk reports installed. Grant a trusted app root in **Superuser** b
 
 ### Configure Magisk
 
-Grant root only to trusted apps in **Superuser**. Enable Zygisk only when a trusted module needs it. Enforced DenyList reverts Magisk modifications in selected processes; it does not guarantee banking or payment app compatibility. The old **Hide the Magisk app** rename option is no longer present in current releases. See [Magisk configuration](./magisk-guide.md#post-installation-setup) and [Play Integrity guidance](../troubleshooting.md#play-integrity-and-banking-apps).
-
-KernelSU is an alternative only if the exact device and kernel are supported. See the [KernelSU guide](./kernelsu-guide.md) before switching; do not install it over Magisk.
+Follow the universal post-root setup in the [main rooting guide](./index.md#step-4-post-root-configuration); see the [Magisk guide](./magisk-guide.md#post-installation-setup) and [Play Integrity guidance](../troubleshooting.md#play-integrity-and-banking-apps) for details. KernelSU is an alternative only if the exact device and kernel are supported - see the [KernelSU guide](./kernelsu-guide.md) before switching; do not install it over Magisk.
 
 ### Nothing OS Optimization
 
@@ -269,7 +267,7 @@ KernelSU is an alternative only if the exact device and kernel are supported. Se
 
 ### Recommended Modules
 
-Install only modules needed for your setup, and verify their device and Android compatibility. See the [app and module catalog](../apps-and-modules/) and [Play Integrity guidance](../troubleshooting.md#play-integrity-and-banking-apps). No module guarantees that a banking or payment app will work.
+Pick modules from the [app and module catalog](../apps-and-modules/) and follow its [safety guidance](../apps-and-modules/index.md#safety-legal). Test Glyph-related modules carefully - most have limited or no Glyph support.
 
 ---
 

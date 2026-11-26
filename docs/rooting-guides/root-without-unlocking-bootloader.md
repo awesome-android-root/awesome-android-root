@@ -62,7 +62,7 @@ head:
 
 # Temporary Root Without Unlocking the Bootloader
 
-DirtyFrag and GhostLock can provide temporary root on specific vulnerable Android builds while the bootloader stays locked. Neither works on every device, and a full reboot ends the active root session.
+DirtyFrag and GhostLock can provide temporary root on specific vulnerable Android builds while the bootloader stays locked. Neither works on every device, and a full reboot ends the active root session. This page is the installation and usage guide; the [temporary-root solutions page](./temporary-root-solutions.md) is the project directory that compares temporary root with MediaTek and Samsung boot-chain research tools.
 
 > [!CAUTION]
 > Back up your data and check recovery options first. An exploit, incompatible module or failed recovery can cause crashes, bootloops or data loss. Do not downgrade or skip security updates just to keep root.
@@ -110,6 +110,9 @@ DirtyFrag ([CVE-2026-43284](https://github.com/CVEProject/cvelistV5/blob/main/cv
 - Unlock the bootloader or allow unsigned custom ROMs, recoveries or kernels to be flashed.
 - Guarantee that banking apps, Play Integrity or Knox services will work.
 - Undo files, apps or settings changed during the session just by rebooting.
+
+> [!WARNING]
+> **Temporary does not mean harmless.** The exploit grants full root: anything root can change during the session - files, apps, settings, security state - can persist after the session ends. A reboot only ends the root access, not the changes made while it was active.
 
 ## Soft reboot vs full reboot
 

@@ -286,7 +286,7 @@ For a supported legacy device, upstream describes renaming the official Magisk A
 
 ### Configure Magisk
 
-Grant only trusted apps access in the **Superuser** tab. Enable Zygisk only when a trusted module needs it. DenyList can revert Magisk modifications in selected processes but does not guarantee app compatibility; the old **Hide the Magisk app** rename option is no longer available in current Magisk releases. See the [Magisk guide](./magisk-guide.md#post-installation-setup) and [Play Integrity guidance](../troubleshooting.md#play-integrity-and-banking-apps).
+Follow the universal post-root setup in the [main rooting guide](./index.md#step-4-post-root-configuration); see the [Magisk guide](./magisk-guide.md#post-installation-setup) for details.
 
 ### OxygenOS/ColorOS Optimization
 

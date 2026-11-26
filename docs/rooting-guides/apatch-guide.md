@@ -113,7 +113,7 @@ Based on APatch upstream docs and repository notes:
 - **Kernel range:** Linux kernel 3.18 to 6.12 (upstream stated range)
 - **Kernel configuration:** `CONFIG_KALLSYMS=y`; see [upstream requirements](https://github.com/AndroidPatch/APatchDocs/blob/main/docs/install.md#install-requirements) for `CONFIG_KALLSYMS_ALL` and device limitations
 - **Kernel 6.6:** upstream says it has only been tested on Xiaomi and OnePlus devices; other brands need additional verification
-- **Practical Android target:** modern Android builds (Android 10+ is the common baseline in community usage)
+- **Android version:** APatch targets the kernel, not an Android version number - check the [official requirements](https://github.com/AndroidPatch/APatchDocs/blob/main/docs/install.md#install-requirements) for your kernel and build
 
 ### Must-Have Prerequisites
 
