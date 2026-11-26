@@ -172,13 +172,10 @@ Three primary custom recovery options exist, each with distinct features.
 ### Critical Warnings
 
 ::: danger ⚠️ ESSENTIAL REQUIREMENTS
-**Unlocked Bootloader** - Custom recovery requires unlocked bootloader. Complete [bootloader unlocking](./how-to-unlock-bootloader.md) first.
-
-**Device Match** - Installing wrong recovery image can brick your device. Verify exact model and codename.
-
-**Data Safety** - While recovery installation shouldn't erase data, always backup important files first.
-
-**Warranty** - Installing custom recovery typically voids manufacturer warranty.
+- **Device-specific images:** verify the exact model, regional variant, firmware and supported recovery build. A similar codename is not enough.
+- **Boot failure and damage:** flashing the wrong image or partition can prevent booting or require device-specific recovery. Keep matching stock firmware and a tested recovery plan off-device.
+- **Partition layout:** modern devices may have no dedicated recovery partition. `boot`, `vendor_boot` and `init_boot` are not interchangeable recovery targets.
+- **Data loss:** bootloader unlocking normally wipes user data. Complete the [bootloader guide](./how-to-unlock-bootloader.md) and [preparation checklist](./index.md#prerequisites-and-safety) first; back up before unlocking or flashing.
 :::
 
 ### Essential Requirements
@@ -219,22 +216,13 @@ Method 3: CPU-Z app
 
 ### Determine Partition Scheme
 
-**Check if A/B device:**
+Use the recovery maintainer's device page to establish the installation method and partition layout. Android version or A/B support alone cannot determine the recovery partition.
+
 ```bash
-adb reboot bootloader
 fastboot getvar current-slot
 ```
 
-If returns "a" or "b": A/B device
-If returns error: A-only device
-
-**Check recovery partition:**
-```bash
-fastboot getvar has-slot:recovery
-```
-
-Returns "yes": Dedicated recovery partition
-Returns "no": Recovery in boot/vendor_boot/init_boot
+A supported response reports the selected slot. An error does **not** prove the device is A-only. Likewise, `has-slot:recovery` reports whether that partition is slotted, not whether a recovery partition exists. Do not use either result to choose a flash target.
 
 ### Download Correct Recovery
 
@@ -259,7 +247,7 @@ shasum -a 256 recovery.img
 
 ## Installation Guide
 
-Installation method depends on your device's partition scheme. Follow the appropriate path.
+Use only the installation method documented for the exact device and recovery build. The examples below are conditional, not alternative partitions to try.
 
 ### Step 1: Preparation
 
@@ -301,7 +289,7 @@ Choose method based on your device type:
 
 #### Method A: Legacy Devices (Dedicated Recovery Partition)
 
-For devices with separate recovery partition (typically Android 9 and older).
+Only for a device whose recovery maintainer explicitly documents a dedicated `recovery` partition and the following fastboot method. Back up first; flashing an image for another device or partition can prevent booting.
 
 **Flash recovery:**
 ```bash
@@ -317,41 +305,18 @@ Or use hardware keys after flashing to prevent stock recovery restoration.
 
 #### Method B: Modern A/B Devices (No Dedicated Recovery)
 
-For devices with A/B partitions and no dedicated recovery (Android 10+).
+1. Verify that the recovery project officially supports the **exact device, firmware and recovery build** you intend to use. Read its device page and known limitations, including encryption support.
+2. Follow that build's installation instructions. They may specify temporary boot, an installer ZIP or a particular boot-related image; A/B support does not determine which method applies. If the device instead has a dedicated recovery partition, use its documented method rather than this assumed layout.
+3. Only boot an image or flash a partition **explicitly named by the recovery maintainer**. Do not try `boot`, `vendor_boot` or `init_boot` as alternatives, and do not infer the destination from Android version or GKI status.
+4. Follow the documented first-boot sequence and verify recovery before further changes. Keep the original images for all affected partitions and slots available off-device.
 
-**Step 1: Boot recovery temporarily**
-```bash
-fastboot boot recovery.img
-```
-
-Device boots to recovery without permanent installation.
-
-**Step 2: Install permanently from recovery**
-
-Option 1: Using installer ZIP
-1. Transfer recovery installer ZIP to device
-2. In recovery: Install > Select ZIP > Swipe to confirm
-3. Reboot to recovery
-
-Option 2: Install to correct partition
-1. In recovery: Install > Install Image
-2. Select recovery.img file
-3. Choose correct partition:
-   - Boot (most common)
-   - Vendor_Boot (some devices)
-   - Init_Boot (Android 13+ GKI devices)
-4. Swipe to confirm
-
-**Step 3: Verify installation**
-```bash
-fastboot reboot recovery
-```
-
-Device should boot to custom recovery.
+::: danger NO GENERIC FALLBACK
+If no supported installation method exists for your exact device and build, stop. Do not flash a recovery image into a boot-critical partition to experiment.
+:::
 
 #### Method C: Samsung Devices (Odin Method)
 
-Samsung devices require Odin tool instead of fastboot.
+Use this path only if the recovery maintainer documents Odin installation for the exact Samsung model and firmware. Confirm unlock eligibility, the required TAR package and Download Mode sequence in that device guide before proceeding.
 
 **Requirements:**
 - Odin tool (Windows only)
@@ -424,14 +389,14 @@ Should show device in recovery mode.
 ### Create Backup
 
 ::: tip CRITICAL FIRST STEP
-Create complete backup before making any modifications. This allows safe recovery if something goes wrong.
+Back up before making modifications, and verify what the recovery can actually restore on your device. A recovery backup is not a substitute for exact-build stock firmware and an off-device copy of personal files.
 :::
 
 **Recommended backup partitions:**
 
 Essential:
-- Boot (or vendor_boot/init_boot on modern devices)
-- Data (contains all user files and apps)
+- Original images for the partitions identified by the device maintainer (not interchangeable targets)
+- Data, only where the recovery supports backup/restore. Internal shared storage (`/data/media`, including photos and downloads) is commonly excluded and must be copied separately.
 
 Important:
 - EFS/Modem (IMEI and carrier data)
@@ -491,11 +456,10 @@ Option 2: Use OTG storage
 - Connect USB drive via OTG adapter
 - Install from OTG in recovery
 
-Option 3: Format data (last resort)
-- Removes encryption and all data
-- Wipe > Format Data
-- Type "yes" to confirm
-- Complete data loss
+Option 3: Format Data only if the exact-device installation instructions require it
+- **Erases user data**, including internal storage; back up off-device first
+- Recreates the data filesystem; it does not guarantee that recovery will support the device's encryption afterward
+- Do not format merely to test whether decryption starts working
 
 ---
 
@@ -571,28 +535,13 @@ adb sideload file.zip
 
 ### A/B Partition Scheme
 
-**Characteristics:**
-- Two system slots (A and B)
-- Seamless updates
-- No dedicated recovery partition
-- Recovery in boot/vendor_boot/init_boot
+A/B devices have two boot slots, but recovery placement and persistence depend on the device. Some have a dedicated recovery partition and others integrate recovery into boot-related images. Use the maintainer's method, including any required OTA reinstall procedure.
 
-**Implications:**
-- Must use temporary boot or installer ZIP
-- OTA updates may remove custom recovery
-- Need to reinstall after updates
-
-**Check active slot:**
 ```bash
 fastboot getvar current-slot
 ```
 
-**Switch slots if needed:**
-```bash
-fastboot set_active a
-# or
-fastboot set_active b
-```
+Record the selected slot before changes. Do not switch slots to experiment: the other slot may contain incompatible firmware or an incomplete update.
 
 ### Dynamic Partitions
 
@@ -608,14 +557,7 @@ fastboot set_active b
 
 ### Android Verified Boot (AVB)
 
-**With unlocked bootloader:**
-- AVB verification disabled
-- Custom recovery and modifications allowed
-- No need to flash vbmeta typically
-
-**If issues occur:**
-- Check device-specific instructions
-- Some devices may need vbmeta modifications
+An unlocked bootloader does not mean every AVB or rollback check is disabled. Only modify `vbmeta` or verification settings when the exact-device instructions explicitly require it. Do not relock with unsupported custom images.
 
 ### Fastbootd Mode
 
@@ -633,10 +575,7 @@ Used for:
 
 ### GKI Devices (Generic Kernel Image)
 
-**Android 12+ devices with GKI:**
-- Recovery may be in init_boot partition
-- Check device instructions carefully
-- Use appropriate partition for flashing
+GKI status does not establish a recovery installation target. A separate `init_boot` can hold a generic ramdisk, but its presence does not authorize flashing a recovery image there. Follow the recovery's device-specific instructions.
 
 ---
 
@@ -644,30 +583,9 @@ Used for:
 
 ### Recovery Won't Boot
 
-**Symptoms:** Device stuck on logo or bootloops after recovery flash
+Stop flashing and compare the image, firmware, partition and slot with the recovery maintainer's instructions. Do not try the same image on another partition. Temporary boot is an option only if the exact recovery build explicitly supports it.
 
-**Solutions:**
-
-1. Boot recovery temporarily to test:
-```bash
-fastboot boot recovery.img
-```
-
-2. Verify correct recovery for your device and Android version
-
-3. Flash to correct partition (check device instructions):
-```bash
-fastboot flash boot recovery.img
-# or
-fastboot flash vendor_boot recovery.img
-# or
-fastboot flash init_boot recovery.img
-```
-
-4. Restore stock image:
-```bash
-fastboot flash boot stock_boot.img
-```
+Restore the original images for the affected partitions and slots using the device's documented restore procedure. Samsung devices may require a full firmware restore rather than individual images. See [emergency recovery](../troubleshooting.md#emergency-recovery) if the documented restore path is unavailable.
 
 ### Recovery Disappears After Reboot
 
@@ -680,7 +598,7 @@ Boot to custom recovery immediately after flashing:
 fastboot reboot recovery
 ```
 
-Or install root solution (Magisk) which prevents restoration.
+Use only the recovery maintainer's documented persistence method; installing Magisk is not a universal solution.
 
 ### Touch Not Working
 
@@ -706,10 +624,9 @@ Option 2: Use OTG storage
 - Connect USB drive
 - Install from OTG
 
-Option 3: Format Data (data loss)
-- Wipe > Format Data
-- Type "yes" to confirm
-- Removes encryption and all data
+Option 3: Format Data only when required by the exact-device guide
+- **Erases user data and internal storage**; back up off-device first
+- Not a generic solution for unsupported recovery decryption
 
 ### Fastboot Not Detecting Device
 
@@ -736,30 +653,13 @@ Option 3: Format Data (data loss)
 
 ### Slot Issues (A/B Devices)
 
-**Boot fails after recovery installation:**
-
-Check active slot:
-```bash
-fastboot getvar current-slot
-```
-
-Try other slot:
-```bash
-fastboot set_active a
-fastboot reboot
-```
-
-Or:
-```bash
-fastboot set_active b
-fastboot reboot
-```
+Record `fastboot getvar current-slot` and compare it with the slot used by the documented installer. Do not blindly activate the other slot: it may have mismatched firmware or an incomplete OTA. Follow the exact-device recovery procedure to restore a consistent set of images.
 
 ### Installation Errors
 
 **"Remote: Flashing not allowed"**
 - Bootloader not fully unlocked
-- Some devices need: `fastboot flashing unlock_critical`
+- Do not unlock additional critical partitions as a generic fix; check the exact-device requirements
 
 **"Remote: Partition doesn't exist"**
 - Wrong partition name for your device
@@ -776,18 +676,9 @@ fastboot reboot
 
 ### Device Won't Boot to Any Mode
 
-1. Try emergency download mode (varies by manufacturer):
-   - Qualcomm: EDL mode (test point or special key combo)
-   - Samsung: Download mode (Volume Down + Power)
-   - Xiaomi: EDL mode (Volume Down + Power while connecting)
+Follow the manufacturer's exact-model recovery procedure or seek authorized service. Download Mode, EDL access and restore-tool eligibility vary by chipset, model and authorization; there is no universal key combination or unbrick tool. Do not short test points or flash a loader from another model based on a generic guide.
 
-2. Use manufacturer unbrick tools:
-   - Google: Flash full factory image
-   - Samsung: Odin with stock firmware
-   - Xiaomi: Mi Flash Tool
-   - OnePlus: MSM Download Tool
-
-3. Seek device-specific help on XDA Forums
+See [emergency recovery](../troubleshooting.md#emergency-recovery) and your [manufacturer guide](./index.md#device-specific-guides) for the next step.
 
 ### Backup Bootloader Access
 
