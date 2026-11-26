@@ -62,8 +62,6 @@ Magisk/KernelSU/LSPosed modules.
 - **[Activity Manager](https://github.com/sdex/ActivityManager)** - Discover the activities of installed applications, run them, and create shortcuts. `FOSS` | [🌱](https://f-droid.org/packages/com.activitymanager/)
 - **[Google Shortcuts Launcher](https://github.com/WSTxda/Google-Shortcuts-Launcher)** - Easily access essential Google apps features directly from your launcher app drawer. `FOSS`
 - **[HyperDesk](https://github.com/LuigiColantuono/HyperDesk)** - Applies icon packs and per-app icons to HyperOS and POCO launchers, and tweaks launcher and System UI visuals. HyperOS 2+; some hooks depend on the ROM build. `FOSS` `[LSP]`
-- **[HyperOS App Vault](https://github.com/Mods-Center/HyperOS-App-Vault)** - Enhanced HyperOS App Vault with unlocked widgets, high-end device features, blur adjustments, and scrolling animations. `Proprietary` `[M]` `[K]`
-- **[HyperOS Launcher](https://github.com/Mods-Center/HyperOS-Launcher#hyperos-launcher-v5)** - Enhanced HyperOS Launcher with features from high-end devices, including customizable app drawer, icon packs, and more. `Proprietary` `[M]` `[K]`
 - **[HyperStack](https://github.com/cramqin/HyperStack)** - Enables widget stacking on HyperOS 4 V8 launchers by flipping a hidden launcher preference. `FOSS`
 - **[Launcher3 QuickLaunch](https://github.com/hddq/launcher3-quicklaunch)** - Lets you press Enter in Launcher3's app drawer search to instantly launch the first search result. `FOSS` `[LSP]`
 - **[One UI Home 31](https://github.com/reiryuki/One-UI-Home-31-Magisk-Module)** - Ports Samsung's One UI Home launcher (target SDK 31) to non-One UI ROMs as a system module. Requires the One UI Core module; Android 8.0 to 12.1, not for Samsung devices. `Proprietary` `[M]` `[K]` `[A]`
@@ -80,7 +78,6 @@ Magisk/KernelSU/LSPosed modules.
 - **[HyperGlow](https://github.com/amarinne/hyperglow)** - Animated lock screen and always-on display lyrics for HyperOS 3. `FOSS` `[LSP]`
 - **[HyperLyric](https://github.com/limczhh/HyperLyric)** - Shows system lyrics in the status bar or HyperOS super island and restyles media cards. Android 13 to 16; lyrics need a separate source module. Upstream of HyperLyrics Enhanced. `FOSS` `[LSP]`
 - **[HyperLyrics Enhanced](https://github.com/juren233/HyperLyrics-Enhanced)** - Shows HyperIsland and always-on display lyrics on HyperOS, with Apple Music enhancements and bundled Lyricon providers. `FOSS` `[LSP]`
-- **[HyperOS AOD](https://github.com/Mods-Center/HyperOS-AOD)** - Enhanced HyperOS AOD and Lock Screen Editor app with unlocked features. `Proprietary` `[M]` `[K]`
 - **[XMorph Clock](https://github.com/Mahmud0808/XMorphClock)** - Replaces the stock lock screen clock with animated morphing faces, weather, widgets and user-placed elements with separate layouts for the large clock, small clock and always-on display. Android 12 to 17 on Pixel firmware and Pixel-based ROMs; manufacturer skins are not supported. `FOSS` `[LSP]`
 
 ## Notifications
@@ -133,7 +130,6 @@ Magisk/KernelSU/LSPosed modules.
 - **[HyperBackground](https://github.com/Solomonstery/HyperBackground)** - Customizes backgrounds, cards and device-info display in HyperOS 3 and 4 Settings and system apps. Android 13 and newer. `FOSS` `[LSP]`
 - **[HyperLight](https://github.com/KiminonawaResa/HyperLight#english)** - Completes the highlight blur effects for HyperOS 3, bringing a unified visual experience to the desktop, notification shade, and control center. `FOSS` `[LSP]`
 - **[HyperOS MTZ Studio](https://github.com/GloriousApps/HyperOS-MTZ-Studio)** - MTZ theme workspace for HyperOS: import, translate, convert, compose and apply themes, with an optional root module for native MTZ import. `Proprietary`
-- **[HyperOS Theme Manager](https://github.com/Mods-Center/HyperOS-Theme-Manager)** - Multi-theme servers, premium themes, AI wallpapers, third-party imports, super icons/widgets etc. `Proprietary` `[M]` `[K]`
 - **[Iconify](https://github.com/Mahmud0808/Iconify)** - Customize your Android 12+ device easily. `FOSS` `[M]` `[A]`
 - **[LiquidVivo](https://github.com/Sleep-jay/LiquidVivo)** - Adjusts blur, transparency and liquid glass effects across vivo OriginOS System UI. `FOSS` `[LSP]`
 - **[Lite Blur Control Center For HyperOS2](https://github.com/fakerieh/Lite-Blur-Control-Center-For-HyperOS2)** - Control Center Blur for HyperOS2 but LIGHTER. `FOSS` `[M]`
