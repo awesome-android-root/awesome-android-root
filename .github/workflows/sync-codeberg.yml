@@ -23,7 +23,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: useblacksmith/checkout@v1
+        uses: useblacksmith/checkout@v1.8.3
         with:
           fetch-depth: 0
           # Never leave GITHUB_TOKEN in the local git config.

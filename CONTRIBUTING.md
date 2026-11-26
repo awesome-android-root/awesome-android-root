@@ -27,3 +27,12 @@ commands](scripts/README.md#typescript-and-validation).
 - [Pull request template](.github/PULL_REQUEST_TEMPLATE.md)
 
 Contributions are licensed under the [MIT License](LICENSE).
+### Local validation
+
+Use the repository's pinned Bun version and Node 26, then `bun install`. Run
+`bun run lint` for internal Markdown links/assets/anchors and entry validation;
+Python is not needed. Links use the site's actual VitePress Markdown pipeline.
+Run `bun run check` for strict typechecks, focused unit tests, lint, a production
+build and Chromium search tests (`bunx playwright install chromium` once).
+See [scripts/README.md](scripts/README.md) for individual commands, subpath
+deployments and the retained search regression tests.

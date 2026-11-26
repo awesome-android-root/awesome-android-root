@@ -5,10 +5,9 @@ import { defineConfig } from 'vitepress'
 import type { DefaultTheme, HeadConfig } from 'vitepress'
 import type { Plugin } from 'vite'
 import { buildSearchIndex } from '../../scripts/search-index.ts'
-import { entrySearchPlugin } from './markdown/entrySearchPlugin.ts'
+import { markdownOptions } from './markdown/index.ts'
 import { withPwa } from '@vite-pwa/vitepress'
-import llmstxt, { copyOrDownloadAsMarkdownButtons } from 'vitepress-plugin-llms'
-import { storeLinkPlugin } from './markdown/storeLinkPlugin.ts'
+import llmstxt from 'vitepress-plugin-llms'
 import { withIcons } from './icons.ts'
 
 const isLlmPageLink = (link: unknown): link is string =>
@@ -621,16 +620,7 @@ export default withPwa(defineConfig({
   },
 
 
-  markdown: {
-    cache: true,
-    anchor: { level: [2, 3, 4] },
-    image: { lazyLoad: true },
-    config: (md) => {
-      md.use(storeLinkPlugin)
-      md.use(entrySearchPlugin)
-      md.use(copyOrDownloadAsMarkdownButtons, { componentName: 'MarkdownActions' })
-    }
-  },
+  markdown: markdownOptions,
 
   head: [
 

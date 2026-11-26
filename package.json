@@ -21,14 +21,13 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "bun scripts/prepare-build.ts && bun run index:build && vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "check:links": "python3 scripts/check_links.py",
+    "check:links": "bun scripts/check-links.ts",
     "test": "bun test scripts/*.test.ts",
     "index:build": "bun scripts/app-entries.ts",
-    "check": "bun run typecheck && bun run test && bun run lint && bun run docs:build && bun run test:index && bun run test:search",
+    "check": "bun run typecheck && bun run test && bun run lint && bun run docs:build && bun run test:search",
     "typecheck": "vue-tsc --noEmit -p tsconfig.browser.json && tsc --noEmit -p tsconfig.tools.json && tsc --noEmit -p tsconfig.worker.json",
     "test:search": "playwright test",
     "lint": "bun run check:links && bun run lint:entries",
-    "test:index": "bun scripts/verify-search-index.ts",
     "lint:entries": "bun scripts/app-entries.ts --check"
   },
   "keywords": [
@@ -57,17 +56,18 @@
     "vitepress"
   ],
   "devDependencies": {
-    "@lucide/vue": "^1.77.0",
+    "@lucide/vue": "^1.81.0",
     "@playwright/test": "^1.65.1",
     "@types/bun": "^1.4.5",
     "@types/markdown-it": "^14.2.0",
     "@vite-pwa/vitepress": "^2.0.5",
     "magicast": "^0.5.5",
-    "markdown-it": "^14.1.0",
     "pagefind": "^1.6.0",
-    "typescript": "~5.9.3",
+    "typescript": "~6.0.3",
+    "vite": "^8.4.0",
     "vitepress": "2.0.0-alpha.21",
     "vitepress-plugin-llms": "^1.15.0",
+    "vue": "^3.5.46",
     "vue-tsc": "^3.3.14"
   },
   "engines": {

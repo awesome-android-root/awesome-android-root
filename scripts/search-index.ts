@@ -1,6 +1,7 @@
 import { readFile, readdir, rm } from 'node:fs/promises'
 import { join, relative } from 'node:path'
-import MarkdownIt from 'markdown-it'
+import { createMarkdownRenderer } from 'vitepress'
+import { markdownOptions } from '../docs/.vitepress/markdown/index.ts'
 import { close, createIndex } from 'pagefind'
 import { parseEntries, extractBadges } from './app-entries.ts'
 import { entryAnchor } from '../docs/.vitepress/shared/entries.ts'
@@ -24,7 +25,7 @@ function checkErrors(response: { errors: string[] }): void {
 
 /** VitePress buildEnd runs after rendering, including for non-root base paths. */
 export async function buildSearchIndex(outDir: string, srcDir: string): Promise<void> {
-  const markdown = new MarkdownIt({ html: false })
+  const markdown = await createMarkdownRenderer(srcDir, markdownOptions)
   const outputPath = join(outDir, 'pagefind')
   await rm(outputPath, { recursive: true, force: true })
   const created = await createIndex({

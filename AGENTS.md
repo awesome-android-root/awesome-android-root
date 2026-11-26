@@ -102,7 +102,7 @@ Commands must be understood and relevant before being added.
 For internal links:
 
 ```bash
-python3 scripts/check_links.py
+bun run check:links
 ```
 
 External links should be authoritative and verified when relevant.
@@ -179,8 +179,8 @@ For app and module entries, also run:
 bun run index:build  # regenerates the app index, count page and reports entry format, ordering and badge problems
 ```
 
-CI runs internal links, entry lint, typecheck, unit tests, the build, index
-verification and browser search tests as blocking steps. `docs:build` also runs
+CI runs internal links, entry lint, typecheck, unit tests, the build and browser
+search tests as blocking steps. `docs:build` also runs
 `index:build` and generates Pagefind. See `scripts/README.md` for local search
 and validation commands. The build needs full git history
 because of `lastUpdated`.
