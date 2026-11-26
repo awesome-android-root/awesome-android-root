@@ -18,5 +18,3 @@ bun.lock
 
 # Local tooling and browser-test artifacts
 .cache/
-test-results/
-playwright-report/

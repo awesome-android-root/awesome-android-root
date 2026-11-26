@@ -97,8 +97,7 @@ bun run typecheck       # one TypeScript 7 compiler, separate runtime environmen
 bun run test            # focused icon, link, Markdown, MCP and search unit tests
 bun run lint            # internal links and entry lint (blocking on errors)
 bun run docs:build      # generate counts, render VitePress, then index Pagefind
-bunx playwright install chromium  # once; CI also installs system dependencies
-bun run test:search     # Bun runner + Playwright Chromium driver/assertions
+bun run test:search     # two search smoke tests; uses installed Google Chrome
 bun run check           # all of the above checks, including build/browser tests
 ```
 
@@ -150,18 +149,34 @@ their original languages; site/link validation uses Bun.
 
 ### Bun tests, including browser tests
 
-Both `bun run test` (unit tests) and `bun run test:search` use `bun:test`. Plain
-value assertions use Bun's `expect`. Browser tests retain Playwright's Chromium
-driver and auto-waiting locator assertions because Bun alone is not a browser.
-There is no separate Playwright test runner or `playwright.config.ts`. After
-building, plain `bun test` runs both suites; `bunfig.toml` excludes local audit
-checkouts and generated output from discovery.
+Both `bun run test` (unit tests) and `bun run test:search` use `bun:test` and
+Bun's `expect`. Browser tests use `puppeteer-core` to drive **installed Google
+Chrome**, or `CHROMIUM_PATH` for an explicit compatible binary. There is no
+Playwright dependency, browser bundle/downloader or second test runner.
+After building, plain `bun test` runs both suites; `bunfig.toml` excludes local
+audit checkouts and generated output from discovery.
 
 `tests/browser.ts` starts a fresh production preview, waits for readiness, launches
-Chromium and closes both during teardown, including launch failures. Each test
+the browser and closes both during teardown, including launch failures. Each test
 gets an isolated browser context. Port 4173 must be free; an existing preview is
-rejected rather than silently testing stale output. These tests are serial in
-Bun; they do not use Playwright runner retries, traces or worker fixtures.
+rejected rather than silently testing stale output. Tests are serial and use
+Puppeteer's built-in locators/condition waits, not fixed sleeps or a new assertion
+framework. The tradeoff is relying on installed Chrome rather than a driver-pinned
+browser; a runner Chrome update may require a driver update.
+
+### CI cost
+
+The pre-trim hosted run spent 7s building the site, **26s installing Chromium**,
+8s on browser tests, and 29s in a separate deployment job. The approximately
+1m45s total was pipeline overhead, not a 1m45s VitePress build.
+
+CI now uses the Ubuntu runner's existing Chrome, runs just the two search smoke
+checks below and deploys the validated workspace directly. There is no browser
+installation/apt step, artifact upload/download or second checkout/runtime/cache
+setup for deployment. The named links check is retained; build/deployment waits
+for it, and typechecks, unit tests, entry lint, build and smoke tests remain
+blocking. Fork PRs still build/test without accessing deployment secrets. These
+changes reduce orchestration work, not the amount of content being generated.
 
 
 ## Pagefind search
@@ -236,21 +251,27 @@ that the base matches hosting and that `/BASE/pagefind/` was uploaded. Search
 requires fetching its index, so an uncached index is unavailable offline; normal
 site navigation still works. The existing image-only PWA precache is unchanged.
 
-`test:search` starts and stops its own preview on port 4173. An installed Chromium is
-required; `CHROMIUM_PATH` can point to a system-compatible binary in constrained
-environments.
+`test:search` starts and stops its own preview on port 4173. Install Google Chrome
+locally, or set `CHROMIUM_PATH=/absolute/path/to/chrome` for a compatible Chromium
+binary. CI uses Google Chrome already provided by `ubuntu-latest`; it does not
+download a browser.
 
 ### Which tests cover search?
 
 - `scripts/search.test.ts`: exact/prefix ranking and deterministic out-of-order
   search/fragment completion and cancellation. Run `bun test scripts/search.test.ts`.
-- `tests/search.spec.ts`: the real generated Pagefind API, realistic queries,
-  keyboard/focus/reset/no-results behavior, entry navigation, mobile/dark mode,
-  module/fragment failure recovery and MCP integration. A theme regression scenario
-  also covers icons, theme toggling, store badges, Markdown actions, back-to-top
-  and offline-status behavior. Browser tests reject unexpected page errors and
-  Vue hydration/render warnings on the standard test pages. Run `bun run test:search`.
+- `tests/search.spec.ts`: **two** production-output smoke tests. One exercises
+  strict lazy loading, real Pagefind/WASM/index results, highlights, keyboard
+  selection, entry navigation, Escape and focus restoration. The other blocks
+  the engine request and verifies in-place Retry recovery. Both fail on page
+  errors/Vue warnings. Run `bun run test:search`.
 
+Removed the broad third-party relevance matrix, generic theme-controls journey,
+mobile duplicate of entry navigation, separate browser MCP audit and fragment
+retry duplicate. The owned ranking/race logic and MCP input/route validation stay
+in cheap Bun unit tests. This is deliberately not automated certification of all
+mobile/theme/MCP interactions; make targeted manual checks when changing those
+areas.
 The one-time gzip-fragment inspector (`test:index`) and corpus-size audit were
 removed. Build-time Pagefind errors and duplicate entry IDs already fail the
 build; the source link checker validates the shared anchor pipeline. Broad

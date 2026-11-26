@@ -34,8 +34,9 @@ Use the repository's pinned Bun version and Node 26, then `bun install`. Run
 `bun run lint` for internal Markdown links/assets/anchors and entry validation;
 Python is not needed. Links use the site's actual VitePress Markdown pipeline.
 Run `bun run check` for strict typechecks, focused unit tests, lint, a production
-build and Chromium tests (`bunx playwright install chromium` once). Both unit
-and browser suites use Bun's runner; Playwright drives the actual browser.
+build and two browser search smoke tests. Install Google Chrome locally, or set
+`CHROMIUM_PATH` to a compatible Chromium binary. Both suites use Bun's runner;
+`puppeteer-core` drives the installed browser without downloading one.
 All environments use the same stable TypeScript 7 compiler. Custom Vue render
 components use checked TSX, not a separate vue-tsc/older compiler.
 See [scripts/README.md](scripts/README.md) for individual commands, subpath

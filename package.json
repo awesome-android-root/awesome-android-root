@@ -57,12 +57,12 @@
   ],
   "devDependencies": {
     "@lucide/vue": "^1.81.0",
-    "@playwright/test": "^1.65.1",
     "@types/bun": "^1.4.5",
     "@types/markdown-it": "^14.2.0",
     "@vite-pwa/vitepress": "^2.0.5",
     "magicast": "^0.5.5",
     "pagefind": "^1.6.0",
+    "puppeteer-core": "^25.19.0",
     "typescript": "7.0.2",
     "vite": "^8.4.0",
     "vitepress": "2.0.0-alpha.21",

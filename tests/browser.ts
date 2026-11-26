@@ -1,12 +1,11 @@
-import { chromium } from '@playwright/test'
-import type { Browser } from '@playwright/test'
+import { launch } from 'puppeteer-core'
+import type { Browser } from 'puppeteer-core'
 
 const base = process.env.SITE_BASE || '/'
 export const baseURL = `http://127.0.0.1:4173${base}`
 
-/** Bun owns the lifecycle; Playwright is only the browser driver/assertions. */
+/** Use installed Chrome: no bundled browser, browser download or second runner. */
 export async function startBrowser() {
-  // Never silently reuse a stale preview: it may have a different build/base.
   const occupied = await fetch(baseURL).then(() => true, () => false)
   if (occupied) throw new Error('Browser test port 4173 is already in use; stop that preview first')
   const server = Bun.spawn(['bun', 'run', 'docs:preview', '--host', '0.0.0.0', '--port', '4173'], {
@@ -29,10 +28,10 @@ export async function startBrowser() {
       if (Date.now() > deadline) throw new Error(`Preview did not start at ${baseURL}`)
       await Bun.sleep(100)
     }
-    browser = await chromium.launch(process.env.CHROMIUM_PATH ? {
-      executablePath: process.env.CHROMIUM_PATH,
-      args: ['--no-sandbox', '--disable-dev-shm-usage', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader']
-    } : {})
+    browser = await launch({
+      ...(process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : { channel: 'chrome' }),
+      args: ['--no-sandbox', '--disable-dev-shm-usage']
+    })
     return { browser, stop }
   } catch (error) {
     await stop()
