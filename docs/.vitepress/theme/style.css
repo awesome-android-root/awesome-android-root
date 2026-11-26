@@ -655,6 +655,13 @@ img {
   color: var(--vp-c-text-2);
 }
 
+.community-card.sponsor-card img {
+  aspect-ratio: auto;
+  width: min(100%, 220px);
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
 
 /**
  * Mobile Optimizations

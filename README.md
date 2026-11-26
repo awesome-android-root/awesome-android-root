@@ -26,7 +26,7 @@
   <a href="#guides-and-documentation">Guides</a> &middot;
   <a href="#contributing">Contributing</a> &middot;
   <a href="#community">Community</a> &middot;
-  <a href="#license-and-disclaimer">License</a>
+  <a href="#sponsors">Sponsors</a>
 </p>
 
 ---
@@ -127,6 +127,13 @@ Read the **[Contributing Guide ↗](docs/contributing.md)** and the **[PR templa
 | **Codeberg** | Mirror | [Codeberg Repo](https://codeberg.org/awesome-android-root/awesome-android-root/) |
 | **Issues** | Bug reports and entry requests | [GitHub Issues](https://github.com/awesome-android-root/awesome-android-root/issues) |
 | **X / Twitter** | Updates and news | [@awsm_and_root](https://x.com/awsm_and_root) |
+
+## Sponsors
+
+<p align="center">
+  <a href="https://addy.io/?ref=awesome-android-root"><img src="docs/public/images/addy-logo.svg" alt="addy.io" width="160" height="66"></a>
+  <br>Thanks to <a href="https://addy.io/?ref=awesome-android-root">addy.io</a> for supporting this project.
+</p>
 
 ## License and Disclaimer
 
