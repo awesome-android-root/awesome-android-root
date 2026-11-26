@@ -182,13 +182,16 @@ For control, or when no prebuilt kernel covers your device. Upstream keeps per k
 1. Clone official KernelSU at a release tag, and the matching SUSFS branch at a tag.
 2. Apply `10_enable_susfs_for_ksu.patch` inside the KernelSU directory and `50_add_susfs_in_kernel-<version>.patch` at the kernel root, then copy the patch set's `fs/susfs.c` and `include/linux/susfs.h` into place.
 3. Enable `CONFIG_KSU_SUSFS=y` and choose the `CONFIG_KSU_SUSFS_*` features you want in `defconfig` or the KernelSU Kconfig.
-4. Build against the Google GKI artifacts (or the DDK toolchain for LKM builds). Make sure the boot image's security patch level is not older than your device's.
+4. Build using the target kernel's documented workflow (Google GKI artifacts or the appropriate DDK workflow for LKM builds). Verify the boot image's security patch level and the device's anti-rollback requirements before flashing.
 5. Flash, boot, install the userspace module.
 
 Upstream's README has the exact copy and patch commands, plus notes for `-dirty` version strings and spoofing `/proc/config.gz` with your stock config.
 
-> [!WARNING]
-> **GKI ABI symbol protections:** some Android 14+ GKI kernel-build workflows remove the `abi_gki_protected_exports_*` files so that modules built against modified symbol lists can load. This is a build-specific workaround tied to how a particular kernel tree and its vendor modules handle the GKI ABI, not a general step: whether it is needed at all depends on the exact kernel build you are reproducing. Before touching ABI files, verify the target kernel's build instructions and the [upstream SUSFS patch set](https://gitlab.com/simonpunk/susfs4ksu) documentation, and confirm the resulting kernel still loads your device's vendor modules.
+::: warning CONDITIONAL GKI BUILD TROUBLESHOOTING
+The [community SUSFS build instructions](https://github.com/ENGRahsepar/susfs4ksu#readme) describe removing `common/android/abi_gki_protected_exports_aarch64` and `common/android/abi_gki_protected_exports_x86_64` for an **Android 14+ GKI build made from Google artifacts**, to address vendor modules such as Wi-Fi failing to work in that workflow. This is not a universal SUSFS installation step or an instruction for every Android 14+ phone, custom kernel or LKM build.
+
+These files participate in GKI ABI/export protection. Before modifying them, verify the target kernel's build instructions, the applicable SUSFS branch and the actual module-loading failure. Changing ABI protection can affect kernel/vendor-module compatibility; do not delete files simply because they exist. If the kernel maintainer does not document the workaround for your build, seek maintainer guidance first.
+:::
 
 ### Option 3: SUSFS as a loadable kernel module
 

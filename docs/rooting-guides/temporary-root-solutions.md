@@ -54,39 +54,72 @@ head:
 
 # Bootloader Mods & Temporary Root {#bootloader-mods-temporary-root}
 
-Most guides here cover boot-image root installed after unlocking the bootloader. This page distinguishes persistent boot-chain modifications from session-only kernel-exploit root that can leave the bootloader locked. It is a project directory and comparison: step-by-step temporary-root instructions, session safety and failure recovery live in the [temporary-root guide](./root-without-unlocking-bootloader.md).
+This is a project directory, not an installation guide. For exact device/build checks, running a session, persistence, module limits and failure recovery, use the [temporary-root usage guide](./root-without-unlocking-bootloader.md). Bootloader research is listed separately below because it changes a different security layer and is not an equivalent rooting method.
 
 > [!CAUTION]
 > These are device-specific research tools that operate below the OS. A bad bootloader flash or failed exploit run can brick a device. Read the project's current documentation and keep stock firmware and recovery options available before proceeding.
 
-## MediaTek Bootloader Modification & Spoofing Tools
+## DirtyFrag and GhostLock Temporary Root {#ghostlock-temporary-root}
 
-These tools modify the MediaTek boot chain rather than the boot or init_boot partition, but they do not all perform the same operation. They fall into three distinct groups.
+| Project family | Compatibility / status notes | Source |
+|----------------|------------------------------|--------|
+| DirtyFrag loaders | Vulnerable kernel plus loader-specific targets; some require a matching KernelSU module | [Project directory and upstream tables](https://github.com/fynks/awesome-temporary-root) |
+| GhostLock loaders | Exact device/build or documented kernel profile; updates can invalidate support | [Project directory and upstream tables](https://github.com/fynks/awesome-temporary-root) |
 
-### Bootloader / secure-boot modification
+Use that directory to locate a loader, then verify its **own** target list and releases. A community report or matching Android version alone is not proof of support. Run instructions belong in the [usage guide](./root-without-unlocking-bootloader.md#run-a-session-safely).
 
-Installed modifications that change what the device's own bootloader does. Kaeru injects code into LK (Little Kernel) to add fastboot commands and change boot-mode key mappings. Fenrir patches `bl2_ext` so the Preloader skips verification on supported devices and can spoof the reported lock state.
+## Other Temporary-Root Tools
+
+See the loader's current README for requirements, manager/transport and testing status. These differ by project.
+
+- **[Shark](https://github.com/Yunnijian/Shark-Releases)** - Uses Shizuku or Stellar and the distinct [CVE-2026-98260](https://github.com/CVEProject/cvelistV5/blob/main/cves/2026/98xxx/CVE-2026-98260.json) POSIX CPU-timer bug to late-load a KernelSU-compatible module for the chosen manager. Check its upstream README for exact supported device and kernel targets.
+
+## Comparison
+
+| Technique | Compatibility basis | Persistence / principal risk |
+|-----------|---------------------|------------------------------|
+| Temporary-root loaders (DirtyFrag, GhostLock, Shark) | Exploit-specific device/build/profile and manager requirements | Active root ends on full reboot; persistent data changes and exploit crashes remain possible |
+| Bootloader/secure-boot modification (Kaeru, Fenrir) | Exact boot-chain image and device support | Changes can persist across reboots; wrong bootloader changes may brick the device |
+| BootROM/preloader tooling (mtkclient, amonet) | Exact chipset, device and exploit/transport support | Flash/read-write operations, not equivalent session-root methods |
+| LK image utilities (lkpatcher, liblk) | Supported image format and documented policies | Offline parsing/patching support; a patched image is not automatically safe to flash |
+| Samsung KEY2 research | Exact target documented by the proof of concept | Key fusing can be irreversible; not session-only root |
+
+For standard unlocked-bootloader installations, see the [framework comparison](./root-framework-comparison.md).
+
+## Usage and safety reference {#faq}
+
+<span id="does-ghostlock-survive-reboot-or-replace-permanent-root"></span>
+<span id="can-it-load-root-modules"></span>
+<span id="which-devices-are-supported"></span>
+<span id="is-temporary-root-safe"></span>
+<span id="safety-legal-notes"></span>
+
+Session behavior, module compatibility, persistent changes and recovery are covered once in the [temporary-root guide](./root-without-unlocking-bootloader.md). A full reboot ends active root, **not necessarily files or settings changed while rooted**.
+
+## Bootloader modification research (not temporary root)
+
+### MediaTek bootloader / secure-boot modification {#mediatek-bootloader-modification-spoofing-tools}
+
+These tools modify the MediaTek boot chain rather than the boot or init_boot partition. Kaeru injects code into LK (Little Kernel) to add fastboot commands and change boot-mode key mappings. Fenrir patches `bl2_ext` so the Preloader skips verification on supported devices and can spoof the reported lock state.
 
 - **[Kaeru](https://github.com/R0rt1z2/kaeru)** - ARMv7 payload that gets arbitrary code execution inside MediaTek LK bootloaders. It can register custom fastboot commands, remap key-combo boot modes, and remove the unlocked-bootloader boot warning. Bootloader-lock spoofing is opt-in, toggled from fastboot. `FOSS` (AGPL-3.0)
 - **[Fenrir](https://github.com/R0rt1z2/fenrir)** - Proof-of-concept exploit for a secure-boot flaw on the Nothing Phone (2a), CMF Phone 1, and a small set of other MediaTek devices. It patches `bl2_ext` so the Preloader skips verification, breaking the chain of trust from EL3 onward, and can spoof the device's reported lock state. `FOSS` (AGPL-3.0)
 
-### BootROM / preloader exploitation and flashing tools
+<span id="supporting-toolchain"></span>
 
-Low-level tools that talk to the BootROM or preloader directly, typically over USB in crash or download modes, to read, write and unlock from outside the running OS.
+### BootROM/preloader exploitation and flashing tools
 
 - **[mtkclient](https://github.com/bkerler/mtkclient)** - MediaTek reverse-engineering and flashing tool for BROM/preloader read-write, partition dumping, and seccfg unlock. Includes the `kamakiri` exploit chain used to get code execution during flashing. `FOSS`
 - **[amonet](https://github.com/R0rt1z2/amonet)** - Older BootROM and LK exploit chain, mainly for Amazon-branded MediaTek devices with locked-down BROM stages that mtkclient alone cannot reach. `FOSS`
 
 ### LK image parsing, patching and supporting libraries
 
-Offline tooling for analyzing and rebuilding LK images on a computer, and libraries used by the tools above.
+These support image analysis and modification; they are not standalone temporary-root loaders.
 
 - **[lkpatcher](https://github.com/R0rt1z2/lkpatcher)** - Patches known security policies in an LK image, with partition listing, policy analysis, and JSON-based custom patches. `FOSS`
 - **[liblk](https://github.com/R0rt1z2/liblk)** - Python library for parsing and rebuilding MediaTek LK images; used by lkpatcher and the Kaeru/Fenrir injectors. `FOSS`
 
-None of these projects grants temporary root by itself; they are boot-chain research and device-specific modification tools, not general rooting methods.
-
-## Samsung Exynos Bootloader Research
+### Samsung Exynos Bootloader Research
 
 These are boot-chain research references, **not temporary-root tools**. Samsung's [November 2026 security bulletin](https://security.samsungmobile.com/securityUpdate.smsb) describes CVE-2026-21155 / SVE-2026-3546 as a bootloader out-of-bounds write requiring physical access and lists a fix in SMR Nov-2026 Release 1.
 
@@ -96,52 +129,7 @@ These are boot-chain research references, **not temporary-root tools**. Samsung'
 > [!CAUTION]
 > Fusing a custom Secure Boot key is [irreversible](https://github.com/henr1kas/Exynos#optional-key-fusing) and can leave the device dependent on custom-signed images. Rebooting does not undo it. Wrong images, lost keys or unsupported hardware can prevent recovery; do not downgrade security updates to pursue an exploit.
 
-## DirtyFrag and GhostLock Temporary Root {#ghostlock-temporary-root}
-
-**DirtyFrag** (CVE-2026-43284) uses a page-cache vulnerability on supported kernels; **GhostLock** (CVE-2026-43499) uses a kernel race on builds with a matching device profile. Both can provide root without unlocking or flashing a boot image on supported builds. A full reboot ends the active session, and updates may remove the vulnerability.
-
-Setup, session safety, module handling, failure recovery and the FAQ live in the dedicated [temporary-root guide](./root-without-unlocking-bootloader.md). This page keeps only the directory-level comparison below.
-
-> [!TIP]
-> Our sister project **[Awesome Temporary Root](https://awesome-temporary-root.pages.dev/)** ([GitHub](https://github.com/fynks/awesome-temporary-root)) maintains device/build sections, links to live upstream tables, tools, module reports, setup and troubleshooting.
-
-## Other Temporary-Root Tools
-
-Some loaders late-load a KernelSU-compatible module to grant `su` and support compatible modules; others provide only a root shell. ADB or Shizuku may be used to stage a loader, but Shizuku's shell access is not root by itself. Use the manager and transport named by the chosen loader.
-
-- **[Shark](https://github.com/Yunnijian/Shark-Releases)** - Uses Shizuku or Stellar and the distinct [CVE-2026-98260](https://github.com/CVEProject/cvelistV5/blob/main/cves/2026/98xxx/CVE-2026-98260.json) POSIX CPU-timer bug to late-load a KernelSU-compatible module for the chosen manager. Check its upstream README for exact supported device and kernel targets.
-
-Upstream target lists and compatibility checks are not guarantees of a successful run. A kernel crash can occur; a full reboot clears active runtime root but may leave files or settings changed during the session.
-
-## Comparison
-
-The Samsung KEY2 proof of concept is not covered in the table: its fused signing key is permanent. DirtyFrag and GhostLock are temporary-root methods, not root frameworks; some loaders use KernelSU during the session.
-
-| | Magisk / KernelSU / APatch | Kaeru / Fenrir | DirtyFrag | GhostLock |
-|---|---|---|---|---|
-| Bootloader | Normally unlocked for standard installation | Unlocked to flash the modification | Can stay locked on supported builds | Can stay locked on supported builds |
-| Full reboot | Root usually returns until removed or replaced | Modification remains until restored or replaced | Active root ends | Active root ends |
-| Scope | Compatible boot-related image or custom kernel | LK / boot-chain images | Kernel page cache; some loaders use KernelSU | Kernel race; some loaders use KernelSU |
-| Device support | Broad, but device-specific images and procedures apply | MediaTek only; exact-device support | Vulnerable kernel and compatible loader/module | Exact device and kernel profile |
-| Main limitation | Requires an unlockable device and careful image/OTA handling | Wrong LK or preloader changes can brick a device | An OTA can patch the vulnerability or break compatibility | An OTA can patch the vulnerability or break the profile; a failed race can reboot |
-| Knox / warranty fuse | Depends on OEM and install method | Depends on OEM | Fuse and Knox-service behavior are not guaranteed | Fuse and Knox-service behavior are not guaranteed |
-| Lock-state and Play Integrity | May need separate hiding tools; results are not guaranteed | Lock-state spoofing is available in some tools; Integrity results are not guaranteed | A locked bootloader does not establish Integrity results | A locked bootloader does not establish Integrity results |
-
-For either temporary-root method, check [Awesome Temporary Root](https://awesome-temporary-root.pages.dev/guide/#supported-devices) and the loader's own requirements. Some loaders can automatically re-run after a reboot; files or settings changed during a session may remain.
-
-For root-hiding tools and configuration on a normally rooted device, see [Root Hiding & Play Integrity](../apps-and-modules/root-management#root-hiding-play-integrity) and the [troubleshooting guide](../troubleshooting.md#play-integrity-and-banking-apps).
-
-## FAQ
-
-Temporary-root questions - reboot behavior, module support, device support and safety - are answered in the [temporary-root guide's FAQ](./root-without-unlocking-bootloader.md#faq). For the boot-chain research tools above, read each project's own documentation: they are separate techniques with separate risks, not alternative rooting methods.
-
-## Safety & Legal Notes
-
-- For Kaeru and Fenrir, verify offsets for the exact bootloader version and keep a stock LK/preloader image before changing it.
-- For runtime exploits, use only project-documented targets and inspect the linked project's issue tracker for current status.
-- Do not confuse Samsung KEY2 fusing with session-only root or assume that a firmware flash can reverse a fuse.
-- These tools are research software maintained by individuals; expect device-specific limitations and breakage after updates.
-- See the project's [Legal & Safety](../legal-disclaimer.md) page for the general disclaimer.
+Verify the exact bootloader version, offsets and stock LK/preloader restore path before boot-chain research. These tools are not substitutes for a temporary-root loader. See [Legal & Safety](../legal-disclaimer.md).
 
 ## Related Resources
 

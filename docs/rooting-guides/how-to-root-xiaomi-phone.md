@@ -75,6 +75,7 @@ Xiaomi is among the strictest OEMs for unlocking/root.
 
 - Mi Account required and waiting period enforced
 - Verification steps change by region/firmware and over time
+- Xiaomi removed the bootloader-unlock application entry from Mi Community (reported December 2025); confirm the current application path for your region and model before relying on it
 - HyperOS tightened unlock rules (especially CN models)
 - MIUI/HyperOS employ strong AVB 2.0, dynamic partitions, and anti-rollback
 - Play Integrity replaces SafetyNet; root-hiding needs extra steps
@@ -103,6 +104,8 @@ Most Xiaomi/Redmi/POCO devices with unlockable bootloaders can be rooted. Check 
 
 ## Prerequisites & Setup
 
+Complete the [universal preparation checklist](./index.md#pre-rooting-checklist) for backups, battery, computer/cable and ADB/Fastboot setup. The requirements below cover this manufacturer's eligibility, firmware and tools.
+
 ### Mi Account Preparation
 1. [Create](https://global.account.xiaomi.com/fe/service/register?_locale=en&_uRegion=ZA)/prepare a dedicated Mi Account (avoid changing password mid-process).
 2. Insert an active SIM (keep it inserted until unlocked).
@@ -114,12 +117,11 @@ Note on waiting time: Xiaomi’s timer is variable now. Users report 72h, 168h (
 
 ### Required Tools
 1. Mi Unlock Tool (Windows-only): https://www.miui.com/unlock/index_en.html
-2. Platform Tools (ADB/Fastboot): https://developer.android.com/studio/releases/platform-tools
-3. Magisk APK (latest stable): https://github.com/topjohnwu/Magisk/releases
-4. Stock Firmware for your exact model/build:
+2. Magisk APK (latest stable): https://github.com/topjohnwu/Magisk/releases
+3. Stock Firmware for your exact model/build:
    - Xiaomi Firmware Updater: https://xmfirmwareupdater.com/
    - Official MIUI/HyperOS Downloads: https://c.mi.com/global/miuidownload/index
-5. USB Drivers:
+4. USB Drivers:
    - [Google USB Driver](https://developer.android.com/studio/run/win-usb) or Xiaomi USB drivers; avoid outdated Mi PC Suite (“Mi Assistant”) unless specifically needed.
 
 Optional but recommended:
@@ -213,14 +215,7 @@ Magisk patches the image containing the relevant ramdisk, which may be `boot.img
 
 #### Step 2: Patch with Magisk (see [Magisk Guide](./magisk-guide.md#method-1-boot-image-patching-recommended))
 
-1. Transfer the verified image to the phone. For example, if it is `boot.img`:
-
-   ```bash
-   adb push boot.img /sdcard/Download/
-   ```
-
-2. On that **same device**, open the official Magisk app and choose **Install > Patch firmware / image > Select from storage**. Select the verified image and note the output filename. Never flash a pre-patched image from another device.
-3. Pull the output, replacing the example with its actual name:
+Follow [Magisk image selection and patching](./magisk-guide.md#step-1-download-required-files) using the stock image verified above. Patch on the **same device** that will use it, retain the original, and note the actual output filename for the flash step. Never flash a pre-patched image from another device. Pull the output, replacing the example with its actual name:
 
    ```bash
    adb pull /sdcard/Download/magisk_patched-EXAMPLE.img .

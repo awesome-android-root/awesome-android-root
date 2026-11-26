@@ -96,6 +96,8 @@ The community-maintained [Nothing Archive device index](https://github.com/spike
 
 ## Prerequisites
 
+Complete the [universal preparation checklist](./index.md#pre-rooting-checklist) for backups, battery, computer/cable and ADB/Fastboot setup. The requirements below cover this manufacturer's eligibility, firmware and tools.
+
 ### Critical Requirements
 
 ::: danger BEFORE YOU START
@@ -108,25 +110,17 @@ The community-maintained [Nothing Archive device index](https://github.com/spike
 **Glyph Interface:** May not work on some custom ROMs. Test before full switch.
 :::
 
-### Hardware Requirements
-
-- Nothing Phone device (any model)
-- Quality USB-C cable
-- Computer (Windows, macOS, or Linux)
-- 50%+ battery charge
+<span id="hardware-requirements"></span>
 
 ### Software Requirements
 
 **On Computer:**
 
-1. **Platform Tools** (ADB/Fastboot)
-   - Download: [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools)
-
-2. **USB Drivers** (Windows)
+1. **USB Drivers** (Windows)
    - Usually auto-install
    - Or download generic Android drivers
 
-3. **Stock Firmware** (for recovery)
+2. **Stock Firmware** (for recovery)
    - The community-maintained [Nothing Archive](https://github.com/spike0en/nothing_archive) indexes firmware and OTA packages. Verify model, region and exact installed build before using a file.
    - [Nothing Support](https://support.nothing.tech/hc/en-us/articles/43114751704209-How-do-I-download-the-latest-firmware) describes the normal system-update path. An OTA package is not necessarily a complete factory recovery package.
 
@@ -211,7 +205,7 @@ An incremental OTA may need the exact base images and the extractor's `-old` opt
 
 **Step 2: Patch with Magisk**
 
-Transfer the verified image to the phone. On the **same device**, install the [official Magisk APK](https://github.com/topjohnwu/Magisk/releases), then select **Install > Patch firmware / image > Select from storage** and patch the image. Never flash an image patched on another device. Note the actual output filename.
+Follow [Magisk image selection and patching](./magisk-guide.md#step-1-download-required-files) using the stock image verified above. Patch on the **same device** that will use it, retain the original, and note the actual output filename for the flash step. Never flash an image patched on another device.
 
 **Step 3: Flash the patched image**
 
@@ -251,7 +245,7 @@ Check that Magisk reports installed. Grant a trusted app root in **Superuser** b
 
 ### Configure Magisk
 
-Follow the universal post-root setup in the [main rooting guide](./index.md#step-4-post-root-configuration); see the [Magisk guide](./magisk-guide.md#post-installation-setup) and [Play Integrity guidance](../troubleshooting.md#play-integrity-and-banking-apps) for details. KernelSU is an alternative only if the exact device and kernel are supported - see the [KernelSU guide](./kernelsu-guide.md) before switching; do not install it over Magisk.
+Use the shared [post-root checklist](./index.md#step-4-post-root-configuration), [Magisk configuration](./magisk-guide.md#post-installation-setup) and [module safety guidance](./index.md#module-safety). KernelSU is an alternative only if the exact device and kernel are supported - see the [KernelSU guide](./kernelsu-guide.md) before switching; do not install it over Magisk.
 
 ### Nothing OS Optimization
 
@@ -265,9 +259,9 @@ Follow the universal post-root setup in the [main rooting guide](./index.md#step
 2. Magisk and root apps
 3. Allow background activity
 
-### Recommended Modules
+<span id="recommended-modules"></span>
 
-Pick modules from the [app and module catalog](../apps-and-modules/) and follow its [safety guidance](../apps-and-modules/index.md#safety-legal). Test Glyph-related modules carefully - most have limited or no Glyph support.
+Use the shared [module safety checklist](./index.md#module-safety) before installing add-ons. Test Glyph-related modules carefully - most have limited or no Glyph support.
 
 ---
 
@@ -395,12 +389,7 @@ Relocking a modified or incompatible device can make it unbootable and may erase
 
 ## Best Practices
 
-### Security
-
-1. **Grant root only to trusted apps**
-2. **Use DenyList where appropriate**, without assuming it bypasses app checks
-3. **Install only trusted modules**
-4. **Keep Magisk updated**
+Use the shared [post-root checklist](./index.md#step-4-post-root-configuration) and [module safety guidance](./index.md#module-safety). Keep the exact-build stock images and follow the manufacturer-specific OTA and restore procedures above.
 
 ---
 

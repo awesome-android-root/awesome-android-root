@@ -141,7 +141,7 @@ Save the output before starting. A kernel-interface label such as `android14-6.1
 
 ## Find device and tool information {#all-apps-and-projects-for-ghostlock}
 
-Use the maintained sections of [Awesome Temporary Root](https://awesome-temporary-root.pages.dev/guide/) to find support information and the original loader instructions.
+Use the [project directory](./temporary-root-solutions.md#ghostlock-temporary-root) to compare tool families, then the maintained sections of [Awesome Temporary Root](https://awesome-temporary-root.pages.dev/guide/) to find support information and the original loader instructions.
 
 | Looking for | Sister project sections |
 | --- | --- |
@@ -235,7 +235,7 @@ There is no guarantee. Results depend on the device, modifications and each app'
 ## Related pages
 
 - [Awesome Temporary Root](https://awesome-temporary-root.pages.dev/) ([GitHub](https://github.com/fynks/awesome-temporary-root)) - maintained support information and module reports
-- [Bootloader Mods & Temporary Root](./temporary-root-solutions.md) - compare temporary root with bootloader modifications
+- [Temporary-root project directory](./temporary-root-solutions.md) - project comparison and separately categorized bootloader research
 - [Root Framework Comparison](./root-framework-comparison.md) - compare standard root installations
 - [Legal & Safety](../legal-disclaimer.md) · [Troubleshooting](../troubleshooting.md)
 

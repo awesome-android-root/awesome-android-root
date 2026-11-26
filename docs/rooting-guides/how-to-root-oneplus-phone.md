@@ -80,6 +80,8 @@ This guide covers Magisk on eligible OnePlus devices running OxygenOS or ColorOS
 
 ## Prerequisites
 
+Complete the [universal preparation checklist](./index.md#pre-rooting-checklist) for backups, battery, computer/cable and ADB/Fastboot setup. The requirements below cover this manufacturer's eligibility, firmware and tools.
+
 ### Critical Requirements
 
 ::: danger BEFORE YOU START
@@ -101,30 +103,25 @@ Most OnePlus devices with unlockable bootloaders can be rooted. Check [XDA Forum
 - **Chinese-market models** running ColorOS may have additional restrictions
 :::
 
+::: danger BUILD-SPECIFIC ANTI-ROLLBACK FUSE
+Avoid ColorOS/OxygenOS builds whose version ends in `.500`, `.501` or `.503`: reports from January 2026 say installing custom images on these builds trips a hardware anti-rollback fuse that permanently blocks downgrades and most unbricking methods. Verify your exact build number in Settings before unlocking or flashing, and check your device forum for the current status of this restriction.
+:::
+
 ::: tip Locked bootloader? Temporary root exists
 On specific OnePlus, OPPO and realme builds, **ghostlock-oneplus** uses GhostLock (CVE-2026-43499) for session-only root without unlocking the bootloader. A full reboot clears active root, but files and settings changed during the session may remain. Other tools use different exploits and target lists; check the exact model and kernel in the loader's own documentation and the sister project's [OnePlus, OPPO and Realme section](https://awesome-temporary-root.pages.dev/guide/#oneplus-oppo-and-realme).
 :::
 
-### Hardware Requirements
-
-- OnePlus device (any supported model)
-- Quality USB-C cable
-- Computer (Windows, macOS, or Linux)
-- 50%+ battery charge
+<span id="hardware-requirements"></span>
 
 ### Software Requirements
 
 **On Computer:**
 
-1. **Platform Tools** (ADB/Fastboot)
-   - Download: [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools)
-   - Extract to easy location
-
-2. **OnePlus USB Drivers** (Windows)
+1. **OnePlus USB Drivers** (Windows)
    - Usually auto-install with ADB
    - Or download from OnePlus site
 
-3. **Stock Firmware** (for recovery)
+2. **Stock Firmware** (for recovery)
    - Obtain the exact model, region and installed build, with a verified device-specific restore procedure.
    - [Oxygen Updater](https://github.com/oxygen-updater/os-updater) is a third-party update downloader. Its offered package may not match the installed build; verify it before use.
    - Check [OnePlus Support](https://www.oneplus.com/support) or a trusted model-specific community source when the required package is unavailable.
@@ -238,7 +235,7 @@ Incremental OTAs may require the exact base images and the extractor's `-old` op
 
 **Step 3: Patch on the device**
 
-Transfer the verified image to the phone, install the official [Magisk APK](https://github.com/topjohnwu/Magisk/releases), and select **Install > Patch firmware / image > Select from storage**. Patch on the **same device** that will use the result; do not use a shared pre-patched image.
+Follow [Magisk image selection and patching](./magisk-guide.md#step-1-download-required-files) using the stock image verified above. Patch on the **same device** that will use it, retain the original, and note the actual output filename for the flash step. Do not use a shared pre-patched image.
 
 **Step 4: Flash the patched image**
 
@@ -286,7 +283,7 @@ For a supported legacy device, upstream describes renaming the official Magisk A
 
 ### Configure Magisk
 
-Follow the universal post-root setup in the [main rooting guide](./index.md#step-4-post-root-configuration); see the [Magisk guide](./magisk-guide.md#post-installation-setup) for details.
+Use the shared [post-root checklist](./index.md#step-4-post-root-configuration), [Magisk configuration](./magisk-guide.md#post-installation-setup) and [module safety guidance](./index.md#module-safety).
 
 ### OxygenOS/ColorOS Optimization
 
@@ -386,14 +383,7 @@ Relocking a modified or incompatible device can make it unbootable and may erase
 
 ## Best Practices
 
-### Security
-
-1. **Grant root only to trusted apps**
-2. **Use DenyList where appropriate**, without assuming it bypasses app checks
-3. **Only install trusted modules**
-4. **Keep Magisk updated**
-5. **Back up stock images**
-6. **Use strong device security** (PIN, password, biometrics)
+Use the shared [post-root checklist](./index.md#step-4-post-root-configuration) and [module safety guidance](./index.md#module-safety). Keep the exact-build stock images and follow the manufacturer-specific OTA and restore procedures above.
 
 ---
 

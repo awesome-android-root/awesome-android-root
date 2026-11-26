@@ -52,229 +52,148 @@ head:
     - name: robots
       content: index, follow
 ---
+
 # Complete LSPosed / Vector Framework Guide
 
-LSPosed-style frameworks provide ART hooking for Xposed modules on rooted devices. Today there are two distributions: the original LSPosed project (archived upstream, now distributed as closed-source builds via Telegram) and the fully open-source **Vector** fork. This guide covers choosing between them, the requirements both share, and the installation steps for each.
+Vector and LSPosed are ART hooking frameworks: modules can change application and system behavior in memory. Installing a framework does not guarantee that a particular module, ROM or banking app will work.
 
-> [!WARNING]
-> **Transparency Advisory:** The original LSPosed GitHub repository ([LSPosed/LSPosed](https://github.com/LSPosed/LSPosed)) has been **archived** since January 2024 with no public releases since October 2023. Current "official" builds are distributed exclusively as **closed-source** binaries via the LSPosed Telegram channel and **[lsposed.zip](https://lsposed.zip/)**. This violates the GPLv3 license under which the original code was released. Users should be aware of the [ongoing controversy](https://exposelsposed.pages.dev/) and make an informed decision.
->
-> The fully open-source **[Vector](https://github.com/JingMatrix/Vector)** fork (GPLv3) is actively maintained with public development and separate stable and CI channels.
+## Essential Resources
 
-## Which Project Should I Use?
+- [Vector README](https://github.com/JingMatrix/Vector#readme), [stable releases](https://github.com/JingMatrix/Vector/releases) and [master CI builds](https://github.com/JingMatrix/Vector/actions/workflows/core.yml?query=branch%3Amaster)
+- [Legacy LSPosed README](https://github.com/LSPosed/LSPosed#readme) and [GitHub releases](https://github.com/LSPosed/LSPosed/releases)
+- [Root preparation](./index.md#prerequisites-and-safety), [Magisk](./magisk-guide.md) and [KernelSU](./kernelsu-guide.md)
+- [Xposed/LSPosed modules](../apps-and-modules/)
 
-| | Vector (JingMatrix fork) | "Official" LSPosed (lsposed.zip) |
-|---|---|---|
-| **Primary URL** | [JingMatrix/Vector](https://github.com/JingMatrix/Vector) | **[lsposed.zip](https://lsposed.zip/)** |
-| **Source code** | ✅ Fully open-source (GPLv3) | ❌ Closed-source; distributed via [Telegram](https://t.me/LSPosed) only |
-| **Channels** | Stable releases and CI builds ([releases](https://github.com/JingMatrix/Vector/releases)) | Telegram and lsposed.zip builds; no public release channel or tracker |
-| **Android support** | 8.1 through 17 Beta (per upstream README) | 8.1+ |
-| **Development** | ✅ Active: public commits, issues, PRs | ⚠️ Closed-source; no public tracker |
-| **Trust & transparency** | ✅ Public code, community audit | ⚠️ [Controversy](https://exposelsposed.pages.dev/), [malware in beta builds](https://xdaforums.com/t/security-analysis-of-the-lsposed-beta-version.4750843/) |
+<span id="background-the-lsposed-ecosystem"></span>
+<span id="what-is-lsposed"></span>
+<span id="what-is-vector"></span>
+<span id="key-features"></span>
 
-> [!NOTE]
-> **About lsposed.zip:** This domain is operated by the original LSPosed team. Builds are distributed through their [official Telegram channel](https://t.me/LSPosed) and are **closed-source** - meaning the code cannot be independently audited. The archived [LSPosed/LSPosed](https://github.com/LSPosed/LSPosed) repository no longer reflects these builds.
+## Choosing Your Version
 
-**Recommendation:** use **Vector** if you value auditable code and an active public development process. Use **lsposed.zip** only if you accept closed-source binaries and their risks. Some users report that those builds hide their presence from certain banking apps more effectively, but that is device- and build-dependent, never guaranteed, and can change between builds.
+- **Vector:** use this path when you need the publicly developed Zygisk-based framework and its modern libxposed support. Select a stable release that meets the module's documented requirements; CI is a separate testing channel, not a promise of stable compatibility.
+- **Legacy LSPosed:** use a specific GitHub release only when your Android build and modules fit that release's documented requirements. Do not assume the legacy distribution implements Vector's APIs or supports newer Android releases.
 
-### libxposed API compatibility
+This guide's legacy path refers to the public `LSPosed/LSPosed` GitHub distribution, not unverified binaries from download sites or messaging channels. Do not mix managers or framework ZIPs from different projects, and never install both frameworks together.
 
-Both distributions run the same module ecosystem, but their stable releases support different libxposed API levels:
+### Which one should I use?
 
-| Module API | Vector | lsposed.zip (closed-source) |
-|---|---|---|
-| **API 102** | v2.2 stable and later | Not available in stable builds |
-| **API 101** | v2.1 stable and later | Stable builds |
-| **API 100 / 82 (legacy)** | v2.0 stable and later; use v2.0 if a module strictly requires API 100 | Stable builds; strict API 100 behavior is not guaranteed for older modules |
+Choose by the target module's framework/API requirements and your exact Android/ROM build. A higher API number does not guarantee backwards compatibility with every module, and switching frameworks is not a reliable detection-hiding strategy.
 
-API support changes between releases - verify against the project's release notes before installing a module that declares a required API version.
+## Prerequisites
 
-## Requirements
+### Mandatory Requirements
 
-> [!IMPORTANT]
-> The framework will **not** work unless every requirement below is met. Do not install anything until they are satisfied.
+1. Complete the [universal preparation checklist](./index.md#pre-rooting-checklist) and have a module-disable/recovery plan.
+2. Use a root manager supported by the chosen framework. Vector's [README](https://github.com/JingMatrix/Vector#compatibility) calls for a recent Magisk or KernelSU installation with a working Zygisk environment (for example [NeoZygisk](https://github.com/JingMatrix/NeoZygisk)). KernelSU needs a separately installed compatible provider; root alone is insufficient. Use one provider at a time and follow its requirements.
+3. Check Android support in the chosen release. At review on **2026-11-26**, Vector's README lists **Android 8.1–17 Beta** and the legacy LSPosed README lists **8.1–14**. These upstream ranges do not guarantee compatibility with every vendor ROM or module.
+4. Verify the module API against the table below and its author's requirements.
 
-| Requirement | Detail |
-|---|---|
-| **Root manager** | Magisk 26+ with Zygisk enabled, or KernelSU (and its forks) with a Zygisk implementation installed |
-| **Zygisk implementation** | Magisk's built-in Zygisk, or [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)/[NeoZygisk](https://github.com/JingMatrix/NeoZygisk) for KernelSU |
-| **Android version** | 8.1 minimum; Vector upstream supports Android 8.1 through 17 Beta |
-| **Module API** | Match the module's required libxposed API using the table above |
+## Device Compatibility
 
-### ROM compatibility
+<span id="rom-compatibility"></span>
 
-| ROM type | Compatibility | Notes |
-|----------|--------------|-------|
-| Stock Android (Google) | Excellent | Best compatibility |
-| AOSP-based ROMs | Excellent | LineageOS, PixelOS, etc. |
-| OneUI (Samsung) | Good | Works with Magisk + Zygisk |
-| OxygenOS (OnePlus) | Good | ColorOS base also works |
-| MIUI/HyperOS (Xiaomi) | Moderate | Known crashes on some HyperOS 2.x versions - see [troubleshooting](#hyperos-xiaomi-specific-issues) |
-| Nothing OS | Good | Growing compatibility |
-| Custom GSI | Variable | Depends on implementation |
-| GrapheneOS | Good* | *Via Zygisk Next/NeoZygisk stable |
-| CalyxOS | Good | Works with microG |
+Use upstream release notes and issue reports for the exact ROM and build. Brand-level ratings such as “excellent” or “unsupported” are not a substitute for testing the framework, Zygisk provider and module together.
 
-> **GrapheneOS note:** Support for GrapheneOS has been added in the Zygisk Next/NeoZygisk stable release. GrapheneOS users should use Zygisk Next/NeoZygisk as their Zygisk provider.
+<span id="api-102-the-current-standard"></span>
+<span id="api-101-the-previous-standard"></span>
+<span id="api-100-legacy"></span>
 
-## Installation
+### Module API Compatibility {#api-compatibility-check}
 
-Install the module ZIP for your chosen distribution through your root manager. The paths differ only in where the ZIP comes from; pick the one that matches your project and root manager.
+| Module API | Verified upstream information | What to check before installing |
+|------------|-------------------------------|---------------------------------|
+| Legacy Xposed API | Both project READMEs describe legacy Xposed support | Module's Android/ROM requirements and scope; legacy Xposed is not libxposed API 100 |
+| libxposed API 100 | [Vector v2.1 notes](https://github.com/JingMatrix/Vector/releases/tag/v2.1) identify v2.0 as the API 100 line | Author's required build; do not downgrade blindly for an old module |
+| libxposed API 101 | [Vector v2.1](https://github.com/JingMatrix/Vector/releases/tag/v2.1) migrated to API 101 with breaking changes | Exact framework release required by the module; newer APIs do not establish backwards compatibility |
+| libxposed API 102 | [Vector v2.2](https://github.com/JingMatrix/Vector/releases/tag/v2.2) introduced API 102 | Module's API target and release requirements; do not infer support for other API generations |
+| Experimental / CI APIs | Vector's README ties CI support to the module/service API submodule commits in that build | Exact commits and module build; CI features are not a stable-release guarantee |
 
-### Path A: Vector (open-source) via Magisk
+API information was checked on **2026-11-26**. When changing this table, check the tagged release notes and API submodule revisions together; do not infer API support in the legacy LSPosed distribution from Vector's version numbers.
 
-1. Enable Zygisk: Magisk app > **Settings** (gear icon) > **Zygisk**, then reboot.
-2. Download a **stable release ZIP** from [Vector releases](https://github.com/JingMatrix/Vector/releases). CI builds are published as pre-releases and via [GitHub Actions](https://github.com/JingMatrix/Vector/actions/workflows/core.yml?query=branch%3Amaster) (GitHub login required); upstream recommends CI builds for testing and warns that pull-request builds can be unstable and unsafe.
-3. Magisk app > **Modules** > **Install from storage** > select the ZIP.
-4. Reboot when the installation finishes.
-5. Open the manager from the notification, or dial `*#*#5776733#*#*` (`*#*#LSPosed#*#*`).
+## Installation Guide
 
-### Path B: lsposed.zip (closed-source) via Magisk
+<span id="step-1-enable-zygisk"></span>
+<span id="step-2-download-the-framework"></span>
+<span id="step-3-install-the-module"></span>
+<span id="step-4-open-the-manager"></span>
 
-1. Enable Zygisk: Magisk app > **Settings** > **Zygisk**, then reboot.
-2. Download the latest **Zygisk release ZIP** from [lsposed.zip](https://lsposed.zip/) or the [official Telegram channel](https://t.me/LSPosed).
-3. Magisk app > **Modules** > **Install from storage** > select the ZIP.
-4. Reboot when the installation finishes.
-5. Open the manager from the notification, or dial `*#*#5776733#*#*`.
+### Method 1: Vector with Magisk {#method-1-magisk-manager-installation-recommended}
 
-### Path C: KernelSU (either distribution)
+1. Establish a working Zygisk environment using Magisk's built-in implementation or a provider supported by Vector. Follow the provider's instructions and disable conflicting providers. Reboot and verify it is active.
+2. Download the **system-module ZIP** from [Vector stable releases](https://github.com/JingMatrix/Vector/releases). Read its release notes before updating. For example, v2.2 requires removing a separately installed v2.1 manager before upgrading; its parasitic manager needs no such removal.
+3. In Magisk, open **Modules > Install from storage**, select the ZIP and review the installer result.
+4. Reboot, open the framework manager from its system notification and confirm that the framework is active before enabling modules.
 
-1. Install KernelSU and its Manager app.
-2. Install a Zygisk implementation - **Zygisk Next** or **NeoZygisk** - via KernelSU Manager > Modules. The framework does not function without one.
-3. Reboot.
-4. Download the module ZIP from your chosen distribution's source (Path A step 2 or Path B step 2).
-5. Install it via KernelSU Manager > **Modules** > **Install from storage**.
-6. Reboot and open the manager from the notification.
+For debugging only, use the separate [master CI channel](https://github.com/JingMatrix/Vector/actions/workflows/core.yml?query=branch%3Amaster). GitHub requires login to download artifacts. Follow upstream artifact instructions, use the matching manager, and do not install arbitrary PR artifacts.
+
+### Method 2: Vector with KernelSU {#method-2-kernelsu-installation}
+
+1. Verify a working KernelSU installation and the module support required by your selected variant.
+2. Install a Vector-compatible Zygisk provider through the manager, following that provider's instructions. Reboot and verify it is active.
+3. Download the Vector system-module ZIP from [stable releases](https://github.com/JingMatrix/Vector/releases), not a legacy LSPosed ZIP.
+4. Install through **KernelSU Manager > Modules**, then reboot and open Vector from its system notification. Verify activation before adding modules.
+
+### Method 3: Legacy LSPosed with Magisk
+
+1. Check the [legacy README](https://github.com/LSPosed/LSPosed#install) and the chosen [GitHub release](https://github.com/LSPosed/LSPosed/releases) for Android and Magisk requirements. This is not the Vector installation path.
+2. For the Zygisk distribution, enable Magisk Zygisk and reboot. Download the release's **Zygisk ZIP**, not the Riru flavor. Riru is a separate legacy setup and is not covered here.
+3. Remove any other ART hooking framework using its documented uninstall process before installing this one; reboot between changes.
+4. Install the ZIP through **Magisk > Modules > Install from storage**, reboot and open LSPosed from its notification. Use only the manager belonging to that release.
 
 ## Module Management
 
-1. Install the module APK (via File Manager or ADB).
-2. Open the **LSPosed/Vector Manager**.
-3. Go to the **Modules** tab and toggle the module **Enable**.
-4. **Select scope:** check the apps the module should modify. System-wide tweaks often need **System Framework**.
-5. **Reboot** if the module requires it; others apply instantly.
+### How to Enable a Module
 
-If a module reports an API version error, compare its required API with the [compatibility table](#libxposed-api-compatibility) and use a framework release that supports it.
+1. Check [API compatibility](#api-compatibility-check) and the [module safety checklist](./index.md#module-safety).
+2. Install the module APK from its upstream source.
+3. Open the framework manager, select the module and enable it.
+4. Select only the required apps in **Scope**. Include System Framework only if the module author requires it; hooking it can affect the whole device.
+5. Restart the target app or reboot as directed by the module, then test before enabling another module.
 
 ## Troubleshooting
 
-### Manager Not Appearing After Install
+### "API Version Too New/Old"
 
-**Symptom:** Module installed in Magisk, but no notification appears.
-
-```bash
-# Check if module is installed
-adb shell su -c "ls /data/adb/modules/ | grep lsposed"
-
-# Check Zygisk status
-adb shell su -c "magisk --status | grep Zygisk"
-```
-
-**Solutions:**
-
-1. **Verify Zygisk:** Magisk Settings > Zygisk > enabled > reboot
-2. **Dial Code:** Open your dialer and enter `*#*#5776733#*#*`
-3. **Reinstall Module:** Remove > reboot > reinstall > reboot
-4. **Clear Magisk cache:**
-   ```bash
-   adb shell su -c "rm -rf /data/adb/magisk/*cache*"
-   adb reboot
-   ```
-
-### Manager Won't Open
-
-```bash
-# Force stop manager
-adb shell am force-stop org.lsposed.manager
-
-# Clear cache
-adb shell pm clear org.lsposed.manager
-```
-
-### Bootloop After Enabling Module
-
-> [!DANGER]
-> Bootloops require immediate action to prevent data loss or extended downtime.
-
-**Emergency Recovery:**
-
-**Step 1: Boot to Recovery or Safe Mode**
-- Hold power 10+ seconds to force off
-- Boot to recovery or Safe Mode (usually holding Volume Down during boot)
-
-**Step 2: Disable Modules**
-
-*Method A - Via Recovery ADB:*
-```bash
-adb devices
-
-# Disable all Magisk modules
-adb shell rm -rf /data/adb/modules/*/
-
-# Or just LSPosed
-adb shell rm -rf /data/adb/modules/lsposed/
-
-adb reboot
-```
-
-*Method B - Via File Manager (Recovery):*
-Navigate to `/data/adb/modules/lsposed/` and rename the folder to `lsposed.disabled`.
+Compare the module's declared requirements with the [single API table](#api-compatibility-check) and the release notes. Do not assume that upgrading or downgrading fixes an incompatible API. Ask the module author which maintained framework build is supported.
 
 ### Detection Issues (Banking Apps)
 
-No framework or build guarantees that a banking app will accept the device. If you still face issues:
+Neither framework guarantees invisibility or app compatibility. Remove the sensitive app from module scopes and test without the framework before adding more modifications. Use [Play Integrity troubleshooting](../troubleshooting.md#play-integrity-and-banking-apps) for the shared overview; no detection-hiding ranking is implied here.
 
-1. Ensure the banking app is **NOT** in the scope of any module.
-2. Use **Shamiko** (closed-source, from the LSPosed team) or the open-source alternative **[Zygisk Assistant](https://xdaforums.com/t/module-zygisk-assistant-foss-root-hider.4664761/)**.
-3. Disable "Verbose Logs" in LSPosed/Vector settings.
+<span id="manager-not-appearing-after-install"></span>
+<span id="manager-won-t-open"></span>
 
-See [Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps) for the wider picture.
+### Installation Issues
+
+If activation or the manager is missing, verify the exact framework ZIP, matching manager and active Zygisk provider. Collect logs using the upstream debugging instructions; Vector requests the latest debug build for bug reports. Avoid clearing app data or deleting framework directories as a generic first step.
+
+<span id="bootloop-after-enabling-module"></span>
+
+### System Stability & Bootloops
+
+Disable the last module using the root manager's documented rescue method: [Magisk module recovery](./magisk-guide.md#managing-installed-modules) or [KernelSU recovery](./kernelsu-guide.md#recovery). Recovery access, decryption and safe-mode behavior differ by device. Do not wipe user data or delete all of `/data/adb` to troubleshoot a module.
+
+<span id="hyperos-xiaomi-specific-issues"></span>
+<span id="framework-shows-as-activated-but-modules-don-t-work"></span>
 
 ### HyperOS / Xiaomi-Specific Issues
 
-<details><summary>Click to expand</summary>
+Check issues for the exact framework, Zygisk provider, firmware and module. Activation alone does not establish that a hook supports the target app or ROM. Do not change the root framework or flash a different kernel based only on the manufacturer name.
 
-#### Framework Shows as Activated but Modules Don't Work
-
-LSPosed may show as "Activated" in the manager, but modules fail to work. This is a known issue on certain HyperOS 2.x (MTK) builds.
-
-**Workarounds:**
-- Update to the latest stable build of your chosen framework; recent releases include fixes for modern ROMs.
-- Try switching between KernelSU and KernelSU Next with NeoZygisk.
-
-</details>
+<span id="complete-removal"></span>
+<span id="method-1-magisk-manager-recommended"></span>
+<span id="method-2-adb"></span>
 
 ## Uninstallation
 
-### Method 1: Magisk Manager (Recommended)
+Disable hooked modules first. Remove the framework through the same root manager that installed it, reboot and verify removal. If a separate manager app was installed, remove that app too. For a device that cannot boot, use the documented root-manager rescue procedure above rather than guessing module directory names.
 
-1. Magisk Manager > **Modules tab**
-2. Find **"LSPosed"** > tap trash icon > **Remove**
-3. Confirm > **Reboot**
-
-### Method 2: ADB
-
-```bash
-adb shell su -c "rm -rf /data/adb/modules/lsposed*"
-adb shell su -c "rm -rf /data/adb/lspd"
-adb shell su -c "rm -rf /data/misc/lspd"
-adb reboot
-```
-
----
-
-| Version | Status | Best For |
-|---------|--------|----------|
-| **Vector (open-source)** | **Recommended** | Transparency, auditable code, active development; stable releases support the libxposed API levels in the table above |
-| **lsposed.zip (closed-source)** | Use with caution | Closed-source builds with their own risks; be aware of the [controversy](https://exposelsposed.pages.dev/) |
-| **LSPatch** | Non-root | Modifying apps on non-rooted devices |
+<span id="expand-your-setup"></span>
+<span id="stay-updated"></span>
 
 ## Next Steps
 
-1. [Custom ROM Installation](./custom-rom-installation.md) - Full system replacement
-2. [Magisk Guide](./magisk-guide.md) / [KernelSU Guide](./kernelsu-guide.md) - Root management and modules
-3. [Root Apps Collection](../apps-and-modules/index.md) - Popular LSPosed/Vector modules directory
-
-**Follow development:** [Vector GitHub](https://github.com/JingMatrix/Vector) · [lsposed.zip](https://lsposed.zip/) · [LSPosed Telegram](https://t.me/LSPosed) · [Expose LSPosed](https://exposelsposed.pages.dev/)
-
-**Need help?** Visit the [FAQ](../faqs.md) or [Troubleshooting Guide](../troubleshooting.md).
+- [Module catalog](../apps-and-modules/) - select modules for the installed framework and ROM.
+- [Vector upstream support](https://github.com/JingMatrix/Vector#support-and-contribution) - debugging and issue-report requirements.
+- [Troubleshooting](../troubleshooting.md) - shared app compatibility and recovery guidance.

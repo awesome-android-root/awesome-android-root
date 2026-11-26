@@ -90,17 +90,13 @@ This guide covers bootloader unlocking, official factory images and Magisk on el
 
 ## Prerequisites
 
+Complete the [universal preparation checklist](./index.md#pre-rooting-checklist) for backups, battery, computer/cable and ADB/Fastboot setup. The requirements below cover this manufacturer's eligibility, firmware and tools.
+
 ::: danger DATA WIPE WARNING
 Unlocking bootloader **erases everything** on your device. Backup all data first!
 :::
 
 ### Quick Checklist
-
-**Hardware:**
-- ✅ Eligible Google Pixel device
-- ✅ USB-C cable (quality matters)
-- ✅ Computer (Windows/macOS/Linux)
-- ✅ 50%+ battery charge
 
 **Software Downloads:**
 1. **[Android Platform Tools](https://developer.android.com/studio/releases/platform-tools)** - ADB/Fastboot
@@ -210,14 +206,7 @@ Extract the outer factory archive and its inner `image-*.zip`. Select the verifi
 
 #### Step 3: Patch with Magisk
 
-1. Transfer the verified stock image to the phone. For example, if the target is `boot.img`:
-
-   ```bash
-   adb push boot.img /sdcard/Download/
-   ```
-
-2. Install the official [Magisk app](https://github.com/topjohnwu/Magisk/releases) on the **same device**. Open **Install > Patch firmware / image > Select from storage** and select the image. Current Magisk can also extract supported factory or OTA packages itself; older versions may use different menu labels.
-3. Note the patched output filename in Download. Never use an image patched on another phone or downloaded pre-patched.
+Follow [Magisk image selection and patching](./magisk-guide.md#step-1-download-required-files) using the stock image verified above. Patch on the **same device** that will use it, retain the original, and note the actual output filename for the flash step. Do not use a shared pre-patched image.
 
 #### Step 4: Flash Patched Image
 
@@ -268,11 +257,11 @@ This is different from [temporary root without unlocking](./root-without-unlocki
 
 ### Essential Magisk Configuration
 
-Follow the universal post-root setup in the [main rooting guide](./index.md#step-4-post-root-configuration): explicit Superuser grants, Zygisk only when a trusted module needs it, and the current root-hiding limitations described in the [Magisk guide](./magisk-guide.md#root-hiding-and-play-integrity).
+Use the shared [post-root checklist](./index.md#step-4-post-root-configuration), [Magisk configuration](./magisk-guide.md#post-installation-setup) and [module safety guidance](./index.md#module-safety).
 
-### Recommended Modules
+For the first-generation Pixel version exception noted above, consult that release's behavior: older Magisk builds may use interactive root prompts instead of the current explicit grants.
 
-Pick modules from the [app and module catalog](../apps-and-modules/) and follow its [safety guidance](../apps-and-modules/index.md#safety-legal). See also the [Play Integrity guidance](../troubleshooting.md#play-integrity-and-banking-apps).
+<span id="recommended-modules"></span>
 
 ---
 
