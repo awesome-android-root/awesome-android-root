@@ -1,0 +1,16 @@
+.back-to-top .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.back-to-top-fade-enter-active,
+.back-to-top-fade-leave-active { transition: opacity .25s ease, transform .25s ease; }
+.back-to-top-fade-enter-from,
+.back-to-top-fade-leave-to { opacity: 0; transform: translateY(6px); }

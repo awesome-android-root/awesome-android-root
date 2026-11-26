@@ -94,9 +94,11 @@ Magisk may need `boot.img`, `init_boot.img`, `vendor_boot.img` or recovery, depe
 
 ## Prerequisites
 
+Complete the [universal preparation checklist](./index.md#pre-rooting-checklist) for backups, battery, computer/cable and ADB/Fastboot setup. The requirements below cover this manufacturer's eligibility, firmware and tools.
+
 ### Critical Requirements
 
-::: danger ⚠️ BEFORE YOU START
+::: danger BEFORE YOU START
 
 **Warranty:** Motorola's [unlock terms](https://en-us.support.motorola.com/ci/fattach/get/741421/1385047216/redirect/1/filename/Boot_revised.pdf) describe warranty consequences, with a Developer Edition exception. Terms and consumer rights can vary by region.
 
@@ -107,24 +109,16 @@ Magisk may need `boot.img`, `init_boot.img`, `vendor_boot.img` or recovery, depe
 **Carrier Check:** There are certain restrictions such as carrier-exclusive models. To find out if your phone supports bootloader unlock you will need to visit Motorola's page and proceed to follow the process.
 :::
 
-### Hardware Requirements
-
-- Motorola device (unlockable model)
-- Quality USB cable (try multiple cables if you encounter issues)
-- Computer (Windows, macOS, Linux)
-- 50%+ battery charge
+<span id="hardware-requirements"></span>
 
 ### Software Requirements
 
 **On Computer:**
 
-1. **Platform Tools**
-   - Download: [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools)
-
-2. **Motorola USB Drivers** (Windows)
+1. **Motorola USB Drivers** (Windows)
    - Download: [Motorola USB Drivers](https://en-us.support.motorola.com/app/usb-drivers)
 
-3. **Web Browser**
+2. **Web Browser**
    - For unlock code request
    - Valid email address (Gmail recommended)
 
@@ -274,7 +268,7 @@ Obtain the original firmware for the exact model, region and **installed build**
 
 **Step 2: Patch on the phone**
 
-Transfer the verified image to the phone. Install the official [Magisk APK](https://github.com/topjohnwu/Magisk/releases) and choose **Install > Patch firmware / image > Select from storage**. Patch on the **same device** that will use the image, and note the output filename. Do not use a shared pre-patched image.
+Follow [Magisk image selection and patching](./magisk-guide.md#step-1-download-required-files) using the stock image verified above. Patch on the **same device** that will use it, retain the original, and note the actual output filename for the flash step. Do not use a shared pre-patched image.
 
 **Step 3: Flash the patched image**
 
@@ -320,7 +314,7 @@ The Edge 50 Fusion example previously associated with this heading is not eviden
 
 ### Configure Magisk
 
-Grant root only to trusted apps in **Superuser**. Enable Zygisk only when a trusted module requires it. Enforced DenyList reverts Magisk modifications in selected processes, but does not guarantee banking or payment app compatibility. See the [Magisk guide](./magisk-guide.md#post-installation-setup) and [Play Integrity guidance](../troubleshooting.md#play-integrity-and-banking-apps).
+Use the shared [post-root checklist](./index.md#step-4-post-root-configuration), [Magisk configuration](./magisk-guide.md#post-installation-setup) and [module safety guidance](./index.md#module-safety).
 
 ### Motorola Optimization
 
@@ -332,9 +326,9 @@ Grant root only to trusted apps in **Superuser**. Enable Zygisk only when a trus
 - Allow background activity for root apps
 - Disable battery optimization for Magisk
 
-### Recommended Modules
+<span id="recommended-modules"></span>
 
-Install only modules needed for your setup, and verify their device and Android compatibility. See the [app and module catalog](../apps-and-modules/) and [Play Integrity guidance](../troubleshooting.md#play-integrity-and-banking-apps). No module guarantees that a banking or payment app will work.
+Use the shared [module safety checklist](./index.md#module-safety) before installing add-ons.
 
 ---
 
@@ -423,34 +417,13 @@ Relocking a modified or incompatible device can leave it unbootable and may eras
 
 ## Custom ROMs
 
-### Popular ROMs
-
-**LineageOS:**
-- Official for many Moto G and Edge devices
-- Stable and well-maintained
-
-**Pixel Experience:**
-- Pixel-like interface
-- Good performance
-
-**crDroid:**
-- Feature-rich
-- Active development
-
-**Evolution X:**
-- Customizable
-- Growing support
+LineageOS provides official builds for many Moto G and Edge devices. Check the [custom ROM guide](./custom-rom-installation.md) for selection criteria and the installation workflow, and the [LineageOS device list](https://wiki.lineageos.org/devices/) for your exact model before unlocking.
 
 ---
 
 ## Best Practices
 
-### Security
-
-1. **Configure DenyList** for sensitive apps
-2. **Trusted modules only** - verify sources
-3. **Keep Magisk updated** - check upstream release notes for device and Android compatibility
-4. **Back up boot images** before every update
+Use the shared [post-root checklist](./index.md#step-4-post-root-configuration) and [module safety guidance](./index.md#module-safety). Keep the exact-build stock images and follow the manufacturer-specific OTA and restore procedures above.
 
 ---
 

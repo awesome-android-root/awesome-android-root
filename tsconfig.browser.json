@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ES2024", "DOM", "DOM.Iterable"],
+    "types": ["vite/client"]
+  },
+  "include": ["docs/.vitepress/theme/**/*.ts", "docs/.vitepress/theme/**/*.tsx", "docs/.vitepress/shared/**/*.ts"]
+}

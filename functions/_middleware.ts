@@ -1,4 +1,4 @@
-function acceptsMarkdown(request) {
+function acceptsMarkdown(request: Request) {
   return (request.headers.get('Accept') ?? '').split(',').some((mediaRange) => {
     const [mediaType, ...parameters] = mediaRange.trim().toLowerCase().split(';')
     if (mediaType.trim() !== 'text/markdown') return false
@@ -9,7 +9,7 @@ function acceptsMarkdown(request) {
   })
 }
 
-function markdownPath(pathname) {
+function markdownPath(pathname: string) {
   if (pathname === '/') return '/index.md'
   if (pathname.endsWith('/')) return `${pathname.slice(0, -1)}.md`
   if (pathname.endsWith('.html')) return `${pathname.slice(0, -5)}.md`
@@ -17,7 +17,7 @@ function markdownPath(pathname) {
   return `${pathname}.md`
 }
 
-function addAcceptVary(headers) {
+function addAcceptVary(headers: Headers) {
   const current = headers.get('Vary') ?? ''
   // Fast path: nothing to do when Accept (or wildcard) is already advertised.
   if (/(^|,)\s*accept\s*(,|$)/i.test(current) || /(^|,)\s*\*\s*(,|$)/.test(current)) {
@@ -28,7 +28,7 @@ function addAcceptVary(headers) {
   headers.set('Vary', varyValues.join(', '))
 }
 
-function responseWithAcceptVary(response) {
+function responseWithAcceptVary(response: Response) {
   const headers = new Headers(response.headers)
   addAcceptVary(headers)
   return new Response(response.body, {
@@ -50,7 +50,7 @@ const STRIPPED_HEADERS = [
   'Transfer-Encoding'
 ]
 
-export async function onRequest(context) {
+export async function onRequest(context: { request: Request; env: { ASSETS: { fetch(request: Request): Promise<Response> } }; next(): Promise<Response> }): Promise<Response> {
   const { request } = context
   const url = new URL(request.url)
   const path = markdownPath(url.pathname)
@@ -61,7 +61,7 @@ export async function onRequest(context) {
 
   if (acceptsMarkdown(request)) {
     url.pathname = path
-    const markdownResponse = await context.env.ASSETS.fetch(new Request(url, request))
+    const markdownResponse = await context.env.ASSETS.fetch(new Request(url.href, request))
 
     if (markdownResponse.status !== 404) {
       const headers = new Headers(markdownResponse.headers)

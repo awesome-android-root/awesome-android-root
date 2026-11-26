@@ -73,7 +73,7 @@ const NAMED_ICONS = {
   zap
 }
 
-function toSvg({ node }) {
+function toSvg({ node }: import('@lucide/vue').LucideIconData) {
   const body = node
     .map(([tag, attrs]) => {
       const pairs = Object.entries(attrs)
@@ -92,19 +92,24 @@ function toSvg({ node }) {
   )
 }
 
-function prependIcon(text, name) {
-  const icon = NAMED_ICONS[name]
+function prependIcon(text: string, name: string) {
+  const icon = NAMED_ICONS[name as keyof typeof NAMED_ICONS]
   if (!icon) throw new Error(`Unknown icon "${name}"`)
   return `${toSvg(icon)} ${text}`
 }
 
 /** Replaces the `icon` key of every config item with inline SVG in its `text`. */
-export function withIcons(node) {
+type Decorated<T> = T extends readonly unknown[] ? { [K in keyof T]: Decorated<T[K]> }
+  : T extends object ? { [K in keyof T as K extends 'icon' ? never : K]: Decorated<T[K]> } : T
+
+export function withIcons<T>(node: T): Decorated<T>
+export function withIcons(node: unknown): unknown {
   if (Array.isArray(node)) return node.map(withIcons)
   if (!node || typeof node !== 'object') return node
 
-  const { icon } = node
-  if (typeof icon === 'string' && typeof node.text !== 'string') {
+  const record = node as Record<string, unknown>
+  const { icon } = record
+  if (typeof icon === 'string' && typeof record.text !== 'string') {
     throw new Error(`Item with icon "${icon}" requires a string text field`)
   }
 
@@ -112,7 +117,7 @@ export function withIcons(node) {
     Object.entries(node).flatMap(([key, value]) => {
       if (key === 'icon') return []
       if (key === 'text' && typeof icon === 'string') {
-        return [[key, prependIcon(value, icon)]]
+        return [[key, prependIcon(String(value), icon)]]
       }
       return [[key, withIcons(value)]]
     })

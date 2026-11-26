@@ -17,6 +17,9 @@ the single source of truth so this file and the site cannot drift apart.
 Read [`docs/contributing.md`](docs/contributing.md) first. It lists the entry format, the allowed
 tags, the quality requirements and the pull request template.
 
+For theme, TypeScript and search changes, see the [development and validation
+commands](scripts/README.md#typescript-and-validation).
+
 ## Need help?
 
 - [Full contribution guide](docs/contributing.md)
@@ -24,3 +27,19 @@ tags, the quality requirements and the pull request template.
 - [Pull request template](.github/PULL_REQUEST_TEMPLATE.md)
 
 Contributions are licensed under the [MIT License](LICENSE).
+
+### Local validation
+
+Use the repository's pinned Bun version and Node 26, then `bun install`. Run
+`bun run lint` for internal Markdown links/assets/anchors and entry validation;
+Python is not needed. Links use the site's actual VitePress Markdown pipeline.
+Run `bun run check` for strict typechecks, focused unit tests, lint, a production
+build and two browser search smoke tests. Install Google Chrome locally, or set
+`CHROMIUM_PATH` to a compatible Chromium binary. Both suites use Bun's runner;
+`puppeteer-core` drives the installed browser without downloading one.
+All environments use Bun's native checker with TypeScript 7.0.2 semantics;
+no direct TypeScript package is required. Editors use their own TypeScript
+installation. Custom Vue render components use checked TSX, not a separate
+vue-tsc/older compiler.
+See [scripts/README.md](scripts/README.md) for individual commands, subpath
+deployments and the retained search regression tests.

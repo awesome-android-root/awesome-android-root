@@ -1,0 +1,3 @@
+[test]
+# Keep local audit checkouts and generated output out of `bun test` discovery.
+pathIgnorePatterns = [".cache/**", "docs/.vitepress/dist/**", "docs/.vitepress/cache/**"]

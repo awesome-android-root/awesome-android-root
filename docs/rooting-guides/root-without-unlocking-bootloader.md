@@ -62,7 +62,7 @@ head:
 
 # Temporary Root Without Unlocking the Bootloader
 
-DirtyFrag and GhostLock can provide temporary root on specific vulnerable Android builds while the bootloader stays locked. Neither works on every device, and a full reboot ends the active root session.
+DirtyFrag and GhostLock can provide temporary root on specific vulnerable Android builds while the bootloader stays locked. Neither works on every device, and a full reboot ends the active root session. This page is the installation and usage guide; the [temporary-root solutions page](./temporary-root-solutions.md) is the project directory that compares temporary root with MediaTek and Samsung boot-chain research tools.
 
 > [!CAUTION]
 > Back up your data and check recovery options first. An exploit, incompatible module or failed recovery can cause crashes, bootloops or data loss. Do not downgrade or skip security updates just to keep root.
@@ -111,6 +111,9 @@ DirtyFrag ([CVE-2026-43284](https://github.com/CVEProject/cvelistV5/blob/main/cv
 - Guarantee that banking apps, Play Integrity or Knox services will work.
 - Undo files, apps or settings changed during the session just by rebooting.
 
+> [!WARNING]
+> **Temporary does not mean harmless.** The exploit grants full root: anything root can change during the session - files, apps, settings, security state - can persist after the session ends. A reboot only ends the root access, not the changes made while it was active.
+
 ## Soft reboot vs full reboot
 
 A **full reboot** ends the active root session. Disable any loader's start-on-boot option first if you do not want it to run the exploit again. Files and settings changed while rooted may remain.
@@ -138,7 +141,7 @@ Save the output before starting. A kernel-interface label such as `android14-6.1
 
 ## Find device and tool information {#all-apps-and-projects-for-ghostlock}
 
-Use the maintained sections of [Awesome Temporary Root](https://awesome-temporary-root.pages.dev/guide/) to find support information and the original loader instructions.
+Use the [project directory](./temporary-root-solutions.md#ghostlock-temporary-root) to compare tool families, then the maintained sections of [Awesome Temporary Root](https://awesome-temporary-root.pages.dev/guide/) to find support information and the original loader instructions.
 
 | Looking for | Sister project sections |
 | --- | --- |
@@ -232,7 +235,7 @@ There is no guarantee. Results depend on the device, modifications and each app'
 ## Related pages
 
 - [Awesome Temporary Root](https://awesome-temporary-root.pages.dev/) ([GitHub](https://github.com/fynks/awesome-temporary-root)) - maintained support information and module reports
-- [Bootloader Mods & Temporary Root](./temporary-root-solutions.md) - compare temporary root with bootloader modifications
+- [Temporary-root project directory](./temporary-root-solutions.md) - project comparison and separately categorized bootloader research
 - [Root Framework Comparison](./root-framework-comparison.md) - compare standard root installations
 - [Legal & Safety](../legal-disclaimer.md) · [Troubleshooting](../troubleshooting.md)
 

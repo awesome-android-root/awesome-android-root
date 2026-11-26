@@ -75,7 +75,7 @@ Use upstream READMEs and release notes to check requirements before downloading.
 
 ## Quick Navigation
 
-- [Getting Started](#🚀-getting-started)
+- [Getting Started](#getting-started)
 - [Core Tooling](#core-tooling)
 - [Firmware and Device Data](#firmware-and-device-data)
 - [Module & App Repositories](#module-app-repositories)
@@ -87,7 +87,7 @@ Use upstream READMEs and release notes to check requirements before downloading.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Core checklist
 
@@ -449,7 +449,7 @@ Vendor kernel source is needed to build KernelSU into a non-GKI kernel. Use the 
 
 ---
 
-## ⚠️ Legal & Safety Notice
+## Legal & Safety Notice
 
 > **Important:** Rooting your device:
 > - May void your warranty
@@ -465,7 +465,7 @@ Vendor kernel source is needed to build KernelSU into a non-GKI kernel. Use the 
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 This is a community-driven project. Contributions are welcome!
 

@@ -85,22 +85,22 @@ Apps and modules are grouped by **what you want to accomplish**, not by whether 
 
 | Category | What you will find |
 | :--- | :--- |
-| 🛠️ [Root Management](root-management.md) | Root managers, module managers, temporary root, LSPosed, Zygisk and root-hiding tools. |
-| ⚙️ [System](system.md) | Systemless tweaks, boot and startup tools, permissions, AppOps and package management. |
-| ⚡ [Performance &amp; Battery](performance.md) | Kernel, CPU, memory, battery, charging and process-management tools. |
-| 🕵️ [Privacy](privacy.md) | Privacy controls, app isolation, location tools and device-ID management. |
-| 🔐 [Security](security.md) | Firewalls, security utilities and tools for inspecting rooted devices. |
-| 🚫 [Ad Blocking](ad-blocking.md) | Hosts-based blockers, DNS filtering and anti-tracking modules. |
-| 🧩 [App Modifications](app-modifications.md) | App patchers, media, browser, social and LSPosed modifications. |
-| 🧹 [Debloating](debloating.md) | Tools for safely reviewing, freezing and removing unwanted system apps. |
-| 🗂️ [File Management](file-management.md) | Root file managers, cleaners, partition and storage tools. |
-| 💾 [Backup &amp; Restore](backup.md) | App/data backup, migration and recovery utilities. |
-| 🎨 [Customization](customization.md) | Themes, fonts, launchers, display, navigation and status-bar changes. |
-| 🎵 [Audio](audio.md) | Audio effects, enhancement, routing and device-specific audio tools. |
-| 🌐 [Networking](networking.md) | VPN, proxy, DNS, Wi-Fi, Bluetooth and NFC utilities. |
-| 🎮 [Gaming](gaming.md) | Gaming performance, FPS, input and device-tuning tools. |
-| 🧑‍💻 [Development &amp; Automation](development.md) | Terminals, ADB, scripting, automation and Android development tools. |
-| 🧰 [General Utilities](utilities.md) | Sync, power, sharing and practical root utilities. |
+| [Root Management](root-management.md) | Root managers, module managers, temporary root, LSPosed, Zygisk and root-hiding tools. |
+| [System](system.md) | Systemless tweaks, boot and startup tools, permissions, AppOps and package management. |
+| [Performance &amp; Battery](performance.md) | Kernel, CPU, memory, battery, charging and process-management tools. |
+| [Privacy](privacy.md) | Privacy controls, app isolation, location tools and device-ID management. |
+| [Security](security.md) | Firewalls, security utilities and tools for inspecting rooted devices. |
+| [Ad Blocking](ad-blocking.md) | Hosts-based blockers, DNS filtering and anti-tracking modules. |
+| [App Modifications](app-modifications.md) | App patchers, media, browser, social and LSPosed modifications. |
+| [Debloating](debloating.md) | Tools for safely reviewing, freezing and removing unwanted system apps. |
+| [File Management](file-management.md) | Root file managers, cleaners, partition and storage tools. |
+| [Backup &amp; Restore](backup.md) | App/data backup, migration and recovery utilities. |
+| [Customization](customization.md) | Themes, fonts, launchers, display, navigation and status-bar changes. |
+| [Audio](audio.md) | Audio effects, enhancement, routing and device-specific audio tools. |
+| [Networking](networking.md) | VPN, proxy, DNS, Wi-Fi, Bluetooth and NFC utilities. |
+| [Gaming](gaming.md) | Gaming performance, FPS, input and device-tuning tools. |
+| [Development &amp; Automation](development.md) | Terminals, ADB, scripting, automation and Android development tools. |
+| [General Utilities](utilities.md) | Sync, power, sharing and practical root utilities. |
 
 > [!TIP]
 > Looking for tutorials instead of tools? Browse the [Rooting Guides](../rooting-guides/index.md) or the
@@ -152,7 +152,7 @@ Apps and modules are grouped by **what you want to accomplish**, not by whether 
 2. Alphabetical order within each (sub-)category
 
 <details>
-<summary><b>📚 Common Rooting Terms</b></summary>
+<summary><b>Common Rooting Terms</b></summary>
 
 - **Bootloader** - Low-level software that starts your OS (must be unlocked for root)
 - **Temporary Root** - Root that exists in memory for the current boot only (e.g. GhostLock/CVE-2026-43499 tools); lost on reboot, no bootloader unlock needed
@@ -173,8 +173,8 @@ Apps and modules are grouped by **what you want to accomplish**, not by whether 
 
 | Platform | Purpose | Link |
 |:---|:---|:---|
-| 🌐 **Website** | Browse apps, modules & guides | [awesome-android-root.xyz](https://awesome-android-root.xyz) |
-| 📂 **GitHub** | Source, discussions & issues | [GitHub Repo](https://github.com/awesome-android-root/awesome-android-root) |
+| **Website** | Browse apps, modules & guides | [awesome-android-root.xyz](https://awesome-android-root.xyz) |
+| **GitHub** | Source, discussions & issues | [GitHub Repo](https://github.com/awesome-android-root/awesome-android-root) |
 | 𝕏 **X/Twitter** | Updates & news | [@awsm_and_root](https://x.com/awsm_and_root) |
 
 ### Quick Help Paths
@@ -190,11 +190,11 @@ Apps and modules are grouped by **what you want to accomplish**, not by whether 
 ### Contribute and Participate
 
 - ⭐ Star the [repo](https://github.com/awesome-android-root/awesome-android-root) (boosts discovery)
-- 🐛 Report [issues](https://github.com/awesome-android-root/awesome-android-root/issues)
-- 💡 Suggest new apps/modules
-- 🧹 Improve formatting / dead link cleanup
+- Report [issues](https://github.com/awesome-android-root/awesome-android-root/issues)
+- Suggest new apps/modules
+- Improve formatting / dead link cleanup
 
-> 📝 Read the [Contributing Guide](../contributing.md) before major PRs.
+> Read the [Contributing Guide](../contributing.md) before major PRs.
 
 ---
 
