@@ -13,6 +13,8 @@ export default defineComponent(() => {
   function shortcut(event: KeyboardEvent) {
     const target = event.target
     const editing = target instanceof HTMLElement && (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName))
+    // Ctrl/Cmd+K is intentionally global, even in editable fields. Only '/'
+    // must leave ordinary typing alone, matching the existing shortcut policy.
     if ((event.key.toLowerCase() === 'k' && (event.ctrlKey || event.metaKey)) || (event.key === '/' && !editing)) {
       event.preventDefault()
       // Give native dialog focus restoration a concrete invoker for shortcuts.

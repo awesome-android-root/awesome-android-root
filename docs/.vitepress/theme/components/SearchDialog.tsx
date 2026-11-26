@@ -75,7 +75,10 @@ export default defineComponent({
       cancel()
       status.value = 'loading'
       await resetPagefind()
-      if (props.opened) scheduleSearch()
+      if (props.opened) {
+        scheduleSearch()
+        input.value?.focus()
+      }
     }
 
     async function navigate(result: SearchResult) {
@@ -88,6 +91,7 @@ export default defineComponent({
         selected.value = (selected.value + (event.key === 'ArrowDown' ? 1 : -1) + results.value.length) % results.value.length
         document.getElementById(`search-result-${selected.value}`)?.scrollIntoView({ block: 'nearest' })
       } else if (event.key === 'Enter' && results.value.length) {
+        // Enter without an arrow selection intentionally opens the first result.
         event.preventDefault()
         void navigate(results.value[Math.max(0, selected.value)])
       }

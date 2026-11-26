@@ -41,6 +41,8 @@ test('built search loads only on use and supports keyboard navigation to an entr
   await page.keyboard.press('Enter')
   await page.waitForFunction(() => location.hash.startsWith('#app-adaway-') && !document.querySelector('dialog')?.open)
   expect(new URL(page.url()).pathname).toBe(new URL('apps-and-modules/ad-blocking', baseURL).pathname)
+  // VitePress updates the URL before its asynchronously loaded page mounts.
+  await page.waitForFunction(() => document.getElementById(location.hash.slice(1)) !== null)
   expect(await page.evaluate(() => document.getElementById(location.hash.slice(1))?.textContent)).toContain('AdAway')
   expect(requests.filter((url) => url.endsWith('/pagefind.js'))).toHaveLength(1)
 
@@ -67,4 +69,5 @@ test('a failed search engine request can retry without reloading the page', asyn
   await page.waitForSelector('[role="option"] strong')
   expect(await page.$eval('[role="option"] strong', (node) => node.textContent)).toBe('AdAway')
   expect(page.url()).toBe(baseURL)
+  expect(await page.evaluate(() => document.activeElement?.id)).toBe('aar-search-input')
 })

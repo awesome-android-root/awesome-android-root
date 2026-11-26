@@ -16,29 +16,38 @@ export interface PagefindBrowser {
   search(query: string): Promise<SearchResponse>
 }
 
-let importAttempts = 0
-let pagefindPromise: Promise<PagefindBrowser> | undefined
-export function loadPagefind(base: string): Promise<PagefindBrowser> {
-  if (!pagefindPromise) {
-    const suffix = importAttempts++ ? `?retry=${importAttempts}` : ''
-    const path = `${base}pagefind/pagefind.js${suffix}`
-    pagefindPromise = import(/* @vite-ignore */ path).then(async (module: PagefindBrowser) => {
-      await module.options({ baseUrl: base, excerptLength: 32 })
-      return module
-    }).catch((error: unknown) => {
+/** Isolate loader state so a late failed import cannot evict a fresh Retry. */
+export function createPagefindLoader(importModule: (path: string) => Promise<PagefindBrowser>) {
+  let importAttempts = 0
+  let pagefindPromise: Promise<PagefindBrowser> | undefined
+  return {
+    load(base: string): Promise<PagefindBrowser> {
+      if (!pagefindPromise) {
+        const suffix = importAttempts++ ? `?retry=${importAttempts}` : ''
+        const path = `${base}pagefind/pagefind.js${suffix}`
+        const pending = importModule(path).then(async (module) => {
+          await module.options({ baseUrl: base, excerptLength: 32 })
+          return module
+        }).catch((error: unknown) => {
+          if (pagefindPromise === pending) pagefindPromise = undefined
+          throw error
+        })
+        pagefindPromise = pending
+      }
+      return pagefindPromise
+    },
+    /** Drop failed worker/chunk promises before an explicit UI retry. */
+    async reset(): Promise<void> {
+      const previous = pagefindPromise
       pagefindPromise = undefined
-      throw error
-    })
+      try { await (await previous)?.destroy() } catch { /* A failed import has no instance to destroy. */ }
+    }
   }
-  return pagefindPromise
 }
 
-/** Drop failed Pagefind worker/chunk promises before an explicit UI retry. */
-export async function resetPagefind(): Promise<void> {
-  const previous = pagefindPromise
-  pagefindPromise = undefined
-  try { await (await previous)?.destroy() } catch { /* A failed import has no instance to destroy. */ }
-}
+const loader = createPagefindLoader((path) => import(/* @vite-ignore */ path))
+export const loadPagefind = loader.load
+export const resetPagefind = loader.reset
 
 /** Exact titles win over incidental mentions, without distorting Pagefind's
  * corpus-wide relevance weights. Prefix ties prefer the more focused title. */

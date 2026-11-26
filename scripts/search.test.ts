@@ -1,12 +1,13 @@
 import { describe, expect, test } from 'bun:test'
-import { createSearchSession, rankTitles } from '../docs/.vitepress/theme/utils/search.ts'
+import { createPagefindLoader, createSearchSession, rankTitles } from '../docs/.vitepress/theme/utils/search.ts'
 import type { PagefindBrowser, SearchResult } from '../docs/.vitepress/theme/utils/search.ts'
 
 const result: SearchResult = { url: '/adaway', excerpt: '<mark>AdAway</mark>', meta: { title: 'AdAway' } }
 function deferred<T>() {
   let resolve!: (value: T) => void
-  const promise = new Promise<T>((done) => { resolve = done })
-  return { promise, resolve }
+  let reject!: (reason: unknown) => void
+  const promise = new Promise<T>((done, fail) => { resolve = done; reject = fail })
+  return { promise, resolve, reject }
 }
 
 describe('search race protection', () => {
@@ -39,4 +40,30 @@ describe('search race protection', () => {
     session.cancel()
     expect(await canceled).toBeNull()
   })
+})
+
+
+test('a late rejected import cannot evict a fresh engine; reset destroys the active instance', async () => {
+  const first = deferred<PagefindBrowser>()
+  const paths: string[] = []
+  let destroyed = 0
+  const engine: PagefindBrowser = {
+    init: async () => {}, options: async () => {},
+    destroy: async () => { destroyed++ }, search: async () => ({ results: [] })
+  }
+  const loader = createPagefindLoader((path) => {
+    paths.push(path)
+    return paths.length === 1 ? first.promise : Promise.resolve(engine)
+  })
+  const failure = new Error('old request failed')
+  const old = loader.load('/android-root/').catch((error: unknown) => error)
+  const reset = loader.reset()
+  expect(await loader.load('/android-root/')).toBe(engine)
+  first.reject(failure)
+  await reset
+  expect(await old).toBe(failure)
+  expect(await loader.load('/android-root/')).toBe(engine)
+  expect(paths).toEqual(['/android-root/pagefind/pagefind.js', '/android-root/pagefind/pagefind.js?retry=2'])
+  await loader.reset()
+  expect(destroyed).toBe(1)
 })

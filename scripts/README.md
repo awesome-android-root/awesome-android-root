@@ -196,6 +196,17 @@ not adopting it here are its current integration/loading model and our entry/MCP
 requirements, not a claim of incompatibility. See
 [the source-reviewed pros and cons](PAGEFIND-DECISION.md).
 The index is written to the ignored `docs/.vitepress/dist/pagefind/` directory.
+Every build verifies that all synthetic entry URLs match unique, rendered app
+anchors and that those list items carry Pagefind's category-exclusion attribute.
+Each rendered entry ID must be consumed exactly once by the shared entry parser.
+Excluded category pages do not leak synthetic entries into search. Category
+introductions/headings remain searchable; app lists are not indexed twice.
+
+Output is written to `.pagefind-staging` and published as `pagefind/` only after
+successful indexing and service cleanup. A failed build removes stale/staging
+output rather than leaving a partial index. This uses cheap build-time invariants,
+not another browser suite or private-fragment-format inspector.
+
 Deploy the entire build output, including this directory, on any static host.
 Do not run a separate search server or commit generated search files.
 
@@ -239,7 +250,9 @@ Index chunks and fragments load only for nonempty queries. Only the top 12 resul
 corpus. Queries are debounced, stale responses ignored and failed imports retried
 with a fresh module URL only on failure. The same lazy Pagefind instance powers
 WebMCP `search_site`; other MCP tools retain on-demand Markdown page retrieval.
-Search's `/` and Ctrl/Cmd+K shortcuts, arrow/Enter selection, Escape, reset,
+Ctrl/Cmd+K intentionally opens search even from an editable field; `/` does not
+interrupt typing. Enter with no arrow selection opens the first result. Search's
+shortcuts, arrow/Enter selection, Escape, reset,
 focus restoration, mobile layout and both color schemes remain supported.
 
 ### Subpath deployments
@@ -267,7 +280,8 @@ download a browser.
 ### Which tests cover search?
 
 - `scripts/search.test.ts`: exact/prefix ranking and deterministic out-of-order
-  search/fragment completion and cancellation. Run `bun test scripts/search.test.ts`.
+  search/fragment completion and cancellation; late-import Retry isolation and
+  active-instance destruction. Run `bun test scripts/search.test.ts`.
 - `tests/search.spec.ts`: **two** production-output smoke tests. One exercises
   strict lazy loading, real Pagefind/WASM/index results, highlights, keyboard
   selection, entry navigation, Escape and focus restoration. The other blocks
@@ -298,4 +312,4 @@ pipeline. Its latest 14.x type declarations are retained for token/plugin types.
 TypeScript 7.0.2 now checks all custom code directly; the former 6.0.3/vue-tsc
 compatibility exception was removed by the Vue TSX port described above. Bun
 1.4.5 and Node 26 remain on stable releases. GitHub Actions use verified stable
-release tags.
+release commit SHAs with version comments.
