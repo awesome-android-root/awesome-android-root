@@ -8,7 +8,7 @@
 
 # Awesome Android Root
 
-**🛡️ Community-curated Android rooting knowledge base**
+**Community-curated Android rooting knowledge base**
 
 <sub>800+ root apps, Magisk / KernelSU / APatch / LSPosed (Xposed) modules, and step-by-step rooting guides.</sub>
 

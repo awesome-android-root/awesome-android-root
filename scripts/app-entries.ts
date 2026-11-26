@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env bun
 /**
  * Entry tool for the Apps & Modules database.
  *
@@ -31,7 +31,7 @@
  * index whenever an entry changes.
  */
 import type { Badge, Entry, ParsedRecord, ParsedFile, EntryIndex } from '../docs/.vitepress/shared/entries.ts'
-import { readFileSync, readdirSync, writeFileSync } from 'node:fs'
+import { readFileSync, readdirSync } from 'node:fs'
 import { join, relative, resolve } from 'node:path'
 
 const ROOT = resolve(import.meta.dirname, '..')
@@ -291,11 +291,7 @@ function buildIndex(parsedFiles: ParsedFile[]): EntryIndex {
   }
 }
 
-function writeIndex(payload: EntryIndex) {
-  writeFileSync(OUT_FILE, `${JSON.stringify(payload, null, 0)}\n`)
-}
-
-function writeCounts(pages: Record<string, number>) {
+function countPage(pages: Record<string, number>): string {
   const pageRows = Object.entries(pages).map(([page, count]) => {
     const category = page
       .split('-')
@@ -335,8 +331,10 @@ function writeCounts(pages: Record<string, number>) {
     '',
     'The same counts are published as JSON at `count.json` for dynamic badges and other tooling.'
   ].join('\n')
-  writeFileSync(COUNT_PAGE, `${table}\n`)
+  return `${table}\n`
+}
 
+function countJson(): string {
   const json = {
     total: countStats.total,
     root_apps: countStats.rootApps,
@@ -345,7 +343,7 @@ function writeCounts(pages: Record<string, number>) {
     apatch_modules: countStats.apatch,
     lsposed_modules: countStats.lsposed
   }
-  writeFileSync(COUNT_JSON, `${JSON.stringify(json, null, 2)}\n`)
+  return `${JSON.stringify(json, null, 2)}\n`
 }
 
 // ---- Main -------------------------------------------------------------------
@@ -362,6 +360,9 @@ if (import.meta.main) {
   lint(parsedFiles)
   if (process.argv.includes('--check') && errors.length) process.exitCode = 1
   const payload = buildIndex(parsedFiles)
-  writeIndex(payload)
-  writeCounts(payload.pages)
+  await Promise.all([
+    Bun.write(OUT_FILE, `${JSON.stringify(payload, null, 0)}\n`),
+    Bun.write(COUNT_PAGE, countPage(payload.pages)),
+    Bun.write(COUNT_JSON, countJson())
+  ])
 }

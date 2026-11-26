@@ -1,5 +1,5 @@
 #!/usr/bin/env bun
-import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
+import { readFileSync, readdirSync, statSync } from 'node:fs'
 import { dirname, extname, isAbsolute, join, relative, resolve, sep } from 'node:path'
 import { createMarkdownRenderer } from 'vitepress'
 import type { MarkdownRenderer } from 'vitepress'
@@ -38,7 +38,7 @@ const inside = (root: string, file: string): boolean => {
   const path = relative(root, file)
   return path !== '..' && !path.startsWith(`..${sep}`) && !isAbsolute(path)
 }
-const isFile = (file: string): boolean => existsSync(file) && statSync(file).isFile()
+const isFile = (file: string): boolean => statSync(file, { throwIfNoEntry: false })?.isFile() === true
 
 /** Check source routes/public assets; no built site, network or Python needed. */
 export async function checkLinks(docs: string, base = '/'): Promise<LinkCheckResult> {

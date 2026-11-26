@@ -60,7 +60,7 @@ head:
 
 <div align="center">
 
-🛡️ **Block Ads System-Wide with Root Access**
+**Block Ads System-Wide with Root Access**
 
 *The complete guide to eliminating ads across your Android system using hosts-based solutions*
 
@@ -101,7 +101,7 @@ Root access enables **system-level ad blocking** that surpasses traditional meth
 - **Works offline** - Continues working without internet connectivity
 - **Fewer ad requests** - Pages and apps load without fetching ad content
 
-### 🔄 **How Root Ad Blocking Works**
+### **How Root Ad Blocking Works**
 
 Root ad blocking operates by modifying the **hosts file** (`/system/etc/hosts`), which acts as a local DNS resolver. When an app tries to connect to an ad server:
 
@@ -116,13 +116,13 @@ Root ad blocking operates by modifying the **hosts file** (`/system/etc/hosts`),
 
 ## Requirements
 
-### 📱 **Device Requirements**
+### **Device Requirements**
 
 - ✅ **Rooted Android device** ([complete rooting guide](../rooting-guides/))
 - ✅ **Magisk**, **KernelSU**, or **APatch** installed ([compare methods](../rooting-guides/root-framework-comparison.md))
 - ✅ **Working root access** (verify with a terminal: `su -c whoami` should print `root`)
 
-### 🔧 **Supported Root Managers**
+### **Supported Root Managers**
 
 | Root Manager | AdAway | Bindhosts | Notes |
 |--------------|--------|-----------|-------|
@@ -133,7 +133,7 @@ Root ad blocking operates by modifying the **hosts file** (`/system/etc/hosts`),
 > [!TIP]
 > On KernelSU and APatch, AdAway needs the [systemless hosts module](https://github.com/symbuzzer/systemless-hosts-KernelSU-module) or [AdAway Helper](https://github.com/DEMONNICA/AdAway-Helper) to write the hosts file. Bindhosts works on all three managers without helpers.
 
-### ⚠️ **Important Notes**
+### **Important Notes**
 
 - Always know how to revert changes before proceeding
 - Some banking and payment apps may require whitelisting
@@ -145,7 +145,7 @@ Root ad blocking operates by modifying the **hosts file** (`/system/etc/hosts`),
 
 | Feature | AdAway | Bindhosts |
 |---------|--------|-----------|
-| **Ease of Use** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ |
+| **Ease of Use** | | |
 | **User Interface** | Native Android app | Web UI + action button + terminal |
 | **Host Sources** | Multiple built-in | Extensive collection |
 | **Customization** | Good | Excellent |
@@ -159,13 +159,13 @@ Root ad blocking operates by modifying the **hosts file** (`/system/etc/hosts`),
 
 **AdAway** is the most user-friendly root ad blocker for Android. It writes a merged hosts file systemlessly and also offers a local VPN mode for non-rooted devices. Also available in our [ad blocker collection](../apps-and-modules/ad-blocking#ad-tracker-blocking).
 
-### 📥 **Installation**
+### **Installation**
 
 - **F-Droid (recommended):** [AdAway on F-Droid](https://f-droid.org/packages/org.adaway)
 - **GitHub:** [AdAway releases](https://github.com/AdAway/AdAway/releases)
 - Or install the APK directly with `adb install adaway.apk`
 
-### ⚙️ **Initial Setup**
+### **Initial Setup**
 
 1. **Launch AdAway** and grant root permissions when prompted
 2. **Choose blocking method:**
@@ -174,7 +174,7 @@ Root ad blocking operates by modifying the **hosts file** (`/system/etc/hosts`),
 3. **Configure hosts sources** (see below)
 4. **Apply changes** - AdAway downloads and merges the lists
 
-### 📋 **Hosts Sources Setup**
+### **Hosts Sources Setup**
 
 Navigate to **Hosts Sources**. AdAway ships with defaults (AdAway hosts, StevenBlack, Peter Lowe). Valid hosts-format sources you can add:
 
@@ -192,7 +192,7 @@ Navigate to **Hosts Sources**. AdAway ships with defaults (AdAway hosts, StevenB
 > [!WARNING]
 > Only use hosts-format sources. Adblock-syntax lists such as EasyList and EasyPrivacy are for browser blockers and do not work in AdAway.
 
-### 🔧 **Optimal Configuration**
+### **Optimal Configuration**
 
 - **Enable automatic updates** in settings (daily or weekly)
 - **Configure the whitelist** for apps that break when their domains are blocked
@@ -204,7 +204,7 @@ Navigate to **Hosts Sources**. AdAway ships with defaults (AdAway hosts, StevenB
 
 **Bindhosts** provides systemless hosts blocking with auto-updating, AdAway coexistence, and multiple redirect methods for stronger root hiding. Find it in our [ad blocking modules](../apps-and-modules/ad-blocking#ad-tracker-blocking).
 
-### 🎯 **Why Choose Bindhosts?**
+### **Why Choose Bindhosts?**
 
 - **Fully systemless** - no permanent system modifications
 - **Self-updating** - maintains current hosts lists automatically
@@ -212,13 +212,13 @@ Navigate to **Hosts Sources**. AdAway ships with defaults (AdAway hosts, StevenB
 - **Web UI management** on KernelSU and APatch (Magisk uses the action button and terminal)
 - **AdAway coexistence** - can run alongside AdAway
 
-### 📥 **Installation**
+### **Installation**
 
 1. Download the module zip from [GitHub releases](https://github.com/bindhosts/bindhosts/releases)
 2. Flash it in your root manager (Magisk, KernelSU, or APatch)
 3. Reboot, then open the module action button or Web UI
 
-### ⚙️ **Operating Modes**
+### **Operating Modes**
 
 Bindhosts probes the best mode automatically. You can override it in the developer options:
 
@@ -232,7 +232,7 @@ Bindhosts probes the best mode automatically. You can override it in the develop
 
 Higher SuSFS modes (overlay, bind + spoof, source mod) exist for KernelSU. See the [official modes documentation](https://github.com/bindhosts/bindhosts/blob/master/Documentation/modes.md) for the full table.
 
-### 🖥️ **Web UI and Terminal**
+### **Web UI and Terminal**
 
 The Web UI (KernelSU and APatch) manages custom rules, sources, whitelists, and blacklists. From a root shell or Termux:
 
@@ -248,7 +248,7 @@ bindhosts --enable-cron    # enable scheduled updates
 bindhosts --force-reset    # reset the hosts file
 ```
 
-### 📋 **Custom Sources**
+### **Custom Sources**
 
 Add hosts-format sources in the Web UI, or append them to the module's sources file, then run `bindhosts --force-update`.
 
@@ -256,7 +256,7 @@ Add hosts-format sources in the Web UI, or append them to the module's sources f
 
 ## Configuration & Optimization
 
-### 🎛️ **Whitelist Management**
+### **Whitelist Management**
 
 Apps that may need whitelisting when they break:
 
@@ -270,7 +270,7 @@ Apps that may need whitelisting when they break:
 **AdAway custom rules:** Your Lists → Allowed/Blocked Hosts.
 **Bindhosts custom rules:** add them in the Web UI.
 
-### 📱 **App-Specific Configuration**
+### **App-Specific Configuration**
 
 **Chrome or WebView still showing ads on KernelSU:** open KernelSU Manager → Superuser → Chrome (and Android System WebView) and disable **Umount modules**, so the browser sees the modified hosts file.
 
@@ -278,7 +278,7 @@ Apps that may need whitelisting when they break:
 
 ## Troubleshooting
 
-### 🔧 **Common Issues & Solutions**
+### **Common Issues & Solutions**
 
 #### Issue: Ads Still Appearing
 
@@ -303,7 +303,7 @@ Apps that may need whitelisting when they break:
 1. **Reduce sources:** fewer, focused lists beat many large ones
 2. Remove duplicate sources that overlap heavily
 
-### 🔍 **Diagnostics**
+### **Diagnostics**
 
 ```bash
 # Verify root works
@@ -320,16 +320,16 @@ bindhosts --query doubleclick.net
 
 ## Advanced Tips
 
-### 🔐 **Malware and Tracker Blocking**
+### **Malware and Tracker Blocking**
 
 Hosts lists focus on ads. For malware and phishing, pair your blocker with a DNS filter (RethinkDNS, AdGuard DNS, or NextDNS), or use StevenBlack's alternate lists that bundle the social tracking extension.
 
-### 🔄 **Backup and Restore**
+### **Backup and Restore**
 
 - **AdAway:** use the built-in backup/export in settings
 - **Bindhosts:** settings and sources live in the module folder under `/data/adb/modules/bindhosts/`
 
-### 🧩 **Complementary Root Tools**
+### **Complementary Root Tools**
 
 - [ForceDNS Cloudflare](https://github.com/LuferOS/forcedns_Magisk-kernelsu) - forces all DNS traffic to Cloudflare via iptables
 - [AdGuard Home for Root](https://github.com/twoone-3/AdGuardHomeForRoot) - runs a full DNS filter on the device
@@ -338,7 +338,7 @@ Hosts lists focus on ads. For malware and phishing, pair your blocker with a DNS
 
 ## FAQ
 
-### ❓ **Frequently Asked Questions**
+### **Frequently Asked Questions**
 
 **Q: Will ad blocking affect app functionality?**
 A: Most apps work normally. Whitelist domains for apps that rely on blocked networks.
@@ -368,13 +368,13 @@ A: See the [non-root alternatives guide](../non-root-alternatives.md) for Privat
 
 ## Related Guides
 
-- 📖 [Complete Android Rooting Guide](../rooting-guides/) - Start your rooting journey
-- 🔧 [Magisk Installation Guide](../rooting-guides/magisk-guide.md) - Popular systemless root
-- ⚡ [KernelSU Setup Guide](../rooting-guides/kernelsu-guide.md) - Kernel-based root with advanced hiding
-- 🛠️ [LSPosed Configuration](../rooting-guides/lsposed-guide.md) - Advanced app modifications
-- 🧹 [Android Debloating Guide](./android-apps-debloating.md) - Remove bloatware for better performance
-- 🛡️ [Privacy & Security Apps](../apps-and-modules/privacy) - Additional privacy tools
-- 🔍 [More Ad Blocking Solutions](../apps-and-modules/ad-blocking#ad-tracker-blocking) - Alternative blockers
+- [Complete Android Rooting Guide](../rooting-guides/) - Start your rooting journey
+- [Magisk Installation Guide](../rooting-guides/magisk-guide.md) - Popular systemless root
+- [KernelSU Setup Guide](../rooting-guides/kernelsu-guide.md) - Kernel-based root with advanced hiding
+- [LSPosed Configuration](../rooting-guides/lsposed-guide.md) - Advanced app modifications
+- [Android Debloating Guide](./android-apps-debloating.md) - Remove bloatware for better performance
+- [Privacy & Security Apps](../apps-and-modules/privacy) - Additional privacy tools
+- [More Ad Blocking Solutions](../apps-and-modules/ad-blocking#ad-tracker-blocking) - Alternative blockers
 
 ---
 
@@ -393,7 +393,7 @@ Remember to:
 
 <div align="center">
 
-*📚 Part of the [Awesome Android Root](https://github.com/awesome-android-root/awesome-android-root) collection*
+*Part of the [Awesome Android Root](https://github.com/awesome-android-root/awesome-android-root) collection*
 
 [![Star on GitHub](https://img.shields.io/github/stars/awesome-android-root/awesome-android-root?style=social)](https://github.com/awesome-android-root/awesome-android-root)
 

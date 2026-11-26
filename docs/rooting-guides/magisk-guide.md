@@ -82,8 +82,6 @@ Magisk provides systemless root through a patched boot-related image. This guide
 
 **Magisk topic map:** [installation](#installation-methods) · [boot image patching](#method-1-boot-image-patching-recommended) · [Magisk modules](#managing-modules) · [Zygisk and DenyList](#root-hiding-and-play-integrity) · [Play Integrity](#understanding-play-integrity) · [troubleshooting](#troubleshooting)
 
----
-
 ## Understanding Magisk
 
 Magisk provides superuser access and can apply systemless modifications without directly changing read-only system partitions. Updates and recovery still depend on the device, firmware and installation method.
@@ -99,67 +97,26 @@ Removing Magisk does not reverse a bootloader unlock or a tripped Samsung Knox w
 
 ### Magisk vs Alternatives
 
-| Feature | Magisk | KernelSU | APatch |
-|---------|--------|----------|---------|
-| Ease of Use | Excellent | Moderate | Moderate |
-| Module Support | Excellent | Excellent | Good |
-| Root Hiding | Community tools; no built-in hiding | App Profiles and optional tools | No guarantee |
-| Device Support | Broadest | GKI 2.0 for official builds, wider via variants | ARM64, kernel 3.18 to 6.12 |
-| Custom Kernel Required | No | No for LKM mode, yes for GKI mode | No |
-
-**Choose Magisk if:**
-- You want easiest installation
-- You need extensive modules (browse the [800+ app and module collection](../apps-and-modules/))
-- You want maximum compatibility
-- You're new to rooting
-
-> [!TIP]
-> Detailed comparison with other root solutions: [Root Comparison](./root-framework-comparison.md)
-
----
+Compare installation models, compatibility requirements and tradeoffs in the [framework comparison](./root-framework-comparison.md). This page covers Magisk installation and management rather than maintaining a second compatibility matrix.
 
 ## Prerequisites
 
+<span id="hardware-requirements"></span>
+<span id="software-requirements"></span>
+
 ### Critical Requirements
 
-::: danger ESSENTIAL PREREQUISITES
-**Unlocked Bootloader** - Magisk requires unlocked bootloader. Complete [bootloader unlocking](./how-to-unlock-bootloader.md) first.
+Complete the [universal preparation checklist](./index.md#pre-rooting-checklist), including [bootloader eligibility and unlocking](./how-to-unlock-bootloader.md), backups, Platform Tools and the device-specific restore plan. For Magisk, also:
 
-**Stock Firmware** - Download your device's stock firmware for boot image extraction.
-
-**Complete Backup** - Backup all important data before proceeding.
-
-**Battery 50%+** - Ensure sufficient battery to prevent interruption.
-:::
-
-### Hardware Requirements
-
-- Android device with unlocked bootloader
-- 50% or higher battery charge
-- Quality USB cable (data-capable)
-- Computer (Windows, macOS, or Linux)
-
-### Software Requirements
-
-**On Computer:**
-- [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools) (ADB/Fastboot)
-- Device-specific USB drivers (Windows only)
-- Stock firmware for your device
-
-**On Device:**
-- Latest Magisk APK from [GitHub](https://github.com/topjohnwu/Magisk/releases)
-- File manager app
-- At least 500MB free storage
+- Install the official [Magisk APK](https://github.com/topjohnwu/Magisk/releases) on the device being patched.
+- Use [image selection below](#step-1-download-required-files) as the source of truth for the matching firmware, image and partition. Keep the original images off-device.
+- Check the [manufacturer guide](./index.md#device-specific-guides) for exceptions, especially Samsung's AP/Download Mode workflow.
 
 ### Compatibility
 
 The official release requires Android 7.0 or newer. Minimum requirements can change, so check the [official project](https://github.com/topjohnwu/Magisk) and [release notes](https://github.com/topjohnwu/Magisk/releases) before installing. An unlockable bootloader alone does not guarantee device compatibility.
 
-1. Verify that your exact device variant can be unlocked and flashed.
-2. Obtain firmware matching the installed build and a device-specific recovery plan.
-3. Check the [upstream installation guide](https://topjohnwu.github.io/Magisk/install.html) and [device-specific guides](./index.md#device-specific-guides) for partition layout and known restrictions.
-
----
+Check the [upstream installation guide](https://topjohnwu.github.io/Magisk/install.html) and [device-specific guides](./index.md#device-specific-guides) for partition layout and known restrictions.
 
 ## Installation Methods
 
@@ -247,15 +204,11 @@ Then reboot with `fastboot reboot`. For a recovery-based installation, a normal 
 
 An installed app alone does not prove that the patched image booted or that root access works.
 
----
-
 ### Method 2: Custom Recovery Installation (Legacy)
 
 Magisk's [custom recovery method](https://topjohnwu.github.io/Magisk/install.html#custom-recovery) is deprecated and maintained with minimal effort. It is only possible on devices with a boot ramdisk; it **cannot** install or upgrade Magisk when Magisk must be installed in recovery.
 
 If your exact device and recovery support this method, upstream describes renaming the official APK to `.zip`, installing it in recovery and then completing the app's direct reinstallation. For problems, use the verified image-patching method instead. A recovery may not be able to decrypt `/data` or access the right partitions.
-
----
 
 ### Method 3: Direct Installation (Advanced)
 
@@ -264,8 +217,6 @@ For an existing, working Magisk installation, upstream recommends opening Magisk
 Temporary boot is device-specific. Only try `fastboot boot` if the device supports it and you have a compatible, bootable `boot` image. An `init_boot` image is not a standalone bootable image. A successful temporary boot is not itself a permanent installation.
 
 If stock firmware is unavailable, do not assume a dump of an already-patched partition is stock. Obtain the exact-build original and confirm the recovery path before proceeding.
-
----
 
 ## Post-Installation Setup
 
@@ -289,8 +240,6 @@ An unrestricted root shell should report `uid=0(root)`. Revoke shell access afte
 - **Recovery Mode** is for patching a recovery image when the device needs Magisk in recovery, not a setting for every custom-recovery user.
 - Enable **Zygisk** only if a trusted module needs it. When enforced, **DenyList** reverts Magisk modifications in selected processes; it does not guarantee root hiding or app compatibility.
 - Review and revoke Superuser grants regularly. Use authentication and capability restrictions where appropriate, and avoid granting root to apps you do not trust.
-
----
 
 ## Managing Modules
 
@@ -331,43 +280,15 @@ adb shell magisk --remove-modules
 
 Recovery-based manual removal requires a compatible recovery that can mount and decrypt `/data`; it is not available on every device. If these methods fail, use the [device-specific stock recovery procedure](#backup-and-restore).
 
----
-
 ## Root Hiding and Play Integrity
+
+<span id="configuring-root-hiding"></span>
+<span id="advanced-root-hiding"></span>
+<span id="testing-play-integrity"></span>
 
 ### Understanding Play Integrity
 
-Play Integrity verdicts, Play Protect certification and an app's own root checks are different signals. Refer to Google's [verdict definitions](https://developer.android.com/google/play/integrity/verdicts):
-
-| Verdict | What to know |
-|---------|--------------|
-| `MEETS_BASIC_INTEGRITY` | A basic verdict, not proof of a locked or certified device. |
-| `MEETS_DEVICE_INTEGRITY` | Requirements vary by Android version; hardware-backed evidence can be required. |
-| `MEETS_STRONG_INTEGRITY` | Adds stronger requirements, including security-update requirements on newer Android versions. |
-
-An unlocked bootloader, modified firmware or independent app checks can prevent acceptance. No module guarantees any verdict or banking-app compatibility.
-
-### Configuring Root Hiding
-
-The [Magisk FAQ](https://topjohnwu.github.io/Magisk/faq.html) states that Magisk no longer handles root hiding. The current official app also no longer offers the old **Hide the Magisk app** repackaging feature.
-
-In **Settings > Configure DenyList**, select the processes whose Magisk modifications should be reverted and enable **Enforce DenyList** if that behavior is wanted. DenyList is not an invisibility guarantee. Enable Zygisk only when a module needs it, and check that module's own DenyList and Zygisk requirements before changing settings.
-
-Uninstalling the Magisk app alone does not uninstall the installed root framework or ensure that apps cannot detect it. Keep access to the official app if you need to manage root grants and modules.
-
-### Advanced Root Hiding
-
-Community Zygisk and integrity modules may address particular detection signals, but their requirements and effectiveness change. Use only sources you trust, follow each project's instructions and avoid stacking overlapping modules. Never download or purchase leaked attestation keys.
-
-See [Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps) and the [root-management index](../apps-and-modules/root-management#root-hiding-play-integrity) for options and limitations. Switching frameworks or adding SUSFS also does not guarantee that an app will accept the device.
-
-### Testing Play Integrity
-
-Use a Play Integrity checker app such as
-[Play Integrity API Checker](https://github.com/1nikolas/play-integrity-checker-app). YASNAC is legacy (SafetyNet) and is no longer
-authoritative.
-
----
+Magisk does not provide built-in root hiding. Enforced DenyList reverts Magisk modifications in selected processes; it does not guarantee that an app will accept the device. Use the canonical [Play Integrity and banking-app guide](../troubleshooting.md#play-integrity-and-banking-apps) for diagnosis, limitations and optional community tools.
 
 ## Updates and Maintenance
 
@@ -375,7 +296,7 @@ authoritative.
 
 **In-App Updates:**
 
-<details><summary>👉 Click to expand details</summary>
+<details><summary>Click to expand details</summary>
 
 1. Magisk > Settings
 2. Update channel: Stable (recommended)
@@ -425,8 +346,6 @@ If you accidentally flashed the wrong partition, restoring `boot` alone will not
 
 </details>
 
----
-
 ## Troubleshooting
 
 ### Installation Issues
@@ -475,27 +394,13 @@ DenyList does not guarantee that an app will ignore root, an unlocked bootloader
 
 Use a current Play Integrity checker and compare the exact verdict against [Google's definitions](https://developer.android.com/google/play/integrity/verdicts). A verdict alone does not prove that a banking app will work. Attestation requirements and server-side checks change, and no module can guarantee Basic, Device or Strong Integrity.
 
----
-
 ## Best Practices
+
+<span id="module-management"></span>
 
 ### Security Recommendations
 
-1. **Only grant root to trusted apps**
-2. **Review superuser logs regularly**
-3. **Keep Magisk updated**
-4. **Backup before major changes**
-5. **Test modules on non-critical device first**
-
-### Module Management
-
-1. **Install modules one at a time**
-2. **Test after each installation**
-3. **Keep list of installed modules**
-4. **Remove unused modules**
-5. **Update modules cautiously**
-
----
+Follow the shared [post-root checklist](./index.md#step-4-post-root-configuration) and [module safety guidance](./index.md#module-safety). Magisk-specific module controls and recovery are documented in [Managing Modules](#managing-modules).
 
 ## Next Steps
 
@@ -503,9 +408,6 @@ Browse the [root apps and modules](../apps-and-modules/) and [starter kit](../ap
 For optional app modifications, see the [LSPosed guide](./lsposed-guide.md); for ad blocking, see the [module list](../apps-and-modules/ad-blocking#ad-tracker-blocking)
 and [tutorial](../general-guides/android-adblocking.md). The [performance modules](../apps-and-modules/performance#performance-optimization),
 [debloating guide](../general-guides/android-apps-debloating.md), and [custom ROM guide](./custom-rom-installation.md) cover other common tasks.
-
----
-
 
 ## Community Resources
 

@@ -46,7 +46,7 @@ Bloatware refers to pre-installed applications that:
 
 ## Important Safety Information
 
-⚠️ **WARNING**: Always create a backup before debloating and understand the risks:
+**WARNING**: Always create a backup before debloating and understand the risks:
 
 - **Not truly deleted**: System apps remain in `/system` partition but are disabled for users
 - **Factory reset restores**: All debloated apps return after factory reset
@@ -89,10 +89,10 @@ App Manager includes a built-in debloater that uses the comprehensive [Android D
 #### Step 2: Review Bloatware Categories
 App Manager categorizes apps based on safety levels:
 
-- **🟢 Safe (Recommended)**: Can be removed without issues
-- **🟡 Caution (Advanced)**: May break minor functionality
-- **🟠 Expert**: May break important features
-- **🔴 Unsafe**: High risk of system instability
+- **Safe (Recommended)**: Can be removed without issues
+- **Caution (Advanced)**: May break minor functionality
+- **Expert**: May break important features
+- **Unsafe**: High risk of system instability
 
 #### Step 3: Select Apps for Removal
 1. **Review descriptions**: Tap any app to see detailed information
