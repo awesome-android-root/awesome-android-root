@@ -93,7 +93,7 @@ Use the pinned Bun version in `.bun-version` and Node version in `.nvmrc`, then
 run `bun install`. The repository intentionally does not track `bun.lock`.
 
 ```bash
-bun run typecheck       # one TypeScript 7 compiler, separate runtime environments
+bun run typecheck       # native Bun checks, separate runtime environments
 bun run test            # focused icon, link, Markdown, MCP and search unit tests
 bun run lint            # internal links and entry lint (blocking on errors)
 bun run docs:build      # generate counts, render VitePress, then index Pagefind
@@ -104,13 +104,26 @@ bun run check           # all of the above checks, including build/browser tests
 There is no separate ESLint or formatting configuration. Keep existing style and
 use `git diff --check`.
 
-### One TypeScript compiler
+### Native Bun typechecking
 
-`typescript` is pinned to **7.0.2**, the latest stable release checked on
-2026-11-26. There is no second compiler alias, legacy TypeScript override or
-`vue-tsc` fallback. TypeScript's platform-specific native executable package has
-the **same** 7.0.2 version; it is part of that compiler, not another compiler.
-Check the installed graph with `bun pm ls --all`.
+All project/CI typechecks use **`bun check`**, not the standalone `tsc` command.
+Bun 1.4.5 embeds TypeScript **7.0.2** semantics and standard-library types; verify
+with `bun -p process.versions.typescript`. The installed `typescript@7.0.2`
+package is kept for editor/tool version alignment, as recommended by Bun, but is
+not invoked by our validation scripts. There is no older compiler/alias or
+`vue-tsc` fallback. When upgrading Bun, recheck that its reported TypeScript
+version and the editor package still match.
+
+The command is `bun check --no-script -p tsconfig.<environment>.json`.
+`--no-script` matters here: this repository already has a `check` package script
+for the **full** validation pipeline. Without the flag, `bun check` would run
+that script rather than the built-in checker, causing recursion from typecheck.
+Keep `bun run check` for the full pipeline and `bun run typecheck` for types only.
+
+`bun test --check` is useful for test-local checks, but not a replacement for all
+four configurations: it only follows test files and their imports, which need
+not cover every theme/config/build/worker source. We keep explicit whole-project
+checks and do not run a redundant second checker through the test command.
 
 The tsconfigs select environments, **not TypeScript versions**:
 
@@ -119,7 +132,7 @@ The tsconfigs select environments, **not TypeScript versions**:
 - `tsconfig.worker.json`: Cloudflare middleware, WebWorker types.
 - `tsconfig.tests.json`: unit/browser-test harnesses, Bun and DOM types.
 
-All use the same `tsc` binary and shared strict configuration. `skipLibCheck`
+All use the same built-in Bun checker and shared strict configuration. `skipLibCheck`
 skips dependency declarations, not custom code. No custom-code typechecks are
 disabled. Lucide's undeclared per-icon `__iconData` exports have a narrow ambient
 contract using its official `LucideIconData` type, not an untyped module shim.
@@ -135,7 +148,7 @@ a new framework. Both setup logic **and rendered expressions/props/handlers** ar
 checked directly by TypeScript 7.
 
 Vite's existing Oxc transform uses Vue's shipped automatic JSX runtime. There is
-no extra JSX plugin/compiler dependency. `jsx: preserve` lets tsc check the render
+no extra JSX plugin/compiler dependency. `jsx: preserve` lets Bun check the render
 code without emitting it; Vite performs the actual transform. In TSX, read/write
 refs with `.value`, use `onClick`/`onInput` handlers and pass typed props normally.
 CSS lives beside the component in namespaced stylesheets; search styles still
@@ -309,7 +322,7 @@ The standalone Markdown-it runtime dependency was removed: use the shared
 VitePress renderer instead of introducing Markdown-it 15 beside VitePress's 14.x
 pipeline. Its latest 14.x type declarations are retained for token/plugin types.
 
-TypeScript 7.0.2 now checks all custom code directly; the former 6.0.3/vue-tsc
+Bun's TypeScript 7.0.2-compatible checker checks all custom code directly; the former 6.0.3/vue-tsc
 compatibility exception was removed by the Vue TSX port described above. Bun
 1.4.5 and Node 26 remain on stable releases. GitHub Actions use verified stable
 release commit SHAs with version comments.

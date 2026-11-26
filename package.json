@@ -25,7 +25,7 @@
     "test": "bun test scripts/*.test.ts",
     "index:build": "bun scripts/app-entries.ts",
     "check": "bun run typecheck && bun run test && bun run lint && bun run docs:build && bun run test:search",
-    "typecheck": "tsc --noEmit -p tsconfig.browser.json && tsc --noEmit -p tsconfig.tools.json && tsc --noEmit -p tsconfig.worker.json && tsc --noEmit -p tsconfig.tests.json",
+    "typecheck": "bun check --no-script -p tsconfig.browser.json && bun check --no-script -p tsconfig.tools.json && bun check --no-script -p tsconfig.worker.json && bun check --no-script -p tsconfig.tests.json",
     "test:search": "bun test tests/search.spec.ts",
     "lint": "bun run check:links && bun run lint:entries",
     "lint:entries": "bun scripts/app-entries.ts --check"

@@ -37,7 +37,8 @@ Run `bun run check` for strict typechecks, focused unit tests, lint, a productio
 build and two browser search smoke tests. Install Google Chrome locally, or set
 `CHROMIUM_PATH` to a compatible Chromium binary. Both suites use Bun's runner;
 `puppeteer-core` drives the installed browser without downloading one.
-All environments use the same stable TypeScript 7 compiler. Custom Vue render
+All environments use Bun's native checker with TypeScript 7.0.2 semantics;
+the matching TypeScript package keeps editor/tool versions aligned. Custom Vue render
 components use checked TSX, not a separate vue-tsc/older compiler.
 See [scripts/README.md](scripts/README.md) for individual commands, subpath
 deployments and the retained search regression tests.
