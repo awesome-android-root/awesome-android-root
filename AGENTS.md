@@ -134,7 +134,10 @@ Rules:
 
 ## 6. Site and Code Changes
 
-The project uses Node.js, VitePress, Markdown/YAML, TypeScript, Python, and Bash.
+The project uses Bun, Node.js, VitePress/Vue, Markdown/YAML, TypeScript/TSX,
+Python, and Bash. Use the pinned runtimes in `.bun-version` and `.nvmrc`.
+Custom Vue components use checked TSX and Vue's JSX runtime, not React or
+`vue-tsc`; preserve the existing rendering and stylesheet conventions.
 
 Use the existing commands from `package.json`:
 
@@ -151,8 +154,14 @@ When changing TypeScript:
 * Keep functions focused and deterministic.
 * Avoid unnecessary dependencies and abstractions.
 * Preserve existing behavior unless a change is required.
+* Keep all four strict typecheck environments: browser, tools, worker, and tests.
+* Use `bun run typecheck`; it invokes native `bun check --no-script` without a
+  direct TypeScript dependency. Plain `bun check` runs our full `check` script.
+* Use `bun:test` and its assertions for tests; avoid ignores, disabled strictness,
+  and untyped shims. Validate untrusted runtime input.
 
 For dependency changes, check existing dependencies before adding new ones.
+Keep VitePress on the project's chosen alpha line; do not add a second compiler.
 
 ### Modern web guidance
 
@@ -176,8 +185,23 @@ bun run docs:build
 For app and module entries, also run:
 
 ```bash
-bun run index:build  # regenerates the app index, count page and reports entry format, ordering and badge problems
+bun run lint:entries # checks entry format, ordering and badges without regenerating files
+bun run index:build  # regenerates the app index, count page and count JSON
 ```
+
+For code changes, run the relevant tests and typechecks; use the full pipeline
+before completing site/search changes:
+
+```bash
+bun run typecheck
+bun run test         # focused unit tests
+bun run test:search  # two built-site search smoke tests; requires Google Chrome or CHROMIUM_PATH
+bun run check        # types, unit tests, lint, production build and search smoke tests
+```
+
+Search uses Pagefind generated from rendered HTML. Preserve entry anchors,
+configured-base URLs, lazy loading, keyboard/focus behavior and retry recovery.
+Keep focused regression tests rather than expanding a broad browser matrix.
 
 CI runs internal links, entry lint, typecheck, unit tests, the build and browser
 search tests as blocking steps. `docs:build` also runs
