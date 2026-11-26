@@ -279,4 +279,14 @@ hero:
     <span>Big collection of resources</span>
   </a>
 </div>
+
+## Sponsors
+
+<div class="community-cards">
+  <a href="https://addy.io/?ref=awesome-android-root" class="community-card sponsor-card">
+    <img src="/images/addy-logo.svg" alt="" width="220" height="90">
+    <strong>addy.io</strong>
+    <span>Our sponsor. A different email address for every website.</span>
+  </a>
+</div>
 </div>
