@@ -141,41 +141,18 @@ Use the [official releases](https://github.com/tiann/KernelSU/releases) for the 
 
 ### KernelSU vs Alternatives
 
-| Feature | KernelSU | Magisk | APatch |
-|---------|----------|---------|--------|
-| Architecture | Kernel-based | Ramdisk/`init` | KernelPatch |
-| App control | App Profiles and allowlist | Superuser policies | SuperKey-based access |
-| Module mounting | Metamodule for system files | Built-in | Built-in |
-| Zygisk | External implementation | Built-in | External implementation |
-| Hiding / integrity | App Profiles and optional tools; no guarantee | Community tools; no built-in root hiding | No guarantee |
-
-**Choose KernelSU if:** your kernel and device are supported and you want kernel-level root with per-app policies. LKM mode keeps the existing kernel, but firmware updates can replace the patched image or change compatibility.
-
-> [!TIP]
-> Detailed comparison: [Root Comparison](./root-framework-comparison.md)
-
----
+Use the [framework comparison](./root-framework-comparison.md) for installation models, requirements and tradeoffs.
 
 ## KernelSU Variants
 
-The KernelSU ecosystem is now mostly forks. Names, maintainers and repositories change quickly, so check that a project is still receiving commits before flashing its kernel.
+| Variant | Main reason to consider it | Compatibility |
+|---------|----------------------------|---------------|
+| [Official KernelSU](https://github.com/tiann/KernelSU) | Official upstream implementation | Check official kernel/KMI requirements and Manager result |
+| [KernelSU Next](https://github.com/KernelSU-Next/KernelSU-Next) | Additional fork-specific features | Verify a matching kernel and manager in the fork's documentation |
+| [SukiSU Nova](https://github.com/SukiSU-Nova/SukiSU-Nova) | Alternative kernel integration and KPM features | Verify the exact supported kernel and required configuration |
+| Other forks | Specialized or legacy use | Verify upstream status, kernel, manager and recovery instructions |
 
-| Variant | Kernel support | Notes |
-|---------|----------------|-------|
-| **[Official KernelSU](https://github.com/tiann/KernelSU)** | GKI 2.0 (5.10+), manual backports for older | LKM-first, metamodule-based, official module repository |
-| **[KernelSU-Next](https://github.com/KernelSU-Next/KernelSU-Next)** | See the fork's kernel requirements | Metamodule-based, ships prebuilt SUSFS LKM `susfs_guard_lkm.ko` per KMI, module and app profile backup, risk detection that blocks suspicious modules, spoofed-package Manager builds |
-| **[SukiSU Nova](https://github.com/SukiSU-Nova/SukiSU-Nova)** (formerly SukiSU-Ultra) | GKI 2.0, plus non-GKI/GKI 1.0 backports | Bundled mount engine with metamodule hooks available, KPM with a compatible kernel configuration, SUSFS controls in the Manager |
-| **[BakaSU](https://github.com/Baka-SU/BakaSU)** (formerly ReSukiSU) | GKI 2.0, manual hooks down to 3.4 | Metamodule-based, built-in SUSFS management, multi-manager support (official or KOWX712 KernelSU Manager can manage its kernel) |
-| **[Wild KSU](https://github.com/WildKernels/Wild_KSU)** | Discontinued | Repository archived in 2026; the WildKernels kernel repos still publish KernelSU/KernelSU-Next builds |
-
-**How to pick:**
-- Supported GKI device, stock or near-stock firmware: consider **official KernelSU** in LKM mode after checking the Manager.
-- You want SUSFS or module backup: check whether **KernelSU-Next** supports your exact device and kernel.
-- Non-GKI or KPM support: consider **SukiSU Nova** after checking your device, kernel and required configuration.
-- You want a second manager or old-kernel manual hooks: **BakaSU**.
-
-> [!WARNING]
-> Everything except official KernelSU is community code. A fork can add detection vectors, drop in maintenance, or rename itself (ReSukiSU to BakaSU is the recent example). Read the project's own README before assuming features carry over. [KernelSU Next](https://github.com/KernelSU-Next/KernelSU-Next) also warns that some recent `x86_64` kernels may panic; check the fork's compatibility notes before installing.
+A fork is not a compatibility workaround by itself. Check its current README and release notes rather than assuming features or manager compatibility carry across forks. Use the [root-management catalog](../apps-and-modules/root-management.md) for project links; release-specific feature inventories belong upstream, not in this installation guide.
 
 ---
 
@@ -218,21 +195,10 @@ Do not assume that a custom ROM includes KernelSU or that a kernel for another m
 
 ## Prerequisites
 
-::: danger ESSENTIAL
-- **Unlocked bootloader** - Complete [bootloader unlocking](./how-to-unlock-bootloader.md) first
-- **A full backup** of important data (bootloader unlock usually wipes the device anyway)
-- **Exact-build stock firmware and original images** for all affected partitions and slots, with a device-specific recovery plan
-- **Battery above 50%** so flashing is never interrupted
-:::
+<!-- Preserve incoming links to consolidated sections. -->
+<span id="requirements"></span>
 
-### Requirements
-
-| Hardware | Software |
-|----------|----------|
-| GKI 2.0 device (kernel 5.10+) for official KernelSU | [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools) (ADB and fastboot) |
-| Data-capable USB cable | Device USB drivers (Windows) |
-| Computer (Windows, macOS, Linux) | KernelSU Manager APK from the chosen variant's releases |
-| ~500 MB free storage for modules and images | Optional: `magiskboot` if you patch images by hand |
+Complete the [universal preparation checklist](./index.md#pre-rooting-checklist), including bootloader unlocking, off-device backups, tools and exact-build stock recovery images. Then verify the selected variant's [current kernel requirements](https://kernelsu.org/guide/installation.html) and use its matching Manager APK. Do not substitute a manager or kernel from another fork without explicit upstream support.
 
 ### Compatibility Check
 
@@ -407,21 +373,11 @@ Apply: KernelSU Manager -> Superuser -> choose app -> edit profile, then restart
 
 ## Root Hiding and Play Integrity
 
-App Profiles, optional community hiding tools and Play Integrity address different signals. None guarantees that an app will accept a modified device.
+<!-- Preserve incoming links to consolidated sections. -->
+<span id="the-three-layers"></span>
+<span id="what-is-realistic"></span>
 
-### The three layers
-
-1. **App Profiles:** control root grants and whether module mounts are visible to non-root apps.
-2. **Optional kernel tools:** some supported kernels or variants provide SUSFS. Requirements depend on the device, KMI and implementation; see the [SUSFS guide](./susfs-guide.md).
-3. **Userspace and attestation:** external Zygisk or integrity modules may address particular signals. Check their documentation, use trusted sources and avoid overlapping implementations.
-
-### What is realistic
-
-Play Integrity, Play Protect certification and an app's own root checks are separate. Google defines the Basic, Device and Strong verdicts in its [official documentation](https://developer.android.com/google/play/integrity/verdicts); requirements vary by Android version and can include hardware-backed evidence and recent security updates.
-
-A rooted or unlocked device can fail any of these checks. App Profiles, SUSFS or a community module cannot guarantee a verdict or banking-app compatibility. Do not download or purchase leaked attestation keys. See [Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps) for troubleshooting, or use an unmodified supported device for essential services.
-
----
+App Profiles control root privileges and exposure; they do not guarantee that banking or attestation checks pass. Use the shared [Play Integrity guide](../troubleshooting.md#play-integrity-and-banking-apps) for diagnosis and the [SUSFS guide](./susfs-guide.md) only if the selected kernel/variant supports it.
 
 ## Troubleshooting
 

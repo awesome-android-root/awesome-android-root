@@ -90,16 +90,7 @@ APatch patches the kernel in `boot.img` and provides kernel-level root access wi
 
 ### APatch vs Other Root Solutions
 
-| Feature | APatch | Magisk | KernelSU |
-|---------|--------|--------|----------|
-| Architecture | Kernel-based | Userspace root stack | Kernel-based |
-| Typical setup | Patch + flash `boot.img` | Patch + flash image | Kernel-dependent install methods |
-| Module model | APModule (plus some compatibility) | Magisk modules | KSU modules |
-| Zygisk-style workflow | Via community alternatives | Native | Via alternatives |
-| OTA workflow | Repatch updated image | Built-in paths + manual recovery cases | Slot/image aware workflows |
-
-> [!CAUTION]
-> Do **not** run APatch together with Magisk or KernelSU on the same active slot. Use one root stack at a time.
+Use the [framework comparison](./root-framework-comparison.md) to choose an installation model. Do **not** run APatch together with Magisk or KernelSU on the same active slot; use one root stack at a time.
 
 ---
 
@@ -107,37 +98,14 @@ APatch patches the kernel in `boot.img` and provides kernel-level root access wi
 
 ### Officially Relevant Compatibility Signals
 
-Based on APatch upstream docs and repository notes:
+Check the official [APatch README requirements](https://github.com/bmax121/APatch#supported-versions) and [installation requirements](https://github.com/AndroidPatch/APatchDocs/blob/main/docs/install.md#install-requirements) for the release being installed. Architecture, supported kernel versions, `CONFIG_KALLSYMS` / `CONFIG_KALLSYMS_ALL` configuration and device security restrictions matter; Android version or manufacturer alone cannot establish compatibility.
 
-- **Architecture:** ARM64 only
-- **Kernel range:** Linux kernel 3.18 to 6.12 (upstream stated range)
-- **Kernel configuration:** `CONFIG_KALLSYMS=y`; see [upstream requirements](https://github.com/AndroidPatch/APatchDocs/blob/main/docs/install.md#install-requirements) for `CONFIG_KALLSYMS_ALL` and device limitations
-- **Kernel 6.6:** upstream says it has only been tested on Xiaomi and OnePlus devices; other brands need additional verification
-- **Practical Android target:** modern Android builds (Android 10+ is the common baseline in community usage)
+<!-- Preserve incoming links to consolidated sections. -->
+<span id="tools-you-need"></span>
 
 ### Must-Have Prerequisites
 
-::: danger ESSENTIAL REQUIREMENTS
-**Unlocked bootloader** - mandatory before any APatch install.
-
-**Exact matching stock firmware** - image must match your current build fingerprint.
-
-**Complete backup** - failed flashes can force full restore.
-
-**Battery 50%+** - avoid interruptions during patch/flash.
-:::
-
-### Tools You Need
-
-**Computer:**
-- [Android Platform Tools](https://developer.android.com/tools/releases/platform-tools) (latest `adb`/`fastboot`)
-- OEM USB drivers (Windows)
-- Image extraction tools (for payload/Firmware archives)
-
-**Device:**
-- Latest APatch manager from [GitHub Releases](https://github.com/bmax121/APatch/releases/latest)
-- File manager
-- 500MB+ free storage
+Complete the [universal preparation checklist](./index.md#pre-rooting-checklist), including an unlocked bootloader, off-device backup, Platform Tools and a device-specific restore plan. Obtain the official [APatch manager](https://github.com/bmax121/APatch/releases/latest) and extraction tools for your firmware package. Keep the exact-build stock **kernel-containing `boot.img`** available for recovery; see the partition distinction below before patching.
 
 ---
 
@@ -276,25 +244,13 @@ Expected output includes `uid=0(root)`.
 
 ## Post-Installation Setup
 
+<!-- Preserve incoming links to consolidated sections. -->
+<span id="root-permission-hygiene"></span>
+<span id="manager-hiding-and-sensitive-apps"></span>
+
 ### Recommended Security Baseline
 
-In APatch settings:
-- Default SU action: prompt
-- Short prompt timeout (for accidental requests)
-- Biometric or device authentication for approvals
-- Enable root access logs
-
-### Root Permission Hygiene
-
-- Grant only to trusted apps
-- Revoke old/unused grants regularly
-- Check logs after new module installs
-
-### Manager Hiding and Sensitive Apps
-
-If your build supports manager hiding/repackaging, use it carefully and test critical apps one-by-one after changes.
-
----
+Protect the APatch **SuperKey**: it has privileges beyond ordinary app root grants. Use a strong key according to upstream requirements and never include it in screenshots or logs. Review access in the manager and follow the shared [post-root checklist](./index.md#step-4-post-root-configuration).
 
 ## Managing Modules
 
@@ -306,10 +262,7 @@ If your build supports manager hiding/repackaging, use it carefully and test cri
 
 ### Safe Module Workflow
 
-1. Install one module at a time
-2. Reboot and test system stability
-3. Keep a known-good boot image for rollback
-4. Avoid stacking many behavior-changing modules at once
+Follow the canonical [module safety checklist](./index.md#module-safety). APModules and KPModules have different roles; kernel modules execute in kernel space, so use only those explicitly supported by the installed APatch/KernelPatch release and device.
 
 ### If a Module Causes Boot Problems
 
@@ -347,21 +300,11 @@ Patch the stock **`boot.img` for the build on the slot you intend to boot**, not
 
 Play Integrity behavior changes frequently server-side. There is no permanent bypass guarantee.
 
-### Practical Expectations
+<!-- Preserve incoming links to consolidated sections. -->
+<span id="practical-expectations"></span>
+<span id="safer-strategy"></span>
 
-- **Basic integrity:** sometimes passable with careful setup
-- **Device/strong integrity:** commonly fails on unlocked/rooted devices
-- Banking/payment app behavior varies by region, app version, and backend policy
-
-### Safer Strategy
-
-- Keep root access denied for sensitive apps
-- Use minimum module set required for your use case
-- Re-test after every OTA or major app update
-- Follow the module stack in
-  [Play Integrity and Banking Apps](../troubleshooting.md#play-integrity-and-banking-apps)
-
----
+Use the shared [Play Integrity/app compatibility guide](../troubleshooting.md#play-integrity-and-banking-apps). Kernel-level root is not a guarantee of invisibility, and SuperKey protection does not make untrusted modules safe.
 
 ## Uninstallation
 

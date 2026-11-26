@@ -134,6 +134,8 @@ Before unlocking, a missing or unavailable OEM Unlocking option is a stop sign, 
 
 ## Prerequisites
 
+Complete the [universal preparation checklist](./index.md#pre-rooting-checklist) for backups, battery, computer/cable and ADB/Fastboot setup. The requirements below cover this manufacturer's eligibility, firmware and tools.
+
 ### Critical Requirements
 
 ::: danger BEFORE YOU START
@@ -148,12 +150,7 @@ Before unlocking, a missing or unavailable OEM Unlocking option is a stop sign, 
 **US Carrier Models:** Most cannot unlock bootloader at all.
 :::
 
-### Hardware Requirements
-
-- Samsung Galaxy variant verified to permit bootloader unlocking
-- Computer with USB access (Odin requires Windows; samloader also supports Linux and macOS)
-- Quality USB cable (Samsung original recommended)
-- 50%+ battery charge
+<span id="hardware-requirements"></span>
 
 ### Software Requirements
 
@@ -163,7 +160,7 @@ Before unlocking, a missing or unavailable OEM Unlocking option is a stop sign, 
    - Download: [Samsung Developers](https://developer.samsung.com/android-usb-driver)
    - Install before connecting device
 
-2. **Odin Flash Tool**
+2. **Odin Flash Tool** (Windows; upstream samloader also supports Linux/macOS)
   - Download the stock Odin package from the [XDA Odin thread](https://xdaforums.com/t/patched-odin-3-13-1.3762572/); this guide's AP-patching steps do not require patched Odin.
   - The thread warns that packages labeled Odin 3.14.4 are fake. Follow the exact-device instructions for the required version, and do not trust a filename alone.
   - Compare the archive's SHA-256 with a hash from an independently trusted source, if available. Scan the archive with up-to-date security software, but do not treat a clean scan as proof of authenticity.
@@ -208,14 +205,9 @@ Settings > Developer options:
 - **OEM unlocking**: Enable (critical)
 - **USB debugging**: Enable
 
-**Step 4: Backup Everything**
+**Step 4: Back up before unlocking**
 
-- Samsung Cloud backup
-- Google Photos for images
-- SMS backup
-- Export contacts
-- Save authenticator codes
-- Note installed apps
+Use the [universal backup checklist](./index.md#pre-rooting-checklist). Samsung's first Magisk install also requires a wipe; keep the matching complete firmware and account recovery details available.
 
 ---
 
@@ -285,9 +277,7 @@ Magisk's [custom recovery method](https://topjohnwu.github.io/Magisk/install.htm
 
 ### Configure Magisk
 
-- Grant root to trusted apps in Magisk's **Superuser** tab before they request `su`.
-- Enable Zygisk only if a trusted module requires it. DenyList reverts Magisk modifications in selected processes when enforced; it is not a guarantee of app compatibility.
-- Current Magisk releases no longer offer the old **Hide the Magisk app** rename option. Review the [Magisk setup guide](./magisk-guide.md#post-installation-setup).
+Use the shared [post-root checklist](./index.md#step-4-post-root-configuration), [Magisk configuration](./magisk-guide.md#post-installation-setup) and [module safety guidance](./index.md#module-safety).
 
 ### Samsung-Specific Root Hiding
 

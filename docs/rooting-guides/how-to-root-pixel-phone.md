@@ -90,17 +90,15 @@ This guide covers bootloader unlocking, official factory images and Magisk on el
 
 ## Prerequisites
 
+Complete the [universal preparation checklist](./index.md#pre-rooting-checklist) for backups, battery, computer/cable and ADB/Fastboot setup. The requirements below cover this manufacturer's eligibility, firmware and tools.
+
 ::: danger DATA WIPE WARNING
 Unlocking bootloader **erases everything** on your device. Backup all data first!
 :::
 
 ### Quick Checklist
 
-**Hardware:**
-- ✅ Eligible Google Pixel device
-- ✅ USB-C cable (quality matters)
-- ✅ Computer (Windows/macOS/Linux)
-- ✅ 50%+ battery charge
+
 
 **Software Downloads:**
 1. **[Android Platform Tools](https://developer.android.com/studio/releases/platform-tools)** - ADB/Fastboot
@@ -118,11 +116,7 @@ Unlocking bootloader **erases everything** on your device. Backup all data first
 
 ### Test ADB Connection
 
-```bash
-# Connect device via USB, accept debugging prompt
-adb devices
-# Should show device serial number
-```
+Use the [shared Platform Tools setup](./how-to-unlock-bootloader.md) to authorize ADB and verify the connection before unlocking.
 
 ---
 
@@ -210,14 +204,7 @@ Extract the outer factory archive and its inner `image-*.zip`. Select the verifi
 
 #### Step 3: Patch with Magisk
 
-1. Transfer the verified stock image to the phone. For example, if the target is `boot.img`:
-
-   ```bash
-   adb push boot.img /sdcard/Download/
-   ```
-
-2. Install the official [Magisk app](https://github.com/topjohnwu/Magisk/releases) on the **same device**. Open **Install > Patch firmware / image > Select from storage** and select the image. Current Magisk can also extract supported factory or OTA packages itself; older versions may use different menu labels.
-3. Note the patched output filename in Download. Never use an image patched on another phone or downloaded pre-patched.
+Follow [Magisk image selection and patching](./magisk-guide.md#step-1-download-required-files) using the stock image verified above. Patch on the **same device** that will use it, retain the original, and note the actual output filename for the flash step. Do not use a shared pre-patched image.
 
 #### Step 4: Flash Patched Image
 
@@ -268,13 +255,11 @@ This is different from [temporary root without unlocking](./root-without-unlocki
 
 ### Essential Magisk Configuration
 
-- In current Magisk, use **Superuser** to explicitly grant trusted apps access before they request `su`. To test with ADB, grant **ADB shell** first, then run `adb shell su -c id`; revoke the shell grant when finished. Older releases, including the version noted for the first-generation Pixel above, may instead show interactive request prompts.
-- Enable **Zygisk** only when a trusted module needs it. **DenyList** can revert Magisk modifications in selected processes, but it does not guarantee that apps will accept a rooted device.
-- Current Magisk releases do not offer the old **Hide the Magisk app** rename option. See the [Magisk guide](./magisk-guide.md#root-hiding-and-play-integrity) for current limitations.
+Use the shared [post-root checklist](./index.md#step-4-post-root-configuration), [Magisk configuration](./magisk-guide.md#post-installation-setup) and [module safety guidance](./index.md#module-safety).
 
-### Recommended Modules
+For the first-generation Pixel version exception noted above, consult that release's behavior: older Magisk builds may use interactive root prompts instead of the current explicit grants.
 
-Install only modules needed for your setup, and verify their device and Android compatibility. See the [app and module catalog](../apps-and-modules/) and [Play Integrity guidance](../troubleshooting.md#play-integrity-and-banking-apps). No module guarantees that a banking or payment app will work.
+<span id="recommended-modules"></span>
 
 ---
 

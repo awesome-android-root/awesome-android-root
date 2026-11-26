@@ -103,6 +103,8 @@ Most Xiaomi/Redmi/POCO devices with unlockable bootloaders can be rooted. Check 
 
 ## Prerequisites & Setup
 
+Complete the [universal preparation checklist](./index.md#pre-rooting-checklist) for backups, battery, computer/cable and ADB/Fastboot setup. The requirements below cover this manufacturer's eligibility, firmware and tools.
+
 ### Mi Account Preparation
 1. [Create](https://global.account.xiaomi.com/fe/service/register?_locale=en&_uRegion=ZA)/prepare a dedicated Mi Account (avoid changing password mid-process).
 2. Insert an active SIM (keep it inserted until unlocked).
@@ -141,13 +143,8 @@ Optional but recommended:
 4. **Charge to 70%+** and use a high-quality USB cable on a USB 2.0/3.0 port
 
 ### Connection Verification
-```bash
-adb devices
-adb reboot bootloader
-fastboot devices
-fastboot getvar product
-fastboot getvar current-slot
-```
+
+Follow the [shared ADB/Fastboot setup](./how-to-unlock-bootloader.md), then record `fastboot getvar product` and, where supported, `fastboot getvar current-slot`. These values help identify the target but do not establish the correct Magisk image by themselves.
 
 ## Bootloader Unlocking Process
 
@@ -211,20 +208,12 @@ Magisk patches the image containing the relevant ramdisk, which may be `boot.img
 2. For a supported full payload, [payload-dumper-go](https://github.com/ssut/payload-dumper-go#usage) can extract images. An incremental OTA may require its exact base images and the extractor's `-old` option; it is not interchangeable with a full package.
 3. Verify the image, partition and intended slot in a trusted guide for the exact device and firmware. Keep an independent copy of the unpatched image and full firmware. Check anti-rollback restrictions; do not downgrade just because a flash package exists.
 
-#### Step 2: Patch with Magisk (see [Magisk Guide](./magisk-guide.md#method-1-boot-image-patching-recommended))
+<!-- Preserve incoming links to consolidated sections. -->
+<span id="step-2-patch-with-magisk-see-magisk-guide"></span>
 
-1. Transfer the verified image to the phone. For example, if it is `boot.img`:
+#### Step 2: Patch with Magisk
 
-   ```bash
-   adb push boot.img /sdcard/Download/
-   ```
-
-2. On that **same device**, open the official Magisk app and choose **Install > Patch firmware / image > Select from storage**. Select the verified image and note the output filename. Never flash a pre-patched image from another device.
-3. Pull the output, replacing the example with its actual name:
-
-   ```bash
-   adb pull /sdcard/Download/magisk_patched-EXAMPLE.img .
-   ```
+Follow [Magisk image selection and patching](./magisk-guide.md#step-1-download-required-files) using the stock image verified above. Patch on the **same device** that will use it, retain the original, and note the actual output filename for the flash step. Do not use a shared pre-patched image.
 
 #### Step 3: Flash the verified image {#step-3-safer-first-boot-then-permanent-install}
 
