@@ -94,26 +94,29 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 - **Faster security patches** - community-maintained
 - **Optional Google services** - choose microG/sandboxed Play/none
 
+<!-- Preserve incoming links to consolidated sections. -->
+<span id="privacy-security-focused"></span>
+<span id="general-use-features"></span>
+<span id="gaming-performance"></span>
+
 ### ROM Categories
 
-#### Privacy & Security Focused:
-- **GrapheneOS** - Maximum security for Pixel devices (relockable bootloader)
-- **CalyxOS** - Privacy-first with optional Sandboxed Google Play
+These are project references, not rankings. Availability, update cadence and supported hardware vary by device:
 
-#### General Use & Features:
-- **LineageOS** - Most popular, widest device support
-- **Pixel Experience** - Pixel-like UX for non-Pixel devices
-- **crDroid** - Feature-rich with heavy customization
-- **PixelOS** / ArrowOS - Lightweight, clean, frequent updates
-- **iodéOS** - Privacy-focused with built-in ad/tracker blocking
+| Project | Focus | Device/build information |
+|---------|-------|--------------------------|
+| [LineageOS](https://lineageos.org/) | Android distribution with device-specific builds | [Official device list and installation guides](https://wiki.lineageos.org/devices/) |
+| [GrapheneOS](https://grapheneos.org/) | Privacy and security-focused Android distribution | [Supported devices and installation](https://grapheneos.org/install/) |
+| [CalyxOS](https://calyxos.org/) | Privacy-focused Android distribution | [Device support and installation](https://calyxos.org/install/) |
+| [crDroid](https://crdroid.net/) | Android customization | Check the project's current device downloads and maintainer instructions |
+| [PixelOS](https://pixelos.net/) | Pixel-style Android experience | Check the project's current device downloads and maintainer instructions |
 
-#### Gaming & Performance:
-- **Evolution X** - Balanced features and performance
-- **Project Sakura** - Performance-focused builds
+**Pixel Experience is not an active recommendation here.** Its [manifest repository](https://github.com/PixelExperience/manifest) is archived (checked 2026-11-26). An old download or unofficial continuation is not evidence of current official maintenance.
 
-::: warning **Notes:**
-- GrapheneOS is Pixel-only and supports secure bootloader re-locking. Most other ROMs require leaving the bootloader unlocked; do NOT relock unless the ROM explicitly supports AVB re-lock.
+::: warning BOOTLOADER RELOCKING
+Relock only when the ROM's exact-device installation instructions explicitly support it, with the required signed images installed. GrapheneOS documents its own relocking procedure; do not generalize it to other ROMs or devices.
 :::
+
 ---
 
 ## Critical Warnings
@@ -132,7 +135,7 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 
 ### Essential Prerequisites
 1. **[Unlocked bootloader](./how-to-unlock-bootloader.md)**
-2. **[Custom recovery](./how-to-install-custom-recovery.md)** (TWRP/OrangeFox) or ROM’s own recovery
+2. **Documented installation method** - use the ROM's exact-device instructions. This may involve its own recovery, fastboot, sideloading or another device-specific process; independently installing TWRP/OrangeFox is not a universal prerequisite.
 3. **Compatible ROM** - for your exact device codename/variant
 4. **Backup everything** - consider both a NANDroid (if supported) and app/data backups
 5. **Stock firmware on hand** - for emergency restore (EDL/Odin/Mi Flash/fastboot images)
@@ -140,7 +143,7 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 ### Required Tools
 - **Latest Android Platform Tools (ADB/Fastboot**) from Google
 - **USB drivers (Windows)**: OEM or Google USB Driver
-- **Custom recovery image/installer ZIP** (device-specific)
+- **Recovery image/installer** only if required by the ROM's device-specific method; use the named recovery, not an interchangeable alternative
 - **ROM ZIP/Images** + optional GApps (see notes below)
 - **A computer** (Windows/macOS/Linux) and reliable USB cable
 
@@ -158,20 +161,16 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 
 ### Decision Matrix
 
-| Need | Recommended ROM | Why |
-|------|------------------|-----|
-| **Maximum privacy** | GrapheneOS (Pixel) | Hardware-backed security, strict app sandboxing, relockable |
-| **Privacy + broad app compatibility** | CalyxOS | Privacy defaults with optional Sandboxed Play |
-| **Most devices** | LineageOS | Broadest device support, mature updates |
-| **Pixel UX** | Pixel Experience / PixelOS | Pixel look-and-feel on non-Pixel devices |
-| **Customization** | crDroid / Evolution X | Granular feature set |
-| **Lightweight performance** | ArrowOS | Clean, lean builds |
+| Check | Selection criterion |
+|-------|---------------------|
+| Exact device support | Model, codename, region and carrier variant appear in the project's supported targets |
+| Official builds | Download is linked by the project and its authenticity can be verified |
+| Active maintenance | Device has recent releases and security updates, with known limitations documented |
+| Firmware prerequisites | Required base firmware and anti-rollback constraints can be satisfied without an unsafe downgrade |
+| Installation and recovery | Current exact-device instructions and a stock recovery path are available |
+| App requirements | Required camera, IMS, banking/work apps and optional Google services are compatible with the intended setup |
 
-::: warning **GApps notes:**
-- LineageOS recommends MindTheGapps; NikGapps also popular.
-- OpenGApps is not maintained for the newest Android versions on many devices.
-- Many ROMs ship in “vanilla” (no GApps) and “with GApps” variants. Match to your preference.
-:::
+Use only the GApps package and installation order named by the ROM's device guide. Some builds bundle services and others do not; do not add a second package or infer compatibility from another ROM.
 
 ### Device Compatibility Check
 
@@ -191,7 +190,7 @@ Custom ROMs are alternative Android distributions that replace your device’s s
 
 ## Installation Process
 
-There are two primary install flows:
+The ROM's device guide is authoritative. The following describes common stages, not a universal command sequence. Install a recovery only when that guide requires it. Common flows include:
 - **Recovery-based** (TWRP/OrangeFox/Lineage Recovery) via Install or ADB Sideload
 - **Fastboot-based** (images/graphical web installers) - common for Pixels/GrapheneOS
 
@@ -203,9 +202,9 @@ There are two primary install flows:
 - Never wipe persist/modem/EFS; losing these can break Wi‑Fi, sensors, IMEI.
 
 #### Actions:
-1. **Boot to recovery**
-2. If supported: Recovery → Backup → Select boot/system/data/vendor (avoid super unless advised)
-3. Copy backups to PC or external storage
+1. Make app/data and file backups before unlocking or installing anything.
+2. If a compatible recovery is already available and its device guide supports backup/restore, also back up the documented partitions. Installing a recovery is not required just to follow this checklist.
+3. Copy backups to PC or external storage and verify them.
 
 ### Step 2: Download ROM Files
 
@@ -222,9 +221,8 @@ There are two primary install flows:
 ### Step 3: Prepare Device
 
 - Transfer ROM and add-ons to device/SD card or prepare to ADB sideload from PC
-- Boot to recovery
-- On dynamic partition devices, some operations require fastbootd:
-  - From bootloader: fastboot reboot fastboot (enters fastbootd)
+- Enter the mode named by the ROM's exact-device guide (its recovery, bootloader, installer or fastbootd). Do not install or boot TWRP/OrangeFox unless explicitly required.
+- Use the documented mode transitions; bootloader fastboot and userspace fastbootd are not interchangeable.
 
 ### Step 4: Wipe / Format
 
@@ -232,13 +230,9 @@ There are two primary install flows:
 Switching ROM families or coming from stock usually requires a full “Format Data” (not just factory reset), which erases internal storage. Back up first.
 :::
 
-- Factory reset for minor updates/dirty flash (same ROM family)
-- Full clean install:
-  - In TWRP/OrangeFox: Wipe → Format Data (type yes)
-  - Advanced Wipe: System, Data, Cache, Dalvik/ART Cache
-  - Do NOT wipe persist/modem/EFS
+Perform **only** the wipes/formats required by the ROM's exact-device instructions. Do not manually wipe System, Vendor, Super, metadata or calibration partitions as a generic clean-install step, and do not assume updates within one ROM family permit a dirty flash.
 
-**Note:** Recovery decryption varies by device. If your recovery can’t decrypt /data, use ADB sideload or external SD/OTG.
+If recovery cannot decrypt data, use the documented sideload or external-storage path. Format Data only when the installation guide requires it and after an off-device backup; it erases user data and is not a generic decryption repair.
 
 ### Step 5: Flash Custom ROM
 
@@ -263,10 +257,8 @@ Recovery install (typical):
 - Incorrect vbmeta steps can cause boot failure or brick.
 
 #### A/B slots:
-- Generally handled by the installer/recovery. For manual fastboot:
-  - fastboot getvar current-slot
-  - fastboot set_active a or b
-  - Some images support _ab targets (e.g., fastboot flash boot_ab boot.img)
+
+Follow the ROM installer's slot handling. Record the selected slot when required, but do not activate the other slot or flash both as a generic fix. Images and required firmware must match the intended slot; a partially updated slot may not boot.
 
 ### Step 6: First Boot & Setup
 
@@ -295,7 +287,7 @@ Bootloader: Can safely relock on GrapheneOS. Do not relock on ROMs that don’t 
 
 Standard method:
 1. Download official builds: https://download.lineageos.org/
-2. Use Lineage Recovery or TWRP/OrangeFox per device guide
+2. Use only the recovery and version named in the exact-device guide; do not substitute TWRP/OrangeFox
 3. ADB sideload recommended by Lineage docs
 4. Use MindTheGapps (recommended) or a compatible GApps package if needed
 5. Seedvault backup integration available
@@ -304,13 +296,7 @@ Benefits: Broad support, stable updates, trustable infrastructure
 
 ### Pixel Experience / PixelOS
 
-- Pixel Experience: https://download.pixelexperience.org/
-- PixelOS: search official site or XDA thread for your device
-
-Notes:
-- Some builds include GApps; others are “vanilla”
-- Install via recovery/ADB sideload; follow device thread instructions
-- Monthly security patches common
+Pixel Experience's archived manifest is not an active installation source. For [PixelOS](https://pixelos.net/), check the current official device list, release date and exact-device installation instructions. Do not reuse Pixel Experience installation steps, assume Google apps are bundled or promise monthly patches across devices.
 
 ---
 
