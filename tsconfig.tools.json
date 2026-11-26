@@ -1,5 +1,21 @@
 {
   "extends": "./tsconfig.json",
-  "compilerOptions": { "lib": ["ESNext"], "types": ["bun"] },
-  "include": ["docs/.vitepress/config.ts", "docs/.vitepress/icons.ts", "docs/.vitepress/markdown/**/*.ts", "docs/.vitepress/shared/**/*.ts", "scripts/**/*.ts", "playwright.config.ts"]
+  "compilerOptions": {
+    "lib": [
+      "ESNext"
+    ],
+    "types": [
+      "bun"
+    ]
+  },
+  "include": [
+    "docs/.vitepress/config.ts",
+    "docs/.vitepress/icons.ts",
+    "docs/.vitepress/markdown/**/*.ts",
+    "docs/.vitepress/shared/**/*.ts",
+    "scripts/**/*.ts"
+  ],
+  "exclude": [
+    "scripts/**/*.test.ts"
+  ]
 }

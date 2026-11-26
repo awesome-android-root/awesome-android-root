@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.browser.json",
+  "compilerOptions": {
+    "types": [
+      "bun",
+      "vite/client"
+    ]
+  },
+  "include": [
+    "tests/**/*.ts",
+    "scripts/**/*.test.ts",
+    "docs/.vitepress/shared/**/*.d.ts"
+  ]
+}

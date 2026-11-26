@@ -25,8 +25,8 @@
     "test": "bun test scripts/*.test.ts",
     "index:build": "bun scripts/app-entries.ts",
     "check": "bun run typecheck && bun run test && bun run lint && bun run docs:build && bun run test:search",
-    "typecheck": "vue-tsc --noEmit -p tsconfig.browser.json && tsc --noEmit -p tsconfig.tools.json && tsc --noEmit -p tsconfig.worker.json",
-    "test:search": "playwright test",
+    "typecheck": "tsc --noEmit -p tsconfig.browser.json && tsc --noEmit -p tsconfig.tools.json && tsc --noEmit -p tsconfig.worker.json && tsc --noEmit -p tsconfig.tests.json",
+    "test:search": "bun test tests/search.spec.ts",
     "lint": "bun run check:links && bun run lint:entries",
     "lint:entries": "bun scripts/app-entries.ts --check"
   },
@@ -63,12 +63,11 @@
     "@vite-pwa/vitepress": "^2.0.5",
     "magicast": "^0.5.5",
     "pagefind": "^1.6.0",
-    "typescript": "~6.0.3",
+    "typescript": "7.0.2",
     "vite": "^8.4.0",
     "vitepress": "2.0.0-alpha.21",
     "vitepress-plugin-llms": "^1.15.0",
-    "vue": "^3.5.46",
-    "vue-tsc": "^3.3.14"
+    "vue": "^3.5.46"
   },
   "engines": {
     "node": ">=26"

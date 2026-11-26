@@ -485,10 +485,11 @@ export default withPwa(defineConfig({
       chunkSizeWarningLimit: 1000,
     },
     server: {
-      warmup: { clientFiles: ['.vitepress/theme/**/*.{js,ts,vue}'] },
+      warmup: { clientFiles: ['.vitepress/theme/**/*.{ts,tsx}'] },
       allowedHosts: true,
     },
     oxc: {
+      jsx: { runtime: 'automatic', importSource: 'vue' },
       target: 'es2024'
     },
 

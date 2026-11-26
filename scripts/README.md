@@ -93,26 +93,76 @@ Use the pinned Bun version in `.bun-version` and Node version in `.nvmrc`, then
 run `bun install`. The repository intentionally does not track `bun.lock`.
 
 ```bash
-bun run typecheck       # strict Vue/browser, Bun/build tools and worker checks
+bun run typecheck       # one TypeScript 7 compiler, separate runtime environments
 bun run test            # focused icon, link, Markdown, MCP and search unit tests
 bun run lint            # internal links and entry lint (blocking on errors)
 bun run docs:build      # generate counts, render VitePress, then index Pagefind
 bunx playwright install chromium  # once; CI also installs system dependencies
-bun run test:search     # real Pagefind API, desktop/mobile modal and MCP tests
+bun run test:search     # Bun runner + Playwright Chromium driver/assertions
 bun run check           # all of the above checks, including build/browser tests
 ```
 
 There is no separate ESLint or formatting configuration. Keep existing style and
-use `git diff --check`. All custom JS has been evaluated and migrated: recursive
-config/icon transforms, Markdown renderers, entry/build scripts, Vue components
-and the Cloudflare middleware now have checked TypeScript contracts. The small
-Vue components only gained typed script blocks/props, not rewrites. The separate
-traffic-publication Python utility and Bash asset tool remain in their original
-languages; the site/link validation pipeline uses Bun. Browser DOM types, Bun/Node tools
-and worker globals have separate tsconfigs; shared entry types have no runtime
-dependencies. `skipLibCheck` skips dependency declarations, not custom code.
-Lucide's undeclared per-icon `__iconData` exports have a narrow ambient contract
-using its official `LucideIconData` type, not an untyped module shim.
+use `git diff --check`.
+
+### One TypeScript compiler
+
+`typescript` is pinned to **7.0.2**, the latest stable release checked on
+2026-11-26. There is no second compiler alias, legacy TypeScript override or
+`vue-tsc` fallback. TypeScript's platform-specific native executable package has
+the **same** 7.0.2 version; it is part of that compiler, not another compiler.
+Check the installed graph with `bun pm ls --all`.
+
+The tsconfigs select environments, **not TypeScript versions**:
+
+- `tsconfig.browser.json`: theme components/utilities, DOM and Vite client types.
+- `tsconfig.tools.json`: build/config/Markdown scripts, Bun and Node types.
+- `tsconfig.worker.json`: Cloudflare middleware, WebWorker types.
+- `tsconfig.tests.json`: unit/browser-test harnesses, Bun and DOM types.
+
+All use the same `tsc` binary and shared strict configuration. `skipLibCheck`
+skips dependency declarations, not custom code. No custom-code typechecks are
+disabled. Lucide's undeclared per-icon `__iconData` exports have a narrow ambient
+contract using its official `LucideIconData` type, not an untyped module shim.
+
+### Vue render code and TypeScript 7
+
+Stable vue-tsc 3.3.14 still depends on the removed legacy JavaScript compiler API;
+changing an import path does not make it compatible with native TypeScript 7.
+Rather than installing a second/older compiler or maintaining a compiler shim,
+our ten custom Vue SFCs were ported to **Vue TSX render components**. This is still
+Vue's `defineComponent`, refs, lifecycle, native dialog and Teleport, not React or
+a new framework. Both setup logic **and rendered expressions/props/handlers** are
+checked directly by TypeScript 7.
+
+Vite's existing Oxc transform uses Vue's shipped automatic JSX runtime. There is
+no extra JSX plugin/compiler dependency. `jsx: preserve` lets tsc check the render
+code without emitting it; Vite performs the actual transform. In TSX, read/write
+refs with `.value`, use `onClick`/`onInput` handlers and pass typed props normally.
+CSS lives beside the component in namespaced stylesheets; search styles still
+lazy-load with the dialog. Preserve those boundaries when adding selectors.
+The third-party Markdown-actions SFC remains upstream code; its only published
+prop (`showDownload`) has a narrow explicit declaration rather than a wildcard
+SFC shim. VitePress's own vendor SFCs are still built normally.
+
+The separate traffic-publication Python utility and Bash asset tool remain in
+their original languages; site/link validation uses Bun.
+
+### Bun tests, including browser tests
+
+Both `bun run test` (unit tests) and `bun run test:search` use `bun:test`. Plain
+value assertions use Bun's `expect`. Browser tests retain Playwright's Chromium
+driver and auto-waiting locator assertions because Bun alone is not a browser.
+There is no separate Playwright test runner or `playwright.config.ts`. After
+building, plain `bun test` runs both suites; `bunfig.toml` excludes local audit
+checkouts and generated output from discovery.
+
+`tests/browser.ts` starts a fresh production preview, waits for readiness, launches
+Chromium and closes both during teardown, including launch failures. Each test
+gets an isolated browser context. Port 4173 must be free; an existing preview is
+rejected rather than silently testing stale output. These tests are serial in
+Bun; they do not use Playwright runner retries, traces or worker fixtures.
+
 
 ## Pagefind search
 
@@ -186,7 +236,7 @@ that the base matches hosting and that `/BASE/pagefind/` was uploaded. Search
 requires fetching its index, so an uncached index is unavailable offline; normal
 site navigation still works. The existing image-only PWA precache is unchanged.
 
-`test:search` starts its own preview on port 4173. An installed Chromium is
+`test:search` starts and stops its own preview on port 4173. An installed Chromium is
 required; `CHROMIUM_PATH` can point to a system-compatible binary in constrained
 environments.
 
@@ -196,7 +246,10 @@ environments.
   search/fragment completion and cancellation. Run `bun test scripts/search.test.ts`.
 - `tests/search.spec.ts`: the real generated Pagefind API, realistic queries,
   keyboard/focus/reset/no-results behavior, entry navigation, mobile/dark mode,
-  module/fragment failure recovery and MCP integration. Run `bun run test:search`.
+  module/fragment failure recovery and MCP integration. A theme regression scenario
+  also covers icons, theme toggling, store badges, Markdown actions, back-to-top
+  and offline-status behavior. Browser tests reject unexpected page errors and
+  Vue hydration/render warnings on the standard test pages. Run `bun run test:search`.
 
 The one-time gzip-fragment inspector (`test:index`) and corpus-size audit were
 removed. Build-time Pagefind errors and duplicate entry IDs already fail the
@@ -213,8 +266,7 @@ The standalone Markdown-it runtime dependency was removed: use the shared
 VitePress renderer instead of introducing Markdown-it 15 beside VitePress's 14.x
 pipeline. Its latest 14.x type declarations are retained for token/plugin types.
 
-TypeScript 6.0.3 is the current compatibility exception: stable 7.0.2 was tested,
-but latest vue-tsc 3.3.14 fails with `ERR_PACKAGE_PATH_NOT_EXPORTED` for
-`typescript/lib/tsc`. Keep the newest compatible 6.0 patch until vue-tsc supports
-TypeScript 7; do not bypass typechecking to upgrade. Bun 1.4.5 and Node 26 remain
-on stable releases. GitHub Actions are pinned to verified stable release tags.
+TypeScript 7.0.2 now checks all custom code directly; the former 6.0.3/vue-tsc
+compatibility exception was removed by the Vue TSX port described above. Bun
+1.4.5 and Node 26 remain on stable releases. GitHub Actions use verified stable
+release tags.

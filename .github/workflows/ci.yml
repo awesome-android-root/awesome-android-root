@@ -61,10 +61,10 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      - name: Typecheck custom code and Vue components
+      - name: Typecheck all environments with TypeScript 7
         run: bun run typecheck
 
-      - name: Test custom code
+      - name: Test custom code with Bun
         run: bun run test
 
       - name: Lint entries
@@ -76,7 +76,7 @@ jobs:
       - name: Install Chromium
         run: bunx playwright install --with-deps chromium
 
-      - name: Test search in Chromium
+      - name: Test search and theme in Chromium with Bun
         run: bun run test:search
 
       - name: Upload built site

@@ -1,5 +1,4 @@
-<script setup lang="ts">
-import { computed } from 'vue'
+import { defineComponent, computed } from 'vue'
 import {
   AudioWaveform,
   BookOpen,
@@ -68,22 +67,10 @@ const ICONS = {
   wrench: Wrench
 }
 
-const props = withDefaults(defineProps<{
-  name: keyof typeof ICONS
-  size?: number | string
-  strokeWidth?: number | string
-}>(), { size: 22, strokeWidth: 1.75 })
+export default defineComponent((props: { name: keyof typeof ICONS; size?: number | string; strokeWidth?: number | string }) => {
+  const icon = computed(() => ICONS[props.name])
 
-const icon = computed(() => ICONS[props.name])
-</script>
-
-<template>
-  <component
-    :is="icon"
-    v-if="icon"
-    class="landing-icon"
-    :size="size"
-    :stroke-width="strokeWidth"
-    aria-hidden="true"
-  />
-</template>
+  return () => (
+    icon.value ? <icon.value class="landing-icon" size={props.size ?? 22} strokeWidth={props.strokeWidth ?? 1.75} aria-hidden="true" /> : null
+  )
+}, { props: ['name', 'size', 'strokeWidth'] })

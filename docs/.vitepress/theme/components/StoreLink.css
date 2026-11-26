@@ -1,0 +1,46 @@
+/* Namespaced selectors replace SFC scoping; repeated root classes preserve
+   the former class + scope-attribute specificity against VitePress styles. */
+.store-badge.store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 26px;
+  margin: 0 2px;
+  padding: 0 8px 0 6px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-2);
+  font-size: 0.8em;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  vertical-align: middle;
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.store-badge.store-badge:hover,
+.store-badge.store-badge:focus-visible {
+  color: var(--vp-c-brand-1);
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 45%, var(--vp-c-divider));
+  background: var(--vp-c-brand-soft);
+  text-decoration: none;
+}
+
+.store-badge.store-badge:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
+.store-badge .store-icon {
+  width: 15px;
+  height: 15px;
+  flex: none;
+}
+
+.store-badge .store-label {
+  white-space: nowrap;
+}

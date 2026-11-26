@@ -1,5 +1,4 @@
-<script setup lang="ts">
-import { computed } from 'vue'
+import { defineComponent, computed } from 'vue'
 
 // Brand marks are CC0 (Simple Icons) and inlined to avoid shipping the full
 // icon package for two glyphs.
@@ -9,24 +8,10 @@ const BRANDS = {
   x: 'M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z'
 }
 
-const props = withDefaults(defineProps<{
-  name: keyof typeof BRANDS
-  size?: number | string
-}>(), { size: 20 })
+export default defineComponent((props: { name: keyof typeof BRANDS; size?: number | string }) => {
+  const path = computed(() => BRANDS[props.name])
 
-const path = computed(() => BRANDS[props.name])
-</script>
-
-<template>
-  <svg
-    v-if="path"
-    class="landing-icon"
-    :width="size"
-    :height="size"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    aria-hidden="true"
-  >
-    <path :d="path" />
-  </svg>
-</template>
+  return () => (
+    path.value ? <svg class="landing-icon" width={props.size ?? 20} height={props.size ?? 20} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d={path.value} /></svg> : null
+  )
+}, { props: ['name', 'size'] })
