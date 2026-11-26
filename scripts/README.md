@@ -178,6 +178,14 @@ for it, and typechecks, unit tests, entry lint, build and smoke tests remain
 blocking. Fork PRs still build/test without accessing deployment secrets. These
 changes reduce orchestration work, not the amount of content being generated.
 
+Hosted measurement for this cleanup (`71c8b7b`, run `45878710548`): first job
+start through deployment/last-job completion fell from **101s to 48s (-52.5%)**.
+The combined build/test/deploy job took 39s; the site build step took 5s and the
+two browser smoke tests 3s. The separate named links job took 7s. These are one
+observed run each, including the new dependency-cache save, not an SLA or
+controlled VitePress performance benchmark. Compare with pre-trim run
+`45876641490`; full job timestamps, not the sum of parallel jobs, define total.
+
 
 ## Pagefind search
 
