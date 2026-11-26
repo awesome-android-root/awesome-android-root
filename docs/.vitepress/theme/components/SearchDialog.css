@@ -11,7 +11,7 @@
 .aar-search-dialog .search-status { padding: 12px 0; font-size: 13px; color: var(--vp-c-text-2); white-space: normal; }
 .aar-search-dialog ul { list-style: none; margin: 0; padding: 0; }
 .aar-search-dialog li { margin-bottom: 8px; border: 1px solid var(--vp-c-divider); border-radius: 6px; }
-.aar-search-dialog li[aria-selected="true"], .aar-search-dialog li:hover { background: var(--vp-c-brand-soft); border-color: var(--vp-c-brand-1); }
+.aar-search-dialog li.search-result-selected, .aar-search-dialog li:hover { background: var(--vp-c-brand-soft); border-color: var(--vp-c-brand-1); }
 .aar-search-dialog a { display: block; padding: 12px; color: inherit; text-decoration: none; }
 .aar-search-dialog strong { display: block; color: var(--vp-c-brand-1); font-size: 16px; }
 .aar-search-dialog .search-excerpt { display: block; margin-top: 6px; font-size: 14px; line-height: 1.6; overflow-wrap: anywhere; }

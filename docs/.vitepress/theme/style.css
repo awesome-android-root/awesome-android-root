@@ -1171,6 +1171,12 @@ img {
   box-shadow: none;
 }
 
+/* Keep outlines inside the upstream split-button's clipped border. */
+.vp-doc .markdown-copy-buttons button:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: -2px;
+}
+
 /* Keyboard accessibility */
 .vp-doc .llms-markdown-buttons button:focus-visible,
 .vp-doc .llms-markdown-buttons a:focus-visible {

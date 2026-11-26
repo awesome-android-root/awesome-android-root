@@ -86,9 +86,13 @@ export default defineComponent({
       await router.go(result.url)
     }
     function keyboard(event: KeyboardEvent) {
+      if (event.isComposing) return
       if ((event.key === 'ArrowDown' || event.key === 'ArrowUp') && results.value.length) {
         event.preventDefault()
-        selected.value = (selected.value + (event.key === 'ArrowDown' ? 1 : -1) + results.value.length) % results.value.length
+        const direction = event.key === 'ArrowDown' ? 1 : -1
+        selected.value = selected.value < 0
+          ? (direction === 1 ? 0 : results.value.length - 1)
+          : (selected.value + direction + results.value.length) % results.value.length
         document.getElementById(`search-result-${selected.value}`)?.scrollIntoView({ block: 'nearest' })
       } else if (event.key === 'Enter' && results.value.length) {
         // Enter without an arrow selection intentionally opens the first result.
@@ -100,7 +104,7 @@ export default defineComponent({
     return () => (
       <Teleport to="body">
         <dialog
-          ref={dialog} class="aar-search-dialog" aria-label="Search documentation" closedby="any"
+          id="aar-search-dialog" ref={dialog} class="aar-search-dialog" aria-label="Search documentation" closedby="any"
           onCancel={() => emit('close')} onClose={onNativeClose}
           onClick={(event) => { if (event.target === dialog.value) close() }}
         >
@@ -112,7 +116,7 @@ export default defineComponent({
                 onInput={(event) => { if (event.currentTarget instanceof HTMLInputElement) query.value = event.currentTarget.value }}
                 type="text" inputmode="search" enterkeyhint="search" placeholder="Search apps, modules and guides"
                 autocomplete="off" autofocus role="combobox" aria-autocomplete="list" aria-controls="aar-search-results"
-                aria-expanded={results.value.length > 0}
+                aria-expanded={results.value.length > 0} aria-describedby="aar-search-help"
                 aria-activedescendant={selected.value >= 0 ? `search-result-${selected.value}` : undefined}
                 onKeydown={keyboard}
               />
@@ -126,16 +130,21 @@ export default defineComponent({
                 : !results.value.length ? `No results for “${query.value}”. Try a shorter name or another spelling.`
                 : `Showing up to ${results.value.length} top results`}
             </p>
-            <ul id="aar-search-results" role="listbox" aria-label="Search results">
-              {results.value.map((result, index) => <li id={`search-result-${index}`} key={result.url} role="option" aria-selected={selected.value === index}>
-                <a href={result.url} onClick={(event) => { event.preventDefault(); void navigate(result) }} onFocus={() => { selected.value = index }}>
+            <ul id="aar-search-results" role="listbox" aria-label="Search results" hidden={!results.value.length} aria-busy={status.value === 'loading'}>
+              {results.value.map((result, index) => <li key={result.url} role="presentation" class={{ 'search-result-selected': selected.value === index }}>
+                <a id={`search-result-${index}`} href={result.url} role="option" aria-selected={selected.value === index} tabindex={-1}
+                  onClick={(event) => {
+                    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return
+                    event.preventDefault()
+                    void navigate(result)
+                  }} onFocus={() => { selected.value = index }}>
                   <strong>{result.meta.title || result.url}</strong>
                   {/* Pagefind's excerpt is HTML-escaped by its API, with only mark tags added. */}
                   <span class="search-excerpt" innerHTML={result.excerpt} />
                 </a>
               </li>)}
             </ul>
-            <footer>↑↓ to navigate · Enter to select · Esc to close</footer>
+            <footer id="aar-search-help">↑↓ to navigate · Enter to select · Esc to close</footer>
           </div>
         </dialog>
       </Teleport>

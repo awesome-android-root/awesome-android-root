@@ -27,7 +27,7 @@ export default defineComponent(() => {
 
   return () => (
     <div class="aar-search">
-      <button ref={trigger} type="button" class="aar-search-button" aria-label="Search" aria-haspopup="dialog" aria-keyshortcuts="/ Control+k Meta+k" onClick={open}>
+      <button ref={trigger} type="button" class="aar-search-button" aria-label="Search" aria-haspopup="dialog" aria-expanded={opened.value} aria-controls={loaded.value ? 'aar-search-dialog' : undefined} aria-keyshortcuts="/ Control+k Meta+k" onClick={open}>
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7.5" /><path d="m16 16 5 5" /></svg>
         <span>Search</span><kbd>Ctrl K</kbd>
       </button>

@@ -302,8 +302,10 @@ download a browser.
   active-instance destruction. Run `bun test scripts/search.test.ts`.
 - `tests/search.spec.ts`: **two** production-output smoke tests. One exercises
   strict lazy loading, real Pagefind/WASM/index results, highlights, keyboard
-  selection, entry navigation, Escape and focus restoration. The other blocks
-  the engine request and verifies in-place Retry recovery. Both fail on page
+  selection (including initial ArrowUp), IME Enter safety, entry navigation,
+  Escape and focus restoration. It also checks the destination page's named
+  Markdown-action buttons and keyboard disclosure/Escape behavior. The other
+  blocks the engine request and verifies in-place Retry recovery. Both fail on page
   errors/Vue warnings. Run `bun run test:search`.
 
 Removed the broad third-party relevance matrix, generic theme-controls journey,
@@ -317,6 +319,22 @@ removed. Build-time Pagefind errors and duplicate entry IDs already fail the
 build; the source link checker validates the shared anchor pipeline. Broad
 mechanical-migration smoke tests and a redundant browser race scenario were
 removed rather than maintained alongside focused regression tests.
+
+### Accessibility maintenance
+
+Search uses one option element per result, with input focus retained through
+`aria-activedescendant`; options are not separate Tab stops or nested controls.
+Keep its instructions associated with the input and its selection styling intact.
+The theme switch's checked state means **dark theme is enabled**.
+
+`patches/vitepress-plugin-llms@1.15.0.patch` is applied by `bun install` through
+`patchedDependencies`. It adds names/state to the upstream icon buttons, Escape
+and focus restoration to the disclosure, and makes closing content inert. It
+also removes the closed panel immediately with reduced motion. The dependency
+is pinned to that exact release so the patch cannot silently stop applying.
+When upgrading, check upstream's fixes and remove or refresh the patch; do not
+replace it with post-mount DOM mutations. Its existing UI/styles are preserved;
+the theme adds a clipped-container-safe keyboard focus outline.
 
 ### Version policy
 

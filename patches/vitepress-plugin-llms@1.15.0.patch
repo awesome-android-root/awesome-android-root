@@ -1,0 +1,84 @@
+diff --git a/dist/vitepress-components/CopyOrDownloadAsMarkdownButtons.vue b/dist/vitepress-components/CopyOrDownloadAsMarkdownButtons.vue
+index 8df9f041480d698aaad678cdb66736d56fe46966..3e9f64631b0818cf87d1496720f5b7996bc36759 100644
+--- a/dist/vitepress-components/CopyOrDownloadAsMarkdownButtons.vue
++++ b/dist/vitepress-components/CopyOrDownloadAsMarkdownButtons.vue
+@@ -1,7 +1,7 @@
+ <template>
+ 	<div class="markdown-copy-buttons">
+ 		<div class="markdown-copy-buttons-inner">
+-			<div class="dropdown-container" ref="dropdownContainer">
++			<div class="dropdown-container" ref="dropdownContainer" @keydown.esc="handleEscape">
+ 				<!-- Main button -->
+ 				<div class="dropdown-trigger">
+ 					<!-- Copy area -->
+@@ -19,13 +19,13 @@
+ 					<span class="divider"></span>
+ 
+ 					<!-- Chevron area -->
+-					<button class="chevron-wrapper" @click.stop="toggleDropdown">
++					<button ref="dropdownToggle" type="button" class="chevron-wrapper" aria-label="More page actions" :aria-expanded="isOpen" :aria-controls="isRendered ? dropdownId : undefined" @click.stop="toggleDropdown">
+ 						<span v-html="iconChevron" class="icon chevron" :class="{ open: isOpen }"></span>
+ 					</button>
+ 				</div>
+ 
+ 				<!-- Dropdown -->
+-				<div v-if="isRendered" ref="dropdownMenu" class="dropdown-menu" :class="{ open: isOpen }">
++				<div v-if="isRendered" :id="dropdownId" ref="dropdownMenu" class="dropdown-menu" :class="{ open: isOpen }" :inert="!isOpen">
+ 					<button class="dropdown-item" @click="handleViewAsMarkdown">
+ 						<span v-html="iconMarkdown" class="icon"></span>
+ 						{{ theme.llms?.viewMarkdownText || 'View as Markdown' }}
+@@ -51,7 +51,7 @@
+ 			</div>
+ 
+ 			<!-- Download button -->
+-			<button v-if="showDownload" class="download-btn" @click="downloadMarkdown">
++			<button v-if="showDownload" type="button" class="download-btn" :aria-label="downloaded ? 'Markdown downloaded' : 'Download page as Markdown'" @click="downloadMarkdown">
+ 				<span v-html="downloaded ? iconCheck : iconDownload" class="icon"></span>
+ 			</button>
+ 		</div>
+@@ -60,7 +60,7 @@
+ 
+ <script setup lang="ts">
+ import { useData } from 'vitepress'
+-import { onMounted, onUnmounted, ref } from 'vue'
++import { onMounted, onUnmounted, ref, useId } from 'vue'
+ 
+ import {
+ 	type MarkdownAiProvider,
+@@ -78,6 +78,8 @@ import iconMarkdown from './icons/markdown.svg?raw'
+ 
+ const { showDownload } = defineProps<{ showDownload?: boolean }>()
+ 
++const dropdownId = useId()
++const dropdownToggle = ref<HTMLButtonElement>()
+ const isOpen = ref(false)
+ const dropdownContainer = ref<HTMLElement | undefined>()
+ const isRendered = ref(false)
+@@ -98,10 +100,11 @@ function closeDropdown(): void {
+ 		return
+ 	}
+ 
++	if (dropdownMenu.value?.contains(document.activeElement)) dropdownToggle.value?.focus()
+ 	isOpen.value = false
+ 
+ 	const el = dropdownMenu.value
+-	if (!el) {
++	if (!el || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+ 		isRendered.value = false
+ 		return
+ 	}
+@@ -114,6 +117,14 @@ function closeDropdown(): void {
+ 	el.addEventListener('transitionend', onEnd)
+ }
+ 
++function handleEscape(event: KeyboardEvent): void {
++	if (!isRendered.value) return
++	event.preventDefault()
++	event.stopPropagation()
++	closeDropdown()
++	dropdownToggle.value?.focus()
++}
++
+ function toggleDropdown(): void {
+ 	if (isOpen.value) {
+ 		closeDropdown()

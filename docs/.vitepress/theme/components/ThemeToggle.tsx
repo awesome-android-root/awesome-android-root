@@ -19,7 +19,7 @@ export default defineComponent(() => {
   }
 
   return () => (
-    <button type="button" class="theme-toggle" role="switch" title={title.value || undefined} aria-label={theme.value.darkModeSwitchLabel || 'Appearance'} aria-checked={isDark.value} onClick={toggle}>
+    <button type="button" class="theme-toggle" role="switch" title={title.value || undefined} aria-label={theme.value.darkModeSwitchLabel || 'Dark theme'} aria-checked={isDark.value} onClick={toggle}>
       <Sun class="theme-icon-sun" aria-hidden="true" />
       <Moon class="theme-icon-moon" aria-hidden="true" />
     </button>
