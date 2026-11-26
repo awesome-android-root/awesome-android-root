@@ -19,3 +19,6 @@ package.json linguist-detectable=false
 # Exclude miscellaneous non-source files
 .gitignore linguist-detectable=false
 LICENSE linguist-detectable=false
+
+# Unified patches contain significant context-line prefixes and upstream tabs.
+patches/*.patch -whitespace

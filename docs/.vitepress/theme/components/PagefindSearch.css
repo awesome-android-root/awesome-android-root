@@ -1,0 +1,8 @@
+/* Namespaced selectors replace SFC scoping; repeated root classes preserve
+   the former class + scope-attribute specificity against VitePress styles. */
+.aar-search.aar-search { display: flex; align-items: center; margin-inline: 16px auto; }
+.aar-search-button.aar-search-button { display: flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 10px; border: 1px solid var(--vp-c-divider); border-radius: 8px; background: var(--vp-c-bg-soft); color: var(--vp-c-text-2); font-size: 13px; }
+.aar-search kbd { border: 1px solid var(--vp-c-divider); border-radius: 4px; padding: 0 4px; font-size: 11px; }
+.aar-search-button.aar-search-button:hover { border-color: var(--vp-c-brand-1); color: var(--vp-c-text-1); }
+.aar-search-button.aar-search-button:focus-visible { outline: 2px solid var(--vp-c-brand-1); outline-offset: 3px; }
+@media (max-width: 767px) { .aar-search.aar-search { margin-inline: auto 12px; } .aar-search-button.aar-search-button { border: 0; background: transparent; } .aar-search-button.aar-search-button span, .aar-search kbd { display: none; } }
