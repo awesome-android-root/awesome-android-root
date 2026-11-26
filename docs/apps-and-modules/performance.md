@@ -30,7 +30,7 @@ optimization**, charging control and task & process management.
 - **[Always Battery Saver](https://github.com/icepony/AlwaysBatterySaver)** - Prevent Android from automatically disabling Battery Saver when the device is charging. `FOSS` `[LSP]`
 - **[AntiWakeLock](https://github.com/binarynoise/XposedModulets/releases?q=AntiWakeLock)** - Disable WAKE_LOCK and FLAG_KEEP_SCREEN_ON to save battery. `FOSS` `[LSP]`
 - **[Auto Sleep](https://github.com/The-First-King/Auto-Sleep)** - Scheduled sleep mode that enables airplane mode, turns off Wi-Fi/Bluetooth and forces Doze using root, then restores the previous states. `FOSS`
-- **[BatStats](https://github.com/mlm-games/BatStats)** - Battery monitor with stats via Shizuku/root. `FOSS`
+- **[BatStats](https://github.com/mlm-games/BatStats)** - Battery monitor with stats via Shizuku/root. `FOSS` `[ADB]`
 - **[Battery Guru](https://play.google.com/store/apps/details?id=com.paget96.batteryguru)** - Battery optimization and monitoring. `Proprietary`
 - **[Battery Info Enabler](https://github.com/klab7/BatteryInfoEnabler)** - Enlocks and enhances the native battery information for Pixel 6+ devices. `FOSS` `[LSP]`
 - **[Battery Monitor](https://github.com/tswistak/Battery-Monitor)** - See battery status at a glance, get meaningful notifications, and track battery behavior over time. `FOSS` | [🌱](https://f-droid.org/packages/codes.swistak.batterymonitor/)
@@ -96,14 +96,14 @@ optimization**, charging control and task & process management.
 
 ## Task & Process Management
 
-- **[Appzuku](https://github.com/northmendo/Appzuku)** - Stops background apps using root or Shizuku permissions. `FOSS`
+- **[Appzuku](https://github.com/northmendo/Appzuku)** - Stops background apps using root or Shizuku permissions. `FOSS` `[ADB]`
 - **[Greenify4Magisk/KSU Reborn](https://github.com/Drsexo/Greenify4Magisk-KSU-Reborn)** - Integrates Greenify as a privileged system app to enable Boost Mode, enhancing hibernation performance without modifying the ROM. `FOSS` `[M]` `[K]` `[A]`
-- **[KillMyApps](https://github.com/dedeadend/KillMyApps)** - Terminates background processes through root or Shizuku to free RAM and save battery, with scheduled auto-kill and a Quick Settings tile. `FOSS`
-- **[LightFreeze](https://github.com/yudigaga/LightFreeze)** - Freezes and unfreezes apps on demand with root or Shizuku, using tag-based rules, batch actions and optional event-driven refreezing through the libxposed system scope. Android 13+. `Proprietary` `[LSP]`
+- **[KillMyApps](https://github.com/dedeadend/KillMyApps)** - Terminates background processes through root or Shizuku to free RAM and save battery, with scheduled auto-kill and a Quick Settings tile. `FOSS` `[ADB]`
+- **[LightFreeze](https://github.com/yudigaga/LightFreeze)** - Freezes and unfreezes apps on demand with root or Shizuku, using tag-based rules, batch actions and optional event-driven refreezing through the libxposed system scope. Android 13+. `Proprietary` `[LSP]` `[ADB]`
 - **[No More Background](https://github.com/adil192/no_more_background)** - A fire-and-forget program to stop Android apps from running in the background. `FOSS` | [🌱](https://f-droid.org/en/packages/com.adilhanney.no_more_background/)
 - **[Operator](https://github.com/by-architect/Operator)** - Matrix-inspired Android Task Manager that lets you monitor, manage, and terminate processes directly from your device. `FOSS` | [🌱](https://apt.izzysoft.de/fdroid/index/apk/com.byarchitect.operator)
 - **[ProcessKeepAlive](https://github.com/Xposed-Modules-Repo/io.github.guys222.processkeepalive)** - Prevents selected apps from being killed in the background by hooking the system framework on AOSP and LineageOS. `Proprietary` `[LSP]`
-- **[Service Keeper](https://github.com/sklndev/Service-Keeper)** - Monitors background services, accessibility services and notification listeners, restarting or re-enabling them when the system kills them, with per-service intervals, boot persistence and an audit log. Uses Shizuku for privileged access. `FOSS`
-- **[Shappky](https://github.com/YasserNull/shappky)** - Stops background apps using root or Shizuku permissions. `FOSS` `[M]`
+- **[Service Keeper](https://github.com/sklndev/Service-Keeper)** - Monitors background services, accessibility services and notification listeners, restarting or re-enabling them when the system kills them, with per-service intervals, boot persistence and an audit log. Uses Shizuku for privileged access. `FOSS` `[ADB]`
+- **[Shappky](https://github.com/YasserNull/shappky)** - Stops background apps using root or Shizuku permissions. `FOSS` `[M]` `[ADB]`
 - **[TaskManager](https://github.com/RohitKushvaha01/TaskManager)** - Task Manager inspired from gnome system monitor for android.Must read [F-Droid inclusion](https://github.com/RohitKushvaha01/TaskManager/issues/24) `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.rk.taskmanager)
-- **[Time Stop](https://github.com/TACPR/com.liuml.apptimelimiter)** - Per-app usage limits finer than system screen time: daily and group quotas, session plans, schedules, PIN protection, cooldowns and in-window blocking panels. Uses LSPosed when a hook is active, otherwise accessibility plus usage access, with optional root or Shizuku force-stop. Android 8.1+. `FOSS` `[LSP]`
+- **[Time Stop](https://github.com/TACPR/com.liuml.apptimelimiter)** - Per-app usage limits finer than system screen time: daily and group quotas, session plans, schedules, PIN protection, cooldowns and in-window blocking panels. Uses LSPosed when a hook is active, otherwise accessibility plus usage access, with optional root or Shizuku force-stop. Android 8.1+. `FOSS` `[LSP]` `[ADB]`

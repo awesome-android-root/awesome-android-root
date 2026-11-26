@@ -54,7 +54,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[Recents](https://github.com/tymwitko/Recents)** - Launcher-agnostic "Recents" menu for Android. `FOSS`
 - **[Three-Finger-Screenshot](https://github.com/hxreborn/three-finger-swipe)**- Standalone LSPosed implementation of three-finger swipe. `FOSS` `[LSP]`
 - **[Volume Key Track Control Module](https://github.com/Hepolise/VolumeKeyTrackControlModule)** - Allows to skip and play/pause track with volume keys. `FOSS` `[LSP]`
-- **[XGesture](https://github.com/qpst4/XGesture)** - Gesture and one-hand navigation suite with edge panels, reachability cursor, floating-ball OCR, notification/OTP handling, app freezer and freeform windows, using Shizuku, root or an optional LSPosed module. `FOSS` `[LSP]`
+- **[XGesture](https://github.com/qpst4/XGesture)** - Gesture and one-hand navigation suite with edge panels, reachability cursor, floating-ball OCR, notification/OTP handling, app freezer and freeform windows, using Shizuku, root or an optional LSPosed module. `FOSS` `[LSP]` `[ADB]`
 
 ## Launchers & Home Screen
 
@@ -126,7 +126,7 @@ Magisk/KernelSU/LSPosed modules.
 ## Themes & Visual Mods
 
 - **[ColorBlendr](https://github.com/Mahmud0808/ColorBlendr)** - Customize Material You colors of your device. `FOSS` | [🌱](https://f-droid.org/en/packages/com.drdisagree.colorblendr/)
-- **[Duo Fold Live](https://github.com/joeconsorti/duo-fold-live)** - Animates the Galaxy Z Fold 8 opening and closing from the live hinge angle, with windowed glass, cover previews and a fade around Samsung's display handoff. Only tested on the SM-F971U with Android 17, and needs Shizuku plus Samsung's fold wallpapers. `FOSS`
+- **[Duo Fold Live](https://github.com/joeconsorti/duo-fold-live)** - Animates the Galaxy Z Fold 8 opening and closing from the live hinge angle, with windowed glass, cover previews and a fade around Samsung's display handoff. Only tested on the SM-F971U with Android 17, and needs Shizuku plus Samsung's fold wallpapers. `FOSS` `[ADB]`
 - **[Duo Open](https://github.com/marcoazeem/duo-open)** - Frosted-glass fold effect for book-style foldables driven by the real hinge angle, drawn through an accessibility overlay above every window or as a live wallpaper. Android 13+, no root. `FOSS`
 - **[Glass Layer](https://github.com/Mahmud0808/GlassLayer)** - Adds live liquid glass with refraction, blur, rim light and reflection to Quick Settings, notifications, the lock screen and system dialogs, with per-surface switches and styles that apply without a SystemUI restart. Android 16+, tested on PixelOS with Android 17. `FOSS` `[LSP]`
 - **[Global Icon Pack](https://github.com/RichardLuo0/global-icon-pack-android)** - Apply icon packs globally. `FOSS` `[LSP]`

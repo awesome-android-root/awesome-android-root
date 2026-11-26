@@ -55,7 +55,7 @@ const TRAILING_BADGE_RE = new RegExp(
   '(?:`[^`]+`|\\|\\s*\\[(?:\\u{1F331}|\\u{25B6}\\uFE0F?)\\]\\([^)]+\\))\\s*$',
   'u'
 )
-const ALLOWED_TAGS = new Set(['FOSS', 'Proprietary', '[M]', '[K]', '[A]', '[LSP]'])
+const ALLOWED_TAGS = new Set(['FOSS', 'Proprietary', '[M]', '[K]', '[A]', '[LSP]', '[ADB]'])
 
 /**
  * Collect the trailing run of badges and store icons.

@@ -34,7 +34,7 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 - **[LADB](https://github.com/tytydraco/LADB)** - Local ADB shell with a built-in terminal interface. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.draco.ladb)
 - **[Log Catcher](https://github.com/hxreborn/Log-Catcher)** - Captures logcat and kernel messages during startup and archives them as timestamped tarballs after unlock. `FOSS` `[M]` `[K]` `[A]`
 - **[Logcat Extreme](https://play.google.com/store/apps/details?id=scd.lcex)** - Logcat reader and capture tool for rooted Android devices. `Proprietary`
-- **[Loki](https://github.com/trinadhthatakula/Loki)** - Logcat reader that captures, saves and shares another app's logs using root or Shizuku. `FOSS`
+- **[Loki](https://github.com/trinadhthatakula/Loki)** - Logcat reader that captures, saves and shares another app's logs using root or Shizuku. `FOSS` `[ADB]`
 - **[USBManager](https://github.com/TigerSpirit217/USBManager/blob/master/README_ENG.md)** - Shows a USB mode picker when the phone is connected to a computer, with one-tap ADB toggles and optional auto-disable of USB debugging on unplug. `FOSS` `[LSP]`
 - **[Wireless ADB Controller](https://github.com/Magisk-Modules-Alt-Repo/wadbd)** - Enables, disables and manages the wireless ADB daemon per session or at boot, with custom port and key support. `FOSS` `[M]` `[K]` `[A]`
 - **[Wireless ADB Switch](https://github.com/Smooth-E/wireless-adb-switch)** - Quickly enable or disable Android's Wireless Debugging feature. Includes widgets and a quick settings tile for convenience. `FOSS` | [🌱](https://f-droid.org/ru/packages/com.smoothie.wirelessDebuggingSwitch)
@@ -47,9 +47,9 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 - **[crond4Android](https://github.com/powerAn2020/crond4android)** - Cron daemon for scheduled jobs on KernelSU, APatch, and Magisk. `FOSS` `[M]` `[K]` `[A]`
 - **[Eta](https://github.com/Mangi-11/Eta/blob/main/README_EN.md)** - System-level BYOK AI agent with direct Android API calls, a GUI agent, terminal and Alpine/Debian environments, Skills and MCP. Core features run without root; root and LSPosed add system access and assistant entry points. Android 14+. `FOSS` `[LSP]`
 - **[FIRERPA (lamda)](https://github.com/firerpa/lamda)** - On-device control platform driven by a Python client: remote desktop streaming, UI/OCR automation, traffic capture, built-in Frida and proxy/VPN networking. Runs with or without root. `FOSS`
-- **[Geto](https://github.com/T31n/Geto)** - Applies device settings automatically when selected apps are launched, using `WRITE_SECURE_SETTINGS` granted through Shizuku or root. `FOSS` | [🌱](https://f-droid.org/en/packages/com.android.geto/)
-- **[Rootless Store](https://github.com/Resilien-Mobile/RootlessStore)** - Manages and runs plugins and automations through the app shell, Shizuku/ADB or optional root. Inspect plugins before granting elevated access. `FOSS`
-- **[Zafiro](https://github.com/niki914/zafiro)** - BYOK AI agent with phone control, native Shell and Python 3, and Skills and MCP support. Runs via Shizuku with root optional. `FOSS` `[LSP]`
+- **[Geto](https://github.com/T31n/Geto)** - Applies device settings automatically when selected apps are launched, using `WRITE_SECURE_SETTINGS` granted with `pm grant` over ADB or a root shell. `FOSS` `[ADB]` | [🌱](https://f-droid.org/en/packages/com.android.geto/)
+- **[Rootless Store](https://github.com/Resilien-Mobile/RootlessStore)** - Manages and runs plugins and automations through the app shell, Shizuku/ADB or optional root. Inspect plugins before granting elevated access. `FOSS` `[ADB]`
+- **[Zafiro](https://github.com/niki914/zafiro)** - BYOK AI agent with phone control, native Shell and Python 3, and Skills and MCP support. Runs via Shizuku with root optional. `FOSS` `[LSP]` `[ADB]`
 
 ## Developer Tools
 

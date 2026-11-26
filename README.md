@@ -51,6 +51,7 @@ Every entry links to its primary source (GitHub, F-Droid, or the project site) a
 | `[K]` | Works with KernelSU |
 | `[A]` | Works with APatch |
 | `[LSP]` | LSPosed (Xposed) module |
+| `[ADB]` | Runs without root over ADB or Shizuku |
 | `FOSS` / `Proprietary` | License type |
 | `⭐` | Widely trusted resource |
 
@@ -112,7 +113,7 @@ Fixes and additions are welcome. A new entry must meet this bar:
 - **Maintained.** Updated within the last 18 months.
 - **Primary source.** A working link to the project itself, not a mirror.
 - **Accurate.** A factual description, no marketing copy.
-- **Tagged.** A license badge (`FOSS` or `Proprietary`) and framework badges (`[M]` `[K]` `[A]` `[LSP]`).
+- **Tagged.** A license badge (`FOSS` or `Proprietary`), framework badges (`[M]` `[K]` `[A]` `[LSP]`), and `[ADB]` when privileged features run without root over ADB or Shizuku.
 - **Unique.** No duplicates.
 - **Starred sparingly.** `⭐` is reserved for widely trusted resources.
 

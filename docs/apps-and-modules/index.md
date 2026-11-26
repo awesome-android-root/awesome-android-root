@@ -74,8 +74,9 @@ head:
 
 > [!NOTE]
 > Every entry links to its **Source Code** page (GitHub/GitLab etc.) for `FOSS` apps, otherwise to its
-> **Google Play Store** listing. The inline badges identify framework and licensing metadata: `[M]` Magisk,
-> `[K]` KernelSU, `[A]` APatch, `[LSP]` LSPosed, `FOSS`, and ⭐ featured entries.
+> **Google Play Store** listing. The inline badges identify framework, licensing and privilege metadata: `[M]` Magisk,
+> `[K]` KernelSU, `[A]` APatch, `[LSP]` LSPosed, `FOSS`, `[ADB]` for ADB or Shizuku operation without root,
+> and ⭐ featured entries.
 
 ---
 
@@ -129,6 +130,7 @@ Apps and modules are grouped by **what you want to accomplish**, not by whether 
 | ⭐ | Community-recommended (most trusted/popular in category) |
 | `FOSS` | Free and Open Source Software (source code available) |
 | `Proprietary` | Closed-source software or unclear licensing |
+| `[ADB]` | Privileged features work without root over ADB or Shizuku |
 
 ### Framework & Module Badges
 

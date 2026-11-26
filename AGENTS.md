@@ -57,6 +57,8 @@ For entries in `docs/apps-and-modules/`:
   useful, verified detail when addressing short-description lint warnings.
 * Use framework tags only when verified:
   `[M]` Magisk, `[K]` KernelSU, `[A]` APatch, `[LSP]` LSPosed/Xposed.
+* Use `[ADB]` only when the upstream project documents that privileged
+  features work without root over ADB or Shizuku.
 * Mark `FOSS` only when the source and license support it.
 * Store badges must point to the correct application.
 * Do not add or remove `⭐` without understanding its existing meaning.

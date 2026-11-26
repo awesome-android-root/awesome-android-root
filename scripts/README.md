@@ -27,7 +27,7 @@ Lints and indexes the entries of the Apps & Modules category pages
 The lint pass checks each line against the entry format documented in
 `docs/contributing.md` and the PR template and reports every `file:line`
 problem; it never rewrites or reorders entries. Checks cover the entry format,
-the `FOSS`/`Proprietary` and framework badges, store icon links, duplicate URLs,
+the `FOSS`/`Proprietary`, framework and `ADB` badges, store icon links, duplicate URLs,
 and the recommended-first then alphabetical ordering inside each section.
 
 The index pass exports every entry to `docs/public/app-index.json`. The file is

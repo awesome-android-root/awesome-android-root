@@ -77,6 +77,7 @@ Include:
 - A concise, factual 1-2 sentence description of its main function.
 - One license badge: `FOSS` or `Proprietary`.
 - Every applicable framework badge: `[M]` Magisk, `[K]` KernelSU, `[A]` APatch, or `[LSP]` LSPosed/Xposed.
+- `[ADB]` when privileged features work without root over ADB or Shizuku; note in the description when that mode is partial.
 - Optional store links after the badges: `🌱` for F-Droid/IzzyOnDroid and `▶️` for Google Play.
 
 Prefer links in this order: GitHub, F-Droid, official project site, then Google Play. Use a direct project or release page when one exists.
@@ -101,6 +102,7 @@ Prefer links in this order: GitHub, F-Droid, official project site, then Google 
 | `[K]` | KernelSU module. |
 | `[A]` | APatch module. |
 | `[LSP]` | LSPosed/Xposed module. |
+| `[ADB]` | Privileged features work without root over ADB or Shizuku. |
 | `⭐` | Community-recommended entry; reserve it for widely trusted resources. |
 | `🌱` | F-Droid or IzzyOnDroid listing. |
 | `▶️` | Google Play listing. |
