@@ -27,10 +27,13 @@
  * It also regenerates the count page and JSON consumed by shields.io badges:
  * docs/count.md and docs/public/count.json.
  *
- * Exit code reflects lint errors only with --check; run the script to regenerate the
- * index whenever an entry changes.
+ * With --check (`bun run lint:entries`) nothing is written: the exit code is
+ * nonzero on lint errors or when the committed app-index.json is stale. Without
+ * it (`bun run index:build`) lint findings are reported and all three files are
+ * regenerated; run it whenever an entry changes.
  */
 import type { Badge, Entry, ParsedRecord, ParsedFile, EntryIndex } from '../docs/.vitepress/shared/entries.ts'
+import { parseEntryLine } from '../docs/.vitepress/shared/entries.ts'
 import { readFileSync, readdirSync } from 'node:fs'
 import { join, relative, resolve } from 'node:path'
 
@@ -42,8 +45,7 @@ const COUNT_JSON = join(ROOT, 'docs', 'public', 'count.json')
 
 // ---- Parsing (shared by the lint and the index builder) ---------------------
 
-// Entry format used by every category page, see docs/contributing.md.
-const ENTRY_RE = /^-\s+\*\*\[([^\]]+)\]\(([^)\s]+)\)\*\*\s*-?\s*(.*)$/u
+// The entry line itself is parsed by parseEntryLine in shared/entries.ts.
 const LINK_RE = /\]\(([^)\s]+)\)/gu
 const BADGE_RE = /`([^`]+)`/gu
 const STAR_RE = /\u2B50\uFE0F?/gu
@@ -113,13 +115,13 @@ export function parseFile(fileName: string): ParsedRecord[] {
     }
     if (!raw.startsWith('- **')) continue
 
-    const match = ENTRY_RE.exec(raw)
-    if (!match) {
+    const parsed = parseEntryLine(raw)
+    if (!parsed) {
       records.push({ file, line: i + 1, malformed: true })
       continue
     }
 
-    const [, rawName, url, rest] = match
+    const { rawName, url, rest } = parsed
     STAR_RE.lastIndex = 0
     const starred = STAR_RE.test(rawName)
     const name = rawName.replace(STAR_RE, '').trim()
@@ -327,9 +329,7 @@ function countPage(pages: Record<string, number>): string {
     '| --- | ---: |',
     ...pageRows,
     '',
-    'Framework counts may overlap when an entry has multiple framework tags.',
-    '',
-    'The same counts are published as JSON at `count.json` for dynamic badges and other tooling.'
+    'Framework counts may overlap when an entry has multiple framework tags.'
   ].join('\n')
   return `${table}\n`
 }
@@ -355,14 +355,33 @@ export function parseEntries(): ParsedFile[] {
     .map((fileName) => ({ fileName, records: parseFile(fileName) }))
 }
 
+export function serializeIndex(payload: EntryIndex): string {
+  return `${JSON.stringify(payload, null, 0)}\n`
+}
+
+/** True when the committed index matches what the current entries produce. */
+export function indexIsCurrent(payload: EntryIndex, committed: string | null): boolean {
+  return committed === serializeIndex(payload)
+}
+
 if (import.meta.main) {
   const parsedFiles = parseEntries()
   lint(parsedFiles)
-  if (process.argv.includes('--check') && errors.length) process.exitCode = 1
   const payload = buildIndex(parsedFiles)
-  await Promise.all([
-    Bun.write(OUT_FILE, `${JSON.stringify(payload, null, 0)}\n`),
-    Bun.write(COUNT_PAGE, countPage(payload.pages)),
-    Bun.write(COUNT_JSON, countJson())
-  ])
+  if (process.argv.includes('--check')) {
+    // Check-only: never write, so a stale committed index fails instead of
+    // being silently regenerated in the working tree.
+    const committed = await Bun.file(OUT_FILE).text().catch(() => null)
+    const current = indexIsCurrent(payload, committed)
+    if (!current) {
+      console.log(`error: ${relative(ROOT, OUT_FILE)} is out of date; run \`bun run index:build\` and commit it.`)
+    }
+    if (errors.length || !current) process.exitCode = 1
+  } else {
+    await Promise.all([
+      Bun.write(OUT_FILE, serializeIndex(payload)),
+      Bun.write(COUNT_PAGE, countPage(payload.pages)),
+      Bun.write(COUNT_JSON, countJson())
+    ])
+  }
 }

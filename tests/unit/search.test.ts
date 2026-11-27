@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'bun:test'
-import { createPagefindLoader, createSearchSession, rankTitles } from '../docs/.vitepress/theme/utils/search.ts'
-import type { PagefindBrowser, SearchResult } from '../docs/.vitepress/theme/utils/search.ts'
+import { createPagefindLoader, createSearchSession, rankTitles } from '../../docs/.vitepress/theme/utils/search.ts'
+import type { PagefindBrowser, SearchResult } from '../../docs/.vitepress/theme/utils/search.ts'
 
 const result: SearchResult = { url: '/adaway', excerpt: '<mark>AdAway</mark>', meta: { title: 'AdAway' } }
 function deferred<T>() {

@@ -1,5 +1,5 @@
 import { expect, test } from 'bun:test'
-import { withIcons } from '../docs/.vitepress/icons.ts'
+import { withIcons } from '../../docs/.vitepress/icons.ts'
 
 test('resolves a named icon into an inline svg and drops the icon key', () => {
   const result = withIcons({ text: 'Quick Start', icon: 'rocket' })

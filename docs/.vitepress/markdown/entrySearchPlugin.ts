@@ -1,5 +1,5 @@
 import type MarkdownIt from 'markdown-it'
-import { entryAnchor } from '../shared/entries.ts'
+import { entryAnchor, parseEntryLine } from '../shared/entries.ts'
 
 /** Give directory entries stable deep links and avoid indexing them twice. */
 export function entrySearchPlugin(md: MarkdownIt): void {
@@ -10,9 +10,9 @@ export function entrySearchPlugin(md: MarkdownIt): void {
     const seen = new Set<string>()
     for (const token of state.tokens) {
       if (token.type !== 'list_item_open' || !token.map) continue
-      const match = lines[token.map[0]]?.match(/^-\s+\*\*\[([^\]]+)\]\(([^)\s]+)\)/u)
-      if (!match) continue
-      const id = entryAnchor(match[1], match[2])
+      const entry = parseEntryLine(lines[token.map[0]] ?? '')
+      if (!entry) continue
+      const id = entryAnchor(entry.rawName, entry.url)
       if (seen.has(id)) throw new Error(`Duplicate search anchor ${id} in ${env.relativePath}`)
       seen.add(id)
       token.attrSet('id', id)

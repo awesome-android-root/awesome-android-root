@@ -23,6 +23,19 @@ export interface EntryIndex {
   entries: { n: string; u: string; a: string[]; t: string[]; p: string; s: string }[]
 }
 
+/**
+ * Entry line format used by every category page, see docs/contributing.md:
+ * `- **[Name](url)** - Description. `FOSS` ...`. The linter, the app index,
+ * the Markdown anchor plugin and the search indexer all parse lines with this.
+ */
+export const ENTRY_RE = /^-\s+\*\*\[([^\]]+)\]\(([^)\s]+)\)\*\*\s*-?\s*(.*)$/u
+
+/** Split an entry line into its raw name (star included), primary URL and the rest. */
+export function parseEntryLine(line: string): { rawName: string; url: string; rest: string } | null {
+  const match = ENTRY_RE.exec(line)
+  return match ? { rawName: match[1], url: match[2], rest: match[3] } : null
+}
+
 // Shared identity must not depend on entry order, recommendations or punctuation.
 export function entryAnchor(name: string, url: string): string {
   let hash = 2166136261

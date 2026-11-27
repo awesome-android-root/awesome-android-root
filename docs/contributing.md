@@ -114,6 +114,21 @@ Prefer links in this order: GitHub, F-Droid, official project site, then Google 
 - State relevant compatibility and access requirements. Root-specific apps and modules belong here; non-root tools are appropriate only when they clearly fit an established category. If root, ADB, Shizuku, or a particular framework is required, make that clear in the description or badges.
 - Do not submit broken, malicious, or suspicious software.
 
+## Before opening a PR
+
+CI runs these checks and blocks the pull request when one fails. Run them locally with [Bun](https://bun.sh) first; [`AGENTS.md` section 7](https://github.com/awesome-android-root/awesome-android-root/blob/main/AGENTS.md#7-validation) explains when each one applies.
+
+```bash
+bun install
+bun run check:links   # internal links and anchors
+bun run lint:entries  # entry format, badges and ordering; fails if app-index.json is stale
+bun run typecheck
+bun run test
+bun run docs:build
+```
+
+After adding, removing, or relinking an entry, run `bun run index:build` and commit the regenerated `docs/public/app-index.json`. The `bun run test:search` browser tests also need Google Chrome, or a compatible browser set in `CHROMIUM_PATH`.
+
 ## Other contributions
 
 For guide changes, preserve prerequisites, warnings, commands, exceptions, and recovery instructions. Link to an existing canonical guide rather than duplicating long procedures where possible.

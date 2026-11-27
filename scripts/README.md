@@ -48,17 +48,37 @@ shields.io dynamic JSON endpoint, for example:
 [![Apps & Modules](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fawesome-android-root.xyz%2Fcount.json&query=%24.total&label=apps%20%26%20modules&color=blue&logo=android&style=for-the-badge)](https://awesome-android-root.xyz/apps-and-modules/)
 ```
 
-The default generation command reports lint findings without failing.
-`bun run lint:entries` passes `--check` and exits nonzero on errors; CI runs it
-as a blocking check. Warnings remain informational.
+The default generation command (`bun run index:build`) reports lint findings
+without failing and writes all three files. `bun run lint:entries` passes
+`--check`, which writes nothing: it exits nonzero on lint errors or when the
+committed `docs/public/app-index.json` differs from what the current entries
+produce, so a PR that forgot to regenerate the index fails instead of being
+fixed silently in the working tree. CI runs it as a blocking check before the
+build. Warnings remain informational.
+
+`/count` and `/count.json` stay published for maintainers and badges, but the
+count page is not linked from the nav, sidebar or other pages, and is excluded
+from the sitemap, `llms.txt`, `llms-full.txt`, the WebMCP page index and
+Pagefind. Its HTML carries `noindex`.
 
 ### Usage
 
 ```bash
-bun scripts/app-entries.ts   # lint + write docs/public/app-index.json, docs/count.md and docs/public/count.json
+bun scripts/app-entries.ts           # lint + write docs/public/app-index.json, docs/count.md and docs/public/count.json
+bun scripts/app-entries.ts --check   # lint + stale-index check, writes nothing
 ```
 
 It is also exposed as `bun run index:build` and runs inside `docs:build`.
+
+## page-index.ts
+
+Runs from VitePress `buildEnd` and writes `page-index.json` to the build output:
+one `{ title, route, markdown }` record per published page, where `route` is the
+clean URL (`/`, `/rooting-guides/`, `/faqs`) and `markdown` the per-page copy
+emitted by vitepress-plugin-llms (`/index.md`, `/rooting-guides.md`,
+`/faqs.md`). The 404 page and the maintainer-only count page are left out. The
+build fails if a listed page has no Markdown copy, since WebMCP `get_page` would
+otherwise return an error.
 
 ## prepare-build.ts
 
@@ -94,7 +114,7 @@ run `bun install`. The repository intentionally does not track `bun.lock`.
 
 ```bash
 bun run typecheck       # native Bun checks, separate runtime environments
-bun run test            # focused icon, link, Markdown, MCP and search unit tests
+bun run test            # unit tests in tests/unit (entries, icons, links, Markdown, MCP, middleware, page index, search, SEO)
 bun run lint            # internal links and entry lint (blocking on errors)
 bun run docs:build      # generate counts, render VitePress, then index Pagefind
 bun run test:search     # two search smoke tests; uses installed Google Chrome
@@ -166,8 +186,10 @@ Both `bun run test` (unit tests) and `bun run test:search` use `bun:test` and
 Bun's `expect`. Browser tests use `puppeteer-core` to drive **installed Google
 Chrome**, or `CHROMIUM_PATH` for an explicit compatible binary. There is no
 Playwright dependency, browser bundle/downloader or second test runner.
-After building, plain `bun test` runs both suites; `bunfig.toml` excludes local
-audit checkouts and generated output from discovery.
+Unit tests live in `tests/unit/*.test.ts`; the browser smoke tests and their
+harness are `tests/search.spec.ts` and `tests/browser.ts`. After building, plain
+`bun test` runs both suites; `bunfig.toml` excludes local audit checkouts and
+generated output from discovery.
 
 `tests/browser.ts` starts a fresh production preview, waits for readiness, launches
 the browser and closes both during teardown, including launch failures. Each test
@@ -262,11 +284,16 @@ The themed native-dialog UI and Pagefind engine/metadata lazy-load on opening.
 Index chunks and fragments load only for nonempty queries. Only the top 12 result fragments are fetched, not the whole
 corpus. Queries are debounced, stale responses ignored and failed imports retried
 with a fresh module URL only on failure. The same lazy Pagefind instance powers
-WebMCP `search_site`; other MCP tools retain on-demand Markdown page retrieval.
+WebMCP `search_site`. `list_pages` and `navigate_to_page` read the small
+build-time `page-index.json` (titles, routes and Markdown paths, a few KB), and
+`get_page` fetches only the requested page's Markdown copy. No tool downloads
+`llms-full.txt`, which stays published for other consumers. `navigate_to_page`
+goes to the canonical route from the index, so `/index.md` opens `/`, and the
+404 and count pages are never listed or returned.
 The WebMCP component loads only after mount when `document.modelContext` or
 `navigator.modelContext` exposes `registerTool`. Unsupported browsers do not
 fetch its module; supported browsers register all four tools without fetching
-the Markdown corpus or Pagefind until a tool needs them. Keep the Pagefind loader
+the page index or Pagefind until a tool needs them. Keep the Pagefind loader
 shared with the search dialog to avoid duplicate engines/workers.
 Ctrl/Cmd+K intentionally opens search even from an editable field; `/` does not
 interrupt typing. Enter with no arrow selection opens the first result. Search's
@@ -297,9 +324,9 @@ download a browser.
 
 ### Which tests cover search?
 
-- `scripts/search.test.ts`: exact/prefix ranking and deterministic out-of-order
+- `tests/unit/search.test.ts`: exact/prefix ranking and deterministic out-of-order
   search/fragment completion and cancellation; late-import Retry isolation and
-  active-instance destruction. Run `bun test scripts/search.test.ts`.
+  active-instance destruction. Run `bun test tests/unit/search.test.ts`.
 - `tests/search.spec.ts`: **two** production-output smoke tests. One exercises
   strict lazy loading, real Pagefind/WASM/index results, highlights, keyboard
   selection (including initial ArrowUp), IME Enter safety, entry navigation,

@@ -2,8 +2,8 @@ import { expect, test } from 'bun:test'
 import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import { checkLinks } from './check-links.ts'
-import { entryAnchor } from '../docs/.vitepress/shared/entries.ts'
+import { checkLinks } from '../../scripts/check-links.ts'
+import { entryAnchor } from '../../docs/.vitepress/shared/entries.ts'
 
 async function fixture(files: Record<string, string>, run: (root: string) => Promise<void>) {
   const root = mkdtempSync(join(tmpdir(), 'aar-links-'))
