@@ -1,19 +1,13 @@
 import { defineComponent, Transition, vShow, withDirectives, ref, onMounted, onBeforeUnmount } from 'vue'
 import './BackToTop.css'
 
+/** Distance from the top of the document, in px, after which the button shows. */
+const SHOW_AFTER = 450
+
 export default defineComponent(() => {
   const visible = ref(false)
-  let ticking = false
-
-  function onScroll() {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        visible.value = window.scrollY > 450
-        ticking = false
-      })
-      ticking = true
-    }
-  }
+  let observer: IntersectionObserver | undefined
+  let sentinel: HTMLElement | undefined
 
   function scrollToTop() {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -25,12 +19,23 @@ export default defineComponent(() => {
   }
 
   onMounted(() => {
-    window.addEventListener('scroll', onScroll, { passive: true })
-    onScroll()
+    // A 1px marker whose bottom edge sits SHOW_AFTER px down the document. It
+    // stops intersecting (edge contact still counts) exactly when
+    // scrollY > SHOW_AFTER, so no handler runs on every scroll frame.
+    sentinel = document.createElement('div')
+    sentinel.className = 'back-to-top-sentinel'
+    sentinel.setAttribute('aria-hidden', 'true')
+    sentinel.style.top = `${SHOW_AFTER - 1}px`
+    document.body.append(sentinel)
+    observer = new IntersectionObserver(([entry]) => {
+      visible.value = !entry.isIntersecting && entry.boundingClientRect.top < 0
+    })
+    observer.observe(sentinel)
   })
 
   onBeforeUnmount(() => {
-    window.removeEventListener('scroll', onScroll)
+    observer?.disconnect()
+    sentinel?.remove()
   })
 
   return () => (

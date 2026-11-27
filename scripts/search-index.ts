@@ -51,7 +51,7 @@ async function writeSearchIndex(outputPath: string, outDir: string, srcDir: stri
     urls.add(url)
   }
   try {
-    const markdown = await createMarkdownRenderer(srcDir, markdownOptions)
+    const renderer = await createMarkdownRenderer(srcDir, markdownOptions)
     const created = await createIndex({
       rootSelector: '.vp-doc',
       forceLanguage: 'en',
@@ -69,12 +69,12 @@ async function writeSearchIndex(outputPath: string, outDir: string, srcDir: stri
       // Source and rendered file reads are independent; fetch both together.
       // node:fs APIs here: this module is bundled into VitePress's config,
       // where the Bun global is not defined.
-      const [markdown, html] = await Promise.all([
+      const [sourceMarkdown, html] = await Promise.all([
         readFile(source, 'utf8').catch(() => null),
         readFile(join(outDir, file), 'utf8')
       ])
-      if (markdown === null) continue
-      const frontmatter = markdown.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] ?? ''
+      if (sourceMarkdown === null) continue
+      const frontmatter = sourceMarkdown.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] ?? ''
       if (/^search:\s*false\s*$/m.test(frontmatter) || /^layout:\s*home\s*$/m.test(frontmatter)) {
         excludedFiles.add(file)
         continue
@@ -125,7 +125,7 @@ async function writeSearchIndex(outputPath: string, outDir: string, srcDir: stri
         // boosting all directory pages. Description/aliases remain normal text.
         const result = await index.addHTMLFile({
           url,
-          content: `<html lang="en"><body><article class="vp-doc"><h1 data-pagefind-meta="title">${title}</h1><p>${markdown.renderInline(description)}</p><p data-pagefind-weight="0.5">${escapeHtml(category)} ${escapeHtml(record.indexSection)} ${frameworks}</p><p data-pagefind-weight="0.5">${escapeHtml(developerTerms(record.url))}</p></article></body></html>`
+          content: `<html lang="en"><body><article class="vp-doc"><h1 data-pagefind-meta="title">${title}</h1><p>${renderer.renderInline(description)}</p><p data-pagefind-weight="0.5">${escapeHtml(category)} ${escapeHtml(record.indexSection)} ${frameworks}</p><p data-pagefind-weight="0.5">${escapeHtml(developerTerms(record.url))}</p></article></body></html>`
         })
         checkErrors(result)
         if (result.file.url !== url || result.file.uniqueWords === 0) {

@@ -12,10 +12,8 @@
     "docs/.vitepress/config.ts",
     "docs/.vitepress/icons.ts",
     "docs/.vitepress/markdown/**/*.ts",
+    "docs/.vitepress/site/**/*.ts",
     "docs/.vitepress/shared/**/*.ts",
     "scripts/**/*.ts"
-  ],
-  "exclude": [
-    "scripts/**/*.test.ts"
   ]
 }

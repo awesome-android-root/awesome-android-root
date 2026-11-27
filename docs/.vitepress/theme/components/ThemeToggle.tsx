@@ -2,6 +2,7 @@ import { defineComponent, ref, watchPostEffect } from 'vue'
 import { Moon } from '@lucide/vue'
 import { Sun } from '@lucide/vue'
 import { useData } from 'vitepress'
+import './ThemeToggle.css'
 
 export default defineComponent(() => {
   const { isDark, theme } = useData()

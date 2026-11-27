@@ -55,6 +55,10 @@ export async function onRequest(context: { request: Request; env: { ASSETS: { fe
   const url = new URL(request.url)
   const path = markdownPath(url.pathname)
 
+  // Files with an extension (hashed /assets/*, images, llms.txt, *.md) have no
+  // Markdown alternative, so they pass through untouched and never get
+  // Vary: Accept. Only page URLs below are negotiated, and every response for
+  // them varies on Accept, including redirects and 404s.
   if (!path || (request.method !== 'GET' && request.method !== 'HEAD')) {
     return context.next()
   }
