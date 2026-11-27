@@ -121,7 +121,7 @@ CI runs these checks and blocks the pull request when one fails. Run them locall
 ```bash
 bun install
 bun run check:links   # internal links and anchors
-bun run lint:entries  # entry format, badges and ordering; fails if app-index.json is stale
+bun run lint:entries  # entry format, badges and ordering; warns if app-index.json is stale
 bun run typecheck
 bun run test
 bun run docs:build

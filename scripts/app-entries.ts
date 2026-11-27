@@ -28,8 +28,9 @@
  * docs/count.md and docs/public/count.json.
  *
  * With --check (`bun run lint:entries`) nothing is written: the exit code is
- * nonzero on lint errors or when the committed app-index.json is stale. Without
- * it (`bun run index:build`) lint findings are reported and all three files are
+ * nonzero on lint errors. A committed app-index.json that differs from the
+ * current entries only warns, because the build regenerates it. Without it
+ * (`bun run index:build`) lint findings are reported and all three files are
  * regenerated; run it whenever an entry changes.
  */
 import type { Badge, Entry, ParsedRecord, ParsedFile, EntryIndex } from '../docs/.vitepress/shared/entries.ts'
@@ -369,14 +370,13 @@ if (import.meta.main) {
   lint(parsedFiles)
   const payload = buildIndex(parsedFiles)
   if (process.argv.includes('--check')) {
-    // Check-only: never write, so a stale committed index fails instead of
-    // being silently regenerated in the working tree.
+    // Check-only: never write. A stale committed index only warns, because the
+    // build regenerates it from the entries and it must not block CI.
     const committed = await Bun.file(OUT_FILE).text().catch(() => null)
-    const current = indexIsCurrent(payload, committed)
-    if (!current) {
-      console.log(`error: ${relative(ROOT, OUT_FILE)} is out of date; run \`bun run index:build\` and commit it.`)
+    if (!indexIsCurrent(payload, committed)) {
+      console.log(`warning: ${relative(ROOT, OUT_FILE)} is out of date; run \`bun run index:build\` to refresh it.`)
     }
-    if (errors.length || !current) process.exitCode = 1
+    if (errors.length) process.exitCode = 1
   } else {
     await Promise.all([
       Bun.write(OUT_FILE, serializeIndex(payload)),

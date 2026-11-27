@@ -50,11 +50,10 @@ shields.io dynamic JSON endpoint, for example:
 
 The default generation command (`bun run index:build`) reports lint findings
 without failing and writes all three files. `bun run lint:entries` passes
-`--check`, which writes nothing: it exits nonzero on lint errors or when the
-committed `docs/public/app-index.json` differs from what the current entries
-produce, so a PR that forgot to regenerate the index fails instead of being
-fixed silently in the working tree. CI runs it as a blocking check before the
-build. Warnings remain informational.
+`--check`, which writes nothing: it exits nonzero on lint errors. A committed
+`docs/public/app-index.json` that differs from what the current entries produce
+only prints a warning, because the build regenerates the index and a stale copy
+must not block CI. Warnings remain informational.
 
 `/count` and `/count.json` stay published for maintainers and badges, but the
 count page is not linked from the nav, sidebar or other pages, and is excluded
