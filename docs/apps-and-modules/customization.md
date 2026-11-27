@@ -38,6 +38,7 @@ Magisk/KernelSU/LSPosed modules.
 - **[MakeFontsGreatAgain](https://github.com/Numbersf/MakeFontsGreatAgain)** - System-wide Font Overrider with Unique GMS Masking & Multi-Range Unicode Filter. `FOSS` `[M]` `[K]`
 - **[MFFMv14](https://github.com/mistu01/MFFMv14)** - Builds flashable font modules from user-supplied fonts, with automatic fixes for lockscreen clock colons, digit-width jitter and OEM quirks. Android 15+, built from a PC or Termux. `FOSS` `[M]` `[K]` `[A]`
 - **[Nastaliq Urdu Font](https://xdaforums.com/t/module-font-nastaliq-urdu-font.4645787/)** - Adds a Nastaliq font for Urdu. `FOSS` `[M]`
+- **[Noto Unicode Fallback](https://github.com/anemia004/noto-unicode-fallback-magisk)** - Systemless Magisk module adding Noto Sans Math and Noto Sans Symbols 2 as fallback fonts to fix missing Unicode symbols on older devices. `FOSS` `[M]`
 - **[Oh My Font](https://gitlab.com/nongthaihoang/oh_my_font)** - A collection of typefaces for Android. `FOSS` `[M]`
 - **[OneUI Emoji Pack](https://github.com/aloozchips/OneUIEmojiPack)** - Systemlessly replaces the AOSP emoji pack with the OneUI emoji pack. `FOSS` `[M]` `[K]` `[A]`
 - **[Twemoji-Remastered](https://codeberg.org/Snowy/Twemoji-Remastered)** - Systemlessly replaces your phone emojis with Twemoji (Twitter Emoji). `FOSS` `[M]`
