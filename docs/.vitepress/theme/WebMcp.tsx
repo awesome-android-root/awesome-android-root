@@ -1,6 +1,6 @@
 import { defineComponent, onMounted, onUnmounted } from 'vue'
 import { useRouter, withBase } from 'vitepress'
-import { parsePageIndex, toolInput, stringInput, resultLimit, pageRoute } from './utils/mcp'
+import { parsePageIndex, toolInput, stringInput, resultLimit, findPage, urlHash } from './utils/mcp'
 import { createSearchSession, loadPagefind } from './utils/search'
 import type { PageRecord, ModelContext, ModelTool } from './utils/mcp'
 
@@ -13,10 +13,11 @@ export default defineComponent(() => {
     if (signal.aborted) throw signal.reason
 
     if (!pageIndexPromise) {
-      pageIndexPromise = fetch(withBase('/llms-full.txt'))
+      // A few KB of titles and paths, written at build time by scripts/page-index.ts.
+      pageIndexPromise = fetch(withBase('/page-index.json'))
         .then((response) => {
           if (!response.ok) throw new Error(`Page index request failed: ${response.status}`)
-          return response.text()
+          return response.json() as Promise<unknown>
         })
         .then(parsePageIndex)
         .catch((error) => {
@@ -68,19 +69,19 @@ export default defineComponent(() => {
       {
         name: 'list_pages',
         title: 'List documentation pages',
-        description: 'List available Android rooting documentation pages with their titles and Markdown URLs.',
+        description: 'List available Android rooting documentation pages with their titles, Markdown URLs and page routes.',
         inputSchema: { type: 'object', properties: {}, additionalProperties: false },
         annotations: { readOnlyHint: true },
         execute: async (_input, { signal }) => {
           const pages = await getPageIndex(signal)
           assertActive(signal)
-          return { pages: pages.map(({ title, url }) => ({ title, url })) }
+          return { pages: pages.map(({ title, route, markdown }) => ({ title, url: withBase(markdown), route: withBase(route) })) }
         }
       },
       {
         name: 'get_page',
         title: 'Read a documentation page',
-        description: 'Retrieve the Markdown for a page listed by list_pages.',
+        description: 'Retrieve the Markdown for a page listed by list_pages, by its Markdown URL or page route.',
         inputSchema: {
           type: 'object',
           properties: { url: { type: 'string', minLength: 1, maxLength: 256 } },
@@ -91,12 +92,15 @@ export default defineComponent(() => {
         execute: async (rawInput, { signal }) => {
           const url = stringInput(toolInput(rawInput), 'url', 256)
           const pages = await getPageIndex(signal)
-          const page = pages.find((entry) => entry.url === url)
+          const page = findPage(pages, url, withBase('/'))
           if (!page) throw new TypeError('url must match a documentation page from list_pages')
 
+          // Fetch only the requested page's Markdown copy.
+          const response = await fetch(withBase(page.markdown), { signal })
+          if (!response.ok) throw new Error(`Page request failed: ${response.status}`)
+          const markdown = await response.text()
           assertActive(signal)
-          // The index already holds every page body, so no second request is needed.
-          return { title: page.title, url: page.url, markdown: page.content }
+          return { title: page.title, url: withBase(page.markdown), markdown }
         }
       },
       {
@@ -113,13 +117,13 @@ export default defineComponent(() => {
           const url = stringInput(toolInput(rawInput), 'url', 256)
           const pages = await getPageIndex(signal)
           assertActive(signal)
-          if (pageRoute(url, withBase('/')) !== '/' && !pages.some((page) => pageRoute(page.url, withBase('/')) === pageRoute(url, withBase('/')))) {
-            throw new TypeError('url must match a documentation page from list_pages, or be /')
-          }
+          const page = findPage(pages, url, withBase('/'))
+          if (!page) throw new TypeError('url must match a documentation page from list_pages, or be /')
 
-          const hash = url.includes('#') ? '#' + url.split('#').slice(1).join('#') : ''
-          await router.go(withBase(pageRoute(url, withBase('/')) + hash))
-          return { navigatedTo: url }
+          // Navigate to the canonical route from the index, never a guessed path.
+          const target = withBase(page.route) + urlHash(url)
+          await router.go(target)
+          return { navigatedTo: target }
         }
       }
     ]

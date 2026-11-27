@@ -1,7 +1,8 @@
-export interface PageRecord { url: string; title: string; content: string }
+/** One record of the build-time `page-index.json` (see scripts/page-index.ts). */
+export interface PageRecord { title: string; route: string; markdown: string }
 export type ToolResult =
   | { results: { title: string; url: string; excerpt: string }[] }
-  | { pages: { title: string; url: string }[] }
+  | { pages: { title: string; url: string; route: string }[] }
   | { title: string; url: string; markdown: string }
   | { navigatedTo: string }
 export interface ToolContext { signal: AbortSignal }
@@ -21,16 +22,24 @@ declare global {
   interface Navigator { modelContext?: ModelContext }
 }
 
-export function parsePageIndex(markdown: string): PageRecord[] {
-  return markdown.split(/(?=^---\nurl:\s*\/)/m).flatMap((section) => {
-    const frontmatterEnd = section.indexOf('\n---\n', 4)
-    if (frontmatterEnd === -1) return []
-    const frontmatter = section.slice(4, frontmatterEnd)
-    const content = section.slice(frontmatterEnd + 5).trim()
-    const url = frontmatter.match(/^url:\s*(\/[^\n]+)$/m)?.[1]
-    // Only same-site paths, not protocol-relative or malformed external URLs.
-    if (!url || url.startsWith('//') || /[\\\s]/.test(url)) return []
-    return [{ url, title: content.match(/^#\s+(.+)$/m)?.[1] ?? url, content }]
+/** Not documentation (404) or maintainer-only (count); never offered to agents. */
+const UNLISTED_ROUTES = new Set(['/404', '/count'])
+
+/** Same-site, base-relative path without a hash, query, backslash or whitespace. */
+function isLocalPath(value: unknown): value is string {
+  return typeof value === 'string' && value.startsWith('/') && !value.startsWith('//') && !/[\\\s#?]/.test(value)
+}
+
+/** Validate the fetched page index; the payload is untrusted runtime input. */
+export function parsePageIndex(payload: unknown): PageRecord[] {
+  const pages = payload && typeof payload === 'object' ? (payload as { pages?: unknown }).pages : undefined
+  if (!Array.isArray(pages)) throw new TypeError('Page index must be an object with a pages array')
+  return pages.flatMap((page: unknown) => {
+    if (!page || typeof page !== 'object') return []
+    const { title, route, markdown } = page as Record<string, unknown>
+    if (typeof title !== 'string' || !title.trim() || !isLocalPath(route) || !isLocalPath(markdown) || !markdown.endsWith('.md')) return []
+    if (UNLISTED_ROUTES.has(pageRoute(route))) return []
+    return [{ title: title.trim(), route, markdown }]
   })
 }
 
@@ -53,9 +62,29 @@ export function resultLimit(input: Record<string, unknown>): number {
   return value
 }
 
-/** Compare Markdown listing URLs with clean Pagefind URLs, including subpaths. */
+/**
+ * Comparison key for page URLs: strips the hash, query, configured base,
+ * `.md`/`.html`, a trailing `index` and trailing slashes, so `/index.md`, `/`,
+ * `/rooting-guides.md`, `/rooting-guides/` and `/rooting-guides/index.md` match
+ * the routes in the page index and the clean URLs Pagefind returns.
+ */
 export function pageRoute(url: string, base = '/'): string {
-  const path = url.split('#')[0]
-  const local = base !== '/' && path.startsWith(base) ? '/' + path.slice(base.length) : path
-  return local.replace(/\.md$/, '').replace(/\/$/, '') || '/'
+  let path = url.split('#')[0].split('?')[0]
+  if (base !== '/') {
+    if (`${path}/` === base) path = '/'
+    else if (path.startsWith(base)) path = `/${path.slice(base.length)}`
+  }
+  return path.replace(/\.(md|html)$/, '').replace(/(^|\/)index$/, '$1').replace(/\/+$/, '') || '/'
+}
+
+/** The listed page a caller URL refers to, in either route or Markdown form. */
+export function findPage(pages: readonly PageRecord[], url: string, base = '/'): PageRecord | undefined {
+  const key = pageRoute(url, base)
+  return pages.find((page) => pageRoute(page.route) === key)
+}
+
+/** The `#fragment` of a URL, including the `#`, or an empty string. */
+export function urlHash(url: string): string {
+  const index = url.indexOf('#')
+  return index === -1 ? '' : url.slice(index)
 }

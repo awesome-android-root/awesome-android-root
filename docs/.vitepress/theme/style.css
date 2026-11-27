@@ -95,11 +95,6 @@ html.dark {
   --vp-c-danger-soft: var(--warn-soft);
 }
 
-/* PWA prompt spacing on small screens */
-@media (max-width: 640px) {
-  .pwa-toast { left: 12px; right: 12px; }
-}
-
 /* Box-model reset - consistent sizing across all elements */
 *,
 *::before,
@@ -148,75 +143,15 @@ html.dark {
   display: none !important;
 }
 
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 2rem;
-  height: 2rem;
-  margin-left: 0.5rem;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background: transparent;
-  color: var(--vp-c-text-1);
-  cursor: pointer;
-  transition: color 0.2s, background-color 0.2s;
-}
-
+/* The built-in appearance switch is hidden, so its 1rem of extra space before
+   the social-links divider leaves the custom toggle visually off-center. */
 @media (min-width: 48rem) {
-  .theme-toggle {
-    color: var(--vp-c-text-2);
-    margin-inline: 1rem 0.5rem;
-  }
-
-  .theme-toggle::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -0.5rem;
-    height: 1.5rem;
-    border-left: 1px solid var(--vp-c-divider);
-    transform: translateY(-50%);
-  }
-
-  /* The built-in appearance switch is hidden, so its 1rem of extra space before
-     the social-links divider leaves the custom toggle visually off-center. */
   html .VPNav .content-body > .appearance + .social-links::before {
     margin-inline-start: 0;
   }
 }
 
-.theme-toggle:hover {
-  background: var(--vp-c-brand-soft);
-  color: var(--vp-c-brand-1);
-}
-
-.theme-toggle:focus-visible {
-  outline: 2px solid var(--vp-c-brand-1);
-  outline-offset: 2px;
-}
-
-.theme-toggle svg {
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  width: 1rem;
-  height: 1rem;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-html:not(.dark) .theme-toggle .theme-icon-moon,
-html.dark .theme-toggle .theme-icon-sun {
-  opacity: 0;
-  transform: rotate(70deg) scale(0.6);
-  pointer-events: none;
-}
-
-.theme-toggle {
-  order: 1;
-}
-
+/* Nav item order; .theme-toggle takes order 1 in ThemeToggle.css. */
 .VPNav .social-links {
   order: 2;
 }
@@ -854,46 +789,6 @@ img {
   }
 }
 
-/* Back To Top Button */
-.back-to-top {
-  position: fixed;
-  bottom: 2rem;
-  right: 1.25rem;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--vp-c-brand-3);
-  color: var(--brand-contrast);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--vp-c-brand-2);
-  cursor: pointer;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-  transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
-  z-index: 9998;
-}
-
-.back-to-top:hover {
-  background: var(--vp-c-brand-2);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-  transform: translateY(-2px);
-}
-
-.back-to-top:active { transform: translateY(0); }
-
-.back-to-top:focus-visible {
-  outline: 3px solid var(--vp-c-brand-1);
-  outline-offset: 2px;
-}
-
-@media (max-width: 640px) {
-  .back-to-top { bottom: 1.25rem; right: 1rem; width: 44px; height: 44px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .back-to-top { transition: none; }
-}
 
 
 /**
