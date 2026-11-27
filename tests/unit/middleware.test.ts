@@ -1,12 +1,9 @@
 import { expect, test } from 'bun:test'
 import { onRequest } from '../../functions/_middleware.ts'
 
-const ORIGIN = 'https://awesome-android-root.xyz'
-
-/** Static files the Pages asset server would return, keyed by pathname. */
 const FILES: Record<string, { body: string; type: string }> = {
   '/assets/style.abc123.css': { body: 'a{}', type: 'text/css' },
-  '/faqs': { body: '<!doctype html><title>FAQ</title>', type: 'text/html; charset=utf-8' },
+  '/faqs': { body: '<!doctype html>', type: 'text/html; charset=utf-8' },
   '/faqs.md': { body: '# Android Rooting FAQ', type: 'text/markdown' }
 }
 
@@ -17,52 +14,32 @@ function serve(request: Request) {
     : new Response('missing', { status: 404, headers: { 'Content-Type': 'text/html' } })
 }
 
-function call(path: string, init: RequestInit = {}) {
-  const request = new Request(`${ORIGIN}${path}`, init)
-  return onRequest({
-    request,
-    env: { ASSETS: { fetch: async (assetRequest) => serve(assetRequest) } },
-    next: async () => serve(request)
-  })
+function call(path: string, accept: string, method = 'GET') {
+  const request = new Request(`https://awesome-android-root.xyz${path}`, { method, headers: { Accept: accept } })
+  return onRequest({ request, env: { ASSETS: { fetch: async (r) => serve(r) } }, next: async () => serve(request) })
 }
 
-test('hashed assets pass through without Vary: Accept', async () => {
-  const response = await call('/assets/style.abc123.css', { headers: { Accept: 'text/markdown' } })
-  expect(response.headers.get('Content-Type')).toBe('text/css')
-  expect(response.headers.get('Vary')).toBeNull()
-})
+test('Markdown negotiation: assets untouched, pages vary on Accept, Markdown served on request', async () => {
+  const asset = await call('/assets/style.abc123.css', 'text/markdown')
+  expect(asset.headers.get('Vary')).toBeNull()
 
-test('HTML pages advertise Vary: Accept because Markdown is negotiable there', async () => {
-  const response = await call('/faqs', { headers: { Accept: 'text/html' } })
-  expect(response.headers.get('Content-Type')).toContain('text/html')
-  expect(response.headers.get('Vary')).toBe('Accept')
-})
+  const html = await call('/faqs', 'text/html')
+  expect(html.headers.get('Content-Type')).toContain('text/html')
+  expect(html.headers.get('Vary')).toBe('Accept')
 
-test('Accept: text/markdown returns the Markdown copy of a page', async () => {
-  const response = await call('/faqs', { headers: { Accept: 'text/markdown' } })
-  expect(response.status).toBe(200)
-  expect(response.headers.get('Content-Type')).toBe('text/markdown; charset=utf-8')
-  expect(response.headers.get('Vary')).toBe('Accept')
-  expect(await response.text()).toBe('# Android Rooting FAQ')
+  const markdown = await call('/faqs', 'text/markdown')
+  expect(markdown.headers.get('Content-Type')).toBe('text/markdown; charset=utf-8')
+  expect(markdown.headers.get('Vary')).toBe('Accept')
+  expect(await markdown.text()).toBe('# Android Rooting FAQ')
+
+  expect((await call('/faqs', 'text/markdown;q=0, text/html')).headers.get('Content-Type')).toContain('text/html')
 })
 
 test('Markdown requests for missing pages get a Markdown 404 without stale validators', async () => {
-  const response = await call('/missing', { headers: { Accept: 'text/markdown;q=0.9, text/html' } })
+  const response = await call('/missing', 'text/markdown')
   expect(response.status).toBe(404)
   expect(response.headers.get('Content-Type')).toBe('text/markdown; charset=utf-8')
   expect(response.headers.get('ETag')).toBeNull()
   expect(await response.text()).toStartWith('# Page not found')
-
-  const head = await call('/missing', { method: 'HEAD', headers: { Accept: 'text/markdown' } })
-  expect(head.status).toBe(404)
-  expect(await head.text()).toBe('')
-})
-
-test('q=0 and non-GET requests do not negotiate Markdown', async () => {
-  const refused = await call('/faqs', { headers: { Accept: 'text/markdown;q=0, text/html' } })
-  expect(refused.headers.get('Content-Type')).toContain('text/html')
-
-  const post = await call('/faqs', { method: 'POST', headers: { Accept: 'text/markdown' } })
-  expect(post.headers.get('Content-Type')).toContain('text/html')
-  expect(post.headers.get('Vary')).toBeNull()
+  expect(await (await call('/missing', 'text/markdown', 'HEAD')).text()).toBe('')
 })

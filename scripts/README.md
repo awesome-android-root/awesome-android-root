@@ -114,7 +114,7 @@ run `bun install`. The repository intentionally does not track `bun.lock`.
 
 ```bash
 bun run typecheck       # native Bun checks, separate runtime environments
-bun run test            # unit tests in tests/unit (entries, icons, links, Markdown, MCP, middleware, page index, search, SEO)
+bun run test            # unit tests in tests/unit (entries, links, Markdown, MCP, middleware, page index, search, SEO)
 bun run lint            # internal links and entry lint (blocking on errors)
 bun run docs:build      # generate counts, render VitePress, then index Pagefind
 bun run test:search     # two search smoke tests; uses installed Google Chrome

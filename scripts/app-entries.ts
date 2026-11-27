@@ -355,12 +355,12 @@ export function parseEntries(): ParsedFile[] {
     .map((fileName) => ({ fileName, records: parseFile(fileName) }))
 }
 
-export function serializeIndex(payload: EntryIndex): string {
+function serializeIndex(payload: EntryIndex): string {
   return `${JSON.stringify(payload, null, 0)}\n`
 }
 
 /** True when the committed index matches what the current entries produce. */
-export function indexIsCurrent(payload: EntryIndex, committed: string | null): boolean {
+function indexIsCurrent(payload: EntryIndex, committed: string | null): boolean {
   return committed === serializeIndex(payload)
 }
 
