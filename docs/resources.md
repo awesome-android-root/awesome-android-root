@@ -168,6 +168,7 @@ Check the [Magisk release notes](https://github.com/topjohnwu/Magisk/releases) f
 | **Android Flash Tool** | Web-based flashing (Pixel/AOSP) | Web | [flash.android.com](https://flash.android.com/) |
 | **Heimdall** | Open-source Samsung flashing (maintained fork) | Linux; macOS and Windows untested by the maintainer | [SourceHut](https://git.sr.ht/~grimler/Heimdall) |
 | **samloader** | Samsung firmware download, decryption and Download Mode flashing | Windows/macOS/Linux | [GitHub](https://github.com/topjohnwu/samloader-rs) |
+| **brokkr-flash** | Cross-platform modern alternative for Odin. (GUI) | Windows/macOS/Linux | [GitHub](https://github.com/Gabriel2392/brokkr-flash) |
 | **Odin** | Samsung Download Mode flashing | Windows | Follow a trusted device guide; avoid repackaged binaries |
 | **Mi Flash Tool** | Xiaomi fastboot flashing | Windows | Obtain via Xiaomi support/device documentation, not lookalike download sites |
 | **MiUnlockTool** | Third-party Xiaomi bootloader unlock client that signs in with your Xiaomi account; same official process, no waiting-period bypass | All (Python) | [GitHub](https://github.com/MiForge/MiUnlockTool) |
