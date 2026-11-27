@@ -315,7 +315,7 @@ Pagefind imports use VitePress's base; its `baseUrl` prefixes clean result URLs.
 No browser code calls a search backend. If requests 404 after deployment, check
 that the base matches hosting and that `/BASE/pagefind/` was uploaded. Search
 requires fetching its index, so an uncached index is unavailable offline; normal
-site navigation still works. The existing image-only PWA precache is unchanged.
+site navigation still works. The PWA precaches only the icons and logos the app renders.
 
 `test:search` starts and stops its own preview on port 4173. Install Google Chrome
 locally, or set `CHROMIUM_PATH=/absolute/path/to/chrome` for a compatible Chromium
