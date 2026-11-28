@@ -155,25 +155,42 @@ hero:
 
 ## Start Your Rooting Journey
 
-<div class="start-options">
-  <a href="/rooting-guides/">
-    <span class="start-path-heading"><span>01 / Learn</span><span class="start-path-icon"><LandingIcon name="sprout" :size="20" /></span></span>
-    <strong>Complete beginner</strong>
-    <p>Understand root, risks and preparation.</p>
-    <b>Start learning <span aria-hidden="true">→</span></b>
-  </a>
-  <a href="/rooting-guides/#device-specific-guides">
-    <span class="start-path-heading"><span>02 / Prepare</span><span class="start-path-icon"><LandingIcon name="rocket" :size="20" /></span></span>
-    <strong>Ready to root</strong>
-    <p>Find instructions for your device.</p>
-    <b>Find your guide <span aria-hidden="true">→</span></b>
-  </a>
-  <a href="/apps-and-modules/">
-    <span class="start-path-heading"><span>03 / Explore</span><span class="start-path-icon"><LandingIcon name="trophy" :size="20" /></span></span>
-    <strong>Already rooted</strong>
-    <p>Find tools for what you want to do.</p>
-    <b>Browse apps <span aria-hidden="true">→</span></b>
-  </a>
+<div class="custom-journey-selector">
+  <div class="journey-card">
+    <span class="icon"><LandingIcon name="sprout" :size="24" /></span>
+    <h3>Complete Beginner</h3>
+    <p>Never rooted before? We'll guide you step-by-step</p>
+    <ul>
+      <li>Safety first approach</li>
+      <li>Backup strategies</li>
+      <li>Risk assessment</li>
+    </ul>
+    <a href="/rooting-guides/" class="journey-btn">Start Learning</a>
+  </div>
+
+  <div class="journey-card">
+    <span class="icon"><LandingIcon name="rocket" :size="24" /></span>
+    <h3>Ready to Root</h3>
+    <p>Know the basics? Let's root your device</p>
+    <ul>
+      <li>Device-specific guides</li>
+      <li>Tool selection</li>
+      <li>Troubleshooting</li>
+    </ul>
+    <a href="/rooting-guides/#device-specific-guides" class="journey-btn">Find Your Device</a>
+  </div>
+
+  <div class="journey-card">
+    <span class="icon"><LandingIcon name="trophy" :size="24" /></span>
+    <h3>Already Rooted</h3>
+    <p>Maximize your rooted device's potential</p>
+    <ul>
+      <li>800+ apps and modules</li>
+      <li>Advanced modules</li>
+      <li>Custom ROMs</li>
+    </ul>
+    <a href="/apps-and-modules/" class="journey-btn">Explore Apps</a>
+  </div>
 </div>
 
 

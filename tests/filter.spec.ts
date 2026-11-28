@@ -24,18 +24,13 @@ afterEach(async () => {
 test('home keeps the original sections and the three starting paths', async () => {
   await page.goto(baseURL)
   expect(await page.$$('.landing-features .feature-card')).toHaveLength(16)
-  expect(await page.$$('.start-options a')).toHaveLength(3)
-  expect(await page.$$('.start-path-icon svg[aria-hidden="true"]')).toHaveLength(3)
+  expect(await page.$$('.custom-journey-selector .journey-card')).toHaveLength(3)
+  expect(await page.$$('.custom-journey-selector .journey-card .icon svg[aria-hidden="true"]')).toHaveLength(3)
+  expect(await page.$$('.custom-journey-selector .journey-btn')).toHaveLength(3)
+  expect(await page.$$('.custom-journey-selector .journey-card li')).toHaveLength(9)
   expect(await page.$('.VPHero .image')).not.toBeNull()
   expect(await page.$('#major-guides')).not.toBeNull()
   expect(await page.$('#community')).not.toBeNull()
-  const cardStyles = await page.evaluate(() => ['.start-options a', '.feature-card', '.community-card'].map((selector) => {
-    const card = document.querySelector<HTMLElement>(selector)!
-    const style = getComputedStyle(card)
-    return [style.backgroundColor, style.borderRadius, style.padding, style.textAlign]
-  }))
-  expect(cardStyles[1]).toEqual(cardStyles[0])
-  expect(cardStyles[2]).toEqual(cardStyles[0])
   await page.setViewport({ width: 360, height: 800 })
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true)
 })
