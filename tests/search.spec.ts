@@ -79,6 +79,46 @@ test('built search loads only on use and supports keyboard navigation to an entr
     const menu = node.querySelector<HTMLElement>('.dropdown-menu')
     return !menu || menu.inert
   })).toBe(true)
+
+  // Exercise the real generated Markdown with clipboard and download APIs stubbed.
+  await page.evaluate(() => {
+    Object.defineProperty(navigator, 'clipboard', { configurable: true, value: {
+      writeText: async (text: string) => { document.documentElement.dataset.copiedMarkdown = text }
+    } })
+    HTMLAnchorElement.prototype.click = function () { document.documentElement.dataset.downloadName = this.download }
+    window.open = (url) => { document.documentElement.dataset.openedUrl = String(url); return null }
+  })
+  expect(await page.$eval('.copy-page .label', (node) => node.textContent?.trim())).toBe('Copy Markdown')
+  await page.locator('.copy-page').click()
+  await page.waitForFunction(() => document.querySelector('.copy-page .label')?.textContent?.trim() === 'Copied')
+  expect(await page.evaluate(() => document.documentElement.dataset.copiedMarkdown)).toContain('# Best Ad Blockers for Rooted Android')
+  await page.locator('.download-btn').click()
+  await page.waitForFunction(() => document.querySelector('.download-btn')?.getAttribute('aria-label') === 'Markdown downloaded')
+  expect(await page.evaluate(() => document.documentElement.dataset.downloadName)).toBe('ad-blocking.md')
+  await page.locator('.chevron-wrapper').click()
+  await page.waitForSelector('.chevron-wrapper[aria-expanded="true"]')
+  await page.locator('.dropdown-item').click()
+  expect(await page.evaluate(() => document.documentElement.dataset.openedUrl)).toBe(new URL('apps-and-modules/ad-blocking.md', baseURL).href)
+
+  // Navigation must copy the new page rather than the previous one.
+  await page.setViewport({ width: 1440, height: 900 })
+  await page.locator('.VPSidebar a[href$="/apps-and-modules/system"]').click()
+  await page.waitForFunction(() => location.pathname.endsWith('/apps-and-modules/system') && document.querySelector('.copy-page'))
+  await page.locator('.copy-page').click()
+  await page.waitForFunction(() => document.documentElement.dataset.copiedMarkdown?.includes('# System Tweaks for Rooted Android'))
+
+  await page.setViewport({ width: 320, height: 800, isMobile: true, hasTouch: true })
+  await page.locator('.chevron-wrapper').click()
+  await page.waitForSelector('.chevron-wrapper[aria-expanded="true"]')
+  await page.waitForFunction(() => getComputedStyle(document.querySelector('.dropdown-menu')!).opacity === '1')
+  const menuFits = await page.$eval('.dropdown-menu', (menu) => {
+    const bounds = menu.getBoundingClientRect()
+    return bounds.left >= 0 && bounds.right <= window.innerWidth &&
+      menu.contains(document.elementFromPoint(bounds.left + 20, bounds.top + 20))
+  })
+  expect(menuFits).toBe(true)
+  expect(await page.$$eval('.copy-page, .chevron-wrapper, .download-btn, .dropdown-item', (buttons) => buttons.every((button) => button.getBoundingClientRect().height >= 44))).toBe(true)
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true)
 })
 
 test('a failed search engine request can retry without reloading the page', async () => {
