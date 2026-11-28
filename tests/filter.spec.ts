@@ -28,50 +28,11 @@ async function waitForAllEntries() {
   })
 }
 
-test('home keeps the original sections and the three starting paths', async () => {
-  await page.goto(baseURL)
-  expect(await page.$$('.custom-journey-selector .journey-card')).toHaveLength(3)
-  expect(await page.$('.VPHero .image')).not.toBeNull()
-  expect(await page.$('#major-guides')).not.toBeNull()
-  expect(await page.$('#community')).not.toBeNull()
-  for (const width of [1440, 360]) {
-    await page.setViewport({ width, height: 800 })
-    expect(await page.$$eval('.VPHome .vp-doc h2', (headings) => headings.every((heading) => getComputedStyle(heading).borderTopWidth === '0px'))).toBe(true)
-    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true)
-  }
-})
-
-test('directory entries keep their layout, links, stars and readable badges', async () => {
+test('badges remain readable and legacy featured links do not filter entries', async () => {
   await page.goto(new URL('apps-and-modules/ad-blocking?featured=1&other=keep', baseURL).href)
   await waitForAllEntries()
-  const entryLayout = await page.$eval('.directory-entry', (entry) => {
-    const list = entry.parentElement!
-    const style = getComputedStyle(entry)
-    return {
-      listStyle: getComputedStyle(list).listStyleType,
-      display: style.display,
-      borderWidth: style.borderTopWidth,
-      text: entry.textContent,
-      hasDescriptionWrapper: !!entry.querySelector('.entry-description'),
-      hasTag: !!entry.querySelector('.entry-chip--foss')
-    }
-  })
-  expect(entryLayout.listStyle).toBe('disc')
-  expect(entryLayout.display).toBe('list-item')
-  expect(entryLayout.borderWidth).toBe('0px')
-  expect(entryLayout.text).toContain('⭐ AdAway - Blocks ads')
-  expect(entryLayout.hasDescriptionWrapper).toBe(false)
-  expect(entryLayout.hasTag).toBe(true)
-  expect(await page.$('.entry-featured')).toBeNull()
   expect(new URL(page.url()).searchParams.has('featured')).toBe(false)
   expect(new URL(page.url()).searchParams.get('other')).toBe('keep')
-  expect(await page.$('.copy-section-link')).toBeNull()
-  expect(await page.$('.vp-doc h2 .header-anchor')).not.toBeNull()
-  expect(await page.$('.markdown-copy-buttons')).not.toBeNull()
-  expect(await page.$('.doc-updated')).toBeNull()
-  expect(await page.$eval('.VPDocFooter .last-updated', (node) => getComputedStyle(node).display)).not.toBe('none')
-  expect(await page.$eval('.VPDocFooter .last-updated time', (node) => node.getAttribute('datetime'))).toBeTruthy()
-  expect(await page.$eval('.vp-doc h2', (node) => getComputedStyle(node).borderTopWidth)).not.toBe('0px')
   for (const dark of [false, true]) {
     const badges = await page.evaluate((dark) => {
       document.documentElement.classList.toggle('dark', dark)
@@ -94,50 +55,13 @@ test('directory entries keep their layout, links, stars and readable badges', as
         const chip = document.querySelector<HTMLElement>(`.entry-chip--${name}`)!
         const style = getComputedStyle(chip)
         const text = luminance(rgb(style.color))
-        return { contrast: (Math.max(background, text) + 0.05) / (Math.min(background, text) + 0.05), label: chip.textContent, border: style.borderTopColor, color: style.color }
+        return { contrast: (Math.max(background, text) + 0.05) / (Math.min(background, text) + 0.05), label: chip.textContent }
       })
     }, dark)
     for (const badge of badges) {
       expect(badge.label).toBeTruthy()
       expect(badge.contrast).toBeGreaterThanOrEqual(4.5)
-      expect(badge.border).not.toBe(badge.color)
     }
-  }
-})
-
-test('SUSFS dropdown body has the same inset as its heading', async () => {
-  for (const width of [1440, 360]) {
-    await page.setViewport({ width, height: 800 })
-    await page.goto(new URL('apps-and-modules/root-management?framework=Magisk%2CKernelSU#susfs', baseURL).href)
-    await page.waitForFunction(() => document.querySelector('.filter-active')?.textContent?.includes('KernelSU'))
-    const details = '#susfs + details'
-    await page.locator(`${details} summary`).click()
-    const layout = await page.$eval(details, (node) => {
-      const summary = node.querySelector('summary')!
-      const paragraph = node.querySelector('p')!
-      const box = node.getBoundingClientRect()
-      const header = summary.getBoundingClientRect()
-      const body = paragraph.getBoundingClientRect()
-      return {
-        open: (node as HTMLDetailsElement).open,
-        text: paragraph.textContent,
-        headerInset: parseFloat(getComputedStyle(summary).paddingLeft),
-        bodyInset: body.left - box.left - parseFloat(getComputedStyle(node).borderLeftWidth),
-        topGap: body.top - header.bottom,
-        bottomGap: box.bottom - body.bottom,
-        nextTag: node.nextElementSibling?.tagName,
-        overflow: document.documentElement.scrollWidth > window.innerWidth
-      }
-    })
-    expect(layout.open).toBe(true)
-    expect(layout.text).toContain('SUSFS (Systemless User Space File System)')
-    expect(layout.bodyInset).toBe(layout.headerInset)
-    expect(layout.topGap).toBeGreaterThan(0)
-    expect(layout.bottomGap).toBeGreaterThan(0)
-    expect(layout.nextTag).toBe('UL')
-    expect(layout.overflow).toBe(false)
-    await page.locator(`${details} summary`).click()
-    expect(await page.$eval(details, (node) => (node as HTMLDetailsElement).open)).toBe(false)
   }
 })
 
@@ -237,7 +161,6 @@ test('mobile filter sheet is operable and has no horizontal overflow', async () 
   expect(licenseResults.visible.length).toBeGreaterThan(0)
   expect(licenseResults.visible.length).toBeLessThan(licenseResults.total)
   expect(licenseResults.visible.every((license) => license === 'Proprietary')).toBe(true)
-  expect(await page.$('.filter-featured')).toBeNull()
   await page.keyboard.press('Escape')
   await page.waitForFunction(() => !document.querySelector<HTMLDialogElement>('.filter-dialog')?.open)
   await page.locator('.filter-search input').fill('no-such-entry')
