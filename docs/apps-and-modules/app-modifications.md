@@ -27,7 +27,7 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[⭐ Morphe](https://morphe.software/)** - A next-generation app patcher built by some of the original ReVanced developers. It offers a modern interface, enhanced stability, and a growing list of supported apps and features. `FOSS`
 - **[Lucky Patcher](https://www.luckypatchers.com/)** - App patcher and modifier (use with caution). `Proprietary`
 - **[NexAlloy](https://github.com/NexAlloy/NexAlloy)** - Applies Morphe and ReVanced-based patches to supported apps, including YouTube. Requires root. `FOSS` `[LSP]`
-- **[NexFusion](https://github.com/a092devs/NexFusion)** - Applies runtime bytecode patches to supported apps process start, without modifying or re-signing APKs.`FOSS`
+- **[NexFusion](https://github.com/a092devs/NexFusion)** - Applies runtime patches to supported apps without modifying or re-signing APKs. `FOSS` `[LSP]`
 - **[ReVanced](https://revanced.app/)** - Patches apps such as YouTube and Spotify to add features and customizations. `FOSS`
 - **[ReVanced Extended](https://github.com/NoName-exe/revanced-extended)** - ReVanced eXtended (now Morphe) YT and YT-M for both root and non-root users. `FOSS` `[M]` `[K]`
 - **[ReVanced Magisk Module by j-hc](https://github.com/j-hc/revanced-magisk-module)** - Extensive ReVanced & morphe builder. `FOSS` `[M]` `[K]`
@@ -39,11 +39,13 @@ This category covers app patchers (including YouTube), social and browser mods, 
 ## App Mods
 
 - **[⭐ GPhotosUnlimited](https://github.com/Rev4N1/GPhotosUnlimited)** - Enables unlimited Google Photos storage. `FOSS` `[M]` `[K]` `[A]`
+- **[1DM+ M3 Expressive Theme](https://github.com/Xposed-Modules-Repo/io.github.freesol916.idmtheme)** - Adds wallpaper-based colors and customizable rounded dialogs to 1DM+. `Proprietary` `[LSP]`
 - **[AA Mods](https://github.com/ImNoammm/aa-mods)** - Adds launcher start, a recents button, phone apps on the car screen and microG without telemetry to Android Auto using Vector. `FOSS` `[LSP]`
 - **[AM++](https://github.com/Zennmn/AM-plus-plus/blob/main/README.en.md)** - Apple Music enhancements: tablet dual-pane player, lyric blur and custom lyric fonts, TTML lyric injection, song title correction and Liquid Glass navigation. `FOSS` `[LSP]`
 - **[AmznKiller](https://github.com/hxreborn/amznkiller)** - Hides sponsored content and ads in the Amazon Shopping app. `FOSS` `[LSP]`
 - **[BetterHeybox](https://github.com/Mrmiaomrzh/BetterHeybox)** - Adds ad filtering, UI tweaks, in-app downloads etc to Heybox (Xiaoheihe). `FOSS` `[LSP]`
 - **[Deekseep](https://github.com/lllucccian/Deekseep)** - Adds account, chat, image, interface, and local API tools to the official DeepSeek Android app. `FOSS` `[LSP]`
+- **[Ding](https://github.com/comewhy/io.github.comewhy.ding)** - Adds message privacy, automation and interface controls to DingTalk. `Proprietary` `[LSP]`
 - **[Enhance Google Phone](https://github.com/Rove24/EnhanceGooglePhone)** - Natively unlocks full-function call recording, and other features in the Google Phone app. `FOSS` `[LSP]`
 - **[F**k Solid Explorer](https://github.com/fzer0x/fucksolidexplorer)** - Unlock premium features and remove advertisements from Solid Explorer. `FOSS` `[LSP]`
 - **[FingerprintPay](https://github.com/eritpchy/FingerprintPay)** - Enables fingerprint payment via WeChat, Alipay, Taobao, Tencent QQ, and UnionPay on phones that support fingerprint recognition. `FOSS` `[M]` `[A]` `[LSP]`
@@ -63,8 +65,10 @@ This category covers app patchers (including YouTube), social and browser mods, 
 - **[Nuke](https://github.com/dartcv/Nuke)** - Adds feature extensions, interface customization and ad filtering to QQ, WeChat and Douyin. Closed source. `Proprietary` `[LSP]`
 - **[Oplati Name Fix](https://github.com/atorixa/oplati-name-fix)** - Rewrites the name and avatar initials that the Oplati (by.lwo.oplati) app displays, without touching the account, server data or app data. Works with Vector and LSPosed on KernelSU, APatch or Magisk. `FOSS` `[LSP]`
 - **[Pixel Mask](https://github.com/kinginu/PixelMask)** - Spoofs a Pixel device profile inside Google Photos to unlock Pixel-only perks on any rooted Android phone. `FOSS` `[LSP]`
+- **[Pixel Photos Evolved](https://github.com/MrxSiN/PixelPhotosEvolved)** - Spoofs Pixel identities for Google Photos backup and adds Video Boost controls; storage eligibility is decided by Google. `FOSS` `[LSP]`
 - **[Pixelify Infinity](https://github.com/samson910022/pixelify-google-photos-modern)** - Enables Pixel-exclusive features in Google Photos. `FOSS` `[LSP]`
 - **[Play Store Adblock](https://github.com/hxreborn/playstore-adblock)** - Removes sponsored listings and ads from the Google Play Store. `FOSS` `[LSP]`
+- **[Pulp](https://github.com/Xposed-Modules-Repo/io.github.mianxyz.fanqiecustomizer)** - Customizes the Fanqie Novel interface and blocks reader ads and promotions. `Proprietary` `[LSP]`
 - **[PureNGA](https://github.com/chr233/PureNGA)** - Removes ads and sponsored content from the NGA forum app, with LSPatch support. `FOSS` `[LSP]`
 - **[Rboard Theme Manager](https://github.com/DerTyp7214/RboardThemeManagerV3)** - Manages Gboard themes and sound settings. `FOSS` `[LSP]`
 - **[ReelsBlock](https://github.com/Xposed-Modules-Repo/io.github.sfsakhawat999.reelsblock)** - Stops endless short-video scrolling: swiping to the next Short, Sample or Reel does nothing in YouTube, YouTube Music, Instagram and Facebook, and Shorts links are blocked in Chromium browsers, 1DM and Firefox. `FOSS` `[LSP]`
@@ -201,6 +205,8 @@ This category covers app patchers (including YouTube), social and browser mods, 
 
 ## Media & Camera Mods
 
+- **[AlmaZoom](https://github.com/zz5644934-design/almazoom)** - Extends digital zoom in Samsung Camera; specific One UI camera versions require Vector and the Xiaomi Camera version is experimental. `Proprietary` `[LSP]`
+- **[CamSpoof](https://github.com/indramccaslin/CamSpoof)** - Spoofs camera make and model in photo EXIF metadata without changing the system-wide device identity. `Proprietary` `[LSP]`
 - **[GlassMic](https://github.com/lm060719/io.mo.glassmic)** - Lets you route an imported audio file into target recording apps through AudioRecord/AAudio hooks. `FOSS` `[LSP]`
 - **[MYCAM](https://github.com/elementtime6969/mycam)** - Replaces supported apps' camera feeds with local media or RTMP on rooted Android; offers an optional LSPosed mode and paid access. `Proprietary` `[LSP]`
 - **[VideoSpeed](https://github.com/MarsGao/io.github.MarsGao.speed)** - Adjusts video playback speed across multiple apps. `FOSS` `[LSP]`

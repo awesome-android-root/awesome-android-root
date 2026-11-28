@@ -90,6 +90,7 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 ## System Tweaks
 
 - **[AnyWebView](https://github.com/neoblackxt/AnyWebView)** - Detects every installed WebView and adds it to the Developer options WebView implementation list. `FOSS` `[LSP]` | [🌱](https://apt.izzysoft.de/packages/com.thinkdifferent.anywebview)
+- **[Asrish](https://github.com/otouotouotou/Asrish)** - Adjusts per-app orientation, fullscreen, DPI and screenshot settings on Android 11+. `FOSS` `[LSP]`
 - **[Block OTA Update](https://github.com/manhgdev/Block-OTA-Update)** - Blocks Pixel system-update prompts and background OTA flows with intent firewall rules. Other vendors need the manual block command; reboot required. `FOSS` `[M]` `[K]` `[A]`
 - **[Cromite SystemWebView](https://github.com/hddq/magisk-cromite-webview)** - Replaces the Android System WebView with Cromite WebView. `FOSS` `[M]`
 - **[Disable Low Ram Flag](https://github.com/Magisk-Modules-Alt-Repo/disable-low-ram)** - Disable Low‑RAM flag on Android Go devices. `FOSS` `[M]`
@@ -169,8 +170,10 @@ Magisk/KernelSU/LSPosed modules are listed together per topic.
 - **[HyperOS 4 SmallWindow Input Filter](https://github.com/zilewang7/HyperOS4SmallWindowInputFilter)** - Restores the two-finger recents-drag small-window gesture on HyperOS 4 by loading an arm64 payload into the native HYOS `com.miui.home` process. Needs Zygisk Next 1.5.0+ and LSPosed 2.1.1+. `FOSS` `[LSP]`
 - **[HyperOSUnf*cker](https://github.com/Enki013/hyperosunfcker)** - Unlocks hidden system performance, display, memory, battery, and visual settings on Xiaomi/POCO/Redmi devices. `FOSS` `[LSP]`
 - **[HyperSelect](https://github.com/Yilink1/HyperSelect)** - Cleans up the HyperOS text selection menu, system share sheet and open-with list by hiding AI entries and reordering or hiding items, with changes applied without a reboot. `FOSS` `[LSP]`
+- **[HyperSliderGuard](https://github.com/lmk26/HyperSliderGuard)** - Disables or adjusts long-press expansion of the brightness and volume sliders in HyperOS Control Center. `Proprietary` `[LSP]`
 - **[HyperStar](https://github.com/YunZiA/HyperStar/blob/master/README_EN-US.md)** - Customizes the Xiaomi HyperOS Control Center. `FOSS` `[LSP]`
 - **[Janus](https://modules.lsposed.org/module/org.pysh.janus/)** - Enhances Xiaomi rear screens with multitasking, app shortcuts, gestures, notification mirroring, and power-saving features. `Proprietary` `[LSP]`
+- **[Madrid2flip](https://github.com/Aragamiz/Madrid2flip)** - Ports Xiaomi 18 rear-screen features to the MIX Flip 2 on HyperOS 4; requires the accompanying system-resource module. `FOSS` `[LSP]`
 - **[MeowPower](https://github.com/Xposed-Modules-Repo/io.github.yuhj319.meowpower)** - Unlocks HyperOS Security Center controls for charging protection, power saving, background cleanup and network limits. `Proprietary` `[LSP]`
 - **[MI Screen HDR Enhanced](https://github.com/TIMENEXSakura/MI-Screen-HDR-Enhanced)** - Keeps the HDR brightness data in Xiaomi screenshots after preview, cropping and framed exports, and flashes the root module its native patch needs. Android 14+ on ARM64. `FOSS` `[M]` `[K]` `[A]` `[LSP]`
 - **[Pengeek](https://github.com/monwf/customiuizer)** - Customize your HyperOS to your liking. For HyperOS based on Android 14. `FOSS` `[LSP]`

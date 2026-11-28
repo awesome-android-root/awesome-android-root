@@ -27,6 +27,7 @@ more), network diagnostics, Wi-Fi & mobile data utilities and Bluetooth & NFC ap
 ## Bluetooth & NFC
 
 - **[KonamikU](https://github.com/C-F0x/KonamikU)** - Extend NFC Capabilities of your device. `FOSS` `[LSP]`
+- **[MiConnectFilter](https://github.com/Wang2035/MiConnectFilter)** - Filters Xiaomi earbuds fast-pair popups using an allowlist on HyperOS. `Proprietary` `[LSP]`
 - **[NFC Card Emulator Pro (Root)](https://play.google.com/store/apps/details?id=com.yuanwofei.cardemulator.pro)** - NFC card emulator for access cards, elevator cards, meal cards, school cards, library cards, and other IC cards. `Proprietary`
 - **[NFCGate](https://github.com/nfcgate/nfcgate)** - Android application meant to capture, analyze, or modify NFC traffic. `FOSS` `[LSP]` | [🌱](https://f-droid.org/packages/de.tu_darmstadt.seemoo.nfcgate/)
 - **[onHit](https://github.com/0penPublic/onHit)** - Trigger Android NFC events without a physical tag by Xposed. `FOSS` `[LSP]`
@@ -61,6 +62,7 @@ more), network diagnostics, Wi-Fi & mobile data utilities and Bluetooth & NFC ap
 - **[Tailscale-android-cli](https://github.com/anasfanani/tailscale-android-cli)** - A command-line interface for Tailscale on Android. `FOSS` 
 - **[VPN Hide](https://github.com/okhsunrog/vpnhide)** - Hide active VPN from selected Android apps (kernel module + LSPosed + Zygisk) `FOSS` `[M]` `[K]` `[A]`
 - **[VPN Hotspot](https://github.com/Mygod/VPNHotspot)** - Share your VPN connection over hotspot or repeater. `FOSS`
+- **[VPNHide Next](https://github.com/soranerai/vpnhide_next)** - Hides VPN connections from selected apps using LSPosed and a matching kernel backend, whose source is private. `Proprietary` `[LSP]`
 - **[WireGuard Plus](https://github.com/AliHaider704/wgplus)** - Runs a userspace WireGuard and AmneziaWG tunnel for Telegram only, keeping Android's single VPN slot free for other apps. Rootless through LSPatch or rooted through LSPosed; a Windows build is included upstream. `FOSS` `[LSP]`
 - **[zapret for Magisk](https://github.com/sevcator/zapret-magisk)** - DPI bypass on Android with additional features. `FOSS` `[M]`
 - **[ZDT-D Root Module](https://github.com/GAME-OVER-op/ZDT-D)** - Provides traffic routing, DPI bypass, proxy chaining, DNS control and per-app network management. `FOSS` `[M]` `[K]` `[A]`
@@ -68,6 +70,7 @@ more), network diagnostics, Wi-Fi & mobile data utilities and Bluetooth & NFC ap
 
 ## Wi-Fi & Mobile Data
 
+- **[Airplane Scheduler](https://github.com/probecat/airplane-scheduler-app)** - Schedules airplane mode and optional Wi-Fi changes using root or Shizuku. `FOSS` | [🌱](https://f-droid.org/packages/io.github.probecat.airplanescheduler/)
 - **[Data SIM Switcher](https://github.com/jksalcedo/data-sim-switcher)** - Quick Settings tile that switches the default mobile data SIM on dual-SIM devices through a root service started only for the tap, with no daemon or phone-state permissions. Android 7+. `FOSS`
 - **[Hotspot Monitor](https://github.com/justakhi/hotspot-monitor)** - Monitors hotspot clients with per-device speeds, app and domain usage and history reports, and adds per-device telemetry when root is granted. Read-only and offline; the source is under the PolyForm Noncommercial license, which restricts commercial use. `Proprietary`
 - **[Hyper 5G Switch](https://github.com/buffcow/Hyper5GSwitch)** - Add a 5G switch to the mobile network panel, only for devices that support 5G net and equipped with HyperOS. `FOSS` `[LSP]`

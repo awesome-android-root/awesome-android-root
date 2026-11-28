@@ -116,6 +116,7 @@ Exploits such as **DirtyFrag (CVE-2026-43284)** and **GhostLock (CVE-2026-43499)
 ## Module Managers
 
 - **[⭐ MMRL](https://github.com/MMRLApp/MMRL)** - Manages module repositories. `FOSS` `[M]` `[K]` `[A]` | [▶️](https://play.google.com/store/apps/details?id=com.dergoogler.mmrl)
+- **[AROMA-Next-Installer](https://github.com/Miustone/AROMA-Next-Installer)** - Provides a touch installer and file manager for custom recovery, with templates for root modules. `FOSS`
 - **[KPatch Next Module](https://github.com/KernelSU-Next/KPatch-Next-Module)** - Standalone implementation of KPM (KernelSU Patch Module) support for Magisk/KernelSU with WebUI. `FOSS` `[M]` `[K]` `[A]`
 - **[LSP Store](https://github.com/Xposed-Modules-Repo/io.github.tophtab.lspstore)** - Updater and browser for LSPosed modules. `Proprietary` `[LSP]`
 - **[Magisk Manager for Recovery Mode](https://github.com/Rikj000/Magisk-Manager-for-Recovery-Mode)** - Easily manage your Magisk Modules from a terminal session in your custom recovery. `FOSS` `[M]`
@@ -169,6 +170,7 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 - **[COPG-VD](https://github.com/VD171/COPG-VD)** - Global device fingerprint spoofing for Play Integrity across the whole device, including system apps, with per-app scope and a WebUI. `FOSS` `[M]` `[K]` `[A]`
 - **[DirtySepolicy Bypass](https://github.com/flipphoneguy/DirtySepolicy_Bypass)** - Bypasses new DirtySepolicy on rooted Android devices to keep apps working. `FOSS` `[M]` `[K]` `[A]`
 - **[Duck ToolBox](https://github.com/eltavine/Duck-ToolBox)** - Provides a WebUI for Tricky Store, TEESimulator and OhMyKeymint configuration, Remote Key Provisioning CSR creation and verification, and Qualcomm Keymaster device ID provisioning. `FOSS` `[M]` `[K]` `[A]`
+- **[fgetpriority](https://github.com/aerath-stuff/fgetpriority)** - Filters getpriority calls to assist app-list hiding; requires a matching loadable kernel module. `FOSS`
 - **[Integrity-Box](https://github.com/MeowDump/Integrity-Box)** - Combines Play Integrity fixes with keybox and target management, property spoofing and system environment cleanup in one module with a WebUI. `FOSS` `[M]` `[K]`
 - **[KernelNoSu](https://github.com/fatalcoder524/kernelnosu)** - Replaces KernelSU's kprobe-based su compatibility with a stealth su binary. Needs a kernel carrying the KernelNoSU core_hook patch. `FOSS` `[K]`
 - **[Komodo Build Props](https://github.com/Elcapitanoe/Komodo-Build-Prop#komodo-build-props)** - Spoofs your device as a Pixel 9 Pro XL (komodo). `FOSS` `[M]` `[A]`
@@ -177,12 +179,14 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 - **[Play Integrity Fork (PIF)](https://github.com/osm0sis/PlayIntegrityFork)** - The most actively maintained PIF. Fixes `DEVICE_INTEGRITY` verdicts with custom fields/props. Recommended starting point after chiteroman's original was discontinued. `FOSS` `[M]` `[A]`
 - **[PlaycurlNEXT](https://github.com/daboynb/playcurlNEXT)** - Fixes Play Integrity (and SafetyNet) verdicts with custom fields and props. `FOSS` `[M]` `[K]`
 - **[ReZygisk's Treat Wheel](https://github.com/PerformanC/Treat-Wheel-Zygisk)** - Hides Magisk and root traces for ReZygisk. `FOSS` `[M]` `[K]` `[A]`
+- **[RKP Manufacturer Auto-Match](https://github.com/Najip/RKP-Mfr-Auto-Match)** - Matches manufacturer properties to the active RKP keybox at boot for supported keystore modules. `FOSS` `[M]` `[K]` `[A]`
 - **[Sensitive Props](https://github.com/Pixel-Props/sensitive-props)** - Modifies system properties and applies device-specific fixes to bypass SafetyNet/Play Integrity. `FOSS` `[M]` `[A]`
 - **[Specter](https://github.com/dpejoh/specter)** - Unified Play Integrity and root hiding stack for Android. Successor of Yurikey. `FOSS` `[M]` `[K]` `[A]`
 - **[TEESimulator-RS](https://github.com/Enginex0/TEESimulator-RS)** - Fork of TEESimulator with native Rust certificate generation, key persistence, and AOSP-compliant attestation behavior. `FOSS` `[M]` `[K]` `[A]`
 - **[Tricky Addon – Update Target List](https://github.com/KOWX712/Tricky-Addon-Update-Target-List)** - KSU WebUI to configure TrickyStore's `target.txt`. `FOSS` `[K]` `[A]`
 - **[TrickyStore](https://github.com/5ec1cff/TrickyStore)** - Modifies the certificate chain for Android key attestation (keybox-based). The original/reference module. `Proprietary` `[M]` `[K]`
 - **[TrickyStore OSS](https://github.com/beakthoven/TrickyStoreOSS)** - Open-source alternative to TrickyStore. `FOSS` `[M]` `[K]`
+- **[UID Filter](https://github.com/longze777/UID-)** - Filters getpriority UID checks for selected apps using Zygisk on arm64 Android 13+. `FOSS`
 - **[YuriKey](https://github.com/dpejoh/yurikey)** - Aims to obtain strong integrity using a systemless approach. `FOSS` `[M]` `[K]` `[A]`
 - **[Zygisk Assistant](https://github.com/snake-4/Zygisk-Assistant)** - Hides root on KernelSU, Magisk and APatch using Zygisk. `FOSS` `[M]` `[A]`
 

@@ -60,6 +60,7 @@ firewalls for hardening your device, controlling which apps can reach the networ
 - **[FreeUnlock](https://github.com/TheWhiteDog9487/FreeUnlock)** - Disables Android's 72-hour requirement to unlock with a password. Weakens screen-lock security; state resets on reboot. `FOSS` `[LSP]`
 - **[ih8SecureLock](https://github.com/j-hc/ih8SecureLock)** - Prevent apps from blocking and listening to your screenshots with Zygisk. `FOSS` `[M]` `[K]`
 - **[Just Trust Me Pro](https://github.com/hang666/JustTrustMePro)** - Disables SSL certificate checking for the purposes of auditing an app with cert pinning. `FOSS` `[M]`
+- **[NoShot Zygisk](https://github.com/LyraVoid/NoShot)** - Removes FLAG_SECURE capture restrictions for selected apps using Zygisk. `FOSS` `[M]` `[K]` `[A]`
 - **[OneShot Extended](https://github.com/chickendrop89/OneShot-Extended)** - Performs various WPS attacks without the requirement of monitor mode. `FOSS` `[M]` `[K]`
 - **[PinGuard](https://github.com/khiqwq/PinGuard/blob/main/README_EN.md)** - Requires a fingerprint or password to unpin screen-pinned apps. `FOSS` `[LSP]`
 - **[SafetyCore Placeholder](https://github.com/daboynb/Safetycore-placeholder)** - Placeholder APK that keeps Google SafetyCore from being installed or updated again, thanks to a signature mismatch. `FOSS`

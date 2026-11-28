@@ -27,6 +27,7 @@ regardless of whether they are apps, Magisk modules, KernelSU modules or LSPosed
 - **[LibrePods](https://github.com/librepods-org/librepods)** - Unlocks Apple's exclusive premium AirPods features on non-Apple devices. `FOSS` `[LSP]` `[M]` `[K]`
 - **[No Volume Warnings](https://github.com/zahahah/No-Volume-Warnings)** - Disables the safe-media-volume warning on Pixel phones through a system product overlay. KernelSU may need a mounting metamodule. `FOSS` `[M]` `[K]`
 - **[SonyPods](https://github.com/Mercury000/SonyPods)** - System-level Sony headphone control for HyperOS devices. `FOSS` `[LSP]`
+- **[StreamVolumePermissionBypass](https://github.com/xxtvrxx233/OplusStreamVolumeBypass)** - Allows selected apps to change stream volume on ColorOS and OxygenOS 14 to 17. `FOSS` `[LSP]`
 - **[VirtuMic](https://gitlab.com/IndiDevs/VirtuMic)** - Virtual microphone manager that injects audio (files or other apps) into the system's recording flow. `FOSS` `[M]` `[K]` | (https://github.com/IndiTheo/VirtuMic) `FOSS`
 
 ## Audio Effects

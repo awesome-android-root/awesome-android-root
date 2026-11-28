@@ -60,6 +60,7 @@ optimization**, charging control and task & process management.
 
 - **[EX Kernel Manager](https://play.google.com/store/apps/details?id=flar2.exkernelmanager)** - Root tool for backup and flashing kernels, tweaking color, sound, gestures and other kernel settings. `Proprietary`
 - **[Franco Kernel Manager](https://play.google.com/store/apps/details?id=com.franco.kernel)** - A complete toolbox for all devices with a rich interface that combines everything you need to manage, tweak and empower your device. `Proprietary`
+- **[GKI KernelSU SUSFS (Bernstein94)](https://github.com/Bernstein94/AnyKernel3_FinaSu_SUSFS)** - Builds Android GKI kernels with selectable KernelSU variants and SUSFS. `FOSS`
 - **[Kernel Enhancer](https://github.com/RAAJK20Pro/KernelEnhancer)** - A Simple Kernel Parameters Optimization for all devices. `Proprietary` `[M]`
 - **[Kernel Flasher](https://github.com/fatalcoder524/KernelFlasher)** - Flashes AK3 files and backs up and restores kernels. `FOSS`
 - **[KernelSU Tuner](https://github.com/ylh440104/KernelSU-Tuner/blob/main/README.en.md)** - Tunes kernel parameters on rooted Android and keeps track of what it changed. `FOSS` `[M]` `[K]`
@@ -97,6 +98,7 @@ optimization**, charging control and task & process management.
 ## Task & Process Management
 
 - **[Appzuku](https://github.com/northmendo/Appzuku)** - Stops background apps using root or Shizuku permissions. `FOSS`
+- **[ColorOSBgManager](https://github.com/Xposed-Modules-Repo/io.github.yukino1111.colorosbgmanager)** - Controls per-app background freezing, autostart and power policies on ColorOS 16. `Proprietary` `[LSP]`
 - **[Greenify4Magisk/KSU Reborn](https://github.com/Drsexo/Greenify4Magisk-KSU-Reborn)** - Integrates Greenify as a privileged system app to enable Boost Mode, enhancing hibernation performance without modifying the ROM. `FOSS` `[M]` `[K]` `[A]`
 - **[KillMyApps](https://github.com/dedeadend/KillMyApps)** - Terminates background processes through root or Shizuku to free RAM and save battery, with scheduled auto-kill and a Quick Settings tile. `FOSS`
 - **[LightFreeze](https://github.com/yudigaga/LightFreeze)** - Freezes and unfreezes apps on demand with root or Shizuku, using tag-based rules, batch actions and optional event-driven refreezing through the libxposed system scope. Android 13+. `Proprietary` `[LSP]`
@@ -107,3 +109,4 @@ optimization**, charging control and task & process management.
 - **[Shappky](https://github.com/YasserNull/shappky)** - Stops background apps using root or Shizuku permissions. `FOSS` `[M]`
 - **[TaskManager](https://github.com/RohitKushvaha01/TaskManager)** - Task Manager inspired from gnome system monitor for android.Must read [F-Droid inclusion](https://github.com/RohitKushvaha01/TaskManager/issues/24) `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.rk.taskmanager)
 - **[Time Stop](https://github.com/TACPR/com.liuml.apptimelimiter)** - Per-app usage limits finer than system screen time: daily and group quotas, session plans, schedules, PIN protection, cooldowns and in-window blocking panels. Uses LSPosed when a hook is active, otherwise accessibility plus usage access, with optional root or Shizuku force-stop. Android 8.1+. `FOSS` `[LSP]`
+- **[XMillet](https://github.com/univers629/XMillet)** - Controls and monitors per-app freezing and power policies on Xiaomi HyperOS. `FOSS` `[LSP]`

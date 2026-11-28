@@ -58,8 +58,10 @@ tools, sharing & intent tweaks, communication helpers and all-in-one power-user 
 - **[⭐ CleanShare](https://github.com/hxreborn/cleanshare)** - Removes Direct Share's suggested contact/conversation shortcuts from Android's Share Sheet. `FOSS` `[LSP]`
 - **[Clipboard Whitelist](https://github.com/fei-ke/ClipboardWhitelist)** - Lets whitelisted apps read the clipboard in the background on Android 10 and newer. `FOSS` `[LSP]`
 - **[ClipVault](https://github.com/kaduvert/AClipBoardManager)** - Android ClipBoard Manager using LSPosed / Magisk. `FOSS` `[M]` `[K]` `[LSP]`
+- **[FerryQR](https://github.com/lcebot/ferryqr)** - Scans QR codes and opens them in the relevant app, with LSPosed support for selected in-app scanners. `FOSS` `[LSP]`
 - **[HyperCopy](https://github.com/1812z/HyperCopy)** - Opens copied links, addresses and tracking numbers in matching apps using configurable rules. LSPosed or Shizuku; cloud rules are fetched online. `Proprietary` `[LSP]`
 - **[No Photo Picker API](https://github.com/yureitzk/NoPhotoPickerAPI)** - Bypasses the Android Photo Picker API and lets apps use the classic document/file picker. `FOSS` `[LSP]`
+- **[NoBrowser](https://github.com/SoL01St/exlindev)** - Opens links from supported apps in an external browser instead of their built-in browsers. `FOSS` `[LSP]`
 
 ## Sync & File Transfer
 

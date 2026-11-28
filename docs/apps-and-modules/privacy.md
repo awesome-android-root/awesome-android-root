@@ -81,9 +81,11 @@ tracking, spoofing your device identity or location, and isolating apps from you
 - **[IAmNotADeveloper](https://github.com/xfqwdsj/IAmNotADeveloper)** - Hide Android developer-related switches status. `FOSS` `[LSP]`
 - **[microG Installer Revived Again](https://github.com/spacealtctrl/microg_installer_revived_again)** - Promote microG GmsCore, GsfProxy, Companion/Play Store, and MapsV1 to system with privileged permissions. `FOSS` `[M]` `[K]`
 - **[MicroGPlus](https://bitgapps.io/extra)** - Installs microG services and other useful apps. `Proprietary` `[M]` `[K]`
+- **[MIUI Blank Pass Ultra](https://github.com/a285865818-crypto/miui-blank-pass-ultra)** - Returns empty data for selected app permissions while reporting them as granted; some access paths remain unblocked. `Proprietary` `[LSP]`
 - **[Oplus16 Hide Zoom Window](https://github.com/jhl337/Oplus16_HideZoomWindow)** - Hides small windows from screenshots and screen recordings (designed for ColorOS 16). `FOSS` `[LSP]`
 - **[PrivacyFlip](https://github.com/dorumrr/privacyflip)** - Automatically disables/enables Wi-Fi, Bluetooth, mobile data, location services, NFC, and even camera/microphone sensors based on lock/unlock state. `FOSS` | [🌱](https://f-droid.org/packages/io.github.dorumrr.privacyflip/)
 - **[ScreenshotFaker](https://github.com/Huai-Tian/ScreenshotFaker)** - Protects on-screen content from being captured in screenshots, recordings and screen sharing, with anti-detection features. `FOSS` `[LSP]`
+- **[Stop Services](https://github.com/LeanxModulostk/Stop_Service)** - Stops a configurable list of logging and telemetry services at boot; its default list also includes thermal services. `Proprietary` `[M]` `[K]`
 - **[Tarnhelm](https://github.com/lz233/Tarnhelm)** - The magic to clean sharing links up. `FOSS` `[LSP]`
 - **[Transparent Screenshot](https://github.com/Dszsu/Transparent_screenshot)** - Hide the application window during screenshots, screen recording, and screen casting. `FOSS` `[LSP]`
 - **[Turn Off Sensors](https://github.com/KatelynTheStargazer/TurnOffSensors-Magisk)** - Disables device sensors on startup via the sensor_privacy service on Android. `FOSS` `[M]`

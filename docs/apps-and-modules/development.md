@@ -31,6 +31,7 @@ automation apps (**Tasker, MacroDroid, Automate**) and hardware/sensor utilities
 - **[Debug Assistant](https://github.com/ThePedroo/DebugAssistant)** - Captures logcat logs across three boots. `FOSS` `[M]` `[A]`
 - **[Enable MIUI ADB](https://github.com/Ylarod/enable-miui-adb)** - Enables adb install on MIUI/HyperOS without Xiaomi account login or SIM verification via a one-shot KernelSU/Magisk script. `FOSS` `[M]` `[K]` `[A]`
 - **[Hotspot Wireless Debugging](https://github.com/droserasprout/io.drsr.hotspotadb)** - Enables wireless debugging over a Wi-Fi hotspot. `FOSS` `[LSP]`
+- **[ira](https://github.com/KodateMitsuru/ira)** - Serves ADB over USB through a private FunctionFS daemon on KernelSU with ZygiskNext. `FOSS` `[K]`
 - **[LADB](https://github.com/tytydraco/LADB)** - Local ADB shell with a built-in terminal interface. `FOSS` | [▶️](https://play.google.com/store/apps/details?id=com.draco.ladb)
 - **[Log Catcher](https://github.com/hxreborn/Log-Catcher)** - Captures logcat and kernel messages during startup and archives them as timestamped tarballs after unlock. `FOSS` `[M]` `[K]` `[A]`
 - **[Logcat Extreme](https://play.google.com/store/apps/details?id=scd.lcex)** - Logcat reader and capture tool for rooted Android devices. `Proprietary`
