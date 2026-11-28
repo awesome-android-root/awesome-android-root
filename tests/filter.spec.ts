@@ -75,6 +75,42 @@ test('starred entries keep their stars and old featured links no longer filter r
   expect(new URL(page.url()).searchParams.get('other')).toBe('keep')
 })
 
+test('SUSFS dropdown body has the same inset as its heading', async () => {
+  for (const width of [1440, 360]) {
+    await page.setViewport({ width, height: 800 })
+    await page.goto(new URL('apps-and-modules/root-management?framework=Magisk%2CKernelSU#susfs', baseURL).href)
+    await page.waitForFunction(() => document.querySelector('.filter-active')?.textContent?.includes('KernelSU'))
+    const details = '#susfs + details'
+    await page.locator(`${details} summary`).click()
+    const layout = await page.$eval(details, (node) => {
+      const summary = node.querySelector('summary')!
+      const paragraph = node.querySelector('p')!
+      const box = node.getBoundingClientRect()
+      const header = summary.getBoundingClientRect()
+      const body = paragraph.getBoundingClientRect()
+      return {
+        open: (node as HTMLDetailsElement).open,
+        text: paragraph.textContent,
+        headerInset: parseFloat(getComputedStyle(summary).paddingLeft),
+        bodyInset: body.left - box.left - parseFloat(getComputedStyle(node).borderLeftWidth),
+        topGap: body.top - header.bottom,
+        bottomGap: box.bottom - body.bottom,
+        nextTag: node.nextElementSibling?.tagName,
+        overflow: document.documentElement.scrollWidth > window.innerWidth
+      }
+    })
+    expect(layout.open).toBe(true)
+    expect(layout.text).toContain('SUSFS (Systemless User Space File System)')
+    expect(layout.bodyInset).toBe(layout.headerInset)
+    expect(layout.topGap).toBeGreaterThan(0)
+    expect(layout.bottomGap).toBeGreaterThan(0)
+    expect(layout.nextTag).toBe('UL')
+    expect(layout.overflow).toBe(false)
+    await page.locator(`${details} summary`).click()
+    expect(await page.$eval(details, (node) => (node as HTMLDetailsElement).open)).toBe(false)
+  }
+})
+
 test('badge labels remain readable in both themes', async () => {
   await page.goto(new URL('apps-and-modules/ad-blocking', baseURL).href)
   for (const dark of [false, true]) {
