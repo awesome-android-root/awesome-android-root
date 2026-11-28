@@ -277,7 +277,7 @@ test('unexpected search errors are logged but not exposed to the agent', async (
   expect(outcome.logged[0]).toContain('TypeError')
 })
 
-test('Pagefind search failures remain actionable availability errors', async () => {
+test('unexpected exceptions inside Pagefind operations are logged as internal errors', async () => {
   await page.setRequestInterception(true)
   page.on('request', (request) => {
     if (request.url().includes('/pagefind/pagefind.js')) {
@@ -285,16 +285,125 @@ test('Pagefind search failures remain actionable availability errors', async () 
         status: 200, contentType: 'text/javascript',
         body: `export async function options() {};
           export async function search(query) {
-            if (query === 'data') return { results: [{ id: 'broken', data: async () => { throw new Error('private fragment failure'); } }] };
-            throw new Error('private Pagefind failure');
+            if (query === 'search-type') throw new TypeError('private search bug');
+            if (query === 'search-error') throw new Error('private search failure');
+            if (query === 'cancel') return new Promise((resolve, reject) => {
+              window.rejectSearch = reject;
+              window.searchStarted();
+            });
+            return { results: [{ id: 'bad', data: async () => {
+              if (query === 'data-type') throw new TypeError('private data bug');
+              throw new Error('private data failure');
+            } }] };
           }`
       })
     } else void request.continue()
   })
   await installContext()
-  const results = await page.evaluate(async () => {
-    const context = { signal: new AbortController().signal }
-    return Promise.all(['test', 'data'].map((query) => window.mcpTest.tools.search_site.execute({ query }, context)))
+  const outcome = await page.evaluate(async () => {
+    const logged: string[] = []
+    const original = console.error
+    console.error = (...args: unknown[]) => { logged.push(args.map(String).join(' ')) }
+    try {
+      const context = { signal: new AbortController().signal }
+      const results = []
+      for (const query of ['search-type', 'search-error', 'data-type', 'data-error']) {
+        results.push(await window.mcpTest.tools.search_site.execute({ query }, context))
+      }
+      const testWindow = window as Window & { rejectSearch?: (error: Error) => void; searchStarted?: () => void }
+      const started = new Promise<void>((resolve) => { testWindow.searchStarted = resolve })
+      const controller = new AbortController()
+      const pending = window.mcpTest.tools.search_site.execute({ query: 'cancel' }, { signal: controller.signal })
+      let timeout: ReturnType<typeof setTimeout> | undefined
+      try {
+        await Promise.race([started, new Promise<never>((_resolve, reject) => {
+          timeout = setTimeout(() => reject(new Error('Pagefind search did not start')), 5_000)
+        })])
+      } finally { clearTimeout(timeout) }
+      controller.abort()
+      testWindow.rejectSearch?.(new Error('private cancellation failure'))
+      let cancelled = false
+      try { await pending } catch { cancelled = true }
+      return { results, logged, cancelled }
+    } finally { console.error = original }
   })
-  for (const result of results) expect(result).toEqual({ error: { code: 'SEARCH_UNAVAILABLE', message: 'Search is unavailable. Try again later.' } })
+  for (const result of outcome.results) expect(result).toEqual({ error: { code: 'INTERNAL_ERROR', message: 'The tool failed unexpectedly. Try again.' } })
+  expect(outcome.logged).toHaveLength(4)
+  expect(outcome.logged.every((line) => line.includes('WebMCP tool search_site failed:'))).toBe(true)
+  expect(outcome.logged.some((line) => line.includes('private search bug'))).toBe(true)
+  expect(outcome.logged.some((line) => line.includes('private data bug'))).toBe(true)
+  expect(outcome.cancelled).toBe(true)
+})
+
+test('a missing Pagefind module returns an availability error', async () => {
+  await page.setRequestInterception(true)
+  page.on('request', (request) => {
+    if (request.url().includes('/pagefind/pagefind.js')) void request.respond({ status: 503, body: 'unavailable' })
+    else void request.continue()
+  })
+  await installContext()
+  const result = await page.evaluate(async () => window.mcpTest.tools.search_site.execute({ query: 'test' }, { signal: new AbortController().signal }))
+  expect(result).toEqual({ error: { code: 'SEARCH_UNAVAILABLE', message: 'Search is unavailable. Try again later.' } })
+})
+
+test('a reachable Pagefind module with a programming error is logged as internal', async () => {
+  await page.setRequestInterception(true)
+  page.on('request', (request) => {
+    if (request.url().includes('/pagefind/pagefind.js')) {
+      void request.respond({ status: 200, contentType: 'text/javascript', body: `throw new TypeError('private module bug'); export async function options() {}` })
+    } else void request.continue()
+  })
+  await installContext()
+  const outcome = await page.evaluate(async () => {
+    const logged: string[] = []
+    const original = console.error
+    console.error = (...args: unknown[]) => { logged.push(args.map(String).join(' ')) }
+    try {
+      const result = await window.mcpTest.tools.search_site.execute({ query: 'test' }, { signal: new AbortController().signal })
+      return { result, logged }
+    } finally { console.error = original }
+  })
+  expect(outcome.result).toEqual({ error: { code: 'INTERNAL_ERROR', message: 'The tool failed unexpectedly. Try again.' } })
+  expect(outcome.logged).toHaveLength(1)
+  expect(outcome.logged[0]).toContain('private module bug')
+})
+
+test('cancellation during the module probe is not returned or logged as an error', async () => {
+  await page.setRequestInterception(true)
+  page.on('request', (request) => {
+    if (request.url().includes('/pagefind/pagefind.js')) void request.respond({ status: 503, body: 'unavailable' })
+    else void request.continue()
+  })
+  await installContext()
+  const outcome = await page.evaluate(async () => {
+    const originalFetch = window.fetch
+    const originalError = console.error
+    const logged: string[] = []
+    console.error = (...args: unknown[]) => { logged.push(args.map(String).join(' ')) }
+    let notify: (() => void) | undefined
+    const started = new Promise<void>((resolve) => { notify = resolve })
+    window.fetch = Object.assign((input: RequestInfo | URL, init?: RequestInit) => {
+      if (String(input).includes('/pagefind/pagefind.js')) {
+        notify?.()
+        return new Promise<Response>((_resolve, reject) => init?.signal?.addEventListener('abort', () => reject(init.signal?.reason)))
+      }
+      return originalFetch(input, init)
+    }, { preconnect: originalFetch.preconnect })
+    const controller = new AbortController()
+    const pending = window.mcpTest.tools.search_site.execute({ query: 'test' }, { signal: controller.signal })
+    let timeout: ReturnType<typeof setTimeout> | undefined
+    try {
+      await Promise.race([started, new Promise<never>((_resolve, reject) => {
+        timeout = setTimeout(() => reject(new Error('Pagefind probe did not start')), 5_000)
+      })])
+      controller.abort()
+      try { await pending; return { cancelled: false, logged } }
+      catch { return { cancelled: true, logged } }
+    } finally {
+      clearTimeout(timeout)
+      window.fetch = originalFetch
+      console.error = originalError
+    }
+  })
+  expect(outcome).toEqual({ cancelled: true, logged: [] })
 })

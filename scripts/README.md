@@ -299,7 +299,9 @@ Disposal aborts the registration signal. The native API is retained because
 the current [`useWebMCP()`](https://vueuse.org/core/usewebmcp/) integration
 does not forward the native execution `AbortSignal` that `get_page` passes to
 its Markdown fetch. Keep the Pagefind loader shared with the search dialog to
-avoid duplicate engines/workers.
+avoid duplicate engines/workers. When Pagefind loading fails, an unavailable
+module probe produces `SEARCH_UNAVAILABLE`; ambiguous Pagefind failures are
+logged and returned as `INTERNAL_ERROR`.
 Ctrl/Cmd+K intentionally opens search even from an editable field; `/` does not
 interrupt typing. Enter with no arrow selection opens the first result. Search's
 shortcuts, arrow/Enter selection, Escape, reset,

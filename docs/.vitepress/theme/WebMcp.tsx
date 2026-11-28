@@ -55,13 +55,24 @@ function validateLimit(input: Record<string, unknown>) {
   catch { throw new ToolFailure('INVALID_INPUT', 'Provide an integer maxResults from 1 to 10.') }
 }
 
-// Only Pagefind operations are translated to availability errors; result processing
-// failures remain internal errors and are logged by executeTool.
-async function searchRequest<T>(signal: AbortSignal, request: () => Promise<T>): Promise<T> {
-  try { return await request() }
-  catch {
+// Pagefind worker errors lose their original type, so do not infer availability
+// from arbitrary exceptions. Probe the module only after loading fails.
+async function searchEngine(signal: AbortSignal) {
+  try { return await loadPagefind(withBase('/')) }
+  catch (error) {
     signal.throwIfAborted()
-    throw new ToolFailure('SEARCH_UNAVAILABLE', 'Search is unavailable. Try again later.')
+    const url = withBase('/pagefind/pagefind.js')
+    let response: Response
+    try { response = await fetch(url, { signal }) }
+    catch (probeError) {
+      signal.throwIfAborted()
+      // Fetch rejects with TypeError if this fixed same-origin request cannot be made.
+      if (probeError instanceof TypeError) throw new ToolFailure('SEARCH_UNAVAILABLE', 'Search is unavailable. Try again later.')
+      throw probeError
+    }
+    if (!response.ok) throw new ToolFailure('SEARCH_UNAVAILABLE', 'Search is unavailable. Try again later.')
+    // The module is reachable: preserve the original error for internal diagnostics.
+    throw error
   }
 }
 
@@ -129,17 +140,9 @@ export default defineComponent((props: { onRegistration: (ready: Promise<void>) 
           const input = validateInput(rawInput, ['query', 'maxResults'])
           const query = validateString(input, 'query', 160)
           const maxResults = validateLimit(input)
-          const engine = await searchRequest(signal, () => loadPagefind(withBase('/')))
+          const engine = await searchEngine(signal)
           signal.throwIfAborted()
-          const results = await createSearchSession().run({
-            ...engine,
-            async search(term) {
-              const response = await searchRequest(signal, () => engine.search(term))
-              return { ...response, results: response.results.map((result) => ({
-                ...result, data: () => searchRequest(signal, () => result.data())
-              })) }
-            }
-          }, query, maxResults)
+          const results = await createSearchSession().run(engine, query, maxResults)
           signal.throwIfAborted()
           return { results: (results ?? []).map((result) => ({
             title: result.meta.title || result.url,
