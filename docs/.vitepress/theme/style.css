@@ -967,7 +967,7 @@ img {
 .vp-doc .markdown-copy-buttons {
   position: relative;
   z-index: 11;
-  justify-content: flex-end;
+  justify-content: center;
   margin: 0 0 1rem;
 }
 
@@ -1028,6 +1028,5 @@ img {
 .vp-doc .markdown-copy-buttons .dropdown-item::before { display: none; }
 
 @media (max-width: 640px) {
-  .vp-doc .markdown-copy-buttons { justify-content: flex-start; }
   .vp-doc .markdown-copy-buttons .dropdown-menu { left: 0; right: auto; }
 }
