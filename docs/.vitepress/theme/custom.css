@@ -99,7 +99,5 @@ html.dark {
   .filter-dialog { inset: auto 0 0; margin: 0; width: 100%; max-width: none; border-radius: var(--radius-medium) var(--radius-medium) 0 0; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; } }
-.doc-updated { margin: 0 0 var(--space-4); color: var(--text-muted); font-size: var(--type-2); font-variant-numeric: tabular-nums; }
-.VPDocFooter .last-updated { display: none; }
 .aar-search-dialog .search-group-label { display: block; padding: var(--space-2) var(--space-3) 0; color: var(--text-muted); font-size: var(--type-1); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
 .aar-search-dialog .search-category { display: inline-block; margin-bottom: var(--space-1); padding: 0 var(--space-2); border: 1px solid var(--border); border-radius: var(--radius-small); color: var(--text-muted); font-size: var(--type-1); text-transform: capitalize; }

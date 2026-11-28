@@ -329,18 +329,11 @@ html.dark .VPHome {
 }
 
 .VPHome .vp-doc h2 {
-  border-top-color: color-mix(in srgb, var(--vp-c-brand-1) 45%, var(--vp-c-divider));
-}
-
-/* Desktop-only heading refinement: the mobile clamp rules below own small
-   screens, this owns spacing, weight and tracking above 48rem. */
-@media (min-width: 48rem) {
-  .VPHome .vp-doc h2 {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-  }
+  margin-top: clamp(2.5rem, 4vw, 3.5rem);
+  padding-top: 0;
+  border-top: 0;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 
@@ -563,7 +556,7 @@ img {
 /* ── Community & guide cards ── */
 .community-card {
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
   padding: 1.75rem 1.5rem;
   text-decoration: none !important;

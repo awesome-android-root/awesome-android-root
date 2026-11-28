@@ -34,8 +34,11 @@ test('home keeps the original sections and the three starting paths', async () =
   expect(await page.$('.VPHero .image')).not.toBeNull()
   expect(await page.$('#major-guides')).not.toBeNull()
   expect(await page.$('#community')).not.toBeNull()
-  await page.setViewport({ width: 360, height: 800 })
-  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true)
+  for (const width of [1440, 360]) {
+    await page.setViewport({ width, height: 800 })
+    expect(await page.$$eval('.VPHome .vp-doc h2', (headings) => headings.every((heading) => getComputedStyle(heading).borderTopWidth === '0px'))).toBe(true)
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true)
+  }
 })
 
 test('directory entries keep their layout, links, stars and readable badges', async () => {
@@ -65,6 +68,10 @@ test('directory entries keep their layout, links, stars and readable badges', as
   expect(await page.$('.copy-section-link')).toBeNull()
   expect(await page.$('.vp-doc h2 .header-anchor')).not.toBeNull()
   expect(await page.$('.markdown-copy-buttons')).not.toBeNull()
+  expect(await page.$('.doc-updated')).toBeNull()
+  expect(await page.$eval('.VPDocFooter .last-updated', (node) => getComputedStyle(node).display)).not.toBe('none')
+  expect(await page.$eval('.VPDocFooter .last-updated time', (node) => node.getAttribute('datetime'))).toBeTruthy()
+  expect(await page.$eval('.vp-doc h2', (node) => getComputedStyle(node).borderTopWidth)).not.toBe('0px')
   for (const dark of [false, true]) {
     const badges = await page.evaluate((dark) => {
       document.documentElement.classList.toggle('dark', dark)
