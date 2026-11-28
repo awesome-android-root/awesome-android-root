@@ -20,11 +20,11 @@ unlocking - always.
 
 ## Backup Apps & Tools {#backup-restore}
 
-- **[⭐ Swift Backup](https://play.google.com/store/apps/details?id=org.swiftapps.swiftbackup)** - Modern backup solution with cloud support. `Proprietary`
-- **[AppSnapshoter](https://github.com/TIIEHenry/AppSnapshoter/blob/main/README_EN.md)** - Packages an app's APK, data directories, OBB, media files, etc. into compressed snapshots for backup and restore. `FOSS`
-- **[DataBackup](https://github.com/XayahSuSuSu/Android-DataBackup)** - DataBackup for Android 7.0+. `FOSS` | [🌱](https://f-droid.org/zh_Hans/packages/com.xayah.databackup.foss/)
+- **[⭐ Swift Backup](https://play.google.com/store/apps/details?id=org.swiftapps.swiftbackup)** - Backs up and restores apps and data with cloud storage support. `Proprietary`
+- **[AppSnapshoter](https://github.com/TIIEHenry/AppSnapshoter/blob/main/README_EN.md)** - Backs up and restores apps, data, OBB and media files as compressed snapshots. `FOSS`
+- **[DataBackup](https://github.com/XayahSuSuSu/Android-DataBackup)** - Backs up and restores app data with root, multi-user and cloud support on Android 7.0+. `FOSS` | [🌱](https://f-droid.org/zh_Hans/packages/com.xayah.databackup.foss/)
 - **[DiskDigger](https://play.google.com/store/apps/details?id=com.defianttech.diskdigger)** - Recovers data on Android devices. `Proprietary`
-- **[Dumpster: Photo/Video Recovery](https://play.google.com/store/apps/details?id=com.baloota.dumpster)** - You can recover deleted videos, restore photos, undelete recently deleted apps, and other files. `Proprietary`
+- **[Dumpster: Photo/Video Recovery](https://play.google.com/store/apps/details?id=com.baloota.dumpster)** - Restores deleted photos, videos, apps and other files. `Proprietary`
 - **[Neo Backup](https://github.com/NeoApplications/Neo-Backup)** - Backs up and restores apps. `FOSS` | [🌱](https://f-droid.org/packages/com.machiav3lli.backup/)
-- **[Restoid](https://github.com/hddq/restoid)** - modern, root-based Android app backup tool powered by restic. `FOSS`
-- **[VD-Backup](https://github.com/VD171/VD-Backup)** - Full app and data backup and restore from a root-manager WebUI: APKs and splits, app data, OBB and media etc. `FOSS` `[M]` `[K]` `[A]`
+- **[Restoid](https://github.com/hddq/restoid)** - Backs up files with restic encryption and deduplication, with root support for app data. `FOSS`
+- **[VD-Backup](https://github.com/VD171/VD-Backup)** - Backs up and restores APKs, app data, OBB and media from a root-manager WebUI. `FOSS` `[M]` `[K]` `[A]`
