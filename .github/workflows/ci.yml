@@ -79,6 +79,9 @@ jobs:
       - name: Smoke-test built search in installed Chrome
         run: bun run test:search
 
+      - name: Smoke-test directory filters in installed Chrome
+        run: bun run test:filter
+
       - name: Test WebMCP integration in installed Chrome
         run: bun run test:webmcp
 

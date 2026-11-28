@@ -201,9 +201,10 @@ Since Google's mid-2025 changes, `DEVICE_INTEGRITY` requires a **locked bootload
 ## Susfs
 
 <details><summary><strong>What is SUSFS?</strong></summary>
+
 SUSFS (Systemless User Space File System) is a kernel-level module that allows root-hiding and system modifications without altering the system partition. It provides a stealthy environment for modules to operate, making it harder for apps to detect root or modifications.
 
-</details><br>
+</details>
 
 - **[⭐ BRENE](https://github.com/rrr333nnn333/BRENE)** - Provides root hiding and spoofing using SUSFS on patched KernelSU kernels. `FOSS` `[K]`
 - **[⭐ SUSFS for KernelSU](https://github.com/sidex15/susfs4ksu-module)** - Provides userspace controls and root hiding for SUSFS-patched KernelSU kernels. `FOSS` `[K]`

@@ -2,7 +2,7 @@ import { defineComponent, Transition, vShow, withDirectives, ref, onMounted, onB
 import './BackToTop.css'
 
 /** Distance from the top of the document, in px, after which the button shows. */
-const SHOW_AFTER = 450
+const SHOW_AFTER_SCREENS = 1.5
 
 export default defineComponent(() => {
   const visible = ref(false)
@@ -25,7 +25,7 @@ export default defineComponent(() => {
     sentinel = document.createElement('div')
     sentinel.className = 'back-to-top-sentinel'
     sentinel.setAttribute('aria-hidden', 'true')
-    sentinel.style.top = `${SHOW_AFTER - 1}px`
+    sentinel.style.top = `${window.innerHeight * SHOW_AFTER_SCREENS - 1}px`
     document.body.append(sentinel)
     observer = new IntersectionObserver(([entry]) => {
       visible.value = !entry.isIntersecting && entry.boundingClientRect.top < 0

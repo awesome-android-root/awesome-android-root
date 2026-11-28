@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig, type DefaultTheme } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
 import { writePageIndex } from '../../scripts/page-index.ts'
 import { buildSearchIndex } from '../../scripts/search-index.ts'
@@ -11,8 +11,9 @@ import { vite } from './site/vite.ts'
 
 // Composition only: site constants, SEO, navigation, PWA and Vite settings live
 // in ./site/, and the Markdown pipeline lives in ./markdown/.
-export default withPwa(defineConfig({
+export default withPwa(defineConfig<DefaultTheme.Config & { llms: { copyText: string } }>({
   lang: 'en-US',
+  appearance: 'dark',
   base: process.env.SITE_BASE || '/',
   async buildEnd(site) {
     await buildSearchIndex(site.outDir, site.srcDir)
@@ -31,6 +32,7 @@ export default withPwa(defineConfig({
   head,
 
   themeConfig: {
+    llms: { copyText: 'Copy Markdown' },
     logo: {
       light: '/images/logo.svg',
       dark: '/images/logo_dark.svg',
@@ -59,7 +61,7 @@ export default withPwa(defineConfig({
     },
 
     outline: {
-      level: [2, 3],
+      level: 2,
       label: 'On this page'
     },
     socialLinks: [

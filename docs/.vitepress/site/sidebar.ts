@@ -67,7 +67,7 @@ export const nav = withIcons([
   },
 ])
 
-export const sidebar = withIcons({
+const sidebarGroups = withIcons({
   // Rooting Guides Sidebar
   '/rooting-guides/': [
     {
@@ -585,3 +585,8 @@ export const sidebar = withIcons({
     }
   ]
 })
+
+// VitePress opens a group containing the active route after mount.
+export const sidebar = Object.fromEntries(Object.entries(sidebarGroups).map(([route, groups]) => [
+  route, groups.map((group) => ({ ...group, collapsed: true }))
+]))

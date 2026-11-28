@@ -261,7 +261,7 @@ hero:
   <a href="https://github.com/awesome-android-root/awesome-android-root" class="community-card">
     <span class="icon"><BrandIcon name="github" /></span>
     <strong>GitHub</strong>
-    <span>6.3K stars</span>
+    <span>View the project</span>
   </a>
   <a href="https://x.com/awsm_and_root" class="community-card">
     <span class="icon"><BrandIcon name="x" /></span>
@@ -284,7 +284,7 @@ hero:
 
 <div class="community-cards">
   <a href="https://addy.io/?ref=awesome-android-root" class="community-card sponsor-card">
-    <img src="/images/addy-logo.svg" alt="" width="220" height="90">
+    <img src="/images/addy-logo.svg" alt="" width="220" height="90" loading="lazy">
     <strong>addy.io</strong>
     <span>Our sponsor. A different email address for every website.</span>
   </a>
