@@ -26,11 +26,11 @@ game-specific tools, mixing root apps, Magisk/KernelSU modules and LSPosed modul
 - **[CatSmoker](https://github.com/catsmoker/catsmoker-app)** - Combines device spoofing to unlock higher graphics settings and FPS, resolution and DPI changes, etc. `Proprietary` `[LSP]`
 - **[CheatDroid](https://android-cheats.com/)** - Edits the data games keep on the device (shared preferences, Unity PlayerPrefs, SQLite databases, raw files) and searches, edits and freezes values in a running game's memory. Requires root. `Proprietary`
 - **[iUnlocker GLTool](https://github.com/i-Taylo/iUnlockerGL)** - Spoofs GPU information for game graphics unlocking and testing. `FOSS` `[M]`
-- **[JoyCon Droid](https://joycondroid.gitbook.io/joycondroid)** - Allows you to turn your Android device into a controller for your Nintendo Switch. `FOSS`
+- **[JoyCon Droid](https://joycondroid.gitbook.io/joycondroid)** - Uses an Android device as a Nintendo Switch controller. `FOSS`
 
 ## Gaming Optimization
 
-- **[AsoulOpt](https://github.com/nakixii/Magisk_AsoulOpt)** - Game threads tweaker for Android, suitable for mainstream games and some niche games. `FOSS` `[M]`
-- **[Encore Tweaks](https://github.com/Rem01Gaming/encore)** - Enhance device performance during gaming sessions, while keeping battery life optimized for normal use. `FOSS` `[M]` `[A]`
-- **[FPS Unlocker](https://github.com/yadavnikhil03/GameUnlocker#fps-unlocker)** - Enables 90 FPS options in BGMI and PUBG and other Games as well for smoother gameplay on low-end devices. `FOSS` `[M]` `[A]`
+- **[AsoulOpt](https://github.com/nakixii/Magisk_AsoulOpt)** - Adjusts game threads for supported Android games. `FOSS` `[M]`
+- **[Encore Tweaks](https://github.com/Rem01Gaming/encore)** - Applies performance settings for gaming and daily use. `FOSS` `[M]` `[A]`
+- **[FPS Unlocker](https://github.com/yadavnikhil03/GameUnlocker#fps-unlocker)** - Spoofs device identity to unlock higher frame-rate options in supported games. `FOSS` `[M]` `[A]`
 - **[Uperf-Game-Turbo](https://github.com/yinwanxi/Uperf-Game-Turbo)** - Userspace performance controller for Android. `FOSS` `[M]`

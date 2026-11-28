@@ -24,8 +24,8 @@ privacy, battery life and performance.
 > **Related Guide**: [Complete Debloating Tutorial](../general-guides/android-apps-debloating.md)
 
 - **[⭐ Canta](https://github.com/samolego/Canta)** - Uninstall any app without root using [Shizuku](development.md#developer-tools). `FOSS` | [🌱](https://f-droid.org/en/packages/io.github.samolego.canta/) | [▶️](https://play.google.com/store/apps/details?id=io.github.samolego.canta)
-- **[De-Bloater](https://github.com/sunilpaulmathew/De-Bloater)** - An application using the power of Magisk to debloat unwanted system apps!. `FOSS` | [🌱](https://f-droid.org/packages/com.sunilpaulmathew.debloater) | [▶️](https://play.google.com/store/apps/details?id=com.sunilpaulmathew.debloater)
-- **[EXA System App Remover](https://play.google.com/store/apps/details?id=exa.free.saux)** - Remove Bloatware, clear memory and speed up your phone now by uninstalling unused system apps. `Proprietary`
-- **[Scalpel](https://github.com/Enginex0/Scalpel)** - Precision Debloat & Systemize for Rooted Android. `FOSS` `[M]` `[K]` `[A]`
+- **[De-Bloater](https://github.com/sunilpaulmathew/De-Bloater)** - Removes unwanted system apps using Magisk. `FOSS` | [🌱](https://f-droid.org/packages/com.sunilpaulmathew.debloater) | [▶️](https://play.google.com/store/apps/details?id=com.sunilpaulmathew.debloater)
+- **[EXA System App Remover](https://play.google.com/store/apps/details?id=exa.free.saux)** - Uninstalls unwanted system apps. `Proprietary`
+- **[Scalpel](https://github.com/Enginex0/Scalpel)** - Removes system apps and promotes user apps to system apps through a WebUI. `FOSS` `[M]` `[K]` `[A]`
 - **[System App Nuker](https://github.com/ChiseWaguri/systemapp_nuker)** - Debloats system apps through a WebUI. `FOSS` `[M]` `[A]`
-- **[System app remover](https://play.google.com/store/apps/details?id=com.jumobile.manager.systemapp)** - A system app remover and user app uninstaller, move app to sdcard, move app to phone, apk on sdcard scan/install/delete. `Proprietary`
+- **[System app remover](https://play.google.com/store/apps/details?id=com.jumobile.manager.systemapp)** - Uninstalls apps, moves apps between storage locations and manages APK files. `Proprietary`
