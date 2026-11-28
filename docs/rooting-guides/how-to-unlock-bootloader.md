@@ -79,10 +79,6 @@ head:
 
 **Bootloader unlocking is the usual first step before permanent Android root, custom recovery or a custom ROM.** The process varies by manufacturer and model, but it normally enables OEM unlocking, uses ADB/Fastboot or a vendor tool, and factory-resets the phone. Check the exact model and region before you follow any command.
 
-<Callout type="data-loss">
-Unlocking normally factory-resets the phone. Back up your data and verify the backup before proceeding. Check your exact model and manufacturer instructions.
-</Callout>
-
 <div class="guide-summary">
 <strong>Before you begin</strong>
 <p><b>Time:</b> Varies by device and manufacturer. <b>Difficulty:</b> Advanced. <b>Risk:</b> High, including data loss and reduced device security.</p>

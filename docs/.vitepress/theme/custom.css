@@ -87,10 +87,7 @@ html.dark {
 .filter-dialog-footer { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border); padding-top: var(--space-2); color: var(--text-muted); font-size: var(--type-2); font-variant-numeric: tabular-nums; }
 .filter-dialog-footer button:disabled { opacity: .5; cursor: not-allowed; }
 
-.safety-callout, .guide-summary, .step-checklist { padding: var(--space-4); margin: var(--space-6) 0; border: 1px solid var(--border); border-radius: var(--radius-medium); background: var(--surface-raised); }
-.safety-callout { border-left: 4px solid var(--warn); }
-.safety-callout > strong { color: var(--warn); }
-.safety-callout > strong span { display: inline-grid; place-items: center; border: 1px solid currentColor; width: 20px; height: 20px; border-radius: var(--radius-small); }
+.guide-summary, .step-checklist { padding: var(--space-4); margin: var(--space-6) 0; border: 1px solid var(--border); border-radius: var(--radius-medium); background: var(--surface-raised); }
 .step-checklist progress { width: 100%; accent-color: var(--accent); }
 .vp-doc .step-checklist ul { list-style: none; padding: 0; }
 .step-checklist label { display: flex; align-items: center; min-height: 44px; gap: var(--space-2); }
@@ -106,9 +103,3 @@ html.dark {
 .VPDocFooter .last-updated { display: none; }
 .aar-search-dialog .search-group-label { display: block; padding: var(--space-2) var(--space-3) 0; color: var(--text-muted); font-size: var(--type-1); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
 .aar-search-dialog .search-category { display: inline-block; margin-bottom: var(--space-1); padding: 0 var(--space-2); border: 1px solid var(--border); border-radius: var(--radius-small); color: var(--text-muted); font-size: var(--type-1); text-transform: capitalize; }
-.safety-callout--tip { border-left-color: var(--accent); }
-.safety-callout--tip > strong { color: var(--accent); }
-.safety-callout--requirement { border-left-color: var(--badge-kernelsu); }
-.safety-callout--requirement > strong { color: var(--badge-kernelsu); }
-.safety-callout--data-loss { border-left-color: var(--badge-proprietary); }
-.safety-callout--data-loss > strong { color: var(--badge-proprietary); }

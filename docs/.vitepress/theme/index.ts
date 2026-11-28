@@ -5,7 +5,6 @@ import './style.css'
 import './custom.css'
 import FilterBar from './components/FilterBar.tsx'
 import DocExtras from './components/DocExtras.tsx'
-import Callout from './components/Callout.tsx'
 import StepChecklist from './components/StepChecklist.tsx'
 import PwaReload from './PwaReload.tsx'
 import BackToTop from './BackToTop.tsx'
@@ -59,7 +58,6 @@ export default {
   },
 
   enhanceApp({ app }) {
-    app.component('Callout', Callout)
     app.component('StepChecklist', StepChecklist)
     app.component('FilterBar', FilterBar)
     app.component('StoreLink', StoreLink)
