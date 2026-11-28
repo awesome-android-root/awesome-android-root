@@ -4,9 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import './custom.css'
 import FilterBar from './components/FilterBar.tsx'
-import HomeRouter from './components/HomeRouter.tsx'
 import DocExtras from './components/DocExtras.tsx'
-import HomeSearch from './components/HomeSearch.tsx'
 import Callout from './components/Callout.tsx'
 import StepChecklist from './components/StepChecklist.tsx'
 import PwaReload from './PwaReload.tsx'
@@ -49,7 +47,6 @@ export default {
 
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
-      'home-hero-info-after': () => h(HomeSearch),
       'doc-before': () => h(DocExtras),
       'nav-bar-content-before': () => h(PagefindSearch),
       'nav-bar-content-after': () => [h(ThemeToggle)],
@@ -65,7 +62,6 @@ export default {
     app.component('Callout', Callout)
     app.component('StepChecklist', StepChecklist)
     app.component('FilterBar', FilterBar)
-    app.component('HomeRouter', HomeRouter)
     app.component('StoreLink', StoreLink)
     app.component('LandingIcon', LandingIcon)
     app.component('BrandIcon', BrandIcon)
