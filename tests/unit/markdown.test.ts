@@ -9,3 +9,19 @@ test('store badges render through the shared site pipeline and reject lookalike 
   expect(md.render('[🌱](https://f-droid.org.evil.test/a)')).not.toContain('StoreLink')
   expect(md.render('[Read more](https://f-droid.org/)')).not.toContain('StoreLink')
 })
+
+test('directory entries gain labeled metadata without changing anchors or other lists', async () => {
+  const md = await createMarkdownRenderer(new URL('../../docs', import.meta.url).pathname, markdownOptions)
+  const source = '# Category\n\nIntro.\n\n## Tools\n\n- **[⭐ Example](https://example.com)** - A useful tool. `FOSS` `[M]` `[K]` | [🌱](https://f-droid.org/packages/a)\n'
+  const rendered = md.render(source, { relativePath: 'apps-and-modules/test.md' })
+  expect(rendered).toContain('<FilterBar />')
+  expect(rendered).toContain('class="directory-entry"')
+  expect(rendered).toContain('data-frameworks="FOSS Magisk KernelSU"')
+  expect(rendered).toContain('data-featured="true"')
+  expect(rendered).toContain('class="entry-featured">Featured')
+  expect(rendered).toContain('class="entry-description"')
+  expect(rendered).toContain('class="entry-chip entry-chip--magisk">Magisk')
+  expect(rendered).toContain('<StoreLink store="fdroid"')
+  expect(rendered).not.toContain('⭐')
+  expect(md.render(source, { relativePath: 'rooting-guides/test.md' })).not.toContain('directory-entry')
+})

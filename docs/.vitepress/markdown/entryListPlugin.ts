@@ -1,0 +1,68 @@
+import type MarkdownIt from 'markdown-it'
+import type Token from 'markdown-it/lib/token.mjs'
+import { parseEntryLine } from '../shared/entries.ts'
+
+const labels: Record<string, string> = {
+  '[M]': 'Magisk', '[K]': 'KernelSU', '[A]': 'APatch', '[LSP]': 'LSPosed',
+  FOSS: 'FOSS', Proprietary: 'Proprietary'
+}
+
+/** Decorate only validated directory entries, leaving the authoring format intact. */
+export function entryListPlugin(md: MarkdownIt): void {
+  md.core.ruler.push('entry-list', (state) => {
+    const path = (state.env as { relativePath?: string }).relativePath
+    if (!path?.startsWith('apps-and-modules/') || path === 'apps-and-modules/index.md') return
+    const lines = state.src.split('\n')
+    const tokens = state.tokens
+    const title = tokens.findIndex((token) => token.type === 'heading_open' && token.tag === 'h1')
+    const introEnd = tokens.findIndex((token, index) => index > title && token.type === 'paragraph_close')
+    if (title >= 0 && introEnd >= 0) {
+      const filter = new state.Token('html_block', '', 0)
+      filter.content = '<FilterBar />\n'
+      tokens.splice(introEnd + 1, 0, filter)
+    }
+    for (let i = 0; i < tokens.length; i++) {
+      const item = tokens[i]
+      if (item.type !== 'list_item_open' || !item.map) continue
+      const entry = parseEntryLine(lines[item.map[0]] ?? '')
+      if (!entry) continue
+      item.attrJoin('class', 'directory-entry')
+      const badges = [...entry.rest.matchAll(/`(FOSS|Proprietary|\[M\]|\[K\]|\[A\]|\[LSP\])`/g)].map((match) => labels[match[1]])
+      item.attrSet('data-frameworks', badges.join(' '))
+      item.attrSet('data-license', badges.find((badge) => badge === 'FOSS' || badge === 'Proprietary') ?? '')
+      item.attrSet('data-featured', String(/^⭐/.test(entry.rawName)))
+      const inline = tokens.slice(i + 1).find((token) => token.type === 'inline')
+      if (!inline?.children) continue
+      const children = inline.children
+      const name = children.find((token) => token.type === 'text' && token.content.includes('⭐'))
+      if (name && /^⭐/.test(entry.rawName)) name.content = name.content.replace(/^⭐\uFE0F?\s*/, '')
+      const strongClose = children.findIndex((token) => token.type === 'strong_close')
+      if (strongClose < 0) continue
+      if (/^⭐/.test(entry.rawName)) {
+        const marker = new state.Token('html_inline', '', 0)
+        marker.content = '<span class="entry-featured">Featured</span>'
+        children.splice(strongClose + 1, 0, marker)
+      }
+      for (const child of children) {
+        if (child.type !== 'code_inline' || !labels[child.content]) continue
+        const label = labels[child.content]
+        child.type = 'html_inline'
+        child.content = `<span class="entry-chip entry-chip--${label.toLowerCase()}">${label}</span>`
+      }
+      const afterTitle = children.findIndex((token) => token.type === 'strong_close') + 1
+      const dash = children.slice(afterTitle).find((token) => token.type === 'text' && /^\s*-\s*/.test(token.content))
+      if (dash) dash.content = dash.content.replace(/^\s*-\s*/, ' ')
+      // Keep Markdown formatting and links inside a separate description span.
+      if (dash) {
+        const start = children.indexOf(dash)
+        const end = children.findIndex((child, index) => index > start && child.type === 'html_inline' && child.content.startsWith('<span class="entry-chip'))
+        const open = new state.Token('html_inline', '', 0)
+        open.content = '<span class="entry-description">'
+        const close = new state.Token('html_inline', '', 0)
+        close.content = '</span>'
+        children.splice(end < 0 ? children.length : end, 0, close)
+        children.splice(start, 0, open)
+      }
+    }
+  })
+}

@@ -22,8 +22,8 @@ export default defineComponent(() => {
       open()
     }
   }
-  onMounted(() => window.addEventListener('keydown', shortcut))
-  onUnmounted(() => window.removeEventListener('keydown', shortcut))
+  onMounted(() => { window.addEventListener('keydown', shortcut); window.addEventListener('aar:open-search', open) })
+  onUnmounted(() => { window.removeEventListener('keydown', shortcut); window.removeEventListener('aar:open-search', open) })
 
   return () => (
     <div class="aar-search">

@@ -13,6 +13,7 @@ import { vite } from './site/vite.ts'
 // in ./site/, and the Markdown pipeline lives in ./markdown/.
 export default withPwa(defineConfig({
   lang: 'en-US',
+  appearance: 'dark',
   base: process.env.SITE_BASE || '/',
   async buildEnd(site) {
     await buildSearchIndex(site.outDir, site.srcDir)
@@ -59,7 +60,7 @@ export default withPwa(defineConfig({
     },
 
     outline: {
-      level: [2, 3],
+      level: 2,
       label: 'On this page'
     },
     socialLinks: [
