@@ -1,5 +1,4 @@
 import type MarkdownIt from 'markdown-it'
-import type Token from 'markdown-it/lib/token.mjs'
 import { parseEntryLine } from '../shared/entries.ts'
 
 const labels: Record<string, string> = {
@@ -30,19 +29,11 @@ export function entryListPlugin(md: MarkdownIt): void {
       const badges = [...entry.rest.matchAll(/`(FOSS|Proprietary|\[M\]|\[K\]|\[A\]|\[LSP\])`/g)].map((match) => labels[match[1]])
       item.attrSet('data-frameworks', badges.join(' '))
       item.attrSet('data-license', badges.find((badge) => badge === 'FOSS' || badge === 'Proprietary') ?? '')
-      item.attrSet('data-featured', String(/^⭐/.test(entry.rawName)))
       const inline = tokens.slice(i + 1).find((token) => token.type === 'inline')
       if (!inline?.children) continue
       const children = inline.children
-      const name = children.find((token) => token.type === 'text' && token.content.includes('⭐'))
-      if (name && /^⭐/.test(entry.rawName)) name.content = name.content.replace(/^⭐\uFE0F?\s*/, '')
       const strongClose = children.findIndex((token) => token.type === 'strong_close')
       if (strongClose < 0) continue
-      if (/^⭐/.test(entry.rawName)) {
-        const marker = new state.Token('html_inline', '', 0)
-        marker.content = '<span class="entry-featured">Featured</span>'
-        children.splice(strongClose + 1, 0, marker)
-      }
       for (const child of children) {
         if (child.type !== 'code_inline' || !labels[child.content]) continue
         const label = labels[child.content]

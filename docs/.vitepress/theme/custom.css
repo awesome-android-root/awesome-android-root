@@ -52,8 +52,7 @@ html.dark {
 .vp-doc .directory-entry:only-child { border-radius: var(--radius-medium); }
 .vp-doc .directory-entry:hover, .vp-doc .directory-entry:focus-within { background: var(--surface-raised); border-color: var(--accent); }
 .directory-entry strong:first-child { display: inline; font-size: var(--type-3); }
-.entry-featured, .entry-chip { display: inline-block; margin: var(--space-1) var(--space-1) var(--space-1) 0; padding: 0 var(--space-2); border: 1px solid currentColor; border-radius: var(--radius-small); font-size: var(--type-1); line-height: 1.7; font-weight: 600; vertical-align: baseline; }
-.entry-featured { color: var(--accent); margin-left: var(--space-2); }
+.entry-chip { display: inline-block; margin: var(--space-1) var(--space-1) var(--space-1) 0; padding: 0 var(--space-2); border: 1px solid currentColor; border-radius: var(--radius-small); font-size: var(--type-1); line-height: 1.7; font-weight: 600; vertical-align: baseline; }
 .entry-chip--magisk { color: var(--badge-magisk); }
 .entry-chip--kernelsu { color: var(--badge-kernelsu); }
 .entry-chip--apatch { color: var(--badge-apatch); }
@@ -97,7 +96,7 @@ html.dark {
 .filter-dialog legend, .filter-license { color: var(--text); font-size: var(--type-2); font-weight: 600; }
 .filter-dialog legend span { margin-left: var(--space-1); color: var(--text-muted); font-size: var(--type-1); font-weight: 400; }
 .filter-options { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-2); }
-.filter-chip, .filter-featured { display: inline-flex; align-items: center; min-height: 44px; gap: var(--space-2); font-size: var(--type-2); cursor: pointer; }
+.filter-chip { display: inline-flex; align-items: center; min-height: 44px; gap: var(--space-2); font-size: var(--type-2); cursor: pointer; }
 .filter-chip { padding: 0 var(--space-3); border: 1px solid var(--border); border-radius: var(--radius-small); }
 .filter-chip:has(input:checked) { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
 .filter-dialog input[type='checkbox'] { accent-color: var(--accent); width: 16px; height: 16px; }

@@ -9,7 +9,6 @@ export default defineComponent(() => {
   const query = ref('')
   const selected = ref<string[]>([])
   const license = ref('')
-  const featured = ref(false)
   const count = ref(0)
   const total = ref(0)
   const ready = ref(false)
@@ -18,8 +17,7 @@ export default defineComponent(() => {
   const pinned = ref(false)
   const activeFilters = computed(() => [
     ...selected.value,
-    ...(license.value ? [license.value] : []),
-    ...(featured.value ? ['Featured'] : [])
+    ...(license.value ? [license.value] : [])
   ])
   const hasFilters = computed(() => !!query.value.trim() || activeFilters.value.length > 0)
   let entries: HTMLElement[] = []
@@ -32,7 +30,12 @@ export default defineComponent(() => {
     query.value = params.get('q') ?? ''
     selected.value = (params.get('framework') ?? '').split(',').filter((value) => frameworks.includes(value))
     license.value = ['FOSS', 'Proprietary'].includes(params.get('license') ?? '') ? params.get('license')! : ''
-    featured.value = params.get('featured') === '1'
+    // Remove the retired filter from links shared before the star was restored.
+    if (params.has('featured')) {
+      const url = new URL(location.href)
+      url.searchParams.delete('featured')
+      history.replaceState(history.state, '', url)
+    }
     restoring = false
     apply(false)
   }
@@ -42,8 +45,7 @@ export default defineComponent(() => {
       const tags = (entry.dataset.frameworks ?? '').split(' ')
       entry.hidden = !(entry.textContent?.toLowerCase().includes(search) &&
         (!selected.value.length || selected.value.some((tag) => tags.includes(tag))) &&
-        (!license.value || entry.dataset.license === license.value) &&
-        (!featured.value || entry.dataset.featured === 'true'))
+        (!license.value || entry.dataset.license === license.value))
     }
     count.value = entries.filter((entry) => !entry.hidden).length
     for (const heading of headings) {
@@ -61,11 +63,10 @@ export default defineComponent(() => {
       if (query.value.trim()) url.searchParams.set('q', query.value.trim())
       if (selected.value.length) url.searchParams.set('framework', selected.value.join(','))
       if (license.value) url.searchParams.set('license', license.value)
-      if (featured.value) url.searchParams.set('featured', '1')
       history.replaceState(history.state, '', url)
     }
   }
-  function clear() { query.value = ''; selected.value = []; license.value = ''; featured.value = false }
+  function clear() { query.value = ''; selected.value = []; license.value = '' }
   async function setupPage() {
     await nextTick()
     entries = [...document.querySelectorAll<HTMLElement>('.vp-doc .directory-entry')]
@@ -93,7 +94,7 @@ export default defineComponent(() => {
     restore()
     ready.value = true
   }
-  watch([query, selected, license, featured], () => apply(), { flush: 'sync' })
+  watch([query, selected, license], () => apply(), { flush: 'sync' })
   watch(() => page.value.relativePath, setupPage)
   onMounted(() => {
     try { pinned.value = localStorage.getItem(PIN_STORAGE_KEY) === 'true' } catch { /* Pinning still works for this page. */ }
@@ -109,7 +110,7 @@ export default defineComponent(() => {
   }
 
   return () => <>
-    <p class="directory-legend">Chips show frameworks and licenses. Featured marks a recommended entry. <a href={withBase('/apps-and-modules/#glossary')}>Read the glossary</a>.</p>
+    <p class="directory-legend">Chips show frameworks and licenses. A star marks a recommended entry. <a href={withBase('/apps-and-modules/#glossary')}>Read the glossary</a>.</p>
     <div class={['directory-filter', { 'directory-filter--pinned': pinned.value }]} aria-label="Filter entries">
       <div class="filter-toolbar">
         <label class="filter-search"><span class="filter-visually-hidden">Filter entries by name or description</span>
@@ -137,7 +138,6 @@ export default defineComponent(() => {
         <div class="filter-dialog-header"><div><strong id="filter-dialog-title">Filter entries</strong><p>Choose the tags that match your setup.</p></div><button type="button" onClick={() => dialog.value?.close()}>Done</button></div>
         <fieldset><legend>Framework <span>Match any</span></legend><div class="filter-options">{frameworks.map((framework) => <label class="filter-chip"><input type="checkbox" checked={selected.value.includes(framework)} onChange={(event) => { selected.value = (event.currentTarget as HTMLInputElement).checked ? [...selected.value, framework] : selected.value.filter((item) => item !== framework) }} />{framework}</label>)}</div></fieldset>
         <label class="filter-license">License<select value={license.value} onChange={(event) => { license.value = (event.currentTarget as HTMLSelectElement).value }}><option value="">Any license</option><option value="FOSS">FOSS</option><option value="Proprietary">Proprietary</option></select></label>
-        <label class="filter-featured"><input type="checkbox" checked={featured.value} onChange={(event) => { featured.value = (event.currentTarget as HTMLInputElement).checked }} /> Featured only</label>
         <div class="filter-dialog-footer"><button type="button" disabled={!hasFilters.value} onClick={clear}>Clear filters</button><span>{ready.value ? `${count.value} of ${total.value} results` : 'Loading filters'}</span></div>
       </div>
     </dialog>
