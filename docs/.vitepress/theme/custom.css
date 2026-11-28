@@ -12,16 +12,11 @@
   --type-2: .875rem;
   --type-3: 1rem;
   --type-4: 1.25rem;
-  --type-5: 1.75rem;
-  --type-6: 3rem;
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
   --space-4: 16px;
-  --space-5: 20px;
   --space-6: 24px;
-  --space-8: 32px;
-  --space-12: 48px;
   --radius-small: 4px;
   --radius-medium: 12px;
   --shadow-panel: 0 8px 24px rgb(0 0 0 / .15);
@@ -84,8 +79,7 @@ html.dark {
 .filter-dialog legend, .filter-license { color: var(--text); font-size: var(--type-2); font-weight: 600; }
 .filter-dialog legend span { margin-left: var(--space-1); color: var(--text-muted); font-size: var(--type-1); font-weight: 400; }
 .filter-options { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-2); }
-.filter-chip { display: inline-flex; align-items: center; min-height: 44px; gap: var(--space-2); font-size: var(--type-2); cursor: pointer; }
-.filter-chip { padding: 0 var(--space-3); border: 1px solid var(--border); border-radius: var(--radius-small); }
+.filter-chip { display: inline-flex; align-items: center; min-height: 44px; gap: var(--space-2); padding: 0 var(--space-3); border: 1px solid var(--border); border-radius: var(--radius-small); font-size: var(--type-2); cursor: pointer; }
 .filter-chip:has(input:checked) { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
 .filter-dialog input[type='checkbox'] { accent-color: var(--accent); width: 16px; height: 16px; }
 .filter-license { display: grid; gap: var(--space-2); }

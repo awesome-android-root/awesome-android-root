@@ -20,8 +20,8 @@ export default defineComponent(() => {
     ...(license.value ? [license.value] : [])
   ])
   const hasFilters = computed(() => !!query.value.trim() || activeFilters.value.length > 0)
-  let entries: HTMLElement[] = []
-  let headings: HTMLElement[] = []
+  let entries: { element: HTMLElement; text: string; tags: string[]; license: string }[] = []
+  let sections: { heading: HTMLElement; entries: HTMLElement[] }[] = []
   let restoring = false
 
   function restore() {
@@ -42,21 +42,16 @@ export default defineComponent(() => {
   }
   function apply(updateUrl = true) {
     const search = query.value.trim().toLowerCase()
+    let visible = 0
     for (const entry of entries) {
-      const tags = (entry.dataset.frameworks ?? '').split(' ')
-      entry.hidden = !(entry.textContent?.toLowerCase().includes(search) &&
-        (!selected.value.length || selected.value.some((tag) => tags.includes(tag))) &&
-        (!license.value || entry.dataset.license === license.value))
+      entry.element.hidden = !(entry.text.includes(search) &&
+        (!selected.value.length || selected.value.some((tag) => entry.tags.includes(tag))) &&
+        (!license.value || entry.license === license.value))
+      if (!entry.element.hidden) visible++
     }
-    count.value = entries.filter((entry) => !entry.hidden).length
-    for (const heading of headings) {
-      let sibling = heading.nextElementSibling
-      const sectionEntries: HTMLElement[] = []
-      while (sibling && !(sibling instanceof HTMLHeadingElement && Number(sibling.tagName[1]) <= Number(heading.tagName[1]))) {
-        if (sibling instanceof HTMLElement) sectionEntries.push(...sibling.querySelectorAll<HTMLElement>('.directory-entry'))
-        sibling = sibling.nextElementSibling
-      }
-      if (sectionEntries.length) heading.hidden = sectionEntries.every((entry) => entry.hidden)
+    count.value = visible
+    for (const section of sections) {
+      section.heading.hidden = section.entries.every((entry) => entry.hidden)
     }
     if (updateUrl && !restoring) {
       const url = new URL(location.href)
@@ -67,16 +62,34 @@ export default defineComponent(() => {
       history.replaceState(history.state, '', url)
     }
   }
-  function clear() { query.value = ''; selected.value = []; license.value = '' }
+  function clear() {
+    restoring = true
+    query.value = ''; selected.value = []; license.value = ''
+    restoring = false
+    apply()
+  }
   async function setupPage() {
     await nextTick()
-    entries = [...document.querySelectorAll<HTMLElement>('.vp-doc .directory-entry')]
-    headings = [...document.querySelectorAll<HTMLElement>('.vp-doc h2, .vp-doc h3, .vp-doc h4')]
+    entries = [...document.querySelectorAll<HTMLElement>('.vp-doc .directory-entry')].map((element) => ({
+      element,
+      text: (element.textContent ?? '').toLowerCase(),
+      tags: (element.dataset.frameworks ?? '').split(' '),
+      license: element.dataset.license ?? ''
+    }))
+    sections = [...document.querySelectorAll<HTMLElement>('.vp-doc h2, .vp-doc h3, .vp-doc h4')].flatMap((heading) => {
+      let sibling = heading.nextElementSibling
+      const sectionEntries: HTMLElement[] = []
+      while (sibling && !(sibling instanceof HTMLHeadingElement && Number(sibling.tagName[1]) <= Number(heading.tagName[1]))) {
+        sectionEntries.push(...sibling.querySelectorAll<HTMLElement>('.directory-entry'))
+        sibling = sibling.nextElementSibling
+      }
+      return sectionEntries.length ? [{ heading, entries: sectionEntries }] : []
+    })
     total.value = entries.length
     restore()
     ready.value = true
   }
-  watch([query, selected, license], () => apply(), { flush: 'sync' })
+  watch([query, selected, license], () => { if (!restoring) apply() }, { flush: 'sync' })
   watch(() => page.value.relativePath, setupPage)
   onMounted(() => {
     try { pinned.value = localStorage.getItem(PIN_STORAGE_KEY) === 'true' } catch { /* Pinning still works for this page. */ }
@@ -84,7 +97,7 @@ export default defineComponent(() => {
     window.addEventListener('popstate', restore)
   })
   watch(pinned, (value) => { try { localStorage.setItem(PIN_STORAGE_KEY, String(value)) } catch { /* Storage is optional. */ } })
-  onBeforeUnmount(() => { window.removeEventListener('popstate', restore); entries.forEach((entry) => { entry.hidden = false }); headings.forEach((heading) => { heading.hidden = false }) })
+  onBeforeUnmount(() => { window.removeEventListener('popstate', restore); entries.forEach((entry) => { entry.element.hidden = false }); sections.forEach(({ heading }) => { heading.hidden = false }) })
 
   function openDialog() {
     dialog.value?.showModal()

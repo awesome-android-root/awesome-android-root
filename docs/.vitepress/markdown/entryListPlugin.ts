@@ -29,8 +29,9 @@ export function entryListPlugin(md: MarkdownIt): void {
       const badges = [...entry.rest.matchAll(/`(FOSS|Proprietary|\[M\]|\[K\]|\[A\]|\[LSP\])`/g)].map((match) => labels[match[1]])
       item.attrSet('data-frameworks', badges.join(' '))
       item.attrSet('data-license', badges.find((badge) => badge === 'FOSS' || badge === 'Proprietary') ?? '')
-      const inline = tokens.slice(i + 1).find((token) => token.type === 'inline')
-      if (!inline?.children) continue
+      // An entry starts with a paragraph; do not scan the rest of the document.
+      const inline = tokens[i + 1]?.type === 'paragraph_open' ? tokens[i + 2] : undefined
+      if (inline?.type !== 'inline' || !inline.children) continue
       const children = inline.children
       const strongClose = children.findIndex((token) => token.type === 'strong_close')
       if (strongClose < 0) continue
@@ -40,7 +41,6 @@ export function entryListPlugin(md: MarkdownIt): void {
         child.type = 'html_inline'
         child.content = `<span class="entry-chip entry-chip--${label.toLowerCase()}">${label}</span>`
       }
-
     }
   })
 }
