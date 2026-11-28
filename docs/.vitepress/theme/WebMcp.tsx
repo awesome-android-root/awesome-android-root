@@ -55,7 +55,17 @@ function validateLimit(input: Record<string, unknown>) {
   catch { throw new ToolFailure('INVALID_INPUT', 'Provide an integer maxResults from 1 to 10.') }
 }
 
-function executeTool(execute: ModelTool['execute']): ModelTool['execute'] {
+// Only Pagefind operations are translated to availability errors; result processing
+// failures remain internal errors and are logged by executeTool.
+async function searchRequest<T>(signal: AbortSignal, request: () => Promise<T>): Promise<T> {
+  try { return await request() }
+  catch {
+    signal.throwIfAborted()
+    throw new ToolFailure('SEARCH_UNAVAILABLE', 'Search is unavailable. Try again later.')
+  }
+}
+
+function executeTool(name: string, execute: ModelTool['execute']): ModelTool['execute'] {
   return async (input, context): Promise<ToolResult> => {
     try {
       context.signal.throwIfAborted()
@@ -64,6 +74,7 @@ function executeTool(execute: ModelTool['execute']): ModelTool['execute'] {
       return result
     } catch (error) {
       context.signal.throwIfAborted()
+      if (!(error instanceof ToolFailure)) console.error(`WebMCP tool ${name} failed:`, error)
       const failure = error instanceof ToolFailure ? error : new ToolFailure('INTERNAL_ERROR', 'The tool failed unexpectedly. Try again.')
       const result: ToolError = { error: { code: failure.code, message: failure.message } }
       if (failure.status !== undefined) result.error.status = failure.status
@@ -114,24 +125,27 @@ export default defineComponent((props: { onRegistration: (ready: Promise<void>) 
         },
         outputSchema: collectionSchema('results', { title: { type: 'string' }, url: { type: 'string' }, excerpt: { type: 'string' } }, ['INVALID_INPUT', 'SEARCH_UNAVAILABLE', 'INTERNAL_ERROR']),
         annotations: { readOnlyHint: true, untrustedContentHint: true },
-        execute: executeTool(async (rawInput, { signal }) => {
+        execute: executeTool('search_site', async (rawInput, { signal }) => {
           const input = validateInput(rawInput, ['query', 'maxResults'])
           const query = validateString(input, 'query', 160)
           const maxResults = validateLimit(input)
-          try {
-            const engine = await loadPagefind(withBase('/'))
-            signal.throwIfAborted()
-            const results = await createSearchSession().run(engine, query, maxResults)
-            signal.throwIfAborted()
-            return { results: (results ?? []).map((result) => ({
-              title: result.meta.title || result.url,
-              url: result.url,
-              excerpt: result.plain_excerpt || result.excerpt.replace(/<\/?mark>/g, '')
-            })) }
-          } catch (error) {
-            signal.throwIfAborted()
-            throw new ToolFailure('SEARCH_UNAVAILABLE', 'Search is unavailable. Try again later.')
-          }
+          const engine = await searchRequest(signal, () => loadPagefind(withBase('/')))
+          signal.throwIfAborted()
+          const results = await createSearchSession().run({
+            ...engine,
+            async search(term) {
+              const response = await searchRequest(signal, () => engine.search(term))
+              return { ...response, results: response.results.map((result) => ({
+                ...result, data: () => searchRequest(signal, () => result.data())
+              })) }
+            }
+          }, query, maxResults)
+          signal.throwIfAborted()
+          return { results: (results ?? []).map((result) => ({
+            title: result.meta.title || result.url,
+            url: result.url,
+            excerpt: result.plain_excerpt || result.excerpt.replace(/<\/?mark>/g, '')
+          })) }
         })
       },
       {
@@ -141,7 +155,7 @@ export default defineComponent((props: { onRegistration: (ready: Promise<void>) 
         inputSchema: { type: 'object', properties: {}, additionalProperties: false },
         outputSchema: collectionSchema('pages', { title: { type: 'string' }, url: { type: 'string' }, route: { type: 'string' } }, ['INVALID_INPUT', 'PAGE_INDEX_UNAVAILABLE', 'INTERNAL_ERROR']),
         annotations: { readOnlyHint: true },
-        execute: executeTool(async (input, { signal }) => {
+        execute: executeTool('list_pages', async (input, { signal }) => {
           validateInput(input, [])
           const pages = await getPageIndex(signal)
           return { pages: pages.map(({ title, route, markdown }) => ({ title, url: withBase(markdown), route: withBase(route) })) }
@@ -157,7 +171,7 @@ export default defineComponent((props: { onRegistration: (ready: Promise<void>) 
           required: ['url'], additionalProperties: false
         },
         annotations: { readOnlyHint: true, untrustedContentHint: true },
-        execute: executeTool(async (rawInput, { signal }) => {
+        execute: executeTool('get_page', async (rawInput, { signal }) => {
           const url = validateString(validateInput(rawInput, ['url']), 'url', 256)
           const pages = await getPageIndex(signal)
           const page = findPage(pages, url, withBase('/'))
@@ -188,7 +202,7 @@ export default defineComponent((props: { onRegistration: (ready: Promise<void>) 
           properties: { url: { type: 'string', minLength: 1, maxLength: 256, description: 'A listed Markdown URL, clean page route or search result URL; heading fragments are preserved.' } },
           required: ['url'], additionalProperties: false
         },
-        execute: executeTool(async (rawInput, { signal }) => {
+        execute: executeTool('navigate_to_page', async (rawInput, { signal }) => {
           const url = validateString(validateInput(rawInput, ['url']), 'url', 256)
           const pages = await getPageIndex(signal)
           const page = findPage(pages, url, withBase('/'))

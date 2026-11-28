@@ -16,8 +16,13 @@ import MarkdownActions from './components/MarkdownActions.tsx'
 const WebMcp = defineComponent(() => {
   const supported = ref(false)
   // Cover the lazy import as well as the registrations performed by the child.
-  let finishReadiness: (ready?: Promise<void>) => void = () => {}
-  const ready = new Promise<void>((resolve) => { finishReadiness = (pending) => resolve(pending) })
+  let finishReadiness: () => void = () => {}
+  const ready = new Promise<void>((resolve) => { finishReadiness = resolve })
+  let registrationStarted = false
+  function onRegistration(pending: Promise<void>) {
+    registrationStarted = true
+    void pending.then(() => finishReadiness(), () => finishReadiness())
+  }
   const Tools = defineAsyncComponent(async () => {
     try { return await import('./WebMcp.tsx') }
     catch (error) { finishReadiness(); throw error }
@@ -28,8 +33,8 @@ const WebMcp = defineComponent(() => {
     if (typeof modelContext.waitForToolsUntil === 'function') modelContext.waitForToolsUntil(ready)
     supported.value = true
   })
-  onUnmounted(() => finishReadiness())
-  return () => supported.value ? h(Tools, { onRegistration: finishReadiness }) : null
+  onUnmounted(() => { if (!registrationStarted) finishReadiness() })
+  return () => supported.value ? h(Tools, { onRegistration }) : null
 })
 
 export default {

@@ -296,9 +296,10 @@ site works normally. Registrations run independently; when available,
 `waitForToolsUntil()` receives a promise covering the component import and all
 registration attempts. It settles after those attempts finish.
 Disposal aborts the registration signal. The native API is retained because
-[`@vueuse/core` 15.1.0](https://registry.npmjs.org/@vueuse/core/-/core-15.1.0.tgz)'s `useWebMCP()` does not forward the execution context's
-`AbortSignal`, which `get_page` passes to its Markdown fetch. Keep the Pagefind
-loader shared with the search dialog to avoid duplicate engines/workers.
+the current [`useWebMCP()`](https://vueuse.org/core/usewebmcp/) integration
+does not forward the native execution `AbortSignal` that `get_page` passes to
+its Markdown fetch. Keep the Pagefind loader shared with the search dialog to
+avoid duplicate engines/workers.
 Ctrl/Cmd+K intentionally opens search even from an editable field; `/` does not
 interrupt typing. Enter with no arrow selection opens the first result. Search's
 shortcuts, arrow/Enter selection, Escape, reset,
