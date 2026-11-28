@@ -6,7 +6,7 @@ test('MCP rejects invalid caller input', () => {
   expect(() => stringInput({ query: 4 }, 'query', 160)).toThrow()
   expect(() => stringInput({ query: ' ' }, 'query', 160)).toThrow()
   expect(() => stringInput({ query: 'x'.repeat(161) }, 'query', 160)).toThrow()
-  for (const maxResults of [0, 11, NaN, 1.5, '5']) expect(() => resultLimit({ maxResults })).toThrow()
+  for (const maxResults of [null, 0, 11, NaN, 1.5, '5']) expect(() => resultLimit({ maxResults })).toThrow()
   expect(resultLimit({})).toBe(5)
 })
 

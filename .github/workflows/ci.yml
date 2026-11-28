@@ -79,6 +79,9 @@ jobs:
       - name: Smoke-test built search in installed Chrome
         run: bun run test:search
 
+      - name: Test WebMCP integration in installed Chrome
+        run: bun run test:webmcp
+
       # Deploy the validated workspace directly. A second runner and artifact
       # upload/download only repeated checkout/runtime/cache setup.
       - name: Deploy to Cloudflare Pages

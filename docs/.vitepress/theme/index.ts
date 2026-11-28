@@ -1,5 +1,5 @@
 import type { Theme } from 'vitepress'
-import { defineAsyncComponent, defineComponent, h, onMounted, ref } from 'vue'
+import { defineAsyncComponent, defineComponent, h, onMounted, onUnmounted, ref } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import PwaReload from './PwaReload.tsx'
@@ -15,11 +15,26 @@ import MarkdownActions from './components/MarkdownActions.tsx'
 // Check support after mount to keep browser globals out of SSR.
 const WebMcp = defineComponent(() => {
   const supported = ref(false)
-  const Tools = defineAsyncComponent(() => import('./WebMcp.tsx'))
-  onMounted(() => {
-    supported.value = !!(document.modelContext ?? navigator.modelContext)?.registerTool
+  // Cover the lazy import as well as the registrations performed by the child.
+  let finishReadiness: () => void = () => {}
+  const ready = new Promise<void>((resolve) => { finishReadiness = resolve })
+  let registrationStarted = false
+  function onRegistration(pending: Promise<void>) {
+    registrationStarted = true
+    void pending.then(() => finishReadiness(), () => finishReadiness())
+  }
+  const Tools = defineAsyncComponent(async () => {
+    try { return await import('./WebMcp.tsx') }
+    catch (error) { finishReadiness(); throw error }
   })
-  return () => supported.value ? h(Tools) : null
+  onMounted(() => {
+    const modelContext = document.modelContext
+    if (typeof modelContext?.registerTool !== 'function') return
+    if (typeof modelContext.waitForToolsUntil === 'function') modelContext.waitForToolsUntil(ready)
+    supported.value = true
+  })
+  onUnmounted(() => { if (!registrationStarted) finishReadiness() })
+  return () => supported.value ? h(Tools, { onRegistration }) : null
 })
 
 export default {

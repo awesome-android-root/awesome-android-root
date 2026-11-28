@@ -117,6 +117,7 @@ bun run test            # unit tests in tests/unit (entries, links, Markdown, MC
 bun run lint            # internal links and entry lint (blocking on errors)
 bun run docs:build      # generate counts, render VitePress, then index Pagefind
 bun run test:search     # two search smoke tests; uses installed Google Chrome
+bun run test:webmcp     # WebMCP integration tests; uses installed Google Chrome
 bun run check           # all of the above checks, including build/browser tests
 ```
 
@@ -289,11 +290,18 @@ build-time `page-index.json` (titles, routes and Markdown paths, a few KB), and
 `llms-full.txt`, which stays published for other consumers. `navigate_to_page`
 goes to the canonical route from the index, so `/index.md` opens `/`, and the
 404 and count pages are never listed or returned.
-The WebMCP component loads only after mount when `document.modelContext` or
-`navigator.modelContext` exposes `registerTool`. Unsupported browsers do not
-fetch its module; supported browsers register all four tools without fetching
-the page index or Pagefind until a tool needs them. Keep the Pagefind loader
-shared with the search dialog to avoid duplicate engines/workers.
+The WebMCP component loads only after mount when `document.modelContext` exposes
+callable `registerTool`. Unsupported browsers do not fetch its module and the
+site works normally. Registrations run independently; when available,
+`waitForToolsUntil()` receives a promise covering the component import and all
+registration attempts. It settles after those attempts finish.
+Disposal aborts the registration signal. The native API is retained because
+the current [`useWebMCP()`](https://vueuse.org/core/usewebmcp/) integration
+does not forward the native execution `AbortSignal` that `get_page` passes to
+its Markdown fetch. Keep the Pagefind loader shared with the search dialog to
+avoid duplicate engines/workers. When Pagefind loading fails, an unavailable
+module probe produces `SEARCH_UNAVAILABLE`; ambiguous Pagefind failures are
+logged and returned as `INTERNAL_ERROR`.
 Ctrl/Cmd+K intentionally opens search even from an editable field; `/` does not
 interrupt typing. Enter with no arrow selection opens the first result. Search's
 shortcuts, arrow/Enter selection, Escape, reset,
@@ -333,13 +341,14 @@ download a browser.
   Markdown-action buttons and keyboard disclosure/Escape behavior. The other
   blocks the engine request and verifies in-place Retry recovery. Both fail on page
   errors/Vue warnings. Run `bun run test:search`.
+- `tests/webmcp.spec.ts`: built-site WebMCP registration and tool callbacks with
+  a stubbed `document.modelContext`. Run `bun run docs:build` then
+  `bun run test:webmcp` (same Chrome/`CHROMIUM_PATH` requirement as `test:search`).
 
 Removed the broad third-party relevance matrix, generic theme-controls journey,
-mobile duplicate of entry navigation, separate browser MCP audit and fragment
-retry duplicate. The owned ranking/race logic and MCP input/route validation stay
-in cheap Bun unit tests. This is deliberately not automated certification of all
-mobile/theme/MCP interactions; make targeted manual checks when changing those
-areas.
+mobile duplicate of entry navigation and fragment retry duplicate. The owned
+ranking/race logic and MCP input/route validation also stay in cheap Bun unit
+tests. These tests are not certification of all mobile or theme interactions.
 The one-time gzip-fragment inspector (`test:index`) and corpus-size audit were
 removed. Build-time Pagefind errors and duplicate entry IDs already fail the
 build; the source link checker validates the shared anchor pipeline. Broad
