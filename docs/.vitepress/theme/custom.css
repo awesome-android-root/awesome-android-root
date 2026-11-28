@@ -43,8 +43,6 @@ html.dark {
 .vp-doc div[class*='language-'] pre { overflow-x: auto; }
 .doc-breadcrumb { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-4); color: var(--text-muted); font-size: var(--type-2); }
 .doc-breadcrumb a { color: var(--accent); }
-.copy-section-link { margin-left: var(--space-3); color: var(--text-muted); font-size: var(--type-1); font-weight: 500; min-height: 44px; vertical-align: middle; }
-.copy-section-link:hover { color: var(--accent); }
 
 /* Entries remain semantic Markdown list items and retain their stable anchors. */
 .vp-doc ul:has(> .directory-entry) { list-style: none; padding: 0; margin: var(--space-4) 0; }

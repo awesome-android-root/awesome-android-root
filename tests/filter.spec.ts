@@ -40,6 +40,19 @@ test('home keeps the original sections and the three starting paths', async () =
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true)
 })
 
+test('section headings keep permalinks without added copy-link buttons', async () => {
+  await page.goto(new URL('apps-and-modules/ad-blocking', baseURL).href)
+  await page.waitForSelector('.directory-entry')
+  expect(await page.$('.copy-section-link')).toBeNull()
+  expect(await page.$('.vp-doc h2 .header-anchor')).not.toBeNull()
+  expect(await page.$('.markdown-copy-buttons')).not.toBeNull()
+  await page.locator('a[href*="android-adblocking"]').click()
+  await page.waitForFunction(() => location.pathname.includes('general-guides/android-adblocking'))
+  await page.waitForSelector('.vp-doc h2 .header-anchor')
+  expect(await page.$('.copy-section-link')).toBeNull()
+  expect(await page.$('.markdown-copy-buttons')).not.toBeNull()
+})
+
 test('compact filters preserve URL state and the pin preference', async () => {
   await page.setViewport({ width: 1440, height: 900 })
   await page.goto(new URL('apps-and-modules/ad-blocking', baseURL).href)
