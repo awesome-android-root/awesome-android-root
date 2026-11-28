@@ -28,7 +28,8 @@ export default defineComponent(() => {
     const params = new URLSearchParams(location.search)
     restoring = true
     query.value = params.get('q') ?? ''
-    selected.value = (params.get('framework') ?? '').split(',').filter((value) => frameworks.includes(value))
+    // URLSearchParams decodes + as a space; accept old comma-separated links too.
+    selected.value = [...new Set((params.get('framework') ?? '').split(/[\s,]+/).filter((value) => frameworks.includes(value)))]
     license.value = ['FOSS', 'Proprietary'].includes(params.get('license') ?? '') ? params.get('license')! : ''
     // Remove the retired filter from links shared before the star was restored.
     if (params.has('featured')) {
@@ -61,7 +62,7 @@ export default defineComponent(() => {
       const url = new URL(location.href)
       for (const key of ['q', 'framework', 'license', 'featured']) url.searchParams.delete(key)
       if (query.value.trim()) url.searchParams.set('q', query.value.trim())
-      if (selected.value.length) url.searchParams.set('framework', selected.value.join(','))
+      if (selected.value.length) url.searchParams.set('framework', selected.value.join(' '))
       if (license.value) url.searchParams.set('license', license.value)
       history.replaceState(history.state, '', url)
     }
