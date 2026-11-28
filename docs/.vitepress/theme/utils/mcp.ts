@@ -1,6 +1,9 @@
 /** One record of the build-time `page-index.json` (see scripts/page-index.ts). */
 export interface PageRecord { title: string; route: string; markdown: string }
+export type ToolErrorCode = 'INVALID_INPUT' | 'SEARCH_UNAVAILABLE' | 'PAGE_INDEX_UNAVAILABLE' | 'PAGE_NOT_FOUND' | 'PAGE_FETCH_FAILED' | 'INTERNAL_ERROR'
+export interface ToolError { error: { code: ToolErrorCode; message: string; status?: number } }
 export type ToolResult =
+  | ToolError
   | { results: { title: string; url: string; excerpt: string }[] }
   | { pages: { title: string; url: string; route: string }[] }
   | { title: string; url: string; markdown: string }
@@ -11,15 +14,16 @@ export interface ModelTool {
   title: string
   description: string
   inputSchema: Record<string, unknown>
+  outputSchema?: Record<string, unknown>
   annotations?: { readOnlyHint?: boolean; untrustedContentHint?: boolean }
   execute(input: unknown, context: ToolContext): Promise<ToolResult>
 }
 export interface ModelContext {
   registerTool(tool: ModelTool, options: { signal: AbortSignal }): Promise<void>
+  waitForToolsUntil?(promise: Promise<unknown>): void
 }
 declare global {
   interface Document { modelContext?: ModelContext }
-  interface Navigator { modelContext?: ModelContext }
 }
 
 /** Not documentation (404) or maintainer-only (count); never offered to agents. */
@@ -55,7 +59,7 @@ export function stringInput(input: Record<string, unknown>, key: string, max: nu
   return value.trim()
 }
 export function resultLimit(input: Record<string, unknown>): number {
-  const value = input.maxResults ?? 5
+  const value = input.maxResults === undefined ? 5 : input.maxResults
   if (typeof value !== 'number' || !Number.isInteger(value) || value < 1 || value > 10) {
     throw new TypeError('maxResults must be an integer from 1 to 10')
   }
