@@ -157,19 +157,19 @@ hero:
 
 <div class="start-options">
   <a href="/rooting-guides/">
-    <span>01 / Learn</span>
+    <span class="start-path-heading"><span>01 / Learn</span><span class="start-path-icon"><LandingIcon name="sprout" :size="20" /></span></span>
     <strong>Complete beginner</strong>
     <p>Understand root, risks and preparation.</p>
     <b>Start learning <span aria-hidden="true">→</span></b>
   </a>
   <a href="/rooting-guides/#device-specific-guides">
-    <span>02 / Prepare</span>
+    <span class="start-path-heading"><span>02 / Prepare</span><span class="start-path-icon"><LandingIcon name="rocket" :size="20" /></span></span>
     <strong>Ready to root</strong>
     <p>Find instructions for your device.</p>
     <b>Find your guide <span aria-hidden="true">→</span></b>
   </a>
   <a href="/apps-and-modules/">
-    <span>03 / Explore</span>
+    <span class="start-path-heading"><span>03 / Explore</span><span class="start-path-icon"><LandingIcon name="trophy" :size="20" /></span></span>
     <strong>Already rooted</strong>
     <p>Find tools for what you want to do.</p>
     <b>Browse apps <span aria-hidden="true">→</span></b>

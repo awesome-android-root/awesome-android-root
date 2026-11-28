@@ -105,14 +105,32 @@ html.dark {
 .filter-dialog-footer { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border); padding-top: var(--space-2); color: var(--text-muted); font-size: var(--type-2); font-variant-numeric: tabular-nums; }
 .filter-dialog-footer button:disabled { opacity: .5; cursor: not-allowed; }
 
-/* Starting paths on the original home layout. */
+/* Shared home card treatment; existing section grids and links stay in place. */
 .start-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); margin: var(--space-6) 0 var(--space-12); }
-.vp-doc .start-options a { display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-6); min-height: 190px; border: 1px solid var(--border); border-radius: var(--radius-medium); background: var(--surface); text-decoration: none; transition: border-color var(--motion-fast), background var(--motion-fast); }
-.vp-doc .start-options a:hover { border-color: var(--accent); background: var(--surface-raised); }
-.start-options a > span { color: var(--accent); font-size: var(--type-1); text-transform: uppercase; letter-spacing: .08em; font-weight: 700; }
-.start-options strong { font-size: var(--type-4); color: var(--text); }
-.vp-doc .start-options p { margin: 0; color: var(--text-muted); font-size: var(--type-2); }
+.VPHome .vp-doc :is(.start-options a, .landing-features .feature-card, .community-card) {
+  display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
+  gap: var(--space-3); padding: var(--space-6); border: 1px solid var(--border);
+  border-radius: var(--radius-medium); background: var(--surface); box-shadow: none;
+  text-align: left; text-decoration: none; transform: none;
+  transition: border-color var(--motion-fast), background var(--motion-fast);
+}
+.VPHome .vp-doc :is(.start-options a, .landing-features .feature-card, .community-card):hover,
+.VPHome .vp-doc :is(.start-options a, .landing-features .feature-card, .community-card):focus-visible {
+  border-color: var(--accent); background: var(--surface-raised); box-shadow: none; transform: none;
+}
+.VPHome .vp-doc .start-options a { min-height: 190px; }
+.start-path-heading { display: flex; align-items: center; justify-content: space-between; width: 100%; gap: var(--space-3); }
+.start-path-heading > span:first-child { color: var(--accent); font-size: var(--type-1); text-transform: uppercase; letter-spacing: .08em; font-weight: 700; }
+.VPHome .vp-doc :is(.start-path-icon, .landing-features .feature-icon, .community-card .icon) {
+  display: inline-flex; align-items: center; justify-content: center; flex: none;
+  width: 40px; height: 40px; margin: 0; border-radius: var(--radius-small);
+  background: var(--accent-soft); color: var(--accent); line-height: 1;
+}
+.VPHome .vp-doc :is(.landing-features .feature-card, .community-card):hover :is(.feature-icon, .icon) { background: var(--accent-soft); color: var(--accent); }
+.VPHome .vp-doc :is(.start-options strong, .feature-title, .community-card strong) { margin: 0; color: var(--text); font-size: var(--type-4); font-weight: 600; line-height: 1.4; }
+.VPHome .vp-doc :is(.start-options p, .feature-text, .community-card span:last-child) { margin: 0; padding: 0; color: var(--text-muted); font-size: var(--type-2); font-weight: 400; line-height: 1.6; }
 .start-options b { margin-top: auto; color: var(--accent); font-size: var(--type-2); }
+.VPHome .vp-doc .community-card.sponsor-card img { width: min(100%, 160px); max-height: 48px; margin: 0; object-fit: contain; object-position: left center; }
 .safety-callout, .guide-summary, .step-checklist { padding: var(--space-4); margin: var(--space-6) 0; border: 1px solid var(--border); border-radius: var(--radius-medium); background: var(--surface-raised); }
 .safety-callout { border-left: 4px solid var(--warn); }
 .safety-callout > strong { color: var(--warn); }
