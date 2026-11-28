@@ -41,13 +41,13 @@ html.dark {
 .doc-breadcrumb a { color: var(--accent); }
 
 /* Directory badges retain their colors without changing the original list layout. */
-.entry-chip { display: inline-block; margin: var(--space-1) var(--space-1) var(--space-1) 0; padding: 0 var(--space-2); border: 1px solid currentColor; border-radius: var(--radius-small); font-size: var(--type-1); line-height: 1.7; font-weight: 600; vertical-align: baseline; }
-.entry-chip--magisk { color: var(--badge-magisk); }
-.entry-chip--kernelsu { color: var(--badge-kernelsu); }
-.entry-chip--apatch { color: var(--badge-apatch); }
-.entry-chip--lsposed { color: var(--badge-lsposed); }
-.entry-chip--foss { color: var(--badge-foss); }
-.entry-chip--proprietary { color: var(--badge-proprietary); }
+.entry-chip { display: inline-block; margin: var(--space-1) var(--space-1) var(--space-1) 0; padding: 0 var(--space-2); border: 1px solid color-mix(in srgb, currentColor 28%, var(--border)); border-radius: var(--radius-small); font-size: var(--type-1); line-height: 1.7; font-weight: 500; vertical-align: baseline; }
+.entry-chip--magisk { color: color-mix(in srgb, var(--badge-magisk) 60%, var(--text-muted)); }
+.entry-chip--kernelsu { color: color-mix(in srgb, var(--badge-kernelsu) 60%, var(--text-muted)); }
+.entry-chip--apatch { color: color-mix(in srgb, var(--badge-apatch) 60%, var(--text-muted)); }
+.entry-chip--lsposed { color: color-mix(in srgb, var(--badge-lsposed) 60%, var(--text-muted)); }
+.entry-chip--foss { color: color-mix(in srgb, var(--badge-foss) 60%, var(--text-muted)); }
+.entry-chip--proprietary { color: color-mix(in srgb, var(--badge-proprietary) 60%, var(--text-muted)); }
 /* The legend scrolls away; only the compact toolbar is optionally pinned. */
 .vp-doc .directory-legend { margin: var(--space-6) 0 var(--space-2); font-size: var(--type-2); color: var(--text-muted); }
 .directory-filter { position: relative; z-index: 10; margin: 0 0 var(--space-6); padding: var(--space-1) var(--space-2); border: 1px solid var(--border); border-radius: var(--radius-medium); background: var(--surface); }

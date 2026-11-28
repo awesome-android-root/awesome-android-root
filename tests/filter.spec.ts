@@ -75,6 +75,42 @@ test('starred entries keep their stars and old featured links no longer filter r
   expect(new URL(page.url()).searchParams.get('other')).toBe('keep')
 })
 
+test('badge labels remain readable in both themes', async () => {
+  await page.goto(new URL('apps-and-modules/ad-blocking', baseURL).href)
+  for (const dark of [false, true]) {
+    const badges = await page.evaluate((dark) => {
+      document.documentElement.classList.toggle('dark', dark)
+      const context = document.createElement('canvas').getContext('2d')!
+      function rgb(color: string) {
+        context.clearRect(0, 0, 1, 1)
+        context.fillStyle = color
+        context.fillRect(0, 0, 1, 1)
+        return [...context.getImageData(0, 0, 1, 1).data].slice(0, 3)
+      }
+      function luminance(color: number[]) {
+        const [r, g, b] = color.map((value) => {
+          const c = value / 255
+          return c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4
+        })
+        return 0.2126 * r + 0.7152 * g + 0.0722 * b
+      }
+      const background = luminance(rgb(getComputedStyle(document.body).backgroundColor))
+      return ['magisk', 'kernelsu', 'apatch', 'lsposed', 'foss', 'proprietary'].map((name) => {
+        const chip = document.querySelector<HTMLElement>(`.entry-chip--${name}`)!
+        const style = getComputedStyle(chip)
+        const text = luminance(rgb(style.color))
+        return { name, contrast: (Math.max(background, text) + 0.05) / (Math.min(background, text) + 0.05), label: chip.textContent, border: style.borderTopColor, color: style.color }
+      })
+    }, dark)
+    expect(badges).toHaveLength(6)
+    for (const badge of badges) {
+      expect(badge.label).toBeTruthy()
+      expect(badge.contrast).toBeGreaterThanOrEqual(4.5)
+      expect(badge.border).not.toBe(badge.color)
+    }
+  }
+})
+
 test('compact filters preserve URL state and the pin preference', async () => {
   await page.setViewport({ width: 1440, height: 900 })
   await page.goto(new URL('apps-and-modules/ad-blocking', baseURL).href)
