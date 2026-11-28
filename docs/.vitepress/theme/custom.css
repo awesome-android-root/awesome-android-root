@@ -35,23 +35,12 @@ html.dark {
   --badge-foss: #8ce2ad;
   --badge-proprietary: #f4c188;
 }
-:where(a, button, input, select, summary):focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-[hidden] { display: none !important; }
-.vp-doc { overflow-wrap: anywhere; }
-.vp-doc p, .vp-doc li { max-width: 75ch; }
-.vp-doc div[class*='language-'] { max-width: 100%; }
-.vp-doc div[class*='language-'] pre { overflow-x: auto; }
+.directory-filter :where(button, input):focus-visible, .filter-dialog :where(button, input, select):focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.vp-doc :is(.directory-entry, h2, h3, h4)[hidden] { display: none !important; }
 .doc-breadcrumb { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-4); color: var(--text-muted); font-size: var(--type-2); }
 .doc-breadcrumb a { color: var(--accent); }
 
-/* Entries remain semantic Markdown list items and retain their stable anchors. */
-.vp-doc ul:has(> .directory-entry) { list-style: none; padding: 0; margin: var(--space-4) 0; }
-.vp-doc .directory-entry { max-width: none; padding: var(--space-3) var(--space-4); margin: 0; border: 1px solid var(--border); border-bottom: 0; background: var(--surface); line-height: 1.6; transition: background var(--motion-fast), border-color var(--motion-fast); }
-.vp-doc .directory-entry:first-child { border-radius: var(--radius-medium) var(--radius-medium) 0 0; }
-.vp-doc .directory-entry:last-child { border-bottom: 1px solid var(--border); border-radius: 0 0 var(--radius-medium) var(--radius-medium); }
-.vp-doc .directory-entry:only-child { border-radius: var(--radius-medium); }
-.vp-doc .directory-entry:hover, .vp-doc .directory-entry:focus-within { background: var(--surface-raised); border-color: var(--accent); }
-.directory-entry strong:first-child { display: inline; font-size: var(--type-3); }
+/* Directory badges retain their colors without changing the original list layout. */
 .entry-chip { display: inline-block; margin: var(--space-1) var(--space-1) var(--space-1) 0; padding: 0 var(--space-2); border: 1px solid currentColor; border-radius: var(--radius-small); font-size: var(--type-1); line-height: 1.7; font-weight: 600; vertical-align: baseline; }
 .entry-chip--magisk { color: var(--badge-magisk); }
 .entry-chip--kernelsu { color: var(--badge-kernelsu); }
@@ -59,7 +48,6 @@ html.dark {
 .entry-chip--lsposed { color: var(--badge-lsposed); }
 .entry-chip--foss { color: var(--badge-foss); }
 .entry-chip--proprietary { color: var(--badge-proprietary); }
-.directory-entry .store-badge.store-badge { min-height: 44px; border: 0; background: transparent; color: var(--text-muted); }
 /* The legend scrolls away; only the compact toolbar is optionally pinned. */
 .vp-doc .directory-legend { margin: var(--space-6) 0 var(--space-2); font-size: var(--type-2); color: var(--text-muted); }
 .directory-filter { position: relative; z-index: 10; margin: 0 0 var(--space-6); padding: var(--space-1) var(--space-2); border: 1px solid var(--border); border-radius: var(--radius-medium); background: var(--surface); }
@@ -105,8 +93,6 @@ html.dark {
 .filter-dialog-footer { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border); padding-top: var(--space-2); color: var(--text-muted); font-size: var(--type-2); font-variant-numeric: tabular-nums; }
 .filter-dialog-footer button:disabled { opacity: .5; cursor: not-allowed; }
 
-/* Keep the original home typography while documentation uses the new fonts. */
-.VPHome { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
 .safety-callout, .guide-summary, .step-checklist { padding: var(--space-4); margin: var(--space-6) 0; border: 1px solid var(--border); border-radius: var(--radius-medium); background: var(--surface-raised); }
 .safety-callout { border-left: 4px solid var(--warn); }
 .safety-callout > strong { color: var(--warn); }
@@ -124,9 +110,6 @@ html.dark {
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; } }
 .doc-updated { margin: 0 0 var(--space-4); color: var(--text-muted); font-size: var(--type-2); font-variant-numeric: tabular-nums; }
 .VPDocFooter .last-updated { display: none; }
-.entry-description { display: block; color: var(--text-muted); }
-.entry-description--clamped { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
-.entry-expand { display: block; min-height: 44px; color: var(--accent); font-size: var(--type-2); font-weight: 600; }
 .aar-search-dialog .search-group-label { display: block; padding: var(--space-2) var(--space-3) 0; color: var(--text-muted); font-size: var(--type-1); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
 .aar-search-dialog .search-category { display: inline-block; margin-bottom: var(--space-1); padding: 0 var(--space-2); border: 1px solid var(--border); border-radius: var(--radius-small); color: var(--text-muted); font-size: var(--type-1); text-transform: capitalize; }
 .safety-callout--tip { border-left-color: var(--accent); }

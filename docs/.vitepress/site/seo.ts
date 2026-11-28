@@ -293,8 +293,6 @@ export function transformHead({ pageData }: TransformContext): HeadConfig[] {
 }
 
 export const head: HeadConfig[] = [
-  ['link', { rel: 'preload', href: '/fonts/inter-latin-wght-normal.woff2', as: 'font', type: 'font/woff2', crossorigin: '' }],
-  ['link', { rel: 'preload', href: '/fonts/jetbrains-mono-latin-wght-normal.woff2', as: 'font', type: 'font/woff2', crossorigin: '' }],
 
   // Favicons and Touch Icons
   ['link', { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' }],

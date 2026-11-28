@@ -72,25 +72,6 @@ export default defineComponent(() => {
     entries = [...document.querySelectorAll<HTMLElement>('.vp-doc .directory-entry')]
     headings = [...document.querySelectorAll<HTMLElement>('.vp-doc h2, .vp-doc h3, .vp-doc h4')]
     total.value = entries.length
-    for (const entry of entries) {
-      const description = entry.querySelector<HTMLElement>('.entry-description')
-      // Do not visually clip interactive links in descriptions.
-      if (!description || description.querySelector('a, button') || entry.querySelector('.entry-expand')) continue
-      description.classList.add('entry-description--clamped')
-      if (description.scrollHeight <= description.clientHeight + 1) { description.classList.remove('entry-description--clamped'); continue }
-      const button = document.createElement('button')
-      button.type = 'button'
-      button.className = 'entry-expand'
-      button.textContent = 'Show more'
-      button.setAttribute('aria-expanded', 'false')
-      button.addEventListener('click', () => {
-        const expanded = button.getAttribute('aria-expanded') === 'true'
-        description.classList.toggle('entry-description--clamped', expanded)
-        button.setAttribute('aria-expanded', String(!expanded))
-        button.textContent = expanded ? 'Show more' : 'Show less'
-      })
-      description.after(button)
-    }
     restore()
     ready.value = true
   }

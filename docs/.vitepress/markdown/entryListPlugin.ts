@@ -40,20 +40,7 @@ export function entryListPlugin(md: MarkdownIt): void {
         child.type = 'html_inline'
         child.content = `<span class="entry-chip entry-chip--${label.toLowerCase()}">${label}</span>`
       }
-      const afterTitle = children.findIndex((token) => token.type === 'strong_close') + 1
-      const dash = children.slice(afterTitle).find((token) => token.type === 'text' && /^\s*-\s*/.test(token.content))
-      if (dash) dash.content = dash.content.replace(/^\s*-\s*/, ' ')
-      // Keep Markdown formatting and links inside a separate description span.
-      if (dash) {
-        const start = children.indexOf(dash)
-        const end = children.findIndex((child, index) => index > start && child.type === 'html_inline' && child.content.startsWith('<span class="entry-chip'))
-        const open = new state.Token('html_inline', '', 0)
-        open.content = '<span class="entry-description">'
-        const close = new state.Token('html_inline', '', 0)
-        close.content = '</span>'
-        children.splice(end < 0 ? children.length : end, 0, close)
-        children.splice(start, 0, open)
-      }
+
     }
   })
 }

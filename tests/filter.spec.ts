@@ -52,6 +52,24 @@ test('starred entries keep their stars and old featured links no longer filter r
   await page.goto(new URL('apps-and-modules/ad-blocking?featured=1&other=keep', baseURL).href)
   await page.waitForFunction(() => document.querySelector('.filter-count')?.textContent?.includes('24 of 24'))
   expect(await page.$eval('.directory-entry strong a', (node) => node.textContent)).toContain('⭐ AdAway')
+  const entryLayout = await page.$eval('.directory-entry', (entry) => {
+    const list = entry.parentElement!
+    const style = getComputedStyle(entry)
+    return {
+      listStyle: getComputedStyle(list).listStyleType,
+      display: style.display,
+      borderWidth: style.borderTopWidth,
+      text: entry.textContent,
+      hasDescriptionWrapper: !!entry.querySelector('.entry-description'),
+      hasTag: !!entry.querySelector('.entry-chip--foss')
+    }
+  })
+  expect(entryLayout.listStyle).toBe('disc')
+  expect(entryLayout.display).toBe('list-item')
+  expect(entryLayout.borderWidth).toBe('0px')
+  expect(entryLayout.text).toContain('⭐ AdAway - Blocks ads')
+  expect(entryLayout.hasDescriptionWrapper).toBe(false)
+  expect(entryLayout.hasTag).toBe(true)
   expect(await page.$('.entry-featured')).toBeNull()
   expect(new URL(page.url()).searchParams.has('featured')).toBe(false)
   expect(new URL(page.url()).searchParams.get('other')).toBe('keep')
